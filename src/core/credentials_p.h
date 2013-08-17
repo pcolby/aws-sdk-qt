@@ -7,24 +7,20 @@
 #define QTAWS_EXPORT Q_DECL_IMPORT
 #endif
 
-//namespace aws {
-//namespace core {
-
 class Credentials;
 
 class QTAWS_EXPORT CredentialsPrivate {
-public:
-    CredentialsPrivate(Credentials * const q);
+    Q_DECLARE_PUBLIC(Credentials)
 
-protected:
+public:
     QString accessKeyId;
     QString secretKey;
 
+    CredentialsPrivate(Credentials * const q);
+
 private:
     Credentials * const q_ptr;
-    Q_DECLARE_PUBLIC(Credentials);
-};
 
-//} }
+};
 
 #endif

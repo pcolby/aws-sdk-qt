@@ -11,9 +11,9 @@
 
 class CredentialsPrivate;
 
-class QTAWS_EXPORT Credentials : public AbstractCredentials
-{
+class QTAWS_EXPORT Credentials : public AbstractCredentials {
     Q_OBJECT
+    Q_DECLARE_PRIVATE(Credentials)
 
 public:
     Credentials(const QString &accessKeyid, const QString &secretKey);
@@ -25,7 +25,6 @@ public:
 
 private:
     CredentialsPrivate * const d_ptr;
-    Q_DECLARE_PRIVATE(Credentials);
 
 };
 
