@@ -1,10 +1,8 @@
 HEADERS += \
-        abstractcredentials.h \
-        abstractrefreshablecredentials.h \
-        credentials.h \
-        credentials_p.h \
-        refreshableinstanceprofilecredentials.h
+        awsabstractcredentials.h \
+        awsbasiccredentials.h \
+        awsbasiccredentials_p.h \
 
-SOURCES += credentials.cpp
+SOURCES += awsbasiccredentials.cpp
 
 VPATH += $$PWD

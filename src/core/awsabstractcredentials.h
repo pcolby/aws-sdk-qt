@@ -1,5 +1,5 @@
-#ifndef ABSTRACTCREDENTIALS_H
-#define ABSTRACTCREDENTIALS_H
+#ifndef AWSABSTRACTCREDENTIALS_H
+#define AWSABSTRACTCREDENTIALS_H
 
 #include <QObject>
 
@@ -9,7 +9,7 @@
 #define QTAWS_EXPORT Q_DECL_IMPORT
 #endif
 
-class QTAWS_EXPORT AbstractCredentials : public QObject {
+class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
 
 public:
