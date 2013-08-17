@@ -19,8 +19,8 @@ class QTAWS_EXPORT AbstractCredentials : public QObject
     Q_PROPERTY(QString secretKey   READ secretKey   WRITE setSecretKey   NOTIFY secretKeyChanged)
 
 public:
-    virtual QString accessKeyId() = 0;
-    virtual QString secretKey() = 0;
+    virtual QString accessKeyId() const = 0;
+    virtual QString secretKey() const = 0;
     virtual void setAccessKeyId(const QString &accessKeyId) = 0;
     virtual void setSecretKey(const QString &setSecretKey) = 0;
 

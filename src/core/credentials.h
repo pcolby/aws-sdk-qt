@@ -19,8 +19,8 @@ class QTAWS_EXPORT Credentials : public AbstractCredentials
     Q_OBJECT
 
 public:
-    virtual QString accessKeyId();
-    virtual QString secretKey();
+    virtual QString accessKeyId() const;
+    virtual QString secretKey() const;
     virtual void setAccessKeyId(const QString &accessKeyId);
     virtual void setSecretKey(const QString &secretKey);
 
