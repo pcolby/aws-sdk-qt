@@ -19,3 +19,5 @@ CONFIG(release,debug|release) {
     OBJECTS_DIR = release/tmp
     RCC_DIR = release/tmp
 }
+
+include(src/aws.pri)
