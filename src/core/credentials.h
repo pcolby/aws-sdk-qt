@@ -17,9 +17,10 @@ class QTAWS_EXPORT Credentials : public AbstractCredentials {
 
 public:
     Credentials(const QString &accessKeyid, const QString &secretKey);
-
     virtual QString accessKeyId() const;
     virtual QString secretKey() const;
+
+public slots:
     virtual void setAccessKeyId(const QString &accessKeyId);
     virtual void setSecretKey(const QString &secretKey);
 
