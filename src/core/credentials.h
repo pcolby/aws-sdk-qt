@@ -1,4 +1,7 @@
-#include <QObject>
+#ifndef CREDENTIALS_H
+#define CREDENTIALS_H
+
+#include "abstractcredentials.h"
 
 #if defined QTAWS_LIBRARY
 #define QTAWS_EXPORT Q_DECL_EXPORT
@@ -6,11 +9,25 @@
 #define QTAWS_EXPORT Q_DECL_IMPORT
 #endif
 
-namespace aws {
-namespace core {
+//namespace aws {
+//namespace core {
 
-class QTAWS_EXPORT Credentials : QObject {
+class CredentialsPrivate;
+
+class QTAWS_EXPORT Credentials : public AbstractCredentials
+{
     Q_OBJECT
+
+public:
+    virtual QString accessKeyId();
+    virtual QString secretKey();
+    virtual void setAccessKeyId(const QString &accessKeyId);
+    virtual void setSecretKey(const QString &secretKey);
+
+private:
+    Q_DECLARE_PRIVATE(Credentials);
 };
 
-} }
+//} }
+
+#endif
