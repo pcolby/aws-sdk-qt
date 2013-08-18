@@ -5,7 +5,7 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @fn       QString accessKeyId() const
+ * @fn       QString AwsAbstractCredentials::accessKeyId() const
  *
  * @brief    AWS access key ID for this credentials object.
  *
@@ -13,7 +13,7 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 /**
- * @fn       QString secretKey() const
+ * @fn       QString AwsAbstractCredentials::secretKey() const
  *
  * @brief    AWS secret access key for this credentials object.
  *
@@ -21,7 +21,7 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 /**
- * @fn       QString token() const
+ * @fn       QString AwsAbstractCredentials::token() const
  *
  * @brief    AWS security token for this credentials object.
  *
@@ -128,7 +128,7 @@ bool AwsAbstractCredentials::refresh() {
 }
 
 /**
- * @fn     void changed()
+ * @fn     void AwsAbstractCredentials::changed()
  *
  * @brief  Signal emitted when this object's credentials have been updated.
  *
