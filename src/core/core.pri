@@ -4,6 +4,8 @@ HEADERS += \
         awsbasiccredentials_p.h \
         qtawsglobal.h
 
-SOURCES += awsbasiccredentials.cpp
+SOURCES += \
+        awsabstractcredentials.cpp \
+        awsbasiccredentials.cpp \
 
 VPATH += $$PWD

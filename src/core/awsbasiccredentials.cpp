@@ -1,6 +1,8 @@
 #include "awsbasiccredentials.h"
 #include "awsbasiccredentials_p.h"
 
+QTAWS_BEGIN_NAMESPACE
+
 AwsBasicCredentials::AwsBasicCredentials(const QString &accessKeyId, const QString &secretKey)
     : d_ptr(new AwsBasicCredentialsPrivate(this))
 {
@@ -34,3 +36,5 @@ void AwsBasicCredentials::setSecretKey(const QString &secretKey) {
 AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q) : q_ptr(q) {
 
 }
+
+QTAWS_END_NAMESPACE

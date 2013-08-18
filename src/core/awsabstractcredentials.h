@@ -3,6 +3,7 @@
 
 #include "qtawsglobal.h"
 
+#include <QDateTime>
 #include <QObject>
 
 QTAWS_BEGIN_NAMESPACE
@@ -15,12 +16,12 @@ public:
     virtual QString secretKey() const = 0;
     virtual QString token() const = 0;
 
-    QDateTime expiration() const;
-    virtual bool isRefreshable() const = 0;
-    virtual bool isExpired() const = 0;
+    virtual QDateTime expiration() const;
+    virtual bool isExpired() const;
+    virtual bool isRefreshable() const;
 
 public slots:
-    virtual bool refresh() = 0;
+    virtual bool refresh();
 
 signals:
     void changed();
