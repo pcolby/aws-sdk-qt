@@ -1,11 +1,7 @@
 #ifndef AWSBASICCREDENTIALS_P_H
 #define AWSBASICCREDENTIALS_P_H
 
-#if defined QTAWS_LIBRARY
-#define QTAWS_EXPORT Q_DECL_EXPORT
-#else
-#define QTAWS_EXPORT Q_DECL_IMPORT
-#endif
+QTAWS_BEGIN_NAMESPACE
 
 class AwsBasicCredentials;
 
@@ -22,5 +18,7 @@ private:
     AwsBasicCredentials * const q_ptr;
 
 };
+
+QTAWS_END_NAMESPACE
 
 #endif

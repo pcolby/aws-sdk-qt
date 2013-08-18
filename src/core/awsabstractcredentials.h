@@ -1,13 +1,11 @@
 #ifndef AWSABSTRACTCREDENTIALS_H
 #define AWSABSTRACTCREDENTIALS_H
 
+#include "qtawsglobal.h"
+
 #include <QObject>
 
-#if defined QTAWS_LIBRARY
-#define QTAWS_EXPORT Q_DECL_EXPORT
-#else
-#define QTAWS_EXPORT Q_DECL_IMPORT
-#endif
+QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
@@ -28,5 +26,7 @@ signals:
     void changed();
 
 };
+
+QTAWS_END_NAMESPACE
 
 #endif

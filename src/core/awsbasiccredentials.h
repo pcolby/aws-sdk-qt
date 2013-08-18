@@ -3,11 +3,7 @@
 
 #include "awsabstractcredentials.h"
 
-#if defined QTAWS_LIBRARY
-#define QTAWS_EXPORT Q_DECL_EXPORT
-#else
-#define QTAWS_EXPORT Q_DECL_IMPORT
-#endif
+QTAWS_BEGIN_NAMESPACE
 
 class AwsBasicCredentialsPrivate;
 
@@ -28,5 +24,7 @@ private:
     AwsBasicCredentialsPrivate * const d_ptr;
 
 };
+
+QTAWS_END_NAMESPACE
 
 #endif
