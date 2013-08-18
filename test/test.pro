@@ -8,6 +8,10 @@ SOURCES += test.cpp
 unix:QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
 unix:QMAKE_LFLAGS += -fprofile-arcs -ftest-coverage
 
-#include(...)
+# @todo
+# lcov --capture --directory . --output coverage.info
+# genhtml --prefix `pwd` --output-directory coverage_html coverage.info
 
-SUBDIRS += core
+include(core/core.pri)
+
+#SUBDIRS += core
