@@ -114,6 +114,9 @@ bool AwsAbstractCredentials::isRefreshable() const {
  * function to provide the appropriate refresh behaviour.
  *
  * @returns  \c true is the refresh transaction has begun successfully, \c false otherwise.
+ *
+ * @see  isRefreshable()
+ * @see  changed()
  */
 bool AwsAbstractCredentials::refresh() {
     if (isRefreshable()) {
@@ -123,5 +126,13 @@ bool AwsAbstractCredentials::refresh() {
     }
     return false;
 }
+
+/**
+ * @fn     void changed()
+ *
+ * @brief  Signal emitted when this object's credentials have been updated.
+ *
+ * @see    refresh()
+ */
 
 QTAWS_END_NAMESPACE
