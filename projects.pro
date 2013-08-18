@@ -1,2 +1,2 @@
 TEMPLATE = subdirs
-SUBDIRS += doc src
+SUBDIRS += doc src test
