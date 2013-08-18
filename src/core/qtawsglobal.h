@@ -2,7 +2,7 @@
 #define QTAWSGLOBAL_H
 
 
-// Export declartion macros.
+// Export declaration macros.
 #if defined QTAWS_LIBRARY
 #  define QTAWS_EXPORT Q_DECL_EXPORT
 #else
