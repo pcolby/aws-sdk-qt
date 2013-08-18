@@ -5,6 +5,12 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
+  * @class  AwsAbstractCredentials
+  *
+  * @brief  Interface class for privding AWS credentials.
+  */
+
+/**
  * @fn       QString AwsAbstractCredentials::accessKeyId() const
  *
  * @brief    AWS access key ID for this credentials object.

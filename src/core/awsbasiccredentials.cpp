@@ -3,6 +3,19 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+/**
+ * @class  AwsBasicCredentials
+ *
+ * @brief  Basic implementation of the AwsAbstractCredentials interface that allows callers
+ *         to pass in the AWS access key and secret access in the constructor.
+ */
+
+/**
+ * @brief  Constructs a new AwsBasicCredentials object.
+ *
+ * @param accessKeyId  The AWS access key ID to use for this credentials object.
+ * @param secretKey    The AWS secret access key to use for this credentials object.
+ */
 AwsBasicCredentials::AwsBasicCredentials(const QString &accessKeyId, const QString &secretKey)
     : d_ptr(new AwsBasicCredentialsPrivate(this))
 {
@@ -21,12 +34,22 @@ QString AwsBasicCredentials::secretKey() const {
     return d->secretKey;
 }
 
+/**
+ * @brief Set the AWS access key ID for this credentials object.
+ *
+ * @param accessKeyId  The AWS access key ID to set for this credentials object.
+ */
 void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId) {
     Q_D(AwsBasicCredentials);
     d->accessKeyId = accessKeyId;
     emit changed();
 }
 
+/**
+ * @brief Set the AWS secret access key for this credentials object.
+ *
+ * @param secretKey  The AWS secret access key to set for this credentials object.
+ */
 void AwsBasicCredentials::setSecretKey(const QString &secretKey) {
     Q_D(AwsBasicCredentials);
     d->secretKey = secretKey;
