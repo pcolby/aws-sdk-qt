@@ -4,6 +4,7 @@ HEADERS += \
         awsbasiccredentials.h \
         awsbasiccredentials_p.h \
         awsnetworkaccessmanager.h \
+        awsnetworkaccessmanager_p.h \
         awssignaturev2.h \
         awssignaturev3.h \
         awssignaturev4.h \
@@ -12,5 +13,6 @@ HEADERS += \
 SOURCES += \
         awsabstractcredentials.cpp \
         awsbasiccredentials.cpp \
+        awsnetworkaccessmanager.cpp \
 
 VPATH += $$PWD

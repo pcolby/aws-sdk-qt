@@ -1,6 +1,8 @@
 #ifndef AWSBASICCREDENTIALS_P_H
 #define AWSBASICCREDENTIALS_P_H
 
+#include "qtawsglobal.h"
+
 #include <QString>
 
 QTAWS_BEGIN_NAMESPACE
