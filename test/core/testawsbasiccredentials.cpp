@@ -28,11 +28,19 @@ void TestAwsBasicCredentials::construct() {
     QFETCH(QString, secretKey);
     QFETCH(QString, token);
 
-    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
+    {   // Test the constructor overload that accepts a security token.
+        const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
+        QCOMPARE(credentials.accessKeyId(), accessKeyId);
+        QCOMPARE(credentials.secretKey(), secretKey);
+        QCOMPARE(credentials.token(), token);
+    }
 
-    QCOMPARE(credentials.accessKeyId(), accessKeyId);
-    QCOMPARE(credentials.secretKey(), secretKey);
-    QCOMPARE(credentials.token(), token);
+    {   // Test the constructor overload that does not accept a security token.
+        const AwsBasicCredentials credentials(accessKeyId, secretKey);
+        QCOMPARE(credentials.accessKeyId(), accessKeyId);
+        QCOMPARE(credentials.secretKey(), secretKey);
+        QVERIFY(credentials.token().isNull());
+    }
 }
 
 void TestAwsBasicCredentials::expiration() {

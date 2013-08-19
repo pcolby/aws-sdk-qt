@@ -11,6 +11,12 @@ QTAWS_BEGIN_NAMESPACE
   */
 
 /**
+ * @brief    Construct an AwsAbstractCredentials.
+ * @param parent
+ */
+AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent) : QObject(parent) { }
+
+/**
  * @fn       QString AwsAbstractCredentials::accessKeyId() const
  *
  * @brief    AWS access key ID for this credentials object.

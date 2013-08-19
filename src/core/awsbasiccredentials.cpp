@@ -13,17 +13,48 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new AwsBasicCredentials object.
  *
+ * Constructs a new BasicAWSCredentials object, with the specified AWS access key, AWS secret
+ * key, and AWS security token.
+ *
  * @param accessKeyId  The AWS access key ID to use for this credentials object.
  * @param secretKey    The AWS secret access key to use for this credentials object.
  * @param token        The AWS security token to use for this credentials object.
+ * @param parent       This object's parent.
  */
-AwsBasicCredentials::AwsBasicCredentials(const QString &accessKeyId, const QString &secretKey, const QString &token)
-    : d_ptr(new AwsBasicCredentialsPrivate(this))
+AwsBasicCredentials::AwsBasicCredentials(
+        const QString &accessKeyId,
+        const QString &secretKey,
+        const QString &token,
+        QObject * const parent
+)
+    : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
 {
     Q_D(AwsBasicCredentials);
     d->accessKeyId = accessKeyId;
     d->secretKey = secretKey;
     d->token = token;
+}
+
+/**
+ * @brief  Constructs a new AwsBasicCredentials object.
+ *
+ * Constructs a new AwsBasicCredentials object, with the specified AWS access key and AWS secret
+ * key.  The object's security token will be left as null string, unless set later via setToken().
+ *
+ * @param accessKeyId  The AWS access key ID to use for this credentials object.
+ * @param secretKey    The AWS secret access key to use for this credentials object.
+ * @param parent       This object's parent.
+ */
+AwsBasicCredentials::AwsBasicCredentials(
+        const QString &accessKeyId,
+        const QString &secretKey,
+        QObject * const parent
+)
+    : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
+{
+    Q_D(AwsBasicCredentials);
+    d->accessKeyId = accessKeyId;
+    d->secretKey = secretKey;
 }
 
 QString AwsBasicCredentials::accessKeyId() const {

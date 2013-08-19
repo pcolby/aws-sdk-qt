@@ -12,7 +12,15 @@ class QTAWS_EXPORT AwsBasicCredentials : public AwsAbstractCredentials {
     Q_DECLARE_PRIVATE(AwsBasicCredentials)
 
 public:
-    AwsBasicCredentials(const QString &accessKeyid, const QString &secretKey, const QString &token=QString());
+    AwsBasicCredentials(const QString &accessKeyid,
+                        const QString &secretKey,
+                        const QString &token,
+                        QObject * const parent = 0);
+
+    AwsBasicCredentials(const QString &accessKeyid,
+                        const QString &secretKey,
+                        QObject * const parent = 0);
+
     virtual QString accessKeyId() const;
     virtual QString secretKey() const;
     virtual QString token() const;

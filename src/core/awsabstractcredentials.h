@@ -12,6 +12,8 @@ class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
 
 public:
+    AwsAbstractCredentials(QObject * const parent = 0);
+
     virtual QString accessKeyId() const = 0;
     virtual QString secretKey() const = 0;
     virtual QString token() const = 0;
