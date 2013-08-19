@@ -1,6 +1,7 @@
 #include <QtTest/QtTest>
 
 #include "core/testawsabstractcredentials.h"
+#include "core/testawsbasiccredentials.h"
 
 int main(int argc, char *argv[]) {
     #define TEST(Class) \
@@ -12,6 +13,7 @@ int main(int argc, char *argv[]) {
 
     // Call the above test macro on all test classes here.
     TEST(TestAwsAbstractCredentials)
+    TEST(TestAwsBasicCredentials)
 
     return 0;
 }

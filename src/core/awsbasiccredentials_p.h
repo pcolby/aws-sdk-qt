@@ -1,6 +1,8 @@
 #ifndef AWSBASICCREDENTIALS_P_H
 #define AWSBASICCREDENTIALS_P_H
 
+#include <QString>
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsBasicCredentials;
@@ -12,6 +14,7 @@ class QTAWS_EXPORT AwsBasicCredentialsPrivate {
 public:
     QString accessKeyId;
     QString secretKey;
+    QString token;
 
     AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
