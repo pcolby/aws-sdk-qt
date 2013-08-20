@@ -4,6 +4,8 @@
 #include "qtawsglobal.h"
 #include "awsabstractsignature.h"
 
+#include <QUrlQuery>
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV2Private;
@@ -21,7 +23,7 @@ public:
 
 private:
     AwsSignatureV2Private * const d_ptr;
-
+    friend class TestAwsSignatureV2;
 };
 
 QTAWS_END_NAMESPACE

@@ -15,7 +15,6 @@ public:
                       QNetworkRequest &request,
                       const AwsAbstractCredentials &credentials,
                       const QByteArray &data = QByteArray()) const = 0;
-
 };
 
 QTAWS_END_NAMESPACE
