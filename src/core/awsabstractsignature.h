@@ -16,15 +16,15 @@ public:
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QIODevice * const data,
-                      const AwsAbstractCredentials &credentials) = 0;
+                      const AwsAbstractCredentials &credentials) const = 0;
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data,
-                      const AwsAbstractCredentials &credentials);
+                      const AwsAbstractCredentials &credentials) const;
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,
-                      const AwsAbstractCredentials &credentials);
+                      const AwsAbstractCredentials &credentials) const;
 };
 
 QTAWS_END_NAMESPACE

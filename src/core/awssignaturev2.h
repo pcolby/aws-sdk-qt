@@ -18,7 +18,7 @@ public:
 public slots:
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QIODevice * const data,
-                      const AwsAbstractCredentials &credentials);
+                      const AwsAbstractCredentials &credentials) const;
 
 private:
     AwsSignatureV2Private * const d_ptr;
