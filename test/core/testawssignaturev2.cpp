@@ -18,9 +18,6 @@ void TestAwsSignatureV2::sign_data() {
     QTest::addColumn<QByteArray>("data");
     QTest::addColumn<QNetworkRequest>("expected");
 
-    //QTest::newRow("null") << QNetworkAccessManager::GetOperation << QNetworkRequest()
-    //                      << QString("") << QString("") << QByteArray() << QNetworkRequest();
-
     { // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
         QTest::newRow("elasticmapreduce")
             << QNetworkAccessManager::GetOperation
