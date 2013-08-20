@@ -15,10 +15,10 @@ class QTAWS_EXPORT AwsSignatureV2 : public AwsAbstractSignature {
 public:
     AwsSignatureV2(QObject * const parent = 0);
 
-public slots:
     virtual void sign(const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QIODevice * const data,
-                      const AwsAbstractCredentials &credentials) const;
+                      QNetworkRequest &request,
+                      const AwsAbstractCredentials &credentials,
+                      const QByteArray &data = QByteArray()) const;
 
 private:
     AwsSignatureV2Private * const d_ptr;

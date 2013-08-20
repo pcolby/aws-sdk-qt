@@ -10,8 +10,9 @@ AwsSignatureV2::AwsSignatureV2(QObject * const parent)
 }
 
 void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
-                          QNetworkRequest &request, const QIODevice * const data,
-                          const AwsAbstractCredentials &credentials
+                          QNetworkRequest &request,
+                          const AwsAbstractCredentials &credentials,
+                          const QByteArray &data
 ) const {
     Q_UNUSED(operation)
     Q_UNUSED(request)
