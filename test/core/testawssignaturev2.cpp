@@ -86,18 +86,18 @@ void TestAwsSignatureV2::canonicalPath() {
 
 void TestAwsSignatureV2::canonicalRequest_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
-    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QUrl>("url");
     QTest::addColumn<QString>("expected");
 
     // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
     QTest::newRow("lasticmapreduce")
         << QNetworkAccessManager::GetOperation
-        << QNetworkRequest(QUrl("https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
-                                "&Version=2009-03-31"
-                                "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                                "&SignatureVersion=2"
-                                "&SignatureMethod=HmacSHA256"
-                                "&Timestamp=2011-10-03T15%3A19%3A30"))
+        << QUrl("https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
+                "&Version=2009-03-31"
+                "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+                "&SignatureVersion=2"
+                "&SignatureMethod=HmacSHA256"
+                "&Timestamp=2011-10-03T15%3A19%3A30")
         << QString("GET\n"
                    "elasticmapreduce.amazonaws.com\n"
                    "/\n"
@@ -106,11 +106,10 @@ void TestAwsSignatureV2::canonicalRequest_data() {
 
 void TestAwsSignatureV2::canonicalRequest() {
     QFETCH(QNetworkAccessManager::Operation, operation);
-    QFETCH(QNetworkRequest, request);
+    QFETCH(QUrl, url);
     QFETCH(QString, expected);
-
     AwsSignatureV2Private signature(NULL);
-    QCOMPARE(signature.canonicalRequest(operation, request.url()), expected);
+    QCOMPARE(signature.canonicalRequest(operation, url), expected);
 }
 
 void TestAwsSignatureV2::canonicalQuery_data() {
