@@ -8,12 +8,9 @@
 
 QTAWS_BEGIN_NAMESPACE
 
-class QTAWS_EXPORT AwsAbstractSignature : public QObject {
-    Q_OBJECT
+class QTAWS_EXPORT AwsAbstractSignature {
 
 public:
-    AwsAbstractSignature(QObject * const parent = 0);
-
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,
                       const AwsAbstractCredentials &credentials,

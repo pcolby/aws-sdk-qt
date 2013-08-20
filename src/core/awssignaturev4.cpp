@@ -3,9 +3,7 @@
 
 QTAWS_BEGIN_NAMESPACE
 
-AwsSignatureV4::AwsSignatureV4(QObject * const parent)
-    : AwsAbstractSignature(parent), d_ptr(new AwsSignatureV4Private(this))
-{
+AwsSignatureV4::AwsSignatureV4() : d_ptr(new AwsSignatureV4Private(this)) {
 
 }
 

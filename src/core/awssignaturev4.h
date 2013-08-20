@@ -9,11 +9,10 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV4Private;
 
 class QTAWS_EXPORT AwsSignatureV4 : public AwsAbstractSignature {
-    Q_OBJECT
     Q_DECLARE_PRIVATE(AwsSignatureV4)
 
 public:
-    AwsSignatureV4(QObject * const parent = 0);
+    AwsSignatureV4();
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,
