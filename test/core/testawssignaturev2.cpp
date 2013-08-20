@@ -56,8 +56,8 @@ void TestAwsSignatureV2::sign() {
 
     AwsSignatureV2 signature;
     signature.sign(operation, request, credentials, data);
-    //QCOMPARE(request.url(), expected.url());
-    //QCOMPARE(request, expected);
+    QCOMPARE(request.url( ), expected.url());
+    QCOMPARE(request, expected);
 
     QBENCHMARK {
         QFETCH(QNetworkRequest, request);

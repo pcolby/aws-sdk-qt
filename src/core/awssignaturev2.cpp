@@ -1,6 +1,7 @@
 #include "awssignaturev2.h"
 #include "awssignaturev2_p.h"
 
+#include <QMessageAuthenticationCode>
 #include <QNetworkRequest>
 #include <QUrl>
 
@@ -20,10 +21,14 @@ void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
     Q_UNUSED(data)
     Q_UNUSED(credentials)
 
-    Q_ASSERT_X(false, "AwsSignatureV2::sign", "Not implemented");
-
-    //Q_D(AwsBasicCredentials);
-    //return d->accessKeyId;
+    Q_D(const AwsSignatureV2);
+    const QString toSign = d->canonicalRequest(operation, request.url());
+    const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
+        QMessageAuthenticationCode::hash(toSign.toUtf8(), credentials.secretKey().toUtf8(),
+                                         QCryptographicHash::Sha256).toBase64())));
+    QUrl url = request.url();
+    url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
+    request.setUrl(url);
 }
 
 AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q) { }
@@ -51,8 +56,8 @@ QString AwsSignatureV2Private::canonicalQuery(const QUrlQuery &query) const {
     QString result;
     foreach (const QStringPair &pair, list) {
         if (!result.isEmpty()) result += QLatin1Char('&');
-        result += QUrl::toPercentEncoding(pair.first) + QLatin1Char('=') +
-                  QUrl::toPercentEncoding(pair.second);
+        result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +
+                  QString::fromUtf8(QUrl::toPercentEncoding(pair.second));
     }
     return result;
 }
