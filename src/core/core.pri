@@ -10,6 +10,7 @@ HEADERS += \
 
 SOURCES += \
         awsabstractcredentials.cpp \
+        awsabstractsignature.cpp \
         awsbasiccredentials.cpp \
 
 VPATH += $$PWD

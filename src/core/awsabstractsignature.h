@@ -15,10 +15,6 @@ public:
     AwsAbstractSignature(QObject * const parent = 0);
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request,
-                      const AwsAbstractCredentials &credentials);
-
-    virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QIODevice * const data,
                       const AwsAbstractCredentials &credentials) = 0;
 
@@ -27,9 +23,8 @@ public:
                       const AwsAbstractCredentials &credentials);
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, QHttpMultiPart * multiPart,
+                      QNetworkRequest &request,
                       const AwsAbstractCredentials &credentials);
-
 };
 
 QTAWS_END_NAMESPACE
