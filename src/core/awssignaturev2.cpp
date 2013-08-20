@@ -16,11 +16,6 @@ void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
                           const AwsAbstractCredentials &credentials,
                           const QByteArray &data
 ) const {
-    Q_UNUSED(operation)
-    Q_UNUSED(request)
-    Q_UNUSED(data)
-    Q_UNUSED(credentials)
-
     Q_D(const AwsSignatureV2);
     const QString toSign = d->canonicalRequest(operation, request.url());
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
