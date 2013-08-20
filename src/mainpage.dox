@@ -1,0 +1,13 @@
+/**
+
+\mainpage
+
+\section Introduction
+
+\section Requirements
+
+\subsection Qt 5.1
+
+This project requires Qt 5.1 or later for QMessageAuthenticationCode.
+
+*/
