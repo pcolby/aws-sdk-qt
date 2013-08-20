@@ -2,7 +2,7 @@
 
 #include "../../src/core/awsabstractcredentials.h"
 
-// Bare minimum instantiable (non-abstact) mock class.
+// Bare minimum concrete mock class.
 class MockCredentials : public AwsAbstractCredentials {
 public:
     virtual QString accessKeyId() const { return QString(); }

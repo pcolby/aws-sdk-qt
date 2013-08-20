@@ -1,5 +1,4 @@
 #include <QtTest/QtTest>
-#include "../../src/core/qtawsglobal.h"
 
 class TestAwsBasicCredentials : public QObject {
     Q_OBJECT

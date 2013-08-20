@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT += testlib
+QT += network testlib
 QT -= gui
 CONFIG += testcase
 SOURCES += test.cpp
