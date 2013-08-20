@@ -59,13 +59,12 @@ QString AwsSignatureV2Private::canonicalQuery(const QUrlQuery &query) const {
 
 QString AwsSignatureV2Private::toString(const QNetworkAccessManager::Operation operation) const {
     switch (operation) {
-        case QNetworkAccessManager::GetOperation: return QLatin1String("GET");
-        case QNetworkAccessManager::PostOperation: return QLatin1String("GET");
-        case QNetworkAccessManager::PutOperation: return QLatin1String("GET");
-        case QNetworkAccessManager::HeadOperation: return QLatin1String("GET");
-        case QNetworkAccessManager::DeleteOperation: return QLatin1String("GET");
-        case QNetworkAccessManager::CustomOperation:
-            Q_ASSERT_X(false, "AwsSignatureV2Private::toString", "QNetworkAccessManager::CustomOperation not supported");
+        case QNetworkAccessManager::DeleteOperation: return QLatin1String("DELETE");
+        case QNetworkAccessManager::HeadOperation:   return QLatin1String("HEAD");
+        case QNetworkAccessManager::GetOperation:    return QLatin1String("GET");
+        case QNetworkAccessManager::PostOperation:   return QLatin1String("POST");
+        case QNetworkAccessManager::PutOperation:    return QLatin1String("PUT");
+        case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
             Q_ASSERT_X(false, "AwsSignatureV2Private::toString", "invalid operation");
     }
