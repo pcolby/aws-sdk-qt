@@ -3,10 +3,10 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
-  * @class  AwsAbstractSignature
-  *
-  * @brief  Interface class for providing AWS signatures.
-  */
+ * @class  AwsAbstractSignature
+ *
+ * @brief  Interface class for providing AWS signatures.
+ */
 
 /**
  * @fn     void AwsAbstractSignature::sign() const
