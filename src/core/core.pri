@@ -13,6 +13,7 @@ HEADERS += \
 
 SOURCES += \
         awsabstractcredentials.cpp \
+        awsabstractsignature.cpp \
         awsbasiccredentials.cpp \
         awssignaturev2.cpp \
         awssignaturev3.cpp \
