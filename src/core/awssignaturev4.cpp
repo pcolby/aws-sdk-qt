@@ -3,6 +3,14 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+/**
+ * @class  AwsSignatureV4
+ *
+ * @brief  Implements AWS Signature Version 4.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ */
+
 AwsSignatureV4::AwsSignatureV4() : d_ptr(new AwsSignatureV4Private(this)) {
 
 }

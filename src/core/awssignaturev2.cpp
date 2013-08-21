@@ -7,6 +7,14 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+/**
+ * @class  AwsSignatureV2
+ *
+ * @brief  Implements AWS Signature Version 2.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ */
+
 AwsSignatureV2::AwsSignatureV2() : d_ptr(new AwsSignatureV2Private(this)) {
 
 }

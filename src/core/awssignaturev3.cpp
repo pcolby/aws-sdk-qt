@@ -3,6 +3,15 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+/**
+ * @class  AwsSignatureV3
+ *
+ * @brief  Implements AWS Signature Version 3.
+ *
+ * Signature Version 3 has been discontinued by Amazon, but is included here
+ * for posterity.
+ */
+
 AwsSignatureV3::AwsSignatureV3() : d_ptr(new AwsSignatureV3Private(this)) {
 
 }
