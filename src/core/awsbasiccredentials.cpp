@@ -6,8 +6,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsBasicCredentials
  *
- * @brief  Basic implementation of the AwsAbstractCredentials interface that allows callers
- *         to pass in the AWS access key and secret access in the constructor.
+ * @brief  Basic non-refreshable implementation of AwsAbstractCredentials.
  */
 
 /**
