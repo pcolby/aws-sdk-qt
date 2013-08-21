@@ -13,6 +13,7 @@ unix {
     # Enable gcov compile and link flags.
     QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_LFLAGS += -fprofile-arcs -ftest-coverage
+    QMAKE_CXXFLAGS_RELEASE -= -O1 -O2 -03
 
     # Generate gcov's gcda files by executing the test program.
     gcov.depends = test
