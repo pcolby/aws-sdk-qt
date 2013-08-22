@@ -15,8 +15,12 @@ QTAWS_BEGIN_NAMESPACE
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 
-AwsSignatureV2::AwsSignatureV2() : d_ptr(new AwsSignatureV2Private(this)) {
-
+AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)
+        : d_ptr(new AwsSignatureV2Private(this))
+{
+    Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));
+    Q_D(AwsSignatureV2);
+    d->hashAlgorithm = hashAlgorithm;
 }
 
 void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
@@ -25,11 +29,15 @@ void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
                           const QByteArray &data
 ) const {
     Q_UNUSED(data) // Not included in V2 signatures.
+
+    // Calculate the signature.
     Q_D(const AwsSignatureV2);
     const QString toSign = d->canonicalRequest(operation, request.url());
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
         QMessageAuthenticationCode::hash(toSign.toUtf8(), credentials.secretKey().toUtf8(),
-                                         QCryptographicHash::Sha256).toBase64())));
+                                         d->hashAlgorithm).toBase64())));
+
+    // Append the signature to the request.
     QUrl url = request.url();
     url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
     request.setUrl(url);

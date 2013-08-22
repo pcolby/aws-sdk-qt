@@ -4,6 +4,7 @@
 #include "qtawsglobal.h"
 #include "awsabstractsignature.h"
 
+#include <QCryptographicHash>
 #include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
@@ -14,7 +15,7 @@ class QTAWS_EXPORT AwsSignatureV2 : public AwsAbstractSignature {
     Q_DECLARE_PRIVATE(AwsSignatureV2)
 
 public:
-    AwsSignatureV2();
+    AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
 
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,

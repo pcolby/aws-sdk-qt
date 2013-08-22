@@ -3,6 +3,8 @@
 
 #include "qtawsglobal.h"
 
+#include <QCryptographicHash>
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV2;
@@ -12,6 +14,8 @@ class QTAWS_EXPORT AwsSignatureV2Private {
     Q_DECLARE_PUBLIC(AwsSignatureV2)
 
 public:
+    QCryptographicHash::Algorithm hashAlgorithm;
+
     AwsSignatureV2Private(AwsSignatureV2 * const q);
 
     QString canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
