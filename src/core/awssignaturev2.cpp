@@ -15,6 +15,14 @@ QTAWS_BEGIN_NAMESPACE
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 
+/**
+ * @brief  Constructs a new AwsSignatureV2 object.
+ *
+ * Use instances of this object to provide Version 2 signatures for AWS services.
+ *
+ * @param  hashAlgorithm  Hash algorithm for signatures.  Must be either QCryptographicHash::Sha1
+ *                        or QCryptographicHash::Sha256 (default, recommended).
+ */
 AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)
         : d_ptr(new AwsSignatureV2Private(this))
 {
