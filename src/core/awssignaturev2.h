@@ -5,7 +5,6 @@
 #include "awsabstractsignature.h"
 
 #include <QCryptographicHash>
-#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 

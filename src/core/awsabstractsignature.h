@@ -4,7 +4,8 @@
 #include "qtawsglobal.h"
 #include "awsabstractcredentials.h"
 
-#include <QtNetwork/QNetworkAccessManager>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
 
 QTAWS_BEGIN_NAMESPACE
 
