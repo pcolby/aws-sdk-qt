@@ -21,7 +21,7 @@ public:
 
 private:
     AwsSignatureV4Private * const d_ptr;
-
+    friend class TestAwsSignatureV4;
 };
 
 QTAWS_END_NAMESPACE
