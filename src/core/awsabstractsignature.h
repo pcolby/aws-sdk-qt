@@ -11,6 +11,8 @@ QTAWS_BEGIN_NAMESPACE
 class QTAWS_EXPORT AwsAbstractSignature {
 
 public:
+    virtual ~AwsAbstractSignature();
+
     virtual void sign(const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,
                       const AwsAbstractCredentials &credentials,

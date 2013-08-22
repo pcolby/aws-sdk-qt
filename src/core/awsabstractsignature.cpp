@@ -9,6 +9,14 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 /**
+ * @brief  AwsAbstractSignature destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsAbstractSignature::~AwsAbstractSignature() { }
+
+/**
  * @fn     void AwsAbstractSignature::sign() const
  *
  * @brief  Sign an AWS request.
