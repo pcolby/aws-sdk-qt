@@ -26,8 +26,8 @@ AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm
 
 void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
                           const QNetworkAccessManager::Operation operation,
-                          QNetworkRequest &request, const QByteArray &data
-) const {
+                          QNetworkRequest &request, const QByteArray &data) const
+{
     Q_D(const AwsSignatureV4);
     d->setAuthorizationHeader(credentials, operation, request, data, d->setDateHeader(request));
 }
@@ -60,28 +60,31 @@ QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash:
         case QCryptographicHash::Sha3_512: // fall through for now.
         default:
             Q_ASSERT_X(false, "AwsSignatureV4Private::algorithmDesignation", "invalid algorithm");
+            return "invalid-algorithm";
     }
 }
 
 QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                                            const QNetworkAccessManager::Operation operation,
-                                                           QNetworkRequest &request, const QByteArray &data,
+                                                           QNetworkRequest &request, const QByteArray &payload,
                                                            const QDateTime &timestamp) const
 {
-    const QByteArray algorithm = algorithmDesignation(hashAlgorithm);
+    const QByteArray algorithmDesignation = this->algorithmDesignation(hashAlgorithm);
     const QString region = extractRegion(request.url());
-    const QString scope = credentialScope(timestamp.date(), request.url(), region);
     const QString service = QLatin1String("iam"); /// @todo Something like AwsUrl::service.
 
-    const QByteArray stringToSign = this->stringToSign(algorithm, operation, request, data);
+    const QByteArray credentialScope = this->credentialScope(timestamp.date(), region, service);
+    const QByteArray canonicalRequest = this->canonicalRequest(operation, request, payload);
+
+    const QByteArray stringToSign = this->stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);
     const QByteArray signingKey = this->signingKey(credentials, timestamp.date(), region, service);
     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, QCryptographicHash::Sha1);
 
-    return algorithm + " Credential=" + credentials.accessKeyId().toUtf8() + '/' + scope.toUtf8() +
+    return algorithmDesignation + " Credential=" + credentials.accessKeyId().toUtf8() + '/' + credentialScope +
             "SignedHeaders=" + signedHeaders(request) + "Signature=" + signature;
 }
 
-QString AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const {
+QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const {
     typedef QPair<QString, QString> QStringPair;
     QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
     qSort(list);
@@ -91,18 +94,20 @@ QString AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const {
         result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +
                   QString::fromUtf8(QUrl::toPercentEncoding(pair.second));
     }
-    return result;
+    return result.toUtf8();
 }
 
-QString AwsSignatureV4Private::canonicalRequest(
+/// @todo  make this return QByteArray?
+QByteArray AwsSignatureV4Private::canonicalRequest(
         const QNetworkAccessManager::Operation operation,
-        const QNetworkRequest &request) const
+        const QNetworkRequest &request,
+        const QByteArray &payload) const
 {
-    return httpMethod(operation) + QLatin1Char('\n') +
-           canonicalUri(request.url()) + QLatin1Char('\n') +
-           canonicalQuery(QUrlQuery(request.url()))  + QLatin1Char('\n') +
-           canonicalHeaders(request) + QLatin1Char('\n') +
-            QCryptographicHash::hash(data, hashAlgorithm).toHex();
+    return httpMethod(operation).toUtf8() + '\n' +
+           canonicalUri(request.url()).toUtf8() + '\n' +
+           canonicalQuery(QUrlQuery(request.url()))  + '\n' +
+           canonicalHeaders(request) + '\n' +
+           QCryptographicHash::hash(payload, hashAlgorithm).toHex();
 }
 
 QString AwsSignatureV4Private::canonicalUri(const QUrl &url) const
@@ -114,16 +119,15 @@ QString AwsSignatureV4Private::canonicalUri(const QUrl &url) const
     return path;
 }
 
-QString AwsSignatureV4Private::credentialScope(const QDate &date, const QUrl &url, const QString &region) const
+QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const
 {
-    const QLatin1Char separator('/');
-    return date.toString(DateFormat) + separator + region + separator + service + QLatin1String("aws_request");
+    return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws_request";
 }
 
 QString AwsSignatureV4Private::extractRegion(const QUrl &url) const
 {
-    /// @todo  Repalce this with something like AwsRegion::fromUrl();
-    return "us-east-1";
+    Q_UNUSED(url); /// @todo  Repalce this with something like AwsRegion::fromUrl();
+    return QString::fromLatin1("us-east-1");
 }
 
 QString AwsSignatureV4Private::httpMethod(const QNetworkAccessManager::Operation operation) const {
@@ -142,42 +146,37 @@ QString AwsSignatureV4Private::httpMethod(const QNetworkAccessManager::Operation
 
 void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &credentials,
                                                    const QNetworkAccessManager::Operation operation,
-                                                   QNetworkRequest &request, const QByteArray &data,
-                                                   const QDateTime &timestamp)
+                                                   QNetworkRequest &request, const QByteArray &payload,
+                                                   const QDateTime &timestamp) const
 {
     Q_ASSERT(!request.hasRawHeader("Authorization"));
-    request.setRawHeader("Authorization", authorizationHeaderValue(credentials, operation, request, data, timestamp));
+    request.setRawHeader("Authorization", authorizationHeaderValue(credentials, operation, request, payload, timestamp));
 }
 
-QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &request, const QDateTime &dateTime) {
+QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &request, const QDateTime &dateTime) const
+{
     Q_ASSERT(!request.hasRawHeader("x-amz-date"));
-    request.setRawHeader("x-amz-date", dateTime.toString(DateTimeFormat));
+    request.setRawHeader("x-amz-date", dateTime.toString(DateTimeFormat).toUtf8());
     return dateTime;
 }
 
-QString AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &credentials,
-                                          const QDate &date,
-                                          const QString &region,
-                                          const QString &service
-) const {
+QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &credentials, const QDate &date,
+                                             const QString &region, const QString &service) const
+{
     return QMessageAuthenticationCode::hash("aws4_request",
-           QMessageAuthenticationCode::hash("service (eg iam)",
-           QMessageAuthenticationCode::hash("xx-region-1",
-           QMessageAuthenticationCode::hash(date, credentials.secretKey().toUtf8()
-    ))));
+           QMessageAuthenticationCode::hash(service.toUtf8(),
+           QMessageAuthenticationCode::hash(region.toUtf8(),
+           QMessageAuthenticationCode::hash(date.toString().toUtf8(), credentials.secretKey().toUtf8(),
+           hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);
 }
 
-
-QByteArray AwsSignatureV4Private::stringToSign(const QString &algorithmDesignation,
-                                               const QDateTime &requestDate,
-                                               const QNetworkRequest &credentialScope,
-                                               const QByteArray &canonicalRequest)
+QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &algorithmDesignation, const QDateTime &requestDate,
+                                               const QByteArray &credentialScope, const QByteArray &canonicalRequest) const
 {
-    return algorithmDesignation + newLine +
-           requestDate.toString(DateFormat)
-           date + QLatin1Char('\n') + // get date from headers.
-           credentialScope + QLatin1Char('\n') +
-            hash(canonicalRequest()).asHex();
+    return algorithmDesignation + '\n' +
+           requestDate.toString(DateFormat).toUtf8() + '\n' +
+           credentialScope + '\n' +
+           QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();
 }
 
 QTAWS_END_NAMESPACE

@@ -22,7 +22,7 @@ public:
 
     void setAuthorizationHeader(const AwsAbstractCredentials &credentials,
                                 const QNetworkAccessManager::Operation operation,
-                                QNetworkRequest &request, const QByteArray &data,
+                                QNetworkRequest &request, const QByteArray &payload,
                                 const QDateTime &timestamp) const;
 
     QDateTime setDateHeader(QNetworkRequest &request, const QDateTime &dateTime = QDateTime::currentDateTimeUtc()) const;
@@ -39,15 +39,22 @@ protected:
 
     QByteArray authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                         const QNetworkAccessManager::Operation operation,
-                                        QNetworkRequest &request, const QByteArray &data,
+                                        QNetworkRequest &request, const QByteArray &payload,
                                         const QDateTime &timestamp) const;
 
-    QString canonicalHeaders(const QNetworkRequest &request) const;
-    QString canonicalQuery(const QUrlQuery &query) const;
-    QString canonicalRequest(const QNetworkAccessManager::Operation operation, const QNetworkRequest &request) const;
+    QByteArray canonicalHeaders(const QNetworkRequest &request) const;
+
+    QByteArray canonicalQuery(const QUrlQuery &query) const;
+
+    QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation,
+                                const QNetworkRequest &request, const QByteArray &payload) const;
+
     QString canonicalUri(const QUrl &url) const;
-    QString credentialScope(const QDate &date, const QUrl &url, const QString &region) const;
+
+    QByteArray credentialScope(const QDate &date, const QString &region, const QString &service) const;
+
     QString extractRegion(const QUrl &url) const;
+
     QString httpMethod(const QNetworkAccessManager::Operation operation) const;
 
     QByteArray signedHeaders(const QNetworkRequest &request) const;
@@ -55,10 +62,8 @@ protected:
     QByteArray signingKey(const AwsAbstractCredentials &credentials, const QDate &date,
                           const QString &region, const QString &service) const;
 
-    QByteArray stringToSign(const QByteArray &algorithmDesignation,
-                            const QNetworkAccessManager::Operation operation,
-                            const QNetworkRequest &request,
-                            const QByteArray &data) const;
+    QByteArray stringToSign(const QByteArray &algorithmDesignation, const QDateTime &requestDate,
+                            const QByteArray &credentialScope, const QByteArray &canonicalRequest) const;
 
 private:
     AwsSignatureV4 * const q_ptr;
