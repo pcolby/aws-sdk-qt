@@ -40,27 +40,37 @@ void TestAwsSignatureV4::canonicalHeader_data()
     QTest::newRow("null") << QByteArray() << QByteArray() << QByteArray(":");
 
     // Examples from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-    QTest::newRow("host") << QByteArray("host")
-                          << QByteArray("iam.amazonaws.com")
-                          << QByteArray("host:iam.amazonaws.com");
-    QTest::newRow("Content-type") << QByteArray("Content-type")
-                                  << QByteArray("application/x-www-form-urlencoded; charset=utf-8")
-                                  << QByteArray("content-type:application/x-www-form-urlencoded; charset=utf-8");
-    QTest::newRow("My-header1") << QByteArray("My-header1")
-                                << QByteArray("    a   b   c ")
-                                << QByteArray("my-header1:a b c");
-    QTest::newRow("x-amz-date") << QByteArray("x-amz-date")
-                                << QByteArray("20120228T030031Z")
-                                   // Note, this is not the same date as the example; our test is more strict ;)
-                                << QByteArray("x-amz-date:20120228T030031Z");
-    QTest::newRow("My-Header2") << QByteArray("My-Header2")
-                                << QByteArray("    \"a   b   c\"")
-                                << QByteArray("my-header2:\"a   b   c\"");
+    QTest::newRow("host")
+        << QByteArray("host")
+        << QByteArray("iam.amazonaws.com")
+        << QByteArray("host:iam.amazonaws.com");
+
+    QTest::newRow("Content-type")
+        << QByteArray("Content-type")
+        << QByteArray("application/x-www-form-urlencoded; charset=utf-8")
+        << QByteArray("content-type:application/x-www-form-urlencoded; charset=utf-8");
+
+    QTest::newRow("My-header1")
+        << QByteArray("My-header1")
+        << QByteArray("    a   b   c ")
+        << QByteArray("my-header1:a b c");
+
+    QTest::newRow("x-amz-date")
+        << QByteArray("x-amz-date")
+        << QByteArray("20120228T030031Z")
+        // Note, this is not the same date as the example; our test is more strict ;)
+        << QByteArray("x-amz-date:20120228T030031Z");
+
+    QTest::newRow("My-Header2")
+        << QByteArray("My-Header2")
+        << QByteArray("    \"a   b   c\"")
+        << QByteArray("my-header2:\"a   b   c\"");
 
     // A few general test cases.
-    QTest::newRow("test1") << QByteArray("UPPER")
-                           << QByteArray("   1   2   3   \"    4   5   6   \"   7   8   9   \"   A   B   C   \"   ")
-                           << QByteArray("upper:1 2 3 \"    4   5   6   \" 7 8 9 \"   A   B   C   \"");
+    QTest::newRow("test1")
+        << QByteArray("UPPER")
+        << QByteArray("   1   2   3   \"    4   5   6   \"   7   8   9   \"   A   B   C   \"   ")
+        << QByteArray("upper:1 2 3 \"    4   5   6   \" 7 8 9 \"   A   B   C   \"");
 }
 
 void TestAwsSignatureV4::canonicalHeader()
