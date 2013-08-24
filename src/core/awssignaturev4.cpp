@@ -221,7 +221,7 @@ QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &crede
     return QMessageAuthenticationCode::hash("aws4_request",
            QMessageAuthenticationCode::hash(service.toUtf8(),
            QMessageAuthenticationCode::hash(region.toUtf8(),
-           QMessageAuthenticationCode::hash(date.toString().toUtf8(), credentials.secretKey().toUtf8(),
+           QMessageAuthenticationCode::hash(date.toString(DateFormat).toUtf8(), "AWS4"+credentials.secretKey().toUtf8(),
            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);
 }
 

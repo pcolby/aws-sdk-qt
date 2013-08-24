@@ -197,6 +197,39 @@ void TestAwsSignatureV4::credentialScope()
     QCOMPARE(scope, expected);
 }
 
+
+void TestAwsSignatureV4::signingKey_data()
+{
+    QTest::addColumn<QString>   ("secretKey");
+    QTest::addColumn<QDate>     ("date");
+    QTest::addColumn<QString>   ("region");
+    QTest::addColumn<QString>   ("service");
+    QTest::addColumn<QByteArray>("expected");
+
+    // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html
+    QTest::newRow("official")
+        << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
+        << QDate::fromString("20110909", "yyyyMMdd")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("iam")
+        << QByteArray("\x98\xf1\xd8\x89\xfe\xc4\xf4""B""\x1a\xdc""R+""\xab\x0c\xe1\xf8"
+                      ".i)""\xc2""b""\xed\x15\xe5\xa9""L""\x90\xef\xd1\xe3\xb0\xe7");
+}
+
+void TestAwsSignatureV4::signingKey()
+{
+    QFETCH(QString,    secretKey);
+    QFETCH(QDate,      date);
+    QFETCH(QString,    region);
+    QFETCH(QString,    service);
+    QFETCH(QByteArray, expected);
+
+    const AwsBasicCredentials credentials(QString(), secretKey);
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    const QByteArray signingKey = signature.signingKey(credentials, date, region, service);
+    QCOMPARE(signingKey, expected);
+}
+
 void TestAwsSignatureV4::stringToSign()
 {
     QFETCH(QByteArray, algorithmDesignation);

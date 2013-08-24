@@ -29,8 +29,8 @@ private slots:
     void credentialScope_data();
     void credentialScope();
 
-    //void signingKey_data();
-    //void signingKey();
+    void signingKey_data();
+    void signingKey();
 
     void stringToSign_data();
     void stringToSign();
