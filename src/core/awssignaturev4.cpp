@@ -217,7 +217,7 @@ QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &algorithmDesign
                                                const QByteArray &credentialScope, const QByteArray &canonicalRequest) const
 {
     return algorithmDesignation + '\n' +
-           requestDate.toString(DateFormat).toUtf8() + '\n' +
+           requestDate.toString(DateTimeFormat).toUtf8() + '\n' +
            credentialScope + '\n' +
            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();
 }
