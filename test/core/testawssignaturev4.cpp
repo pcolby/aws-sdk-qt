@@ -18,6 +18,11 @@ void TestAwsSignatureV4::algorithmDesignation_data()
     QTest::newRow("SHA256") << QCryptographicHash::Sha256 << QByteArray("AWS4-HMAC-SHA256");
     QTest::newRow("SHA384") << QCryptographicHash::Sha384 << QByteArray("AWS4-HMAC-SHA384");
     QTest::newRow("SHA512") << QCryptographicHash::Sha512 << QByteArray("AWS4-HMAC-SHA512");
+
+    QTest::newRow("SHA3_224") << QCryptographicHash::Sha3_224 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_256") << QCryptographicHash::Sha3_256 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_384") << QCryptographicHash::Sha3_384 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_512") << QCryptographicHash::Sha3_512 << QByteArray("invalid-algorithm");
 }
 
 void TestAwsSignatureV4::algorithmDesignation()
