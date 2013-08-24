@@ -175,7 +175,7 @@ QString AwsSignatureV4Private::canonicalUri(const QUrl &url) const
 
 QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const
 {
-    return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws_request";
+    return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws4_request";
 }
 
 QString AwsSignatureV4Private::extractRegion(const QUrl &url) const
