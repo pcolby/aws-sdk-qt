@@ -95,10 +95,20 @@ void TestAwsSignatureV4::canonicalHeaders_data()
     QTest::addColumn<QByteArray>("expectedHeaders");
     QTest::addColumn<QByteArray>("expectedSignedHeaders");
 
-    QTest::newRow("null") << QNetworkRequest() << QByteArray() << QByteArray();
+    QTest::newRow("null") << QNetworkRequest() << QByteArray("host:\n") << QByteArray("host");
 
-    // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-
+    { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        request.setRawHeader("x-amz-date", "20110909T233600Z");
+        QTest::newRow("official")
+            << request
+            << QByteArray(
+                "content-type:application/x-www-form-urlencoded; charset=utf-8\n"
+                "host:iam.amazonaws.com\n"
+                "x-amz-date:20110909T233600Z\n")
+            << QByteArray("content-type;host;x-amz-date");
+    }
 }
 
 void TestAwsSignatureV4::canonicalHeaders()
@@ -112,6 +122,8 @@ void TestAwsSignatureV4::canonicalHeaders()
     const QByteArray headers = signature.canonicalHeaders(request, &signedHeaders);
     QCOMPARE(QString::fromUtf8(headers), QString::fromUtf8(expectedHeaders));
     QCOMPARE(headers, expectedHeaders);
+    QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
+    QCOMPARE(signedHeaders, expectedSignedHeaders);
 }
 
 void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()

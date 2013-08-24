@@ -124,14 +124,15 @@ QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &reques
     // Convert the raw headers list to a map to sort on (lowercased) header names only.
     QMap<QByteArray,QByteArray> headers;
     foreach (const QByteArray &rawHeader, request.rawHeaderList()) {
-        const int pos = rawHeader.indexOf(':');
-        headers.insert(rawHeader.left(pos).toLower(), rawHeader.mid(pos+1));
+        headers.insert(rawHeader.toLower(), request.rawHeader(rawHeader));
     }
+    // The "host" header is not included in QNetworkRequest::rawHeaderList, but will be sent by Qt.
+    headers.insert("host", request.url().host().toUtf8());
 
     // Convert the headers map to a canonical string, keeping track of which headers we've included too.
     QByteArray canonicalHeaders;
     for (QMap<QByteArray,QByteArray>::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {
-        canonicalHeaders += canonicalHeader(iter.key(), iter.value());
+        canonicalHeaders += canonicalHeader(iter.key(), iter.value()) + '\n';
         if (!signedHeaders->isEmpty()) *signedHeaders += ';';
         *signedHeaders += iter.key();
     }
