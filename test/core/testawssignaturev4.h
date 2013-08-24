@@ -18,16 +18,19 @@ private slots:
     void canonicalHeaders_data();
     void canonicalHeaders();
 
-    //void canonicalQuery_data();
-    //void canonicalQuery();
+    //void canonicalQuery_data(); ///< @todo  Move to [Test]AwsAbstractSignature?
+    //void canonicalQuery();      ///< @todo  Move to [Test]AwsAbstractSignature?
 
-    //void canonicalRequest_data();
-    //void canonicalRequest();
+    void canonicalRequest_data();
+    void canonicalRequest();
 
     //void canonicalUri(); ///< @todo  Move to [Test]AwsAbstractSignature?
 
     void credentialScope_data();
     void credentialScope();
+
+    //void sign_data();
+    //void sign();
 
     void signingKey_data();
     void signingKey();

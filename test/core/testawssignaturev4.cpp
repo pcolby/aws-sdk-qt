@@ -5,6 +5,8 @@
 #include "../../src/core/awssignaturev4_p.h"
 
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
+Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+Q_DECLARE_METATYPE(QUrlQuery)
 
 void TestAwsSignatureV4::algorithmDesignation_data()
 {
@@ -129,6 +131,66 @@ void TestAwsSignatureV4::canonicalHeaders()
     QCOMPARE(headers, expectedHeaders);
     QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
     QCOMPARE(signedHeaders, expectedSignedHeaders);
+}
+
+void TestAwsSignatureV4::canonicalRequest_data()
+{
+    QTest::addColumn<QNetworkAccessManager::Operation> ("operation");
+    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QByteArray>("payload");
+    QTest::addColumn<QByteArray>("expectedRequest");
+    QTest::addColumn<QByteArray>("expectedSignedHeaders");
+
+    QTest::newRow("null")
+        << QNetworkAccessManager::PostOperation
+        << QNetworkRequest()
+        << QByteArray()
+        << QByteArray(
+            "POST\n"
+            "/\n\n"
+            "host:\n\n"
+            "host\n"
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
+        << QByteArray("host");
+
+    { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        request.setRawHeader("x-amz-date", "20110909T233600Z");
+        QTest::newRow("official")
+            << QNetworkAccessManager::PostOperation
+            << request
+            << QByteArray("Action=ListUsers&Version=2010-05-08")
+            << QByteArray(
+                "POST\n"
+                "/\n"
+                "\n"
+                "content-type:application/x-www-form-urlencoded; charset=utf-8\n"
+                "host:iam.amazonaws.com\n"
+                "x-amz-date:20110909T233600Z\n"
+                "\n"
+                "content-type;host;x-amz-date\n"
+                "b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2")
+            << QByteArray("content-type;host;x-amz-date");
+    }
+}
+
+void TestAwsSignatureV4::canonicalRequest()
+{
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QNetworkRequest, request);
+    QFETCH(QByteArray, payload);
+    QFETCH(QByteArray, expectedRequest);
+    QFETCH(QByteArray, expectedSignedHeaders);
+
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    QByteArray signedHeaders;
+    const QByteArray canonicalRequest = signature.canonicalRequest(operation, request, payload, &signedHeaders);
+    QCOMPARE(QString::fromUtf8(canonicalRequest), QString::fromUtf8(expectedRequest));
+    QCOMPARE(canonicalRequest, expectedRequest);
+    QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
+    QCOMPARE(signedHeaders, expectedSignedHeaders);
+
 }
 
 void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()

@@ -139,6 +139,7 @@ QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &reques
     return canonicalHeaders;
 }
 
+/// @todo  Move to base class.
 QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const
 {
     typedef QPair<QString, QString> QStringPair;
