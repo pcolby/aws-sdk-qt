@@ -56,6 +56,11 @@ void TestAwsSignatureV4::canonicalHeader_data()
     QTest::newRow("My-Header2") << QByteArray("My-Header2")
                                 << QByteArray("    \"a   b   c\"")
                                 << QByteArray("my-header2:\"a   b   c\"");
+
+    // A few general test cases.
+    QTest::newRow("test1") << QByteArray("UPPER")
+                           << QByteArray("   1   2   3   \"    4   5   6   \"   7   8   9   \"   A   B   C   \"   ")
+                           << QByteArray("upper:1 2 3 \"    4   5   6   \" 7 8 9 \"   A   B   C   \"");
 }
 
 void TestAwsSignatureV4::canonicalHeader()
@@ -68,6 +73,10 @@ void TestAwsSignatureV4::canonicalHeader()
     const QByteArray header = signature.canonicalHeader(headerName, headerValue);
     QCOMPARE(QString::fromUtf8(header), QString::fromUtf8(expected));
     QCOMPARE(header, expected);
+
+    QBENCHMARK {
+        signature.canonicalHeader(headerName, headerValue);
+    }
 }
 
 void TestAwsSignatureV4::canonicalHeaders_data()

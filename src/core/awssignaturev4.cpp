@@ -87,15 +87,26 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
 
 QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const
 {
-    // Builder a header with internal whitespace stripped from non-quoted parts only.
     QByteArray header = headerName.toLower() + ':';
-    const QList<QByteArray> parts = headerValue.trimmed().split('"');
-    for (int index = 0; index < parts.size(); ++index) {
-        if (index % 2 == 0) {
-            header += parts[index].simplified();
+    const QByteArray trimmedHeaderValue = headerValue.trimmed();
+    bool isInQuotes = false;
+    char previousChar = '\0';
+    for (int index = 0; index < trimmedHeaderValue.size(); ++index) {
+        char thisChar = trimmedHeaderValue.at(index);
+        header += thisChar;
+        if (isInQuotes) {
+            if ((thisChar == '"') && (previousChar != '\\'))
+                isInQuotes = false;
         } else {
-            header += '"' + parts[index] + '"';
+            if ((thisChar == '"') && (previousChar != '\\')) {
+                isInQuotes = true;
+            } else if (isspace(thisChar)) {
+                while ((index < trimmedHeaderValue.size()-1) &&
+                       (isspace(trimmedHeaderValue.at(index+1))))
+                    ++index;
+            }
         }
+        previousChar = thisChar;
     }
     return header;
 }
