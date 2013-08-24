@@ -35,7 +35,6 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
 
 const QLatin1String AwsSignatureV4Private::DateFormat("yyyyMMdd");
 const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
-const QLatin1Char   AwsSignatureV4Private::newLine('\n');
 
 AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV4 * const q)

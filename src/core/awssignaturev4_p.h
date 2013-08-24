@@ -31,8 +31,6 @@ protected:
     static const QLatin1String DateFormat;
     static const QLatin1String DateTimeFormat;
 
-    static const QLatin1Char   newLine;
-
     const QCryptographicHash::Algorithm hashAlgorithm;
 
     QByteArray algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const;
