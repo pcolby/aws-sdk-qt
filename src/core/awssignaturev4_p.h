@@ -42,12 +42,14 @@ protected:
                                         QNetworkRequest &request, const QByteArray &payload,
                                         const QDateTime &timestamp) const;
 
-    QByteArray canonicalHeaders(const QNetworkRequest &request) const;
+    QByteArray canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const;
+
+    QByteArray canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const;
 
     QByteArray canonicalQuery(const QUrlQuery &query) const;
 
-    QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation,
-                                const QNetworkRequest &request, const QByteArray &payload) const;
+    QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QNetworkRequest &request,
+                                const QByteArray &payload, QByteArray * const signedHeaders) const;
 
     QString canonicalUri(const QUrl &url) const;
 
@@ -56,8 +58,6 @@ protected:
     QString extractRegion(const QUrl &url) const;
 
     QString httpMethod(const QNetworkAccessManager::Operation operation) const;
-
-    QByteArray signedHeaders(const QNetworkRequest &request) const;
 
     QByteArray signingKey(const AwsAbstractCredentials &credentials, const QDate &date,
                           const QString &region, const QString &service) const;

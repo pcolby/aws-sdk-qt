@@ -1,6 +1,7 @@
 #include "awssignaturev4.h"
 #include "awssignaturev4_p.h"
 
+#include <QDebug>
 #include <QMessageAuthenticationCode>
 
 QTAWS_BEGIN_NAMESPACE
@@ -74,17 +75,61 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
     const QString service = QLatin1String("iam"); /// @todo Something like AwsUrl::service.
 
     const QByteArray credentialScope = this->credentialScope(timestamp.date(), region, service);
-    const QByteArray canonicalRequest = this->canonicalRequest(operation, request, payload);
+    QByteArray signedHeaders;
+    const QByteArray canonicalRequest = this->canonicalRequest(operation, request, payload, &signedHeaders);
 
     const QByteArray stringToSign = this->stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);
     const QByteArray signingKey = this->signingKey(credentials, timestamp.date(), region, service);
     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, QCryptographicHash::Sha1);
 
     return algorithmDesignation + " Credential=" + credentials.accessKeyId().toUtf8() + '/' + credentialScope +
-            "SignedHeaders=" + signedHeaders(request) + "Signature=" + signature;
+            "SignedHeaders=" + *signedHeaders + "Signature=" + signature;
 }
 
-QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const {
+QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const
+{
+    // Builder a header with internal whitespace stripped from non-quoted parts only.
+    QByteArray header = headerName + ':';
+    const QList<QByteArray> parts = headerValue.trimmed().split('"');
+    for (int index = 0; index < parts.size(); ++index) {
+        if (index % 2 == 0) {
+            header += parts[index].simplified();
+        } else {
+            header += '"' + parts[index] + '"';
+        }
+    }
+    return header;
+}
+
+QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const
+{
+    Q_CHECK_PTR(signedHeaders);
+    signedHeaders->clear();
+
+    /* Note, Amazon says we should combine duplicate headers with comma separators...
+     * conveniently for us, QNetworkRequest requires that to have been done already.
+     * See note in QNetworkRequest::setRawHeader.
+     */
+
+    // Convert the raw headers list to a map to sort on (lowercased) header names only.
+    QMap<QByteArray,QByteArray> headers;
+    foreach (const QByteArray &rawHeader, request.rawHeaderList()) {
+        const int pos = rawHeader.indexOf(':');
+        headers.insert(rawHeader.left(pos).toLower(), rawHeader.mid(pos+1));
+    }
+
+    // Convert the headers map to a canonical string, keeping track of which headers we've included too.
+    QByteArray canonicalHeaders;
+    for (QMap<QByteArray,QByteArray>::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {
+        canonicalHeaders += canonicalHeader(iter.key(), iter.value());
+        if (!signedHeaders->isEmpty()) *signedHeaders += ';';
+        *signedHeaders += iter.key();
+    }
+    return canonicalHeaders;
+}
+
+QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const
+{
     typedef QPair<QString, QString> QStringPair;
     QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
     qSort(list);
@@ -97,16 +142,15 @@ QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const {
     return result.toUtf8();
 }
 
-/// @todo  make this return QByteArray?
-QByteArray AwsSignatureV4Private::canonicalRequest(
-        const QNetworkAccessManager::Operation operation,
-        const QNetworkRequest &request,
-        const QByteArray &payload) const
+QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
+                                                   const QNetworkRequest &request, const QByteArray &payload,
+                                                   QByteArray * const signedHeaders) const
 {
     return httpMethod(operation).toUtf8() + '\n' +
            canonicalUri(request.url()).toUtf8() + '\n' +
            canonicalQuery(QUrlQuery(request.url()))  + '\n' +
-           canonicalHeaders(request) + '\n' +
+           canonicalHeaders(request, signedHeaders) + '\n' +
+           *signedHeaders + '\n' +
            QCryptographicHash::hash(payload, hashAlgorithm).toHex();
 }
 
