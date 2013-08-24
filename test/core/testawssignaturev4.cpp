@@ -4,10 +4,33 @@
 #include "../../src/core/awssignaturev4.h"
 #include "../../src/core/awssignaturev4_p.h"
 
-Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
-Q_DECLARE_METATYPE(QUrlQuery)
+Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 
-void TestAwsSignatureV4::stringToSign_data() {
+void TestAwsSignatureV4::algorithmDesignation_data()
+{
+    QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
+    QTest::addColumn<QByteArray>("designation");
+
+    QTest::newRow("MD4")    << QCryptographicHash::Md4    << QByteArray("AWS4-HMAC-MD4");
+    QTest::newRow("MD5")    << QCryptographicHash::Md5    << QByteArray("AWS4-HMAC-MD5");
+    QTest::newRow("SHA1")   << QCryptographicHash::Sha1   << QByteArray("AWS4-HMAC-SHA1");
+    QTest::newRow("SHA224") << QCryptographicHash::Sha224 << QByteArray("AWS4-HMAC-SHA224");
+    QTest::newRow("SHA256") << QCryptographicHash::Sha256 << QByteArray("AWS4-HMAC-SHA256");
+    QTest::newRow("SHA384") << QCryptographicHash::Sha384 << QByteArray("AWS4-HMAC-SHA384");
+    QTest::newRow("SHA512") << QCryptographicHash::Sha512 << QByteArray("AWS4-HMAC-SHA512");
+}
+
+void TestAwsSignatureV4::algorithmDesignation()
+{
+    QFETCH(QCryptographicHash::Algorithm, algorithm);
+    QFETCH(QByteArray, designation);
+
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    QCOMPARE(signature.algorithmDesignation(algorithm), designation);
+}
+
+void TestAwsSignatureV4::stringToSign_data()
+{
     QTest::addColumn<QByteArray>("algorithmDesignation");
     QTest::addColumn<QDateTime> ("requestDate");
     QTest::addColumn<QByteArray>("credentialScope");
@@ -39,7 +62,8 @@ void TestAwsSignatureV4::stringToSign_data() {
                                             "3511de7e95d28ecd39e9513b642aee07e54f4941150d8df8bf94b328ef7e55e2");
 }
 
-void TestAwsSignatureV4::stringToSign() {
+void TestAwsSignatureV4::stringToSign()
+{
     QFETCH(QByteArray, algorithmDesignation);
     QFETCH(QDateTime,  requestDate);
     QFETCH(QByteArray, credentialScope);
