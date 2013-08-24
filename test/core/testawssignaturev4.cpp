@@ -9,7 +9,7 @@ Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 void TestAwsSignatureV4::algorithmDesignation_data()
 {
     QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
-    QTest::addColumn<QByteArray>("designation");
+    QTest::addColumn<QByteArray>("expected");
 
     QTest::newRow("MD4")    << QCryptographicHash::Md4    << QByteArray("AWS4-HMAC-MD4");
     QTest::newRow("MD5")    << QCryptographicHash::Md5    << QByteArray("AWS4-HMAC-MD5");
@@ -23,13 +23,79 @@ void TestAwsSignatureV4::algorithmDesignation_data()
 void TestAwsSignatureV4::algorithmDesignation()
 {
     QFETCH(QCryptographicHash::Algorithm, algorithm);
-    QFETCH(QByteArray, designation);
+    QFETCH(QByteArray, expected);
 
     AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    QCOMPARE(signature.algorithmDesignation(algorithm), designation);
+    const QByteArray designation = signature.algorithmDesignation(algorithm);
+    QCOMPARE(QString::fromUtf8(designation), QString::fromUtf8(expected));
+    QCOMPARE(designation, expected);
 }
 
-void TestAwsSignatureV4::stringToSign_data()
+void TestAwsSignatureV4::canonicalHeader_data()
+{
+    QTest::addColumn<QByteArray>("headerName");
+    QTest::addColumn<QByteArray>("headerValue");
+    QTest::addColumn<QByteArray>("expected");
+
+    QTest::newRow("null") << QByteArray() << QByteArray() << QByteArray(":");
+
+    // Examples from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+    QTest::newRow("host") << QByteArray("host")
+                          << QByteArray("iam.amazonaws.com")
+                          << QByteArray("host:iam.amazonaws.com");
+    QTest::newRow("Content-type") << QByteArray("Content-type")
+                                  << QByteArray("application/x-www-form-urlencoded; charset=utf-8")
+                                  << QByteArray("content-type:application/x-www-form-urlencoded; charset=utf-8");
+    QTest::newRow("My-header1") << QByteArray("My-header1")
+                                << QByteArray("    a   b   c ")
+                                << QByteArray("my-header1:a b c");
+    QTest::newRow("x-amz-date") << QByteArray("x-amz-date")
+                                << QByteArray("20120228T030031Z")
+                                   // Note, this is not the same date as the example; our test is more strict ;)
+                                << QByteArray("x-amz-date:20120228T030031Z");
+    QTest::newRow("My-Header2") << QByteArray("My-Header2")
+                                << QByteArray("    \"a   b   c\"")
+                                << QByteArray("my-header2:\"a   b   c\"");
+}
+
+void TestAwsSignatureV4::canonicalHeader()
+{
+    QFETCH(QByteArray, headerName);
+    QFETCH(QByteArray, headerValue);
+    QFETCH(QByteArray, expected);
+
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    const QByteArray header = signature.canonicalHeader(headerName, headerValue);
+    QCOMPARE(QString::fromUtf8(header), QString::fromUtf8(expected));
+    QCOMPARE(header, expected);
+}
+
+void TestAwsSignatureV4::canonicalHeaders_data()
+{
+    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QByteArray>("expectedHeaders");
+    QTest::addColumn<QByteArray>("expectedSignedHeaders");
+
+    QTest::newRow("null") << QNetworkRequest() << QByteArray() << QByteArray();
+
+    // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+
+}
+
+void TestAwsSignatureV4::canonicalHeaders()
+{
+    QFETCH(QNetworkRequest, request);
+    QFETCH(QByteArray, expectedHeaders);
+    QFETCH(QByteArray, expectedSignedHeaders);
+
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    QByteArray signedHeaders;
+    const QByteArray headers = signature.canonicalHeaders(request, &signedHeaders);
+    QCOMPARE(QString::fromUtf8(headers), QString::fromUtf8(expectedHeaders));
+    QCOMPARE(headers, expectedHeaders);
+}
+
+void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()
 {
     QTest::addColumn<QByteArray>("algorithmDesignation");
     QTest::addColumn<QDateTime> ("requestDate");

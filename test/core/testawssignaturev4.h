@@ -12,11 +12,11 @@ private slots:
     //void authorizationHeaderValue_data();
     //void authorizationHeaderValue();
 
-    //void canonicalHeader_data();
-    //void canonicalHeader();
+    void canonicalHeader_data();
+    void canonicalHeader();
 
-    //void canonicalHeaders_data();
-    //void canonicalHeaders();
+    void canonicalHeaders_data();
+    void canonicalHeaders();
 
     //void canonicalQuery_data();
     //void canonicalQuery();
