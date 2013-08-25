@@ -51,6 +51,7 @@ void TestAwsAbstractSignature::canonicalQuery_data() {
     QTest::addColumn<QByteArray>("expected");
 
     // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+    // Amazon is ambiguous on this, but it seems that V4 used the same canonical query format as V2.
     QTest::newRow("lasticmapreduce")
         << QUrlQuery(
             "Action=DescribeJobFlows"
@@ -66,8 +67,6 @@ void TestAwsAbstractSignature::canonicalQuery_data() {
             "&SignatureVersion=2"
             "&Timestamp=2011-10-03T15%3A19%3A30"
             "&Version=2009-03-31");
-
-    /// @todo Add V4 example?
 }
 
 void TestAwsAbstractSignature::canonicalQuery() {
