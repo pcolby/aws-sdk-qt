@@ -10,4 +10,8 @@
 
 This project requires Qt 5.1 or later for QMessageAuthenticationCode.
 
+@todo  Add a AwsUrl and/or AwsRegion classes.
+
+@todo  Disable automatic ASCII conversion for unit tests.
+
 */
