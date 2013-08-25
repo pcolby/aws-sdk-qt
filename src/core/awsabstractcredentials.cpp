@@ -57,7 +57,8 @@ AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent) : QObject
  * @see  isRefreshable()
  * @see  refresh()
  */
-QDateTime AwsAbstractCredentials::expiration() const {
+QDateTime AwsAbstractCredentials::expiration() const
+{
     if (isRefreshable()) {
         qWarning() << "AwsAbstractCredentials: expiration must be implemented by refreshable derived classes";
     } else {
@@ -82,7 +83,8 @@ QDateTime AwsAbstractCredentials::expiration() const {
  * @see  isRefreshable()
  * @see  refresh()
  */
-bool AwsAbstractCredentials::isExpired() const {
+bool AwsAbstractCredentials::isExpired() const
+{
     if (isRefreshable()) {
         const QDateTime expiration = this->expiration();
         return ((expiration.isValid()) && (expiration < QDateTime::currentDateTimeUtc()));
@@ -106,7 +108,8 @@ bool AwsAbstractCredentials::isExpired() const {
  * @see  isExpired()
  * @see  refresh()
  */
-bool AwsAbstractCredentials::isRefreshable() const {
+bool AwsAbstractCredentials::isRefreshable() const
+{
     return false;
 }
 
@@ -130,7 +133,8 @@ bool AwsAbstractCredentials::isRefreshable() const {
  * @see  isRefreshable()
  * @see  changed()
  */
-bool AwsAbstractCredentials::refresh() {
+bool AwsAbstractCredentials::refresh()
+{
     if (isRefreshable()) {
         qWarning() << "AwsAbstractCredentials: refresh must be implemented by refreshable derived classes";
     } else {

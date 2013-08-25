@@ -24,8 +24,7 @@ AwsBasicCredentials::AwsBasicCredentials(
         const QString &accessKeyId,
         const QString &secretKey,
         const QString &token,
-        QObject * const parent
-)
+        QObject * const parent)
     : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
 {
     Q_D(AwsBasicCredentials);
@@ -47,8 +46,7 @@ AwsBasicCredentials::AwsBasicCredentials(
 AwsBasicCredentials::AwsBasicCredentials(
         const QString &accessKeyId,
         const QString &secretKey,
-        QObject * const parent
-)
+        QObject * const parent)
     : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
 {
     Q_D(AwsBasicCredentials);
@@ -56,17 +54,20 @@ AwsBasicCredentials::AwsBasicCredentials(
     d->secretKey = secretKey;
 }
 
-QString AwsBasicCredentials::accessKeyId() const {
+QString AwsBasicCredentials::accessKeyId() const
+{
     Q_D(const AwsBasicCredentials);
     return d->accessKeyId;
 }
 
-QString AwsBasicCredentials::secretKey() const {
+QString AwsBasicCredentials::secretKey() const
+{
     Q_D(const AwsBasicCredentials);
     return d->secretKey;
 }
 
-QString AwsBasicCredentials::token() const {
+QString AwsBasicCredentials::token() const
+{
     Q_D(const AwsBasicCredentials);
     return d->token;
 }
@@ -76,7 +77,8 @@ QString AwsBasicCredentials::token() const {
  *
  * @param accessKeyId  The AWS access key ID to set for this credentials object.
  */
-void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId) {
+void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId)
+{
     Q_D(AwsBasicCredentials);
     d->accessKeyId = accessKeyId;
     emit changed();
@@ -87,7 +89,8 @@ void AwsBasicCredentials::setAccessKeyId(const QString &accessKeyId) {
  *
  * @param secretKey  The AWS secret access key to set for this credentials object.
  */
-void AwsBasicCredentials::setSecretKey(const QString &secretKey) {
+void AwsBasicCredentials::setSecretKey(const QString &secretKey)
+{
     Q_D(AwsBasicCredentials);
     d->secretKey = secretKey;
     emit changed();
@@ -98,13 +101,16 @@ void AwsBasicCredentials::setSecretKey(const QString &secretKey) {
  *
  * @param token  The AWS security token to set for this credentials object.
  */
-void AwsBasicCredentials::setToken(const QString &token) {
+void AwsBasicCredentials::setToken(const QString &token)
+{
     Q_D(AwsBasicCredentials);
     d->token = token;
     emit changed();
 }
 
-AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q) : q_ptr(q) {
+AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q)
+    : q_ptr(q)
+{
 
 }
 
