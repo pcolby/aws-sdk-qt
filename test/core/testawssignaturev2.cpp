@@ -109,33 +109,6 @@ void TestAwsSignatureV2::canonicalRequest() {
     QCOMPARE(signature.canonicalRequest(operation, url), expected);
 }
 
-void TestAwsSignatureV2::canonicalQuery_data() {
-    QTest::addColumn<QUrlQuery>("query");
-    QTest::addColumn<QString>("expected");
-
-    // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
-    QTest::newRow("lasticmapreduce")
-        << QUrlQuery("Action=DescribeJobFlows"
-                     "&Version=2009-03-31"
-                     "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                     "&SignatureVersion=2"
-                     "&SignatureMethod=HmacSHA256"
-                     "&Timestamp=2011-10-03T15%3A19%3A30")
-        << QString("AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                   "&Action=DescribeJobFlows"
-                   "&SignatureMethod=HmacSHA256"
-                   "&SignatureVersion=2"
-                   "&Timestamp=2011-10-03T15%3A19%3A30"
-                   "&Version=2009-03-31");
-}
-
-void TestAwsSignatureV2::canonicalQuery() {
-    QFETCH(QUrlQuery, query);
-    QFETCH(QString, expected);
-    AwsSignatureV2Private signature(NULL);
-    QCOMPARE(signature.canonicalQuery(query), expected);
-}
-
 void TestAwsSignatureV2::toString_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QString>("expected");

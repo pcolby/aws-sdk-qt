@@ -25,7 +25,6 @@ public:
 
 protected:
     QString canonicalPath(const QUrl &url) const;
-    QString canonicalQuery(const QUrlQuery &query) const;
     QString toString(const QNetworkAccessManager::Operation operation) const;
 
 private:

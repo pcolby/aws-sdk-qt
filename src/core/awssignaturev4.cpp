@@ -139,28 +139,14 @@ QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &reques
     return canonicalHeaders;
 }
 
-/// @todo  Move to base class.
-QByteArray AwsSignatureV4Private::canonicalQuery(const QUrlQuery &query) const
-{
-    typedef QPair<QString, QString> QStringPair;
-    QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
-    qSort(list);
-    QString result;
-    foreach (const QStringPair &pair, list) {
-        if (!result.isEmpty()) result += QLatin1Char('&');
-        result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +
-                  QString::fromUtf8(QUrl::toPercentEncoding(pair.second));
-    }
-    return result.toUtf8();
-}
-
 QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QNetworkRequest &request, const QByteArray &payload,
                                                    QByteArray * const signedHeaders) const
 {
+    Q_Q(const AwsSignatureV4);
     return httpMethod(operation).toUtf8() + '\n' +
            canonicalUri(request.url()).toUtf8() + '\n' +
-           canonicalQuery(QUrlQuery(request.url()))  + '\n' +
+           q->canonicalQuery(QUrlQuery(request.url()))  + '\n' +
            canonicalHeaders(request, signedHeaders) + '\n' +
            *signedHeaders + '\n' +
            QCryptographicHash::hash(payload, hashAlgorithm).toHex();

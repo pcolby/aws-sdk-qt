@@ -16,6 +16,20 @@ QTAWS_BEGIN_NAMESPACE
  */
 AwsAbstractSignature::~AwsAbstractSignature() { }
 
+QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
+{
+    typedef QPair<QString, QString> QStringPair;
+    QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
+    qSort(list);
+    QString result;
+    foreach (const QStringPair &pair, list) {
+        if (!result.isEmpty()) result += QLatin1Char('&');
+        result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +
+                  QString::fromUtf8(QUrl::toPercentEncoding(pair.second));
+    }
+    return result.toUtf8();
+}
+
 /**
  * @fn     void AwsAbstractSignature::sign() const
  *

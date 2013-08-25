@@ -6,4 +6,6 @@ class TestAwsAbstractSignature : public QObject {
 private slots:
     void construct();
 
+    void canonicalQuery_data();
+    void canonicalQuery();
 };

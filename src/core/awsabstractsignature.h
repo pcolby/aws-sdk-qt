@@ -6,6 +6,7 @@
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
+#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -16,6 +17,10 @@ public:
 
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const = 0;
+
+protected:
+    QByteArray canonicalQuery(const QUrlQuery &query) const;
+    friend class TestAwsAbstractSignature;
 };
 
 QTAWS_END_NAMESPACE

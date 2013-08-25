@@ -64,22 +64,9 @@ QString AwsSignatureV2Private::canonicalRequest(
         const QNetworkAccessManager::Operation operation,
         const QUrl &url) const
 {
+    Q_Q(const AwsSignatureV2);
     return toString(operation) + QLatin1Char('\n') + url.host() + QLatin1Char('\n') +
-           canonicalPath(url) + QLatin1Char('\n') + canonicalQuery(QUrlQuery(url));
-}
-
-QString AwsSignatureV2Private::canonicalQuery(const QUrlQuery &query) const
-{
-    typedef QPair<QString, QString> QStringPair;
-    QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
-    qSort(list);
-    QString result;
-    foreach (const QStringPair &pair, list) {
-        if (!result.isEmpty()) result += QLatin1Char('&');
-        result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +
-                  QString::fromUtf8(QUrl::toPercentEncoding(pair.second));
-    }
-    return result;
+           canonicalPath(url) + QLatin1Char('\n') + QString::fromUtf8(q->canonicalQuery(QUrlQuery(url)));
 }
 
 QString AwsSignatureV2Private::toString(const QNetworkAccessManager::Operation operation) const

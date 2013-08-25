@@ -18,9 +18,6 @@ private slots:
     void canonicalHeaders_data();
     void canonicalHeaders();
 
-    //void canonicalQuery_data(); ///< @todo  Move to [Test]AwsAbstractSignature?
-    //void canonicalQuery();      ///< @todo  Move to [Test]AwsAbstractSignature?
-
     void canonicalRequest_data();
     void canonicalRequest();
 

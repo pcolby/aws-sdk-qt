@@ -44,8 +44,6 @@ protected:
 
     QByteArray canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const;
 
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
-
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QNetworkRequest &request,
                                 const QByteArray &payload, QByteArray * const signedHeaders) const;
 

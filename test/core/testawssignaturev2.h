@@ -14,9 +14,6 @@ private slots:
     void canonicalRequest_data();
     void canonicalRequest();
 
-    void canonicalQuery_data();
-    void canonicalQuery();
-
     void toString_data();
     void toString();
 };
