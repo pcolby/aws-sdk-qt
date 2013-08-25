@@ -12,10 +12,8 @@ Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 class MockSignature : public AwsAbstractSignature {
 
 public:
-    virtual void sign(const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request,
-                      const AwsAbstractCredentials &credentials,
-                      const QByteArray &data) const
+    virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
+                      QNetworkRequest &request, const QByteArray &data) const
     {
         Q_UNUSED(operation)
         Q_UNUSED(request)

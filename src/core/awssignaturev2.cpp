@@ -31,11 +31,9 @@ AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm
     d->hashAlgorithm = hashAlgorithm;
 }
 
-void AwsSignatureV2::sign(const QNetworkAccessManager::Operation operation,
-                          QNetworkRequest &request,
-                          const AwsAbstractCredentials &credentials,
-                          const QByteArray &data
-) const {
+void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
+                          QNetworkRequest &request, const QByteArray &data) const
+{
     Q_UNUSED(data) // Not included in V2 signatures.
 
     // Calculate the signature.

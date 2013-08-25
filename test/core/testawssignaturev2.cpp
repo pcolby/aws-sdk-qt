@@ -52,13 +52,13 @@ void TestAwsSignatureV2::sign() {
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
 
     AwsSignatureV2 signature;
-    signature.sign(operation, request, credentials, data);
+    signature.sign(credentials, operation, request, data);
     QCOMPARE(request.url( ), expected.url());
     QCOMPARE(request, expected);
 
     QBENCHMARK {
         QFETCH(QNetworkRequest, request);
-        signature.sign(operation, request, credentials, data);
+        signature.sign(credentials, operation, request, data);
     }
 }
 
