@@ -35,8 +35,7 @@ private slots:
     void setDateHeader_data();
     void setDateHeader();
 
-    //void sign_data();
-    //void sign();
+    void sign();
 
     void signingKey_data();
     void signingKey();

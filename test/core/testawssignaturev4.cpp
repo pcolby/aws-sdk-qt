@@ -362,6 +362,18 @@ void TestAwsSignatureV4::setDateHeader()
     QCOMPARE(result, dateTime);
 }
 
+void TestAwsSignatureV4::sign()
+{
+    const AwsBasicCredentials credentials("", "");
+
+    /// @todo  Add redirection here one abstract class updated.
+    AwsSignatureV4 signature;
+    QNetworkRequest request;
+    signature.sign(credentials, QNetworkAccessManager::PostOperation, request);
+    QVERIFY(request.hasRawHeader("Authorization"));
+    QVERIFY(request.rawHeader("Authorization").startsWith("AWS4-HMAC-SHA256 Credential"));
+}
+
 void TestAwsSignatureV4::signingKey_data()
 {
     QTest::addColumn<QString>   ("secretKey");
