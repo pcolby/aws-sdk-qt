@@ -38,9 +38,9 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 
     // Calculate the signature.
     Q_D(const AwsSignatureV2);
-    const QString toSign = d->canonicalRequest(operation, request.url());
+    const QByteArray stringToSign = d->canonicalRequest(operation, request.url());
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
-        QMessageAuthenticationCode::hash(toSign.toUtf8(), credentials.secretKey().toUtf8(),
+        QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
                                          d->hashAlgorithm).toBase64())));
 
     // Append the signature to the request.
@@ -59,14 +59,14 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 
 AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q) { }
 
-/// @todo Make this return QByteArray?
-QString AwsSignatureV2Private::canonicalRequest(
-        const QNetworkAccessManager::Operation operation,
-        const QUrl &url) const
+QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
+                                                   const QUrl &url) const
 {
     Q_Q(const AwsSignatureV2);
-    return toString(operation) + QLatin1Char('\n') + url.host() + QLatin1Char('\n') +
-           q->canonicalPath(url) + QLatin1Char('\n') + QString::fromUtf8(q->canonicalQuery(QUrlQuery(url)));
+    return toString(operation).toUtf8() + '\n' +
+           url.host().toUtf8() + '\n' +
+           q->canonicalPath(url).toUtf8() + '\n' +
+           q->canonicalQuery(QUrlQuery(url));
 }
 
 QString AwsSignatureV2Private::toString(const QNetworkAccessManager::Operation operation) const

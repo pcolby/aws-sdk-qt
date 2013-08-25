@@ -65,29 +65,33 @@ void TestAwsSignatureV2::sign() {
 void TestAwsSignatureV2::canonicalRequest_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QUrl>("url");
-    QTest::addColumn<QString>("expected");
+    QTest::addColumn<QByteArray>("expected");
 
     // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
     QTest::newRow("lasticmapreduce")
         << QNetworkAccessManager::GetOperation
-        << QUrl("https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
-                "&Version=2009-03-31"
-                "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                "&SignatureVersion=2"
-                "&SignatureMethod=HmacSHA256"
-                "&Timestamp=2011-10-03T15%3A19%3A30")
-        << QString("GET\n"
-                   "elasticmapreduce.amazonaws.com\n"
-                   "/\n"
-                   "AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31");
+        << QUrl(
+            "https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
+            "&Version=2009-03-31"
+            "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+            "&SignatureVersion=2"
+            "&SignatureMethod=HmacSHA256"
+            "&Timestamp=2011-10-03T15%3A19%3A30")
+        << QByteArray(
+            "GET\n"
+            "elasticmapreduce.amazonaws.com\n"
+            "/\n"
+            "AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31");
 }
 
 void TestAwsSignatureV2::canonicalRequest() {
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QUrl, url);
-    QFETCH(QString, expected);
+    QFETCH(QByteArray, expected);
     AwsSignatureV2Private signature(NULL);
-    QCOMPARE(signature.canonicalRequest(operation, url), expected);
+    const QByteArray request = signature.canonicalRequest(operation, url);
+    QCOMPARE(QString::fromUtf8(request), QString::fromUtf8(expected));
+    QCOMPARE(request, expected);
 }
 
 void TestAwsSignatureV2::toString_data() {

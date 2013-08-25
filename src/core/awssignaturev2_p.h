@@ -21,9 +21,10 @@ public:
 
     AwsSignatureV2Private(AwsSignatureV2 * const q);
 
-    QString canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
+    QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
 
 protected:
+    /// @todo  Move this to a common class.
     QString toString(const QNetworkAccessManager::Operation operation) const;
 
 private:
