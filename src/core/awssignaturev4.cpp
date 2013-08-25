@@ -79,10 +79,10 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
 
     const QByteArray stringToSign = this->stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);
     const QByteArray signingKey = this->signingKey(credentials, timestamp.date(), region, service);
-    const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, QCryptographicHash::Sha1);
+    const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);
 
     return algorithmDesignation + " Credential=" + credentials.accessKeyId().toUtf8() + '/' + credentialScope +
-            "SignedHeaders=" + *signedHeaders + "Signature=" + signature;
+            ", SignedHeaders=" + signedHeaders + ", Signature=" + signature.toHex();
 }
 
 QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const
