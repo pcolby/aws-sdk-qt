@@ -14,10 +14,8 @@ class QTAWS_EXPORT AwsSignatureV3 : public AwsAbstractSignature {
 public:
     AwsSignatureV3();
 
-    virtual void sign(const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request,
-                      const AwsAbstractCredentials &credentials,
-                      const QByteArray &data = QByteArray()) const;
+    virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
+                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
 
 private:
     AwsSignatureV3Private * const d_ptr;
