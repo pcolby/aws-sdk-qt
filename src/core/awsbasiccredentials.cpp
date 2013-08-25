@@ -108,6 +108,14 @@ void AwsBasicCredentials::setToken(const QString &token)
     emit changed();
 }
 
+/**
+ * @class  AwsBasicCredentialsPrivate
+ *
+ * @brief  Private implementation for AwsBasicCredentials.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ */
+
 AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q)
     : q_ptr(q)
 {
