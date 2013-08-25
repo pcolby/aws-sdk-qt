@@ -29,8 +29,8 @@ private slots:
     void credentialScope_data();
     void credentialScope();
 
-    //void setAuthorizationHeader_data();
-    //void setAuthorizationHeader();
+    void setAuthorizationHeader_data();
+    void setAuthorizationHeader();
 
     void setDateHeader_data();
     void setDateHeader();

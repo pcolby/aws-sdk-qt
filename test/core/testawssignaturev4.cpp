@@ -282,6 +282,65 @@ void TestAwsSignatureV4::credentialScope()
     QCOMPARE(scope, expected);
 }
 
+void TestAwsSignatureV4::setAuthorizationHeader_data()
+{
+    QTest::addColumn<QString>("accessKeyId");
+    QTest::addColumn<QString>("secretKey");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QByteArray>("payload");
+    QTest::addColumn<QDateTime>("timestamp");
+    QTest::addColumn<QByteArray>("expected");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << QNetworkAccessManager::PostOperation
+        << QNetworkRequest()
+        << QByteArray()
+        << QDateTime()
+        << QByteArray(
+            "AWS4-HMAC-SHA256 "
+            "Credential=//us-east-1/iam/aws4_request, "
+            "SignedHeaders=host, "
+            "Signature=92cbdd300e8f5ca8a04af4f958739e717986e284102c1d4529f82e6d1ddc2830");
+
+    { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        request.setRawHeader("x-amz-date", "20110909T233600Z");
+        QTest::newRow("official")
+            << QString("AKIDEXAMPLE")
+            << QString("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
+            << QNetworkAccessManager::PostOperation
+            << request
+            << QByteArray("Action=ListUsers&Version=2010-05-08")
+            << QDateTime::fromString("20110909T233600Z", "yyyyMMddThhmmssZ")
+            << QByteArray(
+                "AWS4-HMAC-SHA256 "
+                "Credential=AKIDEXAMPLE/20110909/us-east-1/iam/aws4_request, "
+                "SignedHeaders=content-type;host;x-amz-date, "
+                "Signature=ced6826de92d2bdeed8f846f0bf508e8559e98e4b0199114b84c54174deb456c");
+    }
+}
+
+void TestAwsSignatureV4::setAuthorizationHeader()
+{
+    QFETCH(QString, accessKeyId);
+    QFETCH(QString, secretKey);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QNetworkRequest, request);
+    QFETCH(QByteArray, payload);
+    QFETCH(QDateTime, timestamp);
+    QFETCH(QByteArray, expected);
+
+    const AwsBasicCredentials credentials(accessKeyId, secretKey);
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    signature.setAuthorizationHeader(credentials, operation, request, payload, timestamp);
+    QCOMPARE(QString::fromUtf8(request.rawHeader("Authorization")), QString::fromUtf8(expected));
+    QCOMPARE(request.rawHeader("Authorization"), expected);
+}
+
 void TestAwsSignatureV4::setDateHeader_data()
 {
     QTest::addColumn<QDateTime>("dateTime");
