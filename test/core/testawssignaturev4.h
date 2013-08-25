@@ -9,8 +9,8 @@ private slots:
     void algorithmDesignation_data();
     void algorithmDesignation();
 
-    //void authorizationHeaderValue_data();
-    //void authorizationHeaderValue();
+    void authorizationHeaderValue_data();
+    void authorizationHeaderValue();
 
     void canonicalHeader_data();
     void canonicalHeader();
