@@ -19,6 +19,7 @@ public:
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const = 0;
 
 protected:
+    QString canonicalPath(const QUrl &url) const;
     QByteArray canonicalQuery(const QUrlQuery &query) const;
     friend class TestAwsAbstractSignature;
 };

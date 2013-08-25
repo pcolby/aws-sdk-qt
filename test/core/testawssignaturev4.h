@@ -21,8 +21,6 @@ private slots:
     void canonicalRequest_data();
     void canonicalRequest();
 
-    //void canonicalUri(); ///< @todo  Move to [Test]AwsAbstractSignature?
-
     void credentialScope_data();
     void credentialScope();
 

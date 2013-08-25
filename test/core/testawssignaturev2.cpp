@@ -62,25 +62,6 @@ void TestAwsSignatureV2::sign() {
     }
 }
 
-void TestAwsSignatureV2::canonicalPath_data() {
-    QTest::addColumn<QUrl>("url");
-    QTest::addColumn<QString>("path");
-
-    QTest::newRow("invalid"     ) << QUrl() << QString("/");
-    QTest::newRow("none"        ) << QUrl("http://example.com")             << QString("/");
-    QTest::newRow("/"           ) << QUrl("http://example.com/")            << QString("/");
-    QTest::newRow("/123"        ) << QUrl("http://example.com/123")         << QString("/123");
-    QTest::newRow("/123/"       ) << QUrl("http://example.com/123/")        << QString("/123/");
-    QTest::newRow("/foo/bar/baz") << QUrl("http://example.com/foo/bar/baz") << QString("/foo/bar/baz");
-}
-
-void TestAwsSignatureV2::canonicalPath() {
-    QFETCH(QUrl, url);
-    QFETCH(QString, path);
-    AwsSignatureV2Private signature(NULL);
-    QCOMPARE(signature.canonicalPath(url), path);
-}
-
 void TestAwsSignatureV2::canonicalRequest_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QUrl>("url");

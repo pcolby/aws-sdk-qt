@@ -16,6 +16,16 @@ QTAWS_BEGIN_NAMESPACE
  */
 AwsAbstractSignature::~AwsAbstractSignature() { }
 
+// CanonicalURI or
+QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
+{
+    QString path = url.path(QUrl::FullyEncoded);
+    if (path.isEmpty()) {
+        path = QLatin1Char('/');
+    }
+    return path;
+}
+
 QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
 {
     typedef QPair<QString, QString> QStringPair;

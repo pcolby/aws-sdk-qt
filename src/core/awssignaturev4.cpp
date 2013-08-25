@@ -145,20 +145,11 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
 {
     Q_Q(const AwsSignatureV4);
     return httpMethod(operation).toUtf8() + '\n' +
-           canonicalUri(request.url()).toUtf8() + '\n' +
+           q->canonicalPath(request.url()).toUtf8() + '\n' +
            q->canonicalQuery(QUrlQuery(request.url()))  + '\n' +
            canonicalHeaders(request, signedHeaders) + '\n' +
            *signedHeaders + '\n' +
            QCryptographicHash::hash(payload, hashAlgorithm).toHex();
-}
-
-QString AwsSignatureV4Private::canonicalUri(const QUrl &url) const
-{
-    QString path = url.path(QUrl::FullyEncoded);
-    if (path.isEmpty()) {
-        path = QLatin1Char('/');
-    }
-    return path;
 }
 
 QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const

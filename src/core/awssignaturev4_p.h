@@ -47,8 +47,6 @@ protected:
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QNetworkRequest &request,
                                 const QByteArray &payload, QByteArray * const signedHeaders) const;
 
-    QString canonicalUri(const QUrl &url) const;
-
     QByteArray credentialScope(const QDate &date, const QString &region, const QString &service) const;
 
     QString extractRegion(const QUrl &url) const;

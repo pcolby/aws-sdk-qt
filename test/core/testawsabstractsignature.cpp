@@ -27,6 +27,25 @@ void TestAwsAbstractSignature::construct() {
     }
 }
 
+void TestAwsAbstractSignature::canonicalPath_data() {
+    QTest::addColumn<QUrl>("url");
+    QTest::addColumn<QString>("path");
+
+    QTest::newRow("invalid"     ) << QUrl() << QString("/");
+    QTest::newRow("none"        ) << QUrl("http://example.com")             << QString("/");
+    QTest::newRow("/"           ) << QUrl("http://example.com/")            << QString("/");
+    QTest::newRow("/123"        ) << QUrl("http://example.com/123")         << QString("/123");
+    QTest::newRow("/123/"       ) << QUrl("http://example.com/123/")        << QString("/123/");
+    QTest::newRow("/foo/bar/baz") << QUrl("http://example.com/foo/bar/baz") << QString("/foo/bar/baz");
+}
+
+void TestAwsAbstractSignature::canonicalPath() {
+    QFETCH(QUrl, url);
+    QFETCH(QString, path);
+    const MockSignature signature;
+    QCOMPARE(signature.canonicalPath(url), path);
+}
+
 void TestAwsAbstractSignature::canonicalQuery_data() {
     QTest::addColumn<QUrlQuery>("query");
     QTest::addColumn<QByteArray>("expected");
@@ -54,7 +73,7 @@ void TestAwsAbstractSignature::canonicalQuery_data() {
 void TestAwsAbstractSignature::canonicalQuery() {
     QFETCH(QUrlQuery, query);
     QFETCH(QByteArray, expected);
-    MockSignature signature;
+    const MockSignature signature;
     QCOMPARE(QString::fromUtf8(signature.canonicalQuery(query)), QString::fromUtf8(expected));
     QCOMPARE(signature.canonicalQuery(query), expected);
 }

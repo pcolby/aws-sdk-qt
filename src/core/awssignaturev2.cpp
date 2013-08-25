@@ -51,22 +51,14 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 
 AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q) { }
 
-QString AwsSignatureV2Private::canonicalPath(const QUrl &url) const
-{
-    QString path = url.path(QUrl::FullyEncoded);
-    if (path.isEmpty()) {
-        path = QLatin1Char('/');
-    }
-    return path;
-}
-
+/// @todo Make this return QByteArray?
 QString AwsSignatureV2Private::canonicalRequest(
         const QNetworkAccessManager::Operation operation,
         const QUrl &url) const
 {
     Q_Q(const AwsSignatureV2);
     return toString(operation) + QLatin1Char('\n') + url.host() + QLatin1Char('\n') +
-           canonicalPath(url) + QLatin1Char('\n') + QString::fromUtf8(q->canonicalQuery(QUrlQuery(url)));
+           q->canonicalPath(url) + QLatin1Char('\n') + QString::fromUtf8(q->canonicalQuery(QUrlQuery(url)));
 }
 
 QString AwsSignatureV2Private::toString(const QNetworkAccessManager::Operation operation) const
