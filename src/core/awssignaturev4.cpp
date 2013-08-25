@@ -53,7 +53,6 @@ AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm
 
 QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const
 {
-    /// @todo  Move this to another class.
     switch (algorithm) {
         case QCryptographicHash::Md4:      return "AWS4-HMAC-MD4";
         case QCryptographicHash::Md5:      return "AWS4-HMAC-MD5";
