@@ -364,14 +364,14 @@ void TestAwsSignatureV4::setDateHeader()
 
 void TestAwsSignatureV4::sign()
 {
+    // Here we're simply checking that the AwsAbstractSignature::sign function has been correctly overridden
     const AwsBasicCredentials credentials("", "");
-
-    /// @todo  Add redirection here one abstract class updated.
-    AwsSignatureV4 signature;
+    AwsAbstractSignature * const signature = new AwsSignatureV4;
     QNetworkRequest request;
-    signature.sign(credentials, QNetworkAccessManager::PostOperation, request);
+    signature->sign(credentials, QNetworkAccessManager::PostOperation, request);
     QVERIFY(request.hasRawHeader("Authorization"));
     QVERIFY(request.rawHeader("Authorization").startsWith("AWS4-HMAC-SHA256 Credential"));
+    delete signature;
 }
 
 void TestAwsSignatureV4::signingKey_data()
