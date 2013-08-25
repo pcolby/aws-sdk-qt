@@ -30,6 +30,14 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetw
     //return d->accessKeyId;
 }
 
+/**
+ * @class  AwsSignatureV3Private
+ *
+ * @brief  Private implementation for AwsSignatureV3.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ */
+
 AwsSignatureV3Private::AwsSignatureV3Private(AwsSignatureV3 * const q) : q_ptr(q) { }
 
 QTAWS_END_NAMESPACE

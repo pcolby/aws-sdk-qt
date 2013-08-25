@@ -49,6 +49,14 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
     request.setUrl(url);
 }
 
+/**
+ * @class  AwsSignatureV2Private
+ *
+ * @brief  Private implementation for AwsSignatureV2.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ */
+
 AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q) { }
 
 /// @todo Make this return QByteArray?

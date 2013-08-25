@@ -33,6 +33,14 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
     d->setAuthorizationHeader(credentials, operation, request, data, d->setDateHeader(request));
 }
 
+/**
+ * @class  AwsSignatureV4Private
+ *
+ * @brief  Private implementation for AwsSignatureV4.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ */
+
 const QLatin1String AwsSignatureV4Private::DateFormat("yyyyMMdd");
 const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
 
