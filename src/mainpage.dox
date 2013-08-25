@@ -12,8 +12,6 @@ This project requires Qt 5.1 or later for QMessageAuthenticationCode.
 
 @todo  Add a AwsUrl and/or AwsRegion classes.
 
-@todo  Add AwsAnonymousCredentials class.
-
 @todo  Disable automatic ASCII conversion for unit tests.
 
 @todo  Apply the official AWS Signature Version 4 test suite.

@@ -12,7 +12,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new AwsBasicCredentials object.
  *
- * Constructs a new BasicAWSCredentials object, with the specified AWS access key, AWS secret
+ * Constructs a new AwsBasicCredentials object, with the specified AWS access key, AWS secret
  * key, and AWS security token.
  *
  * @param accessKeyId  The AWS access key ID to use for this credentials object.

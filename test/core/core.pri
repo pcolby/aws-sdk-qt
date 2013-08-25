@@ -1,6 +1,7 @@
 HEADERS += \
         testawsabstractcredentials.h \
         testawsabstractsignature.h \
+        testawsanonymouscredentials.h \
         testawsbasiccredentials.h \
         testawssignaturev2.h \
         testawssignaturev4.h \
@@ -8,6 +9,7 @@ HEADERS += \
 SOURCES += \
         testawsabstractcredentials.cpp \
         testawsabstractsignature.cpp \
+        testawsanonymouscredentials.cpp \
         testawsbasiccredentials.cpp \
         testawssignaturev2.cpp \
         testawssignaturev4.cpp \

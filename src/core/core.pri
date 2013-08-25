@@ -1,6 +1,7 @@
 HEADERS += \
         awsabstractcredentials.h \
         awsabstractsignature.h \
+        awsanonymouscredentials.h \
         awsbasiccredentials.h \
         awsbasiccredentials_p.h \
         awssignaturev2.h \
@@ -14,6 +15,7 @@ HEADERS += \
 SOURCES += \
         awsabstractcredentials.cpp \
         awsabstractsignature.cpp \
+        awsanonymouscredentials.cpp \
         awsbasiccredentials.cpp \
         awssignaturev2.cpp \
         awssignaturev3.cpp \
