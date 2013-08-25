@@ -223,6 +223,26 @@ void TestAwsSignatureV4::credentialScope()
     QCOMPARE(scope, expected);
 }
 
+void TestAwsSignatureV4::setDateHeader_data()
+{
+    QTest::addColumn<QDateTime>("dateTime");
+
+    QTest::newRow("null") << QDateTime();
+    QTest::newRow("now")  << QDateTime::currentDateTime();
+    QTest::newRow("utc")  << QDateTime::currentDateTimeUtc();
+}
+
+void TestAwsSignatureV4::setDateHeader()
+{
+    QFETCH(QDateTime, dateTime);
+
+    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    QNetworkRequest request;
+    const QDateTime result = signature.setDateHeader(request, dateTime);
+
+    QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString("yyyyMMddThhmmssZ").toUtf8());
+    QCOMPARE(result, dateTime);
+}
 
 void TestAwsSignatureV4::signingKey_data()
 {
