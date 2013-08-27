@@ -31,12 +31,12 @@ void TestAwsAbstractSignature::canonicalPath_data() {
     QTest::addColumn<QUrl>("url");
     QTest::addColumn<QString>("path");
 
-    QTest::newRow("invalid"     ) << QUrl() << QString("/");
-    QTest::newRow("none"        ) << QUrl("http://example.com")             << QString("/");
-    QTest::newRow("/"           ) << QUrl("http://example.com/")            << QString("/");
-    QTest::newRow("/123"        ) << QUrl("http://example.com/123")         << QString("/123");
-    QTest::newRow("/123/"       ) << QUrl("http://example.com/123/")        << QString("/123/");
-    QTest::newRow("/foo/bar/baz") << QUrl("http://example.com/foo/bar/baz") << QString("/foo/bar/baz");
+    QTest::newRow("invalid"     ) << QUrl() << QString::fromLatin1("/");
+    QTest::newRow("none"        ) << QUrl(QLatin1String("http://example.com"))             << QString::fromLatin1("/");
+    QTest::newRow("/"           ) << QUrl(QLatin1String("http://example.com/"))            << QString::fromLatin1("/");
+    QTest::newRow("/123"        ) << QUrl(QLatin1String("http://example.com/123"))         << QString::fromLatin1("/123");
+    QTest::newRow("/123/"       ) << QUrl(QLatin1String("http://example.com/123/"))        << QString::fromLatin1("/123/");
+    QTest::newRow("/foo/bar/baz") << QUrl(QLatin1String("http://example.com/foo/bar/baz")) << QString::fromLatin1("/foo/bar/baz");
 }
 
 void TestAwsAbstractSignature::canonicalPath() {
@@ -53,13 +53,13 @@ void TestAwsAbstractSignature::canonicalQuery_data() {
     // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
     // Amazon is ambiguous on this, but it seems that V4 used the same canonical query format as V2.
     QTest::newRow("lasticmapreduce")
-        << QUrlQuery(
+        << QUrlQuery(QLatin1String(
             "Action=DescribeJobFlows"
             "&Version=2009-03-31"
             "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
             "&SignatureVersion=2"
             "&SignatureMethod=HmacSHA256"
-            "&Timestamp=2011-10-03T15%3A19%3A30")
+            "&Timestamp=2011-10-03T15%3A19%3A30"))
         << QByteArray(
             "AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
             "&Action=DescribeJobFlows"

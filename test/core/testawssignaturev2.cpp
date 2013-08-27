@@ -21,22 +21,24 @@ void TestAwsSignatureV2::sign_data() {
     { // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
         QTest::newRow("elasticmapreduce")
             << QNetworkAccessManager::GetOperation
-            << QNetworkRequest(QUrl("https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
-                                    "&Version=2009-03-31"
-                                    "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                                    "&SignatureVersion=2"
-                                    "&SignatureMethod=HmacSHA256"
-                                    "&Timestamp=2011-10-03T15%3A19%3A30"))
-            << "AKIAIOSFODNN7EXAMPLE"
-            << "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+            << QNetworkRequest(QUrl(QLatin1String(
+                "https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
+                "&Version=2009-03-31"
+                "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+                "&SignatureVersion=2"
+                "&SignatureMethod=HmacSHA256"
+                "&Timestamp=2011-10-03T15%3A19%3A30")))
+            << QString::fromLatin1("AKIAIOSFODNN7EXAMPLE")
+            << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY")
             << QByteArray()
-            << QNetworkRequest(QUrl("https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
-                                    "&Version=2009-03-31"
-                                    "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-                                    "&SignatureVersion=2"
-                                    "&SignatureMethod=HmacSHA256"
-                                    "&Timestamp=2011-10-03T15%3A19%3A30"
-                                    "&Signature=i91nKc4PWAt0JJIdXwz9HxZCJDdiy6cf%2FMj6vPxyYIs%3D"));
+            << QNetworkRequest(QUrl(QLatin1String(
+                "https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
+                "&Version=2009-03-31"
+                "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+                "&SignatureVersion=2"
+                "&SignatureMethod=HmacSHA256"
+                "&Timestamp=2011-10-03T15%3A19%3A30"
+                "&Signature=i91nKc4PWAt0JJIdXwz9HxZCJDdiy6cf%2FMj6vPxyYIs%3D")));
     }
 
 }
@@ -70,13 +72,13 @@ void TestAwsSignatureV2::canonicalRequest_data() {
     // Official example from http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
     QTest::newRow("lasticmapreduce")
         << QNetworkAccessManager::GetOperation
-        << QUrl(
+        << QUrl(QLatin1String(
             "https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows"
             "&Version=2009-03-31"
             "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
             "&SignatureVersion=2"
             "&SignatureMethod=HmacSHA256"
-            "&Timestamp=2011-10-03T15%3A19%3A30")
+            "&Timestamp=2011-10-03T15%3A19%3A30"))
         << QByteArray(
             "GET\n"
             "elasticmapreduce.amazonaws.com\n"
@@ -98,7 +100,7 @@ void TestAwsSignatureV2::toString_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QString>("expected");
     QTest::newRow("custom") << QNetworkAccessManager::CustomOperation << QString();
-    #define NEW_ROW(op) QTest::newRow(#op) << QNetworkAccessManager::op##Operation << QString(#op).toUpper()
+    #define NEW_ROW(op) QTest::newRow(#op) << QNetworkAccessManager::op##Operation << QString::fromLatin1(#op).toUpper()
     NEW_ROW(Delete);
     NEW_ROW(Head);
     NEW_ROW(Get);

@@ -45,26 +45,26 @@ void TestAwsBasicCredentials::construct() {
 
 void TestAwsBasicCredentials::expiration() {
     // Basic credentials never expire.
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     credentials.expiration();
     QVERIFY(credentials.expiration().isNull());
 }
 
 void TestAwsBasicCredentials::isExpired() {
     // Basic credentials never expire.
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QVERIFY(!credentials.isExpired());
 }
 
 void TestAwsBasicCredentials::isRefreshable() {
     // Basic credentials are not refreshable.
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QVERIFY(!credentials.isRefreshable());
 }
 
 void TestAwsBasicCredentials::refresh() {
     // Basic credentials are not refreshable.
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QVERIFY(!credentials.refresh());
 }
 
@@ -81,7 +81,7 @@ void TestAwsBasicCredentials::setAccessKeyId_data() {
 void TestAwsBasicCredentials::setAccessKeyId() {
     QFETCH(QString, accessKeyId);
 
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     const QString secretKey = credentials.secretKey();
     const QString token = credentials.token();
     credentials.setAccessKeyId(accessKeyId);
@@ -104,7 +104,7 @@ void TestAwsBasicCredentials::setSecretKey_data() {
 void TestAwsBasicCredentials::setSecretKey() {
     QFETCH(QString, secretKey);
 
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     const QString accessKeyId = credentials.accessKeyId();
     const QString token = credentials.token();
     credentials.setSecretKey(secretKey);
@@ -127,7 +127,7 @@ void TestAwsBasicCredentials::setToken_data() {
 void TestAwsBasicCredentials::setToken() {
     QFETCH(QString, token);
 
-    AwsBasicCredentials credentials("", "");
+    AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     const QString accessKeyId = credentials.accessKeyId();
     const QString secretKey = credentials.secretKey();
     credentials.setToken(token);

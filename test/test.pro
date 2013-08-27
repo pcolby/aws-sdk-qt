@@ -4,6 +4,9 @@ QT -= gui
 CONFIG += testcase
 SOURCES += test.cpp
 
+# Disable automatic ASCII conversions (best practice, especially for i18n support).
+DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
+
 # Neaten the output directories.
 MOC_DIR = build
 OBJECTS_DIR = build

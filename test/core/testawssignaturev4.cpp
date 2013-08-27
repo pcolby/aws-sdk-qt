@@ -62,16 +62,16 @@ void TestAwsSignatureV4::authorizationHeaderValue_data()
             "Signature=92cbdd300e8f5ca8a04af4f958739e717986e284102c1d4529f82e6d1ddc2830");
 
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
-        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
         request.setRawHeader("x-amz-date", "20110909T233600Z");
         QTest::newRow("official")
-            << QString("AKIDEXAMPLE")
-            << QString("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
+            << QString::fromLatin1("AKIDEXAMPLE")
+            << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
             << QNetworkAccessManager::PostOperation
             << request
             << QByteArray("Action=ListUsers&Version=2010-05-08")
-            << QDateTime::fromString("20110909T233600Z", "yyyyMMddThhmmssZ")
+            << QDateTime::fromString(QLatin1String("20110909T233600Z"), QLatin1String("yyyyMMddThhmmssZ"))
             << QByteArray(
                 "AWS4-HMAC-SHA256 "
                 "Credential=AKIDEXAMPLE/20110909/us-east-1/iam/aws4_request, "
@@ -164,8 +164,8 @@ void TestAwsSignatureV4::canonicalHeaders_data()
     QTest::newRow("null") << QNetworkRequest() << QByteArray("host:\n") << QByteArray("host");
 
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
         request.setRawHeader("x-amz-date", "20110909T233600Z");
         QTest::newRow("official")
             << request
@@ -213,8 +213,8 @@ void TestAwsSignatureV4::canonicalRequest_data()
         << QByteArray("host");
 
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
         request.setRawHeader("x-amz-date", "20110909T233600Z");
         QTest::newRow("official")
             << QNetworkAccessManager::PostOperation
@@ -263,7 +263,7 @@ void TestAwsSignatureV4::credentialScope_data()
 
     // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
     QTest::newRow("official")
-        << QDate::fromString("20110909", "yyyyMMdd")
+        << QDate::fromString(QLatin1String("20110909"), QLatin1String("yyyyMMdd"))
         << QString::fromLatin1("us-east-1")
         << QString::fromLatin1("iam")
         << QByteArray("20110909/us-east-1/iam/aws4_request");
@@ -306,16 +306,16 @@ void TestAwsSignatureV4::setAuthorizationHeader_data()
             "Signature=92cbdd300e8f5ca8a04af4f958739e717986e284102c1d4529f82e6d1ddc2830");
 
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
-        QNetworkRequest request(QUrl("http://iam.amazonaws.com/"));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded; charset=utf-8");
+        QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
         request.setRawHeader("x-amz-date", "20110909T233600Z");
         QTest::newRow("official")
-            << QString("AKIDEXAMPLE")
-            << QString("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
+            << QString::fromLatin1("AKIDEXAMPLE")
+            << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
             << QNetworkAccessManager::PostOperation
             << request
             << QByteArray("Action=ListUsers&Version=2010-05-08")
-            << QDateTime::fromString("20110909T233600Z", "yyyyMMddThhmmssZ")
+            << QDateTime::fromString(QLatin1String("20110909T233600Z"), QLatin1String("yyyyMMddThhmmssZ"))
             << QByteArray(
                 "AWS4-HMAC-SHA256 "
                 "Credential=AKIDEXAMPLE/20110909/us-east-1/iam/aws4_request, "
@@ -358,14 +358,14 @@ void TestAwsSignatureV4::setDateHeader()
     QNetworkRequest request;
     const QDateTime result = signature.setDateHeader(request, dateTime);
 
-    QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString("yyyyMMddThhmmssZ").toUtf8());
+    QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString(QLatin1String("yyyyMMddThhmmssZ")).toUtf8());
     QCOMPARE(result, dateTime);
 }
 
 void TestAwsSignatureV4::sign()
 {
     // Here we're simply checking that the AwsAbstractSignature::sign function has been correctly overridden
-    const AwsBasicCredentials credentials("", "");
+    const AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     AwsAbstractSignature * const signature = new AwsSignatureV4;
     QNetworkRequest request;
     signature->sign(credentials, QNetworkAccessManager::PostOperation, request);
@@ -385,7 +385,7 @@ void TestAwsSignatureV4::signingKey_data()
     // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html
     QTest::newRow("official")
         << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
-        << QDate::fromString("20110909", "yyyyMMdd")
+        << QDate::fromString(QLatin1String("20110909"), QLatin1String("yyyyMMdd"))
         << QString::fromLatin1("us-east-1")
         << QString::fromLatin1("iam")
         << QByteArray("\x98\xf1\xd8\x89\xfe\xc4\xf4""B""\x1a\xdc""R+""\xab\x0c\xe1\xf8"
@@ -424,7 +424,7 @@ void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()
     // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
     QTest::newRow("official")
         << QByteArray("AWS4-HMAC-SHA256")
-        << QDateTime::fromString("20110909T233600Z", "yyyyMMddThhmmssZ")
+        << QDateTime::fromString(QLatin1String("20110909T233600Z"), QLatin1String("yyyyMMddThhmmssZ"))
         << QByteArray("20110909/us-east-1/iam/aws4_request")
         << QByteArray(
             "POST\n"
