@@ -1,5 +1,6 @@
 #include "testawssignaturev4.h"
 
+#include "../../src/core/awsanonymouscredentials.h"
 #include "../../src/core/awsbasiccredentials.h"
 #include "../../src/core/awssignaturev4.h"
 #include "../../src/core/awssignaturev4_p.h"
@@ -365,7 +366,7 @@ void TestAwsSignatureV4::setDateHeader()
 void TestAwsSignatureV4::sign()
 {
     // Here we're simply checking that the AwsAbstractSignature::sign function has been correctly overridden
-    const AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
+    const AwsAnonymousCredentials credentials;
     AwsAbstractSignature * const signature = new AwsSignatureV4;
     QNetworkRequest request;
     signature->sign(credentials, QNetworkAccessManager::PostOperation, request);
