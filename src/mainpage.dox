@@ -10,6 +10,8 @@
 
 This project requires Qt 5.1 or later for QMessageAuthenticationCode.
 
+@todo  Use data from http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+
 @todo  Add a AwsUrl and/or AwsRegion classes.
 
 @todo  Disable automatic ASCII conversion for unit tests.
