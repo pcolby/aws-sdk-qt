@@ -2,13 +2,13 @@
 
 \mainpage
 
-\section Introduction
+\section intro Introduction
 
-\section Requirements
+\section requirements Requirements
 
-\subsection Qt 5.1
+\subsection qt51 Qt 5.1
 
-This project requires Qt 5.1 or later for QMessageAuthenticationCode.
+This project requires Qt 5.1 or later for the `QMessageAuthenticationCode` class.
 
 @todo  Use data from http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
 
