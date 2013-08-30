@@ -4,6 +4,10 @@ HEADERS += \
         awsanonymouscredentials.h \
         awsbasiccredentials.h \
         awsbasiccredentials_p.h \
+        awsendpoint.h \
+        awsendpoint_p.h \
+        awsregion.h \
+        awsregion_p.h \
         awssignaturev2.h \
         awssignaturev2_p.h \
         awssignaturev3.h \
@@ -17,6 +21,8 @@ SOURCES += \
         awsabstractsignature.cpp \
         awsanonymouscredentials.cpp \
         awsbasiccredentials.cpp \
+        awsendpoint.cpp \
+        awsregion.cpp \
         awssignaturev2.cpp \
         awssignaturev3.cpp \
         awssignaturev4.cpp \
