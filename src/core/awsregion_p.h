@@ -5,22 +5,22 @@
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsEndpoints;
+class AwsRegion;
 
-class QTAWS_EXPORT AwsEndpointsPrivate {
-    Q_DECLARE_PUBLIC(AwsEndpoints)
+class QTAWS_EXPORT AwsRegionPrivate {
+    Q_DECLARE_PUBLIC(AwsRegion)
 
 public:
-    AwsEndpointsPrivate(AwsEndpoints * const q);
+    AwsRegionPrivate(AwsRegion * const q);
 
 protected:
-    QMap<QByteArray, QByteArray> hostToRegionServiceMap;
-    QMap<QByteArray, Regions> serviceToRegionsMap;
-    QMap<QByteArray, QStringList> regionToServicesMap;
+    //QMap<QByteArray, QByteArray> hostToRegionServiceMap;
+    //QMap<QByteArray, Regions> serviceToRegionsMap;
+    //QMap<QByteArray, QStringList> regionToServicesMap;
 
 private:
-    AwsEndpoints * const q_ptr;
-    friend class TestAwsEndpoints;
+    AwsRegion * const q_ptr;
+    friend class TestAwsRegionPrivate;
 };
 
 QTAWS_END_NAMESPACE

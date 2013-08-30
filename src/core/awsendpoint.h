@@ -2,7 +2,6 @@
 #define AWSSENDPOINT_H
 
 #include "qtawsglobal.h"
-#include "awsregion.h"
 
 #include <QFlag>
 #include <QStringList>
@@ -28,25 +27,24 @@ public:
     AwsEndpoint(const QByteArray &hostName);
     AwsEndpoint(const QString &hostName);
 
-    AwsEndpoint(const AwsRegion::Region region, const QString &serviceName);
     AwsEndpoint(const QString &regionName, const QString &serviceName);
 
     bool isValid() const;
     bool isSupported(const QString &serviceName, Transports transport = AnyTransport) const;
 
     QString hostName() const;
-    AwsRegion::Region region() const;
+    QString regionName() const;
     QString serviceName() const;
     QStringList supportedServices(Transports transport = AnyTransport) const;
 
-    static QStringList supportedServices(const AwsRegion::Region region,
-                                         Transports transport = AnyTransport);
+    static QUrl getEndpoint(const QString &region, const QString &serviceName,
+                            Transports transport = AnyTransport);
 
-    static AwsRegion::Regions supportedRegions(const QString &serviceName,
+    static QStringList supportedRegions(const QString &serviceName,
                                                 Transports transport = AnyTransport);
 
-    static QUrl getEndpoint(const QString &serviceName, const AwsRegion::Region region,
-                            Transports transport = AnyTransport);
+    static QStringList supportedServices(const QString &regionName,
+                                         Transports transport = AnyTransport);
 
 private:
     AwsEndpointPrivate * const d_ptr;
