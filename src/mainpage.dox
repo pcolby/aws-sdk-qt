@@ -22,7 +22,7 @@ This project requires Qt 5.1 or later for the `QMessageAuthenticationCode` class
 
 @todo  Consolidate lib and test projects for better Qt Creator experience.
 
-@todo  Sort out @private vs @internal.
+@todo  Sort out \@private vs \@internal.
 
 */
 
