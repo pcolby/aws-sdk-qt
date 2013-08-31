@@ -3,4 +3,4 @@
   <qresource prefix="/aws">
      <file>endpoints.xml</file>
   </qresource>
- </RCC>
+</RCC>

@@ -2,6 +2,9 @@
 #include "awsendpoint_p.h"
 
 #include <QDebug>
+#include <QFile>
+
+#include <QDir>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -103,6 +106,8 @@ QStringList AwsEndpoint::supportedServices(const Transports transport) const
  * @brief  Private implementation for AwsEndpoint.
  */
 
+QMutex AwsEndpointPrivate::mutex;
+
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
 {
@@ -113,10 +118,72 @@ bool AwsEndpointPrivate::loadEndpointData()
 {
     mutex.lock();
 
+    // Check for pre-init.
+
+    // Open the data file.
+    QFile file(QLatin1String(":/aws/endpoints.xml"));
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << file.errorString();
+    }
+
+    QXmlStreamReader xml(&file);
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Regions")) {
+            parseRegions(xml);
+        } else if (xml.name() == QLatin1String("Services")){
+            //parseServices(xml);
+            xml.skipCurrentElement();
+        } else {
+            qDebug() << "ingoring " << xml.name();
+        }
+    }
+    if (xml.hasError()) {
+        qWarning() << xml.errorString();
+    }
+
     Q_ASSERT_X(false, "AwsEndpointPrivate::loadEndpointData", "not implemented");
 
     mutex.unlock();
-    return false;
+    return !xml.hasError();
+}
+
+int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
+{
+    qDebug() << xml.name();
+    return 0;
+}
+
+int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
+{
+    const QStringRef name = xml.name();
+    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Region")) {
+            parseRegion(xml);
+        } else {
+            qDebug() << "ingoring " << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+    return 0;
+}
+
+int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
+{
+    Q_UNUSED(xml);
+    return 0;
+}
+
+int AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
+{
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Service")) {
+            parseService(xml);
+        } else {
+            //qDebug() << "ingoring " << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+    return 0;
 }
 
 QTAWS_END_NAMESPACE

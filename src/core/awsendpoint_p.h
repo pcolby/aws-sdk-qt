@@ -6,6 +6,7 @@
 #include <QMutex>
 #include <QString>
 #include <QStringList>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -23,6 +24,10 @@ public:
 
 protected:
     static bool loadEndpointData();
+    static int parseRegion(QXmlStreamReader &xml);
+    static int parseRegions(QXmlStreamReader &xml);
+    static int parseService(QXmlStreamReader &xml);
+    static int parseServices(QXmlStreamReader &xml);
 
 private:
     static QMutex mutex;
