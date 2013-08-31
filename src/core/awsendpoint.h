@@ -29,22 +29,26 @@ public:
 
     AwsEndpoint(const QString &regionName, const QString &serviceName);
 
+    static QUrl getEndpoint(const QString &regionName, const QString &serviceName,
+                            const Transports transport = AnyTransport);
+
+    bool isSupported(const QString &serviceName, const Transports transport = AnyTransport) const;
+
     bool isValid() const;
-    bool isSupported(const QString &serviceName, Transports transport = AnyTransport) const;
 
     QString hostName() const;
-    QString regionName() const;
-    QString serviceName() const;
-    QStringList supportedServices(Transports transport = AnyTransport) const;
 
-    static QUrl getEndpoint(const QString &region, const QString &serviceName,
-                            Transports transport = AnyTransport);
+    QString regionName() const;
+
+    QString serviceName() const;
 
     static QStringList supportedRegions(const QString &serviceName,
-                                                Transports transport = AnyTransport);
+                                        const Transports transport = AnyTransport);
 
     static QStringList supportedServices(const QString &regionName,
-                                         Transports transport = AnyTransport);
+                                         const Transports transport = AnyTransport);
+
+    QStringList supportedServices(const Transports transport = AnyTransport) const;
 
 private:
     AwsEndpointPrivate * const d_ptr;
