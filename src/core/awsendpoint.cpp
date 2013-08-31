@@ -149,7 +149,22 @@ bool AwsEndpointPrivate::loadEndpointData()
 
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
-    qDebug() << xml.name();
+    QString serviceName;
+    const QStringRef name = xml.name();
+    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Name")) {
+            serviceName = xml.readElementText();
+            qDebug() << "serviceName:" << serviceName;
+        } else if (xml.name() == QLatin1String("Endpoint")) {
+
+        } else {
+            qDebug() << "ingoring " << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+
+//    QMap<QString,
+//    qDebug() << xml.name();
     return 0;
 }
 
