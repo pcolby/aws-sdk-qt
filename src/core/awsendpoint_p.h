@@ -7,6 +7,7 @@
 #include <QString>
 #include <QStringList>
 #include <QXmlStreamReader>
+#include <QVariant>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -21,6 +22,8 @@ public:
     QString serviceName;
 
     AwsEndpointPrivate(AwsEndpoint * const q);
+
+    QVariantMap toVariant(QXmlStreamReader &xml);
 
 protected:
     static bool loadEndpointData();

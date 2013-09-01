@@ -147,6 +147,79 @@ bool AwsEndpointPrivate::loadEndpointData()
     return !xml.hasError();
 }
 
+QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml)
+{
+    //if (maxDepth)
+    //xml.raiseError(...);
+
+    if (xml.tokenType() == QXmlStreamReader::NoToken)
+        xml.readNext();
+
+    if ((xml.tokenType() != QXmlStreamReader::StartDocument) &&
+        (xml.tokenType() != QXmlStreamReader::StartElement)) {
+        qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
+                      .arg(xml.tokenString()).arg(xml.tokenType());
+        return QVariantMap();
+    }
+
+    QVariantMap map;
+    if (xml.tokenType() != QXmlStreamReader::StartDocument) {
+        map.insert(QLatin1String(".documentEncoding"), xml.documentEncoding().toString());
+        map.insert(QLatin1String(".documentVersion"), xml.documentVersion().toString());
+        map.insert(QLatin1String(".isStandaloneDocument"), xml.isStandaloneDocument());
+    } else { // QXmlStreamReader::StartElement
+
+    }
+
+
+    //case QXmlStreamReader::EndDocument:
+        //return QVariant();
+    case QXmlStreamReader::StartElement: {
+        // The reader reports the start of an element with namespaceUri() and name().
+        // Empty elements are also reported as StartElement, followed directly by EndElement.
+        // The convenience function readElementText() can be called to concatenate all content
+        // until the corresponding EndElement. Attributes are reported in attributes(),
+        // namespace declarations in namespaceDeclarations().
+        QVariantMap map;
+        map.insert(QLatin1String(".namespaceUri"), xml.namespaceUri().toString());
+        for (xml.readNext(); (!xml.atEnd()) && (!xml.TokenType == QXmlStreamReader::EndElement); xml.readNext()) {
+            switch (xml.tokenType()) {
+            case QXmlStreamReader::Characters:
+                map.insertMulti(".text", xml.text());
+                break;
+            case QXmlStreamReader::Comment:
+                map.insertMulti(".comment", xml.text());
+                break;
+            case QXmlStreamReader::DTD:
+                map.insertMulti(".dtd", xml.text());
+                break;
+            case QXmlStreamReader::EntityReference:
+                map.insertMulti(".text", xml.text());
+                break;
+            case QXmlStreamReader::ProcessingInstruction:
+                map.insertMulti(QLatin1Char('.') + xml.processingInstructionTarget().toString(),
+                                xml.processingInstructionData().toString());
+                break;
+            case QXmlStreamReader::StartElement:
+                map.insertMulti(xml.name().toString(), toVariant(map));
+                break;
+            default:
+                qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
+                              .arg(xml.tokenString()).arg(xml.tokenType());
+        }
+        return map;
+    }
+    case QXmlStreamReader::EndElement: // The reader reports the end of an element with namespaceUri() and name().
+    case QXmlStreamReader::Characters:            // The reader reports characters in text(). If the characters are all white-space, isWhitespace() returns true. If the characters stem from a CDATA section, isCDATA() returns true.
+    case QXmlStreamReader::Comment:               // The reader reports a comment in text().
+    case QXmlStreamReader::DTD:                   // The reader reports a DTD in text(), notation declarations in ...
+    case QXmlStreamReader::EntityReference:       // The reader reports an entity reference that could not be resolved.
+    case QXmlStreamReader::ProcessingInstruction: // The reader reports a processing instruction in ...
+        break;
+    }
+
+}
+
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
     QString serviceName;
