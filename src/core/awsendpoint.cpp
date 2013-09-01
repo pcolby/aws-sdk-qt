@@ -172,27 +172,32 @@ QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml, const QString &
 
     QVariantMap map;
     if (xml.tokenType() == QXmlStreamReader::StartDocument) {
-        map.insert(prefix + QLatin1String("documentEncoding"), xml.documentEncoding().toString());
-        map.insert(prefix + QLatin1String("documentVersion"), xml.documentVersion().toString());
-        map.insert(prefix + QLatin1String("isStandaloneDocument"), xml.isStandaloneDocument());
+        map.insert(prefix + QLatin1String("DocumentEncoding"), xml.documentEncoding().toString());
+        map.insert(prefix + QLatin1String("DocumentVersion"), xml.documentVersion().toString());
+        map.insert(prefix + QLatin1String("StandaloneDocument"), xml.isStandaloneDocument());
     } else {
-        map.insert(prefix + QLatin1String("namespaceUri"), xml.namespaceUri().toString());
+        if (!xml.namespaceUri().isEmpty())
+            map.insert(prefix + QLatin1String("NamespaceUri"), xml.namespaceUri().toString());
+        foreach (const QXmlStreamAttribute &attribute, xml.attributes()) {
+            QVariantMap attributeMap;
+            attributeMap.insert(QLatin1String("Value"), attribute.value().toString());
+            if (!attribute.namespaceUri().isEmpty())
+                attributeMap.insert(QLatin1String("NamespaceUri"), attribute.namespaceUri().toString());
+            if (!attribute.prefix().isEmpty())
+                attributeMap.insert(QLatin1String("Prefix"), attribute.prefix().toString());
+            attributeMap.insert(QLatin1String("QualifiedName"), attribute.qualifiedName().toString());
+            map.insertMulti(prefix + attribute.name().toString(), attributeMap);
+        }
     }
 
     for (xml.readNext(); (!xml.atEnd()) && (xml.tokenType() != QXmlStreamReader::EndElement)
           && (xml.tokenType() != QXmlStreamReader::EndDocument); xml.readNext()) {
         switch (xml.tokenType()) {
         case QXmlStreamReader::Characters:
-            map.insertMulti(prefix + QLatin1String("text"), xml.text().toString());
-            break;
         case QXmlStreamReader::Comment:
-            map.insertMulti(prefix + QLatin1String("comment"), xml.text().toString());
-            break;
         case QXmlStreamReader::DTD:
-            map.insertMulti(prefix + QLatin1String("dtd"), xml.text().toString());
-            break;
         case QXmlStreamReader::EntityReference:
-            map.insertMulti(prefix + QLatin1String(".text"), xml.text().toString());
+            map.insertMulti(prefix + xml.tokenString(), xml.text().toString());
             break;
         case QXmlStreamReader::ProcessingInstruction:
             map.insertMulti(prefix + xml.processingInstructionTarget().toString(),

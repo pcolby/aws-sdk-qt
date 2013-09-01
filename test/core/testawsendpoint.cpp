@@ -17,7 +17,7 @@ void TestAwsEndpoint::loadEndpointData()
 void TestAwsEndpoint::toVariant()
 {
     QByteArray xml(
-        "<!DOCTYPE doc [<!ATTLIST e9 attr CDATA \"default\">]><!-- comment --><xml>nl<x>ashl</x>ash</xml>");
+        "<!DOCTYPE doc [<!ATTLIST e9 attr CDATA \"default\">]><!-- comment --><xml foo=\" bar \">nl<x>ashl</x>ash</xml>");
     {
         QXmlStreamReader reader(xml);
         qDebug() << AwsEndpointPrivate::toVariant(reader);
