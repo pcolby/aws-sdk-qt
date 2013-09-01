@@ -23,7 +23,9 @@ public:
 
     AwsEndpointPrivate(AwsEndpoint * const q);
 
-    QVariantMap toVariant(QXmlStreamReader &xml);
+    static QVariantMap toVariant(QXmlStreamReader &xml,
+                                 const QString &prefix = QLatin1String("."),
+                                 const int maxDepth = 1024);
 
 protected:
     static bool loadEndpointData();
