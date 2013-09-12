@@ -192,7 +192,7 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 
             /// @todo  Add to hostnames hash too.
             regions[regionName].services[serviceName] = endpoint;
-            qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
+            //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
             qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
@@ -233,7 +233,6 @@ int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    qDebug() << xml.name() << xml.tokenString();
     return 0;
 }
 
