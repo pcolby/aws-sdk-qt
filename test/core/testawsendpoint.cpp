@@ -110,21 +110,114 @@ void TestAwsEndpoint::supportedRegions()
     QFETCH(QStringList, expectedRegions);
 
     const QStringList regions = AwsEndpoint::supportedRegions(serviceName, transport);
-    QCOMPARE(regions.size(), expectedRegions.size());
-
     foreach (const QString &region, expectedRegions) {
-        QVERIFY(regions.contains(region));
+        QVERIFY2(regions.contains(region), region.toLatin1());
     }
+    QCOMPARE(regions.size(), expectedRegions.size());
 }
 
 void TestAwsEndpoint::supportedServices_data()
 {
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<AwsEndpoint::Transports>("transport");
+    QTest::addColumn<QStringList>("expectedServices");
+
+    QTest::newRow("null")           << QString()  << AwsEndpoint::Transports() << QStringList();
+    QTest::newRow("does not exist") << QString()  << AwsEndpoint::Transports() << QStringList();
+
+    QStringList useast1ServicesHttp;
+    useast1ServicesHttp
+        << QLatin1String("cloudfront")
+        << QLatin1String("monitoring")
+        << QLatin1String("dynamodb")
+        << QLatin1String("ec2")
+        << QLatin1String("elasticmapreduce")
+        << QLatin1String("sdb")
+        << QLatin1String("sns")
+        << QLatin1String("sqs")
+        << QLatin1String("s3")
+        << QLatin1String("autoscaling")
+        << QLatin1String("elasticloadbalancing")
+        << QLatin1String("glacier");
+
+    QStringList useast1ServicesHttps;
+    useast1ServicesHttps
+        << QLatin1String("cloudformation")
+        << QLatin1String("cloudfront")
+        << QLatin1String("cloudsearch")
+        << QLatin1String("monitoring")
+        << QLatin1String("dynamodb")
+        << QLatin1String("ec2")
+        << QLatin1String("elasticmapreduce")
+        << QLatin1String("elasticache")
+        << QLatin1String("rds")
+        << QLatin1String("route53")
+        << QLatin1String("email")
+        << QLatin1String("sdb")
+        << QLatin1String("sns")
+        << QLatin1String("sqs")
+        << QLatin1String("s3")
+        << QLatin1String("autoscaling")
+        << QLatin1String("elasticbeanstalk")
+        << QLatin1String("iam")
+        << QLatin1String("importexport")
+        << QLatin1String("sts")
+        << QLatin1String("storagegateway")
+        << QLatin1String("support")
+        << QLatin1String("elasticloadbalancing")
+        << QLatin1String("swf")
+        << QLatin1String("glacier")
+        << QLatin1String("directconnect")
+        << QLatin1String("datapipeline")
+        << QLatin1String("redshift")
+        << QLatin1String("opsworks")
+        << QLatin1String("elastictranscoder");
+
+    QStringList useast1ServicesSmtp;
+    useast1ServicesSmtp << QLatin1String("email");
+
+    QTest::newRow("us-east-1.HTTP")
+        << QString::fromLatin1("us-east-1")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << useast1ServicesHttp;
+    QTest::newRow("us-east-1.HTTPS")
+        << QString::fromLatin1("us-east-1")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << useast1ServicesHttps;
+    QTest::newRow("us-east-1.SMTP")
+        << QString::fromLatin1("us-east-1")
+        << AwsEndpoint::Transports(AwsEndpoint::SMTP)
+        << useast1ServicesSmtp;
+    QTest::newRow("us-east-1.AnyTransport")
+        << QString::fromLatin1("us-east-1")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << useast1ServicesHttps;
 
 }
 
 void TestAwsEndpoint::supportedServices()
 {
+    QFETCH(QString, regionName);
+    QFETCH(AwsEndpoint::Transports, transport);
+    QFETCH(QStringList, expectedServices);
 
+    {
+        const QStringList services = AwsEndpoint::supportedServices(regionName, transport);
+        foreach (const QString &service, expectedServices) {
+            QVERIFY2(services.contains(service), service.toLatin1());
+        }
+        QCOMPARE(services.size(), expectedServices.size());
+    }
+
+    {
+        AwsEndpoint endpoint(regionName, QLatin1String("aaa"));
+        const QStringList services = endpoint.supportedServices(transport);
+        foreach (const QString &service, expectedServices) {
+            QVERIFY2(services.contains(service), service.toLatin1());
+        }
+        qDebug() << services;
+        QCOMPARE(services.size(), expectedServices.size());
+    }
 }
 
 void TestAwsEndpoint::loadEndpointData()
@@ -367,15 +460,15 @@ void TestAwsEndpoint::loadEndpointData()
     QCOMPARE(AwsEndpointPrivate::services.size(), services.size());
 
     foreach (const QByteArray &host, hosts) {
-        QVERIFY(AwsEndpointPrivate::hosts.contains(QLatin1String(host)));
+        QVERIFY2(AwsEndpointPrivate::hosts.contains(QLatin1String(host)), host);
     }
 
     foreach (const QByteArray &region, regions) {
-        QVERIFY(AwsEndpointPrivate::regions.contains(QLatin1String(region)));
+        QVERIFY2(AwsEndpointPrivate::regions.contains(QLatin1String(region)), region);
     }
 
     foreach (const QByteArray &service, services) {
-        QVERIFY(AwsEndpointPrivate::services.contains(QLatin1String(service)));
+        QVERIFY2(AwsEndpointPrivate::services.contains(QLatin1String(service)), service);
     }
 
     QBENCHMARK {
