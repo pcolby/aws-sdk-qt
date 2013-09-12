@@ -107,6 +107,7 @@ QStringList AwsEndpoint::supportedServices(const Transports transport) const
  */
 
 QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;
+QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services;
 
 QMutex AwsEndpointPrivate::mutex;
 
@@ -138,10 +139,9 @@ bool AwsEndpointPrivate::loadEndpointData()
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Regions")) {
             parseRegions(xml);
-        } else if (xml.name() == QLatin1String("Services")){
-            //parseServices(xml);
-            xml.skipCurrentElement();
-        } else {
+        } else if (xml.name() == QLatin1String("Services")) {
+            parseServices(xml);
+        } else if (xml.name() != QLatin1String("XML")) {
             qDebug() << "ingoring " << xml.name();
         }
     }
@@ -224,7 +224,7 @@ QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml, const QString &
 
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
-    QString regionName = QLatin1String("123");
+    QString regionName;
     const QStringRef name = xml.name();
     for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Name")) {
@@ -256,6 +256,9 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
                 endpoint.transports |= AwsEndpoint::SMTP;
             }
 
+            /// @todo  Add to hostnames hash too.
+            Q_ASSERT(!regionName.isEmpty());
+            Q_ASSERT(!serviceName.isEmpty());
             regions[regionName].services[serviceName] = endpoint;
             //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
@@ -263,7 +266,7 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    return 0;
+    return 0; /// @todo  Return something more meaningful.
 }
 
 int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
@@ -282,7 +285,24 @@ int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 
 int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 {
-    Q_UNUSED(xml);
+    QString serviceName;
+    const QStringRef name = xml.name();
+    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Name")) {
+            serviceName = xml.readElementText();
+        } else if (xml.name() == QLatin1String("FullName")) {
+            Q_ASSERT(!serviceName.isEmpty());
+            services[serviceName].fullName = xml.readElementText();
+        } else if (xml.name() == QLatin1String("RegionName")) {
+            Q_ASSERT(!serviceName.isEmpty());
+            const QString &regionName = xml.readElementText();
+            services[serviceName].regionNames.append(regionName);
+            qDebug() << serviceName << services[serviceName].fullName << regionName;
+        } else {
+            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
     return 0;
 }
 
@@ -292,7 +312,7 @@ int AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Service")) {
             parseService(xml);
         } else {
-            //qDebug() << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
