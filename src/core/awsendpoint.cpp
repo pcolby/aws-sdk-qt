@@ -224,7 +224,7 @@ QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml, const QString &
 
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
-    QString regionName;
+    QString regionName = QLatin1String("123");
     const QStringRef name = xml.name();
     for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Name")) {
@@ -232,24 +232,34 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("Endpoint")) {
             RegionEndpointInfo endpoint;
             QString serviceName;
-            for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+            for (xml.readNextStartElement(); xml.name() != QLatin1String("Endpoint"); xml.readNextStartElement()) {
                 if (xml.name() == QLatin1String("ServiceName")) {
                     serviceName = xml.readElementText();
                 } else if (xml.name() == QLatin1String("Http")) {
                     if (xml.readElementText() == QLatin1String("true")) {
-                        endpoint.transports &= AwsEndpoint::HTTP;
+                        endpoint.transports |= AwsEndpoint::HTTP;
                     }
                 } else if (xml.name() == QLatin1String("Https")) {
                     if (xml.readElementText() == QLatin1String("true")) {
-                        endpoint.transports &= AwsEndpoint::HTTPS;
+                        endpoint.transports |= AwsEndpoint::HTTPS;
                     }
                 } else if (xml.name() == QLatin1String("Hostname")) {
                     endpoint.hostName = xml.readElementText();
+                } else {
+                    qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+                    xml.skipCurrentElement();
                 }
             }
+
+            /// @todo  Make this string a constant for performance reasons.
+            if (serviceName == QLatin1String("email")) {
+                endpoint.transports |= AwsEndpoint::SMTP;
+            }
+
             regions[regionName].services[serviceName] = endpoint;
+            //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
-            qDebug() << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -263,7 +273,7 @@ int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Region")) {
             parseRegion(xml);
         } else {
-            qDebug() << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
