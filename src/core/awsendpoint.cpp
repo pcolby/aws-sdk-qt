@@ -106,6 +106,8 @@ QStringList AwsEndpoint::supportedServices(const Transports transport) const
  * @brief  Private implementation for AwsEndpoint.
  */
 
+QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;
+
 QMutex AwsEndpointPrivate::mutex;
 
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
@@ -127,6 +129,12 @@ bool AwsEndpointPrivate::loadEndpointData()
     }
 
     QXmlStreamReader xml(&file);
+    //QVariantMap map = toVariant(xml);
+
+    //foreach (const QVariant &variant, map.values("Regions")) {
+
+    //}
+
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Regions")) {
             parseRegions(xml);
@@ -216,22 +224,35 @@ QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml, const QString &
 
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
-    QString serviceName;
+    QString regionName;
     const QStringRef name = xml.name();
     for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Name")) {
-            serviceName = xml.readElementText();
-            qDebug() << "serviceName:" << serviceName;
+            regionName = xml.readElementText();
         } else if (xml.name() == QLatin1String("Endpoint")) {
-
+            RegionEndpointInfo endpoint;
+            QString serviceName;
+            for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+                if (xml.name() == QLatin1String("ServiceName")) {
+                    serviceName = xml.readElementText();
+                } else if (xml.name() == QLatin1String("Http")) {
+                    if (xml.readElementText() == QLatin1String("true")) {
+                        endpoint.transports &= AwsEndpoint::HTTP;
+                    }
+                } else if (xml.name() == QLatin1String("Https")) {
+                    if (xml.readElementText() == QLatin1String("true")) {
+                        endpoint.transports &= AwsEndpoint::HTTPS;
+                    }
+                } else if (xml.name() == QLatin1String("Hostname")) {
+                    endpoint.hostName = xml.readElementText();
+                }
+            }
+            regions[regionName].services[serviceName] = endpoint;
         } else {
             qDebug() << "ingoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
-
-//    QMap<QString,
-//    qDebug() << xml.name();
     return 0;
 }
 

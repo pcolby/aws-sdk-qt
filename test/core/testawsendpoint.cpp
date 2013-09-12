@@ -7,7 +7,7 @@
 
 void TestAwsEndpoint::loadEndpointData()
 {
-    //QVERIFY(AwsEndpointPrivate::loadEndpointData());
+    QVERIFY(AwsEndpointPrivate::loadEndpointData());
 
     //QBENCHMARK {
         //AwsEndpointPrivate::loadEndpointData();
