@@ -216,10 +216,102 @@ void TestAwsEndpoint::parseService()
 {
     AwsEndpointPrivate::services.clear();
 
+    const QByteArray service1(
+        "<Service>"
+            "<Name>service1</Name>"
+            "<FullName>The First Service</FullName>"
+            "<RegionName>region1</RegionName>"
+            "<RegionName>region2</RegionName>"
+            "<RegionName>region3</RegionName>"
+            "<RegionName>region4</RegionName>"
+            "<foo>ignored</foo>"
+        "</Service>");
+
+    QXmlStreamReader xml1(service1);
+    xml1.readNextStartElement();
+    AwsEndpointPrivate::parseService(xml1);
+    QCOMPARE(AwsEndpointPrivate::services.size(), 1);
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].fullName, QLatin1String("The First Service"));
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames.size(), 4);
+    for (int index = 1; index <= 4; ++index) {
+        QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames[index-1],
+                 QString::fromLatin1("region%1").arg(index));
+    }
+
+    const QByteArray service2(
+        "<Service>"
+            "<foo>ignored</foo>"
+            "<Name>service2</Name>"
+            "<FullName>The Second Service</FullName>"
+            "<RegionName>region1</RegionName>"
+            "<RegionName>region2</RegionName>"
+            "<foo>ignored</foo>"
+            "<RegionName>region1000</RegionName>"
+            "<foo>ignored</foo>"
+        "</Service>");
+
+    QXmlStreamReader xml2(service2);
+    xml2.readNextStartElement();
+    AwsEndpointPrivate::parseService(xml2);
+    QCOMPARE(AwsEndpointPrivate::services.size(), 2);
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].fullName, QLatin1String("The First Service"));
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].fullName, QLatin1String("The Second Service"));
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames.size(), 4);
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames.size(), 3);
+    for (int index = 1; index <= 4; ++index) {
+        QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames[index-1],
+                QString::fromLatin1("region%1").arg(index));
+        if (index <= 2) {
+            QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames[index-1],
+                     QString::fromLatin1("region%1").arg(index));
+        }
+    }
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames[2], QLatin1String("region1000"));
 }
 
 void TestAwsEndpoint::parseServices()
 {
     AwsEndpointPrivate::services.clear();
 
+    const QByteArray services(
+        "<Services>"
+            "<Service>"
+                "<Name>service1</Name>"
+                "<FullName>The First Service</FullName>"
+                "<RegionName>region1</RegionName>"
+                "<RegionName>region2</RegionName>"
+                "<RegionName>region3</RegionName>"
+                "<RegionName>region4</RegionName>"
+                "<foo>ignored</foo>"
+            "</Service>"
+            "<foo>ignored</foo>"
+            "<Service>"
+                "<foo>ignored</foo>"
+                "<Name>service2</Name>"
+                "<FullName>The Second Service</FullName>"
+                "<RegionName>region1</RegionName>"
+                "<RegionName>region2</RegionName>"
+                "<foo>ignored</foo>"
+                "<RegionName>region1000</RegionName>"
+                "<foo>ignored</foo>"
+            "</Service>"
+        "</Services>");
+
+    QXmlStreamReader xml(services);
+    xml.readNextStartElement();
+    AwsEndpointPrivate::parseServices(xml);
+    QCOMPARE(AwsEndpointPrivate::services.size(), 2);
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].fullName, QLatin1String("The First Service"));
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].fullName, QLatin1String("The Second Service"));
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames.size(), 4);
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames.size(), 3);
+    for (int index = 1; index <= 4; ++index) {
+        QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service1")].regionNames[index-1],
+                QString::fromLatin1("region%1").arg(index));
+        if (index <= 2) {
+            QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames[index-1],
+                     QString::fromLatin1("region%1").arg(index));
+        }
+    }
+    QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames[2], QLatin1String("region1000"));
 }
