@@ -23,6 +23,7 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
 {
     Q_D(AwsEndpoint);
     d->hostName = QString::fromUtf8(hostName);
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
     d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
     d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
 }
@@ -32,6 +33,7 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
 {
     Q_D(AwsEndpoint);
     d->hostName = hostName;
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
     d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
     d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
 }
@@ -40,14 +42,16 @@ AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
     : d_ptr(new AwsEndpointPrivate(this))
 {
     Q_D(AwsEndpoint);
-    d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
     d->regionName = regionName;
     d->serviceName = serviceName;
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
+    d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
 }
 
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
     const AwsEndpointPrivate::RegionEndpointInfo &endpointInfo =
         AwsEndpointPrivate::regions[regionName].services[serviceName];
     if (!(endpointInfo.transports & transport)) {
@@ -151,11 +155,14 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
 
 }
 
-bool AwsEndpointPrivate::loadEndpointData()
+void AwsEndpointPrivate::loadEndpointData()
 {
     QMutexLocker locker(&mutex);
 
-    // Check for pre-init.
+    // Bow out early if we've already loaded the endpoint data previously.
+    if (!hosts.empty()) {
+        return; // Already loaded.
+    }
 
     // Open the data file.
     QFile file(QLatin1String(":/aws/endpoints.xml"));
@@ -171,13 +178,16 @@ bool AwsEndpointPrivate::loadEndpointData()
         } else if (xml.name() == QLatin1String("Services")) {
             parseServices(xml);
         } else if (xml.name() != QLatin1String("XML")) {
-            qDebug() << "ingoring " << xml.name();
+            qDebug() << "ignoring " << xml.name();
         }
     }
     if (xml.hasError()) {
         qWarning() << xml.errorString();
     }
-    return ((!xml.hasError()) && (!hosts.isEmpty()) && (!regions.isEmpty()) && (!services.empty()));
+    Q_ASSERT(!xml.hasError());
+    Q_ASSERT(!hosts.isEmpty());
+    Q_ASSERT(!regions.hasError());
+    Q_ASSERT(!services.hasError());
 }
 
 void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
@@ -204,7 +214,7 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
                 } else if (xml.name() == QLatin1String("Hostname")) {
                     endpoint.hostName = xml.readElementText();
                 } else {
-                    qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+                    qDebug() << Q_FUNC_INFO << "ignoring " << xml.name();
                     xml.skipCurrentElement();
                 }
             }
@@ -220,7 +230,7 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             regions[regionName].services[serviceName] = endpoint;
             //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
-            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ignoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -232,7 +242,7 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Region")) {
             parseRegion(xml);
         } else {
-            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ignoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -253,7 +263,7 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             services[serviceName].regionNames.append(regionName);
             //qDebug() << serviceName << services[serviceName].fullName << regionName;
         } else {
-            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ignoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -265,7 +275,7 @@ void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Service")) {
             parseService(xml);
         } else {
-            qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
+            qDebug() << Q_FUNC_INFO << "ignoring " << xml.name();
             xml.skipCurrentElement();
         }
     }

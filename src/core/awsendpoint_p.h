@@ -50,7 +50,7 @@ protected:
 
     static QMutex mutex;
 
-    static bool loadEndpointData();
+    static void loadEndpointData();
     static void parseRegion(QXmlStreamReader &xml);
     static void parseRegions(QXmlStreamReader &xml);
     static void parseService(QXmlStreamReader &xml);
