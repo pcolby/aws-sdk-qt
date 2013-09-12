@@ -51,6 +51,7 @@ AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {
+    AwsEndpointPrivate::loadEndpointData();
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
     const AwsEndpointPrivate::RegionEndpointInfo &endpointInfo =
         AwsEndpointPrivate::regions[regionName].services[serviceName];
@@ -101,6 +102,7 @@ QString AwsEndpoint::serviceName() const
 
 QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Transports transport)
 {
+    AwsEndpointPrivate::loadEndpointData();
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
 
     if (transport == AnyTransport) {
@@ -117,6 +119,7 @@ QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Tran
 
 QStringList AwsEndpoint::supportedServices(const QString &regionName, const Transports transport)
 {
+    AwsEndpointPrivate::loadEndpointData();
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
 
     if (transport == AnyTransport) {
@@ -152,7 +155,7 @@ QMutex AwsEndpointPrivate::mutex;
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
 {
-
+    loadEndpointData();
 }
 
 void AwsEndpointPrivate::loadEndpointData()

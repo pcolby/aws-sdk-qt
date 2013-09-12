@@ -29,14 +29,13 @@ private slots:
 
     QString serviceName() const;
 
-    static QStringList supportedRegions(const QString &serviceName,
-                                        const Transports transport = AnyTransport);
-
-    static QStringList supportedServices(const QString &regionName,
-                                         const Transports transport = AnyTransport);
-
-    QStringList supportedServices(const Transports transport = AnyTransport) const;
     */
+
+    void supportedRegions_data();
+    void supportedRegions();
+
+    void supportedServices_data();
+    void supportedServices();
 
     void loadEndpointData();
     void parseRegion();

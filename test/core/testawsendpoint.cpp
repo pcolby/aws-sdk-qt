@@ -3,12 +3,128 @@
 #include "../../src/core/awsendpoint.h"
 #include "../../src/core/awsendpoint_p.h"
 
-#include <QJsonDocument>
+Q_DECLARE_METATYPE(AwsEndpoint::Transports)
 
 void TestAwsEndpoint::init() {
     AwsEndpointPrivate::hosts.clear();
     AwsEndpointPrivate::regions.clear();
     AwsEndpointPrivate::services.clear();
+}
+
+
+void TestAwsEndpoint::supportedRegions_data()
+{
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<AwsEndpoint::Transports>("transport");
+    QTest::addColumn<QStringList>("expectedRegions");
+
+    QTest::newRow("null")           << QString()  << AwsEndpoint::Transports() << QStringList();
+    QTest::newRow("does not exist") << QString()  << AwsEndpoint::Transports() << QStringList();
+
+    QStringList cloudformationRegions;
+    cloudformationRegions
+        << QLatin1String("us-east-1")
+        << QLatin1String("us-west-1")
+        << QLatin1String("us-west-2")
+        << QLatin1String("eu-west-1")
+        << QLatin1String("ap-northeast-1")
+        << QLatin1String("ap-southeast-1")
+        << QLatin1String("ap-southeast-2")
+        << QLatin1String("sa-east-1");
+    QTest::newRow("cloudformation.HTTP")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << QStringList();
+    QTest::newRow("cloudformation.HTTPS")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << cloudformationRegions;
+    QTest::newRow("cloudformation.SMTP")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::SMTP)
+        << QStringList();
+    QTest::newRow("cloudformation.AnyTransport")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << cloudformationRegions;
+
+    QStringList cloudfrontRegions;
+    cloudfrontRegions
+        << QLatin1String("us-east-1")
+        << QLatin1String("us-west-1")
+        << QLatin1String("us-west-2")
+        << QLatin1String("eu-west-1")
+        << QLatin1String("ap-northeast-1")
+        << QLatin1String("ap-southeast-1")
+        << QLatin1String("ap-southeast-2")
+        << QLatin1String("sa-east-1");
+    QTest::newRow("cloudfront.HTTP")
+        << QString::fromLatin1("cloudfront")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << cloudfrontRegions;
+    QTest::newRow("cloudfront.HTTPS")
+        << QString::fromLatin1("cloudfront")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << cloudfrontRegions;
+    QTest::newRow("cloudfront.SMTP")
+        << QString::fromLatin1("cloudfront")
+        << AwsEndpoint::Transports(AwsEndpoint::SMTP)
+        << QStringList();
+    QTest::newRow("cloudfront.AnyTransport")
+        << QString::fromLatin1("cloudfront")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << cloudfrontRegions;
+
+    QStringList elastictranscoderRegions;
+    elastictranscoderRegions
+        << QLatin1String("us-east-1")
+        << QLatin1String("us-west-1")
+        << QLatin1String("us-west-2")
+        << QLatin1String("eu-west-1")
+        << QLatin1String("ap-northeast-1")
+        << QLatin1String("ap-southeast-1")
+        << QLatin1String("ap-southeast-2")
+        << QLatin1String("sa-east-1");
+    QTest::newRow("elastictranscoder.HTTP")
+        << QString::fromLatin1("elastictranscoder")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << QStringList();
+    QTest::newRow("elastictranscoder.HTTPS")
+        << QString::fromLatin1("elastictranscoder")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << elastictranscoderRegions;
+    QTest::newRow("elastictranscoder.SMTP")
+        << QString::fromLatin1("elastictranscoder")
+        << AwsEndpoint::Transports(AwsEndpoint::SMTP)
+        << QStringList();
+    QTest::newRow("elastictranscoder.AnyTransport")
+        << QString::fromLatin1("elastictranscoder")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << elastictranscoderRegions;
+}
+
+void TestAwsEndpoint::supportedRegions()
+{
+    QFETCH(QString, serviceName);
+    QFETCH(AwsEndpoint::Transports, transport);
+    QFETCH(QStringList, expectedRegions);
+
+    const QStringList regions = AwsEndpoint::supportedRegions(serviceName, transport);
+    QCOMPARE(regions.size(), expectedRegions.size());
+
+    foreach (const QString &region, expectedRegions) {
+        QVERIFY(regions.contains(region));
+    }
+}
+
+void TestAwsEndpoint::supportedServices_data()
+{
+
+}
+
+void TestAwsEndpoint::supportedServices()
+{
+
 }
 
 void TestAwsEndpoint::loadEndpointData()
