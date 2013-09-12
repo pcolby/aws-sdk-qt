@@ -24,9 +24,12 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     Q_D(AwsEndpoint);
     d->hostName = QString::fromUtf8(hostName);
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    /// @todo  Update this to not create keys that don't already exist.
-    d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
-    d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+    if (AwsEndpointPrivate::hosts.contains(d->hostName)) {
+        d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
+        if (!AwsEndpointPrivate::hosts[d->hostName].serviceNames.isEmpty()) {
+            d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+        }
+    }
 }
 
 AwsEndpoint::AwsEndpoint(const QString &hostName)
@@ -35,9 +38,12 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     Q_D(AwsEndpoint);
     d->hostName = hostName;
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    /// @todo  Update this to not create keys that don't already exist.
-    d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
-    d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+    if (AwsEndpointPrivate::hosts.contains(d->hostName)) {
+        d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
+        if (!AwsEndpointPrivate::hosts[d->hostName].serviceNames.isEmpty()) {
+            d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+        }
+    }
 }
 
 AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
@@ -47,8 +53,10 @@ AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
     d->regionName = regionName;
     d->serviceName = serviceName;
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    /// @todo  Update this to not create keys that don't already exist.
-    d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
+    if ((AwsEndpointPrivate::regions.contains(regionName)) &&
+        (AwsEndpointPrivate::regions[regionName].services.contains(serviceName))) {
+        d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
+    }
 }
 
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
@@ -56,7 +64,10 @@ QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceN
 {
     AwsEndpointPrivate::loadEndpointData();
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    /// @todo  Update this to not create keys that don't already exist.
+    if ((!AwsEndpointPrivate::regions.contains(regionName)) ||
+        (!AwsEndpointPrivate::regions[regionName].services.contains(serviceName))) {
+        return QUrl();
+    }
     const AwsEndpointPrivate::RegionEndpointInfo &endpointInfo =
         AwsEndpointPrivate::regions[regionName].services[serviceName];
     if (!(endpointInfo.transports & transport)) {

@@ -215,7 +215,6 @@ void TestAwsEndpoint::supportedServices()
         foreach (const QString &service, expectedServices) {
             QVERIFY2(services.contains(service), service.toLatin1());
         }
-        qDebug() << services;
         QCOMPARE(services.size(), expectedServices.size());
     }
 }
