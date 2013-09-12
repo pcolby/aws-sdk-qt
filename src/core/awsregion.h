@@ -61,10 +61,10 @@ public:
     QString name() const;
     QString fullName() const;
 
-    bool isSupported(const QString &serviceName
-                     /*const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport*/) const;
+    bool isSupported(const QString &serviceName,
+                     const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
 
-    QStringList supportedServices(/*const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport*/) const;
+    QStringList supportedServices(const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
 
 private:
     AwsRegionPrivate * const d_ptr;

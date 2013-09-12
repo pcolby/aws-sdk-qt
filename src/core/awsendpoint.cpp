@@ -80,8 +80,7 @@ bool AwsEndpoint::isSupported(const QString &serviceName, Transports transport) 
 
 bool AwsEndpoint::isValid() const
 {
-    Q_ASSERT_X(false, "AwsEndpoint::isValid", "not implemented");
-    return false;
+    return ((!hostName().isEmpty()) && (!regionName().isEmpty()) && (!serviceName().isEmpty()));
 }
 
 QString AwsEndpoint::regionName() const
