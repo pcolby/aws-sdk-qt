@@ -5,6 +5,8 @@ class TestAwsEndpoint : public QObject {
     Q_OBJECT
 
 private slots:
+    void init();
+
     //void construct_QByteArray_data();
     //void construct_QByteArray();
 

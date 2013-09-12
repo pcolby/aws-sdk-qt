@@ -5,12 +5,14 @@
 
 #include <QJsonDocument>
 
-void TestAwsEndpoint::loadEndpointData()
-{
+void TestAwsEndpoint::init() {
     AwsEndpointPrivate::hosts.clear();
     AwsEndpointPrivate::regions.clear();
     AwsEndpointPrivate::services.clear();
+}
 
+void TestAwsEndpoint::loadEndpointData()
+{
     AwsEndpointPrivate::loadEndpointData();
 
     // sed -nre 's/.*<Hostname>(.*)<.*/<< "\1"/p' ../qrc/endpoints.xml | sort -u
@@ -267,9 +269,6 @@ void TestAwsEndpoint::loadEndpointData()
 
 void TestAwsEndpoint::parseRegion()
 {
-    AwsEndpointPrivate::hosts.clear();
-    AwsEndpointPrivate::regions.clear();
-
     const QByteArray region1(
         "<Region>"
             "<Name>region1</Name>"
@@ -378,9 +377,6 @@ void TestAwsEndpoint::parseRegion()
 
 void TestAwsEndpoint::parseRegions()
 {
-    AwsEndpointPrivate::hosts.clear();
-    AwsEndpointPrivate::regions.clear();
-
     const QByteArray regions(
         "<Regions>"
             "<foo>ignored</foo>"
@@ -462,8 +458,6 @@ void TestAwsEndpoint::parseRegions()
 
 void TestAwsEndpoint::parseService()
 {
-    AwsEndpointPrivate::services.clear();
-
     const QByteArray service1(
         "<Service>"
             "<Name>service1</Name>"
@@ -519,8 +513,6 @@ void TestAwsEndpoint::parseService()
 
 void TestAwsEndpoint::parseServices()
 {
-    AwsEndpointPrivate::services.clear();
-
     const QByteArray services(
         "<Services>"
             "<Service>"
