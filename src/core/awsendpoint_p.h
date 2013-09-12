@@ -51,10 +51,10 @@ protected:
     static QMutex mutex;
 
     static bool loadEndpointData();
-    static int parseRegion(QXmlStreamReader &xml);
-    static int parseRegions(QXmlStreamReader &xml);
-    static int parseService(QXmlStreamReader &xml);
-    static int parseServices(QXmlStreamReader &xml);
+    static void parseRegion(QXmlStreamReader &xml);
+    static void parseRegions(QXmlStreamReader &xml);
+    static void parseService(QXmlStreamReader &xml);
+    static void parseServices(QXmlStreamReader &xml);
 
 private:
     AwsEndpoint * const q_ptr;

@@ -177,10 +177,10 @@ bool AwsEndpointPrivate::loadEndpointData()
     if (xml.hasError()) {
         qWarning() << xml.errorString();
     }
-    return !xml.hasError();
+    return ((!xml.hasError()) && (!hosts.isEmpty()) && (!regions.isEmpty()) && (!services.empty()));
 }
 
-int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
+void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
     QString regionName;
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {
@@ -224,10 +224,9 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    return 0; /// @todo  Return something more meaningful.
 }
 
-int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
+void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 {
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Region")) {
@@ -237,10 +236,9 @@ int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    return 0;
 }
 
-int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
+void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 {
     QString serviceName;
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {
@@ -259,10 +257,9 @@ int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    return 0;
 }
 
-int AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
+void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
 {
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Service")) {
@@ -272,7 +269,6 @@ int AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
             xml.skipCurrentElement();
         }
     }
-    return 0;
 }
 
 QTAWS_END_NAMESPACE
