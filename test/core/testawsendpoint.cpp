@@ -9,6 +9,9 @@ void TestAwsEndpoint::loadEndpointData()
 {
     QVERIFY(AwsEndpointPrivate::loadEndpointData());
 
+    QCOMPARE(AwsEndpointPrivate::regions.size(), 9);
+    QCOMPARE(AwsEndpointPrivate::services.size(), 30);
+
     //QBENCHMARK {
         //AwsEndpointPrivate::loadEndpointData();
     //}

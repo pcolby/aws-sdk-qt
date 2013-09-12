@@ -225,14 +225,14 @@ QVariantMap AwsEndpointPrivate::toVariant(QXmlStreamReader &xml, const QString &
 int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
     QString regionName;
-    const QStringRef name = xml.name();
-    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+    while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Name")) {
             regionName = xml.readElementText();
         } else if (xml.name() == QLatin1String("Endpoint")) {
+            Q_ASSERT(!regionName.isEmpty());
             RegionEndpointInfo endpoint;
             QString serviceName;
-            for (xml.readNextStartElement(); xml.name() != QLatin1String("Endpoint"); xml.readNextStartElement()) {
+            while ((!xml.atEnd()) && (xml.readNextStartElement())) {
                 if (xml.name() == QLatin1String("ServiceName")) {
                     serviceName = xml.readElementText();
                 } else if (xml.name() == QLatin1String("Http")) {
@@ -250,6 +250,7 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
                     xml.skipCurrentElement();
                 }
             }
+            Q_ASSERT(!serviceName.isEmpty());
 
             /// @todo  Make this string a constant for performance reasons.
             if (serviceName == QLatin1String("email")) {
@@ -257,10 +258,8 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             }
 
             /// @todo  Add to hostnames hash too.
-            Q_ASSERT(!regionName.isEmpty());
-            Q_ASSERT(!serviceName.isEmpty());
             regions[regionName].services[serviceName] = endpoint;
-            //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
+            qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
             qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
@@ -271,8 +270,7 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 
 int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 {
-    const QStringRef name = xml.name();
-    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+    while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Region")) {
             parseRegion(xml);
         } else {
@@ -286,8 +284,7 @@ int AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 {
     QString serviceName;
-    const QStringRef name = xml.name();
-    for (xml.readNextStartElement(); xml.name() != name; xml.readNextStartElement()) {
+    while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Name")) {
             serviceName = xml.readElementText();
         } else if (xml.name() == QLatin1String("FullName")) {
@@ -297,18 +294,19 @@ int AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             Q_ASSERT(!serviceName.isEmpty());
             const QString &regionName = xml.readElementText();
             services[serviceName].regionNames.append(regionName);
-            qDebug() << serviceName << services[serviceName].fullName << regionName;
+            //qDebug() << serviceName << services[serviceName].fullName << regionName;
         } else {
             qDebug() << Q_FUNC_INFO << "ingoring " << xml.name();
             xml.skipCurrentElement();
         }
     }
+    qDebug() << xml.name() << xml.tokenString();
     return 0;
 }
 
 int AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
 {
-    while (xml.readNextStartElement()) {
+    while ((!xml.atEnd()) && (xml.readNextStartElement())) {
         if (xml.name() == QLatin1String("Service")) {
             parseService(xml);
         } else {
