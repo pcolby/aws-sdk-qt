@@ -8,6 +8,4 @@ private slots:
 
     void loadEndpointData();
 
-    void toVariant();
-
 };

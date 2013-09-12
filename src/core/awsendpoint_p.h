@@ -25,10 +25,6 @@ public:
 
     AwsEndpointPrivate(AwsEndpoint * const q);
 
-    static QVariantMap toVariant(QXmlStreamReader &xml,
-                                 const QString &prefix = QLatin1String("."),
-                                 const int maxDepth = 1024);
-
 protected:
     //QHash<QString, QString> hostNameToRegionName;
     //QHash<QString, QStringList> regionNameToServiceNames; // Need HTTP/HTTPS?
