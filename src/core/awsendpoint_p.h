@@ -26,16 +26,19 @@ public:
     AwsEndpointPrivate(AwsEndpoint * const q);
 
 protected:
-    //QHash<QString, QString> hostNameToRegionName;
-    //QHash<QString, QStringList> regionNameToServiceNames; // Need HTTP/HTTPS?
-    //QHash<QString, QStringList> serviceNameToRegionNames;
+    struct HostInfo {
+        QString regionName;
+        QStringList serviceNames;
+    };
+    static QHash<QString, HostInfo> hosts;
 
     struct RegionEndpointInfo {
         QString hostName;
         AwsEndpoint::Transports transports;
     };
+    typedef QHash<QString, RegionEndpointInfo> RegionServices;
     struct RegionInfo {
-        QHash<QString, RegionEndpointInfo> services;
+        RegionServices services;
     };
     static QHash<QString, RegionInfo> regions;
 
@@ -45,6 +48,8 @@ protected:
     };
     static QHash<QString, ServiceInfo> services;
 
+    static QMutex mutex;
+
     static bool loadEndpointData();
     static int parseRegion(QXmlStreamReader &xml);
     static int parseRegions(QXmlStreamReader &xml);
@@ -52,8 +57,6 @@ protected:
     static int parseServices(QXmlStreamReader &xml);
 
 private:
-    static QMutex mutex;
-
     AwsEndpoint * const q_ptr;
     friend class TestAwsEndpoint;
 };

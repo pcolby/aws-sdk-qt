@@ -3,8 +3,7 @@
 
 #include <QDebug>
 #include <QFile>
-
-#include <QDir>
+#include <QMutexLocker>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -22,30 +21,47 @@ QTAWS_BEGIN_NAMESPACE
 AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
 {
-    Q_UNUSED(hostName)
+    Q_D(AwsEndpoint);
+    d->hostName = QString::fromUtf8(hostName);
+    d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
+    d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
 }
 
 AwsEndpoint::AwsEndpoint(const QString &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
 {
-    Q_UNUSED(hostName)
+    Q_D(AwsEndpoint);
+    d->hostName = hostName;
+    d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
+    d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
 }
 
 AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
     : d_ptr(new AwsEndpointPrivate(this))
 {
-    Q_UNUSED(regionName)
-    Q_UNUSED(serviceName)
+    Q_D(AwsEndpoint);
+    d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
+    d->regionName = regionName;
+    d->serviceName = serviceName;
 }
 
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {
-    Q_UNUSED(regionName)
-    Q_UNUSED(serviceName)
-    Q_UNUSED(transport)
-    Q_ASSERT_X(false, "AwsEndpoint::getEndpoint", "not implemented");
-    return QUrl();
+    const AwsEndpointPrivate::RegionEndpointInfo &endpointInfo =
+        AwsEndpointPrivate::regions[regionName].services[serviceName];
+    if (!(endpointInfo.transports & transport)) {
+        return QUrl();
+    }
+
+    QUrl url;
+    url.setHost(endpointInfo.hostName);
+    if ((endpointInfo.transports & HTTPS) && (transport & HTTPS))
+        url.setScheme(QLatin1String("https"));
+    else if ((endpointInfo.transports & HTTP) && (transport & HTTP))
+        url.setScheme(QLatin1String("http"));
+    /// @todo  Handle SMTP here?
+    return url;
 }
 
 QString AwsEndpoint::hostName() const
@@ -56,7 +72,10 @@ QString AwsEndpoint::hostName() const
 
 bool AwsEndpoint::isSupported(const QString &serviceName, Transports transport) const
 {
-    return supportedServices(transport).contains(serviceName);
+    /// @todo  Benchmark the following alternative implementations (for fun).
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
+    return AwsEndpointPrivate::regions[regionName()].services[serviceName].transports & transport;
+    //return supportedServices(transport).contains(serviceName);
 }
 
 bool AwsEndpoint::isValid() const
@@ -79,25 +98,40 @@ QString AwsEndpoint::serviceName() const
 
 QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Transports transport)
 {
-    Q_UNUSED(serviceName);
-    Q_UNUSED(transport);
-    Q_ASSERT_X(false, "AwsEndpoint::supportedRegions", "not implemented");
-    return QStringList();
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
+
+    if (transport == AnyTransport) {
+        return AwsEndpointPrivate::services[serviceName].regionNames;
+    }
+
+    QStringList regions;
+    foreach (const QString &regionName, AwsEndpointPrivate::services[serviceName].regionNames) {
+        if (AwsEndpointPrivate::regions[regionName].services[serviceName].transports & transport)
+            regions.append(regionName);
+    }
+    return regions;
 }
 
 QStringList AwsEndpoint::supportedServices(const QString &regionName, const Transports transport)
 {
-    Q_UNUSED(regionName);
-    Q_UNUSED(transport);
-    Q_ASSERT_X(false, "AwsEndpoint::supportedServices", "not implemented");
-    return QStringList();
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
+
+    if (transport == AnyTransport) {
+        return AwsEndpointPrivate::regions[regionName].services.keys();
+    }
+
+    QStringList serviceNames;
+    const AwsEndpointPrivate::RegionServices &services = AwsEndpointPrivate::regions[regionName].services;
+    for (AwsEndpointPrivate::RegionServices::const_iterator iter = services.constBegin(); iter != services.constEnd(); ++iter) {
+        if (iter.value().transports & transport)
+            serviceNames.append(iter.key());
+    }
+    return serviceNames;
 }
 
 QStringList AwsEndpoint::supportedServices(const Transports transport) const
 {
-    Q_UNUSED(transport);
-    Q_ASSERT_X(false, "AwsEndpoint::supportedServices", "not implemented");
-    return QStringList();
+    return supportedServices(regionName(), transport);
 }
 
 /**
@@ -106,6 +140,7 @@ QStringList AwsEndpoint::supportedServices(const Transports transport) const
  * @brief  Private implementation for AwsEndpoint.
  */
 
+QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;
 QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;
 QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services;
 
@@ -119,7 +154,7 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
 
 bool AwsEndpointPrivate::loadEndpointData()
 {
-    mutex.lock();
+    QMutexLocker locker(&mutex);
 
     // Check for pre-init.
 
@@ -129,13 +164,8 @@ bool AwsEndpointPrivate::loadEndpointData()
         qWarning() << file.errorString();
     }
 
+    // Parse the XML data.
     QXmlStreamReader xml(&file);
-    //QVariantMap map = toVariant(xml);
-
-    //foreach (const QVariant &variant, map.values("Regions")) {
-
-    //}
-
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Regions")) {
             parseRegions(xml);
@@ -148,10 +178,6 @@ bool AwsEndpointPrivate::loadEndpointData()
     if (xml.hasError()) {
         qWarning() << xml.errorString();
     }
-
-    Q_ASSERT_X(false, "AwsEndpointPrivate::loadEndpointData", "not implemented");
-
-    mutex.unlock();
     return !xml.hasError();
 }
 
@@ -185,12 +211,13 @@ int AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             }
             Q_ASSERT(!serviceName.isEmpty());
 
-            /// @todo  Make this string a constant for performance reasons.
             if (serviceName == QLatin1String("email")) {
                 endpoint.transports |= AwsEndpoint::SMTP;
             }
 
-            /// @todo  Add to hostnames hash too.
+            Q_ASSERT((!hosts.contains(endpoint.hostName)) || (hosts.value(endpoint.hostName).regionName == regionName));
+            hosts[endpoint.hostName].regionName = regionName;
+            hosts[endpoint.hostName].serviceNames.append(serviceName);
             regions[regionName].services[serviceName] = endpoint;
             //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
