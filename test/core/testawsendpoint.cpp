@@ -201,7 +201,7 @@ void TestAwsEndpoint::supportedServices()
     QFETCH(AwsEndpoint::Transports, transport);
     QFETCH(QStringList, expectedServices);
 
-    {
+    {   // static AwsEndpoint::supportServices
         const QStringList services = AwsEndpoint::supportedServices(regionName, transport);
         foreach (const QString &service, expectedServices) {
             QVERIFY2(services.contains(service), service.toLatin1());
@@ -209,7 +209,7 @@ void TestAwsEndpoint::supportedServices()
         QCOMPARE(services.size(), expectedServices.size());
     }
 
-    {
+    {   // non-static AwsEndpoint::supportServices
         AwsEndpoint endpoint(regionName, QLatin1String("aaa"));
         const QStringList services = endpoint.supportedServices(transport);
         foreach (const QString &service, expectedServices) {
