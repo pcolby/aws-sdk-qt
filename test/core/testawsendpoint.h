@@ -20,16 +20,19 @@ private slots:
                             const Transports transport = AnyTransport);
 
     bool isSupported(const QString &serviceName, const Transports transport = AnyTransport) const;
-
-    bool isValid() const;
-
-    QString hostName() const;
-
-    QString regionName() const;
-
-    QString serviceName() const;
-
     */
+
+    void isValid_data();
+    void isValid();
+
+    void hostName_data();
+    void hostName();
+
+    void regionName_data();
+    void regionName();
+
+    void serviceName_data();
+    void serviceName();
 
     void supportedRegions_data();
     void supportedRegions();
@@ -37,6 +40,7 @@ private slots:
     void supportedServices_data();
     void supportedServices();
 
+    // AwsEndpointPrivate functions.
     void loadEndpointData();
     void parseRegion();
     void parseRegions();

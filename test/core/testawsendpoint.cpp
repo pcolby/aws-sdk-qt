@@ -5,12 +5,116 @@
 
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)
 
-void TestAwsEndpoint::init() {
+void TestAwsEndpoint::init()
+{
     AwsEndpointPrivate::hosts.clear();
     AwsEndpointPrivate::regions.clear();
     AwsEndpointPrivate::services.clear();
 }
 
+void TestAwsEndpoint::isValid_data()
+{
+    QTest::addColumn<QString>("hostName");
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << QString()
+        << false;
+    QTest::newRow("empty")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("")
+        << false;
+    QTest::newRow("1")
+        << QString::fromLatin1("1")
+        << QString::fromLatin1("2")
+        << QString::fromLatin1("")
+        << false;
+    QTest::newRow("2")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("2")
+        << QString::fromLatin1("3")
+        << false;
+    QTest::newRow("3")
+        << QString::fromLatin1("1")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("3")
+        << false;
+    QTest::newRow("4")
+        << QString::fromLatin1("1")
+        << QString::fromLatin1("2")
+        << QString::fromLatin1("3")
+        << true;
+}
+
+void TestAwsEndpoint::isValid()
+{
+    QFETCH(QString, hostName);
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(bool, isValid);
+
+    AwsEndpoint endpoint(QLatin1String(""));
+    endpoint.d_func()->hostName = hostName;
+    endpoint.d_func()->regionName = regionName;
+    endpoint.d_func()->serviceName = serviceName;
+    QCOMPARE(endpoint.isValid(), isValid);
+}
+
+void TestAwsEndpoint::hostName_data()
+{
+    QTest::addColumn<QString>("hostName");
+    QTest::newRow("null")     << QString();
+    QTest::newRow("empty")    << QString::fromLatin1("");
+    QTest::newRow("space")    << QString::fromLatin1(" ");
+    QTest::newRow("spaces")   << QString::fromLatin1("  ");
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf");
+}
+
+void TestAwsEndpoint::hostName()
+{
+    QFETCH(QString, hostName);
+    const AwsEndpoint endpoint(hostName);
+    QCOMPARE(endpoint.hostName(), hostName);
+}
+
+void TestAwsEndpoint::regionName_data()
+{
+    QTest::addColumn<QString>("regionName");
+    QTest::newRow("null")     << QString();
+    QTest::newRow("empty")    << QString::fromLatin1("");
+    QTest::newRow("space")    << QString::fromLatin1(" ");
+    QTest::newRow("spaces")   << QString::fromLatin1("  ");
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf");
+}
+
+void TestAwsEndpoint::regionName()
+{
+    QFETCH(QString, regionName);
+    const AwsEndpoint endpoint(regionName, QString());
+    QCOMPARE(endpoint.regionName(), regionName);
+}
+
+void TestAwsEndpoint::serviceName_data()
+{
+    QTest::addColumn<QString>("serviceName");
+    QTest::newRow("null")     << QString();
+    QTest::newRow("empty")    << QString::fromLatin1("");
+    QTest::newRow("space")    << QString::fromLatin1(" ");
+    QTest::newRow("spaces")   << QString::fromLatin1("  ");
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf");
+}
+
+void TestAwsEndpoint::serviceName()
+{
+    QFETCH(QString, serviceName);
+    const AwsEndpoint endpoint(QString(), serviceName);
+    QCOMPARE(endpoint.serviceName(), serviceName);
+}
 
 void TestAwsEndpoint::supportedRegions_data()
 {
