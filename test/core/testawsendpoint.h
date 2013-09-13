@@ -7,14 +7,14 @@ class TestAwsEndpoint : public QObject {
 private slots:
     void init();
 
-    //void construct_QByteArray_data();
-    //void construct_QByteArray();
+    void construct_QByteArray_data();
+    void construct_QByteArray();
 
-    //void construct_QString_data();
-    //void construct_QString();
+    void construct_QString_data();
+    void construct_QString();
 
-    //void construct_QString_QString_data();
-    //void construct_QString_QString();
+    void construct_QString_QString_data();
+    void construct_QString_QString();
 
     /*static QUrl getEndpoint(const QString &regionName, const QString &serviceName,
                             const Transports transport = AnyTransport);

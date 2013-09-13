@@ -12,6 +12,117 @@ void TestAwsEndpoint::init()
     AwsEndpointPrivate::services.clear();
 }
 
+void TestAwsEndpoint::construct_QByteArray_data()
+{
+    QTest::addColumn<QByteArray>("hostName");
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QByteArray()
+        << QString()
+        << QString()
+        << false;
+
+    QTest::newRow("empty")
+        << QByteArray("")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("")
+        << false;
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com")
+        << QByteArray("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << true;
+
+    QTest::newRow("swf.us-gov-west-1.amazonaws.com")
+        << QByteArray("swf.us-gov-west-1.amazonaws.com")
+        << QString::fromLatin1("us-gov-west-1")
+        << QString::fromLatin1("swf")
+        << true;
+}
+
+void TestAwsEndpoint::construct_QByteArray()
+{
+    QFETCH(QByteArray, hostName);
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(bool, isValid);
+
+    const AwsEndpoint endpoint(hostName);
+    QCOMPARE(endpoint.hostName(),    QString::fromUtf8(hostName));
+    QCOMPARE(endpoint.regionName(),  regionName);
+    QCOMPARE(endpoint.serviceName(), serviceName);
+    QCOMPARE(endpoint.isValid(),     isValid);
+}
+
+void TestAwsEndpoint::construct_QString_data()
+{
+    QTest::addColumn<QString>("hostName");
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << QString()
+        << false;
+
+    QTest::newRow("empty")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("")
+        << QString::fromLatin1("")
+        << false;
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << true;
+
+    QTest::newRow("swf.us-gov-west-1.amazonaws.com")
+        << QString::fromLatin1("swf.us-gov-west-1.amazonaws.com")
+        << QString::fromLatin1("us-gov-west-1")
+        << QString::fromLatin1("swf")
+        << true;
+}
+
+void TestAwsEndpoint::construct_QString()
+{
+    QFETCH(QString, hostName);
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(bool, isValid);
+
+    const AwsEndpoint endpoint(hostName);
+    QCOMPARE(endpoint.hostName(),    hostName);
+    QCOMPARE(endpoint.regionName(),  regionName);
+    QCOMPARE(endpoint.serviceName(), serviceName);
+    QCOMPARE(endpoint.isValid(),     isValid);
+}
+
+void TestAwsEndpoint::construct_QString_QString_data()
+{
+    construct_QString_data(); // Same data for now.
+}
+
+void TestAwsEndpoint::construct_QString_QString()
+{
+    QFETCH(QString, hostName);
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(bool, isValid);
+
+    const AwsEndpoint endpoint(regionName, serviceName);
+    QCOMPARE(endpoint.hostName(),    hostName);
+    QCOMPARE(endpoint.regionName(),  regionName);
+    QCOMPARE(endpoint.serviceName(), serviceName);
+    QCOMPARE(endpoint.isValid(),     isValid);
+}
+
 void TestAwsEndpoint::isValid_data()
 {
     QTest::addColumn<QString>("hostName");
