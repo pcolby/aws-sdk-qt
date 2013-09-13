@@ -16,11 +16,11 @@ private slots:
     void construct_QString_QString_data();
     void construct_QString_QString();
 
-    /*static QUrl getEndpoint(const QString &regionName, const QString &serviceName,
-                            const Transports transport = AnyTransport);
+    void getEndpoint_data();
+    void getEndpoint();
 
-    bool isSupported(const QString &serviceName, const Transports transport = AnyTransport) const;
-    */
+    void isSupported_data();
+    void isSupported();
 
     void isValid_data();
     void isValid();

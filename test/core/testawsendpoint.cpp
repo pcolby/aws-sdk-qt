@@ -123,6 +123,76 @@ void TestAwsEndpoint::construct_QString_QString()
     QCOMPARE(endpoint.isValid(),     isValid);
 }
 
+void TestAwsEndpoint::getEndpoint_data()
+{
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<AwsEndpoint::Transports>("transport");
+    QTest::addColumn<QUrl>("endpoint");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << QUrl();
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.AnyTransport")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << QUrl(QString::fromLatin1("https://cloudformation.us-east-1.amazonaws.com"));
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTP")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << QUrl(); // HTTP is not supported for CF in us-east-1.
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTPS")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << QUrl(QLatin1String("https://cloudformation.us-east-1.amazonaws.com"));
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.AnyTransport")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << QUrl(QString::fromLatin1("https://elasticloadbalancing.us-east-1.amazonaws.com"));
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTP")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << QUrl(QLatin1String("http://elasticloadbalancing.us-east-1.amazonaws.com"));
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTPS")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << QUrl(QLatin1String("https://elasticloadbalancing.us-east-1.amazonaws.com"));
+}
+
+void TestAwsEndpoint::getEndpoint()
+{
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(AwsEndpoint::Transports, transport);
+    QFETCH(QUrl, endpoint);
+
+    QCOMPARE(AwsEndpoint::getEndpoint(regionName, serviceName, transport), endpoint);
+}
+
+void TestAwsEndpoint::isSupported_data()
+{
+
+}
+
+void TestAwsEndpoint::isSupported()
+{
+
+}
+
 void TestAwsEndpoint::isValid_data()
 {
     QTest::addColumn<QString>("hostName");

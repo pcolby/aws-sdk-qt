@@ -16,11 +16,10 @@ class QTAWS_EXPORT AwsEndpoint {
 
 public:
     enum Transport {
-        AnyTransport = 0x00,
         HTTP  = 0x01,
         HTTPS = 0x02,
         SMTP  = 0x04,
-        AllTransports = HTTP|HTTPS|SMTP
+        AnyTransport = HTTP|HTTPS|SMTP
     };
     Q_DECLARE_FLAGS(Transports, Transport)
 
