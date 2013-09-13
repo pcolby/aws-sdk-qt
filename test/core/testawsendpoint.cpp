@@ -185,12 +185,63 @@ void TestAwsEndpoint::getEndpoint()
 
 void TestAwsEndpoint::isSupported_data()
 {
+    QTest::addColumn<QString>("hostName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<AwsEndpoint::Transports>("transport");
+    QTest::addColumn<bool>("supported");
 
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << false;
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.AnyTransport")
+        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << true;
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTP")
+        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << false;
+
+    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTPS")
+        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << true;
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.AnyTransport")
+        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
+        << true;
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTP")
+        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
+        << true;
+
+    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTPS")
+        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
+        << true;
 }
 
 void TestAwsEndpoint::isSupported()
 {
+    QFETCH(QString, hostName);
+    QFETCH(QString, serviceName);
+    QFETCH(AwsEndpoint::Transports, transport);
+    QFETCH(bool, supported);
 
+    const AwsEndpoint endpoint(hostName);
+    QCOMPARE(endpoint.isSupported(serviceName, transport), supported);
 }
 
 void TestAwsEndpoint::isValid_data()

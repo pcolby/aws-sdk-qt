@@ -94,6 +94,10 @@ bool AwsEndpoint::isSupported(const QString &serviceName, Transports transport) 
 {
     /// @todo  Benchmark the following alternative implementations (for fun).
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
+    if ((!AwsEndpointPrivate::regions.contains(regionName())) ||
+            (!AwsEndpointPrivate::regions[regionName()].services.contains(serviceName))) {
+        return false;
+    }
     return AwsEndpointPrivate::regions[regionName()].services[serviceName].transports & transport;
     //return supportedServices(transport).contains(serviceName);
 }
