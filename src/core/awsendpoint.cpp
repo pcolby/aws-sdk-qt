@@ -25,10 +25,10 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     d->hostName = QString::fromUtf8(hostName);
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
     if (AwsEndpointPrivate::hosts.contains(d->hostName)) {
-        d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
-        if (!AwsEndpointPrivate::hosts[d->hostName].serviceNames.isEmpty()) {
-            d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+        if (!AwsEndpointPrivate::hosts[d->hostName].regionNames.empty()) {
+            d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionNames.first();
         }
+        d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceName;
     }
 }
 
@@ -39,10 +39,10 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     d->hostName = hostName;
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
     if (AwsEndpointPrivate::hosts.contains(d->hostName)) {
-        d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionName;
-        if (!AwsEndpointPrivate::hosts[d->hostName].serviceNames.isEmpty()) {
-            d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceNames.first();
+        if (!AwsEndpointPrivate::hosts[d->hostName].regionNames.empty()) {
+            d->regionName = AwsEndpointPrivate::hosts[d->hostName].regionNames.first();
         }
+        d->serviceName = AwsEndpointPrivate::hosts[d->hostName].serviceName;
     }
 }
 
@@ -234,9 +234,9 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
                 endpoint.transports |= AwsEndpoint::SMTP;
             }
 
-            Q_ASSERT((!hosts.contains(endpoint.hostName)) || (hosts.value(endpoint.hostName).regionName == regionName));
-            hosts[endpoint.hostName].regionName = regionName;
-            hosts[endpoint.hostName].serviceNames.append(serviceName);
+            Q_ASSERT((!hosts.contains(endpoint.hostName)) || (hosts.value(endpoint.hostName).serviceName == serviceName));
+            hosts[endpoint.hostName].regionNames.append(regionName);
+            hosts[endpoint.hostName].serviceName  = serviceName;
             regions[regionName].services[serviceName] = endpoint;
             //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {

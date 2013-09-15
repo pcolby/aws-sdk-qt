@@ -27,9 +27,8 @@ public:
 
 protected:
     struct HostInfo {
-        //QStringList regionNames;
-        QString regionName;
-        QStringList serviceNames;
+        QStringList regionNames;
+        QString serviceName;
     };
     static QHash<QString, HostInfo> hosts;
 

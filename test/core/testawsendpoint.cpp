@@ -478,8 +478,8 @@ void TestAwsEndpoint::regionName_data()
 
     // The 6 known (so far) region-agnostic AWS hosts.
     NEW_ROW("cloudfront.amazonaws.com", "us-east-1");
-    NEW_ROW("iam.amazonaws.com", "us-gov-west-1");
-    NEW_ROW("iam.us-gov.amazonaws.com", "us-east-1");
+    NEW_ROW("iam.amazonaws.com", "us-east-1");
+    NEW_ROW("iam.us-gov.amazonaws.com", "us-gov-west-1");
     NEW_ROW("importexport.amazonaws.com", "us-east-1");
     NEW_ROW("route53.amazonaws.com", "us-east-1");
     NEW_ROW("sts.amazonaws.com", "us-east-1");
@@ -498,11 +498,11 @@ void TestAwsEndpoint::serviceName_data()
 {
     QTest::addColumn<QString>("hostName");
     QTest::addColumn<QString>("serviceName");
-    QTest::newRow("null")     << QString();
-    QTest::newRow("empty")    << QString::fromLatin1("");
-    QTest::newRow("space")    << QString::fromLatin1(" ");
-    QTest::newRow("spaces")   << QString::fromLatin1("  ");
     QTest::newRow("null")     << QString() << QString();
+    QTest::newRow("empty")    << QString::fromLatin1("") << QString();
+    QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
+    QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
+    QTest::newRow("null")     << QString() << QString() << QString();
     QTest::newRow("empty")    << QString::fromLatin1("") << QString();
     QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
     QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
