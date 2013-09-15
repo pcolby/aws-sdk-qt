@@ -23,10 +23,6 @@ public:
 
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
 
-protected:
-    /// @todo  Move this to a common class.
-    QString toString(const QNetworkAccessManager::Operation operation) const;
-
 private:
     AwsSignatureV2 * const q_ptr;
     friend class TestAwsSignatureV2;

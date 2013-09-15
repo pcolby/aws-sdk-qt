@@ -152,7 +152,7 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
                                                    QByteArray * const signedHeaders) const
 {
     Q_Q(const AwsSignatureV4);
-    return httpMethod(operation).toUtf8() + '\n' +
+    return q->httpMethod(operation).toUtf8() + '\n' +
            q->canonicalPath(request.url()).toUtf8() + '\n' +
            q->canonicalQuery(QUrlQuery(request.url()))  + '\n' +
            canonicalHeaders(request, signedHeaders) + '\n' +
@@ -163,20 +163,6 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
 QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const
 {
     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws4_request";
-}
-
-QString AwsSignatureV4Private::httpMethod(const QNetworkAccessManager::Operation operation) const {
-    switch (operation) {
-        case QNetworkAccessManager::DeleteOperation: return QLatin1String("DELETE");
-        case QNetworkAccessManager::HeadOperation:   return QLatin1String("HEAD");
-        case QNetworkAccessManager::GetOperation:    return QLatin1String("GET");
-        case QNetworkAccessManager::PostOperation:   return QLatin1String("POST");
-        case QNetworkAccessManager::PutOperation:    return QLatin1String("PUT");
-        case QNetworkAccessManager::CustomOperation: // Fall through.
-        default:
-            Q_ASSERT_X(false, "AwsSignatureV4Private::toString", "invalid operation");
-    }
-    return QString();
 }
 
 void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &credentials,

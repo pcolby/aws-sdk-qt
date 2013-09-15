@@ -20,7 +20,11 @@ public:
 
 protected:
     QString canonicalPath(const QUrl &url) const;
+
     QByteArray canonicalQuery(const QUrlQuery &query) const;
+
+    QString httpMethod(const QNetworkAccessManager::Operation operation) const;
+
     friend class TestAwsAbstractSignature;
 };
 

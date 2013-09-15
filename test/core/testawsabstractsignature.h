@@ -11,4 +11,7 @@ private slots:
 
     void canonicalQuery_data();
     void canonicalQuery();
+
+    void httpMethod_data();
+    void httpMethod();
 };

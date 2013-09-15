@@ -76,3 +76,23 @@ void TestAwsAbstractSignature::canonicalQuery() {
     QCOMPARE(QString::fromUtf8(signature.canonicalQuery(query)), QString::fromUtf8(expected));
     QCOMPARE(signature.canonicalQuery(query), expected);
 }
+
+void TestAwsAbstractSignature::httpMethod_data() {
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+    QTest::addColumn<QString>("expected");
+    QTest::newRow("custom") << QNetworkAccessManager::CustomOperation << QString();
+    #define NEW_ROW(op) QTest::newRow(#op) << QNetworkAccessManager::op##Operation << QString::fromLatin1(#op).toUpper()
+    NEW_ROW(Delete);
+    NEW_ROW(Head);
+    NEW_ROW(Get);
+    NEW_ROW(Post);
+    NEW_ROW(Put);
+    #undef NEW_ROW
+}
+
+void TestAwsAbstractSignature::httpMethod() {
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QString, expected);
+    const MockSignature signature;
+    QCOMPARE(signature.httpMethod(operation), expected);
+}
