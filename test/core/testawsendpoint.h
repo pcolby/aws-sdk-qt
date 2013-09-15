@@ -43,5 +43,4 @@ private slots:
     void parseRegions();
     void parseService();
     void parseServices();
-
 };

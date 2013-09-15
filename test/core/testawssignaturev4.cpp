@@ -49,19 +49,6 @@ void TestAwsSignatureV4::authorizationHeaderValue_data()
     QTest::addColumn<QDateTime>("timestamp");
     QTest::addColumn<QByteArray>("expected");
 
-    QTest::newRow("null")
-        << QString()
-        << QString()
-        << QNetworkAccessManager::PostOperation
-        << QNetworkRequest()
-        << QByteArray()
-        << QDateTime()
-        << QByteArray(
-            "AWS4-HMAC-SHA256 "
-            "Credential=//us-east-1/iam/aws4_request, "
-            "SignedHeaders=host, "
-            "Signature=92cbdd300e8f5ca8a04af4f958739e717986e284102c1d4529f82e6d1ddc2830");
-
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
         QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
         request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
@@ -292,19 +279,6 @@ void TestAwsSignatureV4::setAuthorizationHeader_data()
     QTest::addColumn<QByteArray>("payload");
     QTest::addColumn<QDateTime>("timestamp");
     QTest::addColumn<QByteArray>("expected");
-
-    QTest::newRow("null")
-        << QString()
-        << QString()
-        << QNetworkAccessManager::PostOperation
-        << QNetworkRequest()
-        << QByteArray()
-        << QDateTime()
-        << QByteArray(
-            "AWS4-HMAC-SHA256 "
-            "Credential=//us-east-1/iam/aws4_request, "
-            "SignedHeaders=host, "
-            "Signature=92cbdd300e8f5ca8a04af4f958739e717986e284102c1d4529f82e6d1ddc2830");
 
     { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
         QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
