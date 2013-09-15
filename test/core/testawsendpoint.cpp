@@ -3,6 +3,7 @@
 #include "../../src/core/awsendpoint.h"
 #include "../../src/core/awsendpoint_p.h"
 
+Q_DECLARE_METATYPE(AwsEndpoint::Transport)
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)
 
 void TestAwsEndpoint::init()
@@ -294,7 +295,7 @@ void TestAwsEndpoint::regionName_data()
     QTest::newRow("empty")    << QString::fromLatin1("") << QString();
     QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
     QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
-    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf");
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf") << QString();
 
 
     #define NEW_ROW(host, region) QTest::newRow(host) << QString::fromLatin1(host) << QString::fromLatin1(region)
@@ -505,9 +506,9 @@ void TestAwsEndpoint::serviceName_data()
     QTest::newRow("empty")    << QString::fromLatin1("") << QString();
     QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
     QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
-    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf");
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf") << QString();
 
-    #define NEW_ROW(host, service) QTest::newRow(host) << QString::fromLatin1(host) << QString::fromLatin1(servuce)
+    #define NEW_ROW(host, service) QTest::newRow(host) << QString::fromLatin1(host) << QString::fromLatin1(service)
 
     // The 180 known (so far) AWS hosts.
     // sed -nre 's/.*<Hostname>(([^\.]+).*\.amazonaws\.com)<.*/NEW_ROW("\1", "\2");/p' ../qrc/endpoints.xml | sort -u
@@ -804,6 +805,16 @@ void TestAwsEndpoint::supportedRegions()
         QVERIFY2(regions.contains(region), region.toLatin1());
     }
     QCOMPARE(regions.size(), expectedRegions.size());
+
+    // Test the non-static AwsEndpoint::supportRegions version too.
+    if (!expectedRegions.empty()) {
+        const AwsEndpoint endpoint(AwsEndpoint::getEndpoint(expectedRegions.first(), serviceName).host());
+        const QStringList regions = endpoint.supportedRegions(transport);
+        foreach (const QString &region, expectedRegions) {
+            QVERIFY2(regions.contains(region), region.toLatin1());
+        }
+        QCOMPARE(regions.size(), expectedRegions.size());
+    }
 }
 
 void TestAwsEndpoint::supportedServices_data()
@@ -891,22 +902,11 @@ void TestAwsEndpoint::supportedServices()
     QFETCH(AwsEndpoint::Transports, transport);
     QFETCH(QStringList, expectedServices);
 
-    {   // static AwsEndpoint::supportServices
-        const QStringList services = AwsEndpoint::supportedServices(regionName, transport);
-        foreach (const QString &service, expectedServices) {
-            QVERIFY2(services.contains(service), service.toLatin1());
-        }
-        QCOMPARE(services.size(), expectedServices.size());
+    const QStringList services = AwsEndpoint::supportedServices(regionName, transport);
+    foreach (const QString &service, expectedServices) {
+        QVERIFY2(services.contains(service), service.toLatin1());
     }
-
-    {   // non-static AwsEndpoint::supportServices
-        AwsEndpoint endpoint(regionName, QLatin1String("aaa"));
-        const QStringList services = endpoint.supportedServices(transport);
-        foreach (const QString &service, expectedServices) {
-            QVERIFY2(services.contains(service), service.toLatin1());
-        }
-        QCOMPARE(services.size(), expectedServices.size());
-    }
+    QCOMPARE(services.size(), expectedServices.size());
 }
 
 void TestAwsEndpoint::loadEndpointData()
