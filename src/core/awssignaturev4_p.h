@@ -49,8 +49,6 @@ protected:
 
     QByteArray credentialScope(const QDate &date, const QString &region, const QString &service) const;
 
-    QString extractRegion(const QUrl &url) const;
-
     QString httpMethod(const QNetworkAccessManager::Operation operation) const;
 
     QByteArray signingKey(const AwsAbstractCredentials &credentials, const QDate &date,

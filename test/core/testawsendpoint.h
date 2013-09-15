@@ -13,9 +13,6 @@ private slots:
     void construct_QString_data();
     void construct_QString();
 
-    void construct_QString_QString_data();
-    void construct_QString_QString();
-
     void getEndpoint_data();
     void getEndpoint();
 

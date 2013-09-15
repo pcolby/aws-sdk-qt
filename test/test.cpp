@@ -17,13 +17,13 @@ int main(int argc, char *argv[]) {
     }
 
     // Call the above test macro on all test classes here.
-    //TEST(TestAwsAbstractCredentials)
-    //TEST(TestAwsAbstractSignature)
-    //TEST(TestAwsAnonymousCredentials)
-    //TEST(TestAwsBasicCredentials)
+    TEST(TestAwsAbstractCredentials)
+    TEST(TestAwsAbstractSignature)
+    TEST(TestAwsAnonymousCredentials)
+    TEST(TestAwsBasicCredentials)
     TEST(TestAwsEndpoint)
-    //TEST(TestAwsSignatureV2)
-    //TEST(TestAwsSignatureV4)
+    TEST(TestAwsSignatureV2)
+    TEST(TestAwsSignatureV4)
     return 0;
 }
 

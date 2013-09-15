@@ -1,6 +1,8 @@
 #include "awssignaturev4.h"
 #include "awssignaturev4_p.h"
 
+#include "awsendpoint.h"
+
 #include <QDebug>
 #include <QMessageAuthenticationCode>
 
@@ -77,15 +79,15 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
                                                            const QDateTime &timestamp) const
 {
     const QByteArray algorithmDesignation = this->algorithmDesignation(hashAlgorithm);
-    const QString region = extractRegion(request.url());
-    const QString service = QLatin1String("iam"); /// @todo Something like AwsUrl::service.
+    const AwsEndpoint endpoint(request.url().host());
+    qDebug() << request.url().host() << endpoint.regionName() << endpoint.serviceName();
 
-    const QByteArray credentialScope = this->credentialScope(timestamp.date(), region, service);
+    const QByteArray credentialScope = this->credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());
     QByteArray signedHeaders;
     const QByteArray canonicalRequest = this->canonicalRequest(operation, request, payload, &signedHeaders);
 
     const QByteArray stringToSign = this->stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);
-    const QByteArray signingKey = this->signingKey(credentials, timestamp.date(), region, service);
+    const QByteArray signingKey = this->signingKey(credentials, timestamp.date(), endpoint.regionName(), endpoint.serviceName());
     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);
 
     return algorithmDesignation + " Credential=" + credentials.accessKeyId().toUtf8() + '/' + credentialScope +
@@ -162,12 +164,6 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
 QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const
 {
     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws4_request";
-}
-
-QString AwsSignatureV4Private::extractRegion(const QUrl &url) const
-{
-    Q_UNUSED(url); /// @todo  Repalce this with something like AwsRegion::fromUrl();
-    return QString::fromLatin1("us-east-1");
 }
 
 QString AwsSignatureV4Private::httpMethod(const QNetworkAccessManager::Operation operation) const {

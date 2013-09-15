@@ -46,19 +46,6 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     }
 }
 
-AwsEndpoint::AwsEndpoint(const QString &regionName, const QString &serviceName)
-    : d_ptr(new AwsEndpointPrivate(this))
-{
-    Q_D(AwsEndpoint);
-    d->regionName = regionName;
-    d->serviceName = serviceName;
-    QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    if ((AwsEndpointPrivate::regions.contains(regionName)) &&
-        (AwsEndpointPrivate::regions[regionName].services.contains(serviceName))) {
-        d->hostName = AwsEndpointPrivate::regions[regionName].services[serviceName].hostName;
-    }
-}
-
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {
@@ -90,12 +77,17 @@ QString AwsEndpoint::hostName() const
     return d->hostName;
 }
 
-bool AwsEndpoint::isSupported(const QString &serviceName, Transports transport) const
+bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceName, const Transports transport)
 {
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
-    return ((AwsEndpointPrivate::regions.contains(regionName())) &&
-            (AwsEndpointPrivate::regions[regionName()].services.contains(serviceName)) &&
-            (AwsEndpointPrivate::regions[regionName()].services[serviceName].transports & transport));
+    return ((AwsEndpointPrivate::regions.contains(regionName)) &&
+            (AwsEndpointPrivate::regions[regionName].services.contains(serviceName)) &&
+            (AwsEndpointPrivate::regions[regionName].services[serviceName].transports & transport));
+}
+
+bool AwsEndpoint::isSupported(const Transport transport) const
+{
+    return isSupported(regionName(), serviceName(), AwsEndpoint::Transports(transport));
 }
 
 bool AwsEndpoint::isValid() const
@@ -113,6 +105,11 @@ QString AwsEndpoint::serviceName() const
 {
     Q_D(const AwsEndpoint);
     return d->serviceName;
+}
+
+QStringList AwsEndpoint::supportedRegions(const Transports transport) const
+{
+    return supportedRegions(serviceName(), transport);
 }
 
 QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Transports transport)
@@ -148,11 +145,6 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
             serviceNames.append(iter.key());
     }
     return serviceNames;
-}
-
-QStringList AwsEndpoint::supportedServices(const Transports transport) const
-{
-    return supportedServices(regionName(), transport);
 }
 
 /**

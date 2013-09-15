@@ -26,12 +26,13 @@ public:
     AwsEndpoint(const QByteArray &hostName);
     AwsEndpoint(const QString &hostName);
 
-    AwsEndpoint(const QString &regionName, const QString &serviceName);
-
     static QUrl getEndpoint(const QString &regionName, const QString &serviceName,
                             const Transports transport = AnyTransport);
 
-    bool isSupported(const QString &serviceName, const Transports transport = AnyTransport) const;
+    static bool isSupported(const QString &regionName, const QString &serviceName,
+                            const Transports transport = AnyTransport);
+
+    bool isSupported(const Transport transport) const;
 
     bool isValid() const;
 
@@ -41,13 +42,13 @@ public:
 
     QString serviceName() const;
 
+    QStringList supportedRegions(const Transports transport = AnyTransport) const;
+
     static QStringList supportedRegions(const QString &serviceName,
                                         const Transports transport = AnyTransport);
 
     static QStringList supportedServices(const QString &regionName,
                                          const Transports transport = AnyTransport);
-
-    QStringList supportedServices(const Transports transport = AnyTransport) const;
 
 private:
     AwsEndpointPrivate * const d_ptr;
