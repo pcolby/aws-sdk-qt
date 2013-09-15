@@ -80,7 +80,6 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
 {
     const QByteArray algorithmDesignation = this->algorithmDesignation(hashAlgorithm);
     const AwsEndpoint endpoint(request.url().host());
-    qDebug() << request.url().host() << endpoint.regionName() << endpoint.serviceName();
 
     const QByteArray credentialScope = this->credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());
     QByteArray signedHeaders;
