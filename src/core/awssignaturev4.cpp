@@ -27,6 +27,11 @@ AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm
 
 }
 
+AwsSignatureV4::~AwsSignatureV4()
+{
+    delete d_ptr;
+}
+
 void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
                           const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const

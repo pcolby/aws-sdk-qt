@@ -16,6 +16,8 @@ class QTAWS_EXPORT AwsSignatureV4 : public AwsAbstractSignature {
 public:
     AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
 
+    ~AwsSignatureV4();
+
     virtual void sign(const AwsAbstractCredentials &credentials,
                       const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const;

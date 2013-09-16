@@ -16,6 +16,11 @@ AwsSignatureV3::AwsSignatureV3() : d_ptr(new AwsSignatureV3Private(this)) {
 
 }
 
+AwsSignatureV3::~AwsSignatureV3()
+{
+    delete d_ptr;
+}
+
 void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
 {
