@@ -162,7 +162,7 @@ QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;
 QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;
 QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services;
 
-QMutex AwsEndpointPrivate::mutex;
+QMutex AwsEndpointPrivate::mutex(QMutex::Recursive);
 
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
@@ -170,7 +170,7 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     loadEndpointData();
 }
 
-void AwsEndpointPrivate::loadEndpointData()
+void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 {
     QMutexLocker locker(&mutex);
 
@@ -180,13 +180,40 @@ void AwsEndpointPrivate::loadEndpointData()
     }
 
     // Open the data file.
-    QFile file(QLatin1String(":/aws/endpoints.xml"));
-    if (!file.open(QIODevice::ReadOnly)) {
-        qWarning() << file.errorString();
+    QFile file(fileName);
+    loadEndpointData(file);
+}
+
+void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
+{
+    QMutexLocker locker(&mutex);
+
+    // Bow out early if we've already loaded the endpoint data previously.
+    if (!hosts.empty()) {
+        return; // Already loaded.
+    }
+
+    // Open the device, if not already open.
+    if ((!device.isOpen()) && (!device.open(QIODevice::ReadOnly))) {
+        qWarning() << device.errorString();
+        return;
+    }
+
+    // Parse the data.
+    QXmlStreamReader xml(&device);
+    loadEndpointData(xml);
+}
+
+void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
+{
+    QMutexLocker locker(&mutex);
+
+    // Bow out early if we've already loaded the endpoint data previously.
+    if (!hosts.empty()) {
+        return; // Already loaded.
     }
 
     // Parse the XML data.
-    QXmlStreamReader xml(&file);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Regions")) {
             parseRegions(xml);

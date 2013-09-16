@@ -50,7 +50,9 @@ protected:
 
     static QMutex mutex;
 
-    static void loadEndpointData();
+    static void loadEndpointData(const QString &fileName = QLatin1String(":/aws/endpoints.xml"));
+    static void loadEndpointData(QIODevice &device);
+    static void loadEndpointData(QXmlStreamReader &xml);
     static void parseRegion(QXmlStreamReader &xml);
     static void parseRegions(QXmlStreamReader &xml);
     static void parseService(QXmlStreamReader &xml);
