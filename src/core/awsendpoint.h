@@ -26,6 +26,8 @@ public:
     AwsEndpoint(const QByteArray &hostName);
     AwsEndpoint(const QString &hostName);
 
+    ~AwsEndpoint();
+
     static QUrl getEndpoint(const QString &regionName, const QString &serviceName,
                             const Transports transport = AnyTransport);
 

@@ -58,6 +58,8 @@ public:
     AwsRegion(const Region region);
     AwsRegion(const QString &regionName);
 
+    ~AwsRegion();
+
     QString name() const;
     QString fullName() const;
 

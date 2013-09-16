@@ -46,6 +46,11 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     }
 }
 
+AwsEndpoint::~AwsEndpoint()
+{
+    delete d_ptr;
+}
+
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {

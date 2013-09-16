@@ -25,6 +25,11 @@ QTAWS_BEGIN_NAMESPACE
 
 }*/
 
+AwsRegion::~AwsRegion()
+{
+    delete d_ptr;
+}
+
 /**
  * @class  AwsRegionPrivate
  *
