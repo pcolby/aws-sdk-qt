@@ -54,6 +54,11 @@ AwsBasicCredentials::AwsBasicCredentials(
     d->secretKey = secretKey;
 }
 
+AwsBasicCredentials::~AwsBasicCredentials()
+{
+    delete d_ptr;
+}
+
 QString AwsBasicCredentials::accessKeyId() const
 {
     Q_D(const AwsBasicCredentials);
