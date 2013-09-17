@@ -10,11 +10,22 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsEndpoint
  *
- * @brief  @todo
+ * @brief  Provide access to AWS endpoint information.
+ *
+ * This class parses the `endpoint.xml` data available at
+ * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ *
+ * The `endpoint.xml` file is embedded as a resource in the libqtaws
+ * library - not fetched remotely at runtime.
+ *
+ * @note  This class provides fairly low-level access to AWS endpoint data.
+ *        Generally, you should consider using the AwsRegion and/or various
+ *        AwsService-derived classes in preferenc to using this class
+ *        directly.
  */
 
 /**
- * @brief  Constructs a new AwsSignatureV4 object.
+ * @brief  Constructs a new AwsEndpoint object.
  *
  * @todo
  */
