@@ -10,15 +10,17 @@
 
 This project requires Qt 5.1 or later for the `QMessageAuthenticationCode` class.
 
+@todo  Split doxygen output into public and internal.
+
 @todo  Add licence(s).
 
-@todo  Add a AwsUrl and/or AwsRegion classes.
-
-@todo  Apply the official AWS Signature Version 4 test suite.
+@todo  Flesh out AwsRegion class.
 
 @todo  Document all the code added so far.
 
 @todo  Upload to GitHub.
+
+@todo  Apply the official AWS Signature Version 4 test suite.
 
  */
 
