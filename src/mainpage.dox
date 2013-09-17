@@ -12,10 +12,6 @@ This project requires Qt 5.1 or later for the `QMessageAuthenticationCode` class
 
 @todo  Add licence(s).
 
-@todo  Destroy all provider objects!
-
-@todo  Use data from http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
-
 @todo  Add a AwsUrl and/or AwsRegion classes.
 
 @todo  Apply the official AWS Signature Version 4 test suite.
@@ -28,7 +24,7 @@ This project requires Qt 5.1 or later for the `QMessageAuthenticationCode` class
 
 @todo  Upload to GitHub.
 
-*/
+ */
 
 /**
  * @page test A test page
