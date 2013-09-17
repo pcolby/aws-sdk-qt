@@ -21,6 +21,7 @@ unix {
     QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_LFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_CXXFLAGS_RELEASE -= -O1 -O2 -O3
+    QMAKE_RPATHDIR += ../release
 
     # Generate gcov's gcda files by executing the test program.
     gcov.depends = test
