@@ -58,14 +58,21 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 }
 
 /**
+ * @internal
+ *
  * @class  AwsSignatureV2Private
  *
  * @brief  Private implementation for AwsSignatureV2.
+ *
+ * @warning  This is an internal private implementation class, and as such external should
+ *           code should **not** depend directly on anything contained within this class.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
 /**
+ * @internal
+ *
  * @brief  Constructs a new AwsSignatureV2Private object.
  *
  * @param  q  Pointer to this object's public AwsSignatureV2 instance.
@@ -76,6 +83,8 @@ AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q
 }
 
 /**
+ * @internal
+ *
  * @brief  Convert an AWS request to canonical form.
  *
  * This function creates a canonical representation of an AWS request as defined by
