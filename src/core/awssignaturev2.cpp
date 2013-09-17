@@ -78,16 +78,28 @@ AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q
 /**
  * @brief  Convert an AWS request to canonical form.
  *
- * This function...
+ * This function creates a canonical representation of an AWS request as defined by
+ * Amazon's V2 signature specification.
  *
- * @todo  Details about Amazon's V2 canonical form, including example(s).
+ * For example, for the following HTTP `GET` request:
+ *
+ *     https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&Version=2009-03-31&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30
+ *
+ * this function will return the following canonical form:
+ *
+ *     GET
+ *     elasticmapreduce.amazonaws.com
+ *     /
+ *     AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31
+ *
+ * @note  All URL components are encoded to UTF-8, as required by Amazon.
  *
  * @param  operation  The HTTP method being requested.
  * @param  url        The URL being request.
  *
  * @return The request in canonical form.
  *
- * @see http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
 QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QUrl &url) const
