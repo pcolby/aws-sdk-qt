@@ -909,7 +909,7 @@ void TestAwsEndpoint::supportedServices()
     QCOMPARE(services.size(), expectedServices.size());
 }
 
-void TestAwsEndpoint::loadEndpointData()
+void TestAwsEndpoint::loadEndpointData_QString()
 {
     AwsEndpointPrivate::loadEndpointData();
 
@@ -1159,10 +1159,32 @@ void TestAwsEndpoint::loadEndpointData()
     foreach (const QByteArray &service, services) {
         QVERIFY2(AwsEndpointPrivate::services.contains(QLatin1String(service)), service);
     }
+}
 
-    QBENCHMARK {
-        AwsEndpointPrivate::loadEndpointData();
-    }
+void TestAwsEndpoint::loadEndpointData_QIODevice()
+{
+    // The "working" scenario is already tested by loadEndpointData_QString
+    // above, so here we're just testing some failure scenarios.
+
+    // Loading data from an un-opennable device should fail gracefully.
+    QFile device;
+    AwsEndpointPrivate::loadEndpointData(device);
+
+    // If data has been loaded previously, the device is ignored.
+    AwsEndpointPrivate::loadEndpointData();
+    AwsEndpointPrivate::loadEndpointData(device);
+}
+
+void TestAwsEndpoint::loadEndpointData_QXmlStreamReader()
+{
+    // The "working" scenario is already tested by loadEndpointData_QString
+    // above, so here we're just testing some failure scenarios.
+
+    QXmlStreamReader xml1(QByteArray("<unrecognised_element/>"));
+    AwsEndpointPrivate::loadEndpointData(xml1);
+
+    QXmlStreamReader xml2(QByteArray("not valid xml"));
+    AwsEndpointPrivate::loadEndpointData(xml2);
 }
 
 void TestAwsEndpoint::parseRegion()

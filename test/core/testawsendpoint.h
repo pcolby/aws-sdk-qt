@@ -38,7 +38,9 @@ private slots:
     void supportedServices();
 
     // AwsEndpointPrivate functions.
-    void loadEndpointData();
+    void loadEndpointData_QString();
+    void loadEndpointData_QIODevice();
+    void loadEndpointData_QXmlStreamReader();
     void parseRegion();
     void parseRegions();
     void parseService();
