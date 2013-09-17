@@ -16,6 +16,4 @@ SOURCES += \
         testawssignaturev2.cpp \
         testawssignaturev4.cpp \
 
-VPATH += $$PWD
-
-include(../../src/core/core.pri)
+VPATH += $$PWD ../../src/core
