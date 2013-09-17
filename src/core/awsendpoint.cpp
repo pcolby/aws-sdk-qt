@@ -173,8 +173,6 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
 void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 {
     QMutexLocker locker(&mutex);
-
-    // Bow out early if we've already loaded the endpoint data previously.
     if (!hosts.empty()) {
         return; // Already loaded.
     }
@@ -187,8 +185,6 @@ void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 {
     QMutexLocker locker(&mutex);
-
-    // Bow out early if we've already loaded the endpoint data previously.
     if (!hosts.empty()) {
         return; // Already loaded.
     }
@@ -207,8 +203,6 @@ void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
 {
     QMutexLocker locker(&mutex);
-
-    // Bow out early if we've already loaded the endpoint data previously.
     if (!hosts.empty()) {
         return; // Already loaded.
     }
