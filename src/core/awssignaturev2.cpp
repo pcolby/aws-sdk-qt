@@ -31,6 +31,9 @@ AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm
     d->hashAlgorithm = hashAlgorithm;
 }
 
+/**
+ * @brief AwsSignatureV2 destructor.
+ */
 AwsSignatureV2::~AwsSignatureV2()
 {
     delete d_ptr;
@@ -62,8 +65,30 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
-AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q) { }
+/**
+ * @brief  Constructs a new AwsSignatureV2Private object.
+ *
+ * @param  q  Pointer to this object's public AwsSignatureV2 instance.
+ */
+AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q)
+{
 
+}
+
+/**
+ * @brief  Convert an AWS request to canonical form.
+ *
+ * This function...
+ *
+ * @todo  Details about Amazon's V2 canonical form, including example(s).
+ *
+ * @param  operation  The HTTP method being requested.
+ * @param  url        The URL being request.
+ *
+ * @return The request in canonical form.
+ *
+ * @see http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ */
 QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QUrl &url) const
 {
