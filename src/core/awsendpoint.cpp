@@ -158,11 +158,11 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
  * @brief  Private implementation for AwsEndpoint.
  */
 
-QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;
-QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;
-QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services;
+QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;       /// Hash of hostnames to HostInfo.
+QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;   /// Hash of region names to RegionInfo.
+QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; /// Hash of service names to ServiceInfo.
 
-QMutex AwsEndpointPrivate::mutex(QMutex::Recursive);
+QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); /// Mutex for protecting access to static members.
 
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
