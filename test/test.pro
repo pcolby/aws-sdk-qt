@@ -14,6 +14,7 @@ RESOURCES = ../qrc/aws.qrc
 # Neaten the output directories.
 MOC_DIR = build
 OBJECTS_DIR = build
+RCC_DIR = build
 
 # Code coverage reporting (for Linux at least).
 unix {
