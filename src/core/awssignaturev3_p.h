@@ -9,7 +9,6 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV3;
 
-/// @private
 class QTAWS_EXPORT AwsSignatureV3Private {
     Q_DECLARE_PUBLIC(AwsSignatureV3)
 

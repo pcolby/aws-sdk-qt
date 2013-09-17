@@ -9,7 +9,6 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsBasicCredentials;
 
-/// @private
 class QTAWS_EXPORT AwsBasicCredentialsPrivate {
     Q_DECLARE_PUBLIC(AwsBasicCredentials)
 

@@ -13,7 +13,6 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV4;
 
-/// @private
 class QTAWS_EXPORT AwsSignatureV4Private {
     Q_DECLARE_PUBLIC(AwsSignatureV4)
 
