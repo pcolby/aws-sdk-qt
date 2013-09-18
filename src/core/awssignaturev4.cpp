@@ -44,6 +44,8 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
 }
 
 /**
+ * @internal
+ *
  * @class  AwsSignatureV4Private
  *
  * @brief  Private implementation for AwsSignatureV4.

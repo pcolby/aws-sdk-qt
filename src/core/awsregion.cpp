@@ -31,6 +31,8 @@ AwsRegion::~AwsRegion()
 }
 
 /**
+ * @internal
+ *
  * @class  AwsRegionPrivate
  *
  * @brief  Private implementation for AwsRegion.

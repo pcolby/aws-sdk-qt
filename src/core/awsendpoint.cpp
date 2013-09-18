@@ -164,6 +164,8 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
 }
 
 /**
+ * @internal
+ *
  * @class  AwsEndpointPrivate
  *
  * @brief  Private implementation for AwsEndpoint.

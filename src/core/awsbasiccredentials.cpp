@@ -114,6 +114,8 @@ void AwsBasicCredentials::setToken(const QString &token)
 }
 
 /**
+ * @internal
+ *
  * @class  AwsBasicCredentialsPrivate
  *
  * @brief  Private implementation for AwsBasicCredentials.
