@@ -16,7 +16,7 @@ class QTAWS_EXPORT AwsSignatureV2Private {
     Q_DECLARE_PUBLIC(AwsSignatureV2)
 
 public:
-    QCryptographicHash::Algorithm hashAlgorithm;
+    QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
 
     AwsSignatureV2Private(AwsSignatureV2 * const q);
 
