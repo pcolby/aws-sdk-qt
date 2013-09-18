@@ -33,7 +33,7 @@ public slots:
     virtual void setToken(const QString &token);
 
 private:
-    AwsBasicCredentialsPrivate * const d_ptr;
+    AwsBasicCredentialsPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

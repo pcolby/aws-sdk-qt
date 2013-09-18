@@ -20,7 +20,7 @@ public:
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
 
 private:
-    AwsSignatureV3Private * const d_ptr;
+    AwsSignatureV3Private * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsSignatureV3;
 };
 

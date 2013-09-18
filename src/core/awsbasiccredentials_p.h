@@ -20,7 +20,7 @@ public:
     AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
 private:
-    AwsBasicCredentials * const q_ptr;
+    AwsBasicCredentials * const q_ptr; ///< Internal q-pointer.
 
 };
 

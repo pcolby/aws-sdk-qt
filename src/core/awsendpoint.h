@@ -53,7 +53,7 @@ public:
                                          const Transports transport = AnyTransport);
 
 private:
-    AwsEndpointPrivate * const d_ptr;
+    AwsEndpointPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsEndpoint;
 };
 

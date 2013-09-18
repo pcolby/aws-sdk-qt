@@ -67,7 +67,7 @@ protected:
     static void parseServices(QXmlStreamReader &xml);
 
 private:
-    AwsEndpoint * const q_ptr;
+    AwsEndpoint * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsEndpoint;
 };
 

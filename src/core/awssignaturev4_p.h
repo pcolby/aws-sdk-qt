@@ -55,7 +55,7 @@ protected:
                             const QByteArray &credentialScope, const QByteArray &canonicalRequest) const;
 
 private:
-    AwsSignatureV4 * const q_ptr;
+    AwsSignatureV4 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV4;
 };
 

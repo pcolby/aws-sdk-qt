@@ -16,7 +16,7 @@ public:
     AwsSignatureV3Private(AwsSignatureV3 * const q);
 
 private:
-    AwsSignatureV3 * const q_ptr;
+    AwsSignatureV3 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV3;
 };
 

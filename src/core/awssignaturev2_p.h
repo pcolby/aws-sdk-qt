@@ -23,7 +23,7 @@ public:
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
 
 private:
-    AwsSignatureV2 * const q_ptr;
+    AwsSignatureV2 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV2;
 };
 

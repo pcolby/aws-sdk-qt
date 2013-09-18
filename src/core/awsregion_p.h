@@ -19,7 +19,7 @@ protected:
     //QMap<QByteArray, QStringList> regionToServicesMap;
 
 private:
-    AwsRegion * const q_ptr;
+    AwsRegion * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsRegionPrivate;
 };
 
