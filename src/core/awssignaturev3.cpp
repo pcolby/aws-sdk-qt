@@ -8,14 +8,18 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @brief  Implements AWS Signature Version 3.
  *
- * Signature Version 3 has been discontinued by Amazon, but is included here
- * for posterity.
+ * @note   Signature Version 3 has been discontinued by Amazon, but is included here for posterity.
+ *
+ * @warning  This class has not been implemented yet!
  */
 
 AwsSignatureV3::AwsSignatureV3() : d_ptr(new AwsSignatureV3Private(this)) {
 
 }
 
+/**
+ * @brief AwsSignatureV3 destructor.
+ */
 AwsSignatureV3::~AwsSignatureV3()
 {
     delete d_ptr;
@@ -36,6 +40,8 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetw
 }
 
 /**
+ * @internal
+ *
  * @class  AwsSignatureV3Private
  *
  * @brief  Private implementation for AwsSignatureV3.

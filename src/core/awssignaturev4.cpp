@@ -27,6 +27,9 @@ AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm
 
 }
 
+/**
+ * @brief AwsSignatureV4 destructor.
+ */
 AwsSignatureV4::~AwsSignatureV4()
 {
     delete d_ptr;
