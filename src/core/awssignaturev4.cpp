@@ -20,6 +20,12 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new AwsSignatureV4 object.
  *
  * Use instances of this object to provide Version 4 signatures for AWS services.
+ *
+ * @param  hashAlgorithm  The algorithm to use during various stages of signing.
+ *
+ * @note  The AWS Signature Version 4 documentation is not explcit about which hash
+ *        algorithms are supported by Amazon, however all documented examples use
+ *        SHA256.
  */
 AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)
     : d_ptr(new AwsSignatureV4Private(hashAlgorithm, this))
@@ -53,9 +59,17 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
+/// Format V4 signatures use to represent dates in canonical form.
 const QLatin1String AwsSignatureV4Private::DateFormat("yyyyMMdd");
+
+/// Format V4 signatures use to represent timestamps in canonical form.
 const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
 
+/**
+ * @brief  Constructs a new AwsSignatureV4Private object.
+ *
+ * @param  q  Pointer to this object's public AwsSignatureV4 instance.
+ */
 AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV4 * const q)
     : hashAlgorithm(hashAlgorithm), q_ptr(q)
@@ -63,6 +77,21 @@ AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm
 
 }
 
+/**
+ * @brief  Create an AWS V4 Signature algorithm designation.
+ *
+ * This function returns an algorithm designation, as defined by Amazon, for use with
+ * V4 signatures.
+ *
+ * For example, if the algorith is `QCryptographicHash::Sha3_256`, this function will
+ * return `AWS4-HMAC-SHA256`.
+ *
+ * @param  algorithm  The hash algorithm to get the canonical designation for.
+ *
+ * @return  An AWS V4 Signature algorithm designation.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
+ */
 QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const
 {
     switch (algorithm) {
@@ -83,6 +112,24 @@ QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash:
     }
 }
 
+/**
+ * @brief  Create an AWS V4 Signature authorization header value.
+ *
+ * This function builds an V4 signature, and returns it to the caller.  The returned
+ * header value is then suitable for adding as a `Authorization` header in the HTTP
+ * request, to be accepted by Amazon.
+ *
+ * @param  credentials  The AWS credentials to use to sign the request.
+ * @param  operation    The HTTP method being used for the request.
+ * @param  request      The network request to generate a signature for.
+ * @param  payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+ * @param  timestamp    The timestamp to use when signing the request.
+ *
+ * @return  An AWS V4 Signature authorization header value.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+ * @see    setAuthorizationHeader
+ */
 QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                                            const QNetworkAccessManager::Operation operation,
                                                            QNetworkRequest &request, const QByteArray &payload,
@@ -103,6 +150,21 @@ QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCred
             ", SignedHeaders=" + signedHeaders + ", Signature=" + signature.toHex();
 }
 
+/**
+ * @brief  Create an AWS V4 Signature canonical header string.
+ *
+ * In canonical form, header name and value are combined with a single semi-colon
+ * separator, with all whitespace removed from both, _except_ for whitespace within
+ * double-quotes.
+ *
+ * @param  headerName   Name of the HTTP header to convert to canonical form.
+ * @param  headerValue  Value of the HTTP header to convert to canonical form.
+ *
+ * @return  An AWS V4 Signature canonical header string.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ * @see    canonicalHeaders
+ */
 QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const
 {
     QByteArray header = headerName.toLower() + ':';
@@ -129,6 +191,27 @@ QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &headerName, 
     return header;
 }
 
+/**
+ * @brief  Create an AWS V4 Signature canonical headers string.
+ *
+ * This function constructs a canonical string containing all of the headers
+ * in the given request.
+ *
+ * @note   \p request will typically not include a `Host` header at this stage,
+ *         however Qt will add an appropriate `Host` header when the request is
+ *         performed.  So, if \p request does not include a `Host` header yet,
+ *         this function will include a derived `Host` header in the canonical
+ *         headers to allow for it.
+ *
+ * @param[in]  request        The network request to fetch the canonical headers from.
+ * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
+ *                            included in the result.
+ *
+ * @return  An AWS V4 Signature canonical headers string.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ * @see    canonicalHeader
+ */
 QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const
 {
     Q_CHECK_PTR(signedHeaders);
@@ -157,6 +240,19 @@ QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &reques
     return canonicalHeaders;
 }
 
+/**
+ * @brief  Create an AWS V4 Signature canonical request.
+ *
+ * @param[in]  operation      The HTTP method being used for the request.
+ * @param[in]  request        The network request to generate a canonical request for.
+ * @param[in]  payload        Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+ * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
+ *                            included in the result.
+ *
+ * @return  An AWS V4 Signature canonical request.
+ *
+ * @see     http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ */
 QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QNetworkRequest &request, const QByteArray &payload,
                                                    QByteArray * const signedHeaders) const
@@ -170,11 +266,37 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
            QCryptographicHash::hash(payload, hashAlgorithm).toHex();
 }
 
+/**
+ * @brief  Create an AWS V4 Signature credential scope.
+ *
+ * @param  date     Date to include in the credential scope.
+ * @param  region   Region name to include in the credential scope.
+ * @param  service  Service name to include in the credential scope.
+ *
+ * @return An AWS V4 Signature credential scope.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
+ */
 QByteArray AwsSignatureV4Private::credentialScope(const QDate &date, const QString &region, const QString &service) const
 {
     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + "/aws4_request";
 }
 
+/**
+ * @brief  Set authorization header on a network request.
+ *
+ * This function will calculate the authorization header value and set it as the `Authorization`
+ * HTTP header on \p request.
+ *
+ * @param[in]     credentials  The AWS credentials to use to sign the request.
+ * @param[in]     operation    The HTTP method being used for the request.
+ * @param[in,out] request      The network request to add the authorization header to.
+ * @param[in]     payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+ * @param[in]     timestamp    The timestamp to use when signing the request.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+ * @see    authorizationHeaderValue
+ */
 void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &credentials,
                                                    const QNetworkAccessManager::Operation operation,
                                                    QNetworkRequest &request, const QByteArray &payload,
@@ -184,6 +306,19 @@ void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials 
     request.setRawHeader("Authorization", authorizationHeaderValue(credentials, operation, request, payload, timestamp));
 }
 
+/**
+ * @brief   Set the AWS custom date header.
+ *
+ * This function will set a custom `x-amz-date` header to the value of \p dateTime
+ * formatted to AwsSignatureV4Private::DateTimeFormat.
+ *
+ * @note    Although Amazon labels this as a "date", it is in fact a full timestamp.
+ *
+ * @param   request   The network request to add the date header to.
+ * @param   dateTime  The timestamp to set the date header's value to.
+ *
+ * @return  \p dateTime verbatim (just a convenience for some callers).
+ */
 QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &request, const QDateTime &dateTime) const
 {
     Q_ASSERT(!request.hasRawHeader("x-amz-date"));
@@ -191,6 +326,18 @@ QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &request, const Q
     return dateTime;
 }
 
+/**
+ * @brief  Create an AWS V4 Signature signing key.
+ *
+ * @param  credentials  AWS credentials to use when generating the signing key.
+ * @param  date         Date to include in the signing key.
+ * @param  region       Region name to include in the signing key.
+ * @param  service      Service name to include in the signing key.
+ *
+ * @return An AWS V4 Signature signing key.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html
+ */
 QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &credentials, const QDate &date,
                                              const QString &region, const QString &service) const
 {
@@ -201,6 +348,21 @@ QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &crede
            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);
 }
 
+/**
+ * @brief  Create an AWS V4 Signature string to sign.
+ *
+ * @param  algorithmDesignation  AWS designation for the hash algorithm used to sign the request.
+ * @param  requestDate           AWS request timestamp.
+ * @param  credentialScope       Aws credential scope used to sign the request.
+ * @param  canonicalRequest      AWS request in canonical form.
+ *
+ * @return An AWS V4 Signature string to sign.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
+ * @see    algorithmDesignation
+ * @see    canonicalRequest
+ * @see    credentialScope
+ */
 QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &algorithmDesignation, const QDateTime &requestDate,
                                                const QByteArray &credentialScope, const QByteArray &canonicalRequest) const
 {

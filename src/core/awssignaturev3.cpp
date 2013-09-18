@@ -49,6 +49,11 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetw
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
+/**
+ * @brief  Constructs a new AwsSignatureV3Private object.
+ *
+ * @param  q  Pointer to this object's public AwsSignatureV3 instance.
+ */
 AwsSignatureV3Private::AwsSignatureV3Private(AwsSignatureV3 * const q) : q_ptr(q) { }
 
 QTAWS_END_NAMESPACE
