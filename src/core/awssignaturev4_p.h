@@ -30,7 +30,7 @@ protected:
     static const QLatin1String DateFormat;
     static const QLatin1String DateTimeFormat;
 
-    const QCryptographicHash::Algorithm hashAlgorithm;
+    const QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
 
     QByteArray algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const;
 

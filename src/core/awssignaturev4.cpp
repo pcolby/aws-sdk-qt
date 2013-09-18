@@ -68,7 +68,8 @@ const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
 /**
  * @brief  Constructs a new AwsSignatureV4Private object.
  *
- * @param  q  Pointer to this object's public AwsSignatureV4 instance.
+ * @param  hashAlgorithm  The algorithm to use during various stages of signing.
+ * @param  q              Pointer to this object's public AwsSignatureV4 instance.
  */
 AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV4 * const q)
