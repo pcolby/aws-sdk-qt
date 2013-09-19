@@ -171,18 +171,41 @@ QStringList AwsEndpoint::supportedServices(const QString &regionName, const Tran
  * @brief  Private implementation for AwsEndpoint.
  */
 
-QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;       /// Hash of hostnames to HostInfo.
-QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;   /// Hash of region names to RegionInfo.
-QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; /// Hash of service names to ServiceInfo.
+QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;       ///< Hash of hostnames to HostInfo.
+QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;   ///< Hash of region names to RegionInfo.
+QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; ///< Hash of service names to ServiceInfo.
 
-QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); /// Mutex for protecting access to static members.
+QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///< Mutex for protecting access to static members.
 
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsEndpointPrivate object.
+ *
+ * @param  q  Pointer to this object's public AwsEndpoint instance.
+ *
+ * @see   http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ */
 AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
     : q_ptr(q)
 {
     loadEndpointData();
 }
 
+/**
+ * @internal
+ *
+ * @brief  Load endpoint data
+ *
+ * This function parses AWS endpoint data in XML format.  The XML data is
+ * expected to match the same format as the file provided by Amazon at
+ * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ *
+ * If _any_ data has been loaded previously, this function will return
+ * immediately with no parsing performed.
+ *
+ * @param  fileName  Name of the endpoint XML data file to load.
+ */
 void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 {
     QMutexLocker locker(&mutex);
@@ -195,6 +218,20 @@ void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
     loadEndpointData(file);
 }
 
+/**
+ * @internal
+ *
+ * @brief  Load endpoint data
+ *
+ * This function parses AWS endpoint data in XML format.  The XML data is
+ * expected to match the same format as the file provided by Amazon at
+ * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ *
+ * If _any_ data has been loaded previously, this function will return
+ * immediately with no parsing performed.
+ *
+ * @param  device Device to parse XML data from.
+ */
 void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 {
     QMutexLocker locker(&mutex);
@@ -213,6 +250,20 @@ void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
     loadEndpointData(xml);
 }
 
+/**
+ * @internal
+ *
+ * @brief  Load endpoint data
+ *
+ * This function parses AWS endpoint data in XML format.  The XML data is
+ * expected to match the same format as the file provided by Amazon at
+ * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
+ *
+ * If _any_ data has been loaded previously, this function will return
+ * immediately with no parsing performed.
+ *
+ * @param  xml  XML document to parse.
+ */
 void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
 {
     QMutexLocker locker(&mutex);
@@ -239,6 +290,38 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
     Q_ASSERT(!services.hasError());
 }
 
+/**
+ * @internal
+ *
+ * @brief  Parse a `Region` element from Amazon's endpoint XML data
+ *
+ * This function parses XML elements like:
+ *
+ * @code{xml}
+ * <Region>
+ *   <Name>us-east-1</Name>
+ *   <Endpoint>
+ *     <ServiceName>cloudformation</ServiceName>
+ *     <Http>false</Http>
+ *     <Https>true</Https>
+ *     <Hostname>cloudformation.us-east-1.amazonaws.com</Hostname>
+ *   </Endpoint>
+ *   <Endpoint>
+ *     <ServiceName>cloudfront</ServiceName>
+ *     <Http>true</Http>
+ *     <Https>true</Https>
+ *     <Hostname>cloudfront.amazonaws.com</Hostname>
+ *   </Endpoint>
+ * </Region>
+ * @endcode
+ *
+ * The parsed entries are automatically added to AwsEndpointPrivate::hosts
+ * and AwsEndpointPrivate::regions.
+ *
+ * @param  xml  XML element to parse.
+ *
+ * @see    parseRegion
+ */
 void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
 {
     QString regionName;
@@ -285,6 +368,21 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
     }
 }
 
+/**
+ * @internal
+ *
+ * @brief  Parse a `Regions` element from Amazon's endpoint XML data
+ *
+ * This function parse an XML element containing a list of `Region` elements.
+ * See AwsEndpointPrivate::parseRegion for the `Region` element format.
+ *
+ * The parsed entries are automatically added to AwsEndpointPrivate::hosts
+ * and AwsEndpointPrivate::regions.
+ *
+ * @param  xml  XML element containing regions to parse.
+ *
+ * @see    parseRegion
+ */
 void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
 {
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {
@@ -297,6 +395,34 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
     }
 }
 
+/**
+ * @internal
+ *
+ * @brief  Parse a `Service` element from Amazon's endpoint XML data
+ *
+ * This function parses XML elements like:
+ *
+ * @code{xml}
+ * <Service>
+ *   <Name>cloudformation</Name>
+ *   <FullName>Amazon CloudFormation</FullName>
+ *   <RegionName>us-east-1</RegionName>
+ *   <RegionName>us-west-1</RegionName>
+ *   <RegionName>us-west-2</RegionName>
+ *   <RegionName>eu-west-1</RegionName>
+ *   <RegionName>ap-northeast-1</RegionName>
+ *   <RegionName>ap-southeast-1</RegionName>
+ *   <RegionName>ap-southeast-2</RegionName>
+ *   <RegionName>sa-east-1</RegionName>
+ * </Service>
+ * @endcode
+ *
+ * The parsed entries are automatically added to AwsEndpointPrivate::services.
+ *
+ * @param  xml  XML element to parse.
+ *
+ * @see    parseServices
+ */
 void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
 {
     QString serviceName;
@@ -318,6 +444,20 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
     }
 }
 
+/**
+ * @internal
+ *
+ * @brief  Parse a `Services` element from Amazon's endpoint XML data
+ *
+ * This function parses an XML element containing a list of `Service` elements.
+ * See AwsEndpointPrivate::parseServices for the `Service` element format.
+ *
+ * The parsed entries are automatically added to AwsEndpointPrivate::services.
+ *
+ * @param  xml  XML element containing services to parse.
+ *
+ * @see    parseService
+ */
 void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
 {
     while ((!xml.atEnd()) && (xml.readNextStartElement())) {

@@ -28,14 +28,14 @@ public:
 protected:
     /// The per-host information to load from the endpoints.xml file.
     struct HostInfo {
-        QStringList regionNames;
-        QString serviceName;
+        QStringList regionNames; ///< AWS regions supported by the host.
+        QString serviceName;     ///< AWS service supported by the host.
     };
 
     /// The per-region endpoint-specific information to load from the endpoints.xml file.
     struct RegionEndpointInfo {
-        QString hostName;
-        AwsEndpoint::Transports transports;
+        QString hostName;                   ///< AWS endpoint's hostname.
+        AwsEndpoint::Transports transports; ///< Transports supported by this AWS endpoint.
     };
 
     /// Hash of service names to RegionEndpointInfo.
@@ -43,13 +43,13 @@ protected:
 
     /// The per-region information to load from the endpoints.xml file.
     struct RegionInfo {
-        RegionServices services;
+        RegionServices services; ///< AWS services supported by the AWS region.
     };
 
     /// The per-service information to load from the endpoints.xml file.
     struct ServiceInfo {
-        QString fullName;
-        QStringList regionNames;
+        QString fullName;        ///< AWS service's full human-friendly name.
+        QStringList regionNames; ///< AWS regions support by this service.
     };
 
     static QHash<QString, HostInfo> hosts;
