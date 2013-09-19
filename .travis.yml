@@ -6,8 +6,8 @@ before_install:
   - sudo apt-get install -qq qt5-qmake qtbase5-dev
 
 before_script:
-  - qmake -v
-  - qmake
+  - qmake -qt=qt5 -v
+  - qmake -qt=qt5
 
 script:
   - make
