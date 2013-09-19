@@ -12,22 +12,44 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @brief  Provide access to AWS endpoint information.
  *
+ * @note  This class provides fairly low-level access to AWS endpoint data.
+ *        You should consider using the AwsRegion and/or various
+ *        AwsService-derived classes in preference to using this class
+ *        directly where possible.
+ *
  * This class parses the `endpoint.xml` data available at
  * http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml
  *
  * The `endpoint.xml` file is embedded as a resource in the libqtaws
  * library - not fetched remotely at runtime.
  *
- * @note  This class provides fairly low-level access to AWS endpoint data.
- *        Generally, you should consider using the AwsRegion and/or various
- *        AwsService-derived classes in preferenc to using this class
- *        directly.
+ * Example usage:
+ * @code
+ * AwsEndpoint endpoint(QLatin1String("cloudformation.us-east-1.amazonaws.com"));
+ *
+ * endpoint.hostName();    // "cloudformation.us-east-1.amazonaws.com"
+ * endpoint.regionName();  // "us-east-1"
+ * endpoint.serviceName(); // "cloudformation"
+ *
+ * endpoint.supportedRegions(); // [ "us-east-1" ]
+ *
+ * endpoint.isSupported(AwsEndpoint::HTTP);  // false
+ * endpoint.isSupported(AwsEndpoint::HTTPS); // true
+ *
+ * QUrl ec2 = AwsEndpoint::getEndpoint("ap-southeast-2", "ec2");
+ * QUrl iam = AwsEndpoint::getEndpoint("ap-southeast-2", "iam");
+ *
+ * ec2.host(); // "ec2.ap-southeast-2.amazonaws.com"
+ * iam.host(); // "iam.amazonaws.com"
+ * @endcode
  */
 
 /**
  * @brief  Constructs a new AwsEndpoint object.
  *
  * @todo
+ *
+ * @param  hostName  Name of an AWS host.
  */
 AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
