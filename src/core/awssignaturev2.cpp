@@ -85,7 +85,7 @@ AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q
 /**
  * @internal
  *
- * @brief  Convert an AWS request to canonical form.
+ * @brief  Create an AWS V2 Signature canonical request.
  *
  * This function creates a canonical representation of an AWS request as defined by
  * Amazon's V2 signature specification.
@@ -106,7 +106,7 @@ AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q
  * @param  operation  The HTTP method being requested.
  * @param  url        The URL being request.
  *
- * @return The request in canonical form.
+ * @return An AWS V2 Signature canonical request.
  *
  * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  */
