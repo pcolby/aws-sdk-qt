@@ -12,6 +12,8 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new AwsAnonymousCredentials object.
  *
  * Constructs a new AwsAnonymousCredentials object, with no credentials at all.
+ *
+ * @param  parent  The constructed object's optional parent.
  */
 AwsAnonymousCredentials::AwsAnonymousCredentials(QObject * const parent) : AwsAbstractCredentials(parent)
 {

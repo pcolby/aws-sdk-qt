@@ -32,7 +32,22 @@ AwsAbstractSignature::~AwsAbstractSignature() { }
  * @param  data          Optional POST / PUT data to sign \a request for.
  */
 
-// CanonicalURI or
+/**
+ * @brief  Create an AWS Signature canonical path.
+ *
+ * This function simply returns the fully-URL-encoded path.  However, if the path
+ * is empty, then a single '/' is returned, as is required by Amazon for both V2
+ * and V4 signatures (and presumably other versions too).
+ *
+ * @param  url  URL from which to extract the path.
+ *
+ * @return An AWS Signature canonical path.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ *
+ * @todo   Move this to an AwsAbstractSignaturePrivate class?
+ */
 QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
 {
     QString path = url.path(QUrl::FullyEncoded);
@@ -42,6 +57,23 @@ QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
     return path;
 }
 
+/**
+ * @brief  Create an AWS Signature canonical query.
+ *
+ * This function retuns an HTTP query string in Amazon's canonical form.  That is,
+ * all query parameters are sorted by keys (**but not keys-then-values**), then
+ * joined with `&` separators, in `key=value` pairs with both keys and values being
+ * URL percent encoded.
+ *
+ * @param  query  Query to encode the HTTP query string from.
+ *
+ * @return An AWS Signature canonical path.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+ *
+ * @todo   Move this to an AwsAbstractSignaturePrivate class?
+ */
 QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
 {
     typedef QPair<QString, QString> QStringPair;
@@ -56,6 +88,19 @@ QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
     return result.toUtf8();
 }
 
+/**
+ * @brief  Create an AWS Signature request method string.
+ *
+ * This function simply converts QNetworkAccessManager operations (enum values)
+ * to strings appropriate to use in AWS signatures.
+ *
+ * @param  operation  The network operation to convert to string.
+ *
+ * @return A string representation of \p operation, or an empty string if the
+ *         operation is not recognised or otherwise unsupported.
+ *
+ * @todo   Move this to an AwsAbstractSignaturePrivate class?
+ */
 QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const {
     switch (operation) {
         case QNetworkAccessManager::DeleteOperation: return QLatin1String("DELETE");
@@ -65,9 +110,10 @@ QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation 
         case QNetworkAccessManager::PutOperation:    return QLatin1String("PUT");
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
+            // Catch this in debug mode for easier development / debugging.
             Q_ASSERT_X(false, "AwsSignatureV4Private::toString", "invalid operation");
     }
-    return QString();
+    return QString(); // Operation was invalid / unsupported.
 }
 
 QTAWS_END_NAMESPACE

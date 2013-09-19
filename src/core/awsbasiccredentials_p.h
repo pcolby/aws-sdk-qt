@@ -13,9 +13,9 @@ class QTAWS_EXPORT AwsBasicCredentialsPrivate {
     Q_DECLARE_PUBLIC(AwsBasicCredentials)
 
 public:
-    QString accessKeyId;
-    QString secretKey;
-    QString token;
+    QString accessKeyId; ///< AWS Access Key ID.
+    QString secretKey;   ///< AWS Secret Access Key.
+    QString token;       ///< AWS Security Token.
 
     AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
