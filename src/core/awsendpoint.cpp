@@ -42,14 +42,15 @@ QTAWS_BEGIN_NAMESPACE
  * ec2.host(); // "ec2.ap-southeast-2.amazonaws.com"
  * iam.host(); // "iam.amazonaws.com"
  * @endcode
+ *
+ * @see    AwsRegion
+ * @see    AwsService
  */
 
 /**
  * @brief  Constructs a new AwsEndpoint object.
  *
- * @todo
- *
- * @param  hostName  Name of an AWS host.
+ * @param  hostName  Name of an AWS host, encoded as UTF-8.
  */
 AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
@@ -65,6 +66,11 @@ AwsEndpoint::AwsEndpoint(const QByteArray &hostName)
     }
 }
 
+/**
+ * @brief  Constructs a new AwsEndpoint object.
+ *
+ * @param  hostName  Name of an AWS host.
+ */
 AwsEndpoint::AwsEndpoint(const QString &hostName)
     : d_ptr(new AwsEndpointPrivate(this))
 {
@@ -79,11 +85,62 @@ AwsEndpoint::AwsEndpoint(const QString &hostName)
     }
 }
 
+/**
+ * @brief AwsEndpoint destructor.
+ */
 AwsEndpoint::~AwsEndpoint()
 {
     delete d_ptr;
 }
 
+/**
+ * @brief  Get a QUrl for an AWS endpoint.
+ *
+ * This function will return a QUrl object for accessing an AWS service.  The
+ * region and service names must match those used by Amazon.
+ *
+ * If the specified region and/or service are not known to be valid for AWS, or
+ * the service is not supported in the specified region, then an invalid QUrl
+ * will be returned.
+ *
+ * @note   An invalid QUrl is one for which QUrl::isValid returns `false`.
+ *
+ * The \p transport parameter may be used to specify one or more transports to
+ * consider.  If the specified AWS endpoint exists, but does not support //any//
+ * of the given transports, then an invalid QUrl is returned.
+ *
+ * Where it makes sense to do so, the resulting QUrl's scheme will be set
+ * according to the requested transport.  For example, if the selected transport
+ * is AwsEndpoint::HTTPS, then the resulting QUrl's schems will be set to
+ * "https".
+ *
+ * If \p transport includes both AwsEndpoint::HTTP //and// AwsEndpoint::HTTPS,
+ * and both are supported by the AWS endpoint, then "https" will be chosed in
+ * preference to "http".
+ *
+ * @note   It is possible for the returned QUrl to specify a host that is not
+ *         located in, nor dedicated to the specified region.  For examepl, if
+ *         requesting an endpoint for the `iam` service in `ap-southeast-2`, the
+ *         return endpoint is for a host (`iam.amazonaws.com`) which provides
+ *         the `ami` services for all regions, not just `ap-southeast-2`.
+ *         Services known to behave like this include: `cloudfront`, `iam`,
+ *         `importexport`, `route53`, and `sts`.
+ *
+ * Example usage:
+ * @code
+ * QUrl ec2 = AwsEndpoint::getEndpoint("ap-southeast-2", "ec2");
+ * QUrl iam = AwsEndpoint::getEndpoint("ap-southeast-2", "iam");
+ * ec2.host(); // "ec2.ap-southeast-2.amazonaws.com"
+ * iam.host(); // "iam.amazonaws.com"
+ * @endcode
+ *
+ * @param  regionName   Endpoint's region name.
+ * @param  serviceName  Endpoint's service name.
+ * @param  transport    Optional network transport(s) for the endpoint.
+ *
+ * @return  A QUrl representing the AWS endpoint, or an invalid QUrl if there
+ *          is no such _known_ AWS endpoint.
+ */
 QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceName,
                               const Transports transport)
 {
@@ -109,12 +166,27 @@ QUrl AwsEndpoint::getEndpoint(const QString &regionName, const QString &serviceN
     return url;
 }
 
+/**
+ * @brief   Get the name of host represented by this endpoint.
+ *
+ * @return  Name of host represented by this endpoint.
+ */
 QString AwsEndpoint::hostName() const
 {
     Q_D(const AwsEndpoint);
     return d->hostName;
 }
 
+/**
+ * @brief  Is a region / service / transport combination supported by Amazon?
+ *
+ * @param regionName   AWS region name to check support for.
+ * @param serviceName  AWS service name to check support for.
+ * @param transport    Optional transport to check support for.
+ *
+ * @return `true` if the service is supported in the \p regionName region for at least
+ *         one of the specified transports, `false` otherwise.
+ */
 bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceName, const Transports transport)
 {
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
@@ -123,33 +195,98 @@ bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceN
             (AwsEndpointPrivate::regions[regionName].services[serviceName].transports & transport));
 }
 
+/**
+ * @brief  Is the given transport supported by this endpoint?
+ *
+ * @param  transport  Transport to check for support for.
+ *
+ * @return `true` is the transport is supported by this endpoint, `false` otherwise.
+ */
 bool AwsEndpoint::isSupported(const Transport transport) const
 {
     return isSupported(regionName(), serviceName(), AwsEndpoint::Transports(transport));
 }
 
+/**
+ * @brief  Is this endpoint valid?
+ *
+ * An endpoint is considered valid if the host specified during construction is
+ * a known AWS host, and thus we know what region and service(s) it supports.
+ *
+ * For example:
+ * @code
+ * AwsEndpoint good(QLatin1String("cloudformation.us-east-1.amazonaws.com"));
+ * AwsEndpoint bad(QLatin1String("example.com"));
+ * Q_ASSERT(good.isValid()); // good is valid.
+ * Q_ASSERT(!bad.isValid()); // bad is not.
+ * @endcode
+ *
+ * @return `true` is this endpoint is valid, `false` otherwise.
+ */
 bool AwsEndpoint::isValid() const
 {
     return ((!hostName().isEmpty()) && (!regionName().isEmpty()) && (!serviceName().isEmpty()));
 }
 
+/**
+ * @brief  Get this endpoint's _primary_ region name.
+ *
+ * It is possible for a single endpiont to support multuple regions, such as
+ * `iam.amazonaws.com`, which provides the `ami` servive for all (non-government)
+ * regions.
+ *
+ * In these cases, this function returns the primary region in which the service
+ * is located.  The AwsEndpoint::supportedRegions function may be used to fetch
+ * the full list of regions this endpoint supports.
+ *
+ * @return This endpoint's region name.
+ *
+ * @see supportedRegions
+ */
 QString AwsEndpoint::regionName() const
 {
     Q_D(const AwsEndpoint);
     return d->regionName;
 }
 
+/**
+ * @brief  Get this endpoint's region name.
+ *
+ * @return This endpoint's region name.
+ */
 QString AwsEndpoint::serviceName() const
 {
     Q_D(const AwsEndpoint);
     return d->serviceName;
 }
 
+/**
+ * @brief  Get the full list of regions this endpoint supports.
+ *
+ * Alternatvely, AwsEndpoint::regionName may be used to get this endpoint's
+ * _primary_ region.
+ *
+ * @param  transport  Optional transport to check for support.
+ *
+ * @return A list of all regions this endpoint supports for //at least one// of
+ *         the specified transports.
+ *
+ * @see    regionName
+ */
 QStringList AwsEndpoint::supportedRegions(const Transports transport) const
 {
     return supportedRegions(serviceName(), transport);
 }
 
+/**
+ * @brief  Get a list of regions that supported for a given service.
+ *
+ * @param  serviceName  AWS service to get the supported regions for.
+ * @param  transport    Optional transport(s) to check for support.
+ *
+ * @return A list of AWS regions supported for the given service, for
+ *         _at least one_ of the specified transports.
+ */
 QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Transports transport)
 {
     AwsEndpointPrivate::loadEndpointData();
@@ -167,6 +304,15 @@ QStringList AwsEndpoint::supportedRegions(const QString &serviceName, const Tran
     return regions;
 }
 
+/**
+ * @brief  Get a list of services that support a given region.
+ *
+ * @param  regionName  AWS region to get the supported services for.
+ * @param  transport   Optional transport(s) to check for support.
+ *
+ * @return A list of AWS services supported for the given region, for
+ *         _at least one_ of the specified transports.
+ */
 QStringList AwsEndpoint::supportedServices(const QString &regionName, const Transports transport)
 {
     AwsEndpointPrivate::loadEndpointData();
