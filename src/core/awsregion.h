@@ -15,6 +15,8 @@ class QTAWS_EXPORT AwsRegion {
     Q_DECLARE_PRIVATE(AwsRegion)
 
 public:
+    /// Bit flags representing the possible cardinal directions of
+    /// AWS regions within macro-regions.
     enum CardinalDirection {
         North          = 0x00,
         NorthNorthEast = 0x10,
@@ -34,6 +36,7 @@ public:
         NortNorthWest  = 0xF0
     };
 
+    /// AWS macro-regions.
     enum MacroRegion {
         AsiaPacific     = 0x100,
         Europe          = 0x300,
@@ -42,6 +45,7 @@ public:
         UnitedStatesGov = 0xC00
     };
 
+    /// AWS regions.
     enum Region {
         AP_Northeast_1 = AsiaPacific     + NorthEast + 0x1,
         AP_Southeast_1 = AsiaPacific     + SouthEast + 0x1,
@@ -69,7 +73,7 @@ public:
     QStringList supportedServices(const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
 
 private:
-    AwsRegionPrivate * const d_ptr;
+    AwsRegionPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsRegion;
 };
 
