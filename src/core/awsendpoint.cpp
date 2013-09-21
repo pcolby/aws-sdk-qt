@@ -189,6 +189,7 @@ QString AwsEndpoint::hostName() const
  */
 bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceName, const Transports transport)
 {
+    AwsEndpointPrivate::loadEndpointData();
     QMutexLocker locker(&AwsEndpointPrivate::mutex);
     return ((AwsEndpointPrivate::regions.contains(regionName)) &&
             (AwsEndpointPrivate::regions[regionName].services.contains(serviceName)) &&

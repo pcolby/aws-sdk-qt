@@ -19,6 +19,9 @@ private slots:
     void isSupported_data();
     void isSupported();
 
+    void isSupported_static_data();
+    void isSupported_static();
+
     void isValid_data();
     void isValid();
 

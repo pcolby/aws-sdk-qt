@@ -217,6 +217,66 @@ void TestAwsEndpoint::isSupported()
     QCOMPARE(endpoint.isSupported(transport), supported);
 }
 
+void TestAwsEndpoint::isSupported_static_data()
+{
+    QTest::addColumn<QString>("regionName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<AwsEndpoint::Transport>("transport");
+    QTest::addColumn<bool>("supported");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << AwsEndpoint::AnyTransport
+        << false;
+
+    QTest::newRow("cloudformation:us-east-1:AnyTransport")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::AnyTransport
+        << true;
+
+    QTest::newRow("cloudformation:us-east-1:HTTP")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::HTTP
+        << false;
+
+    QTest::newRow("cloudformation:us-east-1:HTTPS")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("cloudformation")
+        << AwsEndpoint::HTTPS
+        << true;
+
+    QTest::newRow("elasticloadbalancing:us-east-1:AnyTransport")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::AnyTransport
+        << true;
+
+    QTest::newRow("elasticloadbalancing:us-east-1:HTTP")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::HTTP
+        << true;
+
+    QTest::newRow("elasticloadbalancing:us-east-1:HTTPS")
+        << QString::fromLatin1("us-east-1")
+        << QString::fromLatin1("elasticloadbalancing")
+        << AwsEndpoint::HTTPS
+        << true;
+}
+
+void TestAwsEndpoint::isSupported_static()
+{
+    QFETCH(QString, regionName);
+    QFETCH(QString, serviceName);
+    QFETCH(AwsEndpoint::Transport, transport);
+    QFETCH(bool, supported);
+
+    QCOMPARE(AwsEndpoint::isSupported(regionName, serviceName, transport), supported);
+}
+
 void TestAwsEndpoint::isValid_data()
 {
     QTest::addColumn<QString>("hostName");
