@@ -5,6 +5,7 @@
 #include "core/testawsanonymouscredentials.h"
 #include "core/testawsbasiccredentials.h"
 #include "core/testawsendpoint.h"
+#include "core/testawsregion.h"
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev4.h"
 
@@ -22,6 +23,7 @@ int main(int argc, char *argv[]) {
     TEST(TestAwsAnonymousCredentials)
     TEST(TestAwsBasicCredentials)
     TEST(TestAwsEndpoint)
+    TEST(TestAwsRegion)
     TEST(TestAwsSignatureV2)
     TEST(TestAwsSignatureV4)
     return 0;
