@@ -22,6 +22,9 @@ private slots:
     void isValid_data();
     void isValid();
 
+    void fullServiceName_data();
+    void fullServiceName();
+
     void hostName_data();
     void hostName();
 

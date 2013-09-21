@@ -39,6 +39,9 @@ public:
 
     bool isValid() const;
 
+    QString fullServiceName() const;
+    static QString fullServiceName(const QString &serviceName);
+
     QString hostName() const;
 
     QString regionName() const;

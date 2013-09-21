@@ -270,6 +270,69 @@ void TestAwsEndpoint::isValid()
     QCOMPARE(endpoint.isValid(), isValid);
 }
 
+void TestAwsEndpoint::fullServiceName_data()
+{
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<QString>("fullServiceName");
+
+    QTest::newRow("null")     << QString() << QString();
+    QTest::newRow("empty")    << QString::fromLatin1("") << QString();
+    QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
+    QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
+    QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf") << QString();
+
+    #define NEW_ROW(service, fullName) QTest::newRow(service) << QString::fromLatin1(service) << QString::fromLatin1(fullName)
+
+    // The 30 known (so far) AWS services.
+    NEW_ROW("autoscaling", "Auto Scaling");
+    NEW_ROW("cloudformation", "Amazon CloudFormation");
+    NEW_ROW("cloudfront", "Amazon CloudFront");
+    NEW_ROW("cloudsearch", "Amazon CloudSearch");
+    NEW_ROW("datapipeline", "AWS Data Pipeline");
+    NEW_ROW("directconnect", "AWS Direct Connect");
+    NEW_ROW("dynamodb", "Amazon DynamoDB");
+    NEW_ROW("ec2", "Amazon Elastic Compute Cloud");
+    NEW_ROW("elasticache", "Amazon ElastiCache");
+    NEW_ROW("elasticbeanstalk", "AWS Elastic Beanstalk");
+    NEW_ROW("elasticloadbalancing", "Elastic Load Balancing");
+    NEW_ROW("elasticmapreduce", "Amazon Elastic MapReduce");
+    NEW_ROW("elastictranscoder", "Amazon Elastic Transcoder");
+    NEW_ROW("email", "Amazon Simple Email Service");
+    NEW_ROW("glacier", "Amazon Glacier");
+    NEW_ROW("iam", "AWS Identity & Access Management");
+    NEW_ROW("importexport", "AWS Import/Export");
+    NEW_ROW("monitoring", "Amazon CloudWatch");
+    NEW_ROW("opsworks", "AWS OpsWorks");
+    NEW_ROW("rds", "Amazon Relational Database Service");
+    NEW_ROW("redshift", "Amazon Redshift");
+    NEW_ROW("route53", "Amazon Route 53");
+    NEW_ROW("s3", "Amazon Simple Storage Service");
+    NEW_ROW("sdb", "Amazon SimpleDB");
+    NEW_ROW("sns", "Amazon Simple Notification Service");
+    NEW_ROW("sqs", "Amazon Simple Queue Service");
+    NEW_ROW("storagegateway", "AWS Storage Gateway");
+    NEW_ROW("sts", "AWS Security Token Service");
+    NEW_ROW("support", "AWS Support");
+    NEW_ROW("swf", "Amazon Simple Workflow Service");
+
+    #undef NEW_ROW
+}
+
+void TestAwsEndpoint::fullServiceName()
+{
+    QFETCH(QString, serviceName);
+    QFETCH(QString, fullServiceName);
+
+    // Static version.
+    qDebug() << serviceName << fullServiceName;
+    QCOMPARE(AwsEndpoint::fullServiceName(serviceName), fullServiceName);
+
+    // Non-static version.
+    // Here's we're taking advantage of the fact that *all* services are available in us-east-1.
+    const AwsEndpoint endpoint(AwsEndpoint::getEndpoint(QLatin1String("us-east-1"), serviceName).host());
+    QCOMPARE(endpoint.fullServiceName(), fullServiceName);
+}
+
 void TestAwsEndpoint::hostName_data()
 {
     QTest::addColumn<QString>("hostName");
@@ -296,7 +359,6 @@ void TestAwsEndpoint::regionName_data()
     QTest::newRow("space")    << QString::fromLatin1(" ") << QString();
     QTest::newRow("spaces")   << QString::fromLatin1("  ") << QString();
     QTest::newRow("jiberish") << QString::fromLatin1("dhfkjshdkfjhsdkfhkjsdhkfhksdjfhkjsdhfkjsdhkf") << QString();
-
 
     #define NEW_ROW(host, region) QTest::newRow(host) << QString::fromLatin1(host) << QString::fromLatin1(region)
 

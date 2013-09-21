@@ -229,6 +229,42 @@ bool AwsEndpoint::isValid() const
 }
 
 /**
+ * @brief  Get this endpoint's full service name.
+ *
+ * The full service name is a human-readbale form.  For example, the full name for
+ * the `cloudsearch` service is `Amazon CloudSearch`.  Likewise, the full name for
+ * the `rds` service is `Amazon Relational Database Service`.
+ *
+ * @return This endpoint's full service name.
+ *
+ * @see    serviceName
+ */
+QString AwsEndpoint::fullServiceName() const
+{
+    return fullServiceName(serviceName());
+}
+
+/**
+ * @brief  Get the full name for given service.
+ *
+ * The full service name is a human-readbale form.  For example, the full name for
+ * the `cloudsearch` service is `Amazon CloudSearch`.  Likewise, the full name for
+ * the `rds` service is `Amazon Relational Database Service`.
+ *
+ * @return This endpoint's full service name.
+ *
+ * @see    serviceName
+ */
+QString AwsEndpoint::fullServiceName(const QString &serviceName)
+{
+    AwsEndpointPrivate::loadEndpointData();
+    QMutexLocker locker(&AwsEndpointPrivate::mutex);
+    const QHash<QString, AwsEndpointPrivate::ServiceInfo>::const_iterator
+            service = AwsEndpointPrivate::services.constFind(serviceName);
+    return (service == AwsEndpointPrivate::services.constEnd()) ? QString() : service.value().fullName;
+}
+
+/**
  * @brief  Get this endpoint's _primary_ region name.
  *
  * It is possible for a single endpiont to support multuple regions, such as
@@ -250,9 +286,11 @@ QString AwsEndpoint::regionName() const
 }
 
 /**
- * @brief  Get this endpoint's region name.
+ * @brief  Get this endpoint's service name.
  *
- * @return This endpoint's region name.
+ * @return This endpoint's service name.
+ *
+ * @see    fullServiceName
  */
 QString AwsEndpoint::serviceName() const
 {
