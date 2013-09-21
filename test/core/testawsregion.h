@@ -12,6 +12,7 @@ private:
     typedef QMap<QString, AwsRegion::Region> RegionNameToEnumMap;
     static RegionNameToEnumMap regionNameToEnum();
 
+    static QVariantMap regionServiceHosts();
     static QVariantMap supportedServicesMap();
 
 private slots:
