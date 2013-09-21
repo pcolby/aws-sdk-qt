@@ -110,7 +110,7 @@ QString AwsRegion::name(const Region &region)
         case AP_Northeast_1: return QLatin1String("ap-northeast-1");
         case AP_Southeast_1: return QLatin1String("ap-southeast-1");
         case AP_Southeast_2: return QLatin1String("ap-southeast-2");
-        case EU_Eest_1:      return QLatin1String("eu-east-1");
+        case EU_West_1:      return QLatin1String("eu-west-1");
         case SA_East_1:      return QLatin1String("sa-east-1");
         case US_East_1:      return QLatin1String("us-east-1");
         case US_Gov_West_1:  return QLatin1String("us-gov-west-1");
@@ -167,7 +167,7 @@ QString AwsRegion::fullName(const Region &region)
         case AP_Northeast_1: return QLatin1String("Asia Pacific (Tokyo) Region");
         case AP_Southeast_1: return QLatin1String("Asia Pacific (Singapore) Region");
         case AP_Southeast_2: return QLatin1String("Asia Pacific (Sydney) Region");
-        case EU_Eest_1:      return QLatin1String("EU (Ireland) Region");
+        case EU_West_1:      return QLatin1String("EU (Ireland) Region");
         case SA_East_1:      return QLatin1String("São Paulo Region");
         case US_East_1:      return QLatin1String("US East (Northern Virginia) Region");
         case US_Gov_West_1:  return QLatin1String("AWS GovCloud (US) Region");
@@ -237,7 +237,7 @@ AwsRegion::Region AwsRegion::fromName(const QString &regionName)
     if (lowerName == QLatin1String("ap-northeast-1")) return AP_Northeast_1;
     if (lowerName == QLatin1String("ap-southeast-1")) return AP_Southeast_1;
     if (lowerName == QLatin1String("ap-southeast-2")) return AP_Southeast_2;
-    if (lowerName == QLatin1String("eu-east-1"))      return EU_Eest_1;
+    if (lowerName == QLatin1String("eu-west-1"))      return EU_West_1;
     if (lowerName == QLatin1String("sa-east-1"))      return SA_East_1;
     if (lowerName == QLatin1String("us-east-1"))      return US_East_1;
     if (lowerName == QLatin1String("us-gov-west-1"))  return US_Gov_West_1;

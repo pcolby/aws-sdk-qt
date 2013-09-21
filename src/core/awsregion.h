@@ -51,7 +51,7 @@ public:
         AP_Northeast_1 = AsiaPacific     + NorthEast + 0x1,
         AP_Southeast_1 = AsiaPacific     + SouthEast + 0x1,
         AP_Southeast_2 = AsiaPacific     + SouthEast + 0x2,
-        EU_Eest_1      = Europe          + East      + 0x1,
+        EU_West_1      = Europe          + West      + 0x1,
         SA_East_1      = SouthAmerica    + East      + 0x1,
         US_East_1      = UnitedStates    + East      + 0x1,
         US_Gov_West_1  = UnitedStatesGov + West      + 0x1,
