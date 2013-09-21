@@ -196,28 +196,28 @@ QString AwsRegion::hostName(const QString &serviceName) const
  * @brief  Is a given service supported for this region?
  *
  * @param  serviceName  The service to check support for.
- * @param  transport    An optional set of transports to test for support.
+ * @param  transports   An optional set of transports to test for support.
  *
  * @return The name of the host that supports the given service for this region for
  *         _at least one_ of the specified transports, or a null string if the this
  *         service is not supported for this region with any such transports.
  */
-bool AwsRegion::isSupported(const QString &serviceName, const AwsEndpoint::Transport transport) const
+bool AwsRegion::isSupported(const QString &serviceName, const AwsEndpoint::Transports transports) const
 {
-    return AwsEndpoint::isSupported(name(), serviceName, transport);
+    return AwsEndpoint::isSupported(name(), serviceName, transports);
 }
 
 /**
  * @brief  Get a list of services supported by this region.
  *
- * @param  transport  Optional set of transports to test for support.
+ * @param  transports  Optional set of transports to test for support.
  *
  * @return A list of the names of all AWS services support by this region for
  *         _at least one_ of the specified transports. The list may be empty.
  */
-QStringList AwsRegion::supportedServices(const AwsEndpoint::Transport transport) const
+QStringList AwsRegion::supportedServices(const AwsEndpoint::Transports transports) const
 {
-    return AwsEndpoint::supportedServices(name(), transport);
+    return AwsEndpoint::supportedServices(name(), transports);
 }
 
 /**

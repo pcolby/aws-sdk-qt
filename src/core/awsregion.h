@@ -76,9 +76,9 @@ public:
     QString hostName(const QString &serviceName) const;
 
     bool isSupported(const QString &serviceName,
-                     const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
+                     const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
 
-    QStringList supportedServices(const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
+    QStringList supportedServices(const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
 
     static Region fromName(const QString &regionName);
 
