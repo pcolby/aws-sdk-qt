@@ -145,12 +145,32 @@ void TestAwsRegion::hostName()
 
 void TestAwsRegion::isSupported_data()
 {
-    /// @todo
+    QTest::addColumn<AwsRegion::Region>("region");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<AwsEndpoint::Transports>("transports");
+    QTest::addColumn<bool>("isSupported");
+
+    const QVariantMap regions = supportedServicesMap();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        const QVariantMap services = region.value().toMap();
+        for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+            for (int transports = 1; transports <= AwsEndpoint::AnyTransport; ++transports) {
+                QTest::newRow(QString::fromLatin1("%1:%2:%3").arg(region.key()).arg(service.key()).arg(transports).toLatin1())
+                    << AwsRegion::fromName(region.key()) << service.key() << AwsEndpoint::Transports(transports)
+                    << ((service.value().toInt() & transports) ? true : false);
+            }
+        }
+    }
 }
 
 void TestAwsRegion::isSupported()
 {
-    /// @todo
+    QFETCH(AwsRegion::Region, region);
+    QFETCH(QString, serviceName);
+    QFETCH(AwsEndpoint::Transports, transports);
+    QFETCH(bool, isSupported);
+    qDebug() << region << serviceName << transports << isSupported;
+    QCOMPARE(AwsRegion(region).isSupported(serviceName, transports), isSupported);
 }
 
 void TestAwsRegion::name_data()
@@ -195,7 +215,7 @@ void TestAwsRegion::supportedServices_data()
                 }
             }
             supportedServices.sort();
-            QTest::newRow(QString::fromLatin1("%1:%2:").arg(region.key()).arg(transports).toLatin1())
+            QTest::newRow(QString::fromLatin1("%1:%2").arg(region.key()).arg(transports).toLatin1())
                 << AwsRegion::fromName(region.key()) << AwsEndpoint::Transports(transports) << supportedServices;
         }
     }
