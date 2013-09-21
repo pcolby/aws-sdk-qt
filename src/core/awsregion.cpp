@@ -9,7 +9,15 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsRegion
  *
- * @brief  Implements AWS Signature Version 4.
+ * @brief  Provides AWS region information.
+ *
+ * Basic usage example:
+ * @code
+ * const AwsRegion region(AwsRegion::AP_Northeast_1);
+ * region.name();          // "ap-northeast-1"
+ * region.fullName();      // "Asia Pacific (Tokyo) Region"
+ * region.hostName("iam"); // "iam.amazonaws.com"
+ * @endcode
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */

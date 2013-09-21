@@ -10,7 +10,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsEndpoint
  *
- * @brief  Provide access to AWS endpoint information.
+ * @brief  Provides AWS endpoint information.
  *
  * @note  This class provides fairly low-level access to AWS endpoint data.
  *        You should consider using the AwsRegion and/or various
