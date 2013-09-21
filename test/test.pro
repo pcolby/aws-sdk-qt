@@ -3,10 +3,12 @@ QT += network testlib
 QT -= gui
 CONFIG += testcase
 SOURCES += test.cpp
-LIBS += -L../release/ -lqtaws
 
 # Disable automatic ASCII conversions (best practice, especially for i18n support).
 DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
+
+# Add the embedded resources.
+RESOURCES = ../qrc/aws.qrc
 
 # Neaten the output directories.
 MOC_DIR = build
