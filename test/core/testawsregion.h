@@ -3,6 +3,7 @@
 #include "../../src/core/qtawsglobal.h"
 
 #include <QMap>
+#include <QVariantMap>
 
 class TestAwsRegion : public QObject {
     Q_OBJECT
@@ -10,6 +11,8 @@ class TestAwsRegion : public QObject {
 private:
     typedef QMap<QString, AwsRegion::Region> RegionNameToEnumMap;
     static RegionNameToEnumMap regionNameToEnum();
+
+    static QVariantMap supportedServicesMap();
 
 private slots:
 
