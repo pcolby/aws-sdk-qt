@@ -47,6 +47,7 @@ public:
 
     /// AWS regions.
     enum Region {
+        InvalidRegion  = 0,
         AP_Northeast_1 = AsiaPacific     + NorthEast + 0x1,
         AP_Southeast_1 = AsiaPacific     + SouthEast + 0x1,
         AP_Southeast_2 = AsiaPacific     + SouthEast + 0x2,
@@ -61,16 +62,25 @@ public:
 
     AwsRegion(const Region region);
     AwsRegion(const QString &regionName);
-
     ~AwsRegion();
 
+    bool isValid() const;
+    Region region() const;
+
     QString name() const;
+    static QString name(const Region &region);
+
     QString fullName() const;
+    static QString fullName(const Region &region);
+
+    QString hostName(const QString &serviceName) const;
 
     bool isSupported(const QString &serviceName,
                      const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
 
     QStringList supportedServices(const AwsEndpoint::Transport transport = AwsEndpoint::AnyTransport) const;
+
+    static Region fromName(const QString &regionName);
 
 private:
     AwsRegionPrivate * const d_ptr; ///< Internal d-pointer.

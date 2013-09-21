@@ -14,9 +14,7 @@ public:
     AwsRegionPrivate(AwsRegion * const q);
 
 protected:
-    //QMap<QByteArray, QByteArray> hostToRegionServiceMap;
-    //QMap<QByteArray, Regions> serviceToRegionsMap;
-    //QMap<QByteArray, QStringList> regionToServicesMap;
+    int region; ///< AwsRegion::Region represented by this object.
 
 private:
     AwsRegion * const q_ptr; ///< Internal q-pointer.

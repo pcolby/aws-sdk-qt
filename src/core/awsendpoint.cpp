@@ -251,6 +251,8 @@ QString AwsEndpoint::fullServiceName() const
  * the `cloudsearch` service is `Amazon CloudSearch`.  Likewise, the full name for
  * the `rds` service is `Amazon Relational Database Service`.
  *
+ * @param  serviceName  Canonical AWS service name to get the full name of.
+ *
  * @return This endpoint's full service name.
  *
  * @see    serviceName
