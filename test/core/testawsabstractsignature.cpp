@@ -22,9 +22,9 @@ public:
 };
 
 void TestAwsAbstractSignature::construct() {
-    QBENCHMARK {
+    //QBENCHMARK {
         MockSignature signature;
-    }
+    //}
 }
 
 void TestAwsAbstractSignature::canonicalPath_data() {

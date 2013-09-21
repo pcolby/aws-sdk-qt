@@ -58,10 +58,10 @@ void TestAwsSignatureV2::sign() {
     QCOMPARE(request.url( ), expected.url());
     QCOMPARE(request, expected);
 
-    QBENCHMARK {
+    /*QBENCHMARK {
         QFETCH(QNetworkRequest, request);
         signature.sign(credentials, operation, request, data);
-    }
+    }*/
 }
 
 void TestAwsSignatureV2::canonicalRequest_data() {

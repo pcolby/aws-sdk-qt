@@ -138,9 +138,9 @@ void TestAwsSignatureV4::canonicalHeader()
     QCOMPARE(QString::fromUtf8(header), QString::fromUtf8(expected));
     QCOMPARE(header, expected);
 
-    QBENCHMARK {
+    /*QBENCHMARK {
         signature.canonicalHeader(headerName, headerValue);
-    }
+    }*/
 }
 
 void TestAwsSignatureV4::canonicalHeaders_data()
