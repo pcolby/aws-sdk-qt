@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="5,32,157,61"/>
+<area shape="rect" id="node3" href="$classAwsSignatureV2.html" title="Implements AWS Signature Version 2. " alt="" coords="207,5,324,35"/>
+<area shape="rect" id="node5" href="$classAwsSignatureV4.html" title="Implements AWS Signature Version 4. " alt="" coords="207,59,324,88"/>
+</map>

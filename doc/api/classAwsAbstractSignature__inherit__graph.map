@@ -1,0 +1,5 @@
+<map id="AwsAbstractSignature" name="AwsAbstractSignature">
+<area shape="rect" id="node3" href="$classAwsSignatureV2.html" title="Implements AWS Signature Version 2. " alt="" coords="5,83,123,112"/>
+<area shape="rect" id="node5" title="Implements AWS Signature Version 3. " alt="" coords="147,83,264,112"/>
+<area shape="rect" id="node7" href="$classAwsSignatureV4.html" title="Implements AWS Signature Version 4. " alt="" coords="288,83,405,112"/>
+</map>
