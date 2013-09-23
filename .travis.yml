@@ -13,7 +13,8 @@ install:
   - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha384-512.c
   - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.cpp
   - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.h
-  - sed -i -e 's/"qvarlengtharray.h"/<QVarLengthArray>/' -e 's:\.\./\.\./3rdparty/rfc6234/::' src/core/qmessageauthenticationcode.cpp
+  - sed -i -re 's/"qvarlengtharray.h"/<QVarLengthArray>/' -e 's:\.\./\.\./3rdparty/rfc6234/::' \
+        -e 's:(^\s*)(.*Sha3_):\1//\2:' src/core/qmessageauthenticationcode.cpp
   - cat src/core/qmessageauthenticationcode.cpp
 
 before_script:
