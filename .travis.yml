@@ -14,12 +14,11 @@ install:
   - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.cpp
   - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.h
   - sed -e 's:\.\./\.\./3rdparty/::' src/core/qmessageauthenticationcode.cpp
+  - cat src/core/qmessageauthenticationcode.cpp
 
 before_script:
   - qmake -qt=qt5 -v
   - qmake -qt=qt5
-  - false
-  # Stop here for now.
 
 script:
   - make
