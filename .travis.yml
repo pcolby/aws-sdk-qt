@@ -6,13 +6,13 @@ before_install:
   - sudo apt-get install -qq qt5-qmake qtbase5-dev
 
 install:
-  # Fetch Qt 5.1's QMessageAuthenticationCode class for Qt 5.0.
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha-private.h               src/core/
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha.h                       src/core/
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha224-256.c                src/core/
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha384-512.c                src/core/
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.cpp src/core/
-  - wget https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.h   src/core/
+  # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha-private.h
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha.h
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha224-256.c
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha384-512.c
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.cpp
+  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.h
   - sed -e 's:\.\./\.\./3rdparty/::' src/core/qmessageauthenticationcode.cpp
 
 before_script:
