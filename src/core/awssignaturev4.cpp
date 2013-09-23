@@ -23,7 +23,12 @@
 #include "awsendpoint.h"
 
 #include <QDebug>
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0) && QT_VERSION < QT_VERSION_CHECK(5, 1, 0)
+#include <qmessageauthenticationcode.h>
+#else
 #include <QMessageAuthenticationCode>
+#endif
 
 QTAWS_BEGIN_NAMESPACE
 
