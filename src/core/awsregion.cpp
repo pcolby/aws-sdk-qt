@@ -21,7 +21,6 @@
 #include "awsregion_p.h"
 
 #include <QDebug>
-#include <QMessageAuthenticationCode>
 
 QTAWS_BEGIN_NAMESPACE
 
