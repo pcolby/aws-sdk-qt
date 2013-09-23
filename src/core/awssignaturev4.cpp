@@ -108,7 +108,7 @@ AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm
  * This function returns an algorithm designation, as defined by Amazon, for use with
  * V4 signatures.
  *
- * For example, if the algorith is `QCryptographicHash::Sha3_256`, this function will
+ * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
  * return `AWS4-HMAC-SHA256`.
  *
  * @param  algorithm  The hash algorithm to get the canonical designation for.
