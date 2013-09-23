@@ -21,8 +21,10 @@ install:
   - sed -i -re 's:^#define u?int://&:' src/core/qmessageauthenticationcode.cpp
   - sed -i -re 's:^//\s*(#include <stdint.h>):\1:' src/core/sha.h
   # Restore the addTemp and SHA*AddLength macros (Nokia commented out / renamed).
-  - sed -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA224_256AddLength)M/\1/' src/core/sha224-256.c
-  - sed -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA384_512AddLength)M/\1/' src/core/sha384-512.c
+  - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA224_256AddLength)M/\1/' src/core/sha224-256.c
+  - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA384_512AddLength)M/\1/' src/core/sha384-512.c
+  - cat src/core/sha224-256.c
+  - cat src/core/sha384-512.c
   - cat src/core/qmessageauthenticationcode.cpp
 
 before_script:
