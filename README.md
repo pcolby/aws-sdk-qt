@@ -9,7 +9,7 @@ Currently, libqtaws requires Qt 5.1+  This is because the library uses Qt's QMes
 generating HMAC codes for AWS request signatures, and that class was not added until Qt 5.1.0.
 
 It is possible to make the library work with Qt 5.0 by backporting QMessageAuthenticationCode from Qt 5.1 to Qt 5.0 -
-indeed, this is what this project does for [travis-ci](https://travis-ci.org/) support (see (.travis.yml)[.travis.yml]
+indeed, this is what this project does for [travis-ci](https://travis-ci.org/) support (see [.travis.yml](.travis.yml)
 for example), but that is not officially supported (might become so, if enough people show interest).
 
 Note, the library will soon depend on Qt5's built-in JSON support, so it is unlikely that libqtaws will ever officially
