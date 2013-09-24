@@ -1,9 +1,9 @@
 # Libqtaws [![Build Status](https://travis-ci.org/pcolby/libqtaws.png?branch=master)](https://travis-ci.org/pcolby/libqtaws)
 
-Libqtaws is a library for consuming [Amazon Web Services (AWS)](http://aws.amazon.com/) from
+Libqtaws is an open-source (LGPL) library for consuming [Amazon Web Services (AWS)](http://aws.amazon.com/) from
 [Qt](http://qt-project.org/) applications.
 
-The library is very early stages of development; only the AWS signature
+The library is in very early stages of development; only the AWS signature
 code and AWS endpoints information has been implemented so far, but what has been implemented is
 [100% documented](http://pcolby.github.io/libqtaws/doc/api/annotated.html)
 (including the [internal code](http://pcolby.github.io/libqtaws/doc/internal/annotated.html)) and 
