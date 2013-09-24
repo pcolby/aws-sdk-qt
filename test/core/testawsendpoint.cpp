@@ -403,7 +403,6 @@ void TestAwsEndpoint::fullServiceName()
     QFETCH(QString, fullServiceName);
 
     // Static version.
-    qDebug() << serviceName << fullServiceName;
     QCOMPARE(AwsEndpoint::fullServiceName(serviceName), fullServiceName);
 
     // Non-static version.
