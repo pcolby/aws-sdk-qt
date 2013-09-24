@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2013-09-22</td>
+            <td class="headerValue">2013-09-24</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">17</td>
@@ -94,330 +94,331 @@
 <span class="lineNum">      23 </span>                :            : #include &quot;awsendpoint.h&quot;
 <span class="lineNum">      24 </span>                :            : 
 <span class="lineNum">      25 </span>                :            : #include &lt;QDebug&gt;
-<span class="lineNum">      26 </span>                :            : #include &lt;QMessageAuthenticationCode&gt;
-<span class="lineNum">      27 </span>                :            : 
-<span class="lineNum">      28 </span>                :            : QTAWS_BEGIN_NAMESPACE
-<span class="lineNum">      29 </span>                :            : 
-<span class="lineNum">      30 </span>                :            : /**
-<span class="lineNum">      31 </span>                :            :  * @class  AwsSignatureV4
-<span class="lineNum">      32 </span>                :            :  *
-<span class="lineNum">      33 </span>                :            :  * @brief  Implements AWS Signature Version 4.
-<span class="lineNum">      34 </span>                :            :  *
-<span class="lineNum">      35 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
-<span class="lineNum">      36 </span>                :            :  */
-<span class="lineNum">      37 </span>                :            : 
-<span class="lineNum">      38 </span>                :            : /**
-<span class="lineNum">      39 </span>                :            :  * @brief  Constructs a new AwsSignatureV4 object.
-<span class="lineNum">      40 </span>                :            :  *
-<span class="lineNum">      41 </span>                :            :  * Use instances of this object to provide Version 4 signatures for AWS services.
-<span class="lineNum">      42 </span>                :            :  *
-<span class="lineNum">      43 </span>                :            :  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
-<span class="lineNum">      44 </span>                :            :  *
-<span class="lineNum">      45 </span>                :            :  * @note  The AWS Signature Version 4 documentation is not explcit about which hash
-<span class="lineNum">      46 </span>                :            :  *        algorithms are supported by Amazon, however all documented examples use
-<a name="47"><span class="lineNum">      47 </span>                :            :  *        SHA256.</a>
-<span class="lineNum">      48 </span>                :            :  */
-<span class="lineNum">      49 </span>                :<span class="lineCov">          1 : AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)</span>
-<span class="lineNum">      50 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :     : d_ptr(new AwsSignatureV4Private(hashAlgorithm, this))</span>
-<span class="lineNum">      51 </span>                :            : {
-<span class="lineNum">      52 </span>                :            : 
-<span class="lineNum">      53 </span>                :<span class="lineCov">          1 : }</span>
-<span class="lineNum">      54 </span>                :            : 
-<span class="lineNum">      55 </span>                :            : /**
-<a name="56"><span class="lineNum">      56 </span>                :            :  * @brief AwsSignatureV4 destructor.</a>
-<span class="lineNum">      57 </span>                :            :  */
-<span class="lineNum">      58 </span>                :<span class="lineCov">          3 : AwsSignatureV4::~AwsSignatureV4()</span>
-<span class="lineNum">      59 </span>                :            : {
-<span class="lineNum">      60 </span>                :<span class="lineCov">          1 :     delete d_ptr;</span>
-<a name="61"><span class="lineNum">      61 </span>        [<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 1 time"> + </span>]:<span class="lineCov">          2 : }</span></a>
-<span class="lineNum">      62 </span>                :            : 
-<span class="lineNum">      63 </span>                :<span class="lineCov">          1 : void AwsSignatureV4::sign(const AwsAbstractCredentials &amp;credentials,</span>
-<span class="lineNum">      64 </span>                :            :                           const QNetworkAccessManager::Operation operation,
-<span class="lineNum">      65 </span>                :            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
-<span class="lineNum">      66 </span>                :            : {
-<span class="lineNum">      67 </span>                :<span class="lineCov">          1 :     Q_D(const AwsSignatureV4);</span>
-<span class="lineNum">      68 </span>[<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          1 :     d-&gt;setAuthorizationHeader(credentials, operation, request, data, d-&gt;setDateHeader(request));</span>
+<span class="lineNum">      26 </span>                :            : 
+<span class="lineNum">      27 </span>                :            : #if QT_VERSION &gt;= QT_VERSION_CHECK(5, 0, 0) &amp;&amp; QT_VERSION &lt; QT_VERSION_CHECK(5, 1, 0)
+<span class="lineNum">      28 </span>                :            : #include &quot;qmessageauthenticationcode.h&quot;
+<span class="lineNum">      29 </span>                :            : #else
+<span class="lineNum">      30 </span>                :            : #include &lt;QMessageAuthenticationCode&gt;
+<span class="lineNum">      31 </span>                :            : #endif
+<span class="lineNum">      32 </span>                :            : 
+<span class="lineNum">      33 </span>                :            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            : /**
+<span class="lineNum">      36 </span>                :            :  * @class  AwsSignatureV4
+<span class="lineNum">      37 </span>                :            :  *
+<span class="lineNum">      38 </span>                :            :  * @brief  Implements AWS Signature Version 4.
+<span class="lineNum">      39 </span>                :            :  *
+<span class="lineNum">      40 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+<span class="lineNum">      41 </span>                :            :  */
+<span class="lineNum">      42 </span>                :            : 
+<span class="lineNum">      43 </span>                :            : /**
+<span class="lineNum">      44 </span>                :            :  * @brief  Constructs a new AwsSignatureV4 object.
+<span class="lineNum">      45 </span>                :            :  *
+<span class="lineNum">      46 </span>                :            :  * Use instances of this object to provide Version 4 signatures for AWS services.
+<span class="lineNum">      47 </span>                :            :  *
+<span class="lineNum">      48 </span>                :            :  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
+<span class="lineNum">      49 </span>                :            :  *
+<span class="lineNum">      50 </span>                :            :  * @note  The AWS Signature Version 4 documentation is not explcit about which hash
+<span class="lineNum">      51 </span>                :            :  *        algorithms are supported by Amazon, however all documented examples use
+<a name="52"><span class="lineNum">      52 </span>                :            :  *        SHA256.</a>
+<span class="lineNum">      53 </span>                :            :  */
+<span class="lineNum">      54 </span>                :<span class="lineCov">          1 : AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)</span>
+<span class="lineNum">      55 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :     : d_ptr(new AwsSignatureV4Private(hashAlgorithm, this))</span>
+<span class="lineNum">      56 </span>                :            : {
+<span class="lineNum">      57 </span>                :            : 
+<span class="lineNum">      58 </span>                :<span class="lineCov">          1 : }</span>
+<span class="lineNum">      59 </span>                :            : 
+<span class="lineNum">      60 </span>                :            : /**
+<a name="61"><span class="lineNum">      61 </span>                :            :  * @brief AwsSignatureV4 destructor.</a>
+<span class="lineNum">      62 </span>                :            :  */
+<span class="lineNum">      63 </span>                :<span class="lineCov">          3 : AwsSignatureV4::~AwsSignatureV4()</span>
+<span class="lineNum">      64 </span>                :            : {
+<span class="lineNum">      65 </span>                :<span class="lineCov">          1 :     delete d_ptr;</span>
+<a name="66"><span class="lineNum">      66 </span>        [<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 1 time"> + </span>]:<span class="lineCov">          2 : }</span></a>
+<span class="lineNum">      67 </span>                :            : 
+<span class="lineNum">      68 </span>                :<span class="lineCov">          1 : void AwsSignatureV4::sign(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">      69 </span>                :            :                           const QNetworkAccessManager::Operation operation,
+<span class="lineNum">      70 </span>                :            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
+<span class="lineNum">      71 </span>                :            : {
+<span class="lineNum">      72 </span>                :<span class="lineCov">          1 :     Q_D(const AwsSignatureV4);</span>
+<span class="lineNum">      73 </span>[<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          1 :     d-&gt;setAuthorizationHeader(credentials, operation, request, data, d-&gt;setDateHeader(request));</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">      69 </span>                :<span class="lineCov">          1 : }</span>
-<span class="lineNum">      70 </span>                :            : 
-<span class="lineNum">      71 </span>                :            : /**
-<span class="lineNum">      72 </span>                :            :  * @internal
-<span class="lineNum">      73 </span>                :            :  *
-<span class="lineNum">      74 </span>                :            :  * @class  AwsSignatureV4Private
-<span class="lineNum">      75 </span>                :            :  *
-<span class="lineNum">      76 </span>                :            :  * @brief  Private implementation for AwsSignatureV4.
-<span class="lineNum">      77 </span>                :            :  *
-<span class="lineNum">      78 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
-<span class="lineNum">      79 </span>                :            :  */
-<a name="80"><span class="lineNum">      80 </span>                :            : </a>
-<span class="lineNum">      81 </span>                :            : /// Format V4 signatures use to represent dates in canonical form.
-<span class="lineNum">      82 </span>                :<span class="lineCov">          1 : const QLatin1String AwsSignatureV4Private::DateFormat(&quot;yyyyMMdd&quot;);</span>
-<span class="lineNum">      83 </span>                :            : 
-<span class="lineNum">      84 </span>                :            : /// Format V4 signatures use to represent timestamps in canonical form.
-<span class="lineNum">      85 </span>                :<span class="lineCov">          1 : const QLatin1String AwsSignatureV4Private::DateTimeFormat(&quot;yyyyMMddThhmmssZ&quot;);</span>
-<span class="lineNum">      86 </span>                :            : 
-<span class="lineNum">      87 </span>                :            : /**
-<span class="lineNum">      88 </span>                :            :  * @brief  Constructs a new AwsSignatureV4Private object.
-<span class="lineNum">      89 </span>                :            :  *
-<span class="lineNum">      90 </span>                :            :  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
-<a name="91"><span class="lineNum">      91 </span>                :            :  * @param  q              Pointer to this object's public AwsSignatureV4 instance.</a>
-<span class="lineNum">      92 </span>                :            :  */
-<span class="lineNum">      93 </span>                :<span class="lineCov">         33 : AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,</span>
-<span class="lineNum">      94 </span>                :            :                                              AwsSignatureV4 * const q)
-<span class="lineNum">      95 </span>                :<span class="lineCov">         33 :     : hashAlgorithm(hashAlgorithm), q_ptr(q)</span>
-<span class="lineNum">      96 </span>                :            : {
-<span class="lineNum">      97 </span>                :            : 
-<span class="lineNum">      98 </span>                :<span class="lineCov">         33 : }</span>
-<span class="lineNum">      99 </span>                :            : 
-<span class="lineNum">     100 </span>                :            : /**
-<span class="lineNum">     101 </span>                :            :  * @brief  Create an AWS V4 Signature algorithm designation.
-<span class="lineNum">     102 </span>                :            :  *
-<span class="lineNum">     103 </span>                :            :  * This function returns an algorithm designation, as defined by Amazon, for use with
-<span class="lineNum">     104 </span>                :            :  * V4 signatures.
-<span class="lineNum">     105 </span>                :            :  *
-<span class="lineNum">     106 </span>                :            :  * For example, if the algorith is `QCryptographicHash::Sha3_256`, this function will
-<span class="lineNum">     107 </span>                :            :  * return `AWS4-HMAC-SHA256`.
-<span class="lineNum">     108 </span>                :            :  *
-<span class="lineNum">     109 </span>                :            :  * @param  algorithm  The hash algorithm to get the canonical designation for.
+<span class="lineNum">      74 </span>                :<span class="lineCov">          1 : }</span>
+<span class="lineNum">      75 </span>                :            : 
+<span class="lineNum">      76 </span>                :            : /**
+<span class="lineNum">      77 </span>                :            :  * @internal
+<span class="lineNum">      78 </span>                :            :  *
+<span class="lineNum">      79 </span>                :            :  * @class  AwsSignatureV4Private
+<span class="lineNum">      80 </span>                :            :  *
+<span class="lineNum">      81 </span>                :            :  * @brief  Private implementation for AwsSignatureV4.
+<span class="lineNum">      82 </span>                :            :  *
+<span class="lineNum">      83 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+<span class="lineNum">      84 </span>                :            :  */
+<a name="85"><span class="lineNum">      85 </span>                :            : </a>
+<span class="lineNum">      86 </span>                :            : /// Format V4 signatures use to represent dates in canonical form.
+<span class="lineNum">      87 </span>                :<span class="lineCov">          1 : const QLatin1String AwsSignatureV4Private::DateFormat(&quot;yyyyMMdd&quot;);</span>
+<span class="lineNum">      88 </span>                :            : 
+<span class="lineNum">      89 </span>                :            : /// Format V4 signatures use to represent timestamps in canonical form.
+<span class="lineNum">      90 </span>                :<span class="lineCov">          1 : const QLatin1String AwsSignatureV4Private::DateTimeFormat(&quot;yyyyMMddThhmmssZ&quot;);</span>
+<span class="lineNum">      91 </span>                :            : 
+<span class="lineNum">      92 </span>                :            : /**
+<span class="lineNum">      93 </span>                :            :  * @brief  Constructs a new AwsSignatureV4Private object.
+<span class="lineNum">      94 </span>                :            :  *
+<span class="lineNum">      95 </span>                :            :  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
+<a name="96"><span class="lineNum">      96 </span>                :            :  * @param  q              Pointer to this object's public AwsSignatureV4 instance.</a>
+<span class="lineNum">      97 </span>                :            :  */
+<span class="lineNum">      98 </span>                :<span class="lineCov">         33 : AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,</span>
+<span class="lineNum">      99 </span>                :            :                                              AwsSignatureV4 * const q)
+<span class="lineNum">     100 </span>                :<span class="lineCov">         33 :     : hashAlgorithm(hashAlgorithm), q_ptr(q)</span>
+<span class="lineNum">     101 </span>                :            : {
+<span class="lineNum">     102 </span>                :            : 
+<span class="lineNum">     103 </span>                :<span class="lineCov">         33 : }</span>
+<span class="lineNum">     104 </span>                :            : 
+<span class="lineNum">     105 </span>                :            : /**
+<span class="lineNum">     106 </span>                :            :  * @brief  Create an AWS V4 Signature algorithm designation.
+<span class="lineNum">     107 </span>                :            :  *
+<span class="lineNum">     108 </span>                :            :  * This function returns an algorithm designation, as defined by Amazon, for use with
+<span class="lineNum">     109 </span>                :            :  * V4 signatures.
 <span class="lineNum">     110 </span>                :            :  *
-<span class="lineNum">     111 </span>                :            :  * @return  An AWS V4 Signature algorithm designation.
-<span class="lineNum">     112 </span>                :            :  *
-<a name="113"><span class="lineNum">     113 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
-<span class="lineNum">     114 </span>                :            :  */
-<span class="lineNum">     115 </span>                :<span class="lineCov">         14 : QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const</span>
-<span class="lineNum">     116 </span>                :            : {
-<span class="lineNum">     117 </span>  [<span class="branchCov" title="Branch 0 was taken 1 time"> + </span><span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchCov" title="Branch 3 was taken 1 time"> + </span> :<span class="lineCov">         14 :     switch (algorithm) {</span>
+<span class="lineNum">     111 </span>                :            :  * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
+<span class="lineNum">     112 </span>                :            :  * return `AWS4-HMAC-SHA256`.
+<span class="lineNum">     113 </span>                :            :  *
+<span class="lineNum">     114 </span>                :            :  * @param  algorithm  The hash algorithm to get the canonical designation for.
+<span class="lineNum">     115 </span>                :            :  *
+<span class="lineNum">     116 </span>                :            :  * @return  An AWS V4 Signature algorithm designation.
+<span class="lineNum">     117 </span>                :            :  *
+<a name="118"><span class="lineNum">     118 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
+<span class="lineNum">     119 </span>                :            :  */
+<span class="lineNum">     120 </span>                :<span class="lineCov">         14 : QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const</span>
+<span class="lineNum">     121 </span>                :            : {
+<span class="lineNum">     122 </span>  [<span class="branchCov" title="Branch 0 was taken 1 time"> + </span><span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchCov" title="Branch 3 was taken 1 time"> + </span> :<span class="lineCov">         14 :     switch (algorithm) {</span>
 <span class="lineNum">         </span>   <span class="branchCov" title="Branch 4 was taken 4 times"> + </span><span class="branchCov" title="Branch 5 was taken 1 time"> + </span><span class="branchCov" title="Branch 6 was taken 1 time"> + </span><span class="branchCov" title="Branch 7 was taken 4 times"> + </span>]
-<span class="lineNum">     118 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Md4:      return &quot;AWS4-HMAC-MD4&quot;;</span>
-<span class="lineNum">     119 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Md5:      return &quot;AWS4-HMAC-MD5&quot;;</span>
-<span class="lineNum">     120 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha1:     return &quot;AWS4-HMAC-SHA1&quot;;</span>
-<span class="lineNum">     121 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha224:   return &quot;AWS4-HMAC-SHA224&quot;;</span>
-<span class="lineNum">     122 </span>                :<span class="lineCov">          4 :         case QCryptographicHash::Sha256:   return &quot;AWS4-HMAC-SHA256&quot;;</span>
-<span class="lineNum">     123 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha384:   return &quot;AWS4-HMAC-SHA384&quot;;</span>
-<span class="lineNum">     124 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha512:   return &quot;AWS4-HMAC-SHA512&quot;;</span>
-<span class="lineNum">     125 </span>                :            :         case QCryptographicHash::Sha3_224: // fall through for now.
-<span class="lineNum">     126 </span>                :            :         case QCryptographicHash::Sha3_256: // fall through for now.
-<span class="lineNum">     127 </span>                :            :         case QCryptographicHash::Sha3_384: // fall through for now.
-<span class="lineNum">     128 </span>                :            :         case QCryptographicHash::Sha3_512: // fall through for now.
-<span class="lineNum">     129 </span>                :            :         default:
-<span class="lineNum">     130 </span>                :<span class="lineCov">          4 :             Q_ASSERT_X(false, &quot;AwsSignatureV4Private::algorithmDesignation&quot;, &quot;invalid algorithm&quot;);</span>
-<span class="lineNum">     131 </span>                :<span class="lineCov">          4 :             return &quot;invalid-algorithm&quot;;</span>
-<span class="lineNum">     132 </span>                :            :     }
-<span class="lineNum">     133 </span>                :            : }
-<span class="lineNum">     134 </span>                :            : 
-<span class="lineNum">     135 </span>                :            : /**
-<span class="lineNum">     136 </span>                :            :  * @brief  Create an AWS V4 Signature authorization header value.
-<span class="lineNum">     137 </span>                :            :  *
-<span class="lineNum">     138 </span>                :            :  * This function builds an V4 signature, and returns it to the caller.  The returned
-<span class="lineNum">     139 </span>                :            :  * header value is then suitable for adding as a `Authorization` header in the HTTP
-<span class="lineNum">     140 </span>                :            :  * request, to be accepted by Amazon.
-<span class="lineNum">     141 </span>                :            :  *
-<span class="lineNum">     142 </span>                :            :  * @param  credentials  The AWS credentials to use to sign the request.
-<span class="lineNum">     143 </span>                :            :  * @param  operation    The HTTP method being used for the request.
-<span class="lineNum">     144 </span>                :            :  * @param  request      The network request to generate a signature for.
-<span class="lineNum">     145 </span>                :            :  * @param  payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
-<span class="lineNum">     146 </span>                :            :  * @param  timestamp    The timestamp to use when signing the request.
-<span class="lineNum">     147 </span>                :            :  *
-<span class="lineNum">     148 </span>                :            :  * @return  An AWS V4 Signature authorization header value.
-<span class="lineNum">     149 </span>                :            :  *
-<span class="lineNum">     150 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
-<a name="151"><span class="lineNum">     151 </span>                :            :  * @see    setAuthorizationHeader</a>
-<span class="lineNum">     152 </span>                :            :  */
-<span class="lineNum">     153 </span>                :<span class="lineCov">          3 : QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &amp;credentials,</span>
-<span class="lineNum">     154 </span>                :            :                                                            const QNetworkAccessManager::Operation operation,
-<span class="lineNum">     155 </span>                :            :                                                            QNetworkRequest &amp;request, const QByteArray &amp;payload,
-<span class="lineNum">     156 </span>                :            :                                                            const QDateTime &amp;timestamp) const
-<span class="lineNum">     157 </span>                :            : {
-<span class="lineNum">     158 </span>        [<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          3 :     const QByteArray algorithmDesignation = this-&gt;algorithmDesignation(hashAlgorithm);</span>
-<span class="lineNum">     159 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          6 :     const AwsEndpoint endpoint(request.url().host());</span>
+<span class="lineNum">     123 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Md4:      return &quot;AWS4-HMAC-MD4&quot;;</span>
+<span class="lineNum">     124 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Md5:      return &quot;AWS4-HMAC-MD5&quot;;</span>
+<span class="lineNum">     125 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha1:     return &quot;AWS4-HMAC-SHA1&quot;;</span>
+<span class="lineNum">     126 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha224:   return &quot;AWS4-HMAC-SHA224&quot;;</span>
+<span class="lineNum">     127 </span>                :<span class="lineCov">          4 :         case QCryptographicHash::Sha256:   return &quot;AWS4-HMAC-SHA256&quot;;</span>
+<span class="lineNum">     128 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha384:   return &quot;AWS4-HMAC-SHA384&quot;;</span>
+<span class="lineNum">     129 </span>                :<span class="lineCov">          1 :         case QCryptographicHash::Sha512:   return &quot;AWS4-HMAC-SHA512&quot;;</span>
+<span class="lineNum">     130 </span>                :            :         default:
+<span class="lineNum">     131 </span>                :<span class="lineCov">          4 :             Q_ASSERT_X(false, &quot;AwsSignatureV4Private::algorithmDesignation&quot;, &quot;invalid algorithm&quot;);</span>
+<span class="lineNum">     132 </span>                :<span class="lineCov">          4 :             return &quot;invalid-algorithm&quot;;</span>
+<span class="lineNum">     133 </span>                :            :     }
+<span class="lineNum">     134 </span>                :            : }
+<span class="lineNum">     135 </span>                :            : 
+<span class="lineNum">     136 </span>                :            : /**
+<span class="lineNum">     137 </span>                :            :  * @brief  Create an AWS V4 Signature authorization header value.
+<span class="lineNum">     138 </span>                :            :  *
+<span class="lineNum">     139 </span>                :            :  * This function builds an V4 signature, and returns it to the caller.  The returned
+<span class="lineNum">     140 </span>                :            :  * header value is then suitable for adding as a `Authorization` header in the HTTP
+<span class="lineNum">     141 </span>                :            :  * request, to be accepted by Amazon.
+<span class="lineNum">     142 </span>                :            :  *
+<span class="lineNum">     143 </span>                :            :  * @param  credentials  The AWS credentials to use to sign the request.
+<span class="lineNum">     144 </span>                :            :  * @param  operation    The HTTP method being used for the request.
+<span class="lineNum">     145 </span>                :            :  * @param  request      The network request to generate a signature for.
+<span class="lineNum">     146 </span>                :            :  * @param  payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+<span class="lineNum">     147 </span>                :            :  * @param  timestamp    The timestamp to use when signing the request.
+<span class="lineNum">     148 </span>                :            :  *
+<span class="lineNum">     149 </span>                :            :  * @return  An AWS V4 Signature authorization header value.
+<span class="lineNum">     150 </span>                :            :  *
+<span class="lineNum">     151 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+<a name="152"><span class="lineNum">     152 </span>                :            :  * @see    setAuthorizationHeader</a>
+<span class="lineNum">     153 </span>                :            :  */
+<span class="lineNum">     154 </span>                :<span class="lineCov">          3 : QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">     155 </span>                :            :                                                            const QNetworkAccessManager::Operation operation,
+<span class="lineNum">     156 </span>                :            :                                                            QNetworkRequest &amp;request, const QByteArray &amp;payload,
+<span class="lineNum">     157 </span>                :            :                                                            const QDateTime &amp;timestamp) const
+<span class="lineNum">     158 </span>                :            : {
+<span class="lineNum">     159 </span>        [<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          3 :     const QByteArray algorithmDesignation = this-&gt;algorithmDesignation(hashAlgorithm);</span>
+<span class="lineNum">     160 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          6 :     const AwsEndpoint endpoint(request.url().host());</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
-<span class="lineNum">     160 </span>                :            : 
-<span class="lineNum">     161 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray credentialScope = this-&gt;credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
+<span class="lineNum">     161 </span>                :            : 
+<span class="lineNum">     162 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray credentialScope = this-&gt;credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 19 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>]
-<span class="lineNum">     162 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     QByteArray signedHeaders;</span>
-<span class="lineNum">     163 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray canonicalRequest = this-&gt;canonicalRequest(operation, request, payload, &amp;signedHeaders);</span>
-<span class="lineNum">     164 </span>                :            : 
-<span class="lineNum">     165 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray stringToSign = this-&gt;stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);</span>
-<span class="lineNum">     166 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray signingKey = this-&gt;signingKey(credentials, timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
+<span class="lineNum">     163 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     QByteArray signedHeaders;</span>
+<span class="lineNum">     164 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray canonicalRequest = this-&gt;canonicalRequest(operation, request, payload, &amp;signedHeaders);</span>
+<span class="lineNum">     165 </span>                :            : 
+<span class="lineNum">     166 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray stringToSign = this-&gt;stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);</span>
+<span class="lineNum">     167 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray signingKey = this-&gt;signingKey(credentials, timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 19 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>]
-<span class="lineNum">     167 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);</span>
-<span class="lineNum">     168 </span>                :            : 
-<span class="lineNum">     169 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     return algorithmDesignation + &quot; Credential=&quot; + credentials.accessKeyId().toUtf8() + '/' + credentialScope +</span>
+<span class="lineNum">     168 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);</span>
+<span class="lineNum">     169 </span>                :            : 
+<span class="lineNum">     170 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     return algorithmDesignation + &quot; Credential=&quot; + credentials.accessKeyId().toUtf8() + '/' + credentialScope +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 25 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>][<span class="branchCov" title="Branch 28 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 31 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 32 was not taken"> - </span>][<span class="branchCov" title="Branch 34 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 35 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 37 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 38 was not taken"> - </span>][<span class="branchCov" title="Branch 40 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 41 was not taken"> - </span>]
-<span class="lineNum">     170 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         12 :             &quot;, SignedHeaders=&quot; + signedHeaders + &quot;, Signature=&quot; + signature.toHex();</span>
+<span class="lineNum">     171 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         12 :             &quot;, SignedHeaders=&quot; + signedHeaders + &quot;, Signature=&quot; + signature.toHex();</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
-<span class="lineNum">     171 </span>                :            : }
-<span class="lineNum">     172 </span>                :            : 
-<span class="lineNum">     173 </span>                :            : /**
-<span class="lineNum">     174 </span>                :            :  * @brief  Create an AWS V4 Signature canonical header string.
-<span class="lineNum">     175 </span>                :            :  *
-<span class="lineNum">     176 </span>                :            :  * In canonical form, header name and value are combined with a single semi-colon
-<span class="lineNum">     177 </span>                :            :  * separator, with all whitespace removed from both, _except_ for whitespace within
-<span class="lineNum">     178 </span>                :            :  * double-quotes.
-<span class="lineNum">     179 </span>                :            :  *
-<span class="lineNum">     180 </span>                :            :  * @param  headerName   Name of the HTTP header to convert to canonical form.
-<span class="lineNum">     181 </span>                :            :  * @param  headerValue  Value of the HTTP header to convert to canonical form.
-<span class="lineNum">     182 </span>                :            :  *
-<span class="lineNum">     183 </span>                :            :  * @return  An AWS V4 Signature canonical header string.
-<span class="lineNum">     184 </span>                :            :  *
-<span class="lineNum">     185 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-<a name="186"><span class="lineNum">     186 </span>                :            :  * @see    canonicalHeaders</a>
-<span class="lineNum">     187 </span>                :            :  */
-<span class="lineNum">     188 </span>                :<span class="lineCov">         23 : QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &amp;headerName, const QByteArray &amp;headerValue) const</span>
-<span class="lineNum">     189 </span>                :            : {
-<span class="lineNum">     190 </span>[<span class="branchCov" title="Branch 1 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         23 :     QByteArray header = headerName.toLower() + ':';</span>
+<span class="lineNum">     172 </span>                :            : }
+<span class="lineNum">     173 </span>                :            : 
+<span class="lineNum">     174 </span>                :            : /**
+<span class="lineNum">     175 </span>                :            :  * @brief  Create an AWS V4 Signature canonical header string.
+<span class="lineNum">     176 </span>                :            :  *
+<span class="lineNum">     177 </span>                :            :  * In canonical form, header name and value are combined with a single semi-colon
+<span class="lineNum">     178 </span>                :            :  * separator, with all whitespace removed from both, _except_ for whitespace within
+<span class="lineNum">     179 </span>                :            :  * double-quotes.
+<span class="lineNum">     180 </span>                :            :  *
+<span class="lineNum">     181 </span>                :            :  * @param  headerName   Name of the HTTP header to convert to canonical form.
+<span class="lineNum">     182 </span>                :            :  * @param  headerValue  Value of the HTTP header to convert to canonical form.
+<span class="lineNum">     183 </span>                :            :  *
+<span class="lineNum">     184 </span>                :            :  * @return  An AWS V4 Signature canonical header string.
+<span class="lineNum">     185 </span>                :            :  *
+<span class="lineNum">     186 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+<a name="187"><span class="lineNum">     187 </span>                :            :  * @see    canonicalHeaders</a>
+<span class="lineNum">     188 </span>                :            :  */
+<span class="lineNum">     189 </span>                :<span class="lineCov">         23 : QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &amp;headerName, const QByteArray &amp;headerValue) const</span>
+<span class="lineNum">     190 </span>                :            : {
+<span class="lineNum">     191 </span>[<span class="branchCov" title="Branch 1 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         23 :     QByteArray header = headerName.toLower() + ':';</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 7 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>]
-<span class="lineNum">     191 </span>[<span class="branchCov" title="Branch 1 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         46 :     const QByteArray trimmedHeaderValue = headerValue.trimmed();</span>
-<span class="lineNum">     192 </span>                :<span class="lineCov">         23 :     bool isInQuotes = false;</span>
-<span class="lineNum">     193 </span>                :<span class="lineCov">         23 :     char previousChar = '\0';</span>
-<span class="lineNum">     194 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchCov" title="Branch 2 was taken 23 times"> + </span>]:<span class="lineCov">        508 :     for (int index = 0; index &lt; trimmedHeaderValue.size(); ++index) {</span>
-<span class="lineNum">     195 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        485 :         char thisChar = trimmedHeaderValue.at(index);</span>
-<span class="lineNum">     196 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        485 :         header += thisChar;</span>
-<span class="lineNum">     197 </span>        [<span class="branchCov" title="Branch 0 was taken 43 times"> + </span><span class="branchCov" title="Branch 1 was taken 442 times"> + </span>]:<span class="lineCov">        485 :         if (isInQuotes) {</span>
-<span class="lineNum">     198 </span>[<span class="branchCov" title="Branch 0 was taken 3 times"> + </span><span class="branchCov" title="Branch 1 was taken 40 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         43 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\'))</span>
-<span class="lineNum">     199 </span>                :<span class="lineCov">          3 :                 isInQuotes = false;</span>
-<span class="lineNum">     200 </span>                :            :         } else {
-<span class="lineNum">     201 </span>[<span class="branchCov" title="Branch 0 was taken 3 times"> + </span><span class="branchCov" title="Branch 1 was taken 439 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">        442 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\')) {</span>
-<span class="lineNum">     202 </span>                :<span class="lineCov">          3 :                 isInQuotes = true;</span>
-<span class="lineNum">     203 </span>        [<span class="branchCov" title="Branch 0 was taken 14 times"> + </span><span class="branchCov" title="Branch 1 was taken 425 times"> + </span>]:<span class="lineCov">        439 :             } else if (isspace(thisChar)) {</span>
-<span class="lineNum">     204 </span>[<span class="branchCov" title="Branch 1 was taken 32 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 18 times"> + </span><span class="branchCov" title="Branch 4 was taken 14 times"> + </span>]:<span class="lineCov">         64 :                 while ((index &lt; trimmedHeaderValue.size()-1) &amp;&amp;</span>
+<span class="lineNum">     192 </span>[<span class="branchCov" title="Branch 1 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         46 :     const QByteArray trimmedHeaderValue = headerValue.trimmed();</span>
+<span class="lineNum">     193 </span>                :<span class="lineCov">         23 :     bool isInQuotes = false;</span>
+<span class="lineNum">     194 </span>                :<span class="lineCov">         23 :     char previousChar = '\0';</span>
+<span class="lineNum">     195 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchCov" title="Branch 2 was taken 23 times"> + </span>]:<span class="lineCov">        508 :     for (int index = 0; index &lt; trimmedHeaderValue.size(); ++index) {</span>
+<span class="lineNum">     196 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        485 :         char thisChar = trimmedHeaderValue.at(index);</span>
+<span class="lineNum">     197 </span>        [<span class="branchCov" title="Branch 1 was taken 485 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        485 :         header += thisChar;</span>
+<span class="lineNum">     198 </span>        [<span class="branchCov" title="Branch 0 was taken 43 times"> + </span><span class="branchCov" title="Branch 1 was taken 442 times"> + </span>]:<span class="lineCov">        485 :         if (isInQuotes) {</span>
+<span class="lineNum">     199 </span>[<span class="branchCov" title="Branch 0 was taken 3 times"> + </span><span class="branchCov" title="Branch 1 was taken 40 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         43 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\'))</span>
+<span class="lineNum">     200 </span>                :<span class="lineCov">          3 :                 isInQuotes = false;</span>
+<span class="lineNum">     201 </span>                :            :         } else {
+<span class="lineNum">     202 </span>[<span class="branchCov" title="Branch 0 was taken 3 times"> + </span><span class="branchCov" title="Branch 1 was taken 439 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">        442 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\')) {</span>
+<span class="lineNum">     203 </span>                :<span class="lineCov">          3 :                 isInQuotes = true;</span>
+<span class="lineNum">     204 </span>        [<span class="branchCov" title="Branch 0 was taken 14 times"> + </span><span class="branchCov" title="Branch 1 was taken 425 times"> + </span>]:<span class="lineCov">        439 :             } else if (isspace(thisChar)) {</span>
+<span class="lineNum">     205 </span>[<span class="branchCov" title="Branch 1 was taken 32 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 18 times"> + </span><span class="branchCov" title="Branch 4 was taken 14 times"> + </span>]:<span class="lineCov">         64 :                 while ((index &lt; trimmedHeaderValue.size()-1) &amp;&amp;</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 5 was taken 18 times"> + </span><span class="branchCov" title="Branch 6 was taken 14 times"> + </span>]
-<span class="lineNum">     205 </span>        [<span class="branchCov" title="Branch 1 was taken 32 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         32 :                        (isspace(trimmedHeaderValue.at(index+1))))</span>
-<span class="lineNum">     206 </span>                :<span class="lineCov">         18 :                     ++index;</span>
-<span class="lineNum">     207 </span>                :            :             }
-<span class="lineNum">     208 </span>                :            :         }
-<span class="lineNum">     209 </span>                :<span class="lineCov">        485 :         previousChar = thisChar;</span>
-<span class="lineNum">     210 </span>                :            :     }
-<span class="lineNum">     211 </span>                :<span class="lineCov">         46 :     return header;</span>
-<span class="lineNum">     212 </span>                :            : }
-<span class="lineNum">     213 </span>                :            : 
-<span class="lineNum">     214 </span>                :            : /**
-<span class="lineNum">     215 </span>                :            :  * @brief  Create an AWS V4 Signature canonical headers string.
-<span class="lineNum">     216 </span>                :            :  *
-<span class="lineNum">     217 </span>                :            :  * This function constructs a canonical string containing all of the headers
-<span class="lineNum">     218 </span>                :            :  * in the given request.
-<span class="lineNum">     219 </span>                :            :  *
-<span class="lineNum">     220 </span>                :            :  * @note   \p request will typically not include a `Host` header at this stage,
-<span class="lineNum">     221 </span>                :            :  *         however Qt will add an appropriate `Host` header when the request is
-<span class="lineNum">     222 </span>                :            :  *         performed.  So, if \p request does not include a `Host` header yet,
-<span class="lineNum">     223 </span>                :            :  *         this function will include a derived `Host` header in the canonical
-<span class="lineNum">     224 </span>                :            :  *         headers to allow for it.
-<span class="lineNum">     225 </span>                :            :  *
-<span class="lineNum">     226 </span>                :            :  * @param[in]  request        The network request to fetch the canonical headers from.
-<span class="lineNum">     227 </span>                :            :  * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
-<span class="lineNum">     228 </span>                :            :  *                            included in the result.
-<span class="lineNum">     229 </span>                :            :  *
-<span class="lineNum">     230 </span>                :            :  * @return  An AWS V4 Signature canonical headers string.
-<span class="lineNum">     231 </span>                :            :  *
-<span class="lineNum">     232 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
-<a name="233"><span class="lineNum">     233 </span>                :            :  * @see    canonicalHeader</a>
-<span class="lineNum">     234 </span>                :            :  */
-<span class="lineNum">     235 </span>                :<span class="lineCov">          7 : QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &amp;request, QByteArray * const signedHeaders) const</span>
-<span class="lineNum">     236 </span>                :            : {
-<span class="lineNum">     237 </span>[<span class="branchNoCov" title="Branch 0 was not taken"> - </span><span class="branchCov" title="Branch 1 was taken 7 times"> + </span>][<span class="branchNoExec" title="Branch 3 was not executed"> # </span><span class="branchNoExec" title="Branch 4 was not executed"> # </span>]:<span class="lineCov">          7 :     Q_CHECK_PTR(signedHeaders);</span>
-<span class="lineNum">     238 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     signedHeaders-&gt;clear();</span>
-<span class="lineNum">     239 </span>                :            : 
-<span class="lineNum">     240 </span>                :            :     /* Note, Amazon says we should combine duplicate headers with comma separators...
-<span class="lineNum">     241 </span>                :            :      * conveniently for us, QNetworkRequest requires that to have been done already.
-<span class="lineNum">     242 </span>                :            :      * See note in QNetworkRequest::setRawHeader.
-<span class="lineNum">     243 </span>                :            :      */
-<span class="lineNum">     244 </span>                :            : 
-<span class="lineNum">     245 </span>                :            :     // Convert the raw headers list to a map to sort on (lowercased) header names only.
-<span class="lineNum">     246 </span>                :<span class="lineCov">          7 :     QMap&lt;QByteArray,QByteArray&gt; headers;</span>
-<span class="lineNum">     247 </span>[<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         16 :     foreach (const QByteArray &amp;rawHeader, request.rawHeaderList()) {</span>
+<span class="lineNum">     206 </span>        [<span class="branchCov" title="Branch 1 was taken 32 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         32 :                        (isspace(trimmedHeaderValue.at(index+1))))</span>
+<span class="lineNum">     207 </span>                :<span class="lineCov">         18 :                     ++index;</span>
+<span class="lineNum">     208 </span>                :            :             }
+<span class="lineNum">     209 </span>                :            :         }
+<span class="lineNum">     210 </span>                :<span class="lineCov">        485 :         previousChar = thisChar;</span>
+<span class="lineNum">     211 </span>                :            :     }
+<span class="lineNum">     212 </span>                :<span class="lineCov">         46 :     return header;</span>
+<span class="lineNum">     213 </span>                :            : }
+<span class="lineNum">     214 </span>                :            : 
+<span class="lineNum">     215 </span>                :            : /**
+<span class="lineNum">     216 </span>                :            :  * @brief  Create an AWS V4 Signature canonical headers string.
+<span class="lineNum">     217 </span>                :            :  *
+<span class="lineNum">     218 </span>                :            :  * This function constructs a canonical string containing all of the headers
+<span class="lineNum">     219 </span>                :            :  * in the given request.
+<span class="lineNum">     220 </span>                :            :  *
+<span class="lineNum">     221 </span>                :            :  * @note   \p request will typically not include a `Host` header at this stage,
+<span class="lineNum">     222 </span>                :            :  *         however Qt will add an appropriate `Host` header when the request is
+<span class="lineNum">     223 </span>                :            :  *         performed.  So, if \p request does not include a `Host` header yet,
+<span class="lineNum">     224 </span>                :            :  *         this function will include a derived `Host` header in the canonical
+<span class="lineNum">     225 </span>                :            :  *         headers to allow for it.
+<span class="lineNum">     226 </span>                :            :  *
+<span class="lineNum">     227 </span>                :            :  * @param[in]  request        The network request to fetch the canonical headers from.
+<span class="lineNum">     228 </span>                :            :  * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
+<span class="lineNum">     229 </span>                :            :  *                            included in the result.
+<span class="lineNum">     230 </span>                :            :  *
+<span class="lineNum">     231 </span>                :            :  * @return  An AWS V4 Signature canonical headers string.
+<span class="lineNum">     232 </span>                :            :  *
+<span class="lineNum">     233 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+<a name="234"><span class="lineNum">     234 </span>                :            :  * @see    canonicalHeader</a>
+<span class="lineNum">     235 </span>                :            :  */
+<span class="lineNum">     236 </span>                :<span class="lineCov">          7 : QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &amp;request, QByteArray * const signedHeaders) const</span>
+<span class="lineNum">     237 </span>                :            : {
+<span class="lineNum">     238 </span>[<span class="branchNoCov" title="Branch 0 was not taken"> - </span><span class="branchCov" title="Branch 1 was taken 7 times"> + </span>][<span class="branchNoExec" title="Branch 3 was not executed"> # </span><span class="branchNoExec" title="Branch 4 was not executed"> # </span>]:<span class="lineCov">          7 :     Q_CHECK_PTR(signedHeaders);</span>
+<span class="lineNum">     239 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     signedHeaders-&gt;clear();</span>
+<span class="lineNum">     240 </span>                :            : 
+<span class="lineNum">     241 </span>                :            :     /* Note, Amazon says we should combine duplicate headers with comma separators...
+<span class="lineNum">     242 </span>                :            :      * conveniently for us, QNetworkRequest requires that to have been done already.
+<span class="lineNum">     243 </span>                :            :      * See note in QNetworkRequest::setRawHeader.
+<span class="lineNum">     244 </span>                :            :      */
+<span class="lineNum">     245 </span>                :            : 
+<span class="lineNum">     246 </span>                :            :     // Convert the raw headers list to a map to sort on (lowercased) header names only.
+<span class="lineNum">     247 </span>                :<span class="lineCov">          7 :     QMap&lt;QByteArray,QByteArray&gt; headers;</span>
+<span class="lineNum">     248 </span>[<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         16 :     foreach (const QByteArray &amp;rawHeader, request.rawHeaderList()) {</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 9 times"> + </span><span class="branchCov" title="Branch 18 was taken 7 times"> + </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 19 was taken 9 times"> + </span><span class="branchCov" title="Branch 20 was taken 7 times"> + </span>]
-<span class="lineNum">     248 </span>[<span class="branchCov" title="Branch 1 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          9 :         headers.insert(rawHeader.toLower(), request.rawHeader(rawHeader));</span>
+<span class="lineNum">     249 </span>[<span class="branchCov" title="Branch 1 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          9 :         headers.insert(rawHeader.toLower(), request.rawHeader(rawHeader));</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 13 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>]
-<span class="lineNum">     249 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     }</span>
-<span class="lineNum">     250 </span>                :            :     // The &quot;host&quot; header is not included in QNetworkRequest::rawHeaderList, but will be sent by Qt.
-<span class="lineNum">     251 </span>[<span class="branchCov" title="Branch 2 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          7 :     headers.insert(&quot;host&quot;, request.url().host().toUtf8());</span>
+<span class="lineNum">     250 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     }</span>
+<span class="lineNum">     251 </span>                :            :     // The &quot;host&quot; header is not included in QNetworkRequest::rawHeaderList, but will be sent by Qt.
+<span class="lineNum">     252 </span>[<span class="branchCov" title="Branch 2 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          7 :     headers.insert(&quot;host&quot;, request.url().host().toUtf8());</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 20 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 21 was not taken"> - </span>][<span class="branchCov" title="Branch 23 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 24 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 26 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 27 was not taken"> - </span>]
-<span class="lineNum">     252 </span>                :            : 
-<span class="lineNum">     253 </span>                :            :     // Convert the headers map to a canonical string, keeping track of which headers we've included too.
-<span class="lineNum">     254 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     QByteArray canonicalHeaders;</span>
-<span class="lineNum">     255 </span>[<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         23 :     for (QMap&lt;QByteArray,QByteArray&gt;::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {</span>
+<span class="lineNum">     253 </span>                :            : 
+<span class="lineNum">     254 </span>                :            :     // Convert the headers map to a canonical string, keeping track of which headers we've included too.
+<span class="lineNum">     255 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     QByteArray canonicalHeaders;</span>
+<span class="lineNum">     256 </span>[<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         23 :     for (QMap&lt;QByteArray,QByteArray&gt;::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 23 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 16 times"> + </span><span class="branchCov" title="Branch 11 was taken 7 times"> + </span>]
-<span class="lineNum">     256 </span>[<span class="branchCov" title="Branch 3 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 4 was not taken"> - </span>][<span class="branchCov" title="Branch 6 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]:<span class="lineCov">         16 :         canonicalHeaders += canonicalHeader(iter.key(), iter.value()) + '\n';</span>
+<span class="lineNum">     257 </span>[<span class="branchCov" title="Branch 3 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 4 was not taken"> - </span>][<span class="branchCov" title="Branch 6 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]:<span class="lineCov">         16 :         canonicalHeaders += canonicalHeader(iter.key(), iter.value()) + '\n';</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 9 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 10 was not taken"> - </span>][<span class="branchCov" title="Branch 12 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 13 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 15 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 16 was not taken"> - </span>]
-<span class="lineNum">     257 </span>[<span class="branchCov" title="Branch 1 was taken 9 times"> + </span><span class="branchCov" title="Branch 2 was taken 7 times"> + </span>][<span class="branchCov" title="Branch 4 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         16 :         if (!signedHeaders-&gt;isEmpty()) *signedHeaders += ';';</span>
-<span class="lineNum">     258 </span>        [<span class="branchCov" title="Branch 2 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         16 :         *signedHeaders += iter.key();</span>
-<span class="lineNum">     259 </span>                :            :     }
-<span class="lineNum">     260 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     return canonicalHeaders;</span>
-<span class="lineNum">     261 </span>                :            : }
-<span class="lineNum">     262 </span>                :            : 
-<span class="lineNum">     263 </span>                :            : /**
-<span class="lineNum">     264 </span>                :            :  * @brief  Create an AWS V4 Signature canonical request.
-<span class="lineNum">     265 </span>                :            :  *
-<span class="lineNum">     266 </span>                :            :  * @param[in]  operation      The HTTP method being used for the request.
-<span class="lineNum">     267 </span>                :            :  * @param[in]  request        The network request to generate a canonical request for.
-<span class="lineNum">     268 </span>                :            :  * @param[in]  payload        Optional data being submitted in the request (eg for `PUT` and `POST` operations).
-<span class="lineNum">     269 </span>                :            :  * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
-<span class="lineNum">     270 </span>                :            :  *                            included in the result.
-<span class="lineNum">     271 </span>                :            :  *
-<span class="lineNum">     272 </span>                :            :  * @return  An AWS V4 Signature canonical request.
-<span class="lineNum">     273 </span>                :            :  *
-<a name="274"><span class="lineNum">     274 </span>                :            :  * @see     http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
-<span class="lineNum">     275 </span>                :            :  */
-<span class="lineNum">     276 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
-<span class="lineNum">     277 </span>                :            :                                                    const QNetworkRequest &amp;request, const QByteArray &amp;payload,
-<span class="lineNum">     278 </span>                :            :                                                    QByteArray * const signedHeaders) const
-<span class="lineNum">     279 </span>                :            : {
-<span class="lineNum">     280 </span>                :<span class="lineCov">          5 :     Q_Q(const AwsSignatureV4);</span>
-<span class="lineNum">     281 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :     return q-&gt;httpMethod(operation).toUtf8() + '\n' +</span>
+<span class="lineNum">     258 </span>[<span class="branchCov" title="Branch 1 was taken 9 times"> + </span><span class="branchCov" title="Branch 2 was taken 7 times"> + </span>][<span class="branchCov" title="Branch 4 was taken 9 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         16 :         if (!signedHeaders-&gt;isEmpty()) *signedHeaders += ';';</span>
+<span class="lineNum">     259 </span>        [<span class="branchCov" title="Branch 2 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         16 :         *signedHeaders += iter.key();</span>
+<span class="lineNum">     260 </span>                :            :     }
+<span class="lineNum">     261 </span>        [<span class="branchCov" title="Branch 1 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          7 :     return canonicalHeaders;</span>
+<span class="lineNum">     262 </span>                :            : }
+<span class="lineNum">     263 </span>                :            : 
+<span class="lineNum">     264 </span>                :            : /**
+<span class="lineNum">     265 </span>                :            :  * @brief  Create an AWS V4 Signature canonical request.
+<span class="lineNum">     266 </span>                :            :  *
+<span class="lineNum">     267 </span>                :            :  * @param[in]  operation      The HTTP method being used for the request.
+<span class="lineNum">     268 </span>                :            :  * @param[in]  request        The network request to generate a canonical request for.
+<span class="lineNum">     269 </span>                :            :  * @param[in]  payload        Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+<span class="lineNum">     270 </span>                :            :  * @param[out] signedHeaders  A semi-colon separated list of the names of all headers
+<span class="lineNum">     271 </span>                :            :  *                            included in the result.
+<span class="lineNum">     272 </span>                :            :  *
+<span class="lineNum">     273 </span>                :            :  * @return  An AWS V4 Signature canonical request.
+<span class="lineNum">     274 </span>                :            :  *
+<a name="275"><span class="lineNum">     275 </span>                :            :  * @see     http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
+<span class="lineNum">     276 </span>                :            :  */
+<span class="lineNum">     277 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">     278 </span>                :            :                                                    const QNetworkRequest &amp;request, const QByteArray &amp;payload,
+<span class="lineNum">     279 </span>                :            :                                                    QByteArray * const signedHeaders) const
+<span class="lineNum">     280 </span>                :            : {
+<span class="lineNum">     281 </span>                :<span class="lineCov">          5 :     Q_Q(const AwsSignatureV4);</span>
+<span class="lineNum">     282 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :     return q-&gt;httpMethod(operation).toUtf8() + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 25 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>][<span class="branchCov" title="Branch 28 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 31 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 32 was not taken"> - </span>][<span class="branchCov" title="Branch 34 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 35 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 37 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 38 was not taken"> - </span>][<span class="branchCov" title="Branch 40 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 41 was not taken"> - </span>]
-<span class="lineNum">     282 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         20 :            q-&gt;canonicalPath(request.url()).toUtf8() + '\n' +</span>
+<span class="lineNum">     283 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         20 :            q-&gt;canonicalPath(request.url()).toUtf8() + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 25 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>][<span class="branchCov" title="Branch 28 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>]
-<span class="lineNum">     283 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         20 :            q-&gt;canonicalQuery(QUrlQuery(request.url()))  + '\n' +</span>
+<span class="lineNum">     284 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         20 :            q-&gt;canonicalQuery(QUrlQuery(request.url()))  + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
-<span class="lineNum">     284 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            canonicalHeaders(request, signedHeaders) + '\n' +</span>
+<span class="lineNum">     285 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            canonicalHeaders(request, signedHeaders) + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
-<span class="lineNum">     285 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            *signedHeaders + '\n' +</span>
-<span class="lineNum">     286 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         15 :            QCryptographicHash::hash(payload, hashAlgorithm).toHex();</span>
+<span class="lineNum">     286 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            *signedHeaders + '\n' +</span>
+<span class="lineNum">     287 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         15 :            QCryptographicHash::hash(payload, hashAlgorithm).toHex();</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">     287 </span>                :            : }
-<span class="lineNum">     288 </span>                :            : 
-<span class="lineNum">     289 </span>                :            : /**
-<span class="lineNum">     290 </span>                :            :  * @brief  Create an AWS V4 Signature credential scope.
-<span class="lineNum">     291 </span>                :            :  *
-<span class="lineNum">     292 </span>                :            :  * @param  date     Date to include in the credential scope.
-<span class="lineNum">     293 </span>                :            :  * @param  region   Region name to include in the credential scope.
-<span class="lineNum">     294 </span>                :            :  * @param  service  Service name to include in the credential scope.
-<span class="lineNum">     295 </span>                :            :  *
-<span class="lineNum">     296 </span>                :            :  * @return An AWS V4 Signature credential scope.
-<span class="lineNum">     297 </span>                :            :  *
-<a name="298"><span class="lineNum">     298 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
-<span class="lineNum">     299 </span>                :            :  */
-<span class="lineNum">     300 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::credentialScope(const QDate &amp;date, const QString &amp;region, const QString &amp;service) const</span>
-<span class="lineNum">     301 </span>                :            : {
-<span class="lineNum">     302 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          5 :     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + &quot;/aws4_request&quot;;</span>
+<span class="lineNum">     288 </span>                :            : }
+<span class="lineNum">     289 </span>                :            : 
+<span class="lineNum">     290 </span>                :            : /**
+<span class="lineNum">     291 </span>                :            :  * @brief  Create an AWS V4 Signature credential scope.
+<span class="lineNum">     292 </span>                :            :  *
+<span class="lineNum">     293 </span>                :            :  * @param  date     Date to include in the credential scope.
+<span class="lineNum">     294 </span>                :            :  * @param  region   Region name to include in the credential scope.
+<span class="lineNum">     295 </span>                :            :  * @param  service  Service name to include in the credential scope.
+<span class="lineNum">     296 </span>                :            :  *
+<span class="lineNum">     297 </span>                :            :  * @return An AWS V4 Signature credential scope.
+<span class="lineNum">     298 </span>                :            :  *
+<a name="299"><span class="lineNum">     299 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
+<span class="lineNum">     300 </span>                :            :  */
+<span class="lineNum">     301 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::credentialScope(const QDate &amp;date, const QString &amp;region, const QString &amp;service) const</span>
+<span class="lineNum">     302 </span>                :            : {
+<span class="lineNum">     303 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          5 :     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + &quot;/aws4_request&quot;;</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 20 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 21 was not taken"> - </span>][<span class="branchCov" title="Branch 23 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 24 was not taken"> - </span>]
@@ -426,77 +427,77 @@
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 38 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 39 was not taken"> - </span>][<span class="branchCov" title="Branch 41 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 42 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 44 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 45 was not taken"> - </span>][<span class="branchCov" title="Branch 47 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 48 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 50 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 51 was not taken"> - </span>]
-<span class="lineNum">     303 </span>                :            : }
-<span class="lineNum">     304 </span>                :            : 
-<span class="lineNum">     305 </span>                :            : /**
-<span class="lineNum">     306 </span>                :            :  * @brief  Set authorization header on a network request.
-<span class="lineNum">     307 </span>                :            :  *
-<span class="lineNum">     308 </span>                :            :  * This function will calculate the authorization header value and set it as the `Authorization`
-<span class="lineNum">     309 </span>                :            :  * HTTP header on \p request.
-<span class="lineNum">     310 </span>                :            :  *
-<span class="lineNum">     311 </span>                :            :  * @param[in]     credentials  The AWS credentials to use to sign the request.
-<span class="lineNum">     312 </span>                :            :  * @param[in]     operation    The HTTP method being used for the request.
-<span class="lineNum">     313 </span>                :            :  * @param[in,out] request      The network request to add the authorization header to.
-<span class="lineNum">     314 </span>                :            :  * @param[in]     payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
-<span class="lineNum">     315 </span>                :            :  * @param[in]     timestamp    The timestamp to use when signing the request.
-<span class="lineNum">     316 </span>                :            :  *
-<span class="lineNum">     317 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
-<a name="318"><span class="lineNum">     318 </span>                :            :  * @see    authorizationHeaderValue</a>
-<span class="lineNum">     319 </span>                :            :  */
-<span class="lineNum">     320 </span>                :<span class="lineCov">          2 : void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &amp;credentials,</span>
-<span class="lineNum">     321 </span>                :            :                                                    const QNetworkAccessManager::Operation operation,
-<span class="lineNum">     322 </span>                :            :                                                    QNetworkRequest &amp;request, const QByteArray &amp;payload,
-<span class="lineNum">     323 </span>                :            :                                                    const QDateTime &amp;timestamp) const
-<span class="lineNum">     324 </span>                :            : {
-<span class="lineNum">     325 </span>                :<span class="lineCov">          2 :     Q_ASSERT(!request.hasRawHeader(&quot;Authorization&quot;));</span>
-<span class="lineNum">     326 </span>[<span class="branchCov" title="Branch 2 was taken 2 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 2 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          2 :     request.setRawHeader(&quot;Authorization&quot;, authorizationHeaderValue(credentials, operation, request, payload, timestamp));</span>
+<span class="lineNum">     304 </span>                :            : }
+<span class="lineNum">     305 </span>                :            : 
+<span class="lineNum">     306 </span>                :            : /**
+<span class="lineNum">     307 </span>                :            :  * @brief  Set authorization header on a network request.
+<span class="lineNum">     308 </span>                :            :  *
+<span class="lineNum">     309 </span>                :            :  * This function will calculate the authorization header value and set it as the `Authorization`
+<span class="lineNum">     310 </span>                :            :  * HTTP header on \p request.
+<span class="lineNum">     311 </span>                :            :  *
+<span class="lineNum">     312 </span>                :            :  * @param[in]     credentials  The AWS credentials to use to sign the request.
+<span class="lineNum">     313 </span>                :            :  * @param[in]     operation    The HTTP method being used for the request.
+<span class="lineNum">     314 </span>                :            :  * @param[in,out] request      The network request to add the authorization header to.
+<span class="lineNum">     315 </span>                :            :  * @param[in]     payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
+<span class="lineNum">     316 </span>                :            :  * @param[in]     timestamp    The timestamp to use when signing the request.
+<span class="lineNum">     317 </span>                :            :  *
+<span class="lineNum">     318 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
+<a name="319"><span class="lineNum">     319 </span>                :            :  * @see    authorizationHeaderValue</a>
+<span class="lineNum">     320 </span>                :            :  */
+<span class="lineNum">     321 </span>                :<span class="lineCov">          2 : void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">     322 </span>                :            :                                                    const QNetworkAccessManager::Operation operation,
+<span class="lineNum">     323 </span>                :            :                                                    QNetworkRequest &amp;request, const QByteArray &amp;payload,
+<span class="lineNum">     324 </span>                :            :                                                    const QDateTime &amp;timestamp) const
+<span class="lineNum">     325 </span>                :            : {
+<span class="lineNum">     326 </span>                :<span class="lineCov">          2 :     Q_ASSERT(!request.hasRawHeader(&quot;Authorization&quot;));</span>
+<span class="lineNum">     327 </span>[<span class="branchCov" title="Branch 2 was taken 2 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 2 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          2 :     request.setRawHeader(&quot;Authorization&quot;, authorizationHeaderValue(credentials, operation, request, payload, timestamp));</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 2 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">     327 </span>                :<span class="lineCov">          2 : }</span>
-<span class="lineNum">     328 </span>                :            : 
-<span class="lineNum">     329 </span>                :            : /**
-<span class="lineNum">     330 </span>                :            :  * @brief   Set the AWS custom date header.
-<span class="lineNum">     331 </span>                :            :  *
-<span class="lineNum">     332 </span>                :            :  * This function will set a custom `x-amz-date` header to the value of \p dateTime
-<span class="lineNum">     333 </span>                :            :  * formatted to AwsSignatureV4Private::DateTimeFormat.
-<span class="lineNum">     334 </span>                :            :  *
-<span class="lineNum">     335 </span>                :            :  * @note    Although Amazon labels this as a &quot;date&quot;, it is in fact a full timestamp.
-<span class="lineNum">     336 </span>                :            :  *
-<span class="lineNum">     337 </span>                :            :  * @param   request   The network request to add the date header to.
-<span class="lineNum">     338 </span>                :            :  * @param   dateTime  The timestamp to set the date header's value to.
-<span class="lineNum">     339 </span>                :            :  *
-<a name="340"><span class="lineNum">     340 </span>                :            :  * @return  \p dateTime verbatim (just a convenience for some callers).</a>
-<span class="lineNum">     341 </span>                :            :  */
-<span class="lineNum">     342 </span>                :<span class="lineCov">          4 : QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &amp;request, const QDateTime &amp;dateTime) const</span>
-<span class="lineNum">     343 </span>                :            : {
-<span class="lineNum">     344 </span>                :<span class="lineCov">          4 :     Q_ASSERT(!request.hasRawHeader(&quot;x-amz-date&quot;));</span>
-<span class="lineNum">     345 </span>[<span class="branchCov" title="Branch 2 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          4 :     request.setRawHeader(&quot;x-amz-date&quot;, dateTime.toString(DateTimeFormat).toUtf8());</span>
+<span class="lineNum">     328 </span>                :<span class="lineCov">          2 : }</span>
+<span class="lineNum">     329 </span>                :            : 
+<span class="lineNum">     330 </span>                :            : /**
+<span class="lineNum">     331 </span>                :            :  * @brief   Set the AWS custom date header.
+<span class="lineNum">     332 </span>                :            :  *
+<span class="lineNum">     333 </span>                :            :  * This function will set a custom `x-amz-date` header to the value of \p dateTime
+<span class="lineNum">     334 </span>                :            :  * formatted to AwsSignatureV4Private::DateTimeFormat.
+<span class="lineNum">     335 </span>                :            :  *
+<span class="lineNum">     336 </span>                :            :  * @note    Although Amazon labels this as a &quot;date&quot;, it is in fact a full timestamp.
+<span class="lineNum">     337 </span>                :            :  *
+<span class="lineNum">     338 </span>                :            :  * @param   request   The network request to add the date header to.
+<span class="lineNum">     339 </span>                :            :  * @param   dateTime  The timestamp to set the date header's value to.
+<span class="lineNum">     340 </span>                :            :  *
+<a name="341"><span class="lineNum">     341 </span>                :            :  * @return  \p dateTime verbatim (just a convenience for some callers).</a>
+<span class="lineNum">     342 </span>                :            :  */
+<span class="lineNum">     343 </span>                :<span class="lineCov">          4 : QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &amp;request, const QDateTime &amp;dateTime) const</span>
+<span class="lineNum">     344 </span>                :            : {
+<span class="lineNum">     345 </span>                :<span class="lineCov">          4 :     Q_ASSERT(!request.hasRawHeader(&quot;x-amz-date&quot;));</span>
+<span class="lineNum">     346 </span>[<span class="branchCov" title="Branch 2 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          4 :     request.setRawHeader(&quot;x-amz-date&quot;, dateTime.toString(DateTimeFormat).toUtf8());</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 20 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 21 was not taken"> - </span>]
-<span class="lineNum">     346 </span>                :<span class="lineCov">          4 :     return dateTime;</span>
-<span class="lineNum">     347 </span>                :            : }
-<span class="lineNum">     348 </span>                :            : 
-<span class="lineNum">     349 </span>                :            : /**
-<span class="lineNum">     350 </span>                :            :  * @brief  Create an AWS V4 Signature signing key.
-<span class="lineNum">     351 </span>                :            :  *
-<span class="lineNum">     352 </span>                :            :  * @param  credentials  AWS credentials to use when generating the signing key.
-<span class="lineNum">     353 </span>                :            :  * @param  date         Date to include in the signing key.
-<span class="lineNum">     354 </span>                :            :  * @param  region       Region name to include in the signing key.
-<span class="lineNum">     355 </span>                :            :  * @param  service      Service name to include in the signing key.
-<span class="lineNum">     356 </span>                :            :  *
-<span class="lineNum">     357 </span>                :            :  * @return An AWS V4 Signature signing key.
-<span class="lineNum">     358 </span>                :            :  *
-<a name="359"><span class="lineNum">     359 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html</a>
-<span class="lineNum">     360 </span>                :            :  */
-<span class="lineNum">     361 </span>                :<span class="lineCov">          4 : QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &amp;credentials, const QDate &amp;date,</span>
-<span class="lineNum">     362 </span>                :            :                                              const QString &amp;region, const QString &amp;service) const
-<span class="lineNum">     363 </span>                :            : {
-<span class="lineNum">     364 </span>                :            :     return QMessageAuthenticationCode::hash(&quot;aws4_request&quot;,
-<span class="lineNum">     365 </span>                :            :            QMessageAuthenticationCode::hash(service.toUtf8(),
-<span class="lineNum">     366 </span>                :            :            QMessageAuthenticationCode::hash(region.toUtf8(),
-<span class="lineNum">     367 </span>[<span class="branchCov" title="Branch 2 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          8 :            QMessageAuthenticationCode::hash(date.toString(DateFormat).toUtf8(), &quot;AWS4&quot;+credentials.secretKey().toUtf8(),</span>
+<span class="lineNum">     347 </span>                :<span class="lineCov">          4 :     return dateTime;</span>
+<span class="lineNum">     348 </span>                :            : }
+<span class="lineNum">     349 </span>                :            : 
+<span class="lineNum">     350 </span>                :            : /**
+<span class="lineNum">     351 </span>                :            :  * @brief  Create an AWS V4 Signature signing key.
+<span class="lineNum">     352 </span>                :            :  *
+<span class="lineNum">     353 </span>                :            :  * @param  credentials  AWS credentials to use when generating the signing key.
+<span class="lineNum">     354 </span>                :            :  * @param  date         Date to include in the signing key.
+<span class="lineNum">     355 </span>                :            :  * @param  region       Region name to include in the signing key.
+<span class="lineNum">     356 </span>                :            :  * @param  service      Service name to include in the signing key.
+<span class="lineNum">     357 </span>                :            :  *
+<span class="lineNum">     358 </span>                :            :  * @return An AWS V4 Signature signing key.
+<span class="lineNum">     359 </span>                :            :  *
+<a name="360"><span class="lineNum">     360 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html</a>
+<span class="lineNum">     361 </span>                :            :  */
+<span class="lineNum">     362 </span>                :<span class="lineCov">          4 : QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &amp;credentials, const QDate &amp;date,</span>
+<span class="lineNum">     363 </span>                :            :                                              const QString &amp;region, const QString &amp;service) const
+<span class="lineNum">     364 </span>                :            : {
+<span class="lineNum">     365 </span>                :            :     return QMessageAuthenticationCode::hash(&quot;aws4_request&quot;,
+<span class="lineNum">     366 </span>                :            :            QMessageAuthenticationCode::hash(service.toUtf8(),
+<span class="lineNum">     367 </span>                :            :            QMessageAuthenticationCode::hash(region.toUtf8(),
+<span class="lineNum">     368 </span>[<span class="branchCov" title="Branch 2 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          8 :            QMessageAuthenticationCode::hash(date.toString(DateFormat).toUtf8(), &quot;AWS4&quot;+credentials.secretKey().toUtf8(),</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">     368 </span>[<span class="branchCov" title="Branch 1 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          8 :            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);</span>
+<span class="lineNum">     369 </span>[<span class="branchCov" title="Branch 1 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          8 :            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
@@ -506,39 +507,39 @@
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 43 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 44 was not taken"> - </span>][<span class="branchCov" title="Branch 46 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 47 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 49 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 50 was not taken"> - </span>][<span class="branchCov" title="Branch 52 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 53 was not taken"> - </span>]
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 55 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 56 was not taken"> - </span>]
-<span class="lineNum">     369 </span>                :            : }
-<span class="lineNum">     370 </span>                :            : 
-<span class="lineNum">     371 </span>                :            : /**
-<span class="lineNum">     372 </span>                :            :  * @brief  Create an AWS V4 Signature string to sign.
-<span class="lineNum">     373 </span>                :            :  *
-<span class="lineNum">     374 </span>                :            :  * @param  algorithmDesignation  AWS designation for the hash algorithm used to sign the request.
-<span class="lineNum">     375 </span>                :            :  * @param  requestDate           AWS request timestamp.
-<span class="lineNum">     376 </span>                :            :  * @param  credentialScope       Aws credential scope used to sign the request.
-<span class="lineNum">     377 </span>                :            :  * @param  canonicalRequest      AWS request in canonical form.
-<span class="lineNum">     378 </span>                :            :  *
-<span class="lineNum">     379 </span>                :            :  * @return An AWS V4 Signature string to sign.
-<span class="lineNum">     380 </span>                :            :  *
-<span class="lineNum">     381 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
-<span class="lineNum">     382 </span>                :            :  * @see    algorithmDesignation
-<span class="lineNum">     383 </span>                :            :  * @see    canonicalRequest
-<a name="384"><span class="lineNum">     384 </span>                :            :  * @see    credentialScope</a>
-<span class="lineNum">     385 </span>                :            :  */
-<span class="lineNum">     386 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &amp;algorithmDesignation, const QDateTime &amp;requestDate,</span>
-<span class="lineNum">     387 </span>                :            :                                                const QByteArray &amp;credentialScope, const QByteArray &amp;canonicalRequest) const
-<span class="lineNum">     388 </span>                :            : {
-<span class="lineNum">     389 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :     return algorithmDesignation + '\n' +</span>
+<span class="lineNum">     370 </span>                :            : }
+<span class="lineNum">     371 </span>                :            : 
+<span class="lineNum">     372 </span>                :            : /**
+<span class="lineNum">     373 </span>                :            :  * @brief  Create an AWS V4 Signature string to sign.
+<span class="lineNum">     374 </span>                :            :  *
+<span class="lineNum">     375 </span>                :            :  * @param  algorithmDesignation  AWS designation for the hash algorithm used to sign the request.
+<span class="lineNum">     376 </span>                :            :  * @param  requestDate           AWS request timestamp.
+<span class="lineNum">     377 </span>                :            :  * @param  credentialScope       Aws credential scope used to sign the request.
+<span class="lineNum">     378 </span>                :            :  * @param  canonicalRequest      AWS request in canonical form.
+<span class="lineNum">     379 </span>                :            :  *
+<span class="lineNum">     380 </span>                :            :  * @return An AWS V4 Signature string to sign.
+<span class="lineNum">     381 </span>                :            :  *
+<span class="lineNum">     382 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html
+<span class="lineNum">     383 </span>                :            :  * @see    algorithmDesignation
+<span class="lineNum">     384 </span>                :            :  * @see    canonicalRequest
+<a name="385"><span class="lineNum">     385 </span>                :            :  * @see    credentialScope</a>
+<span class="lineNum">     386 </span>                :            :  */
+<span class="lineNum">     387 </span>                :<span class="lineCov">          5 : QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &amp;algorithmDesignation, const QDateTime &amp;requestDate,</span>
+<span class="lineNum">     388 </span>                :            :                                                const QByteArray &amp;credentialScope, const QByteArray &amp;canonicalRequest) const
+<span class="lineNum">     389 </span>                :            : {
+<span class="lineNum">     390 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :     return algorithmDesignation + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 25 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>][<span class="branchCov" title="Branch 28 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>]
-<span class="lineNum">     390 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            requestDate.toString(DateTimeFormat).toUtf8() + '\n' +</span>
+<span class="lineNum">     391 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            requestDate.toString(DateTimeFormat).toUtf8() + '\n' +</span>
 <span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
-<a name="391"><span class="lineNum">     391 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            credentialScope + '\n' +</span></a>
-<span class="lineNum">     392 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         15 :            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();</span>
+<a name="392"><span class="lineNum">     392 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :            credentialScope + '\n' +</span></a>
+<span class="lineNum">     393 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         15 :            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">     393 </span>[<span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 4 was not taken"> - </span>]:<span class="lineCov">          4 : }</span>
-<span class="lineNum">     394 </span>                :            : 
-<span class="lineNum">     395 </span>                :            : QTAWS_END_NAMESPACE
+<span class="lineNum">     394 </span>[<span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 4 was not taken"> - </span>]:<span class="lineCov">          4 : }</span>
+<span class="lineNum">     395 </span>                :            : 
+<span class="lineNum">     396 </span>                :            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>
