@@ -5,8 +5,8 @@ Libqtaws is a library for consuming [Amazon Web Services (AWS)](http://aws.amazo
 
 ## Requirements
 ### Qt 5.1
-Currently, libqtaws requires Qt 5.1+  This is because the library uses the QMessageAuthenticationCode for generating
-HMAC codes for AWS request signatures.
+Currently, libqtaws requires Qt 5.1+  This is because the library uses Qt's QMessageAuthenticationCode class for
+generating HMAC codes for AWS request signatures, and that class was not added until Qt 5.1.0.
 
 It is possible to make the library work with Qt 5.0 by backporting QMessageAuthenticationCode from Qt 5.1 to Qt 5.0 -
 indeed, this is what this project does for [travis-ci](https://travis-ci.org/) support (see (.travis.yml)[.travis.yml]
