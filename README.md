@@ -6,8 +6,8 @@ Libqtaws is a library for consuming [Amazon Web Services (AWS)](http://aws.amazo
 The library is very early stages of development; only the AWS signature
 code and AWS endpoints information has been implemented so far, but what has been implemented is
 [100% documented](http://pcolby.github.io/libqtaws/doc/api/annotated.html)
-(invluding the [internal code](http://pcolby.github.io/libqtaws/doc/internal/annotated.html)) and
-(currently) has 100% [unit test line coverage]((http://pcolby.github.io/libqtaws/test/coverage/).
+(including the [internal code](http://pcolby.github.io/libqtaws/doc/internal/annotated.html)) and 
+currently has 100% [unit test line coverage](http://pcolby.github.io/libqtaws/test/coverage/).
 
 Specific AWS services are being implemented in the order in which they are of interest to me,
 but of course, anyone can contribute implementations for any services that are more important to them.
