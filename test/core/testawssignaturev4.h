@@ -20,10 +20,18 @@
 #include <QtTest/QtTest>
 #include "../../src/core/qtawsglobal.h"
 
+#include <QVariantMap>
+
 class TestAwsSignatureV4 : public QObject {
     Q_OBJECT
 
+private:
+    QVariantMap officialAwsTestSuiteData;
+
+    int loadOfficialTestSuiteData();
+
 private slots:
+    void initTestCase();
 
     void algorithmDesignation_data();
     void algorithmDesignation();

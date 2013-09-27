@@ -28,6 +28,63 @@ Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
+// Load the official AWS V4 signature test suite data.
+int TestAwsSignatureV4::loadOfficialTestSuiteData()
+{
+    // Open the test suite directory.
+    QDir dir(QLatin1String("core/aws4_testsuite"));
+    if (!dir.exists()) {
+        qWarning() << dir.dirName() << "does not exist";
+        return -1;
+    } else if (!dir.isReadable()) {
+        qWarning() << dir.dirName() << "is not readable";
+        return -1;
+    }
+
+    // Fetch all data files, ignoring any fluff (such as readme.txt files).
+    dir.setFilter(QDir::Files|QDir::NoDotAndDotDot|QDir::Readable);
+    QStringList filters;
+    filters
+        << QLatin1String("*.authz")
+        << QLatin1String("*.creq")
+        << QLatin1String("*.req")
+        << QLatin1String("*.sreq")
+        << QLatin1String("*.sts");
+    dir.setNameFilters(filters);
+    const QFileInfoList files = dir.entryInfoList();
+
+    // For each file, load it's content (verbatim) into a two-dimension QVariantMap
+    // such that the first key is the filename without the final extension, and the
+    // second key is the final extension.  For example, the content of the
+    // "get-utf8.sts" file will be assigned to officialAwsTestSuiteData["get-utf8"]["sts"].
+    foreach (const QFileInfo &fileInfo, files) {
+        QFile file(fileInfo.filePath());
+        if (!file.exists()) {
+            qWarning() << fileInfo.filePath() << "does not exist";
+            return -1;
+        }
+        if (!file.open(QFile::ReadOnly)) {
+            qWarning() << fileInfo.filePath() << "could not be openned for reading";
+            return -1;
+        }
+        const QByteArray data = file.readAll();
+        if (data.isEmpty()) {
+            qWarning() << fileInfo.filePath() << "contained no data";
+            return -1;
+        }
+
+        officialAwsTestSuiteData[fileInfo.completeBaseName()].toMap()[fileInfo.suffix()] = data;
+        qWarning() << fileInfo.fileName();
+    }
+    return officialAwsTestSuiteData.size();
+}
+
+void TestAwsSignatureV4::initTestCase()
+{
+    // Load the 31 AWS V4 signature tests.
+    QCOMPARE(loadOfficialTestSuiteData(), 31);
+}
+
 void TestAwsSignatureV4::algorithmDesignation_data()
 {
     QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
