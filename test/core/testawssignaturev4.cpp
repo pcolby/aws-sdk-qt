@@ -28,6 +28,11 @@ Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
+// Official AWS credentials to use for the official AWS V4 signature test suite.
+// See http://docs.aws.amazon.com/general/latest/gr/signature-v4-test-suite.html
+const QString TestAwsSignatureV4::AwsTestSuiteAccessKeyId(QLatin1String("AKIDEXAMPLE"));
+const QString TestAwsSignatureV4::AwsTestSuiteSecretKey(QLatin1String("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY"));
+
 // Load the official AWS V4 signature test suite data.
 int TestAwsSignatureV4::loadOfficialTestSuiteData()
 {

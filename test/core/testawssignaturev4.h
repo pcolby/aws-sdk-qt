@@ -26,6 +26,9 @@ class TestAwsSignatureV4 : public QObject {
     Q_OBJECT
 
 private:
+    static const QString AwsTestSuiteAccessKeyId;
+    static const QString AwsTestSuiteSecretKey;
+
     QVariantMap officialAwsTestSuiteData;
 
     int loadOfficialTestSuiteData();
