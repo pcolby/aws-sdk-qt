@@ -101,7 +101,7 @@ QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
 QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
 {
     typedef QPair<QString, QString> QStringPair;
-    QList<QStringPair> list = query.queryItems(QUrl::FullyEncoded);
+    QList<QStringPair> list = query.queryItems(QUrl::FullyDecoded);
     qSort(list);
     QString result;
     foreach (const QStringPair &pair, list) {
