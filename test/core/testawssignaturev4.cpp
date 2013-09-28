@@ -110,16 +110,14 @@ QNetworkAccessManager::Operation TestAwsSignatureV4::networkOperation(const QByt
 QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
 {
     QNetworkRequest request;
-    QUrl url;
-    url.setScheme(QLatin1String("http"));
+    QByteArray requestUri;
     foreach (const QByteArray &line, req.split('\n')) {
         if ((line.startsWith("GET")) || (line.startsWith("POST"))) {
-            url.setPath(QString::fromUtf8(line.split(' ').at(1)));
+            requestUri = line.split(' ').at(1);
         } else if ((line.startsWith("host")) || (line.startsWith("Host"))) {
             // RFC2616 says "Host", but some of Amazon's tests use "host".
-            url.setHost(QString::fromUtf8(line.mid(5)));
+            request.setUrl(QUrl(QString::fromUtf8("http://" + line.mid(5) + requestUri)));
         } else if (line.isEmpty()) {
-            request.setUrl(url);
             return request;
         } else {
             const int pos = line.indexOf(':');
