@@ -130,6 +130,7 @@ QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
                 request.setRawHeader(line.left(pos), currentValue + ',' + line.mid(pos+1));
 
                 /******* This is probably wrong... will check further. *******/
+                // See https://forums.aws.amazon.com/thread.jspa?threadID=136223
                 QList<QByteArray> list = request.rawHeader(line.left(pos)).split(',');
                 qSort(list);
                 QByteArray out;
