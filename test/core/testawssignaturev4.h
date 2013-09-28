@@ -33,10 +33,13 @@ private:
     QVariantMap officialAwsTestSuiteData;
 
     int loadOfficialTestSuiteData();
-    QNetworkAccessManager::Operation networkOperation(const QByteArray &req);
-    QNetworkRequest networkRequest(const QByteArray &req);
-    QByteArray networkRequestPayload(const QByteArray &req);
-    QByteArray signedHeaders(const QByteArray &sreq);
+
+    QNetworkAccessManager::Operation networkOperation(const QByteArray &req) const;
+    QNetworkRequest networkRequest(const QByteArray &req) const;
+    QByteArray networkRequestPayload(const QByteArray &req) const;
+    QByteArray requestCredentialScope(const QByteArray &sts) const;
+    QDateTime requestDate(const QByteArray &authz) const;
+    QByteArray signedHeaders(const QByteArray &sreq) const;
 
 private slots:
     void initTestCase();

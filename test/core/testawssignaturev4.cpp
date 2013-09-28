@@ -33,7 +33,7 @@ Q_DECLARE_METATYPE(QUrlQuery)
 #define CREQ  QLatin1String("creq")
 #define REQ   QLatin1String("req")
 #define SREQ  QLatin1String("sreq")
-#define STS   QLatin1String("sts");
+#define STS   QLatin1String("sts")
 
 // Official AWS credentials to use for the official AWS V4 signature test suite.
 // See http://docs.aws.amazon.com/general/latest/gr/signature-v4-test-suite.html
@@ -101,7 +101,7 @@ int TestAwsSignatureV4::loadOfficialTestSuiteData()
 }
 
 // Get the network operation (eg GET or POST) from an official AWS test case *.req file's content.
-QNetworkAccessManager::Operation TestAwsSignatureV4::networkOperation(const QByteArray &req)
+QNetworkAccessManager::Operation TestAwsSignatureV4::networkOperation(const QByteArray &req) const
 {
     // The AWS test suite only uses GET and POST operations.
     if (req.startsWith("GET"))  return QNetworkAccessManager::GetOperation;
@@ -111,15 +111,14 @@ QNetworkAccessManager::Operation TestAwsSignatureV4::networkOperation(const QByt
 }
 
 // Create a network request from an official AWS test case *.req file's content.
-QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
+QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req) const
 {
     QNetworkRequest request;
     QByteArray requestUri;
     foreach (const QByteArray &line, req.split('\n')) {
         if ((line.startsWith("GET")) || (line.startsWith("POST"))) {
             requestUri = line.split(' ').at(1);
-        } else if ((line.startsWith("host")) || (line.startsWith("Host"))) {
-            // RFC2616 says "Host", but some of Amazon's tests use "host".
+        } else if (line.toLower().startsWith("host:")) {
             request.setUrl(QUrl(QString::fromUtf8("http://" + line.mid(5) + requestUri)));
         } else if (line.isEmpty()) {
             return request;
@@ -151,14 +150,38 @@ QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
 }
 
 // Extract the (optional) POST payload from an official AWS test case *.req file's content.
-QByteArray TestAwsSignatureV4::networkRequestPayload(const QByteArray &req)
+QByteArray TestAwsSignatureV4::networkRequestPayload(const QByteArray &req) const
 {
     const int pos = req.indexOf("\n\n");
     return (pos < 0) ? QByteArray() : req.mid(pos+2);
 }
 
+// Extract the credential scope from a an official AWS test case *.sts file's content.
+QByteArray TestAwsSignatureV4::requestCredentialScope(const QByteArray &sts) const
+{
+    return sts.split('\n').at(2);
+}
+
+// Get the "Date" timestamp from an official AWS test case *.req file's content.
+QDateTime TestAwsSignatureV4::requestDate(const QByteArray &req) const
+{
+    foreach (const QByteArray &line, req.split('\n')) {
+        if (line.toLower().startsWith("date:")) {
+            // Note, all of the official V4 test use the following **invalid**
+            // date header: "Date:Mon, 09 Sep 2011 23:36:00 GMT"  This is invalid
+            // because 2011-09-09 is a **Friday** - not Monday.
+            return QDateTime::fromString(QString::fromUtf8(line.mid(10, 20)), QLatin1String("dd MMM yyyy HH:mm:ss"));
+        } else if (line.isEmpty()) {
+            qWarning() << "Date header not found";
+            break; // Read the end of the headers.
+        }
+    }
+    qWarning() << "request date not found";
+    return QDateTime();
+}
+
 // Extract the list of headers that should be signed a an official AWS test case *.authz file's content.
-QByteArray TestAwsSignatureV4::signedHeaders(const QByteArray &authz)
+QByteArray TestAwsSignatureV4::signedHeaders(const QByteArray &authz) const
 {
     return authz.split(',').at(1).mid(15);
 }
@@ -560,7 +583,7 @@ void TestAwsSignatureV4::signingKey()
     QCOMPARE(signingKey, expected);
 }
 
-void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()
+void TestAwsSignatureV4::stringToSign_data()
 {
     QTest::addColumn<QByteArray>("algorithmDesignation");
     QTest::addColumn<QDateTime> ("requestDate");
@@ -594,6 +617,21 @@ void TestAwsSignatureV4::TestAwsSignatureV4::stringToSign_data()
             "20110909T233600Z\n"
             "20110909/us-east-1/iam/aws4_request\n"
             "3511de7e95d28ecd39e9513b642aee07e54f4941150d8df8bf94b328ef7e55e2");
+
+    // Official AWS V4 Signature test suite.
+    for (QVariantMap::const_iterator iter = officialAwsTestSuiteData.constBegin();
+         iter != officialAwsTestSuiteData.constEnd(); ++iter)
+    {
+        const QVariantMap testCase = iter.value().toMap();
+        if ((testCase.contains(REQ)) && (testCase.contains(CREQ))) {
+            QTest::newRow(iter.key().toUtf8())
+                << QByteArray("AWS4-HMAC-SHA256")
+                << requestDate(testCase.value(REQ).toByteArray())
+                << requestCredentialScope(testCase.value(STS).toByteArray())
+                << testCase.value(CREQ).toByteArray()
+                << testCase.value(STS).toByteArray();
+        }
+    }
 }
 
 void TestAwsSignatureV4::stringToSign()
