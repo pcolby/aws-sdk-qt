@@ -19,6 +19,8 @@
 
 #include "awsabstractsignature.h"
 
+#include <QDir>
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -69,10 +71,13 @@ AwsAbstractSignature::~AwsAbstractSignature() { }
  */
 QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
 {
-    QString path = url.path(QUrl::FullyEncoded);
-    if (path.isEmpty()) {
-        path = QLatin1Char('/');
+    QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));
+
+    // Restore the trailing '/' if QDir::cleanPath (rightly) removed one.
+    if ((url.path().endsWith(QLatin1Char('/'))) && (!path.endsWith(QLatin1Char('/')))) {
+        path += QLatin1Char('/');
     }
+
     return path;
 }
 
