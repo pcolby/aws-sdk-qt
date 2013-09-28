@@ -23,6 +23,7 @@
 #include "../../src/core/awsbasiccredentials.h"
 #include "../../src/core/awssignaturev4.h"
 #include "../../src/core/awssignaturev4_p.h"
+#include "../../src/core/awsendpoint_p.h"
 
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
@@ -190,6 +191,15 @@ void TestAwsSignatureV4::initTestCase()
 {
     // Load the 31 AWS V4 signature tests.
     QCOMPARE(loadOfficialTestSuiteData(), 30);//31);
+
+    // The official AWS test suite makes use of a fictitious "host.foo.com" host which
+    // resides in "us-east-1" and provides the "host" service.  Here we use some internal
+    // internal knowledge to add that fictitious host to the library's static endpoint data.
+    AwsEndpointPrivate::loadEndpointData(); // A no-op if its already loaded (should be).
+    AwsEndpointPrivate::HostInfo hostInfo;
+    hostInfo.regionNames.append(QLatin1String("us-east-1"));
+    hostInfo.serviceName.append(QLatin1String("host"));
+    AwsEndpointPrivate::hosts.insert(QLatin1String("host.foo.com"), hostInfo);
 }
 
 void TestAwsSignatureV4::algorithmDesignation_data()
@@ -251,6 +261,23 @@ void TestAwsSignatureV4::authorizationHeaderValue_data()
                 "Credential=AKIDEXAMPLE/20110909/us-east-1/iam/aws4_request, "
                 "SignedHeaders=content-type;host;x-amz-date, "
                 "Signature=ced6826de92d2bdeed8f846f0bf508e8559e98e4b0199114b84c54174deb456c");
+    }
+
+    // Official AWS V4 Signature test suite.
+    for (QVariantMap::const_iterator iter = officialAwsTestSuiteData.constBegin();
+         iter != officialAwsTestSuiteData.constEnd(); ++iter)
+    {
+        const QVariantMap testCase = iter.value().toMap();
+        if ((testCase.contains(REQ)) && (testCase.contains(CREQ)) && (testCase.contains(AUTHZ))) {
+            QTest::newRow(iter.key().toUtf8())
+                << AwsTestSuiteAccessKeyId
+                << AwsTestSuiteSecretKey
+                << networkOperation(testCase.value(REQ).toByteArray())
+                << networkRequest(testCase.value(REQ).toByteArray())
+                << networkRequestPayload(testCase.value(REQ).toByteArray())
+                << requestDate(testCase.value(REQ).toByteArray())
+                << testCase.value(AUTHZ).toByteArray();
+        }
     }
 }
 
@@ -412,7 +439,7 @@ void TestAwsSignatureV4::canonicalRequest_data()
          iter != officialAwsTestSuiteData.constEnd(); ++iter)
     {
         const QVariantMap testCase = iter.value().toMap();
-        if ((testCase.contains(REQ)) && (testCase.contains(CREQ))) {
+        if ((testCase.contains(REQ)) && (testCase.contains(CREQ)) && (testCase.contains(AUTHZ))) {
             //qWarning() << iter.key();
             QTest::newRow(iter.key().toUtf8())
                 << networkOperation(testCase.value(REQ).toByteArray())

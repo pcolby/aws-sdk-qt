@@ -88,6 +88,7 @@ protected:
 private:
     AwsEndpoint * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsEndpoint;
+    friend class TestAwsSignatureV4;
 };
 
 QTAWS_END_NAMESPACE
