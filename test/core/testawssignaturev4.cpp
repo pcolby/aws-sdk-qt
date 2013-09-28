@@ -124,6 +124,18 @@ QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
             if (request.hasRawHeader(line.left(pos))) {
                 const QByteArray currentValue = request.rawHeader(line.left(pos));
                 request.setRawHeader(line.left(pos), currentValue + ',' + line.mid(pos+1));
+
+                /******* This is probably wrong... will check further. *******/
+                QList<QByteArray> list = request.rawHeader(line.left(pos)).split(',');
+                qSort(list);
+                QByteArray out;
+                foreach (const QByteArray b, list) {
+                    if (!out.isEmpty()) {
+                        out.append(',');
+                    }
+                    out.append(b);
+                }
+                request.setRawHeader(line.left(pos), out);
             } else {
                 request.setRawHeader(line.left(pos), line.mid(pos+1));
             }
