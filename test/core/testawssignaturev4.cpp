@@ -28,6 +28,13 @@ Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
+// AWS test suite file extensions - used as QVariantMap keys through these test cases.
+#define AUTHZ QLatin1String("authz")
+#define CREQ  QLatin1String("creq")
+#define REQ   QLatin1String("req")
+#define SREQ  QLatin1String("sreq")
+#define STS   QLatin1String("sts");
+
 // Official AWS credentials to use for the official AWS V4 signature test suite.
 // See http://docs.aws.amazon.com/general/latest/gr/signature-v4-test-suite.html
 const QString TestAwsSignatureV4::AwsTestSuiteAccessKeyId(QLatin1String("AKIDEXAMPLE"));
@@ -68,7 +75,11 @@ int TestAwsSignatureV4::loadOfficialTestSuiteData()
             qWarning() << fileInfo.filePath() << "does not exist";
             return -1;
         }
-        if (!file.open(QFile::ReadOnly)) {
+        // The use of QFile::Text here is silly - Amazon has actually used \r\n line endings
+        // in **all** test files (not just the HTTP request *.req files, for which such endings
+        // would be appropriate), including *.creq files, despite the AWS V4 signatures requiring
+        // \n line endings!  ie the test suite is actually wrong, IMO.
+        if (!file.open(QFile::ReadOnly|QFile::Text)) {
             qWarning() << fileInfo.filePath() << "could not be openned for reading";
             return -1;
         }
@@ -78,10 +89,63 @@ int TestAwsSignatureV4::loadOfficialTestSuiteData()
             return -1;
         }
 
-        officialAwsTestSuiteData[fileInfo.completeBaseName()].toMap()[fileInfo.suffix()] = data;
-        qWarning() << fileInfo.fileName();
+        QVariantMap map = officialAwsTestSuiteData.value(fileInfo.completeBaseName()).toMap();
+        map.insert(fileInfo.suffix(), data);
+        officialAwsTestSuiteData.insert(fileInfo.completeBaseName(), map);
     }
     return officialAwsTestSuiteData.size();
+}
+
+// Get the network operation (eg GET or POST) from an official AWS test case *.req file's content.
+QNetworkAccessManager::Operation TestAwsSignatureV4::networkOperation(const QByteArray &req)
+{
+    // The AWS test suite only uses GET and POST operations.
+    if (req.startsWith("GET"))  return QNetworkAccessManager::GetOperation;
+    if (req.startsWith("POST")) return QNetworkAccessManager::PostOperation;
+    qWarning() << "unknown HTTP operation in request:" << req;
+    return QNetworkAccessManager::CustomOperation;
+}
+
+// Create a network request from an official AWS test case *.req file's content.
+QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req)
+{
+    QNetworkRequest request;
+    QUrl url;
+    url.setScheme(QLatin1String("http"));
+    foreach (const QByteArray &line, req.split('\n')) {
+        if ((line.startsWith("GET")) || (line.startsWith("POST"))) {
+            url.setPath(QString::fromUtf8(line.split(' ').at(1)));
+        } else if ((line.startsWith("host")) || (line.startsWith("Host"))) {
+            // RFC2616 says "Host", but some of Amazon's tests use "host".
+            url.setHost(QString::fromUtf8(line.mid(5)));
+        } else if (line.isEmpty()) {
+            request.setUrl(url);
+            return request;
+        } else {
+            const int pos = line.indexOf(':');
+            if (request.hasRawHeader(line.left(pos))) {
+                const QByteArray currentValue = request.rawHeader(line.left(pos));
+                request.setRawHeader(line.left(pos), currentValue + ',' + line.mid(pos+1));
+            } else {
+                request.setRawHeader(line.left(pos), line.mid(pos+1));
+            }
+        }
+    }
+    qWarning() << "request content separator was not found";
+    return request;
+}
+
+// Extract the (optional) POST payload from an official AWS test case *.req file's content.
+QByteArray TestAwsSignatureV4::networkRequestPayload(const QByteArray &req)
+{
+    const int pos = req.indexOf("\n\n");
+    return (pos < 0) ? QByteArray() : req.mid(pos+2);
+}
+
+// Extract the list of headers that should be signed a an official AWS test case *.authz file's content.
+QByteArray TestAwsSignatureV4::signedHeaders(const QByteArray &authz)
+{
+    return authz.split(',').at(1).mid(15);
 }
 
 void TestAwsSignatureV4::initTestCase()
@@ -303,6 +367,22 @@ void TestAwsSignatureV4::canonicalRequest_data()
                 "content-type;host;x-amz-date\n"
                 "b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2")
             << QByteArray("content-type;host;x-amz-date");
+    }
+
+    // Official AWS V4 Signature test suite.
+    for (QVariantMap::const_iterator iter = officialAwsTestSuiteData.constBegin();
+         iter != officialAwsTestSuiteData.constEnd(); ++iter)
+    {
+        const QVariantMap testCase = iter.value().toMap();
+        if ((testCase.contains(REQ)) && (testCase.contains(CREQ))) {
+            //qWarning() << iter.key();
+            QTest::newRow(iter.key().toUtf8())
+                << networkOperation(testCase.value(REQ).toByteArray())
+                << networkRequest(testCase.value(REQ).toByteArray())
+                << networkRequestPayload(testCase.value(REQ).toByteArray())
+                << testCase.value(CREQ).toByteArray()
+                << signedHeaders(testCase.value(AUTHZ).toByteArray());
+        }
     }
 }
 

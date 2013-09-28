@@ -20,6 +20,7 @@
 #include <QtTest/QtTest>
 #include "../../src/core/qtawsglobal.h"
 
+#include <QNetworkAccessManager>
 #include <QVariantMap>
 
 class TestAwsSignatureV4 : public QObject {
@@ -32,6 +33,10 @@ private:
     QVariantMap officialAwsTestSuiteData;
 
     int loadOfficialTestSuiteData();
+    QNetworkAccessManager::Operation networkOperation(const QByteArray &req);
+    QNetworkRequest networkRequest(const QByteArray &req);
+    QByteArray networkRequestPayload(const QByteArray &req);
+    QByteArray signedHeaders(const QByteArray &sreq);
 
 private slots:
     void initTestCase();
