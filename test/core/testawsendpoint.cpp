@@ -97,17 +97,15 @@ void TestAwsEndpoint::construct_QString_data()
         << QString::fromLatin1("")
         << false;
 
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com")
-        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << true;
-
-    QTest::newRow("swf.us-gov-west-1.amazonaws.com")
-        << QString::fromLatin1("swf.us-gov-west-1.amazonaws.com")
-        << QString::fromLatin1("us-gov-west-1")
-        << QString::fromLatin1("swf")
-        << true;
+    const QVariantMap hosts = AwsEndpointTestData::hostInfoMap();
+    for (QVariantMap::const_iterator host = hosts.constBegin(); host != hosts.constEnd(); ++host) {
+        const QVariantMap hostInfo = host.value().toMap();
+        QTest::newRow(QString::fromLatin1("%1").arg(host.key()).toLatin1())
+            << host.key()
+            << hostInfo.value(QLatin1String("region")).toString()
+            << hostInfo.value(QLatin1String("service")).toString()
+            << true;
+    }
 }
 
 void TestAwsEndpoint::construct_QString()
