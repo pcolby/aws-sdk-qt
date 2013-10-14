@@ -135,41 +135,29 @@ void TestAwsEndpoint::getEndpoint_data()
         << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
         << QUrl();
 
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.AnyTransport")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
-        << QUrl(QString::fromLatin1("https://cloudformation.us-east-1.amazonaws.com"));
+    const QVariantMap regions = AwsEndpointTestData::supportedServicesMap();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        const QVariantMap services = region.value().toMap();
+        for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+            const QString hostName = AwsEndpointTestData::regionServiceHosts().value(region.key()).toMap().value(service.key()).toString();
+            for (int transports = 1; transports <= AwsEndpoint::AnyTransport; ++transports) {
+                QUrl url;
+                if (service.value().toInt() & transports) {
+                    url.setHost(hostName);
+                    if (service.value().toInt() & transports & AwsEndpoint::HTTPS) {
+                        url.setScheme(QLatin1String("https"));
+                    } else if (service.value().toInt() & transports & AwsEndpoint::HTTP ) {
+                        url.setScheme(QLatin1String("http"));
+                    }
+                }
+                QTest::newRow(QString::fromLatin1("%1:%2:%3").arg(region.key()).arg(service.key()).arg(transports).toLatin1())
+                    << region.key() << service.key() << AwsEndpoint::Transports(transports) << url;
+            }
+        }
+    }
 
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTP")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
-        << QUrl(); // HTTP is not supported for CF in us-east-1.
 
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTPS")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
-        << QUrl(QLatin1String("https://cloudformation.us-east-1.amazonaws.com"));
 
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.AnyTransport")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
-        << QUrl(QString::fromLatin1("https://elasticloadbalancing.us-east-1.amazonaws.com"));
-
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTP")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
-        << QUrl(QLatin1String("http://elasticloadbalancing.us-east-1.amazonaws.com"));
-
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTPS")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
-        << QUrl(QLatin1String("https://elasticloadbalancing.us-east-1.amazonaws.com"));
 }
 
 void TestAwsEndpoint::getEndpoint()
