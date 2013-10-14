@@ -415,7 +415,7 @@ void TestAwsEndpoint::hostName_data()
 {
     QTest::addColumn<QString>("hostName");
 
-    foreach (const QString &hostname, AwsEndpointTestData::hostnames()) {
+    foreach (const QString &hostname, AwsEndpointTestData::hostInfoMap().keys()) {
         QTest::newRow(hostname.toUtf8()) << hostname;
     }
 
