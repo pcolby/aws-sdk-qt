@@ -21,6 +21,27 @@
 
 #include "../../src/core/awsendpoint.h"
 
+/*
+ * This function builds a map of hostname -> [ "region" -> regionName, "service" -> serviceName ]
+ * for every host AWS supports (as gleaned from Amazons' endpoints.xml file).
+ */
+QVariantMap AwsEndpointTestData::hostInfoMap()
+{
+    QVariantMap hosts;
+    const QVariantMap regions = AwsEndpointTestData::regionServiceHosts();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        const QVariantMap services = region.value().toMap();
+        for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+            QVariantMap hostInfo;
+            hostInfo.insert(QLatin1String("region"),
+                hosts.contains(service.value().toString()) ? QString::fromLatin1("us-east-1") : region.key());
+            hostInfo.insert(QLatin1String("service"), service.key());
+            hosts.insert(service.value().toString(), hostInfo);
+       }
+    }
+    return hosts;
+}
+
 // All valid AWS hostnames.
 // sed -nre 's:.*<Hostname>(.*)</Hostname>:<< QLatin1String(\1):p' ../qrc/endpoints.xml | sort | uniq
 QStringList AwsEndpointTestData::hostnames()
