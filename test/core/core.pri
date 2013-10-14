@@ -1,4 +1,5 @@
 HEADERS += \
+        awsendpointtestdata.h \
         testawsabstractcredentials.h \
         testawsabstractsignature.h \
         testawsanonymouscredentials.h \
@@ -9,6 +10,7 @@ HEADERS += \
         testawssignaturev4.h \
 
 SOURCES += \
+        awsendpointtestdata.cpp \
         testawsabstractcredentials.cpp \
         testawsabstractsignature.cpp \
         testawsanonymouscredentials.cpp \
