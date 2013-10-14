@@ -22,6 +22,8 @@
 #include "../../src/core/awsendpoint.h"
 #include "../../src/core/awsendpoint_p.h"
 
+#include "awsendpointtestdata.h"
+
 Q_DECLARE_METATYPE(AwsEndpoint::Transport)
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)
 
@@ -414,6 +416,11 @@ void TestAwsEndpoint::fullServiceName()
 void TestAwsEndpoint::hostName_data()
 {
     QTest::addColumn<QString>("hostName");
+
+    foreach (const QString &hostname, AwsEndpointTestData::hostnames()) {
+        QTest::newRow(hostname.toUtf8()) << hostname;
+    }
+
     QTest::newRow("null")     << QString();
     QTest::newRow("empty")    << QString::fromLatin1("");
     QTest::newRow("space")    << QString::fromLatin1(" ");
