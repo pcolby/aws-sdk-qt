@@ -185,7 +185,8 @@ void TestAwsEndpoint::isSupported_data()
         const QString region = hostInfo.value(QLatin1String("region")).toString();
         const QString service = hostInfo.value(QLatin1String("service")).toString();
         for (int transport = 1; transport <= AwsEndpoint::AnyTransport; transport*=2) {
-            QTest::newRow(host.key().toUtf8()) << host.key() << (AwsEndpoint::Transport)transport
+            QTest::newRow(QString::fromLatin1("%1:%2").arg(host.key()).arg(transport).toUtf8())
+                << host.key() << (AwsEndpoint::Transport)transport
                 << ((AwsEndpointTestData::supportedServicesMap().value(region).toMap().value(service).toInt() & transport) ? true : false);
         }
     }
@@ -205,60 +206,36 @@ void TestAwsEndpoint::isSupported_static_data()
 {
     QTest::addColumn<QString>("regionName");
     QTest::addColumn<QString>("serviceName");
-    QTest::addColumn<AwsEndpoint::Transport>("transport");
-    QTest::addColumn<bool>("supported");
+    QTest::addColumn<AwsEndpoint::Transports>("transports");
+    QTest::addColumn<bool>("isSupported");
 
     QTest::newRow("null")
         << QString()
         << QString()
-        << AwsEndpoint::AnyTransport
+        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
         << false;
 
-    QTest::newRow("cloudformation:us-east-1:AnyTransport")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::AnyTransport
-        << true;
-
-    QTest::newRow("cloudformation:us-east-1:HTTP")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::HTTP
-        << false;
-
-    QTest::newRow("cloudformation:us-east-1:HTTPS")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("cloudformation")
-        << AwsEndpoint::HTTPS
-        << true;
-
-    QTest::newRow("elasticloadbalancing:us-east-1:AnyTransport")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::AnyTransport
-        << true;
-
-    QTest::newRow("elasticloadbalancing:us-east-1:HTTP")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::HTTP
-        << true;
-
-    QTest::newRow("elasticloadbalancing:us-east-1:HTTPS")
-        << QString::fromLatin1("us-east-1")
-        << QString::fromLatin1("elasticloadbalancing")
-        << AwsEndpoint::HTTPS
-        << true;
+    const QVariantMap regions = AwsEndpointTestData::supportedServicesMap();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        const QVariantMap services = region.value().toMap();
+        for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+            for (int transports = 1; transports <= AwsEndpoint::AnyTransport; ++transports) {
+                QTest::newRow(QString::fromLatin1("%1:%2:%3").arg(region.key()).arg(service.key()).arg(transports).toUtf8())
+                    << region.key() << service.key() << AwsEndpoint::Transports(transports)
+                    << ((service.value().toInt() & transports) ? true : false);
+            }
+        }
+    }
 }
 
 void TestAwsEndpoint::isSupported_static()
 {
     QFETCH(QString, regionName);
     QFETCH(QString, serviceName);
-    QFETCH(AwsEndpoint::Transport, transport);
-    QFETCH(bool, supported);
+    QFETCH(AwsEndpoint::Transports, transports);
+    QFETCH(bool, isSupported);
 
-    QCOMPARE(AwsEndpoint::isSupported(regionName, serviceName, transport), supported);
+    QCOMPARE(AwsEndpoint::isSupported(regionName, serviceName, transports), isSupported);
 }
 
 void TestAwsEndpoint::isValid_data()
