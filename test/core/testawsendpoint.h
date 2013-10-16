@@ -41,8 +41,9 @@ private slots:
     void isSupported_static_data();
     void isSupported_static();
 
-    void isValid_data();
-    void isValid();
+    // The isValid function is already extensively tested
+    // by the two construct_* test functions above.
+    //void isValid();
 
     void fullServiceName_data();
     void fullServiceName();

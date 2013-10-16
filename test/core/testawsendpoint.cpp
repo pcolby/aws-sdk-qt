@@ -238,59 +238,6 @@ void TestAwsEndpoint::isSupported_static()
     QCOMPARE(AwsEndpoint::isSupported(regionName, serviceName, transports), isSupported);
 }
 
-void TestAwsEndpoint::isValid_data()
-{
-    QTest::addColumn<QString>("hostName");
-    QTest::addColumn<QString>("regionName");
-    QTest::addColumn<QString>("serviceName");
-    QTest::addColumn<bool>("isValid");
-
-    QTest::newRow("null")
-        << QString()
-        << QString()
-        << QString()
-        << false;
-    QTest::newRow("empty")
-        << QString::fromLatin1("")
-        << QString::fromLatin1("")
-        << QString::fromLatin1("")
-        << false;
-    QTest::newRow("1")
-        << QString::fromLatin1("1")
-        << QString::fromLatin1("2")
-        << QString::fromLatin1("")
-        << false;
-    QTest::newRow("2")
-        << QString::fromLatin1("")
-        << QString::fromLatin1("2")
-        << QString::fromLatin1("3")
-        << false;
-    QTest::newRow("3")
-        << QString::fromLatin1("1")
-        << QString::fromLatin1("")
-        << QString::fromLatin1("3")
-        << false;
-    QTest::newRow("4")
-        << QString::fromLatin1("1")
-        << QString::fromLatin1("2")
-        << QString::fromLatin1("3")
-        << true;
-}
-
-void TestAwsEndpoint::isValid()
-{
-    QFETCH(QString, hostName);
-    QFETCH(QString, regionName);
-    QFETCH(QString, serviceName);
-    QFETCH(bool, isValid);
-
-    AwsEndpoint endpoint(QLatin1String(""));
-    endpoint.d_func()->hostName = hostName;
-    endpoint.d_func()->regionName = regionName;
-    endpoint.d_func()->serviceName = serviceName;
-    QCOMPARE(endpoint.isValid(), isValid);
-}
-
 void TestAwsEndpoint::fullServiceName_data()
 {
     QTest::addColumn<QString>("serviceName");
