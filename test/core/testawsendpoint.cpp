@@ -155,9 +155,6 @@ void TestAwsEndpoint::getEndpoint_data()
             }
         }
     }
-
-
-
 }
 
 void TestAwsEndpoint::getEndpoint()
@@ -176,40 +173,22 @@ void TestAwsEndpoint::isSupported_data()
     QTest::addColumn<AwsEndpoint::Transport>("transport");
     QTest::addColumn<bool>("supported");
 
-    QTest::newRow("null")
-        << QString()
-        << AwsEndpoint::AnyTransport
-        << false;
+    QTest::newRow("null")     << QString() << AwsEndpoint::AnyTransport << false;
+    QTest::newRow("empty")    << QString::fromLatin1("") << AwsEndpoint::AnyTransport << false;
+    QTest::newRow("space")    << QString::fromLatin1(" ") << AwsEndpoint::AnyTransport << false;
+    QTest::newRow("spaces")   << QString::fromLatin1("  ") << AwsEndpoint::AnyTransport << false;
+    QTest::newRow("jiberish") << QString::fromLatin1("sh398uslajskjsk") << AwsEndpoint::AnyTransport << false;
 
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.AnyTransport")
-        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
-        << AwsEndpoint::AnyTransport
-        << true;
-
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTP")
-        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
-        << AwsEndpoint::HTTP
-        << false;
-
-    QTest::newRow("cloudformation.us-east-1.amazonaws.com.HTTPS")
-        << QString::fromLatin1("cloudformation.us-east-1.amazonaws.com")
-        << AwsEndpoint::HTTPS
-        << true;
-
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.AnyTransport")
-        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
-        << AwsEndpoint::AnyTransport
-        << true;
-
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTP")
-        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
-        << AwsEndpoint::HTTP
-        << true;
-
-    QTest::newRow("elasticloadbalancing.us-east-1.amazonaws.com.HTTPS")
-        << QString::fromLatin1("elasticloadbalancing.us-east-1.amazonaws.com")
-        << AwsEndpoint::HTTPS
-        << true;
+    const QVariantMap hosts = AwsEndpointTestData::hostInfoMap();
+    for (QVariantMap::const_iterator host = hosts.constBegin(); host != hosts.constEnd(); ++host) {
+        const QVariantMap hostInfo = host.value().toMap();
+        const QString region = hostInfo.value(QLatin1String("region")).toString();
+        const QString service = hostInfo.value(QLatin1String("service")).toString();
+        for (int transport = 1; transport <= AwsEndpoint::AnyTransport; transport*=2) {
+            QTest::newRow(host.key().toUtf8()) << host.key() << (AwsEndpoint::Transport)transport
+                << ((AwsEndpointTestData::supportedServicesMap().value(region).toMap().value(service).toInt() & transport) ? true : false);
+        }
+    }
 }
 
 void TestAwsEndpoint::isSupported()
