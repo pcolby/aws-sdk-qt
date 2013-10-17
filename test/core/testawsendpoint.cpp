@@ -326,74 +326,20 @@ void TestAwsEndpoint::supportedServices_data()
     QTest::newRow("null")           << QString()  << AwsEndpoint::Transports() << QStringList();
     QTest::newRow("does not exist") << QString()  << AwsEndpoint::Transports() << QStringList();
 
-    QStringList useast1ServicesHttp;
-    useast1ServicesHttp
-        << QLatin1String("cloudfront")
-        << QLatin1String("monitoring")
-        << QLatin1String("dynamodb")
-        << QLatin1String("ec2")
-        << QLatin1String("elasticmapreduce")
-        << QLatin1String("sdb")
-        << QLatin1String("sns")
-        << QLatin1String("sqs")
-        << QLatin1String("s3")
-        << QLatin1String("autoscaling")
-        << QLatin1String("elasticloadbalancing")
-        << QLatin1String("glacier");
-
-    QStringList useast1ServicesHttps;
-    useast1ServicesHttps
-        << QLatin1String("cloudformation")
-        << QLatin1String("cloudfront")
-        << QLatin1String("cloudsearch")
-        << QLatin1String("monitoring")
-        << QLatin1String("dynamodb")
-        << QLatin1String("ec2")
-        << QLatin1String("elasticmapreduce")
-        << QLatin1String("elasticache")
-        << QLatin1String("rds")
-        << QLatin1String("route53")
-        << QLatin1String("email")
-        << QLatin1String("sdb")
-        << QLatin1String("sns")
-        << QLatin1String("sqs")
-        << QLatin1String("s3")
-        << QLatin1String("autoscaling")
-        << QLatin1String("elasticbeanstalk")
-        << QLatin1String("iam")
-        << QLatin1String("importexport")
-        << QLatin1String("sts")
-        << QLatin1String("storagegateway")
-        << QLatin1String("support")
-        << QLatin1String("elasticloadbalancing")
-        << QLatin1String("swf")
-        << QLatin1String("glacier")
-        << QLatin1String("directconnect")
-        << QLatin1String("datapipeline")
-        << QLatin1String("redshift")
-        << QLatin1String("opsworks")
-        << QLatin1String("elastictranscoder");
-
-    QStringList useast1ServicesSmtp;
-    useast1ServicesSmtp << QLatin1String("email");
-
-    QTest::newRow("us-east-1.HTTP")
-        << QString::fromLatin1("us-east-1")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTP)
-        << useast1ServicesHttp;
-    QTest::newRow("us-east-1.HTTPS")
-        << QString::fromLatin1("us-east-1")
-        << AwsEndpoint::Transports(AwsEndpoint::HTTPS)
-        << useast1ServicesHttps;
-    QTest::newRow("us-east-1.SMTP")
-        << QString::fromLatin1("us-east-1")
-        << AwsEndpoint::Transports(AwsEndpoint::SMTP)
-        << useast1ServicesSmtp;
-    QTest::newRow("us-east-1.AnyTransport")
-        << QString::fromLatin1("us-east-1")
-        << AwsEndpoint::Transports(AwsEndpoint::AnyTransport)
-        << useast1ServicesHttps;
-
+    const QVariantMap regions = AwsEndpointTestData::supportedServicesMap();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        for (int transports = 1; transports <= AwsEndpoint::AnyTransport; ++transports) {
+            QStringList supportedServices;
+            const QVariantMap services = region.value().toMap();
+            for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+                if (service.value().toInt() & transports) {
+                    supportedServices.append(service.key());
+                }
+            }
+            QTest::newRow(QString::fromLatin1("%1:%2").arg(region.key()).arg(transports).toLatin1())
+                << region.key() << AwsEndpoint::Transports(transports) << supportedServices;
+        }
+    }
 }
 
 void TestAwsEndpoint::supportedServices()
