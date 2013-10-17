@@ -469,7 +469,7 @@ void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 
     // Open the device, if not already open.
     if ((!device.isOpen()) && (!device.open(QIODevice::ReadOnly))) {
-        qWarning() << device.errorString();
+        qWarning() << "AwsEndpoint:" << device.errorString();
         return;
     }
 
@@ -506,11 +506,11 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("Services")) {
             parseServices(xml);
         } else if (xml.name() != QLatin1String("XML")) {
-            qDebug() << "ignoring" << xml.name();
+            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
         }
     }
     if (xml.hasError()) {
-        qWarning() << xml.errorString();
+        qWarning() << "AwsEndpoint:" << xml.errorString();
     }
     Q_ASSERT(!xml.hasError());
     Q_ASSERT(!hosts.isEmpty());
@@ -588,7 +588,7 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             hosts[endpoint.hostName].regionNames.append(regionName);
             hosts[endpoint.hostName].serviceName  = serviceName;
             regions[regionName].services[serviceName] = endpoint;
-            //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
+            //qDebug() << Q_FUNC_INFO << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
             qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
             xml.skipCurrentElement();
@@ -664,7 +664,7 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             Q_ASSERT(!serviceName.isEmpty());
             const QString &regionName = xml.readElementText();
             services[serviceName].regionNames.append(regionName);
-            //qDebug() << serviceName << services[serviceName].fullName << regionName;
+            //qDebug() << Q_FUNC_INFO << serviceName << services[serviceName].fullName << regionName;
         } else {
             qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
             xml.skipCurrentElement();
