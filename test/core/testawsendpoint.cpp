@@ -398,6 +398,8 @@ void TestAwsEndpoint::loadEndpointData_QIODevice()
 
     // Loading data from an un-opennable device should fail gracefully.
     QFile device;
+    QTest::ignoreMessage(QtWarningMsg, "QFSFileEngine::open: No file name specified");
+    QTest::ignoreMessage(QtWarningMsg, "AwsEndpoint: \"No file name specified\" ");
     AwsEndpointPrivate::loadEndpointData(device);
 
     // If data has been loaded previously, the device is ignored.
@@ -414,6 +416,7 @@ void TestAwsEndpoint::loadEndpointData_QXmlStreamReader()
     AwsEndpointPrivate::loadEndpointData(xml1);
 
     QXmlStreamReader xml2(QByteArray("not valid xml"));
+    QTest::ignoreMessage(QtWarningMsg, "AwsEndpoint: \"Start tag expected.\" ");
     AwsEndpointPrivate::loadEndpointData(xml2);
 }
 

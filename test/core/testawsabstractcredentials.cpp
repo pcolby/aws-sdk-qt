@@ -37,9 +37,11 @@ public:
 
 void TestAwsAbstractCredentials::expiration() {
     MockCredentials credentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration should not be invoked on non-refreshable objects ");
     QVERIFY(credentials.expiration().isNull());
 
     MockRefreshableCredentials refreshableCredentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration must be implemented by refreshable derived classes ");
     QVERIFY(refreshableCredentials.expiration().isNull());
 }
 
@@ -48,6 +50,7 @@ void TestAwsAbstractCredentials::isExpired() {
     QVERIFY(!credentials.isExpired());
 
     MockRefreshableCredentials refreshableCredentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration must be implemented by refreshable derived classes ");
     QVERIFY(!refreshableCredentials.isExpired());
 }
 
@@ -61,8 +64,10 @@ void TestAwsAbstractCredentials::isRefreshable() {
 
 void TestAwsAbstractCredentials::refresh() {
     MockCredentials credentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh should not be invoked on non-refreshable objects ");
     QVERIFY(!credentials.refresh());
 
     MockRefreshableCredentials refreshableCredentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh must be implemented by refreshable derived classes ");
     QVERIFY(!refreshableCredentials.refresh());
 }

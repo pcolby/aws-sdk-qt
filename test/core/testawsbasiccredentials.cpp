@@ -46,7 +46,7 @@ void TestAwsBasicCredentials::construct() {
 void TestAwsBasicCredentials::expiration() {
     // Basic credentials never expire.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
-    credentials.expiration();
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration should not be invoked on non-refreshable objects ");
     QVERIFY(credentials.expiration().isNull());
 }
 
@@ -65,6 +65,7 @@ void TestAwsBasicCredentials::isRefreshable() {
 void TestAwsBasicCredentials::refresh() {
     // Basic credentials are not refreshable.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh should not be invoked on non-refreshable objects ");
     QVERIFY(!credentials.refresh());
 }
 

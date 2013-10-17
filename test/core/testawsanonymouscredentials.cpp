@@ -42,6 +42,7 @@ void TestAwsAnonymousCredentials::token()
 void TestAwsAnonymousCredentials::expiration()
 {
     const AwsAnonymousCredentials credentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration should not be invoked on non-refreshable objects ");
     QVERIFY(credentials.expiration().isNull());
 }
 
@@ -60,5 +61,6 @@ void TestAwsAnonymousCredentials::isRefreshable()
 void TestAwsAnonymousCredentials::refresh()
 {
     AwsAnonymousCredentials credentials;
+    QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh should not be invoked on non-refreshable objects ");
     QVERIFY(!credentials.refresh());
 }
