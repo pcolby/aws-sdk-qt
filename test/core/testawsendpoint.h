@@ -48,14 +48,11 @@ private slots:
     void fullServiceName_data();
     void fullServiceName();
 
-    void hostName_data();
-    void hostName();
-
-    void regionName_data();
-    void regionName();
-
-    void serviceName_data();
-    void serviceName();
+    // The following function are already extensively tested
+    // by the two construct_* test functions above.
+    //void hostName();
+    //void regionName();
+    //void serviceName();
 
     void supportedRegions_data();
     void supportedRegions();
