@@ -15,7 +15,7 @@ Also, feel free to use the issue tracker to show interest in particular AWS serv
 
 Next steps are roughly:
 
-1. add Amazon's official V4 signature test suite to the unit tests
+1. add Amazon's official V4 signature test suite to the unit tests - [**Done**](https://github.com/pcolby/libqtaws/issues/2)
 2. implement base AwsService class(es)
 3. SQS
 4. SNS
