@@ -21,6 +21,47 @@
 
 #include "../../src/core/awsendpoint.h"
 
+
+QVariantMap AwsEndpointTestData::fullServiceNames()
+{
+    #define ADD_SERVICE(service, fullName) serviceNames.insert(QLatin1String(service), QLatin1String(fullName))
+
+    QVariantMap serviceNames;
+    ADD_SERVICE("autoscaling", "Auto Scaling");
+    ADD_SERVICE("cloudformation", "Amazon CloudFormation");
+    ADD_SERVICE("cloudfront", "Amazon CloudFront");
+    ADD_SERVICE("cloudsearch", "Amazon CloudSearch");
+    ADD_SERVICE("datapipeline", "AWS Data Pipeline");
+    ADD_SERVICE("directconnect", "AWS Direct Connect");
+    ADD_SERVICE("dynamodb", "Amazon DynamoDB");
+    ADD_SERVICE("ec2", "Amazon Elastic Compute Cloud");
+    ADD_SERVICE("elasticache", "Amazon ElastiCache");
+    ADD_SERVICE("elasticbeanstalk", "AWS Elastic Beanstalk");
+    ADD_SERVICE("elasticloadbalancing", "Elastic Load Balancing");
+    ADD_SERVICE("elasticmapreduce", "Amazon Elastic MapReduce");
+    ADD_SERVICE("elastictranscoder", "Amazon Elastic Transcoder");
+    ADD_SERVICE("email", "Amazon Simple Email Service");
+    ADD_SERVICE("glacier", "Amazon Glacier");
+    ADD_SERVICE("iam", "AWS Identity & Access Management");
+    ADD_SERVICE("importexport", "AWS Import/Export");
+    ADD_SERVICE("monitoring", "Amazon CloudWatch");
+    ADD_SERVICE("opsworks", "AWS OpsWorks");
+    ADD_SERVICE("rds", "Amazon Relational Database Service");
+    ADD_SERVICE("redshift", "Amazon Redshift");
+    ADD_SERVICE("route53", "Amazon Route 53");
+    ADD_SERVICE("s3", "Amazon Simple Storage Service");
+    ADD_SERVICE("sdb", "Amazon SimpleDB");
+    ADD_SERVICE("sns", "Amazon Simple Notification Service");
+    ADD_SERVICE("sqs", "Amazon Simple Queue Service");
+    ADD_SERVICE("storagegateway", "AWS Storage Gateway");
+    ADD_SERVICE("sts", "AWS Security Token Service");
+    ADD_SERVICE("support", "AWS Support");
+    ADD_SERVICE("swf", "Amazon Simple Workflow Service");
+
+    #undef ADD_SERVICE
+    return serviceNames;
+}
+
 /*
  * This function builds a map of hostname -> [ "region" -> regionName, "service" -> serviceName ]
  * for every host AWS supports (as gleaned from Amazons' endpoints.xml file).

@@ -22,6 +22,7 @@
 class AwsEndpointTestData {
 
 public:
+    static QVariantMap fullServiceNames();
     static QVariantMap hostInfoMap();
     static QVariantMap regionServiceHosts();
     static QVariantMap supportedServicesMap();
