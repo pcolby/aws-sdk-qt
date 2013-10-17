@@ -25,6 +25,7 @@ public:
     static QVariantMap fullServiceNames();
     static QVariantMap hostInfoMap();
     static QVariantMap regionServiceHosts();
+    static QVariantMap supportedRegionsMap();
     static QVariantMap supportedServicesMap();
 
 };

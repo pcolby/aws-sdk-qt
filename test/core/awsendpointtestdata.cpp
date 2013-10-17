@@ -21,6 +21,7 @@
 
 #include "../../src/core/awsendpoint.h"
 
+#include <QDebug>
 
 QVariantMap AwsEndpointTestData::fullServiceNames()
 {
@@ -340,6 +341,28 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_REGION("us-west-2",      US_West_2);
     #undef ADD_REGION
     return map;
+}
+
+/*
+ * This function builds a map of serivceName -> regionNames -> (int)transports for every
+ * service and region AWS supports (as gleaned from Amazons' endpoints.xml file).
+ */
+QVariantMap AwsEndpointTestData::supportedRegionsMap()
+{
+    QVariantMap supportedRegions;
+
+    // Transpose the supportedServicesMap output.
+    const QVariantMap regions = AwsEndpointTestData::supportedServicesMap();
+    for (QVariantMap::const_iterator region = regions.constBegin(); region != regions.constEnd(); ++region) {
+        const QVariantMap services = region.value().toMap();
+        for (QVariantMap::const_iterator service = services.constBegin(); service != services.constEnd(); ++service) {
+            QVariantMap map = supportedRegions.value(service.key()).toMap();
+            map.insert(region.key(), service.value());
+            supportedRegions.insert(service.key(), map);
+        }
+    }
+
+    return supportedRegions;
 }
 
 /*
