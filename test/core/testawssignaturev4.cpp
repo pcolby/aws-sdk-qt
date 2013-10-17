@@ -66,14 +66,21 @@ int TestAwsSignatureV4::loadOfficialTestSuiteData()
     dir.setNameFilters(filters);
     const QFileInfoList files = dir.entryInfoList();
 
+    // These official AWS tests will be skipped for the reasons specified / linked.
+    QStringList brokenTestsToSkip;
+    brokenTestsToSkip
+        << QLatin1String("get-header-key-duplicate")          // https://github.com/aws/aws-sdk-php/issues/161
+        << QLatin1String("get-header-value-order")            // https://github.com/aws/aws-sdk-php/issues/161
+        << QLatin1String("post-vanilla-query-nonunreserved"); // ****** UNCONFIRMED ******
+
     // For each file, load it's content (verbatim) into a two-dimension QVariantMap
     // such that the first key is the filename without the final extension, and the
     // second key is the final extension.  For example, the content of the
     // "get-utf8.sts" file will be assigned to officialAwsTestSuiteData["get-utf8"]["sts"].
     foreach (const QFileInfo &fileInfo, files) {
-        /******* This may be wrong... will check further. *******/
-        if (fileInfo.fileName().startsWith(QLatin1String("post-vanilla-query-nonunreserved")))
-            continue; // Skip the post-vanilla-query-nonunreserved test for now - it needs some more work.
+        if (brokenTestsToSkip.contains(fileInfo.completeBaseName())) {
+            continue;
+        }
 
         QFile file(fileInfo.filePath());
         if (!file.exists()) {
@@ -128,19 +135,6 @@ QNetworkRequest TestAwsSignatureV4::networkRequest(const QByteArray &req) const
             if (request.hasRawHeader(line.left(pos))) {
                 const QByteArray currentValue = request.rawHeader(line.left(pos));
                 request.setRawHeader(line.left(pos), currentValue + ',' + line.mid(pos+1));
-
-                /******* This is probably wrong... will check further. *******/
-                // See https://forums.aws.amazon.com/thread.jspa?threadID=136223
-                QList<QByteArray> list = request.rawHeader(line.left(pos)).split(',');
-                qSort(list);
-                QByteArray out;
-                foreach (const QByteArray b, list) {
-                    if (!out.isEmpty()) {
-                        out.append(',');
-                    }
-                    out.append(b);
-                }
-                request.setRawHeader(line.left(pos), out);
             } else {
                 request.setRawHeader(line.left(pos), line.mid(pos+1));
             }
@@ -190,7 +184,7 @@ QByteArray TestAwsSignatureV4::signedHeaders(const QByteArray &authz) const
 void TestAwsSignatureV4::initTestCase()
 {
     // Load the 31 AWS V4 signature tests.
-    QCOMPARE(loadOfficialTestSuiteData(), 30);//31);
+    QCOMPARE(loadOfficialTestSuiteData(), 28);//31); // Three broken tests are skipped currently.
 
     // The official AWS test suite makes use of a fictitious "host.foo.com" host which
     // resides in "us-east-1" and provides the "host" service.  Here we use some internal
