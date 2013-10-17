@@ -144,6 +144,7 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_SERVICE(AP_Southeast_1, "elasticloadbalancing", "elasticloadbalancing.ap-southeast-1.amazonaws.com");
     ADD_SERVICE(AP_Southeast_1, "swf", "swf.ap-southeast-1.amazonaws.com");
     ADD_SERVICE(AP_Southeast_1, "directconnect", "directconnect.ap-southeast-1.amazonaws.com");
+    ADD_SERVICE(AP_Southeast_1, "redshift", "redshift.ap-southeast-1.amazonaws.com");
     ADD_SERVICE(AP_Southeast_1, "elastictranscoder", "elastictranscoder.ap-southeast-1.amazonaws.com");
 
     QVariantMap AP_Southeast_2;
@@ -168,7 +169,9 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_SERVICE(AP_Southeast_2, "storagegateway", "storagegateway.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "elasticloadbalancing", "elasticloadbalancing.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "swf", "swf.ap-southeast-2.amazonaws.com");
+    ADD_SERVICE(AP_Southeast_2, "glacier", "glacier.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "directconnect", "directconnect.ap-southeast-2.amazonaws.com");
+    ADD_SERVICE(AP_Southeast_2, "redshift", "redshift.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "elastictranscoder", "elastictranscoder.ap-southeast-2.amazonaws.com");
 
     QVariantMap EU_West_1;
@@ -425,6 +428,7 @@ QVariantMap AwsEndpointTestData::supportedServicesMap()
     ADD_SERVICE(AP_Southeast_1, "elasticloadbalancing", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_1, "swf", AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_1, "directconnect", AwsEndpoint::HTTPS);
+    ADD_SERVICE(AP_Southeast_1, "redshift", AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_1, "elastictranscoder", AwsEndpoint::HTTPS);
 
     QVariantMap AP_Southeast_2;
@@ -449,7 +453,9 @@ QVariantMap AwsEndpointTestData::supportedServicesMap()
     ADD_SERVICE(AP_Southeast_2, "storagegateway", AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "elasticloadbalancing", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "swf", AwsEndpoint::HTTPS);
+    ADD_SERVICE(AP_Southeast_2, "glacier", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "directconnect", AwsEndpoint::HTTPS);
+    ADD_SERVICE(AP_Southeast_2, "redshift", AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "elastictranscoder", AwsEndpoint::HTTPS);
 
     QVariantMap EU_West_1;
