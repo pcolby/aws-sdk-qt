@@ -84,14 +84,14 @@ QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
 /**
  * @brief  Create an AWS Signature canonical query.
  *
- * This function retuns an HTTP query string in Amazon's canonical form.  That is,
+ * This function returns an HTTP query string in Amazon's canonical form.  That is,
  * all query parameters are sorted by keys (**but not keys-then-values**), then
  * joined with `&` separators, in `key=value` pairs with both keys and values being
  * URL percent encoded.
  *
  * @param  query  Query to encode the HTTP query string from.
  *
- * @return An AWS Signature canonical path.
+ * @return An AWS Signature canonical query string.
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
