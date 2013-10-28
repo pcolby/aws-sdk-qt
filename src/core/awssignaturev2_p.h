@@ -25,7 +25,6 @@
 #include <QCryptographicHash>
 #include <QNetworkAccessManager>
 #include <QUrl>
-#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 
