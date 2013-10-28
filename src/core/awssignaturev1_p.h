@@ -22,7 +22,6 @@
 
 #include "qtawsglobal.h"
 
-#include <QCryptographicHash>
 #include <QNetworkAccessManager>
 #include <QUrl>
 #include <QUrlQuery>
@@ -35,8 +34,6 @@ class QTAWS_EXPORT AwsSignatureV1Private {
     Q_DECLARE_PUBLIC(AwsSignatureV1)
 
 public:
-    QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
-
     AwsSignatureV1Private(AwsSignatureV1 * const q);
 
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;

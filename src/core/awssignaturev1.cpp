@@ -26,6 +26,7 @@
 #include <QMessageAuthenticationCode>
 #endif
 
+#include <QCryptographicHash>
 #include <QNetworkRequest>
 #include <QUrl>
 
@@ -52,16 +53,10 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new AwsSignatureV1 object.
  *
  * Use instances of this object to provide Version 1 signatures for AWS services.
- *
- * @param  hashAlgorithm  Hash algorithm for signatures.  Must be either QCryptographicHash::Sha1
- *                        or QCryptographicHash::Sha256 (default, recommended).
  */
-AwsSignatureV1::AwsSignatureV1(const QCryptographicHash::Algorithm hashAlgorithm)
+AwsSignatureV1::AwsSignatureV1()
         : d_ptr(new AwsSignatureV1Private(this))
 {
-    Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));
-    Q_D(AwsSignatureV1);
-    d->hashAlgorithm = hashAlgorithm;
 }
 
 /**
@@ -82,7 +77,7 @@ void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetw
     const QByteArray stringToSign = d->canonicalRequest(operation, request.url());
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
-                                         d->hashAlgorithm).toBase64())));
+                                         QCryptographicHash::Sha1).toBase64())));
 
     // Append the signature to the request.
     QUrl url = request.url();
@@ -147,8 +142,7 @@ QByteArray AwsSignatureV1Private::canonicalRequest(const QNetworkAccessManager::
                                                    const QUrl &url) const
 {
     Q_Q(const AwsSignatureV1);
-    return q->httpMethod(operation).toUtf8() + '\n' +
-           url.host().toUtf8() + '\n' +
+    return url.host().toUtf8() + '\n' +
            q->canonicalPath(url).toUtf8() + '\n' +
            q->canonicalQuery(QUrlQuery(url));
 }

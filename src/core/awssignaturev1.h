@@ -23,8 +23,6 @@
 #include "qtawsglobal.h"
 #include "awsabstractsignature.h"
 
-#include <QCryptographicHash>
-
 QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV1Private;
@@ -33,7 +31,7 @@ class QTAWS_EXPORT AwsSignatureV1 : public AwsAbstractSignature {
     Q_DECLARE_PRIVATE(AwsSignatureV1)
 
 public:
-    AwsSignatureV1(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
+    AwsSignatureV1();
 
     ~AwsSignatureV1();
 
