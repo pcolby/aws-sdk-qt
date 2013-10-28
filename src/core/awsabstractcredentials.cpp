@@ -147,7 +147,7 @@ bool AwsAbstractCredentials::isRefreshable() const
  * Derived classes that return \c true from isRefreshable() must also override this
  * function to provide the appropriate refresh behaviour.
  *
- * @returns  \c true is the refresh transaction has begun successfully, \c false otherwise.
+ * @returns  \c true if the refresh transaction has begun successfully, \c false otherwise.
  *
  * @see  isRefreshable()
  * @see  changed()

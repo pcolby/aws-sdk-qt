@@ -220,7 +220,7 @@ bool AwsEndpoint::isSupported(const QString &regionName, const QString &serviceN
  *
  * @param  transport  Transport to check for support for.
  *
- * @return `true` is the transport is supported by this endpoint, `false` otherwise.
+ * @return `true` if the transport is supported by this endpoint, `false` otherwise.
  */
 bool AwsEndpoint::isSupported(const Transport transport) const
 {
@@ -241,7 +241,7 @@ bool AwsEndpoint::isSupported(const Transport transport) const
  * Q_ASSERT(!bad.isValid()); // bad is not.
  * @endcode
  *
- * @return `true` is this endpoint is valid, `false` otherwise.
+ * @return `true` if this endpoint is valid, `false` otherwise.
  */
 bool AwsEndpoint::isValid() const
 {
