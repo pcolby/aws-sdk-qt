@@ -40,13 +40,15 @@ public:
 
 };
 
-void TestAwsAbstractSignature::construct() {
+void TestAwsAbstractSignature::construct()
+{
     //QBENCHMARK {
         MockSignature signature;
     //}
 }
 
-void TestAwsAbstractSignature::canonicalPath_data() {
+void TestAwsAbstractSignature::canonicalPath_data()
+{
     QTest::addColumn<QUrl>("url");
     QTest::addColumn<QString>("path");
 
@@ -58,14 +60,16 @@ void TestAwsAbstractSignature::canonicalPath_data() {
     QTest::newRow("/foo/bar/baz") << QUrl(QLatin1String("http://example.com/foo/bar/baz")) << QString::fromLatin1("/foo/bar/baz");
 }
 
-void TestAwsAbstractSignature::canonicalPath() {
+void TestAwsAbstractSignature::canonicalPath()
+{
     QFETCH(QUrl, url);
     QFETCH(QString, path);
     const MockSignature signature;
     QCOMPARE(signature.canonicalPath(url), path);
 }
 
-void TestAwsAbstractSignature::canonicalQuery_data() {
+void TestAwsAbstractSignature::canonicalQuery_data()
+{
     QTest::addColumn<QUrlQuery>("query");
     QTest::addColumn<QByteArray>("expected");
 
@@ -88,7 +92,8 @@ void TestAwsAbstractSignature::canonicalQuery_data() {
             "&Version=2009-03-31");
 }
 
-void TestAwsAbstractSignature::canonicalQuery() {
+void TestAwsAbstractSignature::canonicalQuery()
+{
     QFETCH(QUrlQuery, query);
     QFETCH(QByteArray, expected);
     const MockSignature signature;
@@ -96,7 +101,8 @@ void TestAwsAbstractSignature::canonicalQuery() {
     QCOMPARE(signature.canonicalQuery(query), expected);
 }
 
-void TestAwsAbstractSignature::httpMethod_data() {
+void TestAwsAbstractSignature::httpMethod_data()
+{
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QString>("expected");
     QTest::newRow("custom") << QNetworkAccessManager::CustomOperation << QString();
@@ -109,9 +115,20 @@ void TestAwsAbstractSignature::httpMethod_data() {
     #undef NEW_ROW
 }
 
-void TestAwsAbstractSignature::httpMethod() {
+void TestAwsAbstractSignature::httpMethod()
+{
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QString, expected);
     const MockSignature signature;
     QCOMPARE(signature.httpMethod(operation), expected);
+}
+
+void TestAwsAbstractSignature::setSignatureVersionQueryParameter_data()
+{
+
+}
+
+void TestAwsAbstractSignature::setSignatureVersionQueryParameter()
+{
+    //QFAIL("not implemented yet");
 }

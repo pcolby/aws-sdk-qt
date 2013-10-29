@@ -27,6 +27,7 @@
 #endif
 
 #include <QCryptographicHash>
+#include <QDebug>
 #include <QNetworkRequest>
 #include <QUrl>
 
@@ -45,7 +46,7 @@ QTAWS_BEGIN_NAMESPACE
  * signatures can be enabled (why would you want to?) by defining `ALLOW_INSECURE_V1_SIGNATURES`
  * when compiling this library.
  *
- * @see  http://docs.aws.amazon.com/AWSSecurityCredentials/1.0/AboutAWSCredentials.html
+ * @see  http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html#CalculatingHMACSignature
  * @see  http://lmgtfy.com/?q=aws+signature+version+1+is+insecure
  */
 
@@ -70,11 +71,17 @@ AwsSignatureV1::~AwsSignatureV1()
 void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                           QNetworkRequest &request, const QByteArray &data) const
 {
-    Q_UNUSED(data) // Not included in V1 signatures.
+    Q_UNUSED(operation) // Not included in V1 signatures.
+    Q_UNUSED(data)      // Not included in V1 signatures.
+
+    /// @todo  Prevent non-HTTPS.
+
+    // Set the SignatureVersion query parameter, if not already.
+    /// @todo  setSignatureVersionQueryParameter(request, 1);
 
     // Calculate the signature.
     Q_D(const AwsSignatureV1);
-    const QByteArray stringToSign = d->canonicalRequest(operation, request.url());
+    const QByteArray stringToSign = d->canonicalQuery(QUrlQuery(request.url().query()));
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
                                          QCryptographicHash::Sha1).toBase64())));
@@ -111,40 +118,74 @@ AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : q_ptr(q
 }
 
 /**
- * @internal
+ * @brief  Create an AWS V4 Signature canonical query.
  *
- * @brief  Create an AWS V1 Signature canonical request.
+ * This function returns a string containing all non-empty query parameters in
+ * sorted order (case-insensitive), with no separators at all.
  *
- * This function creates a canonical representation of an AWS request as defined by
- * Amazon's V1 signature specification.
+ * For example, for the following SQS query string:
  *
- * For example, for the following HTTP `GET` request:
- *
- *     https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&Version=2009-03-31&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30
+ *     ?Action=CreateQueue&QueueName=queue2&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&SignatureVersion=1&Expires=2007-01-12T12:00:00Z&Version=2006-04-01
  *
  * this function will return the following canonical form:
  *
- *     GET
- *     elasticmapreduce.amazonaws.com
- *     /
- *     AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31
+ *     ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01
  *
- * @note  All URL components are encoded to UTF-8, as required by Amazon.
+ * This function is very similar to AwsAbstractSignature::canonicalQuery(), except
+ * that:
+ *   1. this function sorts case-insensitively, whereas AwsAbstractSignature::canonicalQuery()
+ *      use a byte sort (ie is case sensitive); and
+ *   2. this function excludes parameters with empty values, where
+ *      AwsAbstractSignature::canonicalQuery() includes all query parameters, regardless
+ *      of content; and
+ *   3. this function does not use any separators in the generated string, whereas
+ *      AwsAbstractSignature::canonicalQuery() uses `&` and `=` separators just as
+ *      you would expect to see them in a typical query string; and
+ *   4. this function does not perform any URL encoding of the query parameters,
+ *      whereas AwsAbstractSignature::canonicalQuery() URL encodes both parameter
+ *      keys and values.
  *
- * @param  operation  The HTTP method being requested.
- * @param  url        The URL being request.
+ * The AwsAbstractSignature::canonicalQuery() function is used by the later signature
+ * algorithms, such as AwsSignatureV2 and AwsSignatureV4, as required by Amazon. Instead
+ * this function is specific to version 1 signatures.
  *
- * @return An AWS V1 Signature canonical request.
+ * @param  query  Query to encode the HTTP query string from.
  *
- * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ * @return An AWS Signature canonical query string.
+ *
+ * @see    http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html#CalculatingHMACSignature
  */
-QByteArray AwsSignatureV1Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
-                                                   const QUrl &url) const
+QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
 {
-    Q_Q(const AwsSignatureV1);
-    return url.host().toUtf8() + '\n' +
-           q->canonicalPath(url).toUtf8() + '\n' +
-           q->canonicalQuery(QUrlQuery(url));
+    QList<QStringPair> list = query.queryItems(QUrl::FullyDecoded);
+    qSort(list.begin(), list.end(), AwsSignatureV1Private::caseInsensitiveLessThan);
+    QString result;
+    foreach (const QStringPair &pair, list) {
+        if (!pair.second.isEmpty()) {
+            result += pair.first + pair.second;
+        }
+    }
+    return result.toUtf8();
+}
+
+/**
+ * @brief  Is a key-value pair less than another key-value pair?
+ *
+ * This static function is used by the canonicalQuery function to sort query string
+ * parameters in case-insensitive order, via Qt's qSort function.
+ *
+ * @param  pair1  The first key-value (query string parameter) pair.
+ * @param  pair2  The second key-value (query string parameter) pair.
+ *
+ * @returns `true` if \a pair1 is less than \a pair2.
+ */
+bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2)
+{
+    if (pair1.first.toLower() < pair2.first.toLower())
+        return true;
+    if (pair1.first.toLower() > pair2.first.toLower())
+        return false;
+    return (pair1.second.toLower() < pair2.second.toLower());
 }
 
 QTAWS_END_NAMESPACE

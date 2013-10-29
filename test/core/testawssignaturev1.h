@@ -17,35 +17,20 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSSIGNATUREV1_P_H
-#define AWSSIGNATUREV1_P_H
+#include <QtTest/QtTest>
+#include "../../src/core/qtawsglobal.h"
 
-#include "qtawsglobal.h"
+class TestAwsSignatureV1 : public QObject {
+    Q_OBJECT
 
-#include <QUrlQuery>
+private slots:
+    void sign_data();
+    void sign();
 
-QTAWS_BEGIN_NAMESPACE
+    void canonicalQuery_data();
+    void canonicalQuery();
 
-class AwsSignatureV1;
+    void caseInsensitiveLessThan_data();
+    void caseInsensitiveLessThan();
 
-class QTAWS_EXPORT AwsSignatureV1Private {
-    Q_DECLARE_PUBLIC(AwsSignatureV1)
-
-public:
-    AwsSignatureV1Private(AwsSignatureV1 * const q);
-
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
-
-protected:
-    typedef QPair<QString, QString> QStringPair;
-
-    static bool caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2);
-
-private:
-    AwsSignatureV1 * const q_ptr; ///< Internal q-pointer.
-    friend class TestAwsSignatureV1;
 };
-
-QTAWS_END_NAMESPACE
-
-#endif
