@@ -37,15 +37,7 @@ void TestAwsSignatureV1::sign_data() {
     QTest::addColumn<QByteArray>("data");
     QTest::addColumn<QNetworkRequest>("expected");
 
-    // Note, the example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-    // and http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html
-    // is broken.  Clearly that example was copied from the one below, and the AWSAccessKeyId
-    // sanitised to "AKIAIOSFODNN7EXAMPLE", but the generated signature not update. That is, the
-    // example in those documents produces the exact same signature as the following test, which
-    // is clearly not right.  Someone should update those old AWS documents, but since Signature
-    // version 1 is so old and deprecated, there's not much point.
-
-    // Example from http://awsdocs.s3.amazonaws.com/DevPay/latest/devpay-dg.pdf
+    // Example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
     QTest::newRow("CreateQueue")
         << QNetworkAccessManager::GetOperation
         << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/?"
@@ -66,6 +58,17 @@ void TestAwsSignatureV1::sign_data() {
             "&Expires=2007-01-12T12:00:00Z"
             "&Version=2006-04-01"
             "&Signature=wlv84EOcHQk800Yq6QHgX4AdJfk%3D")));
+
+    // Note, the example from the Amazon DevPay developer guiedes, including:
+    //   * http://awsdocs.s3.amazonaws.com/DevPay/20071201/devpay-dg-20071201.pdf
+    //   * http://awsdocs.s3.amazonaws.com/DevPay/latest/devpay-dg.pdf
+    //   * http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html
+    // is broken.  Clearly that example was copied from the one SQS one above, and the
+    // AWSAccessKeyId sanitised to "AKIAIOSFODNN7EXAMPLE", but the generated signature not updated
+    // That is, the example in those documents produces the exact same signature as the SQS test,
+    // which is clearly not right, since that test uses a differnet AWSAccessKeyId.  Someone should
+    // update those old AWS documents, but since Signature version 1 is so old and deprecated,
+    // there's not much point.
 }
 
 void TestAwsSignatureV1::sign() {
@@ -93,30 +96,7 @@ void TestAwsSignatureV1::canonicalQuery_data() {
     QTest::addColumn<QUrlQuery>("query");
     QTest::addColumn<QByteArray>("expected");
 
-    // Example from http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html
-    // (and also repeated in http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf)
-    QTest::newRow("CreateQueue")
-        << QUrlQuery(QLatin1String(
-            "Action=CreateQueue"
-            "&QueueName=queue2"
-            "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-            "&SignatureVersion=1"
-            "&Expires=2007-01-12T12:00:00Z"
-            "&Version=2006-04-01"))
-        << QByteArray("ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01");
-
-    // A small extension of the above test.
-    QTest::newRow("CreateQueue2")
-        << QUrlQuery(QUrl(QLatin1String("http://www.example.com/?"
-            "Action=CreateQueue"
-            "&QueueName=queue2"
-            "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
-            "&SignatureVersion=1"
-            "&Expires=2007-01-12T12:00:00Z"
-            "&Version=2006-04-01")).query())
-        << QByteArray("ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01");
-
-    // Example from http://awsdocs.s3.amazonaws.com/DevPay/latest/devpay-dg.pdf
+    // Example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
     QTest::newRow("CreateQueue")
         << QUrlQuery(QLatin1String(
             "Action=CreateQueue"
@@ -137,6 +117,33 @@ void TestAwsSignatureV1::canonicalQuery_data() {
             "&Expires=2007-01-12T12:00:00Z"
             "&Version=2006-04-01")))
         << QByteArray("ActionCreateQueueAWSAccessKeyId0A8BDF2G9KCB3ZNKFA82Expires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01");
+
+    // Example from:
+    //   * http://awsdocs.s3.amazonaws.com/DevPay/20071201/devpay-dg-20071201.pdf
+    //   * http://awsdocs.s3.amazonaws.com/DevPay/latest/devpay-dg.pdf
+    //   * http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html
+    // Although this example's signature is broken (see sign_data() above), the string-to-sign
+    // (as tested by this function) is still valid for testing.
+    QTest::newRow("CreateQueue")
+        << QUrlQuery(QLatin1String(
+            "Action=CreateQueue"
+            "&QueueName=queue2"
+            "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+            "&SignatureVersion=1"
+            "&Expires=2007-01-12T12:00:00Z"
+            "&Version=2006-04-01"))
+        << QByteArray("ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01");
+
+    // A small extension of the above test.
+    QTest::newRow("CreateQueue2")
+        << QUrlQuery(QUrl(QLatin1String("http://www.example.com/?"
+            "Action=CreateQueue"
+            "&QueueName=queue2"
+            "&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE"
+            "&SignatureVersion=1"
+            "&Expires=2007-01-12T12:00:00Z"
+            "&Version=2006-04-01")).query())
+        << QByteArray("ActionCreateQueueAWSAccessKeyIdAKIAIOSFODNN7EXAMPLEExpires2007-01-12T12:00:00ZQueueNamequeue2SignatureVersion1Version2006-04-01");
 }
 
 void TestAwsSignatureV1::canonicalQuery()
