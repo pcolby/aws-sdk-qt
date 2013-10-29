@@ -46,7 +46,7 @@ QTAWS_BEGIN_NAMESPACE
  * signatures can be enabled (why would you want to?) by defining `ALLOW_INSECURE_V1_SIGNATURES`
  * when compiling this library.
  *
- * @see  http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html#CalculatingHMACSignature
+ * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
  * @see  http://lmgtfy.com/?q=aws+signature+version+1+is+insecure
  */
 
