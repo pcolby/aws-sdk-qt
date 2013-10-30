@@ -39,6 +39,7 @@ void TestAwsSignatureV1::sign_data()
     QTest::addColumn<QNetworkRequest>("expected");
 
     // Example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+    // This one will not be signed unless ALLOW_INSECURE_V1_SIGNATURES is defined.
     QTest::newRow("CreateQueue")
         << QNetworkAccessManager::GetOperation
         << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/?"
@@ -52,6 +53,32 @@ void TestAwsSignatureV1::sign_data()
         << QString::fromLatin1("fake-secret-key")
         << QByteArray()
         << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/?"
+            "Action=CreateQueue"
+            "&QueueName=queue2"
+            "&AWSAccessKeyId=0A8BDF2G9KCB3ZNKFA82"
+            "&SignatureVersion=1"
+            "&Expires=2007-01-12T12:00:00Z"
+            "&Version=2006-04-01"
+#ifdef ALLOW_INSECURE_V1_SIGNATURES
+            "&Signature=wlv84EOcHQk800Yq6QHgX4AdJfk%3D"
+#endif
+            )));
+
+    // Example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+    // This one will be signed since the HTTPS transport is (considered) secure.
+    QTest::newRow("CreateQueue")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkRequest(QUrl(QLatin1String("https://www.example.com/?"
+            "Action=CreateQueue"
+            "&QueueName=queue2"
+            "&AWSAccessKeyId=0A8BDF2G9KCB3ZNKFA82"
+            "&SignatureVersion=1"
+            "&Expires=2007-01-12T12:00:00Z"
+            "&Version=2006-04-01")))
+        << QString::fromLatin1("0A8BDF2G9KCB3ZNKFA82")
+        << QString::fromLatin1("fake-secret-key")
+        << QByteArray()
+        << QNetworkRequest(QUrl(QLatin1String("https://www.example.com/?"
             "Action=CreateQueue"
             "&QueueName=queue2"
             "&AWSAccessKeyId=0A8BDF2G9KCB3ZNKFA82"
