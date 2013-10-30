@@ -125,10 +125,73 @@ void TestAwsAbstractSignature::httpMethod()
 
 void TestAwsAbstractSignature::setQueryItem_data()
 {
+    QTest::addColumn<QUrlQuery>("query");
+    QTest::addColumn<QString>("key");
+    QTest::addColumn<QString>("value");
+    QTest::addColumn<QUrlQuery>("expectedQuery");
+    QTest::addColumn<bool>("expectedResult");
 
+    QTest::newRow("exists1")
+        << QUrlQuery(QLatin1String("key=value&a=1&b=2"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("key=value&a=1&b=2"))
+        << true;
+
+    QTest::newRow("exists2")
+        << QUrlQuery(QLatin1String("a=1&key=value&b=2"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("a=1&key=value&b=2"))
+        << true;
+
+    QTest::newRow("exists3")
+        << QUrlQuery(QLatin1String("a=1&b=2&key=value"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("a=1&b=2&key=value"))
+        << true;
+
+    QTest::newRow("new1")
+        << QUrlQuery(QLatin1String("a=1&b=2"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("a=1&b=2&key=value"))
+        << true;
+
+    QTest::newRow("new2")
+        << QUrlQuery()
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("key=value"))
+        << true;
+
+    QTest::newRow("duplicate1")
+        << QUrlQuery(QLatin1String("key=different-value"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("value")
+        << QUrlQuery(QLatin1String("key=different-value"))
+        << false;
 }
 
 void TestAwsAbstractSignature::setQueryItem()
 {
-    QFAIL("not implemented yet");
+    QFETCH(QUrlQuery, query);
+    QFETCH(QString, key);
+    QFETCH(QString, value);
+    QFETCH(QUrlQuery, expectedQuery);
+    QFETCH(bool, expectedResult);
+
+    for (int warnOnNonIdenticalDuplicate = 0; warnOnNonIdenticalDuplicate < 2; ++warnOnNonIdenticalDuplicate) {
+        MockSignature signature;
+        if ((warnOnNonIdenticalDuplicate) && (!expectedResult)) {
+            QTest::ignoreMessage(QtWarningMsg,
+                                 QString::fromLatin1("AwsAbstractSignature::setQueryItem Not overwriting "
+                                                     "existing value for key \"%1\" : \"%2\" ")
+                                 .arg(key).arg(query.queryItemValue(key)).toLatin1());
+        }
+        const bool result = signature.setQueryItem(query, key, value, warnOnNonIdenticalDuplicate);
+        QCOMPARE(query, expectedQuery);
+        QCOMPARE(result, expectedResult);
+    }
 }
