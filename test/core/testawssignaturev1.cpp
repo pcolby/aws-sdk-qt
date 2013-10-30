@@ -96,12 +96,31 @@ void TestAwsSignatureV1::sign()
 
 void TestAwsSignatureV1::adornRequest_data()
 {
+    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QString>("accessKeyId");
 
+    QTest::newRow("empty")
+        << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/")))
+        << QString::fromLatin1("access-key-1");
 }
 
 void TestAwsSignatureV1::adornRequest()
 {
-    QFAIL("not implemented yet");
+    QFETCH(QNetworkRequest, request);
+    QFETCH(QString, accessKeyId);
+
+    const AwsBasicCredentials credentials(accessKeyId, QString());
+
+    AwsSignatureV1 signature;
+    signature.d_func()->adornRequest(request, credentials);
+    const QUrlQuery query(request.url());
+
+    QVERIFY(query.hasQueryItem(QLatin1String("AWSAccessKeyId")));
+    QVERIFY(query.hasQueryItem(QLatin1String("SignatureVersion")));
+    QVERIFY(query.hasQueryItem(QLatin1String("Timestamp")));
+
+    QCOMPARE(query.queryItemValue(QLatin1String("AWSAccessKeyId")), accessKeyId);
+    QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("1"));
 }
 
 void TestAwsSignatureV1::canonicalQuery_data()
