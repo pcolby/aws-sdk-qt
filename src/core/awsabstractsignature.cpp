@@ -130,7 +130,8 @@ QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
  *
  * @todo   Move this to an AwsAbstractSignaturePrivate class?
  */
-QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const {
+QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const
+{
     switch (operation) {
         case QNetworkAccessManager::DeleteOperation: return QLatin1String("DELETE");
         case QNetworkAccessManager::HeadOperation:   return QLatin1String("HEAD");

@@ -35,7 +35,8 @@ public:
     virtual bool isRefreshable() const { return true; } // The ruse.
 };
 
-void TestAwsAbstractCredentials::expiration() {
+void TestAwsAbstractCredentials::expiration()
+{
     MockCredentials credentials;
     QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration should not be invoked on non-refreshable objects ");
     QVERIFY(credentials.expiration().isNull());
@@ -45,7 +46,8 @@ void TestAwsAbstractCredentials::expiration() {
     QVERIFY(refreshableCredentials.expiration().isNull());
 }
 
-void TestAwsAbstractCredentials::isExpired() {
+void TestAwsAbstractCredentials::isExpired()
+{
     MockCredentials credentials;
     QVERIFY(!credentials.isExpired());
 
@@ -54,7 +56,8 @@ void TestAwsAbstractCredentials::isExpired() {
     QVERIFY(!refreshableCredentials.isExpired());
 }
 
-void TestAwsAbstractCredentials::isRefreshable() {
+void TestAwsAbstractCredentials::isRefreshable()
+{
     MockCredentials credentials;
     QVERIFY(!credentials.isRefreshable());
 
@@ -62,7 +65,8 @@ void TestAwsAbstractCredentials::isRefreshable() {
     QVERIFY(refreshableCredentials.isRefreshable());
 }
 
-void TestAwsAbstractCredentials::refresh() {
+void TestAwsAbstractCredentials::refresh()
+{
     MockCredentials credentials;
     QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh should not be invoked on non-refreshable objects ");
     QVERIFY(!credentials.refresh());

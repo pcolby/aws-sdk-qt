@@ -2,7 +2,8 @@
 
 #include "../../src/core/awsbasiccredentials.h"
 
-void TestAwsBasicCredentials::construct_data() {
+void TestAwsBasicCredentials::construct_data()
+{
     QTest::addColumn<QString>("accessKeyId");
     QTest::addColumn<QString>("secretKey");
     QTest::addColumn<QString>("token");
@@ -23,7 +24,8 @@ void TestAwsBasicCredentials::construct_data() {
                            << "2f510380-089b-11e3-bd81-080027989a56";
 }
 
-void TestAwsBasicCredentials::construct() {
+void TestAwsBasicCredentials::construct()
+{
     QFETCH(QString, accessKeyId);
     QFETCH(QString, secretKey);
     QFETCH(QString, token);
@@ -43,33 +45,38 @@ void TestAwsBasicCredentials::construct() {
     }
 }
 
-void TestAwsBasicCredentials::expiration() {
+void TestAwsBasicCredentials::expiration()
+{
     // Basic credentials never expire.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: expiration should not be invoked on non-refreshable objects ");
     QVERIFY(credentials.expiration().isNull());
 }
 
-void TestAwsBasicCredentials::isExpired() {
+void TestAwsBasicCredentials::isExpired()
+{
     // Basic credentials never expire.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QVERIFY(!credentials.isExpired());
 }
 
-void TestAwsBasicCredentials::isRefreshable() {
+void TestAwsBasicCredentials::isRefreshable()
+{
     // Basic credentials are not refreshable.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QVERIFY(!credentials.isRefreshable());
 }
 
-void TestAwsBasicCredentials::refresh() {
+void TestAwsBasicCredentials::refresh()
+{
     // Basic credentials are not refreshable.
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
     QTest::ignoreMessage(QtWarningMsg, "AwsAbstractCredentials: refresh should not be invoked on non-refreshable objects ");
     QVERIFY(!credentials.refresh());
 }
 
-void TestAwsBasicCredentials::setAccessKeyId_data() {
+void TestAwsBasicCredentials::setAccessKeyId_data()
+{
     QTest::addColumn<QString>("accessKeyId");
 
     QTest::newRow("<empty>") << "";
@@ -79,7 +86,8 @@ void TestAwsBasicCredentials::setAccessKeyId_data() {
     QTest::newRow("ac9315e6-089a-11e3-953d-080027989a56") << "ac9315e6-089a-11e3-953d-080027989a56";
 }
 
-void TestAwsBasicCredentials::setAccessKeyId() {
+void TestAwsBasicCredentials::setAccessKeyId()
+{
     QFETCH(QString, accessKeyId);
 
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
@@ -92,7 +100,8 @@ void TestAwsBasicCredentials::setAccessKeyId() {
     QCOMPARE(credentials.token(), token);
 }
 
-void TestAwsBasicCredentials::setSecretKey_data() {
+void TestAwsBasicCredentials::setSecretKey_data()
+{
     QTest::addColumn<QString>("secretKey");
 
     QTest::newRow("<empty>") << "";
@@ -102,7 +111,8 @@ void TestAwsBasicCredentials::setSecretKey_data() {
     QTest::newRow("ac9315e6-089a-11e3-953d-080027989a56") << "ac9315e6-089a-11e3-953d-080027989a56";
 }
 
-void TestAwsBasicCredentials::setSecretKey() {
+void TestAwsBasicCredentials::setSecretKey()
+{
     QFETCH(QString, secretKey);
 
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
@@ -115,7 +125,8 @@ void TestAwsBasicCredentials::setSecretKey() {
     QCOMPARE(credentials.token(), token);
 }
 
-void TestAwsBasicCredentials::setToken_data() {
+void TestAwsBasicCredentials::setToken_data()
+{
     QTest::addColumn<QString>("token");
 
     QTest::newRow("<empty>") << "";
@@ -125,7 +136,8 @@ void TestAwsBasicCredentials::setToken_data() {
     QTest::newRow("ac9315e6-089a-11e3-953d-080027989a56") << "ac9315e6-089a-11e3-953d-080027989a56";
 }
 
-void TestAwsBasicCredentials::setToken() {
+void TestAwsBasicCredentials::setToken()
+{
     QFETCH(QString, token);
 
     AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));

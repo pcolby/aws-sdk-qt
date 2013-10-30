@@ -31,7 +31,8 @@ Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
-void TestAwsSignatureV2::sign_data() {
+void TestAwsSignatureV2::sign_data()
+{
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QNetworkRequest>("request");
     QTest::addColumn<QString>("accessKeyId");
@@ -64,7 +65,8 @@ void TestAwsSignatureV2::sign_data() {
 
 }
 
-void TestAwsSignatureV2::sign() {
+void TestAwsSignatureV2::sign()
+{
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QNetworkRequest, request);
     QFETCH(QString, accessKeyId);
@@ -128,7 +130,8 @@ void TestAwsSignatureV2::adornRequest()
     QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("2"));
 }
 
-void TestAwsSignatureV2::canonicalRequest_data() {
+void TestAwsSignatureV2::canonicalRequest_data()
+{
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QUrl>("url");
     QTest::addColumn<QByteArray>("expected");
@@ -150,7 +153,8 @@ void TestAwsSignatureV2::canonicalRequest_data() {
             "AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Action=DescribeJobFlows&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=2011-10-03T15%3A19%3A30&Version=2009-03-31");
 }
 
-void TestAwsSignatureV2::canonicalRequest() {
+void TestAwsSignatureV2::canonicalRequest()
+{
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QUrl, url);
     QFETCH(QByteArray, expected);
