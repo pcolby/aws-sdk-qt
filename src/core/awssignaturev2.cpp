@@ -81,7 +81,6 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 
     // Append the signature to the request.
     QUrl url = request.url();
-    /// @todo  '?' or '&'
     url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
     request.setUrl(url);
 }
@@ -151,7 +150,7 @@ void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
                     false); // Don't warn if its already set to something else.
 
     // If we've touched the query items (likely), then update the request.
-    if (query != QUrlQuery(url.query())) {
+    if (query != QUrlQuery(url)) {
         qDebug() << Q_FUNC_INFO << url;
         url.setQuery(query);
         qDebug() << Q_FUNC_INFO << url;
