@@ -75,7 +75,14 @@ void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetw
     Q_UNUSED(data)      // Not included in V1 signatures.
     Q_D(const AwsSignatureV1);
 
-    /// @todo  Prevent non-HTTPS.
+    // Refuse to sign non-HTTPS requests, unless built with ALLOW_INSECURE_V1_SIGNATURES defined.
+#ifndef ALLOW_INSECURE_V1_SIGNATURES
+    if (request.url().scheme() != QString::fromLatin1("https")) {
+        qWarning("AwsSignatureV1::sign Refusing to sign insecure (non-HTTPS) request");
+        Q_ASSERT_X(false, Q_FUNC_INFO, "insecure V1 signatures not enabled");
+        return;
+    }
+#endif
 
     // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
     d->adornRequest(request, credentials);
