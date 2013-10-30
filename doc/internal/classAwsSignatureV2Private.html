@@ -110,9 +110,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a00d6158e908755781c0cdb31c93b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV2Private.html#a8a00d6158e908755781c0cdb31c93b59">AwsSignatureV2Private</a> (<a class="el" href="classAwsSignatureV2.html">AwsSignatureV2</a> *const q)</td></tr>
 <tr class="memdesc:a8a00d6158e908755781c0cdb31c93b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsSignatureV2Private.html" title="Private implementation for AwsSignatureV2. ">AwsSignatureV2Private</a> object.  <a href="#a8a00d6158e908755781c0cdb31c93b59">More...</a><br/></td></tr>
 <tr class="separator:a8a00d6158e908755781c0cdb31c93b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c4cf00d0fc257859b21e82c78a0853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV2Private.html#a45c4cf00d0fc257859b21e82c78a0853">adornRequest</a> (QNetworkRequest &amp;request, const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials) const </td></tr>
+<tr class="memdesc:a45c4cf00d0fc257859b21e82c78a0853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add AWS Signature Version 2 adornments to an AWS request.  <a href="#a45c4cf00d0fc257859b21e82c78a0853">More...</a><br/></td></tr>
+<tr class="separator:a45c4cf00d0fc257859b21e82c78a0853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef7da1062fab678b204cda46179854b5"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV2Private.html#aef7da1062fab678b204cda46179854b5">canonicalRequest</a> (const QNetworkAccessManager::Operation operation, const QUrl &amp;url) const </td></tr>
 <tr class="memdesc:aef7da1062fab678b204cda46179854b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an AWS V2 Signature canonical request.  <a href="#aef7da1062fab678b204cda46179854b5">More...</a><br/></td></tr>
 <tr class="separator:aef7da1062fab678b204cda46179854b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1029d092b863ab95adf03afed6db8432"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV2Private.html#a1029d092b863ab95adf03afed6db8432">signatureMethod</a> (const QCryptographicHash::Algorithm algorithm) const </td></tr>
+<tr class="memdesc:a1029d092b863ab95adf03afed6db8432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an AWS V2 Signature method designation.  <a href="#a1029d092b863ab95adf03afed6db8432">More...</a><br/></td></tr>
+<tr class="separator:a1029d092b863ab95adf03afed6db8432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -164,6 +170,52 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsSignatureV2</
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a45c4cf00d0fc257859b21e82c78a0853"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsSignatureV2Private::adornRequest </td>
+          <td>(</td>
+          <td class="paramtype">QNetworkRequest &amp;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;&#160;</td>
+          <td class="paramname"><em>credentials</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add AWS Signature Version 2 adornments to an AWS request. </p>
+<p>In addition to service-specific request parameters, Amazon requires that version 2 signatures contain a number of common query parameters. This functions adds those query parameters to <em>request</em> if they're not already present.</p>
+<p>The query parameters added by this function, as required by Amazon, are:</p>
+<ul>
+<li><code>AWSAccessKeyId</code> - set to <em>credentials.accessKeyId()</em>.</li>
+<li><code>SignatureMethod</code> - set to <code>HMAC-SHA1</code> or <code>HMAC-SHA256</code>.</li>
+<li><code>SignatureVersion</code> - set to <code>2</code>.</li>
+<li><code>Timestamp</code> - set to a current UTC timestamp in an ISO 8601 format, like <code>2013-10-30T12:34:56Z</code>.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to adorn. </td></tr>
+    <tr><td class="paramname">credentials</td><td>Credentials to use when adorning <em>request</em>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classAwsSignatureV2Private.html#a1029d092b863ab95adf03afed6db8432" title="Create an AWS V2 Signature method designation. ">signatureMethod</a> </dd>
+<dd>
+<a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aef7da1062fab678b204cda46179854b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -210,6 +262,35 @@ AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;Action=DescribeJobFlows&amp;SignatureMet
 
 </div>
 </div>
+<a class="anchor" id="a1029d092b863ab95adf03afed6db8432"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray AwsSignatureV2Private::signatureMethod </td>
+          <td>(</td>
+          <td class="paramtype">const QCryptographicHash::Algorithm&#160;</td>
+          <td class="paramname"><em>algorithm</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an AWS V2 Signature method designation. </p>
+<p>This function returns a signature method designation, as defined by Amazon, for use with V2 signatures.</p>
+<p>For example, if the algorith is <code>QCryptographicHash::Sha256</code>, this function will return <code>HmacSHA256</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">algorithm</td><td>The hash algorithm to get the canonical designation for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An AWS V2 Signature method designation.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>core/<a class="el" href="awssignaturev2__p_8h_source.html">awssignaturev2_p.h</a></li>
 <li>core/awssignaturev2.cpp</li>
@@ -217,7 +298,7 @@ AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;Action=DescribeJobFlows&amp;SignatureMet
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 17 2013 21:02:46 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 30 2013 21:20:29 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

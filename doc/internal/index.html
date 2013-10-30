@@ -80,18 +80,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">libqtaws Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="intro"></a>
-Introduction</h1>
-<h1><a class="anchor" id="requirements"></a>
-Requirements</h1>
-<h2><a class="anchor" id="qt51"></a>
-Qt 5.1</h2>
-<p>This project requires Qt 5.1 or later for the <code>QMessageAuthenticationCode</code> class.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Apply the official AWS Signature Version 4 test suite.</dd></dl>
+<div class="textblock"><p>Libqtaws is an open-source (LGPL) library for consuming <a href="http://aws.amazon.com/">Amazon Web Services (AWS)</a> from <a href="http://qt-project.org/">Qt</a> applications.</p>
+<p>The library is in very early stages of development; only the AWS signature code and AWS endpoints information has been implemented so far, but what has been implemented is <a href="http://pcolby.github.io/libqtaws/doc/api/annotated.html">100% documented</a> (including the <a href="http://pcolby.github.io/libqtaws/doc/internal/annotated.html">internal code</a>) and currently has 100% <a href="http://pcolby.github.io/libqtaws/test/coverage/">unit test line coverage</a>.</p>
+<p>Specific AWS services are being implemented in the order in which they are of interest to me, but of course, anyone can contribute implementations for any services that are more important to them. Also, feel free to use the issue tracker to show interest in particular AWS services being implemented.</p>
+<p>Next steps are roughly:</p>
+<ol type="1">
+<li>add Amazon's official V4 signature test suite to the unit tests - <a href="https://github.com/pcolby/libqtaws/issues/2">**Done**</a></li>
+<li>implement base AwsService class(es)</li>
+<li>SQS</li>
+<li>SNS</li>
+<li>DynamoDB</li>
+</ol>
+<h2>Requirements</h2>
+<h3>Qt 5.1</h3>
+<p>Currently, libqtaws requires Qt 5.1+ This is because the library uses Qt's QMessageAuthenticationCode class for generating HMAC codes for AWS request signatures, and that class was not added until Qt 5.1.0.</p>
+<p>It is possible to make the library work with Qt 5.0 by backporting QMessageAuthenticationCode from Qt 5.1 to Qt 5.0 - indeed, this is what this project does for <a href="https://travis-ci.org/">travis-ci</a> support (see <a href=".travis.yml">.travis.yml</a> for example), but that is not officially supported (might become so, if enough people show interest).</p>
+<p>Note, the library will soon depend on Qt5's built-in JSON support, so it is unlikely that libqtaws will ever officially support earlier version of Qt, such as Qt4.8.</p>
+<h2>API Documentaion</h2>
+<p>See the doxygen-generated <a href="http://pcolby.github.io/libqtaws/doc/api/annotated.html">API documentation</a>.</p>
+<p>There's also <a href="http://pcolby.github.io/libqtaws/doc/internal/annotated.html">internal documentation</a> for those interested in the internal library implementation.</p>
+<h2>Test Coverage</h2>
+<p>See the <a href="http://pcolby.github.io/libqtaws/test/coverage/">test coverage report</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 17 2013 21:02:47 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 30 2013 21:20:29 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

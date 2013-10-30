@@ -1,6 +1,7 @@
 var searchData=
 [
   ['accesskeyid',['accessKeyId',['../classAwsAbstractCredentials.html#a62272d5ac7ab3317452a17967efd69ac',1,'AwsAbstractCredentials::accessKeyId()'],['../classAwsAnonymousCredentials.html#a3e42bb52bfd7891534a955c83b9ba92c',1,'AwsAnonymousCredentials::accessKeyId()'],['../classAwsBasicCredentials.html#a0c3d2377f88d0750bdd7c84abad77cbf',1,'AwsBasicCredentials::accessKeyId()']]],
+  ['adornrequest',['adornRequest',['../classAwsSignatureV1Private.html#a050475ba03ac46184af2979b8ece05e2',1,'AwsSignatureV1Private::adornRequest()'],['../classAwsSignatureV2Private.html#a45c4cf00d0fc257859b21e82c78a0853',1,'AwsSignatureV2Private::adornRequest()']]],
   ['algorithmdesignation',['algorithmDesignation',['../classAwsSignatureV4Private.html#af87c5caee8744ca96b1055117b67cde1',1,'AwsSignatureV4Private']]],
   ['authorizationheadervalue',['authorizationHeaderValue',['../classAwsSignatureV4Private.html#a0d42e228068cd66f6a1d0e279c904b6b',1,'AwsSignatureV4Private']]],
   ['awsabstractcredentials',['AwsAbstractCredentials',['../classAwsAbstractCredentials.html#a9c9e44ce14b3be82a9d646309760bea1',1,'AwsAbstractCredentials']]],
@@ -11,6 +12,8 @@ var searchData=
   ['awsendpointprivate',['AwsEndpointPrivate',['../classAwsEndpointPrivate.html#a9236a918495e9b7142b3ec2129ba33d5',1,'AwsEndpointPrivate']]],
   ['awsregion',['AwsRegion',['../classAwsRegion.html#a877a789ed2a50da09a8794f8aacf107e',1,'AwsRegion::AwsRegion(const Region region)'],['../classAwsRegion.html#a465a19c1babc3fe233105002da6df407',1,'AwsRegion::AwsRegion(const QString &amp;regionName)']]],
   ['awsregionprivate',['AwsRegionPrivate',['../classAwsRegionPrivate.html#ab210ff944c4d2acd25fc0bd7f79793cb',1,'AwsRegionPrivate']]],
+  ['awssignaturev1',['AwsSignatureV1',['../classAwsSignatureV1.html#af286ff81a03f04ecd08febf743a06d19',1,'AwsSignatureV1']]],
+  ['awssignaturev1private',['AwsSignatureV1Private',['../classAwsSignatureV1Private.html#a13f321070beb6f0ca5a2df4aed442967',1,'AwsSignatureV1Private']]],
   ['awssignaturev2',['AwsSignatureV2',['../classAwsSignatureV2.html#aec69c1bd44d0e3670d5ebfc584734bed',1,'AwsSignatureV2']]],
   ['awssignaturev2private',['AwsSignatureV2Private',['../classAwsSignatureV2Private.html#a8a00d6158e908755781c0cdb31c93b59',1,'AwsSignatureV2Private']]],
   ['awssignaturev3private',['AwsSignatureV3Private',['../classAwsSignatureV3Private.html#a322e0f9f630650799f1876071c054cf6',1,'AwsSignatureV3Private']]],

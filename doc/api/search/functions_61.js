@@ -6,6 +6,7 @@ var searchData=
   ['awsbasiccredentials',['AwsBasicCredentials',['../classAwsBasicCredentials.html#a64562a1b69cf310539e1f2556e6790b6',1,'AwsBasicCredentials::AwsBasicCredentials(const QString &amp;accessKeyid, const QString &amp;secretKey, const QString &amp;token, QObject *const parent=0)'],['../classAwsBasicCredentials.html#ad02212d77a2052f4793b7b1210ac7b2d',1,'AwsBasicCredentials::AwsBasicCredentials(const QString &amp;accessKeyid, const QString &amp;secretKey, QObject *const parent=0)']]],
   ['awsendpoint',['AwsEndpoint',['../classAwsEndpoint.html#a6028864c25d6ebac10ba6af4107e484b',1,'AwsEndpoint::AwsEndpoint(const QByteArray &amp;hostName)'],['../classAwsEndpoint.html#a8eda377230f98b6d54f89f45e9e6d898',1,'AwsEndpoint::AwsEndpoint(const QString &amp;hostName)']]],
   ['awsregion',['AwsRegion',['../classAwsRegion.html#a877a789ed2a50da09a8794f8aacf107e',1,'AwsRegion::AwsRegion(const Region region)'],['../classAwsRegion.html#a465a19c1babc3fe233105002da6df407',1,'AwsRegion::AwsRegion(const QString &amp;regionName)']]],
+  ['awssignaturev1',['AwsSignatureV1',['../classAwsSignatureV1.html#af286ff81a03f04ecd08febf743a06d19',1,'AwsSignatureV1']]],
   ['awssignaturev2',['AwsSignatureV2',['../classAwsSignatureV2.html#aec69c1bd44d0e3670d5ebfc584734bed',1,'AwsSignatureV2']]],
   ['awssignaturev4',['AwsSignatureV4',['../classAwsSignatureV4.html#a91c76d5d1009082eea1ef6acda806d3f',1,'AwsSignatureV4']]]
 ];
