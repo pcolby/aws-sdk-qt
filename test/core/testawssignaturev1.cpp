@@ -29,7 +29,8 @@
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
-void TestAwsSignatureV1::sign_data() {
+void TestAwsSignatureV1::sign_data()
+{
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QNetworkRequest>("request");
     QTest::addColumn<QString>("accessKeyId");
@@ -47,7 +48,7 @@ void TestAwsSignatureV1::sign_data() {
             "&SignatureVersion=1"
             "&Expires=2007-01-12T12:00:00Z"
             "&Version=2006-04-01")))
-        << QString::fromLatin1("AKIAIOSFODNN7EXAMPLE")
+        << QString::fromLatin1("0A8BDF2G9KCB3ZNKFA82")
         << QString::fromLatin1("fake-secret-key")
         << QByteArray()
         << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/?"
@@ -71,7 +72,8 @@ void TestAwsSignatureV1::sign_data() {
     // there's not much point.
 }
 
-void TestAwsSignatureV1::sign() {
+void TestAwsSignatureV1::sign()
+{
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QNetworkRequest, request);
     QFETCH(QString, accessKeyId);
@@ -92,7 +94,18 @@ void TestAwsSignatureV1::sign() {
     }*/
 }
 
-void TestAwsSignatureV1::canonicalQuery_data() {
+void TestAwsSignatureV1::adornRequest_data()
+{
+
+}
+
+void TestAwsSignatureV1::adornRequest()
+{
+    QFAIL("not implemented yet");
+}
+
+void TestAwsSignatureV1::canonicalQuery_data()
+{
     QTest::addColumn<QUrlQuery>("query");
     QTest::addColumn<QByteArray>("expected");
 

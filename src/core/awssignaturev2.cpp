@@ -26,6 +26,7 @@
 #include <QMessageAuthenticationCode>
 #endif
 
+#include <QDebug>
 #include <QNetworkRequest>
 #include <QUrl>
 
@@ -67,9 +68,12 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
                           QNetworkRequest &request, const QByteArray &data) const
 {
     Q_UNUSED(data) // Not included in V2 signatures.
+    Q_D(const AwsSignatureV2);
+
+    // Set the AccessKeyId, SignatureMethod, SignatureVersion and Timestamp query items, if not already.
+    d->adornRequest(request, credentials);
 
     // Calculate the signature.
-    Q_D(const AwsSignatureV2);
     const QByteArray stringToSign = d->canonicalRequest(operation, request.url());
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
@@ -77,6 +81,7 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 
     // Append the signature to the request.
     QUrl url = request.url();
+    /// @todo  '?' or '&'
     url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
     request.setUrl(url);
 }
@@ -104,6 +109,54 @@ void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetw
 AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q)
 {
 
+}
+
+/**
+ * @internal
+ *
+ * @brief  Add AWS Signature Version 2 adornments to an AWS request.
+ *
+ * In addition to service-specific request parameters, Amazon requires that version
+ * 2 signatures contain a number of common query parameters.  This functions adds
+ * those query parameters to \a request if they're not already present.
+ *
+ * The query parameters added by this function, as required by Amazon, are:
+ *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
+ *   * `SignatureMethod` - set to `HMAC-SHA1` or `HMAC-SHA256`.
+ *   * `SignatureVersion` - set to `2`.
+ *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
+ *                 `2013-10-30T12:34:56Z`.
+ *
+ * @param  request      Request to adorn.
+ * @param  credentials  Credentials to use when adorning \a request.
+ *
+ * @see    signatureMethod
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ */
+void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
+                                         const AwsAbstractCredentials &credentials) const
+{
+    Q_Q(const AwsSignatureV2);
+
+    // Set / add the necessary query items.
+    QUrl url = request.url();
+    QUrlQuery query(url);
+    q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
+    q->setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("2"));
+    q->setQueryItem(query, QLatin1String("SignatureMethod"), QString::fromUtf8(signatureMethod(hashAlgorithm)));
+    q->setQueryItem(query, QLatin1String("Timestamp"),
+                    QString::fromUtf8(QUrl::toPercentEncoding(
+                        QDateTime::currentDateTimeUtc().toString(QLatin1String("yyyy-MM-ddThh:mm:ssZ"))
+                    )),
+                    false); // Don't warn if its already set to something else.
+
+    // If we've touched the query items (likely), then update the request.
+    if (query != QUrlQuery(url.query())) {
+        qDebug() << Q_FUNC_INFO << url;
+        url.setQuery(query);
+        qDebug() << Q_FUNC_INFO << url;
+        request.setUrl(url);
+    }
 }
 
 /**
@@ -142,6 +195,34 @@ QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::
            url.host().toUtf8() + '\n' +
            q->canonicalPath(url).toUtf8() + '\n' +
            q->canonicalQuery(QUrlQuery(url));
+}
+
+/**
+ * @brief  Create an AWS V2 Signature method designation.
+ *
+ * This function returns a signature method designation, as defined by Amazon, for
+ * use with V2 signatures.
+ *
+ * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
+ * return `HmacSHA256`.
+ *
+ * @note   Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.
+ *
+ * @param  algorithm  The hash algorithm to get the canonical designation for.
+ *
+ * @return An AWS V2 Signature method designation.
+ *
+ * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
+ */
+QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algorithm algorithm) const
+{
+    switch (algorithm) {
+        case QCryptographicHash::Sha1:     return "HmacSHA1";
+        case QCryptographicHash::Sha256:   return "HmacSHA256";
+        default:
+            Q_ASSERT_X(false, "AwsSignatureV2Private::signatureMethod", "invalid algorithm");
+            return "invalid-algorithm";
+    }
 }
 
 QTAWS_END_NAMESPACE

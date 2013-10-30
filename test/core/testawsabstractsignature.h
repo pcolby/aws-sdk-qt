@@ -34,6 +34,6 @@ private slots:
     void httpMethod_data();
     void httpMethod();
 
-    void setSignatureVersionQueryParameter_data();
-    void setSignatureVersionQueryParameter();
+    void setQueryItem_data();
+    void setQueryItem();
 };

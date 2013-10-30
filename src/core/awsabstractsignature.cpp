@@ -19,6 +19,7 @@
 
 #include "awsabstractsignature.h"
 
+#include <QDebug>
 #include <QDir>
 
 QTAWS_BEGIN_NAMESPACE
@@ -89,6 +90,10 @@ QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
  * joined with `&` separators, in `key=value` pairs with both keys and values being
  * URL percent encoded.
  *
+ * @note   The canonical form produced by this function is used by Amazon's later
+ *         signature formats (versions 2, 3 and 4), but not their earlier formats
+ *         (versions 0 and 1).
+ *
  * @param  query  Query to encode the HTTP query string from.
  *
  * @return An AWS Signature canonical query string.
@@ -135,9 +140,52 @@ QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation 
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
             // Catch this in debug mode for easier development / debugging.
-            Q_ASSERT_X(false, "AwsSignatureV4Private::toString", "invalid operation");
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid operation");
     }
     return QString(); // Operation was invalid / unsupported.
+}
+
+/**
+ * @brief   Set a query item, checking for existing values first.
+ *
+ * This function is a light wrapper around QUrlQuery::addQueryItem() that first
+ * checks for existing values.  Existing values will not be overwritten, instead
+ * if existing values are found, this function will simply check if the exsting
+ * value matches the desired \a value, and if not, will return `false` and
+ * optionally (according to \a warnOnNonIdenticalDuplicate) issue a qWarning().
+ *
+ * Typically, when setting something that must be a specific value, such as an
+ * access key ID, \a warnOnNonIdenticalDuplicate would be `true`. However, when
+ * setting query items as a fall-back default, such as a current timestamp,
+ * \a warnOnNonIdenticalDuplicate would typically be set to `false`.
+ *
+ * @param   query  URL query to add the query item to.
+ * @param   key    Query item key to add to \a query.
+ * @param   value  Query item value to add to \a query.
+ * @param   warnOnNonIdenticalDuplicate  If `true`, and an exisiting \a key
+ *          value is found in \a query that has a value other than \a value,
+ *          then a qWarning() is issued, otherwise the duplicate is silently
+ *          ignored.
+ *
+ * @return  `true` if the query item was set successfully or was already set to
+ *          the requested value previously, `false` otherwise.
+ *
+ * @todo   Move this to an AwsAbstractSignaturePrivate class?
+ */
+bool AwsAbstractSignature::setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
+                                        const bool warnOnNonIdenticalDuplicate) const
+{
+    if (query.hasQueryItem(key)) {
+        const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);
+        const bool existingQueryItemIsIdentical = (existingValue == value);
+        if ((warnOnNonIdenticalDuplicate) && (!existingQueryItemIsIdentical)) {
+            qWarning() << "AwsAbstractSignature::setQueryItem Not overwriting existing value for key"
+                       << key << ':' << existingValue;
+        }
+        return existingQueryItemIsIdentical;
+    }
+    query.addQueryItem(key, value);
+    return true;
 }
 
 QTAWS_END_NAMESPACE

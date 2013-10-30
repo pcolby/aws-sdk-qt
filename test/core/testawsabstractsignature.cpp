@@ -123,12 +123,12 @@ void TestAwsAbstractSignature::httpMethod()
     QCOMPARE(signature.httpMethod(operation), expected);
 }
 
-void TestAwsAbstractSignature::setSignatureVersionQueryParameter_data()
+void TestAwsAbstractSignature::setQueryItem_data()
 {
 
 }
 
-void TestAwsAbstractSignature::setSignatureVersionQueryParameter()
+void TestAwsAbstractSignature::setQueryItem()
 {
-    //QFAIL("not implemented yet");
+    QFAIL("not implemented yet");
 }

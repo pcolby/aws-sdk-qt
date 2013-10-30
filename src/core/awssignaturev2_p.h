@@ -38,7 +38,11 @@ public:
 
     AwsSignatureV2Private(AwsSignatureV2 * const q);
 
+    void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
+
     QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QUrl &url) const;
+
+    QByteArray signatureMethod(const QCryptographicHash::Algorithm algorithm) const;
 
 private:
     AwsSignatureV2 * const q_ptr; ///< Internal q-pointer.

@@ -73,14 +73,14 @@ void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetw
 {
     Q_UNUSED(operation) // Not included in V1 signatures.
     Q_UNUSED(data)      // Not included in V1 signatures.
+    Q_D(const AwsSignatureV1);
 
     /// @todo  Prevent non-HTTPS.
 
-    // Set the SignatureVersion query parameter, if not already.
-    /// @todo  setSignatureVersionQueryParameter(request, 1);
+    // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
+    d->adornRequest(request, credentials);
 
     // Calculate the signature.
-    Q_D(const AwsSignatureV1);
     const QByteArray stringToSign = d->canonicalQuery(QUrlQuery(request.url().query()));
     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
@@ -118,6 +118,59 @@ AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : q_ptr(q
 }
 
 /**
+ * @internal
+ *
+ * @brief  Add AWS Signature Version 1 adornments to an AWS request.
+ *
+ * In addition to service-specific request parameters, Amazon requires that version
+ * 1 signatures contain a number of common query parameters.  This functions adds
+ * those query parameters to \a request if they're not already present.
+ *
+ * The query parameters added by this function, as required by Amazon, are:
+ *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
+ *   * `SignatureVersion` - set to `1`.
+ *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
+ *                 `2013-10-30T12:34:56Z`, unless an `Expires` value is present,
+ *                 in which case no `Timestamp` parameter is added.
+ *
+ * @param  request      Request to adorn.
+ * @param  credentials  Credentials to use when adorning \a request.
+ *
+ * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+ */
+void AwsSignatureV1Private::adornRequest(QNetworkRequest &request,
+                                         const AwsAbstractCredentials &credentials) const
+{
+    Q_Q(const AwsSignatureV1);
+
+    // Set / add the necessary query items.
+    QUrl url = request.url();
+    QUrlQuery query(url);
+    q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
+    q->setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("1"));
+
+    // Amazon: "Query requests must include either Timestamp or Expires, but not both."
+    // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+    if (!query.hasQueryItem(QLatin1String("Expires"))) {
+        q->setQueryItem(query, QLatin1String("Timestamp"),
+                        QString::fromUtf8(QUrl::toPercentEncoding(
+                            QDateTime::currentDateTimeUtc().toString(QLatin1String("yyyy-MM-ddThh:mm:ssZ"))
+                        )),
+                        false); // Don't warn if its already set to something else.
+    }
+
+    // If we've touched the query items (likely), then update the request.
+    if (query != QUrlQuery(url.query())) {
+        qDebug() << Q_FUNC_INFO << url;
+        url.setQuery(query);
+        qDebug() << Q_FUNC_INFO << url;
+        request.setUrl(url);
+    }
+}
+
+/**
+ * @internal
+ *
  * @brief  Create an AWS V4 Signature canonical query.
  *
  * This function returns a string containing all non-empty query parameters in
@@ -169,6 +222,8 @@ QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
 }
 
 /**
+ * @internal
+ *
  * @brief  Is a key-value pair less than another key-value pair?
  *
  * This static function is used by the canonicalQuery function to sort query string

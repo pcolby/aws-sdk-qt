@@ -44,6 +44,9 @@ protected:
 
     QString httpMethod(const QNetworkAccessManager::Operation operation) const;
 
+    bool setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
+                      const bool warnOnNonIdenticalDuplicate = true) const;
+
     friend class TestAwsAbstractSignature;
 };
 

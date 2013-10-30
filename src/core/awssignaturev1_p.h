@@ -36,7 +36,10 @@ public:
 
     QByteArray canonicalQuery(const QUrlQuery &query) const;
 
+    void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
+
 protected:
+    /// A key-value pair of strings for working with QUrlQuery::queryItems() results.
     typedef QPair<QString, QString> QStringPair;
 
     static bool caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2);

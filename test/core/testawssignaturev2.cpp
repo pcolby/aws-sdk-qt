@@ -83,6 +83,16 @@ void TestAwsSignatureV2::sign() {
     }*/
 }
 
+void TestAwsSignatureV2::adornRequest_data()
+{
+
+}
+
+void TestAwsSignatureV2::adornRequest()
+{
+    QFAIL("not implemented yet");
+}
+
 void TestAwsSignatureV2::canonicalRequest_data() {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
     QTest::addColumn<QUrl>("url");
@@ -113,4 +123,14 @@ void TestAwsSignatureV2::canonicalRequest() {
     const QByteArray request = signature.canonicalRequest(operation, url);
     QCOMPARE(QString::fromUtf8(request), QString::fromUtf8(expected));
     QCOMPARE(request, expected);
+}
+
+void TestAwsSignatureV2::signatureMethod_data()
+{
+
+}
+
+void TestAwsSignatureV2::signatureMethod()
+{
+    QFAIL("not implemented yet");
 }
