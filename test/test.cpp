@@ -25,6 +25,7 @@
 #include "core/testawsbasiccredentials.h"
 #include "core/testawsendpoint.h"
 #include "core/testawsregion.h"
+#include "core/testawssignaturev1.h"
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev4.h"
 
@@ -43,6 +44,7 @@ int main(int argc, char *argv[]) {
     TEST(TestAwsBasicCredentials)
     TEST(TestAwsEndpoint)
     TEST(TestAwsRegion)
+    TEST(TestAwsSignatureV1)
     TEST(TestAwsSignatureV2)
     TEST(TestAwsSignatureV4)
     return 0;
