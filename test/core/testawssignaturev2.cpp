@@ -23,9 +23,11 @@
 #include "../../src/core/awssignaturev2.h"
 #include "../../src/core/awssignaturev2_p.h"
 
+#include <QCryptographicHash>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 
@@ -85,12 +87,45 @@ void TestAwsSignatureV2::sign() {
 
 void TestAwsSignatureV2::adornRequest_data()
 {
+    QTest::addColumn<QNetworkRequest>("request");
+    QTest::addColumn<QString>("accessKeyId");
+    QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
+    QTest::addColumn<QString>("signatureMethod");
 
+    QTest::newRow("empty:sha1")
+        << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/")))
+        << QString::fromLatin1("access-key-1")
+        << QCryptographicHash::Sha1
+        << QString::fromLatin1("HmacSHA1");
+
+    QTest::newRow("empty:sha256")
+        << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/")))
+        << QString::fromLatin1("access-key-2")
+        << QCryptographicHash::Sha256
+        << QString::fromLatin1("HmacSHA256");
 }
 
 void TestAwsSignatureV2::adornRequest()
 {
-    QFAIL("not implemented yet");
+    QFETCH(QNetworkRequest, request);
+    QFETCH(QString, accessKeyId);
+    QFETCH(QCryptographicHash::Algorithm, algorithm);
+    QFETCH(QString, signatureMethod);
+
+    const AwsBasicCredentials credentials(accessKeyId, QString());
+
+    AwsSignatureV2 signature(algorithm);
+    signature.d_func()->adornRequest(request, credentials);
+    const QUrlQuery query(request.url());
+
+    QVERIFY(query.hasQueryItem(QLatin1String("AWSAccessKeyId")));
+    QVERIFY(query.hasQueryItem(QLatin1String("SignatureMethod")));
+    QVERIFY(query.hasQueryItem(QLatin1String("SignatureVersion")));
+    QVERIFY(query.hasQueryItem(QLatin1String("Timestamp")));
+
+    QCOMPARE(query.queryItemValue(QLatin1String("AWSAccessKeyId")), accessKeyId);
+    QCOMPARE(query.queryItemValue(QLatin1String("SignatureMethod")), signatureMethod);
+    QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("2"));
 }
 
 void TestAwsSignatureV2::canonicalRequest_data() {
@@ -127,10 +162,37 @@ void TestAwsSignatureV2::canonicalRequest() {
 
 void TestAwsSignatureV2::signatureMethod_data()
 {
+    QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
+    QTest::addColumn<QByteArray>("signatureMethod");
+
+    // Valid algorithms.
+    QTest::newRow("empty:sha1")   << QCryptographicHash::Sha1   << QByteArray("HmacSHA1");
+    QTest::newRow("empty:sha256") << QCryptographicHash::Sha256 << QByteArray("HmacSHA256");
+
+    QTest::newRow("MD4")    << QCryptographicHash::Md4    << QByteArray("invalid-algorithm");
+    QTest::newRow("MD5")    << QCryptographicHash::Md5    << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA1")   << QCryptographicHash::Sha1   << QByteArray("HmacSHA1");
+    QTest::newRow("SHA224") << QCryptographicHash::Sha224 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA256") << QCryptographicHash::Sha256 << QByteArray("HmacSHA256");
+    QTest::newRow("SHA384") << QCryptographicHash::Sha384 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA512") << QCryptographicHash::Sha512 << QByteArray("invalid-algorithm");
+
+    // The following enum values were added in Qt5.1.
+#if QT_VERSION >= QT_VERSION_CHECK(5, 1, 0)
+    QTest::newRow("SHA3_224") << QCryptographicHash::Sha3_224 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_256") << QCryptographicHash::Sha3_256 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_384") << QCryptographicHash::Sha3_384 << QByteArray("invalid-algorithm");
+    QTest::newRow("SHA3_512") << QCryptographicHash::Sha3_512 << QByteArray("invalid-algorithm");
+#endif
 
 }
 
 void TestAwsSignatureV2::signatureMethod()
 {
-    QFAIL("not implemented yet");
+    QFETCH(QCryptographicHash::Algorithm, algorithm);
+    QFETCH(QByteArray, signatureMethod);
+
+    AwsSignatureV2 signature(algorithm);
+
+    QCOMPARE(signature.d_func()->signatureMethod(algorithm), signatureMethod);
 }
