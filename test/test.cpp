@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
     for (int index = 1; index < argc; ++index) {
         if (qstrncmp(argv[index], "Test", 4) == 0) {
             QStringList args = app.arguments();
-            args.removeOne(QString::fromLatin1(argv[index]));
+            args.removeOne(QString::fromLocal8Bit(argv[index]));
             QObject * testObject = testFactory.createObject<QObject>(argv[index]);
             if (!testObject) {
                 /// @todo complain.
