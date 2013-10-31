@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
     testFactory.registerClass<TestAwsSignatureV2>();
     testFactory.registerClass<TestAwsSignatureV4>();
 
-    // If the user has specified a Test* class name, execut that test class only.
+    // If the user has specified a Test* class name, execute that test class only.
     for (int index = 1; index < argc; ++index) {
         if (qstrcmp(argv[index], "-classes") == 0) {
             foreach (const QByteArray &className, testFactory.uniqueKeys()) {
