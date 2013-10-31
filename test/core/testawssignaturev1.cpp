@@ -110,6 +110,12 @@ void TestAwsSignatureV1::sign()
 
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
 
+#ifndef ALLOW_INSECURE_V1_SIGNATURES
+    if (request.url().scheme() != QLatin1String("https")) {
+        QTest::ignoreMessage(QtWarningMsg, "AwsSignatureV1::sign Refusing to sign insecure (non-HTTPS) request");
+    }
+#endif
+
     AwsSignatureV1 signature;
     signature.sign(credentials, operation, request, data);
     QCOMPARE(request.url( ), expected.url());
