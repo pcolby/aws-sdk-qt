@@ -29,24 +29,65 @@
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev4.h"
 
-int main(int argc, char *argv[]) {
-    #define TEST(Class) \
-    { \
-        Class object; \
-        const int result = QTest::qExec(&object, argc, argv); \
-        if (result) exit(result); \
+typedef QObject * (*ObjectConstructor)();
+
+class ObjectFactory : public QHash<QByteArray, ObjectConstructor> {
+public:
+    template<class T> void registerClass()
+    {
+        insert(T::staticMetaObject.className(), &objectConstructor<T>);
     }
 
-    // Call the above test macro on all test classes here.
-    TEST(TestAwsAbstractCredentials)
-    TEST(TestAwsAbstractSignature)
-    TEST(TestAwsAnonymousCredentials)
-    TEST(TestAwsBasicCredentials)
-    TEST(TestAwsEndpoint)
-    TEST(TestAwsRegion)
-    TEST(TestAwsSignatureV1)
-    TEST(TestAwsSignatureV2)
-    TEST(TestAwsSignatureV4)
+    template<class T> T * createObject(const QByteArray &className) const
+    {
+        ObjectConstructor constructor = value(className);
+        return (constructor == NULL) ? NULL : (*constructor)();
+    }
+
+private:
+    template<class T> static QObject * objectConstructor()
+    {
+        return new T();
+    }
+};
+
+int main(int argc, char *argv[]) {
+    QCoreApplication app(argc, argv);
+    app.setAttribute(Qt::AA_Use96Dpi, true);
+
+    // Setup our tests factory object.
+    ObjectFactory testFactory;
+    testFactory.registerClass<TestAwsAbstractCredentials>();
+    testFactory.registerClass<TestAwsAbstractSignature>();
+    testFactory.registerClass<TestAwsAnonymousCredentials>();
+    testFactory.registerClass<TestAwsBasicCredentials>();
+    testFactory.registerClass<TestAwsEndpoint>();
+    testFactory.registerClass<TestAwsRegion>();
+    testFactory.registerClass<TestAwsSignatureV1>();
+    testFactory.registerClass<TestAwsSignatureV2>();
+    testFactory.registerClass<TestAwsSignatureV4>();
+
+    // If the user has specified a Test* class name, execut that test class only.
+    for (int index = 1; index < argc; ++index) {
+        if (qstrncmp(argv[index], "Test", 4) == 0) {
+            QStringList args = app.arguments();
+            args.removeOne(QString::fromLatin1(argv[index]));
+            QObject * testObject = testFactory.createObject<QObject>(argv[index]);
+            if (!testObject) {
+                /// @todo complain.
+                return 1;
+            }
+            return QTest::qExec(testObject, args);
+        }
+    }
+
+    // Otherwise, execute all registered test classes.
+    foreach (const QByteArray &className, testFactory.uniqueKeys()) {
+        QObject * testObject = testFactory.createObject<QObject>(className);
+        if (testObject) {
+            const int result = QTest::qExec(testObject, argc, argv);
+            if (result) exit(result);
+        }
+    }
     return 0;
 }
-
