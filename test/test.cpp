@@ -17,8 +17,6 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <QtTest/QtTest>
-
 #include "core/testawsabstractcredentials.h"
 #include "core/testawsabstractsignature.h"
 #include "core/testawsanonymouscredentials.h"
@@ -28,6 +26,10 @@
 #include "core/testawssignaturev1.h"
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev4.h"
+
+#include <QTest>
+
+#include <stdio.h>
 
 typedef QObject * (*ObjectConstructor)();
 

@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <QtTest/QtTest>
+#include <QTest>
 #include "../../src/core/awsregion.h"
 #include "../../src/core/qtawsglobal.h"
 

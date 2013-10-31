@@ -19,7 +19,7 @@
 
 #include "awsabstractcredentials.h"
 
-#include <QtDebug>
+#include <QDebug>
 
 QTAWS_BEGIN_NAMESPACE
 

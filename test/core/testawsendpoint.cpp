@@ -18,11 +18,12 @@
 */
 
 #include "testawsendpoint.h"
+#include "awsendpointtestdata.h"
 
 #include "../../src/core/awsendpoint.h"
 #include "../../src/core/awsendpoint_p.h"
 
-#include "awsendpointtestdata.h"
+#include <QFile>
 
 Q_DECLARE_METATYPE(AwsEndpoint::Transport)
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)

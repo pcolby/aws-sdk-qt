@@ -18,10 +18,9 @@
 */
 
 #include "testawsregion.h"
+#include "awsendpointtestdata.h"
 
 #include "../../src/core/awsregion.h"
-
-#include "awsendpointtestdata.h"
 
 Q_DECLARE_METATYPE(AwsRegion::Region)
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)

@@ -25,6 +25,9 @@
 #include "../../src/core/awssignaturev4_p.h"
 #include "../../src/core/awsendpoint_p.h"
 
+#include <QDebug>
+#include <QDir>
+
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
