@@ -31,7 +31,7 @@
 
 typedef QObject * (*ObjectConstructor)();
 
-class ObjectFactory : public QHash<QByteArray, ObjectConstructor> {
+class ObjectFactory : public QMap<QByteArray, ObjectConstructor> {
 public:
     template<class T> void registerClass()
     {
@@ -69,7 +69,12 @@ int main(int argc, char *argv[]) {
 
     // If the user has specified a Test* class name, execut that test class only.
     for (int index = 1; index < argc; ++index) {
-        if (qstrncmp(argv[index], "Test", 4) == 0) {
+        if (qstrcmp(argv[index], "-classes") == 0) {
+            foreach (const QByteArray &className, testFactory.uniqueKeys()) {
+                fprintf(stdout, "%s\n", className.data());
+            }
+            return 0;
+        } else if (qstrncmp(argv[index], "Test", 4) == 0) {
             QStringList args = app.arguments();
             args.removeOne(QString::fromLocal8Bit(argv[index]));
             QObject * testObject = testFactory.createObject<QObject>(argv[index]);
