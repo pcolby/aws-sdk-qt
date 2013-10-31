@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
             args.removeOne(QString::fromLocal8Bit(argv[index]));
             QObject * testObject = testFactory.createObject<QObject>(argv[index]);
             if (!testObject) {
-                /// @todo complain.
+                fprintf(stderr, "test class %s is unknown\n", argv[index]);
                 return 1;
             }
             return QTest::qExec(testObject, args);
