@@ -40,6 +40,8 @@ public:
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
 
+    virtual int version() const;
+
 private:
     AwsSignatureV2Private * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsSignatureV2;

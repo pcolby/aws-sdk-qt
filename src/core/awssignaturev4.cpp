@@ -73,6 +73,10 @@ void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
     d->setAuthorizationHeader(credentials, operation, request, data, d->setDateHeader(request));
 }
 
+int AwsSignatureV4::version() const {
+    return 4;
+}
+
 /**
  * @internal
  *

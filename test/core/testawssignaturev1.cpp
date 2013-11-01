@@ -39,7 +39,7 @@ void TestAwsSignatureV1::sign_data()
     QTest::addColumn<QNetworkRequest>("expected");
 
     // Example from http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-    // This one will not be signed unless ALLOW_INSECURE_V1_SIGNATURES is defined.
+    // This one will not be signed unless QTAWS_ALLOW_INSECURE_SIGNATURES is defined.
     QTest::newRow("CreateQueue")
         << QNetworkAccessManager::GetOperation
         << QNetworkRequest(QUrl(QLatin1String("http://www.example.com/?"
@@ -59,7 +59,7 @@ void TestAwsSignatureV1::sign_data()
             "&SignatureVersion=1"
             "&Expires=2007-01-12T12:00:00Z"
             "&Version=2006-04-01"
-#ifdef ALLOW_INSECURE_V1_SIGNATURES
+#ifdef QTAWS_ALLOW_INSECURE_SIGNATURES
             "&Signature=wlv84EOcHQk800Yq6QHgX4AdJfk%3D"
 #endif
             )));
@@ -110,7 +110,7 @@ void TestAwsSignatureV1::sign()
 
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
 
-#ifndef ALLOW_INSECURE_V1_SIGNATURES
+#ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
     if (request.url().scheme() != QLatin1String("https")) {
         QTest::ignoreMessage(QtWarningMsg, "AwsSignatureV1::sign Refusing to sign insecure (non-HTTPS) request");
     }
@@ -215,8 +215,8 @@ void TestAwsSignatureV1::canonicalQuery()
 {
     QFETCH(QUrlQuery, query);
     QFETCH(QByteArray, expected);
-    AwsSignatureV1Private signature(NULL);
-    const QByteArray canonica = signature.canonicalQuery(query);
+    AwsSignatureV1 signature;
+    const QByteArray canonica = signature.d_func()->canonicalQuery(query);
     QCOMPARE(QChar::fromLatin1('"')+QString::fromUtf8(canonica)+QChar::fromLatin1('"'), QChar::fromLatin1('"')+QString::fromUtf8(expected)+QChar::fromLatin1('"'));
     QCOMPARE(canonica, expected);
 }

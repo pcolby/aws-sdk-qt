@@ -41,6 +41,8 @@ public:
                       const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
 
+    virtual int version() const;
+
 private:
     AwsSignatureV4Private * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsSignatureV4;

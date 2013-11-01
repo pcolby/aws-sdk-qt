@@ -37,6 +37,8 @@ public:
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const = 0;
 
+    virtual int version() const = 0;
+
 protected:
     QString canonicalPath(const QUrl &url) const;
 

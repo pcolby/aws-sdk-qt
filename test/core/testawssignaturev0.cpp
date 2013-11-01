@@ -57,7 +57,7 @@ void TestAwsSignatureV0::sign_data()
             "&SignatureVersion=0"
             "&Expires=2007-01-12T12:00:00Z"
             "&Version=2006-04-01"
-#ifdef ALLOW_INSECURE_V0_SIGNATURES
+#ifdef QTAWS_ALLOW_INSECURE_SIGNATURES
             "&Signature=Sb5D7sRtwH0tqwzSaxYgGxh0%2B14%3D"
 #endif
             )));
@@ -101,7 +101,7 @@ void TestAwsSignatureV0::sign_data()
             "&AWSAccessKeyId=0A8BDF2G9KCB3ZNKFA82"
             "&Timestamp=2007-01-12T12:00:00Z"
             "&Version=2006-04-01"
-#ifdef ALLOW_INSECURE_V0_SIGNATURES
+#ifdef QTAWS_ALLOW_INSECURE_SIGNATURES
             "&SignatureVersion=0"
             "&Signature=Sb5D7sRtwH0tqwzSaxYgGxh0%2B14%3D"
 #endif
@@ -140,7 +140,7 @@ void TestAwsSignatureV0::sign()
 
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
 
-#ifndef ALLOW_INSECURE_V1_SIGNATURES
+#ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
     if (request.url().scheme() != QLatin1String("https")) {
         QTest::ignoreMessage(QtWarningMsg, "AwsSignatureV0::sign Refusing to sign insecure (non-HTTPS) request");
     }

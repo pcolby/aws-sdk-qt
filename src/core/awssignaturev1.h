@@ -21,25 +21,21 @@
 #define AWSSIGNATUREV1_H
 
 #include "qtawsglobal.h"
-#include "awsabstractsignature.h"
+#include "awssignaturev0.h"
 
 QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV1Private;
 
-class QTAWS_EXPORT AwsSignatureV1 : public AwsAbstractSignature {
+class QTAWS_EXPORT AwsSignatureV1 : public AwsSignatureV0 {
     Q_DECLARE_PRIVATE(AwsSignatureV1)
 
 public:
-    AwsSignatureV1();
+    AwsSignatureV1(); /// @todo?
 
-    ~AwsSignatureV1();
-
-    virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
+    virtual int version() const;
 
 private:
-    AwsSignatureV1Private * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsSignatureV1;
 };
 

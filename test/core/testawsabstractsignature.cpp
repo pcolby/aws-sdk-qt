@@ -38,6 +38,9 @@ public:
         Q_UNUSED(data)
     }
 
+    virtual int version() const {
+        return 123;
+    }
 };
 
 void TestAwsAbstractSignature::construct()

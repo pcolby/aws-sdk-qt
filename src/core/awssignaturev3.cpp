@@ -58,6 +58,10 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetw
     //return d->accessKeyId;
 }
 
+int AwsSignatureV3::version() const {
+    return 3;
+}
+
 /**
  * @internal
  *

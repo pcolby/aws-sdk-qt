@@ -43,7 +43,7 @@ QTAWS_BEGIN_NAMESPACE
  *
  * As version 0 signatures are rightly regarded as *insecure*, this class will refuse to sign
  * requests that use insecure transports such as HTTP instead of HTTPS. However, insecure
- * signatures can be enabled (why would you want to?) by defining `ALLOW_INSECURE_V0_SIGNATURES`
+ * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
  * when compiling this library.
  *
  * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
@@ -56,6 +56,23 @@ QTAWS_BEGIN_NAMESPACE
  */
 AwsSignatureV0::AwsSignatureV0()
         : d_ptr(new AwsSignatureV0Private(this))
+{
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsSignatureV0 object a specific private implementation.
+ *
+ * This internal constructor allows derived classes to provide their own derived
+ * private implementation.  Specifically, AwsSignatureV1 uses this constructor to
+ * extend this class.
+ *
+ * @param  d  Internal private implementation to use.
+ *
+ * @see    AwsSignatureV1
+ */
+AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : d_ptr(d)
 {
 }
 
@@ -74,10 +91,10 @@ void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetw
     Q_UNUSED(data)      // Not included in V0 signatures.
     Q_D(const AwsSignatureV0);
 
-    // Refuse to sign non-HTTPS requests, unless built with ALLOW_INSECURE_V0_SIGNATURES defined.
-#ifndef ALLOW_INSECURE_V0_SIGNATURES
+    // Refuse to sign non-HTTPS requests, unless built with QTAWS_ALLOW_INSECURE_SIGNATURES defined.
+#ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
     if (request.url().scheme() != QString::fromLatin1("https")) {
-        qWarning("AwsSignatureV0::sign Refusing to sign insecure (non-HTTPS) request");
+        qWarning("AwsSignatureV%d::sign Refusing to sign insecure (non-HTTPS) request", version());
         Q_ASSERT_X(false, Q_FUNC_INFO, "insecure V1 signatures not enabled");
         return;
     }
@@ -96,6 +113,10 @@ void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetw
     QUrl url = request.url();
     url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
     request.setUrl(url);
+}
+
+int AwsSignatureV0::version() const {
+    return 0;
 }
 
 /**
@@ -119,6 +140,14 @@ void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetw
  * @param  q  Pointer to this object's public AwsSignatureV0 instance.
  */
 AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : q_ptr(q)
+{
+
+}
+
+/**
+ * @brief AwsSignatureV0Private destructor.
+ */
+AwsSignatureV0Private::~AwsSignatureV0Private()
 {
 
 }
@@ -156,7 +185,7 @@ void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
     QUrl url = request.url();
     QUrlQuery query(url);
     q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
-    q->setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("0"));
+    q->setQueryItem(query, QLatin1String("SignatureVersion"), QString::fromLatin1("%1").arg(q->version()));
 
     // Amazon: "Query requests must include either Timestamp or Expires, but not both."
     // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf

@@ -43,7 +43,7 @@ QTAWS_BEGIN_NAMESPACE
  *
  * As version 1 signatures are rightly regarded as *insecure*, this class will refuse to sign
  * requests that use insecure transports such as HTTP instead of HTTPS. However, insecure
- * signatures can be enabled (why would you want to?) by defining `ALLOW_INSECURE_V1_SIGNATURES`
+ * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
  * when compiling this library.
  *
  * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
@@ -56,47 +56,12 @@ QTAWS_BEGIN_NAMESPACE
  * Use instances of this object to provide Version 1 signatures for AWS services.
  */
 AwsSignatureV1::AwsSignatureV1()
-        : d_ptr(new AwsSignatureV1Private(this))
+        : AwsSignatureV0(new AwsSignatureV1Private(this))
 {
 }
 
-/**
- * @brief AwsSignatureV1 destructor.
- */
-AwsSignatureV1::~AwsSignatureV1()
-{
-    delete d_ptr;
-}
-
-void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
-                          QNetworkRequest &request, const QByteArray &data) const
-{
-    Q_UNUSED(operation) // Not included in V1 signatures.
-    Q_UNUSED(data)      // Not included in V1 signatures.
-    Q_D(const AwsSignatureV1);
-
-    // Refuse to sign non-HTTPS requests, unless built with ALLOW_INSECURE_V1_SIGNATURES defined.
-#ifndef ALLOW_INSECURE_V1_SIGNATURES
-    if (request.url().scheme() != QString::fromLatin1("https")) {
-        qWarning("AwsSignatureV1::sign Refusing to sign insecure (non-HTTPS) request");
-        Q_ASSERT_X(false, Q_FUNC_INFO, "insecure V1 signatures not enabled");
-        return;
-    }
-#endif
-
-    // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
-    d->adornRequest(request, credentials);
-
-    // Calculate the signature.
-    const QByteArray stringToSign = d->canonicalQuery(QUrlQuery(request.url().query()));
-    const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
-        QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),
-                                         QCryptographicHash::Sha1).toBase64())));
-
-    // Append the signature to the request.
-    QUrl url = request.url();
-    url.setQuery(url.query() + QLatin1String("&Signature=") + signature);
-    request.setUrl(url);
+int AwsSignatureV1::version() const {
+    return 1;
 }
 
 /**
@@ -119,60 +84,9 @@ void AwsSignatureV1::sign(const AwsAbstractCredentials &credentials, const QNetw
  *
  * @param  q  Pointer to this object's public AwsSignatureV1 instance.
  */
-AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : q_ptr(q)
+AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSignatureV0Private(q)
 {
 
-}
-
-/**
- * @internal
- *
- * @brief  Add AWS Signature Version 1 adornments to an AWS request.
- *
- * In addition to service-specific request parameters, Amazon requires that version
- * 1 signatures contain a number of common query parameters.  This functions adds
- * those query parameters to \a request if they're not already present.
- *
- * The query parameters added by this function, as required by Amazon, are:
- *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
- *   * `SignatureVersion` - set to `1`.
- *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
- *                 `2013-10-30T12:34:56Z`, unless an `Expires` value is present,
- *                 in which case no `Timestamp` parameter is added.
- *
- * @param  request      Request to adorn.
- * @param  credentials  Credentials to use when adorning \a request.
- *
- * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
- */
-void AwsSignatureV1Private::adornRequest(QNetworkRequest &request,
-                                         const AwsAbstractCredentials &credentials) const
-{
-    Q_Q(const AwsSignatureV1);
-
-    // Set / add the necessary query items.
-    QUrl url = request.url();
-    QUrlQuery query(url);
-    q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
-    q->setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("1"));
-
-    // Amazon: "Query requests must include either Timestamp or Expires, but not both."
-    // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-    if (!query.hasQueryItem(QLatin1String("Expires"))) {
-        q->setQueryItem(query, QLatin1String("Timestamp"),
-                        QString::fromUtf8(QUrl::toPercentEncoding(
-                            QDateTime::currentDateTimeUtc().toString(QLatin1String("yyyy-MM-ddThh:mm:ssZ"))
-                        )),
-                        false); // Don't warn if its already set to something else.
-    }
-
-    // If we've touched the query items (likely), then update the request.
-    if (query != QUrlQuery(url.query())) {
-        qDebug() << Q_FUNC_INFO << url;
-        url.setQuery(query);
-        qDebug() << Q_FUNC_INFO << url;
-        request.setUrl(url);
-    }
 }
 
 /**

@@ -189,4 +189,15 @@ bool AwsAbstractSignature::setQueryItem(QUrlQuery &query, const QString &key, co
     return true;
 }
 
+/**
+ * @fn     int AwsAbstractSignature::version() const
+ *
+ * @brief  AWS Signature version implemented by this class.
+ *
+ * Derived classes must implement this function to report the version of
+ * the AWS Signature implemented by the class.
+ *
+ * @return The AWS Signature version implemented by this class.
+ */
+
 QTAWS_END_NAMESPACE

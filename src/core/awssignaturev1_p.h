@@ -21,6 +21,7 @@
 #define AWSSIGNATUREV1_P_H
 
 #include "qtawsglobal.h"
+#include "awssignaturev0_p.h"
 
 #include <QUrlQuery>
 
@@ -28,13 +29,11 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV1;
 
-class QTAWS_EXPORT AwsSignatureV1Private {
+class QTAWS_EXPORT AwsSignatureV1Private : public AwsSignatureV0Private {
     Q_DECLARE_PUBLIC(AwsSignatureV1)
 
 public:
     AwsSignatureV1Private(AwsSignatureV1 * const q);
-
-    void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
 
     QByteArray canonicalQuery(const QUrlQuery &query) const;
 
@@ -45,7 +44,6 @@ protected:
     static bool caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2);
 
 private:
-    AwsSignatureV1 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV1;
 };
 
