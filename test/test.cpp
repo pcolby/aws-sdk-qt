@@ -77,16 +77,16 @@ int main(int argc, char *argv[]) {
             foreach (const QByteArray &className, testFactory.uniqueKeys()) {
                 fprintf(stdout, "%s\n", className.data());
             }
-            return 0;
+            return EXIT_SUCCESS;
         } else if (qstrncmp(argv[index], "Test", 4) == 0) {
             QStringList args = app.arguments();
             args.removeOne(QString::fromLocal8Bit(argv[index]));
             QObject * testObject = testFactory.createObject<QObject>(argv[index]);
             if (!testObject) {
                 fprintf(stderr, "test class %s is unknown\n", argv[index]);
-                return 1;
+                return EXIT_FAILURE;
             }
-            return QTest::qExec(testObject, args);
+            return (QTest::qExec(testObject, args) == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
         }
     }
 
