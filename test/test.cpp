@@ -23,6 +23,7 @@
 #include "core/testawsbasiccredentials.h"
 #include "core/testawsendpoint.h"
 #include "core/testawsregion.h"
+#include "core/testawssignaturev0.h"
 #include "core/testawssignaturev1.h"
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev4.h"
@@ -65,6 +66,7 @@ int main(int argc, char *argv[]) {
     testFactory.registerClass<TestAwsBasicCredentials>();
     testFactory.registerClass<TestAwsEndpoint>();
     testFactory.registerClass<TestAwsRegion>();
+    testFactory.registerClass<TestAwsSignatureV0>();
     testFactory.registerClass<TestAwsSignatureV1>();
     testFactory.registerClass<TestAwsSignatureV2>();
     testFactory.registerClass<TestAwsSignatureV4>();

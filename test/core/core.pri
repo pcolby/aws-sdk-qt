@@ -6,6 +6,7 @@ HEADERS += \
         testawsbasiccredentials.h \
         testawsendpoint.h \
         testawsregion.h \
+        testawssignaturev0.h \
         testawssignaturev1.h \
         testawssignaturev2.h \
         testawssignaturev4.h \
@@ -18,6 +19,7 @@ SOURCES += \
         testawsbasiccredentials.cpp \
         testawsendpoint.cpp \
         testawsregion.cpp \
+        testawssignaturev0.cpp \
         testawssignaturev1.cpp \
         testawssignaturev2.cpp \
         testawssignaturev4.cpp \
