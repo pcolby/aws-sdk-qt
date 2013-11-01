@@ -87,6 +87,12 @@ void TestAwsSignatureV2::sign()
     }*/
 }
 
+void TestAwsSignatureV2::version()
+{
+    AwsSignatureV2 signature;
+    QCOMPARE(signature.version(), 2);
+}
+
 void TestAwsSignatureV2::adornRequest_data()
 {
     QTest::addColumn<QNetworkRequest>("request");

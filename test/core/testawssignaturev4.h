@@ -75,4 +75,6 @@ private slots:
 
     void stringToSign_data();
     void stringToSign();
+
+    void version();
 };

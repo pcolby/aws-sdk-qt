@@ -27,6 +27,8 @@ private slots:
     void sign_data();
     void sign();
 
+    void version();
+
     void adornRequest_data();
     void adornRequest();
 

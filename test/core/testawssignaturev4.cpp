@@ -674,3 +674,9 @@ void TestAwsSignatureV4::stringToSign()
     QCOMPARE(QString::fromUtf8(stringToSign), QString::fromUtf8(expected));
     QCOMPARE(stringToSign, expected);
 }
+
+void TestAwsSignatureV4::version()
+{
+    AwsSignatureV4 signature;
+    QCOMPARE(signature.version(), 4);
+}
