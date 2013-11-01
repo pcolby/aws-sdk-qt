@@ -178,7 +178,7 @@ void AwsSignatureV1Private::adornRequest(QNetworkRequest &request,
 /**
  * @internal
  *
- * @brief  Create an AWS V4 Signature canonical query.
+ * @brief  Create an AWS Signature version 1 canonical query.
  *
  * This function returns a string containing all non-empty query parameters in
  * sorted order (case-insensitive), with no separators at all.
