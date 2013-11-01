@@ -91,12 +91,19 @@ int main(int argc, char *argv[]) {
     }
 
     // Otherwise, execute all registered test classes.
+    QList<QByteArray> failedCalssNames;
     foreach (const QByteArray &className, testFactory.uniqueKeys()) {
         QObject * testObject = testFactory.createObject<QObject>(className);
-        if (testObject) {
-            const int result = QTest::qExec(testObject, argc, argv);
-            if (result) exit(result);
+        if ((!testObject) || (QTest::qExec(testObject, argc, argv) != 0)) {
+            failedCalssNames.append(className);
         }
     }
-    return 0;
+
+    // Report our success / failure.
+    fprintf(stdout, "%d of %d test classes completed successfully\n",
+            (testFactory.size() - failedCalssNames.size()), testFactory.size());
+    foreach (const QByteArray &className, failedCalssNames) {
+        fprintf(stdout, "Failed class: %s\n", className.data());
+    }
+    return (failedCalssNames.empty()) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
