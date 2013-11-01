@@ -55,9 +55,9 @@ QTAWS_BEGIN_NAMESPACE
  *
  * Use instances of this object to provide Version 1 signatures for AWS services.
  */
-AwsSignatureV1::AwsSignatureV1()
-        : AwsSignatureV0(new AwsSignatureV1Private(this))
+AwsSignatureV1::AwsSignatureV1() : AwsSignatureV0(new AwsSignatureV1Private(this))
 {
+
 }
 
 int AwsSignatureV1::version() const

@@ -31,7 +31,7 @@ class QTAWS_EXPORT AwsSignatureV1 : public AwsSignatureV0 {
     Q_DECLARE_PRIVATE(AwsSignatureV1)
 
 public:
-    AwsSignatureV1(); /// @todo?
+    AwsSignatureV1();
 
     virtual int version() const;
 
