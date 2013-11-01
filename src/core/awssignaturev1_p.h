@@ -34,9 +34,9 @@ class QTAWS_EXPORT AwsSignatureV1Private {
 public:
     AwsSignatureV1Private(AwsSignatureV1 * const q);
 
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
-
     void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
+
+    QByteArray canonicalQuery(const QUrlQuery &query) const;
 
 protected:
     /// A key-value pair of strings for working with QUrlQuery::queryItems() results.
