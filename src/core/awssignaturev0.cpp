@@ -115,7 +115,8 @@ void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetw
     request.setUrl(url);
 }
 
-int AwsSignatureV0::version() const {
+int AwsSignatureV0::version() const
+{
     return 0;
 }
 

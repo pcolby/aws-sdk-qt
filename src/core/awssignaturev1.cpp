@@ -60,7 +60,8 @@ AwsSignatureV1::AwsSignatureV1()
 {
 }
 
-int AwsSignatureV1::version() const {
+int AwsSignatureV1::version() const
+{
     return 1;
 }
 
