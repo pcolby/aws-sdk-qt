@@ -100,53 +100,53 @@
 <span class="lineNum">      29 </span>                :            : QTAWS_BEGIN_NAMESPACE
 <span class="lineNum">      30 </span>                :            : 
 <span class="lineNum">      31 </span>                :            : class AwsEndpointPrivate;
-<a name="32"><span class="lineNum">      32 </span>                :            : </a>
+<span class="lineNum">      32 </span>                :            : 
 <span class="lineNum">      33 </span>                :            : class QTAWS_EXPORT AwsEndpoint {
-<span class="lineNum">      34 </span>                :<span class="lineCov">       9512 :     Q_DECLARE_PRIVATE(AwsEndpoint)</span>
-<span class="lineNum">      35 </span>                :            : 
-<span class="lineNum">      36 </span>                :            : public:
-<span class="lineNum">      37 </span>                :            :     /// Network transport supported by one or more AWS endpoints.
-<span class="lineNum">      38 </span>                :            :     enum Transport {
-<span class="lineNum">      39 </span>                :            :         HTTP  = 0x01,
-<span class="lineNum">      40 </span>                :            :         HTTPS = 0x02,
-<span class="lineNum">      41 </span>                :            :         SMTP  = 0x04,
-<span class="lineNum">      42 </span>                :            :         AnyTransport = HTTP|HTTPS|SMTP
-<span class="lineNum">      43 </span>                :            :     };
-<span class="lineNum">      44 </span>                :            :     Q_DECLARE_FLAGS(Transports, Transport)
-<span class="lineNum">      45 </span>                :            : 
-<span class="lineNum">      46 </span>                :            :     AwsEndpoint(const QByteArray &amp;hostName);
-<span class="lineNum">      47 </span>                :            :     AwsEndpoint(const QString &amp;hostName);
-<span class="lineNum">      48 </span>                :            : 
-<span class="lineNum">      49 </span>                :            :     ~AwsEndpoint();
-<span class="lineNum">      50 </span>                :            : 
-<span class="lineNum">      51 </span>                :            :     static QUrl getEndpoint(const QString &amp;regionName, const QString &amp;serviceName,
-<span class="lineNum">      52 </span>                :            :                             const Transports transport = AnyTransport);
-<span class="lineNum">      53 </span>                :            : 
-<span class="lineNum">      54 </span>                :            :     static bool isSupported(const QString &amp;regionName, const QString &amp;serviceName,
-<span class="lineNum">      55 </span>                :            :                             const Transports transport = AnyTransport);
-<span class="lineNum">      56 </span>                :            : 
-<span class="lineNum">      57 </span>                :            :     bool isSupported(const Transport transport) const;
-<span class="lineNum">      58 </span>                :            : 
-<span class="lineNum">      59 </span>                :            :     bool isValid() const;
-<span class="lineNum">      60 </span>                :            : 
-<span class="lineNum">      61 </span>                :            :     QString fullServiceName() const;
-<span class="lineNum">      62 </span>                :            :     static QString fullServiceName(const QString &amp;serviceName);
-<span class="lineNum">      63 </span>                :            : 
-<span class="lineNum">      64 </span>                :            :     QString hostName() const;
-<span class="lineNum">      65 </span>                :            : 
-<span class="lineNum">      66 </span>                :            :     QString regionName() const;
-<span class="lineNum">      67 </span>                :            : 
-<span class="lineNum">      68 </span>                :            :     QString serviceName() const;
-<span class="lineNum">      69 </span>                :            : 
-<span class="lineNum">      70 </span>                :            :     QStringList supportedRegions(const Transports transport = AnyTransport) const;
-<span class="lineNum">      71 </span>                :            : 
-<span class="lineNum">      72 </span>                :            :     static QStringList supportedRegions(const QString &amp;serviceName,
-<span class="lineNum">      73 </span>                :            :                                         const Transports transport = AnyTransport);
-<span class="lineNum">      74 </span>                :            : 
-<span class="lineNum">      75 </span>                :            :     static QStringList supportedServices(const QString &amp;regionName,
-<span class="lineNum">      76 </span>                :            :                                          const Transports transport = AnyTransport);
-<span class="lineNum">      77 </span>                :            : 
-<span class="lineNum">      78 </span>                :            : private:
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            : public:
+<span class="lineNum">      36 </span>                :            :     /// Network transport supported by one or more AWS endpoints.
+<span class="lineNum">      37 </span>                :            :     enum Transport {
+<span class="lineNum">      38 </span>                :            :         HTTP  = 0x01,
+<span class="lineNum">      39 </span>                :            :         HTTPS = 0x02,
+<span class="lineNum">      40 </span>                :            :         SMTP  = 0x04,
+<span class="lineNum">      41 </span>                :            :         AnyTransport = HTTP|HTTPS|SMTP
+<span class="lineNum">      42 </span>                :            :     };
+<span class="lineNum">      43 </span>                :            :     Q_DECLARE_FLAGS(Transports, Transport)
+<span class="lineNum">      44 </span>                :            : 
+<span class="lineNum">      45 </span>                :            :     AwsEndpoint(const QByteArray &amp;hostName);
+<span class="lineNum">      46 </span>                :            :     AwsEndpoint(const QString &amp;hostName);
+<span class="lineNum">      47 </span>                :            : 
+<span class="lineNum">      48 </span>                :            :     ~AwsEndpoint();
+<span class="lineNum">      49 </span>                :            : 
+<span class="lineNum">      50 </span>                :            :     static QUrl getEndpoint(const QString &amp;regionName, const QString &amp;serviceName,
+<span class="lineNum">      51 </span>                :            :                             const Transports transport = AnyTransport);
+<span class="lineNum">      52 </span>                :            : 
+<span class="lineNum">      53 </span>                :            :     static bool isSupported(const QString &amp;regionName, const QString &amp;serviceName,
+<span class="lineNum">      54 </span>                :            :                             const Transports transport = AnyTransport);
+<span class="lineNum">      55 </span>                :            : 
+<span class="lineNum">      56 </span>                :            :     bool isSupported(const Transport transport) const;
+<span class="lineNum">      57 </span>                :            : 
+<span class="lineNum">      58 </span>                :            :     bool isValid() const;
+<span class="lineNum">      59 </span>                :            : 
+<span class="lineNum">      60 </span>                :            :     QString fullServiceName() const;
+<span class="lineNum">      61 </span>                :            :     static QString fullServiceName(const QString &amp;serviceName);
+<span class="lineNum">      62 </span>                :            : 
+<span class="lineNum">      63 </span>                :            :     QString hostName() const;
+<span class="lineNum">      64 </span>                :            : 
+<span class="lineNum">      65 </span>                :            :     QString regionName() const;
+<span class="lineNum">      66 </span>                :            : 
+<span class="lineNum">      67 </span>                :            :     QString serviceName() const;
+<span class="lineNum">      68 </span>                :            : 
+<span class="lineNum">      69 </span>                :            :     QStringList supportedRegions(const Transports transport = AnyTransport) const;
+<span class="lineNum">      70 </span>                :            : 
+<span class="lineNum">      71 </span>                :            :     static QStringList supportedRegions(const QString &amp;serviceName,
+<span class="lineNum">      72 </span>                :            :                                         const Transports transport = AnyTransport);
+<span class="lineNum">      73 </span>                :            : 
+<span class="lineNum">      74 </span>                :            :     static QStringList supportedServices(const QString &amp;regionName,
+<span class="lineNum">      75 </span>                :            :                                          const Transports transport = AnyTransport);
+<a name="76"><span class="lineNum">      76 </span>                :            : </a>
+<span class="lineNum">      77 </span>                :            : private:
+<span class="lineNum">      78 </span>                :<span class="lineCov">       9512 :     Q_DECLARE_PRIVATE(AwsEndpoint)</span>
 <span class="lineNum">      79 </span>                :            :     AwsEndpointPrivate * const d_ptr; ///&lt; Internal d-pointer.
 <span class="lineNum">      80 </span>                :            :     friend class TestAwsEndpoint;
 <a name="81"><span class="lineNum">      81 </span>                :            : };</a>

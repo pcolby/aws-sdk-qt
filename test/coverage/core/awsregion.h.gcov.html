@@ -100,79 +100,79 @@
 <span class="lineNum">      29 </span>                :            : QTAWS_BEGIN_NAMESPACE
 <span class="lineNum">      30 </span>                :            : 
 <span class="lineNum">      31 </span>                :            : class AwsRegionPrivate;
-<a name="32"><span class="lineNum">      32 </span>                :            : </a>
+<span class="lineNum">      32 </span>                :            : 
 <span class="lineNum">      33 </span>                :            : class QTAWS_EXPORT AwsRegion {
-<span class="lineNum">      34 </span>                :<span class="lineCov">       7736 :     Q_DECLARE_PRIVATE(AwsRegion)</span>
-<span class="lineNum">      35 </span>                :            : 
-<span class="lineNum">      36 </span>                :            : public:
-<span class="lineNum">      37 </span>                :            :     /// Bit flags representing the possible cardinal directions of
-<span class="lineNum">      38 </span>                :            :     /// AWS regions within macro-regions.
-<span class="lineNum">      39 </span>                :            :     enum CardinalDirection {
-<span class="lineNum">      40 </span>                :            :         North          = 0x00,
-<span class="lineNum">      41 </span>                :            :         NorthNorthEast = 0x10,
-<span class="lineNum">      42 </span>                :            :         NorthEast      = 0x20,
-<span class="lineNum">      43 </span>                :            :         EastNorthEast  = 0x30,
-<span class="lineNum">      44 </span>                :            :         East           = 0x40,
-<span class="lineNum">      45 </span>                :            :         EastSouthEast  = 0x50,
-<span class="lineNum">      46 </span>                :            :         SouthEast      = 0x60,
-<span class="lineNum">      47 </span>                :            :         SouthSouthEast = 0x70,
-<span class="lineNum">      48 </span>                :            :         South          = 0x80,
-<span class="lineNum">      49 </span>                :            :         SouthSouthWest = 0x90,
-<span class="lineNum">      50 </span>                :            :         SouthWest      = 0xA0,
-<span class="lineNum">      51 </span>                :            :         WestSouthWest  = 0xB0,
-<span class="lineNum">      52 </span>                :            :         West           = 0xC0,
-<span class="lineNum">      53 </span>                :            :         WestNorthWest  = 0xD0,
-<span class="lineNum">      54 </span>                :            :         NorthWest      = 0xE0,
-<span class="lineNum">      55 </span>                :            :         NortNorthWest  = 0xF0
-<span class="lineNum">      56 </span>                :            :     };
-<span class="lineNum">      57 </span>                :            : 
-<span class="lineNum">      58 </span>                :            :     /// AWS macro-regions.
-<span class="lineNum">      59 </span>                :            :     enum MacroRegion {
-<span class="lineNum">      60 </span>                :            :         AsiaPacific     = 0x100,
-<span class="lineNum">      61 </span>                :            :         Europe          = 0x300,
-<span class="lineNum">      62 </span>                :            :         SouthAmerica    = 0xA00,
-<span class="lineNum">      63 </span>                :            :         UnitedStates    = 0xB00,
-<span class="lineNum">      64 </span>                :            :         UnitedStatesGov = 0xC00
-<span class="lineNum">      65 </span>                :            :     };
-<span class="lineNum">      66 </span>                :            : 
-<span class="lineNum">      67 </span>                :            :     /// AWS regions.
-<span class="lineNum">      68 </span>                :            :     enum Region {
-<span class="lineNum">      69 </span>                :            :         InvalidRegion  = 0,
-<span class="lineNum">      70 </span>                :            :         AP_Northeast_1 = AsiaPacific     + NorthEast + 0x1,
-<span class="lineNum">      71 </span>                :            :         AP_Southeast_1 = AsiaPacific     + SouthEast + 0x1,
-<span class="lineNum">      72 </span>                :            :         AP_Southeast_2 = AsiaPacific     + SouthEast + 0x2,
-<span class="lineNum">      73 </span>                :            :         EU_West_1      = Europe          + West      + 0x1,
-<span class="lineNum">      74 </span>                :            :         SA_East_1      = SouthAmerica    + East      + 0x1,
-<span class="lineNum">      75 </span>                :            :         US_East_1      = UnitedStates    + East      + 0x1,
-<span class="lineNum">      76 </span>                :            :         US_Gov_West_1  = UnitedStatesGov + West      + 0x1,
-<span class="lineNum">      77 </span>                :            :         US_West_1      = UnitedStates    + West      + 0x1,
-<span class="lineNum">      78 </span>                :            :         US_West_2      = UnitedStates    + West      + 0x2
-<span class="lineNum">      79 </span>                :            :     };
-<span class="lineNum">      80 </span>                :            :     Q_DECLARE_FLAGS(Regions, Region)
-<span class="lineNum">      81 </span>                :            : 
-<span class="lineNum">      82 </span>                :            :     AwsRegion(const Region region);
-<span class="lineNum">      83 </span>                :            :     AwsRegion(const QString &amp;regionName);
-<span class="lineNum">      84 </span>                :            :     ~AwsRegion();
-<span class="lineNum">      85 </span>                :            : 
-<span class="lineNum">      86 </span>                :            :     bool isValid() const;
-<span class="lineNum">      87 </span>                :            :     Region region() const;
-<span class="lineNum">      88 </span>                :            : 
-<span class="lineNum">      89 </span>                :            :     QString name() const;
-<span class="lineNum">      90 </span>                :            :     static QString name(const Region &amp;region);
-<span class="lineNum">      91 </span>                :            : 
-<span class="lineNum">      92 </span>                :            :     QString fullName() const;
-<span class="lineNum">      93 </span>                :            :     static QString fullName(const Region &amp;region);
-<span class="lineNum">      94 </span>                :            : 
-<span class="lineNum">      95 </span>                :            :     QString hostName(const QString &amp;serviceName) const;
-<span class="lineNum">      96 </span>                :            : 
-<span class="lineNum">      97 </span>                :            :     bool isSupported(const QString &amp;serviceName,
-<span class="lineNum">      98 </span>                :            :                      const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
-<span class="lineNum">      99 </span>                :            : 
-<span class="lineNum">     100 </span>                :            :     QStringList supportedServices(const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
-<span class="lineNum">     101 </span>                :            : 
-<span class="lineNum">     102 </span>                :            :     static Region fromName(const QString &amp;regionName);
-<span class="lineNum">     103 </span>                :            : 
-<span class="lineNum">     104 </span>                :            : private:
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            : public:
+<span class="lineNum">      36 </span>                :            :     /// Bit flags representing the possible cardinal directions of
+<span class="lineNum">      37 </span>                :            :     /// AWS regions within macro-regions.
+<span class="lineNum">      38 </span>                :            :     enum CardinalDirection {
+<span class="lineNum">      39 </span>                :            :         North          = 0x00,
+<span class="lineNum">      40 </span>                :            :         NorthNorthEast = 0x10,
+<span class="lineNum">      41 </span>                :            :         NorthEast      = 0x20,
+<span class="lineNum">      42 </span>                :            :         EastNorthEast  = 0x30,
+<span class="lineNum">      43 </span>                :            :         East           = 0x40,
+<span class="lineNum">      44 </span>                :            :         EastSouthEast  = 0x50,
+<span class="lineNum">      45 </span>                :            :         SouthEast      = 0x60,
+<span class="lineNum">      46 </span>                :            :         SouthSouthEast = 0x70,
+<span class="lineNum">      47 </span>                :            :         South          = 0x80,
+<span class="lineNum">      48 </span>                :            :         SouthSouthWest = 0x90,
+<span class="lineNum">      49 </span>                :            :         SouthWest      = 0xA0,
+<span class="lineNum">      50 </span>                :            :         WestSouthWest  = 0xB0,
+<span class="lineNum">      51 </span>                :            :         West           = 0xC0,
+<span class="lineNum">      52 </span>                :            :         WestNorthWest  = 0xD0,
+<span class="lineNum">      53 </span>                :            :         NorthWest      = 0xE0,
+<span class="lineNum">      54 </span>                :            :         NortNorthWest  = 0xF0
+<span class="lineNum">      55 </span>                :            :     };
+<span class="lineNum">      56 </span>                :            : 
+<span class="lineNum">      57 </span>                :            :     /// AWS macro-regions.
+<span class="lineNum">      58 </span>                :            :     enum MacroRegion {
+<span class="lineNum">      59 </span>                :            :         AsiaPacific     = 0x100,
+<span class="lineNum">      60 </span>                :            :         Europe          = 0x300,
+<span class="lineNum">      61 </span>                :            :         SouthAmerica    = 0xA00,
+<span class="lineNum">      62 </span>                :            :         UnitedStates    = 0xB00,
+<span class="lineNum">      63 </span>                :            :         UnitedStatesGov = 0xC00
+<span class="lineNum">      64 </span>                :            :     };
+<span class="lineNum">      65 </span>                :            : 
+<span class="lineNum">      66 </span>                :            :     /// AWS regions.
+<span class="lineNum">      67 </span>                :            :     enum Region {
+<span class="lineNum">      68 </span>                :            :         InvalidRegion  = 0,
+<span class="lineNum">      69 </span>                :            :         AP_Northeast_1 = AsiaPacific     + NorthEast + 0x1,
+<span class="lineNum">      70 </span>                :            :         AP_Southeast_1 = AsiaPacific     + SouthEast + 0x1,
+<span class="lineNum">      71 </span>                :            :         AP_Southeast_2 = AsiaPacific     + SouthEast + 0x2,
+<span class="lineNum">      72 </span>                :            :         EU_West_1      = Europe          + West      + 0x1,
+<span class="lineNum">      73 </span>                :            :         SA_East_1      = SouthAmerica    + East      + 0x1,
+<span class="lineNum">      74 </span>                :            :         US_East_1      = UnitedStates    + East      + 0x1,
+<span class="lineNum">      75 </span>                :            :         US_Gov_West_1  = UnitedStatesGov + West      + 0x1,
+<span class="lineNum">      76 </span>                :            :         US_West_1      = UnitedStates    + West      + 0x1,
+<span class="lineNum">      77 </span>                :            :         US_West_2      = UnitedStates    + West      + 0x2
+<span class="lineNum">      78 </span>                :            :     };
+<span class="lineNum">      79 </span>                :            :     Q_DECLARE_FLAGS(Regions, Region)
+<span class="lineNum">      80 </span>                :            : 
+<span class="lineNum">      81 </span>                :            :     AwsRegion(const Region region);
+<span class="lineNum">      82 </span>                :            :     AwsRegion(const QString &amp;regionName);
+<span class="lineNum">      83 </span>                :            :     ~AwsRegion();
+<span class="lineNum">      84 </span>                :            : 
+<span class="lineNum">      85 </span>                :            :     bool isValid() const;
+<span class="lineNum">      86 </span>                :            :     Region region() const;
+<span class="lineNum">      87 </span>                :            : 
+<span class="lineNum">      88 </span>                :            :     QString name() const;
+<span class="lineNum">      89 </span>                :            :     static QString name(const Region &amp;region);
+<span class="lineNum">      90 </span>                :            : 
+<span class="lineNum">      91 </span>                :            :     QString fullName() const;
+<span class="lineNum">      92 </span>                :            :     static QString fullName(const Region &amp;region);
+<span class="lineNum">      93 </span>                :            : 
+<span class="lineNum">      94 </span>                :            :     QString hostName(const QString &amp;serviceName) const;
+<span class="lineNum">      95 </span>                :            : 
+<span class="lineNum">      96 </span>                :            :     bool isSupported(const QString &amp;serviceName,
+<span class="lineNum">      97 </span>                :            :                      const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
+<span class="lineNum">      98 </span>                :            : 
+<span class="lineNum">      99 </span>                :            :     QStringList supportedServices(const AwsEndpoint::Transports transports = AwsEndpoint::AnyTransport) const;
+<span class="lineNum">     100 </span>                :            : 
+<span class="lineNum">     101 </span>                :            :     static Region fromName(const QString &amp;regionName);
+<a name="102"><span class="lineNum">     102 </span>                :            : </a>
+<span class="lineNum">     103 </span>                :            : private:
+<span class="lineNum">     104 </span>                :<span class="lineCov">       7736 :     Q_DECLARE_PRIVATE(AwsRegion)</span>
 <span class="lineNum">     105 </span>                :            :     AwsRegionPrivate * const d_ptr; ///&lt; Internal d-pointer.
 <span class="lineNum">     106 </span>                :            :     friend class TestAwsRegion;
 <span class="lineNum">     107 </span>                :            : };

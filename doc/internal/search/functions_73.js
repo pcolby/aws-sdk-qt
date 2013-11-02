@@ -5,7 +5,7 @@ var searchData=
   ['setaccesskeyid',['setAccessKeyId',['../classAwsBasicCredentials.html#ad698665cd8bb4b2ae1f0804447646a79',1,'AwsBasicCredentials']]],
   ['setauthorizationheader',['setAuthorizationHeader',['../classAwsSignatureV4Private.html#ae95ffb26c9820739195e3e3be1accb1f',1,'AwsSignatureV4Private']]],
   ['setdateheader',['setDateHeader',['../classAwsSignatureV4Private.html#abd7102cdbb36ab1254004a6c840ef847',1,'AwsSignatureV4Private']]],
-  ['setqueryitem',['setQueryItem',['../classAwsAbstractSignature.html#abeb5a968d185b8b1708458dd27537180',1,'AwsAbstractSignature']]],
+  ['setqueryitem',['setQueryItem',['../classAwsAbstractSignaturePrivate.html#a7abb950f505f194b3e4522eb54668235',1,'AwsAbstractSignaturePrivate']]],
   ['setsecretkey',['setSecretKey',['../classAwsBasicCredentials.html#a5616895ac898b7358f31ef975c08e814',1,'AwsBasicCredentials']]],
   ['settoken',['setToken',['../classAwsBasicCredentials.html#aa3b81f98e3170858abd5de46cd4610fe',1,'AwsBasicCredentials']]],
   ['sign',['sign',['../classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452',1,'AwsAbstractSignature::sign()'],['../classAwsSignatureV0.html#a34b7288f6730e3519356efb29edfc17d',1,'AwsSignatureV0::sign()'],['../classAwsSignatureV2.html#a2fff75934e5a79a6cfc155797826ea85',1,'AwsSignatureV2::sign()'],['../classAwsSignatureV3.html#a971c7a7be5f40e935bdee31ed89d8642',1,'AwsSignatureV3::sign()'],['../classAwsSignatureV4.html#a21983ddefd9992a7deebe91fbf711c3d',1,'AwsSignatureV4::sign()']]],

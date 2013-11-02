@@ -112,17 +112,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AWSSIGNATUREV2_P_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;qtawsglobal.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QCryptographicHash&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QNetworkAccessManager&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QUrl&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. ">AwsSignatureV2</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classAwsSignatureV2Private.html">   33</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classAwsSignatureV2Private.html" title="Private implementation for AwsSignatureV2. ">AwsSignatureV2Private</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. ">AwsSignatureV2</a>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;awsabstractsignature_p.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QCryptographicHash&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QNetworkAccessManager&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QUrl&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. ">AwsSignatureV2</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classAwsSignatureV2Private.html">   34</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classAwsSignatureV2Private.html" title="Private implementation for AwsSignatureV2. ">AwsSignatureV2Private</a> : <span class="keyword">public</span> <a class="code" href="classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. ">AwsAbstractSignaturePrivate</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classAwsSignatureV2Private.html#a57f3938346c57bc5bb8f6fc4b21c8520">   37</a></span>&#160;    QCryptographicHash::Algorithm <a class="code" href="classAwsSignatureV2Private.html#a57f3938346c57bc5bb8f6fc4b21c8520" title="Hash algorithm to use when signing. ">hashAlgorithm</a>; </div>
@@ -136,8 +136,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QByteArray signatureMethod(<span class="keyword">const</span> QCryptographicHash::Algorithm algorithm) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classAwsSignatureV2Private.html#a8318e5d5c727dc51950b3fb1371a3d29">   48</a></span>&#160;    <a class="code" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. ">AwsSignatureV2</a> * <span class="keyword">const</span> <a class="code" href="classAwsSignatureV2Private.html#a8318e5d5c727dc51950b3fb1371a3d29" title="Internal q-pointer. ">q_ptr</a>; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>TestAwsSignatureV2;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. ">AwsSignatureV2</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    friend class TestAwsSignatureV2;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;QTAWS_END_NAMESPACE</div>
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 2 2013 11:14:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 2 2013 14:25:46 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -40,8 +40,8 @@
             <td class="headerValue">2013-11-02</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
@@ -49,9 +49,9 @@
             <td></td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntryHi">-</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">50.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -92,19 +92,19 @@
 <span class="lineNum">      21 </span>                :            : #define AWSSIGNATUREV4_P_H
 <span class="lineNum">      22 </span>                :            : 
 <span class="lineNum">      23 </span>                :            : #include &quot;qtawsglobal.h&quot;
-<span class="lineNum">      24 </span>                :            : 
-<span class="lineNum">      25 </span>                :            : #include &lt;QCryptographicHash&gt;
-<span class="lineNum">      26 </span>                :            : #include &lt;QDateTime&gt;
-<span class="lineNum">      27 </span>                :            : #include &lt;QNetworkAccessManager&gt;
-<span class="lineNum">      28 </span>                :            : #include &lt;QUrl&gt;
-<span class="lineNum">      29 </span>                :            : #include &lt;QUrlQuery&gt;
-<span class="lineNum">      30 </span>                :            : 
-<span class="lineNum">      31 </span>                :            : QTAWS_BEGIN_NAMESPACE
-<span class="lineNum">      32 </span>                :            : 
-<span class="lineNum">      33 </span>                :            : class AwsSignatureV4;
-<a name="34"><span class="lineNum">      34 </span>                :            : </a>
-<span class="lineNum">      35 </span>                :            : class QTAWS_EXPORT AwsSignatureV4Private {
-<span class="lineNum">      36 </span>                :<span class="lineCov">        118 :     Q_DECLARE_PUBLIC(AwsSignatureV4)</span>
+<span class="lineNum">      24 </span>                :            : #include &quot;awsabstractsignature_p.h&quot;
+<span class="lineNum">      25 </span>                :            : 
+<span class="lineNum">      26 </span>                :            : #include &lt;QCryptographicHash&gt;
+<span class="lineNum">      27 </span>                :            : #include &lt;QDateTime&gt;
+<span class="lineNum">      28 </span>                :            : #include &lt;QNetworkAccessManager&gt;
+<span class="lineNum">      29 </span>                :            : #include &lt;QUrl&gt;
+<span class="lineNum">      30 </span>                :            : #include &lt;QUrlQuery&gt;
+<span class="lineNum">      31 </span>                :            : 
+<span class="lineNum">      32 </span>                :            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      33 </span>                :            : 
+<a name="34"><span class="lineNum">      34 </span>                :            : class AwsSignatureV4;</a>
+<span class="lineNum">      35 </span>                :            : 
+<span class="lineNum">      36 </span>        [<span class="branchNoCov" title="Branch 3 was not taken"> - </span><span class="branchCov" title="Branch 4 was taken 115 times"> + </span>]:<span class="lineCov">        460 : class QTAWS_EXPORT AwsSignatureV4Private : public AwsAbstractSignaturePrivate {</span>
 <span class="lineNum">      37 </span>                :            : 
 <span class="lineNum">      38 </span>                :            : public:
 <span class="lineNum">      39 </span>                :            :     AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV4 * const q);
@@ -145,7 +145,7 @@
 <span class="lineNum">      74 </span>                :            :                             const QByteArray &amp;credentialScope, const QByteArray &amp;canonicalRequest) const;
 <span class="lineNum">      75 </span>                :            : 
 <span class="lineNum">      76 </span>                :            : private:
-<span class="lineNum">      77 </span>                :            :     AwsSignatureV4 * const q_ptr; ///&lt; Internal q-pointer.
+<span class="lineNum">      77 </span>                :            :     Q_DECLARE_PUBLIC(AwsSignatureV4)
 <span class="lineNum">      78 </span>                :            :     friend class TestAwsSignatureV4;
 <span class="lineNum">      79 </span>                :            : };
 <span class="lineNum">      80 </span>                :            : 

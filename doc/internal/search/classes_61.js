@@ -2,6 +2,7 @@ var searchData=
 [
   ['awsabstractcredentials',['AwsAbstractCredentials',['../classAwsAbstractCredentials.html',1,'']]],
   ['awsabstractsignature',['AwsAbstractSignature',['../classAwsAbstractSignature.html',1,'']]],
+  ['awsabstractsignatureprivate',['AwsAbstractSignaturePrivate',['../classAwsAbstractSignaturePrivate.html',1,'']]],
   ['awsanonymouscredentials',['AwsAnonymousCredentials',['../classAwsAnonymousCredentials.html',1,'']]],
   ['awsbasiccredentials',['AwsBasicCredentials',['../classAwsBasicCredentials.html',1,'']]],
   ['awsbasiccredentialsprivate',['AwsBasicCredentialsPrivate',['../classAwsBasicCredentialsPrivate.html',1,'']]],

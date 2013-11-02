@@ -97,16 +97,16 @@
 <span class="lineNum">      26 </span>                :            : QTAWS_BEGIN_NAMESPACE
 <span class="lineNum">      27 </span>                :            : 
 <a name="28"><span class="lineNum">      28 </span>                :            : class AwsSignatureV1Private;</a>
-<a name="29"><span class="lineNum">      29 </span>                :            : </a>
+<span class="lineNum">      29 </span>                :            : 
 <span class="lineNum">      30 </span>        [<span class="branchNoCov" title="Branch 3 was not taken"> - </span><span class="branchCov" title="Branch 4 was taken 8 times"> + </span>]:<span class="lineCov">         16 : class QTAWS_EXPORT AwsSignatureV1 : public AwsSignatureV0 {</span>
-<span class="lineNum">      31 </span>                :<span class="lineCov">         10 :     Q_DECLARE_PRIVATE(AwsSignatureV1)</span>
-<span class="lineNum">      32 </span>                :            : 
-<span class="lineNum">      33 </span>                :            : public:
-<span class="lineNum">      34 </span>                :            :     AwsSignatureV1();
-<span class="lineNum">      35 </span>                :            : 
-<span class="lineNum">      36 </span>                :            :     virtual int version() const;
-<span class="lineNum">      37 </span>                :            : 
-<span class="lineNum">      38 </span>                :            : private:
+<span class="lineNum">      31 </span>                :            : 
+<span class="lineNum">      32 </span>                :            : public:
+<span class="lineNum">      33 </span>                :            :     AwsSignatureV1();
+<span class="lineNum">      34 </span>                :            : 
+<span class="lineNum">      35 </span>                :            :     virtual int version() const;
+<a name="36"><span class="lineNum">      36 </span>                :            : </a>
+<span class="lineNum">      37 </span>                :            : private:
+<span class="lineNum">      38 </span>                :<span class="lineCov">         10 :     Q_DECLARE_PRIVATE(AwsSignatureV1)</span>
 <span class="lineNum">      39 </span>                :            :     friend class TestAwsSignatureV1;
 <span class="lineNum">      40 </span>                :            : };
 <span class="lineNum">      41 </span>                :            : 

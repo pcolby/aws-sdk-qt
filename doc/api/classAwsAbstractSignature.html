@@ -86,7 +86,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classAwsAbstractSignature-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AwsAbstractSignature Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -105,8 +104,9 @@ Inheritance diagram for AwsAbstractSignature:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39c9eacd36bcf13ee629f1dcb7f23d5a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#a39c9eacd36bcf13ee629f1dcb7f23d5a">~AwsAbstractSignature</a> ()</td></tr>
-<tr class="memdesc:a39c9eacd36bcf13ee629f1dcb7f23d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. ">AwsAbstractSignature</a> destructor.  <a href="#a39c9eacd36bcf13ee629f1dcb7f23d5a">More...</a><br/></td></tr>
+<tr class="memitem:a39c9eacd36bcf13ee629f1dcb7f23d5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39c9eacd36bcf13ee629f1dcb7f23d5a"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#a39c9eacd36bcf13ee629f1dcb7f23d5a">~AwsAbstractSignature</a> ()</td></tr>
+<tr class="memdesc:a39c9eacd36bcf13ee629f1dcb7f23d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. ">AwsAbstractSignature</a> destructor. <br/></td></tr>
 <tr class="separator:a39c9eacd36bcf13ee629f1dcb7f23d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff347575348cf89d5ea6342b1c147452"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452">sign</a> (const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials, const QNetworkAccessManager::Operation operation, QNetworkRequest &amp;request, const QByteArray &amp;data=QByteArray()) const =0</td></tr>
 <tr class="memdesc:aff347575348cf89d5ea6342b1c147452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign an AWS request.  <a href="#aff347575348cf89d5ea6342b1c147452">More...</a><br/></td></tr>
@@ -114,225 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57f9352c5b831eafdcc6932f0f5b8798"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#a57f9352c5b831eafdcc6932f0f5b8798">version</a> () const =0</td></tr>
 <tr class="memdesc:a57f9352c5b831eafdcc6932f0f5b8798"><td class="mdescLeft">&#160;</td><td class="mdescRight">AWS Signature version implemented by this class.  <a href="#a57f9352c5b831eafdcc6932f0f5b8798">More...</a><br/></td></tr>
 <tr class="separator:a57f9352c5b831eafdcc6932f0f5b8798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad38cb594dcfcf34e191c17b8098ffb73"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#ad38cb594dcfcf34e191c17b8098ffb73">canonicalPath</a> (const QUrl &amp;url) const </td></tr>
-<tr class="memdesc:ad38cb594dcfcf34e191c17b8098ffb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an AWS Signature canonical path.  <a href="#ad38cb594dcfcf34e191c17b8098ffb73">More...</a><br/></td></tr>
-<tr class="separator:ad38cb594dcfcf34e191c17b8098ffb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89758445285f69307a4f0ababbfa2866"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#a89758445285f69307a4f0ababbfa2866">canonicalQuery</a> (const QUrlQuery &amp;query) const </td></tr>
-<tr class="memdesc:a89758445285f69307a4f0ababbfa2866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an AWS Signature canonical query.  <a href="#a89758445285f69307a4f0ababbfa2866">More...</a><br/></td></tr>
-<tr class="separator:a89758445285f69307a4f0ababbfa2866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1614dbac17f70155482c380594dc304"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#ae1614dbac17f70155482c380594dc304">httpMethod</a> (const QNetworkAccessManager::Operation operation) const </td></tr>
-<tr class="memdesc:ae1614dbac17f70155482c380594dc304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an AWS Signature request method string.  <a href="#ae1614dbac17f70155482c380594dc304">More...</a><br/></td></tr>
-<tr class="separator:ae1614dbac17f70155482c380594dc304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb5a968d185b8b1708458dd27537180"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#abeb5a968d185b8b1708458dd27537180">setQueryItem</a> (QUrlQuery &amp;query, const QString &amp;key, const QString &amp;value, const bool warnOnNonIdenticalDuplicate=true) const </td></tr>
-<tr class="memdesc:abeb5a968d185b8b1708458dd27537180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a query item, checking for existing values first.  <a href="#abeb5a968d185b8b1708458dd27537180">More...</a><br/></td></tr>
-<tr class="separator:abeb5a968d185b8b1708458dd27537180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface class for providing AWS signatures. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a39c9eacd36bcf13ee629f1dcb7f23d5a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">AwsAbstractSignature::~AwsAbstractSignature </td>
-          <td>(</td>
-          <td class="paramname">)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. ">AwsAbstractSignature</a> destructor. </p>
-<p>This virtual destructor does nothing (yet) - its here to allow for safe polymorphic destruction. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad38cb594dcfcf34e191c17b8098ffb73"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QString AwsAbstractSignature::canonicalPath </td>
-          <td>(</td>
-          <td class="paramtype">const QUrl &amp;&#160;</td>
-          <td class="paramname"><em>url</em>)</td><td></td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create an AWS Signature canonical path. </p>
-<p>This function simply returns the fully-URL-encoded path. However, if the path is empty, then a single '/' is returned, as is required by Amazon for both V2 and V4 signatures (and presumably other versions too).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">url</td><td>URL from which to extract the path.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An AWS Signature canonical path.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> </dd>
-<dd>
-<a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Move this to an AwsAbstractSignaturePrivate class? </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a89758445285f69307a4f0ababbfa2866"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QByteArray AwsAbstractSignature::canonicalQuery </td>
-          <td>(</td>
-          <td class="paramtype">const QUrlQuery &amp;&#160;</td>
-          <td class="paramname"><em>query</em>)</td><td></td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create an AWS Signature canonical query. </p>
-<p>This function returns an HTTP query string in Amazon's canonical form. That is, all query parameters are sorted by keys (<b>but not keys-then-values</b>), then joined with <code>&amp;</code> separators, in <code>key=value</code> pairs with both keys and values being URL percent encoded.</p>
-<dl class="section note"><dt>Note</dt><dd>The canonical form produced by this function is used by Amazon's later signature formats (versions 2, 3 and 4), but not their earlier formats (versions 0 and 1).</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">query</td><td>Query to encode the HTTP query string from.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An AWS Signature canonical query string.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> </dd>
-<dd>
-<a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Move this to an AwsAbstractSignaturePrivate class? </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae1614dbac17f70155482c380594dc304"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QString AwsAbstractSignature::httpMethod </td>
-          <td>(</td>
-          <td class="paramtype">const QNetworkAccessManager::Operation&#160;</td>
-          <td class="paramname"><em>operation</em>)</td><td></td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create an AWS Signature request method string. </p>
-<p>This function simply converts QNetworkAccessManager operations (enum values) to strings appropriate to use in AWS signatures.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">operation</td><td>The network operation to convert to string.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A string representation of <code>operation</code>, or an empty string if the operation is not recognised or otherwise unsupported.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Move this to an AwsAbstractSignaturePrivate class? </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="abeb5a968d185b8b1708458dd27537180"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool AwsAbstractSignature::setQueryItem </td>
-          <td>(</td>
-          <td class="paramtype">QUrlQuery &amp;&#160;</td>
-          <td class="paramname"><em>query</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>warnOnNonIdenticalDuplicate</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set a query item, checking for existing values first. </p>
-<p>This function is a light wrapper around QUrlQuery::addQueryItem() that first checks for existing values. Existing values will not be overwritten, instead if existing values are found, this function will simply check if the exsting value matches the desired <em>value</em>, and if not, will return <code>false</code> and optionally (according to <em>warnOnNonIdenticalDuplicate</em>) issue a qWarning().</p>
-<p>Typically, when setting something that must be a specific value, such as an access key ID, <em>warnOnNonIdenticalDuplicate</em> would be <code>true</code>. However, when setting query items as a fall-back default, such as a current timestamp, <em>warnOnNonIdenticalDuplicate</em> would typically be set to <code>false</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">query</td><td>URL query to add the query item to. </td></tr>
-    <tr><td class="paramname">key</td><td>Query item key to add to <em>query</em>. </td></tr>
-    <tr><td class="paramname">value</td><td>Query item value to add to <em>query</em>. </td></tr>
-    <tr><td class="paramname">warnOnNonIdenticalDuplicate</td><td>If <code>true</code>, and an exisiting <em>key</em> value is found in <em>query</em> that has a value other than <em>value</em>, then a qWarning() is issued, otherwise the duplicate is silently ignored.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the query item was set successfully or was already set to the requested value previously, <code>false</code> otherwise.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Move this to an AwsAbstractSignaturePrivate class? </dd></dl>
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aff347575348cf89d5ea6342b1c147452"></a>
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +214,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 2 2013 11:14:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 2 2013 14:25:47 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

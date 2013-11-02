@@ -1,4 +1,4 @@
 <map id="AwsSignatureV2" name="AwsSignatureV2">
-<area shape="rect" id="node4" href="$classAwsSignatureV2Private.html" title="Private implementation for AwsSignatureV2. " alt="" coords="5,195,163,229"/>
-<area shape="rect" id="node2" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="8,6,160,39"/>
+<area shape="rect" id="node2" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="103,6,255,39"/>
+<area shape="rect" id="node4" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="147,110,339,143"/>
 </map>
