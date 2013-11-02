@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2013-10-30</td>
+            <td class="headerValue">2013-11-02</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">5</td>
@@ -107,7 +107,7 @@
 <span class="lineNum">      36 </span>                :            :  * This virtual destructor does nothing (yet) - its here to allow for safe
 <a name="37"><span class="lineNum">      37 </span>                :            :  * polymorphic destruction.</a>
 <span class="lineNum">      38 </span>                :            :  */
-<span class="lineNum">      39 </span>        [<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 46 times"> + </span>]:<span class="lineCov">         92 : AwsAbstractSignature::~AwsAbstractSignature() { }</span>
+<span class="lineNum">      39 </span>        [<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 59 times"> + </span>]:<span class="lineCov">        118 : AwsAbstractSignature::~AwsAbstractSignature() { }</span>
 <span class="lineNum">      40 </span>                :            : 
 <span class="lineNum">      41 </span>                :            : /**
 <span class="lineNum">      42 </span>                :            :  * @fn     void AwsAbstractSignature::sign() const
@@ -223,68 +223,80 @@
 <span class="lineNum">     130 </span>                :            :  *
 <a name="131"><span class="lineNum">     131 </span>                :            :  * @todo   Move this to an AwsAbstractSignaturePrivate class?</a>
 <span class="lineNum">     132 </span>                :            :  */
-<span class="lineNum">     133 </span>                :<span class="lineCov">         67 : QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const {</span>
-<span class="lineNum">     134 </span>  [<span class="branchCov" title="Branch 0 was taken 1 time"> + </span><span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchCov" title="Branch 2 was taken 37 times"> + </span><span class="branchCov" title="Branch 3 was taken 26 times"> + </span> :<span class="lineCov">         67 :     switch (operation) {</span>
+<span class="lineNum">     133 </span>                :<span class="lineCov">         67 : QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const</span>
+<span class="lineNum">     134 </span>                :            : {
+<span class="lineNum">     135 </span>  [<span class="branchCov" title="Branch 0 was taken 1 time"> + </span><span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchCov" title="Branch 2 was taken 37 times"> + </span><span class="branchCov" title="Branch 3 was taken 26 times"> + </span> :<span class="lineCov">         67 :     switch (operation) {</span>
 <span class="lineNum">         </span>         <span class="branchCov" title="Branch 4 was taken 1 time"> + </span><span class="branchCov" title="Branch 5 was taken 1 time"> + </span>]
-<span class="lineNum">     135 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::DeleteOperation: return QLatin1String(&quot;DELETE&quot;);</span>
-<span class="lineNum">     136 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::HeadOperation:   return QLatin1String(&quot;HEAD&quot;);</span>
-<span class="lineNum">     137 </span>        [<span class="branchCov" title="Branch 2 was taken 37 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         37 :         case QNetworkAccessManager::GetOperation:    return QLatin1String(&quot;GET&quot;);</span>
-<span class="lineNum">     138 </span>        [<span class="branchCov" title="Branch 2 was taken 26 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         26 :         case QNetworkAccessManager::PostOperation:   return QLatin1String(&quot;POST&quot;);</span>
-<span class="lineNum">     139 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::PutOperation:    return QLatin1String(&quot;PUT&quot;);</span>
-<span class="lineNum">     140 </span>                :            :         case QNetworkAccessManager::CustomOperation: // Fall through.
-<span class="lineNum">     141 </span>                :            :         default:
-<span class="lineNum">     142 </span>                :            :             // Catch this in debug mode for easier development / debugging.
-<span class="lineNum">     143 </span>                :<span class="lineCov">          1 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
-<span class="lineNum">     144 </span>                :            :     }
-<span class="lineNum">     145 </span>                :<span class="lineCov">         67 :     return QString(); // Operation was invalid / unsupported.</span>
-<span class="lineNum">     146 </span>                :            : }
-<span class="lineNum">     147 </span>                :            : 
-<span class="lineNum">     148 </span>                :            : /**
-<span class="lineNum">     149 </span>                :            :  * @brief   Set a query item, checking for existing values first.
-<span class="lineNum">     150 </span>                :            :  *
-<span class="lineNum">     151 </span>                :            :  * This function is a light wrapper around QUrlQuery::addQueryItem() that first
-<span class="lineNum">     152 </span>                :            :  * checks for existing values.  Existing values will not be overwritten, instead
-<span class="lineNum">     153 </span>                :            :  * if existing values are found, this function will simply check if the exsting
-<span class="lineNum">     154 </span>                :            :  * value matches the desired \a value, and if not, will return `false` and
-<span class="lineNum">     155 </span>                :            :  * optionally (according to \a warnOnNonIdenticalDuplicate) issue a qWarning().
-<span class="lineNum">     156 </span>                :            :  *
-<span class="lineNum">     157 </span>                :            :  * Typically, when setting something that must be a specific value, such as an
-<span class="lineNum">     158 </span>                :            :  * access key ID, \a warnOnNonIdenticalDuplicate would be `true`. However, when
-<span class="lineNum">     159 </span>                :            :  * setting query items as a fall-back default, such as a current timestamp,
-<span class="lineNum">     160 </span>                :            :  * \a warnOnNonIdenticalDuplicate would typically be set to `false`.
-<span class="lineNum">     161 </span>                :            :  *
-<span class="lineNum">     162 </span>                :            :  * @param   query  URL query to add the query item to.
-<span class="lineNum">     163 </span>                :            :  * @param   key    Query item key to add to \a query.
-<span class="lineNum">     164 </span>                :            :  * @param   value  Query item value to add to \a query.
-<span class="lineNum">     165 </span>                :            :  * @param   warnOnNonIdenticalDuplicate  If `true`, and an exisiting \a key
-<span class="lineNum">     166 </span>                :            :  *          value is found in \a query that has a value other than \a value,
-<span class="lineNum">     167 </span>                :            :  *          then a qWarning() is issued, otherwise the duplicate is silently
-<span class="lineNum">     168 </span>                :            :  *          ignored.
-<span class="lineNum">     169 </span>                :            :  *
-<span class="lineNum">     170 </span>                :            :  * @return  `true` if the query item was set successfully or was already set to
-<span class="lineNum">     171 </span>                :            :  *          the requested value previously, `false` otherwise.
-<span class="lineNum">     172 </span>                :            :  *
-<a name="173"><span class="lineNum">     173 </span>                :            :  * @todo   Move this to an AwsAbstractSignaturePrivate class?</a>
-<span class="lineNum">     174 </span>                :            :  */
-<span class="lineNum">     175 </span>                :<span class="lineCov">         29 : bool AwsAbstractSignature::setQueryItem(QUrlQuery &amp;query, const QString &amp;key, const QString &amp;value,</span>
-<span class="lineNum">     176 </span>                :            :                                         const bool warnOnNonIdenticalDuplicate) const
-<span class="lineNum">     177 </span>                :            : {
-<span class="lineNum">     178 </span>        [<span class="branchCov" title="Branch 1 was taken 16 times"> + </span><span class="branchCov" title="Branch 2 was taken 13 times"> + </span>]:<span class="lineCov">         29 :     if (query.hasQueryItem(key)) {</span>
-<span class="lineNum">     179 </span>        [<span class="branchCov" title="Branch 2 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         16 :         const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);</span>
-<span class="lineNum">     180 </span>        [<span class="branchCov" title="Branch 1 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         16 :         const bool existingQueryItemIsIdentical = (existingValue == value);</span>
-<span class="lineNum">     181 </span>[<span class="branchCov" title="Branch 0 was taken 11 times"> + </span><span class="branchCov" title="Branch 1 was taken 5 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchCov" title="Branch 3 was taken 10 times"> + </span>]:<span class="lineCov">         16 :         if ((warnOnNonIdenticalDuplicate) &amp;&amp; (!existingQueryItemIsIdentical)) {</span>
-<span class="lineNum">     182 </span>[<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          2 :             qWarning() &lt;&lt; &quot;AwsAbstractSignature::setQueryItem Not overwriting existing value for key&quot;</span>
+<span class="lineNum">     136 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::DeleteOperation: return QLatin1String(&quot;DELETE&quot;);</span>
+<span class="lineNum">     137 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::HeadOperation:   return QLatin1String(&quot;HEAD&quot;);</span>
+<span class="lineNum">     138 </span>        [<span class="branchCov" title="Branch 2 was taken 37 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         37 :         case QNetworkAccessManager::GetOperation:    return QLatin1String(&quot;GET&quot;);</span>
+<span class="lineNum">     139 </span>        [<span class="branchCov" title="Branch 2 was taken 26 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         26 :         case QNetworkAccessManager::PostOperation:   return QLatin1String(&quot;POST&quot;);</span>
+<span class="lineNum">     140 </span>        [<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">          1 :         case QNetworkAccessManager::PutOperation:    return QLatin1String(&quot;PUT&quot;);</span>
+<span class="lineNum">     141 </span>                :            :         case QNetworkAccessManager::CustomOperation: // Fall through.
+<span class="lineNum">     142 </span>                :            :         default:
+<span class="lineNum">     143 </span>                :            :             // Catch this in debug mode for easier development / debugging.
+<span class="lineNum">     144 </span>                :<span class="lineCov">          1 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
+<span class="lineNum">     145 </span>                :            :     }
+<span class="lineNum">     146 </span>                :<span class="lineCov">         67 :     return QString(); // Operation was invalid / unsupported.</span>
+<span class="lineNum">     147 </span>                :            : }
+<span class="lineNum">     148 </span>                :            : 
+<span class="lineNum">     149 </span>                :            : /**
+<span class="lineNum">     150 </span>                :            :  * @brief   Set a query item, checking for existing values first.
+<span class="lineNum">     151 </span>                :            :  *
+<span class="lineNum">     152 </span>                :            :  * This function is a light wrapper around QUrlQuery::addQueryItem() that first
+<span class="lineNum">     153 </span>                :            :  * checks for existing values.  Existing values will not be overwritten, instead
+<span class="lineNum">     154 </span>                :            :  * if existing values are found, this function will simply check if the exsting
+<span class="lineNum">     155 </span>                :            :  * value matches the desired \a value, and if not, will return `false` and
+<span class="lineNum">     156 </span>                :            :  * optionally (according to \a warnOnNonIdenticalDuplicate) issue a qWarning().
+<span class="lineNum">     157 </span>                :            :  *
+<span class="lineNum">     158 </span>                :            :  * Typically, when setting something that must be a specific value, such as an
+<span class="lineNum">     159 </span>                :            :  * access key ID, \a warnOnNonIdenticalDuplicate would be `true`. However, when
+<span class="lineNum">     160 </span>                :            :  * setting query items as a fall-back default, such as a current timestamp,
+<span class="lineNum">     161 </span>                :            :  * \a warnOnNonIdenticalDuplicate would typically be set to `false`.
+<span class="lineNum">     162 </span>                :            :  *
+<span class="lineNum">     163 </span>                :            :  * @param   query  URL query to add the query item to.
+<span class="lineNum">     164 </span>                :            :  * @param   key    Query item key to add to \a query.
+<span class="lineNum">     165 </span>                :            :  * @param   value  Query item value to add to \a query.
+<span class="lineNum">     166 </span>                :            :  * @param   warnOnNonIdenticalDuplicate  If `true`, and an exisiting \a key
+<span class="lineNum">     167 </span>                :            :  *          value is found in \a query that has a value other than \a value,
+<span class="lineNum">     168 </span>                :            :  *          then a qWarning() is issued, otherwise the duplicate is silently
+<span class="lineNum">     169 </span>                :            :  *          ignored.
+<span class="lineNum">     170 </span>                :            :  *
+<span class="lineNum">     171 </span>                :            :  * @return  `true` if the query item was set successfully or was already set to
+<span class="lineNum">     172 </span>                :            :  *          the requested value previously, `false` otherwise.
+<span class="lineNum">     173 </span>                :            :  *
+<a name="174"><span class="lineNum">     174 </span>                :            :  * @todo   Move this to an AwsAbstractSignaturePrivate class?</a>
+<span class="lineNum">     175 </span>                :            :  */
+<span class="lineNum">     176 </span>                :<span class="lineCov">         37 : bool AwsAbstractSignature::setQueryItem(QUrlQuery &amp;query, const QString &amp;key, const QString &amp;value,</span>
+<span class="lineNum">     177 </span>                :            :                                         const bool warnOnNonIdenticalDuplicate) const
+<span class="lineNum">     178 </span>                :            : {
+<span class="lineNum">     179 </span>        [<span class="branchCov" title="Branch 1 was taken 20 times"> + </span><span class="branchCov" title="Branch 2 was taken 17 times"> + </span>]:<span class="lineCov">         37 :     if (query.hasQueryItem(key)) {</span>
+<span class="lineNum">     180 </span>        [<span class="branchCov" title="Branch 2 was taken 20 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         20 :         const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);</span>
+<span class="lineNum">     181 </span>        [<span class="branchCov" title="Branch 1 was taken 20 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         20 :         const bool existingQueryItemIsIdentical = (existingValue == value);</span>
+<span class="lineNum">     182 </span>[<span class="branchCov" title="Branch 0 was taken 14 times"> + </span><span class="branchCov" title="Branch 1 was taken 6 times"> + </span>][<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchCov" title="Branch 3 was taken 13 times"> + </span>]:<span class="lineCov">         20 :         if ((warnOnNonIdenticalDuplicate) &amp;&amp; (!existingQueryItemIsIdentical)) {</span>
+<span class="lineNum">     183 </span>[<span class="branchCov" title="Branch 2 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          2 :             qWarning() &lt;&lt; &quot;AwsAbstractSignature::setQueryItem Not overwriting existing value for key&quot;</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">     183 </span>[<span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          1 :                        &lt;&lt; key &lt;&lt; ':' &lt;&lt; existingValue;</span>
+<span class="lineNum">     184 </span>[<span class="branchCov" title="Branch 1 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          1 :                        &lt;&lt; key &lt;&lt; ':' &lt;&lt; existingValue;</span>
 <span class="lineNum">         </span>        [<span class="branchCov" title="Branch 7 was taken 1 time"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>]
-<span class="lineNum">     184 </span>                :            :         }
-<span class="lineNum">     185 </span>        [<span class="branchCov" title="Branch 1 was taken 16 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         16 :         return existingQueryItemIsIdentical;</span>
-<span class="lineNum">     186 </span>                :            :     }
-<span class="lineNum">     187 </span>                :<span class="lineCov">         13 :     query.addQueryItem(key, value);</span>
-<span class="lineNum">     188 </span>                :<span class="lineCov">         29 :     return true;</span>
-<span class="lineNum">     189 </span>                :            : }
-<span class="lineNum">     190 </span>                :            : 
-<span class="lineNum">     191 </span>                :            : QTAWS_END_NAMESPACE
+<span class="lineNum">     185 </span>                :            :         }
+<span class="lineNum">     186 </span>        [<span class="branchCov" title="Branch 1 was taken 20 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         20 :         return existingQueryItemIsIdentical;</span>
+<span class="lineNum">     187 </span>                :            :     }
+<span class="lineNum">     188 </span>                :<span class="lineCov">         17 :     query.addQueryItem(key, value);</span>
+<span class="lineNum">     189 </span>                :<span class="lineCov">         37 :     return true;</span>
+<span class="lineNum">     190 </span>                :            : }
+<span class="lineNum">     191 </span>                :            : 
+<span class="lineNum">     192 </span>                :            : /**
+<span class="lineNum">     193 </span>                :            :  * @fn     int AwsAbstractSignature::version() const
+<span class="lineNum">     194 </span>                :            :  *
+<span class="lineNum">     195 </span>                :            :  * @brief  AWS Signature version implemented by this class.
+<span class="lineNum">     196 </span>                :            :  *
+<span class="lineNum">     197 </span>                :            :  * Derived classes must implement this function to report the version of
+<span class="lineNum">     198 </span>                :            :  * the AWS Signature implemented by the class.
+<span class="lineNum">     199 </span>                :            :  *
+<span class="lineNum">     200 </span>                :            :  * @return The AWS Signature version implemented by this class.
+<span class="lineNum">     201 </span>                :            :  */
+<span class="lineNum">     202 </span>                :            : 
+<span class="lineNum">     203 </span>                :            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>

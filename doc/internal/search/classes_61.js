@@ -9,6 +9,8 @@ var searchData=
   ['awsendpointprivate',['AwsEndpointPrivate',['../classAwsEndpointPrivate.html',1,'']]],
   ['awsregion',['AwsRegion',['../classAwsRegion.html',1,'']]],
   ['awsregionprivate',['AwsRegionPrivate',['../classAwsRegionPrivate.html',1,'']]],
+  ['awssignaturev0',['AwsSignatureV0',['../classAwsSignatureV0.html',1,'']]],
+  ['awssignaturev0private',['AwsSignatureV0Private',['../classAwsSignatureV0Private.html',1,'']]],
   ['awssignaturev1',['AwsSignatureV1',['../classAwsSignatureV1.html',1,'']]],
   ['awssignaturev1private',['AwsSignatureV1Private',['../classAwsSignatureV1Private.html',1,'']]],
   ['awssignaturev2',['AwsSignatureV2',['../classAwsSignatureV2.html',1,'']]],

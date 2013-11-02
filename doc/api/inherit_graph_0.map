@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node3" href="$classAwsAbstractCredentials.html" title="Interface class for privding AWS credentials. " alt="" coords="125,32,288,61"/>
-<area shape="rect" id="node5" href="$classAwsAnonymousCredentials.html" title="Basic implementation of AwsAbstractCredentials that allows use of &quot;anonymous&quot; credentials. " alt="" coords="337,5,519,35"/>
-<area shape="rect" id="node7" href="$classAwsBasicCredentials.html" title="Basic non&#45;refreshable implementation of AwsAbstractCredentials. " alt="" coords="355,59,501,88"/>
+<area shape="rect" id="node3" href="$classAwsAbstractCredentials.html" title="Interface class for privding AWS credentials. " alt="" coords="125,33,288,66"/>
+<area shape="rect" id="node5" href="$classAwsAnonymousCredentials.html" title="Basic implementation of AwsAbstractCredentials that allows use of &quot;anonymous&quot; credentials. " alt="" coords="337,5,519,38"/>
+<area shape="rect" id="node7" href="$classAwsBasicCredentials.html" title="Basic non&#45;refreshable implementation of AwsAbstractCredentials. " alt="" coords="355,61,501,94"/>
 </map>

@@ -100,7 +100,7 @@ Inheritance diagram for AwsAbstractSignature:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAwsAbstractSignature__inherit__graph.png" border="0" usemap="#AwsAbstractSignature_inherit__map" alt="Inheritance graph"/></div>
 <map name="AwsAbstractSignature_inherit__map" id="AwsAbstractSignature_inherit__map">
-<area shape="rect" id="node3" href="classAwsSignatureV1.html" title="Implements AWS Signature Version 1 (deprecated by Amazon). " alt="" coords="5,83,123,112"/><area shape="rect" id="node5" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. " alt="" coords="147,83,264,112"/><area shape="rect" id="node7" title="Implements AWS Signature Version 3. " alt="" coords="288,83,405,112"/><area shape="rect" id="node9" href="classAwsSignatureV4.html" title="Implements AWS Signature Version 4. " alt="" coords="429,83,547,112"/></map>
+<area shape="rect" id="node3" href="classAwsSignatureV0.html" title="Implements AWS Signature Version 0 (deprecated by Amazon). " alt="" coords="5,89,123,122"/><area shape="rect" id="node7" href="classAwsSignatureV2.html" title="Implements AWS Signature Version 2. " alt="" coords="147,89,264,122"/><area shape="rect" id="node9" title="Implements AWS Signature Version 3. " alt="" coords="288,89,405,122"/><area shape="rect" id="node11" href="classAwsSignatureV4.html" title="Implements AWS Signature Version 4. " alt="" coords="429,89,547,122"/><area shape="rect" id="node5" href="classAwsSignatureV1.html" title="Implements AWS Signature Version 1 (deprecated by Amazon). " alt="" coords="5,171,123,205"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -111,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff347575348cf89d5ea6342b1c147452"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452">sign</a> (const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials, const QNetworkAccessManager::Operation operation, QNetworkRequest &amp;request, const QByteArray &amp;data=QByteArray()) const =0</td></tr>
 <tr class="memdesc:aff347575348cf89d5ea6342b1c147452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign an AWS request.  <a href="#aff347575348cf89d5ea6342b1c147452">More...</a><br/></td></tr>
 <tr class="separator:aff347575348cf89d5ea6342b1c147452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f9352c5b831eafdcc6932f0f5b8798"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractSignature.html#a57f9352c5b831eafdcc6932f0f5b8798">version</a> () const =0</td></tr>
+<tr class="memdesc:a57f9352c5b831eafdcc6932f0f5b8798"><td class="mdescLeft">&#160;</td><td class="mdescRight">AWS Signature version implemented by this class.  <a href="#a57f9352c5b831eafdcc6932f0f5b8798">More...</a><br/></td></tr>
+<tr class="separator:a57f9352c5b831eafdcc6932f0f5b8798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -386,7 +389,36 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classAwsSignatureV2.html#a2fff75934e5a79a6cfc155797826ea85">AwsSignatureV2</a>, <a class="el" href="classAwsSignatureV4.html#a21983ddefd9992a7deebe91fbf711c3d">AwsSignatureV4</a>, and <a class="el" href="classAwsSignatureV1.html#add7679957ae051e3483709961a14b316">AwsSignatureV1</a>.</p>
+<p>Implemented in <a class="el" href="classAwsSignatureV2.html#a2fff75934e5a79a6cfc155797826ea85">AwsSignatureV2</a>, <a class="el" href="classAwsSignatureV4.html#a21983ddefd9992a7deebe91fbf711c3d">AwsSignatureV4</a>, and <a class="el" href="classAwsSignatureV0.html#a34b7288f6730e3519356efb29edfc17d">AwsSignatureV0</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57f9352c5b831eafdcc6932f0f5b8798"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AwsAbstractSignature::version </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AWS Signature version implemented by this class. </p>
+<p>Derived classes must implement this function to report the version of the AWS Signature implemented by the class.</p>
+<dl class="section return"><dt>Returns</dt><dd>The AWS Signature version implemented by this class. </dd></dl>
+
+<p>Implemented in <a class="el" href="classAwsSignatureV4.html#a856ea5dd0b05ce8accd713c075bb7c1d">AwsSignatureV4</a>, <a class="el" href="classAwsSignatureV2.html#ae680c88e22980d7b0d6a175b0abd2e1d">AwsSignatureV2</a>, <a class="el" href="classAwsSignatureV0.html#a88edb37f70be0dcfa2b77f098c40cddc">AwsSignatureV0</a>, and <a class="el" href="classAwsSignatureV1.html#ab2f9a3f7a4a086195eb5422b4260bab7">AwsSignatureV1</a>.</p>
 
 </div>
 </div>
@@ -397,7 +429,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 30 2013 21:20:29 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 2 2013 11:14:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

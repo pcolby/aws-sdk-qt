@@ -3,7 +3,7 @@ var searchData=
   ['canonicalheader',['canonicalHeader',['../classAwsSignatureV4Private.html#a8e2ac219cbf84387281e374e8ee0c7fa',1,'AwsSignatureV4Private']]],
   ['canonicalheaders',['canonicalHeaders',['../classAwsSignatureV4Private.html#a62c449106e040b1efe8f65dfe42201cc',1,'AwsSignatureV4Private']]],
   ['canonicalpath',['canonicalPath',['../classAwsAbstractSignature.html#ad38cb594dcfcf34e191c17b8098ffb73',1,'AwsAbstractSignature']]],
-  ['canonicalquery',['canonicalQuery',['../classAwsAbstractSignature.html#a89758445285f69307a4f0ababbfa2866',1,'AwsAbstractSignature::canonicalQuery()'],['../classAwsSignatureV1Private.html#a21c87b7e50245c9d44a90d031fed5537',1,'AwsSignatureV1Private::canonicalQuery()']]],
+  ['canonicalquery',['canonicalQuery',['../classAwsAbstractSignature.html#a89758445285f69307a4f0ababbfa2866',1,'AwsAbstractSignature::canonicalQuery()'],['../classAwsSignatureV0Private.html#a8d486bb85433930a266702e80765e628',1,'AwsSignatureV0Private::canonicalQuery()'],['../classAwsSignatureV1Private.html#a21c87b7e50245c9d44a90d031fed5537',1,'AwsSignatureV1Private::canonicalQuery()']]],
   ['canonicalrequest',['canonicalRequest',['../classAwsSignatureV2Private.html#aef7da1062fab678b204cda46179854b5',1,'AwsSignatureV2Private::canonicalRequest()'],['../classAwsSignatureV4Private.html#a823b784fd71bf679f39611ce44bf0e58',1,'AwsSignatureV4Private::canonicalRequest()']]],
   ['caseinsensitivelessthan',['caseInsensitiveLessThan',['../classAwsSignatureV1Private.html#af38efa595c9cf8b6e18ad685df1203e7',1,'AwsSignatureV1Private']]],
   ['changed',['changed',['../classAwsAbstractCredentials.html#ae1f61d7f945d5a90209c804c2abf5289',1,'AwsAbstractCredentials']]],
