@@ -30,7 +30,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV1;
 
 class QTAWS_EXPORT AwsSignatureV1Private : public AwsSignatureV0Private {
-    Q_DECLARE_PUBLIC(AwsSignatureV1)
 
 public:
     AwsSignatureV1Private(AwsSignatureV1 * const q);
@@ -43,6 +42,8 @@ protected:
 
     static bool caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2);
 
+private:
+    Q_DECLARE_PUBLIC(AwsSignatureV1)
     friend class TestAwsSignatureV1;
 };
 

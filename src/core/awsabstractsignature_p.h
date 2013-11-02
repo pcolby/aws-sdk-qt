@@ -30,7 +30,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractSignature;
 
 class QTAWS_EXPORT AwsAbstractSignaturePrivate {
-    Q_DECLARE_PUBLIC(AwsAbstractSignature)
 
 public:
     virtual ~AwsAbstractSignaturePrivate();
@@ -48,6 +47,9 @@ public:
 
 protected:
     AwsAbstractSignature * const q_ptr; ///< Internal q-pointer.
+
+private:
+    Q_DECLARE_PUBLIC(AwsAbstractSignature)
     friend class TestAwsAbstractSignature;
 };
 

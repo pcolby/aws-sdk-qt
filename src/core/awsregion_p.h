@@ -27,7 +27,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsRegion;
 
 class QTAWS_EXPORT AwsRegionPrivate {
-    Q_DECLARE_PUBLIC(AwsRegion)
 
 public:
     AwsRegionPrivate(AwsRegion * const q);
@@ -36,6 +35,7 @@ protected:
     int region; ///< AwsRegion::Region represented by this object.
 
 private:
+    Q_DECLARE_PUBLIC(AwsRegion)
     AwsRegion * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsRegionPrivate;
 };

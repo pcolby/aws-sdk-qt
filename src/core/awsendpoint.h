@@ -31,7 +31,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsEndpointPrivate;
 
 class QTAWS_EXPORT AwsEndpoint {
-    Q_DECLARE_PRIVATE(AwsEndpoint)
 
 public:
     /// Network transport supported by one or more AWS endpoints.
@@ -76,6 +75,7 @@ public:
                                          const Transports transport = AnyTransport);
 
 private:
+    Q_DECLARE_PRIVATE(AwsEndpoint)
     AwsEndpointPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsEndpoint;
 };

@@ -35,7 +35,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsEndpoint;
 
 class QTAWS_EXPORT AwsEndpointPrivate {
-    Q_DECLARE_PUBLIC(AwsEndpoint)
 
 public:
     QString hostName;    ///< This endpoint's hostname.
@@ -86,6 +85,7 @@ protected:
     static void parseServices(QXmlStreamReader &xml);
 
 private:
+    Q_DECLARE_PUBLIC(AwsEndpoint)
     AwsEndpoint * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsEndpoint;
     friend class TestAwsSignatureV4;

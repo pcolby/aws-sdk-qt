@@ -30,7 +30,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV4Private;
 
 class QTAWS_EXPORT AwsSignatureV4 : public AwsAbstractSignature {
-    Q_DECLARE_PRIVATE(AwsSignatureV4)
 
 public:
     AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
@@ -41,6 +40,8 @@ public:
 
     virtual int version() const;
 
+private:
+    Q_DECLARE_PRIVATE(AwsSignatureV4)
     friend class TestAwsSignatureV4;
 };
 

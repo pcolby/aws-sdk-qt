@@ -30,7 +30,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV0;
 
 class QTAWS_EXPORT AwsSignatureV0Private : public AwsAbstractSignaturePrivate {
-    Q_DECLARE_PUBLIC(AwsSignatureV0)
 
 public:
     AwsSignatureV0Private(AwsSignatureV0 * const q);
@@ -41,6 +40,8 @@ public:
 
     virtual QByteArray canonicalQuery(const QUrlQuery &query) const;
 
+private:
+    Q_DECLARE_PUBLIC(AwsSignatureV0)
     friend class TestAwsSignatureV0;
 };
 

@@ -34,7 +34,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV4;
 
 class QTAWS_EXPORT AwsSignatureV4Private : public AwsAbstractSignaturePrivate {
-    Q_DECLARE_PUBLIC(AwsSignatureV4)
 
 public:
     AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV4 * const q);
@@ -74,6 +73,8 @@ protected:
     QByteArray stringToSign(const QByteArray &algorithmDesignation, const QDateTime &requestDate,
                             const QByteArray &credentialScope, const QByteArray &canonicalRequest) const;
 
+private:
+    Q_DECLARE_PUBLIC(AwsSignatureV4)
     friend class TestAwsSignatureV4;
 };
 

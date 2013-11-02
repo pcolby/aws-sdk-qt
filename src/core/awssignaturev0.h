@@ -28,7 +28,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV0Private;
 
 class QTAWS_EXPORT AwsSignatureV0 : public AwsAbstractSignature {
-    Q_DECLARE_PRIVATE(AwsSignatureV0)
 
 public:
     AwsSignatureV0();
@@ -42,6 +41,9 @@ protected:
     /// @cond internal
     AwsSignatureV0(AwsSignatureV0Private * const d);
     /// @endcond
+
+private:
+    Q_DECLARE_PRIVATE(AwsSignatureV0)
     friend class TestAwsSignatureV0;
 };
 

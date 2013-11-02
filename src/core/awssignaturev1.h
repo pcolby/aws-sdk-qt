@@ -28,13 +28,14 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV1Private;
 
 class QTAWS_EXPORT AwsSignatureV1 : public AwsSignatureV0 {
-    Q_DECLARE_PRIVATE(AwsSignatureV1)
 
 public:
     AwsSignatureV1();
 
     virtual int version() const;
 
+private:
+    Q_DECLARE_PRIVATE(AwsSignatureV1)
     friend class TestAwsSignatureV1;
 };
 

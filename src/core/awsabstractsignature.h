@@ -31,7 +31,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractSignaturePrivate;
 
 class QTAWS_EXPORT AwsAbstractSignature {
-    Q_DECLARE_PRIVATE(AwsAbstractSignature)
 
 public:
     AwsAbstractSignature();
@@ -48,6 +47,9 @@ protected:
     AwsAbstractSignaturePrivate * const d_ptr; ///< Internal d-pointer.
     AwsAbstractSignature(AwsAbstractSignaturePrivate * const d);
     /// @endcond
+
+private:
+    Q_DECLARE_PRIVATE(AwsAbstractSignature)
     friend class TestAwsAbstractSignature;
 };
 

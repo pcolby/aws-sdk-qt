@@ -31,7 +31,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsRegionPrivate;
 
 class QTAWS_EXPORT AwsRegion {
-    Q_DECLARE_PRIVATE(AwsRegion)
 
 public:
     /// Bit flags representing the possible cardinal directions of
@@ -102,6 +101,7 @@ public:
     static Region fromName(const QString &regionName);
 
 private:
+    Q_DECLARE_PRIVATE(AwsRegion)
     AwsRegionPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsRegion;
 };

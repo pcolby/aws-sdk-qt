@@ -28,7 +28,6 @@ class AwsBasicCredentialsPrivate;
 
 class QTAWS_EXPORT AwsBasicCredentials : public AwsAbstractCredentials {
     Q_OBJECT
-    Q_DECLARE_PRIVATE(AwsBasicCredentials)
 
 public:
     AwsBasicCredentials(const QString &accessKeyid,
@@ -52,6 +51,7 @@ public slots:
     virtual void setToken(const QString &token);
 
 private:
+    Q_DECLARE_PRIVATE(AwsBasicCredentials)
     AwsBasicCredentialsPrivate * const d_ptr; ///< Internal d-pointer.
 
 };

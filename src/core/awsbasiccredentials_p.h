@@ -29,7 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsBasicCredentials;
 
 class QTAWS_EXPORT AwsBasicCredentialsPrivate {
-    Q_DECLARE_PUBLIC(AwsBasicCredentials)
 
 public:
     QString accessKeyId; ///< AWS Access Key ID.
@@ -39,6 +38,7 @@ public:
     AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
 private:
+    Q_DECLARE_PUBLIC(AwsBasicCredentials)
     AwsBasicCredentials * const q_ptr; ///< Internal q-pointer.
 
 };

@@ -32,7 +32,6 @@ QTAWS_BEGIN_NAMESPACE
 class AwsSignatureV2;
 
 class QTAWS_EXPORT AwsSignatureV2Private : public AwsAbstractSignaturePrivate {
-    Q_DECLARE_PUBLIC(AwsSignatureV2)
 
 public:
     QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
@@ -45,6 +44,8 @@ public:
 
     QByteArray signatureMethod(const QCryptographicHash::Algorithm algorithm) const;
 
+private:
+    Q_DECLARE_PUBLIC(AwsSignatureV2)
     friend class TestAwsSignatureV2;
 };
 
