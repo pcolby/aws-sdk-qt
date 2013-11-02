@@ -34,6 +34,8 @@ class QTAWS_EXPORT AwsAbstractSignature {
     Q_DECLARE_PRIVATE(AwsAbstractSignature)
 
 public:
+    AwsAbstractSignature();
+
     virtual ~AwsAbstractSignature();
 
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
@@ -44,7 +46,6 @@ public:
 protected:
     /// @cond internal
     AwsAbstractSignaturePrivate * const d_ptr; ///< Internal d-pointer.
-    AwsAbstractSignature();
     AwsAbstractSignature(AwsAbstractSignaturePrivate * const d);
     /// @endcond
     friend class TestAwsAbstractSignature;
