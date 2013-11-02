@@ -41,8 +41,10 @@ public:
     virtual int version() const;
 
 protected:
+    /// @cond internal
     AwsSignatureV0(AwsSignatureV0Private * const d);
     AwsSignatureV0Private * const d_ptr; ///< Internal d-pointer.
+    /// @endcond
     friend class TestAwsSignatureV0;
 };
 
