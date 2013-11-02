@@ -17,28 +17,38 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSSIGNATUREV3_H
-#define AWSSIGNATUREV3_H
+#ifndef AWSABSTRACTSIGNATURE_P_H
+#define AWSABSTRACTSIGNATURE_P_H
 
 #include "qtawsglobal.h"
-#include "awsabstractsignature.h"
+
+#include <QNetworkAccessManager>
+#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsSignatureV3Private;
+class AwsAbstractSignature;
 
-class QTAWS_EXPORT AwsSignatureV3 : public AwsAbstractSignature {
-    Q_DECLARE_PRIVATE(AwsSignatureV3)
+class QTAWS_EXPORT AwsAbstractSignaturePrivate {
+    Q_DECLARE_PUBLIC(AwsAbstractSignature)
 
 public:
-    AwsSignatureV3();
+    virtual ~AwsAbstractSignaturePrivate();
 
-    virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
+    AwsAbstractSignaturePrivate(AwsAbstractSignature * const q);
 
-    virtual int version() const;
+    QString canonicalPath(const QUrl &url) const;
 
-    friend class TestAwsSignatureV3;
+    QByteArray canonicalQuery(const QUrlQuery &query) const;
+
+    QString httpMethod(const QNetworkAccessManager::Operation operation) const;
+
+    bool setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
+                      const bool warnOnNonIdenticalDuplicate = true) const;
+
+protected:
+    AwsAbstractSignature * const q_ptr; ///< Internal q-pointer.
+    friend class TestAwsAbstractSignature;
 };
 
 QTAWS_END_NAMESPACE

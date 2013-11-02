@@ -21,6 +21,7 @@
 #define AWSSIGNATUREV2_P_H
 
 #include "qtawsglobal.h"
+#include "awsabstractsignature_p.h"
 
 #include <QCryptographicHash>
 #include <QNetworkAccessManager>
@@ -30,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV2;
 
-class QTAWS_EXPORT AwsSignatureV2Private {
+class QTAWS_EXPORT AwsSignatureV2Private : public AwsAbstractSignaturePrivate {
     Q_DECLARE_PUBLIC(AwsSignatureV2)
 
 public:
@@ -44,8 +45,6 @@ public:
 
     QByteArray signatureMethod(const QCryptographicHash::Algorithm algorithm) const;
 
-private:
-    AwsSignatureV2 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV2;
 };
 

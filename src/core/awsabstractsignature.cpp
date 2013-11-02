@@ -18,6 +18,7 @@
 */
 
 #include "awsabstractsignature.h"
+#include "awsabstractsignature_p.h"
 
 #include <QDebug>
 #include <QDir>
@@ -31,12 +32,39 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 /**
- * @brief  AwsAbstractSignature destructor.
+ * @internal
  *
- * This virtual destructor does nothing (yet) - its here to allow for safe
- * polymorphic destruction.
+ * @brief  Initialises an AwsAbstractSignature object.
+ *
+ * This internal constrcutor is used by derived classes that do not wish to
+ * provider their own private implementations.
  */
-AwsAbstractSignature::~AwsAbstractSignature() { }
+AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePrivate(this))
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Initialises an AwsAbstractSignature object.
+ *
+ * This internal constrcutor is used by derived classes to provide their own
+ * private implementations if they wish to.
+ *
+ * @param  d  Internal private implementation to use.
+ */
+AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d) : d_ptr(d)
+{
+
+}
+
+/**
+ * @brief  AwsAbstractSignature destructor.
+ */
+AwsAbstractSignature::~AwsAbstractSignature() {
+    delete d_ptr;
+}
 
 /**
  * @fn     void AwsAbstractSignature::sign() const
@@ -55,6 +83,42 @@ AwsAbstractSignature::~AwsAbstractSignature() { }
  */
 
 /**
+ * @internal
+ *
+ * @class  AwsAbstractSignaturePrivate
+ *
+ * @brief  Private implementation for AwsAbstractSignature.
+ *
+ * @warning  This is an internal private implementation class, and as such external should
+ *           code should **not** depend directly on anything contained within this class.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsAbstractSignaturePrivate object.
+ *
+ * @param  q  Pointer to this object's public AwsAbstractSignature instance.
+ */
+AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * const q) : q_ptr(q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  AwsAbstractSignaturePrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsAbstractSignaturePrivate::~AwsAbstractSignaturePrivate()
+{
+
+}
+
+/**
  * @brief  Create an AWS Signature canonical path.
  *
  * This function simply returns the fully-URL-encoded path.  However, if the path
@@ -67,10 +131,8 @@ AwsAbstractSignature::~AwsAbstractSignature() { }
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
- *
- * @todo   Move this to an AwsAbstractSignaturePrivate class?
  */
-QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
+QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 {
     QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));
 
@@ -100,10 +162,8 @@ QString AwsAbstractSignature::canonicalPath(const QUrl &url) const
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
- *
- * @todo   Move this to an AwsAbstractSignaturePrivate class?
  */
-QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
+QByteArray AwsAbstractSignaturePrivate::canonicalQuery(const QUrlQuery &query) const
 {
     typedef QPair<QString, QString> QStringPair;
     QList<QStringPair> list = query.queryItems(QUrl::FullyDecoded);
@@ -127,10 +187,8 @@ QByteArray AwsAbstractSignature::canonicalQuery(const QUrlQuery &query) const
  *
  * @return A string representation of \p operation, or an empty string if the
  *         operation is not recognised or otherwise unsupported.
- *
- * @todo   Move this to an AwsAbstractSignaturePrivate class?
  */
-QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation operation) const
+QString AwsAbstractSignaturePrivate::httpMethod(const QNetworkAccessManager::Operation operation) const
 {
     switch (operation) {
         case QNetworkAccessManager::DeleteOperation: return QLatin1String("DELETE");
@@ -170,11 +228,9 @@ QString AwsAbstractSignature::httpMethod(const QNetworkAccessManager::Operation 
  *
  * @return  `true` if the query item was set successfully or was already set to
  *          the requested value previously, `false` otherwise.
- *
- * @todo   Move this to an AwsAbstractSignaturePrivate class?
  */
-bool AwsAbstractSignature::setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
-                                        const bool warnOnNonIdenticalDuplicate) const
+bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
+                                               const bool warnOnNonIdenticalDuplicate) const
 {
     if (query.hasQueryItem(key)) {
         const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);

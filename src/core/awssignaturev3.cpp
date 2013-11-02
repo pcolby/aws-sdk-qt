@@ -32,16 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  * @warning  This class has not been implemented yet!
  */
 
-AwsSignatureV3::AwsSignatureV3() : d_ptr(new AwsSignatureV3Private(this)) {
+AwsSignatureV3::AwsSignatureV3() : AwsAbstractSignature(new AwsSignatureV3Private(this)) {
 
-}
-
-/**
- * @brief AwsSignatureV3 destructor.
- */
-AwsSignatureV3::~AwsSignatureV3()
-{
-    delete d_ptr;
 }
 
 void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
@@ -78,6 +70,9 @@ int AwsSignatureV3::version() const
  *
  * @param  q  Pointer to this object's public AwsSignatureV3 instance.
  */
-AwsSignatureV3Private::AwsSignatureV3Private(AwsSignatureV3 * const q) : q_ptr(q) { }
+AwsSignatureV3Private::AwsSignatureV3Private(AwsSignatureV3 * const q) : AwsAbstractSignaturePrivate(q)
+{
+
+}
 
 QTAWS_END_NAMESPACE

@@ -52,17 +52,9 @@ QTAWS_BEGIN_NAMESPACE
  *        SHA256.
  */
 AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)
-    : d_ptr(new AwsSignatureV4Private(hashAlgorithm, this))
+    : AwsAbstractSignature(new AwsSignatureV4Private(hashAlgorithm, this))
 {
 
-}
-
-/**
- * @brief AwsSignatureV4 destructor.
- */
-AwsSignatureV4::~AwsSignatureV4()
-{
-    delete d_ptr;
 }
 
 void AwsSignatureV4::sign(const AwsAbstractCredentials &credentials,
@@ -102,7 +94,7 @@ const QLatin1String AwsSignatureV4Private::DateTimeFormat("yyyyMMddThhmmssZ");
  */
 AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,
                                              AwsSignatureV4 * const q)
-    : hashAlgorithm(hashAlgorithm), q_ptr(q)
+    : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)
 {
 
 }
@@ -283,10 +275,9 @@ QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::
                                                    const QNetworkRequest &request, const QByteArray &payload,
                                                    QByteArray * const signedHeaders) const
 {
-    Q_Q(const AwsSignatureV4);
-    return q->httpMethod(operation).toUtf8() + '\n' +
-           q->canonicalPath(request.url()).toUtf8() + '\n' +
-           q->canonicalQuery(QUrlQuery(request.url()))  + '\n' +
+    return httpMethod(operation).toUtf8() + '\n' +
+           canonicalPath(request.url()).toUtf8() + '\n' +
+           canonicalQuery(QUrlQuery(request.url()))  + '\n' +
            canonicalHeaders(request, signedHeaders) + '\n' +
            *signedHeaders + '\n' +
            QCryptographicHash::hash(payload, hashAlgorithm).toHex();

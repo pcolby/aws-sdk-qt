@@ -21,6 +21,7 @@
 #define AwsSignatureV0_P_H
 
 #include "qtawsglobal.h"
+#include "awsabstractsignature_p.h"
 
 #include <QUrlQuery>
 
@@ -28,7 +29,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV0;
 
-class QTAWS_EXPORT AwsSignatureV0Private {
+class QTAWS_EXPORT AwsSignatureV0Private : public AwsAbstractSignaturePrivate {
     Q_DECLARE_PUBLIC(AwsSignatureV0)
 
 public:
@@ -40,8 +41,6 @@ public:
 
     virtual QByteArray canonicalQuery(const QUrlQuery &query) const;
 
-protected:
-    AwsSignatureV0 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV0;
 };
 

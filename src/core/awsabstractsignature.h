@@ -25,11 +25,13 @@
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
-#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 
+class AwsAbstractSignaturePrivate;
+
 class QTAWS_EXPORT AwsAbstractSignature {
+    Q_DECLARE_PRIVATE(AwsAbstractSignature)
 
 public:
     virtual ~AwsAbstractSignature();
@@ -40,15 +42,11 @@ public:
     virtual int version() const = 0;
 
 protected:
-    QString canonicalPath(const QUrl &url) const;
-
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
-
-    QString httpMethod(const QNetworkAccessManager::Operation operation) const;
-
-    bool setQueryItem(QUrlQuery &query, const QString &key, const QString &value,
-                      const bool warnOnNonIdenticalDuplicate = true) const;
-
+    /// @cond internal
+    AwsAbstractSignaturePrivate * const d_ptr; ///< Internal d-pointer.
+    AwsAbstractSignature();
+    AwsAbstractSignature(AwsAbstractSignaturePrivate * const d);
+    /// @endcond
     friend class TestAwsAbstractSignature;
 };
 

@@ -222,8 +222,8 @@ void TestAwsSignatureV0::canonicalQuery()
 {
     QFETCH(QUrlQuery, query);
     QFETCH(QByteArray, expected);
-    AwsSignatureV0Private signature(NULL);
-    const QByteArray canonica = signature.canonicalQuery(query);
+    AwsSignatureV0 signature;
+    const QByteArray canonica = signature.d_func()->canonicalQuery(query);
     QCOMPARE(QChar::fromLatin1('"')+QString::fromUtf8(canonica)+QChar::fromLatin1('"'), QChar::fromLatin1('"')+QString::fromUtf8(expected)+QChar::fromLatin1('"'));
     QCOMPARE(canonica, expected);
 }

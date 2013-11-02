@@ -35,7 +35,6 @@ public:
 
     virtual int version() const;
 
-private:
     friend class TestAwsSignatureV1;
 };
 

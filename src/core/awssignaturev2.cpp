@@ -49,19 +49,11 @@ QTAWS_BEGIN_NAMESPACE
  *                        or QCryptographicHash::Sha256 (default, recommended).
  */
 AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)
-        : d_ptr(new AwsSignatureV2Private(this))
+        : AwsAbstractSignature(new AwsSignatureV2Private(this))
 {
     Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));
     Q_D(AwsSignatureV2);
     d->hashAlgorithm = hashAlgorithm;
-}
-
-/**
- * @brief AwsSignatureV2 destructor.
- */
-AwsSignatureV2::~AwsSignatureV2()
-{
-    delete d_ptr;
 }
 
 void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
@@ -110,7 +102,7 @@ int AwsSignatureV2::version() const
  *
  * @param  q  Pointer to this object's public AwsSignatureV2 instance.
  */
-AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q)
+AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : AwsAbstractSignaturePrivate(q)
 {
 
 }
@@ -140,15 +132,13 @@ AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : q_ptr(q
 void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
                                          const AwsAbstractCredentials &credentials) const
 {
-    Q_Q(const AwsSignatureV2);
-
     // Set / add the necessary query items.
     QUrl url = request.url();
     QUrlQuery query(url);
-    q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
-    q->setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("2"));
-    q->setQueryItem(query, QLatin1String("SignatureMethod"), QString::fromUtf8(signatureMethod(hashAlgorithm)));
-    q->setQueryItem(query, QLatin1String("Timestamp"),
+    setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
+    setQueryItem(query, QLatin1String("SignatureVersion"), QLatin1String("2"));
+    setQueryItem(query, QLatin1String("SignatureMethod"), QString::fromUtf8(signatureMethod(hashAlgorithm)));
+    setQueryItem(query, QLatin1String("Timestamp"),
                     QString::fromUtf8(QUrl::toPercentEncoding(
                         QDateTime::currentDateTimeUtc().toString(QLatin1String("yyyy-MM-ddThh:mm:ssZ"))
                     )),
@@ -194,11 +184,10 @@ void AwsSignatureV2Private::adornRequest(QNetworkRequest &request,
 QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QUrl &url) const
 {
-    Q_Q(const AwsSignatureV2);
-    return q->httpMethod(operation).toUtf8() + '\n' +
+    return httpMethod(operation).toUtf8() + '\n' +
            url.host().toUtf8() + '\n' +
-           q->canonicalPath(url).toUtf8() + '\n' +
-           q->canonicalQuery(QUrlQuery(url));
+           canonicalPath(url).toUtf8() + '\n' +
+           canonicalQuery(QUrlQuery(url));
 }
 
 /**

@@ -33,8 +33,6 @@ class QTAWS_EXPORT AwsSignatureV0 : public AwsAbstractSignature {
 public:
     AwsSignatureV0();
 
-    ~AwsSignatureV0();
-
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
 
@@ -43,7 +41,6 @@ public:
 protected:
     /// @cond internal
     AwsSignatureV0(AwsSignatureV0Private * const d);
-    AwsSignatureV0Private * const d_ptr; ///< Internal d-pointer.
     /// @endcond
     friend class TestAwsSignatureV0;
 };

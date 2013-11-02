@@ -21,6 +21,7 @@
 #define AWSSIGNATUREV4_P_H
 
 #include "qtawsglobal.h"
+#include "awsabstractsignature_p.h"
 
 #include <QCryptographicHash>
 #include <QDateTime>
@@ -32,7 +33,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV4;
 
-class QTAWS_EXPORT AwsSignatureV4Private {
+class QTAWS_EXPORT AwsSignatureV4Private : public AwsAbstractSignaturePrivate {
     Q_DECLARE_PUBLIC(AwsSignatureV4)
 
 public:
@@ -73,8 +74,6 @@ protected:
     QByteArray stringToSign(const QByteArray &algorithmDesignation, const QDateTime &requestDate,
                             const QByteArray &credentialScope, const QByteArray &canonicalRequest) const;
 
-private:
-    AwsSignatureV4 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV4;
 };
 

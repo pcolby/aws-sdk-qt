@@ -43,7 +43,6 @@ protected:
 
     static bool caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2);
 
-private:
     friend class TestAwsSignatureV1;
 };
 

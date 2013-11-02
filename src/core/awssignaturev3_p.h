@@ -21,6 +21,7 @@
 #define AWSSIGNATUREV3_P_H
 
 #include "qtawsglobal.h"
+#include "awsabstractsignature_p.h"
 
 #include <QString>
 
@@ -28,14 +29,12 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsSignatureV3;
 
-class QTAWS_EXPORT AwsSignatureV3Private {
+class QTAWS_EXPORT AwsSignatureV3Private : public AwsAbstractSignaturePrivate {
     Q_DECLARE_PUBLIC(AwsSignatureV3)
 
 public:
     AwsSignatureV3Private(AwsSignatureV3 * const q);
 
-private:
-    AwsSignatureV3 * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsSignatureV3;
 };
 

@@ -226,8 +226,8 @@ void TestAwsSignatureV4::algorithmDesignation()
     QFETCH(QCryptographicHash::Algorithm, algorithm);
     QFETCH(QByteArray, expected);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    const QByteArray designation = signature.algorithmDesignation(algorithm);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    const QByteArray designation = signature.d_func()->algorithmDesignation(algorithm);
     QCOMPARE(QString::fromUtf8(designation), QString::fromUtf8(expected));
     QCOMPARE(designation, expected);
 }
@@ -289,8 +289,8 @@ void TestAwsSignatureV4::authorizationHeaderValue()
     QFETCH(QByteArray, expected);
 
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    const QByteArray headerValue = signature.authorizationHeaderValue(credentials, operation, request, payload, timestamp);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    const QByteArray headerValue = signature.d_func()->authorizationHeaderValue(credentials, operation, request, payload, timestamp);
     QCOMPARE(QString::fromUtf8(headerValue), QString::fromUtf8(expected));
     QCOMPARE(headerValue, expected);
 }
@@ -343,8 +343,8 @@ void TestAwsSignatureV4::canonicalHeader()
     QFETCH(QByteArray, headerValue);
     QFETCH(QByteArray, expected);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    const QByteArray header = signature.canonicalHeader(headerName, headerValue);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    const QByteArray header = signature.d_func()->canonicalHeader(headerName, headerValue);
     QCOMPARE(QString::fromUtf8(header), QString::fromUtf8(expected));
     QCOMPARE(header, expected);
 
@@ -381,9 +381,9 @@ void TestAwsSignatureV4::canonicalHeaders()
     QFETCH(QByteArray, expectedHeaders);
     QFETCH(QByteArray, expectedSignedHeaders);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
     QByteArray signedHeaders;
-    const QByteArray headers = signature.canonicalHeaders(request, &signedHeaders);
+    const QByteArray headers = signature.d_func()->canonicalHeaders(request, &signedHeaders);
     QCOMPARE(QString::fromUtf8(headers), QString::fromUtf8(expectedHeaders));
     QCOMPARE(headers, expectedHeaders);
     QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
@@ -456,9 +456,9 @@ void TestAwsSignatureV4::canonicalRequest()
     QFETCH(QByteArray, expectedRequest);
     QFETCH(QByteArray, expectedSignedHeaders);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
     QByteArray signedHeaders;
-    const QByteArray canonicalRequest = signature.canonicalRequest(operation, request, payload, &signedHeaders);
+    const QByteArray canonicalRequest = signature.d_func()->canonicalRequest(operation, request, payload, &signedHeaders);
     QCOMPARE(QString::fromUtf8(canonicalRequest), QString::fromUtf8(expectedRequest));
     QCOMPARE(canonicalRequest, expectedRequest);
     QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
@@ -490,8 +490,8 @@ void TestAwsSignatureV4::credentialScope()
     QFETCH(QString,    service);
     QFETCH(QByteArray, expected);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    const QByteArray scope = signature.credentialScope(date, region, service);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    const QByteArray scope = signature.d_func()->credentialScope(date, region, service);
     QCOMPARE(QString::fromUtf8(scope), QString::fromUtf8(expected));
     QCOMPARE(scope, expected);
 }
@@ -536,8 +536,8 @@ void TestAwsSignatureV4::setAuthorizationHeader()
     QFETCH(QByteArray, expected);
 
     const AwsBasicCredentials credentials(accessKeyId, secretKey);
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    signature.setAuthorizationHeader(credentials, operation, request, payload, timestamp);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    signature.d_func()->setAuthorizationHeader(credentials, operation, request, payload, timestamp);
     QCOMPARE(QString::fromUtf8(request.rawHeader("Authorization")), QString::fromUtf8(expected));
     QCOMPARE(request.rawHeader("Authorization"), expected);
 }
@@ -555,9 +555,9 @@ void TestAwsSignatureV4::setDateHeader()
 {
     QFETCH(QDateTime, dateTime);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
     QNetworkRequest request;
-    const QDateTime result = signature.setDateHeader(request, dateTime);
+    const QDateTime result = signature.d_func()->setDateHeader(request, dateTime);
 
     QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString(QLatin1String("yyyyMMddThhmmssZ")).toUtf8());
     QCOMPARE(result, dateTime);
@@ -602,8 +602,8 @@ void TestAwsSignatureV4::signingKey()
     QFETCH(QByteArray, expected);
 
     const AwsBasicCredentials credentials(QString(), secretKey);
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
-    const QByteArray signingKey = signature.signingKey(credentials, date, region, service);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
+    const QByteArray signingKey = signature.d_func()->signingKey(credentials, date, region, service);
     QCOMPARE(signingKey, expected);
 }
 
@@ -666,10 +666,10 @@ void TestAwsSignatureV4::stringToSign()
     QFETCH(QByteArray, canonicalRequest);
     QFETCH(QByteArray, expected);
 
-    AwsSignatureV4Private signature(QCryptographicHash::Sha256, NULL);
+    AwsSignatureV4 signature(QCryptographicHash::Sha256);
 
-    const QByteArray stringToSign = signature.stringToSign(algorithmDesignation, requestDate,
-                                                           credentialScope, canonicalRequest);
+    const QByteArray stringToSign = signature.d_func()->stringToSign(algorithmDesignation, requestDate,
+                                                                     credentialScope, canonicalRequest);
 
     QCOMPARE(QString::fromUtf8(stringToSign), QString::fromUtf8(expected));
     QCOMPARE(stringToSign, expected);

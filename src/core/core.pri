@@ -1,6 +1,7 @@
 HEADERS += \
         awsabstractcredentials.h \
         awsabstractsignature.h \
+        awsabstractsignature_p.h \
         awsanonymouscredentials.h \
         awsbasiccredentials.h \
         awsbasiccredentials_p.h \

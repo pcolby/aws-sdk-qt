@@ -54,15 +54,15 @@ QTAWS_BEGIN_NAMESPACE
  *
  * Use instances of this object to provide Version 0 signatures for AWS services.
  */
-AwsSignatureV0::AwsSignatureV0()
-        : d_ptr(new AwsSignatureV0Private(this))
+AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Private(this))
 {
+
 }
 
 /**
  * @internal
  *
- * @brief  Constructs a new AwsSignatureV0 object a specific private implementation.
+ * @brief  Constructs a new AwsSignatureV0 object with a specific private implementation.
  *
  * This internal constructor allows derived classes to provide their own derived
  * private implementation.  Specifically, AwsSignatureV1 uses this constructor to
@@ -72,16 +72,9 @@ AwsSignatureV0::AwsSignatureV0()
  *
  * @see    AwsSignatureV1
  */
-AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : d_ptr(d)
+AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)
 {
-}
 
-/**
- * @brief AwsSignatureV0 destructor.
- */
-AwsSignatureV0::~AwsSignatureV0()
-{
-    delete d_ptr;
 }
 
 void AwsSignatureV0::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
@@ -140,7 +133,7 @@ int AwsSignatureV0::version() const
  *
  * @param  q  Pointer to this object's public AwsSignatureV0 instance.
  */
-AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : q_ptr(q)
+AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)
 {
 
 }
@@ -185,13 +178,13 @@ void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
     // Set / add the necessary query items.
     QUrl url = request.url();
     QUrlQuery query(url);
-    q->setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
-    q->setQueryItem(query, QLatin1String("SignatureVersion"), QString::fromLatin1("%1").arg(q->version()));
+    setQueryItem(query, QLatin1String("AWSAccessKeyId"), credentials.accessKeyId());
+    setQueryItem(query, QLatin1String("SignatureVersion"), QString::fromLatin1("%1").arg(q->version()));
 
     // Amazon: "Query requests must include either Timestamp or Expires, but not both."
     // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
     if (!query.hasQueryItem(QLatin1String("Expires"))) {
-        q->setQueryItem(query, QLatin1String("Timestamp"),
+        setQueryItem(query, QLatin1String("Timestamp"),
                         QString::fromUtf8(QUrl::toPercentEncoding(
                             QDateTime::currentDateTimeUtc().toString(QLatin1String("yyyy-MM-ddThh:mm:ssZ"))
                         )),

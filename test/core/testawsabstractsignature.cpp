@@ -20,6 +20,7 @@
 #include "testawsabstractsignature.h"
 
 #include "../../src/core/awsabstractsignature.h"
+#include "../../src/core/awsabstractsignature_p.h"
 #include "../../src/core/awsbasiccredentials.h"
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
@@ -68,7 +69,7 @@ void TestAwsAbstractSignature::canonicalPath()
     QFETCH(QUrl, url);
     QFETCH(QString, path);
     const MockSignature signature;
-    QCOMPARE(signature.canonicalPath(url), path);
+    QCOMPARE(signature.d_func()->canonicalPath(url), path);
 }
 
 void TestAwsAbstractSignature::canonicalQuery_data()
@@ -100,8 +101,8 @@ void TestAwsAbstractSignature::canonicalQuery()
     QFETCH(QUrlQuery, query);
     QFETCH(QByteArray, expected);
     const MockSignature signature;
-    QCOMPARE(QString::fromUtf8(signature.canonicalQuery(query)), QString::fromUtf8(expected));
-    QCOMPARE(signature.canonicalQuery(query), expected);
+    QCOMPARE(QString::fromUtf8(signature.d_func()->canonicalQuery(query)), QString::fromUtf8(expected));
+    QCOMPARE(signature.d_func()->canonicalQuery(query), expected);
 }
 
 void TestAwsAbstractSignature::httpMethod_data()
@@ -123,7 +124,7 @@ void TestAwsAbstractSignature::httpMethod()
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QString, expected);
     const MockSignature signature;
-    QCOMPARE(signature.httpMethod(operation), expected);
+    QCOMPARE(signature.d_func()->httpMethod(operation), expected);
 }
 
 void TestAwsAbstractSignature::setQueryItem_data()
@@ -193,7 +194,7 @@ void TestAwsAbstractSignature::setQueryItem()
                                                      "existing value for key \"%1\" : \"%2\" ")
                                  .arg(key).arg(query.queryItemValue(key)).toLatin1());
         }
-        const bool result = signature.setQueryItem(query, key, value, warnOnNonIdenticalDuplicate);
+        const bool result = signature.d_func()->setQueryItem(query, key, value, warnOnNonIdenticalDuplicate);
         QCOMPARE(query, expectedQuery);
         QCOMPARE(result, expectedResult);
     }

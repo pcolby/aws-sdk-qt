@@ -26,6 +26,7 @@
 #include <QCryptographicHash>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
+#include <QUrlQuery>
 
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
@@ -164,8 +165,8 @@ void TestAwsSignatureV2::canonicalRequest()
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QUrl, url);
     QFETCH(QByteArray, expected);
-    AwsSignatureV2Private signature(NULL);
-    const QByteArray request = signature.canonicalRequest(operation, url);
+    AwsSignatureV2 signature;
+    const QByteArray request = signature.d_func()->canonicalRequest(operation, url);
     QCOMPARE(QString::fromUtf8(request), QString::fromUtf8(expected));
     QCOMPARE(request, expected);
 }
