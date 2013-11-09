@@ -36,7 +36,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsSignatureV3
  *
- * @brief  Implements AWS Signature Version 3, both `AWS3` and `AWS3-HTTPS` variations.
+ * @brief  Implements AWS Signature Version 3.
+ *
+ * This class implements both `AWS3` and `AWS3-HTTPS` varieties.
  *
  * @see    http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
  * @see    http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
@@ -134,8 +136,9 @@ QByteArray AwsSignatureV3Private::algorithmDesignation(const QCryptographicHash:
  * request, to be accepted by Amazon.
  *
  * @param  credentials  The AWS credentials to use to sign the request.
+ * @param  operation    The HTTP method being used for the request.
  * @param  request      The network request to generate a signature for.
- * @param  timestamp    The timestamp to use when signing the request.
+ * @param  payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
  *
  * @return  An AWS V3 Signature authorization header value.
  *
@@ -327,8 +330,9 @@ bool AwsSignatureV3Private::isHttps(const QNetworkRequest &request)
  * HTTP header on \p request.
  *
  * @param[in]     credentials  The AWS credentials to use to sign the request.
+ * @param[in]     operation    The HTTP method being used for the request.
  * @param[in,out] request      The network request to add the authorization header to.
- * @param[in]     timestamp    The timestamp to use when signing the request.
+ * @param[in]     payload      Optional data being submitted in the request (eg for `PUT` and `POST` operations).
  *
  * @see    http://docs.aws.amazon.com/general/latest/gr/sigV3-signed-request-examples.html
  * @see    authorizationHeaderValue
