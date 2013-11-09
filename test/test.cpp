@@ -26,6 +26,7 @@
 #include "core/testawssignaturev0.h"
 #include "core/testawssignaturev1.h"
 #include "core/testawssignaturev2.h"
+#include "core/testawssignaturev3.h"
 #include "core/testawssignaturev4.h"
 
 #include <QTest>
@@ -69,6 +70,7 @@ int main(int argc, char *argv[]) {
     testFactory.registerClass<TestAwsSignatureV0>();
     testFactory.registerClass<TestAwsSignatureV1>();
     testFactory.registerClass<TestAwsSignatureV2>();
+    testFactory.registerClass<TestAwsSignatureV3>();
     testFactory.registerClass<TestAwsSignatureV4>();
 
     // If the user has specified a Test* class name, execute that test class only.

@@ -9,6 +9,7 @@ HEADERS += \
         testawssignaturev0.h \
         testawssignaturev1.h \
         testawssignaturev2.h \
+        testawssignaturev3.h \
         testawssignaturev4.h \
 
 SOURCES += \
@@ -22,6 +23,7 @@ SOURCES += \
         testawssignaturev0.cpp \
         testawssignaturev1.cpp \
         testawssignaturev2.cpp \
+        testawssignaturev3.cpp \
         testawssignaturev4.cpp \
 
 VPATH += $$PWD

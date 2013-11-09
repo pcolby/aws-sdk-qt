@@ -23,7 +23,11 @@
 #include "qtawsglobal.h"
 #include "awsabstractsignature_p.h"
 
-#include <QString>
+#include <QCryptographicHash>
+#include <QDateTime>
+#include <QNetworkAccessManager>
+#include <QUrl>
+#include <QUrlQuery>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -32,7 +36,31 @@ class AwsSignatureV3;
 class QTAWS_EXPORT AwsSignatureV3Private : public AwsAbstractSignaturePrivate {
 
 public:
-    AwsSignatureV3Private(AwsSignatureV3 * const q);
+    AwsSignatureV3Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV3 * const q);
+
+    void setAuthorizationHeader(const AwsAbstractCredentials &credentials,
+                                const QNetworkAccessManager::Operation operation,
+                                QNetworkRequest &request, const QByteArray &payload) const;
+
+    void setDateHeader(QNetworkRequest &request, const QDateTime &dateTime = QDateTime::currentDateTimeUtc()) const;
+
+protected:
+    const QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.
+
+    QByteArray algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const;
+
+    QByteArray authorizationHeaderValue(const AwsAbstractCredentials &credentials,
+                                        const QNetworkAccessManager::Operation operation,
+                                        QNetworkRequest &request, const QByteArray &payload) const;
+
+    QByteArray canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const;
+
+    QByteArray canonicalHeaders(const QNetworkRequest &request, QByteArray * const signedHeaders) const;
+
+    QByteArray canonicalRequest(const QNetworkAccessManager::Operation operation, const QNetworkRequest &request,
+                                const QByteArray &payload, QByteArray * const signedHeaders) const;
+
+    static inline bool isHttps(const QNetworkRequest &request);
 
 private:
     Q_DECLARE_PUBLIC(AwsSignatureV3)

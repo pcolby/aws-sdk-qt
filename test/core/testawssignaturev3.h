@@ -17,34 +17,35 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSSIGNATUREV3_H
-#define AWSSIGNATUREV3_H
+#include <QTest>
+#include "../../src/core/qtawsglobal.h"
 
-#include "qtawsglobal.h"
-#include "awsabstractsignature.h"
+class TestAwsSignatureV3 : public QObject {
+    Q_OBJECT
 
-#include <QCryptographicHash>
+private slots:
+    void algorithmDesignation_data();
+    void algorithmDesignation();
 
-QTAWS_BEGIN_NAMESPACE
+    void authorizationHeaderValue_data();
+    void authorizationHeaderValue();
 
-class AwsSignatureV3Private;
+    void canonicalHeader_data();
+    void canonicalHeader();
 
-class QTAWS_EXPORT AwsSignatureV3 : public AwsAbstractSignature {
+    void canonicalHeaders_data();
+    void canonicalHeaders();
 
-public:
-    AwsSignatureV3(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);
+    void canonicalRequest_data();
+    void canonicalRequest();
 
-    virtual void sign(const AwsAbstractCredentials &credentials,
-                      const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const;
+    void setAuthorizationHeader_data();
+    void setAuthorizationHeader();
 
-    virtual int version() const;
+    void setDateHeader_data();
+    void setDateHeader();
 
-private:
-    Q_DECLARE_PRIVATE(AwsSignatureV3)
-    friend class TestAwsSignatureV3;
+    void sign();
+
+    void version();
 };
-
-QTAWS_END_NAMESPACE
-
-#endif
