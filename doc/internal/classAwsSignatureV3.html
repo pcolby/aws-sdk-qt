@@ -112,6 +112,9 @@ Collaboration diagram for AwsSignatureV3:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a616632323817d0c21ba22b072e590650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV3.html#a616632323817d0c21ba22b072e590650">AwsSignatureV3</a> (const QCryptographicHash::Algorithm hashAlgorithm=QCryptographicHash::Sha256)</td></tr>
+<tr class="memdesc:a616632323817d0c21ba22b072e590650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsSignatureV3.html" title="Implements AWS Signature Version 3. ">AwsSignatureV3</a> object.  <a href="#a616632323817d0c21ba22b072e590650">More...</a><br/></td></tr>
+<tr class="separator:a616632323817d0c21ba22b072e590650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a971c7a7be5f40e935bdee31ed89d8642"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsSignatureV3.html#a971c7a7be5f40e935bdee31ed89d8642">sign</a> (const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials, const QNetworkAccessManager::Operation operation, QNetworkRequest &amp;request, const QByteArray &amp;data=QByteArray()) const </td></tr>
 <tr class="memdesc:a971c7a7be5f40e935bdee31ed89d8642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign an AWS request.  <a href="#a971c7a7be5f40e935bdee31ed89d8642">More...</a><br/></td></tr>
 <tr class="separator:a971c7a7be5f40e935bdee31ed89d8642"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,9 +150,37 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements AWS Signature Version 3. </p>
-<dl class="section note"><dt>Note</dt><dd>Signature Version 3 has been discontinued by Amazon, but is included here for posterity.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This class has not been implemented yet! </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>This class implements both <code>AWS3</code> and <code>AWS3-HTTPS</code> varieties.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html">http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html</a> (AWS3) </dd>
+<dd>
+<a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html</a> (AWS3-HTTPS) </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a616632323817d0c21ba22b072e590650"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AwsSignatureV3::AwsSignatureV3 </td>
+          <td>(</td>
+          <td class="paramtype">const QCryptographicHash::Algorithm&#160;</td>
+          <td class="paramname"><em>hashAlgorithm</em> = <code>QCryptographicHash::Sha256</code>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="classAwsSignatureV3.html" title="Implements AWS Signature Version 3. ">AwsSignatureV3</a> object. </p>
+<p>Use instances of this object to provide Version 3 signatures for AWS services.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hashAlgorithm</td><td>Hash algorithm for signatures. Must be either QCryptographicHash::Sha1 or QCryptographicHash::Sha256 (default, recommended). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a971c7a7be5f40e935bdee31ed89d8642"></a>
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +277,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 2 2013 14:25:46 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 9 2013 15:05:38 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.4
 </small></address>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2013-11-02</td>
+            <td class="headerValue">2013-11-09</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">25</td>
@@ -164,29 +164,29 @@
 <span class="lineNum">      90 </span>                :            :  *
 <a name="91"><span class="lineNum">      91 </span>                :            :  * @param  hostName  Name of an AWS host.</a>
 <span class="lineNum">      92 </span>                :            :  */
-<span class="lineNum">      93 </span>                :<span class="lineCov">        950 : AwsEndpoint::AwsEndpoint(const QString &amp;hostName)</span>
-<span class="lineNum">      94 </span>        [<span class="branchCov" title="Branch 2 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">        950 :     : d_ptr(new AwsEndpointPrivate(this))</span>
+<span class="lineNum">      93 </span>                :<span class="lineCov">        977 : AwsEndpoint::AwsEndpoint(const QString &amp;hostName)</span>
+<span class="lineNum">      94 </span>        [<span class="branchCov" title="Branch 2 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">        977 :     : d_ptr(new AwsEndpointPrivate(this))</span>
 <span class="lineNum">      95 </span>                :            : {
-<span class="lineNum">      96 </span>        [<span class="branchCov" title="Branch 1 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        950 :     Q_D(AwsEndpoint);</span>
-<span class="lineNum">      97 </span>        [<span class="branchCov" title="Branch 1 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        950 :     d-&gt;hostName = hostName;</span>
-<span class="lineNum">      98 </span>        [<span class="branchCov" title="Branch 1 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        950 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
-<span class="lineNum">      99 </span>[<span class="branchCov" title="Branch 1 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 937 times"> + </span><span class="branchCov" title="Branch 4 was taken 13 times"> + </span>]:<span class="lineCov">        950 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
-<span class="lineNum">     100 </span>[<span class="branchCov" title="Branch 1 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        937 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 6 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]
-<span class="lineNum">     101 </span>[<span class="branchCov" title="Branch 1 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        937 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 7 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>]
+<span class="lineNum">      96 </span>        [<span class="branchCov" title="Branch 1 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        977 :     Q_D(AwsEndpoint);</span>
+<span class="lineNum">      97 </span>        [<span class="branchCov" title="Branch 1 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        977 :     d-&gt;hostName = hostName;</span>
+<span class="lineNum">      98 </span>        [<span class="branchCov" title="Branch 1 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        977 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">      99 </span>[<span class="branchCov" title="Branch 1 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 964 times"> + </span><span class="branchCov" title="Branch 4 was taken 13 times"> + </span>]:<span class="lineCov">        977 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
+<span class="lineNum">     100 </span>[<span class="branchCov" title="Branch 1 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        964 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
+<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 6 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]
+<span class="lineNum">     101 </span>[<span class="branchCov" title="Branch 1 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        964 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
+<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 7 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>]
 <span class="lineNum">     102 </span>                :            :         }
-<span class="lineNum">     103 </span>[<span class="branchCov" title="Branch 1 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 937 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        937 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
-<span class="lineNum">     104 </span>        [<span class="branchCov" title="Branch 1 was taken 950 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        950 :     }</span>
-<span class="lineNum">     105 </span>                :<span class="lineCov">        950 : }</span>
+<span class="lineNum">     103 </span>[<span class="branchCov" title="Branch 1 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 964 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        964 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
+<span class="lineNum">     104 </span>        [<span class="branchCov" title="Branch 1 was taken 977 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">        977 :     }</span>
+<span class="lineNum">     105 </span>                :<span class="lineCov">        977 : }</span>
 <span class="lineNum">     106 </span>                :            : 
 <span class="lineNum">     107 </span>                :            : /**
 <a name="108"><span class="lineNum">     108 </span>                :            :  * @brief AwsEndpoint destructor.</a>
 <span class="lineNum">     109 </span>                :            :  */
-<span class="lineNum">     110 </span>                :<span class="lineCov">       1135 : AwsEndpoint::~AwsEndpoint()</span>
+<span class="lineNum">     110 </span>                :<span class="lineCov">       1162 : AwsEndpoint::~AwsEndpoint()</span>
 <span class="lineNum">     111 </span>                :            : {
-<span class="lineNum">     112 </span>        [<span class="branchCov" title="Branch 0 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>]:<span class="lineCov">       1135 :     delete d_ptr;</span>
-<span class="lineNum">     113 </span>                :<span class="lineCov">       1135 : }</span>
+<span class="lineNum">     112 </span>        [<span class="branchCov" title="Branch 0 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>]:<span class="lineCov">       1162 :     delete d_ptr;</span>
+<span class="lineNum">     113 </span>                :<span class="lineCov">       1162 : }</span>
 <span class="lineNum">     114 </span>                :            : 
 <span class="lineNum">     115 </span>                :            : /**
 <span class="lineNum">     116 </span>                :            :  * @brief  Get a QUrl for an AWS endpoint.
@@ -400,10 +400,10 @@
 <span class="lineNum">     301 </span>                :            :  *
 <a name="302"><span class="lineNum">     302 </span>                :            :  * @see supportedRegions</a>
 <span class="lineNum">     303 </span>                :            :  */
-<span class="lineNum">     304 </span>                :<span class="lineCov">       1350 : QString AwsEndpoint::regionName() const</span>
+<span class="lineNum">     304 </span>                :<span class="lineCov">       1404 : QString AwsEndpoint::regionName() const</span>
 <span class="lineNum">     305 </span>                :            : {
-<span class="lineNum">     306 </span>                :<span class="lineCov">       1350 :     Q_D(const AwsEndpoint);</span>
-<span class="lineNum">     307 </span>                :<span class="lineCov">       1350 :     return d-&gt;regionName;</span>
+<span class="lineNum">     306 </span>                :<span class="lineCov">       1404 :     Q_D(const AwsEndpoint);</span>
+<span class="lineNum">     307 </span>                :<span class="lineCov">       1404 :     return d-&gt;regionName;</span>
 <span class="lineNum">     308 </span>                :            : }
 <span class="lineNum">     309 </span>                :            : 
 <span class="lineNum">     310 </span>                :            : /**
@@ -413,10 +413,10 @@
 <span class="lineNum">     314 </span>                :            :  *
 <a name="315"><span class="lineNum">     315 </span>                :            :  * @see    fullServiceName</a>
 <span class="lineNum">     316 </span>                :            :  */
-<span class="lineNum">     317 </span>                :<span class="lineCov">       1531 : QString AwsEndpoint::serviceName() const</span>
+<span class="lineNum">     317 </span>                :<span class="lineCov">       1585 : QString AwsEndpoint::serviceName() const</span>
 <span class="lineNum">     318 </span>                :            : {
-<span class="lineNum">     319 </span>                :<span class="lineCov">       1531 :     Q_D(const AwsEndpoint);</span>
-<span class="lineNum">     320 </span>                :<span class="lineCov">       1531 :     return d-&gt;serviceName;</span>
+<span class="lineNum">     319 </span>                :<span class="lineCov">       1585 :     Q_D(const AwsEndpoint);</span>
+<span class="lineNum">     320 </span>                :<span class="lineCov">       1585 :     return d-&gt;serviceName;</span>
 <span class="lineNum">     321 </span>                :            : }
 <span class="lineNum">     322 </span>                :            : 
 <span class="lineNum">     323 </span>                :            : /**
@@ -520,12 +520,12 @@
 <span class="lineNum">     414 </span>                :            :  *
 <a name="415"><span class="lineNum">     415 </span>                :            :  * @see   http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</a>
 <span class="lineNum">     416 </span>                :            :  */
-<span class="lineNum">     417 </span>                :<span class="lineCov">       1135 : AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)</span>
-<span class="lineNum">     418 </span>[<span class="branchCov" title="Branch 2 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">       1135 :     : q_ptr(q)</span>
+<span class="lineNum">     417 </span>                :<span class="lineCov">       1162 : AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)</span>
+<span class="lineNum">     418 </span>[<span class="branchCov" title="Branch 2 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">       1162 :     : q_ptr(q)</span>
 <span class="lineNum">     419 </span>                :            : {
-<span class="lineNum">     420 </span>[<span class="branchCov" title="Branch 2 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">       1135 :     loadEndpointData();</span>
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 1135 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
-<span class="lineNum">     421 </span>                :<span class="lineCov">       1135 : }</span>
+<span class="lineNum">     420 </span>[<span class="branchCov" title="Branch 2 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">       1162 :     loadEndpointData();</span>
+<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 8 was taken 1162 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>]
+<span class="lineNum">     421 </span>                :<span class="lineCov">       1162 : }</span>
 <span class="lineNum">     422 </span>                :            : 
 <span class="lineNum">     423 </span>                :            : /**
 <span class="lineNum">     424 </span>                :            :  * @internal
@@ -541,17 +541,17 @@
 <span class="lineNum">     434 </span>                :            :  *
 <a name="435"><span class="lineNum">     435 </span>                :            :  * @param  fileName  Name of the endpoint XML data file to load.</a>
 <span class="lineNum">     436 </span>                :            :  */
-<span class="lineNum">     437 </span>                :<span class="lineCov">       7254 : void AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName)</span>
+<span class="lineNum">     437 </span>                :<span class="lineCov">       7281 : void AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName)</span>
 <span class="lineNum">     438 </span>                :            : {
-<span class="lineNum">     439 </span>        [<span class="branchCov" title="Branch 1 was taken 7254 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">       7254 :     QMutexLocker locker(&amp;mutex);</span>
-<span class="lineNum">     440 </span>[<span class="branchCov" title="Branch 1 was taken 7254 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 2961 times"> + </span><span class="branchCov" title="Branch 4 was taken 4293 times"> + </span>]:<span class="lineCov">       7254 :     if (!hosts.empty()) {</span>
-<span class="lineNum">     441 </span>                :<span class="lineCov">      10215 :         return; // Already loaded.</span>
+<span class="lineNum">     439 </span>        [<span class="branchCov" title="Branch 1 was taken 7281 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">       7281 :     QMutexLocker locker(&amp;mutex);</span>
+<span class="lineNum">     440 </span>[<span class="branchCov" title="Branch 1 was taken 7281 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 3 was taken 2988 times"> + </span><span class="branchCov" title="Branch 4 was taken 4293 times"> + </span>]:<span class="lineCov">       7281 :     if (!hosts.empty()) {</span>
+<span class="lineNum">     441 </span>                :<span class="lineCov">      10269 :         return; // Already loaded.</span>
 <span class="lineNum">     442 </span>                :            :     }
 <span class="lineNum">     443 </span>                :            : 
 <span class="lineNum">     444 </span>                :            :     // Open the data file.
-<span class="lineNum">     445 </span>[<span class="branchCov" title="Branch 1 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">      11547 :     QFile file(fileName);</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 7254 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 9 was taken 4293 times"> + </span><span class="branchCov" title="Branch 10 was taken 2961 times"> + </span>]
-<span class="lineNum">     446 </span>        [<span class="branchCov" title="Branch 1 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">      11547 :     loadEndpointData(file);</span>
+<span class="lineNum">     445 </span>[<span class="branchCov" title="Branch 1 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">      11574 :     QFile file(fileName);</span>
+<span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 7281 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 9 was taken 4293 times"> + </span><span class="branchCov" title="Branch 10 was taken 2988 times"> + </span>]
+<span class="lineNum">     446 </span>        [<span class="branchCov" title="Branch 1 was taken 4293 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">      11574 :     loadEndpointData(file);</span>
 <span class="lineNum">     447 </span>                :            : }
 <span class="lineNum">     448 </span>                :            : 
 <span class="lineNum">     449 </span>                :            : /**

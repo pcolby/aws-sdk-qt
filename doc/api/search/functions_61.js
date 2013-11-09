@@ -9,5 +9,6 @@ var searchData=
   ['awssignaturev0',['AwsSignatureV0',['../classAwsSignatureV0.html#aca3a1df436a8e18089f9a36b1289c59b',1,'AwsSignatureV0']]],
   ['awssignaturev1',['AwsSignatureV1',['../classAwsSignatureV1.html#af286ff81a03f04ecd08febf743a06d19',1,'AwsSignatureV1']]],
   ['awssignaturev2',['AwsSignatureV2',['../classAwsSignatureV2.html#aec69c1bd44d0e3670d5ebfc584734bed',1,'AwsSignatureV2']]],
+  ['awssignaturev3',['AwsSignatureV3',['../classAwsSignatureV3.html#a616632323817d0c21ba22b072e590650',1,'AwsSignatureV3']]],
   ['awssignaturev4',['AwsSignatureV4',['../classAwsSignatureV4.html#a91c76d5d1009082eea1ef6acda806d3f',1,'AwsSignatureV4']]]
 ];
