@@ -498,31 +498,8 @@ void TestAwsSignatureV4::credentialScope()
 
 void TestAwsSignatureV4::setAuthorizationHeader_data()
 {
-    QTest::addColumn<QString>("accessKeyId");
-    QTest::addColumn<QString>("secretKey");
-    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
-    QTest::addColumn<QNetworkRequest>("request");
-    QTest::addColumn<QByteArray>("payload");
-    QTest::addColumn<QDateTime>("timestamp");
-    QTest::addColumn<QByteArray>("expected");
-
-    { // Example from http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
-        QNetworkRequest request(QUrl(QLatin1String("http://iam.amazonaws.com/")));
-        request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded; charset=utf-8"));
-        request.setRawHeader("x-amz-date", "20110909T233600Z");
-        QTest::newRow("official")
-            << QString::fromLatin1("AKIDEXAMPLE")
-            << QString::fromLatin1("wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY")
-            << QNetworkAccessManager::PostOperation
-            << request
-            << QByteArray("Action=ListUsers&Version=2010-05-08")
-            << QDateTime::fromString(QLatin1String("20110909T233600Z"), QLatin1String("yyyyMMddThhmmssZ"))
-            << QByteArray(
-                "AWS4-HMAC-SHA256 "
-                "Credential=AKIDEXAMPLE/20110909/us-east-1/iam/aws4_request, "
-                "SignedHeaders=content-type;host;x-amz-date, "
-                "Signature=ced6826de92d2bdeed8f846f0bf508e8559e98e4b0199114b84c54174deb456c");
-    }
+    // Use the same data provider as the authorizationHeaderValue tests.
+    authorizationHeaderValue_data();
 }
 
 void TestAwsSignatureV4::setAuthorizationHeader()
