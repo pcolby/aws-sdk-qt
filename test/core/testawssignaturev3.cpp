@@ -429,6 +429,35 @@ void TestAwsSignatureV3::canonicalRequest_data()
             << QByteArray("Fri, 09 Sep 2011 23:36:00 GMT")
             << QByteArray(); // AWS3-HTTPS has no concept of signed headers.
     }
+
+    // Examples from https://github.com/aws/aws-sdk-php/blob/master/tests/Aws/Tests/Common/Signature/SignatureV3HttpsTest.php
+    // but with additional nonce.
+    {
+        // SignatureV3HttpsTest.php:0 tests the PHP test's default timestamp. Not applicable here.
+    }
+    {
+        QNetworkRequest request(QUrl(QLatin1String("https://example.com/")));
+        request.setRawHeader("Date", "Fri, 09 Sep 2011 23:36:00 GMT");
+        request.setRawHeader("x-amz-nonce", "7f7d4264-48ed-11e3-bb77-080027989a56");
+        QTest::newRow("SignatureV3HttpsTest.php:1")
+            << QNetworkAccessManager::GetOperation
+            << request
+            << QByteArray()
+            << QByteArray("Fri, 09 Sep 2011 23:36:00 GMT7f7d4264-48ed-11e3-bb77-080027989a56")
+            << QByteArray(); // AWS3-HTTPS has no concept of signed headers.
+    }
+    {
+        QNetworkRequest request(QUrl(QLatin1String("https://example.com/")));
+        request.setRawHeader("x-amz-date", "Fri, 09 Sep 2011 23:36:00 GMT");
+        request.setRawHeader("x-amz-nonce", "9b094320-48ed-11e3-8fb9-080027989a56");
+        QTest::newRow("SignatureV3HttpsTest.php:2")
+            << QNetworkAccessManager::GetOperation
+            << request
+            << QByteArray()
+            << QByteArray("Fri, 09 Sep 2011 23:36:00 GMT9b094320-48ed-11e3-8fb9-080027989a56")
+            << QByteArray(); // AWS3-HTTPS has no concept of signed headers.
+    }
+
 }
 
 void TestAwsSignatureV3::canonicalRequest()
