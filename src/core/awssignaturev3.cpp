@@ -65,7 +65,7 @@ void AwsSignatureV3::sign(const AwsAbstractCredentials &credentials,
     // Note, the use of a nonce value with AWS3-HTTPS is undocumented, but done by the
     // official Java SDK, and worth copying for additional security.
     if ((d->isHttps(request)) && (!request.hasRawHeader("x-amz-nonce"))) {
-        //request.setRawHeader("x-amz-nonce", QUuid::createUuid().toByteArray().mid(1,36));
+        request.setRawHeader("x-amz-nonce", QUuid::createUuid().toByteArray().mid(1,36));
     }
 
     d->setDateHeader(request);
