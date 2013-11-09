@@ -524,14 +524,36 @@ void TestAwsSignatureV3::setDateHeader()
 
 void TestAwsSignatureV3::sign()
 {
-    // Here we're simply checking that the AwsAbstractSignature::sign function has been correctly overridden
     const AwsAnonymousCredentials credentials;
-    AwsAbstractSignature * const signature = new AwsSignatureV3;
-    QNetworkRequest request;
-    signature->sign(credentials, QNetworkAccessManager::PostOperation, request);
-    QVERIFY(request.hasRawHeader("Authorization"));
-    QCOMPARE(request.rawHeader("Authorization").left(4), QByteArray("AWS3"));
-    delete signature;
+
+    {   // Check that the AwsAbstractSignature::sign function has been correctly overridden
+        QNetworkRequest request;
+        AwsAbstractSignature * const signature = new AwsSignatureV3;
+        signature->sign(credentials, QNetworkAccessManager::GetOperation, request);
+        QVERIFY(request.hasRawHeader("Authorization"));
+        QCOMPARE(request.rawHeader("Authorization").left(4), QByteArray("AWS3"));
+        QVERIFY(request.hasRawHeader("x-amz-date"));
+        delete signature;
+    }
+
+    {   // Check that the AwsSignatureV3::sign adds a nonce for HTTPS requests.
+        QNetworkRequest request(QUrl(QLatin1String("https://example.com")));
+        AwsSignatureV3 signature;
+        signature.sign(credentials, QNetworkAccessManager::PostOperation, request);
+        QVERIFY(request.hasRawHeader("Authorization"));
+        QCOMPARE(request.rawHeader("Authorization").left(4), QByteArray("AWS3"));
+        QVERIFY(request.hasRawHeader("x-amz-date"));
+        QVERIFY(request.hasRawHeader("x-amz-nonce"));
+    }
+    {   // But not for non-HTTPS requests.
+        QNetworkRequest request(QUrl(QLatin1String("http://example.com")));
+        AwsSignatureV3 signature;
+        signature.sign(credentials, QNetworkAccessManager::PostOperation, request);
+        QVERIFY(request.hasRawHeader("Authorization"));
+        QCOMPARE(request.rawHeader("Authorization").left(4), QByteArray("AWS3"));
+        QVERIFY(request.hasRawHeader("x-amz-date"));
+        QVERIFY(!request.hasRawHeader("x-amz-nonce"));
+    }
 }
 
 void TestAwsSignatureV3::version()
