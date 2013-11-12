@@ -26,7 +26,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsAbstractCredentials
  *
- * @brief  Interface class for privding AWS credentials.
+ * @brief  Interface class for providing AWS credentials.
  */
 
 /**
