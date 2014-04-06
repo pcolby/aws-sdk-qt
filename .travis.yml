@@ -4,6 +4,7 @@ before_install:
   - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
   - sudo apt-get update -qq
   - sudo apt-get install -qq doxygen graphviz qt5-qmake qtbase5-dev
+  - sudo pip install cpp-coveralls --use-mirrors
 
 install:
   # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
@@ -35,5 +36,5 @@ script:
   - make
   - make check
 
-after-success:
+after_success:
   - coveralls -b test/ -e debug -e release -E '.+test.*(cpp|h)' -E '(.*/)?(moc|qrc)_.*\.cpp'
