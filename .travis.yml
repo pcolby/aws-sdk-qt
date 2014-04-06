@@ -34,3 +34,6 @@ before_script:
 script:
   - make
   - make check
+
+after-success:
+  - coveralls -b test/ -e debug -e release -E '.+test.*(cpp|h)' -E '(.*/)?(moc|qrc)_.*\.cpp'
