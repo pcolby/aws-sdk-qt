@@ -9,7 +9,8 @@ The library is in very early stages of development; only the AWS signature
 code and AWS endpoints information has been implemented so far, but what has been implemented is
 [100% documented](http://pcolby.github.io/libqtaws/doc/api/annotated.html)
 (including the [internal code](http://pcolby.github.io/libqtaws/doc/internal/annotated.html)) and 
-currently has 100% [unit test line coverage](http://pcolby.github.io/libqtaws/test/coverage/).
+currently has 100% [unit test line coverage](http://pcolby.github.io/libqtaws/test/coverage/)
+(slightly lower on some older versions of gcc / gcov / lcov).
 
 Specific AWS services are being implemented in the order in which they are of interest to me,
 but of course, anyone can contribute implementations for any services that are more important to them.
