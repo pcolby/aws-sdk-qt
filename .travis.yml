@@ -4,7 +4,7 @@ before_install:
   - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
   - sudo apt-get update -qq
   - sudo apt-get install -qq doxygen graphviz qt5-qmake qtbase5-dev
-  - sudo pip install cpp-coveralls --use-mirrors
+  - sudo apt-get install -qq lcov rubygems
 
 install:
   # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
@@ -37,4 +37,5 @@ script:
   - make check
 
 after_success:
-  - coveralls -b test/ -e debug -e release -E '.+test.*(cpp|h)' -E '(.*/)?(moc|qrc)_.*\.cpp'
+  - make -C test coverage
+  - lcoveralls
