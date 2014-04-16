@@ -5,6 +5,7 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq doxygen graphviz qt5-qmake qtbase5-dev
   - sudo apt-get install -qq lcov rubygems
+  - gem install lcoveralls
 
 install:
   # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
