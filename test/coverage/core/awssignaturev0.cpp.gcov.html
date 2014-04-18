@@ -37,21 +37,12 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2013-11-12</td>
+            <td class="headerValue">2014-04-18</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">9</td>
             <td class="headerCovTableEntry">9</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntry">129</td>
-            <td class="headerCovTableEntry">250</td>
-            <td class="headerCovTableEntryLo">51.6 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -67,291 +58,247 @@
     </tr>
     <tr>
       <td>
-<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="sourceHeading">          Line data    Source code</pre>
 <pre class="source">
-<a name="1"><span class="lineNum">       1 </span>                :            : /*</a>
-<span class="lineNum">       2 </span>                :            :     Copyright 2013 Paul Colby
-<span class="lineNum">       3 </span>                :            : 
-<span class="lineNum">       4 </span>                :            :     This file is part of libqtaws.
-<span class="lineNum">       5 </span>                :            : 
-<span class="lineNum">       6 </span>                :            :     Libqtaws is free software: you can redistribute it and/or modify
-<span class="lineNum">       7 </span>                :            :     it under the terms of the GNU Lesser General Public License as published by
-<span class="lineNum">       8 </span>                :            :     the Free Software Foundation, either version 3 of the License, or
-<span class="lineNum">       9 </span>                :            :     (at your option) any later version.
-<span class="lineNum">      10 </span>                :            : 
-<span class="lineNum">      11 </span>                :            :     Libqtaws is distributed in the hope that it will be useful,
-<span class="lineNum">      12 </span>                :            :     but WITHOUT ANY WARRANTY; without even the implied warranty of
-<span class="lineNum">      13 </span>                :            :     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-<span class="lineNum">      14 </span>                :            :     GNU Lesser General Public License for more details.
-<span class="lineNum">      15 </span>                :            : 
-<span class="lineNum">      16 </span>                :            :     You should have received a copy of the GNU Lesser General Public License
-<span class="lineNum">      17 </span>                :            :     along with libqtaws.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-<span class="lineNum">      18 </span>                :            : */
-<span class="lineNum">      19 </span>                :            : 
-<span class="lineNum">      20 </span>                :            : #include &quot;awssignaturev0.h&quot;
-<span class="lineNum">      21 </span>                :            : #include &quot;awssignaturev0_p.h&quot;
-<span class="lineNum">      22 </span>                :            : 
-<span class="lineNum">      23 </span>                :            : #if QT_VERSION &gt;= QT_VERSION_CHECK(5, 0, 0) &amp;&amp; QT_VERSION &lt; QT_VERSION_CHECK(5, 1, 0)
-<span class="lineNum">      24 </span>                :            : #include &quot;qmessageauthenticationcode.h&quot;
-<span class="lineNum">      25 </span>                :            : #else
-<span class="lineNum">      26 </span>                :            : #include &lt;QMessageAuthenticationCode&gt;
-<span class="lineNum">      27 </span>                :            : #endif
-<span class="lineNum">      28 </span>                :            : 
-<span class="lineNum">      29 </span>                :            : #include &lt;QCryptographicHash&gt;
-<span class="lineNum">      30 </span>                :            : #include &lt;QDebug&gt;
-<span class="lineNum">      31 </span>                :            : #include &lt;QNetworkRequest&gt;
-<span class="lineNum">      32 </span>                :            : #include &lt;QUrl&gt;
-<span class="lineNum">      33 </span>                :            : 
-<span class="lineNum">      34 </span>                :            : QTAWS_BEGIN_NAMESPACE
-<span class="lineNum">      35 </span>                :            : 
-<span class="lineNum">      36 </span>                :            : /**
-<span class="lineNum">      37 </span>                :            :  * @class  AwsSignatureV0
-<span class="lineNum">      38 </span>                :            :  *
-<span class="lineNum">      39 </span>                :            :  * @brief  Implements AWS Signature Version 0 \ref deprecated &quot;(deprecated by Amazon)&quot;
-<span class="lineNum">      40 </span>                :            :  *
-<span class="lineNum">      41 </span>                :            :  * @deprecated  Amazon has officially deprecated signature Version 0 in favor of later,
-<span class="lineNum">      42 </span>                :            :  *              more secure signatures, such as AwsSignatureV2 and AwsSignatureV4.
-<span class="lineNum">      43 </span>                :            :  *
-<span class="lineNum">      44 </span>                :            :  * As version 0 signatures are rightly regarded as *insecure*, this class will refuse to sign
-<span class="lineNum">      45 </span>                :            :  * requests that use insecure transports such as HTTP instead of HTTPS. However, insecure
-<span class="lineNum">      46 </span>                :            :  * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
-<span class="lineNum">      47 </span>                :            :  * when compiling this library.
-<span class="lineNum">      48 </span>                :            :  *
-<span class="lineNum">      49 </span>                :            :  * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-<span class="lineNum">      50 </span>                :            :  */
-<span class="lineNum">      51 </span>                :            : 
-<span class="lineNum">      52 </span>                :            : /**
-<span class="lineNum">      53 </span>                :            :  * @brief  Constructs a new AwsSignatureV0 object.
-<span class="lineNum">      54 </span>                :            :  *
-<a name="55"><span class="lineNum">      55 </span>                :            :  * Use instances of this object to provide Version 0 signatures for AWS services.</a>
-<span class="lineNum">      56 </span>                :            :  */
-<span class="lineNum">      57 </span>        [<span class="branchCov" title="Branch 2 was taken 8 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         16 : AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Private(this))</span>
-<span class="lineNum">      58 </span>                :            : {
-<span class="lineNum">      59 </span>                :            : 
-<span class="lineNum">      60 </span>                :<span class="lineCov">          8 : }</span>
-<span class="lineNum">      61 </span>                :            : 
-<span class="lineNum">      62 </span>                :            : /**
-<span class="lineNum">      63 </span>                :            :  * @internal
-<span class="lineNum">      64 </span>                :            :  *
-<span class="lineNum">      65 </span>                :            :  * @brief  Constructs a new AwsSignatureV0 object with a specific private implementation.
-<span class="lineNum">      66 </span>                :            :  *
-<span class="lineNum">      67 </span>                :            :  * This internal constructor allows derived classes to provide their own derived
-<span class="lineNum">      68 </span>                :            :  * private implementation.  Specifically, AwsSignatureV1 uses this constructor to
-<span class="lineNum">      69 </span>                :            :  * extend this class.
-<span class="lineNum">      70 </span>                :            :  *
-<span class="lineNum">      71 </span>                :            :  * @param  d  Internal private implementation to use.
-<span class="lineNum">      72 </span>                :            :  *
-<a name="73"><span class="lineNum">      73 </span>                :            :  * @see    AwsSignatureV1</a>
-<span class="lineNum">      74 </span>                :            :  */
-<span class="lineNum">      75 </span>                :<span class="lineCov">         16 : AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)</span>
-<span class="lineNum">      76 </span>                :            : {
-<span class="lineNum">      77 </span>                :            : 
-<a name="78"><span class="lineNum">      78 </span>                :<span class="lineCov">          8 : }</span></a>
-<span class="lineNum">      79 </span>                :            : 
-<span class="lineNum">      80 </span>                :<span class="lineCov">          6 : void AwsSignatureV0::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
-<span class="lineNum">      81 </span>                :            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
-<span class="lineNum">      82 </span>                :            : {
-<span class="lineNum">      83 </span>                :            :     Q_UNUSED(operation) // Not included in V0 signatures.
-<span class="lineNum">      84 </span>                :            :     Q_UNUSED(data)      // Not included in V0 signatures.
-<span class="lineNum">      85 </span>        [<span class="branchCov" title="Branch 1 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          6 :     Q_D(const AwsSignatureV0);</span>
-<span class="lineNum">      86 </span>                :            : 
-<span class="lineNum">      87 </span>                :            :     // Refuse to sign non-HTTPS requests, unless built with QTAWS_ALLOW_INSECURE_SIGNATURES defined.
-<span class="lineNum">      88 </span>                :            : #ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
-<span class="lineNum">      89 </span>[<span class="branchCov" title="Branch 1 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     if (request.url().scheme() != QString::fromLatin1(&quot;https&quot;)) {</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 6 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 21 was taken 3 times"> + </span><span class="branchCov" title="Branch 22 was taken 3 times"> + </span>]
-<span class="lineNum">      90 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          3 :         qWarning(&quot;AwsSignatureV%d::sign Refusing to sign insecure (non-HTTPS) request&quot;, version());</span>
-<span class="lineNum">      91 </span>                :<span class="lineCov">          3 :         Q_ASSERT_X(false, Q_FUNC_INFO, &quot;insecure V1 signatures not enabled&quot;);</span>
-<span class="lineNum">      92 </span>                :<span class="lineCov">          6 :         return;</span>
-<span class="lineNum">      93 </span>                :            :     }
-<span class="lineNum">      94 </span>                :            : #endif
-<span class="lineNum">      95 </span>                :            : 
-<span class="lineNum">      96 </span>                :            :     // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
-<span class="lineNum">      97 </span>        [<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          3 :     d-&gt;adornRequest(request, credentials);</span>
-<span class="lineNum">      98 </span>                :            : 
-<span class="lineNum">      99 </span>                :            :     // Calculate the signature.
-<span class="lineNum">     100 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          3 :     const QByteArray stringToSign = d-&gt;canonicalQuery(QUrlQuery(request.url().query()));</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 20 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 21 was not taken"> - </span>]
-<span class="lineNum">     101 </span>                :            :     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
-<span class="lineNum">     102 </span>                :<span class="lineCov">          3 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
-<span class="lineNum">     103 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :                                          QCryptographicHash::Sha1).toBase64())));</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 7 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 8 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 11 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 13 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 19 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>][<span class="branchCov" title="Branch 22 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 25 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>][<span class="branchCov" title="Branch 28 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 31 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 32 was not taken"> - </span>][<span class="branchCov" title="Branch 34 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 35 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 37 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 38 was not taken"> - </span>][<span class="branchCov" title="Branch 40 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 41 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 43 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 44 was not taken"> - </span>][<span class="branchCov" title="Branch 46 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 47 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 49 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 50 was not taken"> - </span>][<span class="branchCov" title="Branch 52 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 53 was not taken"> - </span>]
-<span class="lineNum">     104 </span>                :            : 
-<span class="lineNum">     105 </span>                :            :     // Append the signature to the request.
-<span class="lineNum">     106 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     QUrl url = request.url();</span>
-<span class="lineNum">     107 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 6 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]:<span class="lineCov">          3 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 9 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 10 was not taken"> - </span>][<span class="branchCov" title="Branch 12 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 13 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 15 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 16 was not taken"> - </span>][<span class="branchCov" title="Branch 18 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 19 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 21 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 22 was not taken"> - </span>][<span class="branchCov" title="Branch 24 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 25 was not taken"> - </span>]
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 27 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 28 was not taken"> - </span>]
-<span class="lineNum">     108 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          6 :     request.setUrl(url);</span>
-<a name="109"><span class="lineNum">     109 </span>                :            : }</a>
-<span class="lineNum">     110 </span>                :            : 
-<span class="lineNum">     111 </span>                :<span class="lineCov">          6 : int AwsSignatureV0::version() const</span>
-<span class="lineNum">     112 </span>                :            : {
-<span class="lineNum">     113 </span>                :<span class="lineCov">          6 :     return 0;</span>
-<span class="lineNum">     114 </span>                :            : }
-<span class="lineNum">     115 </span>                :            : 
-<span class="lineNum">     116 </span>                :            : /**
-<span class="lineNum">     117 </span>                :            :  * @internal
-<span class="lineNum">     118 </span>                :            :  *
-<span class="lineNum">     119 </span>                :            :  * @class  AwsSignatureV0Private
-<span class="lineNum">     120 </span>                :            :  *
-<span class="lineNum">     121 </span>                :            :  * @brief  Private implementation for AwsSignatureV0.
-<span class="lineNum">     122 </span>                :            :  *
-<span class="lineNum">     123 </span>                :            :  * @warning  This is an internal private implementation class, and as such external should
-<span class="lineNum">     124 </span>                :            :  *           code should **not** depend directly on anything contained within this class.
-<span class="lineNum">     125 </span>                :            :  *
-<span class="lineNum">     126 </span>                :            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
-<span class="lineNum">     127 </span>                :            :  */
-<span class="lineNum">     128 </span>                :            : 
-<span class="lineNum">     129 </span>                :            : /**
-<span class="lineNum">     130 </span>                :            :  * @internal
-<span class="lineNum">     131 </span>                :            :  *
-<span class="lineNum">     132 </span>                :            :  * @brief  Constructs a new AwsSignatureV0Private object.
-<span class="lineNum">     133 </span>                :            :  *
-<a name="134"><span class="lineNum">     134 </span>                :            :  * @param  q  Pointer to this object's public AwsSignatureV0 instance.</a>
-<span class="lineNum">     135 </span>                :            :  */
-<span class="lineNum">     136 </span>                :<span class="lineCov">         32 : AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)</span>
-<span class="lineNum">     137 </span>                :            : {
-<span class="lineNum">     138 </span>                :            : 
-<span class="lineNum">     139 </span>                :<span class="lineCov">         16 : }</span>
-<span class="lineNum">     140 </span>                :            : 
-<span class="lineNum">     141 </span>                :            : /**
-<a name="142"><span class="lineNum">     142 </span>                :            :  * @brief AwsSignatureV0Private destructor.</a>
-<span class="lineNum">     143 </span>                :            :  */
-<span class="lineNum">     144 </span>                :<span class="lineCov">         40 : AwsSignatureV0Private::~AwsSignatureV0Private()</span>
-<span class="lineNum">     145 </span>                :            : {
-<span class="lineNum">     146 </span>                :            : 
-<span class="lineNum">     147 </span>        [<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 16 times"> + </span>]:<span class="lineCov">         24 : }</span>
-<span class="lineNum">     148 </span>                :            : 
-<span class="lineNum">     149 </span>                :            : /**
-<span class="lineNum">     150 </span>                :            :  * @internal
-<span class="lineNum">     151 </span>                :            :  *
-<span class="lineNum">     152 </span>                :            :  * @brief  Add AWS Signature Version 0 adornments to an AWS request.
-<span class="lineNum">     153 </span>                :            :  *
-<span class="lineNum">     154 </span>                :            :  * In addition to service-specific request parameters, Amazon requires that version
-<span class="lineNum">     155 </span>                :            :  * 1 signatures contain a number of common query parameters.  This functions adds
-<span class="lineNum">     156 </span>                :            :  * those query parameters to \a request if they're not already present.
-<span class="lineNum">     157 </span>                :            :  *
-<span class="lineNum">     158 </span>                :            :  * The query parameters added by this function, as required by Amazon, are:
-<span class="lineNum">     159 </span>                :            :  *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
-<span class="lineNum">     160 </span>                :            :  *   * `SignatureVersion` - set to `0`.
-<span class="lineNum">     161 </span>                :            :  *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
-<span class="lineNum">     162 </span>                :            :  *                 `2013-10-30T12:34:56Z`, unless an `Expires` value is present,
-<span class="lineNum">     163 </span>                :            :  *                 in which case no `Timestamp` parameter is added.
-<span class="lineNum">     164 </span>                :            :  *
-<span class="lineNum">     165 </span>                :            :  * @note   The `SignatureVersion` header is optional for version 0 signatures, but
-<span class="lineNum">     166 </span>                :            :  *         this function always includes it for clarity.
-<span class="lineNum">     167 </span>                :            :  *
-<span class="lineNum">     168 </span>                :            :  * @param  request         Request to adorn.
-<span class="lineNum">     169 </span>                :            :  * @param  credentials     Credentials to use when adorning \a request.
-<span class="lineNum">     170 </span>                :            :  *
-<a name="171"><span class="lineNum">     171 </span>                :            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
-<span class="lineNum">     172 </span>                :            :  */
-<span class="lineNum">     173 </span>                :<span class="lineCov">          5 : void AwsSignatureV0Private::adornRequest(QNetworkRequest &amp;request,</span>
-<span class="lineNum">     174 </span>                :            :                                          const AwsAbstractCredentials &amp;credentials) const
-<span class="lineNum">     175 </span>                :            : {
-<span class="lineNum">     176 </span>                :<span class="lineCov">          5 :     Q_Q(const AwsSignatureV0);</span>
-<span class="lineNum">     177 </span>                :            : 
-<span class="lineNum">     178 </span>                :            :     // Set / add the necessary query items.
-<span class="lineNum">     179 </span>        [<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          5 :     QUrl url = request.url();</span>
-<span class="lineNum">     180 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         10 :     QUrlQuery query(url);</span>
-<span class="lineNum">     181 </span>[<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          5 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 14 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>]
-<span class="lineNum">     182 </span>[<span class="branchCov" title="Branch 3 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 4 was not taken"> - </span>][<span class="branchCov" title="Branch 6 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 7 was not taken"> - </span>]:<span class="lineCov">          5 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QString::fromLatin1(&quot;%1&quot;).arg(q-&gt;version()));</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 9 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 10 was not taken"> - </span>][<span class="branchCov" title="Branch 13 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 16 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>][<span class="branchCov" title="Branch 19 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 22 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>][<span class="branchCov" title="Branch 25 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>]
-<span class="lineNum">     183 </span>                :            : 
-<span class="lineNum">     184 </span>                :            :     // Amazon: &quot;Query requests must include either Timestamp or Expires, but not both.&quot;
-<span class="lineNum">     185 </span>                :            :     // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-<span class="lineNum">     186 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          5 :     if (!query.hasQueryItem(QLatin1String(&quot;Expires&quot;))) {</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 10 was taken 3 times"> + </span><span class="branchCov" title="Branch 11 was taken 2 times"> + </span>]
-<span class="lineNum">     187 </span>                :            :         setQueryItem(query, QLatin1String(&quot;Timestamp&quot;),
-<span class="lineNum">     188 </span>                :            :                         QString::fromUtf8(QUrl::toPercentEncoding(
-<span class="lineNum">     189 </span>                :            :                             QDateTime::currentDateTimeUtc().toString(QLatin1String(&quot;yyyy-MM-ddThh:mm:ssZ&quot;))
-<span class="lineNum">     190 </span>                :            :                         )),
-<span class="lineNum">     191 </span>[<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">          3 :                         false); // Don't warn if its already set to something else.</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 17 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 18 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 20 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 21 was not taken"> - </span>][<span class="branchCov" title="Branch 24 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 25 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 27 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 28 was not taken"> - </span>][<span class="branchCov" title="Branch 30 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 31 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 33 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 34 was not taken"> - </span>][<span class="branchCov" title="Branch 36 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 37 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 39 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 40 was not taken"> - </span>][<span class="branchCov" title="Branch 42 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 43 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 45 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 46 was not taken"> - </span>][<span class="branchCov" title="Branch 48 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 49 was not taken"> - </span>]
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 51 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 52 was not taken"> - </span>]
-<span class="lineNum">     192 </span>                :            :     }
-<span class="lineNum">     193 </span>                :            : 
-<span class="lineNum">     194 </span>                :            :     // If we've touched the query items (likely), then update the request.
-<span class="lineNum">     195 </span>[<span class="branchCov" title="Branch 2 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          5 :     if (query != QUrlQuery(url.query())) {</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 14 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 15 was not taken"> - </span>][<span class="branchCov" title="Branch 16 was taken 3 times"> + </span><span class="branchCov" title="Branch 17 was taken 2 times"> + </span>]
-<span class="lineNum">     196 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          3 :         qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; url;</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 9 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 10 was not taken"> - </span>][<span class="branchCov" title="Branch 12 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 13 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 15 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 16 was not taken"> - </span>][<span class="branchCov" title="Branch 18 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 19 was not taken"> - </span>]
-<span class="lineNum">     197 </span>        [<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          3 :         url.setQuery(query);</span>
-<span class="lineNum">     198 </span>[<span class="branchCov" title="Branch 2 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">          3 :         qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; url;</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 9 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 10 was not taken"> - </span>][<span class="branchCov" title="Branch 12 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 13 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 15 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 16 was not taken"> - </span>][<span class="branchCov" title="Branch 18 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 19 was not taken"> - </span>]
-<span class="lineNum">     199 </span>        [<span class="branchCov" title="Branch 1 was taken 3 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          3 :         request.setUrl(url);</span>
-<span class="lineNum">     200 </span>        [<span class="branchCov" title="Branch 1 was taken 5 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          5 :     }</span>
-<span class="lineNum">     201 </span>                :<span class="lineCov">          5 : }</span>
-<span class="lineNum">     202 </span>                :            : 
-<span class="lineNum">     203 </span>                :            : /**
-<span class="lineNum">     204 </span>                :            :  * @internal
-<span class="lineNum">     205 </span>                :            :  *
-<span class="lineNum">     206 </span>                :            :  * @brief  Create an AWS Signature version 0 canonical query.
-<span class="lineNum">     207 </span>                :            :  *
-<span class="lineNum">     208 </span>                :            :  * This function returns a string containing the concatenation of `Action` and
-<span class="lineNum">     209 </span>                :            :  * `timestamp` (or `Expires`) query parameters.
-<span class="lineNum">     210 </span>                :            :  *
-<span class="lineNum">     211 </span>                :            :  * For example, for the following SQS query string:
-<span class="lineNum">     212 </span>                :            :  *
-<span class="lineNum">     213 </span>                :            :  *     ?Action=CreateQueue&amp;QueueName=queue2&amp;AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;SignatureVersion=1&amp;Expires=2007-01-12T12:00:00Z&amp;Version=2006-04-01
-<span class="lineNum">     214 </span>                :            :  *
-<span class="lineNum">     215 </span>                :            :  * this function will return the following canonical form:
-<span class="lineNum">     216 </span>                :            :  *
-<span class="lineNum">     217 </span>                :            :  *     CreateQueue2007-01-12T12:00:00Z
-<span class="lineNum">     218 </span>                :            :  *
-<span class="lineNum">     219 </span>                :            :  * @param  query  Query to encode the HTTP query string from.
-<span class="lineNum">     220 </span>                :            :  *
-<span class="lineNum">     221 </span>                :            :  * @pre    \a query must already contain an `Action` and either a `Timestamp` or
-<span class="lineNum">     222 </span>                :            :  *         `Expires` query paramter.  See adornRequest().
-<span class="lineNum">     223 </span>                :            :  *
-<span class="lineNum">     224 </span>                :            :  * @return An AWS Signature canonical query string.
-<span class="lineNum">     225 </span>                :            :  *
-<span class="lineNum">     226 </span>                :            :  * @see    adornRequest()
-<a name="227"><span class="lineNum">     227 </span>                :            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
-<span class="lineNum">     228 </span>                :            :  */
-<span class="lineNum">     229 </span>                :<span class="lineCov">          4 : QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
-<span class="lineNum">     230 </span>                :            : {
-<span class="lineNum">     231 </span>                :<span class="lineCov">          4 :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Action&quot;)), Q_FUNC_INFO, &quot;Action query parameter required&quot;);</span>
-<span class="lineNum">     232 </span>                :            :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;)) || query.hasQueryItem(QLatin1String(&quot;Expires&quot;)),
-<span class="lineNum">     233 </span>                :<span class="lineCov">          4 :                Q_FUNC_INFO, &quot;Timestamp or Expires query parameter required&quot;);</span>
-<span class="lineNum">     234 </span>                :            : 
-<span class="lineNum">     235 </span>[<span class="branchCov" title="Branch 1 was taken 2 times"> + </span><span class="branchCov" title="Branch 2 was taken 2 times"> + </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         16 :     return (query.queryItemValue(QLatin1String(&quot;Action&quot;)) + query.queryItemValue(QLatin1String(</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 13 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 14 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 16 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 17 was not taken"> - </span>][<span class="branchCov" title="Branch 19 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 20 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 22 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 23 was not taken"> - </span>][<span class="branchCov" title="Branch 25 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 26 was not taken"> - </span>]
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 28 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 29 was not taken"> - </span>][<span class="branchCov" title="Branch 31 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 32 was not taken"> - </span>]
-<span class="lineNum">         </span>        [<span class="branchCov" title="Branch 34 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 35 was not taken"> - </span>]
-<span class="lineNum">     236 </span>[<span class="branchCov" title="Branch 2 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>][<span class="branchCov" title="Branch 5 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 6 was not taken"> - </span>]:<span class="lineCov">         16 :                 (query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;))) ? &quot;Timestamp&quot; : &quot;Expires&quot;))).toUtf8();</span>
-<span class="lineNum">         </span>[<span class="branchCov" title="Branch 8 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 9 was not taken"> - </span>][<span class="branchCov" title="Branch 11 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 12 was not taken"> - </span>]
-<span class="lineNum">     237 </span>                :            : }
-<span class="lineNum">     238 </span>                :            : 
-<span class="lineNum">     239 </span>                :            : QTAWS_END_NAMESPACE
+<a name="1"><span class="lineNum">       1 </span>            : /*</a>
+<span class="lineNum">       2 </span>            :     Copyright 2013 Paul Colby
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            :     This file is part of libqtaws.
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            :     Libqtaws is free software: you can redistribute it and/or modify
+<span class="lineNum">       7 </span>            :     it under the terms of the GNU Lesser General Public License as published by
+<span class="lineNum">       8 </span>            :     the Free Software Foundation, either version 3 of the License, or
+<span class="lineNum">       9 </span>            :     (at your option) any later version.
+<span class="lineNum">      10 </span>            : 
+<span class="lineNum">      11 </span>            :     Libqtaws is distributed in the hope that it will be useful,
+<span class="lineNum">      12 </span>            :     but WITHOUT ANY WARRANTY; without even the implied warranty of
+<span class="lineNum">      13 </span>            :     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+<span class="lineNum">      14 </span>            :     GNU Lesser General Public License for more details.
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            :     You should have received a copy of the GNU Lesser General Public License
+<span class="lineNum">      17 </span>            :     along with libqtaws.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+<span class="lineNum">      18 </span>            : */
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : #include &quot;awssignaturev0.h&quot;
+<span class="lineNum">      21 </span>            : #include &quot;awssignaturev0_p.h&quot;
+<span class="lineNum">      22 </span>            : 
+<span class="lineNum">      23 </span>            : #if QT_VERSION &gt;= QT_VERSION_CHECK(5, 0, 0) &amp;&amp; QT_VERSION &lt; QT_VERSION_CHECK(5, 1, 0)
+<span class="lineNum">      24 </span>            : #include &quot;qmessageauthenticationcode.h&quot;
+<span class="lineNum">      25 </span>            : #else
+<span class="lineNum">      26 </span>            : #include &lt;QMessageAuthenticationCode&gt;
+<span class="lineNum">      27 </span>            : #endif
+<span class="lineNum">      28 </span>            : 
+<span class="lineNum">      29 </span>            : #include &lt;QCryptographicHash&gt;
+<span class="lineNum">      30 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">      31 </span>            : #include &lt;QNetworkRequest&gt;
+<span class="lineNum">      32 </span>            : #include &lt;QUrl&gt;
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      35 </span>            : 
+<span class="lineNum">      36 </span>            : /**
+<span class="lineNum">      37 </span>            :  * @class  AwsSignatureV0
+<span class="lineNum">      38 </span>            :  *
+<span class="lineNum">      39 </span>            :  * @brief  Implements AWS Signature Version 0 \ref deprecated &quot;(deprecated by Amazon)&quot;
+<span class="lineNum">      40 </span>            :  *
+<span class="lineNum">      41 </span>            :  * @deprecated  Amazon has officially deprecated signature Version 0 in favor of later,
+<span class="lineNum">      42 </span>            :  *              more secure signatures, such as AwsSignatureV2 and AwsSignatureV4.
+<span class="lineNum">      43 </span>            :  *
+<span class="lineNum">      44 </span>            :  * As version 0 signatures are rightly regarded as *insecure*, this class will refuse to sign
+<span class="lineNum">      45 </span>            :  * requests that use insecure transports such as HTTP instead of HTTPS. However, insecure
+<span class="lineNum">      46 </span>            :  * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
+<span class="lineNum">      47 </span>            :  * when compiling this library.
+<span class="lineNum">      48 </span>            :  *
+<span class="lineNum">      49 </span>            :  * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+<span class="lineNum">      50 </span>            :  */
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            : /**
+<span class="lineNum">      53 </span>            :  * @brief  Constructs a new AwsSignatureV0 object.
+<span class="lineNum">      54 </span>            :  *
+<a name="55"><span class="lineNum">      55 </span>            :  * Use instances of this object to provide Version 0 signatures for AWS services.</a>
+<span class="lineNum">      56 </span>            :  */
+<span class="lineNum">      57 </span><span class="lineCov">          8 : AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Private(this))</span>
+<span class="lineNum">      58 </span>            : {
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span><span class="lineCov">          8 : }</span>
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            : /**
+<span class="lineNum">      63 </span>            :  * @internal
+<span class="lineNum">      64 </span>            :  *
+<span class="lineNum">      65 </span>            :  * @brief  Constructs a new AwsSignatureV0 object with a specific private implementation.
+<span class="lineNum">      66 </span>            :  *
+<span class="lineNum">      67 </span>            :  * This internal constructor allows derived classes to provide their own derived
+<span class="lineNum">      68 </span>            :  * private implementation.  Specifically, AwsSignatureV1 uses this constructor to
+<span class="lineNum">      69 </span>            :  * extend this class.
+<span class="lineNum">      70 </span>            :  *
+<span class="lineNum">      71 </span>            :  * @param  d  Internal private implementation to use.
+<span class="lineNum">      72 </span>            :  *
+<a name="73"><span class="lineNum">      73 </span>            :  * @see    AwsSignatureV1</a>
+<span class="lineNum">      74 </span>            :  */
+<span class="lineNum">      75 </span><span class="lineCov">          8 : AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)</span>
+<span class="lineNum">      76 </span>            : {
+<span class="lineNum">      77 </span>            : 
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">          8 : }</span></a>
+<span class="lineNum">      79 </span>            : 
+<span class="lineNum">      80 </span><span class="lineCov">          6 : void AwsSignatureV0::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">      81 </span>            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
+<span class="lineNum">      82 </span>            : {
+<span class="lineNum">      83 </span>            :     Q_UNUSED(operation) // Not included in V0 signatures.
+<span class="lineNum">      84 </span>            :     Q_UNUSED(data)      // Not included in V0 signatures.
+<span class="lineNum">      85 </span><span class="lineCov">          6 :     Q_D(const AwsSignatureV0);</span>
+<span class="lineNum">      86 </span>            : 
+<span class="lineNum">      87 </span>            :     // Refuse to sign non-HTTPS requests, unless built with QTAWS_ALLOW_INSECURE_SIGNATURES defined.
+<span class="lineNum">      88 </span>            : #ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
+<span class="lineNum">      89 </span><span class="lineCov">          6 :     if (request.url().scheme() != QString::fromLatin1(&quot;https&quot;)) {</span>
+<span class="lineNum">      90 </span><span class="lineCov">          3 :         qWarning(&quot;AwsSignatureV%d::sign Refusing to sign insecure (non-HTTPS) request&quot;, version());</span>
+<span class="lineNum">      91 </span><span class="lineCov">          3 :         Q_ASSERT_X(false, Q_FUNC_INFO, &quot;insecure V1 signatures not enabled&quot;);</span>
+<span class="lineNum">      92 </span><span class="lineCov">          9 :         return;</span>
+<span class="lineNum">      93 </span>            :     }
+<span class="lineNum">      94 </span>            : #endif
+<span class="lineNum">      95 </span>            : 
+<span class="lineNum">      96 </span>            :     // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
+<span class="lineNum">      97 </span><span class="lineCov">          3 :     d-&gt;adornRequest(request, credentials);</span>
+<span class="lineNum">      98 </span>            : 
+<span class="lineNum">      99 </span>            :     // Calculate the signature.
+<span class="lineNum">     100 </span><span class="lineCov">          3 :     const QByteArray stringToSign = d-&gt;canonicalQuery(QUrlQuery(request.url().query()));</span>
+<span class="lineNum">     101 </span>            :     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
+<span class="lineNum">     102 </span><span class="lineCov">          3 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
+<span class="lineNum">     103 </span><span class="lineCov">          9 :                                          QCryptographicHash::Sha1).toBase64())));</span>
+<span class="lineNum">     104 </span>            : 
+<span class="lineNum">     105 </span>            :     // Append the signature to the request.
+<span class="lineNum">     106 </span><span class="lineCov">          6 :     QUrl url = request.url();</span>
+<span class="lineNum">     107 </span><span class="lineCov">          3 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
+<span class="lineNum">     108 </span><span class="lineCov">          6 :     request.setUrl(url);</span>
+<a name="109"><span class="lineNum">     109 </span>            : }</a>
+<span class="lineNum">     110 </span>            : 
+<span class="lineNum">     111 </span><span class="lineCov">          6 : int AwsSignatureV0::version() const</span>
+<span class="lineNum">     112 </span>            : {
+<span class="lineNum">     113 </span><span class="lineCov">          6 :     return 0;</span>
+<span class="lineNum">     114 </span>            : }
+<span class="lineNum">     115 </span>            : 
+<span class="lineNum">     116 </span>            : /**
+<span class="lineNum">     117 </span>            :  * @internal
+<span class="lineNum">     118 </span>            :  *
+<span class="lineNum">     119 </span>            :  * @class  AwsSignatureV0Private
+<span class="lineNum">     120 </span>            :  *
+<span class="lineNum">     121 </span>            :  * @brief  Private implementation for AwsSignatureV0.
+<span class="lineNum">     122 </span>            :  *
+<span class="lineNum">     123 </span>            :  * @warning  This is an internal private implementation class, and as such external should
+<span class="lineNum">     124 </span>            :  *           code should **not** depend directly on anything contained within this class.
+<span class="lineNum">     125 </span>            :  *
+<span class="lineNum">     126 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+<span class="lineNum">     127 </span>            :  */
+<span class="lineNum">     128 </span>            : 
+<span class="lineNum">     129 </span>            : /**
+<span class="lineNum">     130 </span>            :  * @internal
+<span class="lineNum">     131 </span>            :  *
+<span class="lineNum">     132 </span>            :  * @brief  Constructs a new AwsSignatureV0Private object.
+<span class="lineNum">     133 </span>            :  *
+<a name="134"><span class="lineNum">     134 </span>            :  * @param  q  Pointer to this object's public AwsSignatureV0 instance.</a>
+<span class="lineNum">     135 </span>            :  */
+<span class="lineNum">     136 </span><span class="lineCov">         16 : AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)</span>
+<span class="lineNum">     137 </span>            : {
+<span class="lineNum">     138 </span>            : 
+<span class="lineNum">     139 </span><span class="lineCov">         16 : }</span>
+<span class="lineNum">     140 </span>            : 
+<span class="lineNum">     141 </span>            : /**
+<a name="142"><span class="lineNum">     142 </span>            :  * @brief AwsSignatureV0Private destructor.</a>
+<span class="lineNum">     143 </span>            :  */
+<span class="lineNum">     144 </span><span class="lineCov">         24 : AwsSignatureV0Private::~AwsSignatureV0Private()</span>
+<span class="lineNum">     145 </span>            : {
+<span class="lineNum">     146 </span>            : 
+<span class="lineNum">     147 </span><span class="lineCov">         24 : }</span>
+<span class="lineNum">     148 </span>            : 
+<span class="lineNum">     149 </span>            : /**
+<span class="lineNum">     150 </span>            :  * @internal
+<span class="lineNum">     151 </span>            :  *
+<span class="lineNum">     152 </span>            :  * @brief  Add AWS Signature Version 0 adornments to an AWS request.
+<span class="lineNum">     153 </span>            :  *
+<span class="lineNum">     154 </span>            :  * In addition to service-specific request parameters, Amazon requires that version
+<span class="lineNum">     155 </span>            :  * 1 signatures contain a number of common query parameters.  This functions adds
+<span class="lineNum">     156 </span>            :  * those query parameters to \a request if they're not already present.
+<span class="lineNum">     157 </span>            :  *
+<span class="lineNum">     158 </span>            :  * The query parameters added by this function, as required by Amazon, are:
+<span class="lineNum">     159 </span>            :  *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
+<span class="lineNum">     160 </span>            :  *   * `SignatureVersion` - set to `0`.
+<span class="lineNum">     161 </span>            :  *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
+<span class="lineNum">     162 </span>            :  *                 `2013-10-30T12:34:56Z`, unless an `Expires` value is present,
+<span class="lineNum">     163 </span>            :  *                 in which case no `Timestamp` parameter is added.
+<span class="lineNum">     164 </span>            :  *
+<span class="lineNum">     165 </span>            :  * @note   The `SignatureVersion` header is optional for version 0 signatures, but
+<span class="lineNum">     166 </span>            :  *         this function always includes it for clarity.
+<span class="lineNum">     167 </span>            :  *
+<span class="lineNum">     168 </span>            :  * @param  request         Request to adorn.
+<span class="lineNum">     169 </span>            :  * @param  credentials     Credentials to use when adorning \a request.
+<span class="lineNum">     170 </span>            :  *
+<a name="171"><span class="lineNum">     171 </span>            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
+<span class="lineNum">     172 </span>            :  */
+<span class="lineNum">     173 </span><span class="lineCov">          5 : void AwsSignatureV0Private::adornRequest(QNetworkRequest &amp;request,</span>
+<span class="lineNum">     174 </span>            :                                          const AwsAbstractCredentials &amp;credentials) const
+<span class="lineNum">     175 </span>            : {
+<span class="lineNum">     176 </span><span class="lineCov">          5 :     Q_Q(const AwsSignatureV0);</span>
+<span class="lineNum">     177 </span>            : 
+<span class="lineNum">     178 </span>            :     // Set / add the necessary query items.
+<span class="lineNum">     179 </span><span class="lineCov">          5 :     QUrl url = request.url();</span>
+<span class="lineNum">     180 </span><span class="lineCov">         10 :     QUrlQuery query(url);</span>
+<span class="lineNum">     181 </span><span class="lineCov">          5 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
+<span class="lineNum">     182 </span><span class="lineCov">          5 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QString::fromLatin1(&quot;%1&quot;).arg(q-&gt;version()));</span>
+<span class="lineNum">     183 </span>            : 
+<span class="lineNum">     184 </span>            :     // Amazon: &quot;Query requests must include either Timestamp or Expires, but not both.&quot;
+<span class="lineNum">     185 </span>            :     // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+<span class="lineNum">     186 </span><span class="lineCov">          5 :     if (!query.hasQueryItem(QLatin1String(&quot;Expires&quot;))) {</span>
+<span class="lineNum">     187 </span>            :         setQueryItem(query, QLatin1String(&quot;Timestamp&quot;),
+<span class="lineNum">     188 </span>            :                         QString::fromUtf8(QUrl::toPercentEncoding(
+<span class="lineNum">     189 </span>            :                             QDateTime::currentDateTimeUtc().toString(QLatin1String(&quot;yyyy-MM-ddThh:mm:ssZ&quot;))
+<span class="lineNum">     190 </span>            :                         )),
+<span class="lineNum">     191 </span><span class="lineCov">          3 :                         false); // Don't warn if its already set to something else.</span>
+<span class="lineNum">     192 </span>            :     }
+<span class="lineNum">     193 </span>            : 
+<span class="lineNum">     194 </span>            :     // If we've touched the query items (likely), then update the request.
+<span class="lineNum">     195 </span><span class="lineCov">          5 :     if (query != QUrlQuery(url.query())) {</span>
+<span class="lineNum">     196 </span><span class="lineCov">          3 :         qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; url;</span>
+<span class="lineNum">     197 </span><span class="lineCov">          3 :         url.setQuery(query);</span>
+<span class="lineNum">     198 </span><span class="lineCov">          3 :         qDebug() &lt;&lt; Q_FUNC_INFO &lt;&lt; url;</span>
+<span class="lineNum">     199 </span><span class="lineCov">          3 :         request.setUrl(url);</span>
+<span class="lineNum">     200 </span><span class="lineCov">          5 :     }</span>
+<span class="lineNum">     201 </span><span class="lineCov">          5 : }</span>
+<span class="lineNum">     202 </span>            : 
+<span class="lineNum">     203 </span>            : /**
+<span class="lineNum">     204 </span>            :  * @internal
+<span class="lineNum">     205 </span>            :  *
+<span class="lineNum">     206 </span>            :  * @brief  Create an AWS Signature version 0 canonical query.
+<span class="lineNum">     207 </span>            :  *
+<span class="lineNum">     208 </span>            :  * This function returns a string containing the concatenation of `Action` and
+<span class="lineNum">     209 </span>            :  * `timestamp` (or `Expires`) query parameters.
+<span class="lineNum">     210 </span>            :  *
+<span class="lineNum">     211 </span>            :  * For example, for the following SQS query string:
+<span class="lineNum">     212 </span>            :  *
+<span class="lineNum">     213 </span>            :  *     ?Action=CreateQueue&amp;QueueName=queue2&amp;AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;SignatureVersion=1&amp;Expires=2007-01-12T12:00:00Z&amp;Version=2006-04-01
+<span class="lineNum">     214 </span>            :  *
+<span class="lineNum">     215 </span>            :  * this function will return the following canonical form:
+<span class="lineNum">     216 </span>            :  *
+<span class="lineNum">     217 </span>            :  *     CreateQueue2007-01-12T12:00:00Z
+<span class="lineNum">     218 </span>            :  *
+<span class="lineNum">     219 </span>            :  * @param  query  Query to encode the HTTP query string from.
+<span class="lineNum">     220 </span>            :  *
+<span class="lineNum">     221 </span>            :  * @pre    \a query must already contain an `Action` and either a `Timestamp` or
+<span class="lineNum">     222 </span>            :  *         `Expires` query paramter.  See adornRequest().
+<span class="lineNum">     223 </span>            :  *
+<span class="lineNum">     224 </span>            :  * @return An AWS Signature canonical query string.
+<span class="lineNum">     225 </span>            :  *
+<span class="lineNum">     226 </span>            :  * @see    adornRequest()
+<a name="227"><span class="lineNum">     227 </span>            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
+<span class="lineNum">     228 </span>            :  */
+<span class="lineNum">     229 </span><span class="lineCov">          4 : QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
+<span class="lineNum">     230 </span>            : {
+<span class="lineNum">     231 </span><span class="lineCov">          4 :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Action&quot;)), Q_FUNC_INFO, &quot;Action query parameter required&quot;);</span>
+<span class="lineNum">     232 </span>            :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;)) || query.hasQueryItem(QLatin1String(&quot;Expires&quot;)),
+<span class="lineNum">     233 </span><span class="lineCov">          4 :                Q_FUNC_INFO, &quot;Timestamp or Expires query parameter required&quot;);</span>
+<span class="lineNum">     234 </span>            : 
+<span class="lineNum">     235 </span><span class="lineCov">         16 :     return (query.queryItemValue(QLatin1String(&quot;Action&quot;)) + query.queryItemValue(QLatin1String(</span>
+<span class="lineNum">     236 </span><span class="lineCov">         16 :                 (query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;))) ? &quot;Timestamp&quot; : &quot;Expires&quot;))).toUtf8();</span>
+<span class="lineNum">     237 </span>            : }
+<span class="lineNum">     238 </span>            : 
+<span class="lineNum">     239 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>
@@ -360,7 +307,7 @@
 
   <table width="100%" border=0 cellspacing=0 cellpadding=0>
     <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
-    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.9</a></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.10</a></td></tr>
   </table>
   <br>
 
