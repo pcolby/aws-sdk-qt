@@ -219,6 +219,20 @@ void TestAwsSignatureV4::algorithmDesignation_data()
     QTest::newRow("SHA3_384") << QCryptographicHash::Sha3_384 << QByteArray("invalid-algorithm");
     QTest::newRow("SHA3_512") << QCryptographicHash::Sha3_512 << QByteArray("invalid-algorithm");
 #endif
+
+    // Anything outside the QCryptographicHash::Algorithm enum range is invalid.
+    const QCryptographicHash::Algorithm firstAlgorithm = QCryptographicHash::Md4;
+#if QT_VERSION >= QT_VERSION_CHECK(5, 1, 0)
+    const QCryptographicHash::Algorithm lastAlgorithm = QCryptographicHash::Sha3_512;
+#else
+    const QCryptographicHash::Algorithm lastAlgorithm = QCryptographicHash::Sha512;
+#endif
+    QTest::newRow("below-enum-range")
+        << static_cast<QCryptographicHash::Algorithm>(firstAlgorithm - 1)
+        << QByteArray("invalid-algorithm");
+    QTest::newRow("above-enum-range")
+        << static_cast<QCryptographicHash::Algorithm>(lastAlgorithm + 1)
+        << QByteArray("invalid-algorithm");
 }
 
 void TestAwsSignatureV4::algorithmDesignation()
