@@ -33,6 +33,7 @@ unix {
     lcov.target = build/coverage.info
     lcov.commands = lcov --capture --base-directory ../src --directory build --output build/coverage.info --quiet; \
                     lcov --remove build/coverage.info '"/usr/include/*/*"' '"src/*/*testdata*"' \
+                         '"src/core/qmessageauthenticationcode.cpp"' \
                          '"src/*/test*"' '"src/build/*"' src/test.cpp --output build/coverage.info --quiet
 
     # Generate HTML coverage reports from lcov's tracefile.
