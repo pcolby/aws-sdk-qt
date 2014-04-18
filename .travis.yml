@@ -39,4 +39,4 @@ script:
 
 after_success:
   - make -C test coverage
-  - lcoveralls
+  - lcoveralls --retry-count 5
