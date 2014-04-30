@@ -172,7 +172,6 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_SERVICE(AP_Southeast_2, "glacier", "glacier.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "directconnect", "directconnect.ap-southeast-2.amazonaws.com");
     ADD_SERVICE(AP_Southeast_2, "redshift", "redshift.ap-southeast-2.amazonaws.com");
-    ADD_SERVICE(AP_Southeast_2, "elastictranscoder", "elastictranscoder.ap-southeast-2.amazonaws.com");
 
     QVariantMap EU_West_1;
     ADD_SERVICE(EU_West_1, "cloudformation", "cloudformation.eu-west-1.amazonaws.com");
@@ -225,17 +224,18 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_SERVICE(SA_East_1, "elasticloadbalancing", "elasticloadbalancing.sa-east-1.amazonaws.com");
     ADD_SERVICE(SA_East_1, "swf", "swf.sa-east-1.amazonaws.com");
     ADD_SERVICE(SA_East_1, "directconnect", "directconnect.sa-east-1.amazonaws.com");
-    ADD_SERVICE(SA_East_1, "elastictranscoder", "elastictranscoder.sa-east-1.amazonaws.com");
 
     QVariantMap US_East_1;
     ADD_SERVICE(US_East_1, "cloudformation", "cloudformation.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "cloudfront", "cloudfront.amazonaws.com");
     ADD_SERVICE(US_East_1, "cloudsearch", "cloudsearch.us-east-1.amazonaws.com");
+    ADD_SERVICE(US_East_1, "cloudtrail", "cloudtrail.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "monitoring", "monitoring.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "dynamodb", "dynamodb.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "ec2", "ec2.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "elasticmapreduce", "elasticmapreduce.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "elasticache", "elasticache.us-east-1.amazonaws.com");
+    ADD_SERVICE(US_East_1, "kinesis", "kinesis.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "rds", "rds.us-east-1.amazonaws.com");
     ADD_SERVICE(US_East_1, "route53", "route53.amazonaws.com");
     ADD_SERVICE(US_East_1, "email", "email.us-east-1.amazonaws.com");
@@ -305,6 +305,7 @@ QVariantMap AwsEndpointTestData::regionServiceHosts()
     ADD_SERVICE(US_West_2, "cloudformation", "cloudformation.us-west-2.amazonaws.com");
     ADD_SERVICE(US_West_2, "cloudfront", "cloudfront.amazonaws.com");
     ADD_SERVICE(US_West_2, "cloudsearch", "cloudsearch.us-west-2.amazonaws.com");
+    ADD_SERVICE(US_West_2, "cloudtrail", "cloudtrail.us-west-2.amazonaws.com");
     ADD_SERVICE(US_West_2, "monitoring", "monitoring.us-west-2.amazonaws.com");
     ADD_SERVICE(US_West_2, "dynamodb", "dynamodb.us-west-2.amazonaws.com");
     ADD_SERVICE(US_West_2, "ec2", "ec2.us-west-2.amazonaws.com");
@@ -456,7 +457,6 @@ QVariantMap AwsEndpointTestData::supportedServicesMap()
     ADD_SERVICE(AP_Southeast_2, "glacier", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "directconnect", AwsEndpoint::HTTPS);
     ADD_SERVICE(AP_Southeast_2, "redshift", AwsEndpoint::HTTPS);
-    ADD_SERVICE(AP_Southeast_2, "elastictranscoder", AwsEndpoint::HTTPS);
 
     QVariantMap EU_West_1;
     ADD_SERVICE(EU_West_1, "cloudformation", AwsEndpoint::HTTPS);
@@ -509,17 +509,18 @@ QVariantMap AwsEndpointTestData::supportedServicesMap()
     ADD_SERVICE(SA_East_1, "elasticloadbalancing", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(SA_East_1, "swf", AwsEndpoint::HTTPS);
     ADD_SERVICE(SA_East_1, "directconnect", AwsEndpoint::HTTPS);
-    ADD_SERVICE(SA_East_1, "elastictranscoder", AwsEndpoint::HTTPS);
 
     QVariantMap US_East_1;
     ADD_SERVICE(US_East_1, "cloudformation", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "cloudfront", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "cloudsearch", AwsEndpoint::HTTPS);
+    ADD_SERVICE(US_East_1, "cloudtrail", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "monitoring", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "dynamodb", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "ec2", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "elasticmapreduce", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "elasticache", AwsEndpoint::HTTPS);
+    ADD_SERVICE(US_East_1, "kinesis", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "rds", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "route53", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_East_1, "email", AwsEndpoint::HTTPS|AwsEndpoint::SMTP);
@@ -589,6 +590,7 @@ QVariantMap AwsEndpointTestData::supportedServicesMap()
     ADD_SERVICE(US_West_2, "cloudformation", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_West_2, "cloudfront", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_West_2, "cloudsearch", AwsEndpoint::HTTPS);
+    ADD_SERVICE(US_West_2, "cloudtrail", AwsEndpoint::HTTPS);
     ADD_SERVICE(US_West_2, "monitoring", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_West_2, "dynamodb", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
     ADD_SERVICE(US_West_2, "ec2", AwsEndpoint::HTTP|AwsEndpoint::HTTPS);
