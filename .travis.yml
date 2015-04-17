@@ -9,12 +9,12 @@ before_install:
 
 install:
   # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha-private.h
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha.h
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha224-256.c
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/3rdparty/rfc6234/sha384-512.c
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.cpp
-  - wget -P src/core/ https://qt.gitorious.org/qt/qtbase/raw/src/corelib/tools/qmessageauthenticationcode.h
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha-private.h
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha.h
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha224-256.c
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha384-512.c
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/corelib/tools/qmessageauthenticationcode.cpp
+  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/corelib/tools/qmessageauthenticationcode.h
   # Fixup some includes / paths.
   - sed -i -re 's/"qvarlengtharray.h"/<QVarLengthArray>/' -e 's:\.\./\.\./3rdparty/rfc6234/::' src/core/qmessageauthenticationcode.cpp
   # No Sha3_* constants in Qt5.0
