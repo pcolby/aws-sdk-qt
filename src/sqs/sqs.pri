@@ -1,8 +1,11 @@
 HEADERS += \
-        sqsclient.h
-        sqsclient_p.h
+        sqsclient.h \
+        sqsclient_p.h \
+        sqsrequest.h \
+        sqsrequest_p.h \
 
 SOURCES += \
-        sqsclient.cpp
+        sqsclient.cpp \
+        sqsrequest.cpp
 
 VPATH += $$PWD
