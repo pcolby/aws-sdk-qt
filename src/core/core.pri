@@ -37,6 +37,8 @@ SOURCES += \
         awssignaturev3.cpp \
         awssignaturev4.cpp \
 
+INCLUDEPATH += $$PWD
+
 VPATH += $$PWD
 
 # The QMessageAuthenticationCode was not added until Qt 5.1, but apart from this class,

@@ -17,29 +17,35 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSABSTRACTSERVICE_P_H
-#define AWSABSTRACTSERVICE_P_H
+#ifndef SQSCLIENT_H
+#define SQSCLIENT_H
 
+#include "awsabstractservice.h"
 #include "qtawsglobal.h"
 
-class QNetworkAccessManager;
+#include <QObject>
+
+class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractService;
-class AwsEndpoint;
+class SqsClientPrivate;
 
-class QTAWS_EXPORT AwsAbstractServicePrivate {
+class QTAWS_EXPORT SqsClient : public AwsAbstractService {
+    Q_OBJECT
 
 public:
-    AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
-    QNetworkAccessManager * networkAccessManager; ///< Network access manager.
+    SqsClient(QObject * const parent = 0);
 
-    AwsAbstractServicePrivate(AwsAbstractService * const q);
+    ~SqsClient();
+
+public slots:
+    QNetworkReply * createQueue(); /// @todo Will need some params; just an example for now.
 
 private:
-    Q_DECLARE_PUBLIC(AwsAbstractService)
-    AwsAbstractService * const q_ptr; ///< Internal q-pointer.
+    Q_DECLARE_PRIVATE(SqsClient)
+    SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 
