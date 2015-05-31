@@ -24,13 +24,18 @@
 
 #include <QString>
 
+class QNetworkAccessManager;
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractService;
+class AwsEndpoint;
 
 class QTAWS_EXPORT AwsAbstractServicePrivate {
 
 public:
+    AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
+    QNetworkAccessManager * networkAccessManager; ///< Network access manager.
 
     AwsAbstractServicePrivate(AwsAbstractService * const q);
 

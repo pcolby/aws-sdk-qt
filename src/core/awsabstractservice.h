@@ -24,6 +24,8 @@
 
 #include <QObject>
 
+class QNetworkAccessManager;
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractServicePrivate;
@@ -36,7 +38,10 @@ public:
 
     ~AwsAbstractService();
 
+    QNetworkAccessManager * networkAccessManager() const;
+
 public slots:
+    void setNetworkAccessManager(QNetworkAccessManager * const manager);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractService)

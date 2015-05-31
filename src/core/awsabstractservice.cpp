@@ -46,6 +46,28 @@ AwsAbstractService::~AwsAbstractService()
 }
 
 /**
+ * @brief Get the network access manager for this AWS service object.
+ *
+ * @return The QNetworkAccessManager that handles requests for this object.
+ */
+QNetworkAccessManager * AwsAbstractService::networkAccessManager() const
+{
+    Q_D(const AwsAbstractService);
+    return d->networkAccessManager;
+}
+
+/**
+ * @brief Set the network access manager for this AWS service object.
+ *
+ * @param  manager  Network access manager for this AWS service object to use.
+ */
+void AwsAbstractService::setNetworkAccessManager(QNetworkAccessManager * const manager)
+{
+    Q_D(AwsAbstractService);
+    d->networkAccessManager = manager;
+}
+
+/**
  * @internal
  *
  * @class  AwsAbstractServicePrivate
