@@ -17,30 +17,30 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "awsabstractservice.h"
-#include "awsabstractservice_p.h"
+#include "awsabstractclient.h"
+#include "awsabstractclient_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  AwsAbstractService
+ * @class  AwsAbstractClient
  *
  * @brief  @todo
  */
 
 /**
- * @brief  Constructs a new AwsAbstractService object.
+ * @brief  Constructs a new AwsAbstractClient object.
  *
  * @param parent       This object's parent.
  */
-AwsAbstractService::AwsAbstractService(
+AwsAbstractClient::AwsAbstractClient(
         QObject * const parent)
-    : QObject(parent), d_ptr(new AwsAbstractServicePrivate(this))
+    : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))
 {
-    //Q_D(AwsAbstractService);
+    //Q_D(AwsAbstractClient);
 }
 
-AwsAbstractService::~AwsAbstractService()
+AwsAbstractClient::~AwsAbstractClient()
 {
     delete d_ptr;
 }
@@ -50,9 +50,9 @@ AwsAbstractService::~AwsAbstractService()
  *
  * @return The QNetworkAccessManager that handles requests for this object.
  */
-QNetworkAccessManager * AwsAbstractService::networkAccessManager() const
+QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
 {
-    Q_D(const AwsAbstractService);
+    Q_D(const AwsAbstractClient);
     return d->networkAccessManager;
 }
 
@@ -61,28 +61,28 @@ QNetworkAccessManager * AwsAbstractService::networkAccessManager() const
  *
  * @param  manager  Network access manager for this AWS service object to use.
  */
-void AwsAbstractService::setNetworkAccessManager(QNetworkAccessManager * const manager)
+void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const manager)
 {
-    Q_D(AwsAbstractService);
+    Q_D(AwsAbstractClient);
     d->networkAccessManager = manager;
 }
 
 /**
  * @internal
  *
- * @class  AwsAbstractServicePrivate
+ * @class  AwsAbstractClientPrivate
  *
- * @brief  Private implementation for AwsAbstractService.
+ * @brief  Private implementation for AwsAbstractClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new AwsAbstractServicePrivate object.
+ * @brief  Constructs a new AwsAbstractClientPrivate object.
  *
- * @param  q  Pointer to this object's public AwsAbstractService instance.
+ * @param  q  Pointer to this object's public AwsAbstractClient instance.
  */
-AwsAbstractServicePrivate::AwsAbstractServicePrivate(AwsAbstractService * const q)
+AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
     : q_ptr(q)
 {
 

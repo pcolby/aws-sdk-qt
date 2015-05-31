@@ -38,7 +38,7 @@ QTAWS_BEGIN_NAMESPACE
  */
 SqsClient::SqsClient(
         QObject * const parent)
-    : AwsAbstractService(parent), d_ptr(new SqsClientPrivate(this))
+    : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
 {
     //Q_D(SqsClient);
 }
@@ -74,7 +74,7 @@ QNetworkReply * SqsClient::createQueue()
  * @param  q  Pointer to this object's public SqsClient instance.
  */
 SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
-    : AwsAbstractServicePrivate(q), q_ptr(q)
+    : AwsAbstractClientPrivate(q), q_ptr(q)
 {
 
 }

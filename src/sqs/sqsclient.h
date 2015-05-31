@@ -20,7 +20,7 @@
 #ifndef SQSCLIENT_H
 #define SQSCLIENT_H
 
-#include "awsabstractservice.h"
+#include "awsabstractclient.h"
 #include "qtawsglobal.h"
 
 #include <QObject>
@@ -29,10 +29,10 @@ class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsAbstractService;
+class AwsAbstractClient;
 class SqsClientPrivate;
 
-class QTAWS_EXPORT SqsClient : public AwsAbstractService {
+class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:

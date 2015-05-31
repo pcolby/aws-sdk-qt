@@ -1,7 +1,7 @@
 HEADERS += \
+        awsabstractclient.h \
+        awsabstractclient_p.h \
         awsabstractcredentials.h \
-        awsabstractservice.h \
-        awsabstractservice_p.h \
         awsabstractsignature.h \
         awsabstractsignature_p.h \
         awsanonymouscredentials.h \
@@ -24,8 +24,8 @@ HEADERS += \
         qtawsglobal.h
 
 SOURCES += \
+        awsabstractclient.cpp \
         awsabstractcredentials.cpp \
-        awsabstractservice.cpp \
         awsabstractsignature.cpp \
         awsanonymouscredentials.cpp \
         awsbasiccredentials.cpp \

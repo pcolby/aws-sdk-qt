@@ -20,7 +20,7 @@
 #ifndef SQSCLIENT_P_H
 #define SQSCLIENT_P_H
 
-#include "awsabstractservice_p.h"
+#include "awsabstractclient_p.h"
 #include "qtawsglobal.h"
 
 class QNetworkAccessManager;
@@ -29,7 +29,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class SqsClient;
 
-class QTAWS_EXPORT SqsClientPrivate : public AwsAbstractServicePrivate {
+class QTAWS_EXPORT SqsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
 
