@@ -11,6 +11,8 @@ HEADERS += \
         awsendpoint_p.h \
         awsregion.h \
         awsregion_p.h \
+        awsrequest.h \
+        awsrequest_p.h \
         awssignaturev0.h \
         awssignaturev0_p.h \
         awssignaturev1.h \
@@ -31,6 +33,7 @@ SOURCES += \
         awsbasiccredentials.cpp \
         awsendpoint.cpp \
         awsregion.cpp \
+        awsrequest.cpp \
         awssignaturev0.cpp \
         awssignaturev1.cpp \
         awssignaturev2.cpp \

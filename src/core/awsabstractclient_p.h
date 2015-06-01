@@ -34,6 +34,7 @@ class QTAWS_EXPORT AwsAbstractClientPrivate {
 public:
     AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
+    QList<AwsRequest> pendingRequests;
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
 

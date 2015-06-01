@@ -20,6 +20,8 @@
 #include "awsabstractclient.h"
 #include "awsabstractclient_p.h"
 
+#include <QNetworkRequest>
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -65,6 +67,32 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 {
     Q_D(AwsAbstractClient);
     d->networkAccessManager = manager;
+}
+
+void AwsAbstractClient::abort()
+{
+    Q_D(AwsAbstractClient);
+    foreach (AwsRequest &request, d->pendingRequests) {
+        emit requestAborted(request);
+    }
+    d->pendingRequests.clear();
+}
+
+void AwsAbstractClient::send(AwsRequest &request)
+{
+    Q_D(AwsAbstractClient);
+    sign(request);
+    d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+}
+
+void AwsAbstractClient::sign(AwsRequest &request)
+{
+
+}
+
+void AwsAbstractClient::credentialsChanged()
+{
+    // sign and send all pending.
 }
 
 /**

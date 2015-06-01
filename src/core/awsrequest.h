@@ -17,36 +17,43 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCLIENT_H
-#define SQSCLIENT_H
+#ifndef AWSREQUEST_H
+#define AWSREQUEST_H
 
-#include "awsabstractclient.h"
 #include "qtawsglobal.h"
 
 #include <QObject>
 
-class QNetworkReply;
+class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsAbstractClient;
-class SqsClientPrivate;
+class AwsRequestPrivate;
 
-class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
+class QTAWS_EXPORT AwsRequest : public QObject {
     Q_OBJECT
 
 public:
-    SqsClient(QObject * const parent = 0);
+    AwsRequest(QObject * const parent = 0);
 
-    ~SqsClient();
+    ~AwsRequest();
+
+    QByteArray * data();
+    virtual QNetworkAccessManager::Operation operation() = 0;
+    QNetworkReply * reply();
+    virtual QNetworkRequest * request() = 0;
 
 public slots:
-    QNetworkReply * createQueue(); /// @todo Will need some params; just an example for now.
-    void createQueueFinished();
+    void abort();
 
 private:
-    Q_DECLARE_PRIVATE(SqsClient)
-    SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    Q_DECLARE_PRIVATE(AwsRequest)
+    AwsRequestPrivate * const d_ptr; ///< Internal d-pointer.
+
+signals:
+    void error(QNetworkReply::NetworkError code);
+    void finished(QNetworkReply * reply);
+    void started(QNetworkReply * reply);
 
 };
 

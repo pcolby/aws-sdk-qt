@@ -40,12 +40,25 @@ public:
 
     QNetworkAccessManager * networkAccessManager() const;
 
-public slots:
     void setNetworkAccessManager(QNetworkAccessManager * const manager);
+
+public slots:
+    void abort();
+
+protected:
+    virtual void send(AwsRequest &request);
+    virtual void sign(AwsRequest &request);
+
+protected slots:
+    void credentialsChanged();
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)
     AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
+
+signals:
+    void requestAborted(const AwsRequest * request);
+    void requestSent(const AwsRequest * request, QNetworkReply * reply);
 
 };
 

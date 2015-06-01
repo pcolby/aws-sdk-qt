@@ -17,75 +17,80 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "sqsclient.h"
-#include "sqsclient_p.h"
+#include "awsrequest.h"
+#include "awsrequest_p.h"
 
-#include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SqsClient
+ * @class  AwsRequest
  *
  * @brief  @todo
  */
 
 /**
- * @brief  Constructs a new SqsClient object.
+ * @brief  Constructs a new AwsRequest object.
  *
  * @param parent       This object's parent.
  */
-SqsClient::SqsClient(
+AwsRequest::AwsRequest(
         QObject * const parent)
-    : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
+    : QObject(parent), d_ptr(new AwsRequestPrivate(this))
 {
-    //Q_D(SqsClient);
+    //Q_D(AwsRequest);
 }
 
-SqsClient::~SqsClient()
+AwsRequest::~AwsRequest()
 {
     delete d_ptr;
 }
 
-QNetworkReply * SqsClient::createQueue()
+void AwsRequest::abort()
 {
-    // want to know when:
-    /// request ready for read.
-    /// request failed
-
-    SqsCreateQueueRequest request;
-    parent->sendRequest(request);
-
-    connect(request, "error", this, "createQueueError");
-    connect(request, "finished", this, "requestFinished");
-
-    //Q_D(SqsClient);
-    //return d->networkAccessManager->get(rq);
+    Q_D(AwsRequest);
+    if (d->reply) {
+        d->reply->abort();
+    } else {
+        emit error(QNetworkReply::Aborted);
+    }
 }
 
-void SqsClient::createQueueSent()
+void AwsRequest::send(AwsRequest &request)
 {
-    signal...
+    Q_D(AwsRequest);
+    sign(request);
+    d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+}
+
+void AwsRequest::sign(AwsRequest &request)
+{
+
+}
+
+void AwsRequest::credentialsChanged()
+{
+    // sign and send all pending.
 }
 
 /**
  * @internal
  *
- * @class  SqsClientPrivate
+ * @class  AwsRequestPrivate
  *
- * @brief  Private implementation for SqsClient.
+ * @brief  Private implementation for AwsRequest.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new SqsClientPrivate object.
+ * @brief  Constructs a new AwsRequestPrivate object.
  *
- * @param  q  Pointer to this object's public SqsClient instance.
+ * @param  q  Pointer to this object's public AwsRequest instance.
  */
-SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
-    : AwsAbstractClientPrivate(q), q_ptr(q)
+AwsRequestPrivate::AwsRequestPrivate(AwsRequest * const q)
+    : q_ptr(q)
 {
 
 }
