@@ -1,5 +1,5 @@
 # Libqtaws
-[![Build Status](http://img.shields.io/travis/pcolby/libqtaws.svg)](https://travis-ci.org/pcolby/libqtaws)
+[![Build Status](http://img.shields.io/travis/pcolby/libqtaws/master.svg)](https://travis-ci.org/pcolby/libqtaws)
 [![Coverage Status](http://img.shields.io/coveralls/pcolby/libqtaws.svg)](https://coveralls.io/r/pcolby/libqtaws)
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 
