@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSSENDPOINT_H
-#define AWSSENDPOINT_H
+#ifndef AWSENDPOINT_H
+#define AWSENDPOINT_H
 
 #include "qtawsglobal.h"
 

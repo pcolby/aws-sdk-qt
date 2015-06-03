@@ -30,6 +30,8 @@ Q_DECLARE_METATYPE(QUrlQuery)
 class MockSignature : public AwsAbstractSignature {
 
 public:
+    MockSignature() { }
+
     virtual void sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request, const QByteArray &data) const
     {

@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AwsSignatureV0_H
-#define AwsSignatureV0_H
+#ifndef AWSSIGNATUREV0_H
+#define AWSSIGNATUREV0_H
 
 #include "qtawsglobal.h"
 #include "awsabstractsignature.h"

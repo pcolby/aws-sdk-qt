@@ -514,8 +514,8 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
     }
     Q_ASSERT(!xml.hasError());
     Q_ASSERT(!hosts.isEmpty());
-    Q_ASSERT(!regions.hasError());
-    Q_ASSERT(!services.hasError());
+    Q_ASSERT(!regions.isEmpty());
+    Q_ASSERT(!services.isEmpty());
 }
 
 /**
