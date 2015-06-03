@@ -34,6 +34,7 @@ install:
   - cat src/core/qmessageauthenticationcode.cpp
 
 before_script:
+  - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
   - qmake -qt=qt5 -v
   - qmake -qt=qt5
 
