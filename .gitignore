@@ -1,4 +1,5 @@
 *.user
-deubg
+debug
 Makefile
 release
+/doc/doxygen/

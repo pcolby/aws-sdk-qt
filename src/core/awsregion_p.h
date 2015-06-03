@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSSIGNATUREV4_P_H
-#define AWSSIGNATUREV4_P_H
+#ifndef AWSREGION_P_H
+#define AWSREGION_P_H
 
 #include "qtawsglobal.h"
 
