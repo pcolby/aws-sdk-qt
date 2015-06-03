@@ -11,9 +11,18 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 RESOURCES = ../qrc/aws.qrc
 
 # Neaten the output directories.
-MOC_DIR = build
-OBJECTS_DIR = build
-RCC_DIR = build
+CONFIG(debug,debug|release) {
+    DESTDIR = debug
+    MOC_DIR = debug/tmp
+    OBJECTS_DIR = debug/tmp
+    RCC_DIR = debug/tmp
+}
+CONFIG(release,debug|release) {
+    DESTDIR = release
+    MOC_DIR = release/tmp
+    OBJECTS_DIR = release/tmp
+    RCC_DIR = release/tmp
+}
 
 # Code coverage reporting (for Linux at least).
 unix {

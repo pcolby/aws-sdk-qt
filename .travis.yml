@@ -31,11 +31,11 @@ install:
 
 before_script:
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5
+  - qmake -qt=qt5 CONFIG+=debug_and_release
 
 script:
   - cppcheck --error-exitcode=1 --quiet .
-  - make
+  - make all
   - make check
 
 after_success:

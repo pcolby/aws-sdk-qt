@@ -1,5 +1,5 @@
 *.user
 debug
-Makefile
+Makefile*
 release
 /doc/doxygen/
