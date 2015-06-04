@@ -33,9 +33,9 @@ install:
   - cat src/core/sha384-512.c
   - cat src/core/qmessageauthenticationcode.cpp
   # Apply the QTBUG-32100 fixes for Qt 5.0 with Clang on Travis CI
-  - patch -p0 /usr/include/qt5/QtCore/qabstractitemmodel.h .travis/qabstractitemmodel.diff
-  - patch -p0 /usr/include/qt5/QtCore/qurl.h .travis/qurl.diff
-  - patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
+  - sudo patch -p0 /usr/include/qt5/QtCore/qabstractitemmodel.h .travis/qabstractitemmodel.diff
+  - sudo patch -p0 /usr/include/qt5/QtCore/qurl.h .travis/qurl.diff
+  - sudo patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
 
 before_script:
   # Currently, this won't work due to [QTBUG-32100](https://bugreports.qt.io/browse/QTBUG-32100)
