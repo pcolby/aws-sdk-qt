@@ -1,5 +1,9 @@
 language: cpp
 
+compiler:
+  - clang
+  - gcc
+
 before_install:
   - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
   - sudo apt-get update -qq
@@ -28,14 +32,20 @@ install:
   - cat src/core/sha224-256.c
   - cat src/core/sha384-512.c
   - cat src/core/qmessageauthenticationcode.cpp
+  # Apply the QTBUG-32100 fixes for Qt 5.0 with Clang on Travis CI
+  - sudo patch -p0 /usr/include/qt5/QtCore/qabstractitemmodel.h .travis/qabstractitemmodel.diff
+  - sudo patch -p0 /usr/include/qt5/QtCore/qurl.h .travis/qurl.diff
+  - sudo patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
 
 before_script:
+  # Currently, this won't work due to [QTBUG-32100](https://bugreports.qt.io/browse/QTBUG-32100)
+  - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5
+  - qmake -qt=qt5 CONFIG+=debug_and_release
 
 script:
   - cppcheck --error-exitcode=1 --quiet .
-  - make
+  - make all
   - make check
 
 after_success:
