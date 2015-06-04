@@ -37,11 +37,11 @@ before_script:
   # Currently, this won't work due to [QTBUG-32100](https://bugreports.qt.io/browse/QTBUG-32100)
   - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5
+  - qmake -qt=qt5 CONFIG+=debug_and_release
 
 script:
   - cppcheck --error-exitcode=1 --quiet .
-  - make
+  - make all
   - make check
 
 after_success:
