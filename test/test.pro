@@ -13,16 +13,21 @@ RESOURCES = ../qrc/aws.qrc
 # Neaten the output directories.
 CONFIG(debug,debug|release) {
     DESTDIR = debug
+    LIBS += -L../debug
     MOC_DIR = debug/tmp
     OBJECTS_DIR = debug/tmp
     RCC_DIR = debug/tmp
 }
 CONFIG(release,debug|release) {
     DESTDIR = release
+    LIBS += -L../release
     MOC_DIR = release/tmp
     OBJECTS_DIR = release/tmp
     RCC_DIR = release/tmp
 }
+
+# Link to the libqtaws library.
+LIBS += -lqtaws
 
 # Code coverage reporting (for Linux at least).
 unix {
