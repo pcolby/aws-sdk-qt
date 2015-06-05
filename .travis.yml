@@ -38,15 +38,22 @@ install:
   - sudo patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
 
 before_script:
+  - mkdir -p $TRAVIS_BUILD_DIR-build
   - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
+  - pushd "$TRAVIS_BUILD_DIR-build"
   - qmake -qt=qt5 -v
-  - qmake -qt=qt5 CONFIG+=debug_and_release
+  - qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+  - popd
 
 script:
   - cppcheck --error-exitcode=1 --quiet .
+  - pushd "$TRAVIS_BUILD_DIR-build"
   - make all
   - make check
+  - popd
 
 after_success:
+  - pushd "$TRAVIS_BUILD_DIR-build"
   - make -C test coverage
   - lcoveralls --retry-count 5
+  - popd
