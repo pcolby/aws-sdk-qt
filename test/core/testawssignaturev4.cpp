@@ -48,7 +48,11 @@ const QString TestAwsSignatureV4::AwsTestSuiteSecretKey(QLatin1String("wJalrXUtn
 int TestAwsSignatureV4::loadOfficialTestSuiteData()
 {
     // Open the test suite directory.
-    QDir dir(QLatin1String("../core/aws4_testsuite"));
+    #define LIBQTAWS_STRINGIFY(string) #string
+    #define LIBQTAWS_EXPAND_AND_STRINGIFY(macro) LIBQTAWS_STRINGIFY(macro)
+    QDir dir(QLatin1String(LIBQTAWS_EXPAND_AND_STRINGIFY(AWS4_TESTSUITE_DIR)));
+    #undef LIBQTAWS_EXPAND_AND_STRINGIFY
+    #undef LIBQTAWS_STRINGIFY
     if (!dir.exists()) {
         qWarning() << dir.dirName() << "does not exist";
         return -1;

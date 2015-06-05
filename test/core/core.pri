@@ -1,3 +1,5 @@
+DEFINES += $$shell_quote(AWS4_TESTSUITE_DIR=$$PWD/aws4_testsuite)
+
 HEADERS += \
         awsendpointtestdata.h \
         testawsabstractcredentials.h \
