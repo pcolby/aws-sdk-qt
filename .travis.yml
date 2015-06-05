@@ -38,7 +38,6 @@ install:
   - sudo patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
 
 before_script:
-  # Currently, this won't work due to [QTBUG-32100](https://bugreports.qt.io/browse/QTBUG-32100)
   - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
   - qmake -qt=qt5 -v
   - qmake -qt=qt5 CONFIG+=debug_and_release
