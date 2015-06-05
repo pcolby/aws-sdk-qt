@@ -1,0 +1,16 @@
+@INCLUDE_PATH          = "$$DOXDIR"
+@INCLUDE               = common.dox
+PROJECT_BRIEF          = "Unofficial AWS library for Qt - Internal Documentation"
+STRIP_FROM_PATH        = "$$TOPDIR/src"
+EXTRACT_PRIVATE        = YES
+HIDE_FRIEND_COMPOUNDS  = NO
+INTERNAL_DOCS          = YES
+ENABLED_SECTIONS       = internal
+INPUT                  = "$$TOPDIR/README.md" "$$TOPDIR/src"
+EXCLUDE_SYMBOLS        =
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+STRIP_CODE_COMMENTS    = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+HTML_OUTPUT            = all
