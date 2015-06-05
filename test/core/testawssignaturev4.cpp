@@ -48,14 +48,7 @@ const QString TestAwsSignatureV4::AwsTestSuiteSecretKey(QLatin1String("wJalrXUtn
 int TestAwsSignatureV4::loadOfficialTestSuiteData()
 {
     // Open the test suite directory.
-    QDir dir(QLatin1String("../core/aws4_testsuite"));
-    if (!dir.exists()) {
-        qWarning() << dir.dirName() << "does not exist";
-        return -1;
-    } else if (!dir.isReadable()) {
-        qWarning() << dir.dirName() << "is not readable";
-        return -1;
-    }
+    QDir dir(QFINDTESTDATA("aws4_testsuite"));
 
     // Fetch all data files, ignoring any fluff (such as readme.txt files).
     dir.setFilter(QDir::Files|QDir::NoDotAndDotDot|QDir::Readable);
