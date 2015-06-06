@@ -18,14 +18,12 @@ CONFIG(debug,debug|release) {
     MOC_DIR = ../debug/tmp
     OBJECTS_DIR = ../debug/tmp
     RCC_DIR = ../debug/tmp
-    win32:DLLDESTDIR = ../test/debug
 }
 CONFIG(release,debug|release) {
     DESTDIR = ../release
     MOC_DIR = ../release/tmp
     OBJECTS_DIR = ../release/tmp
     RCC_DIR = ../release/tmp
-    win32:DLLDESTDIR = ../test/release
 }
 
 include(core/core.pri)
