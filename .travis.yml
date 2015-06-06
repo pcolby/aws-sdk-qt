@@ -55,5 +55,5 @@ script:
 after_success:
   - pushd "$TRAVIS_BUILD_DIR-build"
   - make -C test coverage
-  - lcoveralls --retry-count 5
   - popd
+  - lcoveralls --retry-count 5 "$TRAVIS_BUILD_DIR-build/release/coverage.info"
