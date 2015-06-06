@@ -12,21 +12,16 @@ RESOURCES = ../qrc/aws.qrc
 
 # Neaten the output directories.
 CONFIG(debug,debug|release) {
-    DESTDIR = debug
-    LIBS += -L../debug
-    MOC_DIR = debug/tmp
-    OBJECTS_DIR = debug/tmp
-    QMAKE_RPATHDIR += $$OUT_PWD/../debug
-    RCC_DIR = debug/tmp
+    DESTDIR = $$OUT_PWD/../debug
 }
 CONFIG(release,debug|release) {
-    DESTDIR = release
-    LIBS += -L../release
-    MOC_DIR = release/tmp
-    OBJECTS_DIR = release/tmp
-    QMAKE_RPATHDIR += $$OUT_PWD/../release
-    RCC_DIR = release/tmp
+    DESTDIR = $$OUT_PWD/../release
 }
+LIBS += -L$$DESTDIR
+MOC_DIR = $$DESTDIR/$$TARGET-tmp
+OBJECTS_DIR = $$DESTDIR/$$TARGET-tmp
+QMAKE_RPATHDIR += $$DESTDIR
+RCC_DIR = $$DESTDIR/$$TARGET-tmp
 
 # Link to the libqtaws library.
 LIBS += -lqtaws
