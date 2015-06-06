@@ -11,12 +11,8 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 RESOURCES = ../qrc/aws.qrc
 
 # Neaten the output directories.
-CONFIG(debug,debug|release) {
-    DESTDIR = $$OUT_PWD/../debug
-}
-CONFIG(release,debug|release) {
-    DESTDIR = $$OUT_PWD/../release
-}
+CONFIG(debug,debug|release):  DESTDIR = $$OUT_PWD/../debug
+CONFIG(release,debug|release):DESTDIR = $$OUT_PWD/../release
 LIBS += -L$$DESTDIR
 MOC_DIR = $$DESTDIR/$$TARGET-tmp
 OBJECTS_DIR = $$DESTDIR/$$TARGET-tmp
