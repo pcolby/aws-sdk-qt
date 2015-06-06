@@ -1,3 +1,4 @@
+include(../common.pri)
 TEMPLATE = app
 QT += network testlib
 QT -= gui
@@ -11,18 +12,17 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 RESOURCES = ../qrc/aws.qrc
 
 # Neaten the output directories.
-CONFIG(debug,debug|release) {
-    DESTDIR = debug
-    MOC_DIR = debug/tmp
-    OBJECTS_DIR = debug/tmp
-    RCC_DIR = debug/tmp
-}
-CONFIG(release,debug|release) {
-    DESTDIR = release
-    MOC_DIR = release/tmp
-    OBJECTS_DIR = release/tmp
-    RCC_DIR = release/tmp
-}
+CONFIG(debug,debug|release):   DESTDIR = $$absolute_path($$OUT_PWD/../debug)
+CONFIG(release,debug|release): DESTDIR = $$absolute_path($$OUT_PWD/../release)
+LIBS += -L$$DESTDIR
+TEMPDIR = $$DESTDIR/$$TARGET-tmp
+MOC_DIR = $$DESTDIR/$$TARGET-tmp
+OBJECTS_DIR = $$DESTDIR/$$TARGET-tmp
+QMAKE_RPATHDIR += $$DESTDIR
+RCC_DIR = $$DESTDIR/$$TARGET-tmp
+
+# Link to the libqtaws library.
+LIBS += -lqtaws
 
 # Code coverage reporting (for Linux at least).
 unix {
@@ -30,24 +30,23 @@ unix {
     QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_LFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_CXXFLAGS_RELEASE -= -O1 -O2 -O3
-    QMAKE_RPATHDIR += ../release
 
     # Generate gcov's gcda files by executing the test program.
-    gcov.depends = test
-    gcov.target = build/test.gcda
-    gcov.commands = ./test
+    gcov.depends = $$DESTDIR/test
+    gcov.target = $$TEMPDIR/test.gcda
+    gcov.commands = $$DESTDIR/test
 
     # Generate an lcov tracefile from gcov's gcda files.
-    lcov.depends = build/test.gcda
-    lcov.target = build/coverage.info
-    lcov.commands = lcov --capture --base-directory ../src --directory build --output build/coverage.info --quiet; \
-                    lcov --remove build/coverage.info '"/usr/include/*/*"' '"src/*/*testdata*"' \
+    lcov.depends = $$TEMPDIR/test.gcda
+    lcov.target = $$DESTDIR/coverage.info
+    lcov.commands = lcov --capture --base-directory ../src --directory $$TEMPDIR --output $$DESTDIR/coverage.info --quiet; \
+                    lcov --remove $$DESTDIR/coverage.info '"/usr/include/*/*"' \
                          '"src/core/qmessageauthenticationcode.cpp"' \
-                         '"src/*/test*"' '"src/build/*"' src/test.cpp --output build/coverage.info --quiet
+                         '"*/test/*"' '*/*-tmp/*' --output $$DESTDIR/coverage.info --quiet
 
     # Generate HTML coverage reports from lcov's tracefile.
-    coverage.depends = build/coverage.info
-    coverage.commands += genhtml --output-directory coverage_html --prefix `readlink -f ../src` --quiet --title libqtaws build/coverage.info
+    coverage.depends = $$DESTDIR/coverage.info
+    coverage.commands += genhtml --output-directory $$DESTDIR/coverage_html --prefix $$TOPDIR/src --quiet --title libqtaws $$DESTDIR/coverage.info
 
     # Include the above custom targets in the generated build scripts (eg Makefile).
     QMAKE_EXTRA_TARGETS += coverage gcov lcov
