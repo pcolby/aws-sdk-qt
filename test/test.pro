@@ -16,6 +16,7 @@ CONFIG(debug,debug|release) {
     LIBS += -L../debug
     MOC_DIR = debug/tmp
     OBJECTS_DIR = debug/tmp
+    QMAKE_RPATHDIR += $$OUT_PWD/../debug
     RCC_DIR = debug/tmp
 }
 CONFIG(release,debug|release) {
@@ -23,6 +24,7 @@ CONFIG(release,debug|release) {
     LIBS += -L../release
     MOC_DIR = release/tmp
     OBJECTS_DIR = release/tmp
+    QMAKE_RPATHDIR += $$OUT_PWD/../release
     RCC_DIR = release/tmp
 }
 
@@ -35,7 +37,6 @@ unix {
     QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_LFLAGS += -fprofile-arcs -ftest-coverage
     QMAKE_CXXFLAGS_RELEASE -= -O1 -O2 -O3
-    QMAKE_RPATHDIR += ../release
 
     # Generate gcov's gcda files by executing the test program.
     gcov.depends = test
