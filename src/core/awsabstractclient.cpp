@@ -19,6 +19,7 @@
 
 #include "awsabstractclient.h"
 #include "awsabstractclient_p.h"
+#include "awsabstractrequest.h"
 
 #include <QNetworkRequest>
 
@@ -72,13 +73,13 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 void AwsAbstractClient::abort()
 {
     Q_D(AwsAbstractClient);
-    foreach (AwsRequest &request, d->pendingRequests) {
+    foreach (AwsAbstractRequest &request, d->pendingRequests) {
         emit requestAborted(request);
     }
     d->pendingRequests.clear();
 }
 
-void AwsAbstractClient::send(AwsRequest &request)
+void AwsAbstractClient::send(AwsAbstractRequest &request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
@@ -88,11 +89,13 @@ void AwsAbstractClient::send(AwsRequest &request)
 
     sign(request);
     if (d->networkAccessManager) {
-        d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+        // createRequest is protected :|
+        request.send(d->networkAccessManager);
+        //d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
     }
 }
 
-void AwsAbstractClient::sign(AwsRequest &request)
+void AwsAbstractClient::sign(AwsAbstractRequest &request)
 {
 
 }

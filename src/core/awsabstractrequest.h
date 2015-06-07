@@ -45,6 +45,7 @@ public:
 
 public slots:
     void abort();
+    QNetworkReply * send(QNetworkAccessManager * const manager);
 
 protected slots:
     void setReply(QNetworkReply * const reply);
