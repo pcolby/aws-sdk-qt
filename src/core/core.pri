@@ -2,6 +2,8 @@ HEADERS += \
         awsabstractclient.h \
         awsabstractclient_p.h \
         awsabstractcredentials.h \
+        awsabstractrequest.h \
+        awsabstractrequest_p.h \
         awsabstractsignature.h \
         awsabstractsignature_p.h \
         awsanonymouscredentials.h \
@@ -11,8 +13,6 @@ HEADERS += \
         awsendpoint_p.h \
         awsregion.h \
         awsregion_p.h \
-        awsrequest.h \
-        awsrequest_p.h \
         awssignaturev0.h \
         awssignaturev0_p.h \
         awssignaturev1.h \
@@ -28,12 +28,12 @@ HEADERS += \
 SOURCES += \
         awsabstractclient.cpp \
         awsabstractcredentials.cpp \
+        awsabstractrequest.cpp \
         awsabstractsignature.cpp \
         awsanonymouscredentials.cpp \
         awsbasiccredentials.cpp \
         awsendpoint.cpp \
         awsregion.cpp \
-        awsrequest.cpp \
         awssignaturev0.cpp \
         awssignaturev1.cpp \
         awssignaturev2.cpp \

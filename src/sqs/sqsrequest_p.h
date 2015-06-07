@@ -29,7 +29,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class SqsRequest;
 
-class QTAWS_EXPORT SqsRequestPrivate {
+class QTAWS_EXPORT SqsRequestPrivate : AwsAbstractRequestPrivate {
 
 public:
     QString action;

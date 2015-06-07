@@ -17,11 +17,10 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCLIENT_H
-#define SQSCLIENT_H
+#ifndef SQSREQUEST_H
+#define SQSREQUEST_H
 
-#include "awsabstractclient.h"
-#include "qtawsglobal.h"
+#include "awsabstractrequest.h"
 
 #include <QObject>
 
@@ -32,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractClient;
 class SqsRequestPrivate;
 
-class QTAWS_EXPORT SqsRequest : QObject {
+class QTAWS_EXPORT SqsRequest : AwsAbstractRequest {
     Q_OBJECT
 
 public:
