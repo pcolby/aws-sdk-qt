@@ -81,8 +81,15 @@ void AwsAbstractClient::abort()
 void AwsAbstractClient::send(AwsRequest &request)
 {
     Q_D(AwsAbstractClient);
+    Q_ASSERT(d->networkAccessManager);
+    if (!d->networkAccessManager) {
+        emit requestAborted(request);
+    }
+
     sign(request);
-    d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+    if (d->networkAccessManager) {
+        d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+    }
 }
 
 void AwsAbstractClient::sign(AwsRequest &request)
@@ -111,7 +118,7 @@ void AwsAbstractClient::credentialsChanged()
  * @param  q  Pointer to this object's public AwsAbstractClient instance.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
-    : q_ptr(q)
+    : q_ptr(q), networkAccessManager(NULL)
 {
 
 }
