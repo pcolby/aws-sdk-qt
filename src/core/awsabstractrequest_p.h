@@ -31,6 +31,7 @@ class AwsAbstractRequest;
 class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
+    QByteArray data;
     QNetworkReply * reply; ///< Network reply, if any, for this request.
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);

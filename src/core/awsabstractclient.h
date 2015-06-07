@@ -36,7 +36,7 @@ class QTAWS_EXPORT AwsAbstractClient : public QObject {
 public:
     AwsAbstractClient(QObject * const parent = 0);
 
-    ~AwsAbstractClient();
+    virtual ~AwsAbstractClient();
 
     QNetworkAccessManager * networkAccessManager() const;
 
@@ -46,8 +46,8 @@ public slots:
     void abort();
 
 protected:
-    virtual void send(AwsRequest &request);
-    virtual void sign(AwsRequest &request);
+    virtual void send(AwsAbstractRequest &request);
+    virtual void sign(AwsAbstractRequest &request);
 
 protected slots:
     void credentialsChanged();

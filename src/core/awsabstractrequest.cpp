@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "AwsAbstractRequest.h"
-#include "AwsAbstractRequest_p.h"
+#include "awsabstractrequest.h"
+#include "awsabstractrequest_p.h"
 
 #include <QNetworkRequest>
 
@@ -47,6 +47,12 @@ AwsAbstractRequest::~AwsAbstractRequest()
     delete d_ptr;
 }
 
+QByteArray AwsAbstractRequest::data() const
+{
+    Q_D(const AwsAbstractRequest);
+    return d->data;
+}
+
 void AwsAbstractRequest::abort()
 {
     Q_D(AwsAbstractRequest);
@@ -55,23 +61,6 @@ void AwsAbstractRequest::abort()
     } else {
         emit error(QNetworkReply::Aborted);
     }
-}
-
-void AwsAbstractRequest::send(AwsAbstractRequest &request)
-{
-    Q_D(AwsAbstractRequest);
-    sign(request);
-    d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
-}
-
-void AwsAbstractRequest::sign(AwsAbstractRequest &request)
-{
-
-}
-
-void AwsAbstractRequest::credentialsChanged()
-{
-    // sign and send all pending.
 }
 
 /**
@@ -90,7 +79,7 @@ void AwsAbstractRequest::credentialsChanged()
  * @param  q  Pointer to this object's public AwsAbstractRequest instance.
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
-    : q_ptr(q)
+    : q_ptr(q), reply(NULL)
 {
 
 }

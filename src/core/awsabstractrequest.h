@@ -38,13 +38,16 @@ public:
 
     ~AwsAbstractRequest();
 
-    QByteArray * data();
+    QByteArray data() const;
     virtual QNetworkAccessManager::Operation operation() = 0;
     QNetworkReply * reply();
     virtual QNetworkRequest * request() = 0;
 
 public slots:
     void abort();
+
+protected slots:
+    void setReply(QNetworkReply * const reply);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
