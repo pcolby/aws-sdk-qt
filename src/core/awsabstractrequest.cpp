@@ -17,39 +17,39 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "awsrequest.h"
-#include "awsrequest_p.h"
+#include "AwsAbstractRequest.h"
+#include "AwsAbstractRequest_p.h"
 
 #include <QNetworkRequest>
 
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  AwsRequest
+ * @class  AwsAbstractRequest
  *
  * @brief  @todo
  */
 
 /**
- * @brief  Constructs a new AwsRequest object.
+ * @brief  Constructs a new AwsAbstractRequest object.
  *
  * @param parent       This object's parent.
  */
-AwsRequest::AwsRequest(
+AwsAbstractRequest::AwsAbstractRequest(
         QObject * const parent)
-    : QObject(parent), d_ptr(new AwsRequestPrivate(this))
+    : QObject(parent), d_ptr(new AwsAbstractRequestPrivate(this))
 {
-    //Q_D(AwsRequest);
+    //Q_D(AwsAbstractRequest);
 }
 
-AwsRequest::~AwsRequest()
+AwsAbstractRequest::~AwsAbstractRequest()
 {
     delete d_ptr;
 }
 
-void AwsRequest::abort()
+void AwsAbstractRequest::abort()
 {
-    Q_D(AwsRequest);
+    Q_D(AwsAbstractRequest);
     if (d->reply) {
         d->reply->abort();
     } else {
@@ -57,19 +57,19 @@ void AwsRequest::abort()
     }
 }
 
-void AwsRequest::send(AwsRequest &request)
+void AwsAbstractRequest::send(AwsAbstractRequest &request)
 {
-    Q_D(AwsRequest);
+    Q_D(AwsAbstractRequest);
     sign(request);
     d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
 }
 
-void AwsRequest::sign(AwsRequest &request)
+void AwsAbstractRequest::sign(AwsAbstractRequest &request)
 {
 
 }
 
-void AwsRequest::credentialsChanged()
+void AwsAbstractRequest::credentialsChanged()
 {
     // sign and send all pending.
 }
@@ -77,19 +77,19 @@ void AwsRequest::credentialsChanged()
 /**
  * @internal
  *
- * @class  AwsRequestPrivate
+ * @class  AwsAbstractRequestPrivate
  *
- * @brief  Private implementation for AwsRequest.
+ * @brief  Private implementation for AwsAbstractRequest.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new AwsRequestPrivate object.
+ * @brief  Constructs a new AwsAbstractRequestPrivate object.
  *
- * @param  q  Pointer to this object's public AwsRequest instance.
+ * @param  q  Pointer to this object's public AwsAbstractRequest instance.
  */
-AwsRequestPrivate::AwsRequestPrivate(AwsRequest * const q)
+AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
     : q_ptr(q)
 {
 
