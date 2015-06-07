@@ -136,6 +136,18 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 {
     QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));
 
+    // If the path begins with "//", remove one of the redundant slashes.
+    // Note, this is only needed on Windows, because there QDir::speparator is
+    // '\', and internally QDir::cleanPath swaps all separators to '/', before
+    // calling qt_normalizePathSegments with allowUncPaths set to true, so that
+    // '//' is preserved to allow of Windows UNC paths beginning with '\\'.
+    // This should probably be reported as a bug in Qt::cleanPath("//...").
+#ifdef Q_OS_WIN
+    if (path.startsWith(QLatin1String("//"))) {
+        path.remove(0, 1); // Remove the first of two forward slashes.
+    }
+#endif
+
     // Restore the trailing '/' if QDir::cleanPath (rightly) removed one.
     if ((url.path().endsWith(QLatin1Char('/'))) && (!path.endsWith(QLatin1Char('/')))) {
         path += QLatin1Char('/');
