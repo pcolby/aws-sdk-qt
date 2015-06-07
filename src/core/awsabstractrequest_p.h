@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSREQUEST_P_H
-#define AWSREQUEST_P_H
+#ifndef AWSABSTRACTREQUEST_P_H
+#define AWSABSTRACTREQUEST_P_H
 
 #include "qtawsglobal.h"
 
@@ -26,19 +26,18 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsRequest;
-class AwsEndpoint;
+class AwsAbstractRequest;
 
-class QTAWS_EXPORT AwsRequestPrivate {
+class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
     QNetworkReply * reply; ///< Network reply, if any, for this request.
 
-    AwsRequestPrivate(AwsRequest * const q);
+    AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
 
 private:
-    Q_DECLARE_PUBLIC(AwsRequest)
-    AwsRequest * const q_ptr; ///< Internal q-pointer.
+    Q_DECLARE_PUBLIC(AwsAbstractRequest)
+    AwsAbstractRequest * const q_ptr; ///< Internal q-pointer.
 
 };
 
