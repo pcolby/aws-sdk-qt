@@ -117,14 +117,25 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
 
 void AwsAbstractClient::credentialsChanged()
 {
-    // sign and send all pending.
+    Q_D(AwsAbstractClient);
+    foreach (AwsAbstractRequest * const request, d->requestsPendingCredentials) {
+        if (credentials()->isExpired()) {
+            request->abort();
+        } else {
+            request->send(d->networkAccessManager, *d->signature, *d->credentials);
+        }
+    }
 }
 
-void AwsAbstractClient::requestDestroyed(QObject * const request)
+void AwsAbstractClient::requestDestroyed(QObject * request)
 {
+    if (!request) {
+        request = sender();
+    }
+
     // Remove the request from our pending-requests list (if present).
     Q_D(AwsAbstractClient);
-    d->requestsPendingCredentials.remove(qobject_cast<AwsAbstractRequest * const>(sender()));
+    d->requestsPendingCredentials.remove(qobject_cast<AwsAbstractRequest * const>(request));
 }
 
 /**

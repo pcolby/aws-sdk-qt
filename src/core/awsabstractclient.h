@@ -57,7 +57,7 @@ protected:
 
 protected slots:
     void credentialsChanged();
-    void requestDestroyed(QObject * const request);
+    void requestDestroyed(QObject * request = NULL);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)
