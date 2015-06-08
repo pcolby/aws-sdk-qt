@@ -61,7 +61,7 @@ protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
 
 protected slots:
-    void setReply(QNetworkReply * const reply);
+    //void setReply(QNetworkReply * const reply);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
