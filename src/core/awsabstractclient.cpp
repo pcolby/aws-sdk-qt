@@ -88,7 +88,7 @@ AwsAbstractCredentials * AwsAbstractClient::credentials() const
     return d->credentials;
 }
 
-bool AwsAbstractClient::send(const AwsAbstractRequest &request)
+bool AwsAbstractClient::send(AwsAbstractRequest * const request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
@@ -100,16 +100,12 @@ bool AwsAbstractClient::send(const AwsAbstractRequest &request)
     if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
         d->credentials->refresh();
         /// @todo Setup slot to handle this.
+        //connect(request, SIGNAL(destroyed(QObject*))
         return true; // What to return here?
     }
 
-    QNetworkReply * const reply =
-        request.send(d->networkAccessManager, *d->signature, *d->credentials);
-
-    if (reply) {
-        connect(reply, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*const));
-    }
-    return (reply != NULL);
+    request->send(d->networkAccessManager, *d->signature, *d->credentials);
+    return (request->reply() != NULL);
 }
 
 AwsAbstractSignature * AwsAbstractClient::signature() const

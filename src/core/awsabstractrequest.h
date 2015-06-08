@@ -50,26 +50,29 @@ public:
 
     virtual QNetworkAccessManager::Operation operation() const;
 
-    virtual QNetworkReply * send(QNetworkAccessManager * const manager,
-                                 const AwsAbstractSignature &signature,
-                                 const AwsAbstractCredentials &credentials) const;
+    virtual QNetworkReply * reply(); // 0 if not set.
+
+    virtual void send(QNetworkAccessManager * const manager,
+                      const AwsAbstractSignature &signature,
+                      const AwsAbstractCredentials &credentials);
 
 public slots:
-    void abort(QNetworkReply::NetworkError code = QNetworkReply::OperationCanceledError);
+    void abort();
 
 protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
 
 protected slots:
-    //void setReply(QNetworkReply * const reply);
+    void replyDestroyed(QObject * const reply);
+    void setReply(QNetworkReply * const reply);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:
-    void aborted(QNetworkReply::NetworkError code);
-    void started(QNetworkReply * reply);
+    void finished();
+    void replyChanged(QNetworkReply * reply);
 
 };
 

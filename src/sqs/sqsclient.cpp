@@ -52,11 +52,11 @@ SqsClient::~SqsClient()
 void SqsClient::createQueue()
 {
     Q_D(SqsClient);
-    SqsRequest * request = new SqsRequest; // d->createQueueRequest();
+    SqsRequest * const request = new SqsRequest; // d->createQueueRequest();
     connect(request, SIGNAL(aborted(QNetworkReply::NetworkError)),
             this, SLOT(createQueueAborted(QNetworkReply::NetworkError)));
     connect(request, SIGNAL(started(QNetworkReply*)),
-            this, SLOT(createQueueStarted(QNetworkReply*const));
+            this, SLOT(createQueueStarted(QNetworkReply*const)));
     send(request);
 }
 
@@ -67,6 +67,7 @@ void SqsClient::createQueueAborted(const QNetworkReply::NetworkError &code)
 
 void SqsClient::createQueueStarted(QNetworkReply * const reply)
 {
+    // perhaps cut out this middleman by add request signal: finished.
     connect(reply, SIGNAL(finished()), this, SLOT(createQueueFinished()));
 }
 

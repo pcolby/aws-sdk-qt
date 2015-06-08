@@ -52,7 +52,7 @@ public slots:
 
 protected:
     virtual AwsAbstractCredentials * credentials() const;
-    virtual bool send(const AwsAbstractRequest &request);
+    virtual bool send(AwsAbstractRequest * const request);
     virtual AwsAbstractSignature * signature() const;
 
 protected slots:

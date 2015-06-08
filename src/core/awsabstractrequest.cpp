@@ -73,29 +73,40 @@ QNetworkAccessManager::Operation AwsAbstractRequest::operation() const
     return d->operation;
 }
 
-QNetworkReply * AwsAbstractRequest::send(
-    QNetworkAccessManager * const manager,
-    const AwsAbstractSignature &signature,
-    const AwsAbstractCredentials &credentials) const
+QNetworkReply * AwsAbstractRequest::reply()
 {
+    Q_D(const AwsAbstractRequest);
+    return d->reply;
+}
+
+void AwsAbstractRequest::send(QNetworkAccessManager * const manager,
+                              const AwsAbstractSignature &signature,
+                              const AwsAbstractCredentials &credentials)
+{
+    Q_D(AwsAbstractRequest);
+    Q_ASSERT(!d->reply);
     const QNetworkRequest request(networkRequest(signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
-            return manager->deleteResource(request);
+            setReply(manager->deleteResource(request));
+            break;
         case QNetworkAccessManager::HeadOperation:
-            return manager->head(request);
+            setReply(manager->head(request));
+            break;
         case QNetworkAccessManager::GetOperation:
-            return manager->get(request);
+            setReply(manager->get(request));
+            break;
         case QNetworkAccessManager::PostOperation:
-            return manager->post(request, data());
+            setReply(manager->post(request, data()));
+            break;
         case QNetworkAccessManager::PutOperation:
-            return manager->put(request, data());
+            setReply(manager->put(request, data()));
+            break;
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
             // Catch this in debug mode for easier development / debugging.
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid operation");
     }
-    return NULL; // Operation was invalid / unsupported.
 }
 
 // @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
@@ -105,9 +116,24 @@ void AwsAbstractRequest::abort()
     Q_D(AwsAbstractRequest);
     if (d->reply) {
         d->reply->abort();
-    } else {
-        //emit error(QNetworkReply::Aborted);
     }
+}
+
+void AwsAbstractRequest::replyDestroyed(QObject * const reply)
+{
+    Q_D(AwsAbstractRequest);
+    if (d->reply == reply) {
+        d->reply = NULL;
+    }
+}
+
+void AwsAbstractRequest::setReply(QNetworkReply * const reply)
+{
+    Q_D(AwsAbstractRequest);
+    Q_ASSERT(!d->reply);
+    d->reply = reply;
+    connect(reply, SIGNAL(destroyed(QObject*)), SLOT());
+    emit replyChanged(reply);
 }
 
 /**
