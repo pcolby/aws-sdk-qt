@@ -99,6 +99,7 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
 
     if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
         d->credentials->refresh();
+        d->requestsPendingCredentials.insert(request);
         /// @todo Setup slot to handle this.
         //connect(request, SIGNAL(destroyed(QObject*))
         return true; // What to return here?
@@ -122,7 +123,8 @@ void AwsAbstractClient::credentialsChanged()
 void AwsAbstractClient::requestDestroyed(QObject * const request)
 {
     // Remove the request from our pending-requests list (if present).
-    /// @todo remove qobject_cast<AwsAbstractRequest>(sender());
+    Q_D(AwsAbstractClient);
+    d->requestsPendingCredentials.remove(qobject_cast<AwsAbstractRequest * const>(sender()));
 }
 
 /**

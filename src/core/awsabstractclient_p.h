@@ -22,7 +22,7 @@
 
 #include "qtawsglobal.h"
 
-//#include <QList>
+#include <QSet>
 
 class QNetworkAccessManager;
 
@@ -40,7 +40,7 @@ public:
     AwsAbstractCredentials * credentials;
     AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
-    //QList<AwsAbstractRequest *> pendingRequests;
+    QSet<AwsAbstractRequest *> requestsPendingCredentials;
     AwsAbstractSignature * signature;
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
