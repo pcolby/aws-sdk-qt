@@ -20,6 +20,9 @@
 #include "awsabstractrequest.h"
 #include "awsabstractrequest_p.h"
 
+#include "awsabstractcredentials.h"
+#include "awsabstractsignature.h"
+
 #include <QNetworkRequest>
 
 QTAWS_BEGIN_NAMESPACE
@@ -53,6 +56,44 @@ QByteArray AwsAbstractRequest::data() const
     return d->data;
 }
 
+QNetworkReply * AwsAbstractRequest::send(
+    QNetworkAccessManager * const manager,
+    const AwsAbstractSignature &signature,
+    const AwsAbstractCredentials &credentials)
+{
+    const QNetworkRequest request(networkRequest(signature, credentials));
+    switch (operation) {
+        case QNetworkAccessManager::DeleteOperation:
+            return manager->deleteResource(request);
+        case QNetworkAccessManager::HeadOperation:
+            return manager->head(request);
+        case QNetworkAccessManager::GetOperation:
+            return manager->get(request);
+        case QNetworkAccessManager::PostOperation:
+            return manager->post(request, data());
+        case QNetworkAccessManager::PutOperation:
+            return manager->put(request, data());
+        case QNetworkAccessManager::CustomOperation: // Fall through.
+        default:
+            // Catch this in debug mode for easier development / debugging.
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid operation");
+    }
+    return NULL; // Operation was invalid / unsupported.
+}
+
+// Overrides should sign, only if relevant.
+
+virtual QNetworkRequest AwsAbstractRequest::networkRequest(
+    const AwsAbstractSignature &signature,
+    const AwsAbstractCredentials &credentials)
+{
+    QNetworkRequest request(unsignedRequest());
+    signature.sign(credentials, operation(), request, data());
+    return request;
+}
+
+// @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
+
 void AwsAbstractRequest::abort()
 {
     Q_D(AwsAbstractRequest);
@@ -61,6 +102,15 @@ void AwsAbstractRequest::abort()
     } else {
         emit error(QNetworkReply::Aborted);
     }
+}
+
+virtual QNetworkRequest AwsAbstractRequest::networkRequest(
+    const AwsAbstractSignature &signature,
+    const AwsAbstractCredentials &credentials)
+{
+    QNetworkRequest request(unsignedRequest());
+    signature.sign(credentials, operation(), request, data());
+    return request;
 }
 
 /**

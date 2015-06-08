@@ -22,13 +22,18 @@
 
 #include "qtawsglobal.h"
 
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QObject>
 
-class QNetworkAccessManager;
+class QNetworkReply;
+class QNetworkRequest;
 
 QTAWS_BEGIN_NAMESPACE
 
+class AwsAbstractCredentials;
 class AwsAbstractRequestPrivate;
+class AwsAbstractSignature;
 
 class QTAWS_EXPORT AwsAbstractRequest : public QObject {
     Q_OBJECT
@@ -39,13 +44,21 @@ public:
     ~AwsAbstractRequest();
 
     QByteArray data() const;
+
     virtual QNetworkAccessManager::Operation operation() = 0;
-    QNetworkReply * reply();
-    virtual QNetworkRequest * request() = 0;
+
+    virtual QNetworkReply * send(QNetworkAccessManager * const manager,
+                                 const AwsAbstractSignature &signature,
+                                 const AwsAbstractCredentials &credentials);
 
 public slots:
     void abort();
-    QNetworkReply * send(QNetworkAccessManager * const manager);
+
+protected:
+    virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
+                                           const AwsAbstractCredentials &credentials);
+
+    virtual QNetworkRequest unsignedRequest() = 0;
 
 protected slots:
     void setReply(QNetworkReply * const reply);

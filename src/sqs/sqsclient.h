@@ -38,16 +38,17 @@ class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
 public:
     SqsClient(QObject * const parent = 0);
 
-    ~SqsClient();
+    virtual ~SqsClient();
 
 public slots:
-    QNetworkReply * createQueue(); /// @todo Will need some params; just an example for now.
-    void createQueueFinished();
+    QNetworkReply * createQueue(); ///< @todo Will need some params; just an example for now.
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)
     SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
 
+signals:
+    void createQueueFinished(); ///< @todo Will need some params.
 };
 
 QTAWS_END_NAMESPACE

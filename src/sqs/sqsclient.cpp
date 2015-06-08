@@ -19,6 +19,7 @@
 
 #include "sqsclient.h"
 #include "sqsclient_p.h"
+#include "sqsrequest.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -50,23 +51,20 @@ SqsClient::~SqsClient()
 
 QNetworkReply * SqsClient::createQueue()
 {
-    // want to know when:
-    /// request ready for read.
-    /// request failed
-
-    SqsCreateQueueRequest request;
-    parent->sendRequest(request);
-
-    connect(request, "error", this, "createQueueError");
-    connect(request, "finished", this, "requestFinished");
-
-    //Q_D(SqsClient);
-    //return d->networkAccessManager->get(rq);
+    Q_D(SqsClient);
+    const SqsRequest request;// = d->createQueueRequest();
+    QNetworkReply * const reply = send(request);
+    if (reply) {
+        /// @todo
+        //connect(request, "error", this, "createQueueError");
+        //connect(request, "finished", this, "requestFinished");
+    }
+    return reply;
 }
 
 void SqsClient::createQueueSent()
 {
-    signal...
+    /// @todo
 }
 
 /**

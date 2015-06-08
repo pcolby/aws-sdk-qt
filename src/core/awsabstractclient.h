@@ -25,10 +25,12 @@
 #include <QObject>
 
 class QNetworkAccessManager;
+class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClientPrivate;
+class AwsAbstractRequest;
 
 class QTAWS_EXPORT AwsAbstractClient : public QObject {
     Q_OBJECT
@@ -46,8 +48,7 @@ public slots:
     void abort();
 
 protected:
-    virtual void send(AwsAbstractRequest &request);
-    virtual void sign(AwsAbstractRequest &request);
+    virtual QNetworkReply * send(const AwsAbstractRequest &request);
 
 protected slots:
     void credentialsChanged();
@@ -57,8 +58,8 @@ private:
     AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:
-    void requestAborted(const AwsRequest * request);
-    void requestSent(const AwsRequest * request, QNetworkReply * reply);
+    void requestAborted(const AwsAbstractRequest * request);
+    void requestSent(const AwsAbstractRequest * request, QNetworkReply * reply);
 
 };
 

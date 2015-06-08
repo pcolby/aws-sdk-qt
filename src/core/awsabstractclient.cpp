@@ -79,25 +79,14 @@ void AwsAbstractClient::abort()
     d->pendingRequests.clear();
 }
 
-void AwsAbstractClient::send(AwsAbstractRequest &request)
+QNetworkReply * AwsAbstractClient::send(AwsAbstractRequest &request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
-    if (!d->networkAccessManager) {
-        emit requestAborted(request);
-    }
-
-    sign(request);
     if (d->networkAccessManager) {
-        // createRequest is protected :|
-        request.send(d->networkAccessManager);
-        //d->networkAccessManager->createRequest(rquest.op, rq.rq, rq.data);
+        return request.send(d->networkAccessManager, signature, credentials);
     }
-}
-
-void AwsAbstractClient::sign(AwsAbstractRequest &request)
-{
-
+    return NULL;
 }
 
 void AwsAbstractClient::credentialsChanged()
