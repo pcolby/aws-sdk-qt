@@ -73,17 +73,23 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 void AwsAbstractClient::abort()
 {
     Q_D(AwsAbstractClient);
-    foreach (AwsAbstractRequest &request, d->pendingRequests) {
-        emit requestAborted(request);
-    }
-    d->pendingRequests.clear();
+    //foreach (AwsAbstractRequest &request, d->pendingRequests) {
+        //emit requestAborted(request);
+    //}
+    //d->pendingRequests.clear();
 }
 
-QNetworkReply * AwsAbstractClient::send(AwsAbstractRequest &request)
+#include "awsbasiccredentials.h"
+#include "awssignaturev4.h"
+QNetworkReply * AwsAbstractClient::send(const AwsAbstractRequest &request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
     if (d->networkAccessManager) {
+        /// @todo  Move these var to private class, etc, probably accessed via
+        ///        virtual (ie overridable) accessor functions.
+        AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
+        AwsSignatureV4 signature;
         return request.send(d->networkAccessManager, signature, credentials);
     }
     return NULL;
@@ -110,7 +116,7 @@ void AwsAbstractClient::credentialsChanged()
  * @param  q  Pointer to this object's public AwsAbstractClient instance.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
-    : q_ptr(q), networkAccessManager(NULL)
+    : networkAccessManager(NULL), q_ptr(q)
 {
 
 }

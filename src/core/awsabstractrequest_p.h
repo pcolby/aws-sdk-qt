@@ -22,7 +22,10 @@
 
 #include "qtawsglobal.h"
 
-class QNetworkAccessManager;
+#include <QNetworkAccessManager>
+
+class QByteArray;
+class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -32,9 +35,12 @@ class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
     QByteArray data;
+    QNetworkAccessManager::Operation operation;
     QNetworkReply * reply; ///< Network reply, if any, for this request.
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
+
+    virtual ~AwsAbstractRequestPrivate();
 
 private:
     Q_DECLARE_PUBLIC(AwsAbstractRequest)

@@ -20,7 +20,7 @@
 #ifndef SQSREQUEST_P_H
 #define SQSREQUEST_P_H
 
-#include "qtawsglobal.h"
+#include "awsabstractrequest_p.h"
 
 class QUrl;
 class QUrlQuery;
@@ -29,7 +29,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class SqsRequest;
 
-class QTAWS_EXPORT SqsRequestPrivate : AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
     QString action;

@@ -62,10 +62,10 @@ QNetworkReply * SqsClient::createQueue()
     return reply;
 }
 
-void SqsClient::createQueueSent()
-{
+//void SqsClient::createQueueSent()
+//{
     /// @todo
-}
+//}
 
 /**
  * @internal

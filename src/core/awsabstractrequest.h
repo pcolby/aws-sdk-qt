@@ -41,24 +41,24 @@ class QTAWS_EXPORT AwsAbstractRequest : public QObject {
 public:
     AwsAbstractRequest(QObject * const parent = 0);
 
-    ~AwsAbstractRequest();
+    virtual ~AwsAbstractRequest();
 
     QByteArray data() const;
 
-    virtual QNetworkAccessManager::Operation operation() = 0;
+    virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
+                                           const AwsAbstractCredentials &credentials) const;
+
+    virtual QNetworkAccessManager::Operation operation() const;
 
     virtual QNetworkReply * send(QNetworkAccessManager * const manager,
                                  const AwsAbstractSignature &signature,
-                                 const AwsAbstractCredentials &credentials);
+                                 const AwsAbstractCredentials &credentials) const;
 
 public slots:
     void abort();
 
 protected:
-    virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
-                                           const AwsAbstractCredentials &credentials);
-
-    virtual QNetworkRequest unsignedRequest() = 0;
+    virtual QNetworkRequest unsignedRequest() const = 0;
 
 protected slots:
     void setReply(QNetworkReply * const reply);

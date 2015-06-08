@@ -22,6 +22,8 @@
 
 #include "qtawsglobal.h"
 
+//#include <QList>
+
 class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
@@ -35,7 +37,7 @@ class QTAWS_EXPORT AwsAbstractClientPrivate {
 public:
     AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
-    QList<AwsAbstractRequest> pendingRequests;
+    //QList<AwsAbstractRequest *> pendingRequests;
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
 

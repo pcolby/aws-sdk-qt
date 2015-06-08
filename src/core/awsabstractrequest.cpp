@@ -56,13 +56,30 @@ QByteArray AwsAbstractRequest::data() const
     return d->data;
 }
 
+// Overrides should sign, only if relevant.
+
+QNetworkRequest AwsAbstractRequest::networkRequest(
+    const AwsAbstractSignature &signature,
+    const AwsAbstractCredentials &credentials) const
+{
+    QNetworkRequest request(unsignedRequest());
+    signature.sign(credentials, operation(), request, data());
+    return request;
+}
+
+QNetworkAccessManager::Operation AwsAbstractRequest::operation() const
+{
+    Q_D(const AwsAbstractRequest);
+    return d->operation;
+}
+
 QNetworkReply * AwsAbstractRequest::send(
     QNetworkAccessManager * const manager,
     const AwsAbstractSignature &signature,
-    const AwsAbstractCredentials &credentials)
+    const AwsAbstractCredentials &credentials) const
 {
     const QNetworkRequest request(networkRequest(signature, credentials));
-    switch (operation) {
+    switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
             return manager->deleteResource(request);
         case QNetworkAccessManager::HeadOperation:
@@ -81,17 +98,6 @@ QNetworkReply * AwsAbstractRequest::send(
     return NULL; // Operation was invalid / unsupported.
 }
 
-// Overrides should sign, only if relevant.
-
-virtual QNetworkRequest AwsAbstractRequest::networkRequest(
-    const AwsAbstractSignature &signature,
-    const AwsAbstractCredentials &credentials)
-{
-    QNetworkRequest request(unsignedRequest());
-    signature.sign(credentials, operation(), request, data());
-    return request;
-}
-
 // @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
 
 void AwsAbstractRequest::abort()
@@ -100,17 +106,8 @@ void AwsAbstractRequest::abort()
     if (d->reply) {
         d->reply->abort();
     } else {
-        emit error(QNetworkReply::Aborted);
+        //emit error(QNetworkReply::Aborted);
     }
-}
-
-virtual QNetworkRequest AwsAbstractRequest::networkRequest(
-    const AwsAbstractSignature &signature,
-    const AwsAbstractCredentials &credentials)
-{
-    QNetworkRequest request(unsignedRequest());
-    signature.sign(credentials, operation(), request, data());
-    return request;
 }
 
 /**
@@ -127,9 +124,16 @@ virtual QNetworkRequest AwsAbstractRequest::networkRequest(
  * @brief  Constructs a new AwsAbstractRequestPrivate object.
  *
  * @param  q  Pointer to this object's public AwsAbstractRequest instance.
+ *
+ * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
-    : q_ptr(q), reply(NULL)
+    : operation(QNetworkAccessManager::GetOperation), reply(NULL), q_ptr(q)
+{
+
+}
+
+AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()
 {
 
 }

@@ -31,13 +31,13 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractClient;
 class SqsRequestPrivate;
 
-class QTAWS_EXPORT SqsRequest : AwsAbstractRequest {
+class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
     Q_OBJECT
 
 public:
     SqsRequest(QObject * const parent = 0);
 
-    ~SqsRequest();
+    virtual ~SqsRequest();
 
     QString action() const;
     /// @todo  auth params.
@@ -48,6 +48,9 @@ public:
 
     void setAction(const QString &action);
     void setApiVersion(const QString &version);
+
+protected:
+    virtual QNetworkRequest unsignedRequest() const;
 
 private:
     Q_DECLARE_PRIVATE(SqsRequest)
