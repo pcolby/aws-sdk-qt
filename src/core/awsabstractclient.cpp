@@ -98,10 +98,9 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
     }
 
     if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
-        d->credentials->refresh();
         d->requestsPendingCredentials.insert(request);
-        /// @todo Setup slot to handle this.
-        //connect(request, SIGNAL(destroyed(QObject*))
+        connect(request, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*)));
+        d->credentials->refresh();
         return true; // What to return here?
     }
 
