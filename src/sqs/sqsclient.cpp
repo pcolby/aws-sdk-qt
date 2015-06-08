@@ -49,23 +49,33 @@ SqsClient::~SqsClient()
     delete d_ptr;
 }
 
-QNetworkReply * SqsClient::createQueue()
+void SqsClient::createQueue()
 {
     Q_D(SqsClient);
-    const SqsRequest request;// = d->createQueueRequest();
-    QNetworkReply * const reply = send(request);
-    if (reply) {
-        /// @todo
-        //connect(request, "error", this, "createQueueError");
-        //connect(request, "finished", this, "requestFinished");
-    }
-    return reply;
+    SqsRequest * request = new SqsRequest; // d->createQueueRequest();
+    connect(request, SIGNAL(aborted(QNetworkReply::NetworkError)),
+            this, SLOT(createQueueAborted(QNetworkReply::NetworkError)));
+    connect(request, SIGNAL(started(QNetworkReply*)),
+            this, SLOT(createQueueStarted(QNetworkReply*const));
+    send(request);
 }
 
-//void SqsClient::createQueueSent()
-//{
-    /// @todo
-//}
+void SqsClient::createQueueAborted(const QNetworkReply::NetworkError &code)
+{
+    // emit What to do here? maybe this can be merged with createQueueFinished?
+}
+
+void SqsClient::createQueueStarted(QNetworkReply * const reply)
+{
+    connect(reply, SIGNAL(finished()), this, SLOT(createQueueFinished()));
+}
+
+void SqsClient::createQueueFinished()
+{
+    QNetworkReply * const reply = qobject_cast<QNetworkReply *>(sender());
+    Q_ASSERT(reply);
+    /// @todo if (reply->error() == QNetworkReply::NoError)
+}
 
 /**
  * @internal

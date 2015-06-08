@@ -52,11 +52,12 @@ public slots:
 
 protected:
     virtual AwsAbstractCredentials * credentials() const;
-    virtual QNetworkReply * send(const AwsAbstractRequest &request);
+    virtual bool send(const AwsAbstractRequest &request);
     virtual AwsAbstractSignature * signature() const;
 
 protected slots:
     void credentialsChanged();
+    void requestDestroyed(QObject * const request);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)

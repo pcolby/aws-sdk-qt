@@ -24,6 +24,7 @@
 #include "qtawsglobal.h"
 
 #include <QObject>
+#include <QNetworkReply>
 
 class QNetworkReply;
 
@@ -41,14 +42,19 @@ public:
     virtual ~SqsClient();
 
 public slots:
-    QNetworkReply * createQueue(); ///< @todo Will need some params; just an example for now.
+    void createQueue(); ///< @todo Will need some params; just an example for now.
+
+protected slots:
+    void createQueueAborted(const QNetworkReply::NetworkError &code);
+    void createQueueStarted(QNetworkReply * const reply);
+    void createQueueFinished();
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)
     SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:
-    void createQueueFinished(); ///< @todo Will need some params.
+    void queueCreated(); ///< @todo Will need some params.
 };
 
 QTAWS_END_NAMESPACE

@@ -88,21 +88,28 @@ AwsAbstractCredentials * AwsAbstractClient::credentials() const
     return d->credentials;
 }
 
-QNetworkReply * AwsAbstractClient::send(const AwsAbstractRequest &request)
+bool AwsAbstractClient::send(const AwsAbstractRequest &request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
+
     if ((!d->credentials) || (!d->networkAccessManager) || (!d->signature)) {
-        return NULL;
+        return false;
     }
 
-    if (d->credentials->isExpired() && d->credentials->isRefreshable()) {
+    if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
         d->credentials->refresh();
         /// @todo Setup slot to handle this.
-        return NULL;
+        return true; // What to return here?
     }
 
-    return request.send(d->networkAccessManager, *d->signature, *d->credentials);
+    QNetworkReply * const reply =
+        request.send(d->networkAccessManager, *d->signature, *d->credentials);
+
+    if (reply) {
+        connect(reply, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*const));
+    }
+    return (reply != NULL);
 }
 
 AwsAbstractSignature * AwsAbstractClient::signature() const
@@ -114,6 +121,12 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
 void AwsAbstractClient::credentialsChanged()
 {
     // sign and send all pending.
+}
+
+void AwsAbstractClient::requestDestroyed(QObject * const request)
+{
+    // Remove the request from our pending-requests list (if present).
+    /// @todo remove qobject_cast<AwsAbstractRequest>(sender());
 }
 
 /**

@@ -55,7 +55,7 @@ public:
                                  const AwsAbstractCredentials &credentials) const;
 
 public slots:
-    void abort();
+    void abort(QNetworkReply::NetworkError code = QNetworkReply::OperationCanceledError);
 
 protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
@@ -68,8 +68,7 @@ private:
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:
-    void error(QNetworkReply::NetworkError code);
-    void finished(QNetworkReply * reply);
+    void aborted(QNetworkReply::NetworkError code);
     void started(QNetworkReply * reply);
 
 };
