@@ -30,13 +30,16 @@ class QNetworkReply;
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClientPrivate;
+class AwsAbstractCredentials;
 class AwsAbstractRequest;
+class AwsAbstractSignature;
 
 class QTAWS_EXPORT AwsAbstractClient : public QObject {
     Q_OBJECT
 
 public:
-    AwsAbstractClient(QObject * const parent = 0);
+    AwsAbstractClient(
+            QObject * const parent = 0);
 
     virtual ~AwsAbstractClient();
 
@@ -48,7 +51,9 @@ public slots:
     void abort();
 
 protected:
+    virtual AwsAbstractCredentials * credentials() const;
     virtual QNetworkReply * send(const AwsAbstractRequest &request);
+    virtual AwsAbstractSignature * signature() const;
 
 protected slots:
     void credentialsChanged();

@@ -29,15 +29,19 @@ class QNetworkAccessManager;
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
+class AwsAbstractCredentials;
 class AwsAbstractRequest;
+class AwsAbstractSignature;
 class AwsEndpoint;
 
 class QTAWS_EXPORT AwsAbstractClientPrivate {
 
 public:
+    AwsAbstractCredentials * credentials;
     AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
     //QList<AwsAbstractRequest *> pendingRequests;
+    AwsAbstractSignature * signature;
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
 

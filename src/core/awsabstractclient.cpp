@@ -19,7 +19,10 @@
 
 #include "awsabstractclient.h"
 #include "awsabstractclient_p.h"
+
+#include "awsabstractcredentials.h"
 #include "awsabstractrequest.h"
+#include "awsabstractsignature.h"
 
 #include <QNetworkRequest>
 
@@ -79,20 +82,33 @@ void AwsAbstractClient::abort()
     //d->pendingRequests.clear();
 }
 
-#include "awsbasiccredentials.h"
-#include "awssignaturev4.h"
+AwsAbstractCredentials * AwsAbstractClient::credentials() const
+{
+    Q_D(const AwsAbstractClient);
+    return d->credentials;
+}
+
 QNetworkReply * AwsAbstractClient::send(const AwsAbstractRequest &request)
 {
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
-    if (d->networkAccessManager) {
-        /// @todo  Move these var to private class, etc, probably accessed via
-        ///        virtual (ie overridable) accessor functions.
-        AwsBasicCredentials credentials(QLatin1String(""), QLatin1String(""));
-        AwsSignatureV4 signature;
-        return request.send(d->networkAccessManager, signature, credentials);
+    if ((!d->credentials) || (!d->networkAccessManager) || (!d->signature)) {
+        return NULL;
     }
-    return NULL;
+
+    if (d->credentials->isExpired() && d->credentials->isRefreshable()) {
+        d->credentials->refresh();
+        /// @todo Setup slot to handle this.
+        return NULL;
+    }
+
+    return request.send(d->networkAccessManager, *d->signature, *d->credentials);
+}
+
+AwsAbstractSignature * AwsAbstractClient::signature() const
+{
+    Q_D(const AwsAbstractClient);
+    return d->signature;
 }
 
 void AwsAbstractClient::credentialsChanged()
