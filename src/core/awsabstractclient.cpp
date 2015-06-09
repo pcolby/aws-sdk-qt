@@ -44,6 +44,8 @@ AwsAbstractClient::AwsAbstractClient(
     : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))
 {
     //Q_D(AwsAbstractClient);
+    /// @todo Set d->credentials
+    /// @todo connect(d->credentials, changed, this, credentialsChanged);
 }
 
 AwsAbstractClient::~AwsAbstractClient()
@@ -101,7 +103,7 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
         d->requestsPendingCredentials.insert(request);
         connect(request, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*)));
         d->credentials->refresh();
-        return true; // What to return here?
+        return true; /// @todo What to return here?
     }
 
     request->send(d->networkAccessManager, *d->signature, *d->credentials);
