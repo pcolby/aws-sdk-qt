@@ -78,10 +78,10 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 void AwsAbstractClient::abort()
 {
     Q_D(AwsAbstractClient);
-    //foreach (AwsAbstractRequest &request, d->pendingRequests) {
-        //emit requestAborted(request);
-    //}
-    //d->pendingRequests.clear();
+    foreach (AwsAbstractRequest * const request, d->requestsPendingCredentials) {
+        request->abort();
+    }
+    d->requestsPendingCredentials.clear();
 }
 
 AwsAbstractCredentials * AwsAbstractClient::credentials() const
