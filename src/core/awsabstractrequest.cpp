@@ -89,8 +89,6 @@ void AwsAbstractRequest::send(QNetworkAccessManager * const manager,
                               const AwsAbstractSignature &signature,
                               const AwsAbstractCredentials &credentials)
 {
-    Q_D(AwsAbstractRequest);
-    Q_ASSERT(!d->reply);
     const QNetworkRequest request(networkRequest(signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:

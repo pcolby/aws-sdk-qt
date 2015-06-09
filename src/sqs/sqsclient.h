@@ -45,8 +45,6 @@ public slots:
     void createQueue(); ///< @todo Will need some params; just an example for now.
 
 protected slots:
-    void createQueueAborted(const QNetworkReply::NetworkError &code);
-    void createQueueStarted(QNetworkReply * reply);
     void createQueueFinished();
 
 private:
