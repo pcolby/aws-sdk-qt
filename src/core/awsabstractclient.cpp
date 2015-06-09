@@ -86,7 +86,7 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
     request->send(d->networkAccessManager, *d->signature, *d->credentials);
     return (request->reply() != NULL);
 }
-s
+
 /**
  * @brief Set the network access manager for this AWS service object.
  *

@@ -21,18 +21,17 @@
 #define SQSREQUEST_P_H
 
 #include "awsabstractrequest_p.h"
+#include "sqsrequest.h"
 
 class QUrl;
 class QUrlQuery;
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsRequest;
-
 class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    QString action;
+    SqsRequest::SqsAction action;
     QString apiVersion;
 
     SqsRequestPrivate(SqsRequest * const q);

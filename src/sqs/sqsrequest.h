@@ -35,18 +35,39 @@ class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
     Q_OBJECT
 
 public:
+    /// Actions supported by SQS.
+    enum SqsAction {
+        AddPermissionSqsAction,
+        ChangeMessageVisibilitySqsAction,
+        ChangeMessageVisibilityBatchSqsAction,
+        CreateQueueSqsAction,
+        DreateQueueSqsAction,
+        DeleteMessageSqsAction,
+        DeleteMessageBatchSqsAction,
+        DeleteQueueSqsAction,
+        GetQueueUrlSqsAction,
+        ListDeadLetterSourceQueuesSqsAction,
+        ListQueuesSqsAction,
+        PurgeQueueSqsAction,
+        ReceiveMessageSqsAction,
+        RemovePermissionSqsAction,
+        SendMessageSqsAction,
+        SendMessageBatchSqsAction,
+        SetQueueAttributesSqsAction
+    };
+
     SqsRequest(QObject * const parent = 0);
 
     virtual ~SqsRequest();
 
-    QString action() const;
+    SqsAction action() const;
     /// @todo  auth params.
     QString apiVersion() const;
     QNetworkRequest request() const;
 
     bool isValid() const;
 
-    void setAction(const QString &action);
+    void setAction(const SqsAction action);
     void setApiVersion(const QString &version);
 
 protected:

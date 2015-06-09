@@ -32,6 +32,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class SqsClientPrivate;
+class SqsCreateQueueRequest;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
@@ -42,9 +43,8 @@ public:
     virtual ~SqsClient();
 
 public slots:
-    void createQueue(const QString &queueName, const QStringMap &attributes = QStringMap());
+    void createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());
 
-    //void invoke(SqsRequest &request); // call // perform // send?
 /*
     void addPermission(const QStringList &awsAccountIds, const QStringList actionNames, const QString &label, const QString &queueUrl);
     void changeMessageVisibility(const QString &queueUrl, const QString &receiptHandle, const int visbilityTimeout);
@@ -80,7 +80,7 @@ private:
     SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:
-    void queueCreated(SqsCreateQueueRequest * request);
+    void queueCreated(SqsCreateQueueRequest * request); /// @todo
 };
 
 QTAWS_END_NAMESPACE

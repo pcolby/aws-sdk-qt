@@ -53,22 +53,34 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
 {
     Q_ASSERT(request->inherits(SqsRequest::metaObject()->className()));
     SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
-
-    //switch (sqsRequest->action())
-
-    if (request->inherits(SqsCreateQueueRequest::metaObject()->className())) {
-        SqsCreateQueueRequest * r = qobject_cast<SqsCreateQueueRequest *>(request);
-        emit queueCreated(r);
+    switch (sqsRequest->action()) {
+        case SqsRequest::AddPermissionSqsAction:
+            /// @todo
+            break;
+        case SqsRequest::CreateQueueSqsAction:
+            emit queueCreated(qobject_cast<SqsCreateQueueRequest *>(request));
+            break;
+        default:
+            ; /// @todo Q_ASSERT
     }
-
     AwsAbstractClient::onRequestFinished(request);
 }
 
-void SqsClient::createQueue(const QString &queueName)
+/**
+ * @brief SqsClient::createQueue
+ *
+ * Convenience function only; Alternative:
+ *
+ * SqsDeleteQueueRequest * const request = new SqsDeleteQueueRequest(...);
+ * sqsClient->send(request);
+ *
+ * @param queueName
+ */
+void SqsClient::createQueue(const QString &queueName, const QVariantMap &map)
 {
-    SqsDeleteQueueRequest * const request = new SqsDeleteQueueRequest(this);
+    SqsCreateQueueRequest * const request = NULL; ///< @todo new SqsCreateQueueRequest(this);
     /// @todo setup the request.
-    send(request);
+    //send(request); ///< @todo Compiler doesn't know the ancestry yet.
 }
 
 /// @todo This will be done in a SqsCreateQueueRequest class?

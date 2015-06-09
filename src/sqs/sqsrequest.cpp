@@ -50,7 +50,7 @@ SqsRequest::~SqsRequest()
 }
 
 
-QString SqsRequest::action() const
+SqsRequest::SqsAction SqsRequest::action() const
 {
     Q_D(const SqsRequest);
     return d->action;
@@ -69,7 +69,7 @@ QNetworkRequest SqsRequest::request() const
     return request;
 }
 
-void SqsRequest::setAction(const QString &action)
+void SqsRequest::setAction(const SqsAction action)
 {
     Q_D(SqsRequest);
     d->action = action;
@@ -110,7 +110,7 @@ SqsRequestPrivate::SqsRequestPrivate(SqsRequest * const q)
 QUrlQuery SqsRequestPrivate::query() const
 {
     QUrlQuery query;
-    query.addQueryItem(QLatin1String("action"),  action);
+  //query.addQueryItem(QLatin1String("action"),  action-to-string); ///< @todo
     query.addQueryItem(QLatin1String("version"), apiVersion);
     return query;
 }
