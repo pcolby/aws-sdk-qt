@@ -45,6 +45,8 @@ public:
 
     QByteArray data() const;
 
+    QNetworkReply::NetworkError error() const;
+
     virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
                                            const AwsAbstractCredentials &credentials) const;
 

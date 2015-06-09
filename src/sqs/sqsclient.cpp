@@ -59,9 +59,11 @@ void SqsClient::createQueue()
 
 void SqsClient::createQueueFinished()
 {
-    QNetworkReply * const reply = qobject_cast<QNetworkReply *>(sender());
-    Q_ASSERT(reply);
-    /// @todo if (reply->error() == QNetworkReply::NoError)
+    SqsRequest * const request = qobject_cast<SqsRequest *>(sender());
+    Q_ASSERT(request);
+    if (request->error() == QNetworkReply::NoError) {
+        request->reply()->readAll(); ///< @todo Parse this :)
+    } /// @todo else { ??? }
 }
 
 /**

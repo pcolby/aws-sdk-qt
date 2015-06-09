@@ -23,6 +23,7 @@
 #include "qtawsglobal.h"
 
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 class QByteArray;
 class QNetworkReply;
@@ -35,6 +36,7 @@ class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
     QByteArray data;
+    QNetworkReply::NetworkError error;
     QNetworkAccessManager::Operation operation;
     QNetworkReply * reply; ///< Network reply, if any, for this request.
 

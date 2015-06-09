@@ -56,6 +56,12 @@ QByteArray AwsAbstractRequest::data() const
     return d->data;
 }
 
+QNetworkReply::NetworkError AwsAbstractRequest::error() const
+{
+    Q_D(const AwsAbstractRequest);
+    return (d->reply) ? d->reply->error() : d->error;
+}
+
 // Overrides should sign, only if relevant.
 
 QNetworkRequest AwsAbstractRequest::networkRequest(
@@ -115,7 +121,7 @@ void AwsAbstractRequest::abort()
     if (d->reply) {
         d->reply->abort();
     } else {
-        /// @todo set some "aborted" flag / error code.
+        d->error = QNetworkReply::OperationCanceledError;
         emit finished();
     }
 }
@@ -167,7 +173,8 @@ void AwsAbstractRequest::setReply(QNetworkReply * const reply)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
-    : operation(QNetworkAccessManager::GetOperation), reply(NULL), q_ptr(q)
+    : error(QNetworkReply::NoError), operation(QNetworkAccessManager::GetOperation),
+      reply(NULL), q_ptr(q)
 {
 
 }
