@@ -44,6 +44,7 @@ public:
     virtual QDateTime expiration() const;
     virtual bool isExpired() const;
     virtual bool isRefreshable() const;
+    virtual bool isValid() const;
 
 public slots:
     virtual bool refresh();

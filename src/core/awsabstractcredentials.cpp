@@ -132,6 +132,13 @@ bool AwsAbstractCredentials::isRefreshable() const
     return false;
 }
 
+/// @todo  Do we want this??
+bool AwsAbstractCredentials::isValid() const
+{
+    return ((!accessKeyId().isEmpty()) && (!secretKey().isEmpty()) &&
+            (!token().isEmpty()) && (!isExpired()));
+}
+
 /**
  * @brief  Refresh this object's credentials.
  *
