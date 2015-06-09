@@ -49,22 +49,37 @@ SqsClient::~SqsClient()
     delete d_ptr;
 }
 
-void SqsClient::createQueue()
+void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
 {
-    Q_D(SqsClient);
-    SqsRequest * const request = new SqsRequest; // d->createQueueRequest();
-    connect(request, SIGNAL(finished()), this, SLOT(createQueueFinished()));
+    Q_ASSERT(request->inherits(SqsRequest::metaObject()->className()));
+    SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
+
+    //switch (sqsRequest->action())
+
+    if (request->inherits(SqsCreateQueueRequest::metaObject()->className())) {
+        SqsCreateQueueRequest * r = qobject_cast<SqsCreateQueueRequest *>(request);
+        emit queueCreated(r);
+    }
+
+    AwsAbstractClient::onRequestFinished(request);
+}
+
+void SqsClient::createQueue(const QString &queueName)
+{
+    SqsDeleteQueueRequest * const request = new SqsDeleteQueueRequest(this);
+    /// @todo setup the request.
     send(request);
 }
 
-void SqsClient::createQueueFinished()
+/// @todo This will be done in a SqsCreateQueueRequest class?
+/*void SqsClient::createQueueFinished()
 {
     SqsRequest * const request = qobject_cast<SqsRequest *>(sender());
     Q_ASSERT(request);
     if (request->error() == QNetworkReply::NoError) {
         request->reply()->readAll(); ///< @todo Parse this :)
     } /// @todo else { ??? }
-}
+}*/
 
 /**
  * @internal

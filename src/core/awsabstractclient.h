@@ -44,7 +44,7 @@ public:
     virtual ~AwsAbstractClient();
 
     QNetworkAccessManager * networkAccessManager() const;
-
+    virtual bool send(AwsAbstractRequest * const request);
     void setNetworkAccessManager(QNetworkAccessManager * const manager);
 
 public slots:
@@ -52,20 +52,17 @@ public slots:
 
 protected:
     virtual AwsAbstractCredentials * credentials() const;
-    virtual bool send(AwsAbstractRequest * const request);
+    virtual void onRequestFinished(AwsAbstractRequest * const request);
     virtual AwsAbstractSignature * signature() const;
 
 protected slots:
     void credentialsChanged();
-    void requestDestroyed(QObject * request = NULL);
+    void requestDestroyed(QObject * const object = NULL);
+    void requestFinished(QObject * const object = NULL);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)
     AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
-
-signals:
-    void requestAborted(const AwsAbstractRequest * request);
-    void requestSent(const AwsAbstractRequest * request, QNetworkReply * reply);
 
 };
 

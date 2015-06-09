@@ -64,6 +64,29 @@ QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
     return d->networkAccessManager;
 }
 
+bool AwsAbstractClient::send(AwsAbstractRequest * const request)
+{
+    Q_ASSERT(request.isValid());
+    Q_D(AwsAbstractClient);
+    Q_ASSERT(d->networkAccessManager);
+
+    if ((!d->credentials) || (!d->networkAccessManager) || (!d->signature)) {
+        return false;
+    }
+
+    connect(request, SIGNAL(finished()), this, SLOT(requestFinished()));
+
+    if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
+        d->requestsPendingCredentials.insert(request);
+        connect(request, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*)));
+        d->credentials->refresh();
+        return true; /// @todo What to return here?
+    }
+
+    request->send(d->networkAccessManager, *d->signature, *d->credentials);
+    return (request->reply() != NULL);
+}
+s
 /**
  * @brief Set the network access manager for this AWS service object.
  *
@@ -90,24 +113,9 @@ AwsAbstractCredentials * AwsAbstractClient::credentials() const
     return d->credentials;
 }
 
-bool AwsAbstractClient::send(AwsAbstractRequest * const request)
+void AwsAbstractClient::onRequestFinished(AwsAbstractRequest * const request)
 {
-    Q_D(AwsAbstractClient);
-    Q_ASSERT(d->networkAccessManager);
-
-    if ((!d->credentials) || (!d->networkAccessManager) || (!d->signature)) {
-        return false;
-    }
-
-    if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
-        d->requestsPendingCredentials.insert(request);
-        connect(request, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*)));
-        d->credentials->refresh();
-        return true; /// @todo What to return here?
-    }
-
-    request->send(d->networkAccessManager, *d->signature, *d->credentials);
-    return (request->reply() != NULL);
+    Q_UNUSED(request)
 }
 
 AwsAbstractSignature * AwsAbstractClient::signature() const
@@ -126,17 +134,28 @@ void AwsAbstractClient::credentialsChanged()
             request->send(d->networkAccessManager, *d->signature, *d->credentials);
         }
     }
+    d->requestsPendingCredentials.clear();
 }
 
-void AwsAbstractClient::requestDestroyed(QObject * request)
+void AwsAbstractClient::requestDestroyed(QObject * object)
 {
-    if (!request) {
-        request = sender();
-    }
+    AwsAbstractRequest * const request =
+        qobject_cast<AwsAbstractRequest * const>(object ? object : sender());
 
     // Remove the request from our pending-requests list (if present).
     Q_D(AwsAbstractClient);
-    d->requestsPendingCredentials.remove(qobject_cast<AwsAbstractRequest * const>(request));
+    d->requestsPendingCredentials.remove(request);
+}
+
+void AwsAbstractClient::requestFinished(QObject * object)
+{
+    AwsAbstractRequest * const request =
+        qobject_cast<AwsAbstractRequest * const>(object ? object : sender());
+
+    // Remove the request from our pending-requests list (if present).
+    Q_D(AwsAbstractClient);
+    d->requestsPendingCredentials.remove(request);
+    onRequestFinished(request);
 }
 
 /**
