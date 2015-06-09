@@ -43,7 +43,7 @@ public:
 
     virtual ~AwsAbstractRequest();
 
-    QByteArray data() const;
+    QByteArray data() const; ///< @todo Support other data types?
 
     QNetworkReply::NetworkError error() const;
 

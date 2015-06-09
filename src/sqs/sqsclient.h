@@ -42,7 +42,27 @@ public:
     virtual ~SqsClient();
 
 public slots:
-    void createQueue(); ///< @todo Will need some params; just an example for now.
+    void addPermission(const QStringList &awsAccountIds, const QStringList actionNames, const QString &label, const QString &queueUrl);
+    void changeMessageVisibility(const QString &queueUrl, const QString &receiptHandle, const int visbilityTimeout);
+    void changeMessageVisibilityBatch(const QString &queueUrl, const QStringList &receiptHandles, const int visbilityTimeout);
+    void createQueue(const QString &queueName, const QStringMap &attributes = QStringMap());
+    void createQueue(const SqsCreateQueueRequest &request);
+    void deleteMessage(const QString &queueUrl, const QString &receiptHandle);
+    void deleteMessageBatch(const QString &queueUrl, const QStringList &receiptHandles);
+    void deleteQueue(const QString &queueUrl);
+    void getQueueUrl(const QString &queueName, const QString &queueOwnerAWSAccountId = QString());
+    void listDeadLetterSourceQueues(const QString &queueUrl);
+    void listQueues(const QString &queueNamePrefix = QString());
+    void purgeQueue(const QString &queueUrl);
+    void receiveMessage(const QString &queueName/*, ...*/);
+    void receiveMessage(const SqsReceiveMessageRequest &request);
+    void removePermission(const QString &lablel, const QString &queueUrl);
+    void sendMessage(const QString &queueUrl, const QByteArray &message/*, ...*/);
+    void sendMessage(const SqsSendMessageRequest &request);
+    void sendMessageBatch(const QString &queueUrl, const QByteArrayList &messages/*, ...*/);
+    void sendMessageBatch(const SqsSendMessageRequestList &requests);
+    void setQueueAttributes(const QString &queueUrl, const QStringMap &attributes = QStringMap());
+    void setQueueAttributes(const SqsSetQueueAttributesRequest &request);
 
 protected slots:
     void createQueueFinished();
