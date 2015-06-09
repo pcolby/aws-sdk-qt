@@ -53,22 +53,8 @@ void SqsClient::createQueue()
 {
     Q_D(SqsClient);
     SqsRequest * const request = new SqsRequest; // d->createQueueRequest();
-    connect(request, SIGNAL(aborted(QNetworkReply::NetworkError)),
-            this, SLOT(createQueueAborted(QNetworkReply::NetworkError)));
-    connect(request, SIGNAL(started(QNetworkReply*)),
-            this, SLOT(createQueueStarted(QNetworkReply*const)));
+    connect(request, SIGNAL(finished()), this, SLOT(createQueueFinished()));
     send(request);
-}
-
-void SqsClient::createQueueAborted(const QNetworkReply::NetworkError &code)
-{
-    // emit What to do here? maybe this can be merged with createQueueFinished?
-}
-
-void SqsClient::createQueueStarted(QNetworkReply * const reply)
-{
-    // perhaps cut out this middleman by add request signal: finished.
-    connect(reply, SIGNAL(finished()), this, SLOT(createQueueFinished()));
 }
 
 void SqsClient::createQueueFinished()

@@ -46,7 +46,7 @@ public slots:
 
 protected slots:
     void createQueueAborted(const QNetworkReply::NetworkError &code);
-    void createQueueStarted(QNetworkReply * const reply);
+    void createQueueStarted(QNetworkReply * reply);
     void createQueueFinished();
 
 private:

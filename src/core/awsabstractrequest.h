@@ -63,7 +63,8 @@ protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
 
 protected slots:
-    void replyDestroyed(QObject * const reply);
+    void replyDestroyed(QObject * reply = NULL);
+    void replyFinished();
     void setReply(QNetworkReply * const reply);
 
 private:

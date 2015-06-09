@@ -119,12 +119,21 @@ void AwsAbstractRequest::abort()
     }
 }
 
-void AwsAbstractRequest::replyDestroyed(QObject * const reply)
+void AwsAbstractRequest::replyDestroyed(QObject * reply)
 {
+    if (!reply) {
+        reply = sender();
+    }
+
     Q_D(AwsAbstractRequest);
     if (d->reply == reply) {
         d->reply = NULL;
     }
+}
+
+void AwsAbstractRequest::replyFinished()
+{
+    emit finished();
 }
 
 void AwsAbstractRequest::setReply(QNetworkReply * const reply)
@@ -132,7 +141,8 @@ void AwsAbstractRequest::setReply(QNetworkReply * const reply)
     Q_D(AwsAbstractRequest);
     Q_ASSERT(!d->reply);
     d->reply = reply;
-    connect(reply, SIGNAL(destroyed(QObject*)), SLOT());
+    connect(reply, SIGNAL(destroyed(QObject*)), SLOT(replyDestroyed(QObject*const)));
+    connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
     emit replyChanged(reply);
 }
 
