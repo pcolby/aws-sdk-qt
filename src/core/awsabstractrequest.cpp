@@ -109,15 +109,18 @@ void AwsAbstractRequest::send(QNetworkAccessManager * const manager,
     }
 }
 
-// @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
-
 void AwsAbstractRequest::abort()
 {
     Q_D(AwsAbstractRequest);
     if (d->reply) {
         d->reply->abort();
+    } else {
+        /// @todo set some "aborted" flag / error code.
+        emit finished();
     }
 }
+
+// @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
 
 void AwsAbstractRequest::replyDestroyed(QObject * reply)
 {
