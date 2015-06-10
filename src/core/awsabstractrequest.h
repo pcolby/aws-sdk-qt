@@ -47,6 +47,8 @@ public:
 
     QNetworkReply::NetworkError error() const;
 
+    virtual bool isValid() const = 0;
+
     virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
                                            const AwsAbstractCredentials &credentials) const;
 

@@ -23,6 +23,8 @@
 #include "awsabstractrequest_p.h"
 #include "sqsrequest.h"
 
+#include <QVariantMap>
+
 class QUrl;
 class QUrlQuery;
 
@@ -32,8 +34,8 @@ class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
     SqsRequest::SqsAction action;
+    QVariantMap additionalParameters;
     QString apiVersion;
-
     SqsRequestPrivate(SqsRequest * const q);
 
     QUrlQuery query() const;

@@ -37,11 +37,12 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsRequest::SqsRequest(QObject * const parent)
+SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
     : AwsAbstractRequest(parent), d_ptr(new SqsRequestPrivate(this))
 {
-    //Q_D(SqsRequest);
+    Q_D(SqsRequest);
     setApiVersion(QLatin1String("2012-11-05"));
+    d->action = action;
 }
 
 SqsRequest::~SqsRequest()
@@ -65,7 +66,21 @@ QString SqsRequest::apiVersion() const
 QNetworkRequest SqsRequest::request() const
 {
     Q_D(const SqsRequest);
-    QNetworkRequest request(d->url());
+    //QNetworkRequest request(d->url());
+
+    QUrlQuery query;
+    query.addQueryItem(QLatin1String("action"), actionString());
+    query.addQueryItem(QLatin1String("version"), apiVersion());
+    for (QVariantMap::const_iterator iter = d->additionalParameters.cbegin();
+         iter != d->additionalParameters.cend(); ++iter) {
+        // if List ..
+        // else
+        query.addQueryItem(iter.key(), iter.value().asString());
+    }
+
+    QUrl url; /// @todo Endpoint.
+    url.setQuery(urlQuery);
+    /// @todo Add action, apiVersiol
     return request;
 }
 

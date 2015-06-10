@@ -56,16 +56,14 @@ public:
         SetQueueAttributesSqsAction
     };
 
-    SqsRequest(QObject * const parent = 0);
+    SqsRequest(const SqsAction action, QObject * const parent = 0);
 
     virtual ~SqsRequest();
 
     SqsAction action() const;
-    /// @todo  auth params.
+    QString actionString() const;
     QString apiVersion() const;
     QNetworkRequest request() const;
-
-    bool isValid() const;
 
     void setAction(const SqsAction action);
     void setApiVersion(const QString &version);

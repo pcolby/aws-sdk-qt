@@ -79,6 +79,7 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
 void SqsClient::createQueue(const QString &queueName, const QVariantMap &map)
 {
     SqsCreateQueueRequest * const request = NULL; ///< @todo new SqsCreateQueueRequest(this);
+    request.setQueueName(queueName);
     /// @todo setup the request.
     //send(request); ///< @todo Compiler doesn't know the ancestry yet.
 }
