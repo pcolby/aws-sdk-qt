@@ -143,7 +143,7 @@ QString AwsRegion::name(const Region &region)
         case US_West_1:      return QLatin1String("us-west-1");
         case US_West_2:      return QLatin1String("us-west-2");
         default:
-            Q_ASSERT_X(false, "AwsRegion::name", qPrintable(QString::fromLatin1("invalid region: %1").arg(region)));
+            Q_ASSERT_X(false, Q_FUNC_INFO, qPrintable(QString::fromLatin1("invalid region: %1").arg(region)));
     }
     return QString();
 }
@@ -200,7 +200,7 @@ QString AwsRegion::fullName(const Region &region)
         case US_West_1:      return QLatin1String("US West (Northern California) Region");
         case US_West_2:      return QLatin1String("US West (Oregon) Region");
         default:
-            Q_ASSERT_X(false, "AwsRegion::fullName", qPrintable(QString::fromLatin1("invalid region: %1").arg(region)));
+            Q_ASSERT_X(false, Q_FUNC_INFO, qPrintable(QString::fromLatin1("invalid region: %1").arg(region)));
     }
     return QString();
 }
@@ -269,7 +269,7 @@ AwsRegion::Region AwsRegion::fromName(const QString &regionName)
     if (lowerName == QLatin1String("us-gov-west-1"))  return US_Gov_West_1;
     if (lowerName == QLatin1String("us-west-1"))      return US_West_1;
     if (lowerName == QLatin1String("us-west-2"))      return US_West_2;
-    Q_ASSERT_X(false, "AwsRegion::fromName", qPrintable(QString::fromLatin1("invalid region name: %1").arg(regionName)));
+    Q_ASSERT_X(false, Q_FUNC_INFO, qPrintable(QString::fromLatin1("invalid region name: %1").arg(regionName)));
     return InvalidRegion;
 }
 
