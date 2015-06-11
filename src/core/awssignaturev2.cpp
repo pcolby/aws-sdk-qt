@@ -213,7 +213,7 @@ QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algo
         case QCryptographicHash::Sha1:     return "HmacSHA1";
         case QCryptographicHash::Sha256:   return "HmacSHA256";
         default:
-            Q_ASSERT_X(false, "AwsSignatureV2Private::signatureMethod", "invalid algorithm");
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid algorithm");
             return "invalid-algorithm";
     }
 }

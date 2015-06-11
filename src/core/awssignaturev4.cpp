@@ -125,7 +125,7 @@ QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash:
         case QCryptographicHash::Sha384:   return "AWS4-HMAC-SHA384";
         case QCryptographicHash::Sha512:   return "AWS4-HMAC-SHA512";
         default:
-            Q_ASSERT_X(false, "AwsSignatureV4Private::algorithmDesignation", "invalid algorithm");
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid algorithm");
             return "invalid-algorithm";
     }
 }
