@@ -72,9 +72,6 @@ public slots:
 protected:
     virtual void onRequestFinished(AwsAbstractRequest * const request);
 
-protected slots:
-    void createQueueFinished();
-
 private:
     Q_DECLARE_PRIVATE(SqsClient)
     SqsClientPrivate * const d_ptr; ///< Internal d-pointer.

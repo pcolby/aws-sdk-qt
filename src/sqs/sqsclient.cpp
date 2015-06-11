@@ -53,17 +53,19 @@ SqsClient::~SqsClient()
 
 void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
 {
-    Q_ASSERT(request->inherits(SqsRequest::metaObject()->className()));
     SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
-    switch (sqsRequest->action()) {
-        case SqsRequest::AddPermissionSqsAction:
-            /// @todo
-            break;
-        case SqsRequest::CreateQueueSqsAction:
-            emit queueCreated(qobject_cast<SqsCreateQueueRequest *>(request));
-            break;
-        default:
-            ; /// @todo Q_ASSERT
+    Q_ASSERT(sqsRequest);
+    if (sqsRequest) {
+        switch (sqsRequest->action()) {
+            case SqsRequest::AddPermissionSqsAction:
+                /// @todo
+                break;
+            case SqsRequest::CreateQueueSqsAction:
+                emit queueCreated(qobject_cast<SqsCreateQueueRequest *>(request));
+                break;
+            default:
+                ; /// @todo Q_ASSERT
+        }
     }
     AwsAbstractClient::onRequestFinished(request);
 }
@@ -84,16 +86,6 @@ void SqsClient::createQueue(const QString &queueName, const QVariantMap &map)
     /// @todo setup the request.
     send(request);
 }
-
-/// @todo This will be done in a SqsCreateQueueRequest class?
-/*void SqsClient::createQueueFinished()
-{
-    SqsRequest * const request = qobject_cast<SqsRequest *>(sender());
-    Q_ASSERT(request);
-    if (request->error() == QNetworkReply::NoError) {
-        request->reply()->readAll(); ///< @todo Parse this :)
-    } /// @todo else { ??? }
-}*/
 
 /**
  * @internal

@@ -66,7 +66,7 @@ QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
 
 bool AwsAbstractClient::send(AwsAbstractRequest * const request)
 {
-    Q_ASSERT(request.isValid());
+    Q_ASSERT(request->isValid());
     Q_D(AwsAbstractClient);
     Q_ASSERT(d->networkAccessManager);
 

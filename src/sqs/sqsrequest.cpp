@@ -80,7 +80,7 @@ QString SqsRequest::actionString() const
         SqsActionToString(SendMessageBatchSqsAction);
         SqsActionToString(SetQueueAttributesSqsAction);
         default:
-            Q_ASSERT_X(false, Q_FUNC_INFO, qPrintable("invalid SQS action"));
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid SQS action");
     }
     #undef SqsActionToString
     return QString();
