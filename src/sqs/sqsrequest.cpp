@@ -57,31 +57,39 @@ SqsRequest::SqsAction SqsRequest::action() const
     return d->action;
 }
 
+QString SqsRequest::actionString() const
+{
+    #define SqsActionToString(action) \
+        case SqsRequest::action: return QLatin1String(#action)
+    switch (action()) {
+        SqsActionToString(AddPermissionSqsAction);
+        SqsActionToString(ChangeMessageVisibilitySqsAction);
+        SqsActionToString(ChangeMessageVisibilityBatchSqsAction);
+        SqsActionToString(CreateQueueSqsAction);
+        SqsActionToString(DreateQueueSqsAction);
+        SqsActionToString(DeleteMessageSqsAction);
+        SqsActionToString(DeleteMessageBatchSqsAction);
+        SqsActionToString(DeleteQueueSqsAction);
+        SqsActionToString(GetQueueUrlSqsAction);
+        SqsActionToString(ListDeadLetterSourceQueuesSqsAction);
+        SqsActionToString(ListQueuesSqsAction);
+        SqsActionToString(PurgeQueueSqsAction);
+        SqsActionToString(ReceiveMessageSqsAction);
+        SqsActionToString(RemovePermissionSqsAction);
+        SqsActionToString(SendMessageSqsAction);
+        SqsActionToString(SendMessageBatchSqsAction);
+        SqsActionToString(SetQueueAttributesSqsAction);
+        default:
+            Q_ASSERT_X(false, Q_FUNC_INFO, qPrintable("invalid SQS action"));
+    }
+    #undef SqsActionToString
+    return QString();
+}
+
 QString SqsRequest::apiVersion() const
 {
     Q_D(const SqsRequest);
     return d->apiVersion;
-}
-
-QNetworkRequest SqsRequest::request() const
-{
-    Q_D(const SqsRequest);
-    //QNetworkRequest request(d->url());
-
-    QUrlQuery query;
-    query.addQueryItem(QLatin1String("action"), actionString());
-    query.addQueryItem(QLatin1String("version"), apiVersion());
-    for (QVariantMap::const_iterator iter = d->additionalParameters.cbegin();
-         iter != d->additionalParameters.cend(); ++iter) {
-        // if List ..
-        // else
-        query.addQueryItem(iter.key(), iter.value().asString());
-    }
-
-    QUrl url; /// @todo Endpoint.
-    url.setQuery(urlQuery);
-    /// @todo Add action, apiVersiol
-    return request;
 }
 
 void SqsRequest::setAction(const SqsAction action)
@@ -96,9 +104,42 @@ void SqsRequest::setApiVersion(const QString &version)
     d->apiVersion = version;
 }
 
+int SqsRequest::clearParameter(const QString &name)
+{
+    Q_D(SqsRequest);
+    return d->additionalParameters.remove(name);
+}
+
+QVariant SqsRequest::parameter(const QString &name, const QVariant &defaultValue) const
+{
+    Q_D(const SqsRequest);
+    return d->additionalParameters.value(name, defaultValue);
+}
+
+void SqsRequest::setParameter(const QString &name, const QVariant &value)
+{
+    Q_D(SqsRequest);
+    d->additionalParameters.insert(name, value);
+}
+
 QNetworkRequest SqsRequest::unsignedRequest() const
 {
-    return QNetworkRequest(); ///< @todo Not yet implemented.
+    Q_D(const SqsRequest);
+    //QNetworkRequest request(d->url());
+
+    QUrlQuery query;
+    query.addQueryItem(QLatin1String("action"), actionString());
+    query.addQueryItem(QLatin1String("version"), apiVersion());
+    for (QVariantMap::const_iterator iter = d->additionalParameters.cbegin();
+         iter != d->additionalParameters.cend(); ++iter) {
+        // if List ..
+        // else
+        query.addQueryItem(iter.key(), iter.value().toString());
+    }
+
+    QUrl url; /// @todo Endpoint.
+    url.setQuery(query);
+    return QNetworkRequest(url);
 }
 
 /**

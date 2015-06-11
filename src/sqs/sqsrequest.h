@@ -63,12 +63,15 @@ public:
     SqsAction action() const;
     QString actionString() const;
     QString apiVersion() const;
-    QNetworkRequest request() const;
 
     void setAction(const SqsAction action);
     void setApiVersion(const QString &version);
 
 protected:
+    int clearParameter(const QString &name);
+    QVariant parameter(const QString &name, const QVariant &defaultValue = QVariant()) const;
+    void setParameter(const QString &name, const QVariant &value);
+
     virtual QNetworkRequest unsignedRequest() const;
 
 private:

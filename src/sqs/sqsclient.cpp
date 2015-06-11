@@ -19,6 +19,8 @@
 
 #include "sqsclient.h"
 #include "sqsclient_p.h"
+
+#include "sqscreatequeuerequest.h"
 #include "sqsrequest.h"
 
 #include <QNetworkAccessManager>
@@ -78,10 +80,9 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
  */
 void SqsClient::createQueue(const QString &queueName, const QVariantMap &map)
 {
-    SqsCreateQueueRequest * const request = NULL; ///< @todo new SqsCreateQueueRequest(this);
-    request.setQueueName(queueName);
+    SqsCreateQueueRequest * const request = new SqsCreateQueueRequest(queueName, this);
     /// @todo setup the request.
-    //send(request); ///< @todo Compiler doesn't know the ancestry yet.
+    send(request);
 }
 
 /// @todo This will be done in a SqsCreateQueueRequest class?
