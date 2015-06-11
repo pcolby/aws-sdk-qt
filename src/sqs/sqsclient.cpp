@@ -80,10 +80,10 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
  *
  * @param queueName
  */
-void SqsClient::createQueue(const QString &queueName, const QVariantMap &map)
+void SqsClient::createQueue(const QString &queueName, const QVariantMap &attributes)
 {
     SqsCreateQueueRequest * const request = new SqsCreateQueueRequest(queueName, this);
-    /// @todo setup the request.
+    request->setAttributes(attributes);
     send(request);
 }
 

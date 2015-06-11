@@ -19,23 +19,14 @@
 
 #include "sqscreatequeuerequest.h"
 
-#define DELAY_SECONDS QLatin1String("DelaySeconds")
-#define DELAY_SECONDS_MIN 0
-#define DELAY_SECONDS_MAX 900
-
-#define MAXIMUM_MESSAGE_SIZE QLatin1String("MaximumMessageSize")
-#define MAXIMUM_MESSAGE_SIZE_MIN 1024
-#define MAXIMUM_MESSAGE_SIZE_MAX 262144
-
-#define MESSAGE_RETENTION_PERIOD QLatin1String("MessageRetentionPeriod")
-
-#define QUEUE_NAME QLatin1String("QueueName")
-
-#define POLICY QLatin1String("Policy")
-
+#define ATTRIBUTE_ENTRY_N                    QLatin1String("Attribute.%1.%2")
+#define DELAY_SECONDS                        QLatin1String("DelaySeconds")
+#define MAXIMUM_MESSAGE_SIZE                 QLatin1String("MaximumMessageSize")
+#define MESSAGE_RETENTION_PERIOD             QLatin1String("MessageRetentionPeriod")
+#define QUEUE_NAME                           QLatin1String("QueueName")
+#define POLICY                               QLatin1String("Policy")
 #define RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS QLatin1String("ReceiveMessageWaitTimeSeconds")
-
-#define VISIBILITY_TIMEOUT QLatin1String("VisibilityTimeout")
+#define VISIBILITY_TIMEOUT                   QLatin1String("VisibilityTimeout")
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -70,8 +61,17 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(QObject * const parent)
 
 bool SqsCreateQueueRequest::isValid() const
 {
-    /// @todo Validate the queue name?
     return !queueName().isEmpty();
+}
+
+QVariant SqsCreateQueueRequest::attribute(const QString &name, const QVariant &defaultValue) const
+{
+    return attributes().value(name, defaultValue);
+}
+
+QVariantMap SqsCreateQueueRequest::attributes() const
+{
+    return parameter(ATTRIBUTE_ENTRY_N).toMap();
 }
 
 int SqsCreateQueueRequest::delaySeconds() const
@@ -81,72 +81,83 @@ int SqsCreateQueueRequest::delaySeconds() const
 
 int SqsCreateQueueRequest::maximumMessageSize() const
 {
-    return parameter(DELAY_SECONDS, -1).toInt();
+    return attribute(DELAY_SECONDS, -1).toInt();
 }
 
 int SqsCreateQueueRequest::messageRetentionPeriod() const
 {
-    return parameter(MESSAGE_RETENTION_PERIOD, -1).toInt();
+    return attribute(MESSAGE_RETENTION_PERIOD, -1).toInt();
 }
 
 QString SqsCreateQueueRequest::policy() const
 {
-    return parameter(POLICY).toString();
+    return attribute(POLICY).toString();
 }
 
 QString SqsCreateQueueRequest::queueName() const
 {
-    return parameter(QUEUE_NAME).toString();
+    return attribute(QUEUE_NAME).toString();
 }
 
 int SqsCreateQueueRequest::receiveMessageWaitTimeSeconds() const
 {
-    return parameter(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();
+    return attribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();
 }
 
 int SqsCreateQueueRequest::visibilityTimeout() const
 {
-    return parameter(VISIBILITY_TIMEOUT, -1).toInt();
+    return attribute(VISIBILITY_TIMEOUT, -1).toInt();
+}
+
+void SqsCreateQueueRequest::setAttribute(const QString &name, const QVariant &value)
+{
+    QVariantMap attributes = this->attributes();
+    if (value.isNull()) {
+        attributes.remove(name);
+    } else {
+        attributes.insert(name, value);
+    }
+    setAttributes(attributes);
+}
+
+void SqsCreateQueueRequest::setAttributes(const QVariantMap &attributes)
+{
+    setParameter(ATTRIBUTE_ENTRY_N, attributes);
 }
 
 void SqsCreateQueueRequest::setDelaySeconds(int delay)
 {
-    if (delay < 0) {
-        clearParameter(DELAY_SECONDS);
-    } else {
-        Q_ASSERT(delay <= DELAY_SECONDS_MAX);
-        return setParameter(DELAY_SECONDS, qMin(qMax(delay, DELAY_SECONDS_MIN), DELAY_SECONDS_MAX));
-    }
+    setAttribute(DELAY_SECONDS, (delay < 0) ? QVariant() : QVariant(delay));
 }
 
 void SqsCreateQueueRequest::setMaximumMessageSize(int size)
 {
-
+    setAttribute(MAXIMUM_MESSAGE_SIZE, (size < 0) ? QVariant() : QVariant(size));
 }
 
 void SqsCreateQueueRequest::setMessageRetentionPeriod(int period)
 {
-
+    setAttribute(MESSAGE_RETENTION_PERIOD, (period < 0) ? QVariant() : QVariant(period));
 }
 
 void SqsCreateQueueRequest::setPolicy(const QString &policy)
 {
-
+    setAttribute(POLICY, (policy.isEmpty()) ? QVariant() : QVariant(policy));
 }
 
 void SqsCreateQueueRequest::setQueueName(const QString &queueName)
 {
-
+    setParameter(QUEUE_NAME, (queueName.isEmpty()) ? QVariant() : QVariant(queueName));
 }
 
 void SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds(int time)
 {
-
+    setAttribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, (time < 0) ? QVariant() : QVariant(time));
 }
 
 void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
 {
-
+    setAttribute(VISIBILITY_TIMEOUT, (timeout < 0) ? QVariant() : QVariant(timeout));
 }
 
 QTAWS_END_NAMESPACE

@@ -35,6 +35,9 @@ public:
 
     virtual bool isValid() const;
 
+    QVariant attribute(const QString &name, const QVariant &defaultValue = QVariant()) const;
+    QVariantMap attributes() const;
+
     int delaySeconds() const;
     int maximumMessageSize() const;
     int messageRetentionPeriod() const;
@@ -43,14 +46,17 @@ public:
     int receiveMessageWaitTimeSeconds() const;
     int visibilityTimeout() const;
 
-    void setDelaySeconds(int delay = 0);
-    void setMaximumMessageSize(int size = 262144);
-    void setMessageRetentionPeriod(int period = 345600);
-    void setPolicy(const QString &policy = QString());
+    void setAttribute(const QString &name, const QVariant &value);
+    void setAttributes(const QVariantMap &attributes);
+
+    void setDelaySeconds(int delay);
+    void setMaximumMessageSize(int size);
+    void setMessageRetentionPeriod(int period);
+    void setPolicy(const QString &policy);
     /// @todo add setPolicy overload that takes an AwsPolicy object reference.
     void setQueueName(const QString &queueName);
-    void setReceiveMessageWaitTimeSeconds(int time = 0);
-    void setVisibilityTimeout(int timeout = 30);
+    void setReceiveMessageWaitTimeSeconds(int time);
+    void setVisibilityTimeout(int timeout);
 };
 
 QTAWS_END_NAMESPACE
