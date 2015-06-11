@@ -163,20 +163,4 @@ SqsRequestPrivate::SqsRequestPrivate(SqsRequest * const q)
 
 }
 
-QUrlQuery SqsRequestPrivate::query() const
-{
-    QUrlQuery query;
-  //query.addQueryItem(QLatin1String("action"),  action-to-string); ///< @todo
-    query.addQueryItem(QLatin1String("version"), apiVersion);
-    return query;
-}
-
-QUrl SqsRequestPrivate::url() const
-{
-    QUrl url;
-    // need endpoint.
-    url.setQuery(query());
-    return url;
-}
-
 QTAWS_END_NAMESPACE
