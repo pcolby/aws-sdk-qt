@@ -142,12 +142,12 @@ void SqsCreateQueueRequest::setMessageRetentionPeriod(int period)
 
 void SqsCreateQueueRequest::setPolicy(const QString &policy)
 {
-    setAttribute(POLICY, (policy.isEmpty()) ? QVariant() : QVariant(policy));
+    setAttribute(POLICY, (policy.isNull()) ? QVariant() : QVariant(policy));
 }
 
 void SqsCreateQueueRequest::setQueueName(const QString &queueName)
 {
-    setParameter(QUEUE_NAME, (queueName.isEmpty()) ? QVariant() : QVariant(queueName));
+    setParameter(QUEUE_NAME, queueName);
 }
 
 void SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds(int time)
