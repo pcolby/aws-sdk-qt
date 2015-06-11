@@ -64,7 +64,7 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
                 emit queueCreated(qobject_cast<SqsCreateQueueRequest *>(request));
                 break;
             default:
-                ; /// @todo Q_ASSERT
+                Q_ASSERT_X(false, Q_FUNC_INFO, "unknown action");
         }
     }
     AwsAbstractClient::onRequestFinished(request);

@@ -125,16 +125,26 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
 QNetworkRequest SqsRequest::unsignedRequest() const
 {
     Q_D(const SqsRequest);
-    //QNetworkRequest request(d->url());
-
     QUrlQuery query;
     query.addQueryItem(QLatin1String("action"), actionString());
     query.addQueryItem(QLatin1String("version"), apiVersion());
     for (QVariantMap::const_iterator iter = d->additionalParameters.cbegin();
-         iter != d->additionalParameters.cend(); ++iter) {
-        // if List ..
-        // else
-        query.addQueryItem(iter.key(), iter.value().toString());
+         iter != d->additionalParameters.cend(); ++iter)
+    {
+        const QString name = iter.key();
+        //const QVariant value = iter.value();
+        if (iter.value().type() == QVariant::Map) {
+            const QVariantMap map = iter.value().toMap();
+            int index = 1;
+            for (QVariantMap::const_iterator iter = map.cbegin();
+                 iter != d->additionalParameters.cend(); ++iter, ++index)
+            {
+                query.addQueryItem(name.arg(index).arg(QLatin1String("Name")), iter.key());
+                query.addQueryItem(name.arg(index).arg(QLatin1String("Value")), iter.value().toString());
+            }
+        } else {
+            query.addQueryItem(iter.key(), iter.value().toString());
+        }
     }
 
     QUrl url; /// @todo Endpoint.
