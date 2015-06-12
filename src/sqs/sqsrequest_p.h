@@ -34,12 +34,13 @@ class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
     SqsRequest::SqsAction action;
-    QVariantMap additionalParameters;
     QString apiVersion;
+    QVariantMap parameters;
+
     SqsRequestPrivate(SqsRequest * const q);
 
-    QUrlQuery query() const;
-    QUrl url() const;
+    QUrlQuery query() const; ///< @todo
+    QUrl url() const; ///< @todo
 
 private:
     Q_DECLARE_PUBLIC(SqsRequest)

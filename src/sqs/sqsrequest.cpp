@@ -107,19 +107,19 @@ void SqsRequest::setApiVersion(const QString &version)
 int SqsRequest::clearParameter(const QString &name)
 {
     Q_D(SqsRequest);
-    return d->additionalParameters.remove(name);
+    return d->parameters.remove(name);
 }
 
 QVariant SqsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
     Q_D(const SqsRequest);
-    return d->additionalParameters.value(name, defaultValue);
+    return d->parameters.value(name, defaultValue);
 }
 
 void SqsRequest::setParameter(const QString &name, const QVariant &value)
 {
     Q_D(SqsRequest);
-    d->additionalParameters.insert(name, value);
+    d->parameters.insert(name, value);
 }
 
 QNetworkRequest SqsRequest::unsignedRequest() const
@@ -128,8 +128,8 @@ QNetworkRequest SqsRequest::unsignedRequest() const
     QUrlQuery query;
     query.addQueryItem(QLatin1String("action"), actionString());
     query.addQueryItem(QLatin1String("version"), apiVersion());
-    for (QVariantMap::const_iterator iter = d->additionalParameters.cbegin();
-         iter != d->additionalParameters.cend(); ++iter)
+    for (QVariantMap::const_iterator iter = d->parameters.cbegin();
+         iter != d->parameters.cend(); ++iter)
     {
         const QString name = iter.key();
         //const QVariant value = iter.value();
@@ -137,7 +137,7 @@ QNetworkRequest SqsRequest::unsignedRequest() const
             const QVariantMap map = iter.value().toMap();
             int index = 1;
             for (QVariantMap::const_iterator iter = map.cbegin();
-                 iter != d->additionalParameters.cend(); ++iter, ++index)
+                 iter != d->parameters.cend(); ++iter, ++index)
             {
                 query.addQueryItem(name.arg(index).arg(QLatin1String("Name")), iter.key());
                 query.addQueryItem(name.arg(index).arg(QLatin1String("Value")), iter.value().toString());
@@ -147,7 +147,7 @@ QNetworkRequest SqsRequest::unsignedRequest() const
         }
     }
 
-    QUrl url; /// @todo Endpoint.
+    QUrl url;/// @todo = AwsEndpoint::getEndpoint("ap-southeast-2", "sqs");
     url.setQuery(query);
     return QNetworkRequest(url);
 }
