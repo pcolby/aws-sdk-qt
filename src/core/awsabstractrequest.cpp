@@ -85,6 +85,12 @@ QNetworkReply * AwsAbstractRequest::reply()
     return d->reply;
 }
 
+const AwsAbstractResponse * AwsAbstractRequest::response() const
+{
+    Q_D(const AwsAbstractRequest);
+    return d->response;
+}
+
 void AwsAbstractRequest::send(QNetworkAccessManager * const manager,
                               const AwsAbstractSignature &signature,
                               const AwsAbstractCredentials &credentials)
@@ -124,7 +130,9 @@ void AwsAbstractRequest::abort()
     }
 }
 
-// @doc virtual QNetwrorkReqeust unsignedRequest() = 0;
+/// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
+
+/// @todo Doc AwsAbstractResponse * AwsAbstractRequest::parseResponse() = 0;
 
 void AwsAbstractRequest::replyDestroyed(QObject * reply)
 {
@@ -140,6 +148,11 @@ void AwsAbstractRequest::replyDestroyed(QObject * reply)
 
 void AwsAbstractRequest::replyFinished()
 {
+    Q_D(AwsAbstractRequest);
+    Q_ASSERT(d->reply);
+    if (error() == QNetworkReply::NoError) {
+        d->response = parseResponse(d->reply);
+    }
     emit finished();
 }
 
@@ -172,7 +185,7 @@ void AwsAbstractRequest::setReply(QNetworkReply * const reply)
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
     : error(QNetworkReply::NoError), operation(QNetworkAccessManager::GetOperation),
-      reply(NULL), q_ptr(q)
+      reply(NULL), response(NULL), q_ptr(q)
 {
 
 }

@@ -31,6 +31,7 @@ class QNetworkReply;
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractRequest;
+class AwsAbstractResponse;
 
 class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
@@ -39,6 +40,7 @@ public:
     QNetworkReply::NetworkError error;
     QNetworkAccessManager::Operation operation;
     QNetworkReply * reply; ///< Network reply, if any, for this request.
+    AwsAbstractResponse * response;
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
 

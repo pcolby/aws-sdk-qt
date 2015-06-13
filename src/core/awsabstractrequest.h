@@ -33,6 +33,7 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractCredentials;
 class AwsAbstractRequestPrivate;
+class AwsAbstractResponse;
 class AwsAbstractSignature;
 
 class QTAWS_EXPORT AwsAbstractRequest : public QObject {
@@ -56,6 +57,8 @@ public:
 
     virtual QNetworkReply * reply(); // 0 if not set.
 
+    const AwsAbstractResponse * response() const;
+
     virtual void send(QNetworkAccessManager * const manager,
                       const AwsAbstractSignature &signature,
                       const AwsAbstractCredentials &credentials);
@@ -65,6 +68,7 @@ public slots:
 
 protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
+    virtual AwsAbstractResponse * parseResponse(QNetworkReply * const reply) = 0;
 
 protected slots:
     void replyDestroyed(QObject * reply = NULL);

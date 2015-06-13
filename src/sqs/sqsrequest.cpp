@@ -122,6 +122,11 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
+AwsAbstractResponse * SqsRequest::parseResponse(QNetworkReply * const reply)
+{
+    return NULL; /// @todo Implement Sqs*Response class(es).
+}
+
 QNetworkRequest SqsRequest::unsignedRequest() const
 {
     Q_D(const SqsRequest);

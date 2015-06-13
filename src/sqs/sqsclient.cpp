@@ -56,11 +56,8 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
     SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
     Q_ASSERT(sqsRequest);
     if (sqsRequest) {
-        /// @todo Parse the response.
-
-        /// @todo Allow the *Request to parse the response?
-
-        /// @todo Handle errors in some standardised way.
+        /// @todo emit signal(qobject_cast<Sqs##action##Request *>(request),
+        ///                   qobject_cast<Sqs##action##Response *>(response));
 
         #define CaseActionEmitSignal(action, signal) \
             case SqsRequest::action##SqsAction: \
