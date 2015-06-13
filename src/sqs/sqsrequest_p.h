@@ -39,9 +39,6 @@ public:
 
     SqsRequestPrivate(SqsRequest * const q);
 
-    QUrlQuery query() const; ///< @todo
-    QUrl url() const; ///< @todo
-
 private:
     Q_DECLARE_PUBLIC(SqsRequest)
     SqsRequest * const q_ptr; ///< Internal q-pointer.
