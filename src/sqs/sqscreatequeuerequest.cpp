@@ -91,8 +91,6 @@ int SqsCreateQueueRequest::messageRetentionPeriod() const
 
 QString SqsCreateQueueRequest::policy() const
 {
-    /// @todo Verify that when v::isNULL, then v.toString().isNull() too.
-    ///       (this will be covered by the relevant unit test eventually).
     return attribute(POLICY).toString();
 }
 
