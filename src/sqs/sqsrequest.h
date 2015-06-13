@@ -45,6 +45,7 @@ public:
         DeleteMessageSqsAction,
         DeleteMessageBatchSqsAction,
         DeleteQueueSqsAction,
+        GetQueueAttributesSqsAction,
         GetQueueUrlSqsAction,
         ListDeadLetterSourceQueuesSqsAction,
         ListQueuesSqsAction,

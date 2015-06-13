@@ -70,6 +70,7 @@ QString SqsRequest::actionString() const
         SqsActionToString(DeleteMessageSqsAction);
         SqsActionToString(DeleteMessageBatchSqsAction);
         SqsActionToString(DeleteQueueSqsAction);
+        SqsActionToString(GetQueueAttributesSqsAction);
         SqsActionToString(GetQueueUrlSqsAction);
         SqsActionToString(ListDeadLetterSourceQueuesSqsAction);
         SqsActionToString(ListQueuesSqsAction);
