@@ -66,7 +66,6 @@ QString SqsRequest::actionString() const
         SqsActionToString(ChangeMessageVisibilitySqsAction);
         SqsActionToString(ChangeMessageVisibilityBatchSqsAction);
         SqsActionToString(CreateQueueSqsAction);
-        SqsActionToString(DreateQueueSqsAction);
         SqsActionToString(DeleteMessageSqsAction);
         SqsActionToString(DeleteMessageBatchSqsAction);
         SqsActionToString(DeleteQueueSqsAction);

@@ -56,16 +56,32 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
     SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
     Q_ASSERT(sqsRequest);
     if (sqsRequest) {
+        #define CaseActionEmitSignal(action, signal) \
+            case SqsRequest::action##SqsAction: \
+                emit signal(qobject_cast<Sqs##action##Request *>(request)); \
+                break
         switch (sqsRequest->action()) {
-            case SqsRequest::AddPermissionSqsAction:
-                /// @todo
-                break;
-            case SqsRequest::CreateQueueSqsAction:
-                emit queueCreated(qobject_cast<SqsCreateQueueRequest *>(request));
-                break;
+          //CaseActionEmitSignal(AddPermission, permissionAdded);
+          //CaseActionEmitSignal(ChangeMessageVisibility, messageVisibilityChanged);
+          //CaseActionEmitSignal(ChangeMessageVisibilityBatch, messageVisibilityChanged);
+            CaseActionEmitSignal(CreateQueue, queueCreated);
+          //CaseActionEmitSignal(DeleteMessage, messageDeleted);
+          //CaseActionEmitSignal(DeleteMessageBatch, messagesDeleted);
+          //CaseActionEmitSignal(DeleteQueue, queueDeleted);
+          //CaseActionEmitSignal(GetQueueAttributes, queueAttributesRetrieved);
+          //CaseActionEmitSignal(GetQueueUrl, queueUrlRetrieved);
+          //CaseActionEmitSignal(ListDeadLetterSourceQueues, deadLetterSourceQueuesListed);
+          //CaseActionEmitSignal(ListQueues, queuesListed);
+          //CaseActionEmitSignal(PurgeQueue, queuePurged);
+          //CaseActionEmitSignal(ReceiveMessage, messageReceived);
+          //CaseActionEmitSignal(RemovePermission, permissionRemoved);
+          //CaseActionEmitSignal(SendMessage, messageSent);
+          //CaseActionEmitSignal(SendMessageBatch, messagesSent);
+          //CaseActionEmitSignal(SetQueueAttributesSqsAction, queueAttributesSet);
             default:
                 Q_ASSERT_X(false, Q_FUNC_INFO, "unknown action");
         }
+        #undef CaseActionEmitSignal
     }
     AwsAbstractClient::onRequestFinished(request);
 }
