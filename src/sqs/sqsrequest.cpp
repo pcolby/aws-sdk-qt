@@ -60,27 +60,27 @@ SqsRequest::SqsAction SqsRequest::action() const
 QString SqsRequest::actionString() const
 {
     #define SqsActionToString(action) \
-        case SqsRequest::action: return QLatin1String(#action)
+        case SqsRequest::action##SqsAction: return QLatin1String(#action)
     switch (action()) {
-        SqsActionToString(AddPermissionSqsAction);
-        SqsActionToString(ChangeMessageVisibilitySqsAction);
-        SqsActionToString(ChangeMessageVisibilityBatchSqsAction);
-        SqsActionToString(CreateQueueSqsAction);
-        SqsActionToString(DeleteMessageSqsAction);
-        SqsActionToString(DeleteMessageBatchSqsAction);
-        SqsActionToString(DeleteQueueSqsAction);
-        SqsActionToString(GetQueueAttributesSqsAction);
-        SqsActionToString(GetQueueUrlSqsAction);
-        SqsActionToString(ListDeadLetterSourceQueuesSqsAction);
-        SqsActionToString(ListQueuesSqsAction);
-        SqsActionToString(PurgeQueueSqsAction);
-        SqsActionToString(ReceiveMessageSqsAction);
-        SqsActionToString(RemovePermissionSqsAction);
-        SqsActionToString(SendMessageSqsAction);
-        SqsActionToString(SendMessageBatchSqsAction);
-        SqsActionToString(SetQueueAttributesSqsAction);
+        SqsActionToString(AddPermission);
+        SqsActionToString(ChangeMessageVisibility);
+        SqsActionToString(ChangeMessageVisibilityBatch);
+        SqsActionToString(CreateQueue);
+        SqsActionToString(DeleteMessage);
+        SqsActionToString(DeleteMessageBatch);
+        SqsActionToString(DeleteQueue);
+        SqsActionToString(GetQueueAttributes);
+        SqsActionToString(GetQueueUrl);
+        SqsActionToString(ListDeadLetterSourceQueues);
+        SqsActionToString(ListQueues);
+        SqsActionToString(PurgeQueue);
+        SqsActionToString(ReceiveMessage);
+        SqsActionToString(RemovePermission);
+        SqsActionToString(SendMessage);
+        SqsActionToString(SendMessageBatch);
+        SqsActionToString(SetQueueAttributes);
         default:
-            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid SQS action");
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
     #undef SqsActionToString
     return QString();
