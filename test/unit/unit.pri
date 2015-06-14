@@ -49,8 +49,7 @@ unix {
 
     # Generate HTML coverage reports from lcov's tracefile.
     coverage.depends = $$TEMPDIR/coverage.info
-    coverage.commands = genhtml --ignore-errors source \
-                                --output-directory $$shell_quote($$DESTDIR/$$TARGET-coverage) \
+    coverage.commands = genhtml --output-directory $$shell_quote($$DESTDIR/$$TARGET-coverage) \
                                 --prefix $$TOPDIR/src --quiet \
                                 --title $$shell_quote(libqtaws $$VERSION) \
                                 $$shell_quote($$TEMPDIR/coverage.info)
