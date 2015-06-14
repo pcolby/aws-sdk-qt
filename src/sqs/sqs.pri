@@ -6,10 +6,12 @@ HEADERS += \
         sqschangemessagevisibilityrequest.h \
         sqscreatequeuerequest.h \
         sqscreatequeueresponse.h \
+        sqscreatequeueresponse_p.h \
         sqsdeletemessagebatchrequest.h \
         sqsdeletemessagerequest.h \
         sqsdeletequeuerequest.h \
         sqserrorresponse.h \
+        sqserrorresponse_p.h \
         sqsgetqueueattributesrequest.h \
         sqsgetqueueurlrequest.h \
         sqslistdeadlettersourcequeuesrequest.h \

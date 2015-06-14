@@ -18,6 +18,10 @@
 */
 
 #include "sqserrorresponse.h"
+#include "sqserrorresponse_p.h"
+
+#include <QNetworkReply>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -33,7 +37,7 @@ QTAWS_BEGIN_NAMESPACE
  * @param parent       This object's parent.
  */
 SqsErrorResponse::SqsErrorResponse(QObject * const parent)
-    : SqsResponse(parent)
+    : SqsResponse(parent), d_ptr(new SqsErrorResponsePrivate(this))
 {
 
 }
@@ -51,9 +55,43 @@ bool SqsErrorResponse::isValid() const
 
 bool SqsErrorResponse::parse(QNetworkReply * const reply)
 {
-    Q_UNUSED(reply)
-    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
+    Q_D(SqsErrorResponse);
+    QXmlStreamReader xml(reply);
+    xml.readNextStartElement();
+    /// @todo Implement parse
+    //if (xml.name() == "UnknownOperationException");
+    //    d->parseUnknownExceptoin();
+    //if (xml.name() == "ErrorResponse");
+    //    d->parseErrorResponse();
     return false;
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsErrorResponsePrivate
+ *
+ * @brief  Private implementation for SqsErrorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SqsResponse instance.
+ *
+ * @todo   Add operation parameter instead of defaulting to Get?
+ */
+SqsErrorResponsePrivate::SqsErrorResponsePrivate(SqsErrorResponse * const q)
+    : SqsResponsePrivate(q), q_ptr(q)
+{
+
+}
+
+SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
+{
+
 }
 
 QTAWS_END_NAMESPACE

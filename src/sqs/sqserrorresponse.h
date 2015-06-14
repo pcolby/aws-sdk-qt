@@ -24,6 +24,8 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsErrorResponsePrivate;
+
 class QTAWS_EXPORT SqsErrorResponse : public SqsResponse {
     Q_OBJECT
 
@@ -34,6 +36,10 @@ public:
     virtual bool isValid() const;
 
     virtual bool parse(QNetworkReply * const reply);
+
+private:
+    Q_DECLARE_PRIVATE(SqsErrorResponse)
+    SqsErrorResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

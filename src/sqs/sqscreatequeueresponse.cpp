@@ -18,6 +18,7 @@
 */
 
 #include "sqscreatequeueresponse.h"
+#include "sqscreatequeueresponse_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -33,7 +34,7 @@ QTAWS_BEGIN_NAMESPACE
  * @param parent       This object's parent.
  */
 SqsCreateQueueResponse::SqsCreateQueueResponse(QObject * const parent)
-    : SqsResponse(parent)
+    : SqsResponse(parent), d_ptr(new SqsCreateQueueResponsePrivate(this))
 {
 
 }
@@ -49,6 +50,34 @@ bool SqsCreateQueueResponse::parse(QNetworkReply * const reply)
     Q_UNUSED(reply)
     Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
     return false;
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsCreateQueueResponsePrivate
+ *
+ * @brief  Private implementation for SqsCreateQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SqsResponse instance.
+ *
+ * @todo   Add operation parameter instead of defaulting to Get?
+ */
+SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q)
+    : SqsResponsePrivate(q), q_ptr(q)
+{
+
+}
+
+SqsCreateQueueResponsePrivate::~SqsCreateQueueResponsePrivate()
+{
+
 }
 
 QTAWS_END_NAMESPACE
