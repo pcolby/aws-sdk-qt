@@ -57,6 +57,10 @@ public:
     void setQueueName(const QString &queueName);
     void setReceiveMessageWaitTimeSeconds(int time);
     void setVisibilityTimeout(int timeout);
+
+protected:
+    virtual AwsAbstractResponse * parseResponse(QNetworkReply * const reply);
+
 };
 
 QTAWS_END_NAMESPACE

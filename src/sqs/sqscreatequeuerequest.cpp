@@ -160,4 +160,9 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
     setAttribute(VISIBILITY_TIMEOUT, (timeout < 0) ? QVariant() : QVariant(timeout));
 }
 
+AwsAbstractResponse * SqsCreateQueueRequest::parseSuccessResponse(QNetworkReply * const reply)
+{
+    return new SqsCreateQueueResponse(reply);
+}
+
 QTAWS_END_NAMESPACE

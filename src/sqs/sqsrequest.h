@@ -73,7 +73,8 @@ protected:
     QVariant parameter(const QString &name, const QVariant &defaultValue = QVariant()) const;
     void setParameter(const QString &name, const QVariant &value);
 
-    virtual AwsAbstractResponse * parseResponse(QNetworkReply * const reply);
+    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply);
+    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply);
     virtual QNetworkRequest unsignedRequest() const;
 
 private:

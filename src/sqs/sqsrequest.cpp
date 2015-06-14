@@ -23,6 +23,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QUrlQuery>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -122,9 +123,9 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-AwsAbstractResponse * SqsRequest::parseResponse(QNetworkReply * const reply)
+AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply * const reply)
 {
-    return NULL; /// @todo Implement Sqs*Response class(es).
+    return new SqsErrorReponse(reply);
 }
 
 QNetworkRequest SqsRequest::unsignedRequest() const

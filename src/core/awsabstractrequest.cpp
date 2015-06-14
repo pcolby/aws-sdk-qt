@@ -132,7 +132,23 @@ void AwsAbstractRequest::abort()
 
 /// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
 
-/// @todo Doc AwsAbstractResponse * AwsAbstractRequest::parseResponse() = 0;
+AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply)
+{
+    Q_UNUSED(reply)
+    return NULL;
+}
+
+AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply * const reply)
+{
+    return ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
+            ? parseSuccessResponse(reply) : parseErrorResponse(reply);
+}
+
+AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply)
+{
+    Q_UNUSED(reply)
+    return NULL;
+}
 
 void AwsAbstractRequest::replyDestroyed(QObject * reply)
 {
