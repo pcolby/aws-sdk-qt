@@ -29,9 +29,6 @@ install:
   # Restore the addTemp and SHA*AddLength macros (Nokia commented out / renamed).
   - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA224_256AddLength)M/\1/' src/core/sha224-256.c
   - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA384_512AddLength)M/\1/' src/core/sha384-512.c
-  - cat src/core/sha224-256.c
-  - cat src/core/sha384-512.c
-  - cat src/core/qmessageauthenticationcode.cpp
   # Apply the QTBUG-32100 fixes for Qt 5.0 with Clang on Travis CI
   - sudo patch -p0 /usr/include/qt5/QtCore/qabstractitemmodel.h .travis/qabstractitemmodel.diff
   - sudo patch -p0 /usr/include/qt5/QtCore/qurl.h .travis/qurl.diff
@@ -54,5 +51,5 @@ after_success:
   - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
   - sed -i -e "s|^SF:/home/travis/build/libqtaws|SF:$TRAVIS_BUILD_DIR|"
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
-  - lcoveralls --retry-count 5 --trace
+  - lcoveralls --retry-count 5
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
