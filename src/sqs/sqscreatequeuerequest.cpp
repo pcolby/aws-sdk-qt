@@ -18,6 +18,7 @@
 */
 
 #include "sqscreatequeuerequest.h"
+//#include "sqscreatequeueresponse.h"
 
 #define ATTRIBUTE_ENTRY_N                    QLatin1String("Attribute.%1.%2")
 #define DELAY_SECONDS                        QLatin1String("DelaySeconds")
@@ -162,7 +163,8 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
 
 AwsAbstractResponse * SqsCreateQueueRequest::parseSuccessResponse(QNetworkReply * const reply)
 {
-    return new SqsCreateQueueResponse(reply);
+    Q_UNUSED(reply)
+    return NULL; /// @todo new SqsCreateQueueResponse(reply);
 }
 
 QTAWS_END_NAMESPACE

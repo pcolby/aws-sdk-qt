@@ -4,6 +4,8 @@ HEADERS += \
         awsabstractcredentials.h \
         awsabstractrequest.h \
         awsabstractrequest_p.h \
+        awsabstractresponse.h \
+        awsabstractresponse_p.h \
         awsabstractsignature.h \
         awsabstractsignature_p.h \
         awsanonymouscredentials.h \
@@ -29,6 +31,7 @@ SOURCES += \
         awsabstractclient.cpp \
         awsabstractcredentials.cpp \
         awsabstractrequest.cpp \
+        awsabstractresponse.cpp \
         awsabstractsignature.cpp \
         awsanonymouscredentials.cpp \
         awsbasiccredentials.cpp \

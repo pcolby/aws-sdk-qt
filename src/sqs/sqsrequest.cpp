@@ -20,6 +20,8 @@
 #include "sqsrequest.h"
 #include "sqsrequest_p.h"
 
+//#include "sqserrorresponse.h"
+
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QUrlQuery>
@@ -125,7 +127,8 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
 
 AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply * const reply)
 {
-    return new SqsErrorReponse(reply);
+    Q_UNUSED(reply)
+    return NULL; /// @todo new SqsErrorReponse(reply);
 }
 
 QNetworkRequest SqsRequest::unsignedRequest() const
