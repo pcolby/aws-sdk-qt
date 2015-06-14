@@ -30,6 +30,9 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractResponsePrivate;
 
+/// @todo Any benefit to making this inherit from QObject?
+///       Maybe just the parent pointer handling?
+
 class QTAWS_EXPORT AwsAbstractResponse : public QObject {
     Q_OBJECT
 
