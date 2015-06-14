@@ -17,31 +17,23 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSRESPONSE_H
-#define SQSRESPONSE_H
+#ifndef SQSERRORRESPONSE_H
+#define SQSERRORRESPONSE_H
 
-#include "awsabstractresponse.h"
-
-class QNetworkReply;
+#include "sqsresponse.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsResponsePrivate;
-
-class QTAWS_EXPORT SqsResponse : public AwsAbstractResponse {
+class QTAWS_EXPORT SqsErrorResponse : public SqsResponse {
     Q_OBJECT
 
 public:
-    SqsResponse(QObject * const parent = 0);
+    SqsErrorResponse(QObject * const parent = 0);
 
-    virtual ~SqsResponse();
+    virtual bool isErrorResponse() const;
+    virtual bool isValid() const;
 
-private:
-    Q_DECLARE_PRIVATE(SqsResponse)
-    AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
-
-signals:
-    /// @todo Any signals?
+    virtual bool parse(QNetworkReply * const reply);
 
 };
 

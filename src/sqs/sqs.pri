@@ -5,9 +5,11 @@ HEADERS += \
         sqschangemessagevisibilitybatchrequest.h \
         sqschangemessagevisibilityrequest.h \
         sqscreatequeuerequest.h \
+        sqscreatequeueresponse.h \
         sqsdeletemessagebatchrequest.h \
         sqsdeletemessagerequest.h \
         sqsdeletequeuerequest.h \
+        sqserrorresponse.h \
         sqsgetqueueattributesrequest.h \
         sqsgetqueueurlrequest.h \
         sqslistdeadlettersourcequeuesrequest.h \
@@ -29,9 +31,11 @@ SOURCES += \
         sqschangemessagevisibilitybatchrequest.cpp \
         sqschangemessagevisibilityrequest.cpp \
         sqscreatequeuerequest.cpp \
+        sqscreatequeueresponse.cpp \
         sqsdeletemessagebatchrequest.cpp \
         sqsdeletemessagerequest.cpp \
         sqsdeletequeuerequest.cpp \
+        sqserrorresponse.cpp \
         sqsgetqueueattributesrequest.cpp \
         sqsgetqueueurlrequest.cpp \
         sqslistdeadlettersourcequeuesrequest.cpp \

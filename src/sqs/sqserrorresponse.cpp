@@ -17,34 +17,43 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSRESPONSE_H
-#define SQSRESPONSE_H
-
-#include "awsabstractresponse.h"
-
-class QNetworkReply;
+#include "sqserrorresponse.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsResponsePrivate;
+/**
+ * @class  SqsResponse
+ *
+ * @brief  @todo
+ */
 
-class QTAWS_EXPORT SqsResponse : public AwsAbstractResponse {
-    Q_OBJECT
+/**
+ * @brief  Constructs a new SqsResponse object.
+ *
+ * @param parent       This object's parent.
+ */
+SqsErrorResponse::SqsErrorResponse(QObject * const parent)
+    : SqsResponse(parent)
+{
 
-public:
-    SqsResponse(QObject * const parent = 0);
+}
 
-    virtual ~SqsResponse();
+bool SqsErrorResponse::isErrorResponse() const
+{
+    return true;
+}
 
-private:
-    Q_DECLARE_PRIVATE(SqsResponse)
-    AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
+bool SqsErrorResponse::isValid() const
+{
+    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
+    return false;
+}
 
-signals:
-    /// @todo Any signals?
-
-};
+bool SqsErrorResponse::parse(QNetworkReply * const reply)
+{
+    Q_UNUSED(reply)
+    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
+    return false;
+}
 
 QTAWS_END_NAMESPACE
-
-#endif
