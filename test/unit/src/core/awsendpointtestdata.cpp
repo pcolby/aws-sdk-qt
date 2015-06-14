@@ -19,7 +19,7 @@
 
 #include "awsendpointtestdata.h"
 
-#include "../../src/core/awsendpoint.h"
+#include "core/awsendpoint.h"
 
 #include <QDebug>
 

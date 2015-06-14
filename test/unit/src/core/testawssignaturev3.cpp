@@ -19,11 +19,11 @@
 
 #include "testawssignaturev3.h"
 
-#include "../../src/core/awsanonymouscredentials.h"
-#include "../../src/core/awsbasiccredentials.h"
-#include "../../src/core/awssignaturev3.h"
-#include "../../src/core/awssignaturev3_p.h"
-#include "../../src/core/awsendpoint_p.h"
+#include "core/awsanonymouscredentials.h"
+#include "core/awsbasiccredentials.h"
+#include "core/awssignaturev3.h"
+#include "core/awssignaturev3_p.h"
+#include "core/awsendpoint_p.h"
 
 #include <QDebug>
 #include <QDir>

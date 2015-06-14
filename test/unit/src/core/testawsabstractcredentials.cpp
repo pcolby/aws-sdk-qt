@@ -19,7 +19,7 @@
 
 #include "testawsabstractcredentials.h"
 
-#include "../../src/core/awsabstractcredentials.h"
+#include "core/awsabstractcredentials.h"
 
 // Bare minimum concrete mock class.
 class MockCredentials : public AwsAbstractCredentials {

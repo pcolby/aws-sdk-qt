@@ -18,9 +18,9 @@
 */
 
 #include <QTest>
-#include "../../src/core/qtawsglobal.h"
+#include "core/qtawsglobal.h"
 
-class TestAwsSignatureV0 : public QObject {
+class TestAwsSignatureV2 : public QObject {
     Q_OBJECT
 
 private slots:
@@ -32,7 +32,9 @@ private slots:
     void adornRequest_data();
     void adornRequest();
 
-    void canonicalQuery_data();
-    void canonicalQuery();
+    void canonicalRequest_data();
+    void canonicalRequest();
 
+    void signatureMethod_data();
+    void signatureMethod();
 };

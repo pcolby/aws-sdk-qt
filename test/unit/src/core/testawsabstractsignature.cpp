@@ -19,9 +19,9 @@
 
 #include "testawsabstractsignature.h"
 
-#include "../../src/core/awsabstractsignature.h"
-#include "../../src/core/awsabstractsignature_p.h"
-#include "../../src/core/awsbasiccredentials.h"
+#include "core/awsabstractsignature.h"
+#include "core/awsabstractsignature_p.h"
+#include "core/awsbasiccredentials.h"
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
