@@ -40,8 +40,9 @@ unix {
     lcov.commands = lcov --capture --directory $$shell_quote($$TEMPDIR) \
                          --output $$shell_quote($$TEMPDIR/coverage.info) \
                          --quiet; \
+                    sed -i -Ee $$shell_quote(s|^(SF:)/home/src/libqtaws(/src/)|\1$$TOPDIR\2|) \
+                         $$shell_quote($$TEMPDIR/coverage.info); \
                     lcov --remove $$shell_quote($$TEMPDIR/coverage.info) \
-                         $$shell_quote(/src/libqtaws/src/core/aws*credentials.h) \
                          $$shell_quote(/usr/include/*/*) \
                          $$shell_quote(src/core/qmessageauthenticationcode.cpp) \
                          $$shell_quote(*/test/*) $$shell_quote(*/*-tmp/*) \
