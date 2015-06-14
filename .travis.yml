@@ -54,5 +54,5 @@ after_success:
   - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
   - sed -i -e "s|^SF:/home/travis/build/libqtaws|SF:$TRAVIS_BUILD_DIR|"
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
-  - lcoveralls --retry-count 5 --root "$TRAVIS_BUILD_DIR/src" --trace
+  - lcoveralls --retry-count 5 --trace
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
