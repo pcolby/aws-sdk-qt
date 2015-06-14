@@ -30,14 +30,14 @@ unix {
     QMAKE_CXXFLAGS_RELEASE -= -O1 -O2 -O3
 
     # Generate gcov's gcda files by executing the test program.
-    gcov.depends = $$DESTDIR/test
-    gcov.target = $$TEMPDIR/test.gcda
-    gcov.commands = $$DESTDIR/test
+    gcov.depends = $$DESTDIR/$$TARGET
+    gcov.target = $$TEMPDIR/$$TARGET.gcda
+    gcov.commands = $$DESTDIR/$$TARGET
 
     # Generate an lcov tracefile from gcov's gcda files.
-    lcov.depends = $$TEMPDIR/test.gcda
+    lcov.depends = $$TEMPDIR/$$TARGET.gcda
     lcov.target = $$DESTDIR/coverage.info
-    lcov.commands = lcov --capture --base-directory ../src \
+    lcov.commands = lcov --capture --base-directory $$shell_quote($$TOPDIR/src) \
                          --directory $$shell_quote($$TEMPDIR) \
                          --output $$shell_quote($$DESTDIR/coverage.info) \
                          --quiet; \
@@ -50,6 +50,7 @@ unix {
     # Generate HTML coverage reports from lcov's tracefile.
     coverage.depends = $$DESTDIR/coverage.info
     coverage.commands = genhtml --output-directory $$DESTDIR/coverage_html \
+                                --ignore-errors source \
                                 --prefix $$TOPDIR/src --quiet \
                                 --title $$shell_quote(libqtaws $$VERSION) \
                                 $$DESTDIR/coverage.info
