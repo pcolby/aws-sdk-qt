@@ -40,14 +40,14 @@ support earlier version of Qt, such as Qt4.8.
 ## Building
 This library supports out-of-source builds (highly recommended), for example:
 
-```bash
+~~~{.sh}
 mkdir -p <tmp-build-dir>
 pushd <tmp-build-dir>
 qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release <path-to-cloned-repo>
 make # or `nmake` on Windows
 make check
 popd
-```
+~~~
 
 ## API Documentation
 
