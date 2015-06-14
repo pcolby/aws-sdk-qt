@@ -37,8 +37,7 @@ unix {
     # Generate an lcov tracefile from gcov's gcda files.
     lcov.depends = $$TEMPDIR/test.gcda
     lcov.target = $$TEMPDIR/coverage.info
-    lcov.commands = lcov --capture --base-directory $$shell_quote($$TOPDIR/src) \
-                         --directory $$shell_quote($$TEMPDIR) \
+    lcov.commands = lcov --capture --directory $$shell_quote($$TEMPDIR) \
                          --output $$shell_quote($$TEMPDIR/coverage.info) \
                          --quiet; \
                     lcov --remove $$shell_quote($$TEMPDIR/coverage.info) \
