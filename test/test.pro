@@ -46,7 +46,10 @@ unix {
 
     # Generate HTML coverage reports from lcov's tracefile.
     coverage.depends = $$DESTDIR/coverage.info
-    coverage.commands += genhtml --output-directory $$DESTDIR/coverage_html --prefix $$TOPDIR/src --quiet --title libqtaws $$DESTDIR/coverage.info
+    coverage.commands = genhtml --output-directory $$DESTDIR/coverage_html \
+                                --prefix $$TOPDIR/src --quiet \
+                                --title '"libqtaws $$VERSION"' \
+                                $$DESTDIR/coverage.info
 
     # Include the above custom targets in the generated build scripts (eg Makefile).
     QMAKE_EXTRA_TARGETS += coverage gcov lcov
