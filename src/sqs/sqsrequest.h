@@ -74,7 +74,6 @@ protected:
     void setParameter(const QString &name, const QVariant &value);
 
     virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply);
-    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply);
     virtual QNetworkRequest unsignedRequest() const;
 
 private:

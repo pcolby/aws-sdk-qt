@@ -68,9 +68,9 @@ public slots:
 
 protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
-    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply);
+    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply) = 0;
     virtual AwsAbstractResponse * parseResponse(QNetworkReply * const reply);
-    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply);
+    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply) = 0;
 
 protected slots:
     void replyDestroyed(QObject * reply = NULL);
