@@ -42,6 +42,7 @@ unix {
                          --output $$shell_quote($$TEMPDIR/coverage.info) \
                          --quiet; \
                     lcov --remove $$shell_quote($$TEMPDIR/coverage.info) \
+                         $$shell_quote(/src/libqtaws/src/core/aws*credentials.h) \
                          $$shell_quote(/usr/include/*/*) \
                          $$shell_quote(src/core/qmessageauthenticationcode.cpp) \
                          $$shell_quote(*/test/*) $$shell_quote(*/*-tmp/*) \
