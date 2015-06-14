@@ -39,14 +39,22 @@ unix {
     # Generate an lcov tracefile from gcov's gcda files.
     lcov.depends = $$TEMPDIR/test.gcda
     lcov.target = $$DESTDIR/coverage.info
-    lcov.commands = lcov --capture --base-directory ../src --directory $$TEMPDIR --output $$DESTDIR/coverage.info --quiet; \
-                    lcov --remove $$DESTDIR/coverage.info '"/usr/include/*/*"' \
-                         '"src/core/qmessageauthenticationcode.cpp"' \
-                         '"*/test/*"' '*/*-tmp/*' --output $$DESTDIR/coverage.info --quiet
+    lcov.commands = lcov --capture --base-directory ../src \
+                         --directory $$shell_quote($$TEMPDIR) \
+                         --output $$shell_quote($$DESTDIR/coverage.info) \
+                         --quiet; \
+                    lcov --remove $$DESTDIR/coverage.info \
+                         $$shell_quote(/usr/include/*/*) \
+                         $$shell_quote(src/core/qmessageauthenticationcode.cpp) \
+                         $$shell_quote(*/test/*) $$shell_quote(*/*-tmp/*) \
+                         --output $$shell_quote($$DESTDIR/coverage.info) --quiet
 
     # Generate HTML coverage reports from lcov's tracefile.
     coverage.depends = $$DESTDIR/coverage.info
-    coverage.commands += genhtml --output-directory $$DESTDIR/coverage_html --prefix $$TOPDIR/src --quiet --title libqtaws $$DESTDIR/coverage.info
+    coverage.commands = genhtml --output-directory $$DESTDIR/coverage_html \
+                                --prefix $$TOPDIR/src --quiet \
+                                --title $$shell_quote(libqtaws $$VERSION) \
+                                $$DESTDIR/coverage.info
 
     # Include the above custom targets in the generated build scripts (eg Makefile).
     QMAKE_EXTRA_TARGETS += coverage gcov lcov
