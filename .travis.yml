@@ -52,5 +52,5 @@ script:
 
 after_success:
   - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
-  - pwd
-  - lcoveralls --retry-count 5 --trace "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
+  - lcoveralls --retry-count 5 --root "$TRAVIS_BUILD_DIR"
+    "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
