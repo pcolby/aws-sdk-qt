@@ -17,6 +17,8 @@ HEADERS += \
         sqsremovepermissionrequest.h \
         sqsrequest.h \
         sqsrequest_p.h \
+        sqsresponse.h \
+        sqsresponse_p.h \
         sqssendmessagebatchrequest.h \
         sqssendmessagerequest.h \
         sqssetqueueattributesrequest.h \
@@ -38,6 +40,7 @@ SOURCES += \
         sqsreceivemessagerequest.cpp \
         sqsremovepermissionrequest.cpp \
         sqsrequest.cpp \
+        sqsresponse.cpp \
         sqssendmessagebatchrequest.cpp \
         sqssendmessagerequest.cpp \
         sqssetqueueattributesrequest.cpp \
