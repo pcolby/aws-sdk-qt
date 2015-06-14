@@ -1,5 +1,5 @@
-include(../unit.pri)
 TARGET = unit-test-all
+include(../unit.pri)
 
 # Enable tests of the library's internals.
 DEFINES += QTAWS_ENABLE_PRIVATE_TESTS
