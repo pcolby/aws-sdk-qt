@@ -34,8 +34,7 @@ class QTAWS_EXPORT AwsAbstractResponse : public QObject {
     Q_OBJECT
 
 public:
-    AwsAbstractResponse(QNetworkReply * const reply, QObject * const parent = 0);
-    AwsAbstractResponse(QObject * const parent);
+    AwsAbstractResponse(QObject * const parent = 0);
 
     virtual ~AwsAbstractResponse();
 

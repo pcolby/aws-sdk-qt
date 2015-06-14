@@ -32,7 +32,6 @@ class QTAWS_EXPORT SqsResponse : public AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SqsResponse(QNetworkReply * const reply, QObject * const parent = 0);
     SqsResponse(QObject * const parent);
 
     virtual ~SqsResponse();

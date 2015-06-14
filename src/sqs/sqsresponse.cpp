@@ -33,17 +33,6 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsResponse::SqsResponse(QNetworkReply * const reply, QObject * const parent)
-    : AwsAbstractResponse(reply, parent), d_ptr(new SqsResponsePrivate(this))
-{
-
-}
-
-/**
- * @brief  Constructs a new SqsResponse object.
- *
- * @param parent       This object's parent.
- */
 SqsResponse::SqsResponse(QObject * const parent)
     : AwsAbstractResponse(parent), d_ptr(new SqsResponsePrivate(this))
 {

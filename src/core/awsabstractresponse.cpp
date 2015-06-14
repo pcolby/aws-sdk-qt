@@ -35,11 +35,10 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-AwsAbstractResponse::AwsAbstractResponse(
-        QObject * const parent)
+AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))
 {
-    //Q_D(AwsAbstractResponse);
+
 }
 
 AwsAbstractResponse::~AwsAbstractResponse()
