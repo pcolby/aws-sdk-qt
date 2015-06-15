@@ -22,15 +22,21 @@
 #include "core/awsanonymouscredentials.h"
 #include "core/awsbasiccredentials.h"
 #include "core/awssignaturev4.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awssignaturev4_p.h"
 #include "core/awsendpoint_p.h"
+#endif
 
 #include <QDebug>
 #include <QDir>
 
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(QUrlQuery)
+#endif
 
 // AWS test suite file extensions - used as QVariantMap keys through these test cases.
 #define AUTHZ QLatin1String("authz")
@@ -177,6 +183,7 @@ QByteArray TestAwsSignatureV4::signedHeaders(const QByteArray &authz) const
     return authz.split(',').at(1).mid(15);
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::initTestCase()
 {
     // Load the 31 AWS V4 signature tests.
@@ -191,7 +198,9 @@ void TestAwsSignatureV4::initTestCase()
     hostInfo.serviceName.append(QLatin1String("host"));
     AwsEndpointPrivate::hosts.insert(QLatin1String("host.foo.com"), hostInfo);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::algorithmDesignation_data()
 {
     QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
@@ -238,7 +247,9 @@ void TestAwsSignatureV4::algorithmDesignation()
     QCOMPARE(QString::fromUtf8(designation), QString::fromUtf8(expected));
     QCOMPARE(designation, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::authorizationHeaderValue_data()
 {
     QTest::addColumn<QString>("accessKeyId");
@@ -301,7 +312,9 @@ void TestAwsSignatureV4::authorizationHeaderValue()
     QCOMPARE(QString::fromUtf8(headerValue), QString::fromUtf8(expected));
     QCOMPARE(headerValue, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::canonicalHeader_data()
 {
     QTest::addColumn<QByteArray>("headerName");
@@ -359,7 +372,9 @@ void TestAwsSignatureV4::canonicalHeader()
         signature.canonicalHeader(headerName, headerValue);
     }*/
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::canonicalHeaders_data()
 {
     QTest::addColumn<QNetworkRequest>("request");
@@ -396,7 +411,9 @@ void TestAwsSignatureV4::canonicalHeaders()
     QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
     QCOMPARE(signedHeaders, expectedSignedHeaders);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::canonicalRequest_data()
 {
     QTest::addColumn<QNetworkAccessManager::Operation> ("operation");
@@ -472,7 +489,9 @@ void TestAwsSignatureV4::canonicalRequest()
     QCOMPARE(signedHeaders, expectedSignedHeaders);
 
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::credentialScope_data()
 {
     QTest::addColumn<QDate>("date");
@@ -502,7 +521,9 @@ void TestAwsSignatureV4::credentialScope()
     QCOMPARE(QString::fromUtf8(scope), QString::fromUtf8(expected));
     QCOMPARE(scope, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::setAuthorizationHeader_data()
 {
     // Use the same data provider as the authorizationHeaderValue tests.
@@ -525,7 +546,9 @@ void TestAwsSignatureV4::setAuthorizationHeader()
     QCOMPARE(QString::fromUtf8(request.rawHeader("Authorization")), QString::fromUtf8(expected));
     QCOMPARE(request.rawHeader("Authorization"), expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::setDateHeader_data()
 {
     QTest::addColumn<QDateTime>("dateTime");
@@ -546,6 +569,7 @@ void TestAwsSignatureV4::setDateHeader()
     QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString(QLatin1String("yyyyMMddThhmmssZ")).toUtf8());
     QCOMPARE(result, dateTime);
 }
+#endif
 
 void TestAwsSignatureV4::sign()
 {
@@ -559,6 +583,7 @@ void TestAwsSignatureV4::sign()
     delete signature;
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::signingKey_data()
 {
     QTest::addColumn<QString>   ("secretKey");
@@ -590,7 +615,9 @@ void TestAwsSignatureV4::signingKey()
     const QByteArray signingKey = signature.d_func()->signingKey(credentials, date, region, service);
     QCOMPARE(signingKey, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV4::stringToSign_data()
 {
     QTest::addColumn<QByteArray>("algorithmDesignation");
@@ -658,6 +685,7 @@ void TestAwsSignatureV4::stringToSign()
     QCOMPARE(QString::fromUtf8(stringToSign), QString::fromUtf8(expected));
     QCOMPARE(stringToSign, expected);
 }
+#endif
 
 void TestAwsSignatureV4::version()
 {

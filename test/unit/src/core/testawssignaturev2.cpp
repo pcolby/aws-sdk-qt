@@ -21,7 +21,10 @@
 
 #include "core/awsbasiccredentials.h"
 #include "core/awssignaturev2.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awssignaturev2_p.h"
+#endif
 
 #include <QCryptographicHash>
 #include <QNetworkAccessManager>
@@ -94,6 +97,7 @@ void TestAwsSignatureV2::version()
     QCOMPARE(signature.version(), 2);
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV2::adornRequest_data()
 {
     QTest::addColumn<QNetworkRequest>("request");
@@ -136,7 +140,9 @@ void TestAwsSignatureV2::adornRequest()
     QCOMPARE(query.queryItemValue(QLatin1String("SignatureMethod")), signatureMethod);
     QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("2"));
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV2::canonicalRequest_data()
 {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
@@ -170,7 +176,9 @@ void TestAwsSignatureV2::canonicalRequest()
     QCOMPARE(QString::fromUtf8(request), QString::fromUtf8(expected));
     QCOMPARE(request, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV2::signatureMethod_data()
 {
     QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
@@ -207,3 +215,4 @@ void TestAwsSignatureV2::signatureMethod()
 
     QCOMPARE(signature.d_func()->signatureMethod(algorithm), signatureMethod);
 }
+#endif

@@ -20,11 +20,17 @@
 #include "testawsabstractsignature.h"
 
 #include "core/awsabstractsignature.h"
-#include "core/awsabstractsignature_p.h"
 #include "core/awsbasiccredentials.h"
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+#include "core/awsabstractsignature_p.h"
+#endif
+
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(QUrlQuery)
+#endif
 
 // Bare minimum concrete mock class.
 class MockSignature : public AwsAbstractSignature {
@@ -53,6 +59,7 @@ void TestAwsAbstractSignature::construct()
     //}
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsAbstractSignature::canonicalPath_data()
 {
     QTest::addColumn<QUrl>("url");
@@ -73,7 +80,9 @@ void TestAwsAbstractSignature::canonicalPath()
     const MockSignature signature;
     QCOMPARE(signature.d_func()->canonicalPath(url), path);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsAbstractSignature::canonicalQuery_data()
 {
     QTest::addColumn<QUrlQuery>("query");
@@ -106,7 +115,9 @@ void TestAwsAbstractSignature::canonicalQuery()
     QCOMPARE(QString::fromUtf8(signature.d_func()->canonicalQuery(query)), QString::fromUtf8(expected));
     QCOMPARE(signature.d_func()->canonicalQuery(query), expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsAbstractSignature::httpMethod_data()
 {
     QTest::addColumn<QNetworkAccessManager::Operation>("operation");
@@ -128,7 +139,9 @@ void TestAwsAbstractSignature::httpMethod()
     const MockSignature signature;
     QCOMPARE(signature.d_func()->httpMethod(operation), expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsAbstractSignature::setQueryItem_data()
 {
     QTest::addColumn<QUrlQuery>("query");
@@ -201,3 +214,4 @@ void TestAwsAbstractSignature::setQueryItem()
         QCOMPARE(result, expectedResult);
     }
 }
+#endif

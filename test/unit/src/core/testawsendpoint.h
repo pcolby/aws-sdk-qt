@@ -24,7 +24,9 @@ class TestAwsEndpoint : public QObject {
     Q_OBJECT
 
 private slots:
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void init();
+#endif
 
     void construct_QByteArray_data();
     void construct_QByteArray();
@@ -61,6 +63,7 @@ private slots:
     void supportedServices();
 
     // AwsEndpointPrivate functions.
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void loadEndpointData_QString();
     void loadEndpointData_QIODevice();
     void loadEndpointData_QXmlStreamReader();
@@ -68,4 +71,5 @@ private slots:
     void parseRegions();
     void parseService();
     void parseServices();
+#endif
 };

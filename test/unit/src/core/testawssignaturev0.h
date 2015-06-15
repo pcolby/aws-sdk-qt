@@ -29,10 +29,13 @@ private slots:
 
     void version();
 
+    // TestAwsSignatureV0Private functions.
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void adornRequest_data();
     void adornRequest();
 
     void canonicalQuery_data();
     void canonicalQuery();
+#endif
 
 };

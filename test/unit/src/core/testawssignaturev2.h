@@ -29,6 +29,8 @@ private slots:
 
     void version();
 
+    // TestAwsSignatureV2Private functions.
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void adornRequest_data();
     void adornRequest();
 
@@ -37,4 +39,5 @@ private slots:
 
     void signatureMethod_data();
     void signatureMethod();
+#endif
 };

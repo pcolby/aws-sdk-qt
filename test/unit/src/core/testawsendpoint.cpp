@@ -21,19 +21,24 @@
 #include "awsendpointtestdata.h"
 
 #include "core/awsendpoint.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awsendpoint_p.h"
+#endif
 
 #include <QFile>
 
 Q_DECLARE_METATYPE(AwsEndpoint::Transport)
 Q_DECLARE_METATYPE(AwsEndpoint::Transports)
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsEndpoint::init()
 {
     AwsEndpointPrivate::hosts.clear();
     AwsEndpointPrivate::regions.clear();
     AwsEndpointPrivate::services.clear();
 }
+#endif
 
 void TestAwsEndpoint::construct_QByteArray_data()
 {
@@ -356,6 +361,7 @@ void TestAwsEndpoint::supportedServices()
     QCOMPARE(services.size(), expectedServices.size());
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsEndpoint::loadEndpointData_QString()
 {
     AwsEndpointPrivate::loadEndpointData();
@@ -709,3 +715,4 @@ void TestAwsEndpoint::parseServices()
     }
     QCOMPARE(AwsEndpointPrivate::services[QLatin1String("service2")].regionNames[2], QLatin1String("region1000"));
 }
+#endif // QTAWS_ENABLE_PRIVATE_TESTS
