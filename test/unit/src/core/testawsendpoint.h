@@ -18,7 +18,7 @@
 */
 
 #include <QTest>
-#include "../../src/core/qtawsglobal.h"
+#include "core/qtawsglobal.h"
 
 class TestAwsEndpoint : public QObject {
     Q_OBJECT

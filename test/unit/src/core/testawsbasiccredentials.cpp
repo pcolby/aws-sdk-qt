@@ -19,7 +19,7 @@
 
 #include "testawsbasiccredentials.h"
 
-#include "../../src/core/awsbasiccredentials.h"
+#include "core/awsbasiccredentials.h"
 
 void TestAwsBasicCredentials::construct_data()
 {

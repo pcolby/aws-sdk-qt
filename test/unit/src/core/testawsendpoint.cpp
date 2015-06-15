@@ -20,8 +20,8 @@
 #include "testawsendpoint.h"
 #include "awsendpointtestdata.h"
 
-#include "../../src/core/awsendpoint.h"
-#include "../../src/core/awsendpoint_p.h"
+#include "core/awsendpoint.h"
+#include "core/awsendpoint_p.h"
 
 #include <QFile>
 
