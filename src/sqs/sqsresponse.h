@@ -40,9 +40,6 @@ private:
     Q_DECLARE_PRIVATE(SqsResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
-signals:
-    /// @todo Any signals?
-
 };
 
 QTAWS_END_NAMESPACE
