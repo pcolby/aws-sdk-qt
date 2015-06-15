@@ -8,9 +8,9 @@ Libqtaws is an open-source (LGPL) library for consuming [Amazon Web Services (AW
 
 The library is in very early stages of development; only the AWS signature
 code and AWS endpoints information has been implemented so far, but what has been implemented is
-[100% documented](http://pcolby.github.io/libqtaws/0.0.0/api/annotated.html)
-(including the [internal code](http://pcolby.github.io/libqtaws/0.0.0/internal/annotated.html)) and
-currently has 100% [unit test line coverage](http://pcolby.github.io/libqtaws/0.0.0/coverage/).
+[100% documented](http://pcolby.github.io/libqtaws/0.1.0/api/annotated.html)
+(including the [internal code](http://pcolby.github.io/libqtaws/0.1.0/internal/annotated.html)) and
+currently has 100% [unit test line coverage](http://pcolby.github.io/libqtaws/0.1.0/coverage/).
 
 Specific AWS services are being implemented in the order in which they are of interest to me,
 but of course, anyone can contribute implementations for any services that are more important to them.
@@ -51,11 +51,11 @@ popd
 
 ## API Documentation
 
-See the doxygen-generated [API documentation](http://pcolby.github.io/libqtaws/0.0.0/api/annotated.html).
+See the doxygen-generated [API documentation](http://pcolby.github.io/libqtaws/0.1.0/api/annotated.html).
 
-There's also [internal documentation](http://pcolby.github.io/libqtaws/0.0.0/internal/annotated.html) for those
+There's also [internal documentation](http://pcolby.github.io/libqtaws/0.1.0/internal/annotated.html) for those
 interested in the internal library implementation.
 
 ## Test Coverage
 
-See the [test coverage report](http://pcolby.github.io/libqtaws/0.0.0/coverage/).
+See the [test coverage report](http://pcolby.github.io/libqtaws/0.1.0/coverage/).
