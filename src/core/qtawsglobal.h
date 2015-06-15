@@ -22,10 +22,17 @@
 
 
 // Export declaration macros.
-#if defined QTAWS_LIBRARY
-#  define QTAWS_EXPORT Q_DECL_EXPORT
+#if defined(QTAWS_SHARED) || !defined(QTAWS_STATIC)
+#  ifdef QTAWS_STATIC
+#    error "Both QTAWS_SHARED and QTAWS_STATIC defined."
+#  endif
+#  if defined QTAWS_LIBRARY
+#    define QTAWS_EXPORT Q_DECL_EXPORT
+#  else
+#    define QTAWS_EXPORT Q_DECL_IMPORT
+#  endif
 #else
-#  define QTAWS_EXPORT Q_DECL_IMPORT
+#    define QTAWS_EXPORT
 #endif
 
 // Custom namespace wrapper macros.

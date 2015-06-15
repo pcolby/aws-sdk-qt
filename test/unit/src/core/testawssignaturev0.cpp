@@ -19,9 +19,9 @@
 
 #include "testawssignaturev0.h"
 
-#include "../../src/core/awsbasiccredentials.h"
-#include "../../src/core/awssignaturev0.h"
-#include "../../src/core/awssignaturev0_p.h"
+#include "core/awsbasiccredentials.h"
+#include "core/awssignaturev0.h"
+#include "core/awssignaturev0_p.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

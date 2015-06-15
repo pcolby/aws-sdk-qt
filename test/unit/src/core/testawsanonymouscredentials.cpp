@@ -19,7 +19,7 @@
 
 #include "testawsanonymouscredentials.h"
 
-#include "../../src/core/awsanonymouscredentials.h"
+#include "core/awsanonymouscredentials.h"
 
 void TestAwsAnonymousCredentials::accessKeyId()
 {
