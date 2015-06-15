@@ -42,6 +42,7 @@ private:
     QByteArray signedHeaders(const QByteArray &sreq) const;
 
 private slots:
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void initTestCase();
 
     void algorithmDesignation_data();
@@ -67,14 +68,17 @@ private slots:
 
     void setDateHeader_data();
     void setDateHeader();
+#endif
 
     void sign();
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void signingKey_data();
     void signingKey();
 
     void stringToSign_data();
     void stringToSign();
+#endif
 
     void version();
 };

@@ -21,13 +21,19 @@
 
 #include "core/awsbasiccredentials.h"
 #include "core/awssignaturev1.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awssignaturev1_p.h"
+#endif
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(QUrlQuery)
+#endif
 
 void TestAwsSignatureV1::sign_data()
 {
@@ -133,6 +139,7 @@ void TestAwsSignatureV1::version()
     QCOMPARE(signature.version(), 1);
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV1::adornRequest_data()
 {
     QTest::addColumn<QNetworkRequest>("request");
@@ -161,7 +168,9 @@ void TestAwsSignatureV1::adornRequest()
     QCOMPARE(query.queryItemValue(QLatin1String("AWSAccessKeyId")), accessKeyId);
     QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("1"));
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV1::canonicalQuery_data()
 {
     QTest::addColumn<QUrlQuery>("query");
@@ -226,7 +235,9 @@ void TestAwsSignatureV1::canonicalQuery()
     QCOMPARE(QChar::fromLatin1('"')+QString::fromUtf8(canonica)+QChar::fromLatin1('"'), QChar::fromLatin1('"')+QString::fromUtf8(expected)+QChar::fromLatin1('"'));
     QCOMPARE(canonica, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV1::caseInsensitiveLessThan_data()
 {
     QTest::addColumn<AwsSignatureV1Private::QStringPair>("first");
@@ -264,3 +275,4 @@ void TestAwsSignatureV1::caseInsensitiveLessThan()
     QFETCH(bool, lessThan);
     QCOMPARE(AwsSignatureV1Private::caseInsensitiveLessThan(first, second), lessThan);
 }
+#endif

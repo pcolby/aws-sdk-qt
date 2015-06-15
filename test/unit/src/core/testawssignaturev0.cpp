@@ -21,13 +21,19 @@
 
 #include "core/awsbasiccredentials.h"
 #include "core/awssignaturev0.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awssignaturev0_p.h"
+#endif
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(QUrlQuery)
+#endif
 
 void TestAwsSignatureV0::sign_data()
 {
@@ -163,6 +169,7 @@ void TestAwsSignatureV0::version()
     QCOMPARE(signature.version(), 0);
 }
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV0::adornRequest_data()
 {
     QTest::addColumn<QNetworkRequest>("request");
@@ -191,7 +198,9 @@ void TestAwsSignatureV0::adornRequest()
     QCOMPARE(query.queryItemValue(QLatin1String("AWSAccessKeyId")), accessKeyId);
     QCOMPARE(query.queryItemValue(QLatin1String("SignatureVersion")), QString::fromLatin1("0"));
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV0::canonicalQuery_data()
 {
     QTest::addColumn<QUrlQuery>("query");
@@ -227,3 +236,4 @@ void TestAwsSignatureV0::canonicalQuery()
     QCOMPARE(QChar::fromLatin1('"')+QString::fromUtf8(canonica)+QChar::fromLatin1('"'), QChar::fromLatin1('"')+QString::fromUtf8(expected)+QChar::fromLatin1('"'));
     QCOMPARE(canonica, expected);
 }
+#endif

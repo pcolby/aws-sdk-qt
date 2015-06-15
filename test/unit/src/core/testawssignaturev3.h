@@ -24,6 +24,7 @@ class TestAwsSignatureV3 : public QObject {
     Q_OBJECT
 
 private slots:
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void algorithmDesignation_data();
     void algorithmDesignation();
 
@@ -44,6 +45,7 @@ private slots:
 
     void setDateHeader_data();
     void setDateHeader();
+#endif
 
     void sign();
 

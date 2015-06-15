@@ -22,16 +22,23 @@
 #include "core/awsanonymouscredentials.h"
 #include "core/awsbasiccredentials.h"
 #include "core/awssignaturev3.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awssignaturev3_p.h"
 #include "core/awsendpoint_p.h"
+#endif
 
 #include <QDebug>
 #include <QDir>
 
 Q_DECLARE_METATYPE(QCryptographicHash::Algorithm)
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
-Q_DECLARE_METATYPE(QUrlQuery)
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+Q_DECLARE_METATYPE(QUrlQuery)
+#endif
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::algorithmDesignation_data()
 {
     QTest::addColumn<QCryptographicHash::Algorithm>("algorithm");
@@ -64,7 +71,9 @@ void TestAwsSignatureV3::algorithmDesignation()
     QCOMPARE(QString::fromUtf8(designation), QString::fromUtf8(expected));
     QCOMPARE(designation, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::authorizationHeaderValue_data()
 {
     QTest::addColumn<QString>("accessKeyId");
@@ -190,7 +199,9 @@ void TestAwsSignatureV3::authorizationHeaderValue()
     QCOMPARE(QString::fromUtf8(headerValue), QString::fromUtf8(expected));
     QCOMPARE(headerValue, expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::canonicalHeader_data()
 {
     QTest::addColumn<QByteArray>("headerName");
@@ -248,7 +259,9 @@ void TestAwsSignatureV3::canonicalHeader()
         signature.canonicalHeader(headerName, headerValue);
     }*/
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::canonicalHeaders_data()
 {
     QTest::addColumn<QNetworkRequest>("request");
@@ -329,7 +342,9 @@ void TestAwsSignatureV3::canonicalHeaders()
     QCOMPARE(QString::fromUtf8(signedHeaders), QString::fromUtf8(expectedSignedHeaders));
     QCOMPARE(signedHeaders, expectedSignedHeaders);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::canonicalRequest_data()
 {
     QTest::addColumn<QNetworkAccessManager::Operation> ("operation");
@@ -477,7 +492,9 @@ void TestAwsSignatureV3::canonicalRequest()
     QCOMPARE(signedHeaders, expectedSignedHeaders);
 
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::setAuthorizationHeader_data()
 {
     // Use the same data provider as the authorizationHeaderValue tests.
@@ -499,7 +516,9 @@ void TestAwsSignatureV3::setAuthorizationHeader()
     QCOMPARE(QString::fromUtf8(request.rawHeader("Authorization")), QString::fromUtf8(expected));
     QCOMPARE(request.rawHeader("Authorization"), expected);
 }
+#endif
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsSignatureV3::setDateHeader_data()
 {
     QTest::addColumn<QDateTime>("dateTime");
@@ -521,6 +540,7 @@ void TestAwsSignatureV3::setDateHeader()
     QCOMPARE(QString::fromUtf8(request.rawHeader("x-amz-date")), dateTime.toString(dateFormat));
     QCOMPARE(request.rawHeader("x-amz-date"), dateTime.toString(dateFormat).toUtf8());
 }
+#endif
 
 void TestAwsSignatureV3::sign()
 {

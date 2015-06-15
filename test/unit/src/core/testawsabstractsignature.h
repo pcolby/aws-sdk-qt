@@ -25,6 +25,7 @@ class TestAwsAbstractSignature : public QObject {
 private slots:
     void construct();
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void canonicalPath_data();
     void canonicalPath();
 
@@ -36,4 +37,5 @@ private slots:
 
     void setQueryItem_data();
     void setQueryItem();
+#endif
 };
