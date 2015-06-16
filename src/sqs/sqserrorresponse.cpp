@@ -20,6 +20,7 @@
 #include "sqserrorresponse.h"
 #include "sqserrorresponse_p.h"
 
+#include <QDebug>
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
