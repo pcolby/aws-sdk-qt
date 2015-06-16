@@ -22,6 +22,8 @@
 
 #include "sqsresponse_p.h"
 
+class QXmlStreamReader;
+
 QTAWS_BEGIN_NAMESPACE
 
 class SqsErrorResponse;
@@ -32,6 +34,8 @@ public:
     SqsErrorResponsePrivate(SqsErrorResponse * const q);
 
     virtual ~SqsErrorResponsePrivate();
+
+    bool parseErrorResponse(QXmlStreamReader * xml);
 
 private:
     Q_DECLARE_PUBLIC(SqsErrorResponse)

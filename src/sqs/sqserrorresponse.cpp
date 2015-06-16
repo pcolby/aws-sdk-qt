@@ -58,13 +58,12 @@ bool SqsErrorResponse::parse(QIODevice * const response)
     Q_D(SqsErrorResponse);
     QXmlStreamReader xml(response);
     if (!xml.readNextStartElement()) {
-        // invalid / no data.
+        /// @todo invalid / no data / not XML?
+    } else if (xml.name() == QLatin1String("ErrorResponse")) {
+        return d->parseErrorResponse(&xml);
+    } else {
+        /// @todo Some other exception (eg "UnknownOperationException")
     }
-    /// @todo Implement parse
-    //if (xml.name() == "UnknownOperationException");
-    //    d->parseUnknownExceptoin();
-    //if (xml.name() == "ErrorResponse");
-    //    d->parseErrorResponse();
     return false;
 }
 
@@ -94,6 +93,14 @@ SqsErrorResponsePrivate::SqsErrorResponsePrivate(SqsErrorResponse * const q)
 SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
 {
 
+}
+
+bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
+{
+    if (!xml->readNextStartElement()) {
+        return false;
+    }
+    return false; ///< @todo Implement SqsErrorResponsePrivate::parseErrorResponse
 }
 
 QTAWS_END_NAMESPACE
