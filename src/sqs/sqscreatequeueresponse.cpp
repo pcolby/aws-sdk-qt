@@ -45,9 +45,9 @@ bool SqsCreateQueueResponse::isValid() const
     return false;
 }
 
-bool SqsCreateQueueResponse::parse(QNetworkReply * const reply)
+bool SqsCreateQueueResponse::parse(QIODevice * const response)
 {
-    Q_UNUSED(reply)
+    Q_UNUSED(response)
     Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
     return false;
 }

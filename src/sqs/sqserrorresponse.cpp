@@ -53,11 +53,13 @@ bool SqsErrorResponse::isValid() const
     return false;
 }
 
-bool SqsErrorResponse::parse(QNetworkReply * const reply)
+bool SqsErrorResponse::parse(QIODevice * const response)
 {
     Q_D(SqsErrorResponse);
-    QXmlStreamReader xml(reply);
-    xml.readNextStartElement();
+    QXmlStreamReader xml(response);
+    if (!xml.readNextStartElement()) {
+        // invalid / no data.
+    }
     /// @todo Implement parse
     //if (xml.name() == "UnknownOperationException");
     //    d->parseUnknownExceptoin();

@@ -34,7 +34,7 @@ public:
 
     virtual bool isValid() const;
 
-    virtual bool parse(QNetworkReply * const reply);
+    virtual bool parse(QIODevice * const response);
 
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)
