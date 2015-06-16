@@ -95,12 +95,47 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
 
 }
 
+/**
+ * This function parses XML elements like:
+ *
+ * @code{xml}
+ * <ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/">
+ *   <Error>
+ *     <Type>Sender</Type>
+ *     <Code>AccessDenied</Code>
+ *     <Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>
+ *     <Detail/>
+ *   </Error>
+ *   <RequestId>214da364-de64-53c8-9a5c-ee9ed4b0d898</RequestId>
+ * </ErrorResponse>
+ * @endcode
+ */
 bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
 {
-    if (!xml->readNextStartElement()) {
-        return false;
+    Q_ASSERT(xml->name() == QLatin1String("ErrorResponse"));
+    while ((!xml->atEnd()) && (xml->readNextStartElement())) {
+        if (xml->name() == QLatin1String("Error")) {
+            while ((!xml->atEnd()) && (xml->readNextStartElement())) {
+                if (xml->name() == QLatin1String("Type")) {
+                    errorTypeString = xml->readElementText();
+                } else if (xml->name() == QLatin1String("Code")) {
+                    errorCodeString = xml->readElementText();
+                } else if (xml->name() == QLatin1String("Message")) {
+                    errorMessage = xml->readElementText();
+                } else if (xml->name() == QLatin1String("Detail")) {
+                    errorDetail = xml->readElementText();
+                } else {
+                   qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+                }
+            }
+        } else if (xml->name() == QLatin1String("RequestId")) {
+            requestId = xml->readElementText();
+        } else {
+           qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+        }
     }
-    return false; ///< @todo Implement SqsErrorResponsePrivate::parseErrorResponse
+    Q_Q(SqsErrorResponse);
+    return q->isValid();
 }
 
 QTAWS_END_NAMESPACE

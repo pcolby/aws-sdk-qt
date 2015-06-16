@@ -31,6 +31,14 @@ class SqsErrorResponse;
 class QTAWS_EXPORT SqsErrorResponsePrivate : public SqsResponsePrivate {
 
 public:
+    /// @todo ErrorCode errorCode;
+    QString errorCodeString;
+    QString errorDetail;
+    /// @todo ErrorType errorType;
+    QString errorTypeString;
+    QString errorMessage;
+    QString requestId;
+
     SqsErrorResponsePrivate(SqsErrorResponse * const q);
 
     virtual ~SqsErrorResponsePrivate();
