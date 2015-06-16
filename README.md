@@ -1,6 +1,8 @@
 # Libqtaws
 [![Build Status](http://img.shields.io/travis/pcolby/libqtaws/master.svg)](https://travis-ci.org/pcolby/libqtaws)
 [![Coverage Status](http://img.shields.io/coveralls/pcolby/libqtaws.svg)](https://coveralls.io/r/pcolby/libqtaws)
+[![GitHub Issues](http://img.shields.io/github/issues/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/issues)
+[![GitHub Release](http://img.shields.io/github/release/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/releases/latest)
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 
 Libqtaws is an open-source (LGPL) library for consuming [Amazon Web Services (AWS)](http://aws.amazon.com/) from
