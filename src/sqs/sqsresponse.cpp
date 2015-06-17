@@ -47,10 +47,6 @@ SqsResponse::~SqsResponse()
     delete d_ptr;
 }
 
-/// @todo Implement bool SqsResponse::isValid() const ?
-
-/// @todo Implement bool SqsResponse::parse(QNetworkReply * const reply) ?
-
 QString SqsResponse::requestId() const
 {
     Q_D(const SqsResponse);
