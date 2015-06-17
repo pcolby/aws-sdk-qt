@@ -22,8 +22,6 @@
 
 #include "awsabstractresponse_p.h"
 
-class QXmlStreamReader;
-
 QTAWS_BEGIN_NAMESPACE
 
 class SqsResponse;

@@ -22,8 +22,6 @@
 
 #include "awsabstractresponse.h"
 
-class QNetworkReply;
-
 QTAWS_BEGIN_NAMESPACE
 
 class SqsResponsePrivate;

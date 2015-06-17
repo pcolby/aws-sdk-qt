@@ -22,13 +22,11 @@
 
 #include "qtawsglobal.h"
 
-class QByteArray;
-class QNetworkReply;
 class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsAbstractResponsePrivate;
+class AwsAbstractResponse;
 
 class QTAWS_EXPORT AwsAbstractResponsePrivate {
 

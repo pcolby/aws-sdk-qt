@@ -23,8 +23,6 @@
 #include "sqserrorresponse.h"
 #include "sqsresponse_p.h"
 
-class QXmlStreamReader;
-
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsErrorResponsePrivate : public SqsResponsePrivate {

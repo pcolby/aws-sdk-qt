@@ -21,7 +21,6 @@
 #include "awsabstractresponse_p.h"
 
 #include <QNetworkReply>
-#include <QVariant>
 #include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE

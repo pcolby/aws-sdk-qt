@@ -21,9 +21,6 @@
 #include "sqserrorresponse_p.h"
 
 #include <QDebug>
-#include <QNetworkReply>
-#include <QVariant>
-#include <QVariantMap>
 #include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
