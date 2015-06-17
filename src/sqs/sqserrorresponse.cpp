@@ -175,10 +175,10 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
 bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
 {
     Q_ASSERT(xml->name() == QLatin1String("ErrorResponse"));
-    while ((!xml->atEnd()) && (xml->readNextStartElement())) {
+    while (xml->readNextStartElement()) {
         if (xml->name() == QLatin1String("Error")) {
             SqsErrorResponse::Error error;
-            while ((!xml->atEnd()) && (xml->readNextStartElement())) {
+            while (xml->readNextStartElement()) {
                 if (xml->name() == QLatin1String("Type")) {
                     error.rawType = xml->readElementText();
                     error.type = typeFromString(error.rawType);
@@ -193,14 +193,16 @@ bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
                     error.detail = xml->readElementText(QXmlStreamReader::IncludeChildElements);
                   //error.detail = xmlToVariant(xml); ///< https://gist.github.com/pcolby/6558910
                 } else {
-                   qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+                   qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
+                   xml->skipCurrentElement();
                 }
             }
             errors.append(error);
         } else if (xml->name() == QLatin1String("RequestId")) {
             requestId = xml->readElementText();
         } else {
-           qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+           qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
+           xml->skipCurrentElement();
         }
     }
     Q_Q(SqsErrorResponse);

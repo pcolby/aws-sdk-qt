@@ -92,7 +92,7 @@ void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader * xml)
         if (xml->name() == QLatin1String("RequestId")) {
             requestId = xml->readElementText();
         } else {
-           qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+           qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
            xml->skipCurrentElement();
         }
     }
