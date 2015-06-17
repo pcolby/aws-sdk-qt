@@ -45,13 +45,12 @@ SqsErrorResponse::SqsErrorResponse(QObject * const parent)
 
 bool SqsErrorResponse::isErrorResponse() const
 {
-    return true;
+    return true; // Yes, SqsErrorResponse represents an error response ;)
 }
 
 bool SqsErrorResponse::isValid() const
 {
-    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
-    return false;
+    return !errors().isEmpty();
 }
 
 bool SqsErrorResponse::parse(QIODevice * const response)
@@ -66,6 +65,43 @@ bool SqsErrorResponse::parse(QIODevice * const response)
         /// @todo Some other exception (eg "UnknownOperationException")
     }
     return false;
+}
+
+SqsErrorResponse::ErrorList SqsErrorResponse::errors() const
+{
+    Q_D(const SqsErrorResponse);
+    return d->errors;
+}
+
+SqsErrorResponse::ErrorCode SqsErrorResponse::code() const
+{
+    Q_D(const SqsErrorResponse);
+    return (d->errors.isEmpty()) ? OtherError : d->errors.first().code;
+}
+
+QString SqsErrorResponse::detail() const
+{
+    Q_D(const SqsErrorResponse);
+    return (d->errors.isEmpty()) ? QString() : d->errors.first().detail;
+}
+
+QString SqsErrorResponse::message() const
+{
+    Q_D(const SqsErrorResponse);
+    return (d->errors.isEmpty()) ? QString() : d->errors.first().message;
+}
+
+QString SqsErrorResponse::requestId() const
+{
+    Q_D(const SqsErrorResponse);
+    return d->requestId;
+}
+
+// if !isValid then result may be any of the ErrorTypes.
+SqsErrorResponse::ErrorType SqsErrorResponse::type() const
+{
+    Q_D(const SqsErrorResponse);
+    return (d->errors.isEmpty()) ? Receiver : d->errors.first().type;
 }
 
 /**
@@ -110,25 +146,33 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
  *   <RequestId>214da364-de64-53c8-9a5c-ee9ed4b0d898</RequestId>
  * </ErrorResponse>
  * @endcode
+ *
+ * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
 bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
 {
     Q_ASSERT(xml->name() == QLatin1String("ErrorResponse"));
     while ((!xml->atEnd()) && (xml->readNextStartElement())) {
         if (xml->name() == QLatin1String("Error")) {
+            SqsErrorResponse::Error error;
             while ((!xml->atEnd()) && (xml->readNextStartElement())) {
                 if (xml->name() == QLatin1String("Type")) {
-                    errorTypeString = xml->readElementText();
+                    error.rawType = xml->readElementText();
+                    //error.type =
                 } else if (xml->name() == QLatin1String("Code")) {
-                    errorCodeString = xml->readElementText();
+                    error.rawCode = xml->readElementText();
+                    //error.code =
                 } else if (xml->name() == QLatin1String("Message")) {
-                    errorMessage = xml->readElementText();
+                    error.message = xml->readElementText();
                 } else if (xml->name() == QLatin1String("Detail")) {
-                    errorDetail = xml->readElementText();
+                    /// @todo  The WSDL allows unrestricted complex types; can
+                    ///        we report the embedded complex element verbatim?
+                    error.detail = xml->readElementText(QXmlStreamReader::IncludeChildElements);
                 } else {
                    qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
                 }
             }
+            errors.append(error);
         } else if (xml->name() == QLatin1String("RequestId")) {
             requestId = xml->readElementText();
         } else {

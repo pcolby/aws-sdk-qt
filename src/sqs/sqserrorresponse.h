@@ -30,12 +30,57 @@ class QTAWS_EXPORT SqsErrorResponse : public SqsResponse {
     Q_OBJECT
 
 public:
+    enum ErrorCode {
+        AccessDenied,
+        IncompleteSignature,
+        InternalFailure,
+        InvalidAction,
+        InvalidClientTokenId,
+        InvalidParameterCombination,
+        InvalidParameterValue,
+        InvalidQueryParameter,
+        MalformedQueryString,
+        MissingAction,
+        MissingAuthenticationToken,
+        MissingParameter,
+        OptInRequired,
+        RequestExpired,
+        ServiceUnavailable,
+        Throttling,
+        ValidationError,
+        OtherError = 0xFF
+    };
+
+    enum ErrorType {
+        Receiver,
+        Sender,
+    };
+
+    struct Error {
+        ErrorCode code;
+        QString detail;
+        QString message;
+        QString rawCode;
+        QString rawType;
+        ErrorType type;
+    };
+
+    typedef QList<Error> ErrorList;
+
     SqsErrorResponse(QObject * const parent = 0);
 
     virtual bool isErrorResponse() const;
     virtual bool isValid() const;
 
     virtual bool parse(QIODevice * const response);
+
+    ErrorList errors() const;
+
+    ErrorCode code() const;
+    QString detail() const;
+    QString message() const;
+    QString requestId() const;
+    ErrorType type() const;
 
 private:
     Q_DECLARE_PRIVATE(SqsErrorResponse)

@@ -20,24 +20,19 @@
 #ifndef SQSERRORRESPONSE_P_H
 #define SQSERRORRESPONSE_P_H
 
+#include "sqserrorresponse.h"
 #include "sqsresponse_p.h"
 
 class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsErrorResponse;
-
 class QTAWS_EXPORT SqsErrorResponsePrivate : public SqsResponsePrivate {
 
 public:
-    /// @todo ErrorCode errorCode;
-    QString errorCodeString;
-    QString errorDetail;
-    /// @todo ErrorType errorType;
-    QString errorTypeString;
-    QString errorMessage;
+    SqsErrorResponse::ErrorList errors;
     QString requestId;
+
 
     SqsErrorResponsePrivate(SqsErrorResponse * const q);
 
