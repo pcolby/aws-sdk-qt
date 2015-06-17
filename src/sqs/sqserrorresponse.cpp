@@ -79,10 +79,10 @@ SqsErrorResponse::ErrorCode SqsErrorResponse::code() const
     return (d->errors.isEmpty()) ? OtherError : d->errors.first().code;
 }
 
-QString SqsErrorResponse::detail() const
+QVariant SqsErrorResponse::detail() const
 {
     Q_D(const SqsErrorResponse);
-    return (d->errors.isEmpty()) ? QString() : d->errors.first().detail;
+    return (d->errors.isEmpty()) ? QVariant() : d->errors.first().detail;
 }
 
 QString SqsErrorResponse::message() const
@@ -168,6 +168,7 @@ bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
                     /// @todo  The WSDL allows unrestricted complex types; can
                     ///        we report the embedded complex element verbatim?
                     error.detail = xml->readElementText(QXmlStreamReader::IncludeChildElements);
+                    // https://gist.github.com/pcolby/6558910
                 } else {
                    qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
                 }

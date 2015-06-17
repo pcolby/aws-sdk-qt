@@ -22,6 +22,8 @@
 
 #include "sqsresponse.h"
 
+#include <QVariant>
+
 QTAWS_BEGIN_NAMESPACE
 
 class SqsErrorResponsePrivate;
@@ -59,7 +61,7 @@ public:
 
     struct Error {
         ErrorCode code;
-        QString detail;
+        QVariant detail;
         QString message;
         QString rawCode;
         QString rawType;
@@ -78,7 +80,7 @@ public:
     ErrorList errors() const;
 
     ErrorCode code() const;
-    QString detail() const;
+    QVariant detail() const;
     QString message() const;
     QString requestId() const;
     ErrorType type() const;
