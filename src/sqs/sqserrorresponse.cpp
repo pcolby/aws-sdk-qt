@@ -57,23 +57,13 @@ bool SqsErrorResponse::parse(QIODevice * const response)
 {
     Q_D(SqsErrorResponse);
     QXmlStreamReader xml(response);
-    if ((xml.readNextStartElement()) &&
-        (xml.name() == QLatin1String("ErrorResponse")) &&
-        (d->parseErrorResponse(&xml))) {
-        return true;
-    }
-
-    // If the above failed, but we have no stream reader errors, than we must
-    // have the start of an XML document, that does not begin with an
-    // ErrorResponse element.  So include the response document verbatim.
-    if (!xml.hasError()) {
-        SqsErrorResponse::Error error;
-        error.code = OtherError;
-        error.message = tr("Unrecognised SQS response element: %s").arg(xml.name().toString());
-        error.rawCode = tr("UnknownResponseElement");
-        error.type = OtherType;
-      //error.detail = xmlToVariant(xml);
-        d->errors.append(error);
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("ErrorResponse")) {
+            d->parseErrorResponse(&xml);
+        } else {
+            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
     }
 
     // The stream reader encounted a parse error, add it to the errors list.

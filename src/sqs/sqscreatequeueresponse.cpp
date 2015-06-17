@@ -20,6 +20,9 @@
 #include "sqscreatequeueresponse.h"
 #include "sqscreatequeueresponse_p.h"
 
+#include <QDebug>
+#include <QXmlStreamReader>
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -47,8 +50,15 @@ bool SqsCreateQueueResponse::isValid() const
 
 bool SqsCreateQueueResponse::parse(QIODevice * const response)
 {
-    Q_UNUSED(response)
-    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
+    QXmlStreamReader xml(response);
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("CreateQueueResponse")) {
+            /// @todo
+        } else {
+            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
     return false;
 }
 
