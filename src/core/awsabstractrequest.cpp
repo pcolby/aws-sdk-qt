@@ -91,26 +91,26 @@ const AwsAbstractResponse * AwsAbstractRequest::response() const
     return d->response;
 }
 
-void AwsAbstractRequest::send(QNetworkAccessManager * const manager,
+void AwsAbstractRequest::send(QNetworkAccessManager &manager,
                               const AwsAbstractSignature &signature,
                               const AwsAbstractCredentials &credentials)
 {
     const QNetworkRequest request(networkRequest(signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
-            setReply(manager->deleteResource(request));
+            setReply(manager.deleteResource(request));
             break;
         case QNetworkAccessManager::HeadOperation:
-            setReply(manager->head(request));
+            setReply(manager.head(request));
             break;
         case QNetworkAccessManager::GetOperation:
-            setReply(manager->get(request));
+            setReply(manager.get(request));
             break;
         case QNetworkAccessManager::PostOperation:
-            setReply(manager->post(request, data()));
+            setReply(manager.post(request, data()));
             break;
         case QNetworkAccessManager::PutOperation:
-            setReply(manager->put(request, data()));
+            setReply(manager.put(request, data()));
             break;
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
@@ -132,19 +132,19 @@ void AwsAbstractRequest::abort()
 
 /// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
 
-AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply)
+AwsAbstractResponse * parseErrorResponse(QNetworkReply &reply)
 {
     Q_UNUSED(reply)
     return NULL;
 }
 
-AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply * const reply)
+AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply &reply)
 {
-    return ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
+    return ((reply.attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
             ? parseSuccessResponse(reply) : parseErrorResponse(reply);
 }
 
-AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply)
+AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply)
 {
     Q_UNUSED(reply)
     return NULL;
@@ -167,7 +167,7 @@ void AwsAbstractRequest::replyFinished()
     Q_D(AwsAbstractRequest);
     Q_ASSERT(d->reply);
     if (error() == QNetworkReply::NoError) {
-        d->response = parseResponse(d->reply);
+        d->response = parseResponse(*d->reply);
     }
     emit finished();
 }

@@ -41,7 +41,7 @@ public:
     virtual bool isErrorResponse() const;
     virtual bool isValid() const = 0;
 
-    virtual bool parse(QIODevice * const response) = 0;
+    virtual bool parse(QIODevice &response) = 0;
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)

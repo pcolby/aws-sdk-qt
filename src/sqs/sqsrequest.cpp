@@ -125,7 +125,7 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply * const reply)
+AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply &reply)
 {
     SqsErrorResponse * response = new SqsErrorResponse; /// @todo parent?
     response->parse(reply);

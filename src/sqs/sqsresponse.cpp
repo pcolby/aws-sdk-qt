@@ -85,15 +85,15 @@ SqsResponsePrivate::~SqsResponsePrivate()
 
 }
 
-void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader * xml)
+void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader &xml)
 {
-    Q_ASSERT(xml->name() == QLatin1String("ResponseMetadata"));
-    while (xml->readNextStartElement()) {
-        if (xml->name() == QLatin1String("RequestId")) {
-            requestId = xml->readElementText();
+    Q_ASSERT(xml.name() == QLatin1String("ResponseMetadata"));
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("RequestId")) {
+            requestId = xml.readElementText();
         } else {
-           qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
-           xml->skipCurrentElement();
+           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           xml.skipCurrentElement();
         }
     }
 }

@@ -75,7 +75,7 @@ public:
     virtual bool isErrorResponse() const;
     virtual bool isValid() const;
 
-    virtual bool parse(QIODevice * const response);
+    virtual bool parse(QIODevice &response);
 
     ErrorList errors() const;
 

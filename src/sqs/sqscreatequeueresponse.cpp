@@ -62,17 +62,17 @@ bool SqsCreateQueueResponse::isValid() const
  * </CreateQueueResponse>
  * @endcode
  */
-bool SqsCreateQueueResponse::parse(QIODevice * const response)
+bool SqsCreateQueueResponse::parse(QIODevice &response)
 {
     Q_D(SqsCreateQueueResponse);
-    QXmlStreamReader xml(response);
+    QXmlStreamReader xml(&response);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("CreateQueueResponse")) {
             while (xml.readNextStartElement()) {
                 if (xml.name() == QLatin1String("QueueUrl")) {
                     d->queueUrl = xml.readElementText();
                 } else if (xml.name() == QLatin1String("ResponseMetadat")) {
-                    d->parseResponseMetadata(&xml);
+                    d->parseResponseMetadata(xml);
                 } else {
                     qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
                     xml.skipCurrentElement();

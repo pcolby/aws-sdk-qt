@@ -161,7 +161,7 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
     setAttribute(VISIBILITY_TIMEOUT, (timeout < 0) ? QVariant() : QVariant(timeout));
 }
 
-AwsAbstractResponse * SqsCreateQueueRequest::parseSuccessResponse(QNetworkReply * const reply)
+AwsAbstractResponse * SqsCreateQueueRequest::parseSuccessResponse(QNetworkReply &reply)
 {
     SqsCreateQueueResponse * response = new SqsCreateQueueResponse; /// @todo parent?
     response->parse(reply);

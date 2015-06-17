@@ -59,7 +59,7 @@ public:
 
     const AwsAbstractResponse * response() const;
 
-    virtual void send(QNetworkAccessManager * const manager,
+    virtual void send(QNetworkAccessManager &manager,
                       const AwsAbstractSignature &signature,
                       const AwsAbstractCredentials &credentials);
 
@@ -68,9 +68,9 @@ public slots:
 
 protected:
     virtual QNetworkRequest unsignedRequest() const = 0;
-    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply * const reply) = 0;
-    virtual AwsAbstractResponse * parseResponse(QNetworkReply * const reply);
-    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply) = 0;
+    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply &reply) = 0;
+    virtual AwsAbstractResponse * parseResponse(QNetworkReply &reply);
+    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply) = 0;
 
 protected slots:
     void replyDestroyed(QObject * reply = NULL);

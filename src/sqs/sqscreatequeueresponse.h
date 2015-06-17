@@ -34,7 +34,7 @@ public:
 
     virtual bool isValid() const;
 
-    virtual bool parse(QIODevice * const response);
+    virtual bool parse(QIODevice &response);
 
     QString queueUrl() const;
 

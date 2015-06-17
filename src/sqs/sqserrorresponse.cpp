@@ -52,13 +52,13 @@ bool SqsErrorResponse::isValid() const
     return !errors().isEmpty();
 }
 
-bool SqsErrorResponse::parse(QIODevice * const response)
+bool SqsErrorResponse::parse(QIODevice &response)
 {
     Q_D(SqsErrorResponse);
-    QXmlStreamReader xml(response);
+    QXmlStreamReader xml(&response);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("ErrorResponse")) {
-            d->parseErrorResponse(&xml);
+            d->parseErrorResponse(xml);
         } else {
             qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
             xml.skipCurrentElement();
@@ -161,36 +161,36 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
-void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
+void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
 {
-    Q_ASSERT(xml->name() == QLatin1String("ErrorResponse"));
-    while (xml->readNextStartElement()) {
-        if (xml->name() == QLatin1String("Error")) {
+    Q_ASSERT(xml.name() == QLatin1String("ErrorResponse"));
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Error")) {
             SqsErrorResponse::Error error;
-            while (xml->readNextStartElement()) {
-                if (xml->name() == QLatin1String("Type")) {
-                    error.rawType = xml->readElementText();
+            while (xml.readNextStartElement()) {
+                if (xml.name() == QLatin1String("Type")) {
+                    error.rawType = xml.readElementText();
                     error.type = typeFromString(error.rawType);
-                } else if (xml->name() == QLatin1String("Code")) {
-                    error.rawCode = xml->readElementText();
+                } else if (xml.name() == QLatin1String("Code")) {
+                    error.rawCode = xml.readElementText();
                     error.code = codeFromString(error.rawCode);
-                } else if (xml->name() == QLatin1String("Message")) {
-                    error.message = xml->readElementText();
-                } else if (xml->name() == QLatin1String("Detail")) {
+                } else if (xml.name() == QLatin1String("Message")) {
+                    error.message = xml.readElementText();
+                } else if (xml.name() == QLatin1String("Detail")) {
                     /// @todo  The WSDL allows unrestricted complex types; can
                     ///        we report the embedded complex element verbatim?
-                    error.detail = toVariant(*xml);
+                    error.detail = toVariant(xml);
                 } else {
-                   qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
-                   xml->skipCurrentElement();
+                   qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+                   xml.skipCurrentElement();
                 }
             }
             errors.append(error);
-        } else if (xml->name() == QLatin1String("RequestId")) {
-            requestId = xml->readElementText();
+        } else if (xml.name() == QLatin1String("RequestId")) {
+            requestId = xml.readElementText();
         } else {
-           qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
-           xml->skipCurrentElement();
+           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           xml.skipCurrentElement();
         }
     }
 }

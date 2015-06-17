@@ -59,7 +59,7 @@ public:
     void setVisibilityTimeout(int timeout);
 
 protected:
-    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply * const reply);
+    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply);
 
 };
 

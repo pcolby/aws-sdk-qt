@@ -83,7 +83,7 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
         return true; /// @todo What to return here?
     }
 
-    request->send(d->networkAccessManager, *d->signature, *d->credentials);
+    request->send(*d->networkAccessManager, *d->signature, *d->credentials);
     return (request->reply() != NULL);
 }
 
@@ -131,7 +131,7 @@ void AwsAbstractClient::credentialsChanged()
         if (credentials()->isExpired()) {
             request->abort();
         } else {
-            request->send(d->networkAccessManager, *d->signature, *d->credentials);
+            request->send(*d->networkAccessManager, *d->signature, *d->credentials);
         }
     }
     d->requestsPendingCredentials.clear();
