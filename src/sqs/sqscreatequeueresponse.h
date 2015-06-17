@@ -36,6 +36,8 @@ public:
 
     virtual bool parse(QIODevice * const response);
 
+    QString queueUrl() const;
+
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)
     SqsCreateQueueResponsePrivate * const d_ptr; ///< Internal d-pointer.

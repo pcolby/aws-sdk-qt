@@ -44,22 +44,52 @@ SqsCreateQueueResponse::SqsCreateQueueResponse(QObject * const parent)
 
 bool SqsCreateQueueResponse::isValid() const
 {
-    Q_ASSERT_X(false, Q_FUNC_INFO, "not implemented yet");
-    return false;
+    Q_D(const SqsCreateQueueResponse);
+    return !d->queueUrl.isEmpty();
 }
 
+/**
+ * This function parses XML elements like:
+ *
+ * @code{xml}
+ * <CreateQueueResponse>
+ *   <CreateQueueResult>
+ *     <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ *   </CreateQueueResult>
+ *   <ResponseMetadata>
+ *     <RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>
+ *   </ResponseMetadata>
+ * </CreateQueueResponse>
+ * @endcode
+ */
 bool SqsCreateQueueResponse::parse(QIODevice * const response)
 {
+    Q_D(SqsCreateQueueResponse);
     QXmlStreamReader xml(response);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("CreateQueueResponse")) {
-            /// @todo
+            while (xml.readNextStartElement()) {
+                if (xml.name() == QLatin1String("QueueUrl")) {
+                    d->queueUrl = xml.readElementText();
+                } else if (xml.name() == QLatin1String("ResponseMetadat")) {
+                    d->parseResponseMetadata(&xml);
+                } else {
+                    qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+                    xml.skipCurrentElement();
+                }
+            }
         } else {
             qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }
-    return false;
+    return isValid();
+}
+
+QString SqsCreateQueueResponse::queueUrl() const
+{
+    Q_D(const SqsCreateQueueResponse);
+    return d->queueUrl;
 }
 
 /**

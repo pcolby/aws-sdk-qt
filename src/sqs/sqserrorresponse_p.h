@@ -36,7 +36,7 @@ public:
 
     virtual ~SqsErrorResponsePrivate();
 
-    bool parseErrorResponse(QXmlStreamReader * xml);
+    void parseErrorResponse(QXmlStreamReader * xml);
 
     static SqsErrorResponse::ErrorCode codeFromString(const QString &code);
     static SqsErrorResponse::ErrorType typeFromString(const QString &type);

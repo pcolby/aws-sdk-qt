@@ -162,7 +162,7 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
-bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
+void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
 {
     Q_ASSERT(xml->name() == QLatin1String("ErrorResponse"));
     while (xml->readNextStartElement()) {
@@ -195,8 +195,6 @@ bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
            xml->skipCurrentElement();
         }
     }
-    Q_Q(SqsErrorResponse);
-    return q->isValid();
 }
 
 SqsErrorResponse::ErrorCode SqsErrorResponsePrivate::codeFromString(const QString &code)
