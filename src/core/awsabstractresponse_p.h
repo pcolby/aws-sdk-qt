@@ -24,6 +24,7 @@
 
 class QByteArray;
 class QNetworkReply;
+class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -35,6 +36,10 @@ public:
     AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
     virtual ~AwsAbstractResponsePrivate();
+
+    QVariantMap toVariant(QXmlStreamReader &xml,
+                          const QString &prefix = QLatin1String("."),
+                          const int maxDepth = 1024) const;
 
 private:
     Q_DECLARE_PUBLIC(AwsAbstractResponse)

@@ -22,6 +22,8 @@
 
 #include <QDebug>
 #include <QNetworkReply>
+#include <QVariant>
+#include <QVariantMap>
 #include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
@@ -180,8 +182,7 @@ void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
                 } else if (xml->name() == QLatin1String("Detail")) {
                     /// @todo  The WSDL allows unrestricted complex types; can
                     ///        we report the embedded complex element verbatim?
-                    error.detail = xml->readElementText(QXmlStreamReader::IncludeChildElements);
-                  //error.detail = xmlToVariant(xml); ///< https://gist.github.com/pcolby/6558910
+                    error.detail = toVariant(*xml);
                 } else {
                    qWarning() << Q_FUNC_INFO << "ignoring" << xml->name();
                    xml->skipCurrentElement();

@@ -22,7 +22,7 @@
 
 #include "sqsresponse.h"
 
-#include <QVariant>
+#include <QVariantMap>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -61,7 +61,7 @@ public:
 
     struct Error {
         ErrorCode code;
-        QVariant detail;
+        QVariantMap detail;
         QString message;
         QString rawCode;
         QString rawType;

@@ -21,6 +21,8 @@
 #include "awsabstractresponse_p.h"
 
 #include <QNetworkReply>
+#include <QVariant>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -81,6 +83,73 @@ AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * con
 AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()
 {
 
+}
+
+QVariantMap AwsAbstractResponsePrivate::toVariant(
+    QXmlStreamReader &xml, const QString &prefix, const int maxDepth) const
+{
+    if (maxDepth < 0) {
+        qWarning() << QObject::tr("max depth exceeded");
+        return QVariantMap();
+    }
+
+    if (xml.hasError()) {
+        qWarning() << xml.errorString();
+        return QVariantMap();
+    }
+
+    if (xml.tokenType() == QXmlStreamReader::NoToken)
+        xml.readNext();
+
+    if ((xml.tokenType() != QXmlStreamReader::StartDocument) &&
+        (xml.tokenType() != QXmlStreamReader::StartElement)) {
+        qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
+                      .arg(xml.tokenString()).arg(xml.tokenType());
+        return QVariantMap();
+    }
+
+    QVariantMap map;
+    if (xml.tokenType() == QXmlStreamReader::StartDocument) {
+        map.insert(prefix + QLatin1String("DocumentEncoding"), xml.documentEncoding().toString());
+        map.insert(prefix + QLatin1String("DocumentVersion"), xml.documentVersion().toString());
+        map.insert(prefix + QLatin1String("StandaloneDocument"), xml.isStandaloneDocument());
+    } else {
+        if (!xml.namespaceUri().isEmpty())
+            map.insert(prefix + QLatin1String("NamespaceUri"), xml.namespaceUri().toString());
+        foreach (const QXmlStreamAttribute &attribute, xml.attributes()) {
+            QVariantMap attributeMap;
+            attributeMap.insert(QLatin1String("Value"), attribute.value().toString());
+            if (!attribute.namespaceUri().isEmpty())
+                attributeMap.insert(QLatin1String("NamespaceUri"), attribute.namespaceUri().toString());
+            if (!attribute.prefix().isEmpty())
+                attributeMap.insert(QLatin1String("Prefix"), attribute.prefix().toString());
+            attributeMap.insert(QLatin1String("QualifiedName"), attribute.qualifiedName().toString());
+            map.insertMulti(prefix + attribute.name().toString(), attributeMap);
+        }
+    }
+
+    for (xml.readNext(); (!xml.atEnd()) && (xml.tokenType() != QXmlStreamReader::EndElement)
+          && (xml.tokenType() != QXmlStreamReader::EndDocument); xml.readNext()) {
+        switch (xml.tokenType()) {
+        case QXmlStreamReader::Characters:
+        case QXmlStreamReader::Comment:
+        case QXmlStreamReader::DTD:
+        case QXmlStreamReader::EntityReference:
+            map.insertMulti(prefix + xml.tokenString(), xml.text().toString());
+            break;
+        case QXmlStreamReader::ProcessingInstruction:
+            map.insertMulti(prefix + xml.processingInstructionTarget().toString(),
+                            xml.processingInstructionData().toString());
+            break;
+        case QXmlStreamReader::StartElement:
+            map.insertMulti(xml.name().toString(), toVariant(xml, prefix, maxDepth-1));
+            break;
+        default:
+            qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
+                          .arg(xml.tokenString()).arg(xml.tokenType());
+        }
+    }
+    return map;
 }
 
 QTAWS_END_NAMESPACE
