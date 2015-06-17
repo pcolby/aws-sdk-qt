@@ -52,8 +52,9 @@ public:
     };
 
     enum ErrorType {
-        Receiver,
-        Sender,
+        ReceiverType,
+        SenderType,
+        OtherType = 0xFF
     };
 
     struct Error {

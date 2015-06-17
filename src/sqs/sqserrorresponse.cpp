@@ -101,7 +101,7 @@ QString SqsErrorResponse::requestId() const
 SqsErrorResponse::ErrorType SqsErrorResponse::type() const
 {
     Q_D(const SqsErrorResponse);
-    return (d->errors.isEmpty()) ? Receiver : d->errors.first().type;
+    return (d->errors.isEmpty()) ? OtherType : d->errors.first().type;
 }
 
 /**
@@ -158,10 +158,10 @@ bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
             while ((!xml->atEnd()) && (xml->readNextStartElement())) {
                 if (xml->name() == QLatin1String("Type")) {
                     error.rawType = xml->readElementText();
-                    //error.type =
+                    error.type = typeFromString(error.rawType);
                 } else if (xml->name() == QLatin1String("Code")) {
                     error.rawCode = xml->readElementText();
-                    //error.code =
+                    error.code = codeFromString(error.rawCode);
                 } else if (xml->name() == QLatin1String("Message")) {
                     error.message = xml->readElementText();
                 } else if (xml->name() == QLatin1String("Detail")) {
@@ -181,6 +181,43 @@ bool SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader * xml)
     }
     Q_Q(SqsErrorResponse);
     return q->isValid();
+}
+
+SqsErrorResponse::ErrorCode SqsErrorResponsePrivate::codeFromString(const QString &code)
+{
+    #define IfStringReturnErrorResponse(str) \
+        if (code == QLatin1String(#str)) return SqsErrorResponse::str
+    IfStringReturnErrorResponse(AccessDenied);
+    IfStringReturnErrorResponse(IncompleteSignature);
+    IfStringReturnErrorResponse(InternalFailure);
+    IfStringReturnErrorResponse(InvalidAction);
+    IfStringReturnErrorResponse(InvalidClientTokenId);
+    IfStringReturnErrorResponse(InvalidParameterCombination);
+    IfStringReturnErrorResponse(InvalidParameterValue);
+    IfStringReturnErrorResponse(InvalidQueryParameter);
+    IfStringReturnErrorResponse(MalformedQueryString);
+    IfStringReturnErrorResponse(MissingAction);
+    IfStringReturnErrorResponse(MissingAuthenticationToken);
+    IfStringReturnErrorResponse(MissingParameter);
+    IfStringReturnErrorResponse(OptInRequired);
+    IfStringReturnErrorResponse(RequestExpired);
+    IfStringReturnErrorResponse(ServiceUnavailable);
+    IfStringReturnErrorResponse(Throttling);
+    IfStringReturnErrorResponse(ValidationError);
+    #undef IfStringReturnErrorResponse
+    qWarning() << Q_FUNC_INFO << "unknown SQS error code" << code;
+    return SqsErrorResponse::OtherError;
+}
+
+SqsErrorResponse::ErrorType SqsErrorResponsePrivate::typeFromString(const QString &type)
+{
+    #define IfStringReturnErrorType(str) \
+        if (type == QLatin1String(#str)) return SqsErrorResponse::str##Type
+    IfStringReturnErrorType(Receiver);
+    IfStringReturnErrorType(Sender);
+    #undef IfStringReturnErrorType
+    qWarning() << Q_FUNC_INFO << "unknown SQS error type" << type;
+    return SqsErrorResponse::OtherType;
 }
 
 QTAWS_END_NAMESPACE

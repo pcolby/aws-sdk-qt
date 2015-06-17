@@ -40,6 +40,9 @@ public:
 
     bool parseErrorResponse(QXmlStreamReader * xml);
 
+    static SqsErrorResponse::ErrorCode codeFromString(const QString &code);
+    static SqsErrorResponse::ErrorType typeFromString(const QString &type);
+
 private:
     Q_DECLARE_PUBLIC(SqsErrorResponse)
     SqsErrorResponse * const q_ptr; ///< Internal q-pointer.
