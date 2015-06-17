@@ -20,6 +20,7 @@
 #include "awsabstractresponse.h"
 #include "awsabstractresponse_p.h"
 
+#include <QDebug>
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
