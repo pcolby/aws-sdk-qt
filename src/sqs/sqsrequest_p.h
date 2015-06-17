@@ -20,7 +20,7 @@
 #ifndef SQSREQUEST_P_H
 #define SQSREQUEST_P_H
 
-#include "awsabstractrequest_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "sqsrequest.h"
 
 #include <QVariantMap>

@@ -20,7 +20,7 @@
 #ifndef SQSRESPONSE_H
 #define SQSRESPONSE_H
 
-#include "awsabstractresponse.h"
+#include "core/awsabstractresponse.h"
 
 QTAWS_BEGIN_NAMESPACE
 

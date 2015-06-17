@@ -20,7 +20,7 @@
 #ifndef SQSREQUEST_H
 #define SQSREQUEST_H
 
-#include "awsabstractrequest.h"
+#include "core/awsabstractrequest.h"
 
 #include <QObject>
 

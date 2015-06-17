@@ -20,8 +20,7 @@
 #ifndef SQSCLIENT_P_H
 #define SQSCLIENT_P_H
 
-#include "awsabstractclient_p.h"
-#include "qtawsglobal.h"
+#include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 

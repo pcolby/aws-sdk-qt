@@ -20,8 +20,7 @@
 #ifndef SQSCLIENT_H
 #define SQSCLIENT_H
 
-#include "awsabstractclient.h"
-#include "qtawsglobal.h"
+#include "core/awsabstractclient.h"
 
 #include <QObject>
 #include <QNetworkReply>

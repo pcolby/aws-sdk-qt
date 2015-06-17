@@ -17,32 +17,15 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSRESPONSE_P_H
-#define SQSRESPONSE_P_H
+#include "sqs/sqsclient.h" ///< SQS stuff should move to a separate file sometime.
 
-#include "core/awsabstractresponse_p.h"
+#include <QCoreApplication>
 
-QTAWS_BEGIN_NAMESPACE
+int main(int argc, char *argv[])
+{
+    QCoreApplication app (argc, argv);
 
-class SqsResponse;
+    SqsClient client;
 
-class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
-
-public:
-    QString requestId;
-
-    SqsResponsePrivate(SqsResponse * const q);
-
-    virtual ~SqsResponsePrivate();
-
-    void parseResponseMetadata(QXmlStreamReader &xml);
-
-private:
-    Q_DECLARE_PUBLIC(SqsResponse)
-    SqsResponse * const q_ptr; ///< Internal q-pointer.
-
-};
-
-QTAWS_END_NAMESPACE
-
-#endif
+    return app.exec();
+}

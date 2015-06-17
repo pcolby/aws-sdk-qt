@@ -1,2 +1,2 @@
 TEMPLATE = subdirs
-SUBDIRS += unit
+SUBDIRS += cli unit
