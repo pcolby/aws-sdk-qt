@@ -22,6 +22,8 @@
 
 #include "awsabstractresponse_p.h"
 
+class QXmlStreamReader;
+
 QTAWS_BEGIN_NAMESPACE
 
 class SqsResponse;
@@ -29,9 +31,13 @@ class SqsResponse;
 class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
 
 public:
+    QString requestId;
+
     SqsResponsePrivate(SqsResponse * const q);
 
     virtual ~SqsResponsePrivate();
+
+    void parseResponseMetadata(QXmlStreamReader * xml);
 
 private:
     Q_DECLARE_PUBLIC(SqsResponse)

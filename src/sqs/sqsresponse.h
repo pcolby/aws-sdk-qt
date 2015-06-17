@@ -36,6 +36,8 @@ public:
 
     virtual ~SqsResponse();
 
+    QString requestId() const;
+
 private:
     Q_DECLARE_PRIVATE(SqsResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.

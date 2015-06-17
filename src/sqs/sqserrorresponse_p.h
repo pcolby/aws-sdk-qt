@@ -31,8 +31,6 @@ class QTAWS_EXPORT SqsErrorResponsePrivate : public SqsResponsePrivate {
 
 public:
     SqsErrorResponse::ErrorList errors;
-    QString requestId;
-
 
     SqsErrorResponsePrivate(SqsErrorResponse * const q);
 

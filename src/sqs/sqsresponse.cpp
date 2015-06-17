@@ -20,6 +20,9 @@
 #include "sqsresponse.h"
 #include "sqsresponse_p.h"
 
+#include <QDebug>
+#include <QXmlStreamReader>
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -48,6 +51,12 @@ SqsResponse::~SqsResponse()
 
 /// @todo Implement bool SqsResponse::parse(QNetworkReply * const reply) ?
 
+QString SqsResponse::requestId() const
+{
+    Q_D(const SqsResponse);
+    return d->requestId;
+}
+
 /**
  * @internal
  *
@@ -74,6 +83,19 @@ SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
 SqsResponsePrivate::~SqsResponsePrivate()
 {
 
+}
+
+void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader * xml)
+{
+    Q_ASSERT(xml->name() == QLatin1String("ResponseMetadata"));
+    while (xml->readNextStartElement()) {
+        if (xml->name() == QLatin1String("RequestId")) {
+            requestId = xml->readElementText();
+        } else {
+           qDebug() << Q_FUNC_INFO << "ignoring" << xml->name();
+           xml->skipCurrentElement();
+        }
+    }
 }
 
 QTAWS_END_NAMESPACE

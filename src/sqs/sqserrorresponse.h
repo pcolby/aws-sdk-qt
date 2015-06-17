@@ -82,7 +82,6 @@ public:
     ErrorCode code() const;
     QVariant detail() const;
     QString message() const;
-    QString requestId() const;
     ErrorType type() const;
 
 private:

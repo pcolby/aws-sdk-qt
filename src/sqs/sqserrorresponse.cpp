@@ -117,12 +117,6 @@ QString SqsErrorResponse::message() const
     return (d->errors.isEmpty()) ? QString() : d->errors.first().message;
 }
 
-QString SqsErrorResponse::requestId() const
-{
-    Q_D(const SqsErrorResponse);
-    return d->requestId;
-}
-
 // if !isValid then result may be any of the ErrorTypes.
 SqsErrorResponse::ErrorType SqsErrorResponse::type() const
 {
@@ -172,6 +166,9 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
  *   <RequestId>214da364-de64-53c8-9a5c-ee9ed4b0d898</RequestId>
  * </ErrorResponse>
  * @endcode
+ *
+ * @note Unlike most other SQS responses, the SQS ErrorResponse does not wrap
+ *       the RequestId element in a ResponseMetadata element.
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
