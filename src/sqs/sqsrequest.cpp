@@ -43,7 +43,6 @@ QTAWS_BEGIN_NAMESPACE
 SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
     : AwsAbstractRequest(parent), d_ptr(new SqsRequestPrivate(action, this))
 {
-    Q_D(SqsRequest);
     setApiVersion(QLatin1String("2012-11-05"));
 }
 
