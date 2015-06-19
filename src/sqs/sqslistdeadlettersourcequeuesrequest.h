@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
 #define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
 
 #include "sqsrequest.h"

@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCGETQUEUEURLREQUEST_H
+#ifndef SQSGETQUEUEURLREQUEST_H
 #define SQSGETQUEUEURLREQUEST_H
 
 #include "sqsrequest.h"

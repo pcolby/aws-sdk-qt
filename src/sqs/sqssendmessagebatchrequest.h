@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCSENDMESSAGEBATCHREQUEST_H
+#ifndef SQSSENDMESSAGEBATCHREQUEST_H
 #define SQSSENDMESSAGEBATCHREQUEST_H
 
 #include "sqsrequest.h"

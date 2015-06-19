@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCPURGEQUEUEREQUEST_H
+#ifndef SQSPURGEQUEUEREQUEST_H
 #define SQSPURGEQUEUEREQUEST_H
 
 #include "sqsrequest.h"

@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCCHANGEMESSAGEVISIBILITYBATCHREQUEST_H
+#ifndef SQSCHANGEMESSAGEVISIBILITYBATCHREQUEST_H
 #define SQSCHANGEMESSAGEVISIBILITYBATCHREQUEST_H
 
 #include "sqsrequest.h"

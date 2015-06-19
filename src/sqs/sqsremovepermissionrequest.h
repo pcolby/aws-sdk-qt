@@ -17,7 +17,7 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSCREMOVEPERMISSIONREQUEST_H
+#ifndef SQSREMOVEPERMISSIONREQUEST_H
 #define SQSREMOVEPERMISSIONREQUEST_H
 
 #include "sqsrequest.h"
