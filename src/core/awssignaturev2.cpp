@@ -49,11 +49,9 @@ QTAWS_BEGIN_NAMESPACE
  *                        or QCryptographicHash::Sha256 (default, recommended).
  */
 AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)
-        : AwsAbstractSignature(new AwsSignatureV2Private(this))
+        : AwsAbstractSignature(new AwsSignatureV2Private(hashAlgorithm, this))
 {
     Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));
-    Q_D(AwsSignatureV2);
-    d->hashAlgorithm = hashAlgorithm;
 }
 
 void AwsSignatureV2::sign(const AwsAbstractCredentials &credentials, const QNetworkAccessManager::Operation operation,
@@ -102,7 +100,9 @@ int AwsSignatureV2::version() const
  *
  * @param  q  Pointer to this object's public AwsSignatureV2 instance.
  */
-AwsSignatureV2Private::AwsSignatureV2Private(AwsSignatureV2 * const q) : AwsAbstractSignaturePrivate(q)
+AwsSignatureV2Private::AwsSignatureV2Private(
+        const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
+    : AwsAbstractSignaturePrivate(q), hashAlgorithm(algorithm)
 {
 
 }
