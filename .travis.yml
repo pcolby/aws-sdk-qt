@@ -17,9 +17,9 @@ addons:
       description: "Build submitted via Travis CI"
     notification_email: git@colby.id.au
     build_command_prepend: >
-      mkdir -p "$TRAVIS_BUILD_DIR-scan" &&
+      cp -a "$TRAVIS_BUILD_DIR" "$TRAVIS_BUILD_DIR-scan" &&
       pushd "$TRAVIS_BUILD_DIR-scan" &&
-      qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+      qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release
     build_command: make all
     branch_pattern: coverity
 
