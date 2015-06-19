@@ -26,6 +26,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
+#define SQS_SERVICE_NAME QLatin1String("sqs") // As used in endpoints.xml
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -39,11 +41,26 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsClient::SqsClient(
-        QObject * const parent)
+SqsClient::SqsClient(const AwsRegion::Region region,
+                     AwsAbstractCredentials * credentials,
+                     QObject * const parent)
     : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
 {
-    //Q_D(SqsClient);
+    Q_D(SqsClient);
+    d->region = region;
+    d->credentials = credentials;
+    d->serviceName = SQS_SERVICE_NAME;
+}
+
+SqsClient::SqsClient(const QUrl &endpoint,
+                     AwsAbstractCredentials * credentials,
+                     QObject * const parent)
+    : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
+{
+    Q_D(SqsClient);
+    d->endpoint = endpoint;
+    d->credentials = credentials;
+    d->serviceName = SQS_SERVICE_NAME;
 }
 
 SqsClient::~SqsClient()

@@ -17,15 +17,30 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "sqs/sqsclient.h" ///< SQS stuff should move to a separate file sometime.
+#include <core/awsbasiccredentials.h>
+#include <core/awsregion.h>
+#include <sqs/sqsclient.h> ///< SQS stuff should move to a separate file sometime.
+#include <sqs/sqscreatequeuerequest.h>
 
 #include <QCoreApplication>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication app (argc, argv);
+    QCoreApplication app(argc, argv);
 
-    SqsClient client;
+    AwsBasicCredentials credentials(QLatin1String("key"),
+                                    QLatin1String("secret"));
 
+    SqsClient client(AwsRegion::AP_Southeast_2, &credentials);
+
+    //connect(&client, SIGNAL(queueCreated), &app, SLOT(queueCreated));
+    //connect(&client, SIGNAL(......failed), &app, SLOT(............));
+    //client.createQueue(QLatin1String("libqtaws-test-queue"), AwsRegion::AP_Southeast_2);
+
+    // or:
+
+    SqsCreateQueueRequest request(QLatin1String("libqtaws-test-queue"));
+    QObject::connect(&request, SIGNAL(finished()), &app, SLOT(quit()));
+    client.send(&request);
     return app.exec();
 }

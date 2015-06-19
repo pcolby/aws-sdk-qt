@@ -65,10 +65,11 @@ QNetworkReply::NetworkError AwsAbstractRequest::error() const
 // Overrides should sign, only if relevant.
 
 QNetworkRequest AwsAbstractRequest::networkRequest(
+    const QUrl &endpoint,
     const AwsAbstractSignature &signature,
     const AwsAbstractCredentials &credentials) const
 {
-    QNetworkRequest request(unsignedRequest());
+    QNetworkRequest request(unsignedRequest(endpoint));
     signature.sign(credentials, operation(), request, data());
     return request;
 }
@@ -92,10 +93,11 @@ const AwsAbstractResponse * AwsAbstractRequest::response() const
 }
 
 void AwsAbstractRequest::send(QNetworkAccessManager &manager,
+                              const QUrl &endpoint,
                               const AwsAbstractSignature &signature,
                               const AwsAbstractCredentials &credentials)
 {
-    const QNetworkRequest request(networkRequest(signature, credentials));
+    const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
             setReply(manager.deleteResource(request));

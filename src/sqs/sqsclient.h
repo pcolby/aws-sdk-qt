@@ -30,6 +30,7 @@ class QNetworkReply;
 QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
+class AwsAbstractCredentials;
 class SqsClientPrivate;
 class SqsCreateQueueRequest;
 
@@ -37,7 +38,12 @@ class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SqsClient(QObject * const parent = 0);
+    SqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
+              AwsAbstractCredentials * credentials = NULL,
+              QObject * const parent = 0);
+
+    SqsClient(const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+              QObject * const parent = 0);
 
     virtual ~SqsClient();
 

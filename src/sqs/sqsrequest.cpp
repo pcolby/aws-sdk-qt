@@ -130,7 +130,7 @@ AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply &reply)
     return response;
 }
 
-QNetworkRequest SqsRequest::unsignedRequest() const
+QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const SqsRequest);
     QUrlQuery query;
@@ -151,7 +151,7 @@ QNetworkRequest SqsRequest::unsignedRequest() const
         }
     }
 
-    QUrl url;/// @todo = AwsEndpoint::getEndpoint("ap-southeast-2", "sqs");
+    QUrl url(endpoint);
     url.setQuery(query);
     return QNetworkRequest(url);
 }

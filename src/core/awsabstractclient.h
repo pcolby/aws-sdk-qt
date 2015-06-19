@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTCLIENT_H
 #define AWSABSTRACTCLIENT_H
 
-#include "qtawsglobal.h"
+#include "awsregion.h"
 
 #include <QObject>
 
@@ -43,9 +43,16 @@ public:
 
     virtual ~AwsAbstractClient();
 
+    QUrl endpoint() const;
     QNetworkAccessManager * networkAccessManager() const;
+    AwsRegion::Region region() const;
     virtual bool send(AwsAbstractRequest * const request);
+    QString serviceName() const;
+
+    void setCredentials(AwsAbstractCredentials * const credentials);
+    void setEndpoint(const QUrl &endpoint);
     void setNetworkAccessManager(QNetworkAccessManager * const manager);
+    void setRegion(const AwsRegion::Region region);
 
 public slots:
     void abort();

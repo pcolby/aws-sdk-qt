@@ -20,11 +20,12 @@
 #ifndef AWSABSTRACTCLIENT_P_H
 #define AWSABSTRACTCLIENT_P_H
 
-#include "qtawsglobal.h"
+#include "awsregion.h"
 
 #include <QSet>
 
 class QNetworkAccessManager;
+class QUrl;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -32,15 +33,16 @@ class AwsAbstractClient;
 class AwsAbstractCredentials;
 class AwsAbstractRequest;
 class AwsAbstractSignature;
-class AwsEndpoint;
 
 class QTAWS_EXPORT AwsAbstractClientPrivate {
 
 public:
     AwsAbstractCredentials * credentials;
-    AwsEndpoint * endpoint;                       ///< Amazon service endpoint.
+    QUrl endpoint;                                ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
     QSet<AwsAbstractRequest *> requestsPendingCredentials;
+    AwsRegion::Region region;
+    QString serviceName;
     AwsAbstractSignature * signature;
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);

@@ -53,6 +53,13 @@ AwsAbstractClient::~AwsAbstractClient()
     delete d_ptr;
 }
 
+QUrl AwsAbstractClient::endpoint() const
+{
+    Q_D(const AwsAbstractClient);
+    return (d->endpoint.isValid()) ? d->endpoint :
+        AwsEndpoint::getEndpoint(AwsRegion::name(region()), serviceName());
+}
+
 /**
  * @brief Get the network access manager for this AWS service object.
  *
@@ -62,6 +69,12 @@ QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const
 {
     Q_D(const AwsAbstractClient);
     return d->networkAccessManager;
+}
+
+AwsRegion::Region AwsAbstractClient::region() const
+{
+    Q_D(const AwsAbstractClient);
+    return d->region;
 }
 
 bool AwsAbstractClient::send(AwsAbstractRequest * const request)
@@ -83,8 +96,27 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
         return true; /// @todo What to return here?
     }
 
-    request->send(*d->networkAccessManager, *d->signature, *d->credentials);
+    request->send(*d->networkAccessManager, endpoint(), *d->signature, *d->credentials);
     return (request->reply() != NULL);
+}
+
+QString AwsAbstractClient::serviceName() const
+{
+    Q_D(const AwsAbstractClient);
+    Q_ASSERT(!d->serviceName.isEmpty());
+    return d->serviceName;
+}
+
+void AwsAbstractClient::setCredentials(AwsAbstractCredentials * const credentials)
+{
+    Q_D(AwsAbstractClient);
+    d->credentials = credentials;
+}
+
+void AwsAbstractClient::setEndpoint(const QUrl &endpoint)
+{
+    Q_D(AwsAbstractClient);
+    d->endpoint = endpoint;
 }
 
 /**
@@ -96,6 +128,12 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
 {
     Q_D(AwsAbstractClient);
     d->networkAccessManager = manager;
+}
+
+void AwsAbstractClient::setRegion(const AwsRegion::Region region)
+{
+    Q_D(AwsAbstractClient);
+    d->region = region;
 }
 
 void AwsAbstractClient::abort()
@@ -131,7 +169,7 @@ void AwsAbstractClient::credentialsChanged()
         if (credentials()->isExpired()) {
             request->abort();
         } else {
-            request->send(*d->networkAccessManager, *d->signature, *d->credentials);
+            request->send(*d->networkAccessManager, endpoint(), *d->signature, *d->credentials);
         }
     }
     d->requestsPendingCredentials.clear();

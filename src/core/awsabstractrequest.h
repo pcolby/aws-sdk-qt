@@ -50,7 +50,8 @@ public:
 
     virtual bool isValid() const = 0;
 
-    virtual QNetworkRequest networkRequest(const AwsAbstractSignature &signature,
+    virtual QNetworkRequest networkRequest(const QUrl &endpoint,
+                                           const AwsAbstractSignature &signature,
                                            const AwsAbstractCredentials &credentials) const;
 
     virtual QNetworkAccessManager::Operation operation() const;
@@ -59,7 +60,7 @@ public:
 
     const AwsAbstractResponse * response() const;
 
-    virtual void send(QNetworkAccessManager &manager,
+    virtual void send(QNetworkAccessManager &manager, const QUrl &endpoint,
                       const AwsAbstractSignature &signature,
                       const AwsAbstractCredentials &credentials);
 
@@ -67,7 +68,7 @@ public slots:
     void abort();
 
 protected:
-    virtual QNetworkRequest unsignedRequest() const = 0;
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const = 0;
     virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply &reply) = 0;
     virtual AwsAbstractResponse * parseResponse(QNetworkReply &reply);
     virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply) = 0;
