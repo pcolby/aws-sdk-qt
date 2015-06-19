@@ -20,7 +20,7 @@ addons:
       cp -a "$TRAVIS_BUILD_DIR" "$TRAVIS_BUILD_DIR-scan" &&
       pushd "$TRAVIS_BUILD_DIR-scan" &&
       qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release
-    build_command: make all
+    build_command: make -j2 all
     branch_pattern: coverity
 
 before_install:
@@ -63,11 +63,11 @@ before_script:
 
 script:
   - cppcheck --error-exitcode=1 --quiet .
-  - make -C "$TRAVIS_BUILD_DIR-build" all
-  - make -C "$TRAVIS_BUILD_DIR-build" check
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check
 
 after_success:
-  - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
+  - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" -j2 coverage
   - sed -i -e "s|^SF:/home/travis/build/libqtaws|SF:$TRAVIS_BUILD_DIR|"
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
   - lcoveralls --retry-count 5
