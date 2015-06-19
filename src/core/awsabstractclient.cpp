@@ -174,7 +174,8 @@ void AwsAbstractClient::requestFinished(QObject * object)
  * @param  q  Pointer to this object's public AwsAbstractClient instance.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
-    : networkAccessManager(NULL), q_ptr(q)
+    : credentials(NULL), endpoint(NULL), networkAccessManager(NULL),
+      signature(NULL), q_ptr(q)
 {
 
 }
