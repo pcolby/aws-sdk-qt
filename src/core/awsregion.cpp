@@ -45,10 +45,10 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param  region  AWS region for this object to represent.
  */
-AwsRegion::AwsRegion(const Region region) : d_ptr(new AwsRegionPrivate(this))
+AwsRegion::AwsRegion(const Region region)
+    : d_ptr(new AwsRegionPrivate(region, this))
 {
-    Q_D(AwsRegion);
-    d->region = region;
+
 }
 
 /**
@@ -59,10 +59,10 @@ AwsRegion::AwsRegion(const Region region) : d_ptr(new AwsRegionPrivate(this))
  *
  * @param  regionName  Name of the AWS region for this object to represent.
  */
-AwsRegion::AwsRegion(const QString &regionName) : d_ptr(new AwsRegionPrivate(this))
+AwsRegion::AwsRegion(const QString &regionName)
+    : d_ptr(new AwsRegionPrivate(fromName(regionName), this))
 {
-    Q_D(AwsRegion);
-    d->region = fromName(regionName);
+
 }
 
 /**
@@ -286,10 +286,15 @@ AwsRegion::Region AwsRegion::fromName(const QString &regionName)
  *
  * @brief  Constructs a new AwsRegionPrivate object.
  *
- * @param  q  Pointer to this object's public AwsRegion instance.
+ * @param  region  AwsRegion::Region represented by this object.
+ * @param  q       Pointer to this object's public AwsRegion instance.
+ *
+ * @note  The \a region parameter is type \p int to avoid cyclic dependencies
+ *        between \p AwsRegion and \p AwsRegionPrivate.  However it must always
+ *        be set to valid \p AwsRegion::Region enumerator value.
  */
-AwsRegionPrivate::AwsRegionPrivate(AwsRegion * const q)
-    : q_ptr(q)
+AwsRegionPrivate::AwsRegionPrivate(const int region, AwsRegion * const q)
+    : region(region), q_ptr(q)
 {
 
 }

@@ -29,7 +29,7 @@ class AwsRegion;
 class QTAWS_EXPORT AwsRegionPrivate {
 
 public:
-    AwsRegionPrivate(AwsRegion * const q);
+    AwsRegionPrivate(const int region, AwsRegion * const q);
 
 protected:
     int region; ///< AwsRegion::Region represented by this object.
