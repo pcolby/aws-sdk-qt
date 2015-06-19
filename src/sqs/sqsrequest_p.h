@@ -37,7 +37,7 @@ public:
     QString apiVersion;
     QVariantMap parameters;
 
-    SqsRequestPrivate(SqsRequest * const q);
+    SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q);
 
 private:
     Q_DECLARE_PUBLIC(SqsRequest)
