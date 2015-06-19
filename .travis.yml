@@ -13,7 +13,7 @@ env:
 addons:
   coverity_scan:
     project:
-      name: "pcolby/pcp-pmda-cpp"
+      name: "pcolby/libqtaws"
       description: "Build submitted via Travis CI"
     notification_email: git@colby.id.au
     build_command_prepend: >
