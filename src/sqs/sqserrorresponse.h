@@ -72,6 +72,8 @@ public:
 
     SqsErrorResponse(QObject * const parent = 0);
 
+    virtual ~SqsErrorResponse();
+
     virtual bool isErrorResponse() const;
     virtual bool isValid() const;
 

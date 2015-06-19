@@ -42,6 +42,11 @@ SqsErrorResponse::SqsErrorResponse(QObject * const parent)
 
 }
 
+SqsErrorResponse::~SqsErrorResponse()
+{
+    delete d_ptr;
+}
+
 bool SqsErrorResponse::isErrorResponse() const
 {
     return true; // Yes, SqsErrorResponse represents an error response ;)

@@ -42,6 +42,11 @@ SqsCreateQueueResponse::SqsCreateQueueResponse(QObject * const parent)
 
 }
 
+SqsCreateQueueResponse::~SqsCreateQueueResponse()
+{
+    delete d_ptr;
+}
+
 bool SqsCreateQueueResponse::isValid() const
 {
     Q_D(const SqsCreateQueueResponse);

@@ -32,6 +32,8 @@ class QTAWS_EXPORT SqsCreateQueueResponse : public SqsResponse {
 public:
     SqsCreateQueueResponse(QObject * const parent = 0);
 
+    virtual ~SqsCreateQueueResponse();
+
     virtual bool isValid() const;
 
     virtual bool parse(QIODevice &response);

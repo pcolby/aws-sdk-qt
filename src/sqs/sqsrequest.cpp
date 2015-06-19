@@ -53,7 +53,6 @@ SqsRequest::~SqsRequest()
     delete d_ptr;
 }
 
-
 SqsRequest::SqsAction SqsRequest::action() const
 {
     Q_D(const SqsRequest);
