@@ -92,11 +92,14 @@ const AwsAbstractResponse * AwsAbstractRequest::response() const
     return d->response;
 }
 
+// Note, the reply will be owned by manager. Caller's may deleteLater the reply
+// at some appropriate time, and/or set their own parent if they wish.
 void AwsAbstractRequest::send(QNetworkAccessManager &manager,
                               const QUrl &endpoint,
                               const AwsAbstractSignature &signature,
                               const AwsAbstractCredentials &credentials)
 {
+    Q_ASSERT(reply() == NULL);
     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
@@ -179,6 +182,7 @@ void AwsAbstractRequest::setReply(QNetworkReply * const reply)
     Q_D(AwsAbstractRequest);
     Q_ASSERT(!d->reply);
     d->reply = reply;
+    if (reply->parent() == 0)
     connect(reply, SIGNAL(destroyed(QObject*)), SLOT(replyDestroyed(QObject*const)));
     connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
     emit replyChanged(reply);

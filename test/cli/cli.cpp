@@ -37,10 +37,13 @@ int main(int argc, char *argv[])
     //connect(&client, SIGNAL(......failed), &app, SLOT(............));
     //client.createQueue(QLatin1String("libqtaws-test-queue"), AwsRegion::AP_Southeast_2);
 
+    //SqsCreateQueueRequest * request = client.createQueue(QLatin1String("libqtaws-test-queue-1"));
+    //QObject::connect(request, SIGNAL(finished()), &app, SLOT(quit()));
+    //return (client.send(request)) ? app.exec() : 1;
+
     // or:
 
     SqsCreateQueueRequest request(QLatin1String("libqtaws-test-queue"));
     QObject::connect(&request, SIGNAL(finished()), &app, SLOT(quit()));
-    client.send(&request);
-    return app.exec();
+    return (client.send(&request)) ? app.exec() : 1;
 }

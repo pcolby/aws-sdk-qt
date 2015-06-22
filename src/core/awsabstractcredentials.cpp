@@ -135,6 +135,7 @@ bool AwsAbstractCredentials::isRefreshable() const
 /// @todo  Do we want this??
 bool AwsAbstractCredentials::isValid() const
 {
+    /// @todo  token() probably shouldn't be in this list?
     return ((!accessKeyId().isEmpty()) && (!secretKey().isEmpty()) &&
             (!token().isEmpty()) && (!isExpired()));
 }

@@ -87,6 +87,10 @@ bool AwsAbstractClient::send(AwsAbstractRequest * const request)
         return false;
     }
 
+    if (request->parent() == 0) {
+        request->setParent(this);
+    }
+
     connect(request, SIGNAL(finished()), this, SLOT(requestFinished()));
 
     if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
@@ -127,6 +131,23 @@ void AwsAbstractClient::setEndpoint(const QUrl &endpoint)
 void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const manager)
 {
     Q_D(AwsAbstractClient);
+
+    // If \a manager is already our network access manager, drop out early.
+    if (d->networkAccessManager == manager) {
+        return;
+    }
+
+    // If the old network access manager was our parent, disown our parent.
+    if ((d->networkAccessManager != NULL) && (parent() == d->networkAccessManager)) {
+        setParent(NULL);
+    }
+
+    // If we have no parent, set the network access manager as our parent.
+    if ((manager != NULL) && (parent() == NULL)) {
+        this->setParent(manager);
+    }
+
+    // Set the network access manager.
     d->networkAccessManager = manager;
 }
 
@@ -194,6 +215,10 @@ void AwsAbstractClient::requestFinished(QObject * object)
     Q_D(AwsAbstractClient);
     d->requestsPendingCredentials.remove(request);
     onRequestFinished(request);
+
+    if (request->parent() == this) {
+        request->deleteLater();
+    }
 }
 
 /**

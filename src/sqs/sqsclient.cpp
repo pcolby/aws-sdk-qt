@@ -116,11 +116,16 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
  *
  * @param queueName
  */
-void SqsClient::createQueue(const QString &queueName, const QVariantMap &attributes)
+SqsCreateQueueRequest *  SqsClient::createQueue(const QString &queueName,
+                                                const QVariantMap &attributes)
 {
-    SqsCreateQueueRequest * const request = new SqsCreateQueueRequest(queueName, this);
+    SqsCreateQueueRequest * const request = new SqsCreateQueueRequest(queueName);
     request->setAttributes(attributes);
-    send(request);
+    if (send(request)) {
+        return request;
+    }
+    delete request;
+    return NULL;
 }
 
 /**
