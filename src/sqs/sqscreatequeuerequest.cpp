@@ -161,12 +161,9 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
     setAttribute(VISIBILITY_TIMEOUT, (timeout < 0) ? QVariant() : QVariant(timeout));
 }
 
-AwsAbstractResponse * SqsCreateQueueRequest::parseSuccessResponse(QNetworkReply &reply)
+AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const reply) const
 {
-    SqsCreateQueueResponse * response = new SqsCreateQueueResponse; /// @todo parent?
-    response->parse(reply);
-    /// @todo Handle error here? eg emit error? or connect to response signal?
-    return response;
+    return new SqsCreateQueueResponse(reply);
 }
 
 QTAWS_END_NAMESPACE

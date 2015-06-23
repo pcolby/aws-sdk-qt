@@ -22,6 +22,7 @@
 
 #include "awsabstractcredentials.h"
 #include "awsabstractrequest.h"
+#include "awsabstractresponse.h"
 #include "awsabstractsignature.h"
 
 #include <QNetworkRequest>
@@ -43,9 +44,7 @@ AwsAbstractClient::AwsAbstractClient(
         QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))
 {
-    //Q_D(AwsAbstractClient);
-    /// @todo Set d->credentials
-    /// @todo connect(d->credentials, changed, this, credentialsChanged);
+
 }
 
 AwsAbstractClient::~AwsAbstractClient()
@@ -77,31 +76,30 @@ AwsRegion::Region AwsAbstractClient::region() const
     return d->region;
 }
 
-bool AwsAbstractClient::send(AwsAbstractRequest * const request)
+AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
 {
-    Q_ASSERT(request->isValid());
     Q_D(AwsAbstractClient);
+    Q_ASSERT(d->credentials);
     Q_ASSERT(d->networkAccessManager);
+    Q_ASSERT(d->signature);
+    Q_ASSERT(request.isValid());
 
-    if ((!d->credentials) || (!d->networkAccessManager) || (!d->signature)) {
-        return false;
+    if (!d->credentials) {
+        qWarning() << Q_FUNC_INFO << "credentials not set";
+        return NULL;
+    } else if (!d->networkAccessManager) {
+        qWarning() << Q_FUNC_INFO << "network access manager not set";
+        return NULL;
+    } else if (!d->signature) {
+        qWarning() << Q_FUNC_INFO << "signature not set";
+        return NULL;
+    } else if (!request.isValid()) {
+        qWarning() << Q_FUNC_INFO << serviceName() << "request not valid";
+        return NULL;
     }
 
-    if (request->parent() == 0) {
-        request->setParent(this);
-    }
-
-    connect(request, SIGNAL(finished()), this, SLOT(requestFinished()));
-
-    if (d->credentials && d->credentials->isRefreshable() && d->credentials->isExpired()) {
-        d->requestsPendingCredentials.insert(request);
-        connect(request, SIGNAL(destroyed(QObject*)), this, SLOT(requestDestroyed(QObject*)));
-        d->credentials->refresh();
-        return true; /// @todo What to return here?
-    }
-
-    request->send(*d->networkAccessManager, endpoint(), *d->signature, *d->credentials);
-    return (request->reply() != NULL);
+    return request.send(*d->networkAccessManager, endpoint(),
+                        *d->signature, *d->credentials);
 }
 
 QString AwsAbstractClient::serviceName() const
@@ -157,68 +155,16 @@ void AwsAbstractClient::setRegion(const AwsRegion::Region region)
     d->region = region;
 }
 
-void AwsAbstractClient::abort()
-{
-    Q_D(AwsAbstractClient);
-    foreach (AwsAbstractRequest * const request, d->requestsPendingCredentials) {
-        request->abort();
-    }
-    d->requestsPendingCredentials.clear();
-}
-
 AwsAbstractCredentials * AwsAbstractClient::credentials() const
 {
     Q_D(const AwsAbstractClient);
     return d->credentials;
 }
 
-void AwsAbstractClient::onRequestFinished(AwsAbstractRequest * const request)
-{
-    Q_UNUSED(request)
-}
-
 AwsAbstractSignature * AwsAbstractClient::signature() const
 {
     Q_D(const AwsAbstractClient);
     return d->signature;
-}
-
-void AwsAbstractClient::credentialsChanged()
-{
-    Q_D(AwsAbstractClient);
-    foreach (AwsAbstractRequest * const request, d->requestsPendingCredentials) {
-        if (credentials()->isExpired()) {
-            request->abort();
-        } else {
-            request->send(*d->networkAccessManager, endpoint(), *d->signature, *d->credentials);
-        }
-    }
-    d->requestsPendingCredentials.clear();
-}
-
-void AwsAbstractClient::requestDestroyed(QObject * object)
-{
-    AwsAbstractRequest * const request =
-        qobject_cast<AwsAbstractRequest * const>(object ? object : sender());
-
-    // Remove the request from our pending-requests list (if present).
-    Q_D(AwsAbstractClient);
-    d->requestsPendingCredentials.remove(request);
-}
-
-void AwsAbstractClient::requestFinished(QObject * object)
-{
-    AwsAbstractRequest * const request =
-        qobject_cast<AwsAbstractRequest * const>(object ? object : sender());
-
-    // Remove the request from our pending-requests list (if present).
-    Q_D(AwsAbstractClient);
-    d->requestsPendingCredentials.remove(request);
-    onRequestFinished(request);
-
-    if (request->parent() == this) {
-        request->deleteLater();
-    }
 }
 
 /**

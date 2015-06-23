@@ -21,6 +21,7 @@
 #include "sqsclient_p.h"
 
 #include "sqscreatequeuerequest.h"
+#include "sqscreatequeueresponse.h"
 #include "sqsrequest.h"
 
 #include <QNetworkAccessManager>
@@ -68,44 +69,6 @@ SqsClient::~SqsClient()
     delete d_ptr;
 }
 
-void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
-{
-    SqsRequest * const sqsRequest = qobject_cast<SqsRequest *>(request);
-    Q_ASSERT(sqsRequest);
-    if (sqsRequest) {
-        /// @todo emit signal(qobject_cast<Sqs##action##Request *>(request),
-        ///                   qobject_cast<Sqs##action##Response *>(response));
-
-        #define CaseActionEmitSignal(action, signal) \
-            case SqsRequest::action##SqsAction: \
-                emit signal(qobject_cast<Sqs##action##Request *>(request)); \
-                break
-        switch (sqsRequest->action()) {
-          //CaseActionEmitSignal(AddPermission, permissionAdded);
-          //CaseActionEmitSignal(ChangeMessageVisibility, messageVisibilityChanged);
-          //CaseActionEmitSignal(ChangeMessageVisibilityBatch, messageVisibilityChanged);
-            CaseActionEmitSignal(CreateQueue, queueCreated);
-          //CaseActionEmitSignal(DeleteMessage, messageDeleted);
-          //CaseActionEmitSignal(DeleteMessageBatch, messagesDeleted);
-          //CaseActionEmitSignal(DeleteQueue, queueDeleted);
-          //CaseActionEmitSignal(GetQueueAttributes, queueAttributesRetrieved);
-          //CaseActionEmitSignal(GetQueueUrl, queueUrlRetrieved);
-          //CaseActionEmitSignal(ListDeadLetterSourceQueues, deadLetterSourceQueuesListed);
-          //CaseActionEmitSignal(ListQueues, queuesListed);
-          //CaseActionEmitSignal(PurgeQueue, queuePurged);
-          //CaseActionEmitSignal(ReceiveMessage, messageReceived);
-          //CaseActionEmitSignal(RemovePermission, permissionRemoved);
-          //CaseActionEmitSignal(SendMessage, messageSent);
-          //CaseActionEmitSignal(SendMessageBatch, messagesSent);
-          //CaseActionEmitSignal(SetQueueAttributesSqsAction, queueAttributesSet);
-            default:
-                Q_ASSERT_X(false, Q_FUNC_INFO, "unknown action");
-        }
-        #undef CaseActionEmitSignal
-    }
-    AwsAbstractClient::onRequestFinished(request);
-}
-
 /**
  * @brief SqsClient::createQueue
  *
@@ -116,16 +79,12 @@ void SqsClient::onRequestFinished(AwsAbstractRequest * const request)
  *
  * @param queueName
  */
-SqsCreateQueueRequest *  SqsClient::createQueue(const QString &queueName,
+SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
                                                 const QVariantMap &attributes)
 {
-    SqsCreateQueueRequest * const request = new SqsCreateQueueRequest(queueName);
-    request->setAttributes(attributes);
-    if (send(request)) {
-        return request;
-    }
-    delete request;
-    return NULL;
+    SqsCreateQueueRequest request(queueName);
+    request.setAttributes(attributes);
+    return qobject_cast<SqsCreateQueueResponse *>(send(request));
 }
 
 /**

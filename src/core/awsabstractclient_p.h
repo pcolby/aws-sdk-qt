@@ -40,7 +40,6 @@ public:
     AwsAbstractCredentials * credentials;
     QUrl endpoint;                                ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
-    QSet<AwsAbstractRequest *> requestsPendingCredentials;
     AwsRegion::Region region;
     QString serviceName;
     AwsAbstractSignature * signature;

@@ -42,7 +42,7 @@ AwsAbstractRequest::AwsAbstractRequest(
         QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractRequestPrivate(this))
 {
-    //Q_D(AwsAbstractRequest);
+
 }
 
 AwsAbstractRequest::~AwsAbstractRequest()
@@ -54,12 +54,6 @@ QByteArray AwsAbstractRequest::data() const
 {
     Q_D(const AwsAbstractRequest);
     return d->data;
-}
-
-QNetworkReply::NetworkError AwsAbstractRequest::error() const
-{
-    Q_D(const AwsAbstractRequest);
-    return (d->reply) ? d->reply->error() : d->error;
 }
 
 // Overrides should sign, only if relevant.
@@ -80,113 +74,39 @@ QNetworkAccessManager::Operation AwsAbstractRequest::operation() const
     return d->operation;
 }
 
-QNetworkReply * AwsAbstractRequest::reply()
+AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
+                                               const QUrl &endpoint,
+                                               const AwsAbstractSignature &signature,
+                                               const AwsAbstractCredentials &credentials) const
 {
-    Q_D(const AwsAbstractRequest);
-    return d->reply;
-}
-
-const AwsAbstractResponse * AwsAbstractRequest::response() const
-{
-    Q_D(const AwsAbstractRequest);
-    return d->response;
-}
-
-// Note, the reply will be owned by manager. Caller's may deleteLater the reply
-// at some appropriate time, and/or set their own parent if they wish.
-void AwsAbstractRequest::send(QNetworkAccessManager &manager,
-                              const QUrl &endpoint,
-                              const AwsAbstractSignature &signature,
-                              const AwsAbstractCredentials &credentials)
-{
-    Q_ASSERT(reply() == NULL);
+    Q_ASSERT(isValid());
     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
-            setReply(manager.deleteResource(request));
-            break;
+            return response(manager.deleteResource(request));
         case QNetworkAccessManager::HeadOperation:
-            setReply(manager.head(request));
-            break;
+            return response(manager.head(request));
         case QNetworkAccessManager::GetOperation:
-            setReply(manager.get(request));
-            break;
+            return response(manager.get(request));
         case QNetworkAccessManager::PostOperation:
-            setReply(manager.post(request, data()));
-            break;
+            return response(manager.post(request, data()));
         case QNetworkAccessManager::PutOperation:
-            setReply(manager.put(request, data()));
-            break;
+            return response(manager.put(request, data()));
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
             // Catch this in debug mode for easier development / debugging.
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid operation");
     }
-}
-
-void AwsAbstractRequest::abort()
-{
-    Q_D(AwsAbstractRequest);
-    if (d->reply) {
-        d->reply->abort();
-    } else {
-        d->error = QNetworkReply::OperationCanceledError;
-        emit finished();
-    }
+    return NULL;
 }
 
 /// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
 
-AwsAbstractResponse * parseErrorResponse(QNetworkReply &reply)
-{
-    Q_UNUSED(reply)
-    return NULL;
-}
-
-AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply &reply)
+/*AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply &reply)
 {
     return ((reply.attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
             ? parseSuccessResponse(reply) : parseErrorResponse(reply);
-}
-
-AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply)
-{
-    Q_UNUSED(reply)
-    return NULL;
-}
-
-void AwsAbstractRequest::replyDestroyed(QObject * reply)
-{
-    if (!reply) {
-        reply = sender();
-    }
-
-    Q_D(AwsAbstractRequest);
-    if (d->reply == reply) {
-        d->reply = NULL;
-    }
-}
-
-void AwsAbstractRequest::replyFinished()
-{
-    Q_D(AwsAbstractRequest);
-    Q_ASSERT(d->reply);
-    if (error() == QNetworkReply::NoError) {
-        d->response = parseResponse(*d->reply);
-    }
-    emit finished();
-}
-
-void AwsAbstractRequest::setReply(QNetworkReply * const reply)
-{
-    Q_D(AwsAbstractRequest);
-    Q_ASSERT(!d->reply);
-    d->reply = reply;
-    if (reply->parent() == 0)
-    connect(reply, SIGNAL(destroyed(QObject*)), SLOT(replyDestroyed(QObject*const)));
-    connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
-    emit replyChanged(reply);
-}
+}*/
 
 /**
  * @internal
@@ -206,8 +126,7 @@ void AwsAbstractRequest::setReply(QNetworkReply * const reply)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
-    : error(QNetworkReply::NoError), operation(QNetworkAccessManager::GetOperation),
-      reply(NULL), response(NULL), q_ptr(q)
+    : operation(QNetworkAccessManager::GetOperation), q_ptr(q)
 {
 
 }

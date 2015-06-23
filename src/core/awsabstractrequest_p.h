@@ -37,10 +37,7 @@ class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
     QByteArray data;
-    QNetworkReply::NetworkError error;
     QNetworkAccessManager::Operation operation;
-    QNetworkReply * reply; ///< Network reply, if any, for this request.
-    AwsAbstractResponse * response;
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
 

@@ -33,6 +33,7 @@ class AwsAbstractClient;
 class AwsAbstractCredentials;
 class SqsClientPrivate;
 class SqsCreateQueueRequest;
+class SqsCreateQueueResponse;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
@@ -48,7 +49,7 @@ public:
     virtual ~SqsClient();
 
 public slots:
-    SqsCreateQueueRequest * createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());
+    SqsCreateQueueResponse * createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());
 
 /*
     void addPermission(const QStringList &awsAccountIds, const QStringList actionNames, const QString &label, const QString &queueUrl);
@@ -73,9 +74,6 @@ public slots:
     void setQueueAttributes(const QString &queueUrl, const QStringMap &attributes = QStringMap());
     void setQueueAttributes(const SqsSetQueueAttributesRequest &request);
 */
-
-protected:
-    virtual void onRequestFinished(AwsAbstractRequest * const request);
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)

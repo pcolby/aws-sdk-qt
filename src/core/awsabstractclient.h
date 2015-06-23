@@ -32,6 +32,7 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractClientPrivate;
 class AwsAbstractCredentials;
 class AwsAbstractRequest;
+class AwsAbstractResponse;
 class AwsAbstractSignature;
 
 class QTAWS_EXPORT AwsAbstractClient : public QObject {
@@ -46,7 +47,7 @@ public:
     QUrl endpoint() const;
     QNetworkAccessManager * networkAccessManager() const;
     AwsRegion::Region region() const;
-    virtual bool send(AwsAbstractRequest * const request);
+    virtual AwsAbstractResponse * send(const AwsAbstractRequest &request);
     QString serviceName() const;
 
     void setCredentials(AwsAbstractCredentials * const credentials);
@@ -54,18 +55,9 @@ public:
     void setNetworkAccessManager(QNetworkAccessManager * const manager);
     void setRegion(const AwsRegion::Region region);
 
-public slots:
-    void abort();
-
 protected:
     virtual AwsAbstractCredentials * credentials() const;
-    virtual void onRequestFinished(AwsAbstractRequest * const request);
     virtual AwsAbstractSignature * signature() const;
-
-protected slots:
-    void credentialsChanged();
-    void requestDestroyed(QObject * const object = NULL);
-    void requestFinished(QObject * const object = NULL);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)

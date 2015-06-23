@@ -46,8 +46,6 @@ public:
 
     QByteArray data() const; ///< @todo Support other data types?
 
-    QNetworkReply::NetworkError error() const;
-
     virtual bool isValid() const = 0;
 
     virtual QNetworkRequest networkRequest(const QUrl &endpoint,
@@ -56,35 +54,18 @@ public:
 
     virtual QNetworkAccessManager::Operation operation() const;
 
-    virtual QNetworkReply * reply(); // 0 if not set.
-
-    const AwsAbstractResponse * response() const;
-
-    virtual void send(QNetworkAccessManager &manager, const QUrl &endpoint,
-                      const AwsAbstractSignature &signature,
-                      const AwsAbstractCredentials &credentials);
-
-public slots:
-    void abort();
+    virtual AwsAbstractResponse * send(QNetworkAccessManager &manager,
+                                       const QUrl &endpoint,
+                                       const AwsAbstractSignature &signature,
+                                       const AwsAbstractCredentials &credentials) const;
 
 protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const = 0;
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const = 0;
-    virtual AwsAbstractResponse * parseErrorResponse(QNetworkReply &reply) = 0;
-    virtual AwsAbstractResponse * parseResponse(QNetworkReply &reply);
-    virtual AwsAbstractResponse * parseSuccessResponse(QNetworkReply &reply) = 0;
-
-protected slots:
-    void replyDestroyed(QObject * reply = NULL);
-    void replyFinished();
-    void setReply(QNetworkReply * const reply);
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
-
-signals:
-    void finished();
-    void replyChanged(QNetworkReply * reply);
 
 };
 

@@ -20,7 +20,7 @@
 #include <core/awsbasiccredentials.h>
 #include <core/awsregion.h>
 #include <sqs/sqsclient.h> ///< SQS stuff should move to a separate file sometime.
-#include <sqs/sqscreatequeuerequest.h>
+#include <sqs/sqscreatequeueresponse.h>
 
 #include <QCoreApplication>
 
@@ -31,19 +31,9 @@ int main(int argc, char *argv[])
     AwsBasicCredentials credentials(QLatin1String("key"),
                                     QLatin1String("secret"));
 
-    SqsClient client(AwsRegion::AP_Southeast_2, &credentials);
-
-    //connect(&client, SIGNAL(queueCreated), &app, SLOT(queueCreated));
-    //connect(&client, SIGNAL(......failed), &app, SLOT(............));
-    //client.createQueue(QLatin1String("libqtaws-test-queue"), AwsRegion::AP_Southeast_2);
-
-    //SqsCreateQueueRequest * request = client.createQueue(QLatin1String("libqtaws-test-queue-1"));
-    //QObject::connect(request, SIGNAL(finished()), &app, SLOT(quit()));
-    //return (client.send(request)) ? app.exec() : 1;
-
-    // or:
-
-    SqsCreateQueueRequest request(QLatin1String("libqtaws-test-queue"));
-    QObject::connect(&request, SIGNAL(finished()), &app, SLOT(quit()));
-    return (client.send(&request)) ? app.exec() : 1;
+    SqsClient sqs(AwsRegion::AP_Southeast_2, &credentials);
+    SqsCreateQueueResponse * response =
+        sqs.createQueue(QLatin1String("libqtaws-test-queue"));
+    QObject::connect(response, SIGNAL(finished), &app, SLOT(quit()));
+    return (response) ? app.exec() : 1;
 }
