@@ -21,6 +21,9 @@
 #define SQSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+#include "sqserror.h"
+
+#include <QVariantMap>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -34,7 +37,13 @@ public:
 
     virtual ~SqsResponse();
 
+    virtual QString errorString() const;
+    virtual bool hasError() const;
+    virtual bool isValid() const = 0;
+
     QString requestId() const;
+
+    SqsErrorList serviceErrors() const;
 
 protected slots:
     virtual bool parseError(QIODevice &response);

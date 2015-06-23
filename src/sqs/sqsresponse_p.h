@@ -21,6 +21,7 @@
 #define SQSRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
+#include "sqserror.h"
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -29,12 +30,14 @@ class SqsResponse;
 class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
 
 public:
+    SqsErrorList errors;
     QString requestId;
 
     SqsResponsePrivate(SqsResponse * const q);
 
     virtual ~SqsResponsePrivate();
 
+    void parseErrorResponse(QXmlStreamReader &xml);
     void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:

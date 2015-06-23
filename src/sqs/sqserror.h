@@ -20,16 +20,19 @@
 #ifndef SQSERROR_H
 #define SQSERROR_H
 
-#include "sqsresponse.h"
+#include "core/qtawsglobal.h"
 
+#include <QList>
 #include <QVariantMap>
+
+class QIODevice;
+class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
 
 class SqsErrorPrivate;
 
-class QTAWS_EXPORT SqsError : public SqsResponse {
-    Q_OBJECT
+class QTAWS_EXPORT SqsError {
 
 public:
     enum ErrorCode {
@@ -59,39 +62,30 @@ public:
         OtherType = 0xFF
     };
 
-    struct Error {
-        ErrorCode code;
-        QVariantMap detail;
-        QString message;
-        QString rawCode;
-        QString rawType;
-        ErrorType type;
-    };
+    SqsError(QXmlStreamReader &xml);
 
-    typedef QList<Error> ErrorList;
+    // Qt container class support.
+    SqsError();
+    SqsError(const SqsError &other);
+    SqsError &operator=(const SqsError &other);
 
-    SqsError(QObject * const parent = 0);
-
+public:
     virtual ~SqsError();
 
-    virtual bool isErrorResponse() const;
-    virtual bool isValid() const;
-
-    ErrorList errors() const;
-
     ErrorCode code() const;
-    QVariant detail() const;
+    QVariantMap detail() const;
     QString message() const;
+    QString rawCode() const;
+    QString rawType() const;
     ErrorType type() const;
-
-protected slots:
-    virtual bool parseSuccess(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsError)
     SqsErrorPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
+
+typedef QList<SqsError> SqsErrorList;
 
 QTAWS_END_NAMESPACE
 

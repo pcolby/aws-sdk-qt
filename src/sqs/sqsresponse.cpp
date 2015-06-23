@@ -19,6 +19,7 @@
 
 #include "sqsresponse.h"
 #include "sqsresponse_p.h"
+#include "sqserror.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
@@ -47,6 +48,27 @@ SqsResponse::~SqsResponse()
     delete d_ptr;
 }
 
+QString SqsResponse::errorString() const
+{
+    /// @todo If we have errors...
+    ///       else
+    return AwsAbstractResponse::errorString();
+}
+
+bool SqsResponse::hasError() const
+{
+    /// @todo If we have errors...
+    ///       else
+    return AwsAbstractResponse::hasError();
+}
+
+bool SqsResponse::isValid() const
+{
+    /// @todo If we have errors...
+    ///       else
+    return AwsAbstractResponse::isValid();
+}
+
 QString SqsResponse::requestId() const
 {
     Q_D(const SqsResponse);
@@ -55,8 +77,32 @@ QString SqsResponse::requestId() const
 
 bool SqsResponse::parseError(QIODevice &response)
 {
-    Q_UNUSED(response)
-    /// @todo Import this from the now-defunct SqsErrorResponse class.
+    Q_D(SqsResponse);
+    QXmlStreamReader xml(&response);
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("ErrorResponse")) {
+            d->parseErrorResponse(xml);
+        } else {
+            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+
+    // The stream reader encounted a parse error, add it to the errors list.
+    /// @todo Move this to private?
+/*    if (xml.hasError()) {
+        QVariantMap detail;
+        detail[QLatin1String("characterOffset")] = xml.characterOffset();
+        detail[QLatin1String("columnNumber")] = xml.columnNumber();
+        detail[QLatin1String("lineNumber")] = xml.lineNumber();
+        SqsError::Error error;
+        error.code = OtherError;
+        error.message = xml.errorString();
+        error.rawCode = tr("XmlParseError");
+        error.type = OtherType;
+        error.detail = detail;
+        d->errors.append(error);
+    }*/
     return false;
 }
 
@@ -86,6 +132,37 @@ SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
 SqsResponsePrivate::~SqsResponsePrivate()
 {
 
+}
+
+void SqsResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ErrorResponse"));
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("Error")) {
+            errors.append(SqsError(xml));
+        } else if (xml.name() == QLatin1String("RequestId")) {
+            requestId = xml.readElementText();
+        } else {
+           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           xml.skipCurrentElement();
+        }
+    }
+
+    // The stream reader encounted a parse error, add it to the errors list.
+    /// @todo seprate function?
+/*    if (xml.hasError()) {
+        QVariantMap detail;
+        detail[QLatin1String("characterOffset")] = xml.characterOffset();
+        detail[QLatin1String("columnNumber")] = xml.columnNumber();
+        detail[QLatin1String("lineNumber")] = xml.lineNumber();
+        SqsErrorError error;
+        error.code = OtherError;
+        error.message = xml.errorString();
+        error.rawCode = tr("XmlParseError");
+        error.type = OtherType;
+        error.detail = detail;
+        d->errors.append(error);
+    }*/
 }
 
 void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader &xml)

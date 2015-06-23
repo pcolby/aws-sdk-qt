@@ -54,12 +54,14 @@ QString AwsAbstractResponse::errorString() const
     return (networkError() == QNetworkReply::NoError) ? QString() : d->reply->errorString();
 }
 
+/// @todo Include note re cyclic dependencies if calling (virtual) isValid.
 bool AwsAbstractResponse::hasError() const
 {
     Q_D(const AwsAbstractResponse);
     return ((d->reply) && (d->reply->error() != QNetworkReply::NoError));
 }
 
+/// @todo Include note re cyclic dependencies if calling (virtual) hasError.
 bool AwsAbstractResponse::isValid() const
 {
     Q_D(const AwsAbstractResponse);

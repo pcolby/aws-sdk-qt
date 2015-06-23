@@ -17,24 +17,29 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSERRORRESPONSE_P_H
-#define SQSERRORRESPONSE_P_H
+#ifndef SQSERROR_P_H
+#define SQSERROR_P_H
 
 #include "sqserror.h"
-#include "sqsresponse_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class QTAWS_EXPORT SqsErrorPrivate : public SqsResponsePrivate {
+class QTAWS_EXPORT SqsErrorPrivate {
 
 public:
-    SqsError::ErrorList errors;
+    SqsError::ErrorCode code;
+    QVariantMap detail;
+    QString message;
+    QString rawCode;
+    QString rawType;
+    SqsError::ErrorType type;
 
     SqsErrorPrivate(SqsError * const q);
+    SqsErrorPrivate(const SqsErrorPrivate * const other, SqsError * const q);
 
     virtual ~SqsErrorPrivate();
 
-    void parseErrorResponse(QXmlStreamReader &xml);
+    void parse(QXmlStreamReader &xml);
 
     static SqsError::ErrorCode codeFromString(const QString &code);
     static SqsError::ErrorType typeFromString(const QString &type);

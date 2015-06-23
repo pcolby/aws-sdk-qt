@@ -21,6 +21,7 @@
 #include "sqserror_p.h"
 
 #include <QDebug>
+#include <QVariantMap>
 #include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
@@ -36,10 +37,33 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsError::SqsError(QObject * const parent)
-    : SqsResponse(parent), d_ptr(new SqsErrorPrivate(this))
+SqsError::SqsError(QXmlStreamReader &xml) : d_ptr(new SqsErrorPrivate(this))
+{
+    Q_D(SqsError);
+    d->parse(xml);
+}
+
+SqsError::SqsError() : d_ptr(new SqsErrorPrivate(this))
 {
 
+}
+
+SqsError::SqsError(const SqsError &other)
+    : d_ptr(new SqsErrorPrivate(other.d_func(), this))
+{
+
+}
+
+SqsError &SqsError::operator=(const SqsError &other)
+{
+    Q_D(SqsError);
+    d->code = other.code();
+    d->detail = other.detail();
+    d->message = other.message();
+    d->rawCode = other.rawCode();
+    d->rawType = other.rawType();
+    d->type = other.type();
+    return *this;
 }
 
 SqsError::~SqsError()
@@ -47,75 +71,40 @@ SqsError::~SqsError()
     delete d_ptr;
 }
 
-bool SqsError::isErrorResponse() const
-{
-    return true; // Yes, SqsError represents an error response ;)
-}
-
-bool SqsError::isValid() const
-{
-    return !errors().isEmpty();
-}
-
-SqsError::ErrorList SqsError::errors() const
-{
-    Q_D(const SqsError);
-    return d->errors;
-}
-
 SqsError::ErrorCode SqsError::code() const
 {
     Q_D(const SqsError);
-    return (d->errors.isEmpty()) ? OtherError : d->errors.first().code;
+    return d->code;
 }
 
-QVariant SqsError::detail() const
+QVariantMap SqsError::detail() const
 {
     Q_D(const SqsError);
-    return (d->errors.isEmpty()) ? QVariant() : d->errors.first().detail;
+    return d->detail;
 }
 
 QString SqsError::message() const
 {
     Q_D(const SqsError);
-    return (d->errors.isEmpty()) ? QString() : d->errors.first().message;
+    return d->message;
 }
 
-// if !isValid then result may be any of the ErrorTypes.
+QString SqsError::rawCode() const
+{
+    Q_D(const SqsError);
+    return d->rawCode;
+}
+
+QString SqsError::rawType() const
+{
+    Q_D(const SqsError);
+    return d->rawType;
+}
+
 SqsError::ErrorType SqsError::type() const
 {
     Q_D(const SqsError);
-    return (d->errors.isEmpty()) ? OtherType : d->errors.first().type;
-}
-
-bool SqsError::parseSuccess(QIODevice &response)
-{
-    Q_D(SqsError);
-    QXmlStreamReader xml(&response);
-    while (xml.readNextStartElement()) {
-        if (xml.name() == QLatin1String("ErrorResponse")) {
-            d->parseErrorResponse(xml);
-        } else {
-            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
-            xml.skipCurrentElement();
-        }
-    }
-
-    // The stream reader encounted a parse error, add it to the errors list.
-    if (xml.hasError()) {
-        QVariantMap detail;
-        detail[QLatin1String("characterOffset")] = xml.characterOffset();
-        detail[QLatin1String("columnNumber")] = xml.columnNumber();
-        detail[QLatin1String("lineNumber")] = xml.lineNumber();
-        SqsError::Error error;
-        error.code = OtherError;
-        error.message = xml.errorString();
-        error.rawCode = tr("XmlParseError");
-        error.type = OtherType;
-        error.detail = detail;
-        d->errors.append(error);
-    }
-    return false;
+    return d->type;
 }
 
 /**
@@ -136,7 +125,15 @@ bool SqsError::parseSuccess(QIODevice &response)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 SqsErrorPrivate::SqsErrorPrivate(SqsError * const q)
-    : SqsResponsePrivate(q), q_ptr(q)
+    : code(SqsError::OtherError), type(SqsError::OtherType), q_ptr(q)
+{
+
+}
+
+SqsErrorPrivate::SqsErrorPrivate(const SqsErrorPrivate * const other, SqsError * const q)
+    : code(other->code), detail(other->detail), message(other->message),
+      rawCode(other->rawCode), rawType(other->rawType), type(other->type),
+      q_ptr(q)
 {
 
 }
@@ -150,15 +147,12 @@ SqsErrorPrivate::~SqsErrorPrivate()
  * This function parses XML elements like:
  *
  * @code{xml}
- * <ErrorResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/">
- *   <Error>
- *     <Type>Sender</Type>
- *     <Code>AccessDenied</Code>
- *     <Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>
- *     <Detail/>
- *   </Error>
- *   <RequestId>214da364-de64-53c8-9a5c-ee9ed4b0d898</RequestId>
- * </ErrorResponse>
+ * <Error>
+ *   <Type>Sender</Type>
+ *   <Code>AccessDenied</Code>
+ *   <Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>
+ *   <Detail/>
+ * </Error>
  * @endcode
  *
  * @note Unlike most other SQS responses, the SQS ErrorResponse does not wrap
@@ -166,33 +160,22 @@ SqsErrorPrivate::~SqsErrorPrivate()
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
-void SqsErrorPrivate::parseErrorResponse(QXmlStreamReader &xml)
+void SqsErrorPrivate::parse(QXmlStreamReader &xml)
 {
-    Q_ASSERT(xml.name() == QLatin1String("ErrorResponse"));
+    if (xml.isStartDocument()) {
+        xml.readNextStartElement();
+    }
+    Q_ASSERT(xml.name() == QLatin1String("Error"));
     while (xml.readNextStartElement()) {
-        if (xml.name() == QLatin1String("Error")) {
-            SqsError::Error error;
-            while (xml.readNextStartElement()) {
-                if (xml.name() == QLatin1String("Type")) {
-                    error.rawType = xml.readElementText();
-                    error.type = typeFromString(error.rawType);
-                } else if (xml.name() == QLatin1String("Code")) {
-                    error.rawCode = xml.readElementText();
-                    error.code = codeFromString(error.rawCode);
-                } else if (xml.name() == QLatin1String("Message")) {
-                    error.message = xml.readElementText();
-                } else if (xml.name() == QLatin1String("Detail")) {
-                    /// @todo  The WSDL allows unrestricted complex types; can
-                    ///        we report the embedded complex element verbatim?
-                    error.detail = toVariant(xml);
-                } else {
-                   qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
-                   xml.skipCurrentElement();
-                }
-            }
-            errors.append(error);
-        } else if (xml.name() == QLatin1String("RequestId")) {
-            requestId = xml.readElementText();
+        if (xml.name() == QLatin1String("Type")) {
+            type = typeFromString(rawType = xml.readElementText());
+        } else if (xml.name() == QLatin1String("Code")) {
+            code = codeFromString(rawCode = xml.readElementText());
+        } else if (xml.name() == QLatin1String("Message")) {
+            message = xml.readElementText();
+        } else if (xml.name() == QLatin1String("Detail")) {
+            /// @todo
+            //detail = AwsAbstractResponse::toVariant(xml);
         } else {
            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
            xml.skipCurrentElement();

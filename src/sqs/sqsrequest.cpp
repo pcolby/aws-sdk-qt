@@ -20,7 +20,7 @@
 #include "sqsrequest.h"
 #include "sqsrequest_p.h"
 
-#include "sqserrorresponse.h"
+#include "sqserror.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
