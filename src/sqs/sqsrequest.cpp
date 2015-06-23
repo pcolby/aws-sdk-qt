@@ -122,14 +122,6 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
     d->parameters.insert(name, value);
 }
 
-AwsAbstractResponse * SqsRequest::parseErrorResponse(QNetworkReply &reply)
-{
-    SqsErrorResponse * response = new SqsErrorResponse; /// @todo parent?
-    response->parse(reply);
-    /// @todo Handle error here? eg emit error? or connect to response signal?
-    return response;
-}
-
 QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const SqsRequest);

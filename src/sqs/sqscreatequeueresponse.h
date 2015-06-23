@@ -22,6 +22,8 @@
 
 #include "sqsresponse.h"
 
+class QNetworkReply;
+
 QTAWS_BEGIN_NAMESPACE
 
 class SqsCreateQueueResponsePrivate;
@@ -30,15 +32,16 @@ class QTAWS_EXPORT SqsCreateQueueResponse : public SqsResponse {
     Q_OBJECT
 
 public:
-    SqsCreateQueueResponse(QObject * const parent = 0);
+    SqsCreateQueueResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual ~SqsCreateQueueResponse();
 
     virtual bool isValid() const;
 
-    virtual bool parse(QIODevice &response);
-
     QString queueUrl() const;
+
+protected slots:
+    virtual bool parseSuccess(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)

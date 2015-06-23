@@ -25,6 +25,7 @@
 #include <QObject>
 
 class QIODevice;
+class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -41,7 +42,13 @@ public:
     virtual bool isErrorResponse() const;
     virtual bool isValid() const = 0;
 
-    virtual bool parse(QIODevice &response) = 0;
+protected:
+    void setReply(QNetworkReply * reply);
+
+protected slots:
+    virtual bool parse(QNetworkReply * const reply);
+    virtual bool parseError(QIODevice &response) = 0;
+    virtual bool parseSuccess(QIODevice &response) = 0;
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)

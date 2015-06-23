@@ -21,6 +21,7 @@
 #include "sqscreatequeueresponse_p.h"
 
 #include <QDebug>
+#include <QNetworkReply>
 #include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
@@ -36,10 +37,11 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsCreateQueueResponse::SqsCreateQueueResponse(QObject * const parent)
+SqsCreateQueueResponse::SqsCreateQueueResponse(QNetworkReply * const reply,
+                                               QObject * const parent)
     : SqsResponse(parent), d_ptr(new SqsCreateQueueResponsePrivate(this))
 {
-
+    setReply(reply);
 }
 
 SqsCreateQueueResponse::~SqsCreateQueueResponse()
@@ -51,6 +53,12 @@ bool SqsCreateQueueResponse::isValid() const
 {
     Q_D(const SqsCreateQueueResponse);
     return !d->queueUrl.isEmpty();
+}
+
+QString SqsCreateQueueResponse::queueUrl() const
+{
+    Q_D(const SqsCreateQueueResponse);
+    return d->queueUrl;
 }
 
 /**
@@ -67,7 +75,7 @@ bool SqsCreateQueueResponse::isValid() const
  * </CreateQueueResponse>
  * @endcode
  */
-bool SqsCreateQueueResponse::parse(QIODevice &response)
+bool SqsCreateQueueResponse::parseSuccess(QIODevice &response)
 {
     Q_D(SqsCreateQueueResponse);
     QXmlStreamReader xml(&response);
@@ -89,12 +97,6 @@ bool SqsCreateQueueResponse::parse(QIODevice &response)
         }
     }
     return isValid();
-}
-
-QString SqsCreateQueueResponse::queueUrl() const
-{
-    Q_D(const SqsCreateQueueResponse);
-    return d->queueUrl;
 }
 
 /**

@@ -35,6 +35,8 @@ public:
 
     virtual ~SqsCreateQueueResponsePrivate();
 
+    //virtual bool parse(QIODevice &response);
+
 private:
     Q_DECLARE_PUBLIC(SqsCreateQueueResponse)
     SqsCreateQueueResponse * const q_ptr; ///< Internal q-pointer.

@@ -57,6 +57,20 @@ bool AwsAbstractResponse::isErrorResponse() const
 
 /// @todo Document bool AwsAbstractResponse::parse(QNetworkReply * const reply)
 
+void AwsAbstractResponse::setReply(QNetworkReply * const reply)
+{
+    Q_D(AwsAbstractResponse);
+    connect(reply, SIGNAL(finished(QNetworkReply*)), this, SLOT(parse(QNetworkReply*)));
+    d->reply = reply;
+}
+
+bool AwsAbstractResponse::parse(QNetworkReply * const reply)
+{
+    /// @todo if (reply->error() == QNetworkReply::NoError)
+    return ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
+            ? parseSuccess(*reply) : parseError(*reply);
+}
+
 /**
  * @internal
  *

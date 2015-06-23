@@ -53,6 +53,11 @@ QString SqsResponse::requestId() const
     return d->requestId;
 }
 
+bool SqsResponse::parseError(QIODevice &response)
+{
+    /// @todo Import this from the now-defunct SqsErrorResponse class.
+}
+
 /**
  * @internal
  *

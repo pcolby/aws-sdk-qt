@@ -31,6 +31,8 @@ class AwsAbstractResponse;
 class QTAWS_EXPORT AwsAbstractResponsePrivate {
 
 public:
+    QNetworkReply * reply;
+
     AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
     virtual ~AwsAbstractResponsePrivate();

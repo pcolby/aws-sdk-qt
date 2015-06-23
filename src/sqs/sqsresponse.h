@@ -36,6 +36,9 @@ public:
 
     QString requestId() const;
 
+protected slots:
+    virtual bool parseError(QIODevice &response);
+
 private:
     Q_DECLARE_PRIVATE(SqsResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
