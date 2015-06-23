@@ -40,8 +40,11 @@ public:
     virtual ~AwsAbstractResponse();
 
     // network error
-    // aws error
-    // xml parse error
+    // aws "service" errors
+    // xml parse error(s)
+
+    //virtual QNetworkReply::Error networkError() const;
+    //virtual bool hasError() const;
 
     virtual bool isErrorResponse() const;
     virtual bool isValid() const = 0;
@@ -62,6 +65,9 @@ private:
     //void error(QNetworkReply::Error);
     //void error(SQSError?);
     //void finished(...);
+    // networkError(error)
+    // parseError(error, line, charoffset)
+    // serviceError(error, type, etc)
 };
 
 QTAWS_END_NAMESPACE
