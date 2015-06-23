@@ -48,9 +48,28 @@ AwsAbstractResponse::~AwsAbstractResponse()
     delete d_ptr;
 }
 
-bool AwsAbstractResponse::isErrorResponse() const
+QString AwsAbstractResponse::errorString() const
 {
-    return false;
+    Q_D(const AwsAbstractResponse);
+    return (networkError() == QNetworkReply::NoError) ? QString() : d->reply->errorString();
+}
+
+bool AwsAbstractResponse::hasError() const
+{
+    Q_D(const AwsAbstractResponse);
+    return ((d->reply) && (d->reply->error() != QNetworkReply::NoError));
+}
+
+bool AwsAbstractResponse::isValid() const
+{
+    Q_D(const AwsAbstractResponse);
+    return ((!d->reply) || (d->reply->error() == QNetworkReply::NoError));
+}
+
+QNetworkReply::NetworkError AwsAbstractResponse::networkError() const
+{
+    Q_D(const AwsAbstractResponse);
+    return (d->reply) ? d->reply->error() : QNetworkReply::NoError;
 }
 
 /// @todo Document bool AwsAbstractResponse::isValid() const

@@ -22,10 +22,7 @@
 
 #include "qtawsglobal.h"
 
-#include <QObject>
-
-class QIODevice;
-class QNetworkReply;
+#include <QNetworkReply>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -39,15 +36,10 @@ public:
 
     virtual ~AwsAbstractResponse();
 
-    // network error
-    // aws "service" errors
-    // xml parse error(s)
-
-    //virtual QNetworkReply::Error networkError() const;
-    //virtual bool hasError() const;
-
-    virtual bool isErrorResponse() const;
+    virtual QString errorString() const;
+    virtual bool hasError() const;
     virtual bool isValid() const = 0;
+    virtual QNetworkReply::NetworkError networkError() const;
 
 protected:
     void setReply(QNetworkReply * reply);
