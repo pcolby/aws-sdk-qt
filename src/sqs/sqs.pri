@@ -10,8 +10,8 @@ HEADERS += \
         sqsdeletemessagebatchrequest.h \
         sqsdeletemessagerequest.h \
         sqsdeletequeuerequest.h \
-        sqserrorresponse.h \
-        sqserrorresponse_p.h \
+        sqserror.h \
+        sqserror_p.h \
         sqsgetqueueattributesrequest.h \
         sqsgetqueueurlrequest.h \
         sqslistdeadlettersourcequeuesrequest.h \
@@ -37,7 +37,7 @@ SOURCES += \
         sqsdeletemessagebatchrequest.cpp \
         sqsdeletemessagerequest.cpp \
         sqsdeletequeuerequest.cpp \
-        sqserrorresponse.cpp \
+        sqserror.cpp \
         sqsgetqueueattributesrequest.cpp \
         sqsgetqueueurlrequest.cpp \
         sqslistdeadlettersourcequeuesrequest.cpp \

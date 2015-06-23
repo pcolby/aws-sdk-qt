@@ -20,28 +20,28 @@
 #ifndef SQSERRORRESPONSE_P_H
 #define SQSERRORRESPONSE_P_H
 
-#include "sqserrorresponse.h"
+#include "sqserror.h"
 #include "sqsresponse_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class QTAWS_EXPORT SqsErrorResponsePrivate : public SqsResponsePrivate {
+class QTAWS_EXPORT SqsErrorPrivate : public SqsResponsePrivate {
 
 public:
-    SqsErrorResponse::ErrorList errors;
+    SqsError::ErrorList errors;
 
-    SqsErrorResponsePrivate(SqsErrorResponse * const q);
+    SqsErrorPrivate(SqsError * const q);
 
-    virtual ~SqsErrorResponsePrivate();
+    virtual ~SqsErrorPrivate();
 
     void parseErrorResponse(QXmlStreamReader &xml);
 
-    static SqsErrorResponse::ErrorCode codeFromString(const QString &code);
-    static SqsErrorResponse::ErrorType typeFromString(const QString &type);
+    static SqsError::ErrorCode codeFromString(const QString &code);
+    static SqsError::ErrorType typeFromString(const QString &type);
 
 private:
-    Q_DECLARE_PUBLIC(SqsErrorResponse)
-    SqsErrorResponse * const q_ptr; ///< Internal q-pointer.
+    Q_DECLARE_PUBLIC(SqsError)
+    SqsError * const q_ptr; ///< Internal q-pointer.
 
 };
 

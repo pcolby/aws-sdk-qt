@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSERRORRESPONSE_H
-#define SQSERRORRESPONSE_H
+#ifndef SQSERROR_H
+#define SQSERROR_H
 
 #include "sqsresponse.h"
 
@@ -26,9 +26,9 @@
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsErrorResponsePrivate;
+class SqsErrorPrivate;
 
-class QTAWS_EXPORT SqsErrorResponse : public SqsResponse {
+class QTAWS_EXPORT SqsError : public SqsResponse {
     Q_OBJECT
 
 public:
@@ -70,9 +70,9 @@ public:
 
     typedef QList<Error> ErrorList;
 
-    SqsErrorResponse(QObject * const parent = 0);
+    SqsError(QObject * const parent = 0);
 
-    virtual ~SqsErrorResponse();
+    virtual ~SqsError();
 
     virtual bool isErrorResponse() const;
     virtual bool isValid() const;
@@ -88,8 +88,8 @@ protected slots:
     virtual bool parseSuccess(QIODevice &response);
 
 private:
-    Q_DECLARE_PRIVATE(SqsErrorResponse)
-    SqsErrorResponsePrivate * const d_ptr; ///< Internal d-pointer.
+    Q_DECLARE_PRIVATE(SqsError)
+    SqsErrorPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

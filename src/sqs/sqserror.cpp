@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "sqserrorresponse.h"
-#include "sqserrorresponse_p.h"
+#include "sqserror.h"
+#include "sqserror_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
@@ -36,61 +36,61 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsErrorResponse::SqsErrorResponse(QObject * const parent)
-    : SqsResponse(parent), d_ptr(new SqsErrorResponsePrivate(this))
+SqsError::SqsError(QObject * const parent)
+    : SqsResponse(parent), d_ptr(new SqsErrorPrivate(this))
 {
 
 }
 
-SqsErrorResponse::~SqsErrorResponse()
+SqsError::~SqsError()
 {
     delete d_ptr;
 }
 
-bool SqsErrorResponse::isErrorResponse() const
+bool SqsError::isErrorResponse() const
 {
-    return true; // Yes, SqsErrorResponse represents an error response ;)
+    return true; // Yes, SqsError represents an error response ;)
 }
 
-bool SqsErrorResponse::isValid() const
+bool SqsError::isValid() const
 {
     return !errors().isEmpty();
 }
 
-SqsErrorResponse::ErrorList SqsErrorResponse::errors() const
+SqsError::ErrorList SqsError::errors() const
 {
-    Q_D(const SqsErrorResponse);
+    Q_D(const SqsError);
     return d->errors;
 }
 
-SqsErrorResponse::ErrorCode SqsErrorResponse::code() const
+SqsError::ErrorCode SqsError::code() const
 {
-    Q_D(const SqsErrorResponse);
+    Q_D(const SqsError);
     return (d->errors.isEmpty()) ? OtherError : d->errors.first().code;
 }
 
-QVariant SqsErrorResponse::detail() const
+QVariant SqsError::detail() const
 {
-    Q_D(const SqsErrorResponse);
+    Q_D(const SqsError);
     return (d->errors.isEmpty()) ? QVariant() : d->errors.first().detail;
 }
 
-QString SqsErrorResponse::message() const
+QString SqsError::message() const
 {
-    Q_D(const SqsErrorResponse);
+    Q_D(const SqsError);
     return (d->errors.isEmpty()) ? QString() : d->errors.first().message;
 }
 
 // if !isValid then result may be any of the ErrorTypes.
-SqsErrorResponse::ErrorType SqsErrorResponse::type() const
+SqsError::ErrorType SqsError::type() const
 {
-    Q_D(const SqsErrorResponse);
+    Q_D(const SqsError);
     return (d->errors.isEmpty()) ? OtherType : d->errors.first().type;
 }
 
-bool SqsErrorResponse::parseSuccess(QIODevice &response)
+bool SqsError::parseSuccess(QIODevice &response)
 {
-    Q_D(SqsErrorResponse);
+    Q_D(SqsError);
     QXmlStreamReader xml(&response);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("ErrorResponse")) {
@@ -107,7 +107,7 @@ bool SqsErrorResponse::parseSuccess(QIODevice &response)
         detail[QLatin1String("characterOffset")] = xml.characterOffset();
         detail[QLatin1String("columnNumber")] = xml.columnNumber();
         detail[QLatin1String("lineNumber")] = xml.lineNumber();
-        SqsErrorResponse::Error error;
+        SqsError::Error error;
         error.code = OtherError;
         error.message = xml.errorString();
         error.rawCode = tr("XmlParseError");
@@ -121,9 +121,9 @@ bool SqsErrorResponse::parseSuccess(QIODevice &response)
 /**
  * @internal
  *
- * @class  SqsErrorResponsePrivate
+ * @class  SqsErrorPrivate
  *
- * @brief  Private implementation for SqsErrorResponse.
+ * @brief  Private implementation for SqsError.
  */
 
 /**
@@ -135,13 +135,13 @@ bool SqsErrorResponse::parseSuccess(QIODevice &response)
  *
  * @todo   Add operation parameter instead of defaulting to Get?
  */
-SqsErrorResponsePrivate::SqsErrorResponsePrivate(SqsErrorResponse * const q)
+SqsErrorPrivate::SqsErrorPrivate(SqsError * const q)
     : SqsResponsePrivate(q), q_ptr(q)
 {
 
 }
 
-SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
+SqsErrorPrivate::~SqsErrorPrivate()
 {
 
 }
@@ -166,12 +166,12 @@ SqsErrorResponsePrivate::~SqsErrorResponsePrivate()
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
-void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
+void SqsErrorPrivate::parseErrorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ErrorResponse"));
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("Error")) {
-            SqsErrorResponse::Error error;
+            SqsError::Error error;
             while (xml.readNextStartElement()) {
                 if (xml.name() == QLatin1String("Type")) {
                     error.rawType = xml.readElementText();
@@ -200,10 +200,10 @@ void SqsErrorResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
     }
 }
 
-SqsErrorResponse::ErrorCode SqsErrorResponsePrivate::codeFromString(const QString &code)
+SqsError::ErrorCode SqsErrorPrivate::codeFromString(const QString &code)
 {
     #define IfStringReturnErrorResponse(str) \
-        if (code == QLatin1String(#str)) return SqsErrorResponse::str
+        if (code == QLatin1String(#str)) return SqsError::str
     IfStringReturnErrorResponse(AccessDenied);
     IfStringReturnErrorResponse(IncompleteSignature);
     IfStringReturnErrorResponse(InternalFailure);
@@ -223,18 +223,18 @@ SqsErrorResponse::ErrorCode SqsErrorResponsePrivate::codeFromString(const QStrin
     IfStringReturnErrorResponse(ValidationError);
     #undef IfStringReturnErrorResponse
     qWarning() << Q_FUNC_INFO << "unknown SQS error code" << code;
-    return SqsErrorResponse::OtherError;
+    return SqsError::OtherError;
 }
 
-SqsErrorResponse::ErrorType SqsErrorResponsePrivate::typeFromString(const QString &type)
+SqsError::ErrorType SqsErrorPrivate::typeFromString(const QString &type)
 {
     #define IfStringReturnErrorType(str) \
-        if (type == QLatin1String(#str)) return SqsErrorResponse::str##Type
+        if (type == QLatin1String(#str)) return SqsError::str##Type
     IfStringReturnErrorType(Receiver);
     IfStringReturnErrorType(Sender);
     #undef IfStringReturnErrorType
     qWarning() << Q_FUNC_INFO << "unknown SQS error type" << type;
-    return SqsErrorResponse::OtherType;
+    return SqsError::OtherType;
 }
 
 QTAWS_END_NAMESPACE
