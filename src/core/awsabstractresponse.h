@@ -39,6 +39,10 @@ public:
 
     virtual ~AwsAbstractResponse();
 
+    // network error
+    // aws error
+    // xml parse error
+
     virtual bool isErrorResponse() const;
     virtual bool isValid() const = 0;
 
@@ -54,6 +58,10 @@ private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
+//signals:
+    //void error(QNetworkReply::Error);
+    //void error(SQSError?);
+    //void finished(...);
 };
 
 QTAWS_END_NAMESPACE
