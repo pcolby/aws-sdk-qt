@@ -69,13 +69,13 @@ SqsClient::~SqsClient()
     delete d_ptr;
 }
 
+SqsCreateQueueResponse * SqsClient::createQueue(const SqsCreateQueueRequest &request)
+{
+    return qobject_cast<SqsCreateQueueResponse *>(send(request));
+}
+
 /**
  * @brief SqsClient::createQueue
- *
- * Convenience function only; Alternative:
- *
- * SqsDeleteQueueRequest * const request = new SqsDeleteQueueRequest(...);
- * sqsClient->send(request);
  *
  * @param queueName
  */
@@ -84,7 +84,7 @@ SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
 {
     SqsCreateQueueRequest request(queueName);
     request.setAttributes(attributes);
-    return qobject_cast<SqsCreateQueueResponse *>(send(request));
+    return createQueue(request);
 }
 
 /**

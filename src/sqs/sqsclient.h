@@ -49,6 +49,7 @@ public:
     virtual ~SqsClient();
 
 public slots:
+    SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
     SqsCreateQueueResponse * createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());
 
 /*
