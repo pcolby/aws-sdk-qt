@@ -1,8 +1,9 @@
+include(../common.pri)
+
 # Create a library.
 TARGET = qtaws
 TEMPLATE = lib
 DEFINES += QTAWS_LIBRARY
-CONFIG += warn_on
 QT += network
 QT -= gui
 
