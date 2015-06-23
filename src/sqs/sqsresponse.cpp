@@ -57,6 +57,7 @@ bool SqsResponse::parseError(QIODevice &response)
 {
     Q_UNUSED(response)
     /// @todo Import this from the now-defunct SqsErrorResponse class.
+    return false;
 }
 
 /**
