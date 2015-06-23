@@ -57,36 +57,6 @@ bool SqsErrorResponse::isValid() const
     return !errors().isEmpty();
 }
 
-bool SqsErrorResponse::parse(QIODevice &response)
-{
-    Q_D(SqsErrorResponse);
-    QXmlStreamReader xml(&response);
-    while (xml.readNextStartElement()) {
-        if (xml.name() == QLatin1String("ErrorResponse")) {
-            d->parseErrorResponse(xml);
-        } else {
-            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
-            xml.skipCurrentElement();
-        }
-    }
-
-    // The stream reader encounted a parse error, add it to the errors list.
-    if (xml.hasError()) {
-        QVariantMap detail;
-        detail[QLatin1String("characterOffset")] = xml.characterOffset();
-        detail[QLatin1String("columnNumber")] = xml.columnNumber();
-        detail[QLatin1String("lineNumber")] = xml.lineNumber();
-        SqsErrorResponse::Error error;
-        error.code = OtherError;
-        error.message = xml.errorString();
-        error.rawCode = tr("XmlParseError");
-        error.type = OtherType;
-        error.detail = detail;
-        d->errors.append(error);
-    }
-    return false;
-}
-
 SqsErrorResponse::ErrorList SqsErrorResponse::errors() const
 {
     Q_D(const SqsErrorResponse);
@@ -116,6 +86,36 @@ SqsErrorResponse::ErrorType SqsErrorResponse::type() const
 {
     Q_D(const SqsErrorResponse);
     return (d->errors.isEmpty()) ? OtherType : d->errors.first().type;
+}
+
+bool SqsErrorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(SqsErrorResponse);
+    QXmlStreamReader xml(&response);
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("ErrorResponse")) {
+            d->parseErrorResponse(xml);
+        } else {
+            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+
+    // The stream reader encounted a parse error, add it to the errors list.
+    if (xml.hasError()) {
+        QVariantMap detail;
+        detail[QLatin1String("characterOffset")] = xml.characterOffset();
+        detail[QLatin1String("columnNumber")] = xml.columnNumber();
+        detail[QLatin1String("lineNumber")] = xml.lineNumber();
+        SqsErrorResponse::Error error;
+        error.code = OtherError;
+        error.message = xml.errorString();
+        error.rawCode = tr("XmlParseError");
+        error.type = OtherType;
+        error.detail = detail;
+        d->errors.append(error);
+    }
+    return false;
 }
 
 /**

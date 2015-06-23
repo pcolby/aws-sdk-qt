@@ -77,14 +77,15 @@ public:
     virtual bool isErrorResponse() const;
     virtual bool isValid() const;
 
-    virtual bool parse(QIODevice &response);
-
     ErrorList errors() const;
 
     ErrorCode code() const;
     QVariant detail() const;
     QString message() const;
     ErrorType type() const;
+
+protected slots:
+    virtual bool parseSuccess(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsErrorResponse)
