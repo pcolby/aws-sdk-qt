@@ -83,7 +83,7 @@ SqsErrorList SqsResponse::serviceErrors() const
     return d->errors;
 }
 
-void SqsResponse::parseError(QIODevice &response)
+void SqsResponse::parseFailure(QIODevice &response)
 {
     Q_D(SqsResponse);
     QXmlStreamReader xml(&response);

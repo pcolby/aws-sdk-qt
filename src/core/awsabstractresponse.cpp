@@ -132,7 +132,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
     } else if (isSuccess(reply)) {
         parseSuccess(*reply);
     } else {
-        parseError(*reply); /// @todo Rename to parseFailure?
+        parseFailure(*reply);
     }
     emit finished(isValid());
 }

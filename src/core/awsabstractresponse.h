@@ -56,7 +56,7 @@ protected:
 
 protected slots:
     virtual void parse(QNetworkReply * const reply);
-    virtual void parseError(QIODevice &response) = 0;
+    virtual void parseFailure(QIODevice &response) = 0;
     virtual void parseSuccess(QIODevice &response) = 0;
 
 private:
