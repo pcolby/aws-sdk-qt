@@ -69,6 +69,10 @@ public:
     void setApiVersion(const QString &version);
 
 protected:
+    /// @cond internal
+    SqsRequest(SqsRequestPrivate * const d, QObject * const parent);
+    /// @endcond
+
     int clearParameter(const QString &name);
     QVariant parameter(const QString &name, const QVariant &defaultValue = QVariant()) const;
     void setParameter(const QString &name, const QVariant &value);
@@ -78,7 +82,6 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SqsRequest)
     Q_DISABLE_COPY(SqsRequest)
-    SqsRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

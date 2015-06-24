@@ -48,6 +48,11 @@ SqsError::SqsError() : d_ptr(new SqsErrorPrivate(this))
 
 }
 
+SqsError::SqsError(SqsErrorPrivate * const d) : d_ptr(d)
+{
+
+}
+
 SqsError::SqsError(const SqsError &other)
     : d_ptr(new SqsErrorPrivate(other.d_func(), this))
 {

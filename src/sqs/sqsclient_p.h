@@ -31,13 +31,11 @@ class SqsClient;
 class QTAWS_EXPORT SqsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-
     SqsClientPrivate(SqsClient * const q);
 
 private:
     Q_DECLARE_PUBLIC(SqsClient)
     Q_DISABLE_COPY(SqsClientPrivate)
-    SqsClient * const q_ptr; ///< Internal q-pointer.
 
 };
 

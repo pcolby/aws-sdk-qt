@@ -79,9 +79,14 @@ public:
     QString rawType() const;
     ErrorType type() const;
 
+protected:
+    /// @cond internal
+    SqsErrorPrivate * const d_ptr; ///< Internal d-pointer.
+    SqsError(SqsErrorPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SqsError)
-    SqsErrorPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

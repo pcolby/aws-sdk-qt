@@ -38,10 +38,17 @@ QTAWS_BEGIN_NAMESPACE
  * @param parent       This object's parent.
  */
 SqsResponse::SqsResponse(QObject * const parent)
-    : AwsAbstractResponse(parent), d_ptr(new SqsResponsePrivate(this))
+    : AwsAbstractResponse(new SqsResponsePrivate(this), parent)
 {
 
 }
+
+SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)
+    : AwsAbstractResponse(d, parent)
+{
+
+}
+
 
 SqsResponse::~SqsResponse()
 {
@@ -135,7 +142,7 @@ bool SqsResponse::parseError(QIODevice &response)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
-    : AwsAbstractResponsePrivate(q), xmlError(QXmlStreamReader::NoError), q_ptr(q)
+    : AwsAbstractResponsePrivate(q), xmlError(QXmlStreamReader::NoError)
 {
 
 }

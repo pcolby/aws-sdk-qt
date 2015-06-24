@@ -42,7 +42,6 @@ public:
 private:
     Q_DECLARE_PUBLIC(SqsRequest)
     Q_DISABLE_COPY(SqsRequestPrivate)
-    SqsRequest * const q_ptr; ///< Internal q-pointer.
 
 };
 

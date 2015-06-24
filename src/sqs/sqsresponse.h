@@ -48,13 +48,17 @@ public:
     QXmlStreamReader::Error xmlError() const; ///< @todo Move to base class?
     QString xmlErrorString() const; ///< @todo Move to base class?
 
+protected:
+    /// @cond internal
+    SqsResponse(SqsResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual bool parseError(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsResponse)
     Q_DISABLE_COPY(SqsResponse)
-    AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

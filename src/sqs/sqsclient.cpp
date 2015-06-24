@@ -45,7 +45,7 @@ QTAWS_BEGIN_NAMESPACE
 SqsClient::SqsClient(const AwsRegion::Region region,
                      AwsAbstractCredentials * credentials,
                      QObject * const parent)
-    : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
+    : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
     d->region = region;
@@ -56,7 +56,7 @@ SqsClient::SqsClient(const AwsRegion::Region region,
 SqsClient::SqsClient(const QUrl &endpoint,
                      AwsAbstractCredentials * credentials,
                      QObject * const parent)
-    : AwsAbstractClient(parent), d_ptr(new SqsClientPrivate(this))
+    : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
     d->endpoint = endpoint;
@@ -103,7 +103,7 @@ SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
  * @param  q  Pointer to this object's public SqsClient instance.
  */
 SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
-    : AwsAbstractClientPrivate(q), q_ptr(q)
+    : AwsAbstractClientPrivate(q)
 {
 
 }

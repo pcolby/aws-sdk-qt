@@ -41,9 +41,15 @@ QTAWS_BEGIN_NAMESPACE
  * @param parent       This object's parent.
  */
 SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
-    : AwsAbstractRequest(parent), d_ptr(new SqsRequestPrivate(action, this))
+    : AwsAbstractRequest(new SqsRequestPrivate(action, this), parent)
 {
     setApiVersion(QLatin1String("2012-11-05"));
+}
+
+SqsRequest::SqsRequest(SqsRequestPrivate * const d, QObject * const parent)
+    : AwsAbstractRequest(d, parent)
+{
+
 }
 
 SqsRequest::~SqsRequest()
@@ -164,7 +170,7 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q  Pointer to this object's public SqsRequest instance.
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action), q_ptr(q)
+    : AwsAbstractRequestPrivate(q), action(action)
 {
 
 }

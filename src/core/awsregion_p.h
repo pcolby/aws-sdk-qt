@@ -22,6 +22,8 @@
 
 #include "qtawsglobal.h"
 
+#include <QtGlobal>
+
 QTAWS_BEGIN_NAMESPACE
 
 class AwsRegion;
