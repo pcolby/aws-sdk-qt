@@ -49,6 +49,9 @@ public:
 public slots:
     virtual bool refresh();
 
+private:
+    Q_DISABLE_COPY(AwsAbstractCredentials)
+
 signals:
     void changed();
 

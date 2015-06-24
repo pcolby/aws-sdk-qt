@@ -50,6 +50,7 @@ protected slots:
 
 private:
     Q_DECLARE_PRIVATE(SqsResponse)
+    Q_DISABLE_COPY(SqsResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 };

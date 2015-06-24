@@ -42,6 +42,7 @@ public:
 
 private:
     Q_DECLARE_PRIVATE(AwsSignatureV3)
+    Q_DISABLE_COPY(AwsSignatureV3)
     friend class TestAwsSignatureV3;
 };
 

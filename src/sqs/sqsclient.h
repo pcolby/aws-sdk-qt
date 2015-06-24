@@ -78,6 +78,7 @@ public slots:
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)
+    Q_DISABLE_COPY(SqsClient)
     SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 signals:

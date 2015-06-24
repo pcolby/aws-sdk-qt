@@ -46,6 +46,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(AwsSignatureV2)
+    Q_DISABLE_COPY(AwsSignatureV2Private)
     friend class TestAwsSignatureV2;
 };
 

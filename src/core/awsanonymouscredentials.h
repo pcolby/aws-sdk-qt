@@ -33,6 +33,10 @@ public:
     virtual QString accessKeyId() const;
     virtual QString secretKey() const;
     virtual QString token() const;
+
+private:
+    Q_DISABLE_COPY(AwsAnonymousCredentials)
+
 };
 
 QTAWS_END_NAMESPACE

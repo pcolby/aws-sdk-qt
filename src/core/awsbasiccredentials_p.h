@@ -39,6 +39,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(AwsBasicCredentials)
+    Q_DISABLE_COPY(AwsBasicCredentialsPrivate)
     AwsBasicCredentials * const q_ptr; ///< Internal q-pointer.
 
 };

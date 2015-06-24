@@ -86,6 +86,7 @@ protected:
 
 private:
     Q_DECLARE_PUBLIC(AwsEndpoint)
+    Q_DISABLE_COPY(AwsEndpointPrivate)
     AwsEndpoint * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsEndpoint;
     friend class TestAwsSignatureV4;

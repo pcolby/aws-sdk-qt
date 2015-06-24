@@ -65,6 +65,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
+    Q_DISABLE_COPY(AwsAbstractRequest)
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 };

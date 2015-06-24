@@ -102,6 +102,7 @@ public:
 
 private:
     Q_DECLARE_PRIVATE(AwsRegion)
+    Q_DISABLE_COPY(AwsRegion)
     AwsRegionPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsRegion;
 };

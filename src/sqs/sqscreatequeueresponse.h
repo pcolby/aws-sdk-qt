@@ -45,6 +45,7 @@ protected slots:
 
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)
+    Q_DISABLE_COPY(SqsCreateQueueResponse)
     SqsCreateQueueResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 };

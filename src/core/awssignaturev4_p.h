@@ -75,6 +75,7 @@ protected:
 
 private:
     Q_DECLARE_PUBLIC(AwsSignatureV4)
+    Q_DISABLE_COPY(AwsSignatureV4Private)
     friend class TestAwsSignatureV4;
 };
 

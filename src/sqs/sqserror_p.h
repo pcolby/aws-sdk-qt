@@ -46,6 +46,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(SqsError)
+    Q_DISABLE_COPY(SqsErrorPrivate)
     SqsError * const q_ptr; ///< Internal q-pointer.
 
 };

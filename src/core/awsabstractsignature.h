@@ -50,6 +50,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractSignature)
+    Q_DISABLE_COPY(AwsAbstractSignature)
     friend class TestAwsAbstractSignature;
 };
 

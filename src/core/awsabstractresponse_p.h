@@ -43,6 +43,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(AwsAbstractResponse)
+    Q_DISABLE_COPY(AwsAbstractResponsePrivate)
     AwsAbstractResponse * const q_ptr; ///< Internal q-pointer.
 
 };

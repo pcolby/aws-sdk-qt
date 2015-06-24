@@ -77,6 +77,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(SqsRequest)
+    Q_DISABLE_COPY(SqsRequest)
     SqsRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 };

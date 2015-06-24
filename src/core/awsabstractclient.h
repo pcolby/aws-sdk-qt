@@ -61,6 +61,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)
+    Q_DISABLE_COPY(AwsAbstractClient)
     AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 };

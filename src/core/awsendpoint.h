@@ -76,6 +76,7 @@ public:
 
 private:
     Q_DECLARE_PRIVATE(AwsEndpoint)
+    Q_DISABLE_COPY(AwsEndpoint)
     AwsEndpointPrivate * const d_ptr; ///< Internal d-pointer.
     friend class TestAwsEndpoint;
 };

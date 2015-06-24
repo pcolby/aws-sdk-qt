@@ -52,6 +52,7 @@ public slots:
 
 private:
     Q_DECLARE_PRIVATE(AwsBasicCredentials)
+    Q_DISABLE_COPY(AwsBasicCredentials)
     AwsBasicCredentialsPrivate * const d_ptr; ///< Internal d-pointer.
 
 };

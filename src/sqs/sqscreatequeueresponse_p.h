@@ -39,6 +39,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(SqsCreateQueueResponse)
+    Q_DISABLE_COPY(SqsCreateQueueResponsePrivate)
     SqsCreateQueueResponse * const q_ptr; ///< Internal q-pointer.
 
 };

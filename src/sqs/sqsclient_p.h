@@ -36,6 +36,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(SqsClient)
+    Q_DISABLE_COPY(SqsClientPrivate)
     SqsClient * const q_ptr; ///< Internal q-pointer.
 
 };

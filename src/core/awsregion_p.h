@@ -36,6 +36,7 @@ protected:
 
 private:
     Q_DECLARE_PUBLIC(AwsRegion)
+    Q_DISABLE_COPY(AwsRegionPrivate)
     AwsRegion * const q_ptr; ///< Internal q-pointer.
     friend class TestAwsRegionPrivate;
 };

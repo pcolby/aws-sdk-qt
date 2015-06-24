@@ -48,6 +48,7 @@ public:
 
 private:
     Q_DECLARE_PUBLIC(AwsAbstractClient)
+    Q_DISABLE_COPY(AwsAbstractClientPrivate)
     AwsAbstractClient * const q_ptr; ///< Internal q-pointer.
 
 };

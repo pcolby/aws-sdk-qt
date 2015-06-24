@@ -51,6 +51,7 @@ protected slots:
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
+    Q_DISABLE_COPY(AwsAbstractResponse)
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 //signals:
