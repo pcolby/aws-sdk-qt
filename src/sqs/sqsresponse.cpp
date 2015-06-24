@@ -112,8 +112,6 @@ void SqsResponse::parseFailure(QIODevice &response)
  * @brief  Constructs a new SqsResponsePrivate object.
  *
  * @param  q  Pointer to this object's public SqsResponse instance.
- *
- * @todo   Add operation parameter instead of defaulting to Get?
  */
 SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
     : AwsAbstractResponsePrivate(q)

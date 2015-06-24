@@ -109,11 +109,9 @@ void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
 /**
  * @internal
  *
- * @brief  Constructs a new SqsResponsePrivate object.
+ * @brief  Constructs a new SqsCreateQueueResponsePrivate object.
  *
- * @param  q  Pointer to this object's public SqsResponse instance.
- *
- * @todo   Add operation parameter instead of defaulting to Get?
+ * @param  q  Pointer to this object's public SqsCreateQueueResponse instance.
  */
 SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q)
     : SqsResponsePrivate(q), q_ptr(q)

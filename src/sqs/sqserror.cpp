@@ -123,11 +123,9 @@ SqsError::ErrorType SqsError::type() const
 /**
  * @internal
  *
- * @brief  Constructs a new SqsResponsePrivate object.
+ * @brief  Constructs a new SqsErrorPrivate object.
  *
- * @param  q  Pointer to this object's public SqsResponse instance.
- *
- * @todo   Add operation parameter instead of defaulting to Get?
+ * @param  q  Pointer to this object's public SqsError instance.
  */
 SqsErrorPrivate::SqsErrorPrivate(SqsError * const q)
     : code(SqsError::OtherError), type(SqsError::OtherType), q_ptr(q)

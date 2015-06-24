@@ -151,8 +151,6 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
  * @brief  Constructs a new AwsAbstractResponsePrivate object.
  *
  * @param  q  Pointer to this object's public AwsAbstractResponse instance.
- *
- * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
     : xmlError(QXmlStreamReader::NoError), q_ptr(q)
