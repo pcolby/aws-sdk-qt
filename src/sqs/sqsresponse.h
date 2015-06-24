@@ -45,8 +45,6 @@ public:
     QString requestId() const;
 
     SqsErrorList serviceErrors() const;
-    QXmlStreamReader::Error xmlError() const; ///< @todo Move to base class?
-    QString xmlErrorString() const; ///< @todo Move to base class?
 
 protected:
     /// @cond internal

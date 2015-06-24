@@ -57,23 +57,18 @@ SqsResponse::~SqsResponse()
 
 QString SqsResponse::errorString() const
 {
-    /// @todo If we have errors...
-    ///       else
-    return AwsAbstractResponse::errorString();
+    Q_D(const SqsResponse);
+    return (d->errors.empty()) ? AwsAbstractResponse::errorString() : d->errors.first().message();
 }
 
 bool SqsResponse::hasError() const
 {
-    return ((xmlError() != QXmlStreamReader::NoError) ||
-            (!serviceErrors().isEmpty()) ||
-            (AwsAbstractResponse::hasError()));
+    return ((!serviceErrors().isEmpty()) || (AwsAbstractResponse::hasError()));
 }
 
 bool SqsResponse::isValid() const
 {
-    return ((xmlError() == QXmlStreamReader::NoError) &&
-            (serviceErrors().isEmpty()) &&
-            (AwsAbstractResponse::isValid()));
+    return ((serviceErrors().isEmpty()) && (AwsAbstractResponse::isValid()));
 }
 
 QString SqsResponse::requestId() const
@@ -86,20 +81,6 @@ SqsErrorList SqsResponse::serviceErrors() const
 {
     Q_D(const SqsResponse);
     return d->errors;
-}
-
-/// @todo Move to base class?
-QXmlStreamReader::Error SqsResponse::xmlError() const
-{
-    Q_D(const SqsResponse);
-    return d->xmlError;
-}
-
-/// @todo Move to base class?
-QString SqsResponse::xmlErrorString() const
-{
-    Q_D(const SqsResponse);
-    return d->xmlErrorString;
 }
 
 bool SqsResponse::parseError(QIODevice &response)
@@ -142,7 +123,7 @@ bool SqsResponse::parseError(QIODevice &response)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
-    : AwsAbstractResponsePrivate(q), xmlError(QXmlStreamReader::NoError)
+    : AwsAbstractResponsePrivate(q)
 {
 
 }
@@ -165,22 +146,6 @@ void SqsResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
            xml.skipCurrentElement();
         }
     }
-
-    // The stream reader encounted a parse error, add it to the errors list.
-    /// @todo seprate function?
-/*    if (xml.hasError()) {
-        QVariantMap detail;
-        detail[QLatin1String("characterOffset")] = xml.characterOffset();
-        detail[QLatin1String("columnNumber")] = xml.columnNumber();
-        detail[QLatin1String("lineNumber")] = xml.lineNumber();
-        SqsErrorError error;
-        error.code = OtherError;
-        error.message = xml.errorString();
-        error.rawCode = tr("XmlParseError");
-        error.type = OtherType;
-        error.detail = detail;
-        d->errors.append(error);
-    }*/
 }
 
 void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader &xml)

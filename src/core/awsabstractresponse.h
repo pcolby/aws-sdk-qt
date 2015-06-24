@@ -23,6 +23,7 @@
 #include "qtawsglobal.h"
 
 #include <QNetworkReply>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -40,6 +41,8 @@ public:
     virtual bool hasError() const;
     virtual bool isValid() const = 0;
     virtual QNetworkReply::NetworkError networkError() const;
+    virtual QXmlStreamReader::Error xmlParseError() const;
+    virtual QString xmlParseErrorString() const;
 
 protected:
     /// @cond internal

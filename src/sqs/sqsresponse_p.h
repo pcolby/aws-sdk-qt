@@ -34,8 +34,6 @@ class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
 public:
     SqsErrorList errors;
     QString requestId;
-    QXmlStreamReader::Error xmlError; ///< @todo Move to base class?
-    QString xmlErrorString; ///< @todo Move to base class?
 
     SqsResponsePrivate(SqsResponse * const q);
 

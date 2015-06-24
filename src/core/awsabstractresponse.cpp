@@ -58,27 +58,47 @@ AwsAbstractResponse::~AwsAbstractResponse()
 QString AwsAbstractResponse::errorString() const
 {
     Q_D(const AwsAbstractResponse);
-    return (networkError() == QNetworkReply::NoError) ? QString() : d->reply->errorString();
+    if (networkError() != QNetworkReply::NoError) {
+        return d->reply->errorString();
+    } else if (xmlParseError() != QXmlStreamReader::NoError) {
+        return xmlParseErrorString();
+    } else {
+        return QString();
+    }
 }
 
 /// @todo Include note re cyclic dependencies if calling (virtual) isValid.
 bool AwsAbstractResponse::hasError() const
 {
     Q_D(const AwsAbstractResponse);
-    return ((d->reply) && (d->reply->error() != QNetworkReply::NoError));
+    return (((d->reply) && (d->reply->error() != QNetworkReply::NoError)) ||
+            (d->xmlError != QXmlStreamReader::NoError));
 }
 
 /// @todo Include note re cyclic dependencies if calling (virtual) hasError.
 bool AwsAbstractResponse::isValid() const
 {
     Q_D(const AwsAbstractResponse);
-    return ((!d->reply) || (d->reply->error() == QNetworkReply::NoError));
+    return (((!d->reply) || (d->reply->error() == QNetworkReply::NoError)) &&
+            (d->xmlError == QXmlStreamReader::NoError));
 }
 
 QNetworkReply::NetworkError AwsAbstractResponse::networkError() const
 {
     Q_D(const AwsAbstractResponse);
     return (d->reply) ? d->reply->error() : QNetworkReply::NoError;
+}
+
+QXmlStreamReader::Error AwsAbstractResponse::xmlParseError() const
+{
+    Q_D(const AwsAbstractResponse);
+    return d->xmlError;
+}
+
+QString AwsAbstractResponse::xmlParseErrorString() const
+{
+    Q_D(const AwsAbstractResponse);
+    return d->xmlErrorString;
 }
 
 /// @todo Document bool AwsAbstractResponse::isValid() const
@@ -117,7 +137,7 @@ bool AwsAbstractResponse::parse(QNetworkReply * const reply)
  * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
-    : q_ptr(q)
+    : xmlError(QXmlStreamReader::NoError), q_ptr(q)
 {
 
 }

@@ -22,8 +22,9 @@
 
 #include "qtawsglobal.h"
 
-#include <QtGlobal>
+#include <QVariantMap>
 
+class QNetworkReply;
 class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
@@ -34,6 +35,8 @@ class QTAWS_EXPORT AwsAbstractResponsePrivate {
 
 public:
     QNetworkReply * reply;
+    QXmlStreamReader::Error xmlError;
+    QString xmlErrorString;
 
     AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
