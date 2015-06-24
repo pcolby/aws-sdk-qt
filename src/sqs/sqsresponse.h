@@ -52,7 +52,7 @@ protected:
     /// @endcond
 
 protected slots:
-    virtual bool parseError(QIODevice &response);
+    virtual void parseError(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsResponse)

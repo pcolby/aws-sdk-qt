@@ -83,7 +83,7 @@ SqsErrorList SqsResponse::serviceErrors() const
     return d->errors;
 }
 
-bool SqsResponse::parseError(QIODevice &response)
+void SqsResponse::parseError(QIODevice &response)
 {
     Q_D(SqsResponse);
     QXmlStreamReader xml(&response);
@@ -102,7 +102,6 @@ bool SqsResponse::parseError(QIODevice &response)
         d->xmlError = xml.error();
         d->xmlErrorString = xml.errorString();
     }
-    return isValid();
 }
 
 /**

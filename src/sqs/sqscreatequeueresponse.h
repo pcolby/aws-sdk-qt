@@ -41,7 +41,7 @@ public:
     QString queueUrl() const;
 
 protected slots:
-    virtual bool parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response);
 
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)

@@ -75,7 +75,7 @@ QString SqsCreateQueueResponse::queueUrl() const
  * </CreateQueueResponse>
  * @endcode
  */
-bool SqsCreateQueueResponse::parseSuccess(QIODevice &response)
+void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
 {
     Q_D(SqsCreateQueueResponse);
     QXmlStreamReader xml(&response);
@@ -96,7 +96,6 @@ bool SqsCreateQueueResponse::parseSuccess(QIODevice &response)
             xml.skipCurrentElement();
         }
     }
-    return isValid();
 }
 
 /**

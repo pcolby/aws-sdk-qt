@@ -118,19 +118,16 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
-bool AwsAbstractResponse::parse(QNetworkReply * const reply)
+void AwsAbstractResponse::parse(QNetworkReply * const reply)
 {
     if (reply->error() != QNetworkReply::NoError) {
-        /// @todo emit (network error?) Covered by the emit below anyway?
-        return false; /// @todo Just fall through?
+        qDebug() << Q_FUNC_INFO << reply->errorString();
     } else if (isSuccess(reply)) {
         parseSuccess(*reply);
     } else {
         parseError(*reply); /// @todo Rename to parseFailure?
     }
-
-    /// @todo emit something(isValid()); ?
-    return isValid(); /// @todo Return value is ignored.  Remove it?
+    emit finished(isValid());
 }
 
 /**

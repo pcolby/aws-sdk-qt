@@ -39,7 +39,7 @@ public:
 
     virtual QString errorString() const;
     virtual bool hasError() const;
-    virtual bool isValid() const = 0;
+    virtual bool isValid() const;
     virtual QNetworkReply::NetworkError networkError() const;
     virtual QXmlStreamReader::Error xmlParseError() const;
     virtual QString xmlParseErrorString() const;
@@ -54,21 +54,17 @@ protected:
     void setReply(QNetworkReply * reply);
 
 protected slots:
-    virtual bool parse(QNetworkReply * const reply);
-    virtual bool parseError(QIODevice &response) = 0;
-    virtual bool parseSuccess(QIODevice &response) = 0;
+    virtual void parse(QNetworkReply * const reply);
+    virtual void parseError(QIODevice &response) = 0;
+    virtual void parseSuccess(QIODevice &response) = 0;
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
     Q_DISABLE_COPY(AwsAbstractResponse)
 
-//signals:
-    //void error(QNetworkReply::Error);
-    //void error(SQSError?);
-    //void finished(...);
-    // networkError(error)
-    // parseError(error, line, charoffset)
-    // serviceError(error, type, etc)
+signals:
+    void finished(const bool isValid);
+
 };
 
 QTAWS_END_NAMESPACE
