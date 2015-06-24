@@ -24,6 +24,7 @@
 #include "sqserror.h"
 
 #include <QVariantMap>
+#include <QXmlStreamReader>
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -44,6 +45,8 @@ public:
     QString requestId() const;
 
     SqsErrorList serviceErrors() const;
+    QXmlStreamReader::Error xmlError() const; ///< @todo Move to base class?
+    QString xmlErrorString() const; ///< @todo Move to base class?
 
 protected slots:
     virtual bool parseError(QIODevice &response);
