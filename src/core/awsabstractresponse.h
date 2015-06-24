@@ -42,6 +42,11 @@ public:
     virtual QNetworkReply::NetworkError networkError() const;
 
 protected:
+    /// @cond internal
+    AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
+    AwsAbstractResponse(AwsAbstractResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
     void setReply(QNetworkReply * reply);
 
 protected slots:
@@ -52,7 +57,6 @@ protected slots:
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
     Q_DISABLE_COPY(AwsAbstractResponse)
-    AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.
 
 //signals:
     //void error(QNetworkReply::Error);

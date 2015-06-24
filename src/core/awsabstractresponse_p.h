@@ -22,6 +22,8 @@
 
 #include "qtawsglobal.h"
 
+#include <QtGlobal>
+
 class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
@@ -41,10 +43,12 @@ public:
                           const QString &prefix = QLatin1String("."),
                           const int maxDepth = 1024) const;
 
+protected:
+    AwsAbstractResponse * const q_ptr; ///< Internal q-pointer.
+
 private:
     Q_DECLARE_PUBLIC(AwsAbstractResponse)
     Q_DISABLE_COPY(AwsAbstractResponsePrivate)
-    AwsAbstractResponse * const q_ptr; ///< Internal q-pointer.
 
 };
 

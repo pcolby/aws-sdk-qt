@@ -39,8 +39,7 @@ class QTAWS_EXPORT AwsAbstractClient : public QObject {
     Q_OBJECT
 
 public:
-    AwsAbstractClient(
-            QObject * const parent = 0);
+    AwsAbstractClient(QObject * const parent = 0);
 
     virtual ~AwsAbstractClient();
 
@@ -56,13 +55,17 @@ public:
     void setRegion(const AwsRegion::Region region);
 
 protected:
+    /// @cond internal
+    AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AwsAbstractClient(AwsAbstractClientPrivate * const d, QObject * const parent);
+    /// @endcond
+
     virtual AwsAbstractCredentials * credentials() const;
     virtual AwsAbstractSignature * signature() const;
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractClient)
     Q_DISABLE_COPY(AwsAbstractClient)
-    AwsAbstractClientPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

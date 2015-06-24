@@ -60,13 +60,17 @@ public:
                                        const AwsAbstractCredentials &credentials) const;
 
 protected:
+    /// @cond internal
+    AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
+    AwsAbstractRequest(AwsAbstractRequestPrivate * const d, QObject * const parent);
+    /// @endcond
+
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const = 0;
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const = 0;
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
     Q_DISABLE_COPY(AwsAbstractRequest)
-    AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
 

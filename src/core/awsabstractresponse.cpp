@@ -43,6 +43,13 @@ AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
 
 }
 
+AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
+                                         QObject * const parent)
+    : QObject(parent), d_ptr(d)
+{
+
+}
+
 AwsAbstractResponse::~AwsAbstractResponse()
 {
     delete d_ptr;

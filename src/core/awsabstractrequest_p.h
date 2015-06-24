@@ -43,10 +43,12 @@ public:
 
     virtual ~AwsAbstractRequestPrivate();
 
+protected:
+    AwsAbstractRequest * const q_ptr; ///< Internal q-pointer.
+
 private:
     Q_DECLARE_PUBLIC(AwsAbstractRequest)
     Q_DISABLE_COPY(AwsAbstractRequestPrivate)
-    AwsAbstractRequest * const q_ptr; ///< Internal q-pointer.
 
 };
 

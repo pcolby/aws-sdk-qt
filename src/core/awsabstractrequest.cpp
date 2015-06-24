@@ -45,6 +45,13 @@ AwsAbstractRequest::AwsAbstractRequest(
 
 }
 
+AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d,
+                                       QObject * const parent)
+    : QObject(parent), d_ptr(d)
+{
+
+}
+
 AwsAbstractRequest::~AwsAbstractRequest()
 {
     delete d_ptr;

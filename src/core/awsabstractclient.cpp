@@ -48,6 +48,13 @@ AwsAbstractClient::AwsAbstractClient(
 
 }
 
+AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,
+                                     QObject * const parent)
+    : QObject(parent), d_ptr(d)
+{
+
+}
+
 AwsAbstractClient::~AwsAbstractClient()
 {
     delete d_ptr;
