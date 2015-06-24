@@ -105,6 +105,12 @@ QString AwsAbstractResponse::xmlParseErrorString() const
 
 /// @todo Document bool AwsAbstractResponse::parse(QNetworkReply * const reply)
 
+bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
+{
+    return ((reply->error() != QNetworkReply::NoError) &&
+            ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
+}
+
 void AwsAbstractResponse::setReply(QNetworkReply * const reply)
 {
     Q_D(AwsAbstractResponse);
@@ -114,9 +120,17 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
 
 bool AwsAbstractResponse::parse(QNetworkReply * const reply)
 {
-    /// @todo if (reply->error() == QNetworkReply::NoError)
-    return ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
-            ? parseSuccess(*reply) : parseError(*reply);
+    if (reply->error() != QNetworkReply::NoError) {
+        /// @todo emit (network error?) Covered by the emit below anyway?
+        return false; /// @todo Just fall through?
+    } else if (isSuccess(reply)) {
+        parseSuccess(*reply);
+    } else {
+        parseError(*reply); /// @todo Rename to parseFailure?
+    }
+
+    /// @todo emit something(isValid()); ?
+    return isValid(); /// @todo Return value is ignored.  Remove it?
 }
 
 /**

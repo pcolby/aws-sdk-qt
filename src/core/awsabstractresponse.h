@@ -50,6 +50,7 @@ protected:
     AwsAbstractResponse(AwsAbstractResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
+    virtual bool isSuccess(QNetworkReply * const reply) const;
     void setReply(QNetworkReply * reply);
 
 protected slots:
