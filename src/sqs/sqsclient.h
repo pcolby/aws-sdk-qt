@@ -80,8 +80,6 @@ private:
     Q_DECLARE_PRIVATE(SqsClient)
     Q_DISABLE_COPY(SqsClient)
 
-signals:
-    void queueCreated(SqsCreateQueueRequest * request); /// @todo
 };
 
 QTAWS_END_NAMESPACE
