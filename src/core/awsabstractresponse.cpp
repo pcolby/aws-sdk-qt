@@ -118,6 +118,13 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
+void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
+{
+    Q_D(AwsAbstractResponse);
+    d->xmlError = xml.error();
+    d->xmlErrorString = xml.errorString();
+}
+
 void AwsAbstractResponse::parse(QNetworkReply * const reply)
 {
     if (reply->error() != QNetworkReply::NoError) {

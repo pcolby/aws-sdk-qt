@@ -95,13 +95,7 @@ void SqsResponse::parseError(QIODevice &response)
             xml.skipCurrentElement();
         }
     }
-
-    // The stream reader encounted a parse error, add it to the errors list.
-    /// @todo Move this to base class?
-    if (xml.hasError()) {
-        d->xmlError = xml.error();
-        d->xmlErrorString = xml.errorString();
-    }
+    setXmlError(xml);
 }
 
 /**

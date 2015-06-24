@@ -52,6 +52,7 @@ protected:
 
     virtual bool isSuccess(QNetworkReply * const reply) const;
     void setReply(QNetworkReply * reply);
+    void setXmlError(const QXmlStreamReader &xml);
 
 protected slots:
     virtual void parse(QNetworkReply * const reply);
