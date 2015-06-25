@@ -107,13 +107,13 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
     return NULL;
 }
 
-/// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
-
-/*AwsAbstractResponse * AwsAbstractRequest::parseResponse(QNetworkReply &reply)
+void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation operation)
 {
-    return ((reply.attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2)
-            ? parseSuccessResponse(reply) : parseErrorResponse(reply);
-}*/
+    Q_D(AwsAbstractRequest);
+    d->operation = operation;
+}
+
+/// @todo Doc virtual QNetworkReqeust unsignedRequest() = 0;
 
 /**
  * @internal
@@ -129,8 +129,6 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
  * @brief  Constructs a new AwsAbstractRequestPrivate object.
  *
  * @param  q  Pointer to this object's public AwsAbstractRequest instance.
- *
- * @todo   Add operation parameter instead of defaulting to Get?
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
     : operation(QNetworkAccessManager::GetOperation), q_ptr(q)

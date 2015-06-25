@@ -65,6 +65,9 @@ protected:
     AwsAbstractRequest(AwsAbstractRequestPrivate * const d, QObject * const parent);
     /// @endcond
 
+    /// void setData(); @todo
+    void setOperation(const QNetworkAccessManager::Operation operation);
+
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const = 0;
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const = 0;
 

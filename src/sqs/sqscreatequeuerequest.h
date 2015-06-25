@@ -61,6 +61,9 @@ public:
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
+private:
+    Q_DISABLE_COPY(SqsCreateQueueRequest)
+
 };
 
 QTAWS_END_NAMESPACE
