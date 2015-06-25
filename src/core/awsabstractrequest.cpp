@@ -108,6 +108,12 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
     return NULL;
 }
 
+void AwsAbstractRequest::setData(const QByteArray &data)
+{
+    Q_D(AwsAbstractRequest);
+    d->data = data;
+}
+
 void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation operation)
 {
     Q_D(AwsAbstractRequest);
