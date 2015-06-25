@@ -24,12 +24,25 @@
 
 #include <QCoreApplication>
 
+/*
+env vars the official awscli tool recognises.
+see http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_SESSION_TOKEN
+AWS_DEFAULT_REGION
+AWS_DEFAULT_PROFILE
+AWS_CONFIG_FILE
+*/
+
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    AwsBasicCredentials credentials(QLatin1String("key"),
-                                    QLatin1String("secret"));
+    const QString accessKeyId = QString::fromLocal8Bit(qgetenv("AWS_ACCESS_KEY_ID"));
+    const QString secretAccessKey = QString::fromLocal8Bit(qgetenv("AWS_SECRET_ACCESS_KEY"));
+
+    AwsBasicCredentials credentials(accessKeyId, secretAccessKey);
 
     SqsClient sqs(AwsRegion::AP_Southeast_2, &credentials);
     SqsCreateQueueResponse * response =
