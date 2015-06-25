@@ -18,6 +18,7 @@
 */
 
 #include "awsabstractcredentials.h"
+#include "awsabstractcredentials_p.h"
 
 #include <QDebug>
 
@@ -34,10 +35,18 @@ QTAWS_BEGIN_NAMESPACE
  * @param parent
  */
 AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
-    : QObject(parent)
+    : QObject(parent), d_ptr(new AwsAbstractCredentialsPrivate(this))
 {
 
 }
+
+AwsAbstractCredentials::AwsAbstractCredentials(
+    AwsAbstractCredentialsPrivate * const d, QObject * const parent)
+    : QObject(parent), d_ptr(d)
+{
+
+}
+
 
 /**
  * @brief  AwsAbstractCredentials destructor.
@@ -47,7 +56,7 @@ AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
  */
 AwsAbstractCredentials::~AwsAbstractCredentials()
 {
-
+    delete d_ptr;
 }
 
 /**
@@ -182,5 +191,39 @@ bool AwsAbstractCredentials::refresh()
  *
  * @see    refresh()
  */
+
+/**
+ * @internal
+ *
+ * @class  AwsAbstractCredentialsPrivate
+ *
+ * @brief  Private implementation for AwsAbstractCredentials.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsAbstractCredentialsPrivate object.
+ *
+ * @param  q  Pointer to this object's public AwsAbstractCredentials instance.
+ */
+AwsAbstractCredentialsPrivate::AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q)
+    : q_ptr(q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  AwsAbstractCredentialsPrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsAbstractCredentialsPrivate::~AwsAbstractCredentialsPrivate()
+{
+
+}
 
 QTAWS_END_NAMESPACE

@@ -44,7 +44,7 @@ AwsBasicCredentials::AwsBasicCredentials(
         const QString &secretKey,
         const QString &token,
         QObject * const parent)
-    : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
+    : AwsAbstractCredentials(new AwsBasicCredentialsPrivate(this), parent)
 {
     Q_D(AwsBasicCredentials);
     d->accessKeyId = accessKeyId;
@@ -66,17 +66,11 @@ AwsBasicCredentials::AwsBasicCredentials(
         const QString &accessKeyId,
         const QString &secretKey,
         QObject * const parent)
-    : AwsAbstractCredentials(parent), d_ptr(new AwsBasicCredentialsPrivate(this))
+    : AwsAbstractCredentials(new AwsBasicCredentialsPrivate(this), parent)
 {
     Q_D(AwsBasicCredentials);
     d->accessKeyId = accessKeyId;
     d->secretKey = secretKey;
-}
-
-/// @todo Move d_ptr up to parent class.
-AwsBasicCredentials::~AwsBasicCredentials()
-{
-    delete d_ptr;
 }
 
 QString AwsBasicCredentials::accessKeyId() const
@@ -151,20 +145,7 @@ void AwsBasicCredentials::setToken(const QString &token)
  * @param  q  Pointer to this object's public AwsBasicCredentials instance.
  */
 AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * const q)
-    : q_ptr(q)
-{
-
-}
-
-/**
- * @internal
- *
- * @brief  AwsBasicCredentialsPrivate destructor.
- *
- * This virtual destructor does nothing (yet) - its here to allow for safe
- * polymorphic destruction.
- */
-AwsBasicCredentialsPrivate::~AwsBasicCredentialsPrivate()
+    : AwsAbstractCredentialsPrivate(q)
 {
 
 }

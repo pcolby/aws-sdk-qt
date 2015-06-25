@@ -27,7 +27,7 @@
 
 QTAWS_BEGIN_NAMESPACE
 
-/// @todo Add D-pointer to this class, just for consistency.
+class AwsAbstractCredentialsPrivate;
 
 class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
@@ -48,8 +48,15 @@ public:
 public slots:
     virtual bool refresh();
 
+protected:
+    /// @cond internal
+    AwsAbstractCredentialsPrivate * const d_ptr; ///< Internal d-pointer.
+    AwsAbstractCredentials(AwsAbstractCredentialsPrivate * const d, QObject * const parent);
+    /// @endcond
+
 private:
     Q_DISABLE_COPY(AwsAbstractCredentials)
+    Q_DECLARE_PRIVATE(AwsAbstractCredentials)
 
 signals:
     void changed();

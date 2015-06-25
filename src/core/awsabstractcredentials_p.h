@@ -17,29 +17,28 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef AWSBASICCREDENTIALS_P_H
-#define AWSBASICCREDENTIALS_P_H
+#ifndef AWSABSTRACTCREDENTIALS_P_H
+#define AWSABSTRACTCREDENTIALS_P_H
 
-#include "awsabstractcredentials_p.h"
-
-#include <QString>
+#include "qtawsglobal.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class AwsBasicCredentials;
+class AwsAbstractCredentials;
 
-class QTAWS_EXPORT AwsBasicCredentialsPrivate : public AwsAbstractCredentialsPrivate {
+class QTAWS_EXPORT AwsAbstractCredentialsPrivate {
 
 public:
-    QString accessKeyId; ///< AWS Access Key ID.
-    QString secretKey;   ///< AWS Secret Access Key.
-    QString token;       ///< AWS Security Token.
+    AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q);
 
-    AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
+    virtual ~AwsAbstractCredentialsPrivate();
+
+protected:
+    AwsAbstractCredentials * const q_ptr; ///< Internal q-pointer.
 
 private:
-    Q_DECLARE_PUBLIC(AwsBasicCredentials)
-    Q_DISABLE_COPY(AwsBasicCredentialsPrivate)
+    Q_DECLARE_PUBLIC(AwsAbstractCredentials)
+    Q_DISABLE_COPY(AwsAbstractCredentialsPrivate)
 
 };
 

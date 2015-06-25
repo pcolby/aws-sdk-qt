@@ -2,6 +2,7 @@ HEADERS += \
         awsabstractclient.h \
         awsabstractclient_p.h \
         awsabstractcredentials.h \
+        awsabstractcredentials_p.h \
         awsabstractrequest.h \
         awsabstractrequest_p.h \
         awsabstractresponse.h \
