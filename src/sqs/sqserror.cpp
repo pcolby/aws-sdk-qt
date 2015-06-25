@@ -178,7 +178,6 @@ void SqsErrorPrivate::parse(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("Message")) {
             message = xml.readElementText();
         } else if (xml.name() == QLatin1String("Detail")) {
-            /// @todo
             detail = AwsAbstractResponse::toVariant(xml);
         } else {
            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
