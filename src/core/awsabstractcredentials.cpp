@@ -132,21 +132,11 @@ bool AwsAbstractCredentials::isRefreshable() const
     return false;
 }
 
-/// @todo  Do we want this??
-bool AwsAbstractCredentials::isValid() const
-{
-    /// @todo  token() probably shouldn't be in this list?
-    return ((!accessKeyId().isEmpty()) && (!secretKey().isEmpty()) &&
-            (!token().isEmpty()) && (!isExpired()));
-}
-
 /**
  * @brief  Refresh this object's credentials.
  *
  * This slot begins an asynchronous refresh transaction, and should be followed by a
  * change() signal when the credentials have been refreshed.
- *
- * @todo  A signal for errors?
  *
  * This method should not be invoked unless the object is known to be refreshable
  * (ie isRefreshable() returns \c true).  As the base implementation of isRefreshable()
