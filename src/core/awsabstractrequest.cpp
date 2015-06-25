@@ -137,6 +137,14 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const 
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  AwsAbstractRequestPrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
 AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()
 {
 

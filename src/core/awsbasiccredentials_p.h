@@ -37,6 +37,8 @@ public:
 
     AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
+    virtual ~AwsBasicCredentialsPrivate();
+
 private:
     Q_DECLARE_PUBLIC(AwsBasicCredentials)
     Q_DISABLE_COPY(AwsBasicCredentialsPrivate)

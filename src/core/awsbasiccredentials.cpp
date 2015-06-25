@@ -155,4 +155,17 @@ AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * con
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  AwsBasicCredentialsPrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsBasicCredentialsPrivate::~AwsBasicCredentialsPrivate()
+{
+
+}
+
 QTAWS_END_NAMESPACE

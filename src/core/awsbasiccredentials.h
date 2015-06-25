@@ -39,7 +39,7 @@ public:
                         const QString &secretKey,
                         QObject * const parent = 0);
 
-    ~AwsBasicCredentials();
+    virtual ~AwsBasicCredentials();
 
     virtual QString accessKeyId() const;
     virtual QString secretKey() const;

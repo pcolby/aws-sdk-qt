@@ -197,4 +197,17 @@ AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  AwsAbstractClientPrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsAbstractClientPrivate::~AwsAbstractClientPrivate()
+{
+
+}
+
 QTAWS_END_NAMESPACE

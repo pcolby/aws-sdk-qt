@@ -33,7 +33,22 @@ QTAWS_BEGIN_NAMESPACE
  * @brief    Construct an AwsAbstractCredentials.
  * @param parent
  */
-AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent) : QObject(parent) { }
+AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
+    : QObject(parent)
+{
+
+}
+
+/**
+ * @brief  AwsAbstractCredentials destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
+AwsAbstractCredentials::~AwsAbstractCredentials()
+{
+
+}
 
 /**
  * @fn       QString AwsAbstractCredentials::accessKeyId() const

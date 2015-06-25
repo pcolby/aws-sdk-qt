@@ -69,7 +69,6 @@ public:
     SqsError(const SqsError &other);
     SqsError &operator=(const SqsError &other);
 
-public:
     virtual ~SqsError();
 
     ErrorCode code() const;

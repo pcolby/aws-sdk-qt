@@ -46,6 +46,8 @@ public:
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
 
+    virtual ~AwsAbstractClientPrivate();
+
 protected:
     AwsAbstractClient * const q_ptr; ///< Internal q-pointer.
 

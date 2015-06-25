@@ -225,6 +225,14 @@ AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * con
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  AwsAbstractResponsePrivate destructor.
+ *
+ * This virtual destructor does nothing (yet) - its here to allow for safe
+ * polymorphic destruction.
+ */
 AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()
 {
 
