@@ -59,8 +59,6 @@ public:
 
     SqsRequest(const SqsAction action, QObject * const parent = 0);
 
-    virtual ~SqsRequest();
-
     SqsAction action() const;
     QString actionString() const;
     QString apiVersion() const;

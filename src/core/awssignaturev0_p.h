@@ -34,8 +34,6 @@ class QTAWS_EXPORT AwsSignatureV0Private : public AwsAbstractSignaturePrivate {
 public:
     AwsSignatureV0Private(AwsSignatureV0 * const q);
 
-    virtual ~AwsSignatureV0Private();
-
     void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
 
     virtual QByteArray canonicalQuery(const QUrlQuery &query) const;

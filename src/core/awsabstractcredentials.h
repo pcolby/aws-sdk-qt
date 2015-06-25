@@ -27,6 +27,8 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+/// @todo Add D-pointer to this class, just for consistency.
+
 class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
 

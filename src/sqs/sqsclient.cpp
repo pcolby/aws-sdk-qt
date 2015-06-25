@@ -64,11 +64,6 @@ SqsClient::SqsClient(const QUrl &endpoint,
     d->serviceName = SQS_SERVICE_NAME;
 }
 
-SqsClient::~SqsClient()
-{
-    delete d_ptr;
-}
-
 SqsCreateQueueResponse * SqsClient::createQueue(const SqsCreateQueueRequest &request)
 {
     return qobject_cast<SqsCreateQueueResponse *>(send(request));

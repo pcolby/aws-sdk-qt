@@ -37,8 +37,6 @@ public:
 
     SqsResponsePrivate(SqsResponse * const q);
 
-    virtual ~SqsResponsePrivate();
-
     void parseErrorResponse(QXmlStreamReader &xml);
     void parseResponseMetadata(QXmlStreamReader &xml);
 

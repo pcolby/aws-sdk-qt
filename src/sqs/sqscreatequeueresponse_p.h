@@ -33,10 +33,6 @@ public:
 
     SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q);
 
-    virtual ~SqsCreateQueueResponsePrivate();
-
-    //virtual bool parse(QIODevice &response);
-
 private:
     Q_DECLARE_PUBLIC(SqsCreateQueueResponse)
     Q_DISABLE_COPY(SqsCreateQueueResponsePrivate)

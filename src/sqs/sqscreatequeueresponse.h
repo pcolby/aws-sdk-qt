@@ -34,8 +34,6 @@ class QTAWS_EXPORT SqsCreateQueueResponse : public SqsResponse {
 public:
     SqsCreateQueueResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual ~SqsCreateQueueResponse();
-
     virtual bool isValid() const;
 
     QString queueUrl() const;

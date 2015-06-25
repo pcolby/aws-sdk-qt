@@ -46,8 +46,6 @@ public:
     SqsClient(const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
               QObject * const parent = 0);
 
-    virtual ~SqsClient();
-
 public slots:
     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
     SqsCreateQueueResponse * createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());

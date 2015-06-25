@@ -49,12 +49,6 @@ SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)
 
 }
 
-
-SqsResponse::~SqsResponse()
-{
-    delete d_ptr;
-}
-
 QString SqsResponse::errorString() const
 {
     Q_D(const SqsResponse);
@@ -115,11 +109,6 @@ void SqsResponse::parseFailure(QIODevice &response)
  */
 SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
     : AwsAbstractResponsePrivate(q)
-{
-
-}
-
-SqsResponsePrivate::~SqsResponsePrivate()
 {
 
 }

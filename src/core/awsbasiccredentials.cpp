@@ -73,6 +73,7 @@ AwsBasicCredentials::AwsBasicCredentials(
     d->secretKey = secretKey;
 }
 
+/// @todo Move d_ptr up to parent class.
 AwsBasicCredentials::~AwsBasicCredentials()
 {
     delete d_ptr;

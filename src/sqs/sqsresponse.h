@@ -36,8 +36,6 @@ class QTAWS_EXPORT SqsResponse : public AwsAbstractResponse {
 public:
     SqsResponse(QObject * const parent = 0);
 
-    virtual ~SqsResponse();
-
     virtual QString errorString() const;
     virtual bool hasError() const;
     virtual bool isValid() const = 0;

@@ -139,14 +139,6 @@ AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbst
 }
 
 /**
- * @brief AwsSignatureV0Private destructor.
- */
-AwsSignatureV0Private::~AwsSignatureV0Private()
-{
-
-}
-
-/**
  * @internal
  *
  * @brief  Add AWS Signature Version 0 adornments to an AWS request.

@@ -44,11 +44,6 @@ SqsCreateQueueResponse::SqsCreateQueueResponse(QNetworkReply * const reply,
     setReply(reply);
 }
 
-SqsCreateQueueResponse::~SqsCreateQueueResponse()
-{
-    delete d_ptr;
-}
-
 bool SqsCreateQueueResponse::isValid() const
 {
     Q_D(const SqsCreateQueueResponse);
@@ -115,11 +110,6 @@ void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
  */
 SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q)
     : SqsResponsePrivate(q), q_ptr(q)
-{
-
-}
-
-SqsCreateQueueResponsePrivate::~SqsCreateQueueResponsePrivate()
 {
 
 }

@@ -39,6 +39,7 @@ public:
                         const QString &secretKey,
                         QObject * const parent = 0);
 
+    /// @todo Move d_ptr up to parent class.
     virtual ~AwsBasicCredentials();
 
     virtual QString accessKeyId() const;
@@ -53,6 +54,7 @@ public slots:
 private:
     Q_DECLARE_PRIVATE(AwsBasicCredentials)
     Q_DISABLE_COPY(AwsBasicCredentials)
+    /// @todo Move d_ptr up to parent class.
     AwsBasicCredentialsPrivate * const d_ptr; ///< Internal d-pointer.
 
 };
