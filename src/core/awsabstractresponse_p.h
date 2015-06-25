@@ -42,10 +42,6 @@ public:
 
     virtual ~AwsAbstractResponsePrivate();
 
-    QVariantMap toVariant(QXmlStreamReader &xml,
-                          const QString &prefix = QLatin1String("."),
-                          const int maxDepth = 1024) const;
-
 protected:
     AwsAbstractResponse * const q_ptr; ///< Internal q-pointer.
 

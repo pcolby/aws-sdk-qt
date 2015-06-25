@@ -101,70 +101,8 @@ QString AwsAbstractResponse::xmlParseErrorString() const
     return d->xmlErrorString;
 }
 
-/// @todo Document bool AwsAbstractResponse::isValid() const
-
-/// @todo Document bool AwsAbstractResponse::parse(QNetworkReply * const reply)
-
-bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
-{
-    return ((reply->error() != QNetworkReply::NoError) &&
-            ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
-}
-
-void AwsAbstractResponse::setReply(QNetworkReply * const reply)
-{
-    Q_D(AwsAbstractResponse);
-    connect(reply, SIGNAL(finished(QNetworkReply*)), this, SLOT(parse(QNetworkReply*)));
-    d->reply = reply;
-}
-
-void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
-{
-    Q_D(AwsAbstractResponse);
-    d->xmlError = xml.error();
-    d->xmlErrorString = xml.errorString();
-}
-
-void AwsAbstractResponse::parse(QNetworkReply * const reply)
-{
-    if (reply->error() != QNetworkReply::NoError) {
-        qDebug() << Q_FUNC_INFO << reply->errorString();
-    } else if (isSuccess(reply)) {
-        parseSuccess(*reply);
-    } else {
-        parseFailure(*reply);
-    }
-    emit finished(isValid());
-}
-
-/**
- * @internal
- *
- * @class  AwsAbstractResponsePrivate
- *
- * @brief  Private implementation for AwsAbstractResponse.
- */
-
-/**
- * @internal
- *
- * @brief  Constructs a new AwsAbstractResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AwsAbstractResponse instance.
- */
-AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
-    : xmlError(QXmlStreamReader::NoError), q_ptr(q)
-{
-
-}
-
-AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()
-{
-
-}
-
-QVariantMap AwsAbstractResponsePrivate::toVariant(
-    QXmlStreamReader &xml, const QString &prefix, const int maxDepth) const
+QVariantMap AwsAbstractResponse::toVariant(
+    QXmlStreamReader &xml, const QString &prefix, const int maxDepth)
 {
     if (maxDepth < 0) {
         qWarning() << QObject::tr("max depth exceeded");
@@ -228,6 +166,68 @@ QVariantMap AwsAbstractResponsePrivate::toVariant(
         }
     }
     return map;
+}
+
+/// @todo Document bool AwsAbstractResponse::isValid() const
+
+/// @todo Document bool AwsAbstractResponse::parse(QNetworkReply * const reply)
+
+bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
+{
+    return ((reply->error() != QNetworkReply::NoError) &&
+            ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
+}
+
+void AwsAbstractResponse::setReply(QNetworkReply * const reply)
+{
+    Q_D(AwsAbstractResponse);
+    connect(reply, SIGNAL(finished(QNetworkReply*)), this, SLOT(parse(QNetworkReply*)));
+    d->reply = reply;
+}
+
+void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
+{
+    Q_D(AwsAbstractResponse);
+    d->xmlError = xml.error();
+    d->xmlErrorString = xml.errorString();
+}
+
+void AwsAbstractResponse::parse(QNetworkReply * const reply)
+{
+    if (reply->error() != QNetworkReply::NoError) {
+        qDebug() << Q_FUNC_INFO << reply->errorString();
+    } else if (isSuccess(reply)) {
+        parseSuccess(*reply);
+    } else {
+        parseFailure(*reply);
+    }
+    emit finished(isValid());
+}
+
+/**
+ * @internal
+ *
+ * @class  AwsAbstractResponsePrivate
+ *
+ * @brief  Private implementation for AwsAbstractResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsAbstractResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AwsAbstractResponse instance.
+ */
+AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
+    : xmlError(QXmlStreamReader::NoError), q_ptr(q)
+{
+
+}
+
+AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()
+{
+
 }
 
 QTAWS_END_NAMESPACE

@@ -44,6 +44,11 @@ public:
     virtual QXmlStreamReader::Error xmlParseError() const;
     virtual QString xmlParseErrorString() const;
 
+    /// @todo Find a better home for "QVariantMap toVariant(QXmlStreamReader &xml, ...)"
+    static QVariantMap toVariant(QXmlStreamReader &xml,
+                                 const QString &prefix = QLatin1String("."),
+                                 const int maxDepth = 1024);
+
 protected:
     /// @cond internal
     AwsAbstractResponsePrivate * const d_ptr; ///< Internal d-pointer.

@@ -19,6 +19,7 @@
 
 #include "sqserror.h"
 #include "sqserror_p.h"
+#include "core/awsabstractresponse.h"
 
 #include <QDebug>
 #include <QVariantMap>
@@ -178,7 +179,7 @@ void SqsErrorPrivate::parse(QXmlStreamReader &xml)
             message = xml.readElementText();
         } else if (xml.name() == QLatin1String("Detail")) {
             /// @todo
-            //detail = AwsAbstractResponse::toVariant(xml);
+            detail = AwsAbstractResponse::toVariant(xml);
         } else {
            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
            xml.skipCurrentElement();
