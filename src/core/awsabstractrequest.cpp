@@ -87,6 +87,7 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
                                                const AwsAbstractCredentials &credentials) const
 {
     Q_ASSERT(isValid());
+    Q_D(const AwsAbstractRequest);
     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
@@ -96,9 +97,9 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
         case QNetworkAccessManager::GetOperation:
             return response(manager.get(request));
         case QNetworkAccessManager::PostOperation:
-            return response(manager.post(request, data()));
+            return response(d->post(manager, request));
         case QNetworkAccessManager::PutOperation:
-            return response(manager.put(request, data()));
+            return response(d->put(manager, request));
         case QNetworkAccessManager::CustomOperation: // Fall through.
         default:
             // Catch this in debug mode for easier development / debugging.
@@ -139,6 +140,20 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const 
 AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()
 {
 
+}
+
+QNetworkReply *AwsAbstractRequestPrivate::post(QNetworkAccessManager &manager,
+                                               const QNetworkRequest &request) const
+{
+    Q_Q(const AwsAbstractRequest);
+    return manager.post(request, q->data());
+}
+
+QNetworkReply *AwsAbstractRequestPrivate::put(QNetworkAccessManager &manager,
+                                              const QNetworkRequest &request) const
+{
+    Q_Q(const AwsAbstractRequest);
+    return manager.put(request, q->data());
 }
 
 QTAWS_END_NAMESPACE

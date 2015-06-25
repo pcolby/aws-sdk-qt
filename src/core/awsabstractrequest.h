@@ -44,7 +44,7 @@ public:
 
     virtual ~AwsAbstractRequest();
 
-    QByteArray data() const; ///< @todo Support other data types?
+    virtual QByteArray data() const;
 
     virtual bool isValid() const = 0;
 

@@ -43,6 +43,11 @@ public:
 
     virtual ~AwsAbstractRequestPrivate();
 
+    virtual QNetworkReply *post(QNetworkAccessManager &manager,
+                                const QNetworkRequest &request) const;
+    virtual QNetworkReply *put(QNetworkAccessManager &manager,
+                               const QNetworkRequest &request) const;
+
 protected:
     AwsAbstractRequest * const q_ptr; ///< Internal q-pointer.
 
