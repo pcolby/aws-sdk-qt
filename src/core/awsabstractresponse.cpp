@@ -220,7 +220,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
  * @param  q  Pointer to this object's public AwsAbstractResponse instance.
  */
 AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
-    : xmlError(QXmlStreamReader::NoError), q_ptr(q)
+    : reply(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)
 {
 
 }

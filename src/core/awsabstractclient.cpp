@@ -191,7 +191,8 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
  * @param  q  Pointer to this object's public AwsAbstractClient instance.
  */
 AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)
-    : credentials(NULL), networkAccessManager(NULL), signature(NULL), q_ptr(q)
+    : credentials(NULL), networkAccessManager(NULL),
+      region(AwsRegion::InvalidRegion), signature(NULL), q_ptr(q)
 {
 
 }

@@ -166,8 +166,8 @@ SqsErrorPrivate::~SqsErrorPrivate()
  */
 void SqsErrorPrivate::parse(QXmlStreamReader &xml)
 {
-    if (xml.isStartDocument()) {
-        xml.readNextStartElement();
+    if ((xml.isStartDocument()) && (!xml.readNextStartElement())) {
+        return;
     }
     Q_ASSERT(xml.name() == QLatin1String("Error"));
     while (xml.readNextStartElement()) {
