@@ -97,7 +97,7 @@ QString SqsCreateQueueRequest::policy() const
 
 QString SqsCreateQueueRequest::queueName() const
 {
-    return attribute(QUEUE_NAME).toString();
+    return parameter(QUEUE_NAME).toString();
 }
 
 int SqsCreateQueueRequest::receiveMessageWaitTimeSeconds() const
