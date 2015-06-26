@@ -181,7 +181,7 @@ bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
 void AwsAbstractResponse::setReply(QNetworkReply * const reply)
 {
     Q_D(AwsAbstractResponse);
-    connect(reply, SIGNAL(finished(QNetworkReply*)), this, SLOT(parse(QNetworkReply*)));
+    connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
     d->reply = reply;
 }
 
@@ -202,6 +202,15 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
         parseFailure(*reply);
     }
     emit finished(isValid());
+}
+
+void AwsAbstractResponse::replyFinished()
+{
+    QNetworkReply * const reply = qobject_cast<QNetworkReply *>(sender());
+    Q_ASSERT(reply);
+    if (reply) {
+        parse(reply);
+    }
 }
 
 /**

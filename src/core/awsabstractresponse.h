@@ -59,10 +59,12 @@ protected:
     void setReply(QNetworkReply * reply);
     void setXmlError(const QXmlStreamReader &xml);
 
-protected slots:
     virtual void parse(QNetworkReply * const reply);
     virtual void parseFailure(QIODevice &response) = 0;
     virtual void parseSuccess(QIODevice &response) = 0;
+
+protected slots:
+    virtual void replyFinished();
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
