@@ -75,6 +75,7 @@ after_success:
   - lcoveralls --retry-count 5
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
   # Report code coverage to codecov.io
+  - find "$TRAVIS_BUILD_DIR-build" -type f -name '*.gcno'
   - curl https://codecov.io/bash > /tmp/codecov.sh
   - chmod a+x /tmp/codecov.sh
   - /tmp/codecov.sh -p "$TRAVIS_BUILD_DIR-build"
