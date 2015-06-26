@@ -89,6 +89,7 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
     Q_ASSERT(isValid());
     Q_D(const AwsAbstractRequest);
     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
+    qDebug() << request.url();
     switch (operation()) {
         case QNetworkAccessManager::DeleteOperation:
             return response(manager.deleteResource(request));
