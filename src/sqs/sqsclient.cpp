@@ -20,6 +20,7 @@
 #include "sqsclient.h"
 #include "sqsclient_p.h"
 
+#include "core/awssignaturev4.h"
 #include "sqscreatequeuerequest.h"
 #include "sqscreatequeueresponse.h"
 #include "sqsrequest.h"
@@ -100,7 +101,7 @@ SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
 SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-
+    signature = new AwsSignatureV4();
 }
 
 QTAWS_END_NAMESPACE

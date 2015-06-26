@@ -57,6 +57,8 @@ AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,
 
 AwsAbstractClient::~AwsAbstractClient()
 {
+    Q_D(AwsAbstractClient);
+    delete d->signature;
     delete d_ptr;
 }
 
