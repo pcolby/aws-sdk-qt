@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
 
     AwsBasicCredentials credentials(accessKeyId, secretAccessKey);
 
-    SqsClient sqs(AwsRegion::AP_Southeast_2, &credentials);
+    QNetworkAccessManager manager;
+
+    SqsClient sqs(AwsRegion::AP_Southeast_2, &credentials, &manager);
+
     SqsCreateQueueResponse * response =
         sqs.createQueue(QLatin1String("libqtaws-test-queue"));
     QObject::connect(response, SIGNAL(finished), &app, SLOT(quit()));

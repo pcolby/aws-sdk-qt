@@ -41,9 +41,11 @@ class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
 public:
     SqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
               AwsAbstractCredentials * credentials = NULL,
+              QNetworkAccessManager * const manager = NULL,
               QObject * const parent = 0);
 
     SqsClient(const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+              QNetworkAccessManager * const manager = NULL,
               QObject * const parent = 0);
 
 public slots:

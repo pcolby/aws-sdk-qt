@@ -45,23 +45,27 @@ QTAWS_BEGIN_NAMESPACE
  */
 SqsClient::SqsClient(const AwsRegion::Region region,
                      AwsAbstractCredentials * credentials,
+                     QNetworkAccessManager * const manager,
                      QObject * const parent)
     : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
     d->region = region;
     d->credentials = credentials;
+    d->networkAccessManager = manager;
     d->serviceName = SQS_SERVICE_NAME;
 }
 
 SqsClient::SqsClient(const QUrl &endpoint,
                      AwsAbstractCredentials * credentials,
+                     QNetworkAccessManager * const manager,
                      QObject * const parent)
     : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
+    d->networkAccessManager = manager;
     d->serviceName = SQS_SERVICE_NAME;
 }
 
