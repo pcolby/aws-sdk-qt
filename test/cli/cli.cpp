@@ -50,6 +50,6 @@ int main(int argc, char *argv[])
 
     SqsCreateQueueResponse * response =
         sqs.createQueue(QLatin1String("libqtaws-test-queue"));
-    QObject::connect(response, SIGNAL(finished), &app, SLOT(quit()));
+    QObject::connect(response, SIGNAL(finished()), &app, SLOT(quit()));
     return (response) ? app.exec() : 1;
 }
