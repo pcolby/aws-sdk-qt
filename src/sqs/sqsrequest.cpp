@@ -130,17 +130,17 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
     query.addQueryItem(QLatin1String("Action"), actionString());
     query.addQueryItem(QLatin1String("Version"), apiVersion());
     for (QVariantMap::const_iterator iter = d->parameters.cbegin(); iter != d->parameters.cend(); ++iter) {
-        const QString name = iter.key();
-        //const QVariant value = iter.value();
-        if (iter.value().type() == QVariant::Map) {
-            const QVariantMap map = iter.value().toMap();
+        const QString parameterName = iter.key();
+        const QVariant parameterValue = iter.value();
+        if (parameterValue.type() == QVariant::Map) {
+            const QVariantMap map = parameterValue.toMap();
             int index = 1;
             for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {
-                query.addQueryItem(name.arg(index).arg(QLatin1String("Name")), iter.key());
-                query.addQueryItem(name.arg(index).arg(QLatin1String("Value")), iter.value().toString());
+                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Name")), iter.key());
+                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Value")), iter.value().toString());
             }
         } else {
-            query.addQueryItem(iter.key(), iter.value().toString());
+            query.addQueryItem(parameterName, parameterValue.toString());
         }
     }
 
