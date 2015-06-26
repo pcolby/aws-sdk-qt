@@ -135,7 +135,7 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
         if (iter.value().type() == QVariant::Map) {
             const QVariantMap map = iter.value().toMap();
             int index = 1;
-            for (QVariantMap::const_iterator iter = map.cbegin(); iter != d->parameters.cend(); ++iter, ++index) {
+            for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {
                 query.addQueryItem(name.arg(index).arg(QLatin1String("Name")), iter.key());
                 query.addQueryItem(name.arg(index).arg(QLatin1String("Value")), iter.value().toString());
             }
