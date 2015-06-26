@@ -71,7 +71,7 @@ private:
     Q_DISABLE_COPY(AwsAbstractResponse)
 
 signals:
-    void finished(const bool isValid);
+    void finished();
 
 };
 

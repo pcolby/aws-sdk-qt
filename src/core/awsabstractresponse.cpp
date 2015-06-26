@@ -201,7 +201,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
     } else {
         parseFailure(*reply);
     }
-    emit finished(isValid());
+    emit finished();
 }
 
 void AwsAbstractResponse::replyFinished()
