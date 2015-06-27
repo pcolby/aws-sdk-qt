@@ -128,9 +128,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classAwsAbstractRequestPrivate.html">   36</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a> {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QByteArray data;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QNetworkAccessManager::Operation operation;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classAwsAbstractRequestPrivate.html#a2632dc839a2f3559fd2fd9032ab5897d">   39</a></span>&#160;    QByteArray <a class="code" href="classAwsAbstractRequestPrivate.html#a2632dc839a2f3559fd2fd9032ab5897d">data</a>;                            <span class="comment">///&lt; Data for POST/PUT operations.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classAwsAbstractRequestPrivate.html#ae68307306aa9c0b0aa1fca9fcf3405ba">   40</a></span>&#160;<span class="comment"></span>    QNetworkAccessManager::Operation <a class="code" href="classAwsAbstractRequestPrivate.html#ae68307306aa9c0b0aa1fca9fcf3405ba">operation</a>; <span class="comment">///&lt; Network operation to use.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a>(<a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> * <span class="keyword">const</span> q);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a>();</div>
@@ -152,14 +152,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+<div class="ttc" id="classAwsAbstractRequestPrivate_html_a2632dc839a2f3559fd2fd9032ab5897d"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html#a2632dc839a2f3559fd2fd9032ab5897d">AwsAbstractRequestPrivate::data</a></div><div class="ttdeci">QByteArray data</div><div class="ttdoc">Data for POST/PUT operations. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00039">awsabstractrequest_p.h:39</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+<div class="ttc" id="classAwsAbstractRequestPrivate_html_ae68307306aa9c0b0aa1fca9fcf3405ba"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html#ae68307306aa9c0b0aa1fca9fcf3405ba">AwsAbstractRequestPrivate::operation</a></div><div class="ttdeci">QNetworkAccessManager::Operation operation</div><div class="ttdoc">Network operation to use. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00040">awsabstractrequest_p.h:40</a></div></div>
 <div class="ttc" id="classAwsAbstractRequestPrivate_html"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractRequest. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00036">awsabstractrequest_p.h:36</a></div></div>
 <div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
 <div class="ttc" id="classAwsAbstractRequestPrivate_html_a263c8ee8f4419bb8a2826805803b3f69"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html#a263c8ee8f4419bb8a2826805803b3f69">AwsAbstractRequestPrivate::q_ptr</a></div><div class="ttdeci">AwsAbstractRequest *const q_ptr</div><div class="ttdoc">Internal q-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00052">awsabstractrequest_p.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 16:13:13 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -107,7 +107,7 @@ Collaboration diagram for SqsClientPrivate:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsClientPrivate__coll__graph.png" border="0" usemap="#SqsClientPrivate_coll__map" alt="Collaboration graph"/></div>
 <map name="SqsClientPrivate_coll__map" id="SqsClientPrivate_coll__map">
-<area shape="rect" id="node2" href="classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="329,171,501,197"/><area shape="rect" id="node6" href="classAwsAbstractClient.html" title="AwsAbstractClient" alt="" coords="266,260,397,287"/><area shape="rect" id="node3" href="classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="75,81,238,108"/><area shape="rect" id="node5" href="classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="5,171,209,197"/><area shape="rect" id="node7" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="482,81,634,108"/><area shape="rect" id="node8" href="classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="525,171,719,197"/></map>
+<area shape="rect" id="node2" href="classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="329,171,501,197"/><area shape="rect" id="node6" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. " alt="" coords="266,260,397,287"/><area shape="rect" id="node3" href="classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="75,81,238,108"/><area shape="rect" id="node5" href="classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="5,171,209,197"/><area shape="rect" id="node7" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="482,81,634,108"/><area shape="rect" id="node8" href="classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="525,171,719,197"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -127,7 +127,8 @@ Public Member Functions</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classAwsAbstractClientPrivate"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classAwsAbstractClientPrivate')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classAwsAbstractClientPrivate.html">AwsAbstractClientPrivate</a></td></tr>
 <tr class="memitem:ae7042dcbcabce6f18c8c108048e71479 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7042dcbcabce6f18c8c108048e71479"></a>
-<a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>credentials</b></td></tr>
+<a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClientPrivate.html#ae7042dcbcabce6f18c8c108048e71479">credentials</a></td></tr>
+<tr class="memdesc:ae7042dcbcabce6f18c8c108048e71479 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amazon credentials. <br /></td></tr>
 <tr class="separator:ae7042dcbcabce6f18c8c108048e71479 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae71b89e98c1739bbe966aa756314f708 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae71b89e98c1739bbe966aa756314f708"></a>
 QUrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClientPrivate.html#ae71b89e98c1739bbe966aa756314f708">endpoint</a></td></tr>
@@ -138,13 +139,16 @@ QNetworkAccessManager *&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:acd1058b018c2a30a0b52df6fa210c1c7 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Network access manager. <br /></td></tr>
 <tr class="separator:acd1058b018c2a30a0b52df6fa210c1c7 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a380b81e7b820b6b04b581cc00ec9b0c0 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a380b81e7b820b6b04b581cc00ec9b0c0"></a>
-<a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a>&#160;</td><td class="memItemRight" valign="bottom"><b>region</b></td></tr>
+<a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClientPrivate.html#a380b81e7b820b6b04b581cc00ec9b0c0">region</a></td></tr>
+<tr class="memdesc:a380b81e7b820b6b04b581cc00ec9b0c0 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amazon service region. <br /></td></tr>
 <tr class="separator:a380b81e7b820b6b04b581cc00ec9b0c0 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75afacee72ba4c8c304d2dae63291598 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75afacee72ba4c8c304d2dae63291598"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>serviceName</b></td></tr>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClientPrivate.html#a75afacee72ba4c8c304d2dae63291598">serviceName</a></td></tr>
+<tr class="memdesc:a75afacee72ba4c8c304d2dae63291598 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amazon service name. <br /></td></tr>
 <tr class="separator:a75afacee72ba4c8c304d2dae63291598 inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a494e7025ec09c0e655a16ff04a8e754c inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a494e7025ec09c0e655a16ff04a8e754c"></a>
-<a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>signature</b></td></tr>
+<a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClientPrivate.html#a494e7025ec09c0e655a16ff04a8e754c">signature</a></td></tr>
+<tr class="memdesc:a494e7025ec09c0e655a16ff04a8e754c inherit pub_attribs_classAwsAbstractClientPrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amazon signature object. <br /></td></tr>
 <tr class="separator:a494e7025ec09c0e655a16ff04a8e754c inherit pub_attribs_classAwsAbstractClientPrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classAwsAbstractClientPrivate"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAwsAbstractClientPrivate')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAwsAbstractClientPrivate.html">AwsAbstractClientPrivate</a></td></tr>
 <tr class="memitem:a5e2977dac2f67c31c5f6015074874a5b inherit pro_attribs_classAwsAbstractClientPrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e2977dac2f67c31c5f6015074874a5b"></a>
@@ -180,12 +184,15 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>serviceName</b></t
 </dl>
 
 <p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00105">105</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient__p_8h_source.html#l00045">AwsAbstractClientPrivate::signature</a>.</p>
 <div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    : <a class="code" href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate</a>(q)</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    signature = <span class="keyword">new</span> <a class="code" href="classAwsSignatureV4.html">AwsSignatureV4</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classAwsAbstractClientPrivate.html#a494e7025ec09c0e655a16ff04a8e754c">signature</a> = <span class="keyword">new</span> <a class="code" href="classAwsSignatureV4.html">AwsSignatureV4</a>();</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="ttc" id="classAwsSignatureV4_html"><div class="ttname"><a href="classAwsSignatureV4.html">AwsSignatureV4</a></div><div class="ttdoc">Implements AWS Signature Version 4. </div><div class="ttdef"><b>Definition:</b> <a href="awssignaturev4_8h_source.html#l00032">awssignaturev4.h:32</a></div></div>
-<div class="ttc" id="classAwsAbstractClientPrivate_html_aab3621f9553afce63a876632548fb765"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a></div><div class="ttdeci">AwsAbstractClientPrivate(AwsAbstractClient *const q)</div><div class="ttdoc">Constructs a new AwsAbstractClientPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00195">awsabstractclient.cpp:195</a></div></div>
+<div class="ttc" id="classAwsAbstractClientPrivate_html_a494e7025ec09c0e655a16ff04a8e754c"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#a494e7025ec09c0e655a16ff04a8e754c">AwsAbstractClientPrivate::signature</a></div><div class="ttdeci">AwsAbstractSignature * signature</div><div class="ttdoc">Amazon signature object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient__p_8h_source.html#l00045">awsabstractclient_p.h:45</a></div></div>
+<div class="ttc" id="classAwsAbstractClientPrivate_html_aab3621f9553afce63a876632548fb765"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a></div><div class="ttdeci">AwsAbstractClientPrivate(AwsAbstractClient *const q)</div><div class="ttdoc">Constructs a new AwsAbstractClientPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00310">awsabstractclient.cpp:310</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -196,7 +203,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>serviceName</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 16:13:14 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

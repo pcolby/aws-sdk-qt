@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['parsesuccess',['parseSuccess',['../classSqsCreateQueueResponse.html#a610856edcbdbb50f261498dee1b48553',1,'SqsCreateQueueResponse']]]
+  ['name',['name',['../classAwsRegion.html#aa68c884fedce77a646491623db46e391',1,'AwsRegion::name() const '],['../classAwsRegion.html#a70a1a6d5473977a3233313df9bc53ee9',1,'AwsRegion::name(const Region &amp;region)']]],
+  ['networkaccessmanager',['networkAccessManager',['../classAwsAbstractClient.html#a6a4df307cb50edcaafaee22076fa8c8c',1,'AwsAbstractClient']]],
+  ['networkrequest',['networkRequest',['../classAwsAbstractRequest.html#a6ceca2b259d079a7178fa87a4ed063ca',1,'AwsAbstractRequest']]]
 ];

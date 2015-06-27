@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../classAwsRegion.html#aa68c884fedce77a646491623db46e391',1,'AwsRegion::name() const '],['../classAwsRegion.html#a70a1a6d5473977a3233313df9bc53ee9',1,'AwsRegion::name(const Region &amp;region)']]],
-  ['networkaccessmanager',['networkAccessManager',['../classAwsAbstractClient.html#a6a4df307cb50edcaafaee22076fa8c8c',1,'AwsAbstractClient']]]
+  ['loadendpointdata',['loadEndpointData',['../classAwsEndpointPrivate.html#a1e594bf504839850ffe62e03447a4482',1,'AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName=QLatin1String(&quot;:/aws/endpoints.xml&quot;))'],['../classAwsEndpointPrivate.html#a2da95b6e7dc38cb13d2d4630dafd5931',1,'AwsEndpointPrivate::loadEndpointData(QIODevice &amp;device)'],['../classAwsEndpointPrivate.html#a54614bd30c14349459d9c8ed1ca65536',1,'AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &amp;xml)']]]
 ];

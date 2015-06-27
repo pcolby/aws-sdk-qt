@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['q_5fptr',['q_ptr',['../classAwsAbstractClientPrivate.html#a5e2977dac2f67c31c5f6015074874a5b',1,'AwsAbstractClientPrivate::q_ptr()'],['../classAwsAbstractCredentialsPrivate.html#a0ce8f0c17a7341e44b5cf27411ccc0b2',1,'AwsAbstractCredentialsPrivate::q_ptr()'],['../classAwsAbstractRequestPrivate.html#a263c8ee8f4419bb8a2826805803b3f69',1,'AwsAbstractRequestPrivate::q_ptr()'],['../classAwsAbstractResponsePrivate.html#a3397dd89a1751c6ed2e7da260ea462fd',1,'AwsAbstractResponsePrivate::q_ptr()'],['../classAwsAbstractSignaturePrivate.html#ad5be4453d4deaacbed64b6ff6e5234b9',1,'AwsAbstractSignaturePrivate::q_ptr()'],['../classAwsEndpointPrivate.html#aa24509fefbdc3c0fd71e6b015ad531bd',1,'AwsEndpointPrivate::q_ptr()'],['../classAwsRegionPrivate.html#a9e495938929bd820ec088b93d7864785',1,'AwsRegionPrivate::q_ptr()'],['../classSqsCreateQueueResponsePrivate.html#af3396eb5c67fefac292d2697b2b5ed90',1,'SqsCreateQueueResponsePrivate::q_ptr()'],['../classSqsErrorPrivate.html#a1b32fee7bf0afcb8f146cbc2e42df827',1,'SqsErrorPrivate::q_ptr()']]],
-  ['qstringpair',['QStringPair',['../classAwsSignatureV1Private.html#a13f29e5394a3fa041a78a597605dfaca',1,'AwsSignatureV1Private']]]
+  ['parse',['parse',['../classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc',1,'SqsErrorPrivate']]],
+  ['parseregion',['parseRegion',['../classAwsEndpointPrivate.html#a91bf1710215e565affd6344495f1aeae',1,'AwsEndpointPrivate']]],
+  ['parseregions',['parseRegions',['../classAwsEndpointPrivate.html#a3b3e23c871ce4788276efe76e37829bf',1,'AwsEndpointPrivate']]],
+  ['parseservice',['parseService',['../classAwsEndpointPrivate.html#abd8cc2dda47fc547fb9c50ac4e49d5c9',1,'AwsEndpointPrivate']]],
+  ['parseservices',['parseServices',['../classAwsEndpointPrivate.html#a886f2ee4e6918e8566abf95b14f2a304',1,'AwsEndpointPrivate']]],
+  ['parsesuccess',['parseSuccess',['../classSqsCreateQueueResponse.html#a610856edcbdbb50f261498dee1b48553',1,'SqsCreateQueueResponse']]],
+  ['post',['post',['../classAwsAbstractRequestPrivate.html#aa02d071bdea8d8a3fc638014999d0aaa',1,'AwsAbstractRequestPrivate']]],
+  ['put',['put',['../classAwsAbstractRequestPrivate.html#ac1dc542074052dc6ff83e7dc47f31187',1,'AwsAbstractRequestPrivate']]]
 ];

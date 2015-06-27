@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['version',['version',['../classAwsAbstractSignature.html#a57f9352c5b831eafdcc6932f0f5b8798',1,'AwsAbstractSignature::version()'],['../classAwsSignatureV0.html#a88edb37f70be0dcfa2b77f098c40cddc',1,'AwsSignatureV0::version()'],['../classAwsSignatureV1.html#ab2f9a3f7a4a086195eb5422b4260bab7',1,'AwsSignatureV1::version()'],['../classAwsSignatureV2.html#ae680c88e22980d7b0d6a175b0abd2e1d',1,'AwsSignatureV2::version()'],['../classAwsSignatureV3.html#aa104da055a0df9442eee30d561dcf64b',1,'AwsSignatureV3::version()'],['../classAwsSignatureV4.html#a856ea5dd0b05ce8accd713c075bb7c1d',1,'AwsSignatureV4::version()']]]
+  ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['token',['token',['../classAwsAbstractCredentials.html#acebb810e6ea9437ff56b7231db3a373b',1,'AwsAbstractCredentials::token()'],['../classAwsAnonymousCredentials.html#a32b3f1e4f09b615e5f5a70c116efd57d',1,'AwsAnonymousCredentials::token()'],['../classAwsBasicCredentials.html#a186b996db7efa3dff85b6bbc6c11acfa',1,'AwsBasicCredentials::token()']]],
+  ['tovariant',['toVariant',['../classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6',1,'AwsAbstractResponse']]],
+  ['transport',['Transport',['../classAwsEndpoint.html#ac578ec7954d65e6f7aa06331cec06e23',1,'AwsEndpoint']]]
 ];

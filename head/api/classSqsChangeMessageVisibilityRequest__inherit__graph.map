@@ -1,4 +1,4 @@
 <map id="SqsChangeMessageVisibilityRequest" name="SqsChangeMessageVisibilityRequest">
 <area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="54,155,149,181"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="28,80,175,107"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="28,80,175,107"/>
 </map>

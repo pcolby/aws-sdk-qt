@@ -93,6 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">AwsAbstractClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base class for all AWS service clients.  
+ <a href="classAwsAbstractClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AwsAbstractClient:</div>
 <div class="dyncontent">
@@ -109,47 +112,52 @@ Collaboration diagram for AwsAbstractClient:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
+<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
 <tr class="separator:a5fec7f973e9a614f8114e9598f361595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816b91835077442e552939f43991cb63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a816b91835077442e552939f43991cb63"></a>
-QUrl&#160;</td><td class="memItemRight" valign="bottom"><b>endpoint</b> () const </td></tr>
+<tr class="memitem:a45370989e35585591be5186baf5072c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45370989e35585591be5186baf5072c7"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7">~AwsAbstractClient</a> ()</td></tr>
+<tr class="memdesc:a45370989e35585591be5186baf5072c7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> destructor. <br /></td></tr>
+<tr class="separator:a45370989e35585591be5186baf5072c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816b91835077442e552939f43991cb63"><td class="memItemLeft" align="right" valign="top">QUrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a> () const </td></tr>
+<tr class="memdesc:a816b91835077442e552939f43991cb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the endpoint associated with this AWS client.  <a href="#a816b91835077442e552939f43991cb63">More...</a><br /></td></tr>
 <tr class="separator:a816b91835077442e552939f43991cb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a4df307cb50edcaafaee22076fa8c8c"><td class="memItemLeft" align="right" valign="top">QNetworkAccessManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a6a4df307cb50edcaafaee22076fa8c8c">networkAccessManager</a> () const </td></tr>
 <tr class="memdesc:a6a4df307cb50edcaafaee22076fa8c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the network access manager for this AWS service object.  <a href="#a6a4df307cb50edcaafaee22076fa8c8c">More...</a><br /></td></tr>
 <tr class="separator:a6a4df307cb50edcaafaee22076fa8c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5db29e88d5924f6d0e8005fba0b3266"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5db29e88d5924f6d0e8005fba0b3266"></a>
-<a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a>&#160;</td><td class="memItemRight" valign="bottom"><b>region</b> () const </td></tr>
+<tr class="memitem:ad5db29e88d5924f6d0e8005fba0b3266"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a> () const </td></tr>
+<tr class="memdesc:ad5db29e88d5924f6d0e8005fba0b3266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the AWS region associated with this client.  <a href="#ad5db29e88d5924f6d0e8005fba0b3266">More...</a><br /></td></tr>
 <tr class="separator:ad5db29e88d5924f6d0e8005fba0b3266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a831490c9df803ccf8431ae4af0b2e687"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a831490c9df803ccf8431ae4af0b2e687"></a>
-virtual <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> &amp;request)</td></tr>
+<tr class="memitem:a831490c9df803ccf8431ae4af0b2e687"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a831490c9df803ccf8431ae4af0b2e687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an AWS request.  <a href="#a831490c9df803ccf8431ae4af0b2e687">More...</a><br /></td></tr>
 <tr class="separator:a831490c9df803ccf8431ae4af0b2e687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a64efd2e0c8f2fd6a6af352b05548d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a64efd2e0c8f2fd6a6af352b05548d0"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>serviceName</b> () const </td></tr>
+<tr class="memitem:a1a64efd2e0c8f2fd6a6af352b05548d0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a1a64efd2e0c8f2fd6a6af352b05548d0">serviceName</a> () const </td></tr>
+<tr class="memdesc:a1a64efd2e0c8f2fd6a6af352b05548d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the Amazon service this client accesses.  <a href="#a1a64efd2e0c8f2fd6a6af352b05548d0">More...</a><br /></td></tr>
 <tr class="separator:a1a64efd2e0c8f2fd6a6af352b05548d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c3cbef6950ab5c193ce424138b78829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c3cbef6950ab5c193ce424138b78829"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCredentials</b> (<a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *const credentials)</td></tr>
+<tr class="memitem:a1c3cbef6950ab5c193ce424138b78829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a1c3cbef6950ab5c193ce424138b78829">setCredentials</a> (<a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *const <a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>)</td></tr>
+<tr class="memdesc:a1c3cbef6950ab5c193ce424138b78829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the credentials object for this client to use for signing requests.  <a href="#a1c3cbef6950ab5c193ce424138b78829">More...</a><br /></td></tr>
 <tr class="separator:a1c3cbef6950ab5c193ce424138b78829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6ceaf4e7827343cde1106fe611c972"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a6ceaf4e7827343cde1106fe611c972"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEndpoint</b> (const QUrl &amp;endpoint)</td></tr>
+<tr class="memitem:a1a6ceaf4e7827343cde1106fe611c972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a1a6ceaf4e7827343cde1106fe611c972">setEndpoint</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>)</td></tr>
+<tr class="memdesc:a1a6ceaf4e7827343cde1106fe611c972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the AWS endpoint to use with this client.  <a href="#a1a6ceaf4e7827343cde1106fe611c972">More...</a><br /></td></tr>
 <tr class="separator:a1a6ceaf4e7827343cde1106fe611c972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeadf9a11304ab2ce832db7843ab197b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#aeadf9a11304ab2ce832db7843ab197b6">setNetworkAccessManager</a> (QNetworkAccessManager *const manager)</td></tr>
 <tr class="memdesc:aeadf9a11304ab2ce832db7843ab197b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network access manager for this AWS service object.  <a href="#aeadf9a11304ab2ce832db7843ab197b6">More...</a><br /></td></tr>
 <tr class="separator:aeadf9a11304ab2ce832db7843ab197b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa001015404f6060eb690dd6a596cd7e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa001015404f6060eb690dd6a596cd7e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRegion</b> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> region)</td></tr>
+<tr class="memitem:aa001015404f6060eb690dd6a596cd7e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">setRegion</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>)</td></tr>
+<tr class="memdesc:aa001015404f6060eb690dd6a596cd7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the AWS region this client accesses.  <a href="#aa001015404f6060eb690dd6a596cd7e4">More...</a><br /></td></tr>
 <tr class="separator:aa001015404f6060eb690dd6a596cd7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a70c1daf62292148cdfa627fa9957eb40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c1daf62292148cdfa627fa9957eb40"></a>
-virtual <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>credentials</b> () const </td></tr>
+<tr class="memitem:a70c1daf62292148cdfa627fa9957eb40"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a> () const </td></tr>
+<tr class="memdesc:a70c1daf62292148cdfa627fa9957eb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the credentials object to be used for signing requests.  <a href="#a70c1daf62292148cdfa627fa9957eb40">More...</a><br /></td></tr>
 <tr class="separator:a70c1daf62292148cdfa627fa9957eb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102e5e03d1339a8e0483f6d146bfc360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a102e5e03d1339a8e0483f6d146bfc360"></a>
-virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>signature</b> () const </td></tr>
+<tr class="memitem:a102e5e03d1339a8e0483f6d146bfc360"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">signature</a> () const </td></tr>
+<tr class="memdesc:a102e5e03d1339a8e0483f6d146bfc360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the signature object to be used for signing requests.  <a href="#a102e5e03d1339a8e0483f6d146bfc360">More...</a><br /></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd></dd></dl>
+<div class="textblock"><p>Base class for all AWS service clients. </p>
+<p>This class is is used </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5fec7f973e9a614f8114e9598f361595"></a>
 <div class="memitem">
@@ -165,7 +173,7 @@ virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
@@ -176,6 +184,58 @@ virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a70c1daf62292148cdfa627fa9957eb40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * AwsAbstractClient::credentials </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the credentials object to be used for signing requests. </p>
+<dl class="section return"><dt>Returns</dt><dd>An AWS credentials object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a816b91835077442e552939f43991cb63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QUrl AwsAbstractClient::endpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the endpoint associated with this AWS client. </p>
+<p>If a valid QUrl has been set (usually via setEndpoint), then this base implementation will return that QUrl. Otherwise, this base implementation will use the <a class="el" href="classAwsEndpoint.html" title="Provides AWS endpoint information. ">AwsEndpoint</a> class to determine the endpoint to use based on this object's region and serviceName.</p>
+<dl class="section return"><dt>Returns</dt><dd>A QUrl specifying this AWS client's endpoint, or an invalid QUrl if none has been set.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractClient.html#a1a6ceaf4e7827343cde1106fe611c972" title="Set the AWS endpoint to use with this client. ">setEndpoint</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266" title="Get the AWS region associated with this client. ">region</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#a1a64efd2e0c8f2fd6a6af352b05548d0" title="Get the name of the Amazon service this client accesses. ">serviceName</a> </dd>
+<dd>
+<a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6a4df307cb50edcaafaee22076fa8c8c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,6 +254,138 @@ virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature
 
 </div>
 </div>
+<a class="anchor" id="ad5db29e88d5924f6d0e8005fba0b3266"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> AwsAbstractClient::region </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the AWS region associated with this client. </p>
+<dl class="section return"><dt>Returns</dt><dd>The AWS region for this client, or AwsRegion::InvalidRegion if none has been set.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4" title="Set the AWS region this client accesses. ">setRegion</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63" title="Get the endpoint associated with this AWS client. ">endpoint</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a831490c9df803ccf8431ae4af0b2e687"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * AwsAbstractClient::send </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send an AWS request. </p>
+<p>This base implementation simply uses the <em>request's</em> <code>send</code> method, supplying the necessary resources (ie the credentials, network access manager, and signature object) from this object as required.</p>
+<p>Derived classes would not normally need to override this method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The AWS request to send.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An object representing the AWS service's response. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a64efd2e0c8f2fd6a6af352b05548d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString AwsAbstractClient::serviceName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name of the Amazon service this client accesses. </p>
+<p>This base implementation simply returns the name set via setServiceName.</p>
+<dl class="section return"><dt>Returns</dt><dd>An Amazon service name, such as "sqs" or "sns".</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>setServiceName </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c3cbef6950ab5c193ce424138b78829"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractClient::setCredentials </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *const&#160;</td>
+          <td class="paramname"><em>credentials</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the credentials object for this client to use for signing requests. </p>
+<p>This object will not take ownership of the supplied <em>credentials</em> pointer. It is the caller's responsibility to ensure that the pointer remains valid for the life of this object, or until setCredentials is used to set a new pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">credentials</td><td>Credentials to use for signing requests.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>sign </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a6ceaf4e7827343cde1106fe611c972"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractClient::setEndpoint </td>
+          <td>(</td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
+          <td class="paramname"><em>endpoint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the AWS endpoint to use with this client. </p>
+<p>Typically, it is simpler for the user to set this client's region instead (via setRegion), and allow this object to then determine the endpoint based on the serviceName and region. However, this method may be used to set an explicit endpoint URL if desired.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endpoint</td><td>Endpoint URL to use for sending AWS requests.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266" title="Get the AWS region associated with this client. ">region</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687" title="Send an AWS request. ">send</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4" title="Set the AWS region this client accesses. ">setRegion</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aeadf9a11304ab2ce832db7843ab197b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -209,12 +401,67 @@ virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature
 </div><div class="memdoc">
 
 <p>Set the network access manager for this AWS service object. </p>
+<p>This object will not take ownership of the supplied <em>manager</em> pointer. It is the caller's responsibility to ensure that the pointer remains valid for the life of this object, or until setNetworkAccessManager is used to set a new pointer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">manager</td><td>Network access manager for this AWS service object to use. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="aa001015404f6060eb690dd6a596cd7e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractClient::setRegion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a>&#160;</td>
+          <td class="paramname"><em>region</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the AWS region this client accesses. </p>
+<p>If an endpoint is not explicitly set (eg via setEndpoint), then the supplied value may be used (in conjuction with serviceName) to determine the endpoint URL when sending requests to the AWS service.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">region</td><td>Amazon region for this client to use.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687" title="Send an AWS request. ">send</a> </dd>
+<dd>
+<a class="el" href="classAwsAbstractClient.html#a1a6ceaf4e7827343cde1106fe611c972" title="Set the AWS endpoint to use with this client. ">setEndpoint</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a102e5e03d1339a8e0483f6d146bfc360"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> * AwsAbstractClient::signature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the signature object to be used for signing requests. </p>
+<dl class="section return"><dt>Returns</dt><dd>An AWS signature object. </dd></dl>
 
 </div>
 </div>
@@ -225,7 +472,7 @@ virtual <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 16:13:14 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

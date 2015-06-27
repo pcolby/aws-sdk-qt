@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['refresh',['refresh',['../classAwsAbstractCredentials.html#a90d31871ce1dbc366141ce20f3493907',1,'AwsAbstractCredentials']]],
-  ['region',['region',['../classAwsRegionPrivate.html#ae5185facf662728b0dadf4fe646b8971',1,'AwsRegionPrivate::region()'],['../classAwsRegion.html#a8703e0fb4b2ea54a91fa3d635017e443',1,'AwsRegion::region() const '],['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion::Region()']]],
-  ['regionendpointinfo',['RegionEndpointInfo',['../structAwsEndpointPrivate_1_1RegionEndpointInfo.html',1,'AwsEndpointPrivate']]],
-  ['regioninfo',['RegionInfo',['../structAwsEndpointPrivate_1_1RegionInfo.html',1,'AwsEndpointPrivate']]],
-  ['regionname',['regionName',['../classAwsEndpointPrivate.html#ac6fef7bca4012bed4feeb7bc59cbc254',1,'AwsEndpointPrivate::regionName()'],['../classAwsEndpoint.html#a65dd94bbb8b35e80aa9b2b0687286b3e',1,'AwsEndpoint::regionName()']]],
-  ['regionnames',['regionNames',['../structAwsEndpointPrivate_1_1HostInfo.html#a7835e6e9657a9dd88296d389b67ab7de',1,'AwsEndpointPrivate::HostInfo::regionNames()'],['../structAwsEndpointPrivate_1_1ServiceInfo.html#adbc2f3be0a04b556468608130c7d7473',1,'AwsEndpointPrivate::ServiceInfo::regionNames()']]],
-  ['regions',['regions',['../classAwsEndpointPrivate.html#a4fde1f3d151910b897bda27da37ad25e',1,'AwsEndpointPrivate']]],
-  ['regionservices',['RegionServices',['../classAwsEndpointPrivate.html#a52d7f51a80fbb48e1737479651c4187c',1,'AwsEndpointPrivate']]]
+  ['q_5fptr',['q_ptr',['../classAwsAbstractClientPrivate.html#a5e2977dac2f67c31c5f6015074874a5b',1,'AwsAbstractClientPrivate::q_ptr()'],['../classAwsAbstractCredentialsPrivate.html#a0ce8f0c17a7341e44b5cf27411ccc0b2',1,'AwsAbstractCredentialsPrivate::q_ptr()'],['../classAwsAbstractRequestPrivate.html#a263c8ee8f4419bb8a2826805803b3f69',1,'AwsAbstractRequestPrivate::q_ptr()'],['../classAwsAbstractResponsePrivate.html#a3397dd89a1751c6ed2e7da260ea462fd',1,'AwsAbstractResponsePrivate::q_ptr()'],['../classAwsAbstractSignaturePrivate.html#ad5be4453d4deaacbed64b6ff6e5234b9',1,'AwsAbstractSignaturePrivate::q_ptr()'],['../classAwsEndpointPrivate.html#aa24509fefbdc3c0fd71e6b015ad531bd',1,'AwsEndpointPrivate::q_ptr()'],['../classAwsRegionPrivate.html#a9e495938929bd820ec088b93d7864785',1,'AwsRegionPrivate::q_ptr()'],['../classSqsCreateQueueResponsePrivate.html#af3396eb5c67fefac292d2697b2b5ed90',1,'SqsCreateQueueResponsePrivate::q_ptr()'],['../classSqsErrorPrivate.html#a1b32fee7bf0afcb8f146cbc2e42df827',1,'SqsErrorPrivate::q_ptr()']]],
+  ['qstringpair',['QStringPair',['../classAwsSignatureV1Private.html#a13f29e5394a3fa041a78a597605dfaca',1,'AwsSignatureV1Private']]]
 ];

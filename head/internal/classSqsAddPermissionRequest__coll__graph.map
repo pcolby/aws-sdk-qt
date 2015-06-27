@@ -1,5 +1,5 @@
 <map id="SqsAddPermissionRequest" name="SqsAddPermissionRequest">
 <area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="49,171,144,197"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="125,81,271,108"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="125,81,271,108"/>
 <area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="169,171,355,197"/>
 </map>

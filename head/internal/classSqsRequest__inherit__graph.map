@@ -16,5 +16,5 @@
 <area shape="rect" id="node18" href="$classSqsSendMessageBatchRequest.html" title="SqsSendMessageBatchRequest" alt="" coords="465,761,676,788"/>
 <area shape="rect" id="node19" href="$classSqsSendMessageRequest.html" title="SqsSendMessageRequest" alt="" coords="482,812,659,839"/>
 <area shape="rect" id="node20" href="$classSqsSetQueueAttributesRequest.html" title="SqsSetQueueAttributesRequest" alt="" coords="467,863,675,889"/>
-<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="124,441,271,468"/>
+<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="124,441,271,468"/>
 </map>

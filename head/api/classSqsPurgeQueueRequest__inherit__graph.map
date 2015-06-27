@@ -1,4 +1,4 @@
 <map id="SqsPurgeQueueRequest" name="SqsPurgeQueueRequest">
 <area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="41,155,136,181"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="15,80,162,107"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="15,80,162,107"/>
 </map>

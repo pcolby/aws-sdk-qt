@@ -9,5 +9,6 @@ var searchData=
   ['caseinsensitivelessthan',['caseInsensitiveLessThan',['../classAwsSignatureV1Private.html#af38efa595c9cf8b6e18ad685df1203e7',1,'AwsSignatureV1Private']]],
   ['changed',['changed',['../classAwsAbstractCredentials.html#ae1f61d7f945d5a90209c804c2abf5289',1,'AwsAbstractCredentials']]],
   ['createqueue',['createQueue',['../classSqsClient.html#a622a5f5d3ff78f6029e808874c1c918c',1,'SqsClient']]],
+  ['credentials',['credentials',['../classAwsAbstractClientPrivate.html#ae7042dcbcabce6f18c8c108048e71479',1,'AwsAbstractClientPrivate::credentials()'],['../classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40',1,'AwsAbstractClient::credentials()']]],
   ['credentialscope',['credentialScope',['../classAwsSignatureV4Private.html#acef1a15e43c84396a3f41d02699728a3',1,'AwsSignatureV4Private']]]
 ];

@@ -94,6 +94,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">AwsAbstractRequest Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a request to be sent (via a client class) to an Amazon service.  
+ <a href="classAwsAbstractRequest.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AwsAbstractRequest:</div>
 <div class="dyncontent">
@@ -112,34 +115,38 @@ Collaboration diagram for AwsAbstractRequest:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a04f9c9fc9c65b65e01a23c588847dea1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a04f9c9fc9c65b65e01a23c588847dea1">AwsAbstractRequest</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:a04f9c9fc9c65b65e01a23c588847dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> object.  <a href="#a04f9c9fc9c65b65e01a23c588847dea1">More...</a><br /></td></tr>
+<tr class="memdesc:a04f9c9fc9c65b65e01a23c588847dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. ">AwsAbstractRequest</a> object.  <a href="#a04f9c9fc9c65b65e01a23c588847dea1">More...</a><br /></td></tr>
 <tr class="separator:a04f9c9fc9c65b65e01a23c588847dea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8064604d0605756cedf72581c15a36a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8064604d0605756cedf72581c15a36a7"></a>
-virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () const </td></tr>
+<tr class="memitem:aa4ac7b7e84c998e6fe7a674049344b30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4ac7b7e84c998e6fe7a674049344b30"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#aa4ac7b7e84c998e6fe7a674049344b30">~AwsAbstractRequest</a> ()</td></tr>
+<tr class="memdesc:aa4ac7b7e84c998e6fe7a674049344b30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. ">AwsAbstractRequest</a> destructor. <br /></td></tr>
+<tr class="separator:aa4ac7b7e84c998e6fe7a674049344b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8064604d0605756cedf72581c15a36a7"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">data</a> () const </td></tr>
+<tr class="memdesc:a8064604d0605756cedf72581c15a36a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data, if relevant, to be included with PUT and/or POST operations.  <a href="#a8064604d0605756cedf72581c15a36a7">More...</a><br /></td></tr>
 <tr class="separator:a8064604d0605756cedf72581c15a36a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897b8b1bb7614d0188612b8609da9e3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a897b8b1bb7614d0188612b8609da9e3b"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const =0</td></tr>
 <tr class="separator:a897b8b1bb7614d0188612b8609da9e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ceca2b259d079a7178fa87a4ed063ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ceca2b259d079a7178fa87a4ed063ca"></a>
-virtual QNetworkRequest&#160;</td><td class="memItemRight" valign="bottom"><b>networkRequest</b> (const QUrl &amp;endpoint, const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;signature, const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials) const </td></tr>
+<tr class="memitem:a6ceca2b259d079a7178fa87a4ed063ca"><td class="memItemLeft" align="right" valign="top">virtual QNetworkRequest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a6ceca2b259d079a7178fa87a4ed063ca">networkRequest</a> (const QUrl &amp;endpoint, const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;signature, const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials) const </td></tr>
+<tr class="memdesc:a6ceca2b259d079a7178fa87a4ed063ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a QNetworkRequest for this AWS request.  <a href="#a6ceca2b259d079a7178fa87a4ed063ca">More...</a><br /></td></tr>
 <tr class="separator:a6ceca2b259d079a7178fa87a4ed063ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f535def5f6e794a2454d49543ff8c71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f535def5f6e794a2454d49543ff8c71"></a>
-virtual QNetworkAccessManager::Operation&#160;</td><td class="memItemRight" valign="bottom"><b>operation</b> () const </td></tr>
+<tr class="memitem:a1f535def5f6e794a2454d49543ff8c71"><td class="memItemLeft" align="right" valign="top">virtual QNetworkAccessManager::Operation&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">operation</a> () const </td></tr>
+<tr class="memdesc:a1f535def5f6e794a2454d49543ff8c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the network operation this request uses.  <a href="#a1f535def5f6e794a2454d49543ff8c71">More...</a><br /></td></tr>
 <tr class="separator:a1f535def5f6e794a2454d49543ff8c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2256ecd184ed88866ad00bd2d7aa59a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2256ecd184ed88866ad00bd2d7aa59a"></a>
-virtual <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (QNetworkAccessManager &amp;manager, const QUrl &amp;endpoint, const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;signature, const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials) const </td></tr>
+<tr class="memitem:ad2256ecd184ed88866ad00bd2d7aa59a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#ad2256ecd184ed88866ad00bd2d7aa59a">send</a> (QNetworkAccessManager &amp;manager, const QUrl &amp;endpoint, const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;signature, const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;credentials) const </td></tr>
+<tr class="memdesc:ad2256ecd184ed88866ad00bd2d7aa59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send this request to a given Amazon endpoint, via the specified network access manager.  <a href="#ad2256ecd184ed88866ad00bd2d7aa59a">More...</a><br /></td></tr>
 <tr class="separator:ad2256ecd184ed88866ad00bd2d7aa59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1198d7dc7b2bc5836100b4ddfabffdbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1198d7dc7b2bc5836100b4ddfabffdbb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AwsAbstractRequest</b> (<a class="el" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memitem:a1198d7dc7b2bc5836100b4ddfabffdbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a1198d7dc7b2bc5836100b4ddfabffdbb">AwsAbstractRequest</a> (<a class="el" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memdesc:a1198d7dc7b2bc5836100b4ddfabffdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. ">AwsAbstractRequest</a> object.  <a href="#a1198d7dc7b2bc5836100b4ddfabffdbb">More...</a><br /></td></tr>
 <tr class="separator:a1198d7dc7b2bc5836100b4ddfabffdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500af05fc008e1777aace7600f832f1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a500af05fc008e1777aace7600f832f1f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const QByteArray &amp;data)</td></tr>
+<tr class="memitem:a500af05fc008e1777aace7600f832f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#a500af05fc008e1777aace7600f832f1f">setData</a> (const QByteArray &amp;<a class="el" href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">data</a>)</td></tr>
+<tr class="memdesc:a500af05fc008e1777aace7600f832f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data to be used with POST and/or PUT operations.  <a href="#a500af05fc008e1777aace7600f832f1f">More...</a><br /></td></tr>
 <tr class="separator:a500af05fc008e1777aace7600f832f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab90931e641d8498768372ec3521df4d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab90931e641d8498768372ec3521df4d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setOperation</b> (const QNetworkAccessManager::Operation operation)</td></tr>
+<tr class="memitem:ab90931e641d8498768372ec3521df4d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractRequest.html#ab90931e641d8498768372ec3521df4d7">setOperation</a> (const QNetworkAccessManager::Operation <a class="el" href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">operation</a>)</td></tr>
+<tr class="memdesc:ab90931e641d8498768372ec3521df4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network operation to use when submitting this request.  <a href="#ab90931e641d8498768372ec3521df4d7">More...</a><br /></td></tr>
 <tr class="separator:ab90931e641d8498768372ec3521df4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af810c369ce868cc70a352f7c9bd01713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af810c369ce868cc70a352f7c9bd01713"></a>
 virtual <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>response</b> (QNetworkReply *const reply) const =0</td></tr>
@@ -156,7 +163,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a1cfba7f63fd9770b44387872a5e266c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd></dd></dl>
+<div class="textblock"><p>Represents a request to be sent (via a client class) to an Amazon service. </p>
+<p>Typically, a user would pass a derived class (such as <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a>) to an AwsAbstractClient-derived class (such as <a class="el" href="classSqsClient.html">SqsClient</a>) to send a request to an AWS service. </p>
 
 <p>Definition at line <a class="el" href="awsabstractrequest_8h_source.html#l00039">39</a> of file <a class="el" href="awsabstractrequest_8h_source.html">awsabstractrequest.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -174,7 +182,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> object. </p>
+<p>Constructs a new <a class="el" href="classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. ">AwsAbstractRequest</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
@@ -182,13 +190,382 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00042">42</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractRequest.html#a1cfba7f63fd9770b44387872a5e266c5">d_ptr</a>(<span class="keyword">new</span> <a class="code" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00046">46</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractRequest.html#a1cfba7f63fd9770b44387872a5e266c5">d_ptr</a>(<span class="keyword">new</span> <a class="code" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractRequest_html_a1cfba7f63fd9770b44387872a5e266c5"><div class="ttname"><a href="classAwsAbstractRequest.html#a1cfba7f63fd9770b44387872a5e266c5">AwsAbstractRequest::d_ptr</a></div><div class="ttdeci">AwsAbstractRequestPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00064">awsabstractrequest.h:64</a></div></div>
 <div class="ttc" id="classAwsAbstractRequestPrivate_html"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractRequest. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00036">awsabstractrequest_p.h:36</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1198d7dc7b2bc5836100b4ddfabffdbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AwsAbstractRequest::AwsAbstractRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a> *const&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *const&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. ">AwsAbstractRequest</a> object. </p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a class="el" href="classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. ">AwsAbstractRequestPrivate</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Pointer to private data (aka D-Pointer). </td></tr>
+    <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00063">63</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractRequest.html#a1cfba7f63fd9770b44387872a5e266c5">d_ptr</a>(d)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html_a1cfba7f63fd9770b44387872a5e266c5"><div class="ttname"><a href="classAwsAbstractRequest.html#a1cfba7f63fd9770b44387872a5e266c5">AwsAbstractRequest::d_ptr</a></div><div class="ttdeci">AwsAbstractRequestPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00064">awsabstractrequest.h:64</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8064604d0605756cedf72581c15a36a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray AwsAbstractRequest::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the data, if relevant, to be included with PUT and/or POST operations. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00083">83</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="awsabstractrequest_8cpp_source.html#l00110">networkRequest()</a>, and <a class="el" href="awsabstractrequest_8cpp_source.html#l00183">setData()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> d-&gt;data;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6ceca2b259d079a7178fa87a4ed063ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QNetworkRequest AwsAbstractRequest::networkRequest </td>
+          <td>(</td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
+          <td class="paramname"><em>endpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;&#160;</td>
+          <td class="paramname"><em>signature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;&#160;</td>
+          <td class="paramname"><em>credentials</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a QNetworkRequest for this AWS request. </p>
+<p>This base implementation used the protected unsignedRequest function to fetch the basic request to be sent, then uses <em>signature</em> and <em>credentials</em> to sign the request before returning to the caller.</p>
+<p>Derived classes may override this if their specific AWS service required more advanced logic (or disallow signing, for example).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endpoint</td><td>AWS endpoint the request is to be for. </td></tr>
+    <tr><td class="paramname">signature</td><td>AWS signature class for signing the request. </td></tr>
+    <tr><td class="paramname">credentials</td><td>AWS credentials to use for signing the request.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A valid, signed (where appropriate) request that can be sent to via a network access manager to perform the configured request.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>unsignedRequest </dd></dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00110">110</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractrequest_8cpp_source.html#l00083">data()</a>, <a class="el" href="awsabstractrequest_8cpp_source.html#l00130">operation()</a>, and <a class="el" href="classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452">AwsAbstractSignature::sign()</a>.</p>
+
+<p>Referenced by <a class="el" href="awsabstractrequest_8cpp_source.html#l00147">send()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    QNetworkRequest request(unsignedRequest(endpoint));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    signature.<a class="code" href="classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452">sign</a>(credentials, <a class="code" href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">operation</a>(), request, <a class="code" href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">data</a>());</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> request;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractSignature_html_aff347575348cf89d5ea6342b1c147452"><div class="ttname"><a href="classAwsAbstractSignature.html#aff347575348cf89d5ea6342b1c147452">AwsAbstractSignature::sign</a></div><div class="ttdeci">virtual void sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation, QNetworkRequest &amp;request, const QByteArray &amp;data=QByteArray()) const =0</div><div class="ttdoc">Sign an AWS request. </div></div>
+<div class="ttc" id="classAwsAbstractRequest_html_a8064604d0605756cedf72581c15a36a7"><div class="ttname"><a href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">AwsAbstractRequest::data</a></div><div class="ttdeci">virtual QByteArray data() const </div><div class="ttdoc">Get the data, if relevant, to be included with PUT and/or POST operations. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00083">awsabstractrequest.cpp:83</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html_a1f535def5f6e794a2454d49543ff8c71"><div class="ttname"><a href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">AwsAbstractRequest::operation</a></div><div class="ttdeci">virtual QNetworkAccessManager::Operation operation() const </div><div class="ttdoc">Get the network operation this request uses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00130">awsabstractrequest.cpp:130</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1f535def5f6e794a2454d49543ff8c71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QNetworkAccessManager::Operation AwsAbstractRequest::operation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the network operation this request uses. </p>
+<p>This defaults to QNetworkAccessManager::GetOperation unless overridden or changed via setOperation.</p>
+<dl class="section return"><dt>Returns</dt><dd>Network operation to use when sending this request.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractRequest.html#ab90931e641d8498768372ec3521df4d7" title="Set the network operation to use when submitting this request. ">setOperation</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00130">130</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="awsabstractrequest_8cpp_source.html#l00110">networkRequest()</a>, <a class="el" href="awsabstractrequest_8cpp_source.html#l00147">send()</a>, and <a class="el" href="awsabstractrequest_8cpp_source.html#l00194">setOperation()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> d-&gt;operation;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad2256ecd184ed88866ad00bd2d7aa59a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * AwsAbstractRequest::send </td>
+          <td>(</td>
+          <td class="paramtype">QNetworkAccessManager &amp;&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
+          <td class="paramname"><em>endpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> &amp;&#160;</td>
+          <td class="paramname"><em>signature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> &amp;&#160;</td>
+          <td class="paramname"><em>credentials</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send this request to a given Amazon endpoint, via the specified network access manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>Network access manager to send the request via. </td></tr>
+    <tr><td class="paramname">endpoint</td><td>AWS service endpoint to send the request to. </td></tr>
+    <tr><td class="paramname">signature</td><td>Signature implementation to use to sign the request. </td></tr>
+    <tr><td class="paramname">credentials</td><td>AWS credentials to use to sign the request.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AwsAbstractResponse-derived object representing the AWS service's response. </dd></dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00147">147</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractrequest_8cpp_source.html#l00110">networkRequest()</a>, and <a class="el" href="awsabstractrequest_8cpp_source.html#l00130">operation()</a>.</p>
+
+<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00142">AwsAbstractClient::send()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_ASSERT(isValid());</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> QNetworkRequest request(<a class="code" href="classAwsAbstractRequest.html#a6ceca2b259d079a7178fa87a4ed063ca">networkRequest</a>(endpoint, signature, credentials));</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;Request URL:&quot;</span> &lt;&lt; request.url().toString();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">if</span> (request.hasRawHeader(<span class="stringliteral">&quot;Authorization&quot;</span>)) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;Authorization:&quot;</span> &lt;&lt; request.rawHeader(<span class="stringliteral">&quot;Authorization&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">operation</a>()) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::DeleteOperation:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">return</span> response(manager.deleteResource(request));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::HeadOperation:</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">return</span> response(manager.head(request));</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::GetOperation:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> response(manager.get(request));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::PostOperation:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> response(d-&gt;post(manager, request));</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::PutOperation:</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> response(d-&gt;put(manager, request));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">case</span> QNetworkAccessManager::CustomOperation: <span class="comment">// Fall through.</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">// Catch this in debug mode for easier development / debugging.</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            Q_ASSERT_X(<span class="keyword">false</span>, Q_FUNC_INFO, <span class="stringliteral">&quot;invalid operation&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html_a1f535def5f6e794a2454d49543ff8c71"><div class="ttname"><a href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">AwsAbstractRequest::operation</a></div><div class="ttdeci">virtual QNetworkAccessManager::Operation operation() const </div><div class="ttdoc">Get the network operation this request uses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00130">awsabstractrequest.cpp:130</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html_a6ceca2b259d079a7178fa87a4ed063ca"><div class="ttname"><a href="classAwsAbstractRequest.html#a6ceca2b259d079a7178fa87a4ed063ca">AwsAbstractRequest::networkRequest</a></div><div class="ttdeci">virtual QNetworkRequest networkRequest(const QUrl &amp;endpoint, const AwsAbstractSignature &amp;signature, const AwsAbstractCredentials &amp;credentials) const </div><div class="ttdoc">Construct a QNetworkRequest for this AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00110">awsabstractrequest.cpp:110</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a500af05fc008e1777aace7600f832f1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractRequest::setData </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the data to be used with POST and/or PUT operations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>POST/PUT data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00183">183</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractrequest_8cpp_source.html#l00083">data()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    Q_D(<a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    d-&gt;data = <a class="code" href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">data</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html_a8064604d0605756cedf72581c15a36a7"><div class="ttname"><a href="classAwsAbstractRequest.html#a8064604d0605756cedf72581c15a36a7">AwsAbstractRequest::data</a></div><div class="ttdeci">virtual QByteArray data() const </div><div class="ttdoc">Get the data, if relevant, to be included with PUT and/or POST operations. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00083">awsabstractrequest.cpp:83</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab90931e641d8498768372ec3521df4d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractRequest::setOperation </td>
+          <td>(</td>
+          <td class="paramtype">const QNetworkAccessManager::Operation&#160;</td>
+          <td class="paramname"><em>operation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the network operation to use when submitting this request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operation</td><td>Network operation to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="awsabstractrequest_8cpp_source.html#l00194">194</a> of file <a class="el" href="awsabstractrequest_8cpp_source.html">awsabstractrequest.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractrequest_8cpp_source.html#l00130">operation()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    Q_D(<a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    d-&gt;operation = <a class="code" href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">operation</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractRequest_html_a1f535def5f6e794a2454d49543ff8c71"><div class="ttname"><a href="classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71">AwsAbstractRequest::operation</a></div><div class="ttdeci">virtual QNetworkAccessManager::Operation operation() const </div><div class="ttdoc">Get the network operation this request uses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00130">awsabstractrequest.cpp:130</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,7 +576,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 16:13:14 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

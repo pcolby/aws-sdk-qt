@@ -1,5 +1,5 @@
 <map id="SqsListDeadLetterSourceQueuesRequest" name="SqsListDeadLetterSourceQueuesRequest">
 <area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="66,171,161,197"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="141,81,288,108"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="141,81,288,108"/>
 <area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="185,171,372,197"/>
 </map>

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['token',['token',['../classAwsAbstractCredentials.html#acebb810e6ea9437ff56b7231db3a373b',1,'AwsAbstractCredentials::token()'],['../classAwsAnonymousCredentials.html#a32b3f1e4f09b615e5f5a70c116efd57d',1,'AwsAnonymousCredentials::token()'],['../classAwsBasicCredentials.html#a186b996db7efa3dff85b6bbc6c11acfa',1,'AwsBasicCredentials::token()']]],
-  ['tovariant',['toVariant',['../classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6',1,'AwsAbstractResponse']]]
+  ['refresh',['refresh',['../classAwsAbstractCredentials.html#a90d31871ce1dbc366141ce20f3493907',1,'AwsAbstractCredentials']]],
+  ['region',['region',['../classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266',1,'AwsAbstractClient::region()'],['../classAwsRegion.html#a8703e0fb4b2ea54a91fa3d635017e443',1,'AwsRegion::region()']]],
+  ['regionname',['regionName',['../classAwsEndpoint.html#a65dd94bbb8b35e80aa9b2b0687286b3e',1,'AwsEndpoint']]]
 ];

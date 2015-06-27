@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['parse',['parse',['../classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc',1,'SqsErrorPrivate']]],
-  ['parseregion',['parseRegion',['../classAwsEndpointPrivate.html#a91bf1710215e565affd6344495f1aeae',1,'AwsEndpointPrivate']]],
-  ['parseregions',['parseRegions',['../classAwsEndpointPrivate.html#a3b3e23c871ce4788276efe76e37829bf',1,'AwsEndpointPrivate']]],
-  ['parseservice',['parseService',['../classAwsEndpointPrivate.html#abd8cc2dda47fc547fb9c50ac4e49d5c9',1,'AwsEndpointPrivate']]],
-  ['parseservices',['parseServices',['../classAwsEndpointPrivate.html#a886f2ee4e6918e8566abf95b14f2a304',1,'AwsEndpointPrivate']]],
-  ['parsesuccess',['parseSuccess',['../classSqsCreateQueueResponse.html#a610856edcbdbb50f261498dee1b48553',1,'SqsCreateQueueResponse']]]
+  ['name',['name',['../classAwsRegion.html#aa68c884fedce77a646491623db46e391',1,'AwsRegion::name() const '],['../classAwsRegion.html#a70a1a6d5473977a3233313df9bc53ee9',1,'AwsRegion::name(const Region &amp;region)']]],
+  ['networkaccessmanager',['networkAccessManager',['../classAwsAbstractClient.html#a6a4df307cb50edcaafaee22076fa8c8c',1,'AwsAbstractClient']]],
+  ['networkrequest',['networkRequest',['../classAwsAbstractRequest.html#a6ceca2b259d079a7178fa87a4ed063ca',1,'AwsAbstractRequest']]]
 ];

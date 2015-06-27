@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="AwsAbstractClient" alt="" coords="140,344,271,371"/>
+<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Base class for all AWS service clients. " alt="" coords="140,344,271,371"/>
 <area shape="rect" id="node4" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="124,420,287,447"/>
-<area shape="rect" id="node7" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="132,471,279,497"/>
+<area shape="rect" id="node7" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="132,471,279,497"/>
 <area shape="rect" id="node26" href="$classAwsAbstractResponse.html" title="AwsAbstractResponse" alt="" coords="127,612,283,639"/>
 <area shape="rect" id="node3" href="$classSqsClient.html" title="SqsClient" alt="" coords="387,319,465,345"/>
 <area shape="rect" id="node5" href="$classAwsAnonymousCredentials.html" title="Basic implementation of AwsAbstractCredentials that allows use of &quot;anonymous&quot; credentials. " alt="" coords="335,369,517,396"/>

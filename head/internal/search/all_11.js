@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['_7eawsabstractclientprivate',['~AwsAbstractClientPrivate',['../classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01',1,'AwsAbstractClientPrivate']]],
-  ['_7eawsabstractcredentials',['~AwsAbstractCredentials',['../classAwsAbstractCredentials.html#a65457d8b5203dc40022839e3b1d4b0f2',1,'AwsAbstractCredentials']]],
-  ['_7eawsabstractcredentialsprivate',['~AwsAbstractCredentialsPrivate',['../classAwsAbstractCredentialsPrivate.html#abb0c2e84ce765031195d4b80307f0889',1,'AwsAbstractCredentialsPrivate']]],
-  ['_7eawsabstractrequestprivate',['~AwsAbstractRequestPrivate',['../classAwsAbstractRequestPrivate.html#a64019f32250ca7683a2aed7281742de8',1,'AwsAbstractRequestPrivate']]],
-  ['_7eawsabstractresponseprivate',['~AwsAbstractResponsePrivate',['../classAwsAbstractResponsePrivate.html#abd6327cf50c5b016e81456ec31231219',1,'AwsAbstractResponsePrivate']]],
-  ['_7eawsabstractsignature',['~AwsAbstractSignature',['../classAwsAbstractSignature.html#a39c9eacd36bcf13ee629f1dcb7f23d5a',1,'AwsAbstractSignature']]],
-  ['_7eawsabstractsignatureprivate',['~AwsAbstractSignaturePrivate',['../classAwsAbstractSignaturePrivate.html#acbd35159805114681b95a56d2165a8b3',1,'AwsAbstractSignaturePrivate']]],
-  ['_7eawsendpoint',['~AwsEndpoint',['../classAwsEndpoint.html#ad10ffff1f4b7487d93a34de1d9efb5a8',1,'AwsEndpoint']]],
-  ['_7eawsregion',['~AwsRegion',['../classAwsRegion.html#a86af1617f050770622fc3cc782466472',1,'AwsRegion']]]
+  ['version',['version',['../classAwsAbstractSignature.html#a57f9352c5b831eafdcc6932f0f5b8798',1,'AwsAbstractSignature::version()'],['../classAwsSignatureV0.html#a88edb37f70be0dcfa2b77f098c40cddc',1,'AwsSignatureV0::version()'],['../classAwsSignatureV1.html#ab2f9a3f7a4a086195eb5422b4260bab7',1,'AwsSignatureV1::version()'],['../classAwsSignatureV2.html#ae680c88e22980d7b0d6a175b0abd2e1d',1,'AwsSignatureV2::version()'],['../classAwsSignatureV3.html#aa104da055a0df9442eee30d561dcf64b',1,'AwsSignatureV3::version()'],['../classAwsSignatureV4.html#a856ea5dd0b05ce8accd713c075bb7c1d',1,'AwsSignatureV4::version()']]]
 ];
