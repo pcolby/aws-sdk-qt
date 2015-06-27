@@ -24,6 +24,8 @@
 
 #include <QCoreApplication>
 
+#include <iostream>
+
 /*
 env vars the official awscli tool recognises.
 see http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment
@@ -54,7 +56,7 @@ int main(int argc, char *argv[])
     const QString accessKeyId = QString::fromLocal8Bit(qgetenv("AWS_ACCESS_KEY_ID"));
     const QString secretAccessKey = QString::fromLocal8Bit(qgetenv("AWS_SECRET_ACCESS_KEY"));
     if ((accessKeyId.isEmpty()) || (secretAccessKey.isEmpty())) {
-        fprintf(stderr, "Missing credentials\n");
+        std::cerr << "Missing credentials" << std::endl;
         exit(1);
     }
 
