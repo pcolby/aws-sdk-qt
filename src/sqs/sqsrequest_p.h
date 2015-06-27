@@ -33,9 +33,9 @@ QTAWS_BEGIN_NAMESPACE
 class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
-    SqsRequest::SqsAction action;
-    QString apiVersion;
-    QVariantMap parameters;
+    SqsRequest::SqsAction action; ///< SQS action to be performed.
+    QString apiVersion;           ///< SQS API version string.
+    QVariantMap parameters;       ///< SQS request (query string) parameters.
 
     SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q);
 
