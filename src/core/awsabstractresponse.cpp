@@ -174,7 +174,7 @@ QVariantMap AwsAbstractResponse::toVariant(
 
 bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
 {
-    return ((reply->error() != QNetworkReply::NoError) &&
+    return ((reply->error() == QNetworkReply::NoError) &&
             ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
 }
 
