@@ -37,6 +37,18 @@ AWS_CONFIG_FILE
 
 int main(int argc, char *argv[])
 {
+    qSetMessagePattern(QLatin1String(
+        "%{if-warning}\x1b[35m%{endif}"
+        "%{if-critical}\x1b[31m%{endif}"
+        "%{if-fatal}\x1b[1;31m%{endif}"
+        "%{time HH:mm:ss.zzz} "
+      //"%{appname} %{pid} %{threadid} "
+        "%{type} "
+      //"%{file}:%{line} %{function} "
+        "%{if-category}%{category} %{endif}%{message}"
+        "\x1b[0m"
+    ));
+
     QCoreApplication app(argc, argv);
 
     const QString accessKeyId = QString::fromLocal8Bit(qgetenv("AWS_ACCESS_KEY_ID"));
