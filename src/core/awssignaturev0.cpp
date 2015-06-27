@@ -185,9 +185,9 @@ void AwsSignatureV0Private::adornRequest(QNetworkRequest &request,
 
     // If we've touched the query items (likely), then update the request.
     if (query != QUrlQuery(url.query())) {
-        qDebug() << Q_FUNC_INFO << url;
+        qDebug() << url;
         url.setQuery(query);
-        qDebug() << Q_FUNC_INFO << url;
+        qDebug() << url;
         request.setUrl(url);
     }
 }

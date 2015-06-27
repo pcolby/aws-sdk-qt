@@ -195,7 +195,7 @@ void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
 void AwsAbstractResponse::parse(QNetworkReply * const reply)
 {
     if (reply->error() != QNetworkReply::NoError) {
-        qDebug() << Q_FUNC_INFO << reply->errorString();
+        qWarning() << reply->errorString();
     } else if (isSuccess(reply)) {
         parseSuccess(*reply);
     } else {

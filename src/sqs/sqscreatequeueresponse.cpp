@@ -82,12 +82,12 @@ void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
                 } else if (xml.name() == QLatin1String("ResponseMetadat")) {
                     d->parseResponseMetadata(xml);
                 } else {
-                    qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+                    qWarning() << "ignoring" << xml.name();
                     xml.skipCurrentElement();
                 }
             }
         } else {
-            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qWarning() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }

@@ -95,16 +95,16 @@ AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
     Q_ASSERT(request.isValid());
 
     if (!d->credentials) {
-        qWarning() << Q_FUNC_INFO << "credentials not set";
+        qWarning() << "credentials not set";
         return NULL;
     } else if (!d->networkAccessManager) {
-        qWarning() << Q_FUNC_INFO << "network access manager not set";
+        qWarning() << "network access manager not set";
         return NULL;
     } else if (!d->signature) {
-        qWarning() << Q_FUNC_INFO << "signature not set";
+        qWarning() << "signature not set";
         return NULL;
     } else if (!request.isValid()) {
-        qWarning() << Q_FUNC_INFO << serviceName() << "request not valid";
+        qWarning() << serviceName() << "request not valid";
         return NULL;
     }
 

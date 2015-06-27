@@ -506,7 +506,7 @@ void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("Services")) {
             parseServices(xml);
         } else if (xml.name() != QLatin1String("XML")) {
-            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qDebug() << "ignoring" << xml.name();
         }
     }
     if (xml.hasError()) {
@@ -574,7 +574,7 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
                 } else if (xml.name() == QLatin1String("Hostname")) {
                     endpoint.hostName = xml.readElementText();
                 } else {
-                    qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+                    qDebug() << "ignoring" << xml.name();
                     xml.skipCurrentElement();
                 }
             }
@@ -588,9 +588,9 @@ void AwsEndpointPrivate::parseRegion(QXmlStreamReader &xml)
             hosts[endpoint.hostName].regionNames.append(regionName);
             hosts[endpoint.hostName].serviceName  = serviceName;
             regions[regionName].services[serviceName] = endpoint;
-            //qDebug() << Q_FUNC_INFO << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
+            //qDebug() << regionName << serviceName << (int)endpoint.transports << endpoint.hostName;
         } else {
-            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qDebug() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -617,7 +617,7 @@ void AwsEndpointPrivate::parseRegions(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Region")) {
             parseRegion(xml);
         } else {
-            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qDebug() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -664,9 +664,9 @@ void AwsEndpointPrivate::parseService(QXmlStreamReader &xml)
             Q_ASSERT(!serviceName.isEmpty());
             const QString &regionName = xml.readElementText();
             services[serviceName].regionNames.append(regionName);
-            //qDebug() << Q_FUNC_INFO << serviceName << services[serviceName].fullName << regionName;
+            //qDebug() << serviceName << services[serviceName].fullName << regionName;
         } else {
-            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qDebug() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -692,7 +692,7 @@ void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("Service")) {
             parseService(xml);
         } else {
-            qDebug() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qDebug() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }

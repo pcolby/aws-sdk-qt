@@ -85,7 +85,7 @@ void SqsResponse::parseFailure(QIODevice &response)
         if (xml.name() == QLatin1String("ErrorResponse")) {
             d->parseErrorResponse(xml);
         } else {
-            qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+            qWarning() << "ignoring" << xml.name();
             xml.skipCurrentElement();
         }
     }
@@ -122,7 +122,7 @@ void SqsResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("RequestId")) {
             requestId = xml.readElementText();
         } else {
-           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           qWarning() << "ignoring" << xml.name();
            xml.skipCurrentElement();
         }
     }
@@ -135,7 +135,7 @@ void SqsResponsePrivate::parseResponseMetadata(QXmlStreamReader &xml)
         if (xml.name() == QLatin1String("RequestId")) {
             requestId = xml.readElementText();
         } else {
-           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           qWarning() << "ignoring" << xml.name();
            xml.skipCurrentElement();
         }
     }

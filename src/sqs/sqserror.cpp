@@ -180,7 +180,7 @@ void SqsErrorPrivate::parse(QXmlStreamReader &xml)
         } else if (xml.name() == QLatin1String("Detail")) {
             detail = AwsAbstractResponse::toVariant(xml);
         } else {
-           qWarning() << Q_FUNC_INFO << "ignoring" << xml.name();
+           qWarning() << "ignoring" << xml.name();
            xml.skipCurrentElement();
         }
     }
@@ -208,7 +208,7 @@ SqsError::ErrorCode SqsErrorPrivate::codeFromString(const QString &code)
     IfStringReturnErrorResponse(Throttling);
     IfStringReturnErrorResponse(ValidationError);
     #undef IfStringReturnErrorResponse
-    qWarning() << Q_FUNC_INFO << "unknown SQS error code" << code;
+    qWarning() << "unknown SQS error code" << code;
     return SqsError::OtherError;
 }
 
@@ -219,7 +219,7 @@ SqsError::ErrorType SqsErrorPrivate::typeFromString(const QString &type)
     IfStringReturnErrorType(Receiver);
     IfStringReturnErrorType(Sender);
     #undef IfStringReturnErrorType
-    qWarning() << Q_FUNC_INFO << "unknown SQS error type" << type;
+    qWarning() << "unknown SQS error type" << type;
     return SqsError::OtherType;
 }
 
