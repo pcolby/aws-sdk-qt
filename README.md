@@ -22,7 +22,7 @@ Also, feel free to use the issue tracker to show interest in particular AWS serv
 Next steps are roughly:
 
 1. add Amazon's official V4 signature test suite to the unit tests ([_done_](https://github.com/pcolby/libqtaws/issues/2))
-2. implement base AwsService class(es) (_in progress_)
+2. implement base AwsService class(es) (_in progress_; indeed, queue creation works now - the rest to come soon)
 3. SQS (_in progress_)
 4. SNS
 5. DynamoDB
