@@ -53,6 +53,10 @@ int main(int argc, char *argv[])
 
     const QString accessKeyId = QString::fromLocal8Bit(qgetenv("AWS_ACCESS_KEY_ID"));
     const QString secretAccessKey = QString::fromLocal8Bit(qgetenv("AWS_SECRET_ACCESS_KEY"));
+    if ((accessKeyId.isEmpty()) || (secretAccessKey.isEmpty())) {
+        fprintf(stderr, "Missing credentials\n");
+        exit(1);
+    }
 
     AwsBasicCredentials credentials(accessKeyId, secretAccessKey);
 
