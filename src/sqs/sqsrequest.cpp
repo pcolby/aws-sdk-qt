@@ -32,13 +32,14 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  SqsRequest
  *
- * @brief  @todo
+ * @brief  Interface class for providing SQS requests
  */
 
 /**
  * @brief  Constructs a new SqsRequest object.
  *
- * @param parent       This object's parent.
+ * @param  action  The SQS action to request.
+ * @param  parent  This object's parent.
  */
 SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
     : AwsAbstractRequest(new SqsRequestPrivate(action, this), parent)
@@ -46,18 +47,39 @@ SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
     setApiVersion(QLatin1String("2012-11-05"));
 }
 
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsRequest object.
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from SqsRequestPrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
 SqsRequest::SqsRequest(SqsRequestPrivate * const d, QObject * const parent)
     : AwsAbstractRequest(d, parent)
 {
 
 }
 
+/**
+ * @brief  Get the SQS action to be performed by this request.
+ *
+ * @return The SQS action to be performed by this request.
+ */
 SqsRequest::SqsAction SqsRequest::action() const
 {
     Q_D(const SqsRequest);
     return d->action;
 }
 
+/**
+ * @brief Get the name of the SQS action to be performed by this request.
+ *
+ * @return The name of the SQS action to be performed by this request.
+ */
 QString SqsRequest::actionString() const
 {
     #define SqsActionToString(action) \
@@ -87,42 +109,89 @@ QString SqsRequest::actionString() const
     return QString();
 }
 
+/**
+ * @brief  Get the SQS API version implemented by this request.
+ *
+ * @return The SQS API version implmented by this request.
+ */
 QString SqsRequest::apiVersion() const
 {
     Q_D(const SqsRequest);
     return d->apiVersion;
 }
 
+/**
+ * @brief  Set the SQS action to be performed by this request.
+ *
+ * @param  The action to be performed by this request.
+ */
 void SqsRequest::setAction(const SqsAction action)
 {
     Q_D(SqsRequest);
     d->action = action;
 }
 
+/**
+ * @brief  Set the SQS API version to include in this request.
+ *
+ * @param  version  The SQS API version to include in this request.
+ */
 void SqsRequest::setApiVersion(const QString &version)
 {
     Q_D(SqsRequest);
     d->apiVersion = version;
 }
 
+/**
+ * @brief  Remove a parameter from the parameters to be included with this request.
+ *
+ * @param  name  Name of the parameter to remove.
+ *
+ * @return Count of parameters removed (should be 0 or 1).
+ */
 int SqsRequest::clearParameter(const QString &name)
 {
     Q_D(SqsRequest);
     return d->parameters.remove(name);
 }
 
+/**
+ * @brief  Get the value of a parameter included with this SQS request.
+ *
+ * @param name          Name of the parameter to get the value of.
+ * @param defaultValue  Default value to return if no such parameter has been set.
+ *
+ * @return The value of the specified parameter, or \a defaultValue of not set.
+ */
 QVariant SqsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
     Q_D(const SqsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
+/**
+ * @brief  Set a parameter to include with this SQS request.
+ *
+ * @param  name   Name of the parameter to include.
+ * @param  value  Value of the parameter to include.
+ */
 void SqsRequest::setParameter(const QString &name, const QVariant &value)
 {
     Q_D(SqsRequest);
     d->parameters.insert(name, value);
 }
 
+/**
+ * @brief  Build a network request object for this SQS request.
+ *
+ * This SQS implementation builds request URLs by combining the common query
+ * parameters (such as Action and Version), with any that have been added (via
+ * setParameter) by child classes.
+ *
+ * @param  endpoint  AWS endpoint to build this request for.
+ *
+ * @return A network request for this SQS request using the given \a endpoint.
+ */
 QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const SqsRequest);
