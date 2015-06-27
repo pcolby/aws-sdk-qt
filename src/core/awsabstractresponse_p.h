@@ -23,9 +23,9 @@
 #include "qtawsglobal.h"
 
 #include <QVariantMap>
+#include <QXmlStreamReader>
 
 class QNetworkReply;
-class QXmlStreamReader;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -34,9 +34,9 @@ class AwsAbstractResponse;
 class QTAWS_EXPORT AwsAbstractResponsePrivate {
 
 public:
-    QNetworkReply * reply;
-    QXmlStreamReader::Error xmlError;
-    QString xmlErrorString;
+    QNetworkReply * reply;            ///< Network reply for this response.
+    QXmlStreamReader::Error xmlError; ///< XML parse error code.
+    QString xmlErrorString;           ///< XML parse error string.
 
     AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
