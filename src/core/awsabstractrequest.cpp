@@ -94,8 +94,6 @@ QByteArray AwsAbstractRequest::data() const
     return d->data;
 }
 
-// Overrides should sign, only if relevant.
-
 /**
  * @brief  Construct a QNetworkRequest for this AWS request.
  *
@@ -220,19 +218,23 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  *
  * @param  reply  Network reply this response should observe.
  *
+ * @return An AWS response object for \a reply.
+ *
  * @see  AwsAbstractClient::send
  */
 
 /**
  * @fn     QNetworkRequest unsignedRequest(const QUrl &endpoint) const
  *
- * @brief  Build a network request object for the given endpoint.
+ * @brief  Build a network request for the given \a endpoint.
  *
  * Derived classes must implement this pure virtual function to build network
  * requests that the networkRequest function can sign, before being subitted
  * to Amazon.
  *
  * @param  endpoint  AWS endpoint to build this request for.
+ *
+ * @return A network request for the given \a endpoint.
  */
 
 /**
