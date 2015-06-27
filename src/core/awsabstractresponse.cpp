@@ -29,13 +29,23 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsAbstractResponse
  *
- * @brief  @todo
+ * @brief  Interface class for processing AWS responses
+ *
+ * Typically instances of AwsAbstractResponse-derviced classes are returned by
+ * their respective AwsAbstractRequest-derived classes, often via an
+ * intermediate AwsAbstractClient-derived class.
+ *
+ * For example, sending an SqsCreateQueueRequest results in a pointer to an
+ * SqsCreateQueueResponse object, optionally via an SqsClient instance.
+ *
+ * @see  AwsAbstractRequest
+ * @see  AwsAbstractClient
  */
 
 /**
  * @brief  Constructs a new AwsAbstractResponse object.
  *
- * @param parent       This object's parent.
+ * @param  parent  This object's parent.
  */
 AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))
@@ -43,6 +53,16 @@ AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsAbstractResponse object.
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from AwsAbstractRequestPrivate.
+ *
+ * @param  parent  This object's parent.
+ */
 AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
                                          QObject * const parent)
     : QObject(parent), d_ptr(d)
@@ -50,11 +70,39 @@ AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
 
 }
 
+/**
+ * @brief AwsAbstractResponse destructor.
+ */
 AwsAbstractResponse::~AwsAbstractResponse()
 {
     delete d_ptr;
 }
 
+/**
+ * @brief Get this response's error string.
+ *
+ * This base implementation returns either the internal network reply object's
+ * error string (if the reply object has an error), or the internal XML parse
+ * error (if one was set, eg via set setXmlError), otherwise a null QString.
+ *
+ * Derived classes may override this function to support additional error types.
+ * Typically such derived implementations would check this base implementation's
+ * result first, or fallback to this base implementation.  For example:
+ *
+ * @code
+ * if (weHaveOurOwnCustomError()) {
+ *     return customErrorString();
+ * } else {
+ *     return AwsAbstractResponse::errorString();
+ * }
+ * @endcode
+ *
+ * @return  An error string, or a null QString if this response has no errors.
+ *
+ * @see  hasError
+ * @see  networkError
+ * @see  xmlParseError
+ */
 QString AwsAbstractResponse::errorString() const
 {
     Q_D(const AwsAbstractResponse);
@@ -67,7 +115,26 @@ QString AwsAbstractResponse::errorString() const
     }
 }
 
-/// @todo Include note re cyclic dependencies if calling (virtual) isValid.
+/**
+ * @brief  Did any error occurr processing this reponse?
+ *
+ * Errors could be anything from network requests errors, to errors validating
+ * AWS response content.
+ *
+ * This base implementation supports network, and XML parsing errors. Derived
+ * classes may override this function to support additional error types.
+ *
+ * @return \c true if this response contains one or more errors, \c false
+ *         otherwise.
+ *
+ * @note  This function may be equivalent to !isValid, however, it is not safe
+ *        for this function's implementation to be just that, since derived
+ *        classes may assume the inverse, resulting in an infinite cycle between
+ *        the two functions.
+ *
+ * @see  errorString
+ * @see  isValid
+ */
 bool AwsAbstractResponse::hasError() const
 {
     Q_D(const AwsAbstractResponse);
@@ -75,7 +142,22 @@ bool AwsAbstractResponse::hasError() const
             (d->xmlError != QXmlStreamReader::NoError));
 }
 
-/// @todo Include note re cyclic dependencies if calling (virtual) hasError.
+/**
+ * @brief  Is this AWS response valid?
+ *
+ * This base implementation simply checks for the absense of network and XML
+ * parsing errors.  Derived classes may override this function to check other
+ * error types, and/or apply additional validation rules.
+ *
+ * @return \c true if this response is considered valid, \c false otherwise.
+ *
+ * @note  This function may be equivalent to !hasError, however, it is not safe
+ *        for this function's implementation to be just that, since derived
+ *        classes may assume the inverse, resulting in an infinite cycle between
+ *        the two functions.
+ *
+ * @see  hasError
+ */
 bool AwsAbstractResponse::isValid() const
 {
     Q_D(const AwsAbstractResponse);
@@ -83,24 +165,70 @@ bool AwsAbstractResponse::isValid() const
             (d->xmlError == QXmlStreamReader::NoError));
 }
 
+/**
+ * @brief  Get this response's network error, if there is one.
+ *
+ * @return This response's network error, if there is one, otherwise
+ *         QNetworkReply::NoError.
+ *
+ * @see  hasError
+ * @see  errorString
+ */
 QNetworkReply::NetworkError AwsAbstractResponse::networkError() const
 {
     Q_D(const AwsAbstractResponse);
     return (d->reply) ? d->reply->error() : QNetworkReply::NoError;
 }
 
+/**
+ * @brief  Get this response's XML parse error, if there is one.
+ *
+ * @return This response's XML parse error, if there is one, otherwise
+ *         QXmlStreamReader::NoError.
+ *
+ * @see  hasError
+ * @see  errorString
+ */
 QXmlStreamReader::Error AwsAbstractResponse::xmlParseError() const
 {
     Q_D(const AwsAbstractResponse);
     return d->xmlError;
 }
 
+/**
+ * @brief  Get this response's XML parse error string, if there is one.
+ *
+ * @return This response's XML parse error string, if there is one, otherwise
+ *         a null QString.
+ *
+ * @see  hasError
+ * @see  errorString
+ */
 QString AwsAbstractResponse::xmlParseErrorString() const
 {
     Q_D(const AwsAbstractResponse);
     return d->xmlErrorString;
 }
 
+/**
+ * @brief  Convert an XML stream to a hierarchical QVariantMap.
+ *
+ * This function is used internally to embed opaque XML structures, such as the
+ * SQS service's ErrorResponse::Error::Detail, which the SQS schema defines as
+ * an arbitrary complex type.
+ *
+ * @note   This static function exists within the AwsAbstractResponse for
+ *         historic reasons.  It should probably be moved our of this class, and
+ *         into a more generic utility space at some point.
+ *
+ * @param  xml       XML stream to convert.
+ * @param  prefix    Prefix to apply to special (non-element) child entry names.
+ * @param  maxDepth  Maximum depth to traverse before truncating the tree.
+ *
+ * @return A QVariantMap representing the \a xml XML fragment.
+ *
+ * @todo   Move this toVariant function to somewhere more generic.
+ */
 QVariantMap AwsAbstractResponse::toVariant(
     QXmlStreamReader &xml, const QString &prefix, const int maxDepth)
 {
@@ -168,16 +296,35 @@ QVariantMap AwsAbstractResponse::toVariant(
     return map;
 }
 
-/// @todo Document bool AwsAbstractResponse::isValid() const
-
-/// @todo Document bool AwsAbstractResponse::parse(QNetworkReply * const reply)
-
+/**
+ * @brief  Does a network reply indicate a successful response?
+ *
+ * This base implementation simply checks that \a reply has no errors, and that
+ * it represents an HTTP response with a 2xx HTTP status code.
+ *
+ * Derived classes may override this function to perform other checks, and/or to
+ * support non-HTTP responses.
+ *
+ * This function is used by the base implementation of the parse function, to
+ * delegate responsibility to either the parseSuccess or parseFailure functions.
+ *
+ * @param  reply  Network reply to check for success.
+ *
+ * @return  \c true if \a reply indicates a successful repsonse, \c false otherwise.
+ *
+ * @see  parse
+ */
 bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const
 {
     return ((reply->error() == QNetworkReply::NoError) &&
             ((reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));
 }
 
+/**
+ * @brief  Set the network reply from which to expect an AWS response.
+ *
+ * @param  reply  Network reply to an AWS requests.
+ */
 void AwsAbstractResponse::setReply(QNetworkReply * const reply)
 {
     Q_D(AwsAbstractResponse);
@@ -185,6 +332,17 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
+/**
+ * @brief  Record the details of an XML parse error.
+ *
+ * If \a xml has no error, this effectively clears any existing XML parsing
+ * error.
+ *
+ * @param  xml  XML reader from which to fetch an parse error code and string.
+ *
+ * @see  xmlParseError
+ * @see  xmlParseErrorString
+ */
 void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
 {
     Q_D(AwsAbstractResponse);
@@ -192,6 +350,22 @@ void AwsAbstractResponse::setXmlError(const QXmlStreamReader &xml)
     d->xmlErrorString = xml.errorString();
 }
 
+/**
+ * @brief  Parse an AWS response from a network reply.
+ *
+ * This base implementation reports networks, if any occurred, otherwise uses
+ * the result of the virtual isSuccess function to delegate parsing to either
+ * the pure virtual parseSuccess or pure virtual parseFailure methods.
+ *
+ * Typically derived classes will only implement parseSuccess and parseFailure,
+ * without needing to override this function.
+ *
+ * @param  reply  Network reply from which to parse the AWS response.
+ *
+ * @see  isSuccess
+ * @see  parseSuccess
+ * @see  parseFailure
+ */
 void AwsAbstractResponse::parse(QNetworkReply * const reply)
 {
     if (reply->error() != QNetworkReply::NoError) {
@@ -204,6 +378,17 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
     emit finished();
 }
 
+/**
+ * @brief  Slot to be invoked when the internal network reply is finished.
+ *
+ * This slot should only be connectedd to QNetworkReply signals (specifcally,
+ * this function asserts that the signal sender is an qobject-castable to
+ * QNetworkReply).
+ *
+ * This is convenience slot, that really exists just to abstract the sender
+ * casting logic from the parse function (ie so derived classes can override
+ * parse without having to implement explicit casts).
+ */
 void AwsAbstractResponse::replyFinished()
 {
     QNetworkReply * const reply = qobject_cast<QNetworkReply *>(sender());

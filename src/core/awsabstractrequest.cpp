@@ -36,6 +36,14 @@ QTAWS_BEGIN_NAMESPACE
  * Typically, a user would pass a derived class (such as SqsCreateQueueRequest)
  * to an AwsAbstractClient-derived class (such as SqsClient) to send a request
  * to an AWS service.
+ *
+ * Note, by design, requests based on this class are endpoint-agnostic.  That is,
+ * you may instantiate a request (such as an SqsCreateQueueRequest), and pass it
+ * to multiple clients (such as a US instance of SqsClient as well as an AU
+ * instance of SqsClient).  Thus it is the caller (typically an
+ * AwsAbstractClient-derived class) that is responsible for for setting the
+ * region / endpoint information, allowing requests to be reused unmodified
+ * multiple times, and/or in multiple regions.
  */
 
 /**
