@@ -77,8 +77,15 @@ void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("CreateQueueResponse")) {
             while (xml.readNextStartElement()) {
-                if (xml.name() == QLatin1String("QueueUrl")) {
-                    d->queueUrl = xml.readElementText();
+                if (xml.name() == QLatin1String("CreateQueueResult")) {
+                    while (xml.readNextStartElement()) {
+                        if (xml.name() == QLatin1String("QueueUrl")) {
+                            d->queueUrl = xml.readElementText();
+                        } else {
+                            qWarning() << "ignoring" << xml.name();
+                            xml.skipCurrentElement();
+                        }
+                    }
                 } else if (xml.name() == QLatin1String("ResponseMetadata")) {
                     d->parseResponseMetadata(xml);
                 } else {
