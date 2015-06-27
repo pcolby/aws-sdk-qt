@@ -37,12 +37,12 @@ class AwsAbstractSignature;
 class QTAWS_EXPORT AwsAbstractClientPrivate {
 
 public:
-    AwsAbstractCredentials * credentials;
+    AwsAbstractCredentials * credentials;         ///< Amazon credentials.
     QUrl endpoint;                                ///< Amazon service endpoint.
     QNetworkAccessManager * networkAccessManager; ///< Network access manager.
-    AwsRegion::Region region;
-    QString serviceName;
-    AwsAbstractSignature * signature;
+    AwsRegion::Region region;                     ///< Amazon service region.
+    QString serviceName;                          ///< Amazon service name.
+    AwsAbstractSignature * signature;             ///< Amazon signature object.
 
     AwsAbstractClientPrivate(AwsAbstractClient * const q);
 

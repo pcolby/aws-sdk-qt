@@ -50,6 +50,8 @@ AwsAbstractClient::AwsAbstractClient(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
  * @brief  Constructs a new AwsAbstractClient object.
  *
  * This overload allows derived classes to provide their own private class
