@@ -36,7 +36,7 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @brief  Initialises an AwsAbstractSignature object.
  *
- * This internal constrcutor is used by derived classes that do not wish to
+ * This internal constructor is used by derived classes that do not wish to
  * provider their own private implementations.
  */
 AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePrivate(this))
@@ -49,7 +49,7 @@ AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePri
  *
  * @brief  Initialises an AwsAbstractSignature object.
  *
- * This internal constrcutor is used by derived classes to provide their own
+ * This internal constructor is used by derived classes to provide their own
  * private implementations if they wish to.
  *
  * @param  d  Internal private implementation to use.
