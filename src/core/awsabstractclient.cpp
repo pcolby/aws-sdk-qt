@@ -33,9 +33,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsAbstractClient
  *
- * @brief  Base class for all AWS service clients.
- *
- * This class is is used
+ * @brief  Interface class for providing access to individual AWS services.
  */
 
 /**

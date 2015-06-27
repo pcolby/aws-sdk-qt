@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AwsAbstractRequest
  *
- * @brief  Represents a request to be sent (via a client class) to an Amazon service.
+ * @brief  Interface class for providing AWS requests
  *
  * Typically, a user would pass a derived class (such as SqsCreateQueueRequest)
  * to an AwsAbstractClient-derived class (such as SqsClient) to send a request
