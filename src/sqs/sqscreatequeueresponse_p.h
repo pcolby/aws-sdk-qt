@@ -33,6 +33,9 @@ public:
 
     SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q);
 
+    void parseCreateQueueResponse(QXmlStreamReader &xml);
+    void parseCreateQueueResult(QXmlStreamReader &xml);
+
 private:
     Q_DECLARE_PUBLIC(SqsCreateQueueResponse)
     Q_DISABLE_COPY(SqsCreateQueueResponsePrivate)

@@ -76,23 +76,7 @@ void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
     QXmlStreamReader xml(&response);
     while (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("CreateQueueResponse")) {
-            while (xml.readNextStartElement()) {
-                if (xml.name() == QLatin1String("CreateQueueResult")) {
-                    while (xml.readNextStartElement()) {
-                        if (xml.name() == QLatin1String("QueueUrl")) {
-                            d->queueUrl = xml.readElementText();
-                        } else {
-                            qWarning() << "ignoring" << xml.name();
-                            xml.skipCurrentElement();
-                        }
-                    }
-                } else if (xml.name() == QLatin1String("ResponseMetadata")) {
-                    d->parseResponseMetadata(xml);
-                } else {
-                    qWarning() << "ignoring" << xml.name();
-                    xml.skipCurrentElement();
-                }
-            }
+            d->parseCreateQueueResponse(xml);
         } else {
             qWarning() << "ignoring" << xml.name();
             xml.skipCurrentElement();
@@ -119,6 +103,34 @@ SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueRespo
     : SqsResponsePrivate(q), q_ptr(q)
 {
 
+}
+
+void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateQueueResponse"));
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("CreateQueueResult")) {
+            parseCreateQueueResult(xml);
+        } else if (xml.name() == QLatin1String("ResponseMetadata")) {
+            parseResponseMetadata(xml);
+        } else {
+            qWarning() << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
+}
+
+void SqsCreateQueueResponsePrivate::parseCreateQueueResult(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateQueueResult"));
+    while (xml.readNextStartElement()) {
+        if (xml.name() == QLatin1String("QueueUrl")) {
+            queueUrl = xml.readElementText();
+        } else {
+            qWarning() << "ignoring" << xml.name();
+            xml.skipCurrentElement();
+        }
+    }
 }
 
 QTAWS_END_NAMESPACE
