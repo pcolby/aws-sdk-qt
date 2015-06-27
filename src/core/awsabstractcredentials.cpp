@@ -31,8 +31,9 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 /**
- * @brief    Construct an AwsAbstractCredentials.
- * @param parent
+ * @brief  Construct an AwsAbstractCredentials object.
+ *
+ * @param  parent
  */
 AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractCredentialsPrivate(this))
