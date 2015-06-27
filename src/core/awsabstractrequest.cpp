@@ -23,6 +23,7 @@
 #include "awsabstractcredentials.h"
 #include "awsabstractsignature.h"
 
+#include <QDebug>
 #include <QNetworkRequest>
 
 QTAWS_BEGIN_NAMESPACE
