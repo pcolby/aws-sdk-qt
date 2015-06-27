@@ -1,0 +1,4 @@
+<map id="AwsSignatureV1" name="AwsSignatureV1">
+<area shape="rect" id="node2" href="$classAwsSignatureV0.html" title="Implements AWS Signature Version 0 (deprecated by Amazon). " alt="" coords="22,80,141,107"/>
+<area shape="rect" id="node3" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="5,5,157,32"/>
+</map>

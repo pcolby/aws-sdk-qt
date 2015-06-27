@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - libqtaws 0.1.0 - core/awsabstractclient.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">core</a> - awsabstractclient.cpp<span style="font-size: 80%;"> (source / <a href="awsabstractclient.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">libqtaws 0.1.0</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2015-06-27 16:13:35</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*</a>
+<span class="lineNum">       2 </span>            :     Copyright 2013-2015 Paul Colby
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            :     This file is part of libqtaws.
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            :     Libqtaws is free software: you can redistribute it and/or modify
+<span class="lineNum">       7 </span>            :     it under the terms of the GNU Lesser General Public License as published by
+<span class="lineNum">       8 </span>            :     the Free Software Foundation, either version 3 of the License, or
+<span class="lineNum">       9 </span>            :     (at your option) any later version.
+<span class="lineNum">      10 </span>            : 
+<span class="lineNum">      11 </span>            :     Libqtaws is distributed in the hope that it will be useful,
+<span class="lineNum">      12 </span>            :     but WITHOUT ANY WARRANTY; without even the implied warranty of
+<span class="lineNum">      13 </span>            :     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+<span class="lineNum">      14 </span>            :     GNU Lesser General Public License for more details.
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            :     You should have received a copy of the GNU Lesser General Public License
+<span class="lineNum">      17 </span>            :     along with libqtaws.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+<span class="lineNum">      18 </span>            : */
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : #include &quot;awsabstractclient.h&quot;
+<span class="lineNum">      21 </span>            : #include &quot;awsabstractclient_p.h&quot;
+<span class="lineNum">      22 </span>            : 
+<span class="lineNum">      23 </span>            : #include &quot;awsabstractcredentials.h&quot;
+<span class="lineNum">      24 </span>            : #include &quot;awsabstractrequest.h&quot;
+<span class="lineNum">      25 </span>            : #include &quot;awsabstractresponse.h&quot;
+<span class="lineNum">      26 </span>            : #include &quot;awsabstractsignature.h&quot;
+<span class="lineNum">      27 </span>            : 
+<span class="lineNum">      28 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">      29 </span>            : #include &lt;QNetworkRequest&gt;
+<span class="lineNum">      30 </span>            : 
+<span class="lineNum">      31 </span>            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      32 </span>            : 
+<span class="lineNum">      33 </span>            : /**
+<span class="lineNum">      34 </span>            :  * @class  AwsAbstractClient
+<span class="lineNum">      35 </span>            :  *
+<span class="lineNum">      36 </span>            :  * @brief  @todo
+<span class="lineNum">      37 </span>            :  */
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            : /**
+<span class="lineNum">      40 </span>            :  * @brief  Constructs a new AwsAbstractClient object.
+<span class="lineNum">      41 </span>            :  *
+<a name="42"><span class="lineNum">      42 </span>            :  * @param parent       This object's parent.</a>
+<span class="lineNum">      43 </span>            :  */
+<span class="lineNum">      44 </span><span class="lineNoCov">          0 : AwsAbstractClient::AwsAbstractClient(</span>
+<span class="lineNum">      45 </span>            :         QObject * const parent)
+<span class="lineNum">      46 </span><span class="lineNoCov">          0 :     : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))</span>
+<span class="lineNum">      47 </span>            : {
+<span class="lineNum">      48 </span>            : 
+<a name="49"><span class="lineNum">      49 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 : AwsAbstractClient::AwsAbstractClient(AwsAbstractClientPrivate * const d,</span>
+<span class="lineNum">      52 </span>            :                                      QObject * const parent)
+<span class="lineNum">      53 </span><span class="lineNoCov">          0 :     : QObject(parent), d_ptr(d)</span>
+<span class="lineNum">      54 </span>            : {
+<span class="lineNum">      55 </span>            : 
+<a name="56"><span class="lineNum">      56 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span><span class="lineNoCov">          0 : AwsAbstractClient::~AwsAbstractClient()</span>
+<span class="lineNum">      59 </span>            : {
+<span class="lineNum">      60 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">      61 </span><span class="lineNoCov">          0 :     delete d-&gt;signature;</span>
+<span class="lineNum">      62 </span><span class="lineNoCov">          0 :     delete d_ptr;</span>
+<a name="63"><span class="lineNum">      63 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">      64 </span>            : 
+<span class="lineNum">      65 </span><span class="lineNoCov">          0 : QUrl AwsAbstractClient::endpoint() const</span>
+<span class="lineNum">      66 </span>            : {
+<span class="lineNum">      67 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">      68 </span><span class="lineNoCov">          0 :     return (d-&gt;endpoint.isValid()) ? d-&gt;endpoint :</span>
+<span class="lineNum">      69 </span><span class="lineNoCov">          0 :         AwsEndpoint::getEndpoint(AwsRegion::name(region()), serviceName());</span>
+<span class="lineNum">      70 </span>            : }
+<span class="lineNum">      71 </span>            : 
+<span class="lineNum">      72 </span>            : /**
+<span class="lineNum">      73 </span>            :  * @brief Get the network access manager for this AWS service object.
+<span class="lineNum">      74 </span>            :  *
+<a name="75"><span class="lineNum">      75 </span>            :  * @return The QNetworkAccessManager that handles requests for this object.</a>
+<span class="lineNum">      76 </span>            :  */
+<span class="lineNum">      77 </span><span class="lineNoCov">          0 : QNetworkAccessManager * AwsAbstractClient::networkAccessManager() const</span>
+<span class="lineNum">      78 </span>            : {
+<span class="lineNum">      79 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">      80 </span><span class="lineNoCov">          0 :     return d-&gt;networkAccessManager;</span>
+<a name="81"><span class="lineNum">      81 </span>            : }</a>
+<span class="lineNum">      82 </span>            : 
+<span class="lineNum">      83 </span><span class="lineNoCov">          0 : AwsRegion::Region AwsAbstractClient::region() const</span>
+<span class="lineNum">      84 </span>            : {
+<span class="lineNum">      85 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 :     return d-&gt;region;</span>
+<a name="87"><span class="lineNum">      87 </span>            : }</a>
+<span class="lineNum">      88 </span>            : 
+<span class="lineNum">      89 </span><span class="lineNoCov">          0 : AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &amp;request)</span>
+<span class="lineNum">      90 </span>            : {
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">      92 </span><span class="lineNoCov">          0 :     Q_ASSERT(d-&gt;credentials);</span>
+<span class="lineNum">      93 </span><span class="lineNoCov">          0 :     Q_ASSERT(d-&gt;networkAccessManager);</span>
+<span class="lineNum">      94 </span><span class="lineNoCov">          0 :     Q_ASSERT(d-&gt;signature);</span>
+<span class="lineNum">      95 </span><span class="lineNoCov">          0 :     Q_ASSERT(request.isValid());</span>
+<span class="lineNum">      96 </span>            : 
+<span class="lineNum">      97 </span><span class="lineNoCov">          0 :     if (!d-&gt;credentials) {</span>
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 :         qWarning() &lt;&lt; &quot;credentials not set&quot;;</span>
+<span class="lineNum">      99 </span><span class="lineNoCov">          0 :         return NULL;</span>
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     } else if (!d-&gt;networkAccessManager) {</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 :         qWarning() &lt;&lt; &quot;network access manager not set&quot;;</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :         return NULL;</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :     } else if (!d-&gt;signature) {</span>
+<span class="lineNum">     104 </span><span class="lineNoCov">          0 :         qWarning() &lt;&lt; &quot;signature not set&quot;;</span>
+<span class="lineNum">     105 </span><span class="lineNoCov">          0 :         return NULL;</span>
+<span class="lineNum">     106 </span><span class="lineNoCov">          0 :     } else if (!request.isValid()) {</span>
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :         qWarning() &lt;&lt; serviceName() &lt;&lt; &quot;request not valid&quot;;</span>
+<span class="lineNum">     108 </span><span class="lineNoCov">          0 :         return NULL;</span>
+<span class="lineNum">     109 </span>            :     }
+<span class="lineNum">     110 </span>            : 
+<span class="lineNum">     111 </span>            :     return request.send(*d-&gt;networkAccessManager, endpoint(),
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 :                         *d-&gt;signature, *d-&gt;credentials);</span>
+<a name="113"><span class="lineNum">     113 </span>            : }</a>
+<span class="lineNum">     114 </span>            : 
+<span class="lineNum">     115 </span><span class="lineNoCov">          0 : QString AwsAbstractClient::serviceName() const</span>
+<span class="lineNum">     116 </span>            : {
+<span class="lineNum">     117 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 :     Q_ASSERT(!d-&gt;serviceName.isEmpty());</span>
+<span class="lineNum">     119 </span><span class="lineNoCov">          0 :     return d-&gt;serviceName;</span>
+<a name="120"><span class="lineNum">     120 </span>            : }</a>
+<span class="lineNum">     121 </span>            : 
+<span class="lineNum">     122 </span><span class="lineNoCov">          0 : void AwsAbstractClient::setCredentials(AwsAbstractCredentials * const credentials)</span>
+<span class="lineNum">     123 </span>            : {
+<span class="lineNum">     124 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 :     d-&gt;credentials = credentials;</span>
+<a name="126"><span class="lineNum">     126 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">     127 </span>            : 
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 : void AwsAbstractClient::setEndpoint(const QUrl &amp;endpoint)</span>
+<span class="lineNum">     129 </span>            : {
+<span class="lineNum">     130 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">     131 </span><span class="lineNoCov">          0 :     d-&gt;endpoint = endpoint;</span>
+<span class="lineNum">     132 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     133 </span>            : 
+<span class="lineNum">     134 </span>            : /**
+<span class="lineNum">     135 </span>            :  * @brief Set the network access manager for this AWS service object.
+<span class="lineNum">     136 </span>            :  *
+<a name="137"><span class="lineNum">     137 </span>            :  * @param  manager  Network access manager for this AWS service object to use.</a>
+<span class="lineNum">     138 </span>            :  */
+<span class="lineNum">     139 </span><span class="lineNoCov">          0 : void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const manager)</span>
+<span class="lineNum">     140 </span>            : {
+<span class="lineNum">     141 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">     142 </span>            : 
+<span class="lineNum">     143 </span>            :     // If \a manager is already our network access manager, drop out early.
+<span class="lineNum">     144 </span><span class="lineNoCov">          0 :     if (d-&gt;networkAccessManager == manager) {</span>
+<span class="lineNum">     145 </span><span class="lineNoCov">          0 :         return;</span>
+<span class="lineNum">     146 </span>            :     }
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span>            :     // If the old network access manager was our parent, disown our parent.
+<span class="lineNum">     149 </span><span class="lineNoCov">          0 :     if ((d-&gt;networkAccessManager != NULL) &amp;&amp; (parent() == d-&gt;networkAccessManager)) {</span>
+<span class="lineNum">     150 </span><span class="lineNoCov">          0 :         setParent(NULL);</span>
+<span class="lineNum">     151 </span>            :     }
+<span class="lineNum">     152 </span>            : 
+<span class="lineNum">     153 </span>            :     // If we have no parent, set the network access manager as our parent.
+<span class="lineNum">     154 </span><span class="lineNoCov">          0 :     if ((manager != NULL) &amp;&amp; (parent() == NULL)) {</span>
+<span class="lineNum">     155 </span><span class="lineNoCov">          0 :         this-&gt;setParent(manager);</span>
+<span class="lineNum">     156 </span>            :     }
+<span class="lineNum">     157 </span>            : 
+<span class="lineNum">     158 </span>            :     // Set the network access manager.
+<span class="lineNum">     159 </span><span class="lineNoCov">          0 :     d-&gt;networkAccessManager = manager;</span>
+<a name="160"><span class="lineNum">     160 </span>            : }</a>
+<span class="lineNum">     161 </span>            : 
+<span class="lineNum">     162 </span><span class="lineNoCov">          0 : void AwsAbstractClient::setRegion(const AwsRegion::Region region)</span>
+<span class="lineNum">     163 </span>            : {
+<span class="lineNum">     164 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractClient);</span>
+<span class="lineNum">     165 </span><span class="lineNoCov">          0 :     d-&gt;region = region;</span>
+<a name="166"><span class="lineNum">     166 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">     167 </span>            : 
+<span class="lineNum">     168 </span><span class="lineNoCov">          0 : AwsAbstractCredentials * AwsAbstractClient::credentials() const</span>
+<span class="lineNum">     169 </span>            : {
+<span class="lineNum">     170 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">     171 </span><span class="lineNoCov">          0 :     return d-&gt;credentials;</span>
+<a name="172"><span class="lineNum">     172 </span>            : }</a>
+<span class="lineNum">     173 </span>            : 
+<span class="lineNum">     174 </span><span class="lineNoCov">          0 : AwsAbstractSignature * AwsAbstractClient::signature() const</span>
+<span class="lineNum">     175 </span>            : {
+<span class="lineNum">     176 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractClient);</span>
+<span class="lineNum">     177 </span><span class="lineNoCov">          0 :     return d-&gt;signature;</span>
+<span class="lineNum">     178 </span>            : }
+<span class="lineNum">     179 </span>            : 
+<span class="lineNum">     180 </span>            : /**
+<span class="lineNum">     181 </span>            :  * @internal
+<span class="lineNum">     182 </span>            :  *
+<span class="lineNum">     183 </span>            :  * @class  AwsAbstractClientPrivate
+<span class="lineNum">     184 </span>            :  *
+<span class="lineNum">     185 </span>            :  * @brief  Private implementation for AwsAbstractClient.
+<span class="lineNum">     186 </span>            :  */
+<span class="lineNum">     187 </span>            : 
+<span class="lineNum">     188 </span>            : /**
+<span class="lineNum">     189 </span>            :  * @internal
+<span class="lineNum">     190 </span>            :  *
+<span class="lineNum">     191 </span>            :  * @brief  Constructs a new AwsAbstractClientPrivate object.
+<span class="lineNum">     192 </span>            :  *
+<a name="193"><span class="lineNum">     193 </span>            :  * @param  q  Pointer to this object's public AwsAbstractClient instance.</a>
+<span class="lineNum">     194 </span>            :  */
+<span class="lineNum">     195 </span><span class="lineNoCov">          0 : AwsAbstractClientPrivate::AwsAbstractClientPrivate(AwsAbstractClient * const q)</span>
+<span class="lineNum">     196 </span>            :     : credentials(NULL), networkAccessManager(NULL),
+<span class="lineNum">     197 </span><span class="lineNoCov">          0 :       region(AwsRegion::InvalidRegion), signature(NULL), q_ptr(q)</span>
+<span class="lineNum">     198 </span>            : {
+<span class="lineNum">     199 </span>            : 
+<span class="lineNum">     200 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span>            : /**
+<span class="lineNum">     203 </span>            :  * @internal
+<span class="lineNum">     204 </span>            :  *
+<span class="lineNum">     205 </span>            :  * @brief  AwsAbstractClientPrivate destructor.
+<span class="lineNum">     206 </span>            :  *
+<span class="lineNum">     207 </span>            :  * This virtual destructor does nothing (yet) - its here to allow for safe
+<a name="208"><span class="lineNum">     208 </span>            :  * polymorphic destruction.</a>
+<span class="lineNum">     209 </span>            :  */
+<span class="lineNum">     210 </span><span class="lineNoCov">          0 : AwsAbstractClientPrivate::~AwsAbstractClientPrivate()</span>
+<span class="lineNum">     211 </span>            : {
+<span class="lineNum">     212 </span>            : 
+<span class="lineNum">     213 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     214 </span>            : 
+<span class="lineNum">     215 </span>            : QTAWS_END_NAMESPACE
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.11</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

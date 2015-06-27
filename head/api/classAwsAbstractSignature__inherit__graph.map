@@ -1,0 +1,7 @@
+<map id="AwsAbstractSignature" name="AwsAbstractSignature">
+<area shape="rect" id="node2" href="$classAwsSignatureV0.html" title="Implements AWS Signature Version 0 (deprecated by Amazon). " alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node4" href="$classAwsSignatureV2.html" title="Implements AWS Signature Version 2. " alt="" coords="148,80,267,107"/>
+<area shape="rect" id="node5" href="$classAwsSignatureV3.html" title="Implements AWS Signature Version 3. " alt="" coords="291,80,409,107"/>
+<area shape="rect" id="node6" href="$classAwsSignatureV4.html" title="Implements AWS Signature Version 4. " alt="" coords="433,80,552,107"/>
+<area shape="rect" id="node3" href="$classAwsSignatureV1.html" title="Implements AWS Signature Version 1 (deprecated by Amazon). " alt="" coords="5,155,124,181"/>
+</map>

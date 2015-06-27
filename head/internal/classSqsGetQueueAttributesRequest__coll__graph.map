@@ -1,0 +1,5 @@
+<map id="SqsGetQueueAttributesRequest" name="SqsGetQueueAttributesRequest">
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="63,171,157,197"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="138,81,285,108"/>
+<area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="182,171,369,197"/>
+</map>

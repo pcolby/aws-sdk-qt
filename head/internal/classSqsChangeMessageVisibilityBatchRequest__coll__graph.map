@@ -1,0 +1,5 @@
+<map id="SqsChangeMessageVisibilityBatchRequest" name="SqsChangeMessageVisibilityBatchRequest">
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="54,171,149,197"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="AwsAbstractRequest" alt="" coords="129,81,276,108"/>
+<area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="173,171,360,197"/>
+</map>
