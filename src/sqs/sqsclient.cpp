@@ -35,13 +35,20 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  SqsClient
  *
- * @brief  @todo
+ * @brief  Client for Amazon's Simple Queue Service (SQS)
+ *
+ * @see    http://aws.amazon.com/sqs/
+ * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/
+ * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
 
 /**
  * @brief  Constructs a new SqsClient object.
  *
- * @param parent       This object's parent.
+ * @param  region       AWS region for this client to service requests for.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
  */
 SqsClient::SqsClient(const AwsRegion::Region region,
                      AwsAbstractCredentials * credentials,
@@ -56,6 +63,22 @@ SqsClient::SqsClient(const AwsRegion::Region region,
     d->serviceName = SQS_SERVICE_NAME;
 }
 
+/**
+ * @brief  Constructs a new SqsClient object.
+ *
+ * This overload allows the caller to specify the specific SQS endpoint to send
+ * requests to.  Typically, it is easier to use the alternative constructor,
+ * which allows the caller to specify an AWS region instead, in which case this
+ * client will determine the correct SQS endpoint for the given region
+ * automatically (via AwsEndpoint::getEndpoint).
+ *
+ * @param  endpoint     SQS endpoint for building requests URLs.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
+ *
+ * @see  AwsEndpoint::getEndpoint
+ */
 SqsClient::SqsClient(const QUrl &endpoint,
                      AwsAbstractCredentials * credentials,
                      QNetworkAccessManager * const manager,
@@ -69,15 +92,35 @@ SqsClient::SqsClient(const QUrl &endpoint,
     d->serviceName = SQS_SERVICE_NAME;
 }
 
+/**
+ * @brief  Create an SQS queue.
+ *
+ * @param  request  The request to send to Amazon.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
 SqsCreateQueueResponse * SqsClient::createQueue(const SqsCreateQueueRequest &request)
 {
     return qobject_cast<SqsCreateQueueResponse *>(send(request));
 }
 
 /**
- * @brief SqsClient::createQueue
+ * @brief  Create an SQS queue.
  *
- * @param queueName
+ * This convenience overload simply allows callers to skip creating the required
+ * SqsCreateQueueRequest object.
+ *
+ * @param  queueName   Name of the queue to create.
+ * @param  attributes  Optional attributes to include with the request. See the
+ *                     SqsCreateQueueRequest documentation for valid attributes.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsCreateQueueRequest
  */
 SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
                                                 const QVariantMap &attributes)
