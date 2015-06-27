@@ -36,8 +36,8 @@ class AwsAbstractResponse;
 class QTAWS_EXPORT AwsAbstractRequestPrivate {
 
 public:
-    QByteArray data;
-    QNetworkAccessManager::Operation operation;
+    QByteArray data;                            ///< Data for POST/PUT operations.
+    QNetworkAccessManager::Operation operation; ///< Network operation to use.
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
 
