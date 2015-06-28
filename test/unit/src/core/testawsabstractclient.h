@@ -36,6 +36,7 @@ private slots:
 
     void networkAccessManager_data();
     void networkAccessManager();
+    void networkAccessManager_parent();
 
     void region_data();
     void region();

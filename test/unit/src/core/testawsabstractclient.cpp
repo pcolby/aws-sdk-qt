@@ -178,6 +178,26 @@ void TestAwsAbstractClient::networkAccessManager()
     delete manager;
 }
 
+void TestAwsAbstractClient::networkAccessManager_parent()
+{
+    // Given a client with a parent.
+    QNetworkAccessManager manager;
+    AwsAbstractClient client(&manager);
+    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.parent(), qobject_cast<QObject *>(&manager));
+
+    // Such that the parent happens also be the client's network access manager.
+    client.setNetworkAccessManager(&manager);
+    QCOMPARE(client.networkAccessManager(), &manager);
+    QCOMPARE(client.networkAccessManager(), qobject_cast<QObject *>(client.parent()));
+    QCOMPARE(client.parent(), qobject_cast<QObject *>(&manager));
+
+    // When the client's access manager is changed, then the parent is cleared also.
+    client.setNetworkAccessManager(NULL);
+    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.parent(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+}
+
 void TestAwsAbstractClient::region_data()
 {
     QTest::addColumn<AwsRegion::Region>("region");
