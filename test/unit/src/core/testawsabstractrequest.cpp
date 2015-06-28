@@ -21,6 +21,53 @@
 
 #include "core/awsabstractrequest.h"
 
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+#include "core/awsabstractrequest_p.h"
+#endif
+
+// Bare minimum concrete mock class.
+class MockRequest : public AwsAbstractRequest {
+public:
+    MockRequest() : AwsAbstractRequest() { }
+    MockRequest(QObject * const parent) : AwsAbstractRequest(parent) { }
+    MockRequest(AwsAbstractRequestPrivate * const d, QObject * const parent)
+        : AwsAbstractRequest(d, parent) { }
+    virtual bool isValid() const { return false; }
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const {
+        Q_UNUSED(reply)
+        return NULL;
+    }
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const {
+        return QNetworkRequest(endpoint);
+    }
+};
+
+void TestAwsAbstractRequest::construct()
+{
+    {   // Verify the default parent argument is NULL.
+        MockRequest request;
+        QCOMPARE(request.parent(), reinterpret_cast<QObject *>(NULL));
+    }
+
+    {   // Verify the handling of an explicit parent argument.
+        MockRequest request(this);
+        QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
+    }
+}
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractRequest::construct_d_ptr()
+{
+    MockRequest temporaryRequest;
+    AwsAbstractRequestPrivate * const requestPrivate =
+        new AwsAbstractRequestPrivate(&temporaryRequest);
+    MockRequest request(requestPrivate, this);
+    QCOMPARE(request.d_func(), requestPrivate);
+    QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
+}
+#endif
+
 void TestAwsAbstractRequest::data_data()
 {
 
@@ -67,11 +114,6 @@ void TestAwsAbstractRequest::send_data()
 }
 
 void TestAwsAbstractRequest::send()
-{
-
-}
-
-void TestAwsAbstractRequest::construct_d_ptr()
 {
 
 }

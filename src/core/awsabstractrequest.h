@@ -74,7 +74,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
     Q_DISABLE_COPY(AwsAbstractRequest)
-
+    friend class TestAwsAbstractRequest;
 };
 
 QTAWS_END_NAMESPACE

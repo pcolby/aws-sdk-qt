@@ -20,6 +20,45 @@
 #include "testawsabstractresponse.h"
 
 #include "core/awsabstractresponse.h"
+#include "core/awsabstractresponse_p.h"
+
+// Bare minimum concrete mock class.
+class MockResponse : public AwsAbstractResponse {
+public:
+    MockResponse() : AwsAbstractResponse() { }
+    MockResponse(QObject * const parent) : AwsAbstractResponse(parent) { }
+    MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
+        : AwsAbstractResponse(d, parent) { }
+    virtual bool isValid() const { return false; }
+protected:
+    virtual void parseFailure(QIODevice &response) { Q_UNUSED(response); }
+    virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
+};
+
+void TestAwsAbstractResponse::construct()
+{
+    {   // Verify the default parent argument is NULL.
+        MockResponse response;
+        QCOMPARE(response.parent(), reinterpret_cast<QObject *>(NULL));
+    }
+
+    {   // Verify the handling of an explicit parent argument.
+        MockResponse response(this);
+        QCOMPARE(response.parent(), qobject_cast<QObject *>(this));
+    }
+}
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractResponse::construct_d_ptr()
+{
+    MockResponse temporaryResponse;
+    AwsAbstractResponsePrivate * const responsePrivate =
+        new AwsAbstractResponsePrivate(&temporaryResponse);
+    MockResponse response(responsePrivate, this);
+    QCOMPARE(response.d_func(), responsePrivate);
+    QCOMPARE(response.parent(), qobject_cast<QObject *>(this));
+}
+#endif
 
 void TestAwsAbstractResponse::errorString_data()
 {
@@ -87,11 +126,6 @@ void TestAwsAbstractResponse::toVariant_data()
 }
 
 void TestAwsAbstractResponse::toVariant()
-{
-
-}
-
-void TestAwsAbstractResponse::construct_d_ptr()
 {
 
 }

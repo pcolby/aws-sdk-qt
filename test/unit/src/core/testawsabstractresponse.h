@@ -23,6 +23,11 @@ class TestAwsAbstractResponse : public QObject {
     Q_OBJECT
 
 private slots:
+    void construct();
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    void construct_d_ptr();
+    #endif
+
     void errorString_data();
     void errorString();
 
@@ -43,8 +48,6 @@ private slots:
 
     void toVariant_data();
     void toVariant();
-
-    void construct_d_ptr();
 
     void isSuccess_data();
     void isSuccess();

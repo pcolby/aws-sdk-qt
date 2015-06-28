@@ -69,6 +69,7 @@ protected slots:
 private:
     Q_DECLARE_PRIVATE(AwsAbstractResponse)
     Q_DISABLE_COPY(AwsAbstractResponse)
+    friend class TestAwsAbstractResponse;
 
 signals:
     void finished();
