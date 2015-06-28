@@ -226,12 +226,10 @@ void TestAwsAbstractClient::send()
     QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
     QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
 
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
     client.d_func()->signature = new AwsSignatureV4; // Takes ownership.
-    #endif
 
     // If the request is invalid, send should still return a NULL pointer.
-    Q_UNUSED(response)
     if (request->isValid()) {
         QCOMPARE(client.send(*request), response);
     } else {
@@ -242,6 +240,8 @@ void TestAwsAbstractClient::send()
     // whether or not the request was valid.
     SendlessRequest * const sendlessRequest = reinterpret_cast<SendlessRequest *>(request);
     QCOMPARE(sendlessRequest->sendCount, (request->isValid()) ? 1 : 0);
+#endif
+
     delete request;
 }
 
