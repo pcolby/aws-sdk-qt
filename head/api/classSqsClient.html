@@ -93,45 +93,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SqsClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for Amazon's Simple Queue Service (SQS)  
+ <a href="classSqsClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SqsClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsClient__inherit__graph.png" border="0" usemap="#SqsClient_inherit__map" alt="Inheritance graph"/></div>
 <map name="SqsClient_inherit__map" id="SqsClient_inherit__map">
-<area shape="rect" id="node2" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. " alt="" coords="5,80,136,107"/></map>
+<area shape="rect" id="node2" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="5,80,136,107"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for SqsClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsClient__coll__graph.png" border="0" usemap="#SqsClient_coll__map" alt="Collaboration graph"/></div>
 <map name="SqsClient_coll__map" id="SqsClient_coll__map">
-<area shape="rect" id="node2" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. " alt="" coords="5,80,136,107"/></map>
+<area shape="rect" id="node2" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="5,80,136,107"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a97cecd89ba532531052a3e52a6aa2748"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97cecd89ba532531052a3e52a6aa2748"></a>
-<a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>createQueue</b> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request)</td></tr>
+<tr class="memitem:a97cecd89ba532531052a3e52a6aa2748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a97cecd89ba532531052a3e52a6aa2748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a97cecd89ba532531052a3e52a6aa2748">More...</a><br /></td></tr>
 <tr class="separator:a97cecd89ba532531052a3e52a6aa2748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a622a5f5d3ff78f6029e808874c1c918c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a622a5f5d3ff78f6029e808874c1c918c">createQueue</a> (const QString &amp;queueName, const QVariantMap &amp;attributes=QVariantMap())</td></tr>
-<tr class="memdesc:a622a5f5d3ff78f6029e808874c1c918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SqsClient::createQueue.  <a href="#a622a5f5d3ff78f6029e808874c1c918c">More...</a><br /></td></tr>
+<tr class="memdesc:a622a5f5d3ff78f6029e808874c1c918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a622a5f5d3ff78f6029e808874c1c918c">More...</a><br /></td></tr>
 <tr class="separator:a622a5f5d3ff78f6029e808874c1c918c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a11d7f7cc3790eac9b2c237089c57ab3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a11d7f7cc3790eac9b2c237089c57ab3f">SqsClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a11d7f7cc3790eac9b2c237089c57ab3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsClient.html">SqsClient</a> object.  <a href="#a11d7f7cc3790eac9b2c237089c57ab3f">More...</a><br /></td></tr>
+<tr class="memdesc:a11d7f7cc3790eac9b2c237089c57ab3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) ">SqsClient</a> object.  <a href="#a11d7f7cc3790eac9b2c237089c57ab3f">More...</a><br /></td></tr>
 <tr class="separator:a11d7f7cc3790eac9b2c237089c57ab3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bde5ad054ac4fcc5dbca76716d915e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bde5ad054ac4fcc5dbca76716d915e8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SqsClient</b> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
+<tr class="memitem:a4bde5ad054ac4fcc5dbca76716d915e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a4bde5ad054ac4fcc5dbca76716d915e8">SqsClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
+<tr class="memdesc:a4bde5ad054ac4fcc5dbca76716d915e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) ">SqsClient</a> object.  <a href="#a4bde5ad054ac4fcc5dbca76716d915e8">More...</a><br /></td></tr>
 <tr class="separator:a4bde5ad054ac4fcc5dbca76716d915e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
+<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
 <tr class="separator:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45370989e35585591be5186baf5072c7 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45370989e35585591be5186baf5072c7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7">~AwsAbstractClient</a> ()</td></tr>
-<tr class="memdesc:a45370989e35585591be5186baf5072c7 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> destructor. <br /></td></tr>
+<tr class="memdesc:a45370989e35585591be5186baf5072c7 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> destructor. <br /></td></tr>
 <tr class="separator:a45370989e35585591be5186baf5072c7 inherit pub_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a816b91835077442e552939f43991cb63 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">QUrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a> () const </td></tr>
 <tr class="memdesc:a816b91835077442e552939f43991cb63 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the endpoint associated with this AWS client.  <a href="#a816b91835077442e552939f43991cb63">More...</a><br /></td></tr>
@@ -172,7 +175,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd></dd></dl>
+<div class="textblock"><p>Client for Amazon's Simple Queue Service (SQS) </p>
+<dl class="section see"><dt>See also</dt><dd><a href="http://aws.amazon.com/sqs/">http://aws.amazon.com/sqs/</a> </dd>
+<dd>
+<a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/">http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/</a> </dd>
+<dd>
+<a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a11d7f7cc3790eac9b2c237089c57ab3f"></a>
 <div class="memitem">
@@ -210,9 +218,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classSqsClient.html">SqsClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) ">SqsClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
+    <tr><td class="paramname">credentials</td><td>AWS credentials to use for signing requests. </td></tr>
+    <tr><td class="paramname">manager</td><td>Network access manager for sending requests. </td></tr>
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
   </table>
   </dd>
@@ -220,7 +231,92 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4bde5ad054ac4fcc5dbca76716d915e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SqsClient::SqsClient </td>
+          <td>(</td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
+          <td class="paramname"><em>endpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *&#160;</td>
+          <td class="paramname"><em>credentials</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QNetworkAccessManager *const&#160;</td>
+          <td class="paramname"><em>manager</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *const&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) ">SqsClient</a> object. </p>
+<p>This overload allows the caller to specify the specific SQS endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct SQS endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">endpoint</td><td>SQS endpoint for building requests URLs. </td></tr>
+    <tr><td class="paramname">credentials</td><td>AWS credentials to use for signing requests. </td></tr>
+    <tr><td class="paramname">manager</td><td>Network access manager for sending requests. </td></tr>
+    <tr><td class="paramname">parent</td><td>This object's parent.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a> </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a97cecd89ba532531052a3e52a6aa2748"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> * SqsClient::createQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an SQS queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request to send to Amazon.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a622a5f5d3ff78f6029e808874c1c918c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,13 +349,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>SqsClient::createQueue. </p>
+<p>Create an SQS queue. </p>
+<p>This convenience overload simply allows callers to skip creating the required <a class="el" href="classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. ">SqsCreateQueueRequest</a> object.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">queueName</td><td></td></tr>
+    <tr><td class="paramname">queueName</td><td>Name of the queue to create. </td></tr>
+    <tr><td class="paramname">attributes</td><td>Optional attributes to include with the request. See the <a class="el" href="classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. ">SqsCreateQueueRequest</a> documentation for valid attributes.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. ">SqsCreateQueueRequest</a> </dd></dl>
 
 </div>
 </div>
@@ -270,7 +371,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

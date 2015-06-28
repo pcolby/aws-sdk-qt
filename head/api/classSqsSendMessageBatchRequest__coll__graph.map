@@ -1,4 +1,4 @@
 <map id="SqsSendMessageBatchRequest" name="SqsSendMessageBatchRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="63,155,158,181"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="37,80,184,107"/>
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="63,155,158,181"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="37,80,184,107"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="SqsReceiveMessageRequest" name="SqsReceiveMessageRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="SqsRequest" alt="" coords="55,155,150,181"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="29,80,176,107"/>
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="55,155,150,181"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="29,80,176,107"/>
 </map>

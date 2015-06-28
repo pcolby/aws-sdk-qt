@@ -1,4 +1,4 @@
 <map id="SqsRequest" name="SqsRequest">
-<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="81,81,227,108"/>
+<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="81,81,227,108"/>
 <area shape="rect" id="node4" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="125,171,311,197"/>
 </map>

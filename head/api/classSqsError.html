@@ -93,10 +93,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SqsError Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Encapsulation of an Error element from an SQS ErrorResponse response.  
+ <a href="classSqsError.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae1749929dec229427131dcd183b77877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1749929dec229427131dcd183b77877"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCode</b> { <br />
+<tr class="memitem:ae1749929dec229427131dcd183b77877"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#ae1749929dec229427131dcd183b77877">ErrorCode</a> { <br />
 &#160;&#160;<b>AccessDenied</b>, 
 <b>IncompleteSignature</b>, 
 <b>InternalFailure</b>, 
@@ -122,7 +125,7 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ae1749929dec229427131dcd183b77877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac47706a4c98c65c20b97f3f5ff1d01af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac47706a4c98c65c20b97f3f5ff1d01af"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ErrorType</b> { <b>ReceiverType</b>, 
+<tr class="memitem:ac47706a4c98c65c20b97f3f5ff1d01af"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">ErrorType</a> { <b>ReceiverType</b>, 
 <b>SenderType</b>, 
 <b>OtherType</b> = 0xFF
  }</td></tr>
@@ -131,33 +134,61 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f5ef8e6ea85ef9a59b03654eb6f9a11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#a7f5ef8e6ea85ef9a59b03654eb6f9a11">SqsError</a> (QXmlStreamReader &amp;xml)</td></tr>
-<tr class="memdesc:a7f5ef8e6ea85ef9a59b03654eb6f9a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html">SqsResponse</a> object.  <a href="#a7f5ef8e6ea85ef9a59b03654eb6f9a11">More...</a><br /></td></tr>
+<tr class="memdesc:a7f5ef8e6ea85ef9a59b03654eb6f9a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsError.html" title="Encapsulation of an Error element from an SQS ErrorResponse response. ">SqsError</a> object.  <a href="#a7f5ef8e6ea85ef9a59b03654eb6f9a11">More...</a><br /></td></tr>
 <tr class="separator:a7f5ef8e6ea85ef9a59b03654eb6f9a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54349b8b90c47545b3fb22e7e7482f81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54349b8b90c47545b3fb22e7e7482f81"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SqsError</b> (const <a class="el" href="classSqsError.html">SqsError</a> &amp;other)</td></tr>
-<tr class="separator:a54349b8b90c47545b3fb22e7e7482f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a914a78f185b01c1ade7b94dddf5d9025"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a914a78f185b01c1ade7b94dddf5d9025"></a>
-<a class="el" href="classSqsError.html">SqsError</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classSqsError.html">SqsError</a> &amp;other)</td></tr>
-<tr class="separator:a914a78f185b01c1ade7b94dddf5d9025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34184b917f172cb431e3be81da48b49e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34184b917f172cb431e3be81da48b49e"></a>
-ErrorCode&#160;</td><td class="memItemRight" valign="bottom"><b>code</b> () const </td></tr>
+<tr class="memitem:ae6b9523e9649002c77aed81f4d5c90a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6b9523e9649002c77aed81f4d5c90a3"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#ae6b9523e9649002c77aed81f4d5c90a3">~SqsError</a> ()</td></tr>
+<tr class="memdesc:ae6b9523e9649002c77aed81f4d5c90a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSqsError.html" title="Encapsulation of an Error element from an SQS ErrorResponse response. ">SqsError</a> destructor. <br /></td></tr>
+<tr class="separator:ae6b9523e9649002c77aed81f4d5c90a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34184b917f172cb431e3be81da48b49e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsError.html#ae1749929dec229427131dcd183b77877">ErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#a34184b917f172cb431e3be81da48b49e">code</a> () const </td></tr>
+<tr class="memdesc:a34184b917f172cb431e3be81da48b49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parsed SQS error code.  <a href="#a34184b917f172cb431e3be81da48b49e">More...</a><br /></td></tr>
 <tr class="separator:a34184b917f172cb431e3be81da48b49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a7d190a5eb90f2abae2cfffbed5176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19a7d190a5eb90f2abae2cfffbed5176"></a>
-QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>detail</b> () const </td></tr>
+<tr class="memitem:a19a7d190a5eb90f2abae2cfffbed5176"><td class="memItemLeft" align="right" valign="top">QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#a19a7d190a5eb90f2abae2cfffbed5176">detail</a> () const </td></tr>
+<tr class="memdesc:a19a7d190a5eb90f2abae2cfffbed5176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SQS error detail, if any.  <a href="#a19a7d190a5eb90f2abae2cfffbed5176">More...</a><br /></td></tr>
 <tr class="separator:a19a7d190a5eb90f2abae2cfffbed5176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c14570f97be4e93c9d9edf61cc4c0fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c14570f97be4e93c9d9edf61cc4c0fb"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>message</b> () const </td></tr>
+<tr class="memitem:a4c14570f97be4e93c9d9edf61cc4c0fb"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb">message</a> () const </td></tr>
+<tr class="memdesc:a4c14570f97be4e93c9d9edf61cc4c0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parsed SQS error message.  <a href="#a4c14570f97be4e93c9d9edf61cc4c0fb">More...</a><br /></td></tr>
 <tr class="separator:a4c14570f97be4e93c9d9edf61cc4c0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac74d34703409b7aaa3fe40cf5f2a8585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac74d34703409b7aaa3fe40cf5f2a8585"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>rawCode</b> () const </td></tr>
+<tr class="memitem:ac74d34703409b7aaa3fe40cf5f2a8585"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#ac74d34703409b7aaa3fe40cf5f2a8585">rawCode</a> () const </td></tr>
+<tr class="memdesc:ac74d34703409b7aaa3fe40cf5f2a8585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raw SQS error code string.  <a href="#ac74d34703409b7aaa3fe40cf5f2a8585">More...</a><br /></td></tr>
 <tr class="separator:ac74d34703409b7aaa3fe40cf5f2a8585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ffc1db59a772be74bbe956026c63ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7ffc1db59a772be74bbe956026c63ce"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>rawType</b> () const </td></tr>
+<tr class="memitem:ae7ffc1db59a772be74bbe956026c63ce"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#ae7ffc1db59a772be74bbe956026c63ce">rawType</a> () const </td></tr>
+<tr class="memdesc:ae7ffc1db59a772be74bbe956026c63ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raw SQS error type string.  <a href="#ae7ffc1db59a772be74bbe956026c63ce">More...</a><br /></td></tr>
 <tr class="separator:ae7ffc1db59a772be74bbe956026c63ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb3523f8faaaf572c7f4da5cb623ded1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb3523f8faaaf572c7f4da5cb623ded1"></a>
-ErrorType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const </td></tr>
+<tr class="memitem:adb3523f8faaaf572c7f4da5cb623ded1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">ErrorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsError.html#adb3523f8faaaf572c7f4da5cb623ded1">type</a> () const </td></tr>
+<tr class="memdesc:adb3523f8faaaf572c7f4da5cb623ded1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parsed SQS error type.  <a href="#adb3523f8faaaf572c7f4da5cb623ded1">More...</a><br /></td></tr>
 <tr class="separator:adb3523f8faaaf572c7f4da5cb623ded1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Encapsulation of an Error element from an SQS ErrorResponse response. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="ae1749929dec229427131dcd183b77877"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SQS error codes. </p><dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac47706a4c98c65c20b97f3f5ff1d01af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SQS error types. </p><dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7f5ef8e6ea85ef9a59b03654eb6f9a11"></a>
 <div class="memitem">
@@ -173,13 +204,128 @@ ErrorType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () cons
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classSqsResponse.html">SqsResponse</a> object. </p>
+<p>Constructs a new <a class="el" href="classSqsError.html" title="Encapsulation of an Error element from an SQS ErrorResponse response. ">SqsError</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
+    <tr><td class="paramname">xml</td><td>XML stream to parse an SQS ErrorResponse from. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a34184b917f172cb431e3be81da48b49e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a> SqsError::code </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the parsed SQS error code. </p>
+<dl class="section return"><dt>Returns</dt><dd>An SQS error code, or SqsError::OtherError if not found or not recognised.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsError.html#ac74d34703409b7aaa3fe40cf5f2a8585" title="Get the raw SQS error code string. ">rawCode</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a19a7d190a5eb90f2abae2cfffbed5176"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap SqsError::detail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the SQS error detail, if any. </p>
+<dl class="section return"><dt>Returns</dt><dd>SQS error detail, or an empty QVariantMap if not found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c14570f97be4e93c9d9edf61cc4c0fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SqsError::message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the parsed SQS error message. </p>
+<dl class="section return"><dt>Returns</dt><dd>SQS error message, or a null QString if not found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac74d34703409b7aaa3fe40cf5f2a8585"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SqsError::rawCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the raw SQS error code string. </p>
+<p>That may be useful if code returned SqsError::OtherError due to the error code being found, but not recognisable (ie not one of the values specified by the SQS service WSDL).</p>
+<dl class="section return"><dt>Returns</dt><dd>The raw SQS error code string, or a null QString is not found.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsError.html#a34184b917f172cb431e3be81da48b49e" title="Get the parsed SQS error code. ">code</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7ffc1db59a772be74bbe956026c63ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SqsError::rawType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the raw SQS error type string. </p>
+<p>That may be useful if type returned SqsError::OtherType due to the error type being found, but not recognisable (ie not one of the values specified by the SQS service WSDL).</p>
+<dl class="section return"><dt>Returns</dt><dd>The raw SQS error tyep string, or a null QString is not found.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsError.html#adb3523f8faaaf572c7f4da5cb623ded1" title="Get the parsed SQS error type. ">type</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adb3523f8faaaf572c7f4da5cb623ded1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a> SqsError::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the parsed SQS error type. </p>
+<dl class="section return"><dt>Returns</dt><dd>An SQS error type, or SqsError::OtherType if not found or not recognised.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsError.html#ae7ffc1db59a772be74bbe956026c63ce" title="Get the raw SQS error type string. ">rawType</a> </dd></dl>
 
 </div>
 </div>
@@ -190,7 +336,7 @@ ErrorType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () cons
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

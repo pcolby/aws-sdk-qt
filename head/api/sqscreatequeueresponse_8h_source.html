@@ -126,12 +126,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>(QNetworkReply * <span class="keyword">const</span> reply, QObject * <span class="keyword">const</span> parent = 0);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSqsResponse.html#aaffc70156f8909faa54925ed5ceb9e66">isValid</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">isValid</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QString queueUrl() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span> slots:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parseSuccess(QIODevice &amp;response);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess</a>(QIODevice &amp;response);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>)</div>
@@ -143,13 +143,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsResponse_html_aaffc70156f8909faa54925ed5ceb9e66"><div class="ttname"><a href="classSqsResponse.html#aaffc70156f8909faa54925ed5ceb9e66">SqsResponse::isValid</a></div><div class="ttdeci">virtual bool isValid() const =0</div><div class="ttdef"><b>Definition:</b> sqsresponse.cpp:63</div></div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdef"><b>Definition:</b> sqscreatequeueresponse.h:31</div></div>
-<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdef"><b>Definition:</b> sqsresponse.h:33</div></div>
+<div class="ttc" id="classSqsResponse_html_af63b2edc3a70a84718b80433978b1bf6"><div class="ttname"><a href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">SqsResponse::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this AWS response valid? </div><div class="ttdef"><b>Definition:</b> sqsresponse.cpp:92</div></div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> sqscreatequeueresponse.h:31</div></div>
+<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdoc">Interface class for processing SQS responses. </div><div class="ttdef"><b>Definition:</b> sqsresponse.h:33</div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_aad6d4ebfca17ee96fc27fc8bb33e0dba"><div class="ttname"><a href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">AwsAbstractResponse::parseSuccess</a></div><div class="ttdeci">virtual void parseSuccess(QIODevice &amp;response)=0</div><div class="ttdoc">Parse a successful response. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

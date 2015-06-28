@@ -2,7 +2,7 @@
 <area shape="rect" id="node4" href="$classSqsAddPermissionRequest.html" title="SqsAddPermissionRequest" alt="" coords="479,5,662,32"/>
 <area shape="rect" id="node5" href="$classSqsChangeMessageVisibilityBatchRequest.html" title="SqsChangeMessageVisibility\lBatchRequest" alt="" coords="475,57,667,98"/>
 <area shape="rect" id="node6" href="$classSqsChangeMessageVisibilityRequest.html" title="SqsChangeMessageVisibility\lRequest" alt="" coords="475,122,667,163"/>
-<area shape="rect" id="node7" href="$classSqsCreateQueueRequest.html" title="SqsCreateQueueRequest" alt="" coords="485,188,656,215"/>
+<area shape="rect" id="node7" href="$classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. " alt="" coords="485,188,656,215"/>
 <area shape="rect" id="node8" href="$classSqsDeleteMessageBatchRequest.html" title="SqsDeleteMessageBatchRequest" alt="" coords="461,239,680,265"/>
 <area shape="rect" id="node9" href="$classSqsDeleteMessageRequest.html" title="SqsDeleteMessageRequest" alt="" coords="478,289,663,316"/>
 <area shape="rect" id="node10" href="$classSqsDeleteQueueRequest.html" title="SqsDeleteQueueRequest" alt="" coords="485,340,656,367"/>
@@ -16,5 +16,5 @@
 <area shape="rect" id="node18" href="$classSqsSendMessageBatchRequest.html" title="SqsSendMessageBatchRequest" alt="" coords="465,761,676,788"/>
 <area shape="rect" id="node19" href="$classSqsSendMessageRequest.html" title="SqsSendMessageRequest" alt="" coords="482,812,659,839"/>
 <area shape="rect" id="node20" href="$classSqsSetQueueAttributesRequest.html" title="SqsSetQueueAttributesRequest" alt="" coords="467,863,675,889"/>
-<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Represents a request to be sent (via a client class) to an Amazon service. " alt="" coords="124,441,271,468"/>
+<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="124,441,271,468"/>
 </map>

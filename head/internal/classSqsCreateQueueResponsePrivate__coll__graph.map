@@ -1,7 +1,7 @@
 <map id="SqsCreateQueueResponsePrivate" name="SqsCreateQueueResponsePrivate">
-<area shape="rect" id="node6" href="$classSqsCreateQueueResponse.html" title="SqsCreateQueueResponse" alt="" coords="90,437,271,464"/>
+<area shape="rect" id="node6" href="$classSqsCreateQueueResponse.html" title="Handles Amazon Simple Queue Service (SQS) responses. " alt="" coords="90,437,271,464"/>
 <area shape="rect" id="node2" href="$classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="44,272,189,299"/>
 <area shape="rect" id="node3" href="$classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="22,171,219,197"/>
-<area shape="rect" id="node4" href="$classAwsAbstractResponse.html" title="AwsAbstractResponse" alt="" coords="107,81,263,108"/>
-<area shape="rect" id="node7" href="$classSqsResponse.html" title="SqsResponse" alt="" coords="211,221,315,248"/>
+<area shape="rect" id="node4" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="107,81,263,108"/>
+<area shape="rect" id="node7" href="$classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="211,221,315,248"/>
 </map>

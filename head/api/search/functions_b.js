@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['refresh',['refresh',['../classAwsAbstractCredentials.html#a90d31871ce1dbc366141ce20f3493907',1,'AwsAbstractCredentials']]],
-  ['region',['region',['../classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266',1,'AwsAbstractClient::region()'],['../classAwsRegion.html#a8703e0fb4b2ea54a91fa3d635017e443',1,'AwsRegion::region()']]],
-  ['regionname',['regionName',['../classAwsEndpoint.html#a65dd94bbb8b35e80aa9b2b0687286b3e',1,'AwsEndpoint']]]
+  ['parameter',['parameter',['../classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8',1,'SqsRequest']]],
+  ['parse',['parse',['../classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6',1,'AwsAbstractResponse']]],
+  ['parsefailure',['parseFailure',['../classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84',1,'AwsAbstractResponse::parseFailure()'],['../classSqsResponse.html#a96a900bddf9b097a4886c77215960024',1,'SqsResponse::parseFailure()']]],
+  ['parsesuccess',['parseSuccess',['../classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba',1,'AwsAbstractResponse::parseSuccess()'],['../classSqsCreateQueueResponse.html#a610856edcbdbb50f261498dee1b48553',1,'SqsCreateQueueResponse::parseSuccess()']]],
+  ['policy',['policy',['../classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4',1,'SqsCreateQueueRequest']]]
 ];

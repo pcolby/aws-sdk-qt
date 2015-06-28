@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transport',['Transport',['../classAwsEndpoint.html#ac578ec7954d65e6f7aa06331cec06e23',1,'AwsEndpoint']]]
+  ['sqsaction',['SqsAction',['../classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696',1,'SqsRequest']]]
 ];

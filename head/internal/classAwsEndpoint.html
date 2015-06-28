@@ -440,13 +440,13 @@ AwsService </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A QUrl representing the AWS endpoint, or an invalid QUrl if there is no such <em>known</em> AWS endpoint. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Handle SMTP here? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Handle SMTP here? </dd></dl>
 
 <p>Definition at line <a class="el" href="awsendpoint_8cpp_source.html#l00163">163</a> of file <a class="el" href="awsendpoint_8cpp_source.html">awsendpoint.cpp</a>.</p>
 
 <p>References <a class="el" href="awsendpoint__p_8h_source.html#l00055">AwsEndpointPrivate::RegionEndpointInfo::hostName</a>, <a class="el" href="awsendpoint_8cpp_source.html#l00437">AwsEndpointPrivate::loadEndpointData()</a>, <a class="el" href="awsendpoint__p_8h_source.html#l00077">AwsEndpointPrivate::mutex</a>, <a class="el" href="awsendpoint_8cpp_source.html#l00304">regionName()</a>, <a class="el" href="awsendpoint__p_8h_source.html#l00074">AwsEndpointPrivate::regions</a>, <a class="el" href="awsendpoint_8cpp_source.html#l00317">serviceName()</a>, and <a class="el" href="awsendpoint__p_8h_source.html#l00056">AwsEndpointPrivate::RegionEndpointInfo::transports</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00096">AwsAbstractClient::endpoint()</a>, and <a class="el" href="awsregion_8cpp_source.html#l00216">AwsRegion::hostName()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>, and <a class="el" href="awsregion_8cpp_source.html#l00216">AwsRegion::hostName()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classAwsEndpointPrivate.html#a1e594bf504839850ffe62e03447a4482">AwsEndpointPrivate::loadEndpointData</a>();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    QMutexLocker locker(&amp;<a class="code" href="classAwsEndpointPrivate.html#a0d033c2430576d80008adcb459ab043d">AwsEndpointPrivate::mutex</a>);</div>
@@ -885,7 +885,7 @@ AwsService </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -94,14 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for all AWS service clients.  
+<p>Interface class for providing access to individual AWS services.  
  <a href="classAwsAbstractClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AwsAbstractClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAwsAbstractClient__inherit__graph.png" border="0" usemap="#AwsAbstractClient_inherit__map" alt="Inheritance graph"/></div>
 <map name="AwsAbstractClient_inherit__map" id="AwsAbstractClient_inherit__map">
-<area shape="rect" id="node3" href="classSqsClient.html" title="SqsClient" alt="" coords="31,155,110,181"/></map>
+<area shape="rect" id="node3" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) " alt="" coords="31,155,110,181"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for AwsAbstractClient:</div>
@@ -112,11 +112,11 @@ Collaboration diagram for AwsAbstractClient:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
+<tr class="memdesc:a5fec7f973e9a614f8114e9598f361595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> object.  <a href="#a5fec7f973e9a614f8114e9598f361595">More...</a><br /></td></tr>
 <tr class="separator:a5fec7f973e9a614f8114e9598f361595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45370989e35585591be5186baf5072c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45370989e35585591be5186baf5072c7"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7">~AwsAbstractClient</a> ()</td></tr>
-<tr class="memdesc:a45370989e35585591be5186baf5072c7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> destructor. <br /></td></tr>
+<tr class="memdesc:a45370989e35585591be5186baf5072c7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> destructor. <br /></td></tr>
 <tr class="separator:a45370989e35585591be5186baf5072c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a816b91835077442e552939f43991cb63"><td class="memItemLeft" align="right" valign="top">QUrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a> () const </td></tr>
 <tr class="memdesc:a816b91835077442e552939f43991cb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the endpoint associated with this AWS client.  <a href="#a816b91835077442e552939f43991cb63">More...</a><br /></td></tr>
@@ -156,8 +156,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for all AWS service clients. </p>
-<p>This class is is used </p>
+<div class="textblock"><p>Interface class for providing access to individual AWS services. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5fec7f973e9a614f8114e9598f361595"></a>
 <div class="memitem">
@@ -173,7 +172,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
@@ -472,7 +471,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

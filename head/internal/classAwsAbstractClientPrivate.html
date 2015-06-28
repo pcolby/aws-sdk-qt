@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Private implementation for <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a>.  
+<p>Private implementation for <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a>.  
  <a href="classAwsAbstractClientPrivate.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AwsAbstractClientPrivate:</div>
@@ -109,7 +109,7 @@ Collaboration diagram for AwsAbstractClientPrivate:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAwsAbstractClientPrivate__coll__graph.png" border="0" usemap="#AwsAbstractClientPrivate_coll__map" alt="Collaboration graph"/></div>
 <map name="AwsAbstractClientPrivate_coll__map" id="AwsAbstractClientPrivate_coll__map">
-<area shape="rect" id="node5" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. " alt="" coords="286,260,417,287"/><area shape="rect" id="node2" href="classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="75,81,238,108"/><area shape="rect" id="node4" href="classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="5,171,209,197"/><area shape="rect" id="node6" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="482,81,634,108"/><area shape="rect" id="node7" href="classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="525,171,719,197"/></map>
+<area shape="rect" id="node5" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="286,260,417,287"/><area shape="rect" id="node2" href="classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="75,81,238,108"/><area shape="rect" id="node4" href="classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="5,171,209,197"/><area shape="rect" id="node6" href="classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="482,81,634,108"/><area shape="rect" id="node7" href="classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="525,171,719,197"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -156,7 +156,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5e2977dac2f67c31c5f6015074874a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Private implementation for <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a>. </p>
+<div class="textblock"><p>Private implementation for <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a>. </p>
 
 <p>Definition at line <a class="el" href="awsabstractclient__p_8h_source.html#l00037">37</a> of file <a class="el" href="awsabstractclient__p_8h_source.html">awsabstractclient_p.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -177,17 +177,17 @@ Protected Attributes</h2></td></tr>
 <p>Constructs a new <a class="el" href="classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. ">AwsAbstractClientPrivate</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">q</td><td>Pointer to this object's public <a class="el" href="classAwsAbstractClient.html" title="Base class for all AWS service clients. ">AwsAbstractClient</a> instance. </td></tr>
+    <tr><td class="paramname">q</td><td>Pointer to this object's public <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> instance. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00310">310</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    : <a class="code" href="classAwsAbstractClientPrivate.html#ae7042dcbcabce6f18c8c108048e71479">credentials</a>(NULL), <a class="code" href="classAwsAbstractClientPrivate.html#acd1058b018c2a30a0b52df6fa210c1c7">networkAccessManager</a>(NULL),</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <a class="code" href="classAwsAbstractClientPrivate.html#a380b81e7b820b6b04b581cc00ec9b0c0">region</a>(AwsRegion::InvalidRegion), <a class="code" href="classAwsAbstractClientPrivate.html#a494e7025ec09c0e655a16ff04a8e754c">signature</a>(NULL), <a class="code" href="classAwsAbstractClientPrivate.html#a5e2977dac2f67c31c5f6015074874a5b">q_ptr</a>(q)</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
+<p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00308">308</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    : <a class="code" href="classAwsAbstractClientPrivate.html#ae7042dcbcabce6f18c8c108048e71479">credentials</a>(NULL), <a class="code" href="classAwsAbstractClientPrivate.html#acd1058b018c2a30a0b52df6fa210c1c7">networkAccessManager</a>(NULL),</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <a class="code" href="classAwsAbstractClientPrivate.html#a380b81e7b820b6b04b581cc00ec9b0c0">region</a>(AwsRegion::InvalidRegion), <a class="code" href="classAwsAbstractClientPrivate.html#a494e7025ec09c0e655a16ff04a8e754c">signature</a>(NULL), <a class="code" href="classAwsAbstractClientPrivate.html#a5e2977dac2f67c31c5f6015074874a5b">q_ptr</a>(q)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClientPrivate_html_ae7042dcbcabce6f18c8c108048e71479"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#ae7042dcbcabce6f18c8c108048e71479">AwsAbstractClientPrivate::credentials</a></div><div class="ttdeci">AwsAbstractCredentials * credentials</div><div class="ttdoc">Amazon credentials. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient__p_8h_source.html#l00040">awsabstractclient_p.h:40</a></div></div>
 <div class="ttc" id="classAwsAbstractClientPrivate_html_a380b81e7b820b6b04b581cc00ec9b0c0"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#a380b81e7b820b6b04b581cc00ec9b0c0">AwsAbstractClientPrivate::region</a></div><div class="ttdeci">AwsRegion::Region region</div><div class="ttdoc">Amazon service region. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient__p_8h_source.html#l00043">awsabstractclient_p.h:43</a></div></div>
 <div class="ttc" id="classAwsAbstractClientPrivate_html_acd1058b018c2a30a0b52df6fa210c1c7"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#acd1058b018c2a30a0b52df6fa210c1c7">AwsAbstractClientPrivate::networkAccessManager</a></div><div class="ttdeci">QNetworkAccessManager * networkAccessManager</div><div class="ttdoc">Network access manager. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient__p_8h_source.html#l00042">awsabstractclient_p.h:42</a></div></div>
@@ -220,10 +220,10 @@ Protected Attributes</h2></td></tr>
 <p><a class="el" href="classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. ">AwsAbstractClientPrivate</a> destructor. </p>
 <p>This virtual destructor does nothing (yet) - its here to allow for safe polymorphic destruction. </p>
 
-<p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00325">325</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
+<p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00323">323</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;{</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,7 +234,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

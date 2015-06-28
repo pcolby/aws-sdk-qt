@@ -91,101 +91,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classSqsResponse-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SqsResponse Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">SqsResponse Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface class for processing SQS responses.  
+ <a href="classSqsResponse.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SqsResponse:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsResponse__inherit__graph.png" border="0" usemap="#SqsResponse_inherit__map" alt="Inheritance graph"/></div>
 <map name="SqsResponse_inherit__map" id="SqsResponse_inherit__map">
-<area shape="rect" id="node4" href="classSqsCreateQueueResponse.html" title="SqsCreateQueueResponse" alt="" coords="5,229,187,256"/><area shape="rect" id="node2" href="classAwsAbstractResponse.html" title="AwsAbstractResponse" alt="" coords="18,80,174,107"/></map>
+<area shape="rect" id="node4" href="classSqsCreateQueueResponse.html" title="Handles Amazon Simple Queue Service (SQS) responses. " alt="" coords="5,229,187,256"/><area shape="rect" id="node2" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="18,80,174,107"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for SqsResponse:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsResponse__coll__graph.png" border="0" usemap="#SqsResponse_coll__map" alt="Collaboration graph"/></div>
 <map name="SqsResponse_coll__map" id="SqsResponse_coll__map">
-<area shape="rect" id="node2" href="classAwsAbstractResponse.html" title="AwsAbstractResponse" alt="" coords="90,81,246,108"/><area shape="rect" id="node4" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="133,171,331,197"/></map>
+<area shape="rect" id="node2" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="90,81,246,108"/><area shape="rect" id="node4" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="133,171,331,197"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a46c03e6525a566e3db12f2d2fc5df2bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a46c03e6525a566e3db12f2d2fc5df2bf">SqsResponse</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:a46c03e6525a566e3db12f2d2fc5df2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html">SqsResponse</a> object.  <a href="#a46c03e6525a566e3db12f2d2fc5df2bf">More...</a><br /></td></tr>
+<tr class="memdesc:a46c03e6525a566e3db12f2d2fc5df2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#a46c03e6525a566e3db12f2d2fc5df2bf">More...</a><br /></td></tr>
 <tr class="separator:a46c03e6525a566e3db12f2d2fc5df2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f9a4e8a14721c3838b0d92e506443f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24f9a4e8a14721c3838b0d92e506443f"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>errorString</b> () const </td></tr>
+<tr class="memitem:a24f9a4e8a14721c3838b0d92e506443f"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a24f9a4e8a14721c3838b0d92e506443f">errorString</a> () const </td></tr>
+<tr class="memdesc:a24f9a4e8a14721c3838b0d92e506443f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's error string.  <a href="#a24f9a4e8a14721c3838b0d92e506443f">More...</a><br /></td></tr>
 <tr class="separator:a24f9a4e8a14721c3838b0d92e506443f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b8ebf0caeccc782243d969b9267d50"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#ab8b8ebf0caeccc782243d969b9267d50">hasError</a> () const </td></tr>
+<tr class="memdesc:ab8b8ebf0caeccc782243d969b9267d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Did any error occurr processing this reponse?  <a href="#ab8b8ebf0caeccc782243d969b9267d50">More...</a><br /></td></tr>
 <tr class="separator:ab8b8ebf0caeccc782243d969b9267d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffc70156f8909faa54925ed5ceb9e66"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#aaffc70156f8909faa54925ed5ceb9e66">isValid</a> () const =0</td></tr>
-<tr class="separator:aaffc70156f8909faa54925ed5ceb9e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2712e5b567fad615d78484cbc1fb3418"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2712e5b567fad615d78484cbc1fb3418"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>requestId</b> () const </td></tr>
+<tr class="memitem:af63b2edc3a70a84718b80433978b1bf6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">isValid</a> () const </td></tr>
+<tr class="memdesc:af63b2edc3a70a84718b80433978b1bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this AWS response valid?  <a href="#af63b2edc3a70a84718b80433978b1bf6">More...</a><br /></td></tr>
+<tr class="separator:af63b2edc3a70a84718b80433978b1bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2712e5b567fad615d78484cbc1fb3418"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a2712e5b567fad615d78484cbc1fb3418">requestId</a> () const </td></tr>
+<tr class="memdesc:a2712e5b567fad615d78484cbc1fb3418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SQS request ID, if any, included in the SQS response.  <a href="#a2712e5b567fad615d78484cbc1fb3418">More...</a><br /></td></tr>
 <tr class="separator:a2712e5b567fad615d78484cbc1fb3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1baedd0d930d7568ff1322e3daa1647b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1baedd0d930d7568ff1322e3daa1647b"></a>
-SqsErrorList&#160;</td><td class="memItemRight" valign="bottom"><b>serviceErrors</b> () const </td></tr>
+<tr class="memitem:a1baedd0d930d7568ff1322e3daa1647b"><td class="memItemLeft" align="right" valign="top">SqsErrorList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b">serviceErrors</a> () const </td></tr>
+<tr class="memdesc:a1baedd0d930d7568ff1322e3daa1647b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of SQS errors, if any, included in the SQS response.  <a href="#a1baedd0d930d7568ff1322e3daa1647b">More...</a><br /></td></tr>
 <tr class="separator:a1baedd0d930d7568ff1322e3daa1647b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
 <tr class="memitem:ab9edade0587592fcb41d5c7652bf0c9b inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b">AwsAbstractResponse</a> (QObject *const parent=0)</td></tr>
-<tr class="memdesc:ab9edade0587592fcb41d5c7652bf0c9b inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> object.  <a href="#ab9edade0587592fcb41d5c7652bf0c9b">More...</a><br /></td></tr>
+<tr class="memdesc:ab9edade0587592fcb41d5c7652bf0c9b inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. ">AwsAbstractResponse</a> object.  <a href="#ab9edade0587592fcb41d5c7652bf0c9b">More...</a><br /></td></tr>
 <tr class="separator:ab9edade0587592fcb41d5c7652bf0c9b inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9718a51b3f8070ac07c8d4d0a6335ef9 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9718a51b3f8070ac07c8d4d0a6335ef9"></a>
-virtual QNetworkReply::NetworkError&#160;</td><td class="memItemRight" valign="bottom"><b>networkError</b> () const </td></tr>
+<tr class="memitem:a8e25480ed0d6ef4292e71b83947384ef inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e25480ed0d6ef4292e71b83947384ef"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a8e25480ed0d6ef4292e71b83947384ef">~AwsAbstractResponse</a> ()</td></tr>
+<tr class="memdesc:a8e25480ed0d6ef4292e71b83947384ef inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. ">AwsAbstractResponse</a> destructor. <br /></td></tr>
+<tr class="separator:a8e25480ed0d6ef4292e71b83947384ef inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9718a51b3f8070ac07c8d4d0a6335ef9 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual QNetworkReply::NetworkError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9718a51b3f8070ac07c8d4d0a6335ef9">networkError</a> () const </td></tr>
+<tr class="memdesc:a9718a51b3f8070ac07c8d4d0a6335ef9 inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's network error, if there is one.  <a href="#a9718a51b3f8070ac07c8d4d0a6335ef9">More...</a><br /></td></tr>
 <tr class="separator:a9718a51b3f8070ac07c8d4d0a6335ef9 inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc0086cdebfbda83df2c0a0dec5fd11 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cc0086cdebfbda83df2c0a0dec5fd11"></a>
-virtual QXmlStreamReader::Error&#160;</td><td class="memItemRight" valign="bottom"><b>xmlParseError</b> () const </td></tr>
+<tr class="memitem:a3cc0086cdebfbda83df2c0a0dec5fd11 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual QXmlStreamReader::Error&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a3cc0086cdebfbda83df2c0a0dec5fd11">xmlParseError</a> () const </td></tr>
+<tr class="memdesc:a3cc0086cdebfbda83df2c0a0dec5fd11 inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's XML parse error, if there is one.  <a href="#a3cc0086cdebfbda83df2c0a0dec5fd11">More...</a><br /></td></tr>
 <tr class="separator:a3cc0086cdebfbda83df2c0a0dec5fd11 inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9096724efffcc6e73f24eb2cd00b35a2"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>xmlParseErrorString</b> () const </td></tr>
+<tr class="memitem:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">xmlParseErrorString</a> () const </td></tr>
+<tr class="memdesc:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's XML parse error string, if there is one.  <a href="#a9096724efffcc6e73f24eb2cd00b35a2">More...</a><br /></td></tr>
 <tr class="separator:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr class="memitem:a96a900bddf9b097a4886c77215960024"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96a900bddf9b097a4886c77215960024"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parseFailure</b> (QIODevice &amp;response)</td></tr>
+<tr class="memitem:a96a900bddf9b097a4886c77215960024"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a96a900bddf9b097a4886c77215960024">parseFailure</a> (QIODevice &amp;response)</td></tr>
+<tr class="memdesc:a96a900bddf9b097a4886c77215960024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a failure response.  <a href="#a96a900bddf9b097a4886c77215960024">More...</a><br /></td></tr>
 <tr class="separator:a96a900bddf9b097a4886c77215960024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_slots_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('pro_slots_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Protected Slots inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
-<tr class="memitem:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a947e8cd17ec9d795c080bb2c783cbd5c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>replyFinished</b> ()</td></tr>
+<tr class="memitem:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c">replyFinished</a> ()</td></tr>
+<tr class="memdesc:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot to be invoked when the internal network reply is finished.  <a href="#a947e8cd17ec9d795c080bb2c783cbd5c">More...</a><br /></td></tr>
 <tr class="separator:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a47b214877ea0ae2c4f754fc0cba60052"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47b214877ea0ae2c4f754fc0cba60052"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SqsResponse</b> (<a class="el" href="classSqsResponsePrivate.html">SqsResponsePrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memitem:a47b214877ea0ae2c4f754fc0cba60052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsResponse.html#a47b214877ea0ae2c4f754fc0cba60052">SqsResponse</a> (<a class="el" href="classSqsResponsePrivate.html">SqsResponsePrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memdesc:a47b214877ea0ae2c4f754fc0cba60052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#a47b214877ea0ae2c4f754fc0cba60052">More...</a><br /></td></tr>
 <tr class="separator:a47b214877ea0ae2c4f754fc0cba60052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
-<tr class="memitem:a0469a6d60890be4f3cafefdf1b99a8cd inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0469a6d60890be4f3cafefdf1b99a8cd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AwsAbstractResponse</b> (<a class="el" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memitem:a0469a6d60890be4f3cafefdf1b99a8cd inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a0469a6d60890be4f3cafefdf1b99a8cd">AwsAbstractResponse</a> (<a class="el" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> *const d, QObject *const parent)</td></tr>
+<tr class="memdesc:a0469a6d60890be4f3cafefdf1b99a8cd inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. ">AwsAbstractResponse</a> object.  <a href="#a0469a6d60890be4f3cafefdf1b99a8cd">More...</a><br /></td></tr>
 <tr class="separator:a0469a6d60890be4f3cafefdf1b99a8cd inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0a1705f931af5e2c8c9d032eb4ef62 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9b0a1705f931af5e2c8c9d032eb4ef62">isSuccess</a> (QNetworkReply *const reply) const </td></tr>
+<tr class="memdesc:a9b0a1705f931af5e2c8c9d032eb4ef62 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does a network reply indicate a successful response?  <a href="#a9b0a1705f931af5e2c8c9d032eb4ef62">More...</a><br /></td></tr>
 <tr class="separator:a9b0a1705f931af5e2c8c9d032eb4ef62 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13eab6d1bc11b614d243f1da75ce6eb6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setReply</b> (QNetworkReply *reply)</td></tr>
+<tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a> (QNetworkReply *reply)</td></tr>
+<tr class="memdesc:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network reply from which to expect an AWS response.  <a href="#a13eab6d1bc11b614d243f1da75ce6eb6">More...</a><br /></td></tr>
 <tr class="separator:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ddac7db08332f5bbea58abad54a45da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setXmlError</b> (const QXmlStreamReader &amp;xml)</td></tr>
+<tr class="memitem:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a> (const QXmlStreamReader &amp;xml)</td></tr>
+<tr class="memdesc:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the details of an XML parse error.  <a href="#a9ddac7db08332f5bbea58abad54a45da">More...</a><br /></td></tr>
 <tr class="separator:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab47b0951d4db7aac7be5243bc54040e6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab47b0951d4db7aac7be5243bc54040e6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (QNetworkReply *const reply)</td></tr>
+<tr class="memitem:ab47b0951d4db7aac7be5243bc54040e6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6">parse</a> (QNetworkReply *const reply)</td></tr>
+<tr class="memdesc:ab47b0951d4db7aac7be5243bc54040e6 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an AWS response from a network reply.  <a href="#ab47b0951d4db7aac7be5243bc54040e6">More...</a><br /></td></tr>
 <tr class="separator:ab47b0951d4db7aac7be5243bc54040e6 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9ac6c77b7360512d4dfef539720810 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d9ac6c77b7360512d4dfef539720810"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parseFailure</b> (QIODevice &amp;response)=0</td></tr>
-<tr class="separator:a9d9ac6c77b7360512d4dfef539720810 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72b2530d3b0ae7f731b2ec26b3426015 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72b2530d3b0ae7f731b2ec26b3426015"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>parseSuccess</b> (QIODevice &amp;response)=0</td></tr>
-<tr class="separator:a72b2530d3b0ae7f731b2ec26b3426015 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ed2aaf776928e62cac4f4ffc62ed84 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">parseFailure</a> (QIODevice &amp;response)=0</td></tr>
+<tr class="memdesc:ad4ed2aaf776928e62cac4f4ffc62ed84 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a failure response.  <a href="#ad4ed2aaf776928e62cac4f4ffc62ed84">More...</a><br /></td></tr>
+<tr class="separator:ad4ed2aaf776928e62cac4f4ffc62ed84 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess</a> (QIODevice &amp;response)=0</td></tr>
+<tr class="memdesc:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a successful response.  <a href="#aad6d4ebfca17ee96fc27fc8bb33e0dba">More...</a><br /></td></tr>
+<tr class="separator:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header signals_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('signals_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
-<tr class="memitem:a8c0728f93e5a8f7f83d399cb899196cf inherit signals_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c0728f93e5a8f7f83d399cb899196cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td></tr>
+<tr class="memitem:a8c0728f93e5a8f7f83d399cb899196cf inherit signals_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished</a> ()</td></tr>
+<tr class="memdesc:a8c0728f93e5a8f7f83d399cb899196cf inherit signals_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when this object has finished parsing the response.  <a href="#a8c0728f93e5a8f7f83d399cb899196cf">More...</a><br /></td></tr>
 <tr class="separator:a8c0728f93e5a8f7f83d399cb899196cf inherit signals_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
 <tr class="memitem:af644d30e72e701385abdc050c4b0a8b6 inherit pub_static_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">static QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">toVariant</a> (QXmlStreamReader &amp;xml, const QString &amp;prefix=QLatin1String(&quot;.&quot;), const int maxDepth=1024)</td></tr>
+<tr class="memdesc:af644d30e72e701385abdc050c4b0a8b6 inherit pub_static_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an XML stream to a hierarchical QVariantMap.  <a href="#af644d30e72e701385abdc050c4b0a8b6">More...</a><br /></td></tr>
 <tr class="separator:af644d30e72e701385abdc050c4b0a8b6 inherit pub_static_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
 <tr class="memitem:adcd3c492341adb255ea558b08c92ab38 inherit pro_attribs_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcd3c492341adb255ea558b08c92ab38"></a>
@@ -194,9 +205,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
 <tr class="separator:adcd3c492341adb255ea558b08c92ab38 inherit pro_attribs_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd></dd></dl>
+<div class="textblock"><p>Interface class for processing SQS responses. </p>
 
 <p>Definition at line <a class="el" href="sqsresponse_8h_source.html#l00033">33</a> of file <a class="el" href="sqsresponse_8h_source.html">sqsresponse.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -214,7 +223,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classSqsResponse.html">SqsResponse</a> object. </p>
+<p>Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
@@ -228,11 +237,107 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="classSqsResponsePrivate_html"><div class="ttname"><a href="classSqsResponsePrivate.html">SqsResponsePrivate</a></div><div class="ttdoc">Private implementation for SqsResponse. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse__p_8h_source.html#l00032">sqsresponse_p.h:32</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_ab9edade0587592fcb41d5c7652bf0c9b"><div class="ttname"><a href="classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b">AwsAbstractResponse::AwsAbstractResponse</a></div><div class="ttdeci">AwsAbstractResponse(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00040">awsabstractresponse.cpp:40</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_ab9edade0587592fcb41d5c7652bf0c9b"><div class="ttname"><a href="classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b">AwsAbstractResponse::AwsAbstractResponse</a></div><div class="ttdeci">AwsAbstractResponse(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00050">awsabstractresponse.cpp:50</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a47b214877ea0ae2c4f754fc0cba60052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SqsResponse::SqsResponse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSqsResponsePrivate.html">SqsResponsePrivate</a> *const&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *const&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object. </p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a class="el" href="classSqsRequestPrivate.html" title="Private implementation for SqsRequest. ">SqsRequestPrivate</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Pointer to private data (aka D-Pointer). </td></tr>
+    <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00058">58</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    : <a class="code" href="classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b">AwsAbstractResponse</a>(d, parent)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_ab9edade0587592fcb41d5c7652bf0c9b"><div class="ttname"><a href="classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b">AwsAbstractResponse::AwsAbstractResponse</a></div><div class="ttdeci">AwsAbstractResponse(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00050">awsabstractresponse.cpp:50</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a24f9a4e8a14721c3838b0d92e506443f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SqsResponse::errorString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get this response's error string. </p>
+<p>This override checks for SQS service errors, and if found, returns the first one. Otherwise, this override delegates to the base implementation (which checks for network and XML parse errors, for example).</p>
+<p>Also consider using the serviceErrors function to retrieve all of the servive errors (if any), not just the first one (though often SQS will only return one error per response).</p>
+<dl class="section return"><dt>Returns</dt><dd>An error string, or a null QString if this response has no errors.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f" title="Get this response&#39;s error string. ">AwsAbstractResponse::errorString</a> </dd>
+<dd>
+<a class="el" href="classSqsResponse.html#ab8b8ebf0caeccc782243d969b9267d50" title="Did any error occurr processing this reponse? ">hasError</a> </dd>
+<dd>
+<a class="el" href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b" title="Get list of SQS errors, if any, included in the SQS response. ">serviceErrors</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f">AwsAbstractResponse</a>.</p>
+
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00081">81</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00107">AwsAbstractResponse::errorString()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsResponse.html">SqsResponse</a>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> (d-&gt;errors.empty()) ? <a class="code" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f">AwsAbstractResponse::errorString</a>() : d-&gt;errors.first().message();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_a46ea22ce354df8f940286c87fd1a269f"><div class="ttname"><a href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f">AwsAbstractResponse::errorString</a></div><div class="ttdeci">virtual QString errorString() const </div><div class="ttdoc">Get this response&#39;s error string. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00107">awsabstractresponse.cpp:107</a></div></div>
+<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdoc">Interface class for processing SQS responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8h_source.html#l00033">sqsresponse.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="ab8b8ebf0caeccc782243d969b9267d50"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,21 +358,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Include note re cyclic dependencies if calling (virtual) isValid. </dd></dl>
+
+<p>Did any error occurr processing this reponse? </p>
+<p>Errors could be anything from network requests errors, to errors validating AWS response content.</p>
+<p>This base implementation supports network, and XML parsing errors. Derived classes may override this function to support additional error types.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if this response contains one or more errors, <code>false</code> otherwise.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function may be equivalent to !isValid, however, it is not safe for this function's implementation to be just that, since derived classes may assume the inverse, resulting in an infinite cycle between the two functions.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsResponse.html#a24f9a4e8a14721c3838b0d92e506443f" title="Get this response&#39;s error string. ">errorString</a> </dd>
+<dd>
+<a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6" title="Is this AWS response valid? ">isValid</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classAwsAbstractResponse.html#afe41217244afa076213bae63b106680b">AwsAbstractResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00058">58</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00087">87</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00071">AwsAbstractResponse::hasError()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> ((!serviceErrors().isEmpty()) || (<a class="code" href="classAwsAbstractResponse.html#afe41217244afa076213bae63b106680b">AwsAbstractResponse::hasError</a>()));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_afe41217244afa076213bae63b106680b"><div class="ttname"><a href="classAwsAbstractResponse.html#afe41217244afa076213bae63b106680b">AwsAbstractResponse::hasError</a></div><div class="ttdeci">virtual bool hasError() const </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00071">awsabstractresponse.cpp:71</a></div></div>
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00139">AwsAbstractResponse::hasError()</a>, and <a class="el" href="sqsresponse_8cpp_source.html#l00115">serviceErrors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> ((!<a class="code" href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b">serviceErrors</a>().isEmpty()) || (<a class="code" href="classAwsAbstractResponse.html#afe41217244afa076213bae63b106680b">AwsAbstractResponse::hasError</a>()));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_afe41217244afa076213bae63b106680b"><div class="ttname"><a href="classAwsAbstractResponse.html#afe41217244afa076213bae63b106680b">AwsAbstractResponse::hasError</a></div><div class="ttdeci">virtual bool hasError() const </div><div class="ttdoc">Did any error occurr processing this reponse? </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00139">awsabstractresponse.cpp:139</a></div></div>
+<div class="ttc" id="classSqsResponse_html_a1baedd0d930d7568ff1322e3daa1647b"><div class="ttname"><a href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b">SqsResponse::serviceErrors</a></div><div class="ttdeci">SqsErrorList serviceErrors() const </div><div class="ttdoc">Get list of SQS errors, if any, included in the SQS response. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8cpp_source.html#l00115">sqsresponse.cpp:115</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="aaffc70156f8909faa54925ed5ceb9e66"></a>
+<a class="anchor" id="af63b2edc3a70a84718b80433978b1bf6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -283,23 +397,148 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Include note re cyclic dependencies if calling (virtual) hasError. </dd></dl>
+
+<p>Is this AWS response valid? </p>
+<p>This base implementation simply checks for the absense of network and XML parsing errors. Derived classes may override this function to check other error types, and/or apply additional validation rules.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if this response is considered valid, <code>false</code> otherwise.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function may be equivalent to !hasError, however, it is not safe for this function's implementation to be just that, since derived classes may assume the inverse, resulting in an infinite cycle between the two functions.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsResponse.html#ab8b8ebf0caeccc782243d969b9267d50" title="Did any error occurr processing this reponse? ">hasError</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415">AwsAbstractResponse</a>.</p>
 
-<p>Implemented in <a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">SqsCreateQueueResponse</a>.</p>
+<p>Reimplemented in <a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">SqsCreateQueueResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00063">63</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00092">92</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00079">AwsAbstractResponse::isValid()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> ((serviceErrors().isEmpty()) &amp;&amp; (<a class="code" href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415">AwsAbstractResponse::isValid</a>()));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_a6e0f7ac633ae28753ca521b99a1f0415"><div class="ttname"><a href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415">AwsAbstractResponse::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00079">awsabstractresponse.cpp:79</a></div></div>
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00162">AwsAbstractResponse::isValid()</a>, and <a class="el" href="sqsresponse_8cpp_source.html#l00115">serviceErrors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b">serviceErrors</a>().isEmpty()) &amp;&amp; (<a class="code" href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415">AwsAbstractResponse::isValid</a>()));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_a6e0f7ac633ae28753ca521b99a1f0415"><div class="ttname"><a href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415">AwsAbstractResponse::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this AWS response valid? </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00162">awsabstractresponse.cpp:162</a></div></div>
+<div class="ttc" id="classSqsResponse_html_a1baedd0d930d7568ff1322e3daa1647b"><div class="ttname"><a href="classSqsResponse.html#a1baedd0d930d7568ff1322e3daa1647b">SqsResponse::serviceErrors</a></div><div class="ttdeci">SqsErrorList serviceErrors() const </div><div class="ttdoc">Get list of SQS errors, if any, included in the SQS response. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8cpp_source.html#l00115">sqsresponse.cpp:115</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a96a900bddf9b097a4886c77215960024"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SqsResponse::parseFailure </td>
+          <td>(</td>
+          <td class="paramtype">QIODevice &amp;&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parse a failure response. </p>
+<p>This implementation parses SQS ErrorResponse elements, as defined by <a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a></p>
+<p>For example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;ErrorResponse&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;Error&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    &lt;Type&gt;Sender&lt;/Type&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;Code&gt;AccessDenied&lt;/Code&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    &lt;Message&gt;Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.&lt;/Message&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    &lt;Detail/&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  &lt;/Error&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  &lt;Error&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    ...</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  &lt;/Error&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  &lt;RequestId&gt;9a285199-c8d6-47c2-bdb2-314cb47d599d&lt;/RequestId&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;&lt;/ErrorResponse&gt;</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>Response to parse.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Unlike most other SQS responses, the SQS ErrorResponse does not wrap the RequestId element in a ResponseMetadata element.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00150">150</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00347">AwsAbstractResponse::setXmlError()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_D(<a class="code" href="classSqsResponse.html">SqsResponse</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    QXmlStreamReader xml(&amp;response);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;ErrorResponse&quot;</span>)) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            d-&gt;parseErrorResponse(xml);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            xml.skipCurrentElement();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a>(xml);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdoc">Interface class for processing SQS responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8h_source.html#l00033">sqsresponse.h:33</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a9ddac7db08332f5bbea58abad54a45da"><div class="ttname"><a href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">AwsAbstractResponse::setXmlError</a></div><div class="ttdeci">void setXmlError(const QXmlStreamReader &amp;xml)</div><div class="ttdoc">Record the details of an XML parse error. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00347">awsabstractresponse.cpp:347</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2712e5b567fad615d78484cbc1fb3418"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString SqsResponse::requestId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the SQS request ID, if any, included in the SQS response. </p>
+<dl class="section return"><dt>Returns</dt><dd>SQS request ID, or a null QString if not found. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00102">102</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsResponse.html">SqsResponse</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> d-&gt;requestId;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdoc">Interface class for processing SQS responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8h_source.html#l00033">sqsresponse.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1baedd0d930d7568ff1322e3daa1647b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SqsErrorList SqsResponse::serviceErrors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get list of SQS errors, if any, included in the SQS response. </p>
+<dl class="section return"><dt>Returns</dt><dd>A (possinly empty) list of SQS errors found in the SQS reponse.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsResponse.html#a24f9a4e8a14721c3838b0d92e506443f" title="Get this response&#39;s error string. ">errorString</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsresponse_8cpp_source.html#l00115">115</a> of file <a class="el" href="sqsresponse_8cpp_source.html">sqsresponse.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsresponse_8cpp_source.html#l00087">hasError()</a>, and <a class="el" href="sqsresponse_8cpp_source.html#l00092">isValid()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsResponse.html">SqsResponse</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> d-&gt;errors;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="classSqsResponse_html"><div class="ttname"><a href="classSqsResponse.html">SqsResponse</a></div><div class="ttdoc">Interface class for processing SQS responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8h_source.html#l00033">sqsresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,7 +549,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finished</b> ()</td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:20 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

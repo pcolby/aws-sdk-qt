@@ -119,12 +119,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>QTAWS_EXPORT SqsErrorPrivate {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    SqsError::ErrorCode code;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QVariantMap detail;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QString message;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QString rawCode;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QString rawType;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    SqsError::ErrorType type;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a> code; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QVariantMap detail;       </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QString message;          </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QString rawCode;          </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QString rawType;          </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a> type; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    SqsErrorPrivate(<a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    SqsErrorPrivate(<span class="keyword">const</span> SqsErrorPrivate * <span class="keyword">const</span> other, <a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q);</div>
@@ -133,8 +133,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> parse(QXmlStreamReader &amp;xml);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> SqsError::ErrorCode codeFromString(<span class="keyword">const</span> QString &amp;code);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> SqsError::ErrorType typeFromString(<span class="keyword">const</span> QString &amp;type);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> <a class="code" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a> codeFromString(<span class="keyword">const</span> QString &amp;code);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> <a class="code" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a> typeFromString(<span class="keyword">const</span> QString &amp;type);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classSqsError.html">SqsError</a>)</div>
@@ -146,11 +146,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsError_html"><div class="ttname"><a href="classSqsError.html">SqsError</a></div><div class="ttdef"><b>Definition:</b> sqserror.h:35</div></div>
+<div class="ttc" id="classSqsError_html_ac47706a4c98c65c20b97f3f5ff1d01af"><div class="ttname"><a href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a></div><div class="ttdeci">ErrorType</div><div class="ttdef"><b>Definition:</b> sqserror.h:63</div></div>
+<div class="ttc" id="classSqsError_html_ae1749929dec229427131dcd183b77877"><div class="ttname"><a href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a></div><div class="ttdeci">ErrorCode</div><div class="ttdef"><b>Definition:</b> sqserror.h:40</div></div>
+<div class="ttc" id="classSqsError_html"><div class="ttname"><a href="classSqsError.html">SqsError</a></div><div class="ttdoc">Encapsulation of an Error element from an SQS ErrorResponse response. </div><div class="ttdef"><b>Definition:</b> sqserror.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

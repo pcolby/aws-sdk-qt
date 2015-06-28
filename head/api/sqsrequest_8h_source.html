@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QVariant parameter(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;defaultValue = QVariant()) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> setParameter(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;value);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">virtual</span> QNetworkRequest unsignedRequest(<span class="keyword">const</span> QUrl &amp;endpoint) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">virtual</span> QNetworkRequest <a class="code" href="classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7">unsignedRequest</a>(<span class="keyword">const</span> QUrl &amp;endpoint) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsRequest.html">SqsRequest</a>)</div>
@@ -175,14 +175,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdef"><b>Definition:</b> sqsrequest.h:34</div></div>
+<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:34</div></div>
 <div class="ttc" id="classSqsRequest_html_a61eb3cf79681a5f8385fd8be68510696"><div class="ttname"><a href="classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696">SqsRequest::SqsAction</a></div><div class="ttdeci">SqsAction</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:39</div></div>
-<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Represents a request to be sent (via a client class) to an Amazon service. </div><div class="ttdef"><b>Definition:</b> awsabstractrequest.h:39</div></div>
-<div class="ttc" id="classAwsAbstractClient_html"><div class="ttname"><a href="classAwsAbstractClient.html">AwsAbstractClient</a></div><div class="ttdoc">Base class for all AWS service clients. </div><div class="ttdef"><b>Definition:</b> awsabstractclient.h:38</div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Interface class for providing AWS requests. </div><div class="ttdef"><b>Definition:</b> awsabstractrequest.h:39</div></div>
+<div class="ttc" id="classAwsAbstractRequest_html_ac67f588b0449fd47f9ef4ac80655acf7"><div class="ttname"><a href="classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7">AwsAbstractRequest::unsignedRequest</a></div><div class="ttdeci">virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const =0</div><div class="ttdoc">Build a network request for the given endpoint. </div></div>
+<div class="ttc" id="classAwsAbstractClient_html"><div class="ttname"><a href="classAwsAbstractClient.html">AwsAbstractClient</a></div><div class="ttdoc">Interface class for providing access to individual AWS services. </div><div class="ttdef"><b>Definition:</b> awsabstractclient.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 21:56:21 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

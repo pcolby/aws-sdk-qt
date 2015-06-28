@@ -1,4 +1,4 @@
 <map id="SqsResponse" name="SqsResponse">
-<area shape="rect" id="node4" href="$classSqsCreateQueueResponse.html" title="SqsCreateQueueResponse" alt="" coords="5,229,187,256"/>
-<area shape="rect" id="node2" href="$classAwsAbstractResponse.html" title="AwsAbstractResponse" alt="" coords="18,80,174,107"/>
+<area shape="rect" id="node4" href="$classSqsCreateQueueResponse.html" title="Handles Amazon Simple Queue Service (SQS) responses. " alt="" coords="5,229,187,256"/>
+<area shape="rect" id="node2" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="18,80,174,107"/>
 </map>

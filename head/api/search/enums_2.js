@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['region',['Region',['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion']]]
+  ['macroregion',['MacroRegion',['../classAwsRegion.html#ad78b2e6bccc468cc75998dfaa5100c14',1,'AwsRegion']]]
 ];
