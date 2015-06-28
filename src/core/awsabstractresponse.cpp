@@ -421,6 +421,18 @@ void AwsAbstractResponse::replyFinished()
 }
 
 /**
+ * @fn     void AwsAbstractResponse::finished()
+ *
+ * @brief  Signal emitted when this object has finished parsing the response.
+ *
+ * Upon receiving this signal, slots should check isValid or hasError to check
+ * if the response was successful or not.
+ *
+ * @see    hasError
+ * @see    isValid
+ */
+
+/**
  * @internal
  *
  * @class  AwsAbstractResponsePrivate
