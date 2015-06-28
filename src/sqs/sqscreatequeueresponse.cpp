@@ -27,7 +27,7 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SqsResponse
+ * @class  SqsCreateQueueResponse
  *
  * @brief  Handles Amazon Simple Queue Service (SQS) responses.
  */

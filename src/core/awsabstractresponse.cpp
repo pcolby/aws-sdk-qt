@@ -61,6 +61,7 @@ AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AwsAbstractRequestPrivate.
  *
+ * @param  d       Pointer to private data (aka D-Pointer).
  * @param  parent  This object's parent.
  */
 AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,

@@ -49,7 +49,8 @@ AwsAbstractCredentials::AwsAbstractCredentials(QObject * const parent)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AwsAbstractCredentialsPrivate.
  *
- * @param  parent
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
  */
 AwsAbstractCredentials::AwsAbstractCredentials(
     AwsAbstractCredentialsPrivate * const d, QObject * const parent)
@@ -57,7 +58,6 @@ AwsAbstractCredentials::AwsAbstractCredentials(
 {
 
 }
-
 
 /**
  * @brief  AwsAbstractCredentials destructor.
