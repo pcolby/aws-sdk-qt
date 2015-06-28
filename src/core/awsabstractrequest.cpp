@@ -84,7 +84,7 @@ AwsAbstractRequest::~AwsAbstractRequest()
 }
 
 /**
- * @fn     bool isValid() const
+ * @fn     bool AwsAbstractRequest::isValid() const
  *
  * @brief  Is this request valid?
  *
@@ -219,7 +219,7 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
 }
 
 /**
- * @fn     AwsAbstractResponse * response(QNetworkReply * const reply) const
+ * @fn AwsAbstractResponse * AwsAbstractRequest::response(QNetworkReply * const reply) const
  *
  * @brief  Construct an appropriate AWS response object.
  *
@@ -239,7 +239,7 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  */
 
 /**
- * @fn     QNetworkRequest unsignedRequest(const QUrl &endpoint) const
+ * @fn QNetworkRequest AwsAbstractRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Build a network request for the given \a endpoint.
  *

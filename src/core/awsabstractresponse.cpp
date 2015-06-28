@@ -379,7 +379,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
 }
 
 /**
- * @fn void parseFailure(QIODevice &response)
+ * @fn     void AwsAbstractResponse::parseFailure(QIODevice &response)
  *
  * @brief  Parse a failure response.
  *
@@ -390,7 +390,7 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
  */
 
 /**
- * @fn void parseSuccess(QIODevice &response)
+ * @fn     void AwsAbstractResponse::parseSuccess(QIODevice &response)
  *
  * @brief  Parse a successful response.
  *
