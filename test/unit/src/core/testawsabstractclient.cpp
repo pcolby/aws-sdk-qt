@@ -18,9 +18,24 @@
 */
 
 #include "testawsabstractclient.h"
+#include "awsendpointtestdata.h"
 
 #include "core/awsabstractclient.h"
 #include "core/awsbasiccredentials.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+#include "core/awsabstractclient_p.h"
+#include "core/awssignaturev0.h"
+#include "core/awssignaturev1.h"
+#include "core/awssignaturev2.h"
+#include "core/awssignaturev3.h"
+#include "core/awssignaturev4.h"
+#endif
+
+#include <QNetworkAccessManager>
+
+Q_DECLARE_METATYPE(AwsRegion::Region)
+Q_DECLARE_METATYPE(AwsAbstractSignature *)
 
 void TestAwsAbstractClient::credentials_data()
 {
@@ -45,4 +60,173 @@ void TestAwsAbstractClient::credentials()
 
     client.setCredentials(NULL);
     QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
+
+    delete credentials;
 }
+
+void TestAwsAbstractClient::endpoint_data()
+{
+    QTest::addColumn<QUrl>("endpoint");
+    QTest::newRow("null")    << QUrl();
+    QTest::newRow("example") << QUrl(QLatin1String("http://example.com"));
+}
+
+void TestAwsAbstractClient::endpoint()
+{
+    QFETCH(QUrl, endpoint);
+
+    AwsAbstractClient client;
+    QVERIFY(client.endpoint().isEmpty());
+    QVERIFY(!client.endpoint().isValid());
+
+    client.setEndpoint(endpoint);
+    QCOMPARE(client.endpoint(), endpoint);
+}
+
+void TestAwsAbstractClient::networkAccessManager_data()
+{
+    QTest::addColumn<QNetworkAccessManager *>("manager");
+
+    QTest::newRow("null")
+        << reinterpret_cast<QNetworkAccessManager *>(NULL);
+
+    QTest::newRow("valid")
+        << qobject_cast<QNetworkAccessManager *>(new QNetworkAccessManager());
+}
+
+void TestAwsAbstractClient::networkAccessManager()
+{
+    QFETCH(QNetworkAccessManager *, manager);
+
+    AwsAbstractClient client;
+    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+
+    client.setNetworkAccessManager(manager);
+    QCOMPARE(client.networkAccessManager(), manager);
+
+    client.setNetworkAccessManager(NULL);
+    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+
+    delete manager;
+}
+
+void TestAwsAbstractClient::region_data()
+{
+    QTest::addColumn<AwsRegion::Region>("region");
+    #define NEW_ROW(region) QTest::newRow(#region) << AwsRegion::region
+    NEW_ROW(InvalidRegion);
+    NEW_ROW(AP_Northeast_1);
+    NEW_ROW(AP_Southeast_1);
+    NEW_ROW(AP_Southeast_2);
+    NEW_ROW(EU_West_1);
+    NEW_ROW(SA_East_1);
+    NEW_ROW(US_East_1);
+    NEW_ROW(US_Gov_West_1);
+    NEW_ROW(US_West_1);
+    NEW_ROW(US_West_2);
+    #undef NEW_ROW
+}
+
+void TestAwsAbstractClient::region()
+{
+    QFETCH(AwsRegion::Region, region);
+
+    AwsAbstractClient client;
+    QCOMPARE(client.region(), AwsRegion::InvalidRegion);
+
+    client.setRegion(region);
+    QCOMPARE(client.region(), region);
+}
+
+void TestAwsAbstractClient::send_data()
+{
+}
+
+void TestAwsAbstractClient::send()
+{
+
+}
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractClient::serviceName_data()
+{
+    QTest::addColumn<QString>("serviceName");
+
+    QTest::newRow("null")  << QString();
+    QTest::newRow("empty") << QString::fromLatin1("");
+    QTest::newRow("white") << QString::fromLatin1(" ");
+
+    foreach (const QString &serviceName, AwsEndpointTestData::fullServiceNames().keys()) {
+        QTest::newRow(serviceName.toLocal8Bit()) << serviceName;
+    }
+}
+
+void TestAwsAbstractClient::serviceName()
+{
+    QFETCH(QString, serviceName);
+
+    AwsAbstractClient client;
+    QVERIFY(client.serviceName().isNull());
+
+    client.d_func()->serviceName = serviceName;
+    QCOMPARE(client.serviceName(), serviceName);
+}
+#endif
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractClient::signature_data()
+{
+    QTest::addColumn<AwsAbstractSignature *>("signature");
+
+    QTest::newRow("null")
+        << reinterpret_cast<AwsAbstractSignature *>(NULL);
+
+    QTest::newRow("v0")
+        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV0());
+
+    QTest::newRow("v1")
+        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV1());
+
+    QTest::newRow("v2")
+        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV2());
+
+    QTest::newRow("v3")
+        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV3());
+
+    QTest::newRow("v4")
+        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV4());
+}
+
+void TestAwsAbstractClient::signature()
+{
+    QFETCH(AwsAbstractSignature *, signature);
+
+    AwsAbstractClient client;
+    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
+
+    client.d_func()->signature = signature;
+    QCOMPARE(client.signature(), signature);
+
+    client.d_func()->signature = NULL;
+    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
+
+    delete signature;
+}
+#endif
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractClient::constructPrivate()
+{
+    AwsAbstractClient client;
+    AwsAbstractClientPrivate clientPrivate(&client);
+    QCOMPARE(clientPrivate.credentials, reinterpret_cast<AwsAbstractCredentials *>(NULL));
+    QVERIFY(clientPrivate.endpoint.isEmpty());
+    QVERIFY(!clientPrivate.endpoint.isValid());
+    QCOMPARE(clientPrivate.networkAccessManager, reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(clientPrivate.region, AwsRegion::InvalidRegion);
+    QVERIFY(clientPrivate.serviceName.isNull());
+    QCOMPARE(clientPrivate.signature, reinterpret_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(clientPrivate.q_func(), &client);
+}
+
+#endif

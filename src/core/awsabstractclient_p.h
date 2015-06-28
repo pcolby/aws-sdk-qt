@@ -54,7 +54,7 @@ protected:
 private:
     Q_DECLARE_PUBLIC(AwsAbstractClient)
     Q_DISABLE_COPY(AwsAbstractClientPrivate)
-
+    friend class TestAwsAbstractClient;
 };
 
 QTAWS_END_NAMESPACE

@@ -25,7 +25,7 @@ class TestAwsAbstractClient : public QObject {
 private slots:
     void credentials_data();
     void credentials();
-/*
+
     void endpoint_data();
     void endpoint();
 
@@ -38,12 +38,18 @@ private slots:
     void send_data();
     void send();
 
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void serviceName_data();
     void serviceName();
+    #endif
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    void signature_data();
+    void signature();
+    #endif
 
     // AwsAbstractClientPrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void constructPrivate();
     #endif
-*/
 };
