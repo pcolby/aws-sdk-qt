@@ -80,6 +80,31 @@ protected:
     }
 };
 
+void TestAwsAbstractClient::construct()
+{
+    {   // Verify the default parent argument is NULL.
+        AwsAbstractClient client;
+        QCOMPARE(client.parent(), reinterpret_cast<QObject *>(NULL));
+    }
+
+    {   // Verify the handling of an explicit parent argument.
+        AwsAbstractClient client(this);
+        QCOMPARE(client.parent(), qobject_cast<QObject *>(this));
+    }
+}
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractClient::construct_d_ptr()
+{
+    AwsAbstractClient temporaryClient;
+    AwsAbstractClientPrivate * const clientPrivate =
+        new AwsAbstractClientPrivate(&temporaryClient);
+    AwsAbstractClient client(clientPrivate, this);
+    QCOMPARE(client.d_func(), clientPrivate);
+    QCOMPARE(client.parent(), qobject_cast<QObject *>(this));
+}
+#endif
+
 void TestAwsAbstractClient::credentials_data()
 {
     QTest::addColumn<AwsAbstractCredentials *>("credentials");

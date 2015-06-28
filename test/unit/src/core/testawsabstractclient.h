@@ -23,6 +23,11 @@ class TestAwsAbstractClient : public QObject {
     Q_OBJECT
 
 private slots:
+    void construct();
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    void construct_d_ptr();
+    #endif
+
     void credentials_data();
     void credentials();
 
