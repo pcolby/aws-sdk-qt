@@ -84,6 +84,21 @@ AwsAbstractRequest::~AwsAbstractRequest()
 }
 
 /**
+ * @fn     bool isValid() const
+ *
+ * @brief  Is this request valid?
+ *
+ * Derived classes must implement this function to provide a level of request
+ * validation relevant to the type of request being implemented.
+ *
+ * In this context, "valid" means that with valid credentials, the request's
+ * networkRequest method should return a request that the caller can reasonably
+ * expect AWS to accept (ignoring server side access restrictions and the like).
+ *
+ * @returns  \c true if this request is considered valid, \c false other.
+ */
+
+/**
  * @brief  Get the data, if relevant, to be included with PUT and/or POST operations.
  *
  * @return

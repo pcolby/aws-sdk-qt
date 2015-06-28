@@ -34,6 +34,7 @@ public:
     SqsCreateQueueRequest(QObject * const parent);
 
     virtual bool isValid() const;
+    static bool isValidQueueName(const QString &queueName);
 
     QVariant attribute(const QString &name, const QVariant &defaultValue = QVariant()) const;
     QVariantMap attributes() const;
