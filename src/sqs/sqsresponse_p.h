@@ -32,8 +32,8 @@ class SqsResponse;
 class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
 
 public:
-    SqsErrorList errors;
-    QString requestId;
+    SqsErrorList errors; ///< SQS errors.
+    QString requestId;   ///< SQS request ID.
 
     SqsResponsePrivate(SqsResponse * const q);
 

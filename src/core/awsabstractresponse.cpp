@@ -310,7 +310,7 @@ QVariantMap AwsAbstractResponse::toVariant(
  *
  * @param  reply  Network reply to check for success.
  *
- * @return  \c true if \a reply indicates a successful repsonse, \c false otherwise.
+ * @return  \c true if \a reply indicates a successful response, \c false otherwise.
  *
  * @see  parse
  */
@@ -377,6 +377,28 @@ void AwsAbstractResponse::parse(QNetworkReply * const reply)
     }
     emit finished();
 }
+
+/**
+ * @fn void parseFailure(QIODevice &response)
+ *
+ * @brief  Parse a failure response.
+ *
+ * Derived classes must implement this function to process failure responses
+ * (as defined by the virtual isSuccess function).
+ *
+ * @param  response  Response to parse.
+ */
+
+/**
+ * @fn void parseSuccess(QIODevice &response)
+ *
+ * @brief  Parse a successful response.
+ *
+ * Derived classes must implement this function to process successful responses
+ * (as defined by the virtual isSuccess function).
+ *
+ * @param  response  Response to parse.
+ */
 
 /**
  * @brief  Slot to be invoked when the internal network reply is finished.
