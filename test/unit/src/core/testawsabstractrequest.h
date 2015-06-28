@@ -31,8 +31,7 @@ private slots:
     void data_data();
     void data();
 
-    void isValid_data();
-    void isValid();
+  //void isValid() = 0;
 
     void networkRequest_data();
     void networkRequest();
@@ -43,11 +42,9 @@ private slots:
     void send_data();
     void send();
 
-    void response_data();
-    void response();
+  //void response() = 0;
 
-    void unsignedRequest_data();
-    void unsignedRequest();
+  //void unsignedRequest() = 0;
 
     // AwsAbstractRequestPrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS

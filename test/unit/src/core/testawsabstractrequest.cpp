@@ -19,11 +19,19 @@
 
 #include "testawsabstractrequest.h"
 
+#include "core/awsabstractcredentials.h"
 #include "core/awsabstractrequest.h"
+#include "core/awsabstractsignature.h"
+#include "core/awsbasiccredentials.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awsabstractrequest_p.h"
 #endif
+
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+
+Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 
 // Bare minimum concrete mock class.
 class MockRequest : public AwsAbstractRequest {
@@ -42,6 +50,26 @@ protected:
         return QNetworkRequest(endpoint);
     }
 };
+
+class MockSignature : public AwsAbstractSignature {
+public:
+    virtual void sign(const AwsAbstractCredentials &credentials,
+                      const QNetworkAccessManager::Operation operation,
+                      QNetworkRequest &request,
+                      const QByteArray &data = QByteArray()) const
+    {
+        request.setRawHeader("test-accessKeyId", credentials.accessKeyId().toLocal8Bit());
+        request.setRawHeader("test-secretKey",   credentials.secretKey().toLocal8Bit());
+        request.setRawHeader("test-token",       credentials.token().toLocal8Bit());
+        request.setRawHeader("test-operation",   QByteArray(1, (char)operation));
+        if (!data.isNull()) request.setRawHeader("test-data", data);
+    }
+    virtual int version() const { return -1; }
+};
+
+/*class MockNetworkAccessManager : public QNetworkAccessManager {
+public:
+};*/
 
 void TestAwsAbstractRequest::construct()
 {
@@ -70,50 +98,87 @@ void TestAwsAbstractRequest::construct_d_ptr()
 
 void TestAwsAbstractRequest::data_data()
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    QTest::addColumn<QByteArray>("data");
+    QTest::newRow("null")   << QByteArray();
+    QTest::newRow("abc123") << QByteArray("abc123");
 }
 
 void TestAwsAbstractRequest::data()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
-}
-
-void TestAwsAbstractRequest::isValid_data()
-{
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
-}
-
-void TestAwsAbstractRequest::isValid()
-{
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QByteArray, data);
+    MockRequest request;
+    QCOMPARE(request.data(), QByteArray());
+    request.setData(data);
+    QCOMPARE(request.data(), data);
 }
 
 void TestAwsAbstractRequest::networkRequest_data()
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    QTest::addColumn<QUrl>("endpoint");
+    QTest::addColumn<QString>("accessKeyId");
+    QTest::addColumn<QString>("secretKey");
+    QTest::addColumn<QString>("token");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+    QTest::addColumn<QByteArray>("data");
+
+    QTest::newRow("null")
+        << QUrl() << QString() << QString() << QString()
+        << QNetworkAccessManager::UnknownOperation << QByteArray();
+
+    QTest::newRow("1")
+        << QUrl(QLatin1String("http://example.com"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("secret")
+        << QString::fromLatin1("token")
+        << QNetworkAccessManager::GetOperation
+        << QByteArray("abc123");
 }
 
 void TestAwsAbstractRequest::networkRequest()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QUrl,    endpoint);
+    QFETCH(QString, accessKeyId);
+    QFETCH(QString, secretKey);
+    QFETCH(QString, token);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QByteArray, data);
+
+    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
+    const MockSignature signature;
+    MockRequest mockRequest;
+    mockRequest.setOperation(operation);
+    mockRequest.setData(data);
+    const QNetworkRequest request =
+        mockRequest.networkRequest(endpoint, signature, credentials);
+    QCOMPARE(request.url(), endpoint);
+    QCOMPARE(request.rawHeader("test-accessKeyId"), accessKeyId.toLocal8Bit());
+    QCOMPARE(request.rawHeader("test-secretKey"),   secretKey.toLocal8Bit());
+    QCOMPARE(request.rawHeader("test-token"),       token.toLocal8Bit());
+    QCOMPARE(request.rawHeader("test-operation"),   QByteArray(1, (int)operation));
+    QCOMPARE(request.rawHeader("test-data"),        data);
 }
 
 void TestAwsAbstractRequest::operation_data()
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+    #define NEW_ROW(op) QTest::newRow(#op) << QNetworkAccessManager::op##Operation
+    NEW_ROW(Head);
+    NEW_ROW(Get);
+    NEW_ROW(Put);
+    NEW_ROW(Post);
+    NEW_ROW(Delete);
+    NEW_ROW(Custom);
+    NEW_ROW(Unknown);
+    #undef NEW_ROW
 }
 
 void TestAwsAbstractRequest::operation()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    MockRequest request;
+    QCOMPARE(request.operation(), QNetworkAccessManager::GetOperation);
+    request.setOperation(operation);
+    QCOMPARE(request.operation(), operation);
 }
 
 void TestAwsAbstractRequest::send_data()
@@ -123,30 +188,6 @@ void TestAwsAbstractRequest::send_data()
 }
 
 void TestAwsAbstractRequest::send()
-{
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
-}
-
-void TestAwsAbstractRequest::response_data()
-{
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
-}
-
-void TestAwsAbstractRequest::response()
-{
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
-}
-
-void TestAwsAbstractRequest::unsignedRequest_data()
-{
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
-}
-
-void TestAwsAbstractRequest::unsignedRequest()
 {
     QFETCH(QString, foo);
     Q_UNUSED(foo)
