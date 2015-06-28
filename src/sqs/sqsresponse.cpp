@@ -125,7 +125,7 @@ SqsErrorList SqsResponse::serviceErrors() const
  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  *
  * For example:
- * @code
+ * @code{xml}
  * <ErrorResponse>
  *   <Error>
  *     <Type>Sender</Type>
@@ -190,7 +190,7 @@ SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  *
  * For example:
- * @code
+ * @code{xml}
  * <ErrorResponse>
  *   <Error>
  *     <Type>Sender</Type>
@@ -234,7 +234,7 @@ void SqsResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  *
  * For example:
- * @code
+ * @code{xml}
  * <ResponseMetadata>
  *   <RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>
  * </ResponseMetadata>
