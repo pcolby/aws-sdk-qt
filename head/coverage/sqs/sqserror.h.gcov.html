@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-27 16:13:35</td>
+            <td class="headerValue">2015-06-28 17:14:30</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -97,65 +97,71 @@
 <span class="lineNum">      35 </span>            : class QTAWS_EXPORT SqsError {
 <span class="lineNum">      36 </span>            : 
 <span class="lineNum">      37 </span>            : public:
-<span class="lineNum">      38 </span>            :     enum ErrorCode {
-<span class="lineNum">      39 </span>            :         AccessDenied,
-<span class="lineNum">      40 </span>            :         IncompleteSignature,
-<span class="lineNum">      41 </span>            :         InternalFailure,
-<span class="lineNum">      42 </span>            :         InvalidAction,
-<span class="lineNum">      43 </span>            :         InvalidClientTokenId,
-<span class="lineNum">      44 </span>            :         InvalidParameterCombination,
-<span class="lineNum">      45 </span>            :         InvalidParameterValue,
-<span class="lineNum">      46 </span>            :         InvalidQueryParameter,
-<span class="lineNum">      47 </span>            :         MalformedQueryString,
-<span class="lineNum">      48 </span>            :         MissingAction,
-<span class="lineNum">      49 </span>            :         MissingAuthenticationToken,
-<span class="lineNum">      50 </span>            :         MissingParameter,
-<span class="lineNum">      51 </span>            :         OptInRequired,
-<span class="lineNum">      52 </span>            :         RequestExpired,
-<span class="lineNum">      53 </span>            :         ServiceUnavailable,
-<span class="lineNum">      54 </span>            :         Throttling,
-<span class="lineNum">      55 </span>            :         ValidationError,
-<span class="lineNum">      56 </span>            :         OtherError = 0xFF
-<span class="lineNum">      57 </span>            :     };
-<span class="lineNum">      58 </span>            : 
-<span class="lineNum">      59 </span>            :     enum ErrorType {
-<span class="lineNum">      60 </span>            :         ReceiverType,
-<span class="lineNum">      61 </span>            :         SenderType,
-<span class="lineNum">      62 </span>            :         OtherType = 0xFF
-<span class="lineNum">      63 </span>            :     };
-<span class="lineNum">      64 </span>            : 
-<span class="lineNum">      65 </span>            :     SqsError(QXmlStreamReader &amp;xml);
-<span class="lineNum">      66 </span>            : 
-<span class="lineNum">      67 </span>            :     // Qt container class support.
-<span class="lineNum">      68 </span>            :     SqsError();
-<span class="lineNum">      69 </span>            :     SqsError(const SqsError &amp;other);
-<span class="lineNum">      70 </span>            :     SqsError &amp;operator=(const SqsError &amp;other);
-<span class="lineNum">      71 </span>            : 
-<span class="lineNum">      72 </span>            :     virtual ~SqsError();
-<span class="lineNum">      73 </span>            : 
-<span class="lineNum">      74 </span>            :     ErrorCode code() const;
-<span class="lineNum">      75 </span>            :     QVariantMap detail() const;
-<span class="lineNum">      76 </span>            :     QString message() const;
-<span class="lineNum">      77 </span>            :     QString rawCode() const;
-<span class="lineNum">      78 </span>            :     QString rawType() const;
-<span class="lineNum">      79 </span>            :     ErrorType type() const;
-<span class="lineNum">      80 </span>            : 
-<span class="lineNum">      81 </span>            : protected:
-<span class="lineNum">      82 </span>            :     /// @cond internal
-<span class="lineNum">      83 </span>            :     SqsErrorPrivate * const d_ptr; ///&lt; Internal d-pointer.
-<span class="lineNum">      84 </span>            :     SqsError(SqsErrorPrivate * const d);
-<span class="lineNum">      85 </span>            :     /// @endcond
-<a name="86"><span class="lineNum">      86 </span>            : </a>
-<span class="lineNum">      87 </span>            : private:
-<span class="lineNum">      88 </span><span class="lineNoCov">          0 :     Q_DECLARE_PRIVATE(SqsError)</span>
-<span class="lineNum">      89 </span>            : 
-<span class="lineNum">      90 </span>            : };
-<span class="lineNum">      91 </span>            : 
-<span class="lineNum">      92 </span>            : typedef QList&lt;SqsError&gt; SqsErrorList;
-<span class="lineNum">      93 </span>            : 
-<span class="lineNum">      94 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      38 </span>            :     /// SQS error codes.
+<span class="lineNum">      39 </span>            :     /// @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+<span class="lineNum">      40 </span>            :     enum ErrorCode {
+<span class="lineNum">      41 </span>            :         AccessDenied,
+<span class="lineNum">      42 </span>            :         IncompleteSignature,
+<span class="lineNum">      43 </span>            :         InternalFailure,
+<span class="lineNum">      44 </span>            :         InvalidAction,
+<span class="lineNum">      45 </span>            :         InvalidClientTokenId,
+<span class="lineNum">      46 </span>            :         InvalidParameterCombination,
+<span class="lineNum">      47 </span>            :         InvalidParameterValue,
+<span class="lineNum">      48 </span>            :         InvalidQueryParameter,
+<span class="lineNum">      49 </span>            :         MalformedQueryString,
+<span class="lineNum">      50 </span>            :         MissingAction,
+<span class="lineNum">      51 </span>            :         MissingAuthenticationToken,
+<span class="lineNum">      52 </span>            :         MissingParameter,
+<span class="lineNum">      53 </span>            :         OptInRequired,
+<span class="lineNum">      54 </span>            :         RequestExpired,
+<span class="lineNum">      55 </span>            :         ServiceUnavailable,
+<span class="lineNum">      56 </span>            :         Throttling,
+<span class="lineNum">      57 </span>            :         ValidationError,
+<span class="lineNum">      58 </span>            :         OtherError = 0xFF
+<span class="lineNum">      59 </span>            :     };
+<span class="lineNum">      60 </span>            : 
+<span class="lineNum">      61 </span>            :     /// SQS error types.
+<span class="lineNum">      62 </span>            :     /// @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+<span class="lineNum">      63 </span>            :     enum ErrorType {
+<span class="lineNum">      64 </span>            :         ReceiverType,
+<span class="lineNum">      65 </span>            :         SenderType,
+<span class="lineNum">      66 </span>            :         OtherType = 0xFF
+<span class="lineNum">      67 </span>            :     };
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span>            :     SqsError(QXmlStreamReader &amp;xml);
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            :     // Qt container class support.
+<span class="lineNum">      72 </span>            :     /// @cond internal
+<span class="lineNum">      73 </span>            :     SqsError();
+<span class="lineNum">      74 </span>            :     SqsError(const SqsError &amp;other);
+<span class="lineNum">      75 </span>            :     SqsError &amp;operator=(const SqsError &amp;other);
+<span class="lineNum">      76 </span>            :     /// @endcond
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            :     virtual ~SqsError();
+<span class="lineNum">      79 </span>            : 
+<span class="lineNum">      80 </span>            :     ErrorCode code() const;
+<span class="lineNum">      81 </span>            :     QVariantMap detail() const;
+<span class="lineNum">      82 </span>            :     QString message() const;
+<span class="lineNum">      83 </span>            :     QString rawCode() const;
+<span class="lineNum">      84 </span>            :     QString rawType() const;
+<span class="lineNum">      85 </span>            :     ErrorType type() const;
+<span class="lineNum">      86 </span>            : 
+<span class="lineNum">      87 </span>            : protected:
+<span class="lineNum">      88 </span>            :     /// @cond internal
+<span class="lineNum">      89 </span>            :     SqsErrorPrivate * const d_ptr; ///&lt; Internal d-pointer.
+<span class="lineNum">      90 </span>            :     SqsError(SqsErrorPrivate * const d);
+<span class="lineNum">      91 </span>            :     /// @endcond
+<a name="92"><span class="lineNum">      92 </span>            : </a>
+<span class="lineNum">      93 </span>            : private:
+<span class="lineNum">      94 </span><span class="lineNoCov">          0 :     Q_DECLARE_PRIVATE(SqsError)</span>
 <span class="lineNum">      95 </span>            : 
-<span class="lineNum">      96 </span>            : #endif
+<span class="lineNum">      96 </span>            : };
+<span class="lineNum">      97 </span>            : 
+<span class="lineNum">      98 </span>            : typedef QList&lt;SqsError&gt; SqsErrorList;
+<span class="lineNum">      99 </span>            : 
+<span class="lineNum">     100 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">     101 </span>            : 
+<span class="lineNum">     102 </span>            : #endif
 </pre>
       </td>
     </tr>

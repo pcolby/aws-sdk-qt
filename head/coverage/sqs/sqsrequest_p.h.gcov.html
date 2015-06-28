@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-27 16:13:35</td>
+            <td class="headerValue">2015-06-28 17:14:30</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -95,9 +95,9 @@
 <span class="lineNum">      33 </span><span class="lineNoCov">          0 : class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {</span>
 <span class="lineNum">      34 </span>            : 
 <span class="lineNum">      35 </span>            : public:
-<span class="lineNum">      36 </span>            :     SqsRequest::SqsAction action;
-<span class="lineNum">      37 </span>            :     QString apiVersion;
-<span class="lineNum">      38 </span>            :     QVariantMap parameters;
+<span class="lineNum">      36 </span>            :     SqsRequest::SqsAction action; ///&lt; SQS action to be performed.
+<span class="lineNum">      37 </span>            :     QString apiVersion;           ///&lt; SQS API version string.
+<span class="lineNum">      38 </span>            :     QVariantMap parameters;       ///&lt; SQS request (query string) parameters.
 <span class="lineNum">      39 </span>            : 
 <span class="lineNum">      40 </span>            :     SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q);
 <span class="lineNum">      41 </span>            : 

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-27 16:13:35</td>
+            <td class="headerValue">2015-06-28 17:14:30</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">7</td>
@@ -110,36 +110,36 @@
 <span class="lineNum">      48 </span>            :  * @param  hashAlgorithm  Hash algorithm for signatures.  Must be either QCryptographicHash::Sha1
 <a name="49"><span class="lineNum">      49 </span>            :  *                        or QCryptographicHash::Sha256 (default, recommended).</a>
 <span class="lineNum">      50 </span>            :  */
-<span class="lineNum">      51 </span><span class="lineCov">         36 : AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)</span>
-<span class="lineNum">      52 </span><span class="lineCov">         36 :         : AwsAbstractSignature(new AwsSignatureV2Private(hashAlgorithm, this))</span>
+<span class="lineNum">      51 </span><span class="lineCov">        332 : AwsSignatureV2::AwsSignatureV2(const QCryptographicHash::Algorithm hashAlgorithm)</span>
+<span class="lineNum">      52 </span><span class="lineCov">        332 :         : AwsAbstractSignature(new AwsSignatureV2Private(hashAlgorithm, this))</span>
 <span class="lineNum">      53 </span>            : {
-<span class="lineNum">      54 </span><span class="lineCov">         36 :     Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));</span>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         36 : }</span></a>
+<span class="lineNum">      54 </span><span class="lineCov">        332 :     Q_ASSERT((hashAlgorithm == QCryptographicHash::Sha1) || (hashAlgorithm == QCryptographicHash::Sha256));</span>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">        332 : }</span></a>
 <span class="lineNum">      56 </span>            : 
-<span class="lineNum">      57 </span><span class="lineCov">          2 : void AwsSignatureV2::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">      57 </span><span class="lineCov">         18 : void AwsSignatureV2::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
 <span class="lineNum">      58 </span>            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
 <span class="lineNum">      59 </span>            : {
 <span class="lineNum">      60 </span>            :     Q_UNUSED(data) // Not included in V2 signatures.
-<span class="lineNum">      61 </span><span class="lineCov">          2 :     Q_D(const AwsSignatureV2);</span>
+<span class="lineNum">      61 </span><span class="lineCov">         18 :     Q_D(const AwsSignatureV2);</span>
 <span class="lineNum">      62 </span>            : 
 <span class="lineNum">      63 </span>            :     // Set the AccessKeyId, SignatureMethod, SignatureVersion and Timestamp query items, if not already.
-<span class="lineNum">      64 </span><span class="lineCov">          2 :     d-&gt;adornRequest(request, credentials);</span>
+<span class="lineNum">      64 </span><span class="lineCov">         18 :     d-&gt;adornRequest(request, credentials);</span>
 <span class="lineNum">      65 </span>            : 
 <span class="lineNum">      66 </span>            :     // Calculate the signature.
-<span class="lineNum">      67 </span><span class="lineCov">          2 :     const QByteArray stringToSign = d-&gt;canonicalRequest(operation, request.url());</span>
+<span class="lineNum">      67 </span><span class="lineCov">         18 :     const QByteArray stringToSign = d-&gt;canonicalRequest(operation, request.url());</span>
 <span class="lineNum">      68 </span>            :     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
-<span class="lineNum">      69 </span><span class="lineCov">          2 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
-<span class="lineNum">      70 </span><span class="lineCov">          6 :                                          d-&gt;hashAlgorithm).toBase64())));</span>
+<span class="lineNum">      69 </span><span class="lineCov">         18 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
+<span class="lineNum">      70 </span><span class="lineCov">         54 :                                          d-&gt;hashAlgorithm).toBase64())));</span>
 <span class="lineNum">      71 </span>            : 
 <span class="lineNum">      72 </span>            :     // Append the signature to the request.
-<span class="lineNum">      73 </span><span class="lineCov">          4 :     QUrl url = request.url();</span>
-<span class="lineNum">      74 </span><span class="lineCov">          2 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
-<span class="lineNum">      75 </span><span class="lineCov">          4 :     request.setUrl(url);</span>
-<a name="76"><span class="lineNum">      76 </span><span class="lineCov">          2 : }</span></a>
+<span class="lineNum">      73 </span><span class="lineCov">         36 :     QUrl url = request.url();</span>
+<span class="lineNum">      74 </span><span class="lineCov">         18 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
+<span class="lineNum">      75 </span><span class="lineCov">         36 :     request.setUrl(url);</span>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">         18 : }</span></a>
 <span class="lineNum">      77 </span>            : 
-<span class="lineNum">      78 </span><span class="lineCov">          2 : int AwsSignatureV2::version() const</span>
+<span class="lineNum">      78 </span><span class="lineCov">         18 : int AwsSignatureV2::version() const</span>
 <span class="lineNum">      79 </span>            : {
-<span class="lineNum">      80 </span><span class="lineCov">          2 :     return 2;</span>
+<span class="lineNum">      80 </span><span class="lineCov">         18 :     return 2;</span>
 <span class="lineNum">      81 </span>            : }
 <span class="lineNum">      82 </span>            : 
 <span class="lineNum">      83 </span>            : /**
@@ -160,127 +160,128 @@
 <span class="lineNum">      98 </span>            :  *
 <span class="lineNum">      99 </span>            :  * @brief  Constructs a new AwsSignatureV2Private object.
 <span class="lineNum">     100 </span>            :  *
-<a name="101"><span class="lineNum">     101 </span>            :  * @param  q  Pointer to this object's public AwsSignatureV2 instance.</a>
-<span class="lineNum">     102 </span>            :  */
-<span class="lineNum">     103 </span><span class="lineCov">         36 : AwsSignatureV2Private::AwsSignatureV2Private(</span>
-<span class="lineNum">     104 </span>            :         const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
-<span class="lineNum">     105 </span><span class="lineCov">         36 :     : AwsAbstractSignaturePrivate(q), hashAlgorithm(algorithm)</span>
-<span class="lineNum">     106 </span>            : {
-<span class="lineNum">     107 </span>            : 
-<span class="lineNum">     108 </span><span class="lineCov">         36 : }</span>
-<span class="lineNum">     109 </span>            : 
-<span class="lineNum">     110 </span>            : /**
-<span class="lineNum">     111 </span>            :  * @internal
-<span class="lineNum">     112 </span>            :  *
-<span class="lineNum">     113 </span>            :  * @brief  Add AWS Signature Version 2 adornments to an AWS request.
-<span class="lineNum">     114 </span>            :  *
-<span class="lineNum">     115 </span>            :  * In addition to service-specific request parameters, Amazon requires that version
-<span class="lineNum">     116 </span>            :  * 2 signatures contain a number of common query parameters.  This functions adds
-<span class="lineNum">     117 </span>            :  * those query parameters to \a request if they're not already present.
-<span class="lineNum">     118 </span>            :  *
-<span class="lineNum">     119 </span>            :  * The query parameters added by this function, as required by Amazon, are:
-<span class="lineNum">     120 </span>            :  *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
-<span class="lineNum">     121 </span>            :  *   * `SignatureMethod` - set to `HMAC-SHA1` or `HMAC-SHA256`.
-<span class="lineNum">     122 </span>            :  *   * `SignatureVersion` - set to `2`.
-<span class="lineNum">     123 </span>            :  *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
-<span class="lineNum">     124 </span>            :  *                 `2013-10-30T12:34:56Z`.
-<span class="lineNum">     125 </span>            :  *
-<span class="lineNum">     126 </span>            :  * @param  request      Request to adorn.
-<span class="lineNum">     127 </span>            :  * @param  credentials  Credentials to use when adorning \a request.
-<span class="lineNum">     128 </span>            :  *
-<span class="lineNum">     129 </span>            :  * @see    signatureMethod
-<a name="130"><span class="lineNum">     130 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
-<span class="lineNum">     131 </span>            :  */
-<span class="lineNum">     132 </span><span class="lineCov">          6 : void AwsSignatureV2Private::adornRequest(QNetworkRequest &amp;request,</span>
-<span class="lineNum">     133 </span>            :                                          const AwsAbstractCredentials &amp;credentials) const
-<span class="lineNum">     134 </span>            : {
-<span class="lineNum">     135 </span>            :     // Set / add the necessary query items.
-<span class="lineNum">     136 </span><span class="lineCov">          6 :     QUrl url = request.url();</span>
-<span class="lineNum">     137 </span><span class="lineCov">         12 :     QUrlQuery query(url);</span>
-<span class="lineNum">     138 </span><span class="lineCov">          6 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
-<span class="lineNum">     139 </span><span class="lineCov">          6 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QLatin1String(&quot;2&quot;));</span>
-<span class="lineNum">     140 </span><span class="lineCov">          6 :     setQueryItem(query, QLatin1String(&quot;SignatureMethod&quot;), QString::fromUtf8(signatureMethod(hashAlgorithm)));</span>
-<span class="lineNum">     141 </span>            :     setQueryItem(query, QLatin1String(&quot;Timestamp&quot;),
-<span class="lineNum">     142 </span>            :                     QString::fromUtf8(QUrl::toPercentEncoding(
-<span class="lineNum">     143 </span>            :                         QDateTime::currentDateTimeUtc().toString(QLatin1String(&quot;yyyy-MM-ddThh:mm:ssZ&quot;))
-<span class="lineNum">     144 </span>            :                     )),
-<span class="lineNum">     145 </span><span class="lineCov">          6 :                     false); // Don't warn if its already set to something else.</span>
-<span class="lineNum">     146 </span>            : 
-<span class="lineNum">     147 </span>            :     // If we've touched the query items (likely), then update the request.
-<span class="lineNum">     148 </span><span class="lineCov">          6 :     if (query != QUrlQuery(url)) {</span>
-<span class="lineNum">     149 </span><span class="lineCov">          4 :         qDebug() &lt;&lt; url;</span>
-<span class="lineNum">     150 </span><span class="lineCov">          4 :         url.setQuery(query);</span>
-<span class="lineNum">     151 </span><span class="lineCov">          4 :         qDebug() &lt;&lt; url;</span>
-<span class="lineNum">     152 </span><span class="lineCov">          4 :         request.setUrl(url);</span>
-<span class="lineNum">     153 </span><span class="lineCov">          6 :     }</span>
-<span class="lineNum">     154 </span><span class="lineCov">          6 : }</span>
-<span class="lineNum">     155 </span>            : 
-<span class="lineNum">     156 </span>            : /**
-<span class="lineNum">     157 </span>            :  * @internal
-<span class="lineNum">     158 </span>            :  *
-<span class="lineNum">     159 </span>            :  * @brief  Create an AWS V2 Signature canonical request.
-<span class="lineNum">     160 </span>            :  *
-<span class="lineNum">     161 </span>            :  * This function creates a canonical representation of an AWS request as defined by
-<span class="lineNum">     162 </span>            :  * Amazon's V2 signature specification.
-<span class="lineNum">     163 </span>            :  *
-<span class="lineNum">     164 </span>            :  * For example, for the following HTTP `GET` request:
-<span class="lineNum">     165 </span>            :  *
-<span class="lineNum">     166 </span>            :  *     https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&amp;Version=2009-03-31&amp;AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30
-<span class="lineNum">     167 </span>            :  *
-<span class="lineNum">     168 </span>            :  * this function will return the following canonical form:
-<span class="lineNum">     169 </span>            :  *
-<span class="lineNum">     170 </span>            :  *     GET
-<span class="lineNum">     171 </span>            :  *     elasticmapreduce.amazonaws.com
-<span class="lineNum">     172 </span>            :  *     /
-<span class="lineNum">     173 </span>            :  *     AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;Action=DescribeJobFlows&amp;SignatureMethod=HmacSHA256&amp;SignatureVersion=2&amp;Timestamp=2011-10-03T15%3A19%3A30&amp;Version=2009-03-31
-<span class="lineNum">     174 </span>            :  *
-<span class="lineNum">     175 </span>            :  * @note  All URL components are encoded to UTF-8, as required by Amazon.
-<span class="lineNum">     176 </span>            :  *
-<span class="lineNum">     177 </span>            :  * @param  operation  The HTTP method being requested.
-<span class="lineNum">     178 </span>            :  * @param  url        The URL being request.
-<span class="lineNum">     179 </span>            :  *
-<span class="lineNum">     180 </span>            :  * @return An AWS V2 Signature canonical request.
-<span class="lineNum">     181 </span>            :  *
-<a name="182"><span class="lineNum">     182 </span>            :  * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
-<span class="lineNum">     183 </span>            :  */
-<span class="lineNum">     184 </span><span class="lineCov">          4 : QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
-<span class="lineNum">     185 </span>            :                                                    const QUrl &amp;url) const
-<span class="lineNum">     186 </span>            : {
-<span class="lineNum">     187 </span><span class="lineCov">          8 :     return httpMethod(operation).toUtf8() + '\n' +</span>
-<span class="lineNum">     188 </span><span class="lineCov">         16 :            url.host().toUtf8() + '\n' +</span>
-<span class="lineNum">     189 </span><span class="lineCov">          8 :            canonicalPath(url).toUtf8() + '\n' +</span>
-<span class="lineNum">     190 </span><span class="lineCov">         12 :            canonicalQuery(QUrlQuery(url));</span>
-<span class="lineNum">     191 </span>            : }
-<span class="lineNum">     192 </span>            : 
-<span class="lineNum">     193 </span>            : /**
-<span class="lineNum">     194 </span>            :  * @brief  Create an AWS V2 Signature method designation.
-<span class="lineNum">     195 </span>            :  *
-<span class="lineNum">     196 </span>            :  * This function returns a signature method designation, as defined by Amazon, for
-<span class="lineNum">     197 </span>            :  * use with V2 signatures.
-<span class="lineNum">     198 </span>            :  *
-<span class="lineNum">     199 </span>            :  * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
-<span class="lineNum">     200 </span>            :  * return `HmacSHA256`.
-<span class="lineNum">     201 </span>            :  *
-<span class="lineNum">     202 </span>            :  * @note   Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.
-<span class="lineNum">     203 </span>            :  *
-<span class="lineNum">     204 </span>            :  * @param  algorithm  The hash algorithm to get the canonical designation for.
-<span class="lineNum">     205 </span>            :  *
-<span class="lineNum">     206 </span>            :  * @return An AWS V2 Signature method designation.
-<span class="lineNum">     207 </span>            :  *
-<a name="208"><span class="lineNum">     208 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
-<span class="lineNum">     209 </span>            :  */
-<span class="lineNum">     210 </span><span class="lineCov">         32 : QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algorithm algorithm) const</span>
-<span class="lineNum">     211 </span>            : {
-<span class="lineNum">     212 </span><span class="lineCov">         32 :     switch (algorithm) {</span>
-<span class="lineNum">     213 </span><span class="lineCov">          6 :         case QCryptographicHash::Sha1:     return &quot;HmacSHA1&quot;;</span>
-<span class="lineNum">     214 </span><span class="lineCov">          8 :         case QCryptographicHash::Sha256:   return &quot;HmacSHA256&quot;;</span>
-<span class="lineNum">     215 </span>            :         default:
-<span class="lineNum">     216 </span><span class="lineCov">         18 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid algorithm&quot;);</span>
-<span class="lineNum">     217 </span><span class="lineCov">         18 :             return &quot;invalid-algorithm&quot;;</span>
-<span class="lineNum">     218 </span>            :     }
-<span class="lineNum">     219 </span>            : }
-<span class="lineNum">     220 </span>            : 
-<span class="lineNum">     221 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">     101 </span>            :  * @param  algorithm  Hash algorithm for signatures.
+<a name="102"><span class="lineNum">     102 </span>            :  * @param  q          Pointer to this object's public AwsSignatureV2 instance.</a>
+<span class="lineNum">     103 </span>            :  */
+<span class="lineNum">     104 </span><span class="lineCov">        332 : AwsSignatureV2Private::AwsSignatureV2Private(</span>
+<span class="lineNum">     105 </span>            :         const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
+<span class="lineNum">     106 </span><span class="lineCov">        332 :     : AwsAbstractSignaturePrivate(q), hashAlgorithm(algorithm)</span>
+<span class="lineNum">     107 </span>            : {
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span><span class="lineCov">        332 : }</span>
+<span class="lineNum">     110 </span>            : 
+<span class="lineNum">     111 </span>            : /**
+<span class="lineNum">     112 </span>            :  * @internal
+<span class="lineNum">     113 </span>            :  *
+<span class="lineNum">     114 </span>            :  * @brief  Add AWS Signature Version 2 adornments to an AWS request.
+<span class="lineNum">     115 </span>            :  *
+<span class="lineNum">     116 </span>            :  * In addition to service-specific request parameters, Amazon requires that version
+<span class="lineNum">     117 </span>            :  * 2 signatures contain a number of common query parameters.  This functions adds
+<span class="lineNum">     118 </span>            :  * those query parameters to \a request if they're not already present.
+<span class="lineNum">     119 </span>            :  *
+<span class="lineNum">     120 </span>            :  * The query parameters added by this function, as required by Amazon, are:
+<span class="lineNum">     121 </span>            :  *   * `AWSAccessKeyId` - set to \a credentials.accessKeyId().
+<span class="lineNum">     122 </span>            :  *   * `SignatureMethod` - set to `HMAC-SHA1` or `HMAC-SHA256`.
+<span class="lineNum">     123 </span>            :  *   * `SignatureVersion` - set to `2`.
+<span class="lineNum">     124 </span>            :  *   * `Timestamp` - set to a current UTC timestamp in an ISO 8601 format, like
+<span class="lineNum">     125 </span>            :  *                 `2013-10-30T12:34:56Z`.
+<span class="lineNum">     126 </span>            :  *
+<span class="lineNum">     127 </span>            :  * @param  request      Request to adorn.
+<span class="lineNum">     128 </span>            :  * @param  credentials  Credentials to use when adorning \a request.
+<span class="lineNum">     129 </span>            :  *
+<span class="lineNum">     130 </span>            :  * @see    signatureMethod
+<a name="131"><span class="lineNum">     131 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
+<span class="lineNum">     132 </span>            :  */
+<span class="lineNum">     133 </span><span class="lineCov">         54 : void AwsSignatureV2Private::adornRequest(QNetworkRequest &amp;request,</span>
+<span class="lineNum">     134 </span>            :                                          const AwsAbstractCredentials &amp;credentials) const
+<span class="lineNum">     135 </span>            : {
+<span class="lineNum">     136 </span>            :     // Set / add the necessary query items.
+<span class="lineNum">     137 </span><span class="lineCov">         54 :     QUrl url = request.url();</span>
+<span class="lineNum">     138 </span><span class="lineCov">        108 :     QUrlQuery query(url);</span>
+<span class="lineNum">     139 </span><span class="lineCov">         54 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
+<span class="lineNum">     140 </span><span class="lineCov">         54 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QLatin1String(&quot;2&quot;));</span>
+<span class="lineNum">     141 </span><span class="lineCov">         54 :     setQueryItem(query, QLatin1String(&quot;SignatureMethod&quot;), QString::fromUtf8(signatureMethod(hashAlgorithm)));</span>
+<span class="lineNum">     142 </span>            :     setQueryItem(query, QLatin1String(&quot;Timestamp&quot;),
+<span class="lineNum">     143 </span>            :                     QString::fromUtf8(QUrl::toPercentEncoding(
+<span class="lineNum">     144 </span>            :                         QDateTime::currentDateTimeUtc().toString(QLatin1String(&quot;yyyy-MM-ddThh:mm:ssZ&quot;))
+<span class="lineNum">     145 </span>            :                     )),
+<span class="lineNum">     146 </span><span class="lineCov">         54 :                     false); // Don't warn if its already set to something else.</span>
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span>            :     // If we've touched the query items (likely), then update the request.
+<span class="lineNum">     149 </span><span class="lineCov">         54 :     if (query != QUrlQuery(url)) {</span>
+<span class="lineNum">     150 </span><span class="lineCov">         36 :         qDebug() &lt;&lt; url;</span>
+<span class="lineNum">     151 </span><span class="lineCov">         36 :         url.setQuery(query);</span>
+<span class="lineNum">     152 </span><span class="lineCov">         36 :         qDebug() &lt;&lt; url;</span>
+<span class="lineNum">     153 </span><span class="lineCov">         36 :         request.setUrl(url);</span>
+<span class="lineNum">     154 </span><span class="lineCov">         54 :     }</span>
+<span class="lineNum">     155 </span><span class="lineCov">         54 : }</span>
+<span class="lineNum">     156 </span>            : 
+<span class="lineNum">     157 </span>            : /**
+<span class="lineNum">     158 </span>            :  * @internal
+<span class="lineNum">     159 </span>            :  *
+<span class="lineNum">     160 </span>            :  * @brief  Create an AWS V2 Signature canonical request.
+<span class="lineNum">     161 </span>            :  *
+<span class="lineNum">     162 </span>            :  * This function creates a canonical representation of an AWS request as defined by
+<span class="lineNum">     163 </span>            :  * Amazon's V2 signature specification.
+<span class="lineNum">     164 </span>            :  *
+<span class="lineNum">     165 </span>            :  * For example, for the following HTTP `GET` request:
+<span class="lineNum">     166 </span>            :  *
+<span class="lineNum">     167 </span>            :  *     https://elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&amp;Version=2009-03-31&amp;AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30
+<span class="lineNum">     168 </span>            :  *
+<span class="lineNum">     169 </span>            :  * this function will return the following canonical form:
+<span class="lineNum">     170 </span>            :  *
+<span class="lineNum">     171 </span>            :  *     GET
+<span class="lineNum">     172 </span>            :  *     elasticmapreduce.amazonaws.com
+<span class="lineNum">     173 </span>            :  *     /
+<span class="lineNum">     174 </span>            :  *     AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;Action=DescribeJobFlows&amp;SignatureMethod=HmacSHA256&amp;SignatureVersion=2&amp;Timestamp=2011-10-03T15%3A19%3A30&amp;Version=2009-03-31
+<span class="lineNum">     175 </span>            :  *
+<span class="lineNum">     176 </span>            :  * @note  All URL components are encoded to UTF-8, as required by Amazon.
+<span class="lineNum">     177 </span>            :  *
+<span class="lineNum">     178 </span>            :  * @param  operation  The HTTP method being requested.
+<span class="lineNum">     179 </span>            :  * @param  url        The URL being request.
+<span class="lineNum">     180 </span>            :  *
+<span class="lineNum">     181 </span>            :  * @return An AWS V2 Signature canonical request.
+<span class="lineNum">     182 </span>            :  *
+<a name="183"><span class="lineNum">     183 </span>            :  * @see http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
+<span class="lineNum">     184 </span>            :  */
+<span class="lineNum">     185 </span><span class="lineCov">         36 : QByteArray AwsSignatureV2Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">     186 </span>            :                                                    const QUrl &amp;url) const
+<span class="lineNum">     187 </span>            : {
+<span class="lineNum">     188 </span><span class="lineCov">         72 :     return httpMethod(operation).toUtf8() + '\n' +</span>
+<span class="lineNum">     189 </span><span class="lineCov">        144 :            url.host().toUtf8() + '\n' +</span>
+<span class="lineNum">     190 </span><span class="lineCov">         72 :            canonicalPath(url).toUtf8() + '\n' +</span>
+<span class="lineNum">     191 </span><span class="lineCov">        108 :            canonicalQuery(QUrlQuery(url));</span>
+<span class="lineNum">     192 </span>            : }
+<span class="lineNum">     193 </span>            : 
+<span class="lineNum">     194 </span>            : /**
+<span class="lineNum">     195 </span>            :  * @brief  Create an AWS V2 Signature method designation.
+<span class="lineNum">     196 </span>            :  *
+<span class="lineNum">     197 </span>            :  * This function returns a signature method designation, as defined by Amazon, for
+<span class="lineNum">     198 </span>            :  * use with V2 signatures.
+<span class="lineNum">     199 </span>            :  *
+<span class="lineNum">     200 </span>            :  * For example, if the algorith is `QCryptographicHash::Sha256`, this function will
+<span class="lineNum">     201 </span>            :  * return `HmacSHA256`.
+<span class="lineNum">     202 </span>            :  *
+<span class="lineNum">     203 </span>            :  * @note   Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.
+<span class="lineNum">     204 </span>            :  *
+<span class="lineNum">     205 </span>            :  * @param  algorithm  The hash algorithm to get the canonical designation for.
+<span class="lineNum">     206 </span>            :  *
+<span class="lineNum">     207 </span>            :  * @return An AWS V2 Signature method designation.
+<span class="lineNum">     208 </span>            :  *
+<a name="209"><span class="lineNum">     209 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>
+<span class="lineNum">     210 </span>            :  */
+<span class="lineNum">     211 </span><span class="lineCov">        288 : QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algorithm algorithm) const</span>
+<span class="lineNum">     212 </span>            : {
+<span class="lineNum">     213 </span><span class="lineCov">        288 :     switch (algorithm) {</span>
+<span class="lineNum">     214 </span><span class="lineCov">         54 :         case QCryptographicHash::Sha1:     return &quot;HmacSHA1&quot;;</span>
+<span class="lineNum">     215 </span><span class="lineCov">         72 :         case QCryptographicHash::Sha256:   return &quot;HmacSHA256&quot;;</span>
+<span class="lineNum">     216 </span>            :         default:
+<span class="lineNum">     217 </span><span class="lineCov">        162 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid algorithm&quot;);</span>
+<span class="lineNum">     218 </span><span class="lineCov">        162 :             return &quot;invalid-algorithm&quot;;</span>
+<span class="lineNum">     219 </span>            :     }
+<span class="lineNum">     220 </span>            : }
+<span class="lineNum">     221 </span>            : 
+<span class="lineNum">     222 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>

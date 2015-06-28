@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-27 16:13:35</td>
+            <td class="headerValue">2015-06-28 17:14:30</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -98,8 +98,8 @@
 <span class="lineNum">      36 </span>            : class QTAWS_EXPORT AwsAbstractRequestPrivate {
 <span class="lineNum">      37 </span>            : 
 <span class="lineNum">      38 </span>            : public:
-<span class="lineNum">      39 </span>            :     QByteArray data;
-<span class="lineNum">      40 </span>            :     QNetworkAccessManager::Operation operation;
+<span class="lineNum">      39 </span>            :     QByteArray data;                            ///&lt; Data for POST/PUT operations.
+<span class="lineNum">      40 </span>            :     QNetworkAccessManager::Operation operation; ///&lt; Network operation to use.
 <span class="lineNum">      41 </span>            : 
 <span class="lineNum">      42 </span>            :     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
 <span class="lineNum">      43 </span>            : 
