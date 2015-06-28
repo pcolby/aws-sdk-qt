@@ -23,8 +23,125 @@
 
 void TestAwsAbstractResponse::errorString_data()
 {
+
 }
 
 void TestAwsAbstractResponse::errorString()
 {
+
+}
+
+void TestAwsAbstractResponse::hasError_data()
+{
+
+}
+
+void TestAwsAbstractResponse::hasError()
+{
+
+}
+
+void TestAwsAbstractResponse::isValid_data()
+{
+
+}
+
+void TestAwsAbstractResponse::isValid()
+{
+
+}
+
+void TestAwsAbstractResponse::networkError_data()
+{
+
+}
+
+void TestAwsAbstractResponse::networkError()
+{
+
+}
+
+void TestAwsAbstractResponse::xmlParseError_data()
+{
+
+}
+
+void TestAwsAbstractResponse::xmlParseError()
+{
+
+}
+
+void TestAwsAbstractResponse::xmlParseErrorString_data()
+{
+
+}
+
+void TestAwsAbstractResponse::xmlParseErrorString()
+{
+
+}
+
+void TestAwsAbstractResponse::toVariant_data()
+{
+
+}
+
+void TestAwsAbstractResponse::toVariant()
+{
+
+}
+
+void TestAwsAbstractResponse::construct_d_ptr()
+{
+
+}
+
+void TestAwsAbstractResponse::isSuccess_data()
+{
+
+}
+
+void TestAwsAbstractResponse::isSuccess()
+{
+
+}
+
+void TestAwsAbstractResponse::setReply_data()
+{
+
+}
+
+void TestAwsAbstractResponse::setReply()
+{
+
+}
+
+void TestAwsAbstractResponse::setXmlError_data()
+{
+
+}
+
+void TestAwsAbstractResponse::setXmlError()
+{
+
+}
+
+void TestAwsAbstractResponse::parse_data()
+{
+
+}
+
+void TestAwsAbstractResponse::parse()
+{
+
+}
+
+void TestAwsAbstractResponse::replyFinished_data()
+{
+
+}
+
+void TestAwsAbstractResponse::replyFinished()
+{
+
 }

@@ -26,7 +26,7 @@ private slots:
     void errorString_data();
     void errorString();
 
-/*    void hasError_data();
+    void hasError_data();
     void hasError();
 
     void isValid_data();
@@ -49,15 +49,18 @@ private slots:
     void isSuccess_data();
     void isSuccess();
 
-    void setReply(QNetworkReply * reply);
-    void setXmlError(const QXmlStreamReader &xml);
+    void setReply_data();
+    void setReply();
+
+    void setXmlError_data();
+    void setXmlError();
 
     void parse_data();
     void parse();
 
     void replyFinished_data();
     void replyFinished();
-*/
+
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     // Nothing to see here.

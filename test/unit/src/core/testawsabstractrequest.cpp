@@ -23,8 +23,87 @@
 
 void TestAwsAbstractRequest::data_data()
 {
+
 }
 
 void TestAwsAbstractRequest::data()
 {
+
 }
+
+void TestAwsAbstractRequest::isValid_data()
+{
+
+}
+
+void TestAwsAbstractRequest::isValid()
+{
+
+}
+
+void TestAwsAbstractRequest::networkRequest_data()
+{
+
+}
+
+void TestAwsAbstractRequest::networkRequest()
+{
+
+}
+
+void TestAwsAbstractRequest::operation_data()
+{
+
+}
+
+void TestAwsAbstractRequest::operation()
+{
+
+}
+
+void TestAwsAbstractRequest::send_data()
+{
+
+}
+
+void TestAwsAbstractRequest::send()
+{
+
+}
+
+void TestAwsAbstractRequest::construct_d_ptr()
+{
+
+}
+
+void TestAwsAbstractRequest::response_data()
+{
+
+}
+
+void TestAwsAbstractRequest::response()
+{
+
+}
+
+void TestAwsAbstractRequest::unsignedRequest_data()
+{
+
+}
+
+void TestAwsAbstractRequest::unsignedRequest()
+{
+
+}
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestAwsAbstractRequest::post()
+{
+
+}
+
+void TestAwsAbstractRequest::put()
+{
+
+}
+#endif

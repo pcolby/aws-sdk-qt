@@ -25,7 +25,7 @@ class TestAwsAbstractRequest : public QObject {
 private slots:
     void data_data();
     void data();
-/*
+
     void isValid_data();
     void isValid();
 
@@ -51,5 +51,4 @@ private slots:
     void post();
     void put();
     #endif
-*/
 };
