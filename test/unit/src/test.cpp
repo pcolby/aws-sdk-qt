@@ -17,7 +17,10 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "core/testawsabstractclient.h"
 #include "core/testawsabstractcredentials.h"
+#include "core/testawsabstractrequest.h"
+#include "core/testawsabstractresponse.h"
 #include "core/testawsabstractsignature.h"
 #include "core/testawsanonymouscredentials.h"
 #include "core/testawsbasiccredentials.h"
@@ -61,7 +64,10 @@ int main(int argc, char *argv[]) {
 
     // Setup our tests factory object.
     ObjectFactory testFactory;
+    testFactory.registerClass<TestAwsAbstractClient>();
     testFactory.registerClass<TestAwsAbstractCredentials>();
+    testFactory.registerClass<TestAwsAbstractRequest>();
+    testFactory.registerClass<TestAwsAbstractResponse>();
     testFactory.registerClass<TestAwsAbstractSignature>();
     testFactory.registerClass<TestAwsAnonymousCredentials>();
     testFactory.registerClass<TestAwsBasicCredentials>();

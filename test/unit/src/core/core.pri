@@ -1,6 +1,9 @@
 HEADERS += \
         awsendpointtestdata.h \
+        testawsabstractclient.h \
         testawsabstractcredentials.h \
+        testawsabstractrequest.h \
+        testawsabstractresponse.h \
         testawsabstractsignature.h \
         testawsanonymouscredentials.h \
         testawsbasiccredentials.h \
@@ -14,7 +17,10 @@ HEADERS += \
 
 SOURCES += \
         awsendpointtestdata.cpp \
+        testawsabstractclient.cpp \
         testawsabstractcredentials.cpp \
+        testawsabstractrequest.cpp \
+        testawsabstractresponse.cpp \
         testawsabstractsignature.cpp \
         testawsanonymouscredentials.cpp \
         testawsbasiccredentials.cpp \
