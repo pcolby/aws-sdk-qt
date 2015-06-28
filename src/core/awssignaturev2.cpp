@@ -98,7 +98,8 @@ int AwsSignatureV2::version() const
  *
  * @brief  Constructs a new AwsSignatureV2Private object.
  *
- * @param  q  Pointer to this object's public AwsSignatureV2 instance.
+ * @param  algorithm  Hash algorithm for signatures.
+ * @param  q          Pointer to this object's public AwsSignatureV2 instance.
  */
 AwsSignatureV2Private::AwsSignatureV2Private(
         const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
