@@ -69,9 +69,11 @@ public:
     SqsError(QXmlStreamReader &xml);
 
     // Qt container class support.
+    /// @cond internal
     SqsError();
     SqsError(const SqsError &other);
     SqsError &operator=(const SqsError &other);
+    /// @endcond
 
     virtual ~SqsError();
 
