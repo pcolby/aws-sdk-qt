@@ -37,7 +37,10 @@
 #include <QNetworkAccessManager>
 
 Q_DECLARE_METATYPE(AwsRegion::Region)
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(AwsAbstractSignature *)
+#endif
 
 // Bare minimum concrete mock class.
 class MockRequest : public AwsAbstractRequest {
@@ -208,6 +211,8 @@ void TestAwsAbstractClient::send()
     AwsAbstractClient client;
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     client.d_func()->serviceName = QLatin1String("mock");
+#else
+    Q_UNUSED(response)
 #endif
 
     // Without credentials, send should return a NULL pointer.
