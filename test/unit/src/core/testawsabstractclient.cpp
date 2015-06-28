@@ -62,7 +62,6 @@ class SendlessRequest : public MockRequest {
 public:
     mutable int sendCount;
     SendlessRequest(const bool validity) : MockRequest(validity), sendCount(0) { }
-    virtual bool isValid() const { return true; }
 protected:
     virtual AwsAbstractResponse * send(QNetworkAccessManager &manager,
                                        const QUrl &endpoint,
@@ -207,6 +206,9 @@ void TestAwsAbstractClient::send()
     QFETCH(AwsAbstractResponse *, response);
 
     AwsAbstractClient client;
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    client.d_func()->serviceName = QLatin1String("mock");
+#endif
 
     // Without credentials, send should return a NULL pointer.
     QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
