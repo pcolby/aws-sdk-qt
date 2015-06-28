@@ -35,6 +35,8 @@ class SqsErrorPrivate;
 class QTAWS_EXPORT SqsError {
 
 public:
+    /// SQS error codes.
+    /// @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
     enum ErrorCode {
         AccessDenied,
         IncompleteSignature,
@@ -56,6 +58,8 @@ public:
         OtherError = 0xFF
     };
 
+    /// SQS error types.
+    /// @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
     enum ErrorType {
         ReceiverType,
         SenderType,

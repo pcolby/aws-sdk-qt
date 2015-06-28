@@ -113,6 +113,9 @@ SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)
 
 }
 
+//*
+//* @note Unlike most other SQS responses, the SQS ErrorResponse does not wrap
+//*       the RequestId element in a ResponseMetadata element.
 void SqsResponsePrivate::parseErrorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ErrorResponse"));

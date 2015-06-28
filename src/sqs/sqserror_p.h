@@ -27,12 +27,12 @@ QTAWS_BEGIN_NAMESPACE
 class QTAWS_EXPORT SqsErrorPrivate {
 
 public:
-    SqsError::ErrorCode code;
-    QVariantMap detail;
-    QString message;
-    QString rawCode;
-    QString rawType;
-    SqsError::ErrorType type;
+    SqsError::ErrorCode code; ///< SQS error code.
+    QVariantMap detail;       ///< SQS error detail.
+    QString message;          ///< SQS error message.
+    QString rawCode;          ///< Raw SQS error code.
+    QString rawType;          ///< Raw SQS error type.
+    SqsError::ErrorType type; ///< SQS error type.
 
     SqsErrorPrivate(SqsError * const q);
     SqsErrorPrivate(const SqsErrorPrivate * const other, SqsError * const q);
