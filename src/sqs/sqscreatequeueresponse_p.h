@@ -29,7 +29,7 @@ class SqsCreateQueueResponse;
 class QTAWS_EXPORT SqsCreateQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
-    QString queueUrl;
+    QString queueUrl; ///< Created queue URL.
 
     SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q);
 

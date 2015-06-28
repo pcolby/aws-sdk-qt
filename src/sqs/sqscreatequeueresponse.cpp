@@ -29,13 +29,14 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  SqsResponse
  *
- * @brief  @todo
+ * @brief  Handles Amazon Simple Queue Service (SQS) responses.
  */
 
 /**
  * @brief  Constructs a new SqsResponse object.
  *
- * @param parent       This object's parent.
+ * @param  reply   AWS network response to observe.
+ * @param  parent  This object's parent.
  */
 SqsCreateQueueResponse::SqsCreateQueueResponse(QNetworkReply * const reply,
                                                QObject * const parent)
@@ -50,6 +51,12 @@ bool SqsCreateQueueResponse::isValid() const
     return !d->queueUrl.isEmpty();
 }
 
+/**
+ * @brief  Get the created queue's URL.
+ *
+ * @return The URL of the create queue, or a null QString if the response was
+ *         not parsed successfully.
+ */
 QString SqsCreateQueueResponse::queueUrl() const
 {
     Q_D(const SqsCreateQueueResponse);
@@ -57,7 +64,12 @@ QString SqsCreateQueueResponse::queueUrl() const
 }
 
 /**
- * This function parses XML elements like:
+ * @brief  Parse an SQS CreateQueue response.
+ *
+ * This implementation parses SQS CreateQueueResponse elements, as defined by
+ * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ *
+ * For example:
  *
  * @code{xml}
  * <CreateQueueResponse>
@@ -69,6 +81,10 @@ QString SqsCreateQueueResponse::queueUrl() const
  *   </ResponseMetadata>
  * </CreateQueueResponse>
  * @endcode
+ *
+ * @param  response  Response to parse.
+ *
+ * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
 void SqsCreateQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -105,6 +121,29 @@ SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueRespo
 
 }
 
+/**
+ * @brief  Parse an SQS CreateQueueResponse element.
+ *
+ * This implementation parses SQS CreateQueueResponse elements, as defined by
+ * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ *
+ * For example:
+ *
+ * @code{xml}
+ * <CreateQueueResponse>
+ *   <CreateQueueResult>
+ *     <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ *   </CreateQueueResult>
+ *   <ResponseMetadata>
+ *     <RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>
+ *   </ResponseMetadata>
+ * </CreateQueueResponse>
+ * @endcode
+ *
+ * @param  xml  XML stream to parse.
+ *
+ * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ */
 void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQueueResponse"));
@@ -120,6 +159,24 @@ void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &x
     }
 }
 
+/**
+ * @brief  Parse an SQS CreateQueueResult element.
+ *
+ * This implementation parses SQS CreateQueueResult elements, as defined by
+ * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ *
+ * For example:
+ *
+ * @code{xml}
+ * <CreateQueueResult>
+ *   <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ * </CreateQueueResult>
+ * @endcode
+ *
+ * @param  xml  XML stream to parse.
+ *
+ * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ */
 void SqsCreateQueueResponsePrivate::parseCreateQueueResult(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQueueResult"));

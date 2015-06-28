@@ -38,7 +38,7 @@ public:
 
     virtual QString errorString() const;
     virtual bool hasError() const;
-    virtual bool isValid() const = 0;
+    virtual bool isValid() const;
 
     QString requestId() const;
 
