@@ -123,7 +123,7 @@ QString SqsRequest::apiVersion() const
 /**
  * @brief  Set the SQS action to be performed by this request.
  *
- * @param  The action to be performed by this request.
+ * @param  action  The action to be performed by this request.
  */
 void SqsRequest::setAction(const SqsAction action)
 {
@@ -231,7 +231,8 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  *
  * @brief  Constructs a new SqsRequestPrivate object.
  *
- * @param  q  Pointer to this object's public SqsRequest instance.
+ * @param  action  SQS action being performed by the \a q request.
+ * @param  q       Pointer to this object's public SqsRequest instance.
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q)
     : AwsAbstractRequestPrivate(q), action(action)

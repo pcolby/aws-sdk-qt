@@ -117,6 +117,8 @@ SqsError::SqsError(const SqsError &other)
  *
  * @param  other  Instance to copy.
  *
+ * @return A reference to this object.
+ *
  * @see   http://doc.qt.io/qt-5/containers.html
  */
 SqsError &SqsError::operator=(const SqsError &other)
@@ -288,6 +290,8 @@ SqsErrorPrivate::~SqsErrorPrivate()
  *   <Detail/>
  * </Error>
  * @endcode
+ *
+ * @param  xml  XML stream to parse.
  *
  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
  */
