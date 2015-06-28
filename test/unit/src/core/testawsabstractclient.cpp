@@ -21,6 +21,8 @@
 #include "awsendpointtestdata.h"
 
 #include "core/awsabstractclient.h"
+#include "core/awsabstractrequest.h"
+#include "core/awsabstractresponse.h"
 #include "core/awsbasiccredentials.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -36,6 +38,45 @@
 
 Q_DECLARE_METATYPE(AwsRegion::Region)
 Q_DECLARE_METATYPE(AwsAbstractSignature *)
+
+// Bare minimum concrete mock class.
+class MockRequest : public AwsAbstractRequest {
+public:
+    AwsAbstractResponse * mockResponse;
+    bool validity;
+    MockRequest(const bool validity) : mockResponse(NULL), validity(validity) { }
+    virtual bool isValid() const { return validity; }
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const {
+        Q_UNUSED(reply)
+        return mockResponse;
+    }
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const {
+        return QNetworkRequest(endpoint);
+    }
+};
+
+// Mock class that won't actually send requests, but allows to check whether or
+// not the send method was invokeds.
+class SendlessRequest : public MockRequest {
+public:
+    mutable int sendCount;
+    SendlessRequest(const bool validity) : MockRequest(validity), sendCount(0) { }
+    virtual bool isValid() const { return true; }
+protected:
+    virtual AwsAbstractResponse * send(QNetworkAccessManager &manager,
+                                       const QUrl &endpoint,
+                                       const AwsAbstractSignature &signature,
+                                       const AwsAbstractCredentials &credentials) const
+    {
+        Q_UNUSED(manager)
+        Q_UNUSED(endpoint)
+        Q_UNUSED(signature)
+        Q_UNUSED(credentials)
+        sendCount++;
+        return mockResponse;
+    }
+};
 
 void TestAwsAbstractClient::credentials_data()
 {
@@ -140,11 +181,68 @@ void TestAwsAbstractClient::region()
 
 void TestAwsAbstractClient::send_data()
 {
+    QTest::addColumn<AwsAbstractRequest *>("request");
+    QTest::addColumn<AwsAbstractResponse *>("response");
+
+    {
+        SendlessRequest * const request = new SendlessRequest(false);
+        Q_ASSERT(!request->isValid());
+        request->mockResponse = reinterpret_cast<AwsAbstractResponse *>(0x1234);
+        Q_ASSERT(!request->isValid());
+        QTest::newRow("invalid-request") << request << request->mockResponse;
+    }
+
+    {
+        SendlessRequest * const request = new SendlessRequest(true);
+        Q_ASSERT(request->isValid());
+        request->mockResponse = reinterpret_cast<AwsAbstractResponse *>(0x5678);
+        Q_ASSERT(request->isValid());
+        QTest::newRow("valid-request") << request << request->mockResponse;
+    }
 }
 
 void TestAwsAbstractClient::send()
 {
+    QFETCH(AwsAbstractRequest *, request);
+    QFETCH(AwsAbstractResponse *, response);
 
+    AwsAbstractClient client;
+
+    // Without credentials, send should return a NULL pointer.
+    QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
+    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+
+    AwsBasicCredentials credentials(QLatin1String("key"), QLatin1String("secret"));
+    client.setCredentials(&credentials);
+
+    // Without a network access manager, send should still return a NULL pointer.
+    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+
+    QNetworkAccessManager manager;
+    client.setNetworkAccessManager(&manager);
+
+    // Without a signature object, send should still return a NULL pointer.
+    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    client.d_func()->signature = new AwsSignatureV4; // Takes ownership.
+    #endif
+
+    // If the request is invalid, send should still return a NULL pointer.
+    Q_UNUSED(response)
+    if (request->isValid()) {
+        QCOMPARE(client.send(*request), response);
+    } else {
+        QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+    }
+
+    // Verify that send was invoked a total of 0 or 1 times, occording to
+    // whether or not the request was valid.
+    SendlessRequest * const sendlessRequest = reinterpret_cast<SendlessRequest *>(request);
+    QCOMPARE(sendlessRequest->sendCount, (request->isValid()) ? 1 : 0);
+    delete request;
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS

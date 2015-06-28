@@ -241,11 +241,6 @@ void AwsAbstractClient::setNetworkAccessManager(QNetworkAccessManager * const ma
         setParent(NULL);
     }
 
-    // If we have no parent, set the network access manager as our parent.
-    if ((manager != NULL) && (parent() == NULL)) {
-        this->setParent(manager);
-    }
-
     // Set the network access manager.
     d->networkAccessManager = manager;
 }
