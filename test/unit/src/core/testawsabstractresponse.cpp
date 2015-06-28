@@ -62,120 +62,144 @@ void TestAwsAbstractResponse::construct_d_ptr()
 
 void TestAwsAbstractResponse::errorString_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::errorString()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::hasError_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::hasError()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::isValid_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::isValid()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::networkError_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::networkError()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::xmlParseError_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::xmlParseError()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::xmlParseErrorString_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::xmlParseErrorString()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::toVariant_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::toVariant()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::isSuccess_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::isSuccess()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::setReply_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::setReply()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::setXmlError_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::setXmlError()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::parse_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::parse()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractResponse::replyFinished_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractResponse::replyFinished()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }

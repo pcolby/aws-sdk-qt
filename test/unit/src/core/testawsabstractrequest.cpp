@@ -70,72 +70,86 @@ void TestAwsAbstractRequest::construct_d_ptr()
 
 void TestAwsAbstractRequest::data_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::data()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::isValid_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::isValid()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::networkRequest_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::networkRequest()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::operation_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::operation()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::send_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::send()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::response_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::response()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 void TestAwsAbstractRequest::unsignedRequest_data()
 {
-
+    QTest::addColumn<QString>("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
 void TestAwsAbstractRequest::unsignedRequest()
 {
-
+    QFETCH(QString, foo);
+    Q_UNUSED(foo)
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
