@@ -22,6 +22,8 @@
 #include "core/awsabstractresponse.h"
 #include "core/awsabstractresponse_p.h"
 
+namespace TestAwsAbstractResponse_Mocks {
+
 // Bare minimum concrete mock class.
 class MockResponse : public AwsAbstractResponse {
 public:
@@ -34,6 +36,8 @@ protected:
     virtual void parseFailure(QIODevice &response) { Q_UNUSED(response); }
     virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
 };
+
+} using namespace TestAwsAbstractResponse_Mocks;
 
 void TestAwsAbstractResponse::construct()
 {

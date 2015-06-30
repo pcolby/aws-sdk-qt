@@ -32,6 +32,8 @@ Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(QUrlQuery)
 #endif
 
+namespace TestAwsAbstractSignature_Mocks {
+
 // Bare minimum concrete mock class.
 class MockSignature : public AwsAbstractSignature {
 
@@ -51,6 +53,8 @@ public:
         return 123;
     }
 };
+
+} using namespace TestAwsAbstractSignature_Mocks;
 
 void TestAwsAbstractSignature::construct()
 {

@@ -21,6 +21,8 @@
 
 #include "core/awsabstractcredentials.h"
 
+namespace TestAwsAbstractCredentials_Mocks {
+
 // Bare minimum concrete mock class.
 class MockCredentials : public AwsAbstractCredentials {
 public:
@@ -34,6 +36,8 @@ class MockRefreshableCredentials : public MockCredentials {
 public:
     virtual bool isRefreshable() const { return true; } // The ruse.
 };
+
+} using namespace TestAwsAbstractCredentials_Mocks;
 
 void TestAwsAbstractCredentials::expiration()
 {

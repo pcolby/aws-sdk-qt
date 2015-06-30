@@ -42,6 +42,8 @@ Q_DECLARE_METATYPE(AwsRegion::Region)
 Q_DECLARE_METATYPE(AwsAbstractSignature *)
 #endif
 
+namespace TestAwsAbstractClient_Mocks {
+
 // Bare minimum concrete mock class.
 class MockRequest : public AwsAbstractRequest {
 public:
@@ -79,6 +81,8 @@ protected:
         return mockResponse;
     }
 };
+
+} using namespace TestAwsAbstractClient_Mocks;
 
 void TestAwsAbstractClient::construct()
 {
