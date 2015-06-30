@@ -48,7 +48,7 @@ private slots:
 
     // AwsAbstractRequestPrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    void post();
-    void put();
+    void post_put_data();
+    void post_put();
     #endif
 };

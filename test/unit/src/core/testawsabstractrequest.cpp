@@ -48,7 +48,7 @@ protected:
     virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
 };
 
-// Bare minimum concrete mock class.
+class MockRequestPrivate;
 class MockRequest : public AwsAbstractRequest {
 public:
     MockRequest() : AwsAbstractRequest() { }
@@ -64,6 +64,28 @@ protected:
         return QNetworkRequest(endpoint);
     }
 };
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+class MockRequestPrivate : public AwsAbstractRequestPrivate {
+public:
+    mutable int postCount, putCount;
+    MockRequestPrivate(MockRequest * const q)
+        : AwsAbstractRequestPrivate(q), postCount(0), putCount(0) { }
+protected:
+    virtual QNetworkReply *post(QNetworkAccessManager &manager,
+                                const QNetworkRequest &request) const
+    {
+        postCount++;
+        return AwsAbstractRequestPrivate::post(manager, request);
+    }
+    virtual QNetworkReply *put(QNetworkAccessManager &manager,
+                               const QNetworkRequest &request) const
+    {
+        putCount++;
+        return AwsAbstractRequestPrivate::put(manager, request);
+    }
+};
+#endif
 
 class MockSignature : public AwsAbstractSignature {
 public:
@@ -330,13 +352,45 @@ void TestAwsAbstractRequest::send()
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestAwsAbstractRequest::post()
+void TestAwsAbstractRequest::post_put_data()
 {
-
+    networkRequest_data();
 }
 
-void TestAwsAbstractRequest::put()
+void TestAwsAbstractRequest::post_put()
 {
+    QFETCH(QUrl,    endpoint);
+    QFETCH(QString, accessKeyId);
+    QFETCH(QString, secretKey);
+    QFETCH(QString, token);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QByteArray, data);
 
+    // Setup basic mocks required for invoking AwsAbstractRequest::send
+    MockNetworkAccessManager manager;
+    const MockSignature signature;
+    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
+
+    // Setup a mock request with our own AwsAbstractRequestPrivate injected.
+    MockRequest temporaryRequest;
+    MockRequestPrivate * const requestPrivate = new MockRequestPrivate(&temporaryRequest);
+    MockRequest request(requestPrivate, this);
+    QCOMPARE(request.d_func(), requestPrivate);
+    QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
+
+    // Apply the test data.
+    request.setOperation(operation);
+    request.setData(data);
+    QCOMPARE(request.operation(), operation);
+    QCOMPARE(request.data(), data);
+    AwsAbstractResponse * const response =
+        request.send(manager, endpoint, signature, credentials);
+
+    QCOMPARE(requestPrivate->postCount,
+             (operation == QNetworkAccessManager::PostOperation) ? 1 : 0);
+    QCOMPARE(requestPrivate->putCount,
+             (operation == QNetworkAccessManager::PutOperation) ? 1 : 0);
+
+    delete response;
 }
 #endif
