@@ -62,6 +62,7 @@ before_script:
   - popd
 
 script:
+  - cppcheck --errorlist
   - cppcheck --error-exitcode=1 --quiet .
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 check
