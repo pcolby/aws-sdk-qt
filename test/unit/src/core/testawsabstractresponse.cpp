@@ -256,16 +256,20 @@ void TestAwsAbstractResponse::networkError_data()
     NEW_ROW(ContentNotFoundError);
     NEW_ROW(AuthenticationRequiredError);
     NEW_ROW(ContentReSendError);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 3, 0)
     NEW_ROW(ContentConflictError);
     NEW_ROW(ContentGoneError);
+#endif
     NEW_ROW(UnknownContentError);
     NEW_ROW(ProtocolUnknownError);
     NEW_ROW(ProtocolInvalidOperationError);
     NEW_ROW(ProtocolFailure);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 3, 0)
     NEW_ROW(InternalServerError);
     NEW_ROW(OperationNotImplementedError);
     NEW_ROW(ServiceUnavailableError);
     NEW_ROW(UnknownServerError);
+#endif
     #undef NEW_ROW
 }
 
@@ -405,16 +409,20 @@ void TestAwsAbstractResponse::isSuccess_data()
     NEW_ROWS(ContentNotFoundError);
     NEW_ROWS(AuthenticationRequiredError);
     NEW_ROWS(ContentReSendError);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 3, 0)
     NEW_ROWS(ContentConflictError);
     NEW_ROWS(ContentGoneError);
+#endif
     NEW_ROWS(UnknownContentError);
     NEW_ROWS(ProtocolUnknownError);
     NEW_ROWS(ProtocolInvalidOperationError);
     NEW_ROWS(ProtocolFailure);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 3, 0)
     NEW_ROWS(InternalServerError);
     NEW_ROWS(OperationNotImplementedError);
     NEW_ROWS(ServiceUnavailableError);
     NEW_ROWS(UnknownServerError);
+#endif
     #undef NEW_ROWS
 }
 
