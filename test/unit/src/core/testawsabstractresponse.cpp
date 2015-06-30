@@ -27,18 +27,26 @@ namespace TestAwsAbstractResponse_Mocks {
 // Bare minimum concrete mock class.
 class MockResponse : public AwsAbstractResponse {
 public:
-    int parseCount;
-    MockResponse() : AwsAbstractResponse(), parseCount(0) { }
-    MockResponse(QObject * const parent) : AwsAbstractResponse(parent), parseCount(0) { }
+    int parseCount, parseFailureCount, parseSuccessCount;
+    MockResponse() : AwsAbstractResponse(), parseCount(0), parseFailureCount(0),
+        parseSuccessCount(0) { }
+    MockResponse(QObject * const parent) : AwsAbstractResponse(parent),
+        parseCount(0), parseFailureCount(0), parseSuccessCount(0) { }
     MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
         : AwsAbstractResponse(d, parent) { }
-protected:
     virtual void parse(QNetworkReply * const reply) {
         parseCount++;
         AwsAbstractResponse::parse(reply);
     }
-    virtual void parseFailure(QIODevice &response) { Q_UNUSED(response); }
-    virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
+protected:
+    virtual void parseFailure(QIODevice &response) {
+        Q_UNUSED(response);
+        parseFailureCount++;
+    }
+    virtual void parseSuccess(QIODevice &response) {
+        Q_UNUSED(response);
+        parseSuccessCount++;
+    }
 };
 
 class MockNetworkReply : public QNetworkReply {
@@ -448,15 +456,31 @@ void TestAwsAbstractResponse::isSuccess()
 
 void TestAwsAbstractResponse::parse_data()
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    isSuccess_data();
 }
 
-/// @todo
 void TestAwsAbstractResponse::parse()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QNetworkReply::NetworkError, networkError);
+    QFETCH(int, httpStatus);
+    QFETCH(bool, isSuccess);
+
+    MockNetworkReply reply(networkError, QString());
+    reply.setAttribute(QNetworkRequest::HttpStatusCodeAttribute, httpStatus);
+
+    MockResponse response;
+    QCOMPARE(response.parseFailureCount, 0);
+    QCOMPARE(response.parseSuccessCount, 0);
+    response.parse(&reply);
+
+    // On network errors, neither sub-parse function is called.
+    if (networkError != QNetworkReply::NoError) {
+        QCOMPARE(response.parseFailureCount, 0);
+        QCOMPARE(response.parseSuccessCount, 0);
+    } else {
+        QCOMPARE(response.parseFailureCount, isSuccess ? 0 : 1);
+        QCOMPARE(response.parseSuccessCount, isSuccess ? 1 : 0);
+    }
 }
 
 void TestAwsAbstractResponse::replyFinished()
