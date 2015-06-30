@@ -55,7 +55,6 @@ private slots:
     void parse_data();
     void parse();
 
-    void replyFinished_data();
     void replyFinished();
 
     // AwsAbstractResponsePrivate functions.

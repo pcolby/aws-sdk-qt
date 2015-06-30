@@ -27,26 +27,32 @@ namespace TestAwsAbstractResponse_Mocks {
 // Bare minimum concrete mock class.
 class MockResponse : public AwsAbstractResponse {
 public:
-    MockResponse() : AwsAbstractResponse() { }
-    MockResponse(QObject * const parent) : AwsAbstractResponse(parent) { }
+    int parseCount;
+    MockResponse() : AwsAbstractResponse(), parseCount(0) { }
+    MockResponse(QObject * const parent) : AwsAbstractResponse(parent), parseCount(0) { }
     MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
         : AwsAbstractResponse(d, parent) { }
 protected:
+    virtual void parse(QNetworkReply * const reply) {
+        parseCount++;
+        AwsAbstractResponse::parse(reply);
+    }
     virtual void parseFailure(QIODevice &response) { Q_UNUSED(response); }
     virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
 };
 
 class MockNetworkReply : public QNetworkReply {
 public:
+    MockNetworkReply(QObject * const parent = 0) : QNetworkReply(parent) { }
     MockNetworkReply(const NetworkError error, const QString &errorString,
                      QObject * const parent = 0)
-        : QNetworkReply(parent) { setError(error, errorString);}
+        : QNetworkReply(parent) { setError(error, errorString); }
     void setAttribute(const QNetworkRequest::Attribute code, const QVariant &value)
     {
         QNetworkReply::setAttribute(code, value);
     }
+    virtual void abort() { emit finished(); }
 protected:
-    virtual void abort() { }
     virtual qint64 readData(char * data, qint64 maxSize) {
         Q_UNUSED(data)
         Q_UNUSED(maxSize)
@@ -335,6 +341,7 @@ void TestAwsAbstractResponse::toVariant_data()
     QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
+/// @todo
 void TestAwsAbstractResponse::toVariant()
 {
     QFETCH(QString, foo);
@@ -445,20 +452,26 @@ void TestAwsAbstractResponse::parse_data()
     QTest::newRow("bar") << QString::fromLatin1("bar");
 }
 
+/// @todo
 void TestAwsAbstractResponse::parse()
 {
     QFETCH(QString, foo);
     Q_UNUSED(foo)
 }
 
-void TestAwsAbstractResponse::replyFinished_data()
-{
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
-}
-
 void TestAwsAbstractResponse::replyFinished()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    // Here we're simply testing that setReply correctly setup a connection from
+    // the suplied reply to the response's replyFinished slot, which in turn
+    // called parse.
+
+    MockResponse response;
+    QCOMPARE(response.parseCount, 0);
+
+    MockNetworkReply reply;
+    response.setReply(&reply);
+    QCOMPARE(response.parseCount, 0);
+
+    reply.abort();
+    QCOMPARE(response.parseCount, 1);
 }
