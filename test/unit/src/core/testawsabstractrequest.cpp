@@ -21,17 +21,32 @@
 
 #include "core/awsabstractcredentials.h"
 #include "core/awsabstractrequest.h"
+#include "core/awsabstractresponse.h"
 #include "core/awsabstractsignature.h"
 #include "core/awsbasiccredentials.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awsabstractrequest_p.h"
+#include "core/awsabstractresponse_p.h"
 #endif
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
+namespace TestAwsAbstractRequest_Mocks {
+
+class MockResponse : public AwsAbstractResponse {
+public:
+    MockResponse(QNetworkReply * const reply) { setReply(reply); }
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    QNetworkReply * reply() { return d_ptr->reply; }
+    #endif
+protected:
+    virtual void parseFailure(QIODevice &response) { Q_UNUSED(response); }
+    virtual void parseSuccess(QIODevice &response) { Q_UNUSED(response); }
+};
 
 // Bare minimum concrete mock class.
 class MockRequest : public AwsAbstractRequest {
@@ -43,8 +58,7 @@ public:
     virtual bool isValid() const { return false; }
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const {
-        Q_UNUSED(reply)
-        return NULL;
+        return new MockResponse(reply);
     }
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const {
         return QNetworkRequest(endpoint);
@@ -53,6 +67,7 @@ protected:
 
 class MockSignature : public AwsAbstractSignature {
 public:
+    MockSignature() { }
     virtual void sign(const AwsAbstractCredentials &credentials,
                       const QNetworkAccessManager::Operation operation,
                       QNetworkRequest &request,
@@ -67,9 +82,34 @@ public:
     virtual int version() const { return -1; }
 };
 
-/*class MockNetworkAccessManager : public QNetworkAccessManager {
+class MockNetworkReply : public QNetworkReply {
 public:
-};*/
+    MockNetworkReply(const QNetworkRequest &request, QObject * const parent = 0)
+        : QNetworkReply(parent) { setRequest(request); }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
+
+class MockNetworkAccessManager : public QNetworkAccessManager {
+public:
+    Operation operation;
+    QNetworkRequest request;
+protected:
+    QNetworkReply * createRequest(Operation op, const QNetworkRequest &req, QIODevice *outgoingData)
+    {
+        Q_UNUSED(outgoingData)
+        operation = op;
+        request = req;
+        return new MockNetworkReply(req);
+    }
+};
+
+} using namespace TestAwsAbstractRequest_Mocks;
 
 void TestAwsAbstractRequest::construct()
 {
@@ -132,6 +172,10 @@ void TestAwsAbstractRequest::networkRequest_data()
         << QString::fromLatin1("token")
         << QNetworkAccessManager::GetOperation
         << QByteArray("abc123");
+
+    QTest::newRow("null-with-url")
+        << QUrl(QLatin1String("http://example.com")) << QString() << QString()
+        << QString() << QNetworkAccessManager::UnknownOperation << QByteArray();
 }
 
 void TestAwsAbstractRequest::networkRequest()
@@ -143,8 +187,8 @@ void TestAwsAbstractRequest::networkRequest()
     QFETCH(QNetworkAccessManager::Operation, operation);
     QFETCH(QByteArray, data);
 
-    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
     const MockSignature signature;
+    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
     MockRequest mockRequest;
     mockRequest.setOperation(operation);
     mockRequest.setData(data);
@@ -183,14 +227,60 @@ void TestAwsAbstractRequest::operation()
 
 void TestAwsAbstractRequest::send_data()
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    networkRequest_data();
 }
 
 void TestAwsAbstractRequest::send()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QUrl,    endpoint);
+    QFETCH(QString, accessKeyId);
+    QFETCH(QString, secretKey);
+    QFETCH(QString, token);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+    QFETCH(QByteArray, data);
+
+    MockNetworkAccessManager manager;
+    const MockSignature signature;
+    const AwsBasicCredentials credentials(accessKeyId, secretKey, token);
+    MockRequest request;
+    request.setOperation(operation);
+    request.setData(data);
+    QCOMPARE(request.operation(), operation);
+    QCOMPARE(request.data(), data);
+    AwsAbstractResponse * const response =
+        request.send(manager, endpoint, signature, credentials);
+
+    // If the operation is Custom or Unknown, send should simply return NULL.
+    if ((operation == QNetworkAccessManager::CustomOperation) ||
+        (operation == QNetworkAccessManager::UnknownOperation)) {
+        QCOMPARE(response, reinterpret_cast<AwsAbstractResponse *>(NULL));
+        QCOMPARE(manager.request.url(), QUrl());
+        QVERIFY(!manager.request.hasRawHeader("test-accessKeyId"));
+        QVERIFY(!manager.request.hasRawHeader("test-secretKey"));
+        QVERIFY(!manager.request.hasRawHeader("test-token"));
+        QVERIFY(!manager.request.hasRawHeader("test-operation"));
+        QVERIFY(!manager.request.hasRawHeader("test-data"));
+        return;
+    }
+
+    QVERIFY(response);
+    QCOMPARE((int)manager.operation, (int)operation);
+    QCOMPARE(manager.request.url(), endpoint);
+    QCOMPARE(manager.request.rawHeader("test-accessKeyId"), accessKeyId.toLocal8Bit());
+    QCOMPARE(manager.request.rawHeader("test-secretKey"),   secretKey.toLocal8Bit());
+    QCOMPARE(manager.request.rawHeader("test-token"),       token.toLocal8Bit());
+    QCOMPARE(manager.request.rawHeader("test-operation"),   QByteArray(1, (int)operation));
+    QCOMPARE(manager.request.rawHeader("test-data"),        data);
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    MockResponse * const mockResponse = reinterpret_cast<MockResponse *>(response);
+    QCOMPARE(mockResponse->reply()->request().url(), endpoint);
+    QCOMPARE(mockResponse->reply()->request().rawHeader("test-accessKeyId"), accessKeyId.toLocal8Bit());
+    QCOMPARE(mockResponse->reply()->request().rawHeader("test-secretKey"),   secretKey.toLocal8Bit());
+    QCOMPARE(mockResponse->reply()->request().rawHeader("test-token"),       token.toLocal8Bit());
+    QCOMPARE(mockResponse->reply()->request().rawHeader("test-operation"),   QByteArray(1, (int)operation));
+    QCOMPARE(mockResponse->reply()->request().rawHeader("test-data"),        data);
+    #endif
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
