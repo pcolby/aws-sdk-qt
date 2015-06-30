@@ -165,17 +165,62 @@ void TestAwsAbstractRequest::networkRequest_data()
         << QUrl() << QString() << QString() << QString()
         << QNetworkAccessManager::UnknownOperation << QByteArray();
 
-    QTest::newRow("1")
+    QTest::newRow("null-with-url")
+        << QUrl(QLatin1String("http://example.com")) << QString() << QString()
+        << QString() << QNetworkAccessManager::UnknownOperation << QByteArray();
+
+    QTest::newRow("empty")
+        << QUrl(QLatin1String("")) << QString::fromLatin1("")
+        << QString::fromLatin1("") << QString::fromLatin1("")
+        << QNetworkAccessManager::UnknownOperation << QByteArray("");
+
+    QTest::newRow("delete")
+        << QUrl(QLatin1String("http://example.com/something/to/delete"))
+        << QString::fromLatin1("my-awseome-key")
+        << QString::fromLatin1("my-awsome-secret")
+        << QString::fromLatin1("some-sample-token")
+        << QNetworkAccessManager::DeleteOperation
+        << QByteArray("ignored");
+
+    QTest::newRow("head")
+        << QUrl(QLatin1String("https://example.com"))
+        << QString::fromLatin1("key")
+        << QString::fromLatin1("secret")
+        << QString::fromLatin1("token")
+        << QNetworkAccessManager::HeadOperation
+        << QByteArray("ignored");
+
+    QTest::newRow("get")
         << QUrl(QLatin1String("http://example.com"))
         << QString::fromLatin1("key")
         << QString::fromLatin1("secret")
         << QString::fromLatin1("token")
         << QNetworkAccessManager::GetOperation
+        << QByteArray("ignored");
+
+    QTest::newRow("post")
+        << QUrl(QLatin1String("http://example.com/some/path"))
+        << QString::fromLatin1("foo")
+        << QString::fromLatin1("bar")
+        << QString::fromLatin1("baz")
+        << QNetworkAccessManager::PostOperation
         << QByteArray("abc123");
 
-    QTest::newRow("null-with-url")
-        << QUrl(QLatin1String("http://example.com")) << QString() << QString()
-        << QString() << QNetworkAccessManager::UnknownOperation << QByteArray();
+    QTest::newRow("put")
+        << QUrl(QLatin1String("http://example.com/some/other/path"))
+        << QString::fromLatin1("123")
+        << QString::fromLatin1("456")
+        << QString()
+        << QNetworkAccessManager::PutOperation
+        << QByteArray("the quick brown fox jumps over the lazy dog");
+
+    QTest::newRow("custom")
+        << QUrl(QLatin1String("http://example.com/doesn't/really/matter"))
+        << QString::fromLatin1("unused")
+        << QString::fromLatin1("not applicable")
+        << QString::fromLatin1("irrelevant")
+        << QNetworkAccessManager::CustomOperation
+        << QByteArray("ignored");
 }
 
 void TestAwsAbstractRequest::networkRequest()
