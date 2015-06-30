@@ -73,6 +73,7 @@ public:
                       QNetworkRequest &request,
                       const QByteArray &data = QByteArray()) const
     {
+        request.setRawHeader("Authorization",    QByteArray("MockSignature"));
         request.setRawHeader("test-accessKeyId", credentials.accessKeyId().toLocal8Bit());
         request.setRawHeader("test-secretKey",   credentials.secretKey().toLocal8Bit());
         request.setRawHeader("test-token",       credentials.token().toLocal8Bit());
