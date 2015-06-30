@@ -62,8 +62,9 @@ before_script:
   - popd
 
 script:
-  - cppcheck --errorlist
-  - cppcheck --error-exitcode=1 --quiet .
+  - cppcheck --error-exitcode=1 --quiet
+    --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
+    .
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 check
 
