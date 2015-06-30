@@ -110,10 +110,10 @@ void TestAwsAbstractResponse::errorString_data()
 
     // Network errors take precedence over XML errors.
     QTest::newRow("network+xml")
-        << QNetworkReply::InternalServerError
-        << QString::fromLatin1("mock internal server error")
+        << QNetworkReply::TimeoutError
+        << QString::fromLatin1("mock timeout error")
         << QString::fromLatin1("mock XML error")
-        << QString::fromLatin1("mock internal server error");
+        << QString::fromLatin1("mock timeout error");
 }
 
 void TestAwsAbstractResponse::errorString()
@@ -159,8 +159,8 @@ void TestAwsAbstractResponse::hasError_data()
         << true;
 
     QTest::newRow("network+xml")
-        << QNetworkReply::InternalServerError
-        << QString::fromLatin1("mock internal server error")
+        << QNetworkReply::TimeoutError
+        << QString::fromLatin1("mock timeout error")
         << QString::fromLatin1("mock XML error")
         << true;
 }
@@ -208,8 +208,8 @@ void TestAwsAbstractResponse::isValid_data()
         << false;
 
     QTest::newRow("network+xml")
-        << QNetworkReply::InternalServerError
-        << QString::fromLatin1("mock internal server error")
+        << QNetworkReply::TimeoutError
+        << QString::fromLatin1("mock timeout error")
         << QString::fromLatin1("mock XML error")
         << false;
 }
