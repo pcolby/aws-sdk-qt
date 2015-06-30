@@ -52,12 +52,6 @@ private slots:
     void isSuccess_data();
     void isSuccess();
 
-    void setReply_data();
-    void setReply();
-
-    void setXmlError_data();
-    void setXmlError();
-
     void parse_data();
     void parse();
 
