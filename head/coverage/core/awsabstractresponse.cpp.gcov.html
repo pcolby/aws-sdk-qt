@@ -31,18 +31,18 @@
             <td class="headerValue">libqtaws 0.1.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">65</td>
             <td class="headerCovTableEntry">107</td>
-            <td class="headerCovTableEntryLo">17.8 %</td>
+            <td class="headerCovTableEntryLo">60.7 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-30 11:19:55</td>
+            <td class="headerValue">2015-06-30 21:52:50</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">17</td>
             <td class="headerCovTableEntry">19</td>
-            <td class="headerCovTableEntryLo">36.8 %</td>
+            <td class="headerCovTableEntryMed">89.5 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -109,11 +109,11 @@
 <span class="lineNum">      47 </span>            :  *
 <a name="48"><span class="lineNum">      48 </span>            :  * @param  parent  This object's parent.</a>
 <span class="lineNum">      49 </span>            :  */
-<span class="lineNum">      50 </span><span class="lineCov">        111 : AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)</span>
-<span class="lineNum">      51 </span><span class="lineCov">        111 :     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))</span>
+<span class="lineNum">      50 </span><span class="lineCov">       6168 : AwsAbstractResponse::AwsAbstractResponse(QObject * const parent)</span>
+<span class="lineNum">      51 </span><span class="lineCov">       6168 :     : QObject(parent), d_ptr(new AwsAbstractResponsePrivate(this))</span>
 <span class="lineNum">      52 </span>            : {
 <span class="lineNum">      53 </span>            : 
-<span class="lineNum">      54 </span><span class="lineCov">        111 : }</span>
+<span class="lineNum">      54 </span><span class="lineCov">       6168 : }</span>
 <span class="lineNum">      55 </span>            : 
 <span class="lineNum">      56 </span>            : /**
 <span class="lineNum">      57 </span>            :  * @internal
@@ -136,10 +136,10 @@
 <span class="lineNum">      74 </span>            : /**
 <a name="75"><span class="lineNum">      75 </span>            :  * @brief AwsAbstractResponse destructor.</a>
 <span class="lineNum">      76 </span>            :  */
-<span class="lineNum">      77 </span><span class="lineCov">        126 : AwsAbstractResponse::~AwsAbstractResponse()</span>
+<span class="lineNum">      77 </span><span class="lineCov">      12240 : AwsAbstractResponse::~AwsAbstractResponse()</span>
 <span class="lineNum">      78 </span>            : {
-<span class="lineNum">      79 </span><span class="lineCov">         63 :     delete d_ptr;</span>
-<span class="lineNum">      80 </span><span class="lineCov">         63 : }</span>
+<span class="lineNum">      79 </span><span class="lineCov">       6120 :     delete d_ptr;</span>
+<span class="lineNum">      80 </span><span class="lineCov">       6120 : }</span>
 <span class="lineNum">      81 </span>            : 
 <span class="lineNum">      82 </span>            : /**
 <span class="lineNum">      83 </span>            :  * @brief Get this response's error string.
@@ -166,15 +166,15 @@
 <span class="lineNum">     104 </span>            :  * @see  networkError
 <a name="105"><span class="lineNum">     105 </span>            :  * @see  xmlParseError</a>
 <span class="lineNum">     106 </span>            :  */
-<span class="lineNum">     107 </span><span class="lineNoCov">          0 : QString AwsAbstractResponse::errorString() const</span>
+<span class="lineNum">     107 </span><span class="lineCov">         48 : QString AwsAbstractResponse::errorString() const</span>
 <span class="lineNum">     108 </span>            : {
-<span class="lineNum">     109 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     110 </span><span class="lineNoCov">          0 :     if (networkError() != QNetworkReply::NoError) {</span>
-<span class="lineNum">     111 </span><span class="lineNoCov">          0 :         return d-&gt;reply-&gt;errorString();</span>
-<span class="lineNum">     112 </span><span class="lineNoCov">          0 :     } else if (xmlParseError() != QXmlStreamReader::NoError) {</span>
-<span class="lineNum">     113 </span><span class="lineNoCov">          0 :         return xmlParseErrorString();</span>
+<span class="lineNum">     109 </span><span class="lineCov">         48 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     110 </span><span class="lineCov">         48 :     if (networkError() != QNetworkReply::NoError) {</span>
+<span class="lineNum">     111 </span><span class="lineCov">         24 :         return d-&gt;reply-&gt;errorString();</span>
+<span class="lineNum">     112 </span><span class="lineCov">         24 :     } else if (xmlParseError() != QXmlStreamReader::NoError) {</span>
+<span class="lineNum">     113 </span><span class="lineCov">         12 :         return xmlParseErrorString();</span>
 <span class="lineNum">     114 </span>            :     } else {
-<span class="lineNum">     115 </span><span class="lineNoCov">          0 :         return QString();</span>
+<span class="lineNum">     115 </span><span class="lineCov">         12 :         return QString();</span>
 <span class="lineNum">     116 </span>            :     }
 <span class="lineNum">     117 </span>            : }
 <span class="lineNum">     118 </span>            : 
@@ -198,11 +198,11 @@
 <span class="lineNum">     136 </span>            :  * @see  errorString
 <a name="137"><span class="lineNum">     137 </span>            :  * @see  isValid</a>
 <span class="lineNum">     138 </span>            :  */
-<span class="lineNum">     139 </span><span class="lineNoCov">          0 : bool AwsAbstractResponse::hasError() const</span>
+<span class="lineNum">     139 </span><span class="lineCov">         48 : bool AwsAbstractResponse::hasError() const</span>
 <span class="lineNum">     140 </span>            : {
-<span class="lineNum">     141 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     142 </span><span class="lineNoCov">          0 :     return (((d-&gt;reply) &amp;&amp; (d-&gt;reply-&gt;error() != QNetworkReply::NoError)) ||</span>
-<span class="lineNum">     143 </span><span class="lineNoCov">          0 :             (d-&gt;xmlError != QXmlStreamReader::NoError));</span>
+<span class="lineNum">     141 </span><span class="lineCov">         48 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     142 </span><span class="lineCov">         72 :     return (((d-&gt;reply) &amp;&amp; (d-&gt;reply-&gt;error() != QNetworkReply::NoError)) ||</span>
+<span class="lineNum">     143 </span><span class="lineCov">         72 :             (d-&gt;xmlError != QXmlStreamReader::NoError));</span>
 <span class="lineNum">     144 </span>            : }
 <span class="lineNum">     145 </span>            : 
 <span class="lineNum">     146 </span>            : /**
@@ -221,11 +221,11 @@
 <span class="lineNum">     159 </span>            :  *
 <a name="160"><span class="lineNum">     160 </span>            :  * @see  hasError</a>
 <span class="lineNum">     161 </span>            :  */
-<span class="lineNum">     162 </span><span class="lineNoCov">          0 : bool AwsAbstractResponse::isValid() const</span>
+<span class="lineNum">     162 </span><span class="lineCov">         48 : bool AwsAbstractResponse::isValid() const</span>
 <span class="lineNum">     163 </span>            : {
-<span class="lineNum">     164 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     165 </span><span class="lineNoCov">          0 :     return (((!d-&gt;reply) || (d-&gt;reply-&gt;error() == QNetworkReply::NoError)) &amp;&amp;</span>
-<span class="lineNum">     166 </span><span class="lineNoCov">          0 :             (d-&gt;xmlError == QXmlStreamReader::NoError));</span>
+<span class="lineNum">     164 </span><span class="lineCov">         48 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     165 </span><span class="lineCov">         72 :     return (((!d-&gt;reply) || (d-&gt;reply-&gt;error() == QNetworkReply::NoError)) &amp;&amp;</span>
+<span class="lineNum">     166 </span><span class="lineCov">         72 :             (d-&gt;xmlError == QXmlStreamReader::NoError));</span>
 <span class="lineNum">     167 </span>            : }
 <span class="lineNum">     168 </span>            : 
 <span class="lineNum">     169 </span>            : /**
@@ -237,10 +237,10 @@
 <span class="lineNum">     175 </span>            :  * @see  hasError
 <a name="176"><span class="lineNum">     176 </span>            :  * @see  errorString</a>
 <span class="lineNum">     177 </span>            :  */
-<span class="lineNum">     178 </span><span class="lineNoCov">          0 : QNetworkReply::NetworkError AwsAbstractResponse::networkError() const</span>
+<span class="lineNum">     178 </span><span class="lineCov">        752 : QNetworkReply::NetworkError AwsAbstractResponse::networkError() const</span>
 <span class="lineNum">     179 </span>            : {
-<span class="lineNum">     180 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     181 </span><span class="lineNoCov">          0 :     return (d-&gt;reply) ? d-&gt;reply-&gt;error() : QNetworkReply::NoError;</span>
+<span class="lineNum">     180 </span><span class="lineCov">        752 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     181 </span><span class="lineCov">        752 :     return (d-&gt;reply) ? d-&gt;reply-&gt;error() : QNetworkReply::NoError;</span>
 <span class="lineNum">     182 </span>            : }
 <span class="lineNum">     183 </span>            : 
 <span class="lineNum">     184 </span>            : /**
@@ -252,10 +252,10 @@
 <span class="lineNum">     190 </span>            :  * @see  hasError
 <a name="191"><span class="lineNum">     191 </span>            :  * @see  errorString</a>
 <span class="lineNum">     192 </span>            :  */
-<span class="lineNum">     193 </span><span class="lineNoCov">          0 : QXmlStreamReader::Error AwsAbstractResponse::xmlParseError() const</span>
+<span class="lineNum">     193 </span><span class="lineCov">         62 : QXmlStreamReader::Error AwsAbstractResponse::xmlParseError() const</span>
 <span class="lineNum">     194 </span>            : {
-<span class="lineNum">     195 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     196 </span><span class="lineNoCov">          0 :     return d-&gt;xmlError;</span>
+<span class="lineNum">     195 </span><span class="lineCov">         62 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     196 </span><span class="lineCov">         62 :     return d-&gt;xmlError;</span>
 <span class="lineNum">     197 </span>            : }
 <span class="lineNum">     198 </span>            : 
 <span class="lineNum">     199 </span>            : /**
@@ -267,10 +267,10 @@
 <span class="lineNum">     205 </span>            :  * @see  hasError
 <a name="206"><span class="lineNum">     206 </span>            :  * @see  errorString</a>
 <span class="lineNum">     207 </span>            :  */
-<span class="lineNum">     208 </span><span class="lineNoCov">          0 : QString AwsAbstractResponse::xmlParseErrorString() const</span>
+<span class="lineNum">     208 </span><span class="lineCov">         50 : QString AwsAbstractResponse::xmlParseErrorString() const</span>
 <span class="lineNum">     209 </span>            : {
-<span class="lineNum">     210 </span><span class="lineNoCov">          0 :     Q_D(const AwsAbstractResponse);</span>
-<span class="lineNum">     211 </span><span class="lineNoCov">          0 :     return d-&gt;xmlErrorString;</span>
+<span class="lineNum">     210 </span><span class="lineCov">         50 :     Q_D(const AwsAbstractResponse);</span>
+<span class="lineNum">     211 </span><span class="lineCov">         50 :     return d-&gt;xmlErrorString;</span>
 <span class="lineNum">     212 </span>            : }
 <span class="lineNum">     213 </span>            : 
 <span class="lineNum">     214 </span>            : /**
@@ -377,10 +377,10 @@
 <span class="lineNum">     315 </span>            :  *
 <a name="316"><span class="lineNum">     316 </span>            :  * @see  parse</a>
 <span class="lineNum">     317 </span>            :  */
-<span class="lineNum">     318 </span><span class="lineNoCov">          0 : bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const</span>
+<span class="lineNum">     318 </span><span class="lineCov">       4888 : bool AwsAbstractResponse::isSuccess(QNetworkReply * const reply) const</span>
 <span class="lineNum">     319 </span>            : {
-<span class="lineNum">     320 </span><span class="lineNoCov">          0 :     return ((reply-&gt;error() == QNetworkReply::NoError) &amp;&amp;</span>
-<span class="lineNum">     321 </span><span class="lineNoCov">          0 :             ((reply-&gt;attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));</span>
+<span class="lineNum">     320 </span><span class="lineCov">       5240 :     return ((reply-&gt;error() == QNetworkReply::NoError) &amp;&amp;</span>
+<span class="lineNum">     321 </span><span class="lineCov">       5240 :             ((reply-&gt;attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));</span>
 <span class="lineNum">     322 </span>            : }
 <span class="lineNum">     323 </span>            : 
 <span class="lineNum">     324 </span>            : /**
@@ -388,12 +388,12 @@
 <span class="lineNum">     326 </span>            :  *
 <a name="327"><span class="lineNum">     327 </span>            :  * @param  reply  Network reply to an AWS requests.</a>
 <span class="lineNum">     328 </span>            :  */
-<span class="lineNum">     329 </span><span class="lineCov">         75 : void AwsAbstractResponse::setReply(QNetworkReply * const reply)</span>
+<span class="lineNum">     329 </span><span class="lineCov">        621 : void AwsAbstractResponse::setReply(QNetworkReply * const reply)</span>
 <span class="lineNum">     330 </span>            : {
-<span class="lineNum">     331 </span><span class="lineCov">         75 :     Q_D(AwsAbstractResponse);</span>
-<span class="lineNum">     332 </span><span class="lineCov">         75 :     connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));</span>
-<span class="lineNum">     333 </span><span class="lineCov">         75 :     d-&gt;reply = reply;</span>
-<span class="lineNum">     334 </span><span class="lineCov">         75 : }</span>
+<span class="lineNum">     331 </span><span class="lineCov">        621 :     Q_D(AwsAbstractResponse);</span>
+<span class="lineNum">     332 </span><span class="lineCov">        621 :     connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));</span>
+<span class="lineNum">     333 </span><span class="lineCov">        621 :     d-&gt;reply = reply;</span>
+<span class="lineNum">     334 </span><span class="lineCov">        621 : }</span>
 <span class="lineNum">     335 </span>            : 
 <span class="lineNum">     336 </span>            : /**
 <span class="lineNum">     337 </span>            :  * @brief  Record the details of an XML parse error.
@@ -406,12 +406,12 @@
 <span class="lineNum">     344 </span>            :  * @see  xmlParseError
 <a name="345"><span class="lineNum">     345 </span>            :  * @see  xmlParseErrorString</a>
 <span class="lineNum">     346 </span>            :  */
-<span class="lineNum">     347 </span><span class="lineNoCov">          0 : void AwsAbstractResponse::setXmlError(const QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     347 </span><span class="lineCov">        109 : void AwsAbstractResponse::setXmlError(const QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     348 </span>            : {
-<span class="lineNum">     349 </span><span class="lineNoCov">          0 :     Q_D(AwsAbstractResponse);</span>
-<span class="lineNum">     350 </span><span class="lineNoCov">          0 :     d-&gt;xmlError = xml.error();</span>
-<span class="lineNum">     351 </span><span class="lineNoCov">          0 :     d-&gt;xmlErrorString = xml.errorString();</span>
-<span class="lineNum">     352 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     349 </span><span class="lineCov">        109 :     Q_D(AwsAbstractResponse);</span>
+<span class="lineNum">     350 </span><span class="lineCov">        109 :     d-&gt;xmlError = xml.error();</span>
+<span class="lineNum">     351 </span><span class="lineCov">        109 :     d-&gt;xmlErrorString = xml.errorString();</span>
+<span class="lineNum">     352 </span><span class="lineCov">        109 : }</span>
 <span class="lineNum">     353 </span>            : 
 <span class="lineNum">     354 </span>            : /**
 <span class="lineNum">     355 </span>            :  * @brief  Parse an AWS response from a network reply.
@@ -429,17 +429,17 @@
 <span class="lineNum">     367 </span>            :  * @see  parseSuccess
 <a name="368"><span class="lineNum">     368 </span>            :  * @see  parseFailure</a>
 <span class="lineNum">     369 </span>            :  */
-<span class="lineNum">     370 </span><span class="lineNoCov">          0 : void AwsAbstractResponse::parse(QNetworkReply * const reply)</span>
+<span class="lineNum">     370 </span><span class="lineCov">        613 : void AwsAbstractResponse::parse(QNetworkReply * const reply)</span>
 <span class="lineNum">     371 </span>            : {
-<span class="lineNum">     372 </span><span class="lineNoCov">          0 :     if (reply-&gt;error() != QNetworkReply::NoError) {</span>
-<span class="lineNum">     373 </span><span class="lineNoCov">          0 :         qWarning() &lt;&lt; reply-&gt;errorString();</span>
-<span class="lineNum">     374 </span><span class="lineNoCov">          0 :     } else if (isSuccess(reply)) {</span>
-<span class="lineNum">     375 </span><span class="lineNoCov">          0 :         parseSuccess(*reply);</span>
+<span class="lineNum">     372 </span><span class="lineCov">        613 :     if (reply-&gt;error() != QNetworkReply::NoError) {</span>
+<span class="lineNum">     373 </span><span class="lineCov">        589 :         qWarning() &lt;&lt; reply-&gt;errorString();</span>
+<span class="lineNum">     374 </span><span class="lineCov">         24 :     } else if (isSuccess(reply)) {</span>
+<span class="lineNum">     375 </span><span class="lineCov">          3 :         parseSuccess(*reply);</span>
 <span class="lineNum">     376 </span>            :     } else {
-<span class="lineNum">     377 </span><span class="lineNoCov">          0 :         parseFailure(*reply);</span>
+<span class="lineNum">     377 </span><span class="lineCov">         21 :         parseFailure(*reply);</span>
 <span class="lineNum">     378 </span>            :     }
-<span class="lineNum">     379 </span><span class="lineNoCov">          0 :     emit finished();</span>
-<span class="lineNum">     380 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     379 </span><span class="lineCov">        613 :     emit finished();</span>
+<span class="lineNum">     380 </span><span class="lineCov">        613 : }</span>
 <span class="lineNum">     381 </span>            : 
 <span class="lineNum">     382 </span>            : /**
 <span class="lineNum">     383 </span>            :  * @fn     void AwsAbstractResponse::parseFailure(QIODevice &amp;response)
@@ -474,14 +474,14 @@
 <span class="lineNum">     412 </span>            :  * casting logic from the parse function (ie so derived classes can override
 <a name="413"><span class="lineNum">     413 </span>            :  * parse without having to implement explicit casts).</a>
 <span class="lineNum">     414 </span>            :  */
-<span class="lineNum">     415 </span><span class="lineNoCov">          0 : void AwsAbstractResponse::replyFinished()</span>
+<span class="lineNum">     415 </span><span class="lineCov">          5 : void AwsAbstractResponse::replyFinished()</span>
 <span class="lineNum">     416 </span>            : {
-<span class="lineNum">     417 </span><span class="lineNoCov">          0 :     QNetworkReply * const reply = qobject_cast&lt;QNetworkReply *&gt;(sender());</span>
-<span class="lineNum">     418 </span><span class="lineNoCov">          0 :     Q_ASSERT(reply);</span>
-<span class="lineNum">     419 </span><span class="lineNoCov">          0 :     if (reply) {</span>
-<span class="lineNum">     420 </span><span class="lineNoCov">          0 :         parse(reply);</span>
+<span class="lineNum">     417 </span><span class="lineCov">          5 :     QNetworkReply * const reply = qobject_cast&lt;QNetworkReply *&gt;(sender());</span>
+<span class="lineNum">     418 </span><span class="lineCov">          5 :     Q_ASSERT(reply);</span>
+<span class="lineNum">     419 </span><span class="lineCov">          5 :     if (reply) {</span>
+<span class="lineNum">     420 </span><span class="lineCov">          5 :         parse(reply);</span>
 <span class="lineNum">     421 </span>            :     }
-<span class="lineNum">     422 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     422 </span><span class="lineCov">          5 : }</span>
 <span class="lineNum">     423 </span>            : 
 <span class="lineNum">     424 </span>            : /**
 <span class="lineNum">     425 </span>            :  * @fn     void AwsAbstractResponse::finished()
@@ -510,11 +510,11 @@
 <span class="lineNum">     448 </span>            :  *
 <a name="449"><span class="lineNum">     449 </span>            :  * @param  q  Pointer to this object's public AwsAbstractResponse instance.</a>
 <span class="lineNum">     450 </span>            :  */
-<span class="lineNum">     451 </span><span class="lineCov">        123 : AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)</span>
-<span class="lineNum">     452 </span><span class="lineCov">        123 :     : reply(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)</span>
+<span class="lineNum">     451 </span><span class="lineCov">       6180 : AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)</span>
+<span class="lineNum">     452 </span><span class="lineCov">       6180 :     : reply(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)</span>
 <span class="lineNum">     453 </span>            : {
 <span class="lineNum">     454 </span>            : 
-<span class="lineNum">     455 </span><span class="lineCov">        123 : }</span>
+<span class="lineNum">     455 </span><span class="lineCov">       6180 : }</span>
 <span class="lineNum">     456 </span>            : 
 <span class="lineNum">     457 </span>            : /**
 <span class="lineNum">     458 </span>            :  * @internal
@@ -524,10 +524,10 @@
 <span class="lineNum">     462 </span>            :  * This virtual destructor does nothing (yet) - its here to allow for safe
 <a name="463"><span class="lineNum">     463 </span>            :  * polymorphic destruction.</a>
 <span class="lineNum">     464 </span>            :  */
-<span class="lineNum">     465 </span><span class="lineCov">        126 : AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()</span>
+<span class="lineNum">     465 </span><span class="lineCov">      12240 : AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()</span>
 <span class="lineNum">     466 </span>            : {
 <span class="lineNum">     467 </span>            : 
-<span class="lineNum">     468 </span><span class="lineCov">        126 : }</span>
+<span class="lineNum">     468 </span><span class="lineCov">      12240 : }</span>
 <span class="lineNum">     469 </span>            : 
 <span class="lineNum">     470 </span>            : QTAWS_END_NAMESPACE
 </pre>
