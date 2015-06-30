@@ -1,6 +1,6 @@
 # Libqtaws
 [![Build Status](http://img.shields.io/travis/pcolby/libqtaws/master.svg)](https://travis-ci.org/pcolby/libqtaws)
-[![Coverage Status](https://img.shields.io/coveralls/pcolby/libqtaws/v0.1.0.svg)](https://coveralls.io/r/pcolby/libqtaws)
+[![Coverage Status](https://img.shields.io/coveralls/pcolby/libqtaws.svg)](https://coveralls.io/r/pcolby/libqtaws)
 [![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/libqtaws.svg)](https://codecov.io/github/pcolby/libqtaws)
 [![Coverity Scan Status](https://img.shields.io/coverity/scan/5528.svg)](https://scan.coverity.com/projects/5528)
 [![GitHub Issues](http://img.shields.io/github/issues/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/issues)
