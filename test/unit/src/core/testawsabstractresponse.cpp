@@ -343,17 +343,59 @@ void TestAwsAbstractResponse::xmlParseErrorString()
     QCOMPARE(response.xmlParseErrorString(), xmlErrorString);
 }
 
-void TestAwsAbstractResponse::toVariant_data()
+QVariant TestAwsAbstractResponse::toVariant(const QByteArray &bytes)
 {
-    QTest::addColumn<QString>("foo");
-    QTest::newRow("bar") << QString::fromLatin1("bar");
+    QVariant variant;
+    QDataStream stream(bytes);
+    stream >> variant;
+    return variant;
 }
 
-/// @todo
+void TestAwsAbstractResponse::toVariant_data()
+{
+    QTest::addColumn<QByteArray>("xml");
+    QTest::addColumn<QVariant>("expected");
+
+    QTest::newRow("complex")
+        << QByteArray("<!DOCTYPE doc [<!ATTLIST e9 attr CDATA \"default\">]>"
+                      "<!-- comment -->"
+                      "<xml foo=\" bar \">baz<qux>corge</qux>grault</xml>")
+        << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAAGAAAABgB4AG0AbAAAAAgAAAAABAAAAAYAcQB1AHgAAAAIAAAAAAEAAAAWAC"
+    "4AQwBoAGEAcgBhAGMAdABlAHIAcwAAAAoAAAAACgBjAG8AcgBnAGUAAAAIAC4AZgBvAG8A"
+    "AAAIAAAAAAIAAAAKAFYAYQBsAHUAZQAAAAoAAAAACgAgAGIAYQByACAAAAAaAFEAdQBhAG"
+    "wAaQBmAGkAZQBkAE4AYQBtAGUAAAAKAAAAAAYAZgBvAG8AAAAWAC4AQwBoAGEAcgBhAGMA"
+    "dABlAHIAcwAAAAoAAAAABgBiAGEAegAAABYALgBDAGgAYQByAGEAYwB0AGUAcgBzAAAACg"
+    "AAAAAMAGcAcgBhAHUAbAB0AAAAJgAuAFMAdABhAG4AZABhAGwAbwBuAGUARABvAGMAdQBt"
+    "AGUAbgB0AAAAAQAAAAAAIAAuAEQAbwBjAHUAbQBlAG4AdABWAGUAcgBzAGkAbwBuAAAACg"
+    "D/////AAAAIgAuAEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQBuAGcAAAAKAP////8A"
+    "AAAIAC4ARABUAEQAAAAKAAAAAGYAPAAhAEQATwBDAFQAWQBQAEUAIABkAG8AYwAgAFsAPA"
+    "AhAEEAVABUAEwASQBTAFQAIABlADkAIABhAHQAdAByACAAQwBEAEEAVABBACAAIgBkAGUA"
+    "ZgBhAHUAbAB0ACIAPgBdAD4AAAAQAC4AQwBvAG0AbQBlAG4AdAAAAAoAAAAAEgAgAGMAbw"
+    "BtAG0AZQBuAHQAIA=="));
+}
+
 void TestAwsAbstractResponse::toVariant()
 {
-    QFETCH(QString, foo);
-    Q_UNUSED(foo)
+    QFETCH(QByteArray, xml);
+    QFETCH(QVariant, expected);
+
+    QXmlStreamReader reader(xml);
+    const QVariant variant(AwsAbstractResponse::toVariant(reader));
+
+    {   // Just for development (ie when adding new test data).
+        QByteArray bytes;
+        QDataStream stream(&bytes, QIODevice::WriteOnly);
+        stream << variant;
+        qDebug() << bytes.toBase64();
+    }
+
+    if (variant != expected) {
+        qDebug() << "Actual   (variant) :" << variant;
+        qDebug() << "Expected (expected):" << expected;
+    }
+
+    QCOMPARE(variant, expected);
 }
 
 void TestAwsAbstractResponse::isSuccess_data()

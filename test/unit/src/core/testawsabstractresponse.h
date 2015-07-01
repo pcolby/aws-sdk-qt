@@ -61,4 +61,8 @@ private slots:
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     // Nothing to see here.
     #endif
+
+protected:
+    QVariant toVariant(const QByteArray &bytes);
+
 };
