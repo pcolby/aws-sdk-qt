@@ -20,7 +20,10 @@
 #include "testawsabstractresponse.h"
 
 #include "core/awsabstractresponse.h"
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "core/awsabstractresponse_p.h"
+#endif
 
 #include <QDebug>
 
