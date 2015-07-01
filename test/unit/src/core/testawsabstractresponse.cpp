@@ -22,6 +22,8 @@
 #include "core/awsabstractresponse.h"
 #include "core/awsabstractresponse_p.h"
 
+#include <QDebug>
+
 namespace TestAwsAbstractResponse_Mocks {
 
 // Bare minimum concrete mock class.
