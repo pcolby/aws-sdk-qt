@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-06-30 21:52:50</td>
+            <td class="headerValue">2015-07-02 11:10:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">14</td>
@@ -113,11 +113,11 @@
 <span class="lineNum">      51 </span>            :  *
 <a name="52"><span class="lineNum">      52 </span>            :  * @param  parent  This object's parent.</a>
 <span class="lineNum">      53 </span>            :  */
-<span class="lineNum">      54 </span><span class="lineCov">       1095 : AwsAbstractRequest::AwsAbstractRequest(QObject * const parent)</span>
-<span class="lineNum">      55 </span><span class="lineCov">       1095 :     : QObject(parent), d_ptr(new AwsAbstractRequestPrivate(this))</span>
+<span class="lineNum">      54 </span><span class="lineCov">       1218 : AwsAbstractRequest::AwsAbstractRequest(QObject * const parent)</span>
+<span class="lineNum">      55 </span><span class="lineCov">       1218 :     : QObject(parent), d_ptr(new AwsAbstractRequestPrivate(this))</span>
 <span class="lineNum">      56 </span>            : {
 <span class="lineNum">      57 </span>            : 
-<span class="lineNum">      58 </span><span class="lineCov">       1095 : }</span>
+<span class="lineNum">      58 </span><span class="lineCov">       1218 : }</span>
 <span class="lineNum">      59 </span>            : 
 <span class="lineNum">      60 </span>            : /**
 <span class="lineNum">      61 </span>            :  * @internal
@@ -130,20 +130,20 @@
 <span class="lineNum">      68 </span>            :  * @param  d       Pointer to private data (aka D-Pointer).
 <a name="69"><span class="lineNum">      69 </span>            :  * @param  parent  This object's parent.</a>
 <span class="lineNum">      70 </span>            :  */
-<span class="lineNum">      71 </span><span class="lineCov">        225 : AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d,</span>
+<span class="lineNum">      71 </span><span class="lineCov">        255 : AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d,</span>
 <span class="lineNum">      72 </span>            :                                        QObject * const parent)
-<span class="lineNum">      73 </span><span class="lineCov">        225 :     : QObject(parent), d_ptr(d)</span>
+<span class="lineNum">      73 </span><span class="lineCov">        255 :     : QObject(parent), d_ptr(d)</span>
 <span class="lineNum">      74 </span>            : {
 <span class="lineNum">      75 </span>            : 
-<span class="lineNum">      76 </span><span class="lineCov">        225 : }</span>
+<span class="lineNum">      76 </span><span class="lineCov">        255 : }</span>
 <span class="lineNum">      77 </span>            : 
 <span class="lineNum">      78 </span>            : /**
 <a name="79"><span class="lineNum">      79 </span>            :  * @brief AwsAbstractRequest destructor.</a>
 <span class="lineNum">      80 </span>            :  */
-<span class="lineNum">      81 </span><span class="lineCov">       2640 : AwsAbstractRequest::~AwsAbstractRequest()</span>
+<span class="lineNum">      81 </span><span class="lineCov">       2946 : AwsAbstractRequest::~AwsAbstractRequest()</span>
 <span class="lineNum">      82 </span>            : {
-<span class="lineNum">      83 </span><span class="lineCov">       1320 :     delete d_ptr;</span>
-<span class="lineNum">      84 </span><span class="lineCov">       1320 : }</span>
+<span class="lineNum">      83 </span><span class="lineCov">       1473 :     delete d_ptr;</span>
+<span class="lineNum">      84 </span><span class="lineCov">       1473 : }</span>
 <span class="lineNum">      85 </span>            : 
 <span class="lineNum">      86 </span>            : /**
 <span class="lineNum">      87 </span>            :  * @fn     bool AwsAbstractRequest::isValid() const
@@ -165,10 +165,10 @@
 <span class="lineNum">     103 </span>            :  *
 <a name="104"><span class="lineNum">     104 </span>            :  * @return</a>
 <span class="lineNum">     105 </span>            :  */
-<span class="lineNum">     106 </span><span class="lineCov">       1360 : QByteArray AwsAbstractRequest::data() const</span>
+<span class="lineNum">     106 </span><span class="lineCov">       1519 : QByteArray AwsAbstractRequest::data() const</span>
 <span class="lineNum">     107 </span>            : {
-<span class="lineNum">     108 </span><span class="lineCov">       1360 :     Q_D(const AwsAbstractRequest);</span>
-<span class="lineNum">     109 </span><span class="lineCov">       1360 :     return d-&gt;data;</span>
+<span class="lineNum">     108 </span><span class="lineCov">       1519 :     Q_D(const AwsAbstractRequest);</span>
+<span class="lineNum">     109 </span><span class="lineCov">       1519 :     return d-&gt;data;</span>
 <span class="lineNum">     110 </span>            : }
 <span class="lineNum">     111 </span>            : 
 <span class="lineNum">     112 </span>            : /**
@@ -190,14 +190,14 @@
 <span class="lineNum">     128 </span>            :  *
 <a name="129"><span class="lineNum">     129 </span>            :  * @see  unsignedRequest</a>
 <span class="lineNum">     130 </span>            :  */
-<span class="lineNum">     131 </span><span class="lineCov">        699 : QNetworkRequest AwsAbstractRequest::networkRequest(</span>
+<span class="lineNum">     131 </span><span class="lineCov">        780 : QNetworkRequest AwsAbstractRequest::networkRequest(</span>
 <span class="lineNum">     132 </span>            :     const QUrl &amp;endpoint,
 <span class="lineNum">     133 </span>            :     const AwsAbstractSignature &amp;signature,
 <span class="lineNum">     134 </span>            :     const AwsAbstractCredentials &amp;credentials) const
 <span class="lineNum">     135 </span>            : {
-<span class="lineNum">     136 </span><span class="lineCov">        699 :     QNetworkRequest request(unsignedRequest(endpoint));</span>
-<span class="lineNum">     137 </span><span class="lineCov">        699 :     signature.sign(credentials, operation(), request, data());</span>
-<span class="lineNum">     138 </span><span class="lineCov">        699 :     return request;</span>
+<span class="lineNum">     136 </span><span class="lineCov">        780 :     QNetworkRequest request(unsignedRequest(endpoint));</span>
+<span class="lineNum">     137 </span><span class="lineCov">        780 :     signature.sign(credentials, operation(), request, data());</span>
+<span class="lineNum">     138 </span><span class="lineCov">        780 :     return request;</span>
 <span class="lineNum">     139 </span>            : }
 <span class="lineNum">     140 </span>            : 
 <span class="lineNum">     141 </span>            : /**
@@ -210,10 +210,10 @@
 <span class="lineNum">     148 </span>            :  *
 <a name="149"><span class="lineNum">     149 </span>            :  * @see  setOperation</a>
 <span class="lineNum">     150 </span>            :  */
-<span class="lineNum">     151 </span><span class="lineCov">       2031 : QNetworkAccessManager::Operation AwsAbstractRequest::operation() const</span>
+<span class="lineNum">     151 </span><span class="lineCov">       2262 : QNetworkAccessManager::Operation AwsAbstractRequest::operation() const</span>
 <span class="lineNum">     152 </span>            : {
-<span class="lineNum">     153 </span><span class="lineCov">       2031 :     Q_D(const AwsAbstractRequest);</span>
-<span class="lineNum">     154 </span><span class="lineCov">       2031 :     return d-&gt;operation;</span>
+<span class="lineNum">     153 </span><span class="lineCov">       2262 :     Q_D(const AwsAbstractRequest);</span>
+<span class="lineNum">     154 </span><span class="lineCov">       2262 :     return d-&gt;operation;</span>
 <span class="lineNum">     155 </span>            : }
 <span class="lineNum">     156 </span>            : 
 <span class="lineNum">     157 </span>            : /**
@@ -227,35 +227,35 @@
 <span class="lineNum">     165 </span>            :  *
 <a name="166"><span class="lineNum">     166 </span>            :  * @return  AwsAbstractResponse-derived object representing the AWS service's response.</a>
 <span class="lineNum">     167 </span>            :  */
-<span class="lineNum">     168 </span><span class="lineCov">        468 : AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &amp;manager,</span>
+<span class="lineNum">     168 </span><span class="lineCov">        522 : AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &amp;manager,</span>
 <span class="lineNum">     169 </span>            :                                                const QUrl &amp;endpoint,
 <span class="lineNum">     170 </span>            :                                                const AwsAbstractSignature &amp;signature,
 <span class="lineNum">     171 </span>            :                                                const AwsAbstractCredentials &amp;credentials) const
 <span class="lineNum">     172 </span>            : {
-<span class="lineNum">     173 </span><span class="lineCov">        468 :     Q_ASSERT(isValid());</span>
-<span class="lineNum">     174 </span><span class="lineCov">        468 :     Q_D(const AwsAbstractRequest);</span>
-<span class="lineNum">     175 </span><span class="lineCov">        468 :     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));</span>
-<span class="lineNum">     176 </span><span class="lineCov">        468 :     qDebug() &lt;&lt; &quot;Request URL:&quot; &lt;&lt; request.url().toString();</span>
-<span class="lineNum">     177 </span><span class="lineCov">        468 :     if (request.hasRawHeader(&quot;Authorization&quot;)) {</span>
-<span class="lineNum">     178 </span><span class="lineCov">        414 :         qDebug() &lt;&lt; &quot;Authorization:&quot; &lt;&lt; request.rawHeader(&quot;Authorization&quot;);</span>
+<span class="lineNum">     173 </span><span class="lineCov">        522 :     Q_ASSERT(isValid());</span>
+<span class="lineNum">     174 </span><span class="lineCov">        522 :     Q_D(const AwsAbstractRequest);</span>
+<span class="lineNum">     175 </span><span class="lineCov">        522 :     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));</span>
+<span class="lineNum">     176 </span><span class="lineCov">        522 :     qDebug() &lt;&lt; &quot;Request URL:&quot; &lt;&lt; request.url().toString();</span>
+<span class="lineNum">     177 </span><span class="lineCov">        522 :     if (request.hasRawHeader(&quot;Authorization&quot;)) {</span>
+<span class="lineNum">     178 </span><span class="lineCov">        468 :         qDebug() &lt;&lt; &quot;Authorization:&quot; &lt;&lt; request.rawHeader(&quot;Authorization&quot;);</span>
 <span class="lineNum">     179 </span>            :     }
-<span class="lineNum">     180 </span><span class="lineCov">        468 :     switch (operation()) {</span>
+<span class="lineNum">     180 </span><span class="lineCov">        522 :     switch (operation()) {</span>
 <span class="lineNum">     181 </span>            :         case QNetworkAccessManager::DeleteOperation:
-<span class="lineNum">     182 </span><span class="lineCov">         47 :             return response(manager.deleteResource(request));</span>
+<span class="lineNum">     182 </span><span class="lineCov">         53 :             return response(manager.deleteResource(request));</span>
 <span class="lineNum">     183 </span>            :         case QNetworkAccessManager::HeadOperation:
-<span class="lineNum">     184 </span><span class="lineCov">         47 :             return response(manager.head(request));</span>
+<span class="lineNum">     184 </span><span class="lineCov">         53 :             return response(manager.head(request));</span>
 <span class="lineNum">     185 </span>            :         case QNetworkAccessManager::GetOperation:
-<span class="lineNum">     186 </span><span class="lineCov">         68 :             return response(manager.get(request));</span>
+<span class="lineNum">     186 </span><span class="lineCov">         74 :             return response(manager.get(request));</span>
 <span class="lineNum">     187 </span>            :         case QNetworkAccessManager::PostOperation:
-<span class="lineNum">     188 </span><span class="lineCov">         47 :             return response(d-&gt;post(manager, request));</span>
+<span class="lineNum">     188 </span><span class="lineCov">         53 :             return response(d-&gt;post(manager, request));</span>
 <span class="lineNum">     189 </span>            :         case QNetworkAccessManager::PutOperation:
-<span class="lineNum">     190 </span><span class="lineCov">         47 :             return response(d-&gt;put(manager, request));</span>
+<span class="lineNum">     190 </span><span class="lineCov">         53 :             return response(d-&gt;put(manager, request));</span>
 <span class="lineNum">     191 </span>            :         case QNetworkAccessManager::CustomOperation: // Fall through.
 <span class="lineNum">     192 </span>            :         default:
 <span class="lineNum">     193 </span>            :             // Catch this in debug mode for easier development / debugging.
-<span class="lineNum">     194 </span><span class="lineCov">        212 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
+<span class="lineNum">     194 </span><span class="lineCov">        236 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
 <span class="lineNum">     195 </span>            :     }
-<span class="lineNum">     196 </span><span class="lineCov">        212 :     return NULL;</span>
+<span class="lineNum">     196 </span><span class="lineCov">        236 :     return NULL;</span>
 <span class="lineNum">     197 </span>            : }
 <span class="lineNum">     198 </span>            : 
 <span class="lineNum">     199 </span>            : /**
@@ -263,22 +263,22 @@
 <span class="lineNum">     201 </span>            :  *
 <a name="202"><span class="lineNum">     202 </span>            :  * @param  data  POST/PUT data.</a>
 <span class="lineNum">     203 </span>            :  */
-<span class="lineNum">     204 </span><span class="lineCov">        744 : void AwsAbstractRequest::setData(const QByteArray &amp;data)</span>
+<span class="lineNum">     204 </span><span class="lineCov">        831 : void AwsAbstractRequest::setData(const QByteArray &amp;data)</span>
 <span class="lineNum">     205 </span>            : {
-<span class="lineNum">     206 </span><span class="lineCov">        744 :     Q_D(AwsAbstractRequest);</span>
-<span class="lineNum">     207 </span><span class="lineCov">        744 :     d-&gt;data = data;</span>
-<span class="lineNum">     208 </span><span class="lineCov">        744 : }</span>
+<span class="lineNum">     206 </span><span class="lineCov">        831 :     Q_D(AwsAbstractRequest);</span>
+<span class="lineNum">     207 </span><span class="lineCov">        831 :     d-&gt;data = data;</span>
+<span class="lineNum">     208 </span><span class="lineCov">        831 : }</span>
 <span class="lineNum">     209 </span>            : 
 <span class="lineNum">     210 </span>            : /**
 <span class="lineNum">     211 </span>            :  * @brief  Set the network operation to use when submitting this request.
 <span class="lineNum">     212 </span>            :  *
 <a name="213"><span class="lineNum">     213 </span>            :  * @param  operation  Network operation to use.</a>
 <span class="lineNum">     214 </span>            :  */
-<span class="lineNum">     215 </span><span class="lineCov">        879 : void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation operation)</span>
+<span class="lineNum">     215 </span><span class="lineCov">        981 : void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation operation)</span>
 <span class="lineNum">     216 </span>            : {
-<span class="lineNum">     217 </span><span class="lineCov">        879 :     Q_D(AwsAbstractRequest);</span>
-<span class="lineNum">     218 </span><span class="lineCov">        879 :     d-&gt;operation = operation;</span>
-<span class="lineNum">     219 </span><span class="lineCov">        879 : }</span>
+<span class="lineNum">     217 </span><span class="lineCov">        981 :     Q_D(AwsAbstractRequest);</span>
+<span class="lineNum">     218 </span><span class="lineCov">        981 :     d-&gt;operation = operation;</span>
+<span class="lineNum">     219 </span><span class="lineCov">        981 : }</span>
 <span class="lineNum">     220 </span>            : 
 <span class="lineNum">     221 </span>            : /**
 <span class="lineNum">     222 </span>            :  * @fn AwsAbstractResponse * AwsAbstractRequest::response(QNetworkReply * const reply) const
@@ -329,11 +329,11 @@
 <span class="lineNum">     267 </span>            :  *
 <a name="268"><span class="lineNum">     268 </span>            :  * @param  q  Pointer to this object's public AwsAbstractRequest instance.</a>
 <span class="lineNum">     269 </span>            :  */
-<span class="lineNum">     270 </span><span class="lineCov">       1320 : AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)</span>
-<span class="lineNum">     271 </span><span class="lineCov">       1320 :     : operation(QNetworkAccessManager::GetOperation), q_ptr(q)</span>
+<span class="lineNum">     270 </span><span class="lineCov">       1473 : AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)</span>
+<span class="lineNum">     271 </span><span class="lineCov">       1473 :     : operation(QNetworkAccessManager::GetOperation), q_ptr(q)</span>
 <span class="lineNum">     272 </span>            : {
 <span class="lineNum">     273 </span>            : 
-<span class="lineNum">     274 </span><span class="lineCov">       1320 : }</span>
+<span class="lineNum">     274 </span><span class="lineCov">       1473 : }</span>
 <span class="lineNum">     275 </span>            : 
 <span class="lineNum">     276 </span>            : /**
 <span class="lineNum">     277 </span>            :  * @internal
@@ -343,10 +343,10 @@
 <span class="lineNum">     281 </span>            :  * This virtual destructor does nothing (yet) - its here to allow for safe
 <a name="282"><span class="lineNum">     282 </span>            :  * polymorphic destruction.</a>
 <span class="lineNum">     283 </span>            :  */
-<span class="lineNum">     284 </span><span class="lineCov">       2442 : AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()</span>
+<span class="lineNum">     284 </span><span class="lineCov">       2721 : AwsAbstractRequestPrivate::~AwsAbstractRequestPrivate()</span>
 <span class="lineNum">     285 </span>            : {
 <span class="lineNum">     286 </span>            : 
-<span class="lineNum">     287 </span><span class="lineCov">       2442 : }</span>
+<span class="lineNum">     287 </span><span class="lineCov">       2721 : }</span>
 <span class="lineNum">     288 </span>            : 
 <span class="lineNum">     289 </span>            : /**
 <span class="lineNum">     290 </span>            :  * @brief  POST the given \a request via the given \a manager.
@@ -370,11 +370,11 @@
 <span class="lineNum">     308 </span>            :  * @see AwsAbstractRequest::setData
 <a name="309"><span class="lineNum">     309 </span>            :  * @see put</a>
 <span class="lineNum">     310 </span>            :  */
-<span class="lineNum">     311 </span><span class="lineCov">         47 : QNetworkReply *AwsAbstractRequestPrivate::post(QNetworkAccessManager &amp;manager,</span>
+<span class="lineNum">     311 </span><span class="lineCov">         53 : QNetworkReply *AwsAbstractRequestPrivate::post(QNetworkAccessManager &amp;manager,</span>
 <span class="lineNum">     312 </span>            :                                                const QNetworkRequest &amp;request) const
 <span class="lineNum">     313 </span>            : {
-<span class="lineNum">     314 </span><span class="lineCov">         47 :     Q_Q(const AwsAbstractRequest);</span>
-<span class="lineNum">     315 </span><span class="lineCov">         47 :     return manager.post(request, q-&gt;data());</span>
+<span class="lineNum">     314 </span><span class="lineCov">         53 :     Q_Q(const AwsAbstractRequest);</span>
+<span class="lineNum">     315 </span><span class="lineCov">         53 :     return manager.post(request, q-&gt;data());</span>
 <span class="lineNum">     316 </span>            : }
 <span class="lineNum">     317 </span>            : 
 <span class="lineNum">     318 </span>            : /**
@@ -399,11 +399,11 @@
 <span class="lineNum">     337 </span>            :  * @see AwsAbstractRequest::setData
 <a name="338"><span class="lineNum">     338 </span>            :  * @see post</a>
 <span class="lineNum">     339 </span>            :  */
-<span class="lineNum">     340 </span><span class="lineCov">         47 : QNetworkReply *AwsAbstractRequestPrivate::put(QNetworkAccessManager &amp;manager,</span>
+<span class="lineNum">     340 </span><span class="lineCov">         53 : QNetworkReply *AwsAbstractRequestPrivate::put(QNetworkAccessManager &amp;manager,</span>
 <span class="lineNum">     341 </span>            :                                               const QNetworkRequest &amp;request) const
 <span class="lineNum">     342 </span>            : {
-<span class="lineNum">     343 </span><span class="lineCov">         47 :     Q_Q(const AwsAbstractRequest);</span>
-<span class="lineNum">     344 </span><span class="lineCov">         47 :     return manager.put(request, q-&gt;data());</span>
+<span class="lineNum">     343 </span><span class="lineCov">         53 :     Q_Q(const AwsAbstractRequest);</span>
+<span class="lineNum">     344 </span><span class="lineCov">         53 :     return manager.put(request, q-&gt;data());</span>
 <span class="lineNum">     345 </span>            : }
 <span class="lineNum">     346 </span>            : 
 <span class="lineNum">     347 </span>            : QTAWS_END_NAMESPACE
