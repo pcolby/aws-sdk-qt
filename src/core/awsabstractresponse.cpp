@@ -286,9 +286,11 @@ QVariantMap AwsAbstractResponse::toVariant(
             map.insertMulti(prefix + xml.processingInstructionTarget().toString(),
                             xml.processingInstructionData().toString());
             break;
-        case QXmlStreamReader::StartElement:
-            map.insertMulti(xml.name().toString(), toVariant(xml, prefix, maxDepth-1));
+        case QXmlStreamReader::StartElement: {
+            const QString elementName = xml.name().toString();
+            map.insertMulti(elementName, toVariant(xml, prefix, maxDepth-1));
             break;
+        }
         default:
             qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
                           .arg(xml.tokenString()).arg(xml.tokenType());
