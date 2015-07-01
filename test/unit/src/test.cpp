@@ -31,6 +31,28 @@
 #include "core/testawssignaturev2.h"
 #include "core/testawssignaturev3.h"
 #include "core/testawssignaturev4.h"
+#include "sqs/testsqsaddpermissionrequest.h"
+#include "sqs/testsqschangemessagevisibilitybatchrequest.h"
+#include "sqs/testsqschangemessagevisibilityrequest.h"
+#include "sqs/testsqsclient.h"
+#include "sqs/testsqscreatequeuerequest.h"
+#include "sqs/testsqscreatequeueresponse.h"
+#include "sqs/testsqsdeletemessagebatchrequest.h"
+#include "sqs/testsqsdeletemessagerequest.h"
+#include "sqs/testsqsdeletequeuerequest.h"
+#include "sqs/testsqserror.h"
+#include "sqs/testsqsgetqueueattributesrequest.h"
+#include "sqs/testsqsgetqueueurlrequest.h"
+#include "sqs/testsqslistdeadlettersourcequeuesrequest.h"
+#include "sqs/testsqslistqueuesrequest.h"
+#include "sqs/testsqspurgequeuerequest.h"
+#include "sqs/testsqsreceivemessagerequest.h"
+#include "sqs/testsqsremovepermissionrequest.h"
+#include "sqs/testsqsrequest.h"
+#include "sqs/testsqsresponse.h"
+#include "sqs/testsqssendmessagebatchrequest.h"
+#include "sqs/testsqssendmessagerequest.h"
+#include "sqs/testsqssetqueueattributesrequest.h"
 
 #include <QTest>
 
@@ -78,6 +100,28 @@ int main(int argc, char *argv[]) {
     testFactory.registerClass<TestAwsSignatureV2>();
     testFactory.registerClass<TestAwsSignatureV3>();
     testFactory.registerClass<TestAwsSignatureV4>();
+    testFactory.registerClass<TestSqsAddPermissionRequest>();
+    testFactory.registerClass<TestSqsChangeMessageVisibilityBatchRequest>();
+    testFactory.registerClass<TestSqsChangeMessageVisibilityRequest>();
+    testFactory.registerClass<TestSqsClient>();
+    testFactory.registerClass<TestSqsCreateQueueRequest>();
+    testFactory.registerClass<TestSqsCreateQueueResponse>();
+    testFactory.registerClass<TestSqsDeleteMessageBatchRequest>();
+    testFactory.registerClass<TestSqsDeleteMessageRequest>();
+    testFactory.registerClass<TestSqsDeleteQueueRequest>();
+    testFactory.registerClass<TestSqsError>();
+    testFactory.registerClass<TestSqsGetQueueAttributesRequest>();
+    testFactory.registerClass<TestSqsGetQueueUrlRequest>();
+    testFactory.registerClass<TestSqsListDeadLetterSourceQueuesRequest>();
+    testFactory.registerClass<TestSqsListQueuesRequest>();
+    testFactory.registerClass<TestSqsPurgeQueueRequest>();
+    testFactory.registerClass<TestSqsReceiveMessageRequest>();
+    testFactory.registerClass<TestSqsRemovePermissionRequest>();
+    testFactory.registerClass<TestSqsRequest>();
+    testFactory.registerClass<TestSqsResponse>();
+    testFactory.registerClass<TestSqsSendMessageBatchRequest>();
+    testFactory.registerClass<TestSqsSendMessageRequest>();
+    testFactory.registerClass<TestSqsSetQueueAttributesRequest>();
 
     // If the user has specified a Test* class name, execute that test class only.
     for (int index = 1; index < argc; ++index) {
