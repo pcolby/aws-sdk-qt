@@ -354,13 +354,28 @@ QVariant TestAwsAbstractResponse::toVariant(const QByteArray &bytes)
 void TestAwsAbstractResponse::toVariant_data()
 {
     QTest::addColumn<QByteArray>("xml");
+    QTest::addColumn<QString>("prefix");
+    QTest::addColumn<int>("maxDepth");
     QTest::addColumn<QVariant>("expected");
+
+    QTest::newRow("null")
+        << QByteArray() << QString() << 1024 << QVariant(QVariantMap());
+
+    QTest::newRow("simple")
+        << QByteArray("<foo bar=\"baz\">qux</foo>")
+        << QString::fromLatin1("|") << 1024 << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAAEAAAAJgB8AFMAdABhAG4AZABhAGwAbwBuAGUARABvAGMAdQBtAGUAbgB0AA"
+    "AAAQAAAAAAIAB8AEQAbwBjAHUAbQBlAG4AdABWAGUAcgBzAGkAbwBuAAAACgD/////AAAA"
+    "IgB8AEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQBuAGcAAAAKAP////8AAAAGAGYAbw"
+    "BvAAAACAAAAAACAAAACAB8AGIAYQByAAAACAAAAAACAAAACgBWAGEAbAB1AGUAAAAKAAAA"
+    "AAYAYgBhAHoAAAAaAFEAdQBhAGwAaQBmAGkAZQBkAE4AYQBtAGUAAAAKAAAAAAYAYgBhAH"
+    "IAAAAWAHwAQwBoAGEAcgBhAGMAdABlAHIAcwAAAAoAAAAABgBxAHUAeA=="));
 
     QTest::newRow("complex")
         << QByteArray("<!DOCTYPE doc [<!ATTLIST e9 attr CDATA \"default\">]>"
                       "<!-- comment -->"
                       "<xml foo=\" bar \">baz<qux>corge</qux>grault</xml>")
-        << toVariant(QByteArray::fromBase64(
+        << QString::fromLatin1(".") << 1024 << toVariant(QByteArray::fromBase64(
     "AAAACAAAAAAGAAAABgB4AG0AbAAAAAgAAAAABAAAAAYAcQB1AHgAAAAIAAAAAAEAAAAWAC"
     "4AQwBoAGEAcgBhAGMAdABlAHIAcwAAAAoAAAAACgBjAG8AcgBnAGUAAAAIAC4AZgBvAG8A"
     "AAAIAAAAAAIAAAAKAFYAYQBsAHUAZQAAAAoAAAAACgAgAGIAYQByACAAAAAaAFEAdQBhAG"
@@ -373,21 +388,66 @@ void TestAwsAbstractResponse::toVariant_data()
     "AhAEEAVABUAEwASQBTAFQAIABlADkAIABhAHQAdAByACAAQwBEAEEAVABBACAAIgBkAGUA"
     "ZgBhAHUAbAB0ACIAPgBdAD4AAAAQAC4AQwBvAG0AbQBlAG4AdAAAAAoAAAAAEgAgAGMAbw"
     "BtAG0AZQBuAHQAIA=="));
+
+    QTest::newRow("namespace")
+        << QByteArray("<xml xmlns:ns=\"http://example.com/\">"
+                      "<ns:foo ns:bar=\"baz\"/>")
+        << QString::fromLatin1(".") << 10 << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAAEAAAAJgAuAFMAdABhAG4AZABhAGwAbwBuAGUARABvAGMAdQBtAGUAbgB0AA"
+    "AAAQAAAAAAIAAuAEQAbwBjAHUAbQBlAG4AdABWAGUAcgBzAGkAbwBuAAAACgD/////AAAA"
+    "IgAuAEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQBuAGcAAAAKAP//////////AAAACA"
+    "AAAAABAAAABgBmAG8AbwAAAAgAAAAAAgAAAAgALgBiAGEAcgAAAAgAAAAABAAAAAoAVgBh"
+    "AGwAdQBlAAAACgAAAAAGAGIAYQB6AAAAGgBRAHUAYQBsAGkAZgBpAGUAZABOAGEAbQBlAA"
+    "AACgAAAAAMAG4AcwA6AGIAYQByAAAADABQAHIAZQBmAGkAeAAAAAoAAAAABABuAHMAAAAY"
+    "AE4AYQBtAGUAcwBwAGEAYwBlAFUAcgBpAAAACgAAAAAmAGgAdAB0AHAAOgAvAC8AZQB4AG"
+    "EAbQBwAGwAZQAuAGMAbwBtAC8AAAAaAC4ATgBhAG0AZQBzAHAAYQBjAGUAVQByAGkAAAAK"
+    "AAAAACYAaAB0AHQAcAA6AC8ALwBlAHgAYQBtAHAAbABlAC4AYwBvAG0ALw=="));
+
+    QTest::newRow("processing instruction")
+        << QByteArray("<?foo?>")
+        << QString::fromLatin1(".") << 10 << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAAEAAAACAAuAGYAbwBvAAAACgD/////AAAAJgAuAFMAdABhAG4AZABhAGwAbw"
+    "BuAGUARABvAGMAdQBtAGUAbgB0AAAAAQAAAAAAIAAuAEQAbwBjAHUAbQBlAG4AdABWAGUA"
+    "cgBzAGkAbwBuAAAACgD/////AAAAIgAuAEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQ"
+    "BuAGcAAAAKAP////8="));
+
+    QTest::newRow("negative-depth")
+        << QByteArray("<foo bar=\"baz\">qux</foo>")
+        << QString::fromLatin1(".") << -1 << QVariant(QVariantMap());
+
+    QTest::newRow("top-level error")
+        << QByteArray(">>> oops &&&")
+        << QString::fromLatin1(".") << 10 << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAADAAAAJgAuAFMAdABhAG4AZABhAGwAbwBuAGUARABvAGMAdQBtAGUAbgB0AAA"
+    "AAQAAAAAAIAAuAEQAbwBjAHUAbQBlAG4AdABWAGUAcgBzAGkAbwBuAAAACgD/////AAAAIg"
+    "AuAEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQBuAGcAAAAKAP////8="));
+
+    QTest::newRow("lower error")
+        << QByteArray("<foo>bar<baz>>>></foo>")
+        << QString::fromLatin1(".") << 10 << toVariant(QByteArray::fromBase64(
+    "AAAACAAAAAAEAAAABgBiAGEAegAAAAgAAAAAAgAAAAYAYgBhAHoAAAAIAAAAAAEAAAAWAC4"
+    "AQwBoAGEAcgBhAGMAdABlAHIAcwAAAAoAAAAABgA+AD4APgAAABYALgBDAGgAYQByAGEAYw"
+    "B0AGUAcgBzAAAACgAAAAAGAGIAYQByAAAAJgAuAFMAdABhAG4AZABhAGwAbwBuAGUARABvA"
+    "GMAdQBtAGUAbgB0AAAAAQAAAAAAIAAuAEQAbwBjAHUAbQBlAG4AdABWAGUAcgBzAGkAbwBu"
+    "AAAACgD/////AAAAIgAuAEQAbwBjAHUAbQBlAG4AdABFAG4AYwBvAGQAaQBuAGcAAAAKAP/"
+    "///8="));
 }
 
 void TestAwsAbstractResponse::toVariant()
 {
     QFETCH(QByteArray, xml);
+    QFETCH(QString, prefix);
+    QFETCH(int, maxDepth);
     QFETCH(QVariant, expected);
 
     QXmlStreamReader reader(xml);
-    const QVariant variant(AwsAbstractResponse::toVariant(reader));
+    const QVariant variant(AwsAbstractResponse::toVariant(reader, prefix, maxDepth));
 
     {   // Just for development (ie when adding new test data).
         QByteArray bytes;
         QDataStream stream(&bytes, QIODevice::WriteOnly);
         stream << variant;
-        qDebug() << bytes.toBase64();
+        qDebug() << "Base64" << bytes.toBase64();
     }
 
     if (variant != expected) {
@@ -396,6 +456,12 @@ void TestAwsAbstractResponse::toVariant()
     }
 
     QCOMPARE(variant, expected);
+
+    // If the reader has errors (some test data rows will, some won't), then any
+    // further toVariant calls should return in an empty map.
+    if (reader.hasError()) {
+        QCOMPARE(AwsAbstractResponse::toVariant(reader), QVariantMap());
+    }
 }
 
 void TestAwsAbstractResponse::isSuccess_data()
