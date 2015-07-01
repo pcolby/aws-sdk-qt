@@ -445,12 +445,12 @@ void TestAwsAbstractResponse::toVariant()
     QXmlStreamReader reader(xml);
     const QVariant variant(AwsAbstractResponse::toVariant(reader, prefix, maxDepth));
 
-    {   // Just for development (ie when adding new test data).
+    /*{ // Just for development (ie when adding new test data).
         QByteArray bytes;
         QDataStream stream(&bytes, QIODevice::WriteOnly);
         stream << variant;
         qDebug() << "Base64" << bytes.toBase64();
-    }
+    }*/
 
     if (variant != expected) {
         qDebug() << "Actual   (variant) :" << variant;
