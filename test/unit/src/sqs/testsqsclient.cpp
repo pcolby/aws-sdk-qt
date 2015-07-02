@@ -22,6 +22,8 @@
 
 #include "core/awsanonymouscredentials.h"
 #include "sqs/sqsclient.h"
+#include "sqs/sqscreatequeuerequest.h"
+#include "sqs/sqscreatequeueresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "sqs/sqsclient_p.h"
@@ -34,6 +36,55 @@
 Q_DECLARE_METATYPE(AwsRegion::Region)
 
 namespace TestSqsClient_Mocks {
+
+/// @todo  We probably won't need this mock client if responses track their requests.
+class MockSqsClient : public SqsClient {
+public:
+    const AwsAbstractRequest * request;
+    MockSqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
+                  AwsAbstractCredentials * credentials = NULL,
+                  QNetworkAccessManager * const manager = NULL,
+                  QObject * const parent = 0)
+        : SqsClient(region, credentials, manager, parent), request(NULL) { }
+
+    MockSqsClient(const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
+                  QNetworkAccessManager * const manager = NULL,
+                  QObject * const parent = 0)
+        : SqsClient(endpoint, credentials, manager, parent), request(NULL) { }
+protected:
+    virtual AwsAbstractResponse * send(const AwsAbstractRequest &request)
+    {
+        this->request = &request; // Remember for tests to interrogate.
+        return SqsClient::send(request);
+    }
+};
+
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(const QNetworkRequest &request, QObject * const parent = 0)
+        : QNetworkReply(parent) { setRequest(request); }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
+
+class MockNetworkAccessManager : public QNetworkAccessManager {
+public:
+    Operation operation;
+    QNetworkRequest request;
+protected:
+    QNetworkReply * createRequest(Operation op, const QNetworkRequest &req, QIODevice *outgoingData)
+    {
+        Q_UNUSED(outgoingData)
+        operation = op;
+        request = req;
+        return new MockNetworkReply(req);
+    }
+};
 
 } using namespace TestSqsClient_Mocks;
 
@@ -57,7 +108,7 @@ void TestSqsClient::construct_endpoint()
     QFETCH(QUrl, endpoint);
 
     AwsAnonymousCredentials credentials;
-    QNetworkAccessManager manager;
+    MockNetworkAccessManager manager;
     SqsClient sqs(endpoint, &credentials, &manager, this);
 
     QCOMPARE(sqs.endpoint(), endpoint);
@@ -89,7 +140,7 @@ void TestSqsClient::construct_region()
     QFETCH(AwsRegion::Region, region);
 
     AwsAnonymousCredentials credentials;
-    QNetworkAccessManager manager;
+    MockNetworkAccessManager manager;
     SqsClient sqs(region, &credentials, &manager, this);
 
     QCOMPARE(sqs.region(), region);
@@ -98,6 +149,31 @@ void TestSqsClient::construct_region()
     QCOMPARE(sqs.networkAccessManager(), &manager);
     QCOMPARE(sqs.serviceName(), SQS_SERVICE_NAME);
     QCOMPARE(sqs.parent(), this);
+}
+
+void TestSqsClient::createQueue_data()
+{
+    /// @todo
+    //QTest::addColumn<A>("queueName");
+    //QTest::addColumn<AwsRegion::Region>("attributes");
+}
+
+void TestSqsClient::createQueue()
+{
+    /// @todo
+    //QFETCH(QString, queueName);
+    //QFETCH(QVariantMap, attributes);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    SqsCreateQueueResponse * response = sqs.createQueue(QLatin1String("queue name"));
+    QVERIFY(response);
+
+    /// @todo Verify response->request() members. This would require responses
+    ///       to track their requests (ie same as QNetworkReply::request) which
+    ///       would be good to do anyway.
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
