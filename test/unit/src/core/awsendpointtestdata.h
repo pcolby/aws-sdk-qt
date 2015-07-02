@@ -19,6 +19,9 @@
 
 #include <QVariantMap>
 
+#ifndef AWSENDPOINT_TESTDATA_H
+#define AWSENDPOINT_TESTDATA_H
+
 class AwsEndpointTestData {
 
 public:
@@ -29,3 +32,5 @@ public:
     static QVariantMap supportedServicesMap();
 
 };
+
+#endif

@@ -23,14 +23,14 @@ class TestSqsClient : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    void construct_d_ptr();
-    #endif
+    void construct_endpoint_data();
+    void construct_endpoint();
+
+    void construct_region_data();
+    void construct_region();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     // Nothing to see here.
     #endif
-
 };

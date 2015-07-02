@@ -79,7 +79,7 @@ public slots:
 private:
     Q_DECLARE_PRIVATE(SqsClient)
     Q_DISABLE_COPY(SqsClient)
-
+    friend class TestSqsClient;
 };
 
 QTAWS_END_NAMESPACE

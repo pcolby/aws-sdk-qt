@@ -18,7 +18,9 @@
 */
 
 #include "testsqsclient.h"
+#include "../core/awsendpointtestdata.h"
 
+#include "core/awsanonymouscredentials.h"
 #include "sqs/sqsclient.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -27,18 +29,76 @@
 
 #include <QDebug>
 
+#define SQS_SERVICE_NAME QLatin1String("sqs")
+
+Q_DECLARE_METATYPE(AwsRegion::Region)
+
 namespace TestSqsClient_Mocks {
 
 } using namespace TestSqsClient_Mocks;
 
-void TestSqsClient::construct()
+void TestSqsClient::construct_endpoint_data()
 {
+    QTest::addColumn<QUrl>("endpoint");
 
+    const QStringList regionNames = AwsEndpointTestData::supportedRegionsMap()
+                                        .value(SQS_SERVICE_NAME).toMap().keys();
+    Q_ASSERT(!regionNames.isEmpty());
+    foreach (const QString &regionName, regionNames) {
+        const QUrl endpoint = AwsEndpoint::getEndpoint(regionName, SQS_SERVICE_NAME);
+        Q_ASSERT(!endpoint.isEmpty()); // If either of these assertions fail then
+        Q_ASSERT(endpoint.isValid());  // AwsEndpoint and/or AwsEndpointTestData is broken.
+        QTest::newRow(endpoint.host().toLocal8Bit()) << endpoint;
+    }
+}
+
+void TestSqsClient::construct_endpoint()
+{
+    QFETCH(QUrl, endpoint);
+
+    AwsAnonymousCredentials credentials;
+    QNetworkAccessManager manager;
+    SqsClient sqs(endpoint, &credentials, &manager, this);
+
+    QCOMPARE(sqs.endpoint(), endpoint);
+    QCOMPARE(sqs.credentials(), &credentials);
+    QCOMPARE(sqs.networkAccessManager(), &manager);
+    QCOMPARE(sqs.serviceName(), SQS_SERVICE_NAME);
+    QCOMPARE(sqs.parent(), this);
+}
+
+void TestSqsClient::construct_region_data()
+{
+    QTest::addColumn<AwsRegion::Region>("region");
+    #define NEW_ROW(region) QTest::newRow(#region) << AwsRegion::region
+    NEW_ROW(InvalidRegion);
+    NEW_ROW(AP_Northeast_1);
+    NEW_ROW(AP_Southeast_1);
+    NEW_ROW(AP_Southeast_2);
+    NEW_ROW(EU_West_1);
+    NEW_ROW(SA_East_1);
+    NEW_ROW(US_East_1);
+    NEW_ROW(US_Gov_West_1);
+    NEW_ROW(US_West_1);
+    NEW_ROW(US_West_2);
+    #undef NEW_ROW
+}
+
+void TestSqsClient::construct_region()
+{
+    QFETCH(AwsRegion::Region, region);
+
+    AwsAnonymousCredentials credentials;
+    QNetworkAccessManager manager;
+    SqsClient sqs(region, &credentials, &manager, this);
+
+    QCOMPARE(sqs.region(), region);
+    QCOMPARE(sqs.endpoint(), AwsEndpoint::getEndpoint(AwsRegion::name(region), SQS_SERVICE_NAME));
+    QCOMPARE(sqs.credentials(), &credentials);
+    QCOMPARE(sqs.networkAccessManager(), &manager);
+    QCOMPARE(sqs.serviceName(), SQS_SERVICE_NAME);
+    QCOMPARE(sqs.parent(), this);
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsClient::construct_d_ptr()
-{
-
-}
 #endif
