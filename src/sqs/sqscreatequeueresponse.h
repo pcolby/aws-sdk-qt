@@ -20,9 +20,8 @@
 #ifndef SQSCREATEQUEUERESPONSE_H
 #define SQSCREATEQUEUERESPONSE_H
 
+#include "sqscreatequeuerequest.h"
 #include "sqsresponse.h"
-
-class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
@@ -32,9 +31,12 @@ class QTAWS_EXPORT SqsCreateQueueResponse : public SqsResponse {
     Q_OBJECT
 
 public:
-    SqsCreateQueueResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    SqsCreateQueueResponse(const SqsCreateQueueRequest &request,
+                           QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual bool isValid() const;
+
+    virtual const SqsCreateQueueRequest * request() const;
 
     QString queueUrl() const;
 

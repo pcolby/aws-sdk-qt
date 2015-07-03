@@ -40,6 +40,7 @@ namespace TestAwsAbstractRequest_Mocks {
 class MockResponse : public AwsAbstractResponse {
 public:
     MockResponse(QNetworkReply * const reply) { setReply(reply); }
+    virtual const AwsAbstractRequest * request() const { return NULL; }
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     QNetworkReply * reply() { return d_ptr->reply; }
     #endif

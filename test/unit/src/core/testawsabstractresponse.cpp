@@ -39,6 +39,9 @@ public:
         parseCount(0), parseFailureCount(0), parseSuccessCount(0) { }
     MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
         : AwsAbstractResponse(d, parent) { }
+    virtual const AwsAbstractRequest * request() const {
+        return NULL;
+    }
     virtual void parse(QNetworkReply * const reply) {
         parseCount++;
         AwsAbstractResponse::parse(reply);

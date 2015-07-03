@@ -30,6 +30,7 @@ class QTAWS_EXPORT SqsCreateQueueRequest : public SqsRequest {
 
 public:
     SqsCreateQueueRequest(const QString &queueName);
+    SqsCreateQueueRequest(const SqsCreateQueueRequest &other);
     SqsCreateQueueRequest();
 
     virtual bool isValid() const;

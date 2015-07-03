@@ -19,6 +19,7 @@
 
 #include "awsabstractresponse.h"
 #include "awsabstractresponse_p.h"
+#include "awsabstractrequest.h"
 
 #include <QDebug>
 #include <QNetworkReply>
@@ -76,6 +77,7 @@ AwsAbstractResponse::AwsAbstractResponse(AwsAbstractResponsePrivate * const d,
  */
 AwsAbstractResponse::~AwsAbstractResponse()
 {
+    delete d_ptr->request;
     delete d_ptr;
 }
 
@@ -335,6 +337,13 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
+/// @note, we will take ownership of \a request!  Caller's ought to use `new`.
+void AwsAbstractResponse::setRequest(const AwsAbstractRequest * const request)
+{
+    Q_D(AwsAbstractResponse);
+    d->request = request;
+}
+
 /**
  * @brief  Record the details of an XML parse error.
  *
@@ -451,7 +460,7 @@ void AwsAbstractResponse::replyFinished()
  * @param  q  Pointer to this object's public AwsAbstractResponse instance.
  */
 AwsAbstractResponsePrivate::AwsAbstractResponsePrivate(AwsAbstractResponse * const q)
-    : reply(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)
+    : reply(NULL), request(NULL), xmlError(QXmlStreamReader::NoError), q_ptr(q)
 {
 
 }

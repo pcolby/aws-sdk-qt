@@ -27,6 +27,7 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class AwsAbstractRequest;
 class AwsAbstractResponsePrivate;
 
 class QTAWS_EXPORT AwsAbstractResponse : public QObject {
@@ -44,6 +45,8 @@ public:
     virtual QXmlStreamReader::Error xmlParseError() const;
     virtual QString xmlParseErrorString() const;
 
+    virtual const AwsAbstractRequest * request() const = 0;
+
     /// @todo Find a better home for "QVariantMap toVariant(QXmlStreamReader &xml, ...)"
     static QVariantMap toVariant(QXmlStreamReader &xml,
                                  const QString &prefix = QLatin1String("."),
@@ -57,6 +60,7 @@ protected:
 
     virtual bool isSuccess(QNetworkReply * const reply) const;
     void setReply(QNetworkReply * reply);
+    void setRequest(const AwsAbstractRequest * const request);
     void setXmlError(const QXmlStreamReader &xml);
 
     virtual void parse(QNetworkReply * const reply);

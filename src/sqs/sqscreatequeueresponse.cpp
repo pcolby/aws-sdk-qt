@@ -38,10 +38,12 @@ QTAWS_BEGIN_NAMESPACE
  * @param  reply   AWS network response to observe.
  * @param  parent  This object's parent.
  */
-SqsCreateQueueResponse::SqsCreateQueueResponse(QNetworkReply * const reply,
+SqsCreateQueueResponse::SqsCreateQueueResponse(const SqsCreateQueueRequest &request,
+                                               QNetworkReply * const reply,
                                                QObject * const parent)
     : SqsResponse(parent), d_ptr(new SqsCreateQueueResponsePrivate(this))
 {
+    setRequest(new SqsCreateQueueRequest(request));
     setReply(reply);
 }
 
@@ -49,6 +51,12 @@ bool SqsCreateQueueResponse::isValid() const
 {
     Q_D(const SqsCreateQueueResponse);
     return !d->queueUrl.isEmpty();
+}
+
+const SqsCreateQueueRequest * SqsCreateQueueResponse::request() const
+{
+    Q_D(const SqsCreateQueueResponse);
+    return static_cast<const SqsCreateQueueRequest *>(d->request);
 }
 
 /**

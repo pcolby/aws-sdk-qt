@@ -49,6 +49,12 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
     setQueueName(queueName);
 }
 
+SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
+    : SqsRequest(other)
+{
+
+}
+
 /**
  * @brief  Constructs a new SqsCreateQueueRequest object.
  *
@@ -317,7 +323,7 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
  */
 AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const reply) const
 {
-    return new SqsCreateQueueResponse(reply);
+    return new SqsCreateQueueResponse(*this, reply);
 }
 
 QTAWS_END_NAMESPACE

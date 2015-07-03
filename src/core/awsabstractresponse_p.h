@@ -29,14 +29,16 @@ class QNetworkReply;
 
 QTAWS_BEGIN_NAMESPACE
 
+class AwsAbstractRequest;
 class AwsAbstractResponse;
 
 class QTAWS_EXPORT AwsAbstractResponsePrivate {
 
 public:
-    QNetworkReply * reply;            ///< Network reply for this response.
-    QXmlStreamReader::Error xmlError; ///< XML parse error code.
-    QString xmlErrorString;           ///< XML parse error string.
+    QNetworkReply * reply;              ///< Network reply for this response.
+    const AwsAbstractRequest * request; ///< AWS request for this response.
+    QXmlStreamReader::Error xmlError;   ///< XML parse error code.
+    QString xmlErrorString;             ///< XML parse error string.
 
     AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
