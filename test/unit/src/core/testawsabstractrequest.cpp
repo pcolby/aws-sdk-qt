@@ -52,9 +52,8 @@ class MockRequestPrivate;
 class MockRequest : public AwsAbstractRequest {
 public:
     MockRequest() : AwsAbstractRequest() { }
-    MockRequest(QObject * const parent) : AwsAbstractRequest(parent) { }
-    MockRequest(AwsAbstractRequestPrivate * const d, QObject * const parent)
-        : AwsAbstractRequest(d, parent) { }
+    MockRequest(AwsAbstractRequestPrivate * const d)
+        : AwsAbstractRequest(d) { }
     virtual bool isValid() const { return false; }
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const {
@@ -138,12 +137,12 @@ void TestAwsAbstractRequest::construct()
 {
     {   // Verify the default parent argument is NULL.
         MockRequest request;
-        QCOMPARE(request.parent(), reinterpret_cast<QObject *>(NULL));
+        //QCOMPARE(request.parent(), reinterpret_cast<QObject *>(NULL));
     }
 
     {   // Verify the handling of an explicit parent argument.
-        MockRequest request(this);
-        QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
+        //MockRequest request(this);
+        //QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
     }
 }
 
@@ -153,9 +152,8 @@ void TestAwsAbstractRequest::construct_d_ptr()
     MockRequest temporaryRequest;
     AwsAbstractRequestPrivate * const requestPrivate =
         new AwsAbstractRequestPrivate(&temporaryRequest);
-    MockRequest request(requestPrivate, this);
+    MockRequest request(requestPrivate);
     QCOMPARE(request.d_func(), requestPrivate);
-    QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
 }
 #endif
 
@@ -374,9 +372,8 @@ void TestAwsAbstractRequest::post_put()
     // Setup a mock request with our own AwsAbstractRequestPrivate injected.
     MockRequest temporaryRequest;
     MockRequestPrivate * const requestPrivate = new MockRequestPrivate(&temporaryRequest);
-    MockRequest request(requestPrivate, this);
+    MockRequest request(requestPrivate);
     QCOMPARE(request.d_func(), requestPrivate);
-    QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
 
     // Apply the test data.
     request.setOperation(operation);

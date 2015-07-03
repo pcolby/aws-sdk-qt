@@ -43,9 +43,8 @@ QTAWS_BEGIN_NAMESPACE
  * @param  queueName  Name of the queue to be created.
  * @param  parent     This object's parent.
  */
-SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName,
-                                             QObject * const parent)
-    : SqsRequest(SqsRequest::CreateQueueSqsAction, parent)
+SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
+    : SqsRequest(SqsRequest::CreateQueueSqsAction)
 {
     setQueueName(queueName);
 }
@@ -58,8 +57,8 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName,
  *
  * @param  parent  This object's parent.
  */
-SqsCreateQueueRequest::SqsCreateQueueRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::CreateQueueSqsAction, parent)
+SqsCreateQueueRequest::SqsCreateQueueRequest()
+    : SqsRequest(SqsRequest::CreateQueueSqsAction)
 {
 
 }

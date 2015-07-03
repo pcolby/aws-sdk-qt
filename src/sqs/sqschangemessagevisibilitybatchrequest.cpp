@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::ChangeMessageVisibilityBatchSqsAction, parent)
+SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest()
+    : SqsRequest(SqsRequest::ChangeMessageVisibilityBatchSqsAction)
 {
 
 }

@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsPurgeQueueRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsPurgeQueueRequest(QObject * const parent);
+    SqsPurgeQueueRequest();
 
     virtual bool isValid() const;
 

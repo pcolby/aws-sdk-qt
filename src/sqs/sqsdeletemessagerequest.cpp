@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsDeleteMessageRequest::SqsDeleteMessageRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::DeleteMessageSqsAction, parent)
+SqsDeleteMessageRequest::SqsDeleteMessageRequest()
+    : SqsRequest(SqsRequest::DeleteMessageSqsAction)
 {
 
 }

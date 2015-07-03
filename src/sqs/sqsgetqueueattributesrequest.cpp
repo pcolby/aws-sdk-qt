@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::GetQueueAttributesSqsAction, parent)
+SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest()
+    : SqsRequest(SqsRequest::GetQueueAttributesSqsAction)
 {
 
 }

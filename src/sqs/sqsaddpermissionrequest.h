@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsAddPermissionRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsAddPermissionRequest(QObject * const parent);
+    SqsAddPermissionRequest();
 
     virtual bool isValid() const;
 

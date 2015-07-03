@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsAddPermissionRequest::SqsAddPermissionRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::AddPermissionSqsAction, parent)
+SqsAddPermissionRequest::SqsAddPermissionRequest()
+    : SqsRequest(SqsRequest::AddPermissionSqsAction)
 {
 
 }

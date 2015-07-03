@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsPurgeQueueRequest::SqsPurgeQueueRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::PurgeQueueSqsAction, parent)
+SqsPurgeQueueRequest::SqsPurgeQueueRequest()
+    : SqsRequest(SqsRequest::PurgeQueueSqsAction)
 {
 
 }

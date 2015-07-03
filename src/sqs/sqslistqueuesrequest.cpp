@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsListQueuesRequest::SqsListQueuesRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::ListQueuesSqsAction, parent)
+SqsListQueuesRequest::SqsListQueuesRequest()
+    : SqsRequest(SqsRequest::ListQueuesSqsAction)
 {
 
 }

@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsDeleteMessageBatchRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsDeleteMessageBatchRequest(QObject * const parent);
+    SqsDeleteMessageBatchRequest();
 
     virtual bool isValid() const;
 

@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsRemovePermissionRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsRemovePermissionRequest(QObject * const parent);
+    SqsRemovePermissionRequest();
 
     virtual bool isValid() const;
 

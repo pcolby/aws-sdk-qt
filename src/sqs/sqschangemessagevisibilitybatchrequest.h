@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsChangeMessageVisibilityBatchRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsChangeMessageVisibilityBatchRequest(QObject * const parent);
+    SqsChangeMessageVisibilityBatchRequest();
 
     virtual bool isValid() const;
 

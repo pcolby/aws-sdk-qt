@@ -51,10 +51,24 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param  parent  This object's parent.
  */
-AwsAbstractRequest::AwsAbstractRequest(QObject * const parent)
-    : QObject(parent), d_ptr(new AwsAbstractRequestPrivate(this))
+AwsAbstractRequest::AwsAbstractRequest()
+    : d_ptr(new AwsAbstractRequestPrivate(this))
 {
 
+}
+
+AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &other)
+    : d_ptr(new AwsAbstractRequestPrivate(*other.d_ptr, this))
+{
+
+}
+
+AwsAbstractRequest &AwsAbstractRequest::operator=(const AwsAbstractRequest &other)
+{
+    Q_D(AwsAbstractRequest);
+    d->data = other.d_func()->data;
+    d->operation = other.d_func()->operation;
+    return *this;
 }
 
 /**
@@ -68,9 +82,7 @@ AwsAbstractRequest::AwsAbstractRequest(QObject * const parent)
  * @param  d       Pointer to private data (aka D-Pointer).
  * @param  parent  This object's parent.
  */
-AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d,
-                                       QObject * const parent)
-    : QObject(parent), d_ptr(d)
+AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -269,6 +281,13 @@ void AwsAbstractRequest::setOperation(const QNetworkAccessManager::Operation ope
  */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const q)
     : operation(QNetworkAccessManager::GetOperation), q_ptr(q)
+{
+
+}
+
+AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(
+    const AwsAbstractRequestPrivate &other, AwsAbstractRequest * const q)
+    : data(other.data), operation(other.operation), q_ptr(q)
 {
 
 }

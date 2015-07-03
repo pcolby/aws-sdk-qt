@@ -32,7 +32,6 @@ class AwsAbstractClient;
 class SqsRequestPrivate;
 
 class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
-    Q_OBJECT
 
 public:
     /// Actions supported by SQS.
@@ -57,7 +56,9 @@ public:
         SetQueueAttributesSqsAction
     };
 
-    SqsRequest(const SqsAction action, QObject * const parent = 0);
+    SqsRequest(const SqsAction action);
+    SqsRequest(const SqsRequest &other);
+    SqsRequest &operator=(const SqsRequest &other);
 
     SqsAction action() const;
     QString actionString() const;
@@ -68,7 +69,7 @@ public:
 
 protected:
     /// @cond internal
-    SqsRequest(SqsRequestPrivate * const d, QObject * const parent);
+    SqsRequest(SqsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -79,7 +80,6 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(SqsRequest)
-    Q_DISABLE_COPY(SqsRequest)
 
 };
 

@@ -27,11 +27,10 @@ class QNetworkRequest;
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsCreateQueueRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsCreateQueueRequest(const QString &queueName, QObject * const parent = 0);
-    SqsCreateQueueRequest(QObject * const parent);
+    SqsCreateQueueRequest(const QString &queueName);
+    SqsCreateQueueRequest();
 
     virtual bool isValid() const;
 
@@ -60,9 +59,6 @@ public:
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
-
-private:
-    Q_DISABLE_COPY(SqsCreateQueueRequest)
 
 };
 

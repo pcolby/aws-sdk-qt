@@ -38,6 +38,7 @@ public:
     QVariantMap parameters;       ///< SQS request (query string) parameters.
 
     SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q);
+    SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
 
 private:
     Q_DECLARE_PUBLIC(SqsRequest)

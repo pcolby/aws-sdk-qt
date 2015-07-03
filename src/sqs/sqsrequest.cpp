@@ -41,10 +41,25 @@ QTAWS_BEGIN_NAMESPACE
  * @param  action  The SQS action to request.
  * @param  parent  This object's parent.
  */
-SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
-    : AwsAbstractRequest(new SqsRequestPrivate(action, this), parent)
+SqsRequest::SqsRequest(const SqsAction action)
+    : AwsAbstractRequest(new SqsRequestPrivate(action, this))
 {
     setApiVersion(QLatin1String("2012-11-05"));
+}
+
+SqsRequest::SqsRequest(const SqsRequest &other)
+    : AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+SqsRequest& SqsRequest::operator=(const SqsRequest &other)
+{
+    Q_D(SqsRequest);
+    d->action = other.d_func()->action;
+    d->apiVersion = other.d_func()->apiVersion;
+    d->parameters = other.d_func()->parameters;
+    return *this;
 }
 
 /**
@@ -56,10 +71,9 @@ SqsRequest::SqsRequest(const SqsAction action, QObject * const parent)
  * implementation that inherits from SqsRequestPrivate.
  *
  * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
-SqsRequest::SqsRequest(SqsRequestPrivate * const d, QObject * const parent)
-    : AwsAbstractRequest(d, parent)
+SqsRequest::SqsRequest(SqsRequestPrivate * const d)
+    : AwsAbstractRequest(d)
 {
 
 }
@@ -236,6 +250,28 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q)
     : AwsAbstractRequestPrivate(q), action(action)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsRequestPrivate object from an existing one.
+ *
+ * This copy-like constructor copies everything from \a other, except for the
+ * the object's pointer to its public instance - for that, \a q is used instead.
+ *
+ * This is required to support the SqsRequest class's copy and assignment
+ * constructors only.
+ *
+ * @param  action  SQS action being performed by the \a q request.
+ * @param  q       Pointer to this object's public SqsRequest instance.
+ */
+SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
+                                     SqsRequest * const q)
+    : AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

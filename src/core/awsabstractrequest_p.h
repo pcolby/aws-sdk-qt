@@ -40,6 +40,8 @@ public:
     QNetworkAccessManager::Operation operation; ///< Network operation to use.
 
     AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
+    AwsAbstractRequestPrivate(const AwsAbstractRequestPrivate &other,
+                              AwsAbstractRequest * const q);
 
     virtual ~AwsAbstractRequestPrivate();
 

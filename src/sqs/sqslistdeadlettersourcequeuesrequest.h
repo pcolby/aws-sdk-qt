@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsListDeadLetterSourceQueuesRequest(QObject * const parent);
+    SqsListDeadLetterSourceQueuesRequest();
 
     virtual bool isValid() const;
 

@@ -37,6 +37,7 @@
 #include <QNetworkAccessManager>
 
 Q_DECLARE_METATYPE(AwsRegion::Region)
+Q_DECLARE_METATYPE(AwsAbstractRequest *)
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 Q_DECLARE_METATYPE(AwsAbstractSignature *)
@@ -83,6 +84,8 @@ protected:
 };
 
 } using namespace TestAwsAbstractClient_Mocks;
+
+Q_DECLARE_METATYPE(TestAwsAbstractClient_Mocks::SendlessRequest *)
 
 void TestAwsAbstractClient::construct()
 {
@@ -240,7 +243,9 @@ void TestAwsAbstractClient::send_data()
         Q_ASSERT(!request->isValid());
         request->mockResponse = reinterpret_cast<AwsAbstractResponse *>(0x1234);
         Q_ASSERT(!request->isValid());
-        QTest::newRow("invalid-request") << request << request->mockResponse;
+        QTest::newRow("invalid-request")
+            << static_cast<AwsAbstractRequest* >(request)
+            << static_cast<AwsAbstractResponse *>(request->mockResponse);
     }
 
     {
@@ -248,7 +253,9 @@ void TestAwsAbstractClient::send_data()
         Q_ASSERT(request->isValid());
         request->mockResponse = reinterpret_cast<AwsAbstractResponse *>(0x5678);
         Q_ASSERT(request->isValid());
-        QTest::newRow("valid-request") << request << request->mockResponse;
+        QTest::newRow("valid-request")
+            << static_cast<AwsAbstractRequest* >(request)
+            << static_cast<AwsAbstractResponse *>(request->mockResponse);
     }
 }
 

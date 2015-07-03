@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsDeleteQueueRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsDeleteQueueRequest(QObject * const parent);
+    SqsDeleteQueueRequest();
 
     virtual bool isValid() const;
 

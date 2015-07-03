@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsSendMessageRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsSendMessageRequest(QObject * const parent);
+    SqsSendMessageRequest();
 
     virtual bool isValid() const;
 

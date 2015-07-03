@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsGetQueueUrlRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsGetQueueUrlRequest(QObject * const parent);
+    SqsGetQueueUrlRequest();
 
     virtual bool isValid() const;
 

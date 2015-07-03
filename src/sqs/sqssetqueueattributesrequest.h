@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsSetQueueAttributesRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsSetQueueAttributesRequest(QObject * const parent);
+    SqsSetQueueAttributesRequest();
 
     virtual bool isValid() const;
 

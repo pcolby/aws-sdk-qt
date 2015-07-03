@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsReceiveMessageRequest::SqsReceiveMessageRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::ReceiveMessageSqsAction, parent)
+SqsReceiveMessageRequest::SqsReceiveMessageRequest()
+    : SqsRequest(SqsRequest::ReceiveMessageSqsAction)
 {
 
 }

@@ -25,10 +25,9 @@
 QTAWS_BEGIN_NAMESPACE
 
 class QTAWS_EXPORT SqsSendMessageBatchRequest : public SqsRequest {
-    Q_OBJECT
 
 public:
-    SqsSendMessageBatchRequest(QObject * const parent);
+    SqsSendMessageBatchRequest();
 
     virtual bool isValid() const;
 

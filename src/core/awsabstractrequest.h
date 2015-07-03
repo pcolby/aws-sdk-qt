@@ -36,11 +36,12 @@ class AwsAbstractRequestPrivate;
 class AwsAbstractResponse;
 class AwsAbstractSignature;
 
-class QTAWS_EXPORT AwsAbstractRequest : public QObject {
-    Q_OBJECT
+class QTAWS_EXPORT AwsAbstractRequest {
 
 public:
-    AwsAbstractRequest(QObject * const parent = 0);
+    AwsAbstractRequest(); ///< @todo  Make this protected?
+    AwsAbstractRequest(const AwsAbstractRequest &other);
+    AwsAbstractRequest &operator=(const AwsAbstractRequest &other);
 
     virtual ~AwsAbstractRequest();
 
@@ -62,7 +63,7 @@ public:
 protected:
     /// @cond internal
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AwsAbstractRequest(AwsAbstractRequestPrivate * const d, QObject * const parent);
+    AwsAbstractRequest(AwsAbstractRequestPrivate * const d);
     /// @endcond
 
     void setData(const QByteArray &data);
@@ -73,7 +74,6 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(AwsAbstractRequest)
-    Q_DISABLE_COPY(AwsAbstractRequest)
     friend class TestAwsAbstractRequest;
 };
 

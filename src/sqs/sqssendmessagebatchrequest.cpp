@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsSendMessageBatchRequest::SqsSendMessageBatchRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::SendMessageBatchSqsAction, parent)
+SqsSendMessageBatchRequest::SqsSendMessageBatchRequest()
+    : SqsRequest(SqsRequest::SendMessageBatchSqsAction)
 {
 
 }

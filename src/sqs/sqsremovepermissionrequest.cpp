@@ -32,8 +32,8 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param parent       This object's parent.
  */
-SqsRemovePermissionRequest::SqsRemovePermissionRequest(QObject * const parent)
-    : SqsRequest(SqsRequest::RemovePermissionSqsAction, parent)
+SqsRemovePermissionRequest::SqsRemovePermissionRequest()
+    : SqsRequest(SqsRequest::RemovePermissionSqsAction)
 {
 
 }
