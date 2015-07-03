@@ -39,7 +39,7 @@ class AwsAbstractSignature;
 class QTAWS_EXPORT AwsAbstractRequest {
 
 public:
-    AwsAbstractRequest(); ///< @todo  Make this protected?
+    AwsAbstractRequest();
     AwsAbstractRequest(const AwsAbstractRequest &other);
     AwsAbstractRequest &operator=(const AwsAbstractRequest &other);
 
