@@ -29,7 +29,7 @@
 
 Q_DECLARE_METATYPE(SqsRequest::Action)
 
-#define SQS_API_VERSION QLatin1String("2012-11-05")
+#define SQS_API_VERSION QString::fromLatin1("2012-11-05")
 
 namespace TestSqsRequest_Mocks {
 
@@ -238,42 +238,81 @@ void TestSqsRequest::actionString()
 
 void TestSqsRequest::apiVersion_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("apiVersion");
+    QTest::newRow("null") << QString();
+    QTest::newRow("empty") << QString::fromLatin1("");
+    QTest::newRow(SQS_API_VERSION.toLocal8Bit()) << SQS_API_VERSION;
+    QTest::newRow("foo") << QString::fromLatin1("foo");
+    QTest::newRow("bar") << QString::fromLatin1("bar");
+    QTest::newRow("baz") << QString::fromLatin1("baz");
 }
 
 void TestSqsRequest::apiVersion()
 {
-    /// @todo
+    QFETCH(QString, apiVersion);
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.apiVersion(), SQS_API_VERSION);
+    request.setApiVersion(apiVersion);
+    QCOMPARE(request.apiVersion(), apiVersion);
 }
 
 void TestSqsRequest::clearParameter_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<QVariant>("value");
+
+    QTest::newRow("null") << QString() << QVariant();
+    QTest::newRow("empty") << QString::fromLatin1("") << QVariant(QString::fromLatin1(""));
+    QTest::newRow("1") << QString::fromLatin1("") << QVariant(QString::fromLatin1("1"));
+    QTest::newRow("'2'") << QString::fromLatin1("") << QVariant(QLatin1Char('2'));
+    QTest::newRow("3.0") << QString::fromLatin1("") << QVariant(3.0);
 }
 
 void TestSqsRequest::clearParameter()
 {
-    /// @todo
+    QFETCH(QString, name);
+    QFETCH(QVariant, value);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    request.setParameter(name, value);
+    QCOMPARE(request.parameter(name), value);      ///< parameter was set.
+    QCOMPARE(request.clearParameter(name), 1);     ///< parameter was cleared.
+    QCOMPARE(request.clearParameter(name), 0);     ///< parameter didn't exist.
+    QCOMPARE(request.parameter(name), QVariant()); ///< parameter doesn't exist.
 }
 
 void TestSqsRequest::parameter_data()
 {
-    /// @todo
+    clearParameter_data();
 }
 
+// This test is also completely clearParameter above.  Do we need both?
 void TestSqsRequest::parameter()
 {
-    /// @todo
+    QFETCH(QString, name);
+    QFETCH(QVariant, value);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.parameter(name), QVariant());
+    request.setParameter(name, value);
+    QCOMPARE(request.parameter(name), value);
 }
 
 void TestSqsRequest::setParameter_data()
 {
-    /// @todo
+    clearParameter_data();
 }
 
+// This test is also completely clearParameter above.  Do we need both?
 void TestSqsRequest::setParameter()
 {
-    /// @todo
+    QFETCH(QString, name);
+    QFETCH(QVariant, value);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.parameter(name), QVariant());
+    request.setParameter(name, value);
+    QCOMPARE(request.parameter(name), value);
 }
 
 void TestSqsRequest::unsignedRequest_data()
