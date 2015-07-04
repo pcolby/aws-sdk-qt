@@ -44,11 +44,7 @@ public:
     MockSqsResponse(SqsResponsePrivate * const d, QObject * const parent)
         : SqsResponse(d, parent) { }
     virtual const SqsRequest * request() const {
-     //   #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-   //     return d_ptr->request;
-       // #else
         return NULL;
-        //#endif
     }
 protected:
     virtual void parseSuccess(QIODevice &response) {
