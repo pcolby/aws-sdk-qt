@@ -377,10 +377,74 @@ void TestSqsRequest::setParameters()
 
 void TestSqsRequest::unsignedRequest_data()
 {
-    /// @todo
+    QTest::addColumn<SqsRequest::Action>("action");
+    QTest::addColumn<QString>("apiVersion");
+    QTest::addColumn<QVariantMap>("parameters");
+    QTest::addColumn<QUrl>("endpoint");
+    QTest::addColumn<QNetworkRequest>("expected");
+
+    QTest::newRow("null")
+        << SqsRequest::ListQueuesSqsAction
+        << SQS_API_VERSION
+        << QVariantMap()
+        << QUrl()
+        << QNetworkRequest(QUrl(QLatin1String("?Action=ListQueues&Version=2012-11-05")));
+
+    QVariantMap map;
+    map.insert(QLatin1String("foo"), 1);
+    map.insert(QLatin1String("bar"), QLatin1String("2"));
+    map.insert(QLatin1String("baz"), 3.0);
+    QTest::newRow("simple")
+        << SqsRequest::ChangeMessageVisibilitySqsAction
+        << QString::fromLatin1("not-a-valid-api-version")
+        << map
+        << QUrl(QLatin1String("https://example.com/some/path"))
+        << QNetworkRequest(QUrl(QLatin1String(
+           "https://example.com/some/path"
+           "?Action=ChangeMessageVisibility"
+           "&Version=not-a-valid-api-version"
+           "&bar=2"
+           "&baz=3"
+           "&foo=1")));
+
+    QVariantMap childMap;
+    childMap.insert(QLatin1String("qux"),  123);
+    childMap.insert(QLatin1String("quux"), QLatin1String("abc"));
+    childMap.insert(QLatin1String("corge"), 456.789);
+    map.insert(QLatin1String("corge;index:%1;value:%2"), childMap);
+    QTest::newRow("complex")
+        << SqsRequest::DeleteMessageSqsAction
+        << SQS_API_VERSION
+        << map
+        << QUrl(QLatin1String("http://www.example.com/some/other/path"))
+        << QNetworkRequest(QUrl(QLatin1String(
+            "http://www.example.com/some/other/path"
+            "?Action=DeleteMessage"
+            "&Version=2012-11-05"
+            "&bar=2"
+            "&baz=3"
+            "&corge;index:1;value:Name=corge"
+            "&corge;index:1;value:Value=456.789"
+            "&corge;index:2;value:Name=quux"
+            "&corge;index:2;value:Value=abc"
+            "&corge;index:3;value:Name=qux"
+            "&corge;index:3;value:Value=123"
+            "&foo=1")));
 }
 
 void TestSqsRequest::unsignedRequest()
 {
-    /// @todo
+    QFETCH(SqsRequest::Action, action);
+    QFETCH(QString, apiVersion);
+    QFETCH(QVariantMap, parameters);
+    QFETCH(QUrl, endpoint);
+    QFETCH(QNetworkRequest, expected);
+
+    MockSqsRequest request(action);
+    request.setApiVersion(apiVersion);
+    request.setParameters(parameters);
+
+    const QNetworkRequest unsignedRequest = request.unsignedRequest(endpoint);
+    QCOMPARE(unsignedRequest.url(), expected.url()); // Helps with debugging.
+    QCOMPARE(unsignedRequest, expected);             // The real test.
 }
