@@ -42,7 +42,7 @@ QTAWS_BEGIN_NAMESPACE
 SqsCreateQueueResponse::SqsCreateQueueResponse(const SqsCreateQueueRequest &request,
                                                QNetworkReply * const reply,
                                                QObject * const parent)
-    : SqsResponse(parent), d_ptr(new SqsCreateQueueResponsePrivate(this))
+    : SqsResponse(new SqsCreateQueueResponsePrivate(this), parent)
 {
     setRequest(new SqsCreateQueueRequest(request));
     setReply(reply);

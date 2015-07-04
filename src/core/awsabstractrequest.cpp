@@ -194,7 +194,7 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
     Q_ASSERT(isValid());
     Q_D(const AwsAbstractRequest);
     const QNetworkRequest request(networkRequest(endpoint, signature, credentials));
-    qDebug() << "Request URL:" << request.url().toString();
+    qDebug() << "Request URL:" << request.url().toString(QUrl::FullyEncoded);
     if (request.hasRawHeader("Authorization")) {
         qDebug() << "Authorization:" << request.rawHeader("Authorization");
     }
