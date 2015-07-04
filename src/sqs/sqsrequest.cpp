@@ -39,7 +39,6 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsRequest object.
  *
  * @param  action  The SQS action to request.
- * @param  parent  This object's parent.
  */
 SqsRequest::SqsRequest(const SqsAction action)
     : AwsAbstractRequest(new SqsRequestPrivate(action, this))
@@ -47,12 +46,26 @@ SqsRequest::SqsRequest(const SqsAction action)
     setApiVersion(QLatin1String("2012-11-05"));
 }
 
+/**
+ * @brief  Constructs a new SqsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
 SqsRequest::SqsRequest(const SqsRequest &other)
     : AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
+/**
+ * @brief  Assignment operator.
+ *
+ * Assigns \a other to \c this.
+ *
+ * @param  other  Instance to copy.
+ *
+ * @return  A reference to \c this.
+ */
 SqsRequest& SqsRequest::operator=(const SqsRequest &other)
 {
     Q_D(SqsRequest);
@@ -70,10 +83,9 @@ SqsRequest& SqsRequest::operator=(const SqsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SqsRequestPrivate.
  *
- * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  d  Pointer to private data (aka D-Pointer).
  */
-SqsRequest::SqsRequest(SqsRequestPrivate * const d)
-    : AwsAbstractRequest(d)
+SqsRequest::SqsRequest(SqsRequestPrivate * const d) : AwsAbstractRequest(d)
 {
 
 }
@@ -262,11 +274,10 @@ SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequ
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SqsRequest class's copy and assignment
- * constructors only.
+ * This is required to support the SqsRequest class's copy constructor.
  *
- * @param  action  SQS action being performed by the \a q request.
- * @param  q       Pointer to this object's public SqsRequest instance.
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SqsRequest instance.
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
                                      SqsRequest * const q)

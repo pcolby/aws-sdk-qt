@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsDeleteMessageBatchRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsDeleteMessageBatchRequest::SqsDeleteMessageBatchRequest()
     : SqsRequest(SqsRequest::DeleteMessageBatchSqsAction)

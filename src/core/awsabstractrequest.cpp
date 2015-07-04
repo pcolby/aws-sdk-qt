@@ -48,8 +48,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new AwsAbstractRequest object.
- *
- * @param  parent  This object's parent.
  */
 AwsAbstractRequest::AwsAbstractRequest()
     : d_ptr(new AwsAbstractRequestPrivate(this))
@@ -57,12 +55,24 @@ AwsAbstractRequest::AwsAbstractRequest()
 
 }
 
+/**
+ * @brief  Constructs a new AwsAbstractRequest object by copying another.
+ */
 AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &other)
     : d_ptr(new AwsAbstractRequestPrivate(*other.d_ptr, this))
 {
 
 }
 
+/**
+ * @brief  Assignment operator.
+ *
+ * Assigns \a other to \c this.
+ *
+ * @param  other  Instance to copy.
+ *
+ * @return  A reference to \c this.
+ */
 AwsAbstractRequest &AwsAbstractRequest::operator=(const AwsAbstractRequest &other)
 {
     Q_D(AwsAbstractRequest);
@@ -79,8 +89,7 @@ AwsAbstractRequest &AwsAbstractRequest::operator=(const AwsAbstractRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AwsAbstractRequestPrivate.
  *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
+ * @param  d  Pointer to private data (aka D-Pointer).
  */
 AwsAbstractRequest::AwsAbstractRequest(AwsAbstractRequestPrivate * const d) : d_ptr(d)
 {
@@ -285,6 +294,19 @@ AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(AwsAbstractRequest * const 
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AwsAbstractRequestPrivate object from an existing one.
+ *
+ * This copy-like constructor copies everything from \a other, except for the
+ * the object's pointer to its public instance - for that, \a q is used instead.
+ *
+ * This is required to support the AwsAbstractRequest class's copy constructors.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SqsRequest instance.
+ */
 AwsAbstractRequestPrivate::AwsAbstractRequestPrivate(
     const AwsAbstractRequestPrivate &other, AwsAbstractRequest * const q)
     : data(other.data), operation(other.operation), q_ptr(q)

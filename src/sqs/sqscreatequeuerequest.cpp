@@ -41,7 +41,6 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsCreateQueueRequest object.
  *
  * @param  queueName  Name of the queue to be created.
- * @param  parent     This object's parent.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
     : SqsRequest(SqsRequest::CreateQueueSqsAction)
@@ -49,6 +48,11 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
     setQueueName(queueName);
 }
 
+/**
+ * @brief  Constructs a new SqsCreateQueueRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
 SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
     : SqsRequest(other)
 {
@@ -56,12 +60,10 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
 }
 
 /**
- * @brief  Constructs a new SqsCreateQueueRequest object.
+ * @brief  Constructs an invalid SqsCreateQueueRequest object.
  *
  * The constructed object will not be considered valid (ie isValid will return
  * false) untill setQueueName is invoked with a non-empty queue name.
- *
- * @param  parent  This object's parent.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest()
     : SqsRequest(SqsRequest::CreateQueueSqsAction)

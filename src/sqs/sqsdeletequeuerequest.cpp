@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsDeleteQueueRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsDeleteQueueRequest::SqsDeleteQueueRequest()
     : SqsRequest(SqsRequest::DeleteQueueSqsAction)

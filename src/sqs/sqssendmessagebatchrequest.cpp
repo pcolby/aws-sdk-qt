@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsSendMessageBatchRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsSendMessageBatchRequest::SqsSendMessageBatchRequest()
     : SqsRequest(SqsRequest::SendMessageBatchSqsAction)

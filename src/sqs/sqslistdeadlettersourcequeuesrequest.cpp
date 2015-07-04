@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest()
     : SqsRequest(SqsRequest::ListDeadLetterSourceQueuesSqsAction)

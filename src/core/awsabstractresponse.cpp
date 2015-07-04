@@ -214,6 +214,14 @@ QString AwsAbstractResponse::xmlParseErrorString() const
 }
 
 /**
+ * @fn     const AwsAbstractRequest * AwsAbstractResponse::request() const
+ *
+ * @brief  Get this response's originating AWS request.
+ *
+ * @return This response's originating AWS request.
+ */
+
+/**
  * @brief  Convert an XML stream to a hierarchical QVariantMap.
  *
  * This function is used internally to embed opaque XML structures, such as the
@@ -337,10 +345,25 @@ void AwsAbstractResponse::setReply(QNetworkReply * const reply)
     d->reply = reply;
 }
 
-/// @note, we will take ownership of \a request!  Caller's ought to use `new`.
+/**
+ * @brief  Set this response's originating AWS request.
+ *
+ * @note   This object will take ownership of the \a request pointer, and will
+ *         \c delete \a request on destruction.
+ *
+ * Callers should normally create a new request instance (making use of the
+ * request classes' copy-constructors).  For example:
+ *
+ * @code
+ * setRequest(new SpecializedAwsRequest(specializedRequest));
+ * @endcode
+ *
+ * @param  request  AWS request to set.
+ */
 void AwsAbstractResponse::setRequest(const AwsAbstractRequest * const request)
 {
     Q_D(AwsAbstractResponse);
+    delete d->request;
     d->request = request;
 }
 

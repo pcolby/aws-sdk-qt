@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsChangeMessageVisibilityRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest()
     : SqsRequest(SqsRequest::ChangeMessageVisibilitySqsAction)

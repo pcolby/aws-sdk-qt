@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsGetQueueAttributesRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest()
     : SqsRequest(SqsRequest::GetQueueAttributesSqsAction)

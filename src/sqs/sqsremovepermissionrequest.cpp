@@ -29,8 +29,6 @@ QTAWS_BEGIN_NAMESPACE
 
 /**
  * @brief  Constructs a new SqsRemovePermissionRequest object.
- *
- * @param parent       This object's parent.
  */
 SqsRemovePermissionRequest::SqsRemovePermissionRequest()
     : SqsRequest(SqsRequest::RemovePermissionSqsAction)

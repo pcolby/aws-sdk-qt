@@ -35,8 +35,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsResponse object.
  *
- * @param  reply   AWS network response to observe.
- * @param  parent  This object's parent.
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
  */
 SqsCreateQueueResponse::SqsCreateQueueResponse(const SqsCreateQueueRequest &request,
                                                QNetworkReply * const reply,
