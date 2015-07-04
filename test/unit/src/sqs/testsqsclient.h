@@ -29,11 +29,15 @@ private slots:
     void construct_region_data();
     void construct_region();
 
+    /// @todo addPermission, changeMessageVisbility{,Batch}
+
     void createQueue_data();
     void createQueue();
 
+    /// @todo Lots more requests go here.
+
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    /// @todo  Test private class constructor?
+    // Nothing to see here.
     #endif
 };

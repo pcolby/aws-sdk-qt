@@ -37,28 +37,6 @@ Q_DECLARE_METATYPE(AwsRegion::Region)
 
 namespace TestSqsClient_Mocks {
 
-/// @todo  We probably won't need this mock client if responses track their requests.
-class MockSqsClient : public SqsClient {
-public:
-    const AwsAbstractRequest * request;
-    MockSqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
-                  AwsAbstractCredentials * credentials = NULL,
-                  QNetworkAccessManager * const manager = NULL,
-                  QObject * const parent = 0)
-        : SqsClient(region, credentials, manager, parent), request(NULL) { }
-
-    MockSqsClient(const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
-                  QNetworkAccessManager * const manager = NULL,
-                  QObject * const parent = 0)
-        : SqsClient(endpoint, credentials, manager, parent), request(NULL) { }
-protected:
-    virtual AwsAbstractResponse * send(const AwsAbstractRequest &request)
-    {
-        this->request = &request; // Remember for tests to interrogate.
-        return SqsClient::send(request);
-    }
-};
-
 class MockNetworkReply : public QNetworkReply {
 public:
     MockNetworkReply(const QNetworkRequest &request, QObject * const parent = 0)
@@ -153,27 +131,47 @@ void TestSqsClient::construct_region()
 
 void TestSqsClient::createQueue_data()
 {
-    /// @todo
-    //QTest::addColumn<A>("queueName");
-    //QTest::addColumn<AwsRegion::Region>("attributes");
+    QTest::addColumn<QString>("queueName");
+    QTest::addColumn<QVariantMap>("attributes");
+
+    QTest::newRow("empty-map") << QString::fromLatin1("test") << QVariantMap();
+
+    QVariantMap map;
+    map.insert(QLatin1String("foo"), 1);
+    map.insert(QLatin1String("bar"), QLatin1String("2"));
+    map.insert(QLatin1String("baz"), 3.0);
+    QTest::newRow("map")  << QString::fromLatin1("map") << map;
 }
 
 void TestSqsClient::createQueue()
 {
-    /// @todo
-    //QFETCH(QString, queueName);
-    //QFETCH(QVariantMap, attributes);
+    QFETCH(QString, queueName);
+    QFETCH(QVariantMap, attributes);
 
     AwsAnonymousCredentials credentials;
     MockNetworkAccessManager manager;
     SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
 
-    SqsCreateQueueResponse * response = sqs.createQueue(QLatin1String("queue name"));
-    QVERIFY(response);
+    {   // Verify the convenience overload.
+        const SqsCreateQueueResponse * const response = sqs.createQueue(queueName, attributes);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::CreateQueueSqsAction);
+        QCOMPARE(response->request()->queueName(), queueName);
+        QCOMPARE(response->request()->attributes(), attributes);
+    }
 
-    /// @todo Verify response->request() members. This would require responses
-    ///       to track their requests (ie same as QNetworkReply::request) which
-    ///       would be good to do anyway.
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        SqsCreateQueueRequest request;
+        request.setQueueName(queueName);
+        request.setAttributes(attributes);
+        const SqsCreateQueueResponse * const response = sqs.createQueue(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::CreateQueueSqsAction);
+        QCOMPARE(response->request()->queueName(), queueName);
+        QCOMPARE(response->request()->attributes(), attributes);
+    }
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
