@@ -52,25 +52,24 @@ protected:
 void TestSqsRequest::construct_action_data()
 {
     QTest::addColumn<SqsRequest::Action>("action");
-    #define NEW_ROW(action) QTest::newRow(#action) << SqsRequest::action##Action
-    NEW_ROW(AddPermissionSqs);
-    NEW_ROW(ChangeMessageVisibilitySqs);
-    NEW_ROW(ChangeMessageVisibilityBatchSqs);
-    NEW_ROW(CreateQueueSqs);
-    NEW_ROW(DreateQueueSqs);
-    NEW_ROW(DeleteMessageSqs);
-    NEW_ROW(DeleteMessageBatchSqs);
-    NEW_ROW(DeleteQueueSqs);
-    NEW_ROW(GetQueueAttributesSqs);
-    NEW_ROW(GetQueueUrlSqs);
-    NEW_ROW(ListDeadLetterSourceQueuesSqs);
-    NEW_ROW(ListQueuesSqs);
-    NEW_ROW(PurgeQueueSqs);
-    NEW_ROW(ReceiveMessageSqs);
-    NEW_ROW(RemovePermissionSqs);
-    NEW_ROW(SendMessageSqs);
-    NEW_ROW(SendMessageBatchSqs);
-    NEW_ROW(SetQueueAttributesSqs);
+    #define NEW_ROW(action) QTest::newRow(#action) << SqsRequest::action##SqsAction
+    NEW_ROW(AddPermission);
+    NEW_ROW(ChangeMessageVisibility);
+    NEW_ROW(ChangeMessageVisibilityBatch);
+    NEW_ROW(CreateQueue);
+    NEW_ROW(DeleteMessage);
+    NEW_ROW(DeleteMessageBatch);
+    NEW_ROW(DeleteQueue);
+    NEW_ROW(GetQueueAttributes);
+    NEW_ROW(GetQueueUrl);
+    NEW_ROW(ListDeadLetterSourceQueues);
+    NEW_ROW(ListQueues);
+    NEW_ROW(PurgeQueue);
+    NEW_ROW(ReceiveMessage);
+    NEW_ROW(RemovePermission);
+    NEW_ROW(SendMessage);
+    NEW_ROW(SendMessageBatch);
+    NEW_ROW(SetQueueAttributes);
     #undef NEW_ROW
 }
 
@@ -91,25 +90,25 @@ void TestSqsRequest::construct_copy_data()
     QTest::addColumn<SqsRequest::Action>("action");
     QTest::addColumn<QVariantMap>("parameters");
 
-    #define NEW_ROW(action) QTest::newRow(#action) << SqsRequest::action##Action << QVariantMap();
-    NEW_ROW(AddPermissionSqs);
-    NEW_ROW(ChangeMessageVisibilitySqs);
-    NEW_ROW(ChangeMessageVisibilityBatchSqs);
-    NEW_ROW(CreateQueueSqs);
-    NEW_ROW(DreateQueueSqs);
-    NEW_ROW(DeleteMessageSqs);
-    NEW_ROW(DeleteMessageBatchSqs);
-    NEW_ROW(DeleteQueueSqs);
-    NEW_ROW(GetQueueAttributesSqs);
-    NEW_ROW(GetQueueUrlSqs);
-    NEW_ROW(ListDeadLetterSourceQueuesSqs);
-    NEW_ROW(ListQueuesSqs);
-    NEW_ROW(PurgeQueueSqs);
-    NEW_ROW(ReceiveMessageSqs);
-    NEW_ROW(RemovePermissionSqs);
-    NEW_ROW(SendMessageSqs);
-    NEW_ROW(SendMessageBatchSqs);
-    NEW_ROW(SetQueueAttributesSqs);
+    #define NEW_ROW(action) QTest::newRow(#action) \
+        << SqsRequest::action##SqsAction << QVariantMap();
+    NEW_ROW(AddPermission);
+    NEW_ROW(ChangeMessageVisibility);
+    NEW_ROW(ChangeMessageVisibilityBatch);
+    NEW_ROW(CreateQueue);
+    NEW_ROW(DeleteMessage);
+    NEW_ROW(DeleteMessageBatch);
+    NEW_ROW(DeleteQueue);
+    NEW_ROW(GetQueueAttributes);
+    NEW_ROW(GetQueueUrl);
+    NEW_ROW(ListDeadLetterSourceQueues);
+    NEW_ROW(ListQueues);
+    NEW_ROW(PurgeQueue);
+    NEW_ROW(ReceiveMessage);
+    NEW_ROW(RemovePermission);
+    NEW_ROW(SendMessage);
+    NEW_ROW(SendMessageBatch);
+    NEW_ROW(SetQueueAttributes);
     #undef NEW_ROW
 
     QVariantMap parameters;
@@ -202,12 +201,39 @@ void TestSqsRequest::action()
 
 void TestSqsRequest::actionString_data()
 {
-    /// @todo
+    QTest::addColumn<SqsRequest::Action>("action");
+    QTest::addColumn<QString>("actionString");
+
+    #define NEW_ROW(action) QTest::newRow(#action) \
+        << SqsRequest::action##SqsAction << QString::fromLatin1(#action)
+    NEW_ROW(AddPermission);
+    NEW_ROW(ChangeMessageVisibility);
+    NEW_ROW(ChangeMessageVisibilityBatch);
+    NEW_ROW(CreateQueue);
+    NEW_ROW(DeleteMessage);
+    NEW_ROW(DeleteMessageBatch);
+    NEW_ROW(DeleteQueue);
+    NEW_ROW(GetQueueAttributes);
+    NEW_ROW(GetQueueUrl);
+    NEW_ROW(ListDeadLetterSourceQueues);
+    NEW_ROW(ListQueues);
+    NEW_ROW(PurgeQueue);
+    NEW_ROW(ReceiveMessage);
+    NEW_ROW(RemovePermission);
+    NEW_ROW(SendMessage);
+    NEW_ROW(SendMessageBatch);
+    NEW_ROW(SetQueueAttributes);
+    #undef NEW_ROW
 }
 
 void TestSqsRequest::actionString()
 {
-    /// @todo
+    QFETCH(SqsRequest::Action, action);
+    QFETCH(QString, actionString);
+
+    MockSqsRequest request(action);
+    QCOMPARE(request.action(), action);
+    QCOMPARE(request.actionString(), actionString);
 }
 
 void TestSqsRequest::apiVersion_data()
