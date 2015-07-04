@@ -23,10 +23,17 @@ class TestAwsAbstractRequest : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
+    void construct_default();
+
+    void construct_copy_data();
+    void construct_copy();
+
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void construct_d_ptr();
     #endif
+
+    void assignment_data();
+    void assignment();
 
     void data_data();
     void data();

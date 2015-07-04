@@ -134,17 +134,50 @@ protected:
 
 } using namespace TestAwsAbstractRequest_Mocks;
 
-void TestAwsAbstractRequest::construct()
+void TestAwsAbstractRequest::construct_default()
 {
-    {   // Verify the default parent argument is NULL.
-        MockRequest request;
-        //QCOMPARE(request.parent(), reinterpret_cast<QObject *>(NULL));
-    }
+    // Verify defaults.
+    MockRequest request;
+    QVERIFY(request.data().isNull());
+    QCOMPARE(request.operation(), QNetworkAccessManager::GetOperation);
+}
 
-    {   // Verify the handling of an explicit parent argument.
-        //MockRequest request(this);
-        //QCOMPARE(request.parent(), qobject_cast<QObject *>(this));
-    }
+void TestAwsAbstractRequest::construct_copy_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+
+    #define NEW_ROW(data, op) QTest::newRow(#op) << data << QNetworkAccessManager::op##Operation
+    NEW_ROW(QByteArray(), Head);
+    NEW_ROW(QByteArray(), Get);
+    NEW_ROW(QByteArray("foo"), Put);
+    NEW_ROW(QByteArray("bar"), Post);
+    NEW_ROW(QByteArray(), Delete);
+    NEW_ROW(QByteArray(""), Custom);
+    NEW_ROW(QByteArray(), Unknown);
+    #undef NEW_ROW
+}
+
+void TestAwsAbstractRequest::construct_copy()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+
+    // Verify defaults.
+    MockRequest request1;
+    request1.setData(data);
+    request1.setOperation(operation);
+    QCOMPARE(request1.data(), data);
+    QCOMPARE(request1.operation(), operation);
+
+    // const_cast here is just to be pedantic... verifies the API.
+    MockRequest request2(const_cast<const MockRequest &>(request1));
+    QCOMPARE(request1.data(), data);
+    QCOMPARE(request2.data(), data);
+    QCOMPARE(request1.data(), request2.data());
+    QCOMPARE(request1.operation(), operation);
+    QCOMPARE(request2.operation(), operation);
+    QCOMPARE(request1.operation(), request2.operation());
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -157,6 +190,32 @@ void TestAwsAbstractRequest::construct_d_ptr()
     QCOMPARE(request.d_func(), requestPrivate);
 }
 #endif
+
+void TestAwsAbstractRequest::assignment_data()
+{
+    construct_copy_data();
+}
+
+void TestAwsAbstractRequest::assignment()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+
+    MockRequest request1;
+    request1.setData(data);
+    request1.setOperation(operation);
+    QCOMPARE(request1.data(), data);
+    QCOMPARE(request1.operation(), operation);
+
+    MockRequest request2;
+    request2 = request1;
+    QCOMPARE(request1.data(), data);
+    QCOMPARE(request2.data(), data);
+    QCOMPARE(request1.data(), request2.data());
+    QCOMPARE(request1.operation(), operation);
+    QCOMPARE(request2.operation(), operation);
+    QCOMPARE(request1.operation(), request2.operation());
+}
 
 void TestAwsAbstractRequest::data_data()
 {
