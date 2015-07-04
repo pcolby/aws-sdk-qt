@@ -316,11 +316,11 @@ void TestSqsResponse::parseFailure_data()
                     "<Message>Not a real error message.</Message>"
                     "<Detail/>"
                 "</Error>"
-                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+                "<RequestId>bc80f361-f5e7-48e8-badb-4c2aeab67ea6</RequestId>"
             "</ErrorResponse>")
         << QXmlStreamReader::NoError
         << sqsErrors
-        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
+        << QString::fromLatin1("bc80f361-f5e7-48e8-badb-4c2aeab67ea6");
 
     // Unrecognised response element.
     QTest::newRow("NonError")
@@ -345,9 +345,6 @@ void TestSqsResponse::parseFailure()
     QBuffer buffer(&xml);
     QVERIFY(buffer.open(QBuffer::ReadOnly));
     response.parseFailure(buffer);
-    qDebug() << response.serviceErrors().count();
-    if (!response.serviceErrors().empty())
-        qDebug() << response.serviceErrors().first().message();
     QCOMPARE((int)response.xmlParseError(), (int)parseError);
     QCOMPARE(response.xmlParseError(), parseError);
     QCOMPARE(response.serviceErrors(), sqsErrors);
@@ -357,12 +354,91 @@ void TestSqsResponse::parseFailure()
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsResponse::parseErrorResponse_data()
 {
+    QTest::addColumn<QByteArray>("xml");
+    QTest::addColumn<SqsErrorList>("sqsErrors");
+    QTest::addColumn<QString>("requestId");
 
+    // Genuine error returned by SQS.
+    SqsErrorList sqsErrors;
+    {
+        QXmlStreamReader reader(
+            "<Error>"
+                "<Type>Sender</Type>"
+                "<Code>AccessDenied</Code>"
+                "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                "<Detail/>"
+            "</Error>");
+        sqsErrors.append(SqsError(reader));
+    }
+    QTest::newRow("AccessDenied")
+        << QByteArray(
+            "<ErrorResponse>"
+                "<Error>"
+                    "<Type>Sender</Type>"
+                    "<Code>AccessDenied</Code>"
+                    "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+            "</ErrorResponse>")
+        << sqsErrors
+        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
+
+    // Multiple errors.
+    {
+        QXmlStreamReader reader(
+            "<Error>"
+                "<Type>Receiver</Type>"
+                "<Code>FooBar</Code>"
+                "<Message>Not a real error message.</Message>"
+                "<Detail/>"
+            "</Error>");
+        sqsErrors.append(SqsError(reader));
+    }
+    Q_ASSERT(sqsErrors.size() == 2);
+    QTest::newRow("MultipleErrors")
+        << QByteArray(
+            "<ErrorResponse>"
+                "<Error>"
+                    "<Type>Sender</Type>"
+                    "<Code>AccessDenied</Code>"
+                    "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<Error>"
+                    "<Type>Receiver</Type>"
+                    "<Code>FooBar</Code>"
+                    "<Message>Not a real error message.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<RequestId>bc80f361-f5e7-48e8-badb-4c2aeab67ea6</RequestId>"
+            "</ErrorResponse>")
+        << sqsErrors
+        << QString::fromLatin1("bc80f361-f5e7-48e8-badb-4c2aeab67ea6");
+
+    // Unrecognised response element.
+    QTest::newRow("NonError")
+        << QByteArray("<NonErrorResponse/>")
+        << SqsErrorList()
+        << QString();
 }
 
 void TestSqsResponse::parseErrorResponse()
 {
+    QFETCH(QByteArray, xml);
+    QFETCH(SqsErrorList, sqsErrors);
+    QFETCH(QString, requestId);
 
+    MockSqsResponse response;
+    QCOMPARE(response.xmlParseError(), QXmlStreamReader::NoError);
+    QCOMPARE(response.serviceErrors(), SqsErrorList());
+    QCOMPARE(response.requestId(), QString());
+
+    QXmlStreamReader reader(xml);
+    QVERIFY(reader.readNextStartElement());
+    response.d_func()->parseErrorResponse(reader);
+    QCOMPARE(response.serviceErrors(), sqsErrors);
+    QCOMPARE(response.requestId(), requestId);
 }
 
 void TestSqsResponse::parseResponseMetadata_data()
