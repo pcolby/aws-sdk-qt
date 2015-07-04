@@ -48,11 +48,20 @@ private slots:
     void clearParameter_data();
     void clearParameter();
 
+    void clearParameters_data();
+    void clearParameters();
+
     void parameter_data();
     void parameter();
 
+    void parameters_data();
+    void parameters();
+
     void setParameter_data();
     void setParameter();
+
+    void setParameters_data();
+    void setParameters();
 
     void unsignedRequest_data();
     void unsignedRequest();

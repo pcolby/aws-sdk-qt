@@ -284,12 +284,38 @@ void TestSqsRequest::clearParameter()
     QCOMPARE(request.parameter(name), QVariant()); ///< parameter doesn't exist.
 }
 
+void TestSqsRequest::clearParameters_data()
+{
+    QTest::addColumn<QVariantMap>("parameters");
+
+    QTest::newRow("empty") << QVariantMap();
+
+    QVariantMap map;
+    map.insert(QLatin1String("foo"), 1);
+    map.insert(QLatin1String("bar"), QLatin1String("2"));
+    map.insert(QLatin1String("baz"), 3.0);
+    QTest::newRow("foo-bar-baz") << map;
+}
+
+void TestSqsRequest::clearParameters()
+{
+    QFETCH(QVariantMap, parameters);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.parameters(), QVariantMap());
+
+    request.setParameters(parameters);
+    QCOMPARE(request.parameters(), parameters);
+
+    request.clearParameters();
+    QCOMPARE(request.parameters(), QVariantMap());
+}
+
 void TestSqsRequest::parameter_data()
 {
     clearParameter_data();
 }
 
-// This test is also completely clearParameter above.  Do we need both?
 void TestSqsRequest::parameter()
 {
     QFETCH(QString, name);
@@ -301,12 +327,27 @@ void TestSqsRequest::parameter()
     QCOMPARE(request.parameter(name), value);
 }
 
+void TestSqsRequest::parameters_data()
+{
+    clearParameters_data();
+}
+
+void TestSqsRequest::parameters()
+{
+    QFETCH(QVariantMap, parameters);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.parameters(), QVariantMap());
+
+    request.setParameters(parameters);
+    QCOMPARE(request.parameters(), parameters);
+}
+
 void TestSqsRequest::setParameter_data()
 {
     clearParameter_data();
 }
 
-// This test is also completely clearParameter above.  Do we need both?
 void TestSqsRequest::setParameter()
 {
     QFETCH(QString, name);
@@ -316,6 +357,22 @@ void TestSqsRequest::setParameter()
     QCOMPARE(request.parameter(name), QVariant());
     request.setParameter(name, value);
     QCOMPARE(request.parameter(name), value);
+}
+
+void TestSqsRequest::setParameters_data()
+{
+    clearParameters_data();
+}
+
+void TestSqsRequest::setParameters()
+{
+    QFETCH(QVariantMap, parameters);
+
+    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    QCOMPARE(request.parameters(), QVariantMap());
+
+    request.setParameters(parameters);
+    QCOMPARE(request.parameters(), parameters);
 }
 
 void TestSqsRequest::unsignedRequest_data()

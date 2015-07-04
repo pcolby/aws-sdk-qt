@@ -182,6 +182,15 @@ int SqsRequest::clearParameter(const QString &name)
 }
 
 /**
+ * @brief  Clear all parameters that were to be included with this request.
+ */
+void SqsRequest::clearParameters()
+{
+    Q_D(SqsRequest);
+    d->parameters.clear();
+}
+
+/**
  * @brief  Get the value of a parameter included with this SQS request.
  *
  * @param name          Name of the parameter to get the value of.
@@ -196,6 +205,17 @@ QVariant SqsRequest::parameter(const QString &name, const QVariant &defaultValue
 }
 
 /**
+ * @brief  Get all parameters included with this SQS request.
+ *
+ * @return A map of parameters included with this request.
+ */
+const QVariantMap &SqsRequest::parameters() const
+{
+    Q_D(const SqsRequest);
+    return d->parameters;
+}
+
+/**
  * @brief  Set a parameter to include with this SQS request.
  *
  * @param  name   Name of the parameter to include.
@@ -205,6 +225,19 @@ void SqsRequest::setParameter(const QString &name, const QVariant &value)
 {
     Q_D(SqsRequest);
     d->parameters.insert(name, value);
+}
+
+/**
+ * @brief  Set all parameters to include with this SQS request.
+ *
+ * Any request parameters set previously will be discarded.
+ *
+ * @param  parameters  New request parameters to inclued with this request.
+ */
+void SqsRequest::setParameters(const QVariantMap &parameters)
+{
+    Q_D(SqsRequest);
+    d->parameters = parameters;
 }
 
 /**

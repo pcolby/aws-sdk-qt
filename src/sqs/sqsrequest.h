@@ -72,8 +72,11 @@ protected:
     /// @endcond
 
     int clearParameter(const QString &name);
+    void clearParameters();
     QVariant parameter(const QString &name, const QVariant &defaultValue = QVariant()) const;
+    const QVariantMap &parameters() const;
     void setParameter(const QString &name, const QVariant &value);
+    void setParameters(const QVariantMap &parameters);
 
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const;
 
