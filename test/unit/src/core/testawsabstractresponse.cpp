@@ -19,6 +19,7 @@
 
 #include "testawsabstractresponse.h"
 
+#include "core/awsabstractrequest.h"
 #include "core/awsabstractresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -27,9 +28,31 @@
 
 #include <QDebug>
 
+Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
+
 namespace TestAwsAbstractResponse_Mocks {
 
-// Bare minimum concrete mock class.
+class MockRequest : public AwsAbstractRequest {
+public:
+    MockRequest() : AwsAbstractRequest() { }
+    virtual bool isValid() const { return false; }
+    void setData(const QByteArray &data) {
+        AwsAbstractRequest::setData(data);
+    }
+    void setOperation(const QNetworkAccessManager::Operation operation) {
+        AwsAbstractRequest::setOperation(operation);
+    }
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const {
+        Q_UNUSED(reply)
+        return NULL;
+    }
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const {
+        return QNetworkRequest(endpoint);
+    }
+};
+
 class MockResponse : public AwsAbstractResponse {
 public:
     int parseCount, parseFailureCount, parseSuccessCount;
@@ -40,7 +63,11 @@ public:
     MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
         : AwsAbstractResponse(d, parent) { }
     virtual const AwsAbstractRequest * request() const {
+        #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+        return d_ptr->request;
+        #else
         return NULL;
+        #endif
     }
     virtual void parse(QNetworkReply * const reply) {
         parseCount++;
@@ -349,6 +376,53 @@ void TestAwsAbstractResponse::xmlParseErrorString()
     response.setXmlError(xml);
 
     QCOMPARE(response.xmlParseErrorString(), xmlErrorString);
+}
+
+void TestAwsAbstractResponse::request_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operation");
+
+    #define NEW_ROW(data, op) QTest::newRow(#op) << data << QNetworkAccessManager::op##Operation
+    NEW_ROW(QByteArray(), Head);
+    NEW_ROW(QByteArray(), Get);
+    NEW_ROW(QByteArray("foo"), Put);
+    NEW_ROW(QByteArray("bar"), Post);
+    NEW_ROW(QByteArray(), Delete);
+    NEW_ROW(QByteArray(""), Custom);
+    NEW_ROW(QByteArray(), Unknown);
+    #undef NEW_ROW
+}
+
+void TestAwsAbstractResponse::request()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(QNetworkAccessManager::Operation, operation);
+
+    MockRequest request;
+    request.setData(data);
+    request.setOperation(operation);
+    QCOMPARE(request.data(), data);
+    QCOMPARE(request.operation(), operation);
+
+    MockResponse response;
+    QCOMPARE(response.request(), static_cast<const AwsAbstractRequest *>(NULL));
+    response.setRequest(&request);
+
+
+    // Verify that the response took a *copy* of request, not its address.
+    QVERIFY(response.request() != &request);
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    QVERIFY(response.request());
+    QCOMPARE(response.request()->data(), data);
+    QCOMPARE(response.request()->operation(), operation);
+#else
+    // This is simply a limitation in our MockResponse class, which can't return
+    // a real request object (at least not in a meaningful testing way) since
+    // that requires knowledge of the AwsAbstractRequestPrivate class' memeber,
+    // which, of course, is not available if private testing is not enabled.
+    QCOMPARE(response.request(), static_cast<const AwsAbstractRequest *>(NULL));
+#endif
 }
 
 QVariant TestAwsAbstractResponse::toVariant(const QByteArray &bytes)

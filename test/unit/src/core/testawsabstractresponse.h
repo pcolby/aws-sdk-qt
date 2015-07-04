@@ -46,6 +46,9 @@ private slots:
     void xmlParseErrorString_data();
     void xmlParseErrorString();
 
+    void request_data();
+    void request();
+
     void toVariant_data();
     void toVariant();
 
