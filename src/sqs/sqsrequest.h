@@ -40,7 +40,6 @@ public:
         ChangeMessageVisibilitySqsAction,
         ChangeMessageVisibilityBatchSqsAction,
         CreateQueueSqsAction,
-        DreateQueueSqsAction,
         DeleteMessageSqsAction,
         DeleteMessageBatchSqsAction,
         DeleteQueueSqsAction,
