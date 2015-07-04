@@ -151,7 +151,9 @@ void TestSqsResponse::hasError_data()
 void TestSqsResponse::hasError()
 {
     QFETCH(SqsErrorList, errors);
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     QFETCH(bool, hasError);
+    #endif
 
     MockSqsResponse response;
     QCOMPARE(response.hasError(), false);
@@ -192,7 +194,9 @@ void TestSqsResponse::isValid_data()
 void TestSqsResponse::isValid()
 {
     QFETCH(SqsErrorList, errors);
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     QFETCH(bool, isValid);
+    #endif
 
     MockSqsResponse response;
     QCOMPARE(response.isValid(), true);
