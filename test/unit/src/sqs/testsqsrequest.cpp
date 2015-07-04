@@ -80,9 +80,7 @@ void TestSqsRequest::construct_action()
     MockSqsRequest request(action);
     QCOMPARE(request.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request.action(), action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    QCOMPARE(request.d_func()->parameters, QVariantMap());
-#endif
+    QCOMPARE(request.parameters(), QVariantMap());
 }
 
 void TestSqsRequest::construct_copy_data()
@@ -124,21 +122,15 @@ void TestSqsRequest::construct_copy()
     QFETCH(QVariantMap, parameters);
 
     MockSqsRequest request1(action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    request1.d_func()->parameters = parameters;
-#endif
+    request1.setParameters(parameters);
     QCOMPARE(request1.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request1.action(), action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    QCOMPARE(request1.d_func()->parameters, parameters);
-#endif
+    QCOMPARE(request1.parameters(), parameters);
 
     MockSqsRequest request2(request1);
     QCOMPARE(request2.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request2.action(), action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    QCOMPARE(request2.d_func()->parameters, parameters);
-#endif
+    QCOMPARE(request2.parameters(), parameters);
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -163,22 +155,16 @@ void TestSqsRequest::assignment()
     QFETCH(QVariantMap, parameters);
 
     MockSqsRequest request1(action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    request1.d_func()->parameters = parameters;
-#endif
+    request1.setParameters(parameters);
     QCOMPARE(request1.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request1.action(), action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    QCOMPARE(request1.d_func()->parameters, parameters);
-#endif
+    QCOMPARE(request1.parameters(), parameters);
 
     MockSqsRequest request2(SqsRequest::ListQueuesSqsAction);
     request2 = request1;
     QCOMPARE(request2.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request2.action(), action);
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    QCOMPARE(request2.d_func()->parameters, parameters);
-#endif
+    QCOMPARE(request2.parameters(), parameters);
 }
 
 void TestSqsRequest::action_data()
