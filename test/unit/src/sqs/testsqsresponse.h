@@ -49,7 +49,11 @@ private slots:
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
+    void parseErrorResponse_data();
+    void parseErrorResponse();
+
+    void parseResponseMetadata_data();
+    void parseResponseMetadata();
     #endif
 
 };

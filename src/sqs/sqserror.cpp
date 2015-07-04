@@ -224,6 +224,21 @@ SqsError::ErrorType SqsError::type() const
 }
 
 /**
+ * @brief  Equality operator
+ *
+ * @param  other  Instance to compare \c this to.
+ *
+ * @return \c true if \c this and \a other are considered equal
+ */
+bool SqsError::operator==(const SqsError &other) const
+{
+    return ((code() == other.code()) &&
+            (detail() == other.detail()) &&
+            (message() == other.message()) &&
+            (type() == other.type()));
+}
+
+/**
  * @internal
  *
  * @class  SqsErrorPrivate
@@ -297,7 +312,7 @@ SqsErrorPrivate::~SqsErrorPrivate()
  */
 void SqsErrorPrivate::parse(QXmlStreamReader &xml)
 {
-    if ((xml.isStartDocument()) && (!xml.readNextStartElement())) {
+    if ((xml.tokenType() == QXmlStreamReader::NoToken) && (!xml.readNextStartElement())) {
         return;
     }
     Q_ASSERT(xml.name() == QLatin1String("Error"));

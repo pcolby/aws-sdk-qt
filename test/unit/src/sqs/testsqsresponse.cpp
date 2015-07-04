@@ -28,6 +28,8 @@
 
 #include <QDebug>
 
+Q_DECLARE_METATYPE(SqsErrorList)
+
 namespace TestSqsResponse_Mocks {
 
 class MockSqsResponse : public SqsResponse {
@@ -82,52 +84,167 @@ void TestSqsResponse::construct_d_ptr()
 
 void TestSqsResponse::errorString_data()
 {
+    QTest::addColumn<SqsErrorList>("errors");
+    QTest::addColumn<QString>("errorString");
 
+    QTest::newRow("no errors") << SqsErrorList() << QString();
+
+    SqsErrorList errors;
+    {
+        QXmlStreamReader reader("<Error><Message>error one</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("one error") << errors << QString::fromLatin1("error one");
+
+    {
+        QXmlStreamReader reader("<Error><Message>error two</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("two errors") << errors << QString::fromLatin1("error one");
+
+    {
+        QXmlStreamReader reader("<Error><Message>error three</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("three errors") << errors << QString::fromLatin1("error one");
 }
 
 void TestSqsResponse::errorString()
 {
+    QFETCH(SqsErrorList, errors);
+    QFETCH(QString, errorString);
 
+    MockSqsResponse response;
+    QCOMPARE(response.errorString(), QString());
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    response.d_func()->errors = errors;
+    QCOMPARE(response.errorString(), errorString);
+    #endif
 }
 
 void TestSqsResponse::hasError_data()
 {
+    QTest::addColumn<SqsErrorList>("errors");
+    QTest::addColumn<bool>("hasError");
 
+    QTest::newRow("no errors") << SqsErrorList() << false;
+
+    SqsErrorList errors;
+    {
+        QXmlStreamReader reader("<Error><Message>error one</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("one error") << errors << true;
+
+    {
+        QXmlStreamReader reader("<Error><Message>error two</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("two errors") << errors << true;
+
+    {
+        QXmlStreamReader reader("<Error><Message>error three</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("three errors") << errors << true;
 }
 
 void TestSqsResponse::hasError()
 {
+    QFETCH(SqsErrorList, errors);
+    QFETCH(bool, hasError);
 
+    MockSqsResponse response;
+    QCOMPARE(response.hasError(), false);
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    response.d_func()->errors = errors;
+    QCOMPARE(response.hasError(), hasError);
+    #endif
 }
 
 void TestSqsResponse::isValid_data()
 {
+    QTest::addColumn<SqsErrorList>("errors");
+    QTest::addColumn<bool>("isValid");
 
+    QTest::newRow("no errors") << SqsErrorList() << true;
+
+    SqsErrorList errors;
+    {
+        QXmlStreamReader reader("<Error><Message>error one</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("one error") << errors << false;
+
+    {
+        QXmlStreamReader reader("<Error><Message>error two</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("two errors") << errors << false;
+
+    {
+        QXmlStreamReader reader("<Error><Message>error three</Message></Error>");
+        errors.append(SqsError(reader));
+    }
+    QTest::newRow("three errors") << errors << false;
 }
 
 void TestSqsResponse::isValid()
 {
+    QFETCH(SqsErrorList, errors);
+    QFETCH(bool, isValid);
 
+    MockSqsResponse response;
+    QCOMPARE(response.isValid(), true);
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    response.d_func()->errors = errors;
+    QCOMPARE(response.isValid(), isValid);
+    #endif
 }
 
 void TestSqsResponse::requestId_data()
 {
-
+    QTest::addColumn<QString>("requestId");
+    QTest::newRow("null")  << QString();
+    QTest::newRow("empty") << QString::fromLatin1("");
+    QTest::newRow("foo")   << QString::fromLatin1("foo");
+    QTest::newRow("bar")   << QString::fromLatin1("bar");
+    QTest::newRow("baz")   << QString::fromLatin1("baz");
 }
 
+// Note, the real *setting* of the request ID is verified in the parse* tests below.
 void TestSqsResponse::requestId()
 {
+    QFETCH(QString, requestId);
 
+    MockSqsResponse response;
+    QCOMPARE(response.requestId(), QString());
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    response.d_func()->requestId = requestId;
+    QCOMPARE(response.requestId(), requestId);
+    #endif
 }
 
 void TestSqsResponse::serviceErrors_data()
 {
-
+    hasError_data();
 }
 
 void TestSqsResponse::serviceErrors()
 {
+    QFETCH(SqsErrorList, errors);
 
+    MockSqsResponse response;
+    QCOMPARE(response.serviceErrors(), SqsErrorList());
+
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    response.d_func()->errors = errors;
+    QCOMPARE(response.serviceErrors(), errors);
+    #endif
 }
 
 void TestSqsResponse::parseFailure_data()
@@ -139,3 +256,25 @@ void TestSqsResponse::parseFailure()
 {
 
 }
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestSqsResponse::parseErrorResponse_data()
+{
+
+}
+
+void TestSqsResponse::parseErrorResponse()
+{
+
+}
+
+void TestSqsResponse::parseResponseMetadata_data()
+{
+
+}
+
+void TestSqsResponse::parseResponseMetadata()
+{
+
+}
+#endif

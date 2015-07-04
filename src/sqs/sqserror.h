@@ -84,6 +84,8 @@ public:
     QString rawType() const;
     ErrorType type() const;
 
+    bool operator==(const SqsError &other) const;
+
 protected:
     /// @cond internal
     SqsErrorPrivate * const d_ptr; ///< Internal d-pointer.
