@@ -184,12 +184,20 @@ void TestSqsRequest::assignment()
 
 void TestSqsRequest::action_data()
 {
-    /// @todo
+    construct_action_data();
 }
 
 void TestSqsRequest::action()
 {
-    /// @todo
+    QFETCH(SqsRequest::Action, action);
+
+    // Setup a mock request that has an action other than the test data action.
+    MockSqsRequest request((action == SqsRequest::ListQueuesSqsAction)
+        ? SqsRequest::CreateQueueSqsAction : SqsRequest::ListQueuesSqsAction);
+    QVERIFY(request.action() != action);
+
+    request.setAction(action);
+    QCOMPARE(request.action(), action);
 }
 
 void TestSqsRequest::actionString_data()
