@@ -430,7 +430,6 @@ void TestSqsResponse::parseErrorResponse()
     QFETCH(QString, requestId);
 
     MockSqsResponse response;
-    QCOMPARE(response.xmlParseError(), QXmlStreamReader::NoError);
     QCOMPARE(response.serviceErrors(), SqsErrorList());
     QCOMPARE(response.requestId(), QString());
 
@@ -443,11 +442,36 @@ void TestSqsResponse::parseErrorResponse()
 
 void TestSqsResponse::parseResponseMetadata_data()
 {
+    QTest::addColumn<QByteArray>("xml");
+    QTest::addColumn<QString>("requestId");
 
+    QTest::newRow("valid")
+        << QByteArray(
+            "<ResponseMetadata>"
+                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+            "</ResponseMetadata>")
+        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
+
+    QTest::newRow("superflous")
+        << QByteArray(
+            "<ResponseMetadata>"
+                "<foo>this should be ignored</foo>"
+                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+            "</ResponseMetadata>")
+        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
 }
 
 void TestSqsResponse::parseResponseMetadata()
 {
+    QFETCH(QByteArray, xml);
+    QFETCH(QString, requestId);
 
+    MockSqsResponse response;
+    QCOMPARE(response.requestId(), QString());
+
+    QXmlStreamReader reader(xml);
+    QVERIFY(reader.readNextStartElement());
+    response.d_func()->parseResponseMetadata(reader);
+    QCOMPARE(response.requestId(), requestId);
 }
 #endif
