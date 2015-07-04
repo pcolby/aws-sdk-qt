@@ -31,18 +31,18 @@
             <td class="headerValue">libqtaws 0.1.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">53</td>
-            <td class="headerCovTableEntry">86</td>
-            <td class="headerCovTableEntryLo">61.6 %</td>
+            <td class="headerCovTableEntry">97</td>
+            <td class="headerCovTableEntry">97</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-04 12:56:31</td>
+            <td class="headerValue">2015-07-04 23:21:21</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">11</td>
-            <td class="headerCovTableEntry">15</td>
-            <td class="headerCovTableEntryLo">73.3 %</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -102,22 +102,22 @@
 <span class="lineNum">      40 </span>            :  *
 <a name="41"><span class="lineNum">      41 </span>            :  * @param  action  The SQS action to request.</a>
 <span class="lineNum">      42 </span>            :  */
-<span class="lineNum">      43 </span><span class="lineCov">         89 : SqsRequest::SqsRequest(const SqsAction action)</span>
-<span class="lineNum">      44 </span><span class="lineCov">         89 :     : AwsAbstractRequest(new SqsRequestPrivate(action, this))</span>
+<span class="lineNum">      43 </span><span class="lineCov">        564 : SqsRequest::SqsRequest(const Action action)</span>
+<span class="lineNum">      44 </span><span class="lineCov">        564 :     : AwsAbstractRequest(new SqsRequestPrivate(action, this))</span>
 <span class="lineNum">      45 </span>            : {
-<span class="lineNum">      46 </span><span class="lineCov">         89 :     setApiVersion(QLatin1String(&quot;2012-11-05&quot;));</span>
-<span class="lineNum">      47 </span><span class="lineCov">         89 : }</span>
+<span class="lineNum">      46 </span><span class="lineCov">        564 :     setApiVersion(QLatin1String(&quot;2012-11-05&quot;));</span>
+<span class="lineNum">      47 </span><span class="lineCov">        564 : }</span>
 <span class="lineNum">      48 </span>            : 
 <span class="lineNum">      49 </span>            : /**
 <span class="lineNum">      50 </span>            :  * @brief  Constructs a new SqsRequest object by copying another.
 <span class="lineNum">      51 </span>            :  *
 <a name="52"><span class="lineNum">      52 </span>            :  * @param  other  Instance to copy.</a>
 <span class="lineNum">      53 </span>            :  */
-<span class="lineNum">      54 </span><span class="lineCov">         83 : SqsRequest::SqsRequest(const SqsRequest &amp;other)</span>
-<span class="lineNum">      55 </span><span class="lineCov">         83 :     : AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))</span>
+<span class="lineNum">      54 </span><span class="lineCov">         88 : SqsRequest::SqsRequest(const SqsRequest &amp;other)</span>
+<span class="lineNum">      55 </span><span class="lineCov">         88 :     : AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))</span>
 <span class="lineNum">      56 </span>            : {
 <span class="lineNum">      57 </span>            : 
-<span class="lineNum">      58 </span><span class="lineCov">         83 : }</span>
+<span class="lineNum">      58 </span><span class="lineCov">         88 : }</span>
 <span class="lineNum">      59 </span>            : 
 <span class="lineNum">      60 </span>            : /**
 <span class="lineNum">      61 </span>            :  * @brief  Assignment operator.
@@ -128,13 +128,13 @@
 <span class="lineNum">      66 </span>            :  *
 <a name="67"><span class="lineNum">      67 </span>            :  * @return  A reference to \c this.</a>
 <span class="lineNum">      68 </span>            :  */
-<span class="lineNum">      69 </span><span class="lineNoCov">          0 : SqsRequest&amp; SqsRequest::operator=(const SqsRequest &amp;other)</span>
+<span class="lineNum">      69 </span><span class="lineCov">         72 : SqsRequest&amp; SqsRequest::operator=(const SqsRequest &amp;other)</span>
 <span class="lineNum">      70 </span>            : {
-<span class="lineNum">      71 </span><span class="lineNoCov">          0 :     Q_D(SqsRequest);</span>
-<span class="lineNum">      72 </span><span class="lineNoCov">          0 :     d-&gt;action = other.d_func()-&gt;action;</span>
-<span class="lineNum">      73 </span><span class="lineNoCov">          0 :     d-&gt;apiVersion = other.d_func()-&gt;apiVersion;</span>
-<span class="lineNum">      74 </span><span class="lineNoCov">          0 :     d-&gt;parameters = other.d_func()-&gt;parameters;</span>
-<span class="lineNum">      75 </span><span class="lineNoCov">          0 :     return *this;</span>
+<span class="lineNum">      71 </span><span class="lineCov">         72 :     Q_D(SqsRequest);</span>
+<span class="lineNum">      72 </span><span class="lineCov">         72 :     d-&gt;action = other.d_func()-&gt;action;</span>
+<span class="lineNum">      73 </span><span class="lineCov">         72 :     d-&gt;apiVersion = other.d_func()-&gt;apiVersion;</span>
+<span class="lineNum">      74 </span><span class="lineCov">         72 :     d-&gt;parameters = other.d_func()-&gt;parameters;</span>
+<span class="lineNum">      75 </span><span class="lineCov">         72 :     return *this;</span>
 <span class="lineNum">      76 </span>            : }
 <span class="lineNum">      77 </span>            : 
 <span class="lineNum">      78 </span>            : /**
@@ -147,20 +147,20 @@
 <span class="lineNum">      85 </span>            :  *
 <a name="86"><span class="lineNum">      86 </span>            :  * @param  d  Pointer to private data (aka D-Pointer).</a>
 <span class="lineNum">      87 </span>            :  */
-<span class="lineNum">      88 </span><span class="lineNoCov">          0 : SqsRequest::SqsRequest(SqsRequestPrivate * const d) : AwsAbstractRequest(d)</span>
+<span class="lineNum">      88 </span><span class="lineCov">          4 : SqsRequest::SqsRequest(SqsRequestPrivate * const d) : AwsAbstractRequest(d)</span>
 <span class="lineNum">      89 </span>            : {
 <span class="lineNum">      90 </span>            : 
-<span class="lineNum">      91 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      91 </span><span class="lineCov">          4 : }</span>
 <span class="lineNum">      92 </span>            : 
 <span class="lineNum">      93 </span>            : /**
 <span class="lineNum">      94 </span>            :  * @brief  Get the SQS action to be performed by this request.
 <span class="lineNum">      95 </span>            :  *
 <a name="96"><span class="lineNum">      96 </span>            :  * @return The SQS action to be performed by this request.</a>
 <span class="lineNum">      97 </span>            :  */
-<span class="lineNum">      98 </span><span class="lineCov">        152 : SqsRequest::SqsAction SqsRequest::action() const</span>
+<span class="lineNum">      98 </span><span class="lineCov">        684 : SqsRequest::Action SqsRequest::action() const</span>
 <span class="lineNum">      99 </span>            : {
-<span class="lineNum">     100 </span><span class="lineCov">        152 :     Q_D(const SqsRequest);</span>
-<span class="lineNum">     101 </span><span class="lineCov">        152 :     return d-&gt;action;</span>
+<span class="lineNum">     100 </span><span class="lineCov">        684 :     Q_D(const SqsRequest);</span>
+<span class="lineNum">     101 </span><span class="lineCov">        684 :     return d-&gt;action;</span>
 <span class="lineNum">     102 </span>            : }
 <span class="lineNum">     103 </span>            : 
 <span class="lineNum">     104 </span>            : /**
@@ -168,33 +168,33 @@
 <span class="lineNum">     106 </span>            :  *
 <a name="107"><span class="lineNum">     107 </span>            :  * @return The name of the SQS action to be performed by this request.</a>
 <span class="lineNum">     108 </span>            :  */
-<span class="lineNum">     109 </span><span class="lineCov">         83 : QString SqsRequest::actionString() const</span>
+<span class="lineNum">     109 </span><span class="lineCov">        100 : QString SqsRequest::actionString() const</span>
 <span class="lineNum">     110 </span>            : {
 <span class="lineNum">     111 </span>            :     #define SqsActionToString(action) \
 <span class="lineNum">     112 </span>            :         case SqsRequest::action##SqsAction: return QLatin1String(#action)
-<span class="lineNum">     113 </span><span class="lineCov">         83 :     switch (action()) {</span>
-<span class="lineNum">     114 </span><span class="lineNoCov">          0 :         SqsActionToString(AddPermission);</span>
-<span class="lineNum">     115 </span><span class="lineNoCov">          0 :         SqsActionToString(ChangeMessageVisibility);</span>
-<span class="lineNum">     116 </span><span class="lineNoCov">          0 :         SqsActionToString(ChangeMessageVisibilityBatch);</span>
-<span class="lineNum">     117 </span><span class="lineCov">         83 :         SqsActionToString(CreateQueue);</span>
-<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         SqsActionToString(DeleteMessage);</span>
-<span class="lineNum">     119 </span><span class="lineNoCov">          0 :         SqsActionToString(DeleteMessageBatch);</span>
-<span class="lineNum">     120 </span><span class="lineNoCov">          0 :         SqsActionToString(DeleteQueue);</span>
-<span class="lineNum">     121 </span><span class="lineNoCov">          0 :         SqsActionToString(GetQueueAttributes);</span>
-<span class="lineNum">     122 </span><span class="lineNoCov">          0 :         SqsActionToString(GetQueueUrl);</span>
-<span class="lineNum">     123 </span><span class="lineNoCov">          0 :         SqsActionToString(ListDeadLetterSourceQueues);</span>
-<span class="lineNum">     124 </span><span class="lineNoCov">          0 :         SqsActionToString(ListQueues);</span>
-<span class="lineNum">     125 </span><span class="lineNoCov">          0 :         SqsActionToString(PurgeQueue);</span>
-<span class="lineNum">     126 </span><span class="lineNoCov">          0 :         SqsActionToString(ReceiveMessage);</span>
-<span class="lineNum">     127 </span><span class="lineNoCov">          0 :         SqsActionToString(RemovePermission);</span>
-<span class="lineNum">     128 </span><span class="lineNoCov">          0 :         SqsActionToString(SendMessage);</span>
-<span class="lineNum">     129 </span><span class="lineNoCov">          0 :         SqsActionToString(SendMessageBatch);</span>
-<span class="lineNum">     130 </span><span class="lineNoCov">          0 :         SqsActionToString(SetQueueAttributes);</span>
+<span class="lineNum">     113 </span><span class="lineCov">        100 :     switch (action()) {</span>
+<span class="lineNum">     114 </span><span class="lineCov">          4 :         SqsActionToString(AddPermission);</span>
+<span class="lineNum">     115 </span><span class="lineCov">          8 :         SqsActionToString(ChangeMessageVisibility);</span>
+<span class="lineNum">     116 </span><span class="lineCov">          4 :         SqsActionToString(ChangeMessageVisibilityBatch);</span>
+<span class="lineNum">     117 </span><span class="lineCov">         20 :         SqsActionToString(CreateQueue);</span>
+<span class="lineNum">     118 </span><span class="lineCov">          8 :         SqsActionToString(DeleteMessage);</span>
+<span class="lineNum">     119 </span><span class="lineCov">          4 :         SqsActionToString(DeleteMessageBatch);</span>
+<span class="lineNum">     120 </span><span class="lineCov">          4 :         SqsActionToString(DeleteQueue);</span>
+<span class="lineNum">     121 </span><span class="lineCov">          4 :         SqsActionToString(GetQueueAttributes);</span>
+<span class="lineNum">     122 </span><span class="lineCov">          4 :         SqsActionToString(GetQueueUrl);</span>
+<span class="lineNum">     123 </span><span class="lineCov">          4 :         SqsActionToString(ListDeadLetterSourceQueues);</span>
+<span class="lineNum">     124 </span><span class="lineCov">          8 :         SqsActionToString(ListQueues);</span>
+<span class="lineNum">     125 </span><span class="lineCov">          4 :         SqsActionToString(PurgeQueue);</span>
+<span class="lineNum">     126 </span><span class="lineCov">          4 :         SqsActionToString(ReceiveMessage);</span>
+<span class="lineNum">     127 </span><span class="lineCov">          4 :         SqsActionToString(RemovePermission);</span>
+<span class="lineNum">     128 </span><span class="lineCov">          4 :         SqsActionToString(SendMessage);</span>
+<span class="lineNum">     129 </span><span class="lineCov">          4 :         SqsActionToString(SendMessageBatch);</span>
+<span class="lineNum">     130 </span><span class="lineCov">          4 :         SqsActionToString(SetQueueAttributes);</span>
 <span class="lineNum">     131 </span>            :         default:
-<span class="lineNum">     132 </span><span class="lineNoCov">          0 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid action&quot;);</span>
+<span class="lineNum">     132 </span><span class="lineCov">          4 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid action&quot;);</span>
 <span class="lineNum">     133 </span>            :     }
 <span class="lineNum">     134 </span>            :     #undef SqsActionToString
-<span class="lineNum">     135 </span><span class="lineNoCov">          0 :     return QString();</span>
+<span class="lineNum">     135 </span><span class="lineCov">          4 :     return QString();</span>
 <span class="lineNum">     136 </span>            : }
 <span class="lineNum">     137 </span>            : 
 <span class="lineNum">     138 </span>            : /**
@@ -202,10 +202,10 @@
 <span class="lineNum">     140 </span>            :  *
 <a name="141"><span class="lineNum">     141 </span>            :  * @return The SQS API version implmented by this request.</a>
 <span class="lineNum">     142 </span>            :  */
-<span class="lineNum">     143 </span><span class="lineCov">         83 : QString SqsRequest::apiVersion() const</span>
+<span class="lineNum">     143 </span><span class="lineCov">        432 : QString SqsRequest::apiVersion() const</span>
 <span class="lineNum">     144 </span>            : {
-<span class="lineNum">     145 </span><span class="lineCov">         83 :     Q_D(const SqsRequest);</span>
-<span class="lineNum">     146 </span><span class="lineCov">         83 :     return d-&gt;apiVersion;</span>
+<span class="lineNum">     145 </span><span class="lineCov">        432 :     Q_D(const SqsRequest);</span>
+<span class="lineNum">     146 </span><span class="lineCov">        432 :     return d-&gt;apiVersion;</span>
 <span class="lineNum">     147 </span>            : }
 <span class="lineNum">     148 </span>            : 
 <span class="lineNum">     149 </span>            : /**
@@ -213,22 +213,22 @@
 <span class="lineNum">     151 </span>            :  *
 <a name="152"><span class="lineNum">     152 </span>            :  * @param  action  The action to be performed by this request.</a>
 <span class="lineNum">     153 </span>            :  */
-<span class="lineNum">     154 </span><span class="lineNoCov">          0 : void SqsRequest::setAction(const SqsAction action)</span>
+<span class="lineNum">     154 </span><span class="lineCov">         68 : void SqsRequest::setAction(const Action action)</span>
 <span class="lineNum">     155 </span>            : {
-<span class="lineNum">     156 </span><span class="lineNoCov">          0 :     Q_D(SqsRequest);</span>
-<span class="lineNum">     157 </span><span class="lineNoCov">          0 :     d-&gt;action = action;</span>
-<span class="lineNum">     158 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     156 </span><span class="lineCov">         68 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     157 </span><span class="lineCov">         68 :     d-&gt;action = action;</span>
+<span class="lineNum">     158 </span><span class="lineCov">         68 : }</span>
 <span class="lineNum">     159 </span>            : 
 <span class="lineNum">     160 </span>            : /**
 <span class="lineNum">     161 </span>            :  * @brief  Set the SQS API version to include in this request.
 <span class="lineNum">     162 </span>            :  *
 <a name="163"><span class="lineNum">     163 </span>            :  * @param  version  The SQS API version to include in this request.</a>
 <span class="lineNum">     164 </span>            :  */
-<span class="lineNum">     165 </span><span class="lineCov">         89 : void SqsRequest::setApiVersion(const QString &amp;version)</span>
+<span class="lineNum">     165 </span><span class="lineCov">        600 : void SqsRequest::setApiVersion(const QString &amp;version)</span>
 <span class="lineNum">     166 </span>            : {
-<span class="lineNum">     167 </span><span class="lineCov">         89 :     Q_D(SqsRequest);</span>
-<span class="lineNum">     168 </span><span class="lineCov">         89 :     d-&gt;apiVersion = version;</span>
-<span class="lineNum">     169 </span><span class="lineCov">         89 : }</span>
+<span class="lineNum">     167 </span><span class="lineCov">        600 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     168 </span><span class="lineCov">        600 :     d-&gt;apiVersion = version;</span>
+<span class="lineNum">     169 </span><span class="lineCov">        600 : }</span>
 <span class="lineNum">     170 </span>            : 
 <span class="lineNum">     171 </span>            : /**
 <span class="lineNum">     172 </span>            :  * @brief  Remove a parameter from the parameters to be included with this request.
@@ -237,119 +237,152 @@
 <span class="lineNum">     175 </span>            :  *
 <a name="176"><span class="lineNum">     176 </span>            :  * @return Count of parameters removed (should be 0 or 1).</a>
 <span class="lineNum">     177 </span>            :  */
-<span class="lineNum">     178 </span><span class="lineNoCov">          0 : int SqsRequest::clearParameter(const QString &amp;name)</span>
+<span class="lineNum">     178 </span><span class="lineCov">         40 : int SqsRequest::clearParameter(const QString &amp;name)</span>
 <span class="lineNum">     179 </span>            : {
-<span class="lineNum">     180 </span><span class="lineNoCov">          0 :     Q_D(SqsRequest);</span>
-<span class="lineNum">     181 </span><span class="lineNoCov">          0 :     return d-&gt;parameters.remove(name);</span>
+<span class="lineNum">     180 </span><span class="lineCov">         40 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     181 </span><span class="lineCov">         40 :     return d-&gt;parameters.remove(name);</span>
 <span class="lineNum">     182 </span>            : }
 <span class="lineNum">     183 </span>            : 
 <span class="lineNum">     184 </span>            : /**
-<span class="lineNum">     185 </span>            :  * @brief  Get the value of a parameter included with this SQS request.
-<span class="lineNum">     186 </span>            :  *
-<span class="lineNum">     187 </span>            :  * @param name          Name of the parameter to get the value of.
-<span class="lineNum">     188 </span>            :  * @param defaultValue  Default value to return if no such parameter has been set.
-<span class="lineNum">     189 </span>            :  *
-<a name="190"><span class="lineNum">     190 </span>            :  * @return The value of the specified parameter, or \a defaultValue of not set.</a>
-<span class="lineNum">     191 </span>            :  */
-<span class="lineNum">     192 </span><span class="lineCov">        227 : QVariant SqsRequest::parameter(const QString &amp;name, const QVariant &amp;defaultValue) const</span>
-<span class="lineNum">     193 </span>            : {
-<span class="lineNum">     194 </span><span class="lineCov">        227 :     Q_D(const SqsRequest);</span>
-<span class="lineNum">     195 </span><span class="lineCov">        227 :     return d-&gt;parameters.value(name, defaultValue);</span>
-<span class="lineNum">     196 </span>            : }
-<span class="lineNum">     197 </span>            : 
-<span class="lineNum">     198 </span>            : /**
-<span class="lineNum">     199 </span>            :  * @brief  Set a parameter to include with this SQS request.
-<span class="lineNum">     200 </span>            :  *
-<span class="lineNum">     201 </span>            :  * @param  name   Name of the parameter to include.
-<a name="202"><span class="lineNum">     202 </span>            :  * @param  value  Value of the parameter to include.</a>
-<span class="lineNum">     203 </span>            :  */
-<span class="lineNum">     204 </span><span class="lineCov">        178 : void SqsRequest::setParameter(const QString &amp;name, const QVariant &amp;value)</span>
-<span class="lineNum">     205 </span>            : {
-<span class="lineNum">     206 </span><span class="lineCov">        178 :     Q_D(SqsRequest);</span>
-<span class="lineNum">     207 </span><span class="lineCov">        178 :     d-&gt;parameters.insert(name, value);</span>
-<span class="lineNum">     208 </span><span class="lineCov">        178 : }</span>
-<span class="lineNum">     209 </span>            : 
-<span class="lineNum">     210 </span>            : /**
-<span class="lineNum">     211 </span>            :  * @brief  Build a network request object for this SQS request.
-<span class="lineNum">     212 </span>            :  *
-<span class="lineNum">     213 </span>            :  * This SQS implementation builds request URLs by combining the common query
-<span class="lineNum">     214 </span>            :  * parameters (such as Action and Version), with any that have been added (via
-<span class="lineNum">     215 </span>            :  * setParameter) by child classes.
-<span class="lineNum">     216 </span>            :  *
-<span class="lineNum">     217 </span>            :  * @param  endpoint  AWS endpoint to build this request for.
-<span class="lineNum">     218 </span>            :  *
-<a name="219"><span class="lineNum">     219 </span>            :  * @return A network request for this SQS request using the given \a endpoint.</a>
-<span class="lineNum">     220 </span>            :  */
-<span class="lineNum">     221 </span><span class="lineCov">         83 : QNetworkRequest SqsRequest::unsignedRequest(const QUrl &amp;endpoint) const</span>
-<span class="lineNum">     222 </span>            : {
-<span class="lineNum">     223 </span><span class="lineCov">         83 :     Q_D(const SqsRequest);</span>
-<span class="lineNum">     224 </span><span class="lineCov">         83 :     QUrlQuery query;</span>
-<span class="lineNum">     225 </span><span class="lineCov">         83 :     query.addQueryItem(QLatin1String(&quot;Action&quot;), actionString());</span>
-<span class="lineNum">     226 </span><span class="lineCov">         83 :     query.addQueryItem(QLatin1String(&quot;Version&quot;), apiVersion());</span>
-<span class="lineNum">     227 </span><span class="lineCov">        249 :     for (QVariantMap::const_iterator iter = d-&gt;parameters.cbegin(); iter != d-&gt;parameters.cend(); ++iter) {</span>
-<span class="lineNum">     228 </span><span class="lineCov">        166 :         const QString parameterName = iter.key();</span>
-<span class="lineNum">     229 </span><span class="lineCov">        332 :         const QVariant parameterValue = iter.value();</span>
-<span class="lineNum">     230 </span><span class="lineCov">        166 :         if (parameterValue.type() == QVariant::Map) {</span>
-<span class="lineNum">     231 </span><span class="lineCov">         83 :             const QVariantMap map = parameterValue.toMap();</span>
-<span class="lineNum">     232 </span><span class="lineCov">         83 :             int index = 1;</span>
-<span class="lineNum">     233 </span><span class="lineCov">        179 :             for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {</span>
-<span class="lineNum">     234 </span><span class="lineCov">         96 :                 query.addQueryItem(parameterName.arg(index).arg(QLatin1String(&quot;Name&quot;)), iter.key());</span>
-<span class="lineNum">     235 </span><span class="lineCov">         96 :                 query.addQueryItem(parameterName.arg(index).arg(QLatin1String(&quot;Value&quot;)), iter.value().toString());</span>
-<span class="lineNum">     236 </span><span class="lineCov">         83 :             }</span>
-<span class="lineNum">     237 </span>            :         } else {
-<span class="lineNum">     238 </span><span class="lineCov">         83 :             query.addQueryItem(parameterName, parameterValue.toString());</span>
-<span class="lineNum">     239 </span>            :         }
-<span class="lineNum">     240 </span><span class="lineCov">        166 :     }</span>
-<span class="lineNum">     241 </span>            : 
-<span class="lineNum">     242 </span><span class="lineCov">        166 :     QUrl url(endpoint);</span>
-<span class="lineNum">     243 </span><span class="lineCov">         83 :     url.setQuery(query);</span>
-<span class="lineNum">     244 </span><span class="lineCov">        166 :     return QNetworkRequest(url);</span>
-<span class="lineNum">     245 </span>            : }
-<span class="lineNum">     246 </span>            : 
-<span class="lineNum">     247 </span>            : /**
-<span class="lineNum">     248 </span>            :  * @internal
+<a name="185"><span class="lineNum">     185 </span>            :  * @brief  Clear all parameters that were to be included with this request.</a>
+<span class="lineNum">     186 </span>            :  */
+<span class="lineNum">     187 </span><span class="lineCov">          8 : void SqsRequest::clearParameters()</span>
+<span class="lineNum">     188 </span>            : {
+<span class="lineNum">     189 </span><span class="lineCov">          8 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     190 </span><span class="lineCov">          8 :     d-&gt;parameters.clear();</span>
+<span class="lineNum">     191 </span><span class="lineCov">          8 : }</span>
+<span class="lineNum">     192 </span>            : 
+<span class="lineNum">     193 </span>            : /**
+<span class="lineNum">     194 </span>            :  * @brief  Get the value of a parameter included with this SQS request.
+<span class="lineNum">     195 </span>            :  *
+<span class="lineNum">     196 </span>            :  * @param name          Name of the parameter to get the value of.
+<span class="lineNum">     197 </span>            :  * @param defaultValue  Default value to return if no such parameter has been set.
+<span class="lineNum">     198 </span>            :  *
+<a name="199"><span class="lineNum">     199 </span>            :  * @return The value of the specified parameter, or \a defaultValue of not set.</a>
+<span class="lineNum">     200 </span>            :  */
+<span class="lineNum">     201 </span><span class="lineCov">        168 : QVariant SqsRequest::parameter(const QString &amp;name, const QVariant &amp;defaultValue) const</span>
+<span class="lineNum">     202 </span>            : {
+<span class="lineNum">     203 </span><span class="lineCov">        168 :     Q_D(const SqsRequest);</span>
+<span class="lineNum">     204 </span><span class="lineCov">        168 :     return d-&gt;parameters.value(name, defaultValue);</span>
+<span class="lineNum">     205 </span>            : }
+<span class="lineNum">     206 </span>            : 
+<span class="lineNum">     207 </span>            : /**
+<span class="lineNum">     208 </span>            :  * @brief  Get all parameters included with this SQS request.
+<span class="lineNum">     209 </span>            :  *
+<a name="210"><span class="lineNum">     210 </span>            :  * @return A map of parameters included with this request.</a>
+<span class="lineNum">     211 </span>            :  */
+<span class="lineNum">     212 </span><span class="lineCov">        412 : const QVariantMap &amp;SqsRequest::parameters() const</span>
+<span class="lineNum">     213 </span>            : {
+<span class="lineNum">     214 </span><span class="lineCov">        412 :     Q_D(const SqsRequest);</span>
+<span class="lineNum">     215 </span><span class="lineCov">        412 :     return d-&gt;parameters;</span>
+<span class="lineNum">     216 </span>            : }
+<span class="lineNum">     217 </span>            : 
+<span class="lineNum">     218 </span>            : /**
+<span class="lineNum">     219 </span>            :  * @brief  Set a parameter to include with this SQS request.
+<span class="lineNum">     220 </span>            :  *
+<span class="lineNum">     221 </span>            :  * @param  name   Name of the parameter to include.
+<a name="222"><span class="lineNum">     222 </span>            :  * @param  value  Value of the parameter to include.</a>
+<span class="lineNum">     223 </span>            :  */
+<span class="lineNum">     224 </span><span class="lineCov">         92 : void SqsRequest::setParameter(const QString &amp;name, const QVariant &amp;value)</span>
+<span class="lineNum">     225 </span>            : {
+<span class="lineNum">     226 </span><span class="lineCov">         92 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     227 </span><span class="lineCov">         92 :     d-&gt;parameters.insert(name, value);</span>
+<span class="lineNum">     228 </span><span class="lineCov">         92 : }</span>
+<span class="lineNum">     229 </span>            : 
+<span class="lineNum">     230 </span>            : /**
+<span class="lineNum">     231 </span>            :  * @brief  Set all parameters to include with this SQS request.
+<span class="lineNum">     232 </span>            :  *
+<span class="lineNum">     233 </span>            :  * Any request parameters set previously will be discarded.
+<span class="lineNum">     234 </span>            :  *
+<a name="235"><span class="lineNum">     235 </span>            :  * @param  parameters  New request parameters to inclued with this request.</a>
+<span class="lineNum">     236 </span>            :  */
+<span class="lineNum">     237 </span><span class="lineCov">        180 : void SqsRequest::setParameters(const QVariantMap &amp;parameters)</span>
+<span class="lineNum">     238 </span>            : {
+<span class="lineNum">     239 </span><span class="lineCov">        180 :     Q_D(SqsRequest);</span>
+<span class="lineNum">     240 </span><span class="lineCov">        180 :     d-&gt;parameters = parameters;</span>
+<span class="lineNum">     241 </span><span class="lineCov">        180 : }</span>
+<span class="lineNum">     242 </span>            : 
+<span class="lineNum">     243 </span>            : /**
+<span class="lineNum">     244 </span>            :  * @brief  Build a network request object for this SQS request.
+<span class="lineNum">     245 </span>            :  *
+<span class="lineNum">     246 </span>            :  * This SQS implementation builds request URLs by combining the common query
+<span class="lineNum">     247 </span>            :  * parameters (such as Action and Version), with any that have been added (via
+<span class="lineNum">     248 </span>            :  * setParameter) by child classes.
 <span class="lineNum">     249 </span>            :  *
-<span class="lineNum">     250 </span>            :  * @class  SqsRequestPrivate
+<span class="lineNum">     250 </span>            :  * @param  endpoint  AWS endpoint to build this request for.
 <span class="lineNum">     251 </span>            :  *
-<span class="lineNum">     252 </span>            :  * @brief  Private implementation for SqsRequest.
+<a name="252"><span class="lineNum">     252 </span>            :  * @return A network request for this SQS request using the given \a endpoint.</a>
 <span class="lineNum">     253 </span>            :  */
-<span class="lineNum">     254 </span>            : 
-<span class="lineNum">     255 </span>            : /**
-<span class="lineNum">     256 </span>            :  * @internal
-<span class="lineNum">     257 </span>            :  *
-<span class="lineNum">     258 </span>            :  * @brief  Constructs a new SqsRequestPrivate object.
-<span class="lineNum">     259 </span>            :  *
-<span class="lineNum">     260 </span>            :  * @param  action  SQS action being performed by the \a q request.
-<a name="261"><span class="lineNum">     261 </span>            :  * @param  q       Pointer to this object's public SqsRequest instance.</a>
-<span class="lineNum">     262 </span>            :  */
-<span class="lineNum">     263 </span><span class="lineCov">         89 : SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q)</span>
-<span class="lineNum">     264 </span><span class="lineCov">         89 :     : AwsAbstractRequestPrivate(q), action(action)</span>
-<span class="lineNum">     265 </span>            : {
-<span class="lineNum">     266 </span>            : 
-<span class="lineNum">     267 </span><span class="lineCov">         89 : }</span>
-<span class="lineNum">     268 </span>            : 
-<span class="lineNum">     269 </span>            : /**
-<span class="lineNum">     270 </span>            :  * @internal
-<span class="lineNum">     271 </span>            :  *
-<span class="lineNum">     272 </span>            :  * @brief  Constructs a new SqsRequestPrivate object from an existing one.
-<span class="lineNum">     273 </span>            :  *
-<span class="lineNum">     274 </span>            :  * This copy-like constructor copies everything from \a other, except for the
-<span class="lineNum">     275 </span>            :  * the object's pointer to its public instance - for that, \a q is used instead.
-<span class="lineNum">     276 </span>            :  *
-<span class="lineNum">     277 </span>            :  * This is required to support the SqsRequest class's copy constructor.
-<span class="lineNum">     278 </span>            :  *
-<span class="lineNum">     279 </span>            :  * @param  other  Instance to copy.
-<a name="280"><span class="lineNum">     280 </span>            :  * @param  q      Pointer to this object's public SqsRequest instance.</a>
-<span class="lineNum">     281 </span>            :  */
-<span class="lineNum">     282 </span><span class="lineCov">         83 : SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &amp;other,</span>
-<span class="lineNum">     283 </span>            :                                      SqsRequest * const q)
-<span class="lineNum">     284 </span>            :     : AwsAbstractRequestPrivate(q), action(other.action),
-<span class="lineNum">     285 </span><span class="lineCov">         83 :       apiVersion(other.apiVersion), parameters(other.parameters)</span>
-<span class="lineNum">     286 </span>            : {
+<span class="lineNum">     254 </span><span class="lineCov">         28 : QNetworkRequest SqsRequest::unsignedRequest(const QUrl &amp;endpoint) const</span>
+<span class="lineNum">     255 </span>            : {
+<span class="lineNum">     256 </span><span class="lineCov">         28 :     Q_D(const SqsRequest);</span>
+<span class="lineNum">     257 </span><span class="lineCov">         28 :     QUrlQuery query;</span>
+<span class="lineNum">     258 </span><span class="lineCov">         28 :     query.addQueryItem(QLatin1String(&quot;Action&quot;), actionString());</span>
+<span class="lineNum">     259 </span><span class="lineCov">         28 :     query.addQueryItem(QLatin1String(&quot;Version&quot;), apiVersion());</span>
+<span class="lineNum">     260 </span><span class="lineCov">         88 :     for (QVariantMap::const_iterator iter = d-&gt;parameters.cbegin(); iter != d-&gt;parameters.cend(); ++iter) {</span>
+<span class="lineNum">     261 </span><span class="lineCov">         60 :         const QString parameterName = iter.key();</span>
+<span class="lineNum">     262 </span><span class="lineCov">        120 :         const QVariant parameterValue = iter.value();</span>
+<span class="lineNum">     263 </span><span class="lineCov">         60 :         if (parameterValue.type() == QVariant::Map) {</span>
+<span class="lineNum">     264 </span><span class="lineCov">         20 :             const QVariantMap map = parameterValue.toMap();</span>
+<span class="lineNum">     265 </span><span class="lineCov">         20 :             int index = 1;</span>
+<span class="lineNum">     266 </span><span class="lineCov">         56 :             for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {</span>
+<span class="lineNum">     267 </span><span class="lineCov">         36 :                 query.addQueryItem(parameterName.arg(index).arg(QLatin1String(&quot;Name&quot;)), iter.key());</span>
+<span class="lineNum">     268 </span><span class="lineCov">         36 :                 query.addQueryItem(parameterName.arg(index).arg(QLatin1String(&quot;Value&quot;)), iter.value().toString());</span>
+<span class="lineNum">     269 </span><span class="lineCov">         20 :             }</span>
+<span class="lineNum">     270 </span>            :         } else {
+<span class="lineNum">     271 </span><span class="lineCov">         40 :             query.addQueryItem(parameterName, parameterValue.toString());</span>
+<span class="lineNum">     272 </span>            :         }
+<span class="lineNum">     273 </span><span class="lineCov">         60 :     }</span>
+<span class="lineNum">     274 </span>            : 
+<span class="lineNum">     275 </span><span class="lineCov">         56 :     QUrl url(endpoint);</span>
+<span class="lineNum">     276 </span><span class="lineCov">         28 :     url.setQuery(query);</span>
+<span class="lineNum">     277 </span><span class="lineCov">         56 :     return QNetworkRequest(url);</span>
+<span class="lineNum">     278 </span>            : }
+<span class="lineNum">     279 </span>            : 
+<span class="lineNum">     280 </span>            : /**
+<span class="lineNum">     281 </span>            :  * @internal
+<span class="lineNum">     282 </span>            :  *
+<span class="lineNum">     283 </span>            :  * @class  SqsRequestPrivate
+<span class="lineNum">     284 </span>            :  *
+<span class="lineNum">     285 </span>            :  * @brief  Private implementation for SqsRequest.
+<span class="lineNum">     286 </span>            :  */
 <span class="lineNum">     287 </span>            : 
-<span class="lineNum">     288 </span><span class="lineCov">         83 : }</span>
-<span class="lineNum">     289 </span>            : 
-<span class="lineNum">     290 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">     288 </span>            : /**
+<span class="lineNum">     289 </span>            :  * @internal
+<span class="lineNum">     290 </span>            :  *
+<span class="lineNum">     291 </span>            :  * @brief  Constructs a new SqsRequestPrivate object.
+<span class="lineNum">     292 </span>            :  *
+<span class="lineNum">     293 </span>            :  * @param  action  SQS action being performed by the \a q request.
+<a name="294"><span class="lineNum">     294 </span>            :  * @param  q       Pointer to this object's public SqsRequest instance.</a>
+<span class="lineNum">     295 </span>            :  */
+<span class="lineNum">     296 </span><span class="lineCov">        568 : SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q)</span>
+<span class="lineNum">     297 </span><span class="lineCov">        568 :     : AwsAbstractRequestPrivate(q), action(action)</span>
+<span class="lineNum">     298 </span>            : {
+<span class="lineNum">     299 </span>            : 
+<span class="lineNum">     300 </span><span class="lineCov">        568 : }</span>
+<span class="lineNum">     301 </span>            : 
+<span class="lineNum">     302 </span>            : /**
+<span class="lineNum">     303 </span>            :  * @internal
+<span class="lineNum">     304 </span>            :  *
+<span class="lineNum">     305 </span>            :  * @brief  Constructs a new SqsRequestPrivate object from an existing one.
+<span class="lineNum">     306 </span>            :  *
+<span class="lineNum">     307 </span>            :  * This copy-like constructor copies everything from \a other, except for the
+<span class="lineNum">     308 </span>            :  * the object's pointer to its public instance - for that, \a q is used instead.
+<span class="lineNum">     309 </span>            :  *
+<span class="lineNum">     310 </span>            :  * This is required to support the SqsRequest class's copy constructor.
+<span class="lineNum">     311 </span>            :  *
+<span class="lineNum">     312 </span>            :  * @param  other  Instance to copy.
+<a name="313"><span class="lineNum">     313 </span>            :  * @param  q      Pointer to this object's public SqsRequest instance.</a>
+<span class="lineNum">     314 </span>            :  */
+<span class="lineNum">     315 </span><span class="lineCov">         88 : SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &amp;other,</span>
+<span class="lineNum">     316 </span>            :                                      SqsRequest * const q)
+<span class="lineNum">     317 </span>            :     : AwsAbstractRequestPrivate(q), action(other.action),
+<span class="lineNum">     318 </span><span class="lineCov">         88 :       apiVersion(other.apiVersion), parameters(other.parameters)</span>
+<span class="lineNum">     319 </span>            : {
+<span class="lineNum">     320 </span>            : 
+<span class="lineNum">     321 </span><span class="lineCov">         88 : }</span>
+<span class="lineNum">     322 </span>            : 
+<span class="lineNum">     323 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>

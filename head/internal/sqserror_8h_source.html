@@ -176,31 +176,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QString rawType() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    ErrorType type() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">   89</a></span>&#160;<span class="comment"></span>    <a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> <a class="code" href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">d_ptr</a>; <span class="comment">///&lt; Internal d-pointer.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span>    <a class="code" href="classSqsError.html">SqsError</a>(<a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsError.html">SqsError</a>)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classSqsError.html">SqsError</a> &amp;other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">   91</a></span>&#160;<span class="comment"></span>    <a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> <a class="code" href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">d_ptr</a>; <span class="comment">///&lt; Internal d-pointer.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>    <a class="code" href="classSqsError.html">SqsError</a>(<a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> d);<span class="comment"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsError.html">SqsError</a>)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">typedef</span> QList&lt;SqsError&gt; SqsErrorList;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">typedef</span> QList&lt;SqsError&gt; SqsErrorList;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSqsError_html_ac47706a4c98c65c20b97f3f5ff1d01af"><div class="ttname"><a href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a></div><div class="ttdeci">ErrorType</div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00063">sqserror.h:63</a></div></div>
 <div class="ttc" id="classSqsError_html_ae1749929dec229427131dcd183b77877"><div class="ttname"><a href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a></div><div class="ttdeci">ErrorCode</div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00040">sqserror.h:40</a></div></div>
-<div class="ttc" id="classSqsError_html_adc04cb46d4c80fb9772b7f22371463e0"><div class="ttname"><a href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">SqsError::d_ptr</a></div><div class="ttdeci">SqsErrorPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00089">sqserror.h:89</a></div></div>
+<div class="ttc" id="classSqsError_html_adc04cb46d4c80fb9772b7f22371463e0"><div class="ttname"><a href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">SqsError::d_ptr</a></div><div class="ttdeci">SqsErrorPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00091">sqserror.h:91</a></div></div>
 <div class="ttc" id="classSqsErrorPrivate_html"><div class="ttname"><a href="classSqsErrorPrivate.html">SqsErrorPrivate</a></div><div class="ttdoc">Private implementation for SqsError. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror__p_8h_source.html#l00027">sqserror_p.h:27</a></div></div>
 <div class="ttc" id="classSqsError_html"><div class="ttname"><a href="classSqsError.html">SqsError</a></div><div class="ttdoc">Encapsulation of an Error element from an SQS ErrorResponse response. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00035">sqserror.h:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

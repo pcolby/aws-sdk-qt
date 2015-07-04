@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSqsResponse-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SqsResponse Class Reference</div>  </div>
@@ -193,6 +194,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess</a> (QIODevice &amp;response)=0</td></tr>
 <tr class="memdesc:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a successful response.  <a href="#aad6d4ebfca17ee96fc27fc8bb33e0dba">More...</a><br /></td></tr>
 <tr class="separator:aad6d4ebfca17ee96fc27fc8bb33e0dba inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a22b3ad887db64d3260bf92ae712c947c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22b3ad887db64d3260bf92ae712c947c"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TestSqsResponse</b></td></tr>
+<tr class="separator:a22b3ad887db64d3260bf92ae712c947c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -480,7 +487,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    Q_D(<a class="code" href="classSqsResponse.html">SqsResponse</a>);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    QXmlStreamReader xml(&amp;response);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (xml.readNextStartElement()) {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;ErrorResponse&quot;</span>)) {</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            d-&gt;parseErrorResponse(xml);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        } <span class="keywordflow">else</span> {</div>
@@ -555,7 +562,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

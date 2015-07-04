@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-04 12:56:31</td>
+            <td class="headerValue">2015-07-04 23:21:21</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">3</td>
@@ -93,61 +93,63 @@
 <span class="lineNum">      31 </span>            : class AwsAbstractClient;
 <a name="32"><span class="lineNum">      32 </span>            : class SqsRequestPrivate;</a>
 <span class="lineNum">      33 </span>            : 
-<span class="lineNum">      34 </span><span class="lineCov">         33 : class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {</span>
+<span class="lineNum">      34 </span><span class="lineCov">       2975 : class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {</span>
 <span class="lineNum">      35 </span>            : 
 <span class="lineNum">      36 </span>            : public:
 <span class="lineNum">      37 </span>            :     /// Actions supported by SQS.
-<span class="lineNum">      38 </span>            :     enum SqsAction {
+<span class="lineNum">      38 </span>            :     enum Action {
 <span class="lineNum">      39 </span>            :         AddPermissionSqsAction,
 <span class="lineNum">      40 </span>            :         ChangeMessageVisibilitySqsAction,
 <span class="lineNum">      41 </span>            :         ChangeMessageVisibilityBatchSqsAction,
 <span class="lineNum">      42 </span>            :         CreateQueueSqsAction,
-<span class="lineNum">      43 </span>            :         DreateQueueSqsAction,
-<span class="lineNum">      44 </span>            :         DeleteMessageSqsAction,
-<span class="lineNum">      45 </span>            :         DeleteMessageBatchSqsAction,
-<span class="lineNum">      46 </span>            :         DeleteQueueSqsAction,
-<span class="lineNum">      47 </span>            :         GetQueueAttributesSqsAction,
-<span class="lineNum">      48 </span>            :         GetQueueUrlSqsAction,
-<span class="lineNum">      49 </span>            :         ListDeadLetterSourceQueuesSqsAction,
-<span class="lineNum">      50 </span>            :         ListQueuesSqsAction,
-<span class="lineNum">      51 </span>            :         PurgeQueueSqsAction,
-<span class="lineNum">      52 </span>            :         ReceiveMessageSqsAction,
-<span class="lineNum">      53 </span>            :         RemovePermissionSqsAction,
-<span class="lineNum">      54 </span>            :         SendMessageSqsAction,
-<span class="lineNum">      55 </span>            :         SendMessageBatchSqsAction,
-<span class="lineNum">      56 </span>            :         SetQueueAttributesSqsAction
-<span class="lineNum">      57 </span>            :     };
-<span class="lineNum">      58 </span>            : 
-<span class="lineNum">      59 </span>            :     SqsRequest(const SqsAction action);
-<span class="lineNum">      60 </span>            :     SqsRequest(const SqsRequest &amp;other);
-<span class="lineNum">      61 </span>            :     SqsRequest &amp;operator=(const SqsRequest &amp;other);
-<span class="lineNum">      62 </span>            : 
-<span class="lineNum">      63 </span>            :     SqsAction action() const;
-<span class="lineNum">      64 </span>            :     QString actionString() const;
-<span class="lineNum">      65 </span>            :     QString apiVersion() const;
-<span class="lineNum">      66 </span>            : 
-<span class="lineNum">      67 </span>            :     void setAction(const SqsAction action);
-<span class="lineNum">      68 </span>            :     void setApiVersion(const QString &amp;version);
-<span class="lineNum">      69 </span>            : 
-<span class="lineNum">      70 </span>            : protected:
-<span class="lineNum">      71 </span>            :     /// @cond internal
-<span class="lineNum">      72 </span>            :     SqsRequest(SqsRequestPrivate * const d);
-<span class="lineNum">      73 </span>            :     /// @endcond
-<span class="lineNum">      74 </span>            : 
-<span class="lineNum">      75 </span>            :     int clearParameter(const QString &amp;name);
+<span class="lineNum">      43 </span>            :         DeleteMessageSqsAction,
+<span class="lineNum">      44 </span>            :         DeleteMessageBatchSqsAction,
+<span class="lineNum">      45 </span>            :         DeleteQueueSqsAction,
+<span class="lineNum">      46 </span>            :         GetQueueAttributesSqsAction,
+<span class="lineNum">      47 </span>            :         GetQueueUrlSqsAction,
+<span class="lineNum">      48 </span>            :         ListDeadLetterSourceQueuesSqsAction,
+<span class="lineNum">      49 </span>            :         ListQueuesSqsAction,
+<span class="lineNum">      50 </span>            :         PurgeQueueSqsAction,
+<span class="lineNum">      51 </span>            :         ReceiveMessageSqsAction,
+<span class="lineNum">      52 </span>            :         RemovePermissionSqsAction,
+<span class="lineNum">      53 </span>            :         SendMessageSqsAction,
+<span class="lineNum">      54 </span>            :         SendMessageBatchSqsAction,
+<span class="lineNum">      55 </span>            :         SetQueueAttributesSqsAction
+<span class="lineNum">      56 </span>            :     };
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span>            :     SqsRequest(const Action action);
+<span class="lineNum">      59 </span>            :     SqsRequest(const SqsRequest &amp;other);
+<span class="lineNum">      60 </span>            :     SqsRequest &amp;operator=(const SqsRequest &amp;other);
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            :     Action action() const;
+<span class="lineNum">      63 </span>            :     QString actionString() const;
+<span class="lineNum">      64 </span>            :     QString apiVersion() const;
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span>            :     void setAction(const Action action);
+<span class="lineNum">      67 </span>            :     void setApiVersion(const QString &amp;version);
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span>            : protected:
+<span class="lineNum">      70 </span>            :     /// @cond internal
+<span class="lineNum">      71 </span>            :     SqsRequest(SqsRequestPrivate * const d);
+<span class="lineNum">      72 </span>            :     /// @endcond
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            :     int clearParameter(const QString &amp;name);
+<span class="lineNum">      75 </span>            :     void clearParameters();
 <span class="lineNum">      76 </span>            :     QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue = QVariant()) const;
-<span class="lineNum">      77 </span>            :     void setParameter(const QString &amp;name, const QVariant &amp;value);
-<span class="lineNum">      78 </span>            : 
-<span class="lineNum">      79 </span>            :     virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const;
-<a name="80"><span class="lineNum">      80 </span>            : </a>
-<span class="lineNum">      81 </span>            : private:
-<span class="lineNum">      82 </span><span class="lineCov">        895 :     Q_DECLARE_PRIVATE(SqsRequest)</span>
-<span class="lineNum">      83 </span>            : 
-<span class="lineNum">      84 </span>            : };
-<span class="lineNum">      85 </span>            : 
-<span class="lineNum">      86 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      77 </span>            :     const QVariantMap &amp;parameters() const;
+<span class="lineNum">      78 </span>            :     void setParameter(const QString &amp;name, const QVariant &amp;value);
+<span class="lineNum">      79 </span>            :     void setParameters(const QVariantMap &amp;parameters);
+<span class="lineNum">      80 </span>            : 
+<span class="lineNum">      81 </span>            :     virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const;
+<a name="82"><span class="lineNum">      82 </span>            : </a>
+<span class="lineNum">      83 </span>            : private:
+<span class="lineNum">      84 </span><span class="lineCov">       3092 :     Q_DECLARE_PRIVATE(SqsRequest)</span>
+<span class="lineNum">      85 </span>            :     friend class TestSqsRequest;
+<span class="lineNum">      86 </span>            : };
 <span class="lineNum">      87 </span>            : 
-<span class="lineNum">      88 </span>            : #endif
+<span class="lineNum">      88 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            : #endif
 </pre>
       </td>
     </tr>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['parameter',['parameter',['../classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8',1,'SqsRequest']]],
-  ['parameters',['parameters',['../classSqsRequestPrivate.html#a4b41dd77ec9a42bd23e7a96fc4afdfa4',1,'SqsRequestPrivate']]],
+  ['parameters',['parameters',['../classSqsRequestPrivate.html#a4b41dd77ec9a42bd23e7a96fc4afdfa4',1,'SqsRequestPrivate::parameters()'],['../classSqsRequest.html#a96ff20e30474431382a30b9341f4e996',1,'SqsRequest::parameters()']]],
   ['parse',['parse',['../classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6',1,'AwsAbstractResponse::parse()'],['../classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc',1,'SqsErrorPrivate::parse()']]],
   ['parsecreatequeueresponse',['parseCreateQueueResponse',['../classSqsCreateQueueResponsePrivate.html#ab41065d827a4505edae70897a45674b0',1,'SqsCreateQueueResponsePrivate']]],
   ['parsecreatequeueresult',['parseCreateQueueResult',['../classSqsCreateQueueResponsePrivate.html#a2c644b4f7361dbbec879f3565b4372a8',1,'SqsCreateQueueResponsePrivate']]],

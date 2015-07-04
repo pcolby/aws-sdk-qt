@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-04 12:56:31</td>
+            <td class="headerValue">2015-07-04 23:21:21</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">5</td>
@@ -117,14 +117,14 @@
 <span class="lineNum">      55 </span>            :  *
 <a name="56"><span class="lineNum">      56 </span>            :  * Use instances of this object to provide Version 1 signatures for AWS services.</a>
 <span class="lineNum">      57 </span>            :  */
-<span class="lineNum">      58 </span><span class="lineCov">         45 : AwsSignatureV1::AwsSignatureV1() : AwsSignatureV0(new AwsSignatureV1Private(this))</span>
+<span class="lineNum">      58 </span><span class="lineCov">         54 : AwsSignatureV1::AwsSignatureV1() : AwsSignatureV0(new AwsSignatureV1Private(this))</span>
 <span class="lineNum">      59 </span>            : {
 <span class="lineNum">      60 </span>            : 
-<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         45 : }</span></a>
+<a name="61"><span class="lineNum">      61 </span><span class="lineCov">         54 : }</span></a>
 <span class="lineNum">      62 </span>            : 
-<span class="lineNum">      63 </span><span class="lineCov">         20 : int AwsSignatureV1::version() const</span>
+<span class="lineNum">      63 </span><span class="lineCov">         24 : int AwsSignatureV1::version() const</span>
 <span class="lineNum">      64 </span>            : {
-<span class="lineNum">      65 </span><span class="lineCov">         20 :     return 1;</span>
+<span class="lineNum">      65 </span><span class="lineCov">         24 :     return 1;</span>
 <span class="lineNum">      66 </span>            : }
 <span class="lineNum">      67 </span>            : 
 <span class="lineNum">      68 </span>            : /**
@@ -147,10 +147,10 @@
 <span class="lineNum">      85 </span>            :  *
 <a name="86"><span class="lineNum">      86 </span>            :  * @param  q  Pointer to this object's public AwsSignatureV1 instance.</a>
 <span class="lineNum">      87 </span>            :  */
-<span class="lineNum">      88 </span><span class="lineCov">         45 : AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSignatureV0Private(q)</span>
+<span class="lineNum">      88 </span><span class="lineCov">         54 : AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSignatureV0Private(q)</span>
 <span class="lineNum">      89 </span>            : {
 <span class="lineNum">      90 </span>            : 
-<span class="lineNum">      91 </span><span class="lineCov">         45 : }</span>
+<span class="lineNum">      91 </span><span class="lineCov">         54 : }</span>
 <span class="lineNum">      92 </span>            : 
 <span class="lineNum">      93 </span>            : /**
 <span class="lineNum">      94 </span>            :  * @internal
@@ -192,17 +192,17 @@
 <span class="lineNum">     130 </span>            :  *
 <a name="131"><span class="lineNum">     131 </span>            :  * @see    http://docs.aws.amazon.com/AmazonDevPay/latest/DevPayDeveloperGuide/LSAPI_Auth_REST.html#CalculatingHMACSignature</a>
 <span class="lineNum">     132 </span>            :  */
-<span class="lineNum">     133 </span><span class="lineCov">         25 : QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
+<span class="lineNum">     133 </span><span class="lineCov">         30 : QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
 <span class="lineNum">     134 </span>            : {
-<span class="lineNum">     135 </span><span class="lineCov">         25 :     QList&lt;QStringPair&gt; list = query.queryItems(QUrl::FullyDecoded);</span>
-<span class="lineNum">     136 </span><span class="lineCov">         25 :     qSort(list.begin(), list.end(), AwsSignatureV1Private::caseInsensitiveLessThan);</span>
-<span class="lineNum">     137 </span><span class="lineCov">         50 :     QString result;</span>
-<span class="lineNum">     138 </span><span class="lineCov">        175 :     foreach (const QStringPair &amp;pair, list) {</span>
-<span class="lineNum">     139 </span><span class="lineCov">        150 :         if (!pair.second.isEmpty()) {</span>
-<span class="lineNum">     140 </span><span class="lineCov">        150 :             result += pair.first + pair.second;</span>
+<span class="lineNum">     135 </span><span class="lineCov">         30 :     QList&lt;QStringPair&gt; list = query.queryItems(QUrl::FullyDecoded);</span>
+<span class="lineNum">     136 </span><span class="lineCov">         30 :     qSort(list.begin(), list.end(), AwsSignatureV1Private::caseInsensitiveLessThan);</span>
+<span class="lineNum">     137 </span><span class="lineCov">         60 :     QString result;</span>
+<span class="lineNum">     138 </span><span class="lineCov">        210 :     foreach (const QStringPair &amp;pair, list) {</span>
+<span class="lineNum">     139 </span><span class="lineCov">        180 :         if (!pair.second.isEmpty()) {</span>
+<span class="lineNum">     140 </span><span class="lineCov">        180 :             result += pair.first + pair.second;</span>
 <span class="lineNum">     141 </span>            :         }
-<span class="lineNum">     142 </span><span class="lineCov">         25 :     }</span>
-<span class="lineNum">     143 </span><span class="lineCov">         50 :     return result.toUtf8();</span>
+<span class="lineNum">     142 </span><span class="lineCov">         30 :     }</span>
+<span class="lineNum">     143 </span><span class="lineCov">         60 :     return result.toUtf8();</span>
 <span class="lineNum">     144 </span>            : }
 <span class="lineNum">     145 </span>            : 
 <span class="lineNum">     146 </span>            : /**
@@ -218,13 +218,13 @@
 <span class="lineNum">     156 </span>            :  *
 <a name="157"><span class="lineNum">     157 </span>            :  * @returns `true` if \a pair1 is less than \a pair2.</a>
 <span class="lineNum">     158 </span>            :  */
-<span class="lineNum">     159 </span><span class="lineCov">        480 : bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &amp;pair1, const QStringPair &amp;pair2)</span>
+<span class="lineNum">     159 </span><span class="lineCov">        576 : bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &amp;pair1, const QStringPair &amp;pair2)</span>
 <span class="lineNum">     160 </span>            : {
-<span class="lineNum">     161 </span><span class="lineCov">        480 :     if (pair1.first.toLower() &lt; pair2.first.toLower())</span>
-<span class="lineNum">     162 </span><span class="lineCov">        135 :         return true;</span>
-<span class="lineNum">     163 </span><span class="lineCov">        345 :     if (pair1.first.toLower() &gt; pair2.first.toLower())</span>
-<span class="lineNum">     164 </span><span class="lineCov">        315 :         return false;</span>
-<span class="lineNum">     165 </span><span class="lineCov">         30 :     return (pair1.second.toLower() &lt; pair2.second.toLower());</span>
+<span class="lineNum">     161 </span><span class="lineCov">        576 :     if (pair1.first.toLower() &lt; pair2.first.toLower())</span>
+<span class="lineNum">     162 </span><span class="lineCov">        162 :         return true;</span>
+<span class="lineNum">     163 </span><span class="lineCov">        414 :     if (pair1.first.toLower() &gt; pair2.first.toLower())</span>
+<span class="lineNum">     164 </span><span class="lineCov">        378 :         return false;</span>
+<span class="lineNum">     165 </span><span class="lineCov">         36 :     return (pair1.second.toLower() &lt; pair2.second.toLower());</span>
 <span class="lineNum">     166 </span>            : }
 <span class="lineNum">     167 </span>            : 
 <span class="lineNum">     168 </span>            : QTAWS_END_NAMESPACE

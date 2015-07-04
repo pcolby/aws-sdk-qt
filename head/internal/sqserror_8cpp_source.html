@@ -316,163 +316,179 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"> * @brief  Equality operator</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"> * @class  SqsErrorPrivate</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"> * @param  other  Instance to compare \c this to.</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * @brief  Private implementation for SqsError.</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> * @return \c true if \c this and \a other are considered equal</span></div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"> * @internal</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"> * @brief  Constructs a new SqsErrorPrivate object.</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"> * @param  q  Pointer to this object&#39;s public SqsError instance.</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">  241</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a>(<a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    : code(<a class="code" href="classSqsError.html">SqsError</a>::OtherError), type(<a class="code" href="classSqsError.html">SqsError</a>::OtherType), q_ptr(q)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"> * @internal</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * @brief Construc an SqsErrorPrivate object by copying another.</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classSqsError.html#a5102147837ef6a2db4e7983c9c724464">  233</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsError.html#a5102147837ef6a2db4e7983c9c724464">SqsError::operator==</a>(<span class="keyword">const</span> <a class="code" href="classSqsError.html">SqsError</a> &amp;other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="classSqsError.html#a34184b917f172cb431e3be81da48b49e">code</a>() == other.<a class="code" href="classSqsError.html#a34184b917f172cb431e3be81da48b49e">code</a>()) &amp;&amp;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            (<a class="code" href="classSqsError.html#a19a7d190a5eb90f2abae2cfffbed5176">detail</a>() == other.<a class="code" href="classSqsError.html#a19a7d190a5eb90f2abae2cfffbed5176">detail</a>()) &amp;&amp;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            (<a class="code" href="classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb">message</a>() == other.<a class="code" href="classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb">message</a>()) &amp;&amp;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            (<a class="code" href="classSqsError.html#adb3523f8faaaf572c7f4da5cb623ded1">type</a>() == other.<a class="code" href="classSqsError.html#adb3523f8faaaf572c7f4da5cb623ded1">type</a>()));</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment"> * @class  SqsErrorPrivate</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment"> * @brief  Private implementation for SqsError.</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * @internal</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> * This is a lot like a copy constructor, and exists only to support the</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment"> * SqsError class&#39; copy constructor.</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> * @param  other  Instance to copy.</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> * @param  q      Pointer to this object&#39;s public SqsError instance.</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ade3ff42c8f754256df111408b1d51ce6">  258</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a>(<span class="keyword">const</span> <a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> other, <a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    : code(other-&gt;code), detail(other-&gt;detail), message(other-&gt;message),</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      rawCode(other-&gt;rawCode), rawType(other-&gt;rawType), type(other-&gt;type),</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      q_ptr(q)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> * @brief SqsErrorPrivate destructor.</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"> * This virtual destructor does nothing (yet) - its here to allow for safe</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> * polymorphic destruction.</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">  272</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">SqsErrorPrivate::~SqsErrorPrivate</a>()</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"> * @brief  Parse an SQS Error element.</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"> * This function parses Error XML elements (ie from SQS ErrorResponse elements)</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"> * as specified in http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> * For example:</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> * @code{xml}</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> * &lt;Error&gt;</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"> *   &lt;Type&gt;Sender&lt;/Type&gt;</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment"> *   &lt;Code&gt;AccessDenied&lt;/Code&gt;</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"> *   &lt;Message&gt;Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.&lt;/Message&gt;</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"> *   &lt;Detail/&gt;</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"> * &lt;/Error&gt;</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"> * @endcode</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"> * @param  xml  XML stream to parse.</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"> * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">  298</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">SqsErrorPrivate::parse</a>(QXmlStreamReader &amp;xml)</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">if</span> ((xml.isStartDocument()) &amp;&amp; (!xml.readNextStartElement())) {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;Error&quot;</span>));</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Type&quot;</span>)) {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#a317d5077625806d9f60de2b12e494264">type</a> = <a class="code" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">typeFromString</a>(<a class="code" href="classSqsErrorPrivate.html#a261102caf4fb216354d337455280dd58">rawType</a> = xml.readElementText());</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Code&quot;</span>)) {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#aa42f74ad8167b8566049e62da80b280b">code</a> = <a class="code" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">codeFromString</a>(<a class="code" href="classSqsErrorPrivate.html#aa4b2826aac3ae41385ffd2945efbc7d9">rawCode</a> = xml.readElementText());</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Message&quot;</span>)) {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#a34aed834629101bfc33d0b0ed5464082">message</a> = xml.readElementText();</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Detail&quot;</span>)) {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#af47f51ae50bf7d657ad59985269eff9b">detail</a> = <a class="code" href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">AwsAbstractResponse::toVariant</a>(xml);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;           qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;           xml.skipCurrentElement();</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> * @brief  Constructs a new SqsErrorPrivate object.</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * @param  q  Pointer to this object&#39;s public SqsError instance.</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">  256</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a>(<a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    : code(<a class="code" href="classSqsError.html">SqsError</a>::OtherError), type(<a class="code" href="classSqsError.html">SqsError</a>::OtherType), q_ptr(q)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"> * @brief Construc an SqsErrorPrivate object by copying another.</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> * This is a lot like a copy constructor, and exists only to support the</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> * SqsError class&#39; copy constructor.</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> * @param  other  Instance to copy.</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"> * @param  q      Pointer to this object&#39;s public SqsError instance.</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ade3ff42c8f754256df111408b1d51ce6">  273</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a>(<span class="keyword">const</span> <a class="code" href="classSqsErrorPrivate.html">SqsErrorPrivate</a> * <span class="keyword">const</span> other, <a class="code" href="classSqsError.html">SqsError</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    : code(other-&gt;code), detail(other-&gt;detail), message(other-&gt;message),</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      rawCode(other-&gt;rawCode), rawType(other-&gt;rawType), type(other-&gt;type),</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      q_ptr(q)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"> * @brief SqsErrorPrivate destructor.</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"> * This virtual destructor does nothing (yet) - its here to allow for safe</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> * polymorphic destruction.</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">  287</a></span>&#160;<a class="code" href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">SqsErrorPrivate::~SqsErrorPrivate</a>()</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment"> * @brief  Parse an SQS Error element.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"> * This function parses Error XML elements (ie from SQS ErrorResponse elements)</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"> * as specified in http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"> * For example:</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"> * @code{xml}</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment"> * &lt;Error&gt;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"> *   &lt;Type&gt;Sender&lt;/Type&gt;</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"> *   &lt;Code&gt;AccessDenied&lt;/Code&gt;</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"> *   &lt;Message&gt;Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.&lt;/Message&gt;</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> *   &lt;Detail/&gt;</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"> * &lt;/Error&gt;</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment"> * @endcode</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"> * @param  xml  XML stream to parse.</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"> * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">  313</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">SqsErrorPrivate::parse</a>(QXmlStreamReader &amp;xml)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;{</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> ((xml.tokenType() == QXmlStreamReader::NoToken) &amp;&amp; (!xml.readNextStartElement())) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"> * @brief  Convert an SQS error code string to an ErrorCode enum value.</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"> * @param  code  SQS error code.</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment"> * @return ErrorCode equivalent to \a code, or SqsError::OtherError if not recognised.</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">  327</a></span>&#160;<a class="code" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a> <a class="code" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">SqsErrorPrivate::codeFromString</a>(<span class="keyword">const</span> QString &amp;code)</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;{</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">    #define IfStringReturnErrorResponse(str) \</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="preprocessor">        if (code == QLatin1String(#str)) return SqsError::str</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    IfStringReturnErrorResponse(AccessDenied);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    IfStringReturnErrorResponse(IncompleteSignature);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    IfStringReturnErrorResponse(InternalFailure);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    IfStringReturnErrorResponse(InvalidAction);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    IfStringReturnErrorResponse(InvalidClientTokenId);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    IfStringReturnErrorResponse(InvalidParameterCombination);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    IfStringReturnErrorResponse(InvalidParameterValue);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    IfStringReturnErrorResponse(InvalidQueryParameter);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    IfStringReturnErrorResponse(MalformedQueryString);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    IfStringReturnErrorResponse(MissingAction);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    IfStringReturnErrorResponse(MissingAuthenticationToken);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    IfStringReturnErrorResponse(MissingParameter);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    IfStringReturnErrorResponse(OptInRequired);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    IfStringReturnErrorResponse(RequestExpired);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    IfStringReturnErrorResponse(ServiceUnavailable);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    IfStringReturnErrorResponse(Throttling);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    IfStringReturnErrorResponse(ValidationError);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">    #undef IfStringReturnErrorResponse</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown SQS error code&quot;</span> &lt;&lt; <a class="code" href="classSqsErrorPrivate.html#aa42f74ad8167b8566049e62da80b280b">code</a>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">return</span> SqsError::OtherError;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;}</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment"> * @brief  Convert an SQS error type string to an ErrorType enum value.</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment"> * @param  type  SQS error type.</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment"> * @return ErrorType equivalent to \a type, or SqsError::OtherType if not recognised.</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">  360</a></span>&#160;<a class="code" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a> <a class="code" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">SqsErrorPrivate::typeFromString</a>(<span class="keyword">const</span> QString &amp;type)</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">    #define IfStringReturnErrorType(str) \</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">        if (type == QLatin1String(#str)) return SqsError::str##Type</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    IfStringReturnErrorType(Receiver);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    IfStringReturnErrorType(Sender);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">    #undef IfStringReturnErrorType</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown SQS error type&quot;</span> &lt;&lt; <a class="code" href="classSqsErrorPrivate.html#a317d5077625806d9f60de2b12e494264">type</a>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">return</span> SqsError::OtherType;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="ttc" id="classSqsErrorPrivate_html_aeab1bb9eace70286d7e1d09cd38b84dc"><div class="ttname"><a href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">SqsErrorPrivate::parse</a></div><div class="ttdeci">void parse(QXmlStreamReader &amp;xml)</div><div class="ttdoc">Parse an SQS Error element. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00298">sqserror.cpp:298</a></div></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;Error&quot;</span>));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Type&quot;</span>)) {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#a317d5077625806d9f60de2b12e494264">type</a> = <a class="code" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">typeFromString</a>(<a class="code" href="classSqsErrorPrivate.html#a261102caf4fb216354d337455280dd58">rawType</a> = xml.readElementText());</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Code&quot;</span>)) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#aa42f74ad8167b8566049e62da80b280b">code</a> = <a class="code" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">codeFromString</a>(<a class="code" href="classSqsErrorPrivate.html#aa4b2826aac3ae41385ffd2945efbc7d9">rawCode</a> = xml.readElementText());</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Message&quot;</span>)) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#a34aed834629101bfc33d0b0ed5464082">message</a> = xml.readElementText();</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;Detail&quot;</span>)) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <a class="code" href="classSqsErrorPrivate.html#af47f51ae50bf7d657ad59985269eff9b">detail</a> = <a class="code" href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">AwsAbstractResponse::toVariant</a>(xml);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;           qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;           xml.skipCurrentElement();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment"> * @brief  Convert an SQS error code string to an ErrorCode enum value.</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment"> * @param  code  SQS error code.</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment"> * @return ErrorCode equivalent to \a code, or SqsError::OtherError if not recognised.</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">  342</a></span>&#160;<a class="code" href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a> <a class="code" href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">SqsErrorPrivate::codeFromString</a>(<span class="keyword">const</span> QString &amp;code)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;{</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">    #define IfStringReturnErrorResponse(str) \</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">        if (code == QLatin1String(#str)) return SqsError::str</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    IfStringReturnErrorResponse(AccessDenied);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    IfStringReturnErrorResponse(IncompleteSignature);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    IfStringReturnErrorResponse(InternalFailure);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    IfStringReturnErrorResponse(InvalidAction);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    IfStringReturnErrorResponse(InvalidClientTokenId);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    IfStringReturnErrorResponse(InvalidParameterCombination);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    IfStringReturnErrorResponse(InvalidParameterValue);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    IfStringReturnErrorResponse(InvalidQueryParameter);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    IfStringReturnErrorResponse(MalformedQueryString);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    IfStringReturnErrorResponse(MissingAction);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    IfStringReturnErrorResponse(MissingAuthenticationToken);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    IfStringReturnErrorResponse(MissingParameter);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    IfStringReturnErrorResponse(OptInRequired);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    IfStringReturnErrorResponse(RequestExpired);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    IfStringReturnErrorResponse(ServiceUnavailable);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    IfStringReturnErrorResponse(Throttling);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    IfStringReturnErrorResponse(ValidationError);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">    #undef IfStringReturnErrorResponse</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown SQS error code&quot;</span> &lt;&lt; <a class="code" href="classSqsErrorPrivate.html#aa42f74ad8167b8566049e62da80b280b">code</a>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> SqsError::OtherError;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment"> * @brief  Convert an SQS error type string to an ErrorType enum value.</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment"> * @param  type  SQS error type.</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment"> * @return ErrorType equivalent to \a type, or SqsError::OtherType if not recognised.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">  375</a></span>&#160;<a class="code" href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a> <a class="code" href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">SqsErrorPrivate::typeFromString</a>(<span class="keyword">const</span> QString &amp;type)</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;{</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">    #define IfStringReturnErrorType(str) \</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">        if (type == QLatin1String(#str)) return SqsError::str##Type</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    IfStringReturnErrorType(Receiver);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    IfStringReturnErrorType(Sender);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">    #undef IfStringReturnErrorType</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    qWarning() &lt;&lt; <span class="stringliteral">&quot;unknown SQS error type&quot;</span> &lt;&lt; <a class="code" href="classSqsErrorPrivate.html#a317d5077625806d9f60de2b12e494264">type</a>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">return</span> SqsError::OtherType;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="ttc" id="classSqsErrorPrivate_html_aeab1bb9eace70286d7e1d09cd38b84dc"><div class="ttname"><a href="classSqsErrorPrivate.html#aeab1bb9eace70286d7e1d09cd38b84dc">SqsErrorPrivate::parse</a></div><div class="ttdeci">void parse(QXmlStreamReader &amp;xml)</div><div class="ttdoc">Parse an SQS Error element. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00313">sqserror.cpp:313</a></div></div>
 <div class="ttc" id="classSqsError_html_ae6b9523e9649002c77aed81f4d5c90a3"><div class="ttname"><a href="classSqsError.html#ae6b9523e9649002c77aed81f4d5c90a3">SqsError::~SqsError</a></div><div class="ttdeci">virtual ~SqsError()</div><div class="ttdoc">SqsError destructor. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00139">sqserror.cpp:139</a></div></div>
-<div class="ttc" id="classSqsErrorPrivate_html_ab989564828d2bef70e4fd85601c732c3"><div class="ttname"><a href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a></div><div class="ttdeci">SqsErrorPrivate(SqsError *const q)</div><div class="ttdoc">Constructs a new SqsErrorPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00241">sqserror.cpp:241</a></div></div>
+<div class="ttc" id="classSqsError_html_a5102147837ef6a2db4e7983c9c724464"><div class="ttname"><a href="classSqsError.html#a5102147837ef6a2db4e7983c9c724464">SqsError::operator==</a></div><div class="ttdeci">bool operator==(const SqsError &amp;other) const </div><div class="ttdoc">Equality operator. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00233">sqserror.cpp:233</a></div></div>
+<div class="ttc" id="classSqsErrorPrivate_html_ab989564828d2bef70e4fd85601c732c3"><div class="ttname"><a href="classSqsErrorPrivate.html#ab989564828d2bef70e4fd85601c732c3">SqsErrorPrivate::SqsErrorPrivate</a></div><div class="ttdeci">SqsErrorPrivate(SqsError *const q)</div><div class="ttdoc">Constructs a new SqsErrorPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00256">sqserror.cpp:256</a></div></div>
 <div class="ttc" id="classSqsError_html_a4c14570f97be4e93c9d9edf61cc4c0fb"><div class="ttname"><a href="classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb">SqsError::message</a></div><div class="ttdeci">QString message() const </div><div class="ttdoc">Get the parsed SQS error message. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00173">sqserror.cpp:173</a></div></div>
 <div class="ttc" id="classSqsError_html_ac47706a4c98c65c20b97f3f5ff1d01af"><div class="ttname"><a href="classSqsError.html#ac47706a4c98c65c20b97f3f5ff1d01af">SqsError::ErrorType</a></div><div class="ttdeci">ErrorType</div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00063">sqserror.h:63</a></div></div>
 <div class="ttc" id="classSqsError_html_ae1749929dec229427131dcd183b77877"><div class="ttname"><a href="classSqsError.html#ae1749929dec229427131dcd183b77877">SqsError::ErrorCode</a></div><div class="ttdeci">ErrorCode</div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00040">sqserror.h:40</a></div></div>
-<div class="ttc" id="classSqsError_html_adc04cb46d4c80fb9772b7f22371463e0"><div class="ttname"><a href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">SqsError::d_ptr</a></div><div class="ttdeci">SqsErrorPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00089">sqserror.h:89</a></div></div>
+<div class="ttc" id="classSqsError_html_adc04cb46d4c80fb9772b7f22371463e0"><div class="ttname"><a href="classSqsError.html#adc04cb46d4c80fb9772b7f22371463e0">SqsError::d_ptr</a></div><div class="ttdeci">SqsErrorPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8h_source.html#l00091">sqserror.h:91</a></div></div>
 <div class="ttc" id="classSqsError_html_a19a7d190a5eb90f2abae2cfffbed5176"><div class="ttname"><a href="classSqsError.html#a19a7d190a5eb90f2abae2cfffbed5176">SqsError::detail</a></div><div class="ttdeci">QVariantMap detail() const </div><div class="ttdoc">Get the SQS error detail, if any. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00162">sqserror.cpp:162</a></div></div>
-<div class="ttc" id="classSqsErrorPrivate_html_a7a1748a47e54e119b1105a698753cc16"><div class="ttname"><a href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">SqsErrorPrivate::~SqsErrorPrivate</a></div><div class="ttdeci">virtual ~SqsErrorPrivate()</div><div class="ttdoc">SqsErrorPrivate destructor. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00272">sqserror.cpp:272</a></div></div>
+<div class="ttc" id="classSqsErrorPrivate_html_a7a1748a47e54e119b1105a698753cc16"><div class="ttname"><a href="classSqsErrorPrivate.html#a7a1748a47e54e119b1105a698753cc16">SqsErrorPrivate::~SqsErrorPrivate</a></div><div class="ttdeci">virtual ~SqsErrorPrivate()</div><div class="ttdoc">SqsErrorPrivate destructor. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00287">sqserror.cpp:287</a></div></div>
 <div class="ttc" id="classSqsErrorPrivate_html_af47f51ae50bf7d657ad59985269eff9b"><div class="ttname"><a href="classSqsErrorPrivate.html#af47f51ae50bf7d657ad59985269eff9b">SqsErrorPrivate::detail</a></div><div class="ttdeci">QVariantMap detail</div><div class="ttdoc">SQS error detail. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror__p_8h_source.html#l00031">sqserror_p.h:31</a></div></div>
-<div class="ttc" id="classSqsErrorPrivate_html_a4682875e164774a1d656deb773197105"><div class="ttname"><a href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">SqsErrorPrivate::typeFromString</a></div><div class="ttdeci">static SqsError::ErrorType typeFromString(const QString &amp;type)</div><div class="ttdoc">Convert an SQS error type string to an ErrorType enum value. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00360">sqserror.cpp:360</a></div></div>
-<div class="ttc" id="classSqsErrorPrivate_html_ad6912d5762d1e9ef51368afafb2bfa20"><div class="ttname"><a href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">SqsErrorPrivate::codeFromString</a></div><div class="ttdeci">static SqsError::ErrorCode codeFromString(const QString &amp;code)</div><div class="ttdoc">Convert an SQS error code string to an ErrorCode enum value. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00327">sqserror.cpp:327</a></div></div>
+<div class="ttc" id="classSqsErrorPrivate_html_a4682875e164774a1d656deb773197105"><div class="ttname"><a href="classSqsErrorPrivate.html#a4682875e164774a1d656deb773197105">SqsErrorPrivate::typeFromString</a></div><div class="ttdeci">static SqsError::ErrorType typeFromString(const QString &amp;type)</div><div class="ttdoc">Convert an SQS error type string to an ErrorType enum value. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00375">sqserror.cpp:375</a></div></div>
+<div class="ttc" id="classSqsErrorPrivate_html_ad6912d5762d1e9ef51368afafb2bfa20"><div class="ttname"><a href="classSqsErrorPrivate.html#ad6912d5762d1e9ef51368afafb2bfa20">SqsErrorPrivate::codeFromString</a></div><div class="ttdeci">static SqsError::ErrorCode codeFromString(const QString &amp;code)</div><div class="ttdoc">Convert an SQS error code string to an ErrorCode enum value. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00342">sqserror.cpp:342</a></div></div>
 <div class="ttc" id="classSqsError_html_ae7ffc1db59a772be74bbe956026c63ce"><div class="ttname"><a href="classSqsError.html#ae7ffc1db59a772be74bbe956026c63ce">SqsError::rawType</a></div><div class="ttdeci">QString rawType() const </div><div class="ttdoc">Get the raw SQS error type string. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00207">sqserror.cpp:207</a></div></div>
 <div class="ttc" id="classSqsError_html_a34184b917f172cb431e3be81da48b49e"><div class="ttname"><a href="classSqsError.html#a34184b917f172cb431e3be81da48b49e">SqsError::code</a></div><div class="ttdeci">ErrorCode code() const </div><div class="ttdoc">Get the parsed SQS error code. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00151">sqserror.cpp:151</a></div></div>
 <div class="ttc" id="classSqsError_html_a914a78f185b01c1ade7b94dddf5d9025"><div class="ttname"><a href="classSqsError.html#a914a78f185b01c1ade7b94dddf5d9025">SqsError::operator=</a></div><div class="ttdeci">SqsError &amp; operator=(const SqsError &amp;other)</div><div class="ttdoc">Assignment operator. </div><div class="ttdef"><b>Definition:</b> <a href="sqserror_8cpp_source.html#l00124">sqserror.cpp:124</a></div></div>
@@ -490,7 +506,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -4,7 +4,7 @@ var searchData=
   ['rawtype',['rawType',['../classSqsError.html#ae7ffc1db59a772be74bbe956026c63ce',1,'SqsError']]],
   ['receivemessagewaittimeseconds',['receiveMessageWaitTimeSeconds',['../classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909',1,'SqsCreateQueueRequest']]],
   ['refresh',['refresh',['../classAwsAbstractCredentials.html#a90d31871ce1dbc366141ce20f3493907',1,'AwsAbstractCredentials']]],
-  ['region',['region',['../classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266',1,'AwsAbstractClient::region()'],['../classAwsRegion.html#a8703e0fb4b2ea54a91fa3d635017e443',1,'AwsRegion::region() const '],['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion::Region()']]],
+  ['region',['Region',['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion::Region()'],['../classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266',1,'AwsAbstractClient::region()'],['../classAwsRegion.html#a8703e0fb4b2ea54a91fa3d635017e443',1,'AwsRegion::region()']]],
   ['regionname',['regionName',['../classAwsEndpoint.html#a65dd94bbb8b35e80aa9b2b0687286b3e',1,'AwsEndpoint']]],
   ['replyfinished',['replyFinished',['../classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c',1,'AwsAbstractResponse']]],
   ['request',['request',['../classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3',1,'AwsAbstractResponse::request()'],['../classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd',1,'SqsCreateQueueResponse::request()']]],

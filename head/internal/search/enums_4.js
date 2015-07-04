@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sqsaction',['SqsAction',['../classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696',1,'SqsRequest']]]
+  ['region',['Region',['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion']]]
 ];

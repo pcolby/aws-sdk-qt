@@ -1,7 +1,7 @@
 var searchData=
 [
   ['accesskeyid',['accessKeyId',['../classAwsBasicCredentialsPrivate.html#ae8589aa28650d4f9edb288623c6926af',1,'AwsBasicCredentialsPrivate::accessKeyId()'],['../classAwsAbstractCredentials.html#a62272d5ac7ab3317452a17967efd69ac',1,'AwsAbstractCredentials::accessKeyId()'],['../classAwsAnonymousCredentials.html#a3e42bb52bfd7891534a955c83b9ba92c',1,'AwsAnonymousCredentials::accessKeyId()'],['../classAwsBasicCredentials.html#a0c3d2377f88d0750bdd7c84abad77cbf',1,'AwsBasicCredentials::accessKeyId()']]],
-  ['action',['action',['../classSqsRequestPrivate.html#a8969d3b3be9869db147f6720fd56df24',1,'SqsRequestPrivate::action()'],['../classSqsRequest.html#a9429423608c88b1518993010ae96c117',1,'SqsRequest::action()']]],
+  ['action',['action',['../classSqsRequestPrivate.html#a8b78138cac99a6f83e99ccb283912b67',1,'SqsRequestPrivate::action()'],['../classSqsRequest.html#aa5a586fbf0ce41e470f29701cbeccb3e',1,'SqsRequest::action() const '],['../classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804',1,'SqsRequest::Action()']]],
   ['actionstring',['actionString',['../classSqsRequest.html#a68496b8fe518d93ce3952f5de1f3c817',1,'SqsRequest']]],
   ['adornrequest',['adornRequest',['../classAwsSignatureV0Private.html#a40431f90d71fc7bcaf98e95884826170',1,'AwsSignatureV0Private::adornRequest()'],['../classAwsSignatureV2Private.html#a45c4cf00d0fc257859b21e82c78a0853',1,'AwsSignatureV2Private::adornRequest()']]],
   ['algorithmdesignation',['algorithmDesignation',['../classAwsSignatureV3Private.html#acb58bffe446006e9bf7b3c381c8a0317',1,'AwsSignatureV3Private::algorithmDesignation()'],['../classAwsSignatureV4Private.html#af87c5caee8744ca96b1055117b67cde1',1,'AwsSignatureV4Private::algorithmDesignation()']]],

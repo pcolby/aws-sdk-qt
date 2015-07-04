@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-04 12:56:31</td>
+            <td class="headerValue">2015-07-04 23:21:21</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -92,14 +92,14 @@
 <span class="lineNum">      30 </span>            : 
 <a name="31"><span class="lineNum">      31 </span>            : QTAWS_BEGIN_NAMESPACE</a>
 <span class="lineNum">      32 </span>            : 
-<span class="lineNum">      33 </span><span class="lineCov">        178 : class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {</span>
+<span class="lineNum">      33 </span><span class="lineCov">       1280 : class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {</span>
 <span class="lineNum">      34 </span>            : 
 <span class="lineNum">      35 </span>            : public:
-<span class="lineNum">      36 </span>            :     SqsRequest::SqsAction action; ///&lt; SQS action to be performed.
-<span class="lineNum">      37 </span>            :     QString apiVersion;           ///&lt; SQS API version string.
-<span class="lineNum">      38 </span>            :     QVariantMap parameters;       ///&lt; SQS request (query string) parameters.
+<span class="lineNum">      36 </span>            :     SqsRequest::Action action; ///&lt; SQS action to be performed.
+<span class="lineNum">      37 </span>            :     QString apiVersion;        ///&lt; SQS API version string.
+<span class="lineNum">      38 </span>            :     QVariantMap parameters;    ///&lt; SQS request (query string) parameters.
 <span class="lineNum">      39 </span>            : 
-<span class="lineNum">      40 </span>            :     SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q);
+<span class="lineNum">      40 </span>            :     SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q);
 <span class="lineNum">      41 </span>            :     SqsRequestPrivate(const SqsRequestPrivate &amp;other, SqsRequest * const q);
 <span class="lineNum">      42 </span>            : 
 <span class="lineNum">      43 </span>            : private:

@@ -126,65 +126,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSqsRequest.html">   34</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classSqsRequest.html">SqsRequest</a> : <span class="keyword">public</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696">   38</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696">SqsAction</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">   38</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">Action</a> {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        AddPermissionSqsAction,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ChangeMessageVisibilitySqsAction,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        ChangeMessageVisibilityBatchSqsAction,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        CreateQueueSqsAction,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        DreateQueueSqsAction,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        DeleteMessageSqsAction,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        DeleteMessageBatchSqsAction,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        DeleteQueueSqsAction,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        GetQueueAttributesSqsAction,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        GetQueueUrlSqsAction,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        ListDeadLetterSourceQueuesSqsAction,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        ListQueuesSqsAction,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        PurgeQueueSqsAction,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ReceiveMessageSqsAction,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        RemovePermissionSqsAction,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        SendMessageSqsAction,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        SendMessageBatchSqsAction,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        SetQueueAttributesSqsAction</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(<span class="keyword">const</span> SqsAction action);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;other);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;<a class="code" href="classAwsAbstractRequest.html#af861beff1bac4a4870a4c312d86fb753">operator=</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;other);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    SqsAction action() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QString actionString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QString apiVersion() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setAction(<span class="keyword">const</span> SqsAction action);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setApiVersion(<span class="keyword">const</span> QString &amp;version);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(SqsRequestPrivate * <span class="keyword">const</span> d);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> clearParameter(<span class="keyword">const</span> QString &amp;name);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        DeleteMessageSqsAction,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        DeleteMessageBatchSqsAction,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        DeleteQueueSqsAction,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        GetQueueAttributesSqsAction,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        GetQueueUrlSqsAction,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        ListDeadLetterSourceQueuesSqsAction,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        ListQueuesSqsAction,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        PurgeQueueSqsAction,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        ReceiveMessageSqsAction,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        RemovePermissionSqsAction,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        SendMessageSqsAction,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        SendMessageBatchSqsAction,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        SetQueueAttributesSqsAction</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(<span class="keyword">const</span> Action action);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;other);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;<a class="code" href="classAwsAbstractRequest.html#af861beff1bac4a4870a4c312d86fb753">operator=</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> &amp;other);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Action action() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QString actionString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QString apiVersion() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> setAction(<span class="keyword">const</span> Action action);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> setApiVersion(<span class="keyword">const</span> QString &amp;version);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classSqsRequest.html">SqsRequest</a>(SqsRequestPrivate * <span class="keyword">const</span> d);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> clearParameter(<span class="keyword">const</span> QString &amp;name);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> clearParameters();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QVariant parameter(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;defaultValue = QVariant()) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> setParameter(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;value);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> QNetworkRequest <a class="code" href="classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7">unsignedRequest</a>(<span class="keyword">const</span> QUrl &amp;endpoint) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> QVariantMap &amp;parameters() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setParameter(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;value);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> setParameters(<span class="keyword">const</span> QVariantMap &amp;parameters);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsRequest.html">SqsRequest</a>)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> QNetworkRequest <a class="code" href="classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7">unsignedRequest</a>(<span class="keyword">const</span> QUrl &amp;endpoint) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsRequest.html">SqsRequest</a>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    friend class TestSqsRequest;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:34</div></div>
-<div class="ttc" id="classSqsRequest_html_a61eb3cf79681a5f8385fd8be68510696"><div class="ttname"><a href="classSqsRequest.html#a61eb3cf79681a5f8385fd8be68510696">SqsRequest::SqsAction</a></div><div class="ttdeci">SqsAction</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:38</div></div>
 <div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Interface class for providing AWS requests. </div><div class="ttdef"><b>Definition:</b> awsabstractrequest.h:39</div></div>
 <div class="ttc" id="classAwsAbstractRequest_html_af861beff1bac4a4870a4c312d86fb753"><div class="ttname"><a href="classAwsAbstractRequest.html#af861beff1bac4a4870a4c312d86fb753">AwsAbstractRequest::operator=</a></div><div class="ttdeci">AwsAbstractRequest &amp; operator=(const AwsAbstractRequest &amp;other)</div><div class="ttdoc">Assignment operator. </div><div class="ttdef"><b>Definition:</b> awsabstractrequest.cpp:76</div></div>
 <div class="ttc" id="classAwsAbstractRequest_html_ac67f588b0449fd47f9ef4ac80655acf7"><div class="ttname"><a href="classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7">AwsAbstractRequest::unsignedRequest</a></div><div class="ttdeci">virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const =0</div><div class="ttdoc">Build a network request for the given endpoint. </div></div>
 <div class="ttc" id="classAwsAbstractClient_html"><div class="ttname"><a href="classAwsAbstractClient.html">AwsAbstractClient</a></div><div class="ttdoc">Interface class for providing access to individual AWS services. </div><div class="ttdef"><b>Definition:</b> awsabstractclient.h:38</div></div>
+<div class="ttc" id="classSqsRequest_html_a739caff500bb6ef38a9bafcb14a68804"><div class="ttname"><a href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a></div><div class="ttdeci">Action</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 12:56:08 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
