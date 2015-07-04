@@ -407,8 +407,7 @@ void TestAwsAbstractResponse::request()
 
     MockResponse response;
     QCOMPARE(response.request(), static_cast<const AwsAbstractRequest *>(NULL));
-    response.setRequest(&request);
-
+    response.setRequest(new MockRequest(request)); // response takes ownership.
 
     // Verify that the response took a *copy* of request, not its address.
     QVERIFY(response.request() != &request);
