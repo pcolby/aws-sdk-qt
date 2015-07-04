@@ -1,5 +1,5 @@
 <map id="SqsCreateQueueRequest" name="SqsCreateQueueRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="43,171,138,197"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="119,81,265,108"/>
-<area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="163,171,349,197"/>
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="43,95,138,121"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="119,5,265,32"/>
+<area shape="rect" id="node4" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="163,95,349,121"/>
 </map>

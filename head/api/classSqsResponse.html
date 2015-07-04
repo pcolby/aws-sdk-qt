@@ -148,6 +148,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">xmlParseErrorString</a> () const </td></tr>
 <tr class="memdesc:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's XML parse error string, if there is one.  <a href="#a9096724efffcc6e73f24eb2cd00b35a2">More...</a><br /></td></tr>
 <tr class="separator:a9096724efffcc6e73f24eb2cd00b35a2 inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890212c4e876c8fecc1604a9d994a9a3 inherit pub_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a> () const =0</td></tr>
+<tr class="memdesc:a890212c4e876c8fecc1604a9d994a9a3 inherit pub_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's originating AWS request.  <a href="#a890212c4e876c8fecc1604a9d994a9a3">More...</a><br /></td></tr>
+<tr class="separator:a890212c4e876c8fecc1604a9d994a9a3 inherit pub_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
@@ -176,6 +179,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a> (QNetworkReply *reply)</td></tr>
 <tr class="memdesc:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network reply from which to expect an AWS response.  <a href="#a13eab6d1bc11b614d243f1da75ce6eb6">More...</a><br /></td></tr>
 <tr class="separator:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *const <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a>)</td></tr>
+<tr class="memdesc:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this response's originating AWS request.  <a href="#a07d5401836647d49c3f750fc223f2b69">More...</a><br /></td></tr>
+<tr class="separator:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a> (const QXmlStreamReader &amp;xml)</td></tr>
 <tr class="memdesc:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the details of an XML parse error.  <a href="#a9ddac7db08332f5bbea58abad54a45da">More...</a><br /></td></tr>
 <tr class="separator:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:08 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

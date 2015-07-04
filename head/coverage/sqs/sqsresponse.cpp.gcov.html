@@ -31,18 +31,18 @@
             <td class="headerValue">libqtaws 0.1.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">9</td>
             <td class="headerCovTableEntry">50</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntryLo">18.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">3</td>
             <td class="headerCovTableEntry">11</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntryLo">27.3 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -99,11 +99,11 @@
 <span class="lineNum">      37 </span>            :  *
 <a name="38"><span class="lineNum">      38 </span>            :  * @param  parent  This object's parent.</a>
 <span class="lineNum">      39 </span>            :  */
-<span class="lineNum">      40 </span><span class="lineNoCov">          0 : SqsResponse::SqsResponse(QObject * const parent)</span>
-<span class="lineNum">      41 </span><span class="lineNoCov">          0 :     : AwsAbstractResponse(new SqsResponsePrivate(this), parent)</span>
+<span class="lineNum">      40 </span><span class="lineCov">         12 : SqsResponse::SqsResponse(QObject * const parent)</span>
+<span class="lineNum">      41 </span><span class="lineCov">         12 :     : AwsAbstractResponse(new SqsResponsePrivate(this), parent)</span>
 <span class="lineNum">      42 </span>            : {
 <span class="lineNum">      43 </span>            : 
-<span class="lineNum">      44 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      44 </span><span class="lineCov">         12 : }</span>
 <span class="lineNum">      45 </span>            : 
 <span class="lineNum">      46 </span>            : /**
 <span class="lineNum">      47 </span>            :  * @internal
@@ -117,11 +117,11 @@
 <span class="lineNum">      55 </span>            :  * @param  d       Pointer to private data (aka D-Pointer).
 <a name="56"><span class="lineNum">      56 </span>            :  * @param  parent  This object's parent.</a>
 <span class="lineNum">      57 </span>            :  */
-<span class="lineNum">      58 </span><span class="lineNoCov">          0 : SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)</span>
-<span class="lineNum">      59 </span><span class="lineNoCov">          0 :     : AwsAbstractResponse(d, parent)</span>
+<span class="lineNum">      58 </span><span class="lineCov">         71 : SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)</span>
+<span class="lineNum">      59 </span><span class="lineCov">         71 :     : AwsAbstractResponse(d, parent)</span>
 <span class="lineNum">      60 </span>            : {
 <span class="lineNum">      61 </span>            : 
-<span class="lineNum">      62 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      62 </span><span class="lineCov">         71 : }</span>
 <span class="lineNum">      63 </span>            : 
 <span class="lineNum">      64 </span>            : /**
 <span class="lineNum">      65 </span>            :  * @brief Get this response's error string.
@@ -239,11 +239,11 @@
 <span class="lineNum">     177 </span>            :  *
 <a name="178"><span class="lineNum">     178 </span>            :  * @param  q  Pointer to this object's public SqsResponse instance.</a>
 <span class="lineNum">     179 </span>            :  */
-<span class="lineNum">     180 </span><span class="lineNoCov">          0 : SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)</span>
-<span class="lineNum">     181 </span><span class="lineNoCov">          0 :     : AwsAbstractResponsePrivate(q)</span>
+<span class="lineNum">     180 </span><span class="lineCov">         95 : SqsResponsePrivate::SqsResponsePrivate(SqsResponse * const q)</span>
+<span class="lineNum">     181 </span><span class="lineCov">         95 :     : AwsAbstractResponsePrivate(q)</span>
 <span class="lineNum">     182 </span>            : {
 <span class="lineNum">     183 </span>            : 
-<span class="lineNum">     184 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     184 </span><span class="lineCov">         95 : }</span>
 <span class="lineNum">     185 </span>            : 
 <span class="lineNum">     186 </span>            : /**
 <span class="lineNum">     187 </span>            :  * @brief  Parse an SQS ErrorResponse element.

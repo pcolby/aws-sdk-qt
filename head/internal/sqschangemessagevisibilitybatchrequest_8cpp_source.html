@@ -121,28 +121,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * @brief  Constructs a new SqsChangeMessageVisibilityBatchRequest object.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * @param parent       This object&#39;s parent.</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classSqsChangeMessageVisibilityBatchRequest.html#adb7f679943b58f8bef58b149c120bc16">   35</a></span>&#160;<a class="code" href="classSqsChangeMessageVisibilityBatchRequest.html#adb7f679943b58f8bef58b149c120bc16">SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest</a>(QObject * <span class="keyword">const</span> parent)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::ChangeMessageVisibilityBatchSqsAction, parent)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classSqsChangeMessageVisibilityBatchRequest.html#aff845190a7e3f5b28c39a61ce9e4b378">   33</a></span>&#160;<a class="code" href="classSqsChangeMessageVisibilityBatchRequest.html#aff845190a7e3f5b28c39a61ce9e4b378">SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::ChangeMessageVisibilityBatchSqsAction)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">   41</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">SqsChangeMessageVisibilityBatchRequest::isValid</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">   39</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">SqsChangeMessageVisibilityBatchRequest::isValid</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00034">sqsrequest.h:34</a></div></div>
-<div class="ttc" id="classSqsChangeMessageVisibilityBatchRequest_html_adb7f679943b58f8bef58b149c120bc16"><div class="ttname"><a href="classSqsChangeMessageVisibilityBatchRequest.html#adb7f679943b58f8bef58b149c120bc16">SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest</a></div><div class="ttdeci">SqsChangeMessageVisibilityBatchRequest(QObject *const parent)</div><div class="ttdoc">Constructs a new SqsChangeMessageVisibilityBatchRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilitybatchrequest_8cpp_source.html#l00035">sqschangemessagevisibilitybatchrequest.cpp:35</a></div></div>
-<div class="ttc" id="classSqsChangeMessageVisibilityBatchRequest_html_afdf215384ed1b9f76a6f8a4c7f17b2cb"><div class="ttname"><a href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">SqsChangeMessageVisibilityBatchRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilitybatchrequest_8cpp_source.html#l00041">sqschangemessagevisibilitybatchrequest.cpp:41</a></div></div>
+<div class="ttc" id="classSqsChangeMessageVisibilityBatchRequest_html_aff845190a7e3f5b28c39a61ce9e4b378"><div class="ttname"><a href="classSqsChangeMessageVisibilityBatchRequest.html#aff845190a7e3f5b28c39a61ce9e4b378">SqsChangeMessageVisibilityBatchRequest::SqsChangeMessageVisibilityBatchRequest</a></div><div class="ttdeci">SqsChangeMessageVisibilityBatchRequest()</div><div class="ttdoc">Constructs a new SqsChangeMessageVisibilityBatchRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilitybatchrequest_8cpp_source.html#l00033">sqschangemessagevisibilitybatchrequest.cpp:33</a></div></div>
+<div class="ttc" id="classSqsChangeMessageVisibilityBatchRequest_html_afdf215384ed1b9f76a6f8a4c7f17b2cb"><div class="ttname"><a href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">SqsChangeMessageVisibilityBatchRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilitybatchrequest_8cpp_source.html#l00039">sqschangemessagevisibilitybatchrequest.cpp:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:00 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

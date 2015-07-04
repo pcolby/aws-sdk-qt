@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -89,58 +89,62 @@
 <span class="lineNum">      27 </span>            : 
 <span class="lineNum">      28 </span>            : QTAWS_BEGIN_NAMESPACE
 <span class="lineNum">      29 </span>            : 
-<span class="lineNum">      30 </span>            : class AwsAbstractResponsePrivate;
-<span class="lineNum">      31 </span>            : 
-<span class="lineNum">      32 </span>            : class QTAWS_EXPORT AwsAbstractResponse : public QObject {
-<span class="lineNum">      33 </span>            :     Q_OBJECT
-<span class="lineNum">      34 </span>            : 
-<span class="lineNum">      35 </span>            : public:
-<span class="lineNum">      36 </span>            :     AwsAbstractResponse(QObject * const parent = 0);
-<span class="lineNum">      37 </span>            : 
-<span class="lineNum">      38 </span>            :     virtual ~AwsAbstractResponse();
-<span class="lineNum">      39 </span>            : 
-<span class="lineNum">      40 </span>            :     virtual QString errorString() const;
-<span class="lineNum">      41 </span>            :     virtual bool hasError() const;
-<span class="lineNum">      42 </span>            :     virtual bool isValid() const;
-<span class="lineNum">      43 </span>            :     virtual QNetworkReply::NetworkError networkError() const;
-<span class="lineNum">      44 </span>            :     virtual QXmlStreamReader::Error xmlParseError() const;
-<span class="lineNum">      45 </span>            :     virtual QString xmlParseErrorString() const;
-<span class="lineNum">      46 </span>            : 
-<span class="lineNum">      47 </span>            :     /// @todo Find a better home for &quot;QVariantMap toVariant(QXmlStreamReader &amp;xml, ...)&quot;
-<span class="lineNum">      48 </span>            :     static QVariantMap toVariant(QXmlStreamReader &amp;xml,
-<span class="lineNum">      49 </span>            :                                  const QString &amp;prefix = QLatin1String(&quot;.&quot;),
-<span class="lineNum">      50 </span>            :                                  const int maxDepth = 1024);
-<span class="lineNum">      51 </span>            : 
-<span class="lineNum">      52 </span>            : protected:
-<span class="lineNum">      53 </span>            :     /// @cond internal
-<span class="lineNum">      54 </span>            :     AwsAbstractResponsePrivate * const d_ptr; ///&lt; Internal d-pointer.
-<span class="lineNum">      55 </span>            :     AwsAbstractResponse(AwsAbstractResponsePrivate * const d, QObject * const parent);
-<span class="lineNum">      56 </span>            :     /// @endcond
-<span class="lineNum">      57 </span>            : 
-<span class="lineNum">      58 </span>            :     virtual bool isSuccess(QNetworkReply * const reply) const;
-<span class="lineNum">      59 </span>            :     void setReply(QNetworkReply * reply);
-<span class="lineNum">      60 </span>            :     void setXmlError(const QXmlStreamReader &amp;xml);
-<span class="lineNum">      61 </span>            : 
-<span class="lineNum">      62 </span>            :     virtual void parse(QNetworkReply * const reply);
-<span class="lineNum">      63 </span>            :     virtual void parseFailure(QIODevice &amp;response) = 0;
-<span class="lineNum">      64 </span>            :     virtual void parseSuccess(QIODevice &amp;response) = 0;
+<span class="lineNum">      30 </span>            : class AwsAbstractRequest;
+<span class="lineNum">      31 </span>            : class AwsAbstractResponsePrivate;
+<span class="lineNum">      32 </span>            : 
+<span class="lineNum">      33 </span>            : class QTAWS_EXPORT AwsAbstractResponse : public QObject {
+<span class="lineNum">      34 </span>            :     Q_OBJECT
+<span class="lineNum">      35 </span>            : 
+<span class="lineNum">      36 </span>            : public:
+<span class="lineNum">      37 </span>            :     AwsAbstractResponse(QObject * const parent = 0);
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            :     virtual ~AwsAbstractResponse();
+<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      41 </span>            :     virtual QString errorString() const;
+<span class="lineNum">      42 </span>            :     virtual bool hasError() const;
+<span class="lineNum">      43 </span>            :     virtual bool isValid() const;
+<span class="lineNum">      44 </span>            :     virtual QNetworkReply::NetworkError networkError() const;
+<span class="lineNum">      45 </span>            :     virtual QXmlStreamReader::Error xmlParseError() const;
+<span class="lineNum">      46 </span>            :     virtual QString xmlParseErrorString() const;
+<span class="lineNum">      47 </span>            : 
+<span class="lineNum">      48 </span>            :     virtual const AwsAbstractRequest * request() const = 0;
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            :     /// @todo Find a better home for &quot;QVariantMap toVariant(QXmlStreamReader &amp;xml, ...)&quot;
+<span class="lineNum">      51 </span>            :     static QVariantMap toVariant(QXmlStreamReader &amp;xml,
+<span class="lineNum">      52 </span>            :                                  const QString &amp;prefix = QLatin1String(&quot;.&quot;),
+<span class="lineNum">      53 </span>            :                                  const int maxDepth = 1024);
+<span class="lineNum">      54 </span>            : 
+<span class="lineNum">      55 </span>            : protected:
+<span class="lineNum">      56 </span>            :     /// @cond internal
+<span class="lineNum">      57 </span>            :     AwsAbstractResponsePrivate * const d_ptr; ///&lt; Internal d-pointer.
+<span class="lineNum">      58 </span>            :     AwsAbstractResponse(AwsAbstractResponsePrivate * const d, QObject * const parent);
+<span class="lineNum">      59 </span>            :     /// @endcond
+<span class="lineNum">      60 </span>            : 
+<span class="lineNum">      61 </span>            :     virtual bool isSuccess(QNetworkReply * const reply) const;
+<span class="lineNum">      62 </span>            :     void setReply(QNetworkReply * reply);
+<span class="lineNum">      63 </span>            :     void setRequest(const AwsAbstractRequest * const request);
+<span class="lineNum">      64 </span>            :     void setXmlError(const QXmlStreamReader &amp;xml);
 <span class="lineNum">      65 </span>            : 
-<span class="lineNum">      66 </span>            : protected slots:
-<span class="lineNum">      67 </span>            :     virtual void replyFinished();
-<a name="68"><span class="lineNum">      68 </span>            : </a>
-<span class="lineNum">      69 </span>            : private:
-<span class="lineNum">      70 </span><span class="lineCov">        157 :     Q_DECLARE_PRIVATE(AwsAbstractResponse)</span>
-<span class="lineNum">      71 </span>            :     Q_DISABLE_COPY(AwsAbstractResponse)
-<span class="lineNum">      72 </span>            :     friend class TestAwsAbstractResponse;
-<span class="lineNum">      73 </span>            : 
-<span class="lineNum">      74 </span>            : signals:
-<span class="lineNum">      75 </span>            :     void finished();
-<span class="lineNum">      76 </span>            : 
-<span class="lineNum">      77 </span>            : };
-<span class="lineNum">      78 </span>            : 
-<span class="lineNum">      79 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      66 </span>            :     virtual void parse(QNetworkReply * const reply);
+<span class="lineNum">      67 </span>            :     virtual void parseFailure(QIODevice &amp;response) = 0;
+<span class="lineNum">      68 </span>            :     virtual void parseSuccess(QIODevice &amp;response) = 0;
+<span class="lineNum">      69 </span>            : 
+<span class="lineNum">      70 </span>            : protected slots:
+<span class="lineNum">      71 </span>            :     virtual void replyFinished();
+<a name="72"><span class="lineNum">      72 </span>            : </a>
+<span class="lineNum">      73 </span>            : private:
+<span class="lineNum">      74 </span><span class="lineCov">        526 :     Q_DECLARE_PRIVATE(AwsAbstractResponse)</span>
+<span class="lineNum">      75 </span>            :     Q_DISABLE_COPY(AwsAbstractResponse)
+<span class="lineNum">      76 </span>            :     friend class TestAwsAbstractResponse;
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            : signals:
+<span class="lineNum">      79 </span>            :     void finished();
 <span class="lineNum">      80 </span>            : 
-<span class="lineNum">      81 </span>            : #endif
+<span class="lineNum">      81 </span>            : };
+<span class="lineNum">      82 </span>            : 
+<span class="lineNum">      83 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      84 </span>            : 
+<span class="lineNum">      85 </span>            : #endif
 </pre>
       </td>
     </tr>

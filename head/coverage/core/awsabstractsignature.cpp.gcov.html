@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">10</td>
@@ -101,10 +101,10 @@
 <span class="lineNum">      39 </span>            :  * This internal constructor is used by derived classes that do not wish to
 <a name="40"><span class="lineNum">      40 </span>            :  * provider their own private implementations.</a>
 <span class="lineNum">      41 </span>            :  */
-<span class="lineNum">      42 </span><span class="lineCov">       1578 : AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePrivate(this))</span>
+<span class="lineNum">      42 </span><span class="lineCov">        697 : AwsAbstractSignature::AwsAbstractSignature() : d_ptr(new AwsAbstractSignaturePrivate(this))</span>
 <span class="lineNum">      43 </span>            : {
 <span class="lineNum">      44 </span>            : 
-<span class="lineNum">      45 </span><span class="lineCov">       1578 : }</span>
+<span class="lineNum">      45 </span><span class="lineCov">        697 : }</span>
 <span class="lineNum">      46 </span>            : 
 <span class="lineNum">      47 </span>            : /**
 <span class="lineNum">      48 </span>            :  * @internal
@@ -116,17 +116,17 @@
 <span class="lineNum">      54 </span>            :  *
 <a name="55"><span class="lineNum">      55 </span>            :  * @param  d  Internal private implementation to use.</a>
 <span class="lineNum">      56 </span>            :  */
-<span class="lineNum">      57 </span><span class="lineCov">       7290 : AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d) : d_ptr(d)</span>
+<span class="lineNum">      57 </span><span class="lineCov">       1974 : AwsAbstractSignature::AwsAbstractSignature(AwsAbstractSignaturePrivate * const d) : d_ptr(d)</span>
 <span class="lineNum">      58 </span>            : {
 <span class="lineNum">      59 </span>            : 
-<span class="lineNum">      60 </span><span class="lineCov">       7290 : }</span>
+<span class="lineNum">      60 </span><span class="lineCov">       1974 : }</span>
 <span class="lineNum">      61 </span>            : 
 <span class="lineNum">      62 </span>            : /**
 <a name="63"><span class="lineNum">      63 </span>            :  * @brief  AwsAbstractSignature destructor.</a>
 <span class="lineNum">      64 </span>            :  */
-<span class="lineNum">      65 </span><span class="lineCov">       8868 : AwsAbstractSignature::~AwsAbstractSignature() {</span>
-<span class="lineNum">      66 </span><span class="lineCov">       8868 :     delete d_ptr;</span>
-<span class="lineNum">      67 </span><span class="lineCov">       8868 : }</span>
+<span class="lineNum">      65 </span><span class="lineCov">       2671 : AwsAbstractSignature::~AwsAbstractSignature() {</span>
+<span class="lineNum">      66 </span><span class="lineCov">       2671 :     delete d_ptr;</span>
+<span class="lineNum">      67 </span><span class="lineCov">       2671 : }</span>
 <span class="lineNum">      68 </span>            : 
 <span class="lineNum">      69 </span>            : /**
 <span class="lineNum">      70 </span>            :  * @fn     void AwsAbstractSignature::sign() const
@@ -162,10 +162,10 @@
 <span class="lineNum">     100 </span>            :  *
 <a name="101"><span class="lineNum">     101 </span>            :  * @param  q  Pointer to this object's public AwsAbstractSignature instance.</a>
 <span class="lineNum">     102 </span>            :  */
-<span class="lineNum">     103 </span><span class="lineCov">       8868 : AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * const q) : q_ptr(q)</span>
+<span class="lineNum">     103 </span><span class="lineCov">       2671 : AwsAbstractSignaturePrivate::AwsAbstractSignaturePrivate(AwsAbstractSignature * const q) : q_ptr(q)</span>
 <span class="lineNum">     104 </span>            : {
 <span class="lineNum">     105 </span>            : 
-<span class="lineNum">     106 </span><span class="lineCov">       8868 : }</span>
+<span class="lineNum">     106 </span><span class="lineCov">       2671 : }</span>
 <span class="lineNum">     107 </span>            : 
 <span class="lineNum">     108 </span>            : /**
 <span class="lineNum">     109 </span>            :  * @internal
@@ -175,10 +175,10 @@
 <span class="lineNum">     113 </span>            :  * This virtual destructor does nothing (yet) - its here to allow for safe
 <a name="114"><span class="lineNum">     114 </span>            :  * polymorphic destruction.</a>
 <span class="lineNum">     115 </span>            :  */
-<span class="lineNum">     116 </span><span class="lineCov">      10446 : AwsAbstractSignaturePrivate::~AwsAbstractSignaturePrivate()</span>
+<span class="lineNum">     116 </span><span class="lineCov">       3368 : AwsAbstractSignaturePrivate::~AwsAbstractSignaturePrivate()</span>
 <span class="lineNum">     117 </span>            : {
 <span class="lineNum">     118 </span>            : 
-<span class="lineNum">     119 </span><span class="lineCov">      10446 : }</span>
+<span class="lineNum">     119 </span><span class="lineCov">       3368 : }</span>
 <span class="lineNum">     120 </span>            : 
 <span class="lineNum">     121 </span>            : /**
 <span class="lineNum">     122 </span>            :  * @brief  Create an AWS Signature canonical path.
@@ -194,9 +194,9 @@
 <span class="lineNum">     132 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
 <a name="133"><span class="lineNum">     133 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
 <span class="lineNum">     134 </span>            :  */
-<span class="lineNum">     135 </span><span class="lineCov">       3420 : QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &amp;url) const</span>
+<span class="lineNum">     135 </span><span class="lineCov">        654 : QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &amp;url) const</span>
 <span class="lineNum">     136 </span>            : {
-<span class="lineNum">     137 </span><span class="lineCov">       3420 :     QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));</span>
+<span class="lineNum">     137 </span><span class="lineCov">        654 :     QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));</span>
 <span class="lineNum">     138 </span>            : 
 <span class="lineNum">     139 </span>            :     // If the path begins with &quot;//&quot;, remove one of the redundant slashes.
 <span class="lineNum">     140 </span>            :     // Note, this is only needed on Windows, because there QDir::speparator is
@@ -211,11 +211,11 @@
 <span class="lineNum">     149 </span>            : #endif
 <span class="lineNum">     150 </span>            : 
 <span class="lineNum">     151 </span>            :     // Restore the trailing '/' if QDir::cleanPath (rightly) removed one.
-<span class="lineNum">     152 </span><span class="lineCov">       3420 :     if ((url.path().endsWith(QLatin1Char('/'))) &amp;&amp; (!path.endsWith(QLatin1Char('/')))) {</span>
-<span class="lineNum">     153 </span><span class="lineCov">        120 :         path += QLatin1Char('/');</span>
+<span class="lineNum">     152 </span><span class="lineCov">        654 :     if ((url.path().endsWith(QLatin1Char('/'))) &amp;&amp; (!path.endsWith(QLatin1Char('/')))) {</span>
+<span class="lineNum">     153 </span><span class="lineCov">         20 :         path += QLatin1Char('/');</span>
 <span class="lineNum">     154 </span>            :     }
 <span class="lineNum">     155 </span>            : 
-<span class="lineNum">     156 </span><span class="lineCov">       3420 :     return path;</span>
+<span class="lineNum">     156 </span><span class="lineCov">        654 :     return path;</span>
 <span class="lineNum">     157 </span>            : }
 <span class="lineNum">     158 </span>            : 
 <span class="lineNum">     159 </span>            : /**
@@ -237,18 +237,18 @@
 <span class="lineNum">     175 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html
 <a name="176"><span class="lineNum">     176 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
 <span class="lineNum">     177 </span>            :  */
-<span class="lineNum">     178 </span><span class="lineCov">       3300 : QByteArray AwsAbstractSignaturePrivate::canonicalQuery(const QUrlQuery &amp;query) const</span>
+<span class="lineNum">     178 </span><span class="lineCov">        634 : QByteArray AwsAbstractSignaturePrivate::canonicalQuery(const QUrlQuery &amp;query) const</span>
 <span class="lineNum">     179 </span>            : {
 <span class="lineNum">     180 </span>            :     typedef QPair&lt;QString, QString&gt; QStringPair;
-<span class="lineNum">     181 </span><span class="lineCov">       3300 :     QList&lt;QStringPair&gt; list = query.queryItems(QUrl::FullyDecoded);</span>
-<span class="lineNum">     182 </span><span class="lineCov">       3300 :     qSort(list);</span>
-<span class="lineNum">     183 </span><span class="lineCov">       6600 :     QString result;</span>
-<span class="lineNum">     184 </span><span class="lineCov">       5370 :     foreach (const QStringPair &amp;pair, list) {</span>
-<span class="lineNum">     185 </span><span class="lineCov">       2070 :         if (!result.isEmpty()) result += QLatin1Char('&amp;');</span>
-<span class="lineNum">     186 </span><span class="lineCov">       4140 :         result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +</span>
-<span class="lineNum">     187 </span><span class="lineCov">       2070 :                   QString::fromUtf8(QUrl::toPercentEncoding(pair.second));</span>
-<span class="lineNum">     188 </span><span class="lineCov">       3300 :     }</span>
-<span class="lineNum">     189 </span><span class="lineCov">       6600 :     return result.toUtf8();</span>
+<span class="lineNum">     181 </span><span class="lineCov">        634 :     QList&lt;QStringPair&gt; list = query.queryItems(QUrl::FullyDecoded);</span>
+<span class="lineNum">     182 </span><span class="lineCov">        634 :     qSort(list);</span>
+<span class="lineNum">     183 </span><span class="lineCov">       1268 :     QString result;</span>
+<span class="lineNum">     184 </span><span class="lineCov">       1423 :     foreach (const QStringPair &amp;pair, list) {</span>
+<span class="lineNum">     185 </span><span class="lineCov">        789 :         if (!result.isEmpty()) result += QLatin1Char('&amp;');</span>
+<span class="lineNum">     186 </span><span class="lineCov">       1578 :         result += QString::fromUtf8(QUrl::toPercentEncoding(pair.first)) + QLatin1Char('=') +</span>
+<span class="lineNum">     187 </span><span class="lineCov">        789 :                   QString::fromUtf8(QUrl::toPercentEncoding(pair.second));</span>
+<span class="lineNum">     188 </span><span class="lineCov">        634 :     }</span>
+<span class="lineNum">     189 </span><span class="lineCov">       1268 :     return result.toUtf8();</span>
 <span class="lineNum">     190 </span>            : }
 <span class="lineNum">     191 </span>            : 
 <span class="lineNum">     192 </span>            : /**
@@ -262,20 +262,20 @@
 <span class="lineNum">     200 </span>            :  * @return A string representation of \p operation, or an empty string if the
 <a name="201"><span class="lineNum">     201 </span>            :  *         operation is not recognised or otherwise unsupported.</a>
 <span class="lineNum">     202 </span>            :  */
-<span class="lineNum">     203 </span><span class="lineCov">       3420 : QString AwsAbstractSignaturePrivate::httpMethod(const QNetworkAccessManager::Operation operation) const</span>
+<span class="lineNum">     203 </span><span class="lineCov">        654 : QString AwsAbstractSignaturePrivate::httpMethod(const QNetworkAccessManager::Operation operation) const</span>
 <span class="lineNum">     204 </span>            : {
-<span class="lineNum">     205 </span><span class="lineCov">       3420 :     switch (operation) {</span>
-<span class="lineNum">     206 </span><span class="lineCov">        120 :         case QNetworkAccessManager::DeleteOperation: return QLatin1String(&quot;DELETE&quot;);</span>
-<span class="lineNum">     207 </span><span class="lineCov">         30 :         case QNetworkAccessManager::HeadOperation:   return QLatin1String(&quot;HEAD&quot;);</span>
-<span class="lineNum">     208 </span><span class="lineCov">       1830 :         case QNetworkAccessManager::GetOperation:    return QLatin1String(&quot;GET&quot;);</span>
-<span class="lineNum">     209 </span><span class="lineCov">       1380 :         case QNetworkAccessManager::PostOperation:   return QLatin1String(&quot;POST&quot;);</span>
-<span class="lineNum">     210 </span><span class="lineCov">         30 :         case QNetworkAccessManager::PutOperation:    return QLatin1String(&quot;PUT&quot;);</span>
+<span class="lineNum">     205 </span><span class="lineCov">        654 :     switch (operation) {</span>
+<span class="lineNum">     206 </span><span class="lineCov">         20 :         case QNetworkAccessManager::DeleteOperation: return QLatin1String(&quot;DELETE&quot;);</span>
+<span class="lineNum">     207 </span><span class="lineCov">          5 :         case QNetworkAccessManager::HeadOperation:   return QLatin1String(&quot;HEAD&quot;);</span>
+<span class="lineNum">     208 </span><span class="lineCov">        389 :         case QNetworkAccessManager::GetOperation:    return QLatin1String(&quot;GET&quot;);</span>
+<span class="lineNum">     209 </span><span class="lineCov">        230 :         case QNetworkAccessManager::PostOperation:   return QLatin1String(&quot;POST&quot;);</span>
+<span class="lineNum">     210 </span><span class="lineCov">          5 :         case QNetworkAccessManager::PutOperation:    return QLatin1String(&quot;PUT&quot;);</span>
 <span class="lineNum">     211 </span>            :         case QNetworkAccessManager::CustomOperation: // Fall through.
 <span class="lineNum">     212 </span>            :         default:
 <span class="lineNum">     213 </span>            :             // Catch this in debug mode for easier development / debugging.
-<span class="lineNum">     214 </span><span class="lineCov">         30 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
+<span class="lineNum">     214 </span><span class="lineCov">          5 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid operation&quot;);</span>
 <span class="lineNum">     215 </span>            :     }
-<span class="lineNum">     216 </span><span class="lineCov">         30 :     return QString(); // Operation was invalid / unsupported.</span>
+<span class="lineNum">     216 </span><span class="lineCov">          5 :     return QString(); // Operation was invalid / unsupported.</span>
 <span class="lineNum">     217 </span>            : }
 <span class="lineNum">     218 </span>            : 
 <span class="lineNum">     219 </span>            : /**
@@ -303,20 +303,20 @@
 <span class="lineNum">     241 </span>            :  * @return  `true` if the query item was set successfully or was already set to
 <a name="242"><span class="lineNum">     242 </span>            :  *          the requested value previously, `false` otherwise.</a>
 <span class="lineNum">     243 </span>            :  */
-<span class="lineNum">     244 </span><span class="lineCov">       1110 : bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &amp;query, const QString &amp;key, const QString &amp;value,</span>
+<span class="lineNum">     244 </span><span class="lineCov">        185 : bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &amp;query, const QString &amp;key, const QString &amp;value,</span>
 <span class="lineNum">     245 </span>            :                                                const bool warnOnNonIdenticalDuplicate) const
 <span class="lineNum">     246 </span>            : {
-<span class="lineNum">     247 </span><span class="lineCov">       1110 :     if (query.hasQueryItem(key)) {</span>
-<span class="lineNum">     248 </span><span class="lineCov">        600 :         const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);</span>
-<span class="lineNum">     249 </span><span class="lineCov">        600 :         const bool existingQueryItemIsIdentical = (existingValue == value);</span>
-<span class="lineNum">     250 </span><span class="lineCov">        600 :         if ((warnOnNonIdenticalDuplicate) &amp;&amp; (!existingQueryItemIsIdentical)) {</span>
-<span class="lineNum">     251 </span><span class="lineCov">         60 :             qWarning() &lt;&lt; &quot;AwsAbstractSignature::setQueryItem Not overwriting existing value for key&quot;</span>
-<span class="lineNum">     252 </span><span class="lineCov">         30 :                        &lt;&lt; key &lt;&lt; ':' &lt;&lt; existingValue;</span>
+<span class="lineNum">     247 </span><span class="lineCov">        185 :     if (query.hasQueryItem(key)) {</span>
+<span class="lineNum">     248 </span><span class="lineCov">        100 :         const QString existingValue = query.queryItemValue(key, QUrl::FullyEncoded);</span>
+<span class="lineNum">     249 </span><span class="lineCov">        100 :         const bool existingQueryItemIsIdentical = (existingValue == value);</span>
+<span class="lineNum">     250 </span><span class="lineCov">        100 :         if ((warnOnNonIdenticalDuplicate) &amp;&amp; (!existingQueryItemIsIdentical)) {</span>
+<span class="lineNum">     251 </span><span class="lineCov">         10 :             qWarning() &lt;&lt; &quot;AwsAbstractSignature::setQueryItem Not overwriting existing value for key&quot;</span>
+<span class="lineNum">     252 </span><span class="lineCov">          5 :                        &lt;&lt; key &lt;&lt; ':' &lt;&lt; existingValue;</span>
 <span class="lineNum">     253 </span>            :         }
-<span class="lineNum">     254 </span><span class="lineCov">        600 :         return existingQueryItemIsIdentical;</span>
+<span class="lineNum">     254 </span><span class="lineCov">        100 :         return existingQueryItemIsIdentical;</span>
 <span class="lineNum">     255 </span>            :     }
-<span class="lineNum">     256 </span><span class="lineCov">        510 :     query.addQueryItem(key, value);</span>
-<span class="lineNum">     257 </span><span class="lineCov">        510 :     return true;</span>
+<span class="lineNum">     256 </span><span class="lineCov">         85 :     query.addQueryItem(key, value);</span>
+<span class="lineNum">     257 </span><span class="lineCov">         85 :     return true;</span>
 <span class="lineNum">     258 </span>            : }
 <span class="lineNum">     259 </span>            : 
 <span class="lineNum">     260 </span>            : /**

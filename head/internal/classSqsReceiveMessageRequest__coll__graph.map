@@ -1,5 +1,5 @@
 <map id="SqsReceiveMessageRequest" name="SqsReceiveMessageRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="55,171,150,197"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="131,81,277,108"/>
-<area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="175,171,361,197"/>
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="55,95,150,121"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="131,5,277,32"/>
+<area shape="rect" id="node4" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="175,95,361,121"/>
 </map>

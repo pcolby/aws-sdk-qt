@@ -133,317 +133,325 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * @brief  Constructs a new SqsCreateQueueRequest object.</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * @param  queueName  Name of the queue to be created.</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> * @param  parent     This object&#39;s parent.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a9bdfb260192b61de161ae2fe32c7ddcb">   46</a></span>&#160;<a class="code" href="classSqsCreateQueueRequest.html#a9bdfb260192b61de161ae2fe32c7ddcb">SqsCreateQueueRequest::SqsCreateQueueRequest</a>(<span class="keyword">const</span> QString &amp;queueName,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                             QObject * <span class="keyword">const</span> parent)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::CreateQueueSqsAction, parent)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">setQueueName</a>(queueName);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> * @brief  Constructs a new SqsCreateQueueRequest object.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * The constructed object will not be considered valid (ie isValid will return</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * false) untill setQueueName is invoked with a non-empty queue name.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * @param  parent  This object&#39;s parent.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#ab093a8cd3626e0074676ec76a5e97a93">   61</a></span>&#160;<a class="code" href="classSqsCreateQueueRequest.html#a9bdfb260192b61de161ae2fe32c7ddcb">SqsCreateQueueRequest::SqsCreateQueueRequest</a>(QObject * <span class="keyword">const</span> parent)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::CreateQueueSqsAction, parent)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> * @brief  Is this request valid?</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"> * This implementation simply checks that this request has a non-empty SQS queue.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * @todo  Add a more-detailed isValidQueueName function, probably to SqsRequest,</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> *        that perfoms check like: /^[-a-zA-a_]{1,80}$/</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> *        See http://aws.amazon.com/sqs/faqs/</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * @returns  \c true if this request is considered valid, \c false other.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">   78</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">SqsCreateQueueRequest::isValid</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">queueName</a>().isEmpty();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * @brief  Get the value of an attribute to be set on the created queue.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * The \a name parameter should be one of the attributes defined by the SQS</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> * documentation.  The explicit attribute accessors function (such as</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"> * delaySecond, maximumMessageSize, etc) should be used instead of directly</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"> * accessing attributes via this function.  However, this function may be used</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> * if Amazon adds support for new attributes that are not yet covered by this</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * library explicitly.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a1152bad728ac3f30d55cf0e96cd5583a">   45</a></span>&#160;<a class="code" href="classSqsCreateQueueRequest.html#a9967e3d58969b15ad44c64f8ee68a42f">SqsCreateQueueRequest::SqsCreateQueueRequest</a>(<span class="keyword">const</span> QString &amp;queueName)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::CreateQueueSqsAction)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">setQueueName</a>(queueName);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> * @brief  Constructs a new SqsCreateQueueRequest object by copying another.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> * @param  other  Instance to copy.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#af5e816348abf0f03b09d131cf886e194">   56</a></span>&#160;<a class="code" href="classSqsCreateQueueRequest.html#a9967e3d58969b15ad44c64f8ee68a42f">SqsCreateQueueRequest::SqsCreateQueueRequest</a>(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;other)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(other)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * @brief  Constructs an invalid SqsCreateQueueRequest object.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * The constructed object will not be considered valid (ie isValid will return</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> * false) untill setQueueName is invoked with a non-empty queue name.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a9967e3d58969b15ad44c64f8ee68a42f">   68</a></span>&#160;<a class="code" href="classSqsCreateQueueRequest.html#a9967e3d58969b15ad44c64f8ee68a42f">SqsCreateQueueRequest::SqsCreateQueueRequest</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::CreateQueueSqsAction)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * @brief  Is this request valid?</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> * This implementation simply checks that this request has a non-empty SQS queue.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @todo  Add a more-detailed isValidQueueName function, probably to SqsRequest,</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> *        that perfoms check like: /^[-a-zA-a_]{1,80}$/</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> *        See http://aws.amazon.com/sqs/faqs/</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * @returns  \c true if this request is considered valid, \c false other.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">   85</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">SqsCreateQueueRequest::isValid</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">queueName</a>().isEmpty();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * @brief  Get the value of an attribute to be set on the created queue.</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * @param  name          Name of the queue attribute to get the value of.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * @param  defaultValue  Value to return if \a name is not found.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * @return Value of the \a name attribute, or \a defaultValue if not found.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">   98</a></span>&#160;QVariant <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;defaultValue)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a>().value(name, defaultValue);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> * @brief  Get a map of all attributes set to be included with this request.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> * @return A map of all attributes set to be included with this request.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">  108</a></span>&#160;QVariantMap <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">SqsCreateQueueRequest::attributes</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(ATTRIBUTE_ENTRY_N).toMap();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * @brief  Get the value of DelaySeconds queue attribute.</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * @return The value of DelaySeconds queue attribute, or -1 if not set.</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">  118</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">SqsCreateQueueRequest::delaySeconds</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(DELAY_SECONDS, -1).toInt();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> * @brief  Get the value of MaximumMessageSize queue attribute.</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> * @return The value of MaximumMessageSize queue attribute, or -1 if not set.</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">  128</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">SqsCreateQueueRequest::maximumMessageSize</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(DELAY_SECONDS, -1).toInt();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> * @brief  Get the value of MessageRetentionPeriod queue attribute.</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"> * @return The value of MessageRetentionPeriod queue attribute, or -1 if not set.</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">  138</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">SqsCreateQueueRequest::messageRetentionPeriod</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(MESSAGE_RETENTION_PERIOD, -1).toInt();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> * @brief  Get the value of Policy queue attribute.</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> * @return The value of Policy queue attribute, or a null QString if not set.</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">  148</a></span>&#160;QString <a class="code" href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">SqsCreateQueueRequest::policy</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(POLICY).toString();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"> * @brief  Get the name of the queue to be created.</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> * @return The name of the queue to be created, or a null QString if not yet set.</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">  158</a></span>&#160;QString <a class="code" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">SqsCreateQueueRequest::queueName</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(QUEUE_NAME).toString();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"> * @brief  Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute.</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment"> * @return The value of the ReceiveMessageWaitTimeoutSeconds queue attribute, or -1</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"> *         if not set.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">  169</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">SqsCreateQueueRequest::receiveMessageWaitTimeSeconds</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"> * @brief  Get the value of the VisibilityTimeout queue attribute.</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"> * @return The value of the VisibilityTimeout queue attribute, or -1 if not set.</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">  179</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">SqsCreateQueueRequest::visibilityTimeout</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(VISIBILITY_TIMEOUT, -1).toInt();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> * @brief  Set the value of an attribute to be include in the create queue request.</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment"> * The \a name parameter should be one of the attributes defined by the SQS</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment"> * documentation.  The explicit attribute setter functions (such as delaySecond,</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"> * maximumMessageSize, etc) should be used instead of directly setting</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"> * attributes via this function.  However, this function may be used if Amazon</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"> * adds support for new attributes that are not yet covered by this library</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> * explicitly.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * The \a name parameter should be one of the attributes defined by the SQS</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * documentation.  The explicit attribute accessors function (such as</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * delaySecond, maximumMessageSize, etc) should be used instead of directly</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * accessing attributes via this function.  However, this function may be used</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> * if Amazon adds support for new attributes that are not yet covered by this</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"> * library explicitly.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> * @param  name          Name of the queue attribute to get the value of.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> * @param  defaultValue  Value to return if \a name is not found.</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * @return Value of the \a name attribute, or \a defaultValue if not found.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">  105</a></span>&#160;QVariant <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;defaultValue)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a>().value(name, defaultValue);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * @brief  Get a map of all attributes set to be included with this request.</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> * @return A map of all attributes set to be included with this request.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">  115</a></span>&#160;QVariantMap <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">SqsCreateQueueRequest::attributes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(ATTRIBUTE_ENTRY_N).toMap();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> * @brief  Get the value of DelaySeconds queue attribute.</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> * @return The value of DelaySeconds queue attribute, or -1 if not set.</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">  125</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">SqsCreateQueueRequest::delaySeconds</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(DELAY_SECONDS, -1).toInt();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> * @brief  Get the value of MaximumMessageSize queue attribute.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"> * @return The value of MaximumMessageSize queue attribute, or -1 if not set.</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">  135</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">SqsCreateQueueRequest::maximumMessageSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(DELAY_SECONDS, -1).toInt();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> * @brief  Get the value of MessageRetentionPeriod queue attribute.</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * @return The value of MessageRetentionPeriod queue attribute, or -1 if not set.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">  145</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">SqsCreateQueueRequest::messageRetentionPeriod</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(MESSAGE_RETENTION_PERIOD, -1).toInt();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> * @brief  Get the value of Policy queue attribute.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"> * @return The value of Policy queue attribute, or a null QString if not set.</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">  155</a></span>&#160;QString <a class="code" href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">SqsCreateQueueRequest::policy</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(POLICY).toString();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment"> * @brief  Get the name of the queue to be created.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment"> * @return The name of the queue to be created, or a null QString if not yet set.</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">  165</a></span>&#160;QString <a class="code" href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">SqsCreateQueueRequest::queueName</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(QUEUE_NAME).toString();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"> * @brief  Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute.</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"> * @return The value of the ReceiveMessageWaitTimeoutSeconds queue attribute, or -1</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"> *         if not set.</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">  176</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">SqsCreateQueueRequest::receiveMessageWaitTimeSeconds</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment"> * @brief  Get the value of the VisibilityTimeout queue attribute.</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"> * @return The value of the VisibilityTimeout queue attribute, or -1 if not set.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">  186</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">SqsCreateQueueRequest::visibilityTimeout</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(VISIBILITY_TIMEOUT, -1).toInt();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"> * @brief  Set the value of an attribute to be include in the create queue request.</span></div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"> * @param  name   Name of the queue attribute to set the value of.</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"> * @param  value  Value to set for the \a name attribute.</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"> * @note  Attribues can be removed by setting \a value to a null QVariant.</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">  199</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">SqsCreateQueueRequest::setAttribute</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;value)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    QVariantMap <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a> = this-&gt;<a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a>();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> (value.isNull()) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        attributes.remove(name);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        attributes.insert(name, value);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">setAttributes</a>(attributes);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment"> * @brief  Set the attributes to be included in the create queue request.</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment"> * The given \a attributes will entirely replace any existing attibutes map.</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment"> * @param  attributes  Map of all attributes to be includes with the request.</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">  217</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">SqsCreateQueueRequest::setAttributes</a>(<span class="keyword">const</span> QVariantMap &amp;attributes)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;{</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(ATTRIBUTE_ENTRY_N, attributes);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"> * @brief  Set the value of DelaySeconds queue attribute.</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment"> * If \a delay is negative, then any existing DelaySeconds attribute will be</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment"> * cleared instead.</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment"> * @param  delay  Value to set for the DelaySeconds attribute.</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">  230</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">SqsCreateQueueRequest::setDelaySeconds</a>(<span class="keywordtype">int</span> delay)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(DELAY_SECONDS, (delay &lt; 0) ? QVariant() : QVariant(delay));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment"> * @brief  Set the value of MaximumMessageSize queue attribute.</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment"> * If \a size is negative, then any existing MaximumMessageSize attribute will</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"> * be cleared instead.</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment"> * @param  size  Value to set for the MaximumMessageSize attribute.</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">  243</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">SqsCreateQueueRequest::setMaximumMessageSize</a>(<span class="keywordtype">int</span> size)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(MAXIMUM_MESSAGE_SIZE, (size &lt; 0) ? QVariant() : QVariant(size));</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> * @brief  Set the value of MessageRetentionPeriod queue attribute.</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> * If \a period is negative, then any existing MessageRetentionPeriod attribute</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> * will be cleared instead.</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * @param  period  Value to set for the MessageRetentionPeriod attribute.</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">  256</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">SqsCreateQueueRequest::setMessageRetentionPeriod</a>(<span class="keywordtype">int</span> period)</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(MESSAGE_RETENTION_PERIOD, (period &lt; 0) ? QVariant() : QVariant(period));</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> * @brief  Set the value of Policy queue attribute.</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment"> * If \a policy is a null QString, then any existing Policy attribute will be</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"> * cleared instead.</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> * @param  policy  Value to set for the Policy attribute.</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">  269</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">SqsCreateQueueRequest::setPolicy</a>(<span class="keyword">const</span> QString &amp;policy)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(POLICY, (policy.isNull()) ? QVariant() : QVariant(policy));</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment"> * @brief  Set the name of the queue to be created.</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment"> * @param  queueName  Name of the queue to be created.</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">  279</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">SqsCreateQueueRequest::setQueueName</a>(<span class="keyword">const</span> QString &amp;queueName)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(QUEUE_NAME, queueName);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> * @brief  Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute.</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"> * If \a time is negative, then any existing ReceiveMessageWaitTimeoutSeconds</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment"> * attribute will be cleared instead.</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"> * @param  time  Value to set for the ReceiveMessageWaitTimeoutSeconds attribute.</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">  292</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds</a>(<span class="keywordtype">int</span> time)</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, (time &lt; 0) ? QVariant() : QVariant(time));</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"> * @brief  Set the value of VisibilityTimeout queue attribute.</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"> * If \a timeout is negative, then any existing VisibilityTimeout attribute will</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment"> * be cleared instead</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"> * @param  timeout  Value to set for the VisibilityTimeout attribute.</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">  305</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">SqsCreateQueueRequest::setVisibilityTimeout</a>(<span class="keywordtype">int</span> timeout)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(VISIBILITY_TIMEOUT, (timeout &lt; 0) ? QVariant() : QVariant(timeout));</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"> * @brief  Construct an SqsCreateQueueResponse object.</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"> * @param  reply  Network reply this response should observe.</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment"> * @return An SqsCreateQueueResponse instance for \a reply.</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment"> * @see  AwsAbstractClient::send</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">  319</a></span>&#160;<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * <a class="code" href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">SqsCreateQueueRequest::response</a>(QNetworkReply * <span class="keyword">const</span> reply)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>(reply);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"> * The \a name parameter should be one of the attributes defined by the SQS</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"> * documentation.  The explicit attribute setter functions (such as delaySecond,</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"> * maximumMessageSize, etc) should be used instead of directly setting</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment"> * attributes via this function.  However, this function may be used if Amazon</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"> * adds support for new attributes that are not yet covered by this library</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"> * explicitly.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment"> * @param  name   Name of the queue attribute to set the value of.</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> * @param  value  Value to set for the \a name attribute.</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"> * @note  Attribues can be removed by setting \a value to a null QVariant.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">  206</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">SqsCreateQueueRequest::setAttribute</a>(<span class="keyword">const</span> QString &amp;name, <span class="keyword">const</span> QVariant &amp;value)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    QVariantMap <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a> = this-&gt;<a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (value.isNull()) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        attributes.remove(name);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        attributes.insert(name, value);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">setAttributes</a>(attributes);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"> * @brief  Set the attributes to be included in the create queue request.</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment"> * The given \a attributes will entirely replace any existing attibutes map.</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment"> * @param  attributes  Map of all attributes to be includes with the request.</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">  224</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">SqsCreateQueueRequest::setAttributes</a>(<span class="keyword">const</span> QVariantMap &amp;attributes)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(ATTRIBUTE_ENTRY_N, attributes);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"> * @brief  Set the value of DelaySeconds queue attribute.</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"> * If \a delay is negative, then any existing DelaySeconds attribute will be</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment"> * cleared instead.</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"> * @param  delay  Value to set for the DelaySeconds attribute.</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">  237</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">SqsCreateQueueRequest::setDelaySeconds</a>(<span class="keywordtype">int</span> delay)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(DELAY_SECONDS, (delay &lt; 0) ? QVariant() : QVariant(delay));</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment"> * @brief  Set the value of MaximumMessageSize queue attribute.</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment"> * If \a size is negative, then any existing MaximumMessageSize attribute will</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment"> * be cleared instead.</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"> * @param  size  Value to set for the MaximumMessageSize attribute.</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">  250</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">SqsCreateQueueRequest::setMaximumMessageSize</a>(<span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(MAXIMUM_MESSAGE_SIZE, (size &lt; 0) ? QVariant() : QVariant(size));</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> * @brief  Set the value of MessageRetentionPeriod queue attribute.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"> * If \a period is negative, then any existing MessageRetentionPeriod attribute</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"> * will be cleared instead.</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"> * @param  period  Value to set for the MessageRetentionPeriod attribute.</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">  263</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">SqsCreateQueueRequest::setMessageRetentionPeriod</a>(<span class="keywordtype">int</span> period)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(MESSAGE_RETENTION_PERIOD, (period &lt; 0) ? QVariant() : QVariant(period));</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"> * @brief  Set the value of Policy queue attribute.</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"> * If \a policy is a null QString, then any existing Policy attribute will be</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"> * cleared instead.</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment"> * @param  policy  Value to set for the Policy attribute.</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">  276</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">SqsCreateQueueRequest::setPolicy</a>(<span class="keyword">const</span> QString &amp;policy)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(POLICY, (policy.isNull()) ? QVariant() : QVariant(policy));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"> * @brief  Set the name of the queue to be created.</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"> * @param  queueName  Name of the queue to be created.</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">  286</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">SqsCreateQueueRequest::setQueueName</a>(<span class="keyword">const</span> QString &amp;queueName)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(QUEUE_NAME, queueName);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"> * @brief  Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute.</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"> * If \a time is negative, then any existing ReceiveMessageWaitTimeoutSeconds</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"> * attribute will be cleared instead.</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"> * @param  time  Value to set for the ReceiveMessageWaitTimeoutSeconds attribute.</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">  299</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds</a>(<span class="keywordtype">int</span> time)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, (time &lt; 0) ? QVariant() : QVariant(time));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> * @brief  Set the value of VisibilityTimeout queue attribute.</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment"> * If \a timeout is negative, then any existing VisibilityTimeout attribute will</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment"> * be cleared instead</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment"> * @param  timeout  Value to set for the VisibilityTimeout attribute.</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">  312</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">SqsCreateQueueRequest::setVisibilityTimeout</a>(<span class="keywordtype">int</span> timeout)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">setAttribute</a>(VISIBILITY_TIMEOUT, (timeout &lt; 0) ? QVariant() : QVariant(timeout));</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment"> * @brief  Construct an SqsCreateQueueResponse object.</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment"> * @param  reply  Network reply this response should observe.</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"> * @return An SqsCreateQueueResponse instance for \a reply.</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment"> * @see  AwsAbstractClient::send</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">  326</a></span>&#160;<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * <a class="code" href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">SqsCreateQueueRequest::response</a>(QNetworkReply * <span class="keyword">const</span> reply)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>(*<span class="keyword">this</span>, reply);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;}</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;QTAWS_END_NAMESPACE</div>
 <div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00034">sqsrequest.h:34</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_ae58adbc3a2455e7e79c89d75390d6e75"><div class="ttname"><a href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">SqsCreateQueueRequest::setDelaySeconds</a></div><div class="ttdeci">void setDelaySeconds(int delay)</div><div class="ttdoc">Set the value of DelaySeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00230">sqscreatequeuerequest.cpp:230</a></div></div>
-<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00166">sqsrequest.cpp:166</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_aed3daa9035fef359978a2b96c9cfd1eb"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a></div><div class="ttdeci">QVariant attribute(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of an attribute to be set on the created queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00098">sqscreatequeuerequest.cpp:98</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a7198a4657461a444a9012901581a28c7"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">SqsCreateQueueRequest::response</a></div><div class="ttdeci">virtual AwsAbstractResponse * response(QNetworkReply *const reply) const </div><div class="ttdoc">Construct an SqsCreateQueueResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00319">sqscreatequeuerequest.cpp:319</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a55f354e8dd21321f417279d9a11879ac"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">SqsCreateQueueRequest::setAttribute</a></div><div class="ttdeci">void setAttribute(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set the value of an attribute to be include in the create queue request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00199">sqscreatequeuerequest.cpp:199</a></div></div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00031">sqscreatequeueresponse.h:31</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_ad6c031b35a8364081d8d5aaefe0441df"><div class="ttname"><a href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">SqsCreateQueueRequest::queueName</a></div><div class="ttdeci">QString queueName() const </div><div class="ttdoc">Get the name of the queue to be created. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00158">sqscreatequeuerequest.cpp:158</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a0cfe6450f713c9bb1b11ae660303d177"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">SqsCreateQueueRequest::setMessageRetentionPeriod</a></div><div class="ttdeci">void setMessageRetentionPeriod(int period)</div><div class="ttdoc">Set the value of MessageRetentionPeriod queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00256">sqscreatequeuerequest.cpp:256</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_aee0508f74a3c792d3e4336b15688b101"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">SqsCreateQueueRequest::setQueueName</a></div><div class="ttdeci">void setQueueName(const QString &amp;queueName)</div><div class="ttdoc">Set the name of the queue to be created. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00279">sqscreatequeuerequest.cpp:279</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a10839f9117063bb37b926ce03d619f22"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">SqsCreateQueueRequest::maximumMessageSize</a></div><div class="ttdeci">int maximumMessageSize() const </div><div class="ttdoc">Get the value of MaximumMessageSize queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00128">sqscreatequeuerequest.cpp:128</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a3da978102e4c8fe680b172d6f42b99f6"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">SqsCreateQueueRequest::delaySeconds</a></div><div class="ttdeci">int delaySeconds() const </div><div class="ttdoc">Get the value of DelaySeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00118">sqscreatequeuerequest.cpp:118</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a9bdfb260192b61de161ae2fe32c7ddcb"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a9bdfb260192b61de161ae2fe32c7ddcb">SqsCreateQueueRequest::SqsCreateQueueRequest</a></div><div class="ttdeci">SqsCreateQueueRequest(const QString &amp;queueName, QObject *const parent=0)</div><div class="ttdoc">Constructs a new SqsCreateQueueRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00046">sqscreatequeuerequest.cpp:46</a></div></div>
-<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00178">sqsrequest.cpp:178</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_add0347adc28d3dd161468da42e844134"><div class="ttname"><a href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">SqsCreateQueueRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00078">sqscreatequeuerequest.cpp:78</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a3ab7e8dc6b29baeb07d193f3a3442f3e"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">SqsCreateQueueRequest::attributes</a></div><div class="ttdeci">QVariantMap attributes() const </div><div class="ttdoc">Get a map of all attributes set to be included with this request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00108">sqscreatequeuerequest.cpp:108</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a2df877901a51a709b5143e00299ef100"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">SqsCreateQueueRequest::setAttributes</a></div><div class="ttdeci">void setAttributes(const QVariantMap &amp;attributes)</div><div class="ttdoc">Set the attributes to be included in the create queue request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00217">sqscreatequeuerequest.cpp:217</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a68919e7b2195b7df245150ecc2c449f5"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">SqsCreateQueueRequest::messageRetentionPeriod</a></div><div class="ttdeci">int messageRetentionPeriod() const </div><div class="ttdoc">Get the value of MessageRetentionPeriod queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00138">sqscreatequeuerequest.cpp:138</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a8b358ed48bc30467daf52f97f8accbf5"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">SqsCreateQueueRequest::setVisibilityTimeout</a></div><div class="ttdeci">void setVisibilityTimeout(int timeout)</div><div class="ttdoc">Set the value of VisibilityTimeout queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00305">sqscreatequeuerequest.cpp:305</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a96e94506504206aa7d9b72c0a129cd35"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">SqsCreateQueueRequest::setPolicy</a></div><div class="ttdeci">void setPolicy(const QString &amp;policy)</div><div class="ttdoc">Set the value of Policy queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00269">sqscreatequeuerequest.cpp:269</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a9736f270bdb95b6f9911d7f86bcd61e4"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">SqsCreateQueueRequest::policy</a></div><div class="ttdeci">QString policy() const </div><div class="ttdoc">Get the value of Policy queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00148">sqscreatequeuerequest.cpp:148</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a76174ae7d69f121243cf18d8bde4fa3b"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">SqsCreateQueueRequest::setMaximumMessageSize</a></div><div class="ttdeci">void setMaximumMessageSize(int size)</div><div class="ttdoc">Set the value of MaximumMessageSize queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00243">sqscreatequeuerequest.cpp:243</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a946939a16ea7ca7142010410256e7877"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">SqsCreateQueueRequest::visibilityTimeout</a></div><div class="ttdeci">int visibilityTimeout() const </div><div class="ttdoc">Get the value of the VisibilityTimeout queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00179">sqscreatequeuerequest.cpp:179</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_af46c8d8d656317c14ca1385471ad4909"><div class="ttname"><a href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">SqsCreateQueueRequest::receiveMessageWaitTimeSeconds</a></div><div class="ttdeci">int receiveMessageWaitTimeSeconds() const </div><div class="ttdoc">Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00169">sqscreatequeuerequest.cpp:169</a></div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html_a321aa6c494aed7c38fc9b1f5bc9ca1e0"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds</a></div><div class="ttdeci">void setReceiveMessageWaitTimeSeconds(int time)</div><div class="ttdoc">Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00292">sqscreatequeuerequest.cpp:292</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a9967e3d58969b15ad44c64f8ee68a42f"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a9967e3d58969b15ad44c64f8ee68a42f">SqsCreateQueueRequest::SqsCreateQueueRequest</a></div><div class="ttdeci">SqsCreateQueueRequest()</div><div class="ttdoc">Constructs an invalid SqsCreateQueueRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00068">sqscreatequeuerequest.cpp:68</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_ae58adbc3a2455e7e79c89d75390d6e75"><div class="ttname"><a href="classSqsCreateQueueRequest.html#ae58adbc3a2455e7e79c89d75390d6e75">SqsCreateQueueRequest::setDelaySeconds</a></div><div class="ttdeci">void setDelaySeconds(int delay)</div><div class="ttdoc">Set the value of DelaySeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00237">sqscreatequeuerequest.cpp:237</a></div></div>
+<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00192">sqsrequest.cpp:192</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_aed3daa9035fef359978a2b96c9cfd1eb"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a></div><div class="ttdeci">QVariant attribute(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of an attribute to be set on the created queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00105">sqscreatequeuerequest.cpp:105</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a7198a4657461a444a9012901581a28c7"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a7198a4657461a444a9012901581a28c7">SqsCreateQueueRequest::response</a></div><div class="ttdeci">virtual AwsAbstractResponse * response(QNetworkReply *const reply) const </div><div class="ttdoc">Construct an SqsCreateQueueResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00326">sqscreatequeuerequest.cpp:326</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a55f354e8dd21321f417279d9a11879ac"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a55f354e8dd21321f417279d9a11879ac">SqsCreateQueueRequest::setAttribute</a></div><div class="ttdeci">void setAttribute(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set the value of an attribute to be include in the create queue request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00206">sqscreatequeuerequest.cpp:206</a></div></div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_ad6c031b35a8364081d8d5aaefe0441df"><div class="ttname"><a href="classSqsCreateQueueRequest.html#ad6c031b35a8364081d8d5aaefe0441df">SqsCreateQueueRequest::queueName</a></div><div class="ttdeci">QString queueName() const </div><div class="ttdoc">Get the name of the queue to be created. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00165">sqscreatequeuerequest.cpp:165</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a0cfe6450f713c9bb1b11ae660303d177"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a0cfe6450f713c9bb1b11ae660303d177">SqsCreateQueueRequest::setMessageRetentionPeriod</a></div><div class="ttdeci">void setMessageRetentionPeriod(int period)</div><div class="ttdoc">Set the value of MessageRetentionPeriod queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00263">sqscreatequeuerequest.cpp:263</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_aee0508f74a3c792d3e4336b15688b101"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aee0508f74a3c792d3e4336b15688b101">SqsCreateQueueRequest::setQueueName</a></div><div class="ttdeci">void setQueueName(const QString &amp;queueName)</div><div class="ttdoc">Set the name of the queue to be created. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00286">sqscreatequeuerequest.cpp:286</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a10839f9117063bb37b926ce03d619f22"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22">SqsCreateQueueRequest::maximumMessageSize</a></div><div class="ttdeci">int maximumMessageSize() const </div><div class="ttdoc">Get the value of MaximumMessageSize queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00135">sqscreatequeuerequest.cpp:135</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a3da978102e4c8fe680b172d6f42b99f6"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a3da978102e4c8fe680b172d6f42b99f6">SqsCreateQueueRequest::delaySeconds</a></div><div class="ttdeci">int delaySeconds() const </div><div class="ttdoc">Get the value of DelaySeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00125">sqscreatequeuerequest.cpp:125</a></div></div>
+<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00204">sqsrequest.cpp:204</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_add0347adc28d3dd161468da42e844134"><div class="ttname"><a href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">SqsCreateQueueRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00085">sqscreatequeuerequest.cpp:85</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a3ab7e8dc6b29baeb07d193f3a3442f3e"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">SqsCreateQueueRequest::attributes</a></div><div class="ttdeci">QVariantMap attributes() const </div><div class="ttdoc">Get a map of all attributes set to be included with this request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00115">sqscreatequeuerequest.cpp:115</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a2df877901a51a709b5143e00299ef100"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a2df877901a51a709b5143e00299ef100">SqsCreateQueueRequest::setAttributes</a></div><div class="ttdeci">void setAttributes(const QVariantMap &amp;attributes)</div><div class="ttdoc">Set the attributes to be included in the create queue request. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00224">sqscreatequeuerequest.cpp:224</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a68919e7b2195b7df245150ecc2c449f5"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5">SqsCreateQueueRequest::messageRetentionPeriod</a></div><div class="ttdeci">int messageRetentionPeriod() const </div><div class="ttdoc">Get the value of MessageRetentionPeriod queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00145">sqscreatequeuerequest.cpp:145</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a8b358ed48bc30467daf52f97f8accbf5"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a8b358ed48bc30467daf52f97f8accbf5">SqsCreateQueueRequest::setVisibilityTimeout</a></div><div class="ttdeci">void setVisibilityTimeout(int timeout)</div><div class="ttdoc">Set the value of VisibilityTimeout queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00312">sqscreatequeuerequest.cpp:312</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a96e94506504206aa7d9b72c0a129cd35"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a96e94506504206aa7d9b72c0a129cd35">SqsCreateQueueRequest::setPolicy</a></div><div class="ttdeci">void setPolicy(const QString &amp;policy)</div><div class="ttdoc">Set the value of Policy queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00276">sqscreatequeuerequest.cpp:276</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a9736f270bdb95b6f9911d7f86bcd61e4"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4">SqsCreateQueueRequest::policy</a></div><div class="ttdeci">QString policy() const </div><div class="ttdoc">Get the value of Policy queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00155">sqscreatequeuerequest.cpp:155</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a76174ae7d69f121243cf18d8bde4fa3b"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a76174ae7d69f121243cf18d8bde4fa3b">SqsCreateQueueRequest::setMaximumMessageSize</a></div><div class="ttdeci">void setMaximumMessageSize(int size)</div><div class="ttdoc">Set the value of MaximumMessageSize queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00250">sqscreatequeuerequest.cpp:250</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a946939a16ea7ca7142010410256e7877"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a946939a16ea7ca7142010410256e7877">SqsCreateQueueRequest::visibilityTimeout</a></div><div class="ttdeci">int visibilityTimeout() const </div><div class="ttdoc">Get the value of the VisibilityTimeout queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00186">sqscreatequeuerequest.cpp:186</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8h_source.html#l00029">sqscreatequeuerequest.h:29</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_af46c8d8d656317c14ca1385471ad4909"><div class="ttname"><a href="classSqsCreateQueueRequest.html#af46c8d8d656317c14ca1385471ad4909">SqsCreateQueueRequest::receiveMessageWaitTimeSeconds</a></div><div class="ttdeci">int receiveMessageWaitTimeSeconds() const </div><div class="ttdoc">Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00176">sqscreatequeuerequest.cpp:176</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_a321aa6c494aed7c38fc9b1f5bc9ca1e0"><div class="ttname"><a href="classSqsCreateQueueRequest.html#a321aa6c494aed7c38fc9b1f5bc9ca1e0">SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds</a></div><div class="ttdeci">void setReceiveMessageWaitTimeSeconds(int time)</div><div class="ttdoc">Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00299">sqscreatequeuerequest.cpp:299</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:00 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

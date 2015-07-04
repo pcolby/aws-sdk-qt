@@ -119,64 +119,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classAwsAbstractResponse.html">   32</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> : <span class="keyword">public</span> QObject {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>(QObject * <span class="keyword">const</span> parent = 0);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> QString errorString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasError() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isValid() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> QNetworkReply::NetworkError networkError() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> QXmlStreamReader::Error xmlParseError() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> QString xmlParseErrorString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    /// @todo Find a better home for &quot;QVariantMap toVariant(QXmlStreamReader &amp;xml, ...)&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>    <span class="keyword">static</span> QVariantMap toVariant(QXmlStreamReader &amp;xml,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                 <span class="keyword">const</span> QString &amp;prefix = QLatin1String(<span class="stringliteral">&quot;.&quot;</span>),</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                 <span class="keyword">const</span> <span class="keywordtype">int</span> maxDepth = 1024);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    /// @cond internal</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">   54</a></span>&#160;<span class="comment"></span>    <a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> * <span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>; <span class="comment">///&lt; Internal d-pointer.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>    <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>(<a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> * <span class="keyword">const</span> d, QObject * <span class="keyword">const</span> parent);<span class="comment"></span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    /// @endcond</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isSuccess(QNetworkReply * <span class="keyword">const</span> reply) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setReply(QNetworkReply * reply);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setXmlError(<span class="keyword">const</span> QXmlStreamReader &amp;xml);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parse(QNetworkReply * <span class="keyword">const</span> reply);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parseFailure(QIODevice &amp;response) = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parseSuccess(QIODevice &amp;response) = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classAwsAbstractResponse.html">   33</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>(QObject * <span class="keyword">const</span> parent = 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> QString errorString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> hasError() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isValid() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> QNetworkReply::NetworkError networkError() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> QXmlStreamReader::Error xmlParseError() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> QString xmlParseErrorString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> * request() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    /// @todo Find a better home for &quot;QVariantMap toVariant(QXmlStreamReader &amp;xml, ...)&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>    <span class="keyword">static</span> QVariantMap toVariant(QXmlStreamReader &amp;xml,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                 <span class="keyword">const</span> QString &amp;prefix = QLatin1String(<span class="stringliteral">&quot;.&quot;</span>),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                 <span class="keyword">const</span> <span class="keywordtype">int</span> maxDepth = 1024);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">protected</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    /// @cond internal</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">   57</a></span>&#160;<span class="comment"></span>    <a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> * <span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>; <span class="comment">///&lt; Internal d-pointer.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span>    <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>(<a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> * <span class="keyword">const</span> d, QObject * <span class="keyword">const</span> parent);<span class="comment"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    /// @endcond</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isSuccess(QNetworkReply * <span class="keyword">const</span> reply) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setReply(QNetworkReply * reply);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setRequest(<span class="keyword">const</span> <a class="code" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> * <span class="keyword">const</span> request);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setXmlError(<span class="keyword">const</span> QXmlStreamReader &amp;xml);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">protected</span> slots:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> replyFinished();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parse(QNetworkReply * <span class="keyword">const</span> reply);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parseFailure(QIODevice &amp;response) = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> parseSuccess(QIODevice &amp;response) = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">protected</span> slots:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> replyFinished();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;signals:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> finished();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    friend class TestAwsAbstractResponse;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classAwsAbstractResponsePrivate_html"><div class="ttname"><a href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractResponse. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse__p_8h_source.html#l00034">awsabstractresponse_p.h:34</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00054">awsabstractresponse.h:54</a></div></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;signals:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> finished();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classAwsAbstractResponsePrivate_html"><div class="ttname"><a href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractResponse. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse__p_8h_source.html#l00035">awsabstractresponse_p.h:35</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html"><div class="ttname"><a href="classAwsAbstractRequest.html">AwsAbstractRequest</a></div><div class="ttdoc">Interface class for providing AWS requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8h_source.html#l00039">awsabstractrequest.h:39</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00057">awsabstractresponse.h:57</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:00 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

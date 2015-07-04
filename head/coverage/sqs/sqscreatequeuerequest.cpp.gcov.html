@@ -31,18 +31,18 @@
             <td class="headerValue">libqtaws 0.1.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">60</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntryLo">38.1 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">22</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntryLo">39.1 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -102,288 +102,295 @@
 <span class="lineNum">      40 </span>            : /**
 <span class="lineNum">      41 </span>            :  * @brief  Constructs a new SqsCreateQueueRequest object.
 <span class="lineNum">      42 </span>            :  *
-<span class="lineNum">      43 </span>            :  * @param  queueName  Name of the queue to be created.
-<a name="44"><span class="lineNum">      44 </span>            :  * @param  parent     This object's parent.</a>
-<span class="lineNum">      45 </span>            :  */
-<span class="lineNum">      46 </span><span class="lineNoCov">          0 : SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &amp;queueName,</span>
-<span class="lineNum">      47 </span>            :                                              QObject * const parent)
-<span class="lineNum">      48 </span><span class="lineNoCov">          0 :     : SqsRequest(SqsRequest::CreateQueueSqsAction, parent)</span>
-<span class="lineNum">      49 </span>            : {
-<span class="lineNum">      50 </span><span class="lineNoCov">          0 :     setQueueName(queueName);</span>
-<span class="lineNum">      51 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      52 </span>            : 
-<span class="lineNum">      53 </span>            : /**
-<span class="lineNum">      54 </span>            :  * @brief  Constructs a new SqsCreateQueueRequest object.
-<span class="lineNum">      55 </span>            :  *
-<span class="lineNum">      56 </span>            :  * The constructed object will not be considered valid (ie isValid will return
-<span class="lineNum">      57 </span>            :  * false) untill setQueueName is invoked with a non-empty queue name.
-<span class="lineNum">      58 </span>            :  *
-<a name="59"><span class="lineNum">      59 </span>            :  * @param  parent  This object's parent.</a>
-<span class="lineNum">      60 </span>            :  */
-<span class="lineNum">      61 </span><span class="lineNoCov">          0 : SqsCreateQueueRequest::SqsCreateQueueRequest(QObject * const parent)</span>
-<span class="lineNum">      62 </span><span class="lineNoCov">          0 :     : SqsRequest(SqsRequest::CreateQueueSqsAction, parent)</span>
-<span class="lineNum">      63 </span>            : {
-<span class="lineNum">      64 </span>            : 
-<span class="lineNum">      65 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">      66 </span>            : 
-<span class="lineNum">      67 </span>            : /**
-<span class="lineNum">      68 </span>            :  * @brief  Is this request valid?
-<span class="lineNum">      69 </span>            :  *
-<span class="lineNum">      70 </span>            :  * This implementation simply checks that this request has a non-empty SQS queue.
-<span class="lineNum">      71 </span>            :  *
-<span class="lineNum">      72 </span>            :  * @todo  Add a more-detailed isValidQueueName function, probably to SqsRequest,
-<span class="lineNum">      73 </span>            :  *        that perfoms check like: /^[-a-zA-a_]{1,80}$/
-<span class="lineNum">      74 </span>            :  *        See http://aws.amazon.com/sqs/faqs/
-<span class="lineNum">      75 </span>            :  *
-<a name="76"><span class="lineNum">      76 </span>            :  * @returns  \c true if this request is considered valid, \c false other.</a>
-<span class="lineNum">      77 </span>            :  */
-<span class="lineNum">      78 </span><span class="lineNoCov">          0 : bool SqsCreateQueueRequest::isValid() const</span>
-<span class="lineNum">      79 </span>            : {
-<span class="lineNum">      80 </span><span class="lineNoCov">          0 :     return !queueName().isEmpty();</span>
-<span class="lineNum">      81 </span>            : }
-<span class="lineNum">      82 </span>            : 
-<span class="lineNum">      83 </span>            : /**
-<span class="lineNum">      84 </span>            :  * @brief  Get the value of an attribute to be set on the created queue.
-<span class="lineNum">      85 </span>            :  *
-<span class="lineNum">      86 </span>            :  * The \a name parameter should be one of the attributes defined by the SQS
-<span class="lineNum">      87 </span>            :  * documentation.  The explicit attribute accessors function (such as
-<span class="lineNum">      88 </span>            :  * delaySecond, maximumMessageSize, etc) should be used instead of directly
-<span class="lineNum">      89 </span>            :  * accessing attributes via this function.  However, this function may be used
-<span class="lineNum">      90 </span>            :  * if Amazon adds support for new attributes that are not yet covered by this
-<span class="lineNum">      91 </span>            :  * library explicitly.
+<a name="43"><span class="lineNum">      43 </span>            :  * @param  queueName  Name of the queue to be created.</a>
+<span class="lineNum">      44 </span>            :  */
+<span class="lineNum">      45 </span><span class="lineCov">         44 : SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &amp;queueName)</span>
+<span class="lineNum">      46 </span><span class="lineCov">         44 :     : SqsRequest(SqsRequest::CreateQueueSqsAction)</span>
+<span class="lineNum">      47 </span>            : {
+<span class="lineNum">      48 </span><span class="lineCov">         44 :     setQueueName(queueName);</span>
+<span class="lineNum">      49 </span><span class="lineCov">         44 : }</span>
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            : /**
+<span class="lineNum">      52 </span>            :  * @brief  Constructs a new SqsCreateQueueRequest object by copying another.
+<span class="lineNum">      53 </span>            :  *
+<a name="54"><span class="lineNum">      54 </span>            :  * @param  other  Instance to copy.</a>
+<span class="lineNum">      55 </span>            :  */
+<span class="lineNum">      56 </span><span class="lineCov">         71 : SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &amp;other)</span>
+<span class="lineNum">      57 </span><span class="lineCov">         71 :     : SqsRequest(other)</span>
+<span class="lineNum">      58 </span>            : {
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span><span class="lineCov">         71 : }</span>
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            : /**
+<span class="lineNum">      63 </span>            :  * @brief  Constructs an invalid SqsCreateQueueRequest object.
+<span class="lineNum">      64 </span>            :  *
+<span class="lineNum">      65 </span>            :  * The constructed object will not be considered valid (ie isValid will return
+<a name="66"><span class="lineNum">      66 </span>            :  * false) untill setQueueName is invoked with a non-empty queue name.</a>
+<span class="lineNum">      67 </span>            :  */
+<span class="lineNum">      68 </span><span class="lineCov">         33 : SqsCreateQueueRequest::SqsCreateQueueRequest()</span>
+<span class="lineNum">      69 </span><span class="lineCov">         33 :     : SqsRequest(SqsRequest::CreateQueueSqsAction)</span>
+<span class="lineNum">      70 </span>            : {
+<span class="lineNum">      71 </span>            : 
+<span class="lineNum">      72 </span><span class="lineCov">         33 : }</span>
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            : /**
+<span class="lineNum">      75 </span>            :  * @brief  Is this request valid?
+<span class="lineNum">      76 </span>            :  *
+<span class="lineNum">      77 </span>            :  * This implementation simply checks that this request has a non-empty SQS queue.
+<span class="lineNum">      78 </span>            :  *
+<span class="lineNum">      79 </span>            :  * @todo  Add a more-detailed isValidQueueName function, probably to SqsRequest,
+<span class="lineNum">      80 </span>            :  *        that perfoms check like: /^[-a-zA-a_]{1,80}$/
+<span class="lineNum">      81 </span>            :  *        See http://aws.amazon.com/sqs/faqs/
+<span class="lineNum">      82 </span>            :  *
+<a name="83"><span class="lineNum">      83 </span>            :  * @returns  \c true if this request is considered valid, \c false other.</a>
+<span class="lineNum">      84 </span>            :  */
+<span class="lineNum">      85 </span><span class="lineCov">         77 : bool SqsCreateQueueRequest::isValid() const</span>
+<span class="lineNum">      86 </span>            : {
+<span class="lineNum">      87 </span><span class="lineCov">         77 :     return !queueName().isEmpty();</span>
+<span class="lineNum">      88 </span>            : }
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            : /**
+<span class="lineNum">      91 </span>            :  * @brief  Get the value of an attribute to be set on the created queue.
 <span class="lineNum">      92 </span>            :  *
-<span class="lineNum">      93 </span>            :  * @param  name          Name of the queue attribute to get the value of.
-<span class="lineNum">      94 </span>            :  * @param  defaultValue  Value to return if \a name is not found.
-<span class="lineNum">      95 </span>            :  *
-<a name="96"><span class="lineNum">      96 </span>            :  * @return Value of the \a name attribute, or \a defaultValue if not found.</a>
-<span class="lineNum">      97 </span>            :  */
-<span class="lineNum">      98 </span><span class="lineNoCov">          0 : QVariant SqsCreateQueueRequest::attribute(const QString &amp;name, const QVariant &amp;defaultValue) const</span>
-<span class="lineNum">      99 </span>            : {
-<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     return attributes().value(name, defaultValue);</span>
-<span class="lineNum">     101 </span>            : }
-<span class="lineNum">     102 </span>            : 
-<span class="lineNum">     103 </span>            : /**
-<span class="lineNum">     104 </span>            :  * @brief  Get a map of all attributes set to be included with this request.
-<span class="lineNum">     105 </span>            :  *
-<a name="106"><span class="lineNum">     106 </span>            :  * @return A map of all attributes set to be included with this request.</a>
-<span class="lineNum">     107 </span>            :  */
-<span class="lineNum">     108 </span><span class="lineNoCov">          0 : QVariantMap SqsCreateQueueRequest::attributes() const</span>
-<span class="lineNum">     109 </span>            : {
-<span class="lineNum">     110 </span><span class="lineNoCov">          0 :     return parameter(ATTRIBUTE_ENTRY_N).toMap();</span>
-<span class="lineNum">     111 </span>            : }
-<span class="lineNum">     112 </span>            : 
-<span class="lineNum">     113 </span>            : /**
-<span class="lineNum">     114 </span>            :  * @brief  Get the value of DelaySeconds queue attribute.
-<span class="lineNum">     115 </span>            :  *
-<a name="116"><span class="lineNum">     116 </span>            :  * @return The value of DelaySeconds queue attribute, or -1 if not set.</a>
-<span class="lineNum">     117 </span>            :  */
-<span class="lineNum">     118 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::delaySeconds() const</span>
-<span class="lineNum">     119 </span>            : {
-<span class="lineNum">     120 </span><span class="lineNoCov">          0 :     return parameter(DELAY_SECONDS, -1).toInt();</span>
-<span class="lineNum">     121 </span>            : }
-<span class="lineNum">     122 </span>            : 
-<span class="lineNum">     123 </span>            : /**
-<span class="lineNum">     124 </span>            :  * @brief  Get the value of MaximumMessageSize queue attribute.
-<span class="lineNum">     125 </span>            :  *
-<a name="126"><span class="lineNum">     126 </span>            :  * @return The value of MaximumMessageSize queue attribute, or -1 if not set.</a>
-<span class="lineNum">     127 </span>            :  */
-<span class="lineNum">     128 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::maximumMessageSize() const</span>
-<span class="lineNum">     129 </span>            : {
-<span class="lineNum">     130 </span><span class="lineNoCov">          0 :     return attribute(DELAY_SECONDS, -1).toInt();</span>
-<span class="lineNum">     131 </span>            : }
-<span class="lineNum">     132 </span>            : 
-<span class="lineNum">     133 </span>            : /**
-<span class="lineNum">     134 </span>            :  * @brief  Get the value of MessageRetentionPeriod queue attribute.
-<span class="lineNum">     135 </span>            :  *
-<a name="136"><span class="lineNum">     136 </span>            :  * @return The value of MessageRetentionPeriod queue attribute, or -1 if not set.</a>
-<span class="lineNum">     137 </span>            :  */
-<span class="lineNum">     138 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::messageRetentionPeriod() const</span>
-<span class="lineNum">     139 </span>            : {
-<span class="lineNum">     140 </span><span class="lineNoCov">          0 :     return attribute(MESSAGE_RETENTION_PERIOD, -1).toInt();</span>
-<span class="lineNum">     141 </span>            : }
-<span class="lineNum">     142 </span>            : 
-<span class="lineNum">     143 </span>            : /**
-<span class="lineNum">     144 </span>            :  * @brief  Get the value of Policy queue attribute.
-<span class="lineNum">     145 </span>            :  *
-<a name="146"><span class="lineNum">     146 </span>            :  * @return The value of Policy queue attribute, or a null QString if not set.</a>
-<span class="lineNum">     147 </span>            :  */
-<span class="lineNum">     148 </span><span class="lineNoCov">          0 : QString SqsCreateQueueRequest::policy() const</span>
-<span class="lineNum">     149 </span>            : {
-<span class="lineNum">     150 </span><span class="lineNoCov">          0 :     return attribute(POLICY).toString();</span>
-<span class="lineNum">     151 </span>            : }
-<span class="lineNum">     152 </span>            : 
-<span class="lineNum">     153 </span>            : /**
-<span class="lineNum">     154 </span>            :  * @brief  Get the name of the queue to be created.
-<span class="lineNum">     155 </span>            :  *
-<a name="156"><span class="lineNum">     156 </span>            :  * @return The name of the queue to be created, or a null QString if not yet set.</a>
-<span class="lineNum">     157 </span>            :  */
-<span class="lineNum">     158 </span><span class="lineNoCov">          0 : QString SqsCreateQueueRequest::queueName() const</span>
-<span class="lineNum">     159 </span>            : {
-<span class="lineNum">     160 </span><span class="lineNoCov">          0 :     return parameter(QUEUE_NAME).toString();</span>
-<span class="lineNum">     161 </span>            : }
-<span class="lineNum">     162 </span>            : 
-<span class="lineNum">     163 </span>            : /**
-<span class="lineNum">     164 </span>            :  * @brief  Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute.
-<span class="lineNum">     165 </span>            :  *
-<span class="lineNum">     166 </span>            :  * @return The value of the ReceiveMessageWaitTimeoutSeconds queue attribute, or -1
-<a name="167"><span class="lineNum">     167 </span>            :  *         if not set.</a>
-<span class="lineNum">     168 </span>            :  */
-<span class="lineNum">     169 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::receiveMessageWaitTimeSeconds() const</span>
-<span class="lineNum">     170 </span>            : {
-<span class="lineNum">     171 </span><span class="lineNoCov">          0 :     return attribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();</span>
-<span class="lineNum">     172 </span>            : }
-<span class="lineNum">     173 </span>            : 
-<span class="lineNum">     174 </span>            : /**
-<span class="lineNum">     175 </span>            :  * @brief  Get the value of the VisibilityTimeout queue attribute.
-<span class="lineNum">     176 </span>            :  *
-<a name="177"><span class="lineNum">     177 </span>            :  * @return The value of the VisibilityTimeout queue attribute, or -1 if not set.</a>
-<span class="lineNum">     178 </span>            :  */
-<span class="lineNum">     179 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::visibilityTimeout() const</span>
-<span class="lineNum">     180 </span>            : {
-<span class="lineNum">     181 </span><span class="lineNoCov">          0 :     return attribute(VISIBILITY_TIMEOUT, -1).toInt();</span>
-<span class="lineNum">     182 </span>            : }
-<span class="lineNum">     183 </span>            : 
-<span class="lineNum">     184 </span>            : /**
-<span class="lineNum">     185 </span>            :  * @brief  Set the value of an attribute to be include in the create queue request.
-<span class="lineNum">     186 </span>            :  *
-<span class="lineNum">     187 </span>            :  * The \a name parameter should be one of the attributes defined by the SQS
-<span class="lineNum">     188 </span>            :  * documentation.  The explicit attribute setter functions (such as delaySecond,
-<span class="lineNum">     189 </span>            :  * maximumMessageSize, etc) should be used instead of directly setting
-<span class="lineNum">     190 </span>            :  * attributes via this function.  However, this function may be used if Amazon
-<span class="lineNum">     191 </span>            :  * adds support for new attributes that are not yet covered by this library
-<span class="lineNum">     192 </span>            :  * explicitly.
+<span class="lineNum">      93 </span>            :  * The \a name parameter should be one of the attributes defined by the SQS
+<span class="lineNum">      94 </span>            :  * documentation.  The explicit attribute accessors function (such as
+<span class="lineNum">      95 </span>            :  * delaySecond, maximumMessageSize, etc) should be used instead of directly
+<span class="lineNum">      96 </span>            :  * accessing attributes via this function.  However, this function may be used
+<span class="lineNum">      97 </span>            :  * if Amazon adds support for new attributes that are not yet covered by this
+<span class="lineNum">      98 </span>            :  * library explicitly.
+<span class="lineNum">      99 </span>            :  *
+<span class="lineNum">     100 </span>            :  * @param  name          Name of the queue attribute to get the value of.
+<span class="lineNum">     101 </span>            :  * @param  defaultValue  Value to return if \a name is not found.
+<span class="lineNum">     102 </span>            :  *
+<a name="103"><span class="lineNum">     103 </span>            :  * @return Value of the \a name attribute, or \a defaultValue if not found.</a>
+<span class="lineNum">     104 </span>            :  */
+<span class="lineNum">     105 </span><span class="lineNoCov">          0 : QVariant SqsCreateQueueRequest::attribute(const QString &amp;name, const QVariant &amp;defaultValue) const</span>
+<span class="lineNum">     106 </span>            : {
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :     return attributes().value(name, defaultValue);</span>
+<span class="lineNum">     108 </span>            : }
+<span class="lineNum">     109 </span>            : 
+<span class="lineNum">     110 </span>            : /**
+<span class="lineNum">     111 </span>            :  * @brief  Get a map of all attributes set to be included with this request.
+<span class="lineNum">     112 </span>            :  *
+<a name="113"><span class="lineNum">     113 </span>            :  * @return A map of all attributes set to be included with this request.</a>
+<span class="lineNum">     114 </span>            :  */
+<span class="lineNum">     115 </span><span class="lineCov">         69 : QVariantMap SqsCreateQueueRequest::attributes() const</span>
+<span class="lineNum">     116 </span>            : {
+<span class="lineNum">     117 </span><span class="lineCov">         69 :     return parameter(ATTRIBUTE_ENTRY_N).toMap();</span>
+<span class="lineNum">     118 </span>            : }
+<span class="lineNum">     119 </span>            : 
+<span class="lineNum">     120 </span>            : /**
+<span class="lineNum">     121 </span>            :  * @brief  Get the value of DelaySeconds queue attribute.
+<span class="lineNum">     122 </span>            :  *
+<a name="123"><span class="lineNum">     123 </span>            :  * @return The value of DelaySeconds queue attribute, or -1 if not set.</a>
+<span class="lineNum">     124 </span>            :  */
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::delaySeconds() const</span>
+<span class="lineNum">     126 </span>            : {
+<span class="lineNum">     127 </span><span class="lineNoCov">          0 :     return parameter(DELAY_SECONDS, -1).toInt();</span>
+<span class="lineNum">     128 </span>            : }
+<span class="lineNum">     129 </span>            : 
+<span class="lineNum">     130 </span>            : /**
+<span class="lineNum">     131 </span>            :  * @brief  Get the value of MaximumMessageSize queue attribute.
+<span class="lineNum">     132 </span>            :  *
+<a name="133"><span class="lineNum">     133 </span>            :  * @return The value of MaximumMessageSize queue attribute, or -1 if not set.</a>
+<span class="lineNum">     134 </span>            :  */
+<span class="lineNum">     135 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::maximumMessageSize() const</span>
+<span class="lineNum">     136 </span>            : {
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 :     return attribute(DELAY_SECONDS, -1).toInt();</span>
+<span class="lineNum">     138 </span>            : }
+<span class="lineNum">     139 </span>            : 
+<span class="lineNum">     140 </span>            : /**
+<span class="lineNum">     141 </span>            :  * @brief  Get the value of MessageRetentionPeriod queue attribute.
+<span class="lineNum">     142 </span>            :  *
+<a name="143"><span class="lineNum">     143 </span>            :  * @return The value of MessageRetentionPeriod queue attribute, or -1 if not set.</a>
+<span class="lineNum">     144 </span>            :  */
+<span class="lineNum">     145 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::messageRetentionPeriod() const</span>
+<span class="lineNum">     146 </span>            : {
+<span class="lineNum">     147 </span><span class="lineNoCov">          0 :     return attribute(MESSAGE_RETENTION_PERIOD, -1).toInt();</span>
+<span class="lineNum">     148 </span>            : }
+<span class="lineNum">     149 </span>            : 
+<span class="lineNum">     150 </span>            : /**
+<span class="lineNum">     151 </span>            :  * @brief  Get the value of Policy queue attribute.
+<span class="lineNum">     152 </span>            :  *
+<a name="153"><span class="lineNum">     153 </span>            :  * @return The value of Policy queue attribute, or a null QString if not set.</a>
+<span class="lineNum">     154 </span>            :  */
+<span class="lineNum">     155 </span><span class="lineNoCov">          0 : QString SqsCreateQueueRequest::policy() const</span>
+<span class="lineNum">     156 </span>            : {
+<span class="lineNum">     157 </span><span class="lineNoCov">          0 :     return attribute(POLICY).toString();</span>
+<span class="lineNum">     158 </span>            : }
+<span class="lineNum">     159 </span>            : 
+<span class="lineNum">     160 </span>            : /**
+<span class="lineNum">     161 </span>            :  * @brief  Get the name of the queue to be created.
+<span class="lineNum">     162 </span>            :  *
+<a name="163"><span class="lineNum">     163 </span>            :  * @return The name of the queue to be created, or a null QString if not yet set.</a>
+<span class="lineNum">     164 </span>            :  */
+<span class="lineNum">     165 </span><span class="lineCov">        146 : QString SqsCreateQueueRequest::queueName() const</span>
+<span class="lineNum">     166 </span>            : {
+<span class="lineNum">     167 </span><span class="lineCov">        146 :     return parameter(QUEUE_NAME).toString();</span>
+<span class="lineNum">     168 </span>            : }
+<span class="lineNum">     169 </span>            : 
+<span class="lineNum">     170 </span>            : /**
+<span class="lineNum">     171 </span>            :  * @brief  Get the value of the ReceiveMessageWaitTimeoutSeconds queue attribute.
+<span class="lineNum">     172 </span>            :  *
+<span class="lineNum">     173 </span>            :  * @return The value of the ReceiveMessageWaitTimeoutSeconds queue attribute, or -1
+<a name="174"><span class="lineNum">     174 </span>            :  *         if not set.</a>
+<span class="lineNum">     175 </span>            :  */
+<span class="lineNum">     176 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::receiveMessageWaitTimeSeconds() const</span>
+<span class="lineNum">     177 </span>            : {
+<span class="lineNum">     178 </span><span class="lineNoCov">          0 :     return attribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, -1).toInt();</span>
+<span class="lineNum">     179 </span>            : }
+<span class="lineNum">     180 </span>            : 
+<span class="lineNum">     181 </span>            : /**
+<span class="lineNum">     182 </span>            :  * @brief  Get the value of the VisibilityTimeout queue attribute.
+<span class="lineNum">     183 </span>            :  *
+<a name="184"><span class="lineNum">     184 </span>            :  * @return The value of the VisibilityTimeout queue attribute, or -1 if not set.</a>
+<span class="lineNum">     185 </span>            :  */
+<span class="lineNum">     186 </span><span class="lineNoCov">          0 : int SqsCreateQueueRequest::visibilityTimeout() const</span>
+<span class="lineNum">     187 </span>            : {
+<span class="lineNum">     188 </span><span class="lineNoCov">          0 :     return attribute(VISIBILITY_TIMEOUT, -1).toInt();</span>
+<span class="lineNum">     189 </span>            : }
+<span class="lineNum">     190 </span>            : 
+<span class="lineNum">     191 </span>            : /**
+<span class="lineNum">     192 </span>            :  * @brief  Set the value of an attribute to be include in the create queue request.
 <span class="lineNum">     193 </span>            :  *
-<span class="lineNum">     194 </span>            :  * @param  name   Name of the queue attribute to set the value of.
-<span class="lineNum">     195 </span>            :  * @param  value  Value to set for the \a name attribute.
-<span class="lineNum">     196 </span>            :  *
-<a name="197"><span class="lineNum">     197 </span>            :  * @note  Attribues can be removed by setting \a value to a null QVariant.</a>
-<span class="lineNum">     198 </span>            :  */
-<span class="lineNum">     199 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setAttribute(const QString &amp;name, const QVariant &amp;value)</span>
-<span class="lineNum">     200 </span>            : {
-<span class="lineNum">     201 </span><span class="lineNoCov">          0 :     QVariantMap attributes = this-&gt;attributes();</span>
-<span class="lineNum">     202 </span><span class="lineNoCov">          0 :     if (value.isNull()) {</span>
-<span class="lineNum">     203 </span><span class="lineNoCov">          0 :         attributes.remove(name);</span>
-<span class="lineNum">     204 </span>            :     } else {
-<span class="lineNum">     205 </span><span class="lineNoCov">          0 :         attributes.insert(name, value);</span>
-<span class="lineNum">     206 </span>            :     }
-<span class="lineNum">     207 </span><span class="lineNoCov">          0 :     setAttributes(attributes);</span>
-<span class="lineNum">     208 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     209 </span>            : 
-<span class="lineNum">     210 </span>            : /**
-<span class="lineNum">     211 </span>            :  * @brief  Set the attributes to be included in the create queue request.
-<span class="lineNum">     212 </span>            :  *
-<span class="lineNum">     213 </span>            :  * The given \a attributes will entirely replace any existing attibutes map.
-<span class="lineNum">     214 </span>            :  *
-<a name="215"><span class="lineNum">     215 </span>            :  * @param  attributes  Map of all attributes to be includes with the request.</a>
-<span class="lineNum">     216 </span>            :  */
-<span class="lineNum">     217 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setAttributes(const QVariantMap &amp;attributes)</span>
-<span class="lineNum">     218 </span>            : {
-<span class="lineNum">     219 </span><span class="lineNoCov">          0 :     setParameter(ATTRIBUTE_ENTRY_N, attributes);</span>
-<span class="lineNum">     220 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     221 </span>            : 
-<span class="lineNum">     222 </span>            : /**
-<span class="lineNum">     223 </span>            :  * @brief  Set the value of DelaySeconds queue attribute.
-<span class="lineNum">     224 </span>            :  *
-<span class="lineNum">     225 </span>            :  * If \a delay is negative, then any existing DelaySeconds attribute will be
-<span class="lineNum">     226 </span>            :  * cleared instead.
-<span class="lineNum">     227 </span>            :  *
-<a name="228"><span class="lineNum">     228 </span>            :  * @param  delay  Value to set for the DelaySeconds attribute.</a>
-<span class="lineNum">     229 </span>            :  */
-<span class="lineNum">     230 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setDelaySeconds(int delay)</span>
-<span class="lineNum">     231 </span>            : {
-<span class="lineNum">     232 </span><span class="lineNoCov">          0 :     setAttribute(DELAY_SECONDS, (delay &lt; 0) ? QVariant() : QVariant(delay));</span>
-<span class="lineNum">     233 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     234 </span>            : 
-<span class="lineNum">     235 </span>            : /**
-<span class="lineNum">     236 </span>            :  * @brief  Set the value of MaximumMessageSize queue attribute.
-<span class="lineNum">     237 </span>            :  *
-<span class="lineNum">     238 </span>            :  * If \a size is negative, then any existing MaximumMessageSize attribute will
-<span class="lineNum">     239 </span>            :  * be cleared instead.
-<span class="lineNum">     240 </span>            :  *
-<a name="241"><span class="lineNum">     241 </span>            :  * @param  size  Value to set for the MaximumMessageSize attribute.</a>
-<span class="lineNum">     242 </span>            :  */
-<span class="lineNum">     243 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setMaximumMessageSize(int size)</span>
-<span class="lineNum">     244 </span>            : {
-<span class="lineNum">     245 </span><span class="lineNoCov">          0 :     setAttribute(MAXIMUM_MESSAGE_SIZE, (size &lt; 0) ? QVariant() : QVariant(size));</span>
-<span class="lineNum">     246 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     247 </span>            : 
-<span class="lineNum">     248 </span>            : /**
-<span class="lineNum">     249 </span>            :  * @brief  Set the value of MessageRetentionPeriod queue attribute.
-<span class="lineNum">     250 </span>            :  *
-<span class="lineNum">     251 </span>            :  * If \a period is negative, then any existing MessageRetentionPeriod attribute
-<span class="lineNum">     252 </span>            :  * will be cleared instead.
-<span class="lineNum">     253 </span>            :  *
-<a name="254"><span class="lineNum">     254 </span>            :  * @param  period  Value to set for the MessageRetentionPeriod attribute.</a>
-<span class="lineNum">     255 </span>            :  */
-<span class="lineNum">     256 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setMessageRetentionPeriod(int period)</span>
-<span class="lineNum">     257 </span>            : {
-<span class="lineNum">     258 </span><span class="lineNoCov">          0 :     setAttribute(MESSAGE_RETENTION_PERIOD, (period &lt; 0) ? QVariant() : QVariant(period));</span>
-<span class="lineNum">     259 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     260 </span>            : 
-<span class="lineNum">     261 </span>            : /**
-<span class="lineNum">     262 </span>            :  * @brief  Set the value of Policy queue attribute.
-<span class="lineNum">     263 </span>            :  *
-<span class="lineNum">     264 </span>            :  * If \a policy is a null QString, then any existing Policy attribute will be
-<span class="lineNum">     265 </span>            :  * cleared instead.
-<span class="lineNum">     266 </span>            :  *
-<a name="267"><span class="lineNum">     267 </span>            :  * @param  policy  Value to set for the Policy attribute.</a>
-<span class="lineNum">     268 </span>            :  */
-<span class="lineNum">     269 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setPolicy(const QString &amp;policy)</span>
-<span class="lineNum">     270 </span>            : {
-<span class="lineNum">     271 </span><span class="lineNoCov">          0 :     setAttribute(POLICY, (policy.isNull()) ? QVariant() : QVariant(policy));</span>
-<span class="lineNum">     272 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     273 </span>            : 
-<span class="lineNum">     274 </span>            : /**
-<span class="lineNum">     275 </span>            :  * @brief  Set the name of the queue to be created.
-<span class="lineNum">     276 </span>            :  *
-<a name="277"><span class="lineNum">     277 </span>            :  * @param  queueName  Name of the queue to be created.</a>
-<span class="lineNum">     278 </span>            :  */
-<span class="lineNum">     279 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setQueueName(const QString &amp;queueName)</span>
-<span class="lineNum">     280 </span>            : {
-<span class="lineNum">     281 </span><span class="lineNoCov">          0 :     setParameter(QUEUE_NAME, queueName);</span>
-<span class="lineNum">     282 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     283 </span>            : 
-<span class="lineNum">     284 </span>            : /**
-<span class="lineNum">     285 </span>            :  * @brief  Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute.
-<span class="lineNum">     286 </span>            :  *
-<span class="lineNum">     287 </span>            :  * If \a time is negative, then any existing ReceiveMessageWaitTimeoutSeconds
-<span class="lineNum">     288 </span>            :  * attribute will be cleared instead.
-<span class="lineNum">     289 </span>            :  *
-<a name="290"><span class="lineNum">     290 </span>            :  * @param  time  Value to set for the ReceiveMessageWaitTimeoutSeconds attribute.</a>
-<span class="lineNum">     291 </span>            :  */
-<span class="lineNum">     292 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds(int time)</span>
-<span class="lineNum">     293 </span>            : {
-<span class="lineNum">     294 </span><span class="lineNoCov">          0 :     setAttribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, (time &lt; 0) ? QVariant() : QVariant(time));</span>
-<span class="lineNum">     295 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     296 </span>            : 
-<span class="lineNum">     297 </span>            : /**
-<span class="lineNum">     298 </span>            :  * @brief  Set the value of VisibilityTimeout queue attribute.
-<span class="lineNum">     299 </span>            :  *
-<span class="lineNum">     300 </span>            :  * If \a timeout is negative, then any existing VisibilityTimeout attribute will
-<span class="lineNum">     301 </span>            :  * be cleared instead
-<span class="lineNum">     302 </span>            :  *
-<a name="303"><span class="lineNum">     303 </span>            :  * @param  timeout  Value to set for the VisibilityTimeout attribute.</a>
-<span class="lineNum">     304 </span>            :  */
-<span class="lineNum">     305 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)</span>
-<span class="lineNum">     306 </span>            : {
-<span class="lineNum">     307 </span><span class="lineNoCov">          0 :     setAttribute(VISIBILITY_TIMEOUT, (timeout &lt; 0) ? QVariant() : QVariant(timeout));</span>
-<span class="lineNum">     308 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     309 </span>            : 
-<span class="lineNum">     310 </span>            : /**
-<span class="lineNum">     311 </span>            :  * @brief  Construct an SqsCreateQueueResponse object.
-<span class="lineNum">     312 </span>            :  *
-<span class="lineNum">     313 </span>            :  * @param  reply  Network reply this response should observe.
-<span class="lineNum">     314 </span>            :  *
-<span class="lineNum">     315 </span>            :  * @return An SqsCreateQueueResponse instance for \a reply.
-<span class="lineNum">     316 </span>            :  *
-<a name="317"><span class="lineNum">     317 </span>            :  * @see  AwsAbstractClient::send</a>
-<span class="lineNum">     318 </span>            :  */
-<span class="lineNum">     319 </span><span class="lineNoCov">          0 : AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const reply) const</span>
-<span class="lineNum">     320 </span>            : {
-<span class="lineNum">     321 </span><span class="lineNoCov">          0 :     return new SqsCreateQueueResponse(reply);</span>
-<span class="lineNum">     322 </span>            : }
-<span class="lineNum">     323 </span>            : 
-<span class="lineNum">     324 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">     194 </span>            :  * The \a name parameter should be one of the attributes defined by the SQS
+<span class="lineNum">     195 </span>            :  * documentation.  The explicit attribute setter functions (such as delaySecond,
+<span class="lineNum">     196 </span>            :  * maximumMessageSize, etc) should be used instead of directly setting
+<span class="lineNum">     197 </span>            :  * attributes via this function.  However, this function may be used if Amazon
+<span class="lineNum">     198 </span>            :  * adds support for new attributes that are not yet covered by this library
+<span class="lineNum">     199 </span>            :  * explicitly.
+<span class="lineNum">     200 </span>            :  *
+<span class="lineNum">     201 </span>            :  * @param  name   Name of the queue attribute to set the value of.
+<span class="lineNum">     202 </span>            :  * @param  value  Value to set for the \a name attribute.
+<span class="lineNum">     203 </span>            :  *
+<a name="204"><span class="lineNum">     204 </span>            :  * @note  Attribues can be removed by setting \a value to a null QVariant.</a>
+<span class="lineNum">     205 </span>            :  */
+<span class="lineNum">     206 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setAttribute(const QString &amp;name, const QVariant &amp;value)</span>
+<span class="lineNum">     207 </span>            : {
+<span class="lineNum">     208 </span><span class="lineNoCov">          0 :     QVariantMap attributes = this-&gt;attributes();</span>
+<span class="lineNum">     209 </span><span class="lineNoCov">          0 :     if (value.isNull()) {</span>
+<span class="lineNum">     210 </span><span class="lineNoCov">          0 :         attributes.remove(name);</span>
+<span class="lineNum">     211 </span>            :     } else {
+<span class="lineNum">     212 </span><span class="lineNoCov">          0 :         attributes.insert(name, value);</span>
+<span class="lineNum">     213 </span>            :     }
+<span class="lineNum">     214 </span><span class="lineNoCov">          0 :     setAttributes(attributes);</span>
+<span class="lineNum">     215 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     216 </span>            : 
+<span class="lineNum">     217 </span>            : /**
+<span class="lineNum">     218 </span>            :  * @brief  Set the attributes to be included in the create queue request.
+<span class="lineNum">     219 </span>            :  *
+<span class="lineNum">     220 </span>            :  * The given \a attributes will entirely replace any existing attibutes map.
+<span class="lineNum">     221 </span>            :  *
+<a name="222"><span class="lineNum">     222 </span>            :  * @param  attributes  Map of all attributes to be includes with the request.</a>
+<span class="lineNum">     223 </span>            :  */
+<span class="lineNum">     224 </span><span class="lineCov">         77 : void SqsCreateQueueRequest::setAttributes(const QVariantMap &amp;attributes)</span>
+<span class="lineNum">     225 </span>            : {
+<span class="lineNum">     226 </span><span class="lineCov">         77 :     setParameter(ATTRIBUTE_ENTRY_N, attributes);</span>
+<span class="lineNum">     227 </span><span class="lineCov">         77 : }</span>
+<span class="lineNum">     228 </span>            : 
+<span class="lineNum">     229 </span>            : /**
+<span class="lineNum">     230 </span>            :  * @brief  Set the value of DelaySeconds queue attribute.
+<span class="lineNum">     231 </span>            :  *
+<span class="lineNum">     232 </span>            :  * If \a delay is negative, then any existing DelaySeconds attribute will be
+<span class="lineNum">     233 </span>            :  * cleared instead.
+<span class="lineNum">     234 </span>            :  *
+<a name="235"><span class="lineNum">     235 </span>            :  * @param  delay  Value to set for the DelaySeconds attribute.</a>
+<span class="lineNum">     236 </span>            :  */
+<span class="lineNum">     237 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setDelaySeconds(int delay)</span>
+<span class="lineNum">     238 </span>            : {
+<span class="lineNum">     239 </span><span class="lineNoCov">          0 :     setAttribute(DELAY_SECONDS, (delay &lt; 0) ? QVariant() : QVariant(delay));</span>
+<span class="lineNum">     240 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     241 </span>            : 
+<span class="lineNum">     242 </span>            : /**
+<span class="lineNum">     243 </span>            :  * @brief  Set the value of MaximumMessageSize queue attribute.
+<span class="lineNum">     244 </span>            :  *
+<span class="lineNum">     245 </span>            :  * If \a size is negative, then any existing MaximumMessageSize attribute will
+<span class="lineNum">     246 </span>            :  * be cleared instead.
+<span class="lineNum">     247 </span>            :  *
+<a name="248"><span class="lineNum">     248 </span>            :  * @param  size  Value to set for the MaximumMessageSize attribute.</a>
+<span class="lineNum">     249 </span>            :  */
+<span class="lineNum">     250 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setMaximumMessageSize(int size)</span>
+<span class="lineNum">     251 </span>            : {
+<span class="lineNum">     252 </span><span class="lineNoCov">          0 :     setAttribute(MAXIMUM_MESSAGE_SIZE, (size &lt; 0) ? QVariant() : QVariant(size));</span>
+<span class="lineNum">     253 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     254 </span>            : 
+<span class="lineNum">     255 </span>            : /**
+<span class="lineNum">     256 </span>            :  * @brief  Set the value of MessageRetentionPeriod queue attribute.
+<span class="lineNum">     257 </span>            :  *
+<span class="lineNum">     258 </span>            :  * If \a period is negative, then any existing MessageRetentionPeriod attribute
+<span class="lineNum">     259 </span>            :  * will be cleared instead.
+<span class="lineNum">     260 </span>            :  *
+<a name="261"><span class="lineNum">     261 </span>            :  * @param  period  Value to set for the MessageRetentionPeriod attribute.</a>
+<span class="lineNum">     262 </span>            :  */
+<span class="lineNum">     263 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setMessageRetentionPeriod(int period)</span>
+<span class="lineNum">     264 </span>            : {
+<span class="lineNum">     265 </span><span class="lineNoCov">          0 :     setAttribute(MESSAGE_RETENTION_PERIOD, (period &lt; 0) ? QVariant() : QVariant(period));</span>
+<span class="lineNum">     266 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     267 </span>            : 
+<span class="lineNum">     268 </span>            : /**
+<span class="lineNum">     269 </span>            :  * @brief  Set the value of Policy queue attribute.
+<span class="lineNum">     270 </span>            :  *
+<span class="lineNum">     271 </span>            :  * If \a policy is a null QString, then any existing Policy attribute will be
+<span class="lineNum">     272 </span>            :  * cleared instead.
+<span class="lineNum">     273 </span>            :  *
+<a name="274"><span class="lineNum">     274 </span>            :  * @param  policy  Value to set for the Policy attribute.</a>
+<span class="lineNum">     275 </span>            :  */
+<span class="lineNum">     276 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setPolicy(const QString &amp;policy)</span>
+<span class="lineNum">     277 </span>            : {
+<span class="lineNum">     278 </span><span class="lineNoCov">          0 :     setAttribute(POLICY, (policy.isNull()) ? QVariant() : QVariant(policy));</span>
+<span class="lineNum">     279 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     280 </span>            : 
+<span class="lineNum">     281 </span>            : /**
+<span class="lineNum">     282 </span>            :  * @brief  Set the name of the queue to be created.
+<span class="lineNum">     283 </span>            :  *
+<a name="284"><span class="lineNum">     284 </span>            :  * @param  queueName  Name of the queue to be created.</a>
+<span class="lineNum">     285 </span>            :  */
+<span class="lineNum">     286 </span><span class="lineCov">         77 : void SqsCreateQueueRequest::setQueueName(const QString &amp;queueName)</span>
+<span class="lineNum">     287 </span>            : {
+<span class="lineNum">     288 </span><span class="lineCov">         77 :     setParameter(QUEUE_NAME, queueName);</span>
+<span class="lineNum">     289 </span><span class="lineCov">         77 : }</span>
+<span class="lineNum">     290 </span>            : 
+<span class="lineNum">     291 </span>            : /**
+<span class="lineNum">     292 </span>            :  * @brief  Set the value of ReceiveMessageWaitTimeoutSeconds queue attribute.
+<span class="lineNum">     293 </span>            :  *
+<span class="lineNum">     294 </span>            :  * If \a time is negative, then any existing ReceiveMessageWaitTimeoutSeconds
+<span class="lineNum">     295 </span>            :  * attribute will be cleared instead.
+<span class="lineNum">     296 </span>            :  *
+<a name="297"><span class="lineNum">     297 </span>            :  * @param  time  Value to set for the ReceiveMessageWaitTimeoutSeconds attribute.</a>
+<span class="lineNum">     298 </span>            :  */
+<span class="lineNum">     299 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setReceiveMessageWaitTimeSeconds(int time)</span>
+<span class="lineNum">     300 </span>            : {
+<span class="lineNum">     301 </span><span class="lineNoCov">          0 :     setAttribute(RECEIVE_MESSAGE_WAIT_TIMEOUT_SECONDS, (time &lt; 0) ? QVariant() : QVariant(time));</span>
+<span class="lineNum">     302 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     303 </span>            : 
+<span class="lineNum">     304 </span>            : /**
+<span class="lineNum">     305 </span>            :  * @brief  Set the value of VisibilityTimeout queue attribute.
+<span class="lineNum">     306 </span>            :  *
+<span class="lineNum">     307 </span>            :  * If \a timeout is negative, then any existing VisibilityTimeout attribute will
+<span class="lineNum">     308 </span>            :  * be cleared instead
+<span class="lineNum">     309 </span>            :  *
+<a name="310"><span class="lineNum">     310 </span>            :  * @param  timeout  Value to set for the VisibilityTimeout attribute.</a>
+<span class="lineNum">     311 </span>            :  */
+<span class="lineNum">     312 </span><span class="lineNoCov">          0 : void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)</span>
+<span class="lineNum">     313 </span>            : {
+<span class="lineNum">     314 </span><span class="lineNoCov">          0 :     setAttribute(VISIBILITY_TIMEOUT, (timeout &lt; 0) ? QVariant() : QVariant(timeout));</span>
+<span class="lineNum">     315 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     316 </span>            : 
+<span class="lineNum">     317 </span>            : /**
+<span class="lineNum">     318 </span>            :  * @brief  Construct an SqsCreateQueueResponse object.
+<span class="lineNum">     319 </span>            :  *
+<span class="lineNum">     320 </span>            :  * @param  reply  Network reply this response should observe.
+<span class="lineNum">     321 </span>            :  *
+<span class="lineNum">     322 </span>            :  * @return An SqsCreateQueueResponse instance for \a reply.
+<span class="lineNum">     323 </span>            :  *
+<a name="324"><span class="lineNum">     324 </span>            :  * @see  AwsAbstractClient::send</a>
+<span class="lineNum">     325 </span>            :  */
+<span class="lineNum">     326 </span><span class="lineCov">         71 : AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const reply) const</span>
+<span class="lineNum">     327 </span>            : {
+<span class="lineNum">     328 </span><span class="lineCov">         71 :     return new SqsCreateQueueResponse(*this, reply);</span>
+<span class="lineNum">     329 </span>            : }
+<span class="lineNum">     330 </span>            : 
+<span class="lineNum">     331 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>

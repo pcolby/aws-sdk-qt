@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classAwsAbstractResponse-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AwsAbstractResponse Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -112,7 +113,7 @@ Collaboration diagram for AwsAbstractResponse:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAwsAbstractResponse__coll__graph.png" border="0" usemap="#AwsAbstractResponse_coll__map" alt="Collaboration graph"/></div>
 <map name="AwsAbstractResponse_coll__map" id="AwsAbstractResponse_coll__map">
-<area shape="rect" id="node3" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="5,171,203,197"/></map>
+<area shape="rect" id="node3" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="216,171,413,197"/><area shape="rect" id="node4" href="classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="89,81,236,108"/><area shape="rect" id="node5" href="classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="5,171,192,197"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
@@ -148,6 +149,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a9096724efffcc6e73f24eb2cd00b35a2"><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">xmlParseErrorString</a> () const </td></tr>
 <tr class="memdesc:a9096724efffcc6e73f24eb2cd00b35a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's XML parse error string, if there is one.  <a href="#a9096724efffcc6e73f24eb2cd00b35a2">More...</a><br /></td></tr>
 <tr class="separator:a9096724efffcc6e73f24eb2cd00b35a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890212c4e876c8fecc1604a9d994a9a3"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a> () const =0</td></tr>
+<tr class="memdesc:a890212c4e876c8fecc1604a9d994a9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's originating AWS request.  <a href="#a890212c4e876c8fecc1604a9d994a9a3">More...</a><br /></td></tr>
+<tr class="separator:a890212c4e876c8fecc1604a9d994a9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -172,6 +176,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a> (QNetworkReply *reply)</td></tr>
 <tr class="memdesc:a13eab6d1bc11b614d243f1da75ce6eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network reply from which to expect an AWS response.  <a href="#a13eab6d1bc11b614d243f1da75ce6eb6">More...</a><br /></td></tr>
 <tr class="separator:a13eab6d1bc11b614d243f1da75ce6eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d5401836647d49c3f750fc223f2b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *const <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a>)</td></tr>
+<tr class="memdesc:a07d5401836647d49c3f750fc223f2b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this response's originating AWS request.  <a href="#a07d5401836647d49c3f750fc223f2b69">More...</a><br /></td></tr>
+<tr class="separator:a07d5401836647d49c3f750fc223f2b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddac7db08332f5bbea58abad54a45da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a> (const QXmlStreamReader &amp;xml)</td></tr>
 <tr class="memdesc:a9ddac7db08332f5bbea58abad54a45da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the details of an XML parse error.  <a href="#a9ddac7db08332f5bbea58abad54a45da">More...</a><br /></td></tr>
 <tr class="separator:a9ddac7db08332f5bbea58abad54a45da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +198,12 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a></td></tr>
 <tr class="memdesc:adcd3c492341adb255ea558b08c92ab38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal d-pointer. <br /></td></tr>
 <tr class="separator:adcd3c492341adb255ea558b08c92ab38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a2748870d7c9b089291acee00cb33ad92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2748870d7c9b089291acee00cb33ad92"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractResponse</b></td></tr>
+<tr class="separator:a2748870d7c9b089291acee00cb33ad92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface class for processing AWS responses. </p>
@@ -200,7 +213,7 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. ">AwsAbstractClient</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8h_source.html#l00032">32</a> of file <a class="el" href="awsabstractresponse_8h_source.html">awsabstractresponse.h</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8h_source.html#l00033">33</a> of file <a class="el" href="awsabstractresponse_8h_source.html">awsabstractresponse.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab9edade0587592fcb41d5c7652bf0c9b"></a>
 <div class="memitem">
@@ -224,13 +237,13 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00050">50</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>(<span class="keyword">new</span> <a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponsePrivate_html"><div class="ttname"><a href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractResponse. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse__p_8h_source.html#l00034">awsabstractresponse_p.h:34</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00054">awsabstractresponse.h:54</a></div></div>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00051">51</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>(<span class="keyword">new</span> <a class="code" href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a>(<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponsePrivate_html"><div class="ttname"><a href="classAwsAbstractResponsePrivate.html">AwsAbstractResponsePrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractResponse. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse__p_8h_source.html#l00035">awsabstractresponse_p.h:35</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00057">awsabstractresponse.h:57</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,12 +289,12 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00067">67</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>(d)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00054">awsabstractresponse.h:54</a></div></div>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00068">68</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    : QObject(parent), <a class="code" href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">d_ptr</a>(d)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_adcd3c492341adb255ea558b08c92ab38"><div class="ttname"><a href="classAwsAbstractResponse.html#adcd3c492341adb255ea558b08c92ab38">AwsAbstractResponse::d_ptr</a></div><div class="ttdeci">AwsAbstractResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00057">awsabstractresponse.h:57</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -324,25 +337,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSqsResponse.html#a24f9a4e8a14721c3838b0d92e506443f">SqsResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00107">107</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00109">109</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00178">networkError()</a>, <a class="el" href="awsabstractresponse_8cpp_source.html#l00193">xmlParseError()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00208">xmlParseErrorString()</a>.</p>
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00180">networkError()</a>, <a class="el" href="awsabstractresponse_8cpp_source.html#l00195">xmlParseError()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00210">xmlParseErrorString()</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsresponse_8cpp_source.html#l00081">SqsResponse::errorString()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a9718a51b3f8070ac07c8d4d0a6335ef9">networkError</a>() != QNetworkReply::NoError) {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> d-&gt;reply-&gt;errorString();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a3cc0086cdebfbda83df2c0a0dec5fd11">xmlParseError</a>() != QXmlStreamReader::NoError) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">xmlParseErrorString</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> QString();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_a9718a51b3f8070ac07c8d4d0a6335ef9"><div class="ttname"><a href="classAwsAbstractResponse.html#a9718a51b3f8070ac07c8d4d0a6335ef9">AwsAbstractResponse::networkError</a></div><div class="ttdeci">virtual QNetworkReply::NetworkError networkError() const </div><div class="ttdoc">Get this response&#39;s network error, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00178">awsabstractresponse.cpp:178</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_a9096724efffcc6e73f24eb2cd00b35a2"><div class="ttname"><a href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">AwsAbstractResponse::xmlParseErrorString</a></div><div class="ttdeci">virtual QString xmlParseErrorString() const </div><div class="ttdoc">Get this response&#39;s XML parse error string, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00208">awsabstractresponse.cpp:208</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_a3cc0086cdebfbda83df2c0a0dec5fd11"><div class="ttname"><a href="classAwsAbstractResponse.html#a3cc0086cdebfbda83df2c0a0dec5fd11">AwsAbstractResponse::xmlParseError</a></div><div class="ttdeci">virtual QXmlStreamReader::Error xmlParseError() const </div><div class="ttdoc">Get this response&#39;s XML parse error, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00193">awsabstractresponse.cpp:193</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a9718a51b3f8070ac07c8d4d0a6335ef9">networkError</a>() != QNetworkReply::NoError) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> d-&gt;reply-&gt;errorString();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a3cc0086cdebfbda83df2c0a0dec5fd11">xmlParseError</a>() != QXmlStreamReader::NoError) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">xmlParseErrorString</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> QString();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_a9718a51b3f8070ac07c8d4d0a6335ef9"><div class="ttname"><a href="classAwsAbstractResponse.html#a9718a51b3f8070ac07c8d4d0a6335ef9">AwsAbstractResponse::networkError</a></div><div class="ttdeci">virtual QNetworkReply::NetworkError networkError() const </div><div class="ttdoc">Get this response&#39;s network error, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00180">awsabstractresponse.cpp:180</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a9096724efffcc6e73f24eb2cd00b35a2"><div class="ttname"><a href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2">AwsAbstractResponse::xmlParseErrorString</a></div><div class="ttdeci">virtual QString xmlParseErrorString() const </div><div class="ttdoc">Get this response&#39;s XML parse error string, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00210">awsabstractresponse.cpp:210</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a3cc0086cdebfbda83df2c0a0dec5fd11"><div class="ttname"><a href="classAwsAbstractResponse.html#a3cc0086cdebfbda83df2c0a0dec5fd11">AwsAbstractResponse::xmlParseError</a></div><div class="ttdeci">virtual QXmlStreamReader::Error xmlParseError() const </div><div class="ttdoc">Get this response&#39;s XML parse error, if there is one. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00195">awsabstractresponse.cpp:195</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -373,7 +386,7 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#a6e0f7ac633ae28753ca521b99a1f0415" title="Is this AWS response valid? ">isValid</a> </dd></dl>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">parse()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00329">setReply()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">parse()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00341">setReply()</a>.</p>
 
 </div>
 </div>
@@ -409,15 +422,15 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSqsResponse.html#ab8b8ebf0caeccc782243d969b9267d50">SqsResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00139">139</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00141">141</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsresponse_8cpp_source.html#l00087">SqsResponse::hasError()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> (((d-&gt;reply) &amp;&amp; (d-&gt;reply-&gt;error() != QNetworkReply::NoError)) ||</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            (d-&gt;xmlError != QXmlStreamReader::NoError));</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> (((d-&gt;reply) &amp;&amp; (d-&gt;reply-&gt;error() != QNetworkReply::NoError)) ||</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            (d-&gt;xmlError != QXmlStreamReader::NoError));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -456,13 +469,13 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>reply</em> indicates a successful response, <code>false</code> otherwise.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6" title="Parse an AWS response from a network reply. ">parse</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00318">318</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00330">330</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">parse()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">return</span> ((reply-&gt;error() == QNetworkReply::NoError) &amp;&amp;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            ((reply-&gt;attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">parse()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> ((reply-&gt;error() == QNetworkReply::NoError) &amp;&amp;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            ((reply-&gt;attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() / 100) == 2));</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -495,15 +508,15 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">SqsResponse</a>, and <a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">SqsCreateQueueResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00162">162</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00164">164</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsresponse_8cpp_source.html#l00092">SqsResponse::isValid()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> (((!d-&gt;reply) || (d-&gt;reply-&gt;error() == QNetworkReply::NoError)) &amp;&amp;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            (d-&gt;xmlError == QXmlStreamReader::NoError));</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> (((!d-&gt;reply) || (d-&gt;reply-&gt;error() == QNetworkReply::NoError)) &amp;&amp;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            (d-&gt;xmlError == QXmlStreamReader::NoError));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -534,14 +547,14 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f" title="Get this response&#39;s error string. ">errorString</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00178">178</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00180">180</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00107">errorString()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> (d-&gt;reply) ? d-&gt;reply-&gt;error() : QNetworkReply::NoError;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00109">errorString()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">return</span> (d-&gt;reply) ? d-&gt;reply-&gt;error() : QNetworkReply::NoError;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -582,24 +595,24 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84" title="Parse a failure response. ">parseFailure</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">370</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">404</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished()</a>, <a class="el" href="awsabstractresponse_8cpp_source.html#l00318">isSuccess()</a>, <a class="el" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">parseFailure()</a>, and <a class="el" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess()</a>.</p>
+<p>References <a class="el" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished()</a>, <a class="el" href="awsabstractresponse_8cpp_source.html#l00330">isSuccess()</a>, <a class="el" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">parseFailure()</a>, and <a class="el" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess()</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00415">replyFinished()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">if</span> (reply-&gt;error() != QNetworkReply::NoError) {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        qWarning() &lt;&lt; reply-&gt;errorString();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a9b0a1705f931af5e2c8c9d032eb4ef62">isSuccess</a>(reply)) {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess</a>(*reply);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">parseFailure</a>(*reply);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    emit <a class="code" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished</a>();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00449">replyFinished()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;{</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">if</span> (reply-&gt;error() != QNetworkReply::NoError) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        qWarning() &lt;&lt; reply-&gt;errorString();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classAwsAbstractResponse.html#a9b0a1705f931af5e2c8c9d032eb4ef62">isSuccess</a>(reply)) {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">parseSuccess</a>(*reply);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">parseFailure</a>(*reply);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    emit <a class="code" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractResponse_html_a8c0728f93e5a8f7f83d399cb899196cf"><div class="ttname"><a href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">AwsAbstractResponse::finished</a></div><div class="ttdeci">void finished()</div><div class="ttdoc">Signal emitted when this object has finished parsing the response. </div></div>
 <div class="ttc" id="classAwsAbstractResponse_html_ad4ed2aaf776928e62cac4f4ffc62ed84"><div class="ttname"><a href="classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84">AwsAbstractResponse::parseFailure</a></div><div class="ttdeci">virtual void parseFailure(QIODevice &amp;response)=0</div><div class="ttdoc">Parse a failure response. </div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_a9b0a1705f931af5e2c8c9d032eb4ef62"><div class="ttname"><a href="classAwsAbstractResponse.html#a9b0a1705f931af5e2c8c9d032eb4ef62">AwsAbstractResponse::isSuccess</a></div><div class="ttdeci">virtual bool isSuccess(QNetworkReply *const reply) const </div><div class="ttdoc">Does a network reply indicate a successful response? </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00318">awsabstractresponse.cpp:318</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a9b0a1705f931af5e2c8c9d032eb4ef62"><div class="ttname"><a href="classAwsAbstractResponse.html#a9b0a1705f931af5e2c8c9d032eb4ef62">AwsAbstractResponse::isSuccess</a></div><div class="ttdeci">virtual bool isSuccess(QNetworkReply *const reply) const </div><div class="ttdoc">Does a network reply indicate a successful response? </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00330">awsabstractresponse.cpp:330</a></div></div>
 <div class="ttc" id="classAwsAbstractResponse_html_aad6d4ebfca17ee96fc27fc8bb33e0dba"><div class="ttname"><a href="classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba">AwsAbstractResponse::parseSuccess</a></div><div class="ttdeci">virtual void parseSuccess(QIODevice &amp;response)=0</div><div class="ttdoc">Parse a successful response. </div></div>
 </div><!-- fragment -->
 </div>
@@ -635,7 +648,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">parse()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">parse()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +683,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">parse()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">parse()</a>.</p>
 
 </div>
 </div>
@@ -699,20 +712,50 @@ Protected Attributes</h2></td></tr>
 <p>This slot should only be connectedd to QNetworkReply signals (specifcally, this function asserts that the signal sender is an qobject-castable to QNetworkReply).</p>
 <p>This is convenience slot, that really exists just to abstract the sender casting logic from the parse function (ie so derived classes can override parse without having to implement explicit casts). </p>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00415">415</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00449">449</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00370">parse()</a>.</p>
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00404">parse()</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00329">setReply()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    QNetworkReply * <span class="keyword">const</span> reply = qobject_cast&lt;QNetworkReply *&gt;(sender());</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    Q_ASSERT(reply);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span> (reply) {</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6">parse</a>(reply);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_ab47b0951d4db7aac7be5243bc54040e6"><div class="ttname"><a href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6">AwsAbstractResponse::parse</a></div><div class="ttdeci">virtual void parse(QNetworkReply *const reply)</div><div class="ttdoc">Parse an AWS response from a network reply. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00370">awsabstractresponse.cpp:370</a></div></div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00341">setReply()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;{</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    QNetworkReply * <span class="keyword">const</span> reply = qobject_cast&lt;QNetworkReply *&gt;(sender());</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    Q_ASSERT(reply);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">if</span> (reply) {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <a class="code" href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6">parse</a>(reply);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_ab47b0951d4db7aac7be5243bc54040e6"><div class="ttname"><a href="classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6">AwsAbstractResponse::parse</a></div><div class="ttdeci">virtual void parse(QNetworkReply *const reply)</div><div class="ttdoc">Parse an AWS response from a network reply. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00404">awsabstractresponse.cpp:404</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a890212c4e876c8fecc1604a9d994a9a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> * AwsAbstractResponse::request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get this response's originating AWS request. </p>
+<dl class="section return"><dt>Returns</dt><dd>This response's originating AWS request. </dd></dl>
+
+<p>Implemented in <a class="el" href="classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd">SqsCreateQueueResponse</a>.</p>
+
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00363">setRequest()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a13eab6d1bc11b614d243f1da75ce6eb6"></a>
@@ -745,19 +788,67 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00329">329</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00341">341</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00415">replyFinished()</a>.</p>
+<p>References <a class="el" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00449">replyFinished()</a>.</p>
 
-<p>Referenced by <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00041">SqsCreateQueueResponse::SqsCreateQueueResponse()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;{</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    Q_D(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    connect(reply, SIGNAL(<a class="code" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished</a>()), <span class="keyword">this</span>, SLOT(<a class="code" href="classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c">replyFinished</a>()));</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    d-&gt;reply = reply;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<p>Referenced by <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00042">SqsCreateQueueResponse::SqsCreateQueueResponse()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;{</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    Q_D(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    connect(reply, SIGNAL(<a class="code" href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">finished</a>()), <span class="keyword">this</span>, SLOT(<a class="code" href="classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c">replyFinished</a>()));</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    d-&gt;reply = reply;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractResponse_html_a8c0728f93e5a8f7f83d399cb899196cf"><div class="ttname"><a href="classAwsAbstractResponse.html#a8c0728f93e5a8f7f83d399cb899196cf">AwsAbstractResponse::finished</a></div><div class="ttdeci">void finished()</div><div class="ttdoc">Signal emitted when this object has finished parsing the response. </div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_a947e8cd17ec9d795c080bb2c783cbd5c"><div class="ttname"><a href="classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c">AwsAbstractResponse::replyFinished</a></div><div class="ttdeci">virtual void replyFinished()</div><div class="ttdoc">Slot to be invoked when the internal network reply is finished. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00415">awsabstractresponse.cpp:415</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a947e8cd17ec9d795c080bb2c783cbd5c"><div class="ttname"><a href="classAwsAbstractResponse.html#a947e8cd17ec9d795c080bb2c783cbd5c">AwsAbstractResponse::replyFinished</a></div><div class="ttdeci">virtual void replyFinished()</div><div class="ttdoc">Slot to be invoked when the internal network reply is finished. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00449">awsabstractresponse.cpp:449</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a07d5401836647d49c3f750fc223f2b69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AwsAbstractResponse::setRequest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *const&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set this response's originating AWS request. </p>
+<dl class="section note"><dt>Note</dt><dd>This object will take ownership of the <em>request</em> pointer, and will <code>delete</code> <em>request</em> on destruction.</dd></dl>
+<p>Callers should normally create a new request instance (making use of the request classes' copy-constructors). For example:</p>
+<div class="fragment"><div class="line"><a class="code" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a>(<span class="keyword">new</span> SpecializedAwsRequest(specializedRequest));</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>AWS request to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00363">363</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+
+<p>References <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00042">SqsCreateQueueResponse::SqsCreateQueueResponse()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    Q_D(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">delete</span> d-&gt;request;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    d-&gt;request = <a class="code" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a>;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_a890212c4e876c8fecc1604a9d994a9a3"><div class="ttname"><a href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">AwsAbstractResponse::request</a></div><div class="ttdeci">virtual const AwsAbstractRequest * request() const =0</div><div class="ttdoc">Get this response&#39;s originating AWS request. </div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -795,15 +886,15 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#a9096724efffcc6e73f24eb2cd00b35a2" title="Get this response&#39;s XML parse error string, if there is one. ">xmlParseErrorString</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00347">347</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00381">381</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsresponse_8cpp_source.html#l00150">SqsResponse::parseFailure()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;{</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    Q_D(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    d-&gt;xmlError = xml.error();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    d-&gt;xmlErrorString = xml.errorString();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="fragment"><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;{</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    Q_D(<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    d-&gt;xmlError = xml.error();</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    d-&gt;xmlErrorString = xml.errorString();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -860,74 +951,76 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A QVariantMap representing the <em>xml</em> XML fragment.</dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Move this toVariant function to somewhere more generic. </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00233">233</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00243">243</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sqserror_8cpp_source.html#l00298">SqsErrorPrivate::parse()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">if</span> (maxDepth &lt; 0) {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;max depth exceeded&quot;</span>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> QVariantMap();</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> (xml.hasError()) {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        qWarning() &lt;&lt; xml.errorString();</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> QVariantMap();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (xml.tokenType() == QXmlStreamReader::NoToken)</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        xml.readNext();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> ((xml.tokenType() != QXmlStreamReader::StartDocument) &amp;&amp;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        (xml.tokenType() != QXmlStreamReader::StartElement)) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;unexpected XML tokenType %1 (%2)&quot;</span>)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                      .arg(xml.tokenString()).arg(xml.tokenType());</div>
+<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (maxDepth &lt; 0) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;max depth exceeded&quot;</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> QVariantMap();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> (xml.hasError()) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        qWarning() &lt;&lt; xml.errorString();</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> QVariantMap();</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    QVariantMap map;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">if</span> (xml.tokenType() == QXmlStreamReader::StartDocument) {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;DocumentEncoding&quot;</span>), xml.documentEncoding().toString());</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;DocumentVersion&quot;</span>), xml.documentVersion().toString());</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;StandaloneDocument&quot;</span>), xml.isStandaloneDocument());</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">if</span> (!xml.namespaceUri().isEmpty())</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;NamespaceUri&quot;</span>), xml.namespaceUri().toString());</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">foreach</span> (<span class="keyword">const</span> QXmlStreamAttribute &amp;attribute, xml.attributes()) {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            QVariantMap attributeMap;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;Value&quot;</span>), attribute.value().toString());</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">if</span> (!attribute.namespaceUri().isEmpty())</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;NamespaceUri&quot;</span>), attribute.namespaceUri().toString());</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span> (!attribute.prefix().isEmpty())</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;Prefix&quot;</span>), attribute.prefix().toString());</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;QualifiedName&quot;</span>), attribute.qualifiedName().toString());</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            map.insertMulti(prefix + attribute.name().toString(), attributeMap);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">for</span> (xml.readNext(); (!xml.atEnd()) &amp;&amp; (xml.tokenType() != QXmlStreamReader::EndElement)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          &amp;&amp; (xml.tokenType() != QXmlStreamReader::EndDocument); xml.readNext()) {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">switch</span> (xml.tokenType()) {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::Characters:</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::Comment:</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::DTD:</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::EntityReference:</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            map.insertMulti(prefix + xml.tokenString(), xml.text().toString());</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::ProcessingInstruction:</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            map.insertMulti(prefix + xml.processingInstructionTarget().toString(),</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                            xml.processingInstructionData().toString());</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::StartElement:</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            map.insertMulti(xml.name().toString(), <a class="code" href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">toVariant</a>(xml, prefix, maxDepth-1));</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;unexpected XML tokenType %1 (%2)&quot;</span>)</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                          .arg(xml.tokenString()).arg(xml.tokenType());</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> map;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html_af644d30e72e701385abdc050c4b0a8b6"><div class="ttname"><a href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">AwsAbstractResponse::toVariant</a></div><div class="ttdeci">static QVariantMap toVariant(QXmlStreamReader &amp;xml, const QString &amp;prefix=QLatin1String(&quot;.&quot;), const int maxDepth=1024)</div><div class="ttdoc">Convert an XML stream to a hierarchical QVariantMap. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00233">awsabstractresponse.cpp:233</a></div></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (xml.tokenType() == QXmlStreamReader::NoToken)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        xml.readNext();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> ((xml.tokenType() != QXmlStreamReader::StartDocument) &amp;&amp;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        (xml.tokenType() != QXmlStreamReader::StartElement)) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;unexpected XML tokenType %1 (%2)&quot;</span>)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                      .arg(xml.tokenString()).arg(xml.tokenType());</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> QVariantMap();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    QVariantMap map;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">if</span> (xml.tokenType() == QXmlStreamReader::StartDocument) {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;DocumentEncoding&quot;</span>), xml.documentEncoding().toString());</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;DocumentVersion&quot;</span>), xml.documentVersion().toString());</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;StandaloneDocument&quot;</span>), xml.isStandaloneDocument());</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span> (!xml.namespaceUri().isEmpty())</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            map.insert(prefix + QLatin1String(<span class="stringliteral">&quot;NamespaceUri&quot;</span>), xml.namespaceUri().toString());</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">foreach</span> (<span class="keyword">const</span> QXmlStreamAttribute &amp;attribute, xml.attributes()) {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            QVariantMap attributeMap;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;Value&quot;</span>), attribute.value().toString());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">if</span> (!attribute.namespaceUri().isEmpty())</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;NamespaceUri&quot;</span>), attribute.namespaceUri().toString());</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">if</span> (!attribute.prefix().isEmpty())</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;Prefix&quot;</span>), attribute.prefix().toString());</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            attributeMap.insert(QLatin1String(<span class="stringliteral">&quot;QualifiedName&quot;</span>), attribute.qualifiedName().toString());</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            map.insertMulti(prefix + attribute.name().toString(), attributeMap);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">for</span> (xml.readNext(); (!xml.atEnd()) &amp;&amp; (xml.tokenType() != QXmlStreamReader::EndElement)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          &amp;&amp; (xml.tokenType() != QXmlStreamReader::EndDocument); xml.readNext()) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">switch</span> (xml.tokenType()) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::Characters:</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::Comment:</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::DTD:</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::EntityReference:</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            map.insertMulti(prefix + xml.tokenString(), xml.text().toString());</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::ProcessingInstruction:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            map.insertMulti(prefix + xml.processingInstructionTarget().toString(),</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                            xml.processingInstructionData().toString());</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">case</span> QXmlStreamReader::StartElement: {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keyword">const</span> QString elementName = xml.name().toString();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            map.insertMulti(elementName, <a class="code" href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">toVariant</a>(xml, prefix, maxDepth-1));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            qWarning() &lt;&lt; QObject::tr(<span class="stringliteral">&quot;unexpected XML tokenType %1 (%2)&quot;</span>)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                          .arg(xml.tokenString()).arg(xml.tokenType());</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">return</span> map;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html_af644d30e72e701385abdc050c4b0a8b6"><div class="ttname"><a href="classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6">AwsAbstractResponse::toVariant</a></div><div class="ttdeci">static QVariantMap toVariant(QXmlStreamReader &amp;xml, const QString &amp;prefix=QLatin1String(&quot;.&quot;), const int maxDepth=1024)</div><div class="ttdoc">Convert an XML stream to a hierarchical QVariantMap. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00243">awsabstractresponse.cpp:243</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -958,14 +1051,14 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f" title="Get this response&#39;s error string. ">errorString</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00193">193</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00195">195</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00107">errorString()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> d-&gt;xmlError;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00109">errorString()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> d-&gt;xmlError;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -996,14 +1089,14 @@ Protected Attributes</h2></td></tr>
 <dd>
 <a class="el" href="classAwsAbstractResponse.html#a46ea22ce354df8f940286c87fd1a269f" title="Get this response&#39;s error string. ">errorString</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00208">208</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="awsabstractresponse_8cpp_source.html#l00210">210</a> of file <a class="el" href="awsabstractresponse_8cpp_source.html">awsabstractresponse.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00107">errorString()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span> d-&gt;xmlErrorString;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<p>Referenced by <a class="el" href="awsabstractresponse_8cpp_source.html#l00109">errorString()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">return</span> d-&gt;xmlErrorString;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1014,7 +1107,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

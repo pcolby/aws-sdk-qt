@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSqsClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SqsClient Class Reference</div>  </div>
@@ -163,6 +164,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:aa001015404f6060eb690dd6a596cd7e4 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">setRegion</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>)</td></tr>
 <tr class="memdesc:aa001015404f6060eb690dd6a596cd7e4 inherit pub_methods_classAwsAbstractClient"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the AWS region this client accesses.  <a href="#aa001015404f6060eb690dd6a596cd7e4">More...</a><br /></td></tr>
 <tr class="separator:aa001015404f6060eb690dd6a596cd7e4 inherit pub_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a20908dd7dc36a4fdb0b9c6b40ca7e404"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20908dd7dc36a4fdb0b9c6b40ca7e404"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TestSqsClient</b></td></tr>
+<tr class="separator:a20908dd7dc36a4fdb0b9c6b40ca7e404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -241,7 +248,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00053">53</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00276">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00121">AwsAbstractClient::region()</a>.</p>
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00121">AwsAbstractClient::region()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
@@ -251,7 +258,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    d-&gt;serviceName = SQS_SERVICE_NAME;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00038">sqsclient.h:38</a></div></div>
-<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00276">awsabstractclient.cpp:276</a></div></div>
+<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classSqsClientPrivate_html"><div class="ttname"><a href="classSqsClientPrivate.html">SqsClientPrivate</a></div><div class="ttdoc">Private implementation for SqsClient. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient__p_8h_source.html#l00031">sqsclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_ad5db29e88d5924f6d0e8005fba0b3266"><div class="ttname"><a href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">AwsAbstractClient::region</a></div><div class="ttdeci">AwsRegion::Region region() const </div><div class="ttdoc">Get the AWS region associated with this client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00121">awsabstractclient.cpp:121</a></div></div>
@@ -309,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00082">82</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00276">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>.</p>
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
@@ -320,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
 <div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00038">sqsclient.h:38</a></div></div>
-<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00276">awsabstractclient.cpp:276</a></div></div>
+<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classSqsClientPrivate_html"><div class="ttname"><a href="classSqsClientPrivate.html">SqsClientPrivate</a></div><div class="ttdoc">Private implementation for SqsClient. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient__p_8h_source.html#l00031">sqsclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
 </div><!-- fragment -->
@@ -368,7 +375,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00031">sqscreatequeueresponse.h:31</a></div></div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -419,7 +426,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00125">125</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsclient_8cpp_source.html#l00104">createQueue()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00217">SqsCreateQueueRequest::setAttributes()</a>.</p>
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00104">createQueue()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00224">SqsCreateQueueRequest::setAttributes()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> request(queueName);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    request.setAttributes(attributes);</div>
@@ -437,7 +444,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

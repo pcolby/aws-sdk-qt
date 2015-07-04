@@ -8,7 +8,7 @@ var searchData=
   ['attributes',['attributes',['../classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e',1,'SqsCreateQueueRequest']]],
   ['awsabstractclient',['AwsAbstractClient',['../classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595',1,'AwsAbstractClient']]],
   ['awsabstractcredentials',['AwsAbstractCredentials',['../classAwsAbstractCredentials.html#a9c9e44ce14b3be82a9d646309760bea1',1,'AwsAbstractCredentials']]],
-  ['awsabstractrequest',['AwsAbstractRequest',['../classAwsAbstractRequest.html#a04f9c9fc9c65b65e01a23c588847dea1',1,'AwsAbstractRequest']]],
+  ['awsabstractrequest',['AwsAbstractRequest',['../classAwsAbstractRequest.html#adcce63301529bfa36ffcac34d403e3af',1,'AwsAbstractRequest::AwsAbstractRequest()'],['../classAwsAbstractRequest.html#aa0c1a422f7d226584966905403d08283',1,'AwsAbstractRequest::AwsAbstractRequest(const AwsAbstractRequest &amp;other)']]],
   ['awsabstractresponse',['AwsAbstractResponse',['../classAwsAbstractResponse.html#ab9edade0587592fcb41d5c7652bf0c9b',1,'AwsAbstractResponse']]],
   ['awsanonymouscredentials',['AwsAnonymousCredentials',['../classAwsAnonymousCredentials.html#a502c69bcd18bcd330c778f6bd9e7c973',1,'AwsAnonymousCredentials']]],
   ['awsbasiccredentials',['AwsBasicCredentials',['../classAwsBasicCredentials.html#a64562a1b69cf310539e1f2556e6790b6',1,'AwsBasicCredentials::AwsBasicCredentials(const QString &amp;accessKeyid, const QString &amp;secretKey, const QString &amp;token, QObject *const parent=0)'],['../classAwsBasicCredentials.html#ad02212d77a2052f4793b7b1210ac7b2d',1,'AwsBasicCredentials::AwsBasicCredentials(const QString &amp;accessKeyid, const QString &amp;secretKey, QObject *const parent=0)']]],

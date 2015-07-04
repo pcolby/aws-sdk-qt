@@ -109,7 +109,7 @@ Collaboration diagram for SqsCreateQueueResponsePrivate:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsCreateQueueResponsePrivate__coll__graph.png" border="0" usemap="#SqsCreateQueueResponsePrivate_coll__map" alt="Collaboration graph"/></div>
 <map name="SqsCreateQueueResponsePrivate_coll__map" id="SqsCreateQueueResponsePrivate_coll__map">
-<area shape="rect" id="node6" href="classSqsCreateQueueResponse.html" title="Handles Amazon Simple Queue Service (SQS) responses. " alt="" coords="90,437,271,464"/><area shape="rect" id="node2" href="classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="44,272,189,299"/><area shape="rect" id="node3" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="22,171,219,197"/><area shape="rect" id="node4" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="107,81,263,108"/><area shape="rect" id="node7" href="classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="211,221,315,248"/></map>
+<area shape="rect" id="node2" href="classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="156,235,301,261"/><area shape="rect" id="node3" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="101,95,298,121"/><area shape="rect" id="node6" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="24,184,180,211"/><area shape="rect" id="node4" href="classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="278,5,425,32"/><area shape="rect" id="node5" href="classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="322,95,509,121"/><area shape="rect" id="node9" href="classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="49,285,153,312"/><area shape="rect" id="node8" href="classSqsCreateQueueResponse.html" title="Handles Amazon Simple Queue Service (SQS) responses. " alt="" coords="10,361,191,388"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -161,6 +161,10 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 QNetworkReply *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponsePrivate.html#a63f6f6197cd3239d5537cae88899cb55">reply</a></td></tr>
 <tr class="memdesc:a63f6f6197cd3239d5537cae88899cb55 inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Network reply for this response. <br /></td></tr>
 <tr class="separator:a63f6f6197cd3239d5537cae88899cb55 inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf7eea4e060d7365e159b901865b1c1 inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaf7eea4e060d7365e159b901865b1c1"></a>
+const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponsePrivate.html#afaf7eea4e060d7365e159b901865b1c1">request</a></td></tr>
+<tr class="memdesc:afaf7eea4e060d7365e159b901865b1c1 inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">AWS request for this response. <br /></td></tr>
+<tr class="separator:afaf7eea4e060d7365e159b901865b1c1 inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce5a7a49cc68f695582eaad7436004f inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ce5a7a49cc68f695582eaad7436004f"></a>
 QXmlStreamReader::Error&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponsePrivate.html#a8ce5a7a49cc68f695582eaad7436004f">xmlError</a></td></tr>
 <tr class="memdesc:a8ce5a7a49cc68f695582eaad7436004f inherit pub_attribs_classAwsAbstractResponsePrivate"><td class="mdescLeft">&#160;</td><td class="mdescRight">XML parse error code. <br /></td></tr>
@@ -212,11 +216,11 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00118">118</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    : <a class="code" href="classSqsResponsePrivate.html#a342270e75da83024bbfaebefb0455593">SqsResponsePrivate</a>(q), <a class="code" href="classSqsCreateQueueResponsePrivate.html#af3396eb5c67fefac292d2697b2b5ed90">q_ptr</a>(q)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00127">127</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    : <a class="code" href="classSqsResponsePrivate.html#a342270e75da83024bbfaebefb0455593">SqsResponsePrivate</a>(q), <a class="code" href="classSqsCreateQueueResponsePrivate.html#af3396eb5c67fefac292d2697b2b5ed90">q_ptr</a>(q)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
 <div class="ttc" id="classSqsResponsePrivate_html_a342270e75da83024bbfaebefb0455593"><div class="ttname"><a href="classSqsResponsePrivate.html#a342270e75da83024bbfaebefb0455593">SqsResponsePrivate::SqsResponsePrivate</a></div><div class="ttdeci">SqsResponsePrivate(SqsResponse *const q)</div><div class="ttdoc">Constructs a new SqsResponsePrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8cpp_source.html#l00180">sqsresponse.cpp:180</a></div></div>
 <div class="ttc" id="classSqsCreateQueueResponsePrivate_html_af3396eb5c67fefac292d2697b2b5ed90"><div class="ttname"><a href="classSqsCreateQueueResponsePrivate.html#af3396eb5c67fefac292d2697b2b5ed90">SqsCreateQueueResponsePrivate::q_ptr</a></div><div class="ttdeci">SqsCreateQueueResponse *const q_ptr</div><div class="ttdoc">Internal q-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse__p_8h_source.html#l00042">sqscreatequeueresponse_p.h:42</a></div></div>
 </div><!-- fragment -->
@@ -256,23 +260,23 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00147">147</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00156">156</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00180">parseCreateQueueResult()</a>, and <a class="el" href="sqsresponse_8cpp_source.html#l00253">SqsResponsePrivate::parseResponseMetadata()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResponse&quot;</span>));</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResult&quot;</span>)) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <a class="code" href="classSqsCreateQueueResponsePrivate.html#a2c644b4f7361dbbec879f3565b4372a8">parseCreateQueueResult</a>(xml);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;ResponseMetadata&quot;</span>)) {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="classSqsResponsePrivate.html#aec6071d66d881dc0471f0f9becedd2ce">parseResponseMetadata</a>(xml);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            xml.skipCurrentElement();</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="ttc" id="classSqsCreateQueueResponsePrivate_html_a2c644b4f7361dbbec879f3565b4372a8"><div class="ttname"><a href="classSqsCreateQueueResponsePrivate.html#a2c644b4f7361dbbec879f3565b4372a8">SqsCreateQueueResponsePrivate::parseCreateQueueResult</a></div><div class="ttdeci">void parseCreateQueueResult(QXmlStreamReader &amp;xml)</div><div class="ttdoc">Parse an SQS CreateQueueResult element. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8cpp_source.html#l00180">sqscreatequeueresponse.cpp:180</a></div></div>
+<p>References <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00189">parseCreateQueueResult()</a>, and <a class="el" href="sqsresponse_8cpp_source.html#l00253">SqsResponsePrivate::parseResponseMetadata()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResponse&quot;</span>));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResult&quot;</span>)) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="classSqsCreateQueueResponsePrivate.html#a2c644b4f7361dbbec879f3565b4372a8">parseCreateQueueResult</a>(xml);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;ResponseMetadata&quot;</span>)) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <a class="code" href="classSqsResponsePrivate.html#aec6071d66d881dc0471f0f9becedd2ce">parseResponseMetadata</a>(xml);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            xml.skipCurrentElement();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="ttc" id="classSqsCreateQueueResponsePrivate_html_a2c644b4f7361dbbec879f3565b4372a8"><div class="ttname"><a href="classSqsCreateQueueResponsePrivate.html#a2c644b4f7361dbbec879f3565b4372a8">SqsCreateQueueResponsePrivate::parseCreateQueueResult</a></div><div class="ttdeci">void parseCreateQueueResult(QXmlStreamReader &amp;xml)</div><div class="ttdoc">Parse an SQS CreateQueueResult element. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8cpp_source.html#l00189">sqscreatequeueresponse.cpp:189</a></div></div>
 <div class="ttc" id="classSqsResponsePrivate_html_aec6071d66d881dc0471f0f9becedd2ce"><div class="ttname"><a href="classSqsResponsePrivate.html#aec6071d66d881dc0471f0f9becedd2ce">SqsResponsePrivate::parseResponseMetadata</a></div><div class="ttdeci">void parseResponseMetadata(QXmlStreamReader &amp;xml)</div><div class="ttdoc">Parse an SQS ResponseMetadata element. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8cpp_source.html#l00253">sqsresponse.cpp:253</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -305,22 +309,22 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00180">180</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00189">189</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
 
 <p>References <a class="el" href="sqscreatequeueresponse__p_8h_source.html#l00032">queueUrl</a>.</p>
 
-<p>Referenced by <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00147">parseCreateQueueResponse()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResult&quot;</span>));</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;QueueUrl&quot;</span>)) {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="classSqsCreateQueueResponsePrivate.html#a859e045b10e58b5dc9dde9b85ecb99fe">queueUrl</a> = xml.readElementText();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            xml.skipCurrentElement();</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<p>Referenced by <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00156">parseCreateQueueResponse()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    Q_ASSERT(xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResult&quot;</span>));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;QueueUrl&quot;</span>)) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <a class="code" href="classSqsCreateQueueResponsePrivate.html#a859e045b10e58b5dc9dde9b85ecb99fe">queueUrl</a> = xml.readElementText();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            xml.skipCurrentElement();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
 <div class="ttc" id="classSqsCreateQueueResponsePrivate_html_a859e045b10e58b5dc9dde9b85ecb99fe"><div class="ttname"><a href="classSqsCreateQueueResponsePrivate.html#a859e045b10e58b5dc9dde9b85ecb99fe">SqsCreateQueueResponsePrivate::queueUrl</a></div><div class="ttdeci">QString queueUrl</div><div class="ttdoc">Created queue URL. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse__p_8h_source.html#l00032">sqscreatequeueresponse_p.h:32</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -332,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

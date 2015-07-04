@@ -113,12 +113,15 @@ Collaboration diagram for SqsCreateQueueResponse:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8ef237f341d419018a09e6232f2d425"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#ae8ef237f341d419018a09e6232f2d425">SqsCreateQueueResponse</a> (QNetworkReply *const reply, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ae8ef237f341d419018a09e6232f2d425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#ae8ef237f341d419018a09e6232f2d425">More...</a><br /></td></tr>
-<tr class="separator:ae8ef237f341d419018a09e6232f2d425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffcae436ef5dada83573a2cdfe703af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#a3ffcae436ef5dada83573a2cdfe703af">SqsCreateQueueResponse</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;<a class="el" href="classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd">request</a>, QNetworkReply *const reply, QObject *const parent=0)</td></tr>
+<tr class="memdesc:a3ffcae436ef5dada83573a2cdfe703af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#a3ffcae436ef5dada83573a2cdfe703af">More...</a><br /></td></tr>
+<tr class="separator:a3ffcae436ef5dada83573a2cdfe703af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa31d73f58e066f5942fba854d2e6fd9b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">isValid</a> () const </td></tr>
 <tr class="memdesc:aa31d73f58e066f5942fba854d2e6fd9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this AWS response valid?  <a href="#aa31d73f58e066f5942fba854d2e6fd9b">More...</a><br /></td></tr>
 <tr class="separator:aa31d73f58e066f5942fba854d2e6fd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea85705d104af6b9213c0d5bbc8e0cd"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd">request</a> () const </td></tr>
+<tr class="memdesc:abea85705d104af6b9213c0d5bbc8e0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's originating AWS request.  <a href="#abea85705d104af6b9213c0d5bbc8e0cd">More...</a><br /></td></tr>
+<tr class="separator:abea85705d104af6b9213c0d5bbc8e0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21aa6debaa40f084c86b80c4a5a45c53"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#a21aa6debaa40f084c86b80c4a5a45c53">queueUrl</a> () const </td></tr>
 <tr class="memdesc:a21aa6debaa40f084c86b80c4a5a45c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the created queue's URL.  <a href="#a21aa6debaa40f084c86b80c4a5a45c53">More...</a><br /></td></tr>
 <tr class="separator:a21aa6debaa40f084c86b80c4a5a45c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +190,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a> (QNetworkReply *reply)</td></tr>
 <tr class="memdesc:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network reply from which to expect an AWS response.  <a href="#a13eab6d1bc11b614d243f1da75ce6eb6">More...</a><br /></td></tr>
 <tr class="separator:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *const <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a>)</td></tr>
+<tr class="memdesc:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this response's originating AWS request.  <a href="#a07d5401836647d49c3f750fc223f2b69">More...</a><br /></td></tr>
+<tr class="separator:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a> (const QXmlStreamReader &amp;xml)</td></tr>
 <tr class="memdesc:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the details of an XML parse error.  <a href="#a9ddac7db08332f5bbea58abad54a45da">More...</a><br /></td></tr>
 <tr class="separator:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,13 +209,19 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles Amazon Simple Queue Service (SQS) responses. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae8ef237f341d419018a09e6232f2d425"></a>
+<a class="anchor" id="a3ffcae436ef5dada83573a2cdfe703af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">SqsCreateQueueResponse::SqsCreateQueueResponse </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">QNetworkReply *const&#160;</td>
           <td class="paramname"><em>reply</em>, </td>
         </tr>
@@ -230,6 +242,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">request</td><td>Original AWS request. </td></tr>
     <tr><td class="paramname">reply</td><td>AWS network response to observe. </td></tr>
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
   </table>
@@ -331,6 +344,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abea85705d104af6b9213c0d5bbc8e0cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> * SqsCreateQueueResponse::request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get this response's originating AWS request. </p>
+<dl class="section return"><dt>Returns</dt><dd>This response's originating AWS request. </dd></dl>
+
+<p>Implements <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">AwsAbstractResponse</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>sqs/<a class="el" href="sqscreatequeueresponse_8h_source.html">sqscreatequeueresponse.h</a></li>
 <li>sqs/sqscreatequeueresponse.cpp</li>
@@ -338,7 +379,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:08 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

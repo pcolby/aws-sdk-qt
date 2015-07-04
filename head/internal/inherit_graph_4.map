@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="5,5,203,32"/>
-<area shape="rect" id="node2" href="$classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="251,5,396,32"/>
-<area shape="rect" id="node3" href="$classSqsCreateQueueResponsePrivate.html" title="Private implementation for SqsCreateQueueResponse. " alt="" coords="444,5,667,32"/>
+<area shape="rect" id="node1" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="240,5,375,32"/>
 </map>

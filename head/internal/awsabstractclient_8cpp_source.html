@@ -333,97 +333,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        setParent(NULL);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">// If we have no parent, set the network access manager as our parent.</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> ((manager != NULL) &amp;&amp; (parent() == NULL)) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        this-&gt;setParent(manager);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">// Set the network access manager.</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    d-&gt;networkAccessManager = manager;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> * @brief  Set the AWS region this client accesses.</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> * If an endpoint is not explicitly set (eg via setEndpoint), then the supplied</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"> * value may be used (in conjuction with serviceName) to determine the endpoint</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"> * URL when sending requests to the AWS service.</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment"> * @param  region  Amazon region for this client to use.</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"> * @see  send</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment"> * @see  setEndpoint</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">  265</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">AwsAbstractClient::setRegion</a>(<span class="keyword">const</span> <a class="code" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> region)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    Q_D(<a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment"> * @brief  Get the credentials object to be used for signing requests.</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment"> * @return An AWS credentials object.</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">  276</a></span>&#160;<a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">return</span> d-&gt;credentials;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment"> * @brief  Get the signature object to be used for signing requests.</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment"> * @return An AWS signature object.</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">  287</a></span>&#160;<a class="code" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> * <a class="code" href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">AwsAbstractClient::signature</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">return</span> d-&gt;signature;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"> * @internal</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment"> * @class  AwsAbstractClientPrivate</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"> * @brief  Private implementation for AwsAbstractClient.</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"> * @internal</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"> * @brief  Constructs a new AwsAbstractClientPrivate object.</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"> * @param  q  Pointer to this object&#39;s public AwsAbstractClient instance.</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">  308</a></span>&#160;<a class="code" href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a>(<a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a> * <span class="keyword">const</span> q)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    : credentials(NULL), networkAccessManager(NULL),</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      region(<a class="code" href="classAwsRegion.html">AwsRegion</a>::InvalidRegion), signature(NULL), q_ptr(q)</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"> * @internal</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment"> * @brief  AwsAbstractClientPrivate destructor.</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment"> * This virtual destructor does nothing (yet) - its here to allow for safe</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"> * polymorphic destruction.</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">  323</a></span>&#160;<a class="code" href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">AwsAbstractClientPrivate::~AwsAbstractClientPrivate</a>()</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;{</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="ttc" id="classAwsAbstractClient_html_aa001015404f6060eb690dd6a596cd7e4"><div class="ttname"><a href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">AwsAbstractClient::setRegion</a></div><div class="ttdeci">void setRegion(const AwsRegion::Region region)</div><div class="ttdoc">Set the AWS region this client accesses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00265">awsabstractclient.cpp:265</a></div></div>
-<div class="ttc" id="classAwsAbstractClientPrivate_html_a9ee2918253da51946f69de8d6d114b01"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">AwsAbstractClientPrivate::~AwsAbstractClientPrivate</a></div><div class="ttdeci">virtual ~AwsAbstractClientPrivate()</div><div class="ttdoc">AwsAbstractClientPrivate destructor. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00323">awsabstractclient.cpp:323</a></div></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">// Set the network access manager.</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    d-&gt;networkAccessManager = manager;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> * @brief  Set the AWS region this client accesses.</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> * If an endpoint is not explicitly set (eg via setEndpoint), then the supplied</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> * value may be used (in conjuction with serviceName) to determine the endpoint</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment"> * URL when sending requests to the AWS service.</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"> * @param  region  Amazon region for this client to use.</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"> * @see  send</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment"> * @see  setEndpoint</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">  260</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">AwsAbstractClient::setRegion</a>(<span class="keyword">const</span> <a class="code" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> region)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    Q_D(<a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> * @brief  Get the credentials object to be used for signing requests.</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"> * @return An AWS credentials object.</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">  271</a></span>&#160;<a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> d-&gt;credentials;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"> * @brief  Get the signature object to be used for signing requests.</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"> * @return An AWS signature object.</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">  282</a></span>&#160;<a class="code" href="classAwsAbstractSignature.html">AwsAbstractSignature</a> * <a class="code" href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">AwsAbstractClient::signature</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> d-&gt;signature;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"> * @class  AwsAbstractClientPrivate</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment"> * @brief  Private implementation for AwsAbstractClient.</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment"> * @brief  Constructs a new AwsAbstractClientPrivate object.</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment"> * @param  q  Pointer to this object&#39;s public AwsAbstractClient instance.</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">  303</a></span>&#160;<a class="code" href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a>(<a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    : credentials(NULL), networkAccessManager(NULL),</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      region(<a class="code" href="classAwsRegion.html">AwsRegion</a>::InvalidRegion), signature(NULL), q_ptr(q)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"> * @brief  AwsAbstractClientPrivate destructor.</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment"> * This virtual destructor does nothing (yet) - its here to allow for safe</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment"> * polymorphic destruction.</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">  318</a></span>&#160;<a class="code" href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">AwsAbstractClientPrivate::~AwsAbstractClientPrivate</a>()</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;{</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="ttc" id="classAwsAbstractClient_html_aa001015404f6060eb690dd6a596cd7e4"><div class="ttname"><a href="classAwsAbstractClient.html#aa001015404f6060eb690dd6a596cd7e4">AwsAbstractClient::setRegion</a></div><div class="ttdeci">void setRegion(const AwsRegion::Region region)</div><div class="ttdoc">Set the AWS region this client accesses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00260">awsabstractclient.cpp:260</a></div></div>
+<div class="ttc" id="classAwsAbstractClientPrivate_html_a9ee2918253da51946f69de8d6d114b01"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#a9ee2918253da51946f69de8d6d114b01">AwsAbstractClientPrivate::~AwsAbstractClientPrivate</a></div><div class="ttdeci">virtual ~AwsAbstractClientPrivate()</div><div class="ttdoc">AwsAbstractClientPrivate destructor. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00318">awsabstractclient.cpp:318</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a1c3cbef6950ab5c193ce424138b78829"><div class="ttname"><a href="classAwsAbstractClient.html#a1c3cbef6950ab5c193ce424138b78829">AwsAbstractClient::setCredentials</a></div><div class="ttdeci">void setCredentials(AwsAbstractCredentials *const credentials)</div><div class="ttdoc">Set the credentials object for this client to use for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00194">awsabstractclient.cpp:194</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
-<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00276">awsabstractclient.cpp:276</a></div></div>
+<div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a1a6ceaf4e7827343cde1106fe611c972"><div class="ttname"><a href="classAwsAbstractClient.html#a1a6ceaf4e7827343cde1106fe611c972">AwsAbstractClient::setEndpoint</a></div><div class="ttdeci">void setEndpoint(const QUrl &amp;endpoint)</div><div class="ttdoc">Set the AWS endpoint to use with this client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00214">awsabstractclient.cpp:214</a></div></div>
 <div class="ttc" id="classAwsAbstractClientPrivate_html"><div class="ttname"><a href="classAwsAbstractClientPrivate.html">AwsAbstractClientPrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractClient. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient__p_8h_source.html#l00037">awsabstractclient_p.h:37</a></div></div>
 <div class="ttc" id="classAwsRegion_html_aa68c884fedce77a646491623db46e391"><div class="ttname"><a href="classAwsRegion.html#aa68c884fedce77a646491623db46e391">AwsRegion::name</a></div><div class="ttdeci">QString name() const </div><div class="ttdoc">Get the canonical AWS name for this region. </div><div class="ttdef"><b>Definition:</b> <a href="awsregion_8cpp_source.html#l00120">awsregion.cpp:120</a></div></div>
@@ -435,21 +430,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classAwsAbstractClient_html_a1a64efd2e0c8f2fd6a6af352b05548d0"><div class="ttname"><a href="classAwsAbstractClient.html#a1a64efd2e0c8f2fd6a6af352b05548d0">AwsAbstractClient::serviceName</a></div><div class="ttdeci">QString serviceName() const </div><div class="ttdoc">Get the name of the Amazon service this client accesses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00175">awsabstractclient.cpp:175</a></div></div>
 <div class="ttc" id="classAwsRegion_html"><div class="ttname"><a href="classAwsRegion.html">AwsRegion</a></div><div class="ttdoc">Provides AWS region information. </div><div class="ttdef"><b>Definition:</b> <a href="awsregion_8h_source.html#l00033">awsregion.h:33</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_ac92df733e1ee5b1233b4349893b5cd68"><div class="ttname"><a href="classAwsAbstractClient.html#ac92df733e1ee5b1233b4349893b5cd68">AwsAbstractClient::d_ptr</a></div><div class="ttdeci">AwsAbstractClientPrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8h_source.html#l00059">awsabstractclient.h:59</a></div></div>
-<div class="ttc" id="classAwsAbstractRequest_html_ad2256ecd184ed88866ad00bd2d7aa59a"><div class="ttname"><a href="classAwsAbstractRequest.html#ad2256ecd184ed88866ad00bd2d7aa59a">AwsAbstractRequest::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(QNetworkAccessManager &amp;manager, const QUrl &amp;endpoint, const AwsAbstractSignature &amp;signature, const AwsAbstractCredentials &amp;credentials) const </div><div class="ttdoc">Send this request to a given Amazon endpoint, via the specified network access manager. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00168">awsabstractrequest.cpp:168</a></div></div>
+<div class="ttc" id="classAwsAbstractRequest_html_ad2256ecd184ed88866ad00bd2d7aa59a"><div class="ttname"><a href="classAwsAbstractRequest.html#ad2256ecd184ed88866ad00bd2d7aa59a">AwsAbstractRequest::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(QNetworkAccessManager &amp;manager, const QUrl &amp;endpoint, const AwsAbstractSignature &amp;signature, const AwsAbstractCredentials &amp;credentials) const </div><div class="ttdoc">Send this request to a given Amazon endpoint, via the specified network access manager. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest_8cpp_source.html#l00189">awsabstractrequest.cpp:189</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a6a4df307cb50edcaafaee22076fa8c8c"><div class="ttname"><a href="classAwsAbstractClient.html#a6a4df307cb50edcaafaee22076fa8c8c">AwsAbstractClient::networkAccessManager</a></div><div class="ttdeci">QNetworkAccessManager * networkAccessManager() const </div><div class="ttdoc">Get the network access manager for this AWS service object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00106">awsabstractclient.cpp:106</a></div></div>
 <div class="ttc" id="classAwsEndpoint_html_a972e747803e29799e4b2ca6c211c7240"><div class="ttname"><a href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240">AwsEndpoint::getEndpoint</a></div><div class="ttdeci">static QUrl getEndpoint(const QString &amp;regionName, const QString &amp;serviceName, const Transports transport=AnyTransport)</div><div class="ttdoc">Get a QUrl for an AWS endpoint. </div><div class="ttdef"><b>Definition:</b> <a href="awsendpoint_8cpp_source.html#l00163">awsendpoint.cpp:163</a></div></div>
-<div class="ttc" id="classAwsAbstractClient_html_a102e5e03d1339a8e0483f6d146bfc360"><div class="ttname"><a href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">AwsAbstractClient::signature</a></div><div class="ttdeci">virtual AwsAbstractSignature * signature() const </div><div class="ttdoc">Get the signature object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00287">awsabstractclient.cpp:287</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00032">awsabstractresponse.h:32</a></div></div>
+<div class="ttc" id="classAwsAbstractClient_html_a102e5e03d1339a8e0483f6d146bfc360"><div class="ttname"><a href="classAwsAbstractClient.html#a102e5e03d1339a8e0483f6d146bfc360">AwsAbstractClient::signature</a></div><div class="ttdeci">virtual AwsAbstractSignature * signature() const </div><div class="ttdoc">Get the signature object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00282">awsabstractclient.cpp:282</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a45370989e35585591be5186baf5072c7"><div class="ttname"><a href="classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7">AwsAbstractClient::~AwsAbstractClient</a></div><div class="ttdeci">virtual ~AwsAbstractClient()</div><div class="ttdoc">AwsAbstractClient destructor. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00071">awsabstractclient.cpp:71</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html"><div class="ttname"><a href="classAwsAbstractClient.html">AwsAbstractClient</a></div><div class="ttdoc">Interface class for providing access to individual AWS services. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8h_source.html#l00038">awsabstractclient.h:38</a></div></div>
 <div class="ttc" id="classAwsAbstractSignature_html"><div class="ttname"><a href="classAwsAbstractSignature.html">AwsAbstractSignature</a></div><div class="ttdoc">Interface class for providing AWS signatures. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractsignature_8h_source.html#l00033">awsabstractsignature.h:33</a></div></div>
-<div class="ttc" id="classAwsAbstractClientPrivate_html_aab3621f9553afce63a876632548fb765"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a></div><div class="ttdeci">AwsAbstractClientPrivate(AwsAbstractClient *const q)</div><div class="ttdoc">Constructs a new AwsAbstractClientPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00308">awsabstractclient.cpp:308</a></div></div>
+<div class="ttc" id="classAwsAbstractClientPrivate_html_aab3621f9553afce63a876632548fb765"><div class="ttname"><a href="classAwsAbstractClientPrivate.html#aab3621f9553afce63a876632548fb765">AwsAbstractClientPrivate::AwsAbstractClientPrivate</a></div><div class="ttdeci">AwsAbstractClientPrivate(AwsAbstractClient *const q)</div><div class="ttdoc">Constructs a new AwsAbstractClientPrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00303">awsabstractclient.cpp:303</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_ad5db29e88d5924f6d0e8005fba0b3266"><div class="ttname"><a href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">AwsAbstractClient::region</a></div><div class="ttdeci">AwsRegion::Region region() const </div><div class="ttdoc">Get the AWS region associated with this client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00121">awsabstractclient.cpp:121</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:00 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

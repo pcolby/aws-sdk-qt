@@ -31,18 +31,18 @@
             <td class="headerValue">libqtaws 0.1.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">41</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntryLo">24.4 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntryLo">0.0 %</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntryLo">37.5 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -97,162 +97,171 @@
 <span class="lineNum">      35 </span>            : /**
 <span class="lineNum">      36 </span>            :  * @brief  Constructs a new SqsResponse object.
 <span class="lineNum">      37 </span>            :  *
-<span class="lineNum">      38 </span>            :  * @param  reply   AWS network response to observe.
-<a name="39"><span class="lineNum">      39 </span>            :  * @param  parent  This object's parent.</a>
-<span class="lineNum">      40 </span>            :  */
-<span class="lineNum">      41 </span><span class="lineNoCov">          0 : SqsCreateQueueResponse::SqsCreateQueueResponse(QNetworkReply * const reply,</span>
-<span class="lineNum">      42 </span>            :                                                QObject * const parent)
-<span class="lineNum">      43 </span><span class="lineNoCov">          0 :     : SqsResponse(parent), d_ptr(new SqsCreateQueueResponsePrivate(this))</span>
-<span class="lineNum">      44 </span>            : {
-<span class="lineNum">      45 </span><span class="lineNoCov">          0 :     setReply(reply);</span>
-<a name="46"><span class="lineNum">      46 </span><span class="lineNoCov">          0 : }</span></a>
-<span class="lineNum">      47 </span>            : 
-<span class="lineNum">      48 </span><span class="lineNoCov">          0 : bool SqsCreateQueueResponse::isValid() const</span>
-<span class="lineNum">      49 </span>            : {
-<span class="lineNum">      50 </span><span class="lineNoCov">          0 :     Q_D(const SqsCreateQueueResponse);</span>
-<span class="lineNum">      51 </span><span class="lineNoCov">          0 :     return !d-&gt;queueUrl.isEmpty();</span>
-<span class="lineNum">      52 </span>            : }
-<span class="lineNum">      53 </span>            : 
-<span class="lineNum">      54 </span>            : /**
-<span class="lineNum">      55 </span>            :  * @brief  Get the created queue's URL.
-<span class="lineNum">      56 </span>            :  *
-<span class="lineNum">      57 </span>            :  * @return The URL of the create queue, or a null QString if the response was
-<a name="58"><span class="lineNum">      58 </span>            :  *         not parsed successfully.</a>
-<span class="lineNum">      59 </span>            :  */
-<span class="lineNum">      60 </span><span class="lineNoCov">          0 : QString SqsCreateQueueResponse::queueUrl() const</span>
-<span class="lineNum">      61 </span>            : {
-<span class="lineNum">      62 </span><span class="lineNoCov">          0 :     Q_D(const SqsCreateQueueResponse);</span>
-<span class="lineNum">      63 </span><span class="lineNoCov">          0 :     return d-&gt;queueUrl;</span>
-<span class="lineNum">      64 </span>            : }
-<span class="lineNum">      65 </span>            : 
-<span class="lineNum">      66 </span>            : /**
-<span class="lineNum">      67 </span>            :  * @brief  Parse an SQS CreateQueue response.
-<span class="lineNum">      68 </span>            :  *
-<span class="lineNum">      69 </span>            :  * This implementation parses SQS CreateQueueResponse elements, as defined by
-<span class="lineNum">      70 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
-<span class="lineNum">      71 </span>            :  *
-<span class="lineNum">      72 </span>            :  * For example:
-<span class="lineNum">      73 </span>            :  *
-<span class="lineNum">      74 </span>            :  * @code{xml}
-<span class="lineNum">      75 </span>            :  * &lt;CreateQueueResponse&gt;
-<span class="lineNum">      76 </span>            :  *   &lt;CreateQueueResult&gt;
-<span class="lineNum">      77 </span>            :  *     &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
-<span class="lineNum">      78 </span>            :  *   &lt;/CreateQueueResult&gt;
-<span class="lineNum">      79 </span>            :  *   &lt;ResponseMetadata&gt;
-<span class="lineNum">      80 </span>            :  *     &lt;RequestId&gt;7a62c49f-347e-4fc4-9331-6e8e7a96aa73&lt;/RequestId&gt;
-<span class="lineNum">      81 </span>            :  *   &lt;/ResponseMetadata&gt;
-<span class="lineNum">      82 </span>            :  * &lt;/CreateQueueResponse&gt;
-<span class="lineNum">      83 </span>            :  * @endcode
-<span class="lineNum">      84 </span>            :  *
-<span class="lineNum">      85 </span>            :  * @param  response  Response to parse.
-<span class="lineNum">      86 </span>            :  *
-<a name="87"><span class="lineNum">      87 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
-<span class="lineNum">      88 </span>            :  */
-<span class="lineNum">      89 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponse::parseSuccess(QIODevice &amp;response)</span>
-<span class="lineNum">      90 </span>            : {
-<span class="lineNum">      91 </span><span class="lineNoCov">          0 :     Q_D(SqsCreateQueueResponse);</span>
-<span class="lineNum">      92 </span><span class="lineNoCov">          0 :     QXmlStreamReader xml(&amp;response);</span>
-<span class="lineNum">      93 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
-<span class="lineNum">      94 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;CreateQueueResponse&quot;)) {</span>
-<span class="lineNum">      95 </span><span class="lineNoCov">          0 :             d-&gt;parseCreateQueueResponse(xml);</span>
-<span class="lineNum">      96 </span>            :         } else {
-<span class="lineNum">      97 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">      98 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
-<span class="lineNum">      99 </span>            :         }
-<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     }</span>
-<span class="lineNum">     101 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     102 </span>            : 
-<span class="lineNum">     103 </span>            : /**
-<span class="lineNum">     104 </span>            :  * @internal
-<span class="lineNum">     105 </span>            :  *
-<span class="lineNum">     106 </span>            :  * @class  SqsCreateQueueResponsePrivate
-<span class="lineNum">     107 </span>            :  *
-<span class="lineNum">     108 </span>            :  * @brief  Private implementation for SqsCreateQueueResponse.
-<span class="lineNum">     109 </span>            :  */
-<span class="lineNum">     110 </span>            : 
-<span class="lineNum">     111 </span>            : /**
-<span class="lineNum">     112 </span>            :  * @internal
-<span class="lineNum">     113 </span>            :  *
-<span class="lineNum">     114 </span>            :  * @brief  Constructs a new SqsCreateQueueResponsePrivate object.
-<span class="lineNum">     115 </span>            :  *
-<a name="116"><span class="lineNum">     116 </span>            :  * @param  q  Pointer to this object's public SqsCreateQueueResponse instance.</a>
-<span class="lineNum">     117 </span>            :  */
-<span class="lineNum">     118 </span><span class="lineNoCov">          0 : SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q)</span>
-<span class="lineNum">     119 </span><span class="lineNoCov">          0 :     : SqsResponsePrivate(q), q_ptr(q)</span>
-<span class="lineNum">     120 </span>            : {
-<span class="lineNum">     121 </span>            : 
-<span class="lineNum">     122 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     123 </span>            : 
-<span class="lineNum">     124 </span>            : /**
-<span class="lineNum">     125 </span>            :  * @brief  Parse an SQS CreateQueueResponse element.
-<span class="lineNum">     126 </span>            :  *
-<span class="lineNum">     127 </span>            :  * This implementation parses SQS CreateQueueResponse elements, as defined by
-<span class="lineNum">     128 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
-<span class="lineNum">     129 </span>            :  *
-<span class="lineNum">     130 </span>            :  * For example:
-<span class="lineNum">     131 </span>            :  *
-<span class="lineNum">     132 </span>            :  * @code{xml}
-<span class="lineNum">     133 </span>            :  * &lt;CreateQueueResponse&gt;
-<span class="lineNum">     134 </span>            :  *   &lt;CreateQueueResult&gt;
-<span class="lineNum">     135 </span>            :  *     &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
-<span class="lineNum">     136 </span>            :  *   &lt;/CreateQueueResult&gt;
-<span class="lineNum">     137 </span>            :  *   &lt;ResponseMetadata&gt;
-<span class="lineNum">     138 </span>            :  *     &lt;RequestId&gt;7a62c49f-347e-4fc4-9331-6e8e7a96aa73&lt;/RequestId&gt;
-<span class="lineNum">     139 </span>            :  *   &lt;/ResponseMetadata&gt;
-<span class="lineNum">     140 </span>            :  * &lt;/CreateQueueResponse&gt;
-<span class="lineNum">     141 </span>            :  * @endcode
-<span class="lineNum">     142 </span>            :  *
-<span class="lineNum">     143 </span>            :  * @param  xml  XML stream to parse.
-<span class="lineNum">     144 </span>            :  *
-<a name="145"><span class="lineNum">     145 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
-<span class="lineNum">     146 </span>            :  */
-<span class="lineNum">     147 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &amp;xml)</span>
-<span class="lineNum">     148 </span>            : {
-<span class="lineNum">     149 </span><span class="lineNoCov">          0 :     Q_ASSERT(xml.name() == QLatin1String(&quot;CreateQueueResponse&quot;));</span>
-<span class="lineNum">     150 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
-<span class="lineNum">     151 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;CreateQueueResult&quot;)) {</span>
-<span class="lineNum">     152 </span><span class="lineNoCov">          0 :             parseCreateQueueResult(xml);</span>
-<span class="lineNum">     153 </span><span class="lineNoCov">          0 :         } else if (xml.name() == QLatin1String(&quot;ResponseMetadata&quot;)) {</span>
-<span class="lineNum">     154 </span><span class="lineNoCov">          0 :             parseResponseMetadata(xml);</span>
-<span class="lineNum">     155 </span>            :         } else {
-<span class="lineNum">     156 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     157 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
-<span class="lineNum">     158 </span>            :         }
-<span class="lineNum">     159 </span>            :     }
-<span class="lineNum">     160 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     161 </span>            : 
-<span class="lineNum">     162 </span>            : /**
-<span class="lineNum">     163 </span>            :  * @brief  Parse an SQS CreateQueueResult element.
-<span class="lineNum">     164 </span>            :  *
-<span class="lineNum">     165 </span>            :  * This implementation parses SQS CreateQueueResult elements, as defined by
-<span class="lineNum">     166 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
-<span class="lineNum">     167 </span>            :  *
-<span class="lineNum">     168 </span>            :  * For example:
-<span class="lineNum">     169 </span>            :  *
-<span class="lineNum">     170 </span>            :  * @code{xml}
-<span class="lineNum">     171 </span>            :  * &lt;CreateQueueResult&gt;
-<span class="lineNum">     172 </span>            :  *   &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
-<span class="lineNum">     173 </span>            :  * &lt;/CreateQueueResult&gt;
-<span class="lineNum">     174 </span>            :  * @endcode
-<span class="lineNum">     175 </span>            :  *
-<span class="lineNum">     176 </span>            :  * @param  xml  XML stream to parse.
-<span class="lineNum">     177 </span>            :  *
-<a name="178"><span class="lineNum">     178 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
-<span class="lineNum">     179 </span>            :  */
-<span class="lineNum">     180 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponsePrivate::parseCreateQueueResult(QXmlStreamReader &amp;xml)</span>
-<span class="lineNum">     181 </span>            : {
-<span class="lineNum">     182 </span><span class="lineNoCov">          0 :     Q_ASSERT(xml.name() == QLatin1String(&quot;CreateQueueResult&quot;));</span>
-<span class="lineNum">     183 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
-<span class="lineNum">     184 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;QueueUrl&quot;)) {</span>
-<span class="lineNum">     185 </span><span class="lineNoCov">          0 :             queueUrl = xml.readElementText();</span>
-<span class="lineNum">     186 </span>            :         } else {
-<span class="lineNum">     187 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     188 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
-<span class="lineNum">     189 </span>            :         }
-<span class="lineNum">     190 </span>            :     }
-<span class="lineNum">     191 </span><span class="lineNoCov">          0 : }</span>
-<span class="lineNum">     192 </span>            : 
-<span class="lineNum">     193 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      38 </span>            :  * @param  request  Original AWS request.
+<span class="lineNum">      39 </span>            :  * @param  reply    AWS network response to observe.
+<a name="40"><span class="lineNum">      40 </span>            :  * @param  parent   This object's parent.</a>
+<span class="lineNum">      41 </span>            :  */
+<span class="lineNum">      42 </span><span class="lineCov">         12 : SqsCreateQueueResponse::SqsCreateQueueResponse(const SqsCreateQueueRequest &amp;request,</span>
+<span class="lineNum">      43 </span>            :                                                QNetworkReply * const reply,
+<span class="lineNum">      44 </span>            :                                                QObject * const parent)
+<span class="lineNum">      45 </span><span class="lineCov">         12 :     : SqsResponse(new SqsCreateQueueResponsePrivate(this), parent)</span>
+<span class="lineNum">      46 </span>            : {
+<span class="lineNum">      47 </span><span class="lineCov">         12 :     setRequest(new SqsCreateQueueRequest(request));</span>
+<span class="lineNum">      48 </span><span class="lineCov">         12 :     setReply(reply);</span>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">         12 : }</span></a>
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span><span class="lineNoCov">          0 : bool SqsCreateQueueResponse::isValid() const</span>
+<span class="lineNum">      52 </span>            : {
+<span class="lineNum">      53 </span><span class="lineNoCov">          0 :     Q_D(const SqsCreateQueueResponse);</span>
+<span class="lineNum">      54 </span><span class="lineNoCov">          0 :     return !d-&gt;queueUrl.isEmpty();</span>
+<a name="55"><span class="lineNum">      55 </span>            : }</a>
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span><span class="lineCov">         48 : const SqsCreateQueueRequest * SqsCreateQueueResponse::request() const</span>
+<span class="lineNum">      58 </span>            : {
+<span class="lineNum">      59 </span><span class="lineCov">         48 :     Q_D(const SqsCreateQueueResponse);</span>
+<span class="lineNum">      60 </span><span class="lineCov">         48 :     return static_cast&lt;const SqsCreateQueueRequest *&gt;(d-&gt;request);</span>
+<span class="lineNum">      61 </span>            : }
+<span class="lineNum">      62 </span>            : 
+<span class="lineNum">      63 </span>            : /**
+<span class="lineNum">      64 </span>            :  * @brief  Get the created queue's URL.
+<span class="lineNum">      65 </span>            :  *
+<span class="lineNum">      66 </span>            :  * @return The URL of the create queue, or a null QString if the response was
+<a name="67"><span class="lineNum">      67 </span>            :  *         not parsed successfully.</a>
+<span class="lineNum">      68 </span>            :  */
+<span class="lineNum">      69 </span><span class="lineNoCov">          0 : QString SqsCreateQueueResponse::queueUrl() const</span>
+<span class="lineNum">      70 </span>            : {
+<span class="lineNum">      71 </span><span class="lineNoCov">          0 :     Q_D(const SqsCreateQueueResponse);</span>
+<span class="lineNum">      72 </span><span class="lineNoCov">          0 :     return d-&gt;queueUrl;</span>
+<span class="lineNum">      73 </span>            : }
+<span class="lineNum">      74 </span>            : 
+<span class="lineNum">      75 </span>            : /**
+<span class="lineNum">      76 </span>            :  * @brief  Parse an SQS CreateQueue response.
+<span class="lineNum">      77 </span>            :  *
+<span class="lineNum">      78 </span>            :  * This implementation parses SQS CreateQueueResponse elements, as defined by
+<span class="lineNum">      79 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+<span class="lineNum">      80 </span>            :  *
+<span class="lineNum">      81 </span>            :  * For example:
+<span class="lineNum">      82 </span>            :  *
+<span class="lineNum">      83 </span>            :  * @code{xml}
+<span class="lineNum">      84 </span>            :  * &lt;CreateQueueResponse&gt;
+<span class="lineNum">      85 </span>            :  *   &lt;CreateQueueResult&gt;
+<span class="lineNum">      86 </span>            :  *     &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
+<span class="lineNum">      87 </span>            :  *   &lt;/CreateQueueResult&gt;
+<span class="lineNum">      88 </span>            :  *   &lt;ResponseMetadata&gt;
+<span class="lineNum">      89 </span>            :  *     &lt;RequestId&gt;7a62c49f-347e-4fc4-9331-6e8e7a96aa73&lt;/RequestId&gt;
+<span class="lineNum">      90 </span>            :  *   &lt;/ResponseMetadata&gt;
+<span class="lineNum">      91 </span>            :  * &lt;/CreateQueueResponse&gt;
+<span class="lineNum">      92 </span>            :  * @endcode
+<span class="lineNum">      93 </span>            :  *
+<span class="lineNum">      94 </span>            :  * @param  response  Response to parse.
+<span class="lineNum">      95 </span>            :  *
+<a name="96"><span class="lineNum">      96 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
+<span class="lineNum">      97 </span>            :  */
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponse::parseSuccess(QIODevice &amp;response)</span>
+<span class="lineNum">      99 </span>            : {
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :     Q_D(SqsCreateQueueResponse);</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 :     QXmlStreamReader xml(&amp;response);</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;CreateQueueResponse&quot;)) {</span>
+<span class="lineNum">     104 </span><span class="lineNoCov">          0 :             d-&gt;parseCreateQueueResponse(xml);</span>
+<span class="lineNum">     105 </span>            :         } else {
+<span class="lineNum">     106 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     108 </span>            :         }
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 :     }</span>
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span>            : /**
+<span class="lineNum">     113 </span>            :  * @internal
+<span class="lineNum">     114 </span>            :  *
+<span class="lineNum">     115 </span>            :  * @class  SqsCreateQueueResponsePrivate
+<span class="lineNum">     116 </span>            :  *
+<span class="lineNum">     117 </span>            :  * @brief  Private implementation for SqsCreateQueueResponse.
+<span class="lineNum">     118 </span>            :  */
+<span class="lineNum">     119 </span>            : 
+<span class="lineNum">     120 </span>            : /**
+<span class="lineNum">     121 </span>            :  * @internal
+<span class="lineNum">     122 </span>            :  *
+<span class="lineNum">     123 </span>            :  * @brief  Constructs a new SqsCreateQueueResponsePrivate object.
+<span class="lineNum">     124 </span>            :  *
+<a name="125"><span class="lineNum">     125 </span>            :  * @param  q  Pointer to this object's public SqsCreateQueueResponse instance.</a>
+<span class="lineNum">     126 </span>            :  */
+<span class="lineNum">     127 </span><span class="lineCov">         12 : SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueResponse * const q)</span>
+<span class="lineNum">     128 </span><span class="lineCov">         12 :     : SqsResponsePrivate(q), q_ptr(q)</span>
+<span class="lineNum">     129 </span>            : {
+<span class="lineNum">     130 </span>            : 
+<span class="lineNum">     131 </span><span class="lineCov">         12 : }</span>
+<span class="lineNum">     132 </span>            : 
+<span class="lineNum">     133 </span>            : /**
+<span class="lineNum">     134 </span>            :  * @brief  Parse an SQS CreateQueueResponse element.
+<span class="lineNum">     135 </span>            :  *
+<span class="lineNum">     136 </span>            :  * This implementation parses SQS CreateQueueResponse elements, as defined by
+<span class="lineNum">     137 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+<span class="lineNum">     138 </span>            :  *
+<span class="lineNum">     139 </span>            :  * For example:
+<span class="lineNum">     140 </span>            :  *
+<span class="lineNum">     141 </span>            :  * @code{xml}
+<span class="lineNum">     142 </span>            :  * &lt;CreateQueueResponse&gt;
+<span class="lineNum">     143 </span>            :  *   &lt;CreateQueueResult&gt;
+<span class="lineNum">     144 </span>            :  *     &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
+<span class="lineNum">     145 </span>            :  *   &lt;/CreateQueueResult&gt;
+<span class="lineNum">     146 </span>            :  *   &lt;ResponseMetadata&gt;
+<span class="lineNum">     147 </span>            :  *     &lt;RequestId&gt;7a62c49f-347e-4fc4-9331-6e8e7a96aa73&lt;/RequestId&gt;
+<span class="lineNum">     148 </span>            :  *   &lt;/ResponseMetadata&gt;
+<span class="lineNum">     149 </span>            :  * &lt;/CreateQueueResponse&gt;
+<span class="lineNum">     150 </span>            :  * @endcode
+<span class="lineNum">     151 </span>            :  *
+<span class="lineNum">     152 </span>            :  * @param  xml  XML stream to parse.
+<span class="lineNum">     153 </span>            :  *
+<a name="154"><span class="lineNum">     154 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
+<span class="lineNum">     155 </span>            :  */
+<span class="lineNum">     156 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     157 </span>            : {
+<span class="lineNum">     158 </span><span class="lineNoCov">          0 :     Q_ASSERT(xml.name() == QLatin1String(&quot;CreateQueueResponse&quot;));</span>
+<span class="lineNum">     159 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
+<span class="lineNum">     160 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;CreateQueueResult&quot;)) {</span>
+<span class="lineNum">     161 </span><span class="lineNoCov">          0 :             parseCreateQueueResult(xml);</span>
+<span class="lineNum">     162 </span><span class="lineNoCov">          0 :         } else if (xml.name() == QLatin1String(&quot;ResponseMetadata&quot;)) {</span>
+<span class="lineNum">     163 </span><span class="lineNoCov">          0 :             parseResponseMetadata(xml);</span>
+<span class="lineNum">     164 </span>            :         } else {
+<span class="lineNum">     165 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     166 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     167 </span>            :         }
+<span class="lineNum">     168 </span>            :     }
+<span class="lineNum">     169 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     170 </span>            : 
+<span class="lineNum">     171 </span>            : /**
+<span class="lineNum">     172 </span>            :  * @brief  Parse an SQS CreateQueueResult element.
+<span class="lineNum">     173 </span>            :  *
+<span class="lineNum">     174 </span>            :  * This implementation parses SQS CreateQueueResult elements, as defined by
+<span class="lineNum">     175 </span>            :  * http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+<span class="lineNum">     176 </span>            :  *
+<span class="lineNum">     177 </span>            :  * For example:
+<span class="lineNum">     178 </span>            :  *
+<span class="lineNum">     179 </span>            :  * @code{xml}
+<span class="lineNum">     180 </span>            :  * &lt;CreateQueueResult&gt;
+<span class="lineNum">     181 </span>            :  *   &lt;QueueUrl&gt;http://&amp;useast1-query;/123456789012/testQueue&lt;/QueueUrl&gt;
+<span class="lineNum">     182 </span>            :  * &lt;/CreateQueueResult&gt;
+<span class="lineNum">     183 </span>            :  * @endcode
+<span class="lineNum">     184 </span>            :  *
+<span class="lineNum">     185 </span>            :  * @param  xml  XML stream to parse.
+<span class="lineNum">     186 </span>            :  *
+<a name="187"><span class="lineNum">     187 </span>            :  * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
+<span class="lineNum">     188 </span>            :  */
+<span class="lineNum">     189 </span><span class="lineNoCov">          0 : void SqsCreateQueueResponsePrivate::parseCreateQueueResult(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     190 </span>            : {
+<span class="lineNum">     191 </span><span class="lineNoCov">          0 :     Q_ASSERT(xml.name() == QLatin1String(&quot;CreateQueueResult&quot;));</span>
+<span class="lineNum">     192 </span><span class="lineNoCov">          0 :     while (xml.readNextStartElement()) {</span>
+<span class="lineNum">     193 </span><span class="lineNoCov">          0 :         if (xml.name() == QLatin1String(&quot;QueueUrl&quot;)) {</span>
+<span class="lineNum">     194 </span><span class="lineNoCov">          0 :             queueUrl = xml.readElementText();</span>
+<span class="lineNum">     195 </span>            :         } else {
+<span class="lineNum">     196 </span><span class="lineNoCov">          0 :             qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     197 </span><span class="lineNoCov">          0 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     198 </span>            :         }
+<span class="lineNum">     199 </span>            :     }
+<span class="lineNum">     200 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>

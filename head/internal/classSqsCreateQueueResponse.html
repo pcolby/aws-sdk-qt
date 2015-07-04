@@ -88,7 +88,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-slots">Protected Slots</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSqsCreateQueueResponse-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SqsCreateQueueResponse Class Reference</div>  </div>
@@ -109,17 +108,20 @@ Collaboration diagram for SqsCreateQueueResponse:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSqsCreateQueueResponse__coll__graph.png" border="0" usemap="#SqsCreateQueueResponse_coll__map" alt="Collaboration graph"/></div>
 <map name="SqsCreateQueueResponse_coll__map" id="SqsCreateQueueResponse_coll__map">
-<area shape="rect" id="node6" href="classSqsCreateQueueResponsePrivate.html" title="Private implementation for SqsCreateQueueResponse. " alt="" coords="29,361,252,388"/><area shape="rect" id="node2" href="classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="151,196,255,223"/><area shape="rect" id="node3" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="124,95,280,121"/><area shape="rect" id="node5" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="10,5,207,32"/><area shape="rect" id="node7" href="classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="5,145,151,172"/></map>
+<area shape="rect" id="node2" href="classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="437,171,541,197"/><area shape="rect" id="node3" href="classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="301,81,457,108"/><area shape="rect" id="node5" href="classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="216,171,413,197"/><area shape="rect" id="node6" href="classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="89,81,236,108"/><area shape="rect" id="node7" href="classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="5,171,192,197"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8ef237f341d419018a09e6232f2d425"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#ae8ef237f341d419018a09e6232f2d425">SqsCreateQueueResponse</a> (QNetworkReply *const reply, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ae8ef237f341d419018a09e6232f2d425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#ae8ef237f341d419018a09e6232f2d425">More...</a><br /></td></tr>
-<tr class="separator:ae8ef237f341d419018a09e6232f2d425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffcae436ef5dada83573a2cdfe703af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#a3ffcae436ef5dada83573a2cdfe703af">SqsCreateQueueResponse</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;<a class="el" href="classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd">request</a>, QNetworkReply *const reply, QObject *const parent=0)</td></tr>
+<tr class="memdesc:a3ffcae436ef5dada83573a2cdfe703af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object.  <a href="#a3ffcae436ef5dada83573a2cdfe703af">More...</a><br /></td></tr>
+<tr class="separator:a3ffcae436ef5dada83573a2cdfe703af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa31d73f58e066f5942fba854d2e6fd9b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">isValid</a> () const </td></tr>
 <tr class="memdesc:aa31d73f58e066f5942fba854d2e6fd9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this AWS response valid?  <a href="#aa31d73f58e066f5942fba854d2e6fd9b">More...</a><br /></td></tr>
 <tr class="separator:aa31d73f58e066f5942fba854d2e6fd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea85705d104af6b9213c0d5bbc8e0cd"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#abea85705d104af6b9213c0d5bbc8e0cd">request</a> () const </td></tr>
+<tr class="memdesc:abea85705d104af6b9213c0d5bbc8e0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this response's originating AWS request.  <a href="#abea85705d104af6b9213c0d5bbc8e0cd">More...</a><br /></td></tr>
+<tr class="separator:abea85705d104af6b9213c0d5bbc8e0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21aa6debaa40f084c86b80c4a5a45c53"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#a21aa6debaa40f084c86b80c4a5a45c53">queueUrl</a> () const </td></tr>
 <tr class="memdesc:a21aa6debaa40f084c86b80c4a5a45c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the created queue's URL.  <a href="#a21aa6debaa40f084c86b80c4a5a45c53">More...</a><br /></td></tr>
 <tr class="separator:a21aa6debaa40f084c86b80c4a5a45c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,13 +173,6 @@ Protected Slots</h2></td></tr>
 <tr class="memdesc:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot to be invoked when the internal network reply is finished.  <a href="#a947e8cd17ec9d795c080bb2c783cbd5c">More...</a><br /></td></tr>
 <tr class="separator:a947e8cd17ec9d795c080bb2c783cbd5c inherit pro_slots_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aaa1a3f237c3788bc57182cb2bc0dd52d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa1a3f237c3788bc57182cb2bc0dd52d"></a>
-<a class="el" href="classSqsCreateQueueResponsePrivate.html">SqsCreateQueueResponsePrivate</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsCreateQueueResponse.html#aaa1a3f237c3788bc57182cb2bc0dd52d">d_ptr</a></td></tr>
-<tr class="memdesc:aaa1a3f237c3788bc57182cb2bc0dd52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal d-pointer. <br /></td></tr>
-<tr class="separator:aaa1a3f237c3788bc57182cb2bc0dd52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header signals_classAwsAbstractResponse"><td colspan="2" onclick="javascript:toggleInherit('signals_classAwsAbstractResponse')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classAwsAbstractResponse.html">AwsAbstractResponse</a></td></tr>
@@ -202,6 +197,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a> (QNetworkReply *reply)</td></tr>
 <tr class="memdesc:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network reply from which to expect an AWS response.  <a href="#a13eab6d1bc11b614d243f1da75ce6eb6">More...</a><br /></td></tr>
 <tr class="separator:a13eab6d1bc11b614d243f1da75ce6eb6 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a> (const <a class="el" href="classAwsAbstractRequest.html">AwsAbstractRequest</a> *const <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">request</a>)</td></tr>
+<tr class="memdesc:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this response's originating AWS request.  <a href="#a07d5401836647d49c3f750fc223f2b69">More...</a><br /></td></tr>
+<tr class="separator:a07d5401836647d49c3f750fc223f2b69 inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractResponse.html#a9ddac7db08332f5bbea58abad54a45da">setXmlError</a> (const QXmlStreamReader &amp;xml)</td></tr>
 <tr class="memdesc:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the details of an XML parse error.  <a href="#a9ddac7db08332f5bbea58abad54a45da">More...</a><br /></td></tr>
 <tr class="separator:a9ddac7db08332f5bbea58abad54a45da inherit pro_methods_classAwsAbstractResponse"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,15 +221,21 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles Amazon Simple Queue Service (SQS) responses. </p>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8h_source.html#l00031">31</a> of file <a class="el" href="sqscreatequeueresponse_8h_source.html">sqscreatequeueresponse.h</a>.</p>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8h_source.html#l00030">30</a> of file <a class="el" href="sqscreatequeueresponse_8h_source.html">sqscreatequeueresponse.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae8ef237f341d419018a09e6232f2d425"></a>
+<a class="anchor" id="a3ffcae436ef5dada83573a2cdfe703af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">SqsCreateQueueResponse::SqsCreateQueueResponse </td>
           <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">QNetworkReply *const&#160;</td>
           <td class="paramname"><em>reply</em>, </td>
         </tr>
@@ -252,22 +256,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a new <a class="el" href="classSqsResponse.html" title="Interface class for processing SQS responses. ">SqsResponse</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">request</td><td>Original AWS request. </td></tr>
     <tr><td class="paramname">reply</td><td>AWS network response to observe. </td></tr>
     <tr><td class="paramname">parent</td><td>This object's parent. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00041">41</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00042">42</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
 
-<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00329">AwsAbstractResponse::setReply()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    : <a class="code" href="classSqsResponse.html#a46c03e6525a566e3db12f2d2fc5df2bf">SqsResponse</a>(parent), <a class="code" href="classSqsCreateQueueResponse.html#aaa1a3f237c3788bc57182cb2bc0dd52d">d_ptr</a>(<span class="keyword">new</span> <a class="code" href="classSqsCreateQueueResponsePrivate.html">SqsCreateQueueResponsePrivate</a>(<span class="keyword">this</span>))</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a>(reply);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<p>References <a class="el" href="awsabstractresponse_8cpp_source.html#l00341">AwsAbstractResponse::setReply()</a>, and <a class="el" href="awsabstractresponse_8cpp_source.html#l00363">AwsAbstractResponse::setRequest()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    : <a class="code" href="classSqsResponse.html#a46c03e6525a566e3db12f2d2fc5df2bf">SqsResponse</a>(<span class="keyword">new</span> <a class="code" href="classSqsCreateQueueResponsePrivate.html">SqsCreateQueueResponsePrivate</a>(<span class="keyword">this</span>), parent)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">setRequest</a>(<span class="keyword">new</span> <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a>(request));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">setReply</a>(reply);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="ttc" id="classSqsCreateQueueResponsePrivate_html"><div class="ttname"><a href="classSqsCreateQueueResponsePrivate.html">SqsCreateQueueResponsePrivate</a></div><div class="ttdoc">Private implementation for SqsCreateQueueResponse. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse__p_8h_source.html#l00029">sqscreatequeueresponse_p.h:29</a></div></div>
-<div class="ttc" id="classAwsAbstractResponse_html_a13eab6d1bc11b614d243f1da75ce6eb6"><div class="ttname"><a href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">AwsAbstractResponse::setReply</a></div><div class="ttdeci">void setReply(QNetworkReply *reply)</div><div class="ttdoc">Set the network reply from which to expect an AWS response. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00329">awsabstractresponse.cpp:329</a></div></div>
-<div class="ttc" id="classSqsCreateQueueResponse_html_aaa1a3f237c3788bc57182cb2bc0dd52d"><div class="ttname"><a href="classSqsCreateQueueResponse.html#aaa1a3f237c3788bc57182cb2bc0dd52d">SqsCreateQueueResponse::d_ptr</a></div><div class="ttdeci">SqsCreateQueueResponsePrivate *const d_ptr</div><div class="ttdoc">Internal d-pointer. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00047">sqscreatequeueresponse.h:47</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a07d5401836647d49c3f750fc223f2b69"><div class="ttname"><a href="classAwsAbstractResponse.html#a07d5401836647d49c3f750fc223f2b69">AwsAbstractResponse::setRequest</a></div><div class="ttdeci">void setRequest(const AwsAbstractRequest *const request)</div><div class="ttdoc">Set this response&#39;s originating AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00363">awsabstractresponse.cpp:363</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html_a13eab6d1bc11b614d243f1da75ce6eb6"><div class="ttname"><a href="classAwsAbstractResponse.html#a13eab6d1bc11b614d243f1da75ce6eb6">AwsAbstractResponse::setReply</a></div><div class="ttdeci">void setReply(QNetworkReply *reply)</div><div class="ttdoc">Set the network reply from which to expect an AWS response. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8cpp_source.html#l00341">awsabstractresponse.cpp:341</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8h_source.html#l00029">sqscreatequeuerequest.h:29</a></div></div>
 <div class="ttc" id="classSqsResponse_html_a46c03e6525a566e3db12f2d2fc5df2bf"><div class="ttname"><a href="classSqsResponse.html#a46c03e6525a566e3db12f2d2fc5df2bf">SqsResponse::SqsResponse</a></div><div class="ttdeci">SqsResponse(QObject *const parent=0)</div><div class="ttdoc">Constructs a new SqsResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsresponse_8cpp_source.html#l00040">sqsresponse.cpp:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -302,12 +309,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">SqsResponse</a>.</p>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00048">48</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> !d-&gt;queueUrl.isEmpty();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00031">sqscreatequeueresponse.h:31</a></div></div>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00051">51</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> !d-&gt;queueUrl.isEmpty();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -352,20 +359,20 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00089">89</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Q_D(<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QXmlStreamReader xml(&amp;response);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResponse&quot;</span>)) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            d-&gt;parseCreateQueueResponse(xml);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            xml.skipCurrentElement();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00031">sqscreatequeueresponse.h:31</a></div></div>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00098">98</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    Q_D(<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    QXmlStreamReader xml(&amp;response);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;CreateQueueResponse&quot;</span>)) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            d-&gt;parseCreateQueueResponse(xml);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            xml.skipCurrentElement();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -385,12 +392,48 @@ Additional Inherited Members</h2></td></tr>
 <p>Get the created queue's URL. </p>
 <dl class="section return"><dt>Returns</dt><dd>The URL of the create queue, or a null QString if the response was not parsed successfully. </dd></dl>
 
-<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00060">60</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> d-&gt;queueUrl;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00031">sqscreatequeueresponse.h:31</a></div></div>
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00069">69</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> d-&gt;queueUrl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abea85705d104af6b9213c0d5bbc8e0cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> * SqsCreateQueueResponse::request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get this response's originating AWS request. </p>
+<dl class="section return"><dt>Returns</dt><dd>This response's originating AWS request. </dd></dl>
+
+<p>Implements <a class="el" href="classAwsAbstractResponse.html#a890212c4e876c8fecc1604a9d994a9a3">AwsAbstractResponse</a>.</p>
+
+<p>Definition at line <a class="el" href="sqscreatequeueresponse_8cpp_source.html#l00057">57</a> of file <a class="el" href="sqscreatequeueresponse_8cpp_source.html">sqscreatequeueresponse.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> *<span class="keyword">&gt;</span>(d-&gt;request);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8h_source.html#l00029">sqscreatequeuerequest.h:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -401,7 +444,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 28 2015 12:10:01 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 4 2015 12:56:07 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

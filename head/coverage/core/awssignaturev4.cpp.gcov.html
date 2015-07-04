@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-02 11:10:51</td>
+            <td class="headerValue">2015-07-04 12:56:31</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">16</td>
@@ -113,23 +113,23 @@
 <span class="lineNum">      51 </span>            :  *        algorithms are supported by Amazon, however all documented examples use
 <a name="52"><span class="lineNum">      52 </span>            :  *        SHA256.</a>
 <span class="lineNum">      53 </span>            :  */
-<span class="lineNum">      54 </span><span class="lineCov">       4854 : AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)</span>
-<span class="lineNum">      55 </span><span class="lineCov">       4854 :     : AwsAbstractSignature(new AwsSignatureV4Private(hashAlgorithm, this))</span>
+<span class="lineNum">      54 </span><span class="lineCov">       1494 : AwsSignatureV4::AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm)</span>
+<span class="lineNum">      55 </span><span class="lineCov">       1494 :     : AwsAbstractSignature(new AwsSignatureV4Private(hashAlgorithm, this))</span>
 <span class="lineNum">      56 </span>            : {
 <span class="lineNum">      57 </span>            : 
-<a name="58"><span class="lineNum">      58 </span><span class="lineCov">       4854 : }</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">       1494 : }</span></a>
 <span class="lineNum">      59 </span>            : 
-<span class="lineNum">      60 </span><span class="lineCov">         34 : void AwsSignatureV4::sign(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">      60 </span><span class="lineCov">         89 : void AwsSignatureV4::sign(const AwsAbstractCredentials &amp;credentials,</span>
 <span class="lineNum">      61 </span>            :                           const QNetworkAccessManager::Operation operation,
 <span class="lineNum">      62 </span>            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
 <span class="lineNum">      63 </span>            : {
-<span class="lineNum">      64 </span><span class="lineCov">         34 :     Q_D(const AwsSignatureV4);</span>
-<span class="lineNum">      65 </span><span class="lineCov">         34 :     d-&gt;setAuthorizationHeader(credentials, operation, request, data, d-&gt;setDateHeader(request));</span>
-<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         34 : }</span></a>
+<span class="lineNum">      64 </span><span class="lineCov">         89 :     Q_D(const AwsSignatureV4);</span>
+<span class="lineNum">      65 </span><span class="lineCov">         89 :     d-&gt;setAuthorizationHeader(credentials, operation, request, data, d-&gt;setDateHeader(request));</span>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         89 : }</span></a>
 <span class="lineNum">      67 </span>            : 
-<span class="lineNum">      68 </span><span class="lineCov">         33 : int AwsSignatureV4::version() const</span>
+<span class="lineNum">      68 </span><span class="lineCov">          5 : int AwsSignatureV4::version() const</span>
 <span class="lineNum">      69 </span>            : {
-<span class="lineNum">      70 </span><span class="lineCov">         33 :     return 4;</span>
+<span class="lineNum">      70 </span><span class="lineCov">          5 :     return 4;</span>
 <span class="lineNum">      71 </span>            : }
 <span class="lineNum">      72 </span>            : 
 <span class="lineNum">      73 </span>            : /**
@@ -143,10 +143,10 @@
 <span class="lineNum">      81 </span>            :  */
 <span class="lineNum">      82 </span>            : 
 <span class="lineNum">      83 </span>            : /// Format V4 signatures use to represent dates in canonical form.
-<span class="lineNum">      84 </span><span class="lineCov">        179 : const QLatin1String AwsSignatureV4Private::DateFormat(&quot;yyyyMMdd&quot;);</span>
+<span class="lineNum">      84 </span><span class="lineCov">         55 : const QLatin1String AwsSignatureV4Private::DateFormat(&quot;yyyyMMdd&quot;);</span>
 <span class="lineNum">      85 </span>            : 
 <span class="lineNum">      86 </span>            : /// Format V4 signatures use to represent timestamps in canonical form.
-<span class="lineNum">      87 </span><span class="lineCov">        179 : const QLatin1String AwsSignatureV4Private::DateTimeFormat(&quot;yyyyMMddThhmmssZ&quot;);</span>
+<span class="lineNum">      87 </span><span class="lineCov">         55 : const QLatin1String AwsSignatureV4Private::DateTimeFormat(&quot;yyyyMMddThhmmssZ&quot;);</span>
 <span class="lineNum">      88 </span>            : 
 <span class="lineNum">      89 </span>            : /**
 <span class="lineNum">      90 </span>            :  * @brief  Constructs a new AwsSignatureV4Private object.
@@ -154,12 +154,12 @@
 <span class="lineNum">      92 </span>            :  * @param  hashAlgorithm  The algorithm to use during various stages of signing.
 <a name="93"><span class="lineNum">      93 </span>            :  * @param  q              Pointer to this object's public AwsSignatureV4 instance.</a>
 <span class="lineNum">      94 </span>            :  */
-<span class="lineNum">      95 </span><span class="lineCov">       4854 : AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,</span>
+<span class="lineNum">      95 </span><span class="lineCov">       1494 : AwsSignatureV4Private::AwsSignatureV4Private(const QCryptographicHash::Algorithm hashAlgorithm,</span>
 <span class="lineNum">      96 </span>            :                                              AwsSignatureV4 * const q)
-<span class="lineNum">      97 </span><span class="lineCov">       4854 :     : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)</span>
+<span class="lineNum">      97 </span><span class="lineCov">       1494 :     : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)</span>
 <span class="lineNum">      98 </span>            : {
 <span class="lineNum">      99 </span>            : 
-<span class="lineNum">     100 </span><span class="lineCov">       4854 : }</span>
+<span class="lineNum">     100 </span><span class="lineCov">       1494 : }</span>
 <span class="lineNum">     101 </span>            : 
 <span class="lineNum">     102 </span>            : /**
 <span class="lineNum">     103 </span>            :  * @brief  Create an AWS V4 Signature algorithm designation.
@@ -176,19 +176,19 @@
 <span class="lineNum">     114 </span>            :  *
 <a name="115"><span class="lineNum">     115 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
 <span class="lineNum">     116 </span>            :  */
-<span class="lineNum">     117 </span><span class="lineCov">       2311 : QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const</span>
+<span class="lineNum">     117 </span><span class="lineCov">        434 : QByteArray AwsSignatureV4Private::algorithmDesignation(const QCryptographicHash::Algorithm algorithm) const</span>
 <span class="lineNum">     118 </span>            : {
-<span class="lineNum">     119 </span><span class="lineCov">       2311 :     switch (algorithm) {</span>
-<span class="lineNum">     120 </span><span class="lineCov">         33 :         case QCryptographicHash::Md4:      return &quot;AWS4-HMAC-MD4&quot;;</span>
-<span class="lineNum">     121 </span><span class="lineCov">         33 :         case QCryptographicHash::Md5:      return &quot;AWS4-HMAC-MD5&quot;;</span>
-<span class="lineNum">     122 </span><span class="lineCov">         33 :         case QCryptographicHash::Sha1:     return &quot;AWS4-HMAC-SHA1&quot;;</span>
-<span class="lineNum">     123 </span><span class="lineCov">         33 :         case QCryptographicHash::Sha224:   return &quot;AWS4-HMAC-SHA224&quot;;</span>
-<span class="lineNum">     124 </span><span class="lineCov">       1915 :         case QCryptographicHash::Sha256:   return &quot;AWS4-HMAC-SHA256&quot;;</span>
-<span class="lineNum">     125 </span><span class="lineCov">         33 :         case QCryptographicHash::Sha384:   return &quot;AWS4-HMAC-SHA384&quot;;</span>
-<span class="lineNum">     126 </span><span class="lineCov">         33 :         case QCryptographicHash::Sha512:   return &quot;AWS4-HMAC-SHA512&quot;;</span>
+<span class="lineNum">     119 </span><span class="lineCov">        434 :     switch (algorithm) {</span>
+<span class="lineNum">     120 </span><span class="lineCov">          5 :         case QCryptographicHash::Md4:      return &quot;AWS4-HMAC-MD4&quot;;</span>
+<span class="lineNum">     121 </span><span class="lineCov">          5 :         case QCryptographicHash::Md5:      return &quot;AWS4-HMAC-MD5&quot;;</span>
+<span class="lineNum">     122 </span><span class="lineCov">          5 :         case QCryptographicHash::Sha1:     return &quot;AWS4-HMAC-SHA1&quot;;</span>
+<span class="lineNum">     123 </span><span class="lineCov">          5 :         case QCryptographicHash::Sha224:   return &quot;AWS4-HMAC-SHA224&quot;;</span>
+<span class="lineNum">     124 </span><span class="lineCov">        374 :         case QCryptographicHash::Sha256:   return &quot;AWS4-HMAC-SHA256&quot;;</span>
+<span class="lineNum">     125 </span><span class="lineCov">          5 :         case QCryptographicHash::Sha384:   return &quot;AWS4-HMAC-SHA384&quot;;</span>
+<span class="lineNum">     126 </span><span class="lineCov">          5 :         case QCryptographicHash::Sha512:   return &quot;AWS4-HMAC-SHA512&quot;;</span>
 <span class="lineNum">     127 </span>            :         default:
-<span class="lineNum">     128 </span><span class="lineCov">        198 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid algorithm&quot;);</span>
-<span class="lineNum">     129 </span><span class="lineCov">        198 :             return &quot;invalid-algorithm&quot;;</span>
+<span class="lineNum">     128 </span><span class="lineCov">         30 :             Q_ASSERT_X(false, Q_FUNC_INFO, &quot;invalid algorithm&quot;);</span>
+<span class="lineNum">     129 </span><span class="lineCov">         30 :             return &quot;invalid-algorithm&quot;;</span>
 <span class="lineNum">     130 </span>            :     }
 <span class="lineNum">     131 </span>            : }
 <span class="lineNum">     132 </span>            : 
@@ -210,24 +210,24 @@
 <span class="lineNum">     148 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
 <a name="149"><span class="lineNum">     149 </span>            :  * @see    setAuthorizationHeader</a>
 <span class="lineNum">     150 </span>            :  */
-<span class="lineNum">     151 </span><span class="lineCov">       1882 : QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">     151 </span><span class="lineCov">        369 : QByteArray AwsSignatureV4Private::authorizationHeaderValue(const AwsAbstractCredentials &amp;credentials,</span>
 <span class="lineNum">     152 </span>            :                                                            const QNetworkAccessManager::Operation operation,
 <span class="lineNum">     153 </span>            :                                                            QNetworkRequest &amp;request, const QByteArray &amp;payload,
 <span class="lineNum">     154 </span>            :                                                            const QDateTime &amp;timestamp) const
 <span class="lineNum">     155 </span>            : {
-<span class="lineNum">     156 </span><span class="lineCov">       1882 :     const QByteArray algorithmDesignation = this-&gt;algorithmDesignation(hashAlgorithm);</span>
-<span class="lineNum">     157 </span><span class="lineCov">       3764 :     const AwsEndpoint endpoint(request.url().host());</span>
+<span class="lineNum">     156 </span><span class="lineCov">        369 :     const QByteArray algorithmDesignation = this-&gt;algorithmDesignation(hashAlgorithm);</span>
+<span class="lineNum">     157 </span><span class="lineCov">        738 :     const AwsEndpoint endpoint(request.url().host());</span>
 <span class="lineNum">     158 </span>            : 
-<span class="lineNum">     159 </span><span class="lineCov">       3764 :     const QByteArray credentialScope = this-&gt;credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
-<span class="lineNum">     160 </span><span class="lineCov">       3764 :     QByteArray signedHeaders;</span>
-<span class="lineNum">     161 </span><span class="lineCov">       3764 :     const QByteArray canonicalRequest = this-&gt;canonicalRequest(operation, request, payload, &amp;signedHeaders);</span>
+<span class="lineNum">     159 </span><span class="lineCov">        738 :     const QByteArray credentialScope = this-&gt;credentialScope(timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
+<span class="lineNum">     160 </span><span class="lineCov">        738 :     QByteArray signedHeaders;</span>
+<span class="lineNum">     161 </span><span class="lineCov">        738 :     const QByteArray canonicalRequest = this-&gt;canonicalRequest(operation, request, payload, &amp;signedHeaders);</span>
 <span class="lineNum">     162 </span>            : 
-<span class="lineNum">     163 </span><span class="lineCov">       3764 :     const QByteArray stringToSign = this-&gt;stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);</span>
-<span class="lineNum">     164 </span><span class="lineCov">       3764 :     const QByteArray signingKey = this-&gt;signingKey(credentials, timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
-<span class="lineNum">     165 </span><span class="lineCov">       3764 :     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);</span>
+<span class="lineNum">     163 </span><span class="lineCov">        738 :     const QByteArray stringToSign = this-&gt;stringToSign(algorithmDesignation, timestamp, credentialScope, canonicalRequest);</span>
+<span class="lineNum">     164 </span><span class="lineCov">        738 :     const QByteArray signingKey = this-&gt;signingKey(credentials, timestamp.date(), endpoint.regionName(), endpoint.serviceName());</span>
+<span class="lineNum">     165 </span><span class="lineCov">        738 :     const QByteArray signature = QMessageAuthenticationCode::hash(stringToSign, signingKey, hashAlgorithm);</span>
 <span class="lineNum">     166 </span>            : 
-<span class="lineNum">     167 </span><span class="lineCov">       3764 :     return algorithmDesignation + &quot; Credential=&quot; + credentials.accessKeyId().toUtf8() + '/' + credentialScope +</span>
-<span class="lineNum">     168 </span><span class="lineCov">       7528 :             &quot;, SignedHeaders=&quot; + signedHeaders + &quot;, Signature=&quot; + signature.toHex();</span>
+<span class="lineNum">     167 </span><span class="lineCov">        738 :     return algorithmDesignation + &quot; Credential=&quot; + credentials.accessKeyId().toUtf8() + '/' + credentialScope +</span>
+<span class="lineNum">     168 </span><span class="lineCov">       1476 :             &quot;, SignedHeaders=&quot; + signedHeaders + &quot;, Signature=&quot; + signature.toHex();</span>
 <span class="lineNum">     169 </span>            : }
 <span class="lineNum">     170 </span>            : 
 <span class="lineNum">     171 </span>            : /**
@@ -245,30 +245,30 @@
 <span class="lineNum">     183 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
 <a name="184"><span class="lineNum">     184 </span>            :  * @see    canonicalHeaders</a>
 <span class="lineNum">     185 </span>            :  */
-<span class="lineNum">     186 </span><span class="lineCov">       6602 : QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &amp;headerName, const QByteArray &amp;headerValue) const</span>
+<span class="lineNum">     186 </span><span class="lineCov">       1168 : QByteArray AwsSignatureV4Private::canonicalHeader(const QByteArray &amp;headerName, const QByteArray &amp;headerValue) const</span>
 <span class="lineNum">     187 </span>            : {
-<span class="lineNum">     188 </span><span class="lineCov">       6602 :     QByteArray header = headerName.toLower() + ':';</span>
-<span class="lineNum">     189 </span><span class="lineCov">      13204 :     const QByteArray trimmedHeaderValue = headerValue.trimmed();</span>
-<span class="lineNum">     190 </span><span class="lineCov">       6602 :     bool isInQuotes = false;</span>
-<span class="lineNum">     191 </span><span class="lineCov">       6602 :     char previousChar = '\0';</span>
-<span class="lineNum">     192 </span><span class="lineCov">     141830 :     for (int index = 0; index &lt; trimmedHeaderValue.size(); ++index) {</span>
-<span class="lineNum">     193 </span><span class="lineCov">     135228 :         char thisChar = trimmedHeaderValue.at(index);</span>
-<span class="lineNum">     194 </span><span class="lineCov">     135228 :         header += thisChar;</span>
-<span class="lineNum">     195 </span><span class="lineCov">     135228 :         if (isInQuotes) {</span>
-<span class="lineNum">     196 </span><span class="lineCov">       1419 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\'))</span>
-<span class="lineNum">     197 </span><span class="lineCov">         99 :                 isInQuotes = false;</span>
+<span class="lineNum">     188 </span><span class="lineCov">       1168 :     QByteArray header = headerName.toLower() + ':';</span>
+<span class="lineNum">     189 </span><span class="lineCov">       2336 :     const QByteArray trimmedHeaderValue = headerValue.trimmed();</span>
+<span class="lineNum">     190 </span><span class="lineCov">       1168 :     bool isInQuotes = false;</span>
+<span class="lineNum">     191 </span><span class="lineCov">       1168 :     char previousChar = '\0';</span>
+<span class="lineNum">     192 </span><span class="lineCov">      25265 :     for (int index = 0; index &lt; trimmedHeaderValue.size(); ++index) {</span>
+<span class="lineNum">     193 </span><span class="lineCov">      24097 :         char thisChar = trimmedHeaderValue.at(index);</span>
+<span class="lineNum">     194 </span><span class="lineCov">      24097 :         header += thisChar;</span>
+<span class="lineNum">     195 </span><span class="lineCov">      24097 :         if (isInQuotes) {</span>
+<span class="lineNum">     196 </span><span class="lineCov">        215 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\'))</span>
+<span class="lineNum">     197 </span><span class="lineCov">         15 :                 isInQuotes = false;</span>
 <span class="lineNum">     198 </span>            :         } else {
-<span class="lineNum">     199 </span><span class="lineCov">     133809 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\')) {</span>
-<span class="lineNum">     200 </span><span class="lineCov">         99 :                 isInQuotes = true;</span>
-<span class="lineNum">     201 </span><span class="lineCov">     133710 :             } else if (isspace(thisChar)) {</span>
-<span class="lineNum">     202 </span><span class="lineCov">      42966 :                 while ((index &lt; trimmedHeaderValue.size()-1) &amp;&amp;</span>
-<span class="lineNum">     203 </span><span class="lineCov">      14520 :                        (isspace(trimmedHeaderValue.at(index+1))))</span>
-<span class="lineNum">     204 </span><span class="lineCov">        594 :                     ++index;</span>
+<span class="lineNum">     199 </span><span class="lineCov">      23882 :             if ((thisChar == '&quot;') &amp;&amp; (previousChar != '\\')) {</span>
+<span class="lineNum">     200 </span><span class="lineCov">         15 :                 isInQuotes = true;</span>
+<span class="lineNum">     201 </span><span class="lineCov">      23867 :             } else if (isspace(thisChar)) {</span>
+<span class="lineNum">     202 </span><span class="lineCov">       6510 :                 while ((index &lt; trimmedHeaderValue.size()-1) &amp;&amp;</span>
+<span class="lineNum">     203 </span><span class="lineCov">       2200 :                        (isspace(trimmedHeaderValue.at(index+1))))</span>
+<span class="lineNum">     204 </span><span class="lineCov">         90 :                     ++index;</span>
 <span class="lineNum">     205 </span>            :             }
 <span class="lineNum">     206 </span>            :         }
-<span class="lineNum">     207 </span><span class="lineCov">     135228 :         previousChar = thisChar;</span>
+<span class="lineNum">     207 </span><span class="lineCov">      24097 :         previousChar = thisChar;</span>
 <span class="lineNum">     208 </span>            :     }
-<span class="lineNum">     209 </span><span class="lineCov">      13204 :     return header;</span>
+<span class="lineNum">     209 </span><span class="lineCov">       2336 :     return header;</span>
 <span class="lineNum">     210 </span>            : }
 <span class="lineNum">     211 </span>            : 
 <span class="lineNum">     212 </span>            : /**
@@ -292,10 +292,10 @@
 <span class="lineNum">     230 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
 <a name="231"><span class="lineNum">     231 </span>            :  * @see    canonicalHeader</a>
 <span class="lineNum">     232 </span>            :  */
-<span class="lineNum">     233 </span><span class="lineCov">       2905 : QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &amp;request, QByteArray * const signedHeaders) const</span>
+<span class="lineNum">     233 </span><span class="lineCov">        524 : QByteArray AwsSignatureV4Private::canonicalHeaders(const QNetworkRequest &amp;request, QByteArray * const signedHeaders) const</span>
 <span class="lineNum">     234 </span>            : {
-<span class="lineNum">     235 </span><span class="lineCov">       2905 :     Q_CHECK_PTR(signedHeaders);</span>
-<span class="lineNum">     236 </span><span class="lineCov">       2905 :     signedHeaders-&gt;clear();</span>
+<span class="lineNum">     235 </span><span class="lineCov">        524 :     Q_CHECK_PTR(signedHeaders);</span>
+<span class="lineNum">     236 </span><span class="lineCov">        524 :     signedHeaders-&gt;clear();</span>
 <span class="lineNum">     237 </span>            : 
 <span class="lineNum">     238 </span>            :     /* Note, Amazon says we should combine duplicate headers with comma separators...
 <span class="lineNum">     239 </span>            :      * conveniently for us, QNetworkRequest requires that to have been done already.
@@ -303,21 +303,21 @@
 <span class="lineNum">     241 </span>            :      */
 <span class="lineNum">     242 </span>            : 
 <span class="lineNum">     243 </span>            :     // Convert the raw headers list to a map to sort on (lowercased) header names only.
-<span class="lineNum">     244 </span><span class="lineCov">       2905 :     QMap&lt;QByteArray,QByteArray&gt; headers;</span>
-<span class="lineNum">     245 </span><span class="lineCov">       6371 :     foreach (const QByteArray &amp;rawHeader, request.rawHeaderList()) {</span>
-<span class="lineNum">     246 </span><span class="lineCov">       3466 :         headers.insert(rawHeader.toLower(), request.rawHeader(rawHeader));</span>
-<span class="lineNum">     247 </span><span class="lineCov">       2905 :     }</span>
+<span class="lineNum">     244 </span><span class="lineCov">        524 :     QMap&lt;QByteArray,QByteArray&gt; headers;</span>
+<span class="lineNum">     245 </span><span class="lineCov">       1133 :     foreach (const QByteArray &amp;rawHeader, request.rawHeaderList()) {</span>
+<span class="lineNum">     246 </span><span class="lineCov">        609 :         headers.insert(rawHeader.toLower(), request.rawHeader(rawHeader));</span>
+<span class="lineNum">     247 </span><span class="lineCov">        524 :     }</span>
 <span class="lineNum">     248 </span>            :     // The &quot;host&quot; header is not included in QNetworkRequest::rawHeaderList, but will be sent by Qt.
-<span class="lineNum">     249 </span><span class="lineCov">       2905 :     headers.insert(&quot;host&quot;, request.url().host().toUtf8());</span>
+<span class="lineNum">     249 </span><span class="lineCov">        524 :     headers.insert(&quot;host&quot;, request.url().host().toUtf8());</span>
 <span class="lineNum">     250 </span>            : 
 <span class="lineNum">     251 </span>            :     // Convert the headers map to a canonical string, keeping track of which headers we've included too.
-<span class="lineNum">     252 </span><span class="lineCov">       2905 :     QByteArray canonicalHeaders;</span>
-<span class="lineNum">     253 </span><span class="lineCov">       9276 :     for (QMap&lt;QByteArray,QByteArray&gt;::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {</span>
-<span class="lineNum">     254 </span><span class="lineCov">       6371 :         canonicalHeaders += canonicalHeader(iter.key(), iter.value()) + '\n';</span>
-<span class="lineNum">     255 </span><span class="lineCov">       6371 :         if (!signedHeaders-&gt;isEmpty()) *signedHeaders += ';';</span>
-<span class="lineNum">     256 </span><span class="lineCov">       6371 :         *signedHeaders += iter.key();</span>
+<span class="lineNum">     252 </span><span class="lineCov">        524 :     QByteArray canonicalHeaders;</span>
+<span class="lineNum">     253 </span><span class="lineCov">       1657 :     for (QMap&lt;QByteArray,QByteArray&gt;::const_iterator iter = headers.constBegin(); iter != headers.constEnd(); ++iter) {</span>
+<span class="lineNum">     254 </span><span class="lineCov">       1133 :         canonicalHeaders += canonicalHeader(iter.key(), iter.value()) + '\n';</span>
+<span class="lineNum">     255 </span><span class="lineCov">       1133 :         if (!signedHeaders-&gt;isEmpty()) *signedHeaders += ';';</span>
+<span class="lineNum">     256 </span><span class="lineCov">       1133 :         *signedHeaders += iter.key();</span>
 <span class="lineNum">     257 </span>            :     }
-<span class="lineNum">     258 </span><span class="lineCov">       2905 :     return canonicalHeaders;</span>
+<span class="lineNum">     258 </span><span class="lineCov">        524 :     return canonicalHeaders;</span>
 <span class="lineNum">     259 </span>            : }
 <span class="lineNum">     260 </span>            : 
 <span class="lineNum">     261 </span>            : /**
@@ -333,16 +333,16 @@
 <span class="lineNum">     271 </span>            :  *
 <a name="272"><span class="lineNum">     272 </span>            :  * @see     http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
 <span class="lineNum">     273 </span>            :  */
-<span class="lineNum">     274 </span><span class="lineCov">       2839 : QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">     274 </span><span class="lineCov">        514 : QByteArray AwsSignatureV4Private::canonicalRequest(const QNetworkAccessManager::Operation operation,</span>
 <span class="lineNum">     275 </span>            :                                                    const QNetworkRequest &amp;request, const QByteArray &amp;payload,
 <span class="lineNum">     276 </span>            :                                                    QByteArray * const signedHeaders) const
 <span class="lineNum">     277 </span>            : {
-<span class="lineNum">     278 </span><span class="lineCov">       5678 :     return httpMethod(operation).toUtf8() + '\n' +</span>
-<span class="lineNum">     279 </span><span class="lineCov">      11356 :            canonicalPath(request.url()).toUtf8() + '\n' +</span>
-<span class="lineNum">     280 </span><span class="lineCov">      11356 :            canonicalQuery(QUrlQuery(request.url()))  + '\n' +</span>
-<span class="lineNum">     281 </span><span class="lineCov">       5678 :            canonicalHeaders(request, signedHeaders) + '\n' +</span>
-<span class="lineNum">     282 </span><span class="lineCov">       5678 :            *signedHeaders + '\n' +</span>
-<span class="lineNum">     283 </span><span class="lineCov">       8517 :            QCryptographicHash::hash(payload, hashAlgorithm).toHex();</span>
+<span class="lineNum">     278 </span><span class="lineCov">       1028 :     return httpMethod(operation).toUtf8() + '\n' +</span>
+<span class="lineNum">     279 </span><span class="lineCov">       2056 :            canonicalPath(request.url()).toUtf8() + '\n' +</span>
+<span class="lineNum">     280 </span><span class="lineCov">       2056 :            canonicalQuery(QUrlQuery(request.url()))  + '\n' +</span>
+<span class="lineNum">     281 </span><span class="lineCov">       1028 :            canonicalHeaders(request, signedHeaders) + '\n' +</span>
+<span class="lineNum">     282 </span><span class="lineCov">       1028 :            *signedHeaders + '\n' +</span>
+<span class="lineNum">     283 </span><span class="lineCov">       1542 :            QCryptographicHash::hash(payload, hashAlgorithm).toHex();</span>
 <span class="lineNum">     284 </span>            : }
 <span class="lineNum">     285 </span>            : 
 <span class="lineNum">     286 </span>            : /**
@@ -356,9 +356,9 @@
 <span class="lineNum">     294 </span>            :  *
 <a name="295"><span class="lineNum">     295 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>
 <span class="lineNum">     296 </span>            :  */
-<span class="lineNum">     297 </span><span class="lineCov">       1948 : QByteArray AwsSignatureV4Private::credentialScope(const QDate &amp;date, const QString &amp;region, const QString &amp;service) const</span>
+<span class="lineNum">     297 </span><span class="lineCov">        379 : QByteArray AwsSignatureV4Private::credentialScope(const QDate &amp;date, const QString &amp;region, const QString &amp;service) const</span>
 <span class="lineNum">     298 </span>            : {
-<span class="lineNum">     299 </span><span class="lineCov">       1948 :     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + &quot;/aws4_request&quot;;</span>
+<span class="lineNum">     299 </span><span class="lineCov">        379 :     return date.toString(DateFormat).toUtf8() + '/' + region.toUtf8() + '/' + service.toUtf8() + &quot;/aws4_request&quot;;</span>
 <span class="lineNum">     300 </span>            : }
 <span class="lineNum">     301 </span>            : 
 <span class="lineNum">     302 </span>            : /**
@@ -376,14 +376,14 @@
 <span class="lineNum">     314 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html
 <a name="315"><span class="lineNum">     315 </span>            :  * @see    authorizationHeaderValue</a>
 <span class="lineNum">     316 </span>            :  */
-<span class="lineNum">     317 </span><span class="lineCov">        958 : void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &amp;credentials,</span>
+<span class="lineNum">     317 </span><span class="lineCov">        229 : void AwsSignatureV4Private::setAuthorizationHeader(const AwsAbstractCredentials &amp;credentials,</span>
 <span class="lineNum">     318 </span>            :                                                    const QNetworkAccessManager::Operation operation,
 <span class="lineNum">     319 </span>            :                                                    QNetworkRequest &amp;request, const QByteArray &amp;payload,
 <span class="lineNum">     320 </span>            :                                                    const QDateTime &amp;timestamp) const
 <span class="lineNum">     321 </span>            : {
-<span class="lineNum">     322 </span><span class="lineCov">        958 :     Q_ASSERT(!request.hasRawHeader(&quot;Authorization&quot;));</span>
-<span class="lineNum">     323 </span><span class="lineCov">        958 :     request.setRawHeader(&quot;Authorization&quot;, authorizationHeaderValue(credentials, operation, request, payload, timestamp));</span>
-<span class="lineNum">     324 </span><span class="lineCov">        958 : }</span>
+<span class="lineNum">     322 </span><span class="lineCov">        229 :     Q_ASSERT(!request.hasRawHeader(&quot;Authorization&quot;));</span>
+<span class="lineNum">     323 </span><span class="lineCov">        229 :     request.setRawHeader(&quot;Authorization&quot;, authorizationHeaderValue(credentials, operation, request, payload, timestamp));</span>
+<span class="lineNum">     324 </span><span class="lineCov">        229 : }</span>
 <span class="lineNum">     325 </span>            : 
 <span class="lineNum">     326 </span>            : /**
 <span class="lineNum">     327 </span>            :  * @brief   Set the AWS custom date header.
@@ -398,11 +398,11 @@
 <span class="lineNum">     336 </span>            :  *
 <a name="337"><span class="lineNum">     337 </span>            :  * @return  \p dateTime verbatim (just a convenience for some callers).</a>
 <span class="lineNum">     338 </span>            :  */
-<span class="lineNum">     339 </span><span class="lineCov">        133 : QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &amp;request, const QDateTime &amp;dateTime) const</span>
+<span class="lineNum">     339 </span><span class="lineCov">        104 : QDateTime AwsSignatureV4Private::setDateHeader(QNetworkRequest &amp;request, const QDateTime &amp;dateTime) const</span>
 <span class="lineNum">     340 </span>            : {
-<span class="lineNum">     341 </span><span class="lineCov">        133 :     Q_ASSERT(!request.hasRawHeader(&quot;x-amz-date&quot;));</span>
-<span class="lineNum">     342 </span><span class="lineCov">        133 :     request.setRawHeader(&quot;x-amz-date&quot;, dateTime.toString(DateTimeFormat).toUtf8());</span>
-<span class="lineNum">     343 </span><span class="lineCov">        133 :     return dateTime;</span>
+<span class="lineNum">     341 </span><span class="lineCov">        104 :     Q_ASSERT(!request.hasRawHeader(&quot;x-amz-date&quot;));</span>
+<span class="lineNum">     342 </span><span class="lineCov">        104 :     request.setRawHeader(&quot;x-amz-date&quot;, dateTime.toString(DateTimeFormat).toUtf8());</span>
+<span class="lineNum">     343 </span><span class="lineCov">        104 :     return dateTime;</span>
 <span class="lineNum">     344 </span>            : }
 <span class="lineNum">     345 </span>            : 
 <span class="lineNum">     346 </span>            : /**
@@ -417,14 +417,14 @@
 <span class="lineNum">     355 </span>            :  *
 <a name="356"><span class="lineNum">     356 </span>            :  * @see    http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html</a>
 <span class="lineNum">     357 </span>            :  */
-<span class="lineNum">     358 </span><span class="lineCov">       1915 : QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &amp;credentials, const QDate &amp;date,</span>
+<span class="lineNum">     358 </span><span class="lineCov">        374 : QByteArray AwsSignatureV4Private::signingKey(const AwsAbstractCredentials &amp;credentials, const QDate &amp;date,</span>
 <span class="lineNum">     359 </span>            :                                              const QString &amp;region, const QString &amp;service) const
 <span class="lineNum">     360 </span>            : {
 <span class="lineNum">     361 </span>            :     return QMessageAuthenticationCode::hash(&quot;aws4_request&quot;,
 <span class="lineNum">     362 </span>            :            QMessageAuthenticationCode::hash(service.toUtf8(),
 <span class="lineNum">     363 </span>            :            QMessageAuthenticationCode::hash(region.toUtf8(),
-<span class="lineNum">     364 </span><span class="lineCov">       3830 :            QMessageAuthenticationCode::hash(date.toString(DateFormat).toUtf8(), &quot;AWS4&quot;+credentials.secretKey().toUtf8(),</span>
-<span class="lineNum">     365 </span><span class="lineCov">       5745 :            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);</span>
+<span class="lineNum">     364 </span><span class="lineCov">        748 :            QMessageAuthenticationCode::hash(date.toString(DateFormat).toUtf8(), &quot;AWS4&quot;+credentials.secretKey().toUtf8(),</span>
+<span class="lineNum">     365 </span><span class="lineCov">       1122 :            hashAlgorithm), hashAlgorithm), hashAlgorithm), hashAlgorithm);</span>
 <span class="lineNum">     366 </span>            : }
 <span class="lineNum">     367 </span>            : 
 <span class="lineNum">     368 </span>            : /**
@@ -442,14 +442,14 @@
 <span class="lineNum">     380 </span>            :  * @see    canonicalRequest
 <a name="381"><span class="lineNum">     381 </span>            :  * @see    credentialScope</a>
 <span class="lineNum">     382 </span>            :  */
-<span class="lineNum">     383 </span><span class="lineCov">       2839 : QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &amp;algorithmDesignation, const QDateTime &amp;requestDate,</span>
+<span class="lineNum">     383 </span><span class="lineCov">        514 : QByteArray AwsSignatureV4Private::stringToSign(const QByteArray &amp;algorithmDesignation, const QDateTime &amp;requestDate,</span>
 <span class="lineNum">     384 </span>            :                                                const QByteArray &amp;credentialScope, const QByteArray &amp;canonicalRequest) const
 <span class="lineNum">     385 </span>            : {
-<span class="lineNum">     386 </span><span class="lineCov">       5678 :     return algorithmDesignation + '\n' +</span>
-<span class="lineNum">     387 </span><span class="lineCov">       5678 :            requestDate.toString(DateTimeFormat).toUtf8() + '\n' +</span>
-<a name="388"><span class="lineNum">     388 </span><span class="lineCov">       5678 :            credentialScope + '\n' +</span></a>
-<span class="lineNum">     389 </span><span class="lineCov">       8517 :            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();</span>
-<span class="lineNum">     390 </span><span class="lineCov">        537 : }</span>
+<span class="lineNum">     386 </span><span class="lineCov">       1028 :     return algorithmDesignation + '\n' +</span>
+<span class="lineNum">     387 </span><span class="lineCov">       1028 :            requestDate.toString(DateTimeFormat).toUtf8() + '\n' +</span>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">       1028 :            credentialScope + '\n' +</span></a>
+<span class="lineNum">     389 </span><span class="lineCov">       1542 :            QCryptographicHash::hash(canonicalRequest, hashAlgorithm).toHex();</span>
+<span class="lineNum">     390 </span><span class="lineCov">        165 : }</span>
 <span class="lineNum">     391 </span>            : 
 <span class="lineNum">     392 </span>            : QTAWS_END_NAMESPACE
 </pre>
