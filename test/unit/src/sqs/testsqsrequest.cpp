@@ -224,6 +224,9 @@ void TestSqsRequest::actionString_data()
     NEW_ROW(SendMessageBatch);
     NEW_ROW(SetQueueAttributes);
     #undef NEW_ROW
+
+    // Invalid actions should result in a null QString.
+    QTest::newRow("invalid") << static_cast<SqsRequest::Action>(-1) << QString();
 }
 
 void TestSqsRequest::actionString()
