@@ -35,7 +35,7 @@ class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
 
 public:
     /// Actions supported by SQS.
-    enum SqsAction {
+    enum Action {
         AddPermissionSqsAction,
         ChangeMessageVisibilitySqsAction,
         ChangeMessageVisibilityBatchSqsAction,
@@ -56,15 +56,15 @@ public:
         SetQueueAttributesSqsAction
     };
 
-    SqsRequest(const SqsAction action);
+    SqsRequest(const Action action);
     SqsRequest(const SqsRequest &other);
     SqsRequest &operator=(const SqsRequest &other);
 
-    SqsAction action() const;
+    Action action() const;
     QString actionString() const;
     QString apiVersion() const;
 
-    void setAction(const SqsAction action);
+    void setAction(const Action action);
     void setApiVersion(const QString &version);
 
 protected:

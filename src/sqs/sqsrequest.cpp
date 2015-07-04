@@ -40,7 +40,7 @@ QTAWS_BEGIN_NAMESPACE
  *
  * @param  action  The SQS action to request.
  */
-SqsRequest::SqsRequest(const SqsAction action)
+SqsRequest::SqsRequest(const Action action)
     : AwsAbstractRequest(new SqsRequestPrivate(action, this))
 {
     setApiVersion(QLatin1String("2012-11-05"));
@@ -95,7 +95,7 @@ SqsRequest::SqsRequest(SqsRequestPrivate * const d) : AwsAbstractRequest(d)
  *
  * @return The SQS action to be performed by this request.
  */
-SqsRequest::SqsAction SqsRequest::action() const
+SqsRequest::Action SqsRequest::action() const
 {
     Q_D(const SqsRequest);
     return d->action;
@@ -151,7 +151,7 @@ QString SqsRequest::apiVersion() const
  *
  * @param  action  The action to be performed by this request.
  */
-void SqsRequest::setAction(const SqsAction action)
+void SqsRequest::setAction(const Action action)
 {
     Q_D(SqsRequest);
     d->action = action;
@@ -260,7 +260,7 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  action  SQS action being performed by the \a q request.
  * @param  q       Pointer to this object's public SqsRequest instance.
  */
-SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::SqsAction action, SqsRequest * const q)
+SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q)
     : AwsAbstractRequestPrivate(q), action(action)
 {
 
