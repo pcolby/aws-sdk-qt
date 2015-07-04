@@ -109,7 +109,7 @@ void TestAwsAbstractResponse::construct()
 {
     {   // Verify the default parent argument is NULL.
         MockResponse response;
-        QCOMPARE(response.parent(), reinterpret_cast<QObject *>(NULL));
+        QCOMPARE(response.parent(), static_cast<QObject *>(NULL));
     }
 
     {   // Verify the handling of an explicit parent argument.

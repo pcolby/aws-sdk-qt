@@ -379,7 +379,7 @@ void TestAwsAbstractRequest::send()
     // If the operation is Custom or Unknown, send should simply return NULL.
     if ((operation == QNetworkAccessManager::CustomOperation) ||
         (operation == QNetworkAccessManager::UnknownOperation)) {
-        QCOMPARE(response, reinterpret_cast<AwsAbstractResponse *>(NULL));
+        QCOMPARE(response, static_cast<AwsAbstractResponse *>(NULL));
         QCOMPARE(manager.request.url(), QUrl());
         QVERIFY(!manager.request.hasRawHeader("test-accessKeyId"));
         QVERIFY(!manager.request.hasRawHeader("test-secretKey"));
@@ -399,7 +399,7 @@ void TestAwsAbstractRequest::send()
     QCOMPARE(manager.request.rawHeader("test-data"),        data);
 
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    MockResponse * const mockResponse = reinterpret_cast<MockResponse *>(response);
+    MockResponse * const mockResponse = static_cast<MockResponse *>(response);
     QCOMPARE(mockResponse->reply()->request().url(), endpoint);
     QCOMPARE(mockResponse->reply()->request().rawHeader("test-accessKeyId"), accessKeyId.toLocal8Bit());
     QCOMPARE(mockResponse->reply()->request().rawHeader("test-secretKey"),   secretKey.toLocal8Bit());

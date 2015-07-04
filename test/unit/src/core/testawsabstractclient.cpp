@@ -91,7 +91,7 @@ void TestAwsAbstractClient::construct()
 {
     {   // Verify the default parent argument is NULL.
         AwsAbstractClient client;
-        QCOMPARE(client.parent(), reinterpret_cast<QObject *>(NULL));
+        QCOMPARE(client.parent(), static_cast<QObject *>(NULL));
     }
 
     {   // Verify the handling of an explicit parent argument.
@@ -117,7 +117,7 @@ void TestAwsAbstractClient::credentials_data()
     QTest::addColumn<AwsAbstractCredentials *>("credentials");
 
     QTest::newRow("null")
-        << reinterpret_cast<AwsAbstractCredentials *>(NULL);
+        << static_cast<AwsAbstractCredentials *>(NULL);
 
     QTest::newRow("basic")
         << qobject_cast<AwsAbstractCredentials *>(new AwsBasicCredentials(QString(),QString()));
@@ -128,13 +128,13 @@ void TestAwsAbstractClient::credentials()
     QFETCH(AwsAbstractCredentials *, credentials);
 
     AwsAbstractClient client;
-    QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
+    QCOMPARE(client.credentials(), static_cast<AwsAbstractCredentials *>(NULL));
 
     client.setCredentials(credentials);
     QCOMPARE(client.credentials(), credentials);
 
     client.setCredentials(NULL);
-    QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
+    QCOMPARE(client.credentials(), static_cast<AwsAbstractCredentials *>(NULL));
 
     delete credentials;
 }
@@ -163,7 +163,7 @@ void TestAwsAbstractClient::networkAccessManager_data()
     QTest::addColumn<QNetworkAccessManager *>("manager");
 
     QTest::newRow("null")
-        << reinterpret_cast<QNetworkAccessManager *>(NULL);
+        << static_cast<QNetworkAccessManager *>(NULL);
 
     QTest::newRow("valid")
         << qobject_cast<QNetworkAccessManager *>(new QNetworkAccessManager());
@@ -174,13 +174,13 @@ void TestAwsAbstractClient::networkAccessManager()
     QFETCH(QNetworkAccessManager *, manager);
 
     AwsAbstractClient client;
-    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.networkAccessManager(), static_cast<QNetworkAccessManager *>(NULL));
 
     client.setNetworkAccessManager(manager);
     QCOMPARE(client.networkAccessManager(), manager);
 
     client.setNetworkAccessManager(NULL);
-    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.networkAccessManager(), static_cast<QNetworkAccessManager *>(NULL));
 
     delete manager;
 }
@@ -190,7 +190,7 @@ void TestAwsAbstractClient::networkAccessManager_parent()
     // Given a client with a parent.
     QNetworkAccessManager manager;
     AwsAbstractClient client(&manager);
-    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.networkAccessManager(), static_cast<QNetworkAccessManager *>(NULL));
     QCOMPARE(client.parent(), qobject_cast<QObject *>(&manager));
 
     // Such that the parent happens also be the client's network access manager.
@@ -201,8 +201,8 @@ void TestAwsAbstractClient::networkAccessManager_parent()
 
     // When the client's access manager is changed, then the parent is cleared also.
     client.setNetworkAccessManager(NULL);
-    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
-    QCOMPARE(client.parent(), reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.networkAccessManager(), static_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.parent(), static_cast<QNetworkAccessManager *>(NULL));
 }
 
 void TestAwsAbstractClient::region_data()
@@ -272,22 +272,22 @@ void TestAwsAbstractClient::send()
 #endif
 
     // Without credentials, send should return a NULL pointer.
-    QCOMPARE(client.credentials(), reinterpret_cast<AwsAbstractCredentials *>(NULL));
-    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+    QCOMPARE(client.credentials(), static_cast<AwsAbstractCredentials *>(NULL));
+    QCOMPARE(client.send(*request), static_cast<AwsAbstractResponse *>(NULL));
 
     AwsBasicCredentials credentials(QLatin1String("key"), QLatin1String("secret"));
     client.setCredentials(&credentials);
 
     // Without a network access manager, send should still return a NULL pointer.
-    QCOMPARE(client.networkAccessManager(), reinterpret_cast<QNetworkAccessManager *>(NULL));
-    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+    QCOMPARE(client.networkAccessManager(), static_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(client.send(*request), static_cast<AwsAbstractResponse *>(NULL));
 
     QNetworkAccessManager manager;
     client.setNetworkAccessManager(&manager);
 
     // Without a signature object, send should still return a NULL pointer.
-    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
-    QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+    QCOMPARE(client.signature(), static_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(client.send(*request), static_cast<AwsAbstractResponse *>(NULL));
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     client.d_func()->signature = new AwsSignatureV4; // Takes ownership.
@@ -296,12 +296,12 @@ void TestAwsAbstractClient::send()
     if (request->isValid()) {
         QCOMPARE(client.send(*request), response);
     } else {
-        QCOMPARE(client.send(*request), reinterpret_cast<AwsAbstractResponse *>(NULL));
+        QCOMPARE(client.send(*request), static_cast<AwsAbstractResponse *>(NULL));
     }
 
     // Verify that send was invoked a total of 0 or 1 times, occording to
     // whether or not the request was valid.
-    SendlessRequest * const sendlessRequest = reinterpret_cast<SendlessRequest *>(request);
+    SendlessRequest * const sendlessRequest = static_cast<SendlessRequest *>(request);
     QCOMPARE(sendlessRequest->sendCount, (request->isValid()) ? 1 : 0);
 #endif
 
@@ -340,22 +340,22 @@ void TestAwsAbstractClient::signature_data()
     QTest::addColumn<AwsAbstractSignature *>("signature");
 
     QTest::newRow("null")
-        << reinterpret_cast<AwsAbstractSignature *>(NULL);
+        << static_cast<AwsAbstractSignature *>(NULL);
 
     QTest::newRow("v0")
-        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV0());
+        << static_cast<AwsAbstractSignature *>(new AwsSignatureV0());
 
     QTest::newRow("v1")
-        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV1());
+        << static_cast<AwsAbstractSignature *>(new AwsSignatureV1());
 
     QTest::newRow("v2")
-        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV2());
+        << static_cast<AwsAbstractSignature *>(new AwsSignatureV2());
 
     QTest::newRow("v3")
-        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV3());
+        << static_cast<AwsAbstractSignature *>(new AwsSignatureV3());
 
     QTest::newRow("v4")
-        << reinterpret_cast<AwsAbstractSignature *>(new AwsSignatureV4());
+        << static_cast<AwsAbstractSignature *>(new AwsSignatureV4());
 }
 
 void TestAwsAbstractClient::signature()
@@ -363,13 +363,13 @@ void TestAwsAbstractClient::signature()
     QFETCH(AwsAbstractSignature *, signature);
 
     AwsAbstractClient client;
-    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(client.signature(), static_cast<AwsAbstractSignature *>(NULL));
 
     client.d_func()->signature = signature;
     QCOMPARE(client.signature(), signature);
 
     client.d_func()->signature = NULL;
-    QCOMPARE(client.signature(), reinterpret_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(client.signature(), static_cast<AwsAbstractSignature *>(NULL));
 
     delete signature;
 }
@@ -380,13 +380,13 @@ void TestAwsAbstractClient::constructPrivate()
 {
     AwsAbstractClient client;
     AwsAbstractClientPrivate clientPrivate(&client);
-    QCOMPARE(clientPrivate.credentials, reinterpret_cast<AwsAbstractCredentials *>(NULL));
+    QCOMPARE(clientPrivate.credentials, static_cast<AwsAbstractCredentials *>(NULL));
     QVERIFY(clientPrivate.endpoint.isEmpty());
     QVERIFY(!clientPrivate.endpoint.isValid());
-    QCOMPARE(clientPrivate.networkAccessManager, reinterpret_cast<QNetworkAccessManager *>(NULL));
+    QCOMPARE(clientPrivate.networkAccessManager, static_cast<QNetworkAccessManager *>(NULL));
     QCOMPARE(clientPrivate.region, AwsRegion::InvalidRegion);
     QVERIFY(clientPrivate.serviceName.isNull());
-    QCOMPARE(clientPrivate.signature, reinterpret_cast<AwsAbstractSignature *>(NULL));
+    QCOMPARE(clientPrivate.signature, static_cast<AwsAbstractSignature *>(NULL));
     QCOMPARE(clientPrivate.q_func(), &client);
 }
 
