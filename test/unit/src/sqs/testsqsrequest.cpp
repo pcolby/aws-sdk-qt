@@ -31,14 +31,104 @@ namespace TestSqsRequest_Mocks {
 
 } using namespace TestSqsRequest_Mocks;
 
-void TestSqsRequest::construct()
+void TestSqsRequest::construct_default()
 {
+    /// @todo
+}
 
+void TestSqsRequest::construct_copy_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::construct_copy()
+{
+    /// @todo
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsRequest::construct_d_ptr()
 {
-
+    /// @todo
 }
 #endif
+
+void TestSqsRequest::assignment_data()
+{
+    construct_copy_data();
+}
+
+void TestSqsRequest::assignment()
+{
+    /// @todo
+}
+
+void TestSqsRequest::action_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::action()
+{
+    /// @todo
+}
+
+void TestSqsRequest::actionString_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::actionString()
+{
+    /// @todo
+}
+
+void TestSqsRequest::apiVersion_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::apiVersion()
+{
+    /// @todo
+}
+
+void TestSqsRequest::clearParameter_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::clearParameter()
+{
+    /// @todo
+}
+
+void TestSqsRequest::parameter_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::parameter()
+{
+    /// @todo
+}
+
+void TestSqsRequest::setParameter_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::setParameter()
+{
+    /// @todo
+}
+
+void TestSqsRequest::unsignedRequest_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::unsignedRequest()
+{
+    /// @todo
+}

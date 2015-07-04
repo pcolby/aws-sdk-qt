@@ -23,14 +23,41 @@ class TestSqsRequest : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
+    void construct_default();
+
+    void construct_copy_data();
+    void construct_copy();
+
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void construct_d_ptr();
     #endif
+
+    void assignment_data();
+    void assignment();
+
+    void action_data();
+    void action();
+
+    void actionString_data();
+    void actionString();
+
+    void apiVersion_data();
+    void apiVersion();
+
+    void clearParameter_data();
+    void clearParameter();
+
+    void parameter_data();
+    void parameter();
+
+    void setParameter_data();
+    void setParameter();
+
+    void unsignedRequest_data();
+    void unsignedRequest();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     // Nothing to see here.
     #endif
-
 };
