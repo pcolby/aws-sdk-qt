@@ -26,8 +26,10 @@
 #include "sqs/sqsresponse_p.h"
 #endif
 
+#include <QBuffer>
 #include <QDebug>
 
+Q_DECLARE_METATYPE(QXmlStreamReader::Error)
 Q_DECLARE_METATYPE(SqsErrorList)
 
 namespace TestSqsResponse_Mocks {
@@ -249,12 +251,107 @@ void TestSqsResponse::serviceErrors()
 
 void TestSqsResponse::parseFailure_data()
 {
+    QTest::addColumn<QByteArray>("xml");
+    QTest::addColumn<QXmlStreamReader::Error>("parseError");
+    QTest::addColumn<SqsErrorList>("sqsErrors");
+    QTest::addColumn<QString>("requestId");
 
+    QTest::newRow("null")
+        << QByteArray()
+        << QXmlStreamReader::PrematureEndOfDocumentError
+        << SqsErrorList()
+        << QString();
+
+    // Genuine error returned by SQS.
+    SqsErrorList sqsErrors;
+    {
+        QXmlStreamReader reader(
+            "<Error>"
+                "<Type>Sender</Type>"
+                "<Code>AccessDenied</Code>"
+                "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                "<Detail/>"
+            "</Error>");
+        sqsErrors.append(SqsError(reader));
+    }
+    QTest::newRow("AccessDenied")
+        << QByteArray(
+            "<ErrorResponse>"
+                "<Error>"
+                    "<Type>Sender</Type>"
+                    "<Code>AccessDenied</Code>"
+                    "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+            "</ErrorResponse>")
+        << QXmlStreamReader::NoError
+        << sqsErrors
+        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
+
+    // Multiple errors.
+    {
+        QXmlStreamReader reader(
+            "<Error>"
+                "<Type>Receiver</Type>"
+                "<Code>FooBar</Code>"
+                "<Message>Not a real error message.</Message>"
+                "<Detail/>"
+            "</Error>");
+        sqsErrors.append(SqsError(reader));
+    }
+    Q_ASSERT(sqsErrors.size() == 2);
+    QTest::newRow("MultipleErrors")
+        << QByteArray(
+            "<ErrorResponse>"
+                "<Error>"
+                    "<Type>Sender</Type>"
+                    "<Code>AccessDenied</Code>"
+                    "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<Error>"
+                    "<Type>Receiver</Type>"
+                    "<Code>FooBar</Code>"
+                    "<Message>Not a real error message.</Message>"
+                    "<Detail/>"
+                "</Error>"
+                "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+            "</ErrorResponse>")
+        << QXmlStreamReader::NoError
+        << sqsErrors
+        << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
+
+    // Unrecognised response element.
+    QTest::newRow("NonError")
+        << QByteArray("<NonErrorResponse/>")
+        << QXmlStreamReader::NoError
+        << SqsErrorList()
+        << QString();
 }
 
 void TestSqsResponse::parseFailure()
 {
+    QFETCH(QByteArray, xml);
+    QFETCH(QXmlStreamReader::Error, parseError);
+    QFETCH(SqsErrorList, sqsErrors);
+    QFETCH(QString, requestId);
 
+    MockSqsResponse response;
+    QCOMPARE(response.xmlParseError(), QXmlStreamReader::NoError);
+    QCOMPARE(response.serviceErrors(), SqsErrorList());
+    QCOMPARE(response.requestId(), QString());
+
+    QBuffer buffer(&xml);
+    QVERIFY(buffer.open(QBuffer::ReadOnly));
+    response.parseFailure(buffer);
+    qDebug() << response.serviceErrors().count();
+    if (!response.serviceErrors().empty())
+        qDebug() << response.serviceErrors().first().message();
+    QCOMPARE((int)response.xmlParseError(), (int)parseError);
+    QCOMPARE(response.xmlParseError(), parseError);
+    QCOMPARE(response.serviceErrors(), sqsErrors);
+    QCOMPARE(response.requestId(), requestId);
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS

@@ -151,7 +151,7 @@ void SqsResponse::parseFailure(QIODevice &response)
 {
     Q_D(SqsResponse);
     QXmlStreamReader xml(&response);
-    while (xml.readNextStartElement()) {
+    if (xml.readNextStartElement()) {
         if (xml.name() == QLatin1String("ErrorResponse")) {
             d->parseErrorResponse(xml);
         } else {
