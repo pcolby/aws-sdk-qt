@@ -80,7 +80,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(SqsRequest)
-
+    friend class TestSqsRequest;
 };
 
 QTAWS_END_NAMESPACE

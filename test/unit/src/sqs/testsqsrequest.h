@@ -23,7 +23,8 @@ class TestSqsRequest : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct_default();
+    void construct_action_data();
+    void construct_action();
 
     void construct_copy_data();
     void construct_copy();
