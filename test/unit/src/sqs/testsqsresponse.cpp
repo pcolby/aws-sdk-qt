@@ -414,9 +414,25 @@ void TestSqsResponse::parseErrorResponse_data()
 
     // Unrecognised response element.
     QTest::newRow("NonError")
-        << QByteArray("<NonErrorResponse/>")
-        << SqsErrorList()
-        << QString();
+        << QByteArray(
+           "<ErrorResponse>"
+               "<Error>"
+                   "<Type>Sender</Type>"
+                   "<Code>AccessDenied</Code>"
+                   "<Message>Access to the resource http://sqs.us-east-1.amazonaws.com/ is denied.</Message>"
+                   "<Detail/>"
+               "</Error>"
+               "<Unrecognized>This should be ignored, and not break anything.</Unrecognized>"
+               "<Error>"
+                   "<Type>Receiver</Type>"
+                   "<Code>FooBar</Code>"
+                   "<Message>Not a real error message.</Message>"
+                   "<Detail/>"
+               "</Error>"
+               "<RequestId>9a285199-c8d6-47c2-bdb2-314cb47d599d</RequestId>"
+           "</ErrorResponse>")
+       << sqsErrors
+       << QString::fromLatin1("9a285199-c8d6-47c2-bdb2-314cb47d599d");
 }
 
 void TestSqsResponse::parseErrorResponse()
