@@ -22,15 +22,47 @@
 class TestSqsCreateQueueRequest : public QObject {
     Q_OBJECT
 
+private:
+    void numeric_data();
+
 private slots:
-    void construct();
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    void construct_d_ptr();
-    #endif
+    void construct_queueName_data();
+    void construct_queueName();
 
-    // AwsAbstractResponsePrivate functions.
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
-    #endif
+    void construct_copy_data();
+    void construct_copy();
 
+    void construct_default();
+
+    void isValid_data();
+    void isValid();
+
+    void attribute_data();
+    void attribute();
+
+    void attributes_data();
+    void attributes();
+
+    void delaySeconds_data();
+    void delaySeconds();
+
+    void maximumMessageSize_data();
+    void maximumMessageSize();
+
+    void messageRetentionPeriod_data();
+    void messageRetentionPeriod();
+
+    void policy_data();
+    void policy();
+
+    void queueName_data();
+    void queueName();
+
+    void receiveMessageWaitTimeSeconds_data();
+    void receiveMessageWaitTimeSeconds();
+
+    void visibilityTimeout_data();
+    void visibilityTimeout();
+
+    void response();
 };

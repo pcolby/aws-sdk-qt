@@ -61,6 +61,7 @@ public:
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
+    friend class TestSqsCreateQueueRequest;
 };
 
 QTAWS_END_NAMESPACE

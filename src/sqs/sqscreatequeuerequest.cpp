@@ -124,7 +124,7 @@ QVariantMap SqsCreateQueueRequest::attributes() const
  */
 int SqsCreateQueueRequest::delaySeconds() const
 {
-    return parameter(DELAY_SECONDS, -1).toInt();
+    return attribute(DELAY_SECONDS, -1).toInt();
 }
 
 /**
@@ -134,7 +134,7 @@ int SqsCreateQueueRequest::delaySeconds() const
  */
 int SqsCreateQueueRequest::maximumMessageSize() const
 {
-    return attribute(DELAY_SECONDS, -1).toInt();
+    return attribute(MAXIMUM_MESSAGE_SIZE, -1).toInt();
 }
 
 /**
