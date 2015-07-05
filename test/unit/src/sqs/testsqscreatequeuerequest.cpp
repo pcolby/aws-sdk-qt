@@ -195,14 +195,11 @@ void TestSqsCreateQueueRequest::attribute()
 
     request.setAttribute(name, value);
     QCOMPARE(request.attribute(name), value);
-
-    request.clearParameter(name);
-    QCOMPARE(request.attribute(name), QVariant());
 }
 
 void TestSqsCreateQueueRequest::attributes_data()
 {
-    QTest::addColumn<QVariantMap>("attribute");
+    QTest::addColumn<QVariantMap>("attributes");
 
     QVariantMap attributes;
     QTest::newRow("null") << attributes;
