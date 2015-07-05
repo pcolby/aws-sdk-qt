@@ -218,6 +218,18 @@ AwsAbstractResponse * AwsAbstractRequest::send(QNetworkAccessManager &manager,
 }
 
 /**
+ * @brief  Equality operator.
+ *
+ * @param  other  Instance to compare \c this to.
+ *
+ * @return \c true if \c this and \a other are considered equal.
+ */
+bool AwsAbstractRequest::operator==(const AwsAbstractRequest &other) const
+{
+    return ((data() == other.data()) && (operation() == other.operation()));
+}
+
+/**
  * @brief  Set the data to be used with POST and/or PUT operations.
  *
  * @param  data  POST/PUT data.

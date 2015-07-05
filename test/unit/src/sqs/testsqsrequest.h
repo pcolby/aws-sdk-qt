@@ -45,6 +45,9 @@ private slots:
     void apiVersion_data();
     void apiVersion();
 
+    void equality_data();
+    void equality();
+
     void clearParameter_data();
     void clearParameter();
 

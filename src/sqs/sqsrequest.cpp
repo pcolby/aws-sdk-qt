@@ -169,6 +169,26 @@ void SqsRequest::setApiVersion(const QString &version)
 }
 
 /**
+ * @brief  Equality operator.
+ *
+ * Note, most derived Sqs*Request classes do not need to provider their own
+ * implementations of this function, since most such request classes rely on
+ * this class' parameters functionality for all request parameters, and that
+ * parameters map is already checked via this implementation.
+ *
+ * @param  other  Instance to compare \c this to.
+ *
+ * @return \c true if \c this and \a other are considered equal.
+ */
+bool SqsRequest::operator==(const SqsRequest &other) const
+{
+    return ((action() == other.action()) &&
+            (apiVersion() == other.apiVersion()) &&
+            (parameters() == other.parameters()) &&
+            (AwsAbstractRequest::operator ==(other)));
+}
+
+/**
  * @brief  Remove a parameter from the parameters to be included with this request.
  *
  * @param  name  Name of the parameter to remove.

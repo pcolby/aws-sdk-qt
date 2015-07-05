@@ -66,6 +66,8 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
+    virtual bool operator==(const SqsRequest &other) const;
+
 protected:
     /// @cond internal
     SqsRequest(SqsRequestPrivate * const d);

@@ -27,6 +27,7 @@
 
 #include <QDebug>
 
+Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(SqsRequest::Action)
 
 #define SQS_API_VERSION QString::fromLatin1("2012-11-05")
@@ -243,6 +244,116 @@ void TestSqsRequest::apiVersion()
     QCOMPARE(request.apiVersion(), SQS_API_VERSION);
     request.setApiVersion(apiVersion);
     QCOMPARE(request.apiVersion(), apiVersion);
+}
+
+void TestSqsRequest::equality_data()
+{
+    QTest::addColumn<QNetworkAccessManager::Operation>("operationA");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operationB");
+    QTest::addColumn<SqsRequest::Action>("actionA");
+    QTest::addColumn<SqsRequest::Action>("actionB");
+    QTest::addColumn<QString>("apiVersionA");
+    QTest::addColumn<QString>("apiVersionB");
+    QTest::addColumn<QVariantMap>("parametersA");
+    QTest::addColumn<QVariantMap>("parametersB");
+    QTest::addColumn<bool>("expected");
+
+    QTest::newRow("equal-1")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << SqsRequest::CreateQueueSqsAction
+        << SqsRequest::CreateQueueSqsAction
+        << SQS_API_VERSION
+        << SQS_API_VERSION
+        << QVariantMap()
+        << QVariantMap()
+        << true;
+
+    QVariantMap mapA;
+    mapA.insert(QLatin1String("foo"), 123);
+    QTest::newRow("equal-2")
+        << QNetworkAccessManager::DeleteOperation
+        << QNetworkAccessManager::DeleteOperation
+        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesSqsAction
+        << QString::fromLatin1("foo version")
+        << QString::fromLatin1("foo version")
+        << mapA
+        << mapA
+        << true;
+
+    // Operation equality is tested by the parent class, so this tests the fallback.
+    QTest::newRow("diff-operation")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::PutOperation
+        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesSqsAction
+        << SQS_API_VERSION
+        << SQS_API_VERSION
+        << mapA
+        << mapA
+        << false;
+
+    QTest::newRow("diff-action")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::CreateQueueSqsAction
+        << SQS_API_VERSION
+        << SQS_API_VERSION
+        << mapA
+        << mapA
+        << false;
+
+    QTest::newRow("diff-apiVersion")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesSqsAction
+        << SQS_API_VERSION
+        << QString::fromLatin1("2000-01-01")
+        << mapA
+        << mapA
+        << false;
+
+    QVariantMap mapB = mapA;
+    mapB.insert(QLatin1String("bar"), 456.0);
+    QTest::newRow("diff-map")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesSqsAction
+        << SQS_API_VERSION
+        << SQS_API_VERSION
+        << mapA
+        << mapB
+        << false;
+}
+
+void TestSqsRequest::equality()
+{
+    QFETCH(QNetworkAccessManager::Operation, operationA);
+    QFETCH(QNetworkAccessManager::Operation, operationB);
+    QFETCH(SqsRequest::Action, actionA);
+    QFETCH(SqsRequest::Action, actionB);
+    QFETCH(QString, apiVersionA);
+    QFETCH(QString, apiVersionB);
+    QFETCH(QVariantMap, parametersA);
+    QFETCH(QVariantMap, parametersB);
+    QFETCH(bool, expected);
+
+    MockSqsRequest requestA(actionA);
+    requestA.setOperation(operationA);
+    requestA.setApiVersion(apiVersionA);
+    requestA.setParameters(parametersA);
+
+    MockSqsRequest requestB(actionB);
+    requestB.setOperation(operationB);
+    requestB.setApiVersion(apiVersionB);
+    requestB.setParameters(parametersB);
+
+    const bool areEqual = (requestA == requestB);
+    QCOMPARE(areEqual, expected);
 }
 
 void TestSqsRequest::clearParameter_data()

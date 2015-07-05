@@ -49,6 +49,9 @@ private slots:
     void send_data();
     void send();
 
+    void equality_data();
+    void equality();
+
   //void response() = 0;
 
   //void unsignedRequest() = 0;

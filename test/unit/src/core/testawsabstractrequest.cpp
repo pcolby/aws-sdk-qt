@@ -409,6 +409,98 @@ void TestAwsAbstractRequest::send()
     #endif
 }
 
+void TestAwsAbstractRequest::equality_data()
+{
+    QTest::addColumn<QByteArray>("dataA");
+    QTest::addColumn<QByteArray>("dataB");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operationA");
+    QTest::addColumn<QNetworkAccessManager::Operation>("operationB");
+    QTest::addColumn<bool>("expected");
+
+    QTest::newRow("equal-1")
+        << QByteArray()
+        << QByteArray()
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << true;
+
+    QTest::newRow("equal-2")
+        << QByteArray("")
+        << QByteArray("")
+        << QNetworkAccessManager::PostOperation
+        << QNetworkAccessManager::PostOperation
+        << true;
+
+    QTest::newRow("equal-3")
+        << QByteArray("abc")
+        << QByteArray("abc")
+        << QNetworkAccessManager::DeleteOperation
+        << QNetworkAccessManager::DeleteOperation
+        << true;
+
+    QTest::newRow("diff-data-1")
+        << QByteArray("abc")
+        << QByteArray()
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << false;
+
+    QTest::newRow("diff-data-2")
+        << QByteArray()
+        << QByteArray("123")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << false;
+
+    QTest::newRow("diff-data-3")
+        << QByteArray("abc")
+        << QByteArray("123")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::GetOperation
+        << false;
+
+    QTest::newRow("diff-operation-1")
+        << QByteArray()
+        << QByteArray()
+        << QNetworkAccessManager::DeleteOperation
+        << QNetworkAccessManager::GetOperation
+        << false;
+
+    QTest::newRow("diff-operation-2")
+        << QByteArray("")
+        << QByteArray("")
+        << QNetworkAccessManager::GetOperation
+        << QNetworkAccessManager::PutOperation
+        << false;
+
+    QTest::newRow("diff-operation-3")
+        << QByteArray("abc")
+        << QByteArray("abc")
+        << QNetworkAccessManager::PutOperation
+        << QNetworkAccessManager::PostOperation
+        << false;
+}
+
+void TestAwsAbstractRequest::equality()
+{
+    QFETCH(QByteArray, dataA);
+    QFETCH(QByteArray, dataB);
+    QFETCH(QNetworkAccessManager::Operation, operationA);
+    QFETCH(QNetworkAccessManager::Operation, operationB);
+    QFETCH(bool, expected);
+
+    MockRequest requestA;
+    requestA.setData(dataA);
+    requestA.setOperation(operationA);
+
+    MockRequest requestB;
+    requestB.setData(dataB);
+    requestB.setOperation(operationB);
+
+    const bool areEqual = (requestA == requestB);
+    QCOMPARE(areEqual, expected);
+}
+
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestAwsAbstractRequest::post_put_data()
 {

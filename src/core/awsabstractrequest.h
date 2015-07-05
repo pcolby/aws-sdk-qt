@@ -60,6 +60,8 @@ public:
                                        const AwsAbstractSignature &signature,
                                        const AwsAbstractCredentials &credentials) const;
 
+    virtual bool operator==(const AwsAbstractRequest &other) const;
+
 protected:
     /// @cond internal
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
