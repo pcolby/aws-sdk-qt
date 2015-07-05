@@ -153,11 +153,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * <a class="code" href="classAwsAbstractRequest.html#a5a18c91bcf88c002d3330fb6eaf69c33">response</a>(QNetworkReply * <span class="keyword">const</span> reply) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>TestSqsCreateQueueRequest;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00034">sqsrequest.h:34</a></div></div>
 <div class="ttc" id="classAwsAbstractRequest_html_a5a18c91bcf88c002d3330fb6eaf69c33"><div class="ttname"><a href="classAwsAbstractRequest.html#a5a18c91bcf88c002d3330fb6eaf69c33">AwsAbstractRequest::response</a></div><div class="ttdeci">virtual AwsAbstractResponse * response(QNetworkReply *const reply) const =0</div><div class="ttdoc">Construct an appropriate AWS response object. </div></div>
 <div class="ttc" id="classAwsAbstractRequest_html_a2da1991ae228b896e884935aec40a32c"><div class="ttname"><a href="classAwsAbstractRequest.html#a2da1991ae228b896e884935aec40a32c">AwsAbstractRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const =0</div><div class="ttdoc">Is this request valid? </div></div>
@@ -166,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 5 2015 20:49:34 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

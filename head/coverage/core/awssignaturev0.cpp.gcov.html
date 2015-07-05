@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-04 23:21:21</td>
+            <td class="headerValue">2015-07-05 20:49:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">7</td>
@@ -116,10 +116,10 @@
 <span class="lineNum">      54 </span>            :  *
 <a name="55"><span class="lineNum">      55 </span>            :  * Use instances of this object to provide Version 0 signatures for AWS services.</a>
 <span class="lineNum">      56 </span>            :  */
-<span class="lineNum">      57 </span><span class="lineCov">         54 : AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Private(this))</span>
+<span class="lineNum">      57 </span><span class="lineCov">         45 : AwsSignatureV0::AwsSignatureV0() : AwsAbstractSignature(new AwsSignatureV0Private(this))</span>
 <span class="lineNum">      58 </span>            : {
 <span class="lineNum">      59 </span>            : 
-<span class="lineNum">      60 </span><span class="lineCov">         54 : }</span>
+<span class="lineNum">      60 </span><span class="lineCov">         45 : }</span>
 <span class="lineNum">      61 </span>            : 
 <span class="lineNum">      62 </span>            : /**
 <span class="lineNum">      63 </span>            :  * @internal
@@ -134,45 +134,45 @@
 <span class="lineNum">      72 </span>            :  *
 <a name="73"><span class="lineNum">      73 </span>            :  * @see    AwsSignatureV1</a>
 <span class="lineNum">      74 </span>            :  */
-<span class="lineNum">      75 </span><span class="lineCov">         54 : AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)</span>
+<span class="lineNum">      75 </span><span class="lineCov">         45 : AwsSignatureV0::AwsSignatureV0(AwsSignatureV0Private * const d) : AwsAbstractSignature(d)</span>
 <span class="lineNum">      76 </span>            : {
 <span class="lineNum">      77 </span>            : 
-<a name="78"><span class="lineNum">      78 </span><span class="lineCov">         54 : }</span></a>
+<a name="78"><span class="lineNum">      78 </span><span class="lineCov">         45 : }</span></a>
 <span class="lineNum">      79 </span>            : 
-<span class="lineNum">      80 </span><span class="lineCov">         36 : void AwsSignatureV0::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
+<span class="lineNum">      80 </span><span class="lineCov">         30 : void AwsSignatureV0::sign(const AwsAbstractCredentials &amp;credentials, const QNetworkAccessManager::Operation operation,</span>
 <span class="lineNum">      81 </span>            :                           QNetworkRequest &amp;request, const QByteArray &amp;data) const
 <span class="lineNum">      82 </span>            : {
 <span class="lineNum">      83 </span>            :     Q_UNUSED(operation) // Not included in V0 signatures.
 <span class="lineNum">      84 </span>            :     Q_UNUSED(data)      // Not included in V0 signatures.
-<span class="lineNum">      85 </span><span class="lineCov">         36 :     Q_D(const AwsSignatureV0);</span>
+<span class="lineNum">      85 </span><span class="lineCov">         30 :     Q_D(const AwsSignatureV0);</span>
 <span class="lineNum">      86 </span>            : 
 <span class="lineNum">      87 </span>            :     // Refuse to sign non-HTTPS requests, unless built with QTAWS_ALLOW_INSECURE_SIGNATURES defined.
 <span class="lineNum">      88 </span>            : #ifndef QTAWS_ALLOW_INSECURE_SIGNATURES
-<span class="lineNum">      89 </span><span class="lineCov">         36 :     if (request.url().scheme() != QString::fromLatin1(&quot;https&quot;)) {</span>
-<span class="lineNum">      90 </span><span class="lineCov">         18 :         qWarning(&quot;AwsSignatureV%d::sign Refusing to sign insecure (non-HTTPS) request&quot;, version());</span>
-<span class="lineNum">      91 </span><span class="lineCov">         18 :         Q_ASSERT_X(false, Q_FUNC_INFO, &quot;insecure V1 signatures not enabled&quot;);</span>
-<span class="lineNum">      92 </span><span class="lineCov">         54 :         return;</span>
+<span class="lineNum">      89 </span><span class="lineCov">         30 :     if (request.url().scheme() != QString::fromLatin1(&quot;https&quot;)) {</span>
+<span class="lineNum">      90 </span><span class="lineCov">         15 :         qWarning(&quot;AwsSignatureV%d::sign Refusing to sign insecure (non-HTTPS) request&quot;, version());</span>
+<span class="lineNum">      91 </span><span class="lineCov">         15 :         Q_ASSERT_X(false, Q_FUNC_INFO, &quot;insecure V1 signatures not enabled&quot;);</span>
+<span class="lineNum">      92 </span><span class="lineCov">         45 :         return;</span>
 <span class="lineNum">      93 </span>            :     }
 <span class="lineNum">      94 </span>            : #endif
 <span class="lineNum">      95 </span>            : 
 <span class="lineNum">      96 </span>            :     // Set the AWSAccessKeyId, SignatureVersion and Timestamp query items, if not already.
-<span class="lineNum">      97 </span><span class="lineCov">         18 :     d-&gt;adornRequest(request, credentials);</span>
+<span class="lineNum">      97 </span><span class="lineCov">         15 :     d-&gt;adornRequest(request, credentials);</span>
 <span class="lineNum">      98 </span>            : 
 <span class="lineNum">      99 </span>            :     // Calculate the signature.
-<span class="lineNum">     100 </span><span class="lineCov">         18 :     const QByteArray stringToSign = d-&gt;canonicalQuery(QUrlQuery(request.url().query()));</span>
+<span class="lineNum">     100 </span><span class="lineCov">         15 :     const QByteArray stringToSign = d-&gt;canonicalQuery(QUrlQuery(request.url().query()));</span>
 <span class="lineNum">     101 </span>            :     const QString signature = QString::fromUtf8(QUrl::toPercentEncoding(QString::fromUtf8(
-<span class="lineNum">     102 </span><span class="lineCov">         18 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
-<span class="lineNum">     103 </span><span class="lineCov">         54 :                                          QCryptographicHash::Sha1).toBase64())));</span>
+<span class="lineNum">     102 </span><span class="lineCov">         15 :         QMessageAuthenticationCode::hash(stringToSign, credentials.secretKey().toUtf8(),</span>
+<span class="lineNum">     103 </span><span class="lineCov">         45 :                                          QCryptographicHash::Sha1).toBase64())));</span>
 <span class="lineNum">     104 </span>            : 
 <span class="lineNum">     105 </span>            :     // Append the signature to the request.
-<span class="lineNum">     106 </span><span class="lineCov">         36 :     QUrl url = request.url();</span>
-<span class="lineNum">     107 </span><span class="lineCov">         18 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
-<span class="lineNum">     108 </span><span class="lineCov">         36 :     request.setUrl(url);</span>
+<span class="lineNum">     106 </span><span class="lineCov">         30 :     QUrl url = request.url();</span>
+<span class="lineNum">     107 </span><span class="lineCov">         15 :     url.setQuery(url.query() + QLatin1String(&quot;&amp;Signature=&quot;) + signature);</span>
+<span class="lineNum">     108 </span><span class="lineCov">         30 :     request.setUrl(url);</span>
 <a name="109"><span class="lineNum">     109 </span>            : }</a>
 <span class="lineNum">     110 </span>            : 
-<span class="lineNum">     111 </span><span class="lineCov">         36 : int AwsSignatureV0::version() const</span>
+<span class="lineNum">     111 </span><span class="lineCov">         30 : int AwsSignatureV0::version() const</span>
 <span class="lineNum">     112 </span>            : {
-<span class="lineNum">     113 </span><span class="lineCov">         36 :     return 0;</span>
+<span class="lineNum">     113 </span><span class="lineCov">         30 :     return 0;</span>
 <span class="lineNum">     114 </span>            : }
 <span class="lineNum">     115 </span>            : 
 <span class="lineNum">     116 </span>            : /**
@@ -195,10 +195,10 @@
 <span class="lineNum">     133 </span>            :  *
 <a name="134"><span class="lineNum">     134 </span>            :  * @param  q  Pointer to this object's public AwsSignatureV0 instance.</a>
 <span class="lineNum">     135 </span>            :  */
-<span class="lineNum">     136 </span><span class="lineCov">        108 : AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)</span>
+<span class="lineNum">     136 </span><span class="lineCov">         90 : AwsSignatureV0Private::AwsSignatureV0Private(AwsSignatureV0 * const q) : AwsAbstractSignaturePrivate(q)</span>
 <span class="lineNum">     137 </span>            : {
 <span class="lineNum">     138 </span>            : 
-<span class="lineNum">     139 </span><span class="lineCov">        108 : }</span>
+<span class="lineNum">     139 </span><span class="lineCov">         90 : }</span>
 <span class="lineNum">     140 </span>            : 
 <span class="lineNum">     141 </span>            : /**
 <span class="lineNum">     142 </span>            :  * @internal
@@ -224,35 +224,35 @@
 <span class="lineNum">     162 </span>            :  *
 <a name="163"><span class="lineNum">     163 </span>            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
 <span class="lineNum">     164 </span>            :  */
-<span class="lineNum">     165 </span><span class="lineCov">         30 : void AwsSignatureV0Private::adornRequest(QNetworkRequest &amp;request,</span>
+<span class="lineNum">     165 </span><span class="lineCov">         25 : void AwsSignatureV0Private::adornRequest(QNetworkRequest &amp;request,</span>
 <span class="lineNum">     166 </span>            :                                          const AwsAbstractCredentials &amp;credentials) const
 <span class="lineNum">     167 </span>            : {
-<span class="lineNum">     168 </span><span class="lineCov">         30 :     Q_Q(const AwsSignatureV0);</span>
+<span class="lineNum">     168 </span><span class="lineCov">         25 :     Q_Q(const AwsSignatureV0);</span>
 <span class="lineNum">     169 </span>            : 
 <span class="lineNum">     170 </span>            :     // Set / add the necessary query items.
-<span class="lineNum">     171 </span><span class="lineCov">         30 :     QUrl url = request.url();</span>
-<span class="lineNum">     172 </span><span class="lineCov">         60 :     QUrlQuery query(url);</span>
-<span class="lineNum">     173 </span><span class="lineCov">         30 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
-<span class="lineNum">     174 </span><span class="lineCov">         30 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QString::fromLatin1(&quot;%1&quot;).arg(q-&gt;version()));</span>
+<span class="lineNum">     171 </span><span class="lineCov">         25 :     QUrl url = request.url();</span>
+<span class="lineNum">     172 </span><span class="lineCov">         50 :     QUrlQuery query(url);</span>
+<span class="lineNum">     173 </span><span class="lineCov">         25 :     setQueryItem(query, QLatin1String(&quot;AWSAccessKeyId&quot;), credentials.accessKeyId());</span>
+<span class="lineNum">     174 </span><span class="lineCov">         25 :     setQueryItem(query, QLatin1String(&quot;SignatureVersion&quot;), QString::fromLatin1(&quot;%1&quot;).arg(q-&gt;version()));</span>
 <span class="lineNum">     175 </span>            : 
 <span class="lineNum">     176 </span>            :     // Amazon: &quot;Query requests must include either Timestamp or Expires, but not both.&quot;
 <span class="lineNum">     177 </span>            :     // See http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
-<span class="lineNum">     178 </span><span class="lineCov">         30 :     if (!query.hasQueryItem(QLatin1String(&quot;Expires&quot;))) {</span>
+<span class="lineNum">     178 </span><span class="lineCov">         25 :     if (!query.hasQueryItem(QLatin1String(&quot;Expires&quot;))) {</span>
 <span class="lineNum">     179 </span>            :         setQueryItem(query, QLatin1String(&quot;Timestamp&quot;),
 <span class="lineNum">     180 </span>            :                         QString::fromUtf8(QUrl::toPercentEncoding(
 <span class="lineNum">     181 </span>            :                             QDateTime::currentDateTimeUtc().toString(QLatin1String(&quot;yyyy-MM-ddThh:mm:ssZ&quot;))
 <span class="lineNum">     182 </span>            :                         )),
-<span class="lineNum">     183 </span><span class="lineCov">         18 :                         false); // Don't warn if its already set to something else.</span>
+<span class="lineNum">     183 </span><span class="lineCov">         15 :                         false); // Don't warn if its already set to something else.</span>
 <span class="lineNum">     184 </span>            :     }
 <span class="lineNum">     185 </span>            : 
 <span class="lineNum">     186 </span>            :     // If we've touched the query items (likely), then update the request.
-<span class="lineNum">     187 </span><span class="lineCov">         30 :     if (query != QUrlQuery(url.query())) {</span>
-<span class="lineNum">     188 </span><span class="lineCov">         18 :         qDebug() &lt;&lt; url;</span>
-<span class="lineNum">     189 </span><span class="lineCov">         18 :         url.setQuery(query);</span>
-<span class="lineNum">     190 </span><span class="lineCov">         18 :         qDebug() &lt;&lt; url;</span>
-<span class="lineNum">     191 </span><span class="lineCov">         18 :         request.setUrl(url);</span>
-<span class="lineNum">     192 </span><span class="lineCov">         30 :     }</span>
-<span class="lineNum">     193 </span><span class="lineCov">         30 : }</span>
+<span class="lineNum">     187 </span><span class="lineCov">         25 :     if (query != QUrlQuery(url.query())) {</span>
+<span class="lineNum">     188 </span><span class="lineCov">         15 :         qDebug() &lt;&lt; url;</span>
+<span class="lineNum">     189 </span><span class="lineCov">         15 :         url.setQuery(query);</span>
+<span class="lineNum">     190 </span><span class="lineCov">         15 :         qDebug() &lt;&lt; url;</span>
+<span class="lineNum">     191 </span><span class="lineCov">         15 :         request.setUrl(url);</span>
+<span class="lineNum">     192 </span><span class="lineCov">         25 :     }</span>
+<span class="lineNum">     193 </span><span class="lineCov">         25 : }</span>
 <span class="lineNum">     194 </span>            : 
 <span class="lineNum">     195 </span>            : /**
 <span class="lineNum">     196 </span>            :  * @internal
@@ -280,14 +280,14 @@
 <span class="lineNum">     218 </span>            :  * @see    adornRequest()
 <a name="219"><span class="lineNum">     219 </span>            :  * @see    http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf</a>
 <span class="lineNum">     220 </span>            :  */
-<span class="lineNum">     221 </span><span class="lineCov">         24 : QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
+<span class="lineNum">     221 </span><span class="lineCov">         20 : QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &amp;query) const</span>
 <span class="lineNum">     222 </span>            : {
-<span class="lineNum">     223 </span><span class="lineCov">         24 :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Action&quot;)), Q_FUNC_INFO, &quot;Action query parameter required&quot;);</span>
+<span class="lineNum">     223 </span><span class="lineCov">         20 :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Action&quot;)), Q_FUNC_INFO, &quot;Action query parameter required&quot;);</span>
 <span class="lineNum">     224 </span>            :     Q_ASSERT_X(query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;)) || query.hasQueryItem(QLatin1String(&quot;Expires&quot;)),
-<span class="lineNum">     225 </span><span class="lineCov">         24 :                Q_FUNC_INFO, &quot;Timestamp or Expires query parameter required&quot;);</span>
+<span class="lineNum">     225 </span><span class="lineCov">         20 :                Q_FUNC_INFO, &quot;Timestamp or Expires query parameter required&quot;);</span>
 <span class="lineNum">     226 </span>            : 
-<span class="lineNum">     227 </span><span class="lineCov">         96 :     return (query.queryItemValue(QLatin1String(&quot;Action&quot;)) + query.queryItemValue(QLatin1String(</span>
-<span class="lineNum">     228 </span><span class="lineCov">         96 :                 (query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;))) ? &quot;Timestamp&quot; : &quot;Expires&quot;))).toUtf8();</span>
+<span class="lineNum">     227 </span><span class="lineCov">         80 :     return (query.queryItemValue(QLatin1String(&quot;Action&quot;)) + query.queryItemValue(QLatin1String(</span>
+<span class="lineNum">     228 </span><span class="lineCov">         80 :                 (query.hasQueryItem(QLatin1String(&quot;Timestamp&quot;))) ? &quot;Timestamp&quot; : &quot;Expires&quot;))).toUtf8();</span>
 <span class="lineNum">     229 </span>            : }
 <span class="lineNum">     230 </span>            : 
 <span class="lineNum">     231 </span>            : QTAWS_END_NAMESPACE

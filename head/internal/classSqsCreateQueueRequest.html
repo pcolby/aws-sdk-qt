@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSqsCreateQueueRequest-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SqsCreateQueueRequest Class Reference</div>  </div>
@@ -275,6 +276,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ab90931e641d8498768372ec3521df4d7 inherit pro_methods_classAwsAbstractRequest"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the network operation to use when submitting this request.  <a href="#ab90931e641d8498768372ec3521df4d7">More...</a><br /></td></tr>
 <tr class="separator:ab90931e641d8498768372ec3521df4d7 inherit pro_methods_classAwsAbstractRequest"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a23746447cd88c20999b458d67b0ee2dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23746447cd88c20999b458d67b0ee2dc"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TestSqsCreateQueueRequest</b></td></tr>
+<tr class="separator:a23746447cd88c20999b458d67b0ee2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classSqsRequest"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classSqsRequest')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classSqsRequest.html">SqsRequest</a></td></tr>
@@ -446,7 +453,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>References <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00115">attributes()</a>.</p>
 
-<p>Referenced by <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00135">maximumMessageSize()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00145">messageRetentionPeriod()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00155">policy()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00176">receiveMessageWaitTimeSeconds()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00186">visibilityTimeout()</a>.</p>
+<p>Referenced by <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00125">delaySeconds()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00135">maximumMessageSize()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00145">messageRetentionPeriod()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00155">policy()</a>, <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00176">receiveMessageWaitTimeSeconds()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00186">visibilityTimeout()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e">attributes</a>().value(name, defaultValue);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
@@ -500,11 +507,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00125">125</a> of file <a class="el" href="sqscreatequeuerequest_8cpp_source.html">sqscreatequeuerequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00201">SqsRequest::parameter()</a>.</p>
+<p>References <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00105">attribute()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(DELAY_SECONDS, -1).toInt();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(DELAY_SECONDS, -1).toInt();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00201">sqsrequest.cpp:201</a></div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html_aed3daa9035fef359978a2b96c9cfd1eb"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a></div><div class="ttdeci">QVariant attribute(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of an attribute to be set on the created queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00105">sqscreatequeuerequest.cpp:105</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -566,7 +573,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>References <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00105">attribute()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(DELAY_SECONDS, -1).toInt();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">attribute</a>(MAXIMUM_MESSAGE_SIZE, -1).toInt();</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 <div class="ttc" id="classSqsCreateQueueRequest_html_aed3daa9035fef359978a2b96c9cfd1eb"><div class="ttname"><a href="classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb">SqsCreateQueueRequest::attribute</a></div><div class="ttdeci">QVariant attribute(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of an attribute to be set on the created queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8cpp_source.html#l00105">sqscreatequeuerequest.cpp:105</a></div></div>
 </div><!-- fragment -->
@@ -1078,7 +1085,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 4 2015 23:18:02 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 5 2015 20:49:34 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
