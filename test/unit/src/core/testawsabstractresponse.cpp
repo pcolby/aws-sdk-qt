@@ -61,7 +61,8 @@ public:
     MockResponse(QObject * const parent) : AwsAbstractResponse(parent),
         parseCount(0), parseFailureCount(0), parseSuccessCount(0) { }
     MockResponse(AwsAbstractResponsePrivate * const d, QObject * const parent)
-        : AwsAbstractResponse(d, parent) { }
+        : AwsAbstractResponse(d, parent), parseCount(0), parseFailureCount(0),
+          parseSuccessCount(0) { }
     virtual const AwsAbstractRequest * request() const {
         #ifdef QTAWS_ENABLE_PRIVATE_TESTS
         return d_ptr->request;

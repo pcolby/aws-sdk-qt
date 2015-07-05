@@ -36,11 +36,8 @@ namespace TestSqsResponse_Mocks {
 
 class MockSqsResponse : public SqsResponse {
 public:
-    int parseCount, parseFailureCount, parseSuccessCount;
-    MockSqsResponse() : SqsResponse(), parseCount(0), parseFailureCount(0),
-        parseSuccessCount(0) { }
-    MockSqsResponse(QObject * const parent) : SqsResponse(parent),
-        parseCount(0), parseFailureCount(0), parseSuccessCount(0) { }
+    MockSqsResponse() : SqsResponse() { }
+    MockSqsResponse(QObject * const parent) : SqsResponse(parent) { }
     MockSqsResponse(SqsResponsePrivate * const d, QObject * const parent)
         : SqsResponse(d, parent) { }
     virtual const SqsRequest * request() const {
@@ -49,7 +46,6 @@ public:
 protected:
     virtual void parseSuccess(QIODevice &response) {
         Q_UNUSED(response);
-        parseSuccessCount++;
     }
 };
 
