@@ -132,6 +132,8 @@ void TestSqsRequest::construct_copy()
     QCOMPARE(request2.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request2.action(), action);
     QCOMPARE(request2.parameters(), parameters);
+
+    QCOMPARE(request1, request2);
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -166,6 +168,8 @@ void TestSqsRequest::assignment()
     QCOMPARE(request2.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request2.action(), action);
     QCOMPARE(request2.parameters(), parameters);
+
+    QCOMPARE(request1, request2);
 }
 
 void TestSqsRequest::action_data()

@@ -44,7 +44,8 @@ void TestSqsCreateQueueResponse::construct()
     const SqsCreateQueueRequest request(queueName);
     SqsCreateQueueResponse response(request, NULL);
     QCOMPARE(response.isValid(), false);
-    QCOMPARE(response.request()->queueName(), queueName);
+    QVERIFY(response.request());
+    QCOMPARE(*response.request(), request);
 }
 
 void TestSqsCreateQueueResponse::isValid_data()
@@ -103,7 +104,7 @@ void TestSqsCreateQueueResponse::request()
     // Verify that the response took a copy of (not a reference to) the request.
     QVERIFY(response.request());
     QVERIFY(response.request() != &request);
-    QCOMPARE(response.request()->queueName(), queueName);
+    QCOMPARE(*response.request(), request);
 }
 
 void TestSqsCreateQueueResponse::queueUrl_data()

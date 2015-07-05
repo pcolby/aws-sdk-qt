@@ -416,6 +416,7 @@ void TestAwsAbstractResponse::request()
     QVERIFY(response.request());
     QCOMPARE(response.request()->data(), data);
     QCOMPARE(response.request()->operation(), operation);
+    QVERIFY(*response.request() == request);
 #else
     // This is simply a limitation in our MockResponse class, which can't return
     // a real request object (at least not in a meaningful testing way) since

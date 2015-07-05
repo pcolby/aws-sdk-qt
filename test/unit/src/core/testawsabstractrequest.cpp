@@ -172,12 +172,10 @@ void TestAwsAbstractRequest::construct_copy()
 
     // const_cast here is just to be pedantic... verifies the API.
     MockRequest request2(const_cast<const MockRequest &>(request1));
-    QCOMPARE(request1.data(), data);
     QCOMPARE(request2.data(), data);
-    QCOMPARE(request1.data(), request2.data());
-    QCOMPARE(request1.operation(), operation);
     QCOMPARE(request2.operation(), operation);
-    QCOMPARE(request1.operation(), request2.operation());
+
+    QCOMPARE(request1, request2);
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
@@ -209,12 +207,10 @@ void TestAwsAbstractRequest::assignment()
 
     MockRequest request2;
     request2 = request1;
-    QCOMPARE(request1.data(), data);
     QCOMPARE(request2.data(), data);
-    QCOMPARE(request1.data(), request2.data());
-    QCOMPARE(request1.operation(), operation);
     QCOMPARE(request2.operation(), operation);
-    QCOMPARE(request1.operation(), request2.operation());
+
+    QCOMPARE(request1, request2);
 }
 
 void TestAwsAbstractRequest::data_data()
