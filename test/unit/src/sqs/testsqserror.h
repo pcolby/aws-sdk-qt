@@ -23,16 +23,33 @@ class TestSqsError : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
+    void construct_default();
+
+    void construct_parse_data();
+    void construct_parse();
+
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void construct_d_ptr();
     #endif
 
-    /// @todo
+    void construct_copy_data();
+    void construct_copy();
+
+    void assign_data();
+    void assign();
+
+    void equality_data();
+    void equality();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
-    #endif
+    void parse_data();
+    void parse();
 
+    void codeFromString_data();
+    void codeFromString();
+
+    void typeFromString_data();
+    void typeFromString();
+    #endif
 };

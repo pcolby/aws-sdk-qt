@@ -94,7 +94,7 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(SqsError)
-
+    friend class TestSqsError;
 };
 
 typedef QList<SqsError> SqsErrorList;
