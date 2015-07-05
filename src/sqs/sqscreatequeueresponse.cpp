@@ -83,7 +83,7 @@ QString SqsCreateQueueResponse::queueUrl() const
  * @code{xml}
  * <CreateQueueResponse>
  *   <CreateQueueResult>
- *     <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ *     <QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>
  *   </CreateQueueResult>
  *   <ResponseMetadata>
  *     <RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>
@@ -141,7 +141,7 @@ SqsCreateQueueResponsePrivate::SqsCreateQueueResponsePrivate(SqsCreateQueueRespo
  * @code{xml}
  * <CreateQueueResponse>
  *   <CreateQueueResult>
- *     <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ *     <QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>
  *   </CreateQueueResult>
  *   <ResponseMetadata>
  *     <RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>
@@ -178,7 +178,7 @@ void SqsCreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &x
  *
  * @code{xml}
  * <CreateQueueResult>
- *   <QueueUrl>http://&useast1-query;/123456789012/testQueue</QueueUrl>
+ *   <QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>
  * </CreateQueueResult>
  * @endcode
  *

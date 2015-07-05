@@ -46,7 +46,7 @@ protected slots:
 private:
     Q_DECLARE_PRIVATE(SqsCreateQueueResponse)
     Q_DISABLE_COPY(SqsCreateQueueResponse)
-
+    friend class TestSqsCreateQueueResponse;
 };
 
 QTAWS_END_NAMESPACE
