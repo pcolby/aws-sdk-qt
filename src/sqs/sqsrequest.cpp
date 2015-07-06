@@ -108,31 +108,8 @@ SqsRequest::Action SqsRequest::action() const
  */
 QString SqsRequest::actionString() const
 {
-    #define SqsActionToString(action) \
-        case SqsRequest::action##SqsAction: return QLatin1String(#action)
-    switch (action()) {
-        SqsActionToString(AddPermission);
-        SqsActionToString(ChangeMessageVisibility);
-        SqsActionToString(ChangeMessageVisibilityBatch);
-        SqsActionToString(CreateQueue);
-        SqsActionToString(DeleteMessage);
-        SqsActionToString(DeleteMessageBatch);
-        SqsActionToString(DeleteQueue);
-        SqsActionToString(GetQueueAttributes);
-        SqsActionToString(GetQueueUrl);
-        SqsActionToString(ListDeadLetterSourceQueues);
-        SqsActionToString(ListQueues);
-        SqsActionToString(PurgeQueue);
-        SqsActionToString(ReceiveMessage);
-        SqsActionToString(RemovePermission);
-        SqsActionToString(SendMessage);
-        SqsActionToString(SendMessageBatch);
-        SqsActionToString(SetQueueAttributes);
-        default:
-            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
-    }
-    #undef SqsActionToString
-    return QString();
+    Q_D(const SqsRequest);
+    return d->toString(action());
 }
 
 /**
@@ -357,6 +334,35 @@ SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
+}
+
+QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
+{
+    #define SqsActionToString(action) \
+        case SqsRequest::action##SqsAction: return QLatin1String(#action)
+    switch (action) {
+        SqsActionToString(AddPermission);
+        SqsActionToString(ChangeMessageVisibility);
+        SqsActionToString(ChangeMessageVisibilityBatch);
+        SqsActionToString(CreateQueue);
+        SqsActionToString(DeleteMessage);
+        SqsActionToString(DeleteMessageBatch);
+        SqsActionToString(DeleteQueue);
+        SqsActionToString(GetQueueAttributes);
+        SqsActionToString(GetQueueUrl);
+        SqsActionToString(ListDeadLetterSourceQueues);
+        SqsActionToString(ListQueues);
+        SqsActionToString(PurgeQueue);
+        SqsActionToString(ReceiveMessage);
+        SqsActionToString(RemovePermission);
+        SqsActionToString(SendMessage);
+        SqsActionToString(SendMessageBatch);
+        SqsActionToString(SetQueueAttributes);
+        default:
+            Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
+    }
+    #undef SqsActionToString
+    return QString();
 }
 
 QTAWS_END_NAMESPACE

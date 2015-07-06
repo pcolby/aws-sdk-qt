@@ -21,6 +21,8 @@
 #include "sqsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "sqsaddpermissionrequest.h"
+#include "sqsaddpermissionresponse.h"
 #include "sqscreatequeuerequest.h"
 #include "sqscreatequeueresponse.h"
 #include "sqsrequest.h"
@@ -90,6 +92,18 @@ SqsClient::SqsClient(const QUrl &endpoint,
     d->credentials = credentials;
     d->networkAccessManager = manager;
     d->serviceName = SQS_SERVICE_NAME;
+}
+
+SqsAddPermissionResponse * SqsClient::addPermission(const SqsAddPermissionRequest &request)
+{
+    return qobject_cast<SqsAddPermissionResponse *>(send(request));
+}
+
+SqsAddPermissionResponse * SqsClient::addPermission(const QString &queueUrl, const QString &label,
+                                         const QVariantMap &accountActions)
+{
+    const SqsAddPermissionRequest request(queueUrl, label, accountActions);
+    return addPermission(request);
 }
 
 /**

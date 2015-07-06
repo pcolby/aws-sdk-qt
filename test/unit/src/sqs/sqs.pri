@@ -1,5 +1,6 @@
 HEADERS += \
         testsqsaddpermissionrequest.h \
+        testsqsaddpermissionresponse.h \
         testsqschangemessagevisibilitybatchrequest.h \
         testsqschangemessagevisibilityrequest.h \
         testsqsclient.h \
@@ -24,6 +25,7 @@ HEADERS += \
 
 SOURCES += \
         testsqsaddpermissionrequest.cpp \
+        testsqsaddpermissionresponse.cpp \
         testsqschangemessagevisibilitybatchrequest.cpp \
         testsqschangemessagevisibilityrequest.cpp \
         testsqsclient.cpp \

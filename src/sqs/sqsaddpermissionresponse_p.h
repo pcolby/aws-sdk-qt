@@ -17,34 +17,29 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSREQUEST_P_H
-#define SQSREQUEST_P_H
+#ifndef SQSADDPERMISSION_P_H
+#define SQSADDPERMISSION_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "sqsrequest.h"
-
-#include <QVariantMap>
-
-class QUrl;
-class QUrlQuery;
+#include "sqsresponse_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
+class SqsAddPermissionResponse;
+
+class QTAWS_EXPORT SqsAddPermissionResponsePrivate : public SqsResponsePrivate {
 
 public:
-    SqsRequest::Action action; ///< SQS action to be performed.
-    QString apiVersion;        ///< SQS API version string.
-    QVariantMap parameters;    ///< SQS request (query string) parameters.
+    QString queueUrl; ///< Created queue URL.
 
-    SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q);
-    SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
+    SqsAddPermissionResponsePrivate(SqsAddPermissionResponse * const q);
 
-    static QString toString(const SqsRequest::Action &action);
+    void parseAddPermissionResponse(QXmlStreamReader &xml);
+    void parseAddPermissionResult(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SqsRequest)
-    Q_DISABLE_COPY(SqsRequestPrivate)
+    Q_DECLARE_PUBLIC(SqsAddPermissionResponse)
+    Q_DISABLE_COPY(SqsAddPermissionResponsePrivate)
+    SqsAddPermissionResponse * const q_ptr; ///< Internal q-pointer.
 
 };
 

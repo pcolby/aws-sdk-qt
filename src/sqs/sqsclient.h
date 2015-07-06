@@ -32,6 +32,8 @@ QTAWS_BEGIN_NAMESPACE
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 class SqsClientPrivate;
+class SqsAddPermissionRequest;
+class SqsAddPermissionResponse;
 class SqsCreateQueueRequest;
 class SqsCreateQueueResponse;
 
@@ -49,15 +51,17 @@ public:
               QObject * const parent = 0);
 
 public slots:
+    SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &request);
+    SqsAddPermissionResponse * addPermission(const QString &queueUrl, const QString &label,
+                                             const QVariantMap &permissions);
+
     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
-    SqsCreateQueueResponse * createQueue(const QString &queueName, const QVariantMap &attributes = QVariantMap());
+    SqsCreateQueueResponse * createQueue(const QString &queueName,
+                                         const QVariantMap &attributes = QVariantMap());
 
 /*
-    void addPermission(const QStringList &awsAccountIds, const QStringList actionNames, const QString &label, const QString &queueUrl);
     void changeMessageVisibility(const QString &queueUrl, const QString &receiptHandle, const int visbilityTimeout);
     void changeMessageVisibilityBatch(const QString &queueUrl, const QStringList &receiptHandles, const int visbilityTimeout);
-    void createQueue(const QString &queueName, const QStringMap &attributes = QStringMap());
-    void createQueue(const SqsCreateQueueRequest &request);
     void deleteMessage(const QString &queueUrl, const QString &receiptHandle);
     void deleteMessageBatch(const QString &queueUrl, const QStringList &receiptHandles);
     void deleteQueue(const QString &queueUrl);

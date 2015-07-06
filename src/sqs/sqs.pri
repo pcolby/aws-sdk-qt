@@ -2,6 +2,8 @@ HEADERS += \
         sqsclient.h \
         sqsclient_p.h \
         sqsaddpermissionrequest.h \
+        sqsaddpermissionresponse.h \
+        sqsaddpermissionresponse_p.h \
         sqschangemessagevisibilitybatchrequest.h \
         sqschangemessagevisibilityrequest.h \
         sqscreatequeuerequest.h \
@@ -30,6 +32,7 @@ HEADERS += \
 SOURCES += \
         sqsclient.cpp \
         sqsaddpermissionrequest.cpp \
+        sqsaddpermissionresponse.cpp \
         sqschangemessagevisibilitybatchrequest.cpp \
         sqschangemessagevisibilityrequest.cpp \
         sqscreatequeuerequest.cpp \

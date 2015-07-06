@@ -27,10 +27,43 @@ QTAWS_BEGIN_NAMESPACE
 class QTAWS_EXPORT SqsAddPermissionRequest : public SqsRequest {
 
 public:
+    /// The subset of SQS actions that may be used with the AddPermission action.
+    enum PermissibleAction {
+        SendMessageSqsAction = SqsRequest::SendMessageSqsAction,
+        ReceiveMessageSqsAction = SqsRequest::ReceiveMessageSqsAction,
+        DeleteMessageSqsAction = SqsRequest::DeleteMessageSqsAction,
+        ChangeMessageVisibilitySqsAction = SqsRequest::ChangeMessageVisibilitySqsAction,
+        GetQueueAttributesSqsAction = SqsRequest::GetQueueAttributesSqsAction,
+        GetQueueUrlSqsAction = SqsRequest::GetQueueUrlSqsAction,
+        AllPermissibleActions = 0xFF ///< Translates to wildcard ("*") for SQS.
+    };
+
+    SqsAddPermissionRequest(const QString &queueUrl,
+                            const QString &label = QString(),
+                            const QVariantMap &permissions = QVariantMap());
+    SqsAddPermissionRequest(const SqsAddPermissionRequest &other);
     SqsAddPermissionRequest();
 
     virtual bool isValid() const;
 
+    QString label() const;
+    QVariantMap permissions() const;
+    QString queueUrl() const;
+
+    void addPermission(const QString &accountId, const PermissibleAction action);
+    void addPermission(const QString &accountId, const QString &actionName);
+
+    void setLabel(const QString &label);
+    void setQueueUrl(const QString &queueUrl);
+
+    void setPermission(const QString &accountId, const PermissibleAction action);
+    void setPermission(const QString &accountId, const QString &actionName);
+    void setPermissions(const QVariantMap &permissions);
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+    friend class TestSqsAddPermissionRequest;
 };
 
 QTAWS_END_NAMESPACE

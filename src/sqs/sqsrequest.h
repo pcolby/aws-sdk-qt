@@ -35,6 +35,7 @@ class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
 
 public:
     /// Actions supported by SQS.
+    /// @todo  Drop the "Sqs" in these enum labels?  Seems redundant.
     enum Action {
         AddPermissionSqsAction,
         ChangeMessageVisibilitySqsAction,

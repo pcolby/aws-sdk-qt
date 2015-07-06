@@ -129,6 +129,16 @@ void TestSqsClient::construct_region()
     QCOMPARE(sqs.parent(), this);
 }
 
+void TestSqsClient::addPermission_data()
+{
+    /// @todo
+}
+
+void TestSqsClient::addPermission()
+{
+    /// @todo
+}
+
 void TestSqsClient::createQueue_data()
 {
     QTest::addColumn<QString>("queueName");

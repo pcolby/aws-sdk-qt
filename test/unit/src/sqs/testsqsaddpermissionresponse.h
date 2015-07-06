@@ -19,28 +19,30 @@
 
 #include <QTest>
 
-class TestSqsClient : public QObject {
+class TestSqsAddPermissionResponse : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct_endpoint_data();
-    void construct_endpoint();
+    void construct_data();
+    void construct();
 
-    void construct_region_data();
-    void construct_region();
+    void isValid_data();
+    void isValid();
 
-    void addPermission_data();
-    void addPermission();
+    void request();
 
-    /// @todo changeMessageVisbility{,Batch}
+    void queueUrl_data();
+    void queueUrl();
 
-    void createQueue_data();
-    void createQueue();
-
-    /// @todo Lots more requests go here.
+    void parseSuccess_data();
+    void parseSuccess();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
+    void parseAddPermissionResponse_data();
+    void parseAddPermissionResponse();
+
+    void parseAddPermissionResult_data();
+    void parseAddPermissionResult();
     #endif
 };

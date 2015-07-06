@@ -589,3 +589,15 @@ void TestSqsRequest::unsignedRequest()
     QCOMPARE(unsignedRequest.url(), expected.url()); // Helps with debugging.
     QCOMPARE(unsignedRequest, expected);             // The real test.
 }
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestSqsRequest::toString_action_data()
+{
+    /// @todo
+}
+
+void TestSqsRequest::toString_action()
+{
+    /// @todo
+}
+#endif

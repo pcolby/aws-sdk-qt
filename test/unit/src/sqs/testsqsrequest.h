@@ -74,6 +74,7 @@ private slots:
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
+    void toString_action_data();
+    void toString_action();
     #endif
 };
