@@ -74,17 +74,16 @@ SqsCreateQueueRequest::SqsCreateQueueRequest()
 /**
  * @brief  Is this request valid?
  *
- * This implementation simply checks that this request has a non-empty SQS queue.
- *
- * @todo  Add a more-detailed isValidQueueName function, probably to SqsRequest,
- *        that perfoms check like: /^[-a-zA-a_]{1,80}$/
- *        See http://aws.amazon.com/sqs/faqs/
+ * This implementation simply checks that this request has a valid queue name,
+ * as defined by SqsRequest::isValidQueueName.
  *
  * @returns  \c true if this request is considered valid, \c false other.
+ *
+ * @see  SqsRequest::isValidQueueName
  */
 bool SqsCreateQueueRequest::isValid() const
 {
-    return !queueName().isEmpty();
+    return isValidQueueName(queueName());
 }
 
 /**

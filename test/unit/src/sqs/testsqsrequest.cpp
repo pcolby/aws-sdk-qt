@@ -360,6 +360,46 @@ void TestSqsRequest::equality()
     QCOMPARE(areEqual, expected);
 }
 
+void TestSqsRequest::isValidQueueName_data()
+{
+    QTest::addColumn<QString>("queueName");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("hyphens")
+        << QString::fromLatin1("my-queue-name") << true;
+
+    QTest::newRow("underscored")
+        << QString::fromLatin1("my_queue_name") << true;
+
+    QTest::newRow("null")
+        << QString() << false;
+
+    QTest::newRow("empty")
+        << QString::fromLatin1("") << false;
+
+    QTest::newRow("max length")
+        << QString(80, QLatin1Char('a')) << true;
+
+    QTest::newRow("too long")
+        << QString(81, QLatin1Char('a')) << false;
+
+    QTest::newRow("invalid char 1")
+        << QString::fromLatin1("foo bar") << false;
+
+    QTest::newRow("invalid char 2")
+        << QString::fromLatin1("foo$bar") << false;
+
+    QTest::newRow("invalid chars")
+        << QString::fromLatin1("a@^%#&^%#^b") << false;
+}
+
+void TestSqsRequest::isValidQueueName()
+{
+    QFETCH(QString, queueName);
+    QFETCH(bool, isValid);
+    QCOMPARE(SqsRequest::isValidQueueName(queueName), isValid);
+}
+
 void TestSqsRequest::clearParameter_data()
 {
     QTest::addColumn<QString>("name");

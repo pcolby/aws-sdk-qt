@@ -71,6 +71,9 @@ void TestSqsCreateQueueRequest::construct_queueName_data()
     QTest::newRow("foo")   << QString::fromLatin1("foo") << true;
     QTest::newRow("bar")   << QString::fromLatin1("bar") << true;
     QTest::newRow("baz")   << QString::fromLatin1("baz") << true;
+    QTest::newRow("long")     << QString(80, QLatin1Char('z')) << true;
+    QTest::newRow("too long") << QString(81, QLatin1Char('z')) << false;
+    QTest::newRow("invalid")  << QString::fromLatin1("$$$")    << false;
 }
 
 void TestSqsCreateQueueRequest::construct_queueName()

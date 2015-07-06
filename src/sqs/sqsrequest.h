@@ -68,6 +68,8 @@ public:
 
     virtual bool operator==(const SqsRequest &other) const;
 
+    static bool isValidQueueName(const QString &queueName);
+
 protected:
     /// @cond internal
     SqsRequest(SqsRequestPrivate * const d);

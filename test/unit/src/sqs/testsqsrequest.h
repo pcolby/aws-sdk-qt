@@ -48,6 +48,9 @@ private slots:
     void equality_data();
     void equality();
 
+    void isValidQueueName_data();
+    void isValidQueueName();
+
     void clearParameter_data();
     void clearParameter();
 

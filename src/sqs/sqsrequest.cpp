@@ -189,6 +189,25 @@ bool SqsRequest::operator==(const SqsRequest &other) const
 }
 
 /**
+ * @brief  Check if \a queueName is a valid SQS queue name.
+ *
+ * @par From SQS FAQs:
+ *      Queue names are limited to 80 characters. Alphanumeric characters plus
+ *      hyphens (-) and underscores (_) are allowed.
+ *
+ * @param  queueName  Name to check for validity.
+ *
+ * @return \c true if \a queueName is a valid SQS queue name, \c false otherwise.
+ *
+ * @see    http://aws.amazon.com/sqs/faqs/
+ */
+bool SqsRequest::isValidQueueName(const QString &queueName)
+{
+    const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
+    return pattern.exactMatch(queueName);
+}
+
+/**
  * @brief  Remove a parameter from the parameters to be included with this request.
  *
  * @param  name  Name of the parameter to remove.
