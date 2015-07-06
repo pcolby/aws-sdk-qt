@@ -22,6 +22,7 @@
 
 #include "core/awsabstractrequest.h"
 
+#include <QFlags>
 #include <QObject>
 
 class QNetworkRequest;
@@ -37,24 +38,25 @@ public:
     /// Actions supported by SQS.
     /// @todo  Drop the "Sqs" in these enum labels?  Seems redundant.
     enum Action {
-        AddPermissionSqsAction,
-        ChangeMessageVisibilitySqsAction,
-        ChangeMessageVisibilityBatchSqsAction,
-        CreateQueueSqsAction,
-        DeleteMessageSqsAction,
-        DeleteMessageBatchSqsAction,
-        DeleteQueueSqsAction,
-        GetQueueAttributesSqsAction,
-        GetQueueUrlSqsAction,
-        ListDeadLetterSourceQueuesSqsAction,
-        ListQueuesSqsAction,
-        PurgeQueueSqsAction,
-        ReceiveMessageSqsAction,
-        RemovePermissionSqsAction,
-        SendMessageSqsAction,
-        SendMessageBatchSqsAction,
-        SetQueueAttributesSqsAction
+        AddPermissionSqsAction                = 0x00001,
+        ChangeMessageVisibilitySqsAction      = 0x00002,
+        ChangeMessageVisibilityBatchSqsAction = 0x00004,
+        CreateQueueSqsAction                  = 0x00008,
+        DeleteMessageSqsAction                = 0x00010,
+        DeleteMessageBatchSqsAction           = 0x00020,
+        DeleteQueueSqsAction                  = 0x00040,
+        GetQueueAttributesSqsAction           = 0x00080,
+        GetQueueUrlSqsAction                  = 0x00100,
+        ListDeadLetterSourceQueuesSqsAction   = 0x00200,
+        ListQueuesSqsAction                   = 0x00400,
+        PurgeQueueSqsAction                   = 0x00800,
+        ReceiveMessageSqsAction               = 0x01000,
+        RemovePermissionSqsAction             = 0x02000,
+        SendMessageSqsAction                  = 0x04000,
+        SendMessageBatchSqsAction             = 0x08000,
+        SetQueueAttributesSqsAction           = 0x10000
     };
+    Q_DECLARE_FLAGS(Actions, Action)
 
     SqsRequest(const Action action);
     SqsRequest(const SqsRequest &other);
@@ -89,6 +91,8 @@ private:
     Q_DECLARE_PRIVATE(SqsRequest)
     friend class TestSqsRequest;
 };
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(SqsRequest::Actions)
 
 QTAWS_END_NAMESPACE
 

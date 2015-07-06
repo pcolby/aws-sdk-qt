@@ -29,42 +29,46 @@ class QTAWS_EXPORT SqsAddPermissionRequest : public SqsRequest {
 public:
     /// The subset of SQS actions that may be used with the AddPermission action.
     enum PermissibleAction {
-        SendMessageSqsAction = SqsRequest::SendMessageSqsAction,
-        ReceiveMessageSqsAction = SqsRequest::ReceiveMessageSqsAction,
-        DeleteMessageSqsAction = SqsRequest::DeleteMessageSqsAction,
+        SendMessageSqsAction             = SqsRequest::SendMessageSqsAction,
+        ReceiveMessageSqsAction          = SqsRequest::ReceiveMessageSqsAction,
+        DeleteMessageSqsAction           = SqsRequest::DeleteMessageSqsAction,
         ChangeMessageVisibilitySqsAction = SqsRequest::ChangeMessageVisibilitySqsAction,
-        GetQueueAttributesSqsAction = SqsRequest::GetQueueAttributesSqsAction,
-        GetQueueUrlSqsAction = SqsRequest::GetQueueUrlSqsAction,
-        AllPermissibleActions = 0xFF ///< Translates to wildcard ("*") for SQS.
+        GetQueueAttributesSqsAction      = SqsRequest::GetQueueAttributesSqsAction,
+        GetQueueUrlSqsAction             = SqsRequest::GetQueueUrlSqsAction
     };
+    Q_DECLARE_FLAGS(PermissibleActions, PermissibleAction)
+    typedef QMap<QString, PermissibleActions> PermissionsMap;
 
     SqsAddPermissionRequest(const QString &queueUrl,
                             const QString &label = QString(),
-                            const QVariantMap &permissions = QVariantMap());
+                            const PermissionsMap &permissions = PermissionsMap());
     SqsAddPermissionRequest(const SqsAddPermissionRequest &other);
     SqsAddPermissionRequest();
 
     virtual bool isValid() const;
 
     QString label() const;
-    QVariantMap permissions() const;
+    PermissibleActions permissions(const QString &accountId) const;
+    PermissionsMap permissions() const;
     QString queueUrl() const;
-
-    void addPermission(const QString &accountId, const PermissibleAction action);
-    void addPermission(const QString &accountId, const QString &actionName);
 
     void setLabel(const QString &label);
     void setQueueUrl(const QString &queueUrl);
 
-    void setPermission(const QString &accountId, const PermissibleAction action);
-    void setPermission(const QString &accountId, const QString &actionName);
-    void setPermissions(const QVariantMap &permissions);
+    void setPermission(const QString &accountId, const PermissibleAction action,
+                       const bool permitted = true);
+    void setPermission(const QString &accountId, const QString &actionName,
+                       const bool permitted = true);
+    void setPermissions(const QString &accountId, const PermissibleActions &actions);
+    void setPermissions(const PermissionsMap &permissions);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
     friend class TestSqsAddPermissionRequest;
 };
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(SqsAddPermissionRequest::PermissibleActions)
 
 QTAWS_END_NAMESPACE
 

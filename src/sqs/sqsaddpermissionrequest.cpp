@@ -35,8 +35,7 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 SqsAddPermissionRequest::SqsAddPermissionRequest(
-    const QString &queueUrl, const QString &label,
-    const QVariantMap &permissions)
+    const QString &queueUrl, const QString &label, const PermissionsMap &permissions)
     : SqsRequest(SqsRequest::AddPermissionSqsAction)
 {
     setLabel(label);
@@ -63,10 +62,9 @@ SqsAddPermissionRequest::SqsAddPermissionRequest()
 
 bool SqsAddPermissionRequest::isValid() const
 {
-    /// @todo  Validate the permissions entries?
-    return (isValidQueueName(label())) &&
-            (!queueUrl().isEmpty()) &&
-            (!permissions().isEmpty());
+    return ((isValidQueueName(label())) &&
+            (!permissions().isEmpty()) &&
+            (!queueUrl().isEmpty()));
 }
 
 QString SqsAddPermissionRequest::label() const
@@ -74,30 +72,21 @@ QString SqsAddPermissionRequest::label() const
     return parameter(LABEL).toString();
 }
 
-QVariantMap SqsAddPermissionRequest::permissions() const
+SqsAddPermissionRequest::PermissibleActions SqsAddPermissionRequest::permissions(
+    const QString &accountId) const
+{
+    return permissions().value(accountId);
+}
+
+SqsAddPermissionRequest::PermissionsMap SqsAddPermissionRequest::permissions() const
 {
     /// @todo
-    return QVariantMap();
+    return PermissionsMap();
 }
 
 QString SqsAddPermissionRequest::queueUrl() const
 {
     return parameter(QUEUE_URL).toString();
-}
-
-void SqsAddPermissionRequest::addPermission(const QString &accountId,
-                                            const PermissibleAction action)
-{
-    Q_UNUSED(accountId)
-    Q_UNUSED(action)
-    /// @todo
-}
-
-void SqsAddPermissionRequest::addPermission(const QString &accountId, const QString &actionName)
-{
-    Q_UNUSED(accountId)
-    Q_UNUSED(actionName)
-    /// @todo
 }
 
 void SqsAddPermissionRequest::setLabel(const QString &label)
@@ -110,23 +99,33 @@ void SqsAddPermissionRequest::setQueueUrl(const QString &queueUrl)
     setParameter(QUEUE_URL, queueUrl);
 }
 
-void SqsAddPermissionRequest::setPermission(const QString &accountId,
-                                            const PermissibleAction action)
-{
-    const QString actionName = (action == AllPermissibleActions)
-        ? QString::fromLatin1("*")
-        : SqsRequestPrivate::toString(static_cast<SqsRequest::Action>(action));
-    setPermission(accountId, actionName);
-}
-
-void SqsAddPermissionRequest::setPermission(const QString &accountId, const QString &actionName)
+void SqsAddPermissionRequest::setPermission(
+    const QString &accountId, const PermissibleAction action, const bool permitted)
 {
     Q_UNUSED(accountId)
-    Q_UNUSED(actionName)
+    Q_UNUSED(action)
+    Q_UNUSED(permitted)
     /// @todo
 }
 
-void SqsAddPermissionRequest::setPermissions(const QVariantMap &permissions)
+void SqsAddPermissionRequest::setPermission(
+    const QString &accountId, const QString &actionName, const bool permitted)
+{
+    Q_UNUSED(accountId)
+    Q_UNUSED(actionName)
+    Q_UNUSED(permitted)
+    /// @todo
+}
+
+void SqsAddPermissionRequest::setPermissions(
+    const QString &accountId, const PermissibleActions &actions)
+{
+    Q_UNUSED(accountId)
+    Q_UNUSED(actions)
+    /// @todo
+}
+
+void SqsAddPermissionRequest::setPermissions(const PermissionsMap &permissions)
 {
     Q_UNUSED(permissions)
     /// @todo

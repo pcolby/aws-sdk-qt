@@ -52,8 +52,6 @@ public:
 
 public slots:
     SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &request);
-    SqsAddPermissionResponse * addPermission(const QString &queueUrl, const QString &label,
-                                             const QVariantMap &permissions);
 
     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
     SqsCreateQueueResponse * createQueue(const QString &queueName,

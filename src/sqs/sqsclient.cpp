@@ -99,13 +99,6 @@ SqsAddPermissionResponse * SqsClient::addPermission(const SqsAddPermissionReques
     return qobject_cast<SqsAddPermissionResponse *>(send(request));
 }
 
-SqsAddPermissionResponse * SqsClient::addPermission(const QString &queueUrl, const QString &label,
-                                         const QVariantMap &accountActions)
-{
-    const SqsAddPermissionRequest request(queueUrl, label, accountActions);
-    return addPermission(request);
-}
-
 /**
  * @brief  Create an SQS queue.
  *
