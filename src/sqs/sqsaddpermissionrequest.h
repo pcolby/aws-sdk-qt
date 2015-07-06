@@ -24,6 +24,8 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsAddPermissionRequestPrivate;
+
 class QTAWS_EXPORT SqsAddPermissionRequest : public SqsRequest {
 
 public:
@@ -65,6 +67,8 @@ public:
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
+private:
+    Q_DECLARE_PRIVATE(SqsAddPermissionRequest)
     friend class TestSqsAddPermissionRequest;
 };
 

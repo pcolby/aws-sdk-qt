@@ -17,28 +17,28 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSADDPERMISSIONRESPONSE_P_H
-#define SQSADDPERMISSIONRESPONSE_P_H
+#ifndef SQSADDPERMISSIONREQUEST_P_H
+#define SQSADDPERMISSIONREQUEST_P_H
 
-#include "sqsresponse_p.h"
+#include "sqsaddpermissionrequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsAddPermissionResponse;
+class SqsAddPermissionRequest;
 
-class QTAWS_EXPORT SqsAddPermissionResponsePrivate : public SqsResponsePrivate {
+class QTAWS_EXPORT SqsAddPermissionRequestPrivate : public SqsRequestPrivate {
 
 public:
-    QString queueUrl; ///< Created queue URL.
+    SqsAddPermissionRequest::PermissionsMap permissions; ///< Permissions to add.
 
-    SqsAddPermissionResponsePrivate(SqsAddPermissionResponse * const q);
-
-    void parseAddPermissionResponse(QXmlStreamReader &xml);
-    void parseAddPermissionResult(QXmlStreamReader &xml);
+    SqsAddPermissionRequestPrivate(const SqsRequest::Action action,
+                                   SqsAddPermissionRequest * const q);
+    SqsAddPermissionRequestPrivate(const SqsAddPermissionRequestPrivate &other,
+                                   SqsAddPermissionRequest * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SqsAddPermissionResponse)
-    Q_DISABLE_COPY(SqsAddPermissionResponsePrivate)
+    Q_DECLARE_PUBLIC(SqsAddPermissionRequest)
 
 };
 

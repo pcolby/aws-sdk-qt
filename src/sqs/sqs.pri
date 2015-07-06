@@ -2,6 +2,7 @@ HEADERS += \
         sqsclient.h \
         sqsclient_p.h \
         sqsaddpermissionrequest.h \
+        sqsaddpermissionrequest_p.h \
         sqsaddpermissionresponse.h \
         sqsaddpermissionresponse_p.h \
         sqschangemessagevisibilitybatchrequest.h \

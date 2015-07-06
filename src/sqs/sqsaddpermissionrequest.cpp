@@ -18,6 +18,7 @@
 */
 
 #include "sqsaddpermissionrequest.h"
+#include "sqsaddpermissionrequest_p.h"
 #include "sqsaddpermissionresponse.h"
 #include "sqsrequest_p.h"
 
@@ -36,7 +37,7 @@ QTAWS_BEGIN_NAMESPACE
 
 SqsAddPermissionRequest::SqsAddPermissionRequest(
     const QString &queueUrl, const QString &label, const PermissionsMap &permissions)
-    : SqsRequest(SqsRequest::AddPermissionSqsAction)
+    : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionSqsAction, this))
 {
     setLabel(label);
     setQueueUrl(queueUrl);
@@ -44,11 +45,9 @@ SqsAddPermissionRequest::SqsAddPermissionRequest(
 }
 
 SqsAddPermissionRequest::SqsAddPermissionRequest(const SqsAddPermissionRequest &other)
-    : SqsRequest(other)
+    : SqsRequest(new SqsAddPermissionRequestPrivate(*other.d_func(), this))
 {
-    setLabel(other.label());
-    setQueueUrl(other.queueUrl());
-    setPermissions(other.permissions());
+
 }
 
 /**
@@ -80,8 +79,8 @@ SqsAddPermissionRequest::PermissibleActions SqsAddPermissionRequest::permissions
 
 SqsAddPermissionRequest::PermissionsMap SqsAddPermissionRequest::permissions() const
 {
-    /// @todo
-    return PermissionsMap();
+    Q_D(const SqsAddPermissionRequest);
+    return d->permissions;
 }
 
 QString SqsAddPermissionRequest::queueUrl() const
@@ -102,33 +101,26 @@ void SqsAddPermissionRequest::setQueueUrl(const QString &queueUrl)
 void SqsAddPermissionRequest::setPermission(
     const QString &accountId, const PermissibleAction action, const bool permitted)
 {
-    Q_UNUSED(accountId)
-    Q_UNUSED(action)
-    Q_UNUSED(permitted)
-    /// @todo
-}
-
-void SqsAddPermissionRequest::setPermission(
-    const QString &accountId, const QString &actionName, const bool permitted)
-{
-    Q_UNUSED(accountId)
-    Q_UNUSED(actionName)
-    Q_UNUSED(permitted)
-    /// @todo
+    PermissibleActions actions = permissions(accountId);
+    if (permitted) {
+        actions |= action;
+    } else {
+        actions ^= action;
+    }
+    setPermissions(accountId, actions);
 }
 
 void SqsAddPermissionRequest::setPermissions(
     const QString &accountId, const PermissibleActions &actions)
 {
-    Q_UNUSED(accountId)
-    Q_UNUSED(actions)
-    /// @todo
+    Q_D(SqsAddPermissionRequest);
+    d->permissions.insert(accountId, actions);
 }
 
 void SqsAddPermissionRequest::setPermissions(const PermissionsMap &permissions)
 {
-    Q_UNUSED(permissions)
-    /// @todo
+    Q_D(SqsAddPermissionRequest);
+    d->permissions = permissions;
 }
 
 /**
@@ -143,6 +135,35 @@ void SqsAddPermissionRequest::setPermissions(const PermissionsMap &permissions)
 AwsAbstractResponse * SqsAddPermissionRequest::response(QNetworkReply * const reply) const
 {
     return new SqsAddPermissionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsAddPermissionRequestPrivate
+ *
+ * @brief  Private implementation for SqsAddPermissionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsAddPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SqsAddPermissionRequest instance.
+ */
+SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(
+    const SqsRequest::Action action, SqsAddPermissionRequest * const q)
+    : SqsRequestPrivate(action, q)
+{
+
+}
+
+SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(
+    const SqsAddPermissionRequestPrivate &other, SqsAddPermissionRequest * const q)
+    : SqsRequestPrivate(other, q), permissions(other.permissions)
+{
+
 }
 
 QTAWS_END_NAMESPACE

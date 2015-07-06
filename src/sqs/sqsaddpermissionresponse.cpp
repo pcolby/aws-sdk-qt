@@ -124,8 +124,8 @@ void SqsAddPermissionResponse::parseSuccess(QIODevice &response)
  *
  * @param  q  Pointer to this object's public SqsAddPermissionResponse instance.
  */
-SqsAddPermissionResponsePrivate::SqsAddPermissionResponsePrivate(SqsAddPermissionResponse * const q)
-    : SqsResponsePrivate(q), q_ptr(q)
+SqsAddPermissionResponsePrivate::SqsAddPermissionResponsePrivate(
+    SqsAddPermissionResponse * const q) : SqsResponsePrivate(q)
 {
 
 }
