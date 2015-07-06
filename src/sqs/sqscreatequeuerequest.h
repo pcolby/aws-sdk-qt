@@ -26,6 +26,8 @@ class QNetworkRequest;
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsCreateQueueRequestPrivate;
+
 class QTAWS_EXPORT SqsCreateQueueRequest : public SqsRequest {
 
 public:
@@ -61,6 +63,8 @@ public:
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
 
+private:
+    Q_DECLARE_PRIVATE(SqsCreateQueueRequest)
     friend class TestSqsCreateQueueRequest;
 };
 

@@ -8,6 +8,7 @@ HEADERS += \
         sqschangemessagevisibilitybatchrequest.h \
         sqschangemessagevisibilityrequest.h \
         sqscreatequeuerequest.h \
+        sqscreatequeuerequest_p.h \
         sqscreatequeueresponse.h \
         sqscreatequeueresponse_p.h \
         sqsdeletemessagebatchrequest.h \

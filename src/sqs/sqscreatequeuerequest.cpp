@@ -18,6 +18,7 @@
 */
 
 #include "sqscreatequeuerequest.h"
+#include "sqscreatequeuerequest_p.h"
 #include "sqscreatequeueresponse.h"
 
 #define ATTRIBUTE_ENTRY_N                    QLatin1String("Attribute.%1.%2")
@@ -43,7 +44,7 @@ QTAWS_BEGIN_NAMESPACE
  * @param  queueName  Name of the queue to be created.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
-    : SqsRequest(SqsRequest::CreateQueueSqsAction)
+    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueSqsAction, this))
 {
     setQueueName(queueName);
 }
@@ -54,7 +55,7 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
  * @param  other  Instance to copy.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
-    : SqsRequest(other)
+    : SqsRequest(new SqsCreateQueueRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -66,7 +67,7 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
  * false) untill setQueueName is invoked with a non-empty queue name.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest()
-    : SqsRequest(SqsRequest::CreateQueueSqsAction)
+    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueSqsAction, this))
 {
 
 }
@@ -325,6 +326,35 @@ void SqsCreateQueueRequest::setVisibilityTimeout(int timeout)
 AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const reply) const
 {
     return new SqsCreateQueueResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsCreateQueueRequestPrivate
+ *
+ * @brief  Private implementation for SqsCreateQueueRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsCreateQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SqsCreateQueueRequest instance.
+ */
+SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
+    const SqsRequest::Action action, SqsCreateQueueRequest * const q)
+    : SqsRequestPrivate(action, q)
+{
+
+}
+
+SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
+    const SqsCreateQueueRequestPrivate &other, SqsCreateQueueRequest * const q)
+    : SqsRequestPrivate(other, q)
+{
+
 }
 
 QTAWS_END_NAMESPACE
