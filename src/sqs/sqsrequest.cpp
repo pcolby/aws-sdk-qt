@@ -43,7 +43,7 @@ QTAWS_BEGIN_NAMESPACE
 SqsRequest::SqsRequest(const Action action)
     : AwsAbstractRequest(new SqsRequestPrivate(action, this))
 {
-    setApiVersion(QLatin1String("2012-11-05"));
+
 }
 
 /**
@@ -292,7 +292,7 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  * @param  q       Pointer to this object's public SqsRequest instance.
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q)
-    : AwsAbstractRequestPrivate(q), action(action)
+    : AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }

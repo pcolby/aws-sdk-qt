@@ -145,6 +145,7 @@ void TestSqsRequest::construct_d_ptr()
         new SqsRequestPrivate(temporaryRequest.action(), &temporaryRequest);
     MockSqsRequest request(requestPrivate);
     QCOMPARE(request.d_func(), requestPrivate);
+    QCOMPARE(request.apiVersion(), SQS_API_VERSION);
 }
 #endif
 

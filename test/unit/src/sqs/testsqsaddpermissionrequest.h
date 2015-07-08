@@ -40,6 +40,12 @@ private slots:
     void queueUrl_data();
     void queueUrl();
 
+    void permission_data();
+    void permission();
+
+    void permissions_account_data();
+    void permissions_account();
+
     void permissions_data();
     void permissions();
 

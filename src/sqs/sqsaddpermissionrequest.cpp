@@ -107,7 +107,7 @@ void SqsAddPermissionRequest::setPermission(
     if (permitted) {
         actions |= action;
     } else {
-        actions ^= action;
+        actions &= ~action;
     }
     setPermissions(accountId, actions);
 }
@@ -193,6 +193,7 @@ QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const
                     QString(ACTION_NAME_MEMBER_N).arg(index), \
                     toString(static_cast<SqsRequest::Action>(SqsAddPermissionRequest::action##Action))); \
                 actions &= ~SqsAddPermissionRequest::action##Action; \
+                ++index; \
             }
         IF_ACTION_SET_PARAMETER(SendMessage)
         IF_ACTION_SET_PARAMETER(ReceiveMessage)

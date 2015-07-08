@@ -59,8 +59,6 @@ public:
 
     void setPermission(const QString &accountId, const PermissibleAction action,
                        const bool permitted = true);
-    void setPermission(const QString &accountId, const QString &actionName,
-                       const bool permitted = true);
     void setPermissions(const QString &accountId, const PermissibleActions &actions);
     void setPermissions(const PermissionsMap &permissions);
 

@@ -28,8 +28,11 @@
 #endif
 
 #include <QDebug>
+#include <QUrlQuery>
 
+Q_DECLARE_METATYPE(SqsAddPermissionRequest::PermissibleActions)
 Q_DECLARE_METATYPE(SqsAddPermissionRequest::PermissionsMap)
+Q_DECLARE_METATYPE(QUrlQuery)
 
 namespace TestSqsAddPermissionRequest_Mocks {
 
@@ -65,6 +68,18 @@ void TestSqsAddPermissionRequest::construct_params_data()
                        SqsAddPermissionRequest::SendMessageAction);
     QTest::newRow("foo")
         << QString::fromLatin1("foo")
+        << permissions
+        << QString::fromLatin1("http://example.com/bar/baz");
+
+    permissions.insert(QString::fromLatin1("bar"),
+                       SqsAddPermissionRequest::SendMessageAction|
+                       SqsAddPermissionRequest::ReceiveMessageAction|
+                       SqsAddPermissionRequest::DeleteMessageAction|
+                       SqsAddPermissionRequest::ChangeMessageVisibilityAction|
+                       SqsAddPermissionRequest::GetQueueAttributesAction|
+                       SqsAddPermissionRequest::GetQueueUrlAction);
+    QTest::newRow("all")
+        << QString::fromLatin1("foo-bar")
         << permissions
         << QString::fromLatin1("http://example.com/bar/baz");
 }
@@ -195,14 +210,106 @@ void TestSqsAddPermissionRequest::queueUrl()
     QCOMPARE(request.queueUrl(), queueUrl);
 }
 
+void TestSqsAddPermissionRequest::permission_data()
+{
+    permissions_account_data();
+}
+
+void TestSqsAddPermissionRequest::permission()
+{
+    QFETCH(QString, accountId);
+    QFETCH(SqsAddPermissionRequest::PermissibleActions, permissions);
+
+    #define SET_ACCOUNT_PERM(action) request.setPermission(accountId, \
+        SqsAddPermissionRequest::action##Action, \
+        permissions.testFlag(SqsAddPermissionRequest::action##Action));
+
+    {   // Starting with no permissions.
+        SqsAddPermissionRequest request;
+        QCOMPARE(request.permissions(accountId), SqsAddPermissionRequest::PermissibleActions());
+        SET_ACCOUNT_PERM(SendMessage);
+        SET_ACCOUNT_PERM(ReceiveMessage);
+        SET_ACCOUNT_PERM(DeleteMessage);
+        SET_ACCOUNT_PERM(ChangeMessageVisibility);
+        SET_ACCOUNT_PERM(GetQueueAttributes);
+        SET_ACCOUNT_PERM(GetQueueUrl);
+        QCOMPARE(request.permissions(accountId), permissions);
+    }
+
+    {   // Starting with all permissions.
+        SqsAddPermissionRequest request;
+        request.setPermissions(accountId,
+            SqsAddPermissionRequest::PermissibleActions(
+               SqsAddPermissionRequest::SendMessageAction|
+               SqsAddPermissionRequest::ReceiveMessageAction|
+               SqsAddPermissionRequest::DeleteMessageAction|
+               SqsAddPermissionRequest::ChangeMessageVisibilityAction|
+               SqsAddPermissionRequest::GetQueueAttributesAction|
+               SqsAddPermissionRequest::GetQueueUrlAction));
+        SET_ACCOUNT_PERM(SendMessage);
+        SET_ACCOUNT_PERM(ReceiveMessage);
+        SET_ACCOUNT_PERM(DeleteMessage);
+        SET_ACCOUNT_PERM(ChangeMessageVisibility);
+        SET_ACCOUNT_PERM(GetQueueAttributes);
+        SET_ACCOUNT_PERM(GetQueueUrl);
+        QCOMPARE(request.permissions(accountId), permissions);
+    }
+
+    #undef SET_ACCOUNT_PERM
+}
+
+void TestSqsAddPermissionRequest::permissions_account_data()
+{
+    QTest::addColumn<QString>("accountId");
+    QTest::addColumn<SqsAddPermissionRequest::PermissibleActions>("permissions");
+
+    #define NEW_ROW(action) QTest::newRow(#action) << QString::fromLatin1("foo") \
+        << SqsAddPermissionRequest::PermissibleActions(SqsAddPermissionRequest::action##Action)
+    NEW_ROW(SendMessage);
+    NEW_ROW(ReceiveMessage);
+    NEW_ROW(DeleteMessage);
+    NEW_ROW(ChangeMessageVisibility);
+    NEW_ROW(GetQueueAttributes);
+    NEW_ROW(GetQueueUrl);
+    #undef NEW_ROW
+
+    QTest::newRow("all")
+        << QString::fromLatin1("bar")
+        << SqsAddPermissionRequest::PermissibleActions(
+               SqsAddPermissionRequest::SendMessageAction|
+               SqsAddPermissionRequest::ReceiveMessageAction|
+               SqsAddPermissionRequest::DeleteMessageAction|
+               SqsAddPermissionRequest::ChangeMessageVisibilityAction|
+               SqsAddPermissionRequest::GetQueueAttributesAction|
+               SqsAddPermissionRequest::GetQueueUrlAction);
+}
+
+void TestSqsAddPermissionRequest::permissions_account()
+{
+    QFETCH(QString, accountId);
+    QFETCH(SqsAddPermissionRequest::PermissibleActions, permissions);
+
+    SqsAddPermissionRequest request;
+    QCOMPARE(request.permissions(accountId), SqsAddPermissionRequest::PermissibleActions());
+
+    request.setPermissions(accountId, permissions);
+    QCOMPARE(request.permissions(accountId), permissions);
+}
+
 void TestSqsAddPermissionRequest::permissions_data()
 {
-
+    construct_params_data();
 }
 
 void TestSqsAddPermissionRequest::permissions()
 {
-    /// @todo
+    QFETCH(SqsAddPermissionRequest::PermissionsMap, permissions);
+
+    SqsAddPermissionRequest request;
+    QCOMPARE(request.permissions(), SqsAddPermissionRequest::PermissionsMap());
+
+    request.setPermissions(permissions);
+    QCOMPARE(request.permissions(), permissions);
 }
 
 void TestSqsAddPermissionRequest::response()
@@ -221,11 +328,77 @@ void TestSqsAddPermissionRequest::response()
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsAddPermissionRequest::urlQuery_data()
 {
+    QTest::addColumn<QString>("label");
+    QTest::addColumn<SqsAddPermissionRequest::PermissionsMap>("permissions");
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QUrlQuery>("expected");
 
+    SqsAddPermissionRequest::PermissionsMap permissions;
+
+    QTest::newRow("null")
+        << QString()
+        << permissions
+        << QString()
+        << QUrlQuery(QLatin1String(
+           "Action=AddPermission"
+           "&Version=2012-11-05"
+           "&Label&QueueUrl"));
+
+    permissions.insert(QString::fromLatin1("foo"),
+                       SqsAddPermissionRequest::SendMessageAction);
+    QTest::newRow("SendMessage")
+        << QString::fromLatin1("foo")
+        << permissions
+        << QString::fromLatin1("http://example.com/bar/baz")
+        << QUrlQuery(QLatin1String(
+            "Action=AddPermission"
+            "&Version=2012-11-05"
+            "&Label=foo"
+            "&QueueUrl=http://example.com/bar/baz"
+            "&AWSAccountId.member.1=foo"
+            "&ActionName.member.1=SendMessage"));
+
+    permissions.insert(QString::fromLatin1("bar"),
+                       SqsAddPermissionRequest::SendMessageAction|
+                       SqsAddPermissionRequest::ReceiveMessageAction|
+                       SqsAddPermissionRequest::DeleteMessageAction|
+                       SqsAddPermissionRequest::ChangeMessageVisibilityAction|
+                       SqsAddPermissionRequest::GetQueueAttributesAction|
+                       SqsAddPermissionRequest::GetQueueUrlAction);
+    QTest::newRow("all")
+        << QString::fromLatin1("foo-bar")
+        << permissions
+        << QString::fromLatin1("http://example.com/bar/baz")
+        << QUrlQuery(QLatin1String(
+            "Action=AddPermission"
+            "&Version=2012-11-05"
+            "&Label=foo-bar"
+            "&QueueUrl=http://example.com/bar/baz"
+            "&AWSAccountId.member.1=bar"
+            "&ActionName.member.1=SendMessage"
+            "&AWSAccountId.member.2=bar"
+            "&ActionName.member.2=ReceiveMessage"
+            "&AWSAccountId.member.3=bar"
+            "&ActionName.member.3=DeleteMessage"
+            "&AWSAccountId.member.4=bar"
+            "&ActionName.member.4=ChangeMessageVisibility"
+            "&AWSAccountId.member.5=bar"
+            "&ActionName.member.5=GetQueueAttributes"
+            "&AWSAccountId.member.6=bar"
+            "&ActionName.member.6=GetQueueUrl"
+            "&AWSAccountId.member.7=foo"
+            "&ActionName.member.7=SendMessage"));
 }
 
 void TestSqsAddPermissionRequest::urlQuery()
 {
-    /// @todo
+    QFETCH(QString, label);
+    QFETCH(SqsAddPermissionRequest::PermissionsMap, permissions);
+    QFETCH(QString, queueUrl);
+    QFETCH(QUrlQuery, expected);
+
+    const SqsAddPermissionRequest request(label, permissions, queueUrl);
+    const QUrlQuery urlQuery = request.d_func()->urlQuery();
+    QCOMPARE(urlQuery, expected);
 }
 #endif
