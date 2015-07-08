@@ -24,6 +24,7 @@
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
+#include <QRegExp>
 #include <QUrlQuery>
 #include <QXmlStreamReader>
 
