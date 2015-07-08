@@ -36,6 +36,8 @@ QTAWS_BEGIN_NAMESPACE
  * @class  SqsCreateQueueRequest
  *
  * @brief  Implements SQS CreateQueue requests.
+ *
+ * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html
  */
 
 /**
@@ -341,7 +343,8 @@ AwsAbstractResponse * SqsCreateQueueRequest::response(QNetworkReply * const repl
  *
  * @brief  Constructs a new SqsCreateQueueResponsePrivate object.
  *
- * @param  q  Pointer to this object's public SqsCreateQueueRequest instance.
+ * @param  action  SQS action being perfomed.
+ * @param  q       Pointer to this object's public SqsCreateQueueRequest instance.
  */
 SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
     const SqsRequest::Action action, SqsCreateQueueRequest * const q)
@@ -350,6 +353,17 @@ SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
 
 }
 
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsCreateQueueRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SqsCreateQueueRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SqsCreateQueueRequest instance.
+ */
 SqsCreateQueueRequestPrivate::SqsCreateQueueRequestPrivate(
     const SqsCreateQueueRequestPrivate &other, SqsCreateQueueRequest * const q)
     : SqsRequestPrivate(other, q)

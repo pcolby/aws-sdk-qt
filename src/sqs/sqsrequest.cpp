@@ -318,6 +318,13 @@ SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
 
 }
 
+/**
+ * @brief  Construct the URL query for this request.
+ *
+ * @return The URL query for this request.
+ *
+ * @see  SqsRequest::unsignedRequest
+ */
 QUrlQuery SqsRequestPrivate::urlQuery() const
 {
     Q_Q(const SqsRequest);
@@ -341,6 +348,17 @@ QUrlQuery SqsRequestPrivate::urlQuery() const
     return query;
 }
 
+/**
+ * @brief  Convert and SQS action to a string.
+ *
+ * This function converts SqsRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the SQS service's Action
+ * query parameters.
+ *
+ * @param  action  SQS action to convert.
+ *
+ * @return A string representing \a action, or a null string if \a action is invalid.
+ */
 QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
 {
     #define ActionToString(action) \

@@ -94,6 +94,15 @@ SqsClient::SqsClient(const QUrl &endpoint,
     d->serviceName = SQS_SERVICE_NAME;
 }
 
+/**
+ * @brief  Add permissions to an SQS queue.
+ *
+ * @param  request  The request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
 SqsAddPermissionResponse * SqsClient::addPermission(const SqsAddPermissionRequest &request)
 {
     return qobject_cast<SqsAddPermissionResponse *>(send(request));
@@ -102,7 +111,7 @@ SqsAddPermissionResponse * SqsClient::addPermission(const SqsAddPermissionReques
 /**
  * @brief  Create an SQS queue.
  *
- * @param  request  The request to send to Amazon.
+ * @param  request  The request to send to SQS.
  *
  * @return A pointer to a related response object.
  *

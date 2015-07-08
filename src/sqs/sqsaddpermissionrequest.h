@@ -39,6 +39,8 @@ public:
         GetQueueUrlAction             = SqsRequest::GetQueueUrlAction
     };
     Q_DECLARE_FLAGS(PermissibleActions, PermissibleAction)
+
+    /// Map of principals (aka accountIds) to their permissions.
     typedef QMap<QString, PermissibleActions> PermissionsMap;
 
     SqsAddPermissionRequest(const QString &label,

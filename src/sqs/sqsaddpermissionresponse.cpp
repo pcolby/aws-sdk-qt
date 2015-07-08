@@ -29,7 +29,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  SqsAddPermissionResponse
  *
- * @brief  Handles Amazon Simple Queue Service (SQS) responses.
+ * @brief  Handles SQS AddPermission responses.
+ *
+ * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_AddPermission.html
  */
 
 /**
