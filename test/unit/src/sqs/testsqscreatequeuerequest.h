@@ -65,4 +65,9 @@ private slots:
     void visibilityTimeout();
 
     void response();
+
+    // AwsAbstractResponsePrivate functions.
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    // Nothing to see here.
+    #endif
 };

@@ -23,14 +23,31 @@ class TestSqsAddPermissionRequest : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    void construct_d_ptr();
-    #endif
+    void construct_params_data();
+    void construct_params();
+
+    void construct_copy_data();
+    void construct_copy();
+
+    void construct_default();
+
+    void isValid_data();
+    void isValid();
+
+    void label_data();
+    void label();
+
+    void queueUrl_data();
+    void queueUrl();
+
+    void permissions_data();
+    void permissions();
+
+    void response();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    // Nothing to see here.
+    void urlQuery_data();
+    void urlQuery();
     #endif
-
 };

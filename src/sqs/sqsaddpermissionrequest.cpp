@@ -56,7 +56,7 @@ SqsAddPermissionRequest::SqsAddPermissionRequest(const SqsAddPermissionRequest &
  * @brief  Constructs a new SqsAddPermissionRequest object.
  */
 SqsAddPermissionRequest::SqsAddPermissionRequest()
-    : SqsRequest(SqsRequest::AddPermissionAction)
+    : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))
 {
 
 }
