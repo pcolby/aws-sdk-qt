@@ -41,9 +41,9 @@ public:
     Q_DECLARE_FLAGS(PermissibleActions, PermissibleAction)
     typedef QMap<QString, PermissibleActions> PermissionsMap;
 
-    SqsAddPermissionRequest(const QString &queueUrl,
-                            const QString &label = QString(),
-                            const PermissionsMap &permissions = PermissionsMap());
+    SqsAddPermissionRequest(const QString &label,
+                            const PermissionsMap &permissions = PermissionsMap(),
+                            const QString &queueUrl = QString());
     SqsAddPermissionRequest(const SqsAddPermissionRequest &other);
     SqsAddPermissionRequest();
 

@@ -21,6 +21,8 @@
 #include "../core/awsendpointtestdata.h"
 
 #include "core/awsanonymouscredentials.h"
+#include "sqs/sqsaddpermissionrequest.h"
+#include "sqs/sqsaddpermissionresponse.h"
 #include "sqs/sqsclient.h"
 #include "sqs/sqscreatequeuerequest.h"
 #include "sqs/sqscreatequeueresponse.h"
@@ -34,6 +36,7 @@
 #define SQS_SERVICE_NAME QLatin1String("sqs")
 
 Q_DECLARE_METATYPE(AwsRegion::Region)
+Q_DECLARE_METATYPE(SqsAddPermissionRequest::PermissionsMap)
 
 namespace TestSqsClient_Mocks {
 
@@ -131,12 +134,37 @@ void TestSqsClient::construct_region()
 
 void TestSqsClient::addPermission_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("label");
+    QTest::addColumn<SqsAddPermissionRequest::PermissionsMap>("permissions");
+    QTest::addColumn<QString>("queueUrl");
+
+    SqsAddPermissionRequest::PermissionsMap permissions;
+    permissions.insert(QString::fromLatin1("foo"),
+                       SqsAddPermissionRequest::SendMessageSqsAction);
+    QTest::newRow("foo")
+        << QString::fromLatin1("foo")
+        << permissions
+        << QString::fromLatin1("http://example.com/bar/baz");
 }
 
 void TestSqsClient::addPermission()
 {
-    /// @todo
+    QFETCH(QString, label);
+    QFETCH(SqsAddPermissionRequest::PermissionsMap, permissions);
+    QFETCH(QString, queueUrl);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    // Verify the explicit SqsCreateQueueRequest overload.
+    const SqsAddPermissionRequest request(label, permissions, queueUrl);
+    const SqsAddPermissionResponse * const response = sqs.addPermission(request);
+    QVERIFY(response);
+    QVERIFY(response->request());
+    QVERIFY(response->request() != &request); // A copy, not a reference.
+    QCOMPARE(*response->request(),  request);
+    delete response;
 }
 
 void TestSqsClient::createQueue_data()
@@ -169,6 +197,7 @@ void TestSqsClient::createQueue()
         QCOMPARE(response->request()->action(), SqsRequest::CreateQueueSqsAction);
         QCOMPARE(response->request()->queueName(), queueName);
         QCOMPARE(response->request()->attributes(), attributes);
+        delete response;
     }
 
     {   // Verify the explicit SqsCreateQueueRequest overload.
@@ -178,9 +207,9 @@ void TestSqsClient::createQueue()
         const SqsCreateQueueResponse * const response = sqs.createQueue(request);
         QVERIFY(response);
         QVERIFY(response->request());
-        QCOMPARE(response->request()->action(), SqsRequest::CreateQueueSqsAction);
-        QCOMPARE(response->request()->queueName(), queueName);
-        QCOMPARE(response->request()->attributes(), attributes);
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
     }
 }
 

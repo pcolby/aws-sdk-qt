@@ -38,7 +38,7 @@ QTAWS_BEGIN_NAMESPACE
  */
 
 SqsAddPermissionRequest::SqsAddPermissionRequest(
-    const QString &queueUrl, const QString &label, const PermissionsMap &permissions)
+    const QString &label, const PermissionsMap &permissions, const QString &queueUrl)
     : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionSqsAction, this))
 {
     setLabel(label);

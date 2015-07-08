@@ -26,6 +26,7 @@
 #endif
 
 #include <QDebug>
+#include <QUrlQuery>
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
 Q_DECLARE_METATYPE(SqsRequest::Action)
@@ -593,23 +594,36 @@ void TestSqsRequest::unsignedRequest()
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsRequest::urlQuery_data()
 {
-
+    unsignedRequest_data();
 }
 
 void TestSqsRequest::urlQuery()
 {
+    QFETCH(SqsRequest::Action, action);
+    QFETCH(QString, apiVersion);
+    QFETCH(QVariantMap, parameters);
+    QFETCH(QUrl, endpoint);
+    QFETCH(QNetworkRequest, expected);
 
+    MockSqsRequest request(action);
+    request.setApiVersion(apiVersion);
+    request.setParameters(parameters);
+
+    QCOMPARE(request.d_func()->urlQuery().toString(),
+             expected.url().query());
 }
 #endif
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsRequest::toString_action_data()
 {
-    /// @todo
+    actionString_data();
 }
 
 void TestSqsRequest::toString_action()
 {
-    /// @todo
+    QFETCH(SqsRequest::Action, action);
+    QFETCH(QString, actionString);
+    QCOMPARE(SqsRequestPrivate::toString(action), actionString);
 }
 #endif
