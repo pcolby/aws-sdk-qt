@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsReceiveMessageRequest object.
  */
 SqsReceiveMessageRequest::SqsReceiveMessageRequest()
-    : SqsRequest(SqsRequest::ReceiveMessageSqsAction)
+    : SqsRequest(SqsRequest::ReceiveMessageAction)
 {
 
 }

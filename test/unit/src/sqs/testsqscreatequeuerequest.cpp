@@ -82,7 +82,7 @@ void TestSqsCreateQueueRequest::construct_queueName()
     QFETCH(bool, isValid);
 
     SqsCreateQueueRequest request(queueName);
-    QCOMPARE(request.action(), SqsRequest::CreateQueueSqsAction);
+    QCOMPARE(request.action(), SqsRequest::CreateQueueAction);
     QCOMPARE(request.attributes(), QVariantMap());
     QCOMPARE(request.delaySeconds(), -1);
     QCOMPARE(request.isValid(), isValid);
@@ -151,7 +151,7 @@ void TestSqsCreateQueueRequest::construct_copy()
 void TestSqsCreateQueueRequest::construct_default()
 {
     SqsCreateQueueRequest request;
-    QCOMPARE(request.action(), SqsRequest::CreateQueueSqsAction);
+    QCOMPARE(request.action(), SqsRequest::CreateQueueAction);
     QCOMPARE(request.attributes(), QVariantMap());
     QCOMPARE(request.delaySeconds(), -1);
     QCOMPARE(request.isValid(), false);

@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsPurgeQueueRequest object.
  */
 SqsPurgeQueueRequest::SqsPurgeQueueRequest()
-    : SqsRequest(SqsRequest::PurgeQueueSqsAction)
+    : SqsRequest(SqsRequest::PurgeQueueAction)
 {
 
 }

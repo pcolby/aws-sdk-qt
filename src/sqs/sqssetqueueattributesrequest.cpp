@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsSetQueueAttributesRequest object.
  */
 SqsSetQueueAttributesRequest::SqsSetQueueAttributesRequest()
-    : SqsRequest(SqsRequest::SetQueueAttributesSqsAction)
+    : SqsRequest(SqsRequest::SetQueueAttributesAction)
 {
 
 }

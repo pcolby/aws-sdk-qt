@@ -39,7 +39,7 @@ QTAWS_BEGIN_NAMESPACE
 
 SqsAddPermissionRequest::SqsAddPermissionRequest(
     const QString &label, const PermissionsMap &permissions, const QString &queueUrl)
-    : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionSqsAction, this))
+    : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))
 {
     setLabel(label);
     setQueueUrl(queueUrl);
@@ -56,7 +56,7 @@ SqsAddPermissionRequest::SqsAddPermissionRequest(const SqsAddPermissionRequest &
  * @brief  Constructs a new SqsAddPermissionRequest object.
  */
 SqsAddPermissionRequest::SqsAddPermissionRequest()
-    : SqsRequest(SqsRequest::AddPermissionSqsAction)
+    : SqsRequest(SqsRequest::AddPermissionAction)
 {
 
 }
@@ -186,13 +186,13 @@ QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const
 
         // Add the specified permissions.
         #define IF_ACTION_SET_PARAMETER(action) \
-            if (actions.testFlag(SqsAddPermissionRequest::action##SqsAction)) { \
+            if (actions.testFlag(SqsAddPermissionRequest::action##Action)) { \
                 query.addQueryItem( \
                     QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index), iter.key()); \
                 query.addQueryItem( \
                     QString(ACTION_NAME_MEMBER_N).arg(index), \
-                    toString(static_cast<SqsRequest::Action>(SqsAddPermissionRequest::action##SqsAction))); \
-                actions &= ~SqsAddPermissionRequest::action##SqsAction; \
+                    toString(static_cast<SqsRequest::Action>(SqsAddPermissionRequest::action##Action))); \
+                actions &= ~SqsAddPermissionRequest::action##Action; \
             }
         IF_ACTION_SET_PARAMETER(SendMessage)
         IF_ACTION_SET_PARAMETER(ReceiveMessage)

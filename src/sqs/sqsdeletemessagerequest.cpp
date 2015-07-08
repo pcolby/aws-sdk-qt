@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsDeleteMessageRequest object.
  */
 SqsDeleteMessageRequest::SqsDeleteMessageRequest()
-    : SqsRequest(SqsRequest::DeleteMessageSqsAction)
+    : SqsRequest(SqsRequest::DeleteMessageAction)
 {
 
 }

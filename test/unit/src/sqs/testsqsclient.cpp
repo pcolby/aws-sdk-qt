@@ -140,7 +140,7 @@ void TestSqsClient::addPermission_data()
 
     SqsAddPermissionRequest::PermissionsMap permissions;
     permissions.insert(QString::fromLatin1("foo"),
-                       SqsAddPermissionRequest::SendMessageSqsAction);
+                       SqsAddPermissionRequest::SendMessageAction);
     QTest::newRow("foo")
         << QString::fromLatin1("foo")
         << permissions
@@ -194,7 +194,7 @@ void TestSqsClient::createQueue()
         const SqsCreateQueueResponse * const response = sqs.createQueue(queueName, attributes);
         QVERIFY(response);
         QVERIFY(response->request());
-        QCOMPARE(response->request()->action(), SqsRequest::CreateQueueSqsAction);
+        QCOMPARE(response->request()->action(), SqsRequest::CreateQueueAction);
         QCOMPARE(response->request()->queueName(), queueName);
         QCOMPARE(response->request()->attributes(), attributes);
         delete response;

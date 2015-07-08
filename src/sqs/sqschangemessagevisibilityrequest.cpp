@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsChangeMessageVisibilityRequest object.
  */
 SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest()
-    : SqsRequest(SqsRequest::ChangeMessageVisibilitySqsAction)
+    : SqsRequest(SqsRequest::ChangeMessageVisibilityAction)
 {
 
 }

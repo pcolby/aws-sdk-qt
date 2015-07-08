@@ -36,25 +36,24 @@ class QTAWS_EXPORT SqsRequest : public AwsAbstractRequest {
 
 public:
     /// Actions supported by SQS.
-    /// @todo  Drop the "Sqs" in these enum labels?  Seems redundant.
     enum Action {
-        AddPermissionSqsAction                = 0x00001,
-        ChangeMessageVisibilitySqsAction      = 0x00002,
-        ChangeMessageVisibilityBatchSqsAction = 0x00004,
-        CreateQueueSqsAction                  = 0x00008,
-        DeleteMessageSqsAction                = 0x00010,
-        DeleteMessageBatchSqsAction           = 0x00020,
-        DeleteQueueSqsAction                  = 0x00040,
-        GetQueueAttributesSqsAction           = 0x00080,
-        GetQueueUrlSqsAction                  = 0x00100,
-        ListDeadLetterSourceQueuesSqsAction   = 0x00200,
-        ListQueuesSqsAction                   = 0x00400,
-        PurgeQueueSqsAction                   = 0x00800,
-        ReceiveMessageSqsAction               = 0x01000,
-        RemovePermissionSqsAction             = 0x02000,
-        SendMessageSqsAction                  = 0x04000,
-        SendMessageBatchSqsAction             = 0x08000,
-        SetQueueAttributesSqsAction           = 0x10000
+        AddPermissionAction                = 0x00001,
+        ChangeMessageVisibilityAction      = 0x00002,
+        ChangeMessageVisibilityBatchAction = 0x00004,
+        CreateQueueAction                  = 0x00008,
+        DeleteMessageAction                = 0x00010,
+        DeleteMessageBatchAction           = 0x00020,
+        DeleteQueueAction                  = 0x00040,
+        GetQueueAttributesAction           = 0x00080,
+        GetQueueUrlAction                  = 0x00100,
+        ListDeadLetterSourceQueuesAction   = 0x00200,
+        ListQueuesAction                   = 0x00400,
+        PurgeQueueAction                   = 0x00800,
+        ReceiveMessageAction               = 0x01000,
+        RemovePermissionAction             = 0x02000,
+        SendMessageAction                  = 0x04000,
+        SendMessageBatchAction             = 0x08000,
+        SetQueueAttributesAction           = 0x10000
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -54,7 +54,7 @@ protected:
 void TestSqsRequest::construct_action_data()
 {
     QTest::addColumn<SqsRequest::Action>("action");
-    #define NEW_ROW(action) QTest::newRow(#action) << SqsRequest::action##SqsAction
+    #define NEW_ROW(action) QTest::newRow(#action) << SqsRequest::action##Action
     NEW_ROW(AddPermission);
     NEW_ROW(ChangeMessageVisibility);
     NEW_ROW(ChangeMessageVisibilityBatch);
@@ -91,7 +91,7 @@ void TestSqsRequest::construct_copy_data()
     QTest::addColumn<QVariantMap>("parameters");
 
     #define NEW_ROW(action) QTest::newRow(#action) \
-        << SqsRequest::action##SqsAction << QVariantMap();
+        << SqsRequest::action##Action << QVariantMap();
     NEW_ROW(AddPermission);
     NEW_ROW(ChangeMessageVisibility);
     NEW_ROW(ChangeMessageVisibilityBatch);
@@ -115,7 +115,7 @@ void TestSqsRequest::construct_copy_data()
     parameters.insert(QLatin1String("foo"), 1);
     parameters.insert(QLatin1String("bar"), QLatin1String("2"));
     parameters.insert(QLatin1String("baz"), 3.0);
-    QTest::newRow("parameters") << SqsRequest::ListQueuesSqsAction << parameters;
+    QTest::newRow("parameters") << SqsRequest::ListQueuesAction << parameters;
 }
 
 void TestSqsRequest::construct_copy()
@@ -140,7 +140,7 @@ void TestSqsRequest::construct_copy()
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsRequest::construct_d_ptr()
 {
-    MockSqsRequest temporaryRequest(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest temporaryRequest(SqsRequest::ListQueuesAction);
     SqsRequestPrivate * const requestPrivate =
         new SqsRequestPrivate(temporaryRequest.action(), &temporaryRequest);
     MockSqsRequest request(requestPrivate);
@@ -164,7 +164,7 @@ void TestSqsRequest::assignment()
     QCOMPARE(request1.action(), action);
     QCOMPARE(request1.parameters(), parameters);
 
-    MockSqsRequest request2(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request2(SqsRequest::ListQueuesAction);
     request2 = request1;
     QCOMPARE(request2.apiVersion(), SQS_API_VERSION);
     QCOMPARE(request2.action(), action);
@@ -183,8 +183,8 @@ void TestSqsRequest::action()
     QFETCH(SqsRequest::Action, action);
 
     // Setup a mock request that has an action other than the test data action.
-    MockSqsRequest request((action == SqsRequest::ListQueuesSqsAction)
-        ? SqsRequest::CreateQueueSqsAction : SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request((action == SqsRequest::ListQueuesAction)
+        ? SqsRequest::CreateQueueAction : SqsRequest::ListQueuesAction);
     QVERIFY(request.action() != action);
 
     request.setAction(action);
@@ -197,7 +197,7 @@ void TestSqsRequest::actionString_data()
     QTest::addColumn<QString>("actionString");
 
     #define NEW_ROW(action) QTest::newRow(#action) \
-        << SqsRequest::action##SqsAction << QString::fromLatin1(#action)
+        << SqsRequest::action##Action << QString::fromLatin1(#action)
     NEW_ROW(AddPermission);
     NEW_ROW(ChangeMessageVisibility);
     NEW_ROW(ChangeMessageVisibilityBatch);
@@ -245,7 +245,7 @@ void TestSqsRequest::apiVersion_data()
 void TestSqsRequest::apiVersion()
 {
     QFETCH(QString, apiVersion);
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.apiVersion(), SQS_API_VERSION);
     request.setApiVersion(apiVersion);
     QCOMPARE(request.apiVersion(), apiVersion);
@@ -266,8 +266,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("equal-1")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::GetOperation
-        << SqsRequest::CreateQueueSqsAction
-        << SqsRequest::CreateQueueSqsAction
+        << SqsRequest::CreateQueueAction
+        << SqsRequest::CreateQueueAction
         << SQS_API_VERSION
         << SQS_API_VERSION
         << QVariantMap()
@@ -279,8 +279,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("equal-2")
         << QNetworkAccessManager::DeleteOperation
         << QNetworkAccessManager::DeleteOperation
-        << SqsRequest::ListQueuesSqsAction
-        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesAction
+        << SqsRequest::ListQueuesAction
         << QString::fromLatin1("foo version")
         << QString::fromLatin1("foo version")
         << mapA
@@ -291,8 +291,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("diff-operation")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::PutOperation
-        << SqsRequest::ListQueuesSqsAction
-        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesAction
+        << SqsRequest::ListQueuesAction
         << SQS_API_VERSION
         << SQS_API_VERSION
         << mapA
@@ -302,8 +302,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("diff-action")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::GetOperation
-        << SqsRequest::ListQueuesSqsAction
-        << SqsRequest::CreateQueueSqsAction
+        << SqsRequest::ListQueuesAction
+        << SqsRequest::CreateQueueAction
         << SQS_API_VERSION
         << SQS_API_VERSION
         << mapA
@@ -313,8 +313,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("diff-apiVersion")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::GetOperation
-        << SqsRequest::ListQueuesSqsAction
-        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesAction
+        << SqsRequest::ListQueuesAction
         << SQS_API_VERSION
         << QString::fromLatin1("2000-01-01")
         << mapA
@@ -326,8 +326,8 @@ void TestSqsRequest::equality_data()
     QTest::newRow("diff-map")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::GetOperation
-        << SqsRequest::ListQueuesSqsAction
-        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesAction
+        << SqsRequest::ListQueuesAction
         << SQS_API_VERSION
         << SQS_API_VERSION
         << mapA
@@ -418,7 +418,7 @@ void TestSqsRequest::clearParameter()
     QFETCH(QString, name);
     QFETCH(QVariant, value);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     request.setParameter(name, value);
     QCOMPARE(request.parameter(name), value);      ///< parameter was set.
     QCOMPARE(request.clearParameter(name), 1);     ///< parameter was cleared.
@@ -443,7 +443,7 @@ void TestSqsRequest::clearParameters()
 {
     QFETCH(QVariantMap, parameters);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.parameters(), QVariantMap());
 
     request.setParameters(parameters);
@@ -463,7 +463,7 @@ void TestSqsRequest::parameter()
     QFETCH(QString, name);
     QFETCH(QVariant, value);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.parameter(name), QVariant());
     request.setParameter(name, value);
     QCOMPARE(request.parameter(name), value);
@@ -478,7 +478,7 @@ void TestSqsRequest::parameters()
 {
     QFETCH(QVariantMap, parameters);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.parameters(), QVariantMap());
 
     request.setParameters(parameters);
@@ -495,7 +495,7 @@ void TestSqsRequest::setParameter()
     QFETCH(QString, name);
     QFETCH(QVariant, value);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.parameter(name), QVariant());
     request.setParameter(name, value);
     QCOMPARE(request.parameter(name), value);
@@ -510,7 +510,7 @@ void TestSqsRequest::setParameters()
 {
     QFETCH(QVariantMap, parameters);
 
-    MockSqsRequest request(SqsRequest::ListQueuesSqsAction);
+    MockSqsRequest request(SqsRequest::ListQueuesAction);
     QCOMPARE(request.parameters(), QVariantMap());
 
     request.setParameters(parameters);
@@ -526,7 +526,7 @@ void TestSqsRequest::unsignedRequest_data()
     QTest::addColumn<QNetworkRequest>("expected");
 
     QTest::newRow("null")
-        << SqsRequest::ListQueuesSqsAction
+        << SqsRequest::ListQueuesAction
         << SQS_API_VERSION
         << QVariantMap()
         << QUrl()
@@ -537,7 +537,7 @@ void TestSqsRequest::unsignedRequest_data()
     map.insert(QLatin1String("bar"), QLatin1String("2"));
     map.insert(QLatin1String("baz"), 3.0);
     QTest::newRow("simple")
-        << SqsRequest::ChangeMessageVisibilitySqsAction
+        << SqsRequest::ChangeMessageVisibilityAction
         << QString::fromLatin1("not-a-valid-api-version")
         << map
         << QUrl(QLatin1String("https://example.com/some/path"))
@@ -555,7 +555,7 @@ void TestSqsRequest::unsignedRequest_data()
     childMap.insert(QLatin1String("corge"), 456.789);
     map.insert(QLatin1String("corge;index:%1;value:%2"), childMap);
     QTest::newRow("complex")
-        << SqsRequest::DeleteMessageSqsAction
+        << SqsRequest::DeleteMessageAction
         << SQS_API_VERSION
         << map
         << QUrl(QLatin1String("http://www.example.com/some/other/path"))

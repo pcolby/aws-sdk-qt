@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsListQueuesRequest object.
  */
 SqsListQueuesRequest::SqsListQueuesRequest()
-    : SqsRequest(SqsRequest::ListQueuesSqsAction)
+    : SqsRequest(SqsRequest::ListQueuesAction)
 {
 
 }

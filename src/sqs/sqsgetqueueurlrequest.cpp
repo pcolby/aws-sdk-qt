@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsGetQueueUrlRequest object.
  */
 SqsGetQueueUrlRequest::SqsGetQueueUrlRequest()
-    : SqsRequest(SqsRequest::GetQueueUrlSqsAction)
+    : SqsRequest(SqsRequest::GetQueueUrlAction)
 {
 
 }

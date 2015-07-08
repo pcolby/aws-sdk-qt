@@ -31,12 +31,12 @@ class QTAWS_EXPORT SqsAddPermissionRequest : public SqsRequest {
 public:
     /// The subset of SQS actions that may be used with the AddPermission action.
     enum PermissibleAction {
-        SendMessageSqsAction             = SqsRequest::SendMessageSqsAction,
-        ReceiveMessageSqsAction          = SqsRequest::ReceiveMessageSqsAction,
-        DeleteMessageSqsAction           = SqsRequest::DeleteMessageSqsAction,
-        ChangeMessageVisibilitySqsAction = SqsRequest::ChangeMessageVisibilitySqsAction,
-        GetQueueAttributesSqsAction      = SqsRequest::GetQueueAttributesSqsAction,
-        GetQueueUrlSqsAction             = SqsRequest::GetQueueUrlSqsAction
+        SendMessageAction             = SqsRequest::SendMessageAction,
+        ReceiveMessageAction          = SqsRequest::ReceiveMessageAction,
+        DeleteMessageAction           = SqsRequest::DeleteMessageAction,
+        ChangeMessageVisibilityAction = SqsRequest::ChangeMessageVisibilityAction,
+        GetQueueAttributesAction      = SqsRequest::GetQueueAttributesAction,
+        GetQueueUrlAction             = SqsRequest::GetQueueUrlAction
     };
     Q_DECLARE_FLAGS(PermissibleActions, PermissibleAction)
     typedef QMap<QString, PermissibleActions> PermissionsMap;

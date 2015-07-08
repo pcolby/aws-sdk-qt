@@ -44,7 +44,7 @@ QTAWS_BEGIN_NAMESPACE
  * @param  queueName  Name of the queue to be created.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest(const QString &queueName)
-    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueSqsAction, this))
+    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueAction, this))
 {
     setQueueName(queueName);
 }
@@ -67,7 +67,7 @@ SqsCreateQueueRequest::SqsCreateQueueRequest(const SqsCreateQueueRequest &other)
  * false) untill setQueueName is invoked with a non-empty queue name.
  */
 SqsCreateQueueRequest::SqsCreateQueueRequest()
-    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueSqsAction, this))
+    : SqsRequest(new SqsCreateQueueRequestPrivate(SqsRequest::CreateQueueAction, this))
 {
 
 }

@@ -31,7 +31,7 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest object.
  */
 SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest()
-    : SqsRequest(SqsRequest::ListDeadLetterSourceQueuesSqsAction)
+    : SqsRequest(SqsRequest::ListDeadLetterSourceQueuesAction)
 {
 
 }

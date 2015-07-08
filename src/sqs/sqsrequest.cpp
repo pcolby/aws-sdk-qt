@@ -343,30 +343,30 @@ QUrlQuery SqsRequestPrivate::urlQuery() const
 
 QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
 {
-    #define SqsActionToString(action) \
-        case SqsRequest::action##SqsAction: return QLatin1String(#action)
+    #define ActionToString(action) \
+        case SqsRequest::action##Action: return QLatin1String(#action)
     switch (action) {
-        SqsActionToString(AddPermission);
-        SqsActionToString(ChangeMessageVisibility);
-        SqsActionToString(ChangeMessageVisibilityBatch);
-        SqsActionToString(CreateQueue);
-        SqsActionToString(DeleteMessage);
-        SqsActionToString(DeleteMessageBatch);
-        SqsActionToString(DeleteQueue);
-        SqsActionToString(GetQueueAttributes);
-        SqsActionToString(GetQueueUrl);
-        SqsActionToString(ListDeadLetterSourceQueues);
-        SqsActionToString(ListQueues);
-        SqsActionToString(PurgeQueue);
-        SqsActionToString(ReceiveMessage);
-        SqsActionToString(RemovePermission);
-        SqsActionToString(SendMessage);
-        SqsActionToString(SendMessageBatch);
-        SqsActionToString(SetQueueAttributes);
+        ActionToString(AddPermission);
+        ActionToString(ChangeMessageVisibility);
+        ActionToString(ChangeMessageVisibilityBatch);
+        ActionToString(CreateQueue);
+        ActionToString(DeleteMessage);
+        ActionToString(DeleteMessageBatch);
+        ActionToString(DeleteQueue);
+        ActionToString(GetQueueAttributes);
+        ActionToString(GetQueueUrl);
+        ActionToString(ListDeadLetterSourceQueues);
+        ActionToString(ListQueues);
+        ActionToString(PurgeQueue);
+        ActionToString(ReceiveMessage);
+        ActionToString(RemovePermission);
+        ActionToString(SendMessage);
+        ActionToString(SendMessageBatch);
+        ActionToString(SetQueueAttributes);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
-    #undef SqsActionToString
+    #undef ActionToString
     return QString();
 }
 
