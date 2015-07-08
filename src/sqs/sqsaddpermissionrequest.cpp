@@ -178,15 +178,13 @@ QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const
         SqsAddPermissionRequest::PermissibleActions actions = iter.value();
         if (!actions) continue;
 
-        // Skip over any manually-inserted (via SqsRequest::setParameter) entries.
-        while ((query.hasQueryItem(QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index)))||
-               (query.hasQueryItem(QString(   ACTION_NAME_MEMBER_N).arg(index)))) {
-            ++index;
-        }
-
         // Add the specified permissions.
         #define IF_ACTION_SET_PARAMETER(action) \
             if (actions.testFlag(SqsAddPermissionRequest::action##Action)) { \
+                while ((query.hasQueryItem(QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index)))|| \
+                       (query.hasQueryItem(QString(   ACTION_NAME_MEMBER_N).arg(index)))) { \
+                    ++index; \
+                } \
                 query.addQueryItem( \
                     QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index), iter.key()); \
                 query.addQueryItem( \

@@ -331,6 +331,7 @@ void TestSqsAddPermissionRequest::urlQuery_data()
     QTest::addColumn<QString>("label");
     QTest::addColumn<SqsAddPermissionRequest::PermissionsMap>("permissions");
     QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QVariantMap>("parameters");
     QTest::addColumn<QUrlQuery>("expected");
 
     SqsAddPermissionRequest::PermissionsMap permissions;
@@ -339,6 +340,7 @@ void TestSqsAddPermissionRequest::urlQuery_data()
         << QString()
         << permissions
         << QString()
+        << QVariantMap()
         << QUrlQuery(QLatin1String(
            "Action=AddPermission"
            "&Version=2012-11-05"
@@ -350,6 +352,7 @@ void TestSqsAddPermissionRequest::urlQuery_data()
         << QString::fromLatin1("foo")
         << permissions
         << QString::fromLatin1("http://example.com/bar/baz")
+        << QVariantMap()
         << QUrlQuery(QLatin1String(
             "Action=AddPermission"
             "&Version=2012-11-05"
@@ -369,6 +372,7 @@ void TestSqsAddPermissionRequest::urlQuery_data()
         << QString::fromLatin1("foo-bar")
         << permissions
         << QString::fromLatin1("http://example.com/bar/baz")
+        << QVariantMap()
         << QUrlQuery(QLatin1String(
             "Action=AddPermission"
             "&Version=2012-11-05"
@@ -388,6 +392,40 @@ void TestSqsAddPermissionRequest::urlQuery_data()
             "&ActionName.member.6=GetQueueUrl"
             "&AWSAccountId.member.7=foo"
             "&ActionName.member.7=SendMessage"));
+
+    QVariantMap parameters;
+    parameters.insert(QLatin1String("ActionName.member.1"),   123);
+    parameters.insert(QLatin1String("ActionName.member.3"),   456);
+    parameters.insert(QLatin1String("AWSAccountId.member.5"), 789);
+    parameters.insert(QLatin1String("ActionName.member.6"),   234);
+    parameters.insert(QLatin1String("AWSAccountId.member.7"), 567);
+    QTest::newRow("obstructions")
+        << QString::fromLatin1("foo-bar")
+        << permissions
+        << QString::fromLatin1("http://example.com/bar/baz")
+        << parameters
+        << QUrlQuery(QLatin1String(
+            "Action=AddPermission"
+            "&Version=2012-11-05"
+            "&AWSAccountId.member.5=789"
+            "&AWSAccountId.member.7=567"
+            "&ActionName.member.1=123"
+            "&ActionName.member.3=456"
+            "&ActionName.member.6=234"
+            "&AWSAccountId.member.2=bar"
+            "&ActionName.member.2=SendMessage"
+            "&AWSAccountId.member.4=bar"
+            "&ActionName.member.4=ReceiveMessage"
+            "&AWSAccountId.member.8=bar"
+            "&ActionName.member.8=DeleteMessage"
+            "&AWSAccountId.member.9=bar"
+            "&ActionName.member.9=ChangeMessageVisibility"
+            "&AWSAccountId.member.10=bar"
+            "&ActionName.member.10=GetQueueAttributes"
+            "&AWSAccountId.member.11=bar"
+            "&ActionName.member.11=GetQueueUrl"
+            "&AWSAccountId.member.12=foo"
+            "&ActionName.member.12=SendMessage"));
 }
 
 void TestSqsAddPermissionRequest::urlQuery()
@@ -395,10 +433,17 @@ void TestSqsAddPermissionRequest::urlQuery()
     QFETCH(QString, label);
     QFETCH(SqsAddPermissionRequest::PermissionsMap, permissions);
     QFETCH(QString, queueUrl);
+    QFETCH(QVariantMap, parameters);
     QFETCH(QUrlQuery, expected);
 
-    const SqsAddPermissionRequest request(label, permissions, queueUrl);
+    SqsAddPermissionRequest request(label, permissions, queueUrl);
+
+    if (!parameters.isEmpty()) {
+        request.setParameters(parameters);
+    }
+
     const QUrlQuery urlQuery = request.d_func()->urlQuery();
+  //qDebug() << urlQuery.toString(QUrl::FullyEncoded);
     QCOMPARE(urlQuery, expected);
 }
 #endif
