@@ -37,6 +37,8 @@ public:
     SqsAddPermissionRequestPrivate(const SqsAddPermissionRequestPrivate &other,
                                    SqsAddPermissionRequest * const q);
 
+    virtual QUrlQuery urlQuery() const;
+
 private:
     Q_DECLARE_PUBLIC(SqsAddPermissionRequest)
 

@@ -270,26 +270,8 @@ void SqsRequest::setParameters(const QVariantMap &parameters)
 QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
 {
     Q_D(const SqsRequest);
-    QUrlQuery query;
-    query.addQueryItem(QLatin1String("Action"), actionString());
-    query.addQueryItem(QLatin1String("Version"), apiVersion());
-    for (QVariantMap::const_iterator iter = d->parameters.cbegin(); iter != d->parameters.cend(); ++iter) {
-        const QString parameterName = iter.key();
-        const QVariant parameterValue = iter.value();
-        if (parameterValue.type() == QVariant::Map) {
-            const QVariantMap map = parameterValue.toMap();
-            int index = 1;
-            for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {
-                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Name")), iter.key());
-                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Value")), iter.value().toString());
-            }
-        } else {
-            query.addQueryItem(parameterName, parameterValue.toString());
-        }
-    }
-
     QUrl url(endpoint);
-    url.setQuery(query);
+    url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
@@ -334,6 +316,29 @@ SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
+}
+
+QUrlQuery SqsRequestPrivate::urlQuery() const
+{
+    Q_Q(const SqsRequest);
+    QUrlQuery query;
+    query.addQueryItem(QLatin1String("Action"), q->actionString());
+    query.addQueryItem(QLatin1String("Version"), q->apiVersion());
+    for (QVariantMap::const_iterator iter = parameters.cbegin(); iter != parameters.cend(); ++iter) {
+        const QString parameterName = iter.key();
+        const QVariant parameterValue = iter.value();
+        if (parameterValue.type() == QVariant::Map) {
+            const QVariantMap map = parameterValue.toMap();
+            int index = 1;
+            for (QVariantMap::const_iterator iter = map.cbegin(); iter != map.cend(); ++iter, ++index) {
+                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Name")), iter.key());
+                query.addQueryItem(parameterName.arg(index).arg(QLatin1String("Value")), iter.value().toString());
+            }
+        } else {
+            query.addQueryItem(parameterName, parameterValue.toString());
+        }
+    }
+    return query;
 }
 
 QString SqsRequestPrivate::toString(const SqsRequest::Action &action)

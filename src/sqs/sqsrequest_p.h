@@ -40,6 +40,8 @@ public:
     SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q);
     SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
 
+    virtual QUrlQuery urlQuery() const;
+
     static QString toString(const SqsRequest::Action &action);
 
 private:

@@ -74,6 +74,9 @@ private slots:
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    void urlQuery_data();
+    void urlQuery();
+
     void toString_action_data();
     void toString_action();
     #endif

@@ -22,6 +22,8 @@
 #include "sqsaddpermissionresponse.h"
 #include "sqsrequest_p.h"
 
+#include <QUrlQuery>
+
 #define AWS_ACCOUNT_ID_MEMBER_N QLatin1String("AWSAccountId.member.%1")
 #define ACTION_NAME_MEMBER_N    QLatin1String("ActionName.member.%1")
 #define LABEL                   QLatin1String("Label")
@@ -164,6 +166,44 @@ SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(
     : SqsRequestPrivate(other, q), permissions(other.permissions)
 {
 
+}
+
+QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const
+{
+    QUrlQuery query = SqsRequestPrivate::urlQuery();
+    int index = 1; // SQS attributes are 1-indexed.
+    for (SqsAddPermissionRequest::PermissionsMap::const_iterator iter = permissions.cbegin();
+         iter != permissions.cend(); ++iter)
+    {
+        SqsAddPermissionRequest::PermissibleActions actions = iter.value();
+        if (!actions) continue;
+
+        // Skip over any manually-inserted (via SqsRequest::setParameter) entries.
+        while ((query.hasQueryItem(QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index)))||
+               (query.hasQueryItem(QString(   ACTION_NAME_MEMBER_N).arg(index)))) {
+            ++index;
+        }
+
+        // Add the specified permissions.
+        #define IF_ACTION_SET_PARAMETER(action) \
+            if (actions.testFlag(SqsAddPermissionRequest::action##SqsAction)) { \
+                query.addQueryItem( \
+                    QString(AWS_ACCOUNT_ID_MEMBER_N).arg(index), iter.key()); \
+                query.addQueryItem( \
+                    QString(ACTION_NAME_MEMBER_N).arg(index), \
+                    toString(static_cast<SqsRequest::Action>(SqsAddPermissionRequest::action##SqsAction))); \
+                actions &= ~SqsAddPermissionRequest::action##SqsAction; \
+            }
+        IF_ACTION_SET_PARAMETER(SendMessage)
+        IF_ACTION_SET_PARAMETER(ReceiveMessage)
+        IF_ACTION_SET_PARAMETER(DeleteMessage)
+        IF_ACTION_SET_PARAMETER(ChangeMessageVisibility)
+        IF_ACTION_SET_PARAMETER(GetQueueAttributes)
+        IF_ACTION_SET_PARAMETER(GetQueueUrl)
+        #undef IF_ACTION_SET_PARAMETER
+        Q_ASSERT(actions); // Sanity check.
+    }
+    return query;
 }
 
 QTAWS_END_NAMESPACE

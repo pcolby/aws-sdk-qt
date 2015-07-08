@@ -591,6 +591,18 @@ void TestSqsRequest::unsignedRequest()
 }
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+void TestSqsRequest::urlQuery_data()
+{
+
+}
+
+void TestSqsRequest::urlQuery()
+{
+
+}
+#endif
+
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
 void TestSqsRequest::toString_action_data()
 {
     /// @todo
