@@ -48,51 +48,6 @@ void TestSqsAddPermissionResponse::construct()
     QCOMPARE(*response.request(), request);
 }
 
-void TestSqsAddPermissionResponse::isValid_data()
-{
-    QTest::addColumn<QByteArray>("xml");
-    QTest::addColumn<bool>("isValid");
-
-    QTest::newRow("valid")
-        << QByteArray(
-            "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
-                "<ResponseMetadata>"
-                    "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
-                "</ResponseMetadata>"
-            "</AddPermissionResponse>")
-        << true;
-
-    QTest::newRow("invalid")
-        << QByteArray(
-            "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<NotQueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</NotQueueUrl>"
-                "</AddPermissionResult>"
-                "<ResponseMetadata>"
-                    "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
-                "</ResponseMetadata>"
-            "</AddPermissionResponse>")
-        << false;
-}
-
-void TestSqsAddPermissionResponse::isValid()
-{
-    QFETCH(QByteArray, xml);
-    QFETCH(bool, isValid);
-
-    SqsAddPermissionRequest request;
-    SqsAddPermissionResponse response(request, NULL);
-    QCOMPARE(response.isValid(), false);
-
-    QBuffer buffer(&xml);
-    buffer.open(QBuffer::ReadOnly);
-    response.parseSuccess(buffer);
-    QCOMPARE(response.isValid(), isValid);
-}
-
 void TestSqsAddPermissionResponse::request()
 {
     const QString queueName = QString::fromLatin1("sentinel-queue-name");
@@ -107,51 +62,6 @@ void TestSqsAddPermissionResponse::request()
     QCOMPARE(*response.request(), request);
 }
 
-void TestSqsAddPermissionResponse::queueUrl_data()
-{
-    QTest::addColumn<QByteArray>("xml");
-    QTest::addColumn<QString>("queueUrl");
-
-    QTest::newRow("valid")
-        << QByteArray(
-            "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
-                "<ResponseMetadata>"
-                    "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
-                "</ResponseMetadata>"
-            "</AddPermissionResponse>")
-        << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue");
-
-    QTest::newRow("invalid")
-        << QByteArray(
-            "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<NotQueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</NotQueueUrl>"
-                "</AddPermissionResult>"
-                "<ResponseMetadata>"
-                    "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
-                "</ResponseMetadata>"
-            "</AddPermissionResponse>")
-        << QString();
-}
-
-void TestSqsAddPermissionResponse::queueUrl()
-{
-    QFETCH(QByteArray, xml);
-    QFETCH(QString, queueUrl);
-
-    SqsAddPermissionRequest request;
-    SqsAddPermissionResponse response(request, NULL);
-    QCOMPARE(response.queueUrl(), QString());
-
-    QBuffer buffer(&xml);
-    buffer.open(QBuffer::ReadOnly);
-    response.parseSuccess(buffer);
-    QCOMPARE(response.queueUrl(), queueUrl);
-}
-
 void TestSqsAddPermissionResponse::parseSuccess_data()
 {
     QTest::addColumn<QByteArray>("xml");
@@ -161,9 +71,6 @@ void TestSqsAddPermissionResponse::parseSuccess_data()
     QTest::newRow("valid")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
@@ -174,9 +81,6 @@ void TestSqsAddPermissionResponse::parseSuccess_data()
     QTest::newRow("invalid")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<NotQueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</NotQueueUrl>"
-                "</AddPermissionResult>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
@@ -187,9 +91,6 @@ void TestSqsAddPermissionResponse::parseSuccess_data()
     QTest::newRow("unrecognized-sub")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
@@ -201,9 +102,6 @@ void TestSqsAddPermissionResponse::parseSuccess_data()
     QTest::newRow("unrecognized-top")
         << QByteArray(
             "<NotAddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
@@ -222,13 +120,11 @@ void TestSqsAddPermissionResponse::parseSuccess()
     SqsAddPermissionRequest request;
     SqsAddPermissionResponse response(request, NULL);
     QCOMPARE(response.requestId(), QString());
-    QCOMPARE(response.queueUrl(), QString());
 
     QBuffer buffer(&xml);
     buffer.open(QBuffer::ReadOnly);
     response.parseSuccess(buffer);
     QCOMPARE(response.requestId(), requestId);
-    QCOMPARE(response.queueUrl(), queueUrl);
 }
 
 // AwsAbstractResponsePrivate functions.
@@ -242,9 +138,6 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
     QTest::newRow("valid")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
@@ -255,9 +148,6 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
     QTest::newRow("invalid")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<NotQueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</NotQueueUrl>"
-                "</AddPermissionResult>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
@@ -268,9 +158,6 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
     QTest::newRow("unrecognized-sub")
         << QByteArray(
             "<AddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
@@ -282,9 +169,6 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
     QTest::newRow("unrecognized-top")
         << QByteArray(
             "<NotAddPermissionResponse>"
-                "<AddPermissionResult>"
-                    "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-                "</AddPermissionResult>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
@@ -303,48 +187,11 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse()
     SqsAddPermissionRequest request;
     SqsAddPermissionResponse response(request, NULL);
     QCOMPARE(response.requestId(), QString());
-    QCOMPARE(response.queueUrl(), QString());
 
     QXmlStreamReader reader(xml);
     reader.readNextStartElement();
     response.d_func()->parseAddPermissionResponse(reader);
     QCOMPARE(response.requestId(), requestId);
-    QCOMPARE(response.queueUrl(), queueUrl);
 }
 
-void TestSqsAddPermissionResponse::parseAddPermissionResult_data()
-{
-    QTest::addColumn<QByteArray>("xml");
-    QTest::addColumn<QString>("queueUrl");
-    QTest::addColumn<QString>("requestId");
-
-    QTest::newRow("valid")
-        << QByteArray(
-            "<AddPermissionResult>"
-                "<QueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</QueueUrl>"
-            "</AddPermissionResult>")
-        << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue");
-
-    QTest::newRow("invalid")
-        << QByteArray(
-            "<AddPermissionResult>"
-                "<NotQueueUrl>http://sqs.us-east-1.amazonaws.com/123456789012/testQueue</NotQueueUrl>"
-            "</AddPermissionResult>")
-        << QString();
-}
-
-void TestSqsAddPermissionResponse::parseAddPermissionResult()
-{
-    QFETCH(QByteArray, xml);
-    QFETCH(QString, queueUrl);
-
-    SqsAddPermissionRequest request;
-    SqsAddPermissionResponse response(request, NULL);
-    QCOMPARE(response.queueUrl(), QString());
-
-    QXmlStreamReader reader(xml);
-    reader.readNextStartElement();
-    response.d_func()->parseAddPermissionResult(reader);
-    QCOMPARE(response.queueUrl(), queueUrl);
-}
 #endif

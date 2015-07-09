@@ -26,13 +26,7 @@ private slots:
     void construct_data();
     void construct();
 
-    void isValid_data();
-    void isValid();
-
     void request();
-
-    void queueUrl_data();
-    void queueUrl();
 
     void parseSuccess_data();
     void parseSuccess();
@@ -41,8 +35,5 @@ private slots:
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     void parseAddPermissionResponse_data();
     void parseAddPermissionResponse();
-
-    void parseAddPermissionResult_data();
-    void parseAddPermissionResult();
     #endif
 };

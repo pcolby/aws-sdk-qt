@@ -32,13 +32,9 @@ class QTAWS_EXPORT SqsAddPermissionResponse : public SqsResponse {
 
 public:
     SqsAddPermissionResponse(const SqsAddPermissionRequest &request,
-                           QNetworkReply * const reply, QObject * const parent = 0);
-
-    virtual bool isValid() const;
+                             QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual const SqsAddPermissionRequest * request() const;
-
-    QString queueUrl() const;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response);
