@@ -93,10 +93,12 @@ void TestSqsCreateQueueResponse::isValid()
     QCOMPARE(response.isValid(), isValid);
 
     // Verify the fallback to the parent (SqsResponse::isValid) implementation.
+    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
     if (isValid) {
         response.d_func()->xmlError = QXmlStreamReader::UnexpectedElementError;
         QCOMPARE(response.isValid(), false);
     }
+    #endif
 }
 
 void TestSqsCreateQueueResponse::request()
