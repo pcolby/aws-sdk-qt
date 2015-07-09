@@ -7,13 +7,19 @@ HEADERS += \
         sqsaddpermissionresponse_p.h \
         sqschangemessagevisibilitybatchrequest.h \
         sqschangemessagevisibilityrequest.h \
+        sqschangemessagevisibilityresponse.h \
+        sqschangemessagevisibilityresponse_p.h \
         sqscreatequeuerequest.h \
         sqscreatequeuerequest_p.h \
         sqscreatequeueresponse.h \
         sqscreatequeueresponse_p.h \
         sqsdeletemessagebatchrequest.h \
         sqsdeletemessagerequest.h \
+        sqsdeletemessageresponse.h \
+        sqsdeletemessageresponse_p.h \
         sqsdeletequeuerequest.h \
+        sqsdeletequeueresponse.h \
+        sqsdeletequeueresponse_p.h \
         sqserror.h \
         sqserror_p.h \
         sqsgetqueueattributesrequest.h \
@@ -21,8 +27,12 @@ HEADERS += \
         sqslistdeadlettersourcequeuesrequest.h \
         sqslistqueuesrequest.h \
         sqspurgequeuerequest.h \
+        sqspurgequeueresponse.h \
+        sqspurgequeueresponse_p.h \
         sqsreceivemessagerequest.h \
         sqsremovepermissionrequest.h \
+        sqsremovepermissionresponse.h \
+        sqsremovepermissionresponse_p.h \
         sqsrequest.h \
         sqsrequest_p.h \
         sqsresponse.h \
@@ -30,6 +40,8 @@ HEADERS += \
         sqssendmessagebatchrequest.h \
         sqssendmessagerequest.h \
         sqssetqueueattributesrequest.h \
+        sqssetqueueattributesresponse.h \
+        sqssetqueueattributesresponse_p.h \
 
 SOURCES += \
         sqsclient.cpp \
@@ -37,23 +49,29 @@ SOURCES += \
         sqsaddpermissionresponse.cpp \
         sqschangemessagevisibilitybatchrequest.cpp \
         sqschangemessagevisibilityrequest.cpp \
+        sqschangemessagevisibilityresponse.cpp \
         sqscreatequeuerequest.cpp \
         sqscreatequeueresponse.cpp \
         sqsdeletemessagebatchrequest.cpp \
         sqsdeletemessagerequest.cpp \
+        sqsdeletemessageresponse.cpp \
         sqsdeletequeuerequest.cpp \
+        sqsdeletequeueresponse.cpp \
         sqserror.cpp \
         sqsgetqueueattributesrequest.cpp \
         sqsgetqueueurlrequest.cpp \
         sqslistdeadlettersourcequeuesrequest.cpp \
         sqslistqueuesrequest.cpp \
         sqspurgequeuerequest.cpp \
+        sqspurgequeueresponse.cpp \
         sqsreceivemessagerequest.cpp \
         sqsremovepermissionrequest.cpp \
+        sqsremovepermissionresponse.cpp \
         sqsrequest.cpp \
         sqsresponse.cpp \
         sqssendmessagebatchrequest.cpp \
         sqssendmessagerequest.cpp \
         sqssetqueueattributesrequest.cpp \
+        sqssetqueueattributesresponse.cpp \
 
 VPATH += $$PWD
