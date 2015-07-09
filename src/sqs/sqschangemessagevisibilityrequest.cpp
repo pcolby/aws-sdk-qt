@@ -18,27 +18,114 @@
 */
 
 #include "sqschangemessagevisibilityrequest.h"
+#include "sqschangemessagevisibilityrequest_p.h"
+#include "sqschangemessagevisibilityresponse.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
 /**
  * @class  SqsChangeMessageVisibilityRequest
  *
- * @brief  @todo
+ * @brief  Implements SQS ChangeMessageVisibility requests.
+ *
+ * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ChangeMessageVisibility.html
+ * @see    SqsRemovePermissionRequest
  */
+
+/**
+ * @brief  Constructs a new SqsChangeMessageVisibilityRequest.
+ *
+ * @todo
+ */
+/*SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest(
+    ...
+    : SqsRequest(new SqsChangeMessageVisibilityRequestPrivate(SqsRequest::ChangeMessageVisibilityAction, this))
+{
+    setLabel(label);
+    setQueueUrl(queueUrl);
+    setPermissions(permissions);
+}*/
+
+/**
+ * @brief  Constructs a new SqsChangeMessageVisibilityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest(const SqsChangeMessageVisibilityRequest &other)
+    : SqsRequest(new SqsChangeMessageVisibilityRequestPrivate(*other.d_func(), this))
+{
+
+}
 
 /**
  * @brief  Constructs a new SqsChangeMessageVisibilityRequest object.
  */
 SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest()
-    : SqsRequest(SqsRequest::ChangeMessageVisibilityAction)
+    : SqsRequest(new SqsChangeMessageVisibilityRequestPrivate(SqsRequest::ChangeMessageVisibilityAction, this))
 {
 
 }
 
 bool SqsChangeMessageVisibilityRequest::isValid() const
 {
+    /// @todo
     return false;
+}
+
+/**
+ * @brief  Construct an SqsChangeMessageVisibilityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SqsChangeMessageVisibilityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ */
+AwsAbstractResponse * SqsChangeMessageVisibilityRequest::response(QNetworkReply * const reply) const
+{
+    return new SqsChangeMessageVisibilityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsChangeMessageVisibilityRequestPrivate
+ *
+ * @brief  Private implementation for SqsChangeMessageVisibilityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsChangeMessageVisibilityResponsePrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public SqsChangeMessageVisibilityRequest instance.
+ */
+SqsChangeMessageVisibilityRequestPrivate::SqsChangeMessageVisibilityRequestPrivate(
+    const SqsRequest::Action action, SqsChangeMessageVisibilityRequest * const q)
+    : SqsRequestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsChangeMessageVisibilityResponsePrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SqsChangeMessageVisibilityResponse
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SqsChangeMessageVisibilityRequest instance.
+ */
+SqsChangeMessageVisibilityRequestPrivate::SqsChangeMessageVisibilityRequestPrivate(
+    const SqsChangeMessageVisibilityRequestPrivate &other, SqsChangeMessageVisibilityRequest * const q)
+    : SqsRequestPrivate(other, q)
+{
+
 }
 
 QTAWS_END_NAMESPACE

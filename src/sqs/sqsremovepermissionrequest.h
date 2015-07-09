@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsRemovePermissionRequestPrivate;
+
 class QTAWS_EXPORT SqsRemovePermissionRequest : public SqsRequest {
 
 public:
+  //SqsRemovePermissionRequest(...); ///< @todo
+    SqsRemovePermissionRequest(const SqsRemovePermissionRequest &other);
     SqsRemovePermissionRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsRemovePermissionRequest)
+    friend class TestSqsRemovePermissionRequest;
 };
 
 QTAWS_END_NAMESPACE

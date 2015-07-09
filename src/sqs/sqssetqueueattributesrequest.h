@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsSetQueueAttributesRequestPrivate;
+
 class QTAWS_EXPORT SqsSetQueueAttributesRequest : public SqsRequest {
 
 public:
+  //SqsSetQueueAttributesRequest(...); ///< @todo
+    SqsSetQueueAttributesRequest(const SqsSetQueueAttributesRequest &other);
     SqsSetQueueAttributesRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsSetQueueAttributesRequest)
+    friend class TestSqsSetQueueAttributesRequest;
 };
 
 QTAWS_END_NAMESPACE

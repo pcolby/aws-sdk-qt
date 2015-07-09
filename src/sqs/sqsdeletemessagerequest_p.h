@@ -17,30 +17,27 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSPURGEQUEUEREQUEST_H
-#define SQSPURGEQUEUEREQUEST_H
+#ifndef SQSDELETEMESSAGEREQUEST_P_H
+#define SQSDELETEMESSAGEREQUEST_P_H
 
-#include "sqsrequest.h"
+#include "sqsdeletemessagerequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsPurgeQueueRequestPrivate;
+class SqsDeleteMessageRequest;
 
-class QTAWS_EXPORT SqsPurgeQueueRequest : public SqsRequest {
+class QTAWS_EXPORT SqsDeleteMessageRequestPrivate : public SqsRequestPrivate {
 
 public:
-  //SqsPurgeQueueRequest(...); ///< @todo
-    SqsPurgeQueueRequest(const SqsPurgeQueueRequest &other);
-    SqsPurgeQueueRequest();
-
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    SqsDeleteMessageRequestPrivate(const SqsRequest::Action action,
+                                   SqsDeleteMessageRequest * const q);
+    SqsDeleteMessageRequestPrivate(const SqsDeleteMessageRequestPrivate &other,
+                                   SqsDeleteMessageRequest * const q);
 
 private:
-    Q_DECLARE_PRIVATE(SqsPurgeQueueRequest)
-    friend class TestSqsPurgeQueueRequest;
+    Q_DECLARE_PUBLIC(SqsDeleteMessageRequest)
+
 };
 
 QTAWS_END_NAMESPACE

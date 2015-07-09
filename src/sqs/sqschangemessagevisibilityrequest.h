@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsChangeMessageVisibilityRequestPrivate;
+
 class QTAWS_EXPORT SqsChangeMessageVisibilityRequest : public SqsRequest {
 
 public:
+  //SqsChangeMessageVisibilityRequest(...); ///< @todo
+    SqsChangeMessageVisibilityRequest(const SqsChangeMessageVisibilityRequest &other);
     SqsChangeMessageVisibilityRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsChangeMessageVisibilityRequest)
+    friend class TestSqsChangeMessageVisibilityRequest;
 };
 
 QTAWS_END_NAMESPACE

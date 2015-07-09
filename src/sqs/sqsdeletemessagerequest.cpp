@@ -18,27 +18,114 @@
 */
 
 #include "sqsdeletemessagerequest.h"
+#include "sqsdeletemessagerequest_p.h"
+#include "sqsdeletemessageresponse.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
 /**
  * @class  SqsDeleteMessageRequest
  *
- * @brief  @todo
+ * @brief  Implements SQS DeleteMessage requests.
+ *
+ * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_DeleteMessage.html
+ * @see    SqsRemovePermissionRequest
  */
+
+/**
+ * @brief  Constructs a new SqsDeleteMessageRequest.
+ *
+ * @todo
+ */
+/*SqsDeleteMessageRequest::SqsDeleteMessageRequest(
+    ...
+    : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))
+{
+    setLabel(label);
+    setQueueUrl(queueUrl);
+    setPermissions(permissions);
+}*/
+
+/**
+ * @brief  Constructs a new SqsDeleteMessageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SqsDeleteMessageRequest::SqsDeleteMessageRequest(const SqsDeleteMessageRequest &other)
+    : SqsRequest(new SqsDeleteMessageRequestPrivate(*other.d_func(), this))
+{
+
+}
 
 /**
  * @brief  Constructs a new SqsDeleteMessageRequest object.
  */
 SqsDeleteMessageRequest::SqsDeleteMessageRequest()
-    : SqsRequest(SqsRequest::DeleteMessageAction)
+    : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))
 {
 
 }
 
 bool SqsDeleteMessageRequest::isValid() const
 {
+    /// @todo
     return false;
+}
+
+/**
+ * @brief  Construct an SqsDeleteMessageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SqsDeleteMessageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ */
+AwsAbstractResponse * SqsDeleteMessageRequest::response(QNetworkReply * const reply) const
+{
+    return new SqsDeleteMessageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SqsDeleteMessageRequestPrivate
+ *
+ * @brief  Private implementation for SqsDeleteMessageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsDeleteMessageResponsePrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public SqsDeleteMessageRequest instance.
+ */
+SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(
+    const SqsRequest::Action action, SqsDeleteMessageRequest * const q)
+    : SqsRequestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SqsDeleteMessageResponsePrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SqsDeleteMessageResponse
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SqsDeleteMessageRequest instance.
+ */
+SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(
+    const SqsDeleteMessageRequestPrivate &other, SqsDeleteMessageRequest * const q)
+    : SqsRequestPrivate(other, q)
+{
+
 }
 
 QTAWS_END_NAMESPACE

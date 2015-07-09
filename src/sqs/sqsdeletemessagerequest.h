@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsDeleteMessageRequestPrivate;
+
 class QTAWS_EXPORT SqsDeleteMessageRequest : public SqsRequest {
 
 public:
+  //SqsDeleteMessageRequest(...); ///< @todo
+    SqsDeleteMessageRequest(const SqsDeleteMessageRequest &other);
     SqsDeleteMessageRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsDeleteMessageRequest)
+    friend class TestSqsDeleteMessageRequest;
 };
 
 QTAWS_END_NAMESPACE

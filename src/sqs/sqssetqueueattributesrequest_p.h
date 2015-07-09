@@ -17,30 +17,27 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSPURGEQUEUEREQUEST_H
-#define SQSPURGEQUEUEREQUEST_H
+#ifndef SQSSETQUEUEATTRIBUTESREQUEST_P_H
+#define SQSSETQUEUEATTRIBUTESREQUEST_P_H
 
-#include "sqsrequest.h"
+#include "sqssetqueueattributesrequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsPurgeQueueRequestPrivate;
+class SqsSetQueueAttributesRequest;
 
-class QTAWS_EXPORT SqsPurgeQueueRequest : public SqsRequest {
+class QTAWS_EXPORT SqsSetQueueAttributesRequestPrivate : public SqsRequestPrivate {
 
 public:
-  //SqsPurgeQueueRequest(...); ///< @todo
-    SqsPurgeQueueRequest(const SqsPurgeQueueRequest &other);
-    SqsPurgeQueueRequest();
-
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    SqsSetQueueAttributesRequestPrivate(const SqsRequest::Action action,
+                                   SqsSetQueueAttributesRequest * const q);
+    SqsSetQueueAttributesRequestPrivate(const SqsSetQueueAttributesRequestPrivate &other,
+                                   SqsSetQueueAttributesRequest * const q);
 
 private:
-    Q_DECLARE_PRIVATE(SqsPurgeQueueRequest)
-    friend class TestSqsPurgeQueueRequest;
+    Q_DECLARE_PUBLIC(SqsSetQueueAttributesRequest)
+
 };
 
 QTAWS_END_NAMESPACE
