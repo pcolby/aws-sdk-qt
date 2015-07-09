@@ -91,6 +91,12 @@ void TestSqsCreateQueueResponse::isValid()
     buffer.open(QBuffer::ReadOnly);
     response.parseSuccess(buffer);
     QCOMPARE(response.isValid(), isValid);
+
+    // Verify the fallback to the parent (SqsResponse::isValid) implementation.
+    if (isValid) {
+        response.d_func()->xmlError = QXmlStreamReader::UnexpectedElementError;
+        QCOMPARE(response.isValid(), false);
+    }
 }
 
 void TestSqsCreateQueueResponse::request()

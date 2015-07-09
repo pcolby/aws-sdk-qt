@@ -53,7 +53,7 @@ SqsCreateQueueResponse::SqsCreateQueueResponse(const SqsCreateQueueRequest &requ
 bool SqsCreateQueueResponse::isValid() const
 {
     Q_D(const SqsCreateQueueResponse);
-    return !d->queueUrl.isEmpty();
+    return ((!d->queueUrl.isEmpty()) && (SqsResponse::isValid()));
 }
 
 const SqsCreateQueueRequest * SqsCreateQueueResponse::request() const
