@@ -17,30 +17,26 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSLISTQUEUESRESPONSE_P_H
+#define SQSLISTQUEUESRESPONSE_P_H
 
-#include "sqsrequest.h"
+#include "sqsresponse_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsListQueuesResponse;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsListQueuesResponsePrivate : public SqsResponsePrivate {
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
+    SqsListQueuesResponsePrivate(SqsListQueuesResponse * const q);
 
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    void parseListQueuesResponse(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PUBLIC(SqsListQueuesResponse)
+    Q_DISABLE_COPY(SqsListQueuesResponsePrivate)
+
 };
 
 QTAWS_END_NAMESPACE

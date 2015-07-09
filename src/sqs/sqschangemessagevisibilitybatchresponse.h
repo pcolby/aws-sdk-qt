@@ -17,30 +17,34 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSCHANGEMESSAGEVISIBILITYBATCH_H
+#define SQSCHANGEMESSAGEVISIBILITYBATCH_H
 
-#include "sqsrequest.h"
+#include "sqschangemessagevisibilitybatchrequest.h"
+#include "sqsresponse.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsChangeMessageVisibilityBatchResponsePrivate;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsChangeMessageVisibilityBatchResponse : public SqsResponse {
+    Q_OBJECT
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
+    SqsChangeMessageVisibilityBatchResponse(const SqsChangeMessageVisibilityBatchRequest &request,
+                             QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual bool isValid() const;
 
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    virtual const SqsChangeMessageVisibilityBatchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PRIVATE(SqsChangeMessageVisibilityBatchResponse)
+    Q_DISABLE_COPY(SqsChangeMessageVisibilityBatchResponse)
+    friend class TestSqsChangeMessageVisibilityBatchResponse;
 };
 
 QTAWS_END_NAMESPACE

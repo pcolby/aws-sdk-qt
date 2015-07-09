@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsSendMessageRequestPrivate;
+
 class QTAWS_EXPORT SqsSendMessageRequest : public SqsRequest {
 
 public:
+  //SqsSendMessageRequest(...); ///< @todo
+    SqsSendMessageRequest(const SqsSendMessageRequest &other);
     SqsSendMessageRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsSendMessageRequest)
+    friend class TestSqsSendMessageRequest;
 };
 
 QTAWS_END_NAMESPACE

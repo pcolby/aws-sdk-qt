@@ -17,30 +17,27 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_P_H
+#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_P_H
 
-#include "sqsrequest.h"
+#include "sqslistdeadlettersourcequeuesrequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsListDeadLetterSourceQueuesRequest;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequestPrivate : public SqsRequestPrivate {
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
-
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    SqsListDeadLetterSourceQueuesRequestPrivate(const SqsRequest::Action action,
+                                   SqsListDeadLetterSourceQueuesRequest * const q);
+    SqsListDeadLetterSourceQueuesRequestPrivate(const SqsListDeadLetterSourceQueuesRequestPrivate &other,
+                                   SqsListDeadLetterSourceQueuesRequest * const q);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PUBLIC(SqsListDeadLetterSourceQueuesRequest)
+
 };
 
 QTAWS_END_NAMESPACE

@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsGetQueueUrlRequestPrivate;
+
 class QTAWS_EXPORT SqsGetQueueUrlRequest : public SqsRequest {
 
 public:
+  //SqsGetQueueUrlRequest(...); ///< @todo
+    SqsGetQueueUrlRequest(const SqsGetQueueUrlRequest &other);
     SqsGetQueueUrlRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsGetQueueUrlRequest)
+    friend class TestSqsGetQueueUrlRequest;
 };
 
 QTAWS_END_NAMESPACE

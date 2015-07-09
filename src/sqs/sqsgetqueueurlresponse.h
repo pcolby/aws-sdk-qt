@@ -17,30 +17,34 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSGETQUEUEURL_H
+#define SQSGETQUEUEURL_H
 
-#include "sqsrequest.h"
+#include "sqsgetqueueurlrequest.h"
+#include "sqsresponse.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsGetQueueUrlResponsePrivate;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsGetQueueUrlResponse : public SqsResponse {
+    Q_OBJECT
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
+    SqsGetQueueUrlResponse(const SqsGetQueueUrlRequest &request,
+                             QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual bool isValid() const;
 
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    virtual const SqsGetQueueUrlRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PRIVATE(SqsGetQueueUrlResponse)
+    Q_DISABLE_COPY(SqsGetQueueUrlResponse)
+    friend class TestSqsGetQueueUrlResponse;
 };
 
 QTAWS_END_NAMESPACE

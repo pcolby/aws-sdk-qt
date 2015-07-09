@@ -17,30 +17,27 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSDELETEMESSAGEBATCHREQUEST_P_H
+#define SQSDELETEMESSAGEBATCHREQUEST_P_H
 
-#include "sqsrequest.h"
+#include "sqsdeletemessagebatchrequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsDeleteMessageBatchRequest;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsDeleteMessageBatchRequestPrivate : public SqsRequestPrivate {
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
-
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    SqsDeleteMessageBatchRequestPrivate(const SqsRequest::Action action,
+                                   SqsDeleteMessageBatchRequest * const q);
+    SqsDeleteMessageBatchRequestPrivate(const SqsDeleteMessageBatchRequestPrivate &other,
+                                   SqsDeleteMessageBatchRequest * const q);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PUBLIC(SqsDeleteMessageBatchRequest)
+
 };
 
 QTAWS_END_NAMESPACE

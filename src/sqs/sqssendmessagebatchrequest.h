@@ -24,13 +24,23 @@
 
 QTAWS_BEGIN_NAMESPACE
 
+class SqsSendMessageBatchRequestPrivate;
+
 class QTAWS_EXPORT SqsSendMessageBatchRequest : public SqsRequest {
 
 public:
+  //SqsSendMessageBatchRequest(...); ///< @todo
+    SqsSendMessageBatchRequest(const SqsSendMessageBatchRequest &other);
     SqsSendMessageBatchRequest();
 
     virtual bool isValid() const;
 
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SqsSendMessageBatchRequest)
+    friend class TestSqsSendMessageBatchRequest;
 };
 
 QTAWS_END_NAMESPACE

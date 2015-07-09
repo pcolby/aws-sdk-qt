@@ -17,30 +17,27 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
-#define SQSLISTDEADLETTERSOURCEQUEUESREQUEST_H
+#ifndef SQSCHANGEMESSAGEVISIBILITYBATCHREQUEST_P_H
+#define SQSCHANGEMESSAGEVISIBILITYBATCHREQUEST_P_H
 
-#include "sqsrequest.h"
+#include "sqschangemessagevisibilitybatchrequest.h"
+#include "sqsrequest_p.h"
 
 QTAWS_BEGIN_NAMESPACE
 
-class SqsListDeadLetterSourceQueuesRequestPrivate;
+class SqsChangeMessageVisibilityBatchRequest;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequest : public SqsRequest {
+class QTAWS_EXPORT SqsChangeMessageVisibilityBatchRequestPrivate : public SqsRequestPrivate {
 
 public:
-  //SqsListDeadLetterSourceQueuesRequest(...); ///< @todo
-    SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &other);
-    SqsListDeadLetterSourceQueuesRequest();
-
-    virtual bool isValid() const;
-
-protected:
-    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    SqsChangeMessageVisibilityBatchRequestPrivate(const SqsRequest::Action action,
+                                   SqsChangeMessageVisibilityBatchRequest * const q);
+    SqsChangeMessageVisibilityBatchRequestPrivate(const SqsChangeMessageVisibilityBatchRequestPrivate &other,
+                                   SqsChangeMessageVisibilityBatchRequest * const q);
 
 private:
-    Q_DECLARE_PRIVATE(SqsListDeadLetterSourceQueuesRequest)
-    friend class TestSqsListDeadLetterSourceQueuesRequest;
+    Q_DECLARE_PUBLIC(SqsChangeMessageVisibilityBatchRequest)
+
 };
 
 QTAWS_END_NAMESPACE
