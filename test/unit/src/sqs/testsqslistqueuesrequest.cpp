@@ -19,26 +19,100 @@
 
 #include "testsqslistqueuesrequest.h"
 
+#include "core/awsabstractresponse.h"
 #include "sqs/sqslistqueuesrequest.h"
+#include "sqs/sqslistqueuesresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-//#include "sqs/sqslistqueuesrequest_p.h"
+#include "sqs/sqslistqueuesrequest_p.h"
 #endif
 
 #include <QDebug>
 
+/// @todo Q_DECLARE_METATYPE(...)
+
 namespace TestSqsListQueuesRequest_Mocks {
+
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
 } using namespace TestSqsListQueuesRequest_Mocks;
 
-void TestSqsListQueuesRequest::construct()
+void TestSqsListQueuesRequest::construct_params_data()
 {
-
+    /// @todo
 }
 
+void TestSqsListQueuesRequest::construct_params()
+{
+    //QFETCH( @todo );
+
+    //const SqsListQueuesRequest request(label, permissions, queueUrl);
+
+    //QCOMPARE( @todo );
+}
+
+void TestSqsListQueuesRequest::construct_copy_data()
+{
+    construct_params_data();
+}
+
+void TestSqsListQueuesRequest::construct_copy()
+{
+    //QFETCH( @todo );
+
+    const SqsListQueuesRequest request1/*( @todo )*/;
+    //QCOMPARE(request1...);
+
+    const SqsListQueuesRequest request2(request1);
+    //QCOMPARE(request2...);
+
+    QCOMPARE(request1, request2);
+}
+
+void TestSqsListQueuesRequest::construct_default()
+{
+    SqsListQueuesRequest request;
+    QCOMPARE(request.isValid(), false);
+    //QCOMPARE( @todo );
+}
+
+void TestSqsListQueuesRequest::isValid_data()
+{
+    /// @todo
+}
+
+void TestSqsListQueuesRequest::isValid()
+{
+    //QFETCH( @todo );
+
+    const SqsListQueuesRequest request/*( @todo )*/;
+    //QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsListQueuesRequest::response()
+{
+    const SqsListQueuesRequest request;
+    MockNetworkReply reply;
+    const AwsAbstractResponse * const abstractResponse = request.response(&reply);
+    QVERIFY(abstractResponse);
+    QVERIFY(abstractResponse->inherits("SqsListQueuesResponse"));
+    const SqsListQueuesResponse * const sqsResponse =
+        qobject_cast<const SqsListQueuesResponse *>(abstractResponse);
+    QVERIFY(sqsResponse);
+}
+
+// AwsAbstractResponsePrivate functions.
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsListQueuesRequest::construct_d_ptr()
-{
-
-}
+/// @todo
 #endif

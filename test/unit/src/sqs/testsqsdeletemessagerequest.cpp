@@ -19,26 +19,100 @@
 
 #include "testsqsdeletemessagerequest.h"
 
+#include "core/awsabstractresponse.h"
 #include "sqs/sqsdeletemessagerequest.h"
+#include "sqs/sqsdeletemessageresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-//#include "sqs/sqsdeletemessagerequest_p.h"
+#include "sqs/sqsdeletemessagerequest_p.h"
 #endif
 
 #include <QDebug>
 
+/// @todo Q_DECLARE_METATYPE(...)
+
 namespace TestSqsDeleteMessageRequest_Mocks {
+
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
 } using namespace TestSqsDeleteMessageRequest_Mocks;
 
-void TestSqsDeleteMessageRequest::construct()
+void TestSqsDeleteMessageRequest::construct_params_data()
 {
-
+    /// @todo
 }
 
+void TestSqsDeleteMessageRequest::construct_params()
+{
+    //QFETCH( @todo );
+
+    //const SqsDeleteMessageRequest request(label, permissions, queueUrl);
+
+    //QCOMPARE( @todo );
+}
+
+void TestSqsDeleteMessageRequest::construct_copy_data()
+{
+    construct_params_data();
+}
+
+void TestSqsDeleteMessageRequest::construct_copy()
+{
+    //QFETCH( @todo );
+
+    const SqsDeleteMessageRequest request1/*( @todo )*/;
+    //QCOMPARE(request1...);
+
+    const SqsDeleteMessageRequest request2(request1);
+    //QCOMPARE(request2...);
+
+    QCOMPARE(request1, request2);
+}
+
+void TestSqsDeleteMessageRequest::construct_default()
+{
+    SqsDeleteMessageRequest request;
+    QCOMPARE(request.isValid(), false);
+    //QCOMPARE( @todo );
+}
+
+void TestSqsDeleteMessageRequest::isValid_data()
+{
+    /// @todo
+}
+
+void TestSqsDeleteMessageRequest::isValid()
+{
+    //QFETCH( @todo );
+
+    const SqsDeleteMessageRequest request/*( @todo )*/;
+    //QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsDeleteMessageRequest::response()
+{
+    const SqsDeleteMessageRequest request;
+    MockNetworkReply reply;
+    const AwsAbstractResponse * const abstractResponse = request.response(&reply);
+    QVERIFY(abstractResponse);
+    QVERIFY(abstractResponse->inherits("SqsDeleteMessageResponse"));
+    const SqsDeleteMessageResponse * const sqsResponse =
+        qobject_cast<const SqsDeleteMessageResponse *>(abstractResponse);
+    QVERIFY(sqsResponse);
+}
+
+// AwsAbstractResponsePrivate functions.
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsDeleteMessageRequest::construct_d_ptr()
-{
-
-}
+/// @todo
 #endif

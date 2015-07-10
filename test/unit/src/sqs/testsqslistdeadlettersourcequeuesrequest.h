@@ -23,14 +23,24 @@ class TestSqsListDeadLetterSourceQueuesRequest : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct();
-    #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    void construct_d_ptr();
-    #endif
+    void construct_params_data();
+    void construct_params();
+
+    void construct_copy_data();
+    void construct_copy();
+
+    void construct_default();
+
+    void isValid_data();
+    void isValid();
+
+    /// @todo
+
+    void response();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    /// @todo
     // Nothing to see here.
     #endif
-
 };

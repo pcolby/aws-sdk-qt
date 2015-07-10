@@ -19,26 +19,100 @@
 
 #include "testsqschangemessagevisibilityrequest.h"
 
+#include "core/awsabstractresponse.h"
 #include "sqs/sqschangemessagevisibilityrequest.h"
+#include "sqs/sqschangemessagevisibilityresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-//#include "sqs/sqschangemessagevisibilityrequest_p.h"
+#include "sqs/sqschangemessagevisibilityrequest_p.h"
 #endif
 
 #include <QDebug>
 
+/// @todo Q_DECLARE_METATYPE(...)
+
 namespace TestSqsChangeMessageVisibilityRequest_Mocks {
+
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
 } using namespace TestSqsChangeMessageVisibilityRequest_Mocks;
 
-void TestSqsChangeMessageVisibilityRequest::construct()
+void TestSqsChangeMessageVisibilityRequest::construct_params_data()
 {
-
+    /// @todo
 }
 
+void TestSqsChangeMessageVisibilityRequest::construct_params()
+{
+    //QFETCH( @todo );
+
+    //const SqsChangeMessageVisibilityRequest request(label, permissions, queueUrl);
+
+    //QCOMPARE( @todo );
+}
+
+void TestSqsChangeMessageVisibilityRequest::construct_copy_data()
+{
+    construct_params_data();
+}
+
+void TestSqsChangeMessageVisibilityRequest::construct_copy()
+{
+    //QFETCH( @todo );
+
+    const SqsChangeMessageVisibilityRequest request1/*( @todo )*/;
+    //QCOMPARE(request1...);
+
+    const SqsChangeMessageVisibilityRequest request2(request1);
+    //QCOMPARE(request2...);
+
+    QCOMPARE(request1, request2);
+}
+
+void TestSqsChangeMessageVisibilityRequest::construct_default()
+{
+    SqsChangeMessageVisibilityRequest request;
+    QCOMPARE(request.isValid(), false);
+    //QCOMPARE( @todo );
+}
+
+void TestSqsChangeMessageVisibilityRequest::isValid_data()
+{
+    /// @todo
+}
+
+void TestSqsChangeMessageVisibilityRequest::isValid()
+{
+    //QFETCH( @todo );
+
+    const SqsChangeMessageVisibilityRequest request/*( @todo )*/;
+    //QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsChangeMessageVisibilityRequest::response()
+{
+    const SqsChangeMessageVisibilityRequest request;
+    MockNetworkReply reply;
+    const AwsAbstractResponse * const abstractResponse = request.response(&reply);
+    QVERIFY(abstractResponse);
+    QVERIFY(abstractResponse->inherits("SqsChangeMessageVisibilityResponse"));
+    const SqsChangeMessageVisibilityResponse * const sqsResponse =
+        qobject_cast<const SqsChangeMessageVisibilityResponse *>(abstractResponse);
+    QVERIFY(sqsResponse);
+}
+
+// AwsAbstractResponsePrivate functions.
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsChangeMessageVisibilityRequest::construct_d_ptr()
-{
-
-}
+/// @todo
 #endif

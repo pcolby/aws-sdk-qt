@@ -19,26 +19,100 @@
 
 #include "testsqsremovepermissionrequest.h"
 
+#include "core/awsabstractresponse.h"
 #include "sqs/sqsremovepermissionrequest.h"
+#include "sqs/sqsremovepermissionresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-//#include "sqs/sqsremovepermissionrequest_p.h"
+#include "sqs/sqsremovepermissionrequest_p.h"
 #endif
 
 #include <QDebug>
 
+/// @todo Q_DECLARE_METATYPE(...)
+
 namespace TestSqsRemovePermissionRequest_Mocks {
+
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
 } using namespace TestSqsRemovePermissionRequest_Mocks;
 
-void TestSqsRemovePermissionRequest::construct()
+void TestSqsRemovePermissionRequest::construct_params_data()
 {
-
+    /// @todo
 }
 
+void TestSqsRemovePermissionRequest::construct_params()
+{
+    //QFETCH( @todo );
+
+    //const SqsRemovePermissionRequest request(label, permissions, queueUrl);
+
+    //QCOMPARE( @todo );
+}
+
+void TestSqsRemovePermissionRequest::construct_copy_data()
+{
+    construct_params_data();
+}
+
+void TestSqsRemovePermissionRequest::construct_copy()
+{
+    //QFETCH( @todo );
+
+    const SqsRemovePermissionRequest request1/*( @todo )*/;
+    //QCOMPARE(request1...);
+
+    const SqsRemovePermissionRequest request2(request1);
+    //QCOMPARE(request2...);
+
+    QCOMPARE(request1, request2);
+}
+
+void TestSqsRemovePermissionRequest::construct_default()
+{
+    SqsRemovePermissionRequest request;
+    QCOMPARE(request.isValid(), false);
+    //QCOMPARE( @todo );
+}
+
+void TestSqsRemovePermissionRequest::isValid_data()
+{
+    /// @todo
+}
+
+void TestSqsRemovePermissionRequest::isValid()
+{
+    //QFETCH( @todo );
+
+    const SqsRemovePermissionRequest request/*( @todo )*/;
+    //QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsRemovePermissionRequest::response()
+{
+    const SqsRemovePermissionRequest request;
+    MockNetworkReply reply;
+    const AwsAbstractResponse * const abstractResponse = request.response(&reply);
+    QVERIFY(abstractResponse);
+    QVERIFY(abstractResponse->inherits("SqsRemovePermissionResponse"));
+    const SqsRemovePermissionResponse * const sqsResponse =
+        qobject_cast<const SqsRemovePermissionResponse *>(abstractResponse);
+    QVERIFY(sqsResponse);
+}
+
+// AwsAbstractResponsePrivate functions.
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsRemovePermissionRequest::construct_d_ptr()
-{
-
-}
+/// @todo
 #endif
