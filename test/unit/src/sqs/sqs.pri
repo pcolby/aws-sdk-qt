@@ -2,30 +2,39 @@ HEADERS += \
         testsqsaddpermissionrequest.h \
         testsqsaddpermissionresponse.h \
         testsqschangemessagevisibilitybatchrequest.h \
+        testsqschangemessagevisibilitybatchresponse.h \
         testsqschangemessagevisibilityrequest.h \
         testsqschangemessagevisibilityresponse.h \
         testsqsclient.h \
         testsqscreatequeuerequest.h \
         testsqscreatequeueresponse.h \
         testsqsdeletemessagebatchrequest.h \
+        testsqsdeletemessagebatchresponse.h \
         testsqsdeletemessagerequest.h \
         testsqsdeletemessageresponse.h \
         testsqsdeletequeuerequest.h \
         testsqsdeletequeueresponse.h \
         testsqserror.h \
         testsqsgetqueueattributesrequest.h \
+        testsqsgetqueueattributesresponse.h \
         testsqsgetqueueurlrequest.h \
+        testsqsgetqueueurlresponse.h \
         testsqslistdeadlettersourcequeuesrequest.h \
+        testsqslistdeadlettersourcequeuesresponse.h \
         testsqslistqueuesrequest.h \
+        testsqslistqueuesresponse.h \
         testsqspurgequeuerequest.h \
         testsqspurgequeueresponse.h \
         testsqsreceivemessagerequest.h \
+        testsqsreceivemessageresponse.h \
         testsqsremovepermissionrequest.h \
         testsqsremovepermissionresponse.h \
         testsqsrequest.h \
         testsqsresponse.h \
         testsqssendmessagebatchrequest.h \
+        testsqssendmessagebatchresponse.h \
         testsqssendmessagerequest.h \
+        testsqssendmessageresponse.h \
         testsqssetqueueattributesrequest.h \
         testsqssetqueueattributesresponse.h \
 
@@ -33,30 +42,39 @@ SOURCES += \
         testsqsaddpermissionrequest.cpp \
         testsqsaddpermissionresponse.cpp \
         testsqschangemessagevisibilitybatchrequest.cpp \
+        testsqschangemessagevisibilitybatchresponse.cpp \
         testsqschangemessagevisibilityrequest.cpp \
         testsqschangemessagevisibilityresponse.cpp \
         testsqsclient.cpp \
         testsqscreatequeuerequest.cpp \
         testsqscreatequeueresponse.cpp \
         testsqsdeletemessagebatchrequest.cpp \
+        testsqsdeletemessagebatchresponse.cpp \
         testsqsdeletemessagerequest.cpp \
         testsqsdeletemessageresponse.cpp \
         testsqsdeletequeuerequest.cpp \
         testsqsdeletequeueresponse.cpp \
         testsqserror.cpp \
         testsqsgetqueueattributesrequest.cpp \
+        testsqsgetqueueattributesresponse.cpp \
         testsqsgetqueueurlrequest.cpp \
+        testsqsgetqueueurlresponse.cpp \
         testsqslistdeadlettersourcequeuesrequest.cpp \
+        testsqslistdeadlettersourcequeuesresponse.cpp \
         testsqslistqueuesrequest.cpp \
+        testsqslistqueuesresponse.cpp \
         testsqspurgequeuerequest.cpp \
         testsqspurgequeueresponse.cpp \
         testsqsreceivemessagerequest.cpp \
+        testsqsreceivemessageresponse.cpp \
         testsqsremovepermissionrequest.cpp \
         testsqsremovepermissionresponse.cpp \
         testsqsrequest.cpp \
         testsqsresponse.cpp \
         testsqssendmessagebatchrequest.cpp \
+        testsqssendmessagebatchresponse.cpp \
         testsqssendmessagerequest.cpp \
+        testsqssendmessageresponse.cpp \
         testsqssetqueueattributesrequest.cpp \
         testsqssetqueueattributesresponse.cpp \
 

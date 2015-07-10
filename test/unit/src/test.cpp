@@ -34,30 +34,39 @@
 #include "sqs/testsqsaddpermissionrequest.h"
 #include "sqs/testsqsaddpermissionresponse.h"
 #include "sqs/testsqschangemessagevisibilitybatchrequest.h"
+#include "sqs/testsqschangemessagevisibilitybatchresponse.h"
 #include "sqs/testsqschangemessagevisibilityrequest.h"
 #include "sqs/testsqschangemessagevisibilityresponse.h"
 #include "sqs/testsqsclient.h"
 #include "sqs/testsqscreatequeuerequest.h"
 #include "sqs/testsqscreatequeueresponse.h"
 #include "sqs/testsqsdeletemessagebatchrequest.h"
+#include "sqs/testsqsdeletemessagebatchresponse.h"
 #include "sqs/testsqsdeletemessagerequest.h"
 #include "sqs/testsqsdeletemessageresponse.h"
 #include "sqs/testsqsdeletequeuerequest.h"
 #include "sqs/testsqsdeletequeueresponse.h"
 #include "sqs/testsqserror.h"
 #include "sqs/testsqsgetqueueattributesrequest.h"
+#include "sqs/testsqsgetqueueattributesresponse.h"
 #include "sqs/testsqsgetqueueurlrequest.h"
+#include "sqs/testsqsgetqueueurlresponse.h"
 #include "sqs/testsqslistdeadlettersourcequeuesrequest.h"
+#include "sqs/testsqslistdeadlettersourcequeuesresponse.h"
 #include "sqs/testsqslistqueuesrequest.h"
+#include "sqs/testsqslistqueuesresponse.h"
 #include "sqs/testsqspurgequeuerequest.h"
 #include "sqs/testsqspurgequeueresponse.h"
 #include "sqs/testsqsreceivemessagerequest.h"
+#include "sqs/testsqsreceivemessageresponse.h"
 #include "sqs/testsqsremovepermissionrequest.h"
 #include "sqs/testsqsremovepermissionresponse.h"
 #include "sqs/testsqsrequest.h"
 #include "sqs/testsqsresponse.h"
 #include "sqs/testsqssendmessagebatchrequest.h"
+#include "sqs/testsqssendmessagebatchresponse.h"
 #include "sqs/testsqssendmessagerequest.h"
+#include "sqs/testsqssendmessageresponse.h"
 #include "sqs/testsqssetqueueattributesrequest.h"
 #include "sqs/testsqssetqueueattributesresponse.h"
 
@@ -110,30 +119,39 @@ int main(int argc, char *argv[]) {
     testFactory.registerClass<TestSqsAddPermissionRequest>();
     testFactory.registerClass<TestSqsAddPermissionResponse>();
     testFactory.registerClass<TestSqsChangeMessageVisibilityBatchRequest>();
+    testFactory.registerClass<TestSqsChangeMessageVisibilityBatchResponse>();
     testFactory.registerClass<TestSqsChangeMessageVisibilityRequest>();
     testFactory.registerClass<TestSqsChangeMessageVisibilityResponse>();
     testFactory.registerClass<TestSqsClient>();
     testFactory.registerClass<TestSqsCreateQueueRequest>();
     testFactory.registerClass<TestSqsCreateQueueResponse>();
     testFactory.registerClass<TestSqsDeleteMessageBatchRequest>();
+    testFactory.registerClass<TestSqsDeleteMessageBatchResponse>();
     testFactory.registerClass<TestSqsDeleteMessageRequest>();
     testFactory.registerClass<TestSqsDeleteMessageResponse>();
     testFactory.registerClass<TestSqsDeleteQueueRequest>();
     testFactory.registerClass<TestSqsDeleteQueueResponse>();
     testFactory.registerClass<TestSqsError>();
     testFactory.registerClass<TestSqsGetQueueAttributesRequest>();
+    testFactory.registerClass<TestSqsGetQueueAttributesResponse>();
     testFactory.registerClass<TestSqsGetQueueUrlRequest>();
+    testFactory.registerClass<TestSqsGetQueueUrlResponse>();
     testFactory.registerClass<TestSqsListDeadLetterSourceQueuesRequest>();
+    testFactory.registerClass<TestSqsListDeadLetterSourceQueuesResponse>();
     testFactory.registerClass<TestSqsListQueuesRequest>();
+    testFactory.registerClass<TestSqsListQueuesResponse>();
     testFactory.registerClass<TestSqsPurgeQueueRequest>();
     testFactory.registerClass<TestSqsPurgeQueueResponse>();
     testFactory.registerClass<TestSqsReceiveMessageRequest>();
+    testFactory.registerClass<TestSqsReceiveMessageResponse>();
     testFactory.registerClass<TestSqsRemovePermissionRequest>();
     testFactory.registerClass<TestSqsRemovePermissionResponse>();
     testFactory.registerClass<TestSqsRequest>();
     testFactory.registerClass<TestSqsResponse>();
     testFactory.registerClass<TestSqsSendMessageBatchRequest>();
+    testFactory.registerClass<TestSqsSendMessageBatchResponse>();
     testFactory.registerClass<TestSqsSendMessageRequest>();
+    testFactory.registerClass<TestSqsSendMessageResponse>();
     testFactory.registerClass<TestSqsSetQueueAttributesRequest>();
     testFactory.registerClass<TestSqsSetQueueAttributesResponse>();
 
