@@ -17,44 +17,44 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "testsqsaddpermissionresponse.h"
+#include "testsqsdeletequeueresponse.h"
 
-#include "sqs/sqsaddpermissionresponse.h"
+#include "sqs/sqsdeletequeueresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-#include "sqs/sqsaddpermissionresponse_p.h"
+#include "sqs/sqsdeletequeueresponse_p.h"
 #endif
 
 #include <QBuffer>
 #include <QDebug>
 
-namespace TestSqsAddPermissionResponse_Mocks {
+namespace TestSqsDeleteQueueResponse_Mocks {
 
-} using namespace TestSqsAddPermissionResponse_Mocks;
+} using namespace TestSqsDeleteQueueResponse_Mocks;
 
-void TestSqsAddPermissionResponse::construct_data()
+void TestSqsDeleteQueueResponse::construct_data()
 {
-    QTest::addColumn<QString>("queueName");
-    QTest::newRow("example") << QString::fromLatin1("example");
+    //QTest::addColumn<QString>("queueName");
+    //QTest::newRow("example") << QString::fromLatin1("example");
 }
 
-void TestSqsAddPermissionResponse::construct()
+void TestSqsDeleteQueueResponse::construct()
 {
-    QFETCH(QString, queueName);
-    const SqsAddPermissionRequest request(queueName);
-    SqsAddPermissionResponse response(request, NULL);
+    //QFETCH(QString, queueName);
+    const SqsDeleteQueueRequest request/**( @todo )*/;
+    SqsDeleteQueueResponse response(request, NULL);
     QCOMPARE(response.isValid(), true);
     QVERIFY(response.request());
     QCOMPARE(*response.request(), request);
 }
 
-void TestSqsAddPermissionResponse::request()
+void TestSqsDeleteQueueResponse::request()
 {
-    const QString queueName = QString::fromLatin1("sentinel-queue-name");
+    //const QString queueName = QString::fromLatin1("sentinel-queue-name");
 
-    SqsAddPermissionRequest request(queueName);
+    SqsDeleteQueueRequest request/**( @todo )*/;
     //QCOMPARE(request.queueName(), queueName);
-    SqsAddPermissionResponse response(request, NULL);
+    SqsDeleteQueueResponse response(request, NULL);
 
     // Verify that the response took a copy of (not a reference to) the request.
     QVERIFY(response.request());
@@ -62,7 +62,7 @@ void TestSqsAddPermissionResponse::request()
     QCOMPARE(*response.request(), request);
 }
 
-void TestSqsAddPermissionResponse::parseSuccess_data()
+void TestSqsDeleteQueueResponse::parseSuccess_data()
 {
     QTest::addColumn<QByteArray>("xml");
     QTest::addColumn<QString>("queueUrl");
@@ -70,55 +70,55 @@ void TestSqsAddPermissionResponse::parseSuccess_data()
 
     QTest::newRow("valid")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue")
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("invalid")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString()
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("unrecognized-sub")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue")
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("unrecognized-top")
         << QByteArray(
-            "<NotAddPermissionResponse>"
+            "<NotDeleteQueueResponse>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</NotAddPermissionResponse>")
+            "</NotDeleteQueueResponse>")
         << QString()
         << QString();
 }
 
-void TestSqsAddPermissionResponse::parseSuccess()
+void TestSqsDeleteQueueResponse::parseSuccess()
 {
     QFETCH(QByteArray, xml);
     QFETCH(QString, queueUrl);
     QFETCH(QString, requestId);
 
-    SqsAddPermissionRequest request;
-    SqsAddPermissionResponse response(request, NULL);
+    SqsDeleteQueueRequest request;
+    SqsDeleteQueueResponse response(request, NULL);
     QCOMPARE(response.requestId(), QString());
 
     QBuffer buffer(&xml);
@@ -129,7 +129,7 @@ void TestSqsAddPermissionResponse::parseSuccess()
 
 // AwsAbstractResponsePrivate functions.
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
+void TestSqsDeleteQueueResponse::parseDeleteQueueResponse_data()
 {
     QTest::addColumn<QByteArray>("xml");
     QTest::addColumn<QString>("queueUrl");
@@ -137,60 +137,60 @@ void TestSqsAddPermissionResponse::parseAddPermissionResponse_data()
 
     QTest::newRow("valid")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue")
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("invalid")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString()
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("unrecognized-sub")
         << QByteArray(
-            "<AddPermissionResponse>"
+            "<DeleteQueueResponse>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</AddPermissionResponse>")
+            "</DeleteQueueResponse>")
         << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue")
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 
     QTest::newRow("unrecognized-top")
         << QByteArray(
-            "<NotAddPermissionResponse>"
+            "<NotDeleteQueueResponse>"
                 "<IgnoreMe>This element should be ignored</IgnoreMe>"
                 "<ResponseMetadata>"
                     "<RequestId>7a62c49f-347e-4fc4-9331-6e8e7a96aa73</RequestId>"
                 "</ResponseMetadata>"
-            "</NotAddPermissionResponse>")
+            "</NotDeleteQueueResponse>")
         << QString::fromLatin1("http://sqs.us-east-1.amazonaws.com/123456789012/testQueue")
         << QString::fromLatin1("7a62c49f-347e-4fc4-9331-6e8e7a96aa73");
 }
 
-void TestSqsAddPermissionResponse::parseAddPermissionResponse()
+void TestSqsDeleteQueueResponse::parseDeleteQueueResponse()
 {
     QFETCH(QByteArray, xml);
     QFETCH(QString, queueUrl);
     QFETCH(QString, requestId);
 
-    SqsAddPermissionRequest request;
-    SqsAddPermissionResponse response(request, NULL);
+    SqsDeleteQueueRequest request;
+    SqsDeleteQueueResponse response(request, NULL);
     QCOMPARE(response.requestId(), QString());
 
     QXmlStreamReader reader(xml);
     reader.readNextStartElement();
-    response.d_func()->parseAddPermissionResponse(reader);
+    response.d_func()->parseDeleteQueueResponse(reader);
     QCOMPARE(response.requestId(), requestId);
 }
 

@@ -3,49 +3,61 @@ HEADERS += \
         testsqsaddpermissionresponse.h \
         testsqschangemessagevisibilitybatchrequest.h \
         testsqschangemessagevisibilityrequest.h \
+        testsqschangemessagevisibilityresponse.h \
         testsqsclient.h \
         testsqscreatequeuerequest.h \
         testsqscreatequeueresponse.h \
         testsqsdeletemessagebatchrequest.h \
         testsqsdeletemessagerequest.h \
+        testsqsdeletemessageresponse.h \
         testsqsdeletequeuerequest.h \
+        testsqsdeletequeueresponse.h \
         testsqserror.h \
         testsqsgetqueueattributesrequest.h \
         testsqsgetqueueurlrequest.h \
         testsqslistdeadlettersourcequeuesrequest.h \
         testsqslistqueuesrequest.h \
         testsqspurgequeuerequest.h \
+        testsqspurgequeueresponse.h \
         testsqsreceivemessagerequest.h \
         testsqsremovepermissionrequest.h \
+        testsqsremovepermissionresponse.h \
         testsqsrequest.h \
         testsqsresponse.h \
         testsqssendmessagebatchrequest.h \
         testsqssendmessagerequest.h \
         testsqssetqueueattributesrequest.h \
+        testsqssetqueueattributesresponse.h \
 
 SOURCES += \
         testsqsaddpermissionrequest.cpp \
         testsqsaddpermissionresponse.cpp \
         testsqschangemessagevisibilitybatchrequest.cpp \
         testsqschangemessagevisibilityrequest.cpp \
+        testsqschangemessagevisibilityresponse.cpp \
         testsqsclient.cpp \
         testsqscreatequeuerequest.cpp \
         testsqscreatequeueresponse.cpp \
         testsqsdeletemessagebatchrequest.cpp \
         testsqsdeletemessagerequest.cpp \
+        testsqsdeletemessageresponse.cpp \
         testsqsdeletequeuerequest.cpp \
+        testsqsdeletequeueresponse.cpp \
         testsqserror.cpp \
         testsqsgetqueueattributesrequest.cpp \
         testsqsgetqueueurlrequest.cpp \
         testsqslistdeadlettersourcequeuesrequest.cpp \
         testsqslistqueuesrequest.cpp \
         testsqspurgequeuerequest.cpp \
+        testsqspurgequeueresponse.cpp \
         testsqsreceivemessagerequest.cpp \
         testsqsremovepermissionrequest.cpp \
+        testsqsremovepermissionresponse.cpp \
         testsqsrequest.cpp \
         testsqsresponse.cpp \
         testsqssendmessagebatchrequest.cpp \
         testsqssendmessagerequest.cpp \
         testsqssetqueueattributesrequest.cpp \
+        testsqssetqueueattributesresponse.cpp \
 
 VPATH += $$PWD
