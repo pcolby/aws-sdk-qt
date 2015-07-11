@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['unsignedrequest',['unsignedRequest',['../classAwsAbstractRequest.html#ac67f588b0449fd47f9ef4ac80655acf7',1,'AwsAbstractRequest::unsignedRequest()'],['../classSqsRequest.html#acb6e9754098ea296833c53b7da7d74b5',1,'SqsRequest::unsignedRequest()']]]
+  ['token',['token',['../classAwsAbstractCredentials.html#acebb810e6ea9437ff56b7231db3a373b',1,'AwsAbstractCredentials::token()'],['../classAwsAnonymousCredentials.html#a32b3f1e4f09b615e5f5a70c116efd57d',1,'AwsAnonymousCredentials::token()'],['../classAwsBasicCredentials.html#a186b996db7efa3dff85b6bbc6c11acfa',1,'AwsBasicCredentials::token()']]],
+  ['tovariant',['toVariant',['../classAwsAbstractResponse.html#af644d30e72e701385abdc050c4b0a8b6',1,'AwsAbstractResponse']]],
+  ['type',['type',['../classSqsError.html#adb3523f8faaaf572c7f4da5cb623ded1',1,'SqsError']]]
 ];

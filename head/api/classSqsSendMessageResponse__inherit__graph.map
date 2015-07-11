@@ -1,0 +1,4 @@
+<map id="SqsSendMessageResponse" name="SqsSendMessageResponse">
+<area shape="rect" id="node2" href="$classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="47,155,151,181"/>
+<area shape="rect" id="node3" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="21,80,177,107"/>
+</map>

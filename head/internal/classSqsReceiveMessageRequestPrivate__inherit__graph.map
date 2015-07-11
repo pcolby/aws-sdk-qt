@@ -1,0 +1,4 @@
+<map id="SqsReceiveMessageRequestPrivate" name="SqsReceiveMessageRequestPrivate">
+<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="35,80,170,107"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="9,5,196,32"/>
+</map>

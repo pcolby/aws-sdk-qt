@@ -110,37 +110,132 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;sqsgetqueueattributesrequest.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * @class  SqsGetQueueAttributesRequest</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * @brief  @todo</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesRequest object.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">   33</a></span>&#160;<a class="code" href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest</a>()</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::GetQueueAttributesSqsAction)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">   39</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">SqsGetQueueAttributesRequest::isValid</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00034">sqsrequest.h:34</a></div></div>
-<div class="ttc" id="classSqsGetQueueAttributesRequest_html_a283132ed50f5aae4f6367002454fb3ec"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest</a></div><div class="ttdeci">SqsGetQueueAttributesRequest()</div><div class="ttdoc">Constructs a new SqsGetQueueAttributesRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00033">sqsgetqueueattributesrequest.cpp:33</a></div></div>
-<div class="ttc" id="classSqsGetQueueAttributesRequest_html_af66766b450ee1763efffb1089fd6a286"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">SqsGetQueueAttributesRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00039">sqsgetqueueattributesrequest.cpp:39</a></div></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;sqsgetqueueattributesrequest_p.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;sqsgetqueueattributesresponse.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;sqsrequest_p.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * @class  SqsGetQueueAttributesRequest</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * @brief  Implements SQS GetQueueAttributes requests.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_GetQueueAttributes.html</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * @see    SqsRemovePermissionRequest</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesRequest.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * @todo</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest(</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    ...</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    : SqsRequest(new SqsGetQueueAttributesRequestPrivate(SqsRequest::GetQueueAttributesAction, this))</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    setLabel(label);</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    setQueueUrl(queueUrl);</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    setPermissions(permissions);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">}*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesRequest object by copying another.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * @param  other  Instance to copy.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#ace46ae2ece0b9c0c667e57eca523bafb">   55</a></span>&#160;<a class="code" href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest</a>(<span class="keyword">const</span> <a class="code" href="classSqsGetQueueAttributesRequest.html">SqsGetQueueAttributesRequest</a> &amp;other)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(new <a class="code" href="classSqsGetQueueAttributesRequestPrivate.html">SqsGetQueueAttributesRequestPrivate</a>(*other.d_func(), this))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesRequest object.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">   64</a></span>&#160;<a class="code" href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    : <a class="code" href="classSqsRequest.html">SqsRequest</a>(new <a class="code" href="classSqsGetQueueAttributesRequestPrivate.html">SqsGetQueueAttributesRequestPrivate</a>(<a class="code" href="classSqsRequest.html">SqsRequest</a>::GetQueueAttributesAction, this))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">   70</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">SqsGetQueueAttributesRequest::isValid</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword"></span>{<span class="comment"></span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    /// @todo</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> * @brief  Construct an SqsGetQueueAttributesResponse object.</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * @param  reply  Network reply this response should observe.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * @return An SqsGetQueueAttributesResponse instance for \a reply.</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * @see  AwsAbstractClient::send</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequest.html#a50a0db4fcf612a87b3239dfa1d7af3e8">   85</a></span>&#160;<a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * <a class="code" href="classSqsGetQueueAttributesRequest.html#a50a0db4fcf612a87b3239dfa1d7af3e8">SqsGetQueueAttributesRequest::response</a>(QNetworkReply * <span class="keyword">const</span> reply)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classSqsGetQueueAttributesResponse.html">SqsGetQueueAttributesResponse</a>(*<span class="keyword">this</span>, reply);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * @class  SqsGetQueueAttributesRequestPrivate</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * @brief  Private implementation for SqsGetQueueAttributesRequest.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesResponsePrivate object.</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * @param  action  SQS action being performed.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> * @param  q       Pointer to this object&#39;s public SqsGetQueueAttributesRequest instance.</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequestPrivate.html#ae8bb8e85261c4b26331ee752fb793d2a">  106</a></span>&#160;<a class="code" href="classSqsGetQueueAttributesRequestPrivate.html#ae8bb8e85261c4b26331ee752fb793d2a">SqsGetQueueAttributesRequestPrivate::SqsGetQueueAttributesRequestPrivate</a>(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a> action, <a class="code" href="classSqsGetQueueAttributesRequest.html">SqsGetQueueAttributesRequest</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    : <a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>(action, q)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * @internal</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * @brief  Constructs a new SqsGetQueueAttributesResponsePrivate object, copying another.</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment"> * This copy-like constructor exists for the benefit of the SqsGetQueueAttributesResponse</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"> * class&#39; copy constructor.</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment"> * @param  other  Instance to copy.</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"> * @param  q      Pointer to this object&#39;s public SqsGetQueueAttributesRequest instance.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classSqsGetQueueAttributesRequestPrivate.html#a357d0cdd90ff63604e0713c387eadd0b">  124</a></span>&#160;<a class="code" href="classSqsGetQueueAttributesRequestPrivate.html#ae8bb8e85261c4b26331ee752fb793d2a">SqsGetQueueAttributesRequestPrivate::SqsGetQueueAttributesRequestPrivate</a>(</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsGetQueueAttributesRequestPrivate.html">SqsGetQueueAttributesRequestPrivate</a> &amp;other, <a class="code" href="classSqsGetQueueAttributesRequest.html">SqsGetQueueAttributesRequest</a> * <span class="keyword">const</span> q)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    : <a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>(other, q)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00035">sqsrequest.h:35</a></div></div>
+<div class="ttc" id="classSqsRequestPrivate_html"><div class="ttname"><a href="classSqsRequestPrivate.html">SqsRequestPrivate</a></div><div class="ttdoc">Private implementation for SqsRequest. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest__p_8h_source.html#l00033">sqsrequest_p.h:33</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequestPrivate_html_ae8bb8e85261c4b26331ee752fb793d2a"><div class="ttname"><a href="classSqsGetQueueAttributesRequestPrivate.html#ae8bb8e85261c4b26331ee752fb793d2a">SqsGetQueueAttributesRequestPrivate::SqsGetQueueAttributesRequestPrivate</a></div><div class="ttdeci">SqsGetQueueAttributesRequestPrivate(const SqsRequest::Action action, SqsGetQueueAttributesRequest *const q)</div><div class="ttdoc">Constructs a new SqsGetQueueAttributesResponsePrivate object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00106">sqsgetqueueattributesrequest.cpp:106</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequest_html_a283132ed50f5aae4f6367002454fb3ec"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html#a283132ed50f5aae4f6367002454fb3ec">SqsGetQueueAttributesRequest::SqsGetQueueAttributesRequest</a></div><div class="ttdeci">SqsGetQueueAttributesRequest()</div><div class="ttdoc">Constructs a new SqsGetQueueAttributesRequest object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00064">sqsgetqueueattributesrequest.cpp:64</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequest_html"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html">SqsGetQueueAttributesRequest</a></div><div class="ttdoc">Implements SQS GetQueueAttributes requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8h_source.html#l00029">sqsgetqueueattributesrequest.h:29</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequest_html_a50a0db4fcf612a87b3239dfa1d7af3e8"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html#a50a0db4fcf612a87b3239dfa1d7af3e8">SqsGetQueueAttributesRequest::response</a></div><div class="ttdeci">virtual AwsAbstractResponse * response(QNetworkReply *const reply) const </div><div class="ttdoc">Construct an SqsGetQueueAttributesResponse object. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00085">sqsgetqueueattributesrequest.cpp:85</a></div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractresponse_8h_source.html#l00033">awsabstractresponse.h:33</a></div></div>
+<div class="ttc" id="classSqsRequest_html_a739caff500bb6ef38a9bafcb14a68804"><div class="ttname"><a href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a></div><div class="ttdeci">Action</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00039">sqsrequest.h:39</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequestPrivate_html"><div class="ttname"><a href="classSqsGetQueueAttributesRequestPrivate.html">SqsGetQueueAttributesRequestPrivate</a></div><div class="ttdoc">Private implementation for SqsGetQueueAttributesRequest. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest__p_8h_source.html#l00030">sqsgetqueueattributesrequest_p.h:30</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesRequest_html_af66766b450ee1763efffb1089fd6a286"><div class="ttname"><a href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">SqsGetQueueAttributesRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const </div><div class="ttdoc">Is this request valid? </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesrequest_8cpp_source.html#l00070">sqsgetqueueattributesrequest.cpp:70</a></div></div>
+<div class="ttc" id="classSqsGetQueueAttributesResponse_html"><div class="ttname"><a href="classSqsGetQueueAttributesResponse.html">SqsGetQueueAttributesResponse</a></div><div class="ttdoc">Handles SQS GetQueueAttributes responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsgetqueueattributesresponse_8h_source.html#l00030">sqsgetqueueattributesresponse.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:34 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:50 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

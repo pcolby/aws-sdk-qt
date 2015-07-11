@@ -132,26 +132,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a> action, <a class="code" href="classSqsRequest.html">SqsRequest</a> * <span class="keyword">const</span> q);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>(<span class="keyword">const</span> <a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a> &amp;other, <a class="code" href="classSqsRequest.html">SqsRequest</a> * <span class="keyword">const</span> q);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classSqsRequest.html">SqsRequest</a>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> QUrlQuery urlQuery() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">static</span> QString toString(<span class="keyword">const</span> <a class="code" href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a> &amp;action);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    Q_DECLARE_PUBLIC(<a class="code" href="classSqsRequest.html">SqsRequest</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classSqsRequestPrivate.html">SqsRequestPrivate</a>)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00034">sqsrequest.h:34</a></div></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00035">sqsrequest.h:35</a></div></div>
 <div class="ttc" id="classSqsRequestPrivate_html"><div class="ttname"><a href="classSqsRequestPrivate.html">SqsRequestPrivate</a></div><div class="ttdoc">Private implementation for SqsRequest. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest__p_8h_source.html#l00033">sqsrequest_p.h:33</a></div></div>
 <div class="ttc" id="classSqsRequestPrivate_html_a4b41dd77ec9a42bd23e7a96fc4afdfa4"><div class="ttname"><a href="classSqsRequestPrivate.html#a4b41dd77ec9a42bd23e7a96fc4afdfa4">SqsRequestPrivate::parameters</a></div><div class="ttdeci">QVariantMap parameters</div><div class="ttdoc">SQS request (query string) parameters. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest__p_8h_source.html#l00038">sqsrequest_p.h:38</a></div></div>
 <div class="ttc" id="classAwsAbstractRequestPrivate_html"><div class="ttname"><a href="classAwsAbstractRequestPrivate.html">AwsAbstractRequestPrivate</a></div><div class="ttdoc">Private implementation for AwsAbstractRequest. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractrequest__p_8h_source.html#l00036">awsabstractrequest_p.h:36</a></div></div>
 <div class="ttc" id="classSqsRequestPrivate_html_acaac93cac32bb206ba657137f4e6e850"><div class="ttname"><a href="classSqsRequestPrivate.html#acaac93cac32bb206ba657137f4e6e850">SqsRequestPrivate::apiVersion</a></div><div class="ttdeci">QString apiVersion</div><div class="ttdoc">SQS API version string. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest__p_8h_source.html#l00037">sqsrequest_p.h:37</a></div></div>
 <div class="ttc" id="classSqsRequestPrivate_html_a8b78138cac99a6f83e99ccb283912b67"><div class="ttname"><a href="classSqsRequestPrivate.html#a8b78138cac99a6f83e99ccb283912b67">SqsRequestPrivate::action</a></div><div class="ttdeci">SqsRequest::Action action</div><div class="ttdoc">SQS action to be performed. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest__p_8h_source.html#l00036">sqsrequest_p.h:36</a></div></div>
-<div class="ttc" id="classSqsRequest_html_a739caff500bb6ef38a9bafcb14a68804"><div class="ttname"><a href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a></div><div class="ttdeci">Action</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00038">sqsrequest.h:38</a></div></div>
+<div class="ttc" id="classSqsRequest_html_a739caff500bb6ef38a9bafcb14a68804"><div class="ttname"><a href="classSqsRequest.html#a739caff500bb6ef38a9bafcb14a68804">SqsRequest::Action</a></div><div class="ttdeci">Action</div><div class="ttdoc">Actions supported by SQS. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8h_source.html#l00039">sqsrequest.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:34 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:50 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

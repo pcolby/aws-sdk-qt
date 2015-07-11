@@ -124,69 +124,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">class </span><a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>SqsClientPrivate;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classSqsClient.html">   38</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classSqsClient.html">SqsClient</a> : <span class="keyword">public</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a> {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classSqsClient.html">SqsClient</a>(<span class="keyword">const</span> <a class="code" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> region = AwsRegion::InvalidRegion,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;              <a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * credentials = NULL,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;              QNetworkAccessManager * <span class="keyword">const</span> manager = NULL,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              QObject * <span class="keyword">const</span> parent = 0);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classSqsClient.html">SqsClient</a>(<span class="keyword">const</span> QUrl &amp;endpoint, <a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * credentials = NULL,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;              QNetworkAccessManager * <span class="keyword">const</span> manager = NULL,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;              QObject * <span class="keyword">const</span> parent = 0);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> * createQueue(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> * createQueue(<span class="keyword">const</span> QString &amp;queueName, <span class="keyword">const</span> QVariantMap &amp;attributes = QVariantMap());</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    void addPermission(const QStringList &amp;awsAccountIds, const QStringList actionNames, const QString &amp;label, const QString &amp;queueUrl);</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    void changeMessageVisibility(const QString &amp;queueUrl, const QString &amp;receiptHandle, const int visbilityTimeout);</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    void changeMessageVisibilityBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles, const int visbilityTimeout);</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    void createQueue(const QString &amp;queueName, const QStringMap &amp;attributes = QStringMap());</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    void createQueue(const SqsCreateQueueRequest &amp;request);</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    void deleteMessage(const QString &amp;queueUrl, const QString &amp;receiptHandle);</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    void deleteMessageBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles);</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    void deleteQueue(const QString &amp;queueUrl);</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    void getQueueUrl(const QString &amp;queueName, const QString &amp;queueOwnerAWSAccountId = QString());</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    void listDeadLetterSourceQueues(const QString &amp;queueUrl);</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    void listQueues(const QString &amp;queueNamePrefix = QString());</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    void purgeQueue(const QString &amp;queueUrl);</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    void receiveMessage(const QString &amp;queueName, ...);</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    void receiveMessage(const SqsReceiveMessageRequest &amp;request);</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    void removePermission(const QString &amp;lablel, const QString &amp;queueUrl);</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    void sendMessage(const QString &amp;queueUrl, const QByteArray &amp;message, ...);</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    void sendMessage(const SqsSendMessageRequest &amp;request);</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    void sendMessageBatch(const QString &amp;queueUrl, const QByteArrayList &amp;messages, ...);</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    void sendMessageBatch(const SqsSendMessageRequestList &amp;requests);</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    void setQueueAttributes(const QString &amp;queueUrl, const QStringMap &amp;attributes = QStringMap());</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    void setQueueAttributes(const SqsSetQueueAttributesRequest &amp;request);</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsClient.html">SqsClient</a>)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classSqsClient.html">SqsClient</a>)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>TestSqsClient;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">class </span><a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classSqsClient.html">   40</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classSqsClient.html">SqsClient</a> : <span class="keyword">public</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classSqsClient.html">SqsClient</a>(<span class="keyword">const</span> <a class="code" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> region = AwsRegion::InvalidRegion,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              <a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * credentials = NULL,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;              QNetworkAccessManager * <span class="keyword">const</span> manager = NULL,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;              QObject * <span class="keyword">const</span> parent = 0);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSqsClient.html">SqsClient</a>(<span class="keyword">const</span> QUrl &amp;endpoint, <a class="code" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> * credentials = NULL,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;              QNetworkAccessManager * <span class="keyword">const</span> manager = NULL,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;              QObject * <span class="keyword">const</span> parent = 0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> * addPermission(<span class="keyword">const</span> <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;request);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> * createQueue(<span class="keyword">const</span> <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> * createQueue(<span class="keyword">const</span> QString &amp;queueName,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                         <span class="keyword">const</span> QVariantMap &amp;attributes = QVariantMap());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    void changeMessageVisibility(const QString &amp;queueUrl, const QString &amp;receiptHandle, const int visbilityTimeout);</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    void changeMessageVisibilityBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles, const int visbilityTimeout);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    void deleteMessage(const QString &amp;queueUrl, const QString &amp;receiptHandle);</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    void deleteMessageBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    void deleteQueue(const QString &amp;queueUrl);</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    void getQueueUrl(const QString &amp;queueName, const QString &amp;queueOwnerAWSAccountId = QString());</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    void listDeadLetterSourceQueues(const QString &amp;queueUrl);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    void listQueues(const QString &amp;queueNamePrefix = QString());</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    void purgeQueue(const QString &amp;queueUrl);</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    void receiveMessage(const QString &amp;queueName, ...);</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    void receiveMessage(const SqsReceiveMessageRequest &amp;request);</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    void removePermission(const QString &amp;lablel, const QString &amp;queueUrl);</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    void sendMessage(const QString &amp;queueUrl, const QByteArray &amp;message, ...);</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">    void sendMessage(const SqsSendMessageRequest &amp;request);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">    void sendMessageBatch(const QString &amp;queueUrl, const QByteArrayList &amp;messages, ...);</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">    void sendMessageBatch(const SqsSendMessageRequestList &amp;requests);</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">    void setQueueAttributes(const QString &amp;queueUrl, const QStringMap &amp;attributes = QStringMap());</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    void setQueueAttributes(const SqsSetQueueAttributesRequest &amp;request);</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsClient.html">SqsClient</a>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Q_DISABLE_COPY(<a class="code" href="classSqsClient.html">SqsClient</a>)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>TestSqsClient;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> sqsclient.h:38</div></div>
-<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles Amazon Simple Queue Service (SQS) responses. </div><div class="ttdef"><b>Definition:</b> sqscreatequeueresponse.h:30</div></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> sqsclient.h:40</div></div>
+<div class="ttc" id="classSqsAddPermissionResponse_html"><div class="ttname"><a href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a></div><div class="ttdoc">Handles SQS AddPermission responses. </div><div class="ttdef"><b>Definition:</b> sqsaddpermissionresponse.h:30</div></div>
+<div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles SQS CreateQueue responses. </div><div class="ttdef"><b>Definition:</b> sqscreatequeueresponse.h:30</div></div>
 <div class="ttc" id="classAwsRegion_html_aacff2316d6b458313e7315540f5cf39d"><div class="ttname"><a href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a></div><div class="ttdeci">Region</div><div class="ttdoc">AWS regions. </div><div class="ttdef"><b>Definition:</b> awsregion.h:67</div></div>
 <div class="ttc" id="classAwsAbstractCredentials_html"><div class="ttname"><a href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a></div><div class="ttdoc">Interface class for providing AWS credentials. </div><div class="ttdef"><b>Definition:</b> awsabstractcredentials.h:32</div></div>
+<div class="ttc" id="classSqsAddPermissionRequest_html"><div class="ttname"><a href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a></div><div class="ttdoc">Implements SQS AddPermission requests. </div><div class="ttdef"><b>Definition:</b> sqsaddpermissionrequest.h:29</div></div>
 <div class="ttc" id="classAwsAbstractClient_html"><div class="ttname"><a href="classAwsAbstractClient.html">AwsAbstractClient</a></div><div class="ttdoc">Interface class for providing access to individual AWS services. </div><div class="ttdef"><b>Definition:</b> awsabstractclient.h:38</div></div>
-<div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> sqscreatequeuerequest.h:29</div></div>
+<div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> sqscreatequeuerequest.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:35 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:51 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

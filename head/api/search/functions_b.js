@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['parameter',['parameter',['../classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8',1,'SqsRequest']]],
-  ['parameters',['parameters',['../classSqsRequest.html#a96ff20e30474431382a30b9341f4e996',1,'SqsRequest']]],
-  ['parse',['parse',['../classAwsAbstractResponse.html#ab47b0951d4db7aac7be5243bc54040e6',1,'AwsAbstractResponse']]],
-  ['parsefailure',['parseFailure',['../classAwsAbstractResponse.html#ad4ed2aaf776928e62cac4f4ffc62ed84',1,'AwsAbstractResponse::parseFailure()'],['../classSqsResponse.html#a96a900bddf9b097a4886c77215960024',1,'SqsResponse::parseFailure()']]],
-  ['parsesuccess',['parseSuccess',['../classAwsAbstractResponse.html#aad6d4ebfca17ee96fc27fc8bb33e0dba',1,'AwsAbstractResponse::parseSuccess()'],['../classSqsCreateQueueResponse.html#a610856edcbdbb50f261498dee1b48553',1,'SqsCreateQueueResponse::parseSuccess()']]],
-  ['policy',['policy',['../classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4',1,'SqsCreateQueueRequest']]]
+  ['operation',['operation',['../classAwsAbstractRequest.html#a1f535def5f6e794a2454d49543ff8c71',1,'AwsAbstractRequest']]],
+  ['operator_3d',['operator=',['../classAwsAbstractRequest.html#af861beff1bac4a4870a4c312d86fb753',1,'AwsAbstractRequest::operator=()'],['../classSqsRequest.html#a03bae7aece53223c0e5847a5800e9d1e',1,'SqsRequest::operator=()']]],
+  ['operator_3d_3d',['operator==',['../classAwsAbstractRequest.html#aa3a088edacba3942a9a452e4b32ec567',1,'AwsAbstractRequest::operator==()'],['../classSqsError.html#a5102147837ef6a2db4e7983c9c724464',1,'SqsError::operator==()'],['../classSqsRequest.html#a636ef857a13d51cd3d82a49580849fd7',1,'SqsRequest::operator==()']]]
 ];

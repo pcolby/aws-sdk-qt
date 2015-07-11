@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transport',['Transport',['../classAwsEndpoint.html#ac578ec7954d65e6f7aa06331cec06e23',1,'AwsEndpoint']]]
+  ['region',['Region',['../classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d',1,'AwsRegion']]]
 ];

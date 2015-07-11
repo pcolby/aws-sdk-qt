@@ -290,7 +290,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractClien
 
 <p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00271">271</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00194">setCredentials()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00053">SqsClient::SqsClient()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00194">setCredentials()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00055">SqsClient::SqsClient()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> d-&gt;credentials;</div>
@@ -327,7 +327,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractClien
 
 <p>References <a class="el" href="awsendpoint_8cpp_source.html#l00163">AwsEndpoint::getEndpoint()</a>, <a class="el" href="awsregion_8cpp_source.html#l00120">AwsRegion::name()</a>, <a class="el" href="awsabstractclient_8cpp_source.html#l00121">region()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00175">serviceName()</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00140">send()</a>, <a class="el" href="awsabstractclient_8cpp_source.html#l00214">setEndpoint()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00082">SqsClient::SqsClient()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00140">send()</a>, <a class="el" href="awsabstractclient_8cpp_source.html#l00214">setEndpoint()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00084">SqsClient::SqsClient()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> (d-&gt;endpoint.isValid()) ? d-&gt;endpoint :</div>
@@ -387,7 +387,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractClien
 
 <p>Definition at line <a class="el" href="awsabstractclient_8cpp_source.html#l00121">121</a> of file <a class="el" href="awsabstractclient_8cpp_source.html">awsabstractclient.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00094">endpoint()</a>, <a class="el" href="awsabstractclient_8cpp_source.html#l00260">setRegion()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00053">SqsClient::SqsClient()</a>.</p>
+<p>Referenced by <a class="el" href="awsabstractclient_8cpp_source.html#l00094">endpoint()</a>, <a class="el" href="awsabstractclient_8cpp_source.html#l00260">setRegion()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00055">SqsClient::SqsClient()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    Q_D(<span class="keyword">const</span> <a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> d-&gt;region;</div>
@@ -433,7 +433,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractClien
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00094">endpoint()</a>, <a class="el" href="classAwsAbstractRequest.html#a2da1991ae228b896e884935aec40a32c">AwsAbstractRequest::isValid()</a>, <a class="el" href="awsabstractrequest_8cpp_source.html#l00189">AwsAbstractRequest::send()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00175">serviceName()</a>.</p>
 
-<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00104">SqsClient::createQueue()</a>.</p>
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00106">SqsClient::addPermission()</a>, and <a class="el" href="sqsclient_8cpp_source.html#l00120">SqsClient::createQueue()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    Q_D(<a class="code" href="classAwsAbstractClient.html">AwsAbstractClient</a>);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    Q_ASSERT(d-&gt;credentials);</div>
@@ -694,7 +694,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TestAwsAbstractClien
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:34 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:50 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

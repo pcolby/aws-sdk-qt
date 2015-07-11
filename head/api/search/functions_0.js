@@ -3,6 +3,7 @@ var searchData=
   ['accesskeyid',['accessKeyId',['../classAwsAbstractCredentials.html#a62272d5ac7ab3317452a17967efd69ac',1,'AwsAbstractCredentials::accessKeyId()'],['../classAwsAnonymousCredentials.html#a3e42bb52bfd7891534a955c83b9ba92c',1,'AwsAnonymousCredentials::accessKeyId()'],['../classAwsBasicCredentials.html#a0c3d2377f88d0750bdd7c84abad77cbf',1,'AwsBasicCredentials::accessKeyId()']]],
   ['action',['action',['../classSqsRequest.html#aa5a586fbf0ce41e470f29701cbeccb3e',1,'SqsRequest']]],
   ['actionstring',['actionString',['../classSqsRequest.html#a68496b8fe518d93ce3952f5de1f3c817',1,'SqsRequest']]],
+  ['addpermission',['addPermission',['../classSqsClient.html#ad667aac3b84e3f3992f3b41de704412f',1,'SqsClient']]],
   ['apiversion',['apiVersion',['../classSqsRequest.html#ae1224fbd69cdace98e06bbde890b362b',1,'SqsRequest']]],
   ['attribute',['attribute',['../classSqsCreateQueueRequest.html#aed3daa9035fef359978a2b96c9cfd1eb',1,'SqsCreateQueueRequest']]],
   ['attributes',['attributes',['../classSqsCreateQueueRequest.html#a3ab7e8dc6b29baeb07d193f3a3442f3e',1,'SqsCreateQueueRequest']]],

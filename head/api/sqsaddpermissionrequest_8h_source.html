@@ -116,25 +116,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;QTAWS_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classSqsAddPermissionRequest.html">   27</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> : <span class="keyword">public</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>SqsAddPermissionRequestPrivate;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classAwsAbstractRequest.html#a2da1991ae228b896e884935aec40a32c">isValid</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;QTAWS_END_NAMESPACE</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:34</div></div>
-<div class="ttc" id="classAwsAbstractRequest_html_a2da1991ae228b896e884935aec40a32c"><div class="ttname"><a href="classAwsAbstractRequest.html#a2da1991ae228b896e884935aec40a32c">AwsAbstractRequest::isValid</a></div><div class="ttdeci">virtual bool isValid() const =0</div><div class="ttdoc">Is this request valid? </div></div>
-<div class="ttc" id="classSqsAddPermissionRequest_html"><div class="ttname"><a href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a></div><div class="ttdef"><b>Definition:</b> sqsaddpermissionrequest.h:27</div></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classSqsAddPermissionRequest.html">   29</a></span>&#160;<span class="keyword">class </span>QTAWS_EXPORT <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> : <span class="keyword">public</span> <a class="code" href="classSqsRequest.html">SqsRequest</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classSqsAddPermissionRequest.html#aa50169f5f2d7792d6d71cdd88d7b1b1f">   33</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classSqsAddPermissionRequest.html#aa50169f5f2d7792d6d71cdd88d7b1b1f">PermissibleAction</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        SendMessageAction             = SqsRequest::SendMessageAction,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        ReceiveMessageAction          = SqsRequest::ReceiveMessageAction,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        DeleteMessageAction           = SqsRequest::DeleteMessageAction,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ChangeMessageVisibilityAction = SqsRequest::ChangeMessageVisibilityAction,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        GetQueueAttributesAction      = SqsRequest::GetQueueAttributesAction,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        GetQueueUrlAction             = SqsRequest::GetQueueUrlAction</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Q_DECLARE_FLAGS(PermissibleActions, PermissibleAction)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classSqsAddPermissionRequest.html#af05ff2d54739e2ca3c4c76675a34ed19">   44</a></span>&#160;    typedef QMap&lt;QString, PermissibleActions&gt; <a class="code" href="classSqsAddPermissionRequest.html#af05ff2d54739e2ca3c4c76675a34ed19">PermissionsMap</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>(const QString &amp;label,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                            const PermissionsMap &amp;permissions = PermissionsMap(),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                            const QString &amp;queueUrl = QString());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>(const <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;other);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    virtual <span class="keywordtype">bool</span> isValid() const;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QString label() const;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    PermissibleActions permissions(const QString &amp;accountId) const;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    PermissionsMap permissions() const;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString queueUrl() const;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> setLabel(const QString &amp;label);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> setQueueUrl(const QString &amp;queueUrl);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setPermission(const QString &amp;accountId, const <a class="code" href="classSqsAddPermissionRequest.html#aa50169f5f2d7792d6d71cdd88d7b1b1f">PermissibleAction</a> action,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                       const <span class="keywordtype">bool</span> permitted = true);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setPermissions(const QString &amp;accountId, const PermissibleActions &amp;actions);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setPermissions(const PermissionsMap &amp;permissions);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;protected:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    virtual <a class="code" href="classAwsAbstractResponse.html">AwsAbstractResponse</a> * response(QNetworkReply * const reply) const;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;private:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Q_DECLARE_PRIVATE(<a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    friend class TestSqsAddPermissionRequest;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;Q_DECLARE_OPERATORS_FOR_FLAGS(<a class="code" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a>::PermissibleActions)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;QTAWS_END_NAMESPACE</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classSqsRequest_html"><div class="ttname"><a href="classSqsRequest.html">SqsRequest</a></div><div class="ttdoc">Interface class for providing SQS requests. </div><div class="ttdef"><b>Definition:</b> sqsrequest.h:35</div></div>
+<div class="ttc" id="classSqsAddPermissionRequest_html_af05ff2d54739e2ca3c4c76675a34ed19"><div class="ttname"><a href="classSqsAddPermissionRequest.html#af05ff2d54739e2ca3c4c76675a34ed19">SqsAddPermissionRequest::PermissionsMap</a></div><div class="ttdeci">QMap&lt; QString, PermissibleActions &gt; PermissionsMap</div><div class="ttdoc">Map of principals (aka accountIds) to their permissions. </div><div class="ttdef"><b>Definition:</b> sqsaddpermissionrequest.h:44</div></div>
+<div class="ttc" id="classSqsAddPermissionRequest_html"><div class="ttname"><a href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a></div><div class="ttdoc">Implements SQS AddPermission requests. </div><div class="ttdef"><b>Definition:</b> sqsaddpermissionrequest.h:29</div></div>
+<div class="ttc" id="classAwsAbstractResponse_html"><div class="ttname"><a href="classAwsAbstractResponse.html">AwsAbstractResponse</a></div><div class="ttdoc">Interface class for processing AWS responses. </div><div class="ttdef"><b>Definition:</b> awsabstractresponse.h:33</div></div>
+<div class="ttc" id="classSqsAddPermissionRequest_html_aa50169f5f2d7792d6d71cdd88d7b1b1f"><div class="ttname"><a href="classSqsAddPermissionRequest.html#aa50169f5f2d7792d6d71cdd88d7b1b1f">SqsAddPermissionRequest::PermissibleAction</a></div><div class="ttdeci">PermissibleAction</div><div class="ttdoc">The subset of SQS actions that may be used with the AddPermission action. </div><div class="ttdef"><b>Definition:</b> sqsaddpermissionrequest.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:35 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:51 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

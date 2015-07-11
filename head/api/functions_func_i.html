@@ -73,6 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
     </ul>
   </div>
@@ -86,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li class="current"><a href="functions_func_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_func_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
@@ -139,29 +141,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classAwsRegion.html#a6a0b7fabbf3bc1a0eeb5564da97fbc1e">AwsRegion</a>
 , <a class="el" href="classSqsAddPermissionRequest.html#a8f8c1027bd383b9771f7ce874b3e3fa0">SqsAddPermissionRequest</a>
 , <a class="el" href="classSqsChangeMessageVisibilityBatchRequest.html#afdf215384ed1b9f76a6f8a4c7f17b2cb">SqsChangeMessageVisibilityBatchRequest</a>
+, <a class="el" href="classSqsChangeMessageVisibilityBatchResponse.html#a4fe5f244063e1e2a3703f5c48bff1dfe">SqsChangeMessageVisibilityBatchResponse</a>
 , <a class="el" href="classSqsChangeMessageVisibilityRequest.html#adb21746c00bc6184c05841490269b3a0">SqsChangeMessageVisibilityRequest</a>
 , <a class="el" href="classSqsCreateQueueRequest.html#add0347adc28d3dd161468da42e844134">SqsCreateQueueRequest</a>
 , <a class="el" href="classSqsCreateQueueResponse.html#aa31d73f58e066f5942fba854d2e6fd9b">SqsCreateQueueResponse</a>
 , <a class="el" href="classSqsDeleteMessageBatchRequest.html#adf250d365e9af7bd78b9fb6d7557824f">SqsDeleteMessageBatchRequest</a>
+, <a class="el" href="classSqsDeleteMessageBatchResponse.html#a494a701996c674ea4a3b5c77c654e810">SqsDeleteMessageBatchResponse</a>
 , <a class="el" href="classSqsDeleteMessageRequest.html#a86818bc66f1f672d5e43ffe7dce5a0bb">SqsDeleteMessageRequest</a>
 , <a class="el" href="classSqsDeleteQueueRequest.html#afc65b7702ee44aa303935a98b4312bd8">SqsDeleteQueueRequest</a>
 , <a class="el" href="classSqsGetQueueAttributesRequest.html#af66766b450ee1763efffb1089fd6a286">SqsGetQueueAttributesRequest</a>
+, <a class="el" href="classSqsGetQueueAttributesResponse.html#ab91dd66d1fd74935849a8eab3b1a3f25">SqsGetQueueAttributesResponse</a>
 , <a class="el" href="classSqsGetQueueUrlRequest.html#a41f115dc43de8bcb276a7c396c929a94">SqsGetQueueUrlRequest</a>
+, <a class="el" href="classSqsGetQueueUrlResponse.html#a44c821caea29be963ebbf09b216bfae7">SqsGetQueueUrlResponse</a>
 , <a class="el" href="classSqsListDeadLetterSourceQueuesRequest.html#ac3377a995c93e86afedffdb03f56b6a2">SqsListDeadLetterSourceQueuesRequest</a>
+, <a class="el" href="classSqsListDeadLetterSourceQueuesResponse.html#a566b92f2e6ce34476c4c2dcfd15dc055">SqsListDeadLetterSourceQueuesResponse</a>
 , <a class="el" href="classSqsListQueuesRequest.html#a6479ce59649d68ed22b5d518eee22873">SqsListQueuesRequest</a>
+, <a class="el" href="classSqsListQueuesResponse.html#a620106b0c1c96bc32c89ba26121a8b61">SqsListQueuesResponse</a>
 , <a class="el" href="classSqsPurgeQueueRequest.html#ad812e97341ba561fa045fdcc6ebcc4be">SqsPurgeQueueRequest</a>
 , <a class="el" href="classSqsReceiveMessageRequest.html#a58ee497a255d097604d52340407c7788">SqsReceiveMessageRequest</a>
+, <a class="el" href="classSqsReceiveMessageResponse.html#a97f16a3caf7be5ae34f85b3a3a2e0f4c">SqsReceiveMessageResponse</a>
 , <a class="el" href="classSqsRemovePermissionRequest.html#a28e51e3259bcf8d8fc017f385e3efe74">SqsRemovePermissionRequest</a>
 , <a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">SqsResponse</a>
 , <a class="el" href="classSqsSendMessageBatchRequest.html#ab8c86d5eb22e0d40cccb75ad00b55a93">SqsSendMessageBatchRequest</a>
+, <a class="el" href="classSqsSendMessageBatchResponse.html#a995f28005021c62dbbe871225be78c01">SqsSendMessageBatchResponse</a>
 , <a class="el" href="classSqsSendMessageRequest.html#a21bdc6ebdd038272e68f1db7ade8f9d3">SqsSendMessageRequest</a>
+, <a class="el" href="classSqsSendMessageResponse.html#a8eb47d554afbfebbd9820af38aacbf17">SqsSendMessageResponse</a>
 , <a class="el" href="classSqsSetQueueAttributesRequest.html#a9ced6ee796a409c313c6d5f9f2743e9e">SqsSetQueueAttributesRequest</a>
+</li>
+<li>isValidQueueName()
+: <a class="el" href="classSqsRequest.html#afc2ab3332db546be3c5ede7a90ac98a9">SqsRequest</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:35 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:51 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

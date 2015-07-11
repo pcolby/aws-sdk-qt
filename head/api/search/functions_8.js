@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['maximummessagesize',['maximumMessageSize',['../classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22',1,'SqsCreateQueueRequest']]],
-  ['message',['message',['../classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb',1,'SqsError']]],
-  ['messageretentionperiod',['messageRetentionPeriod',['../classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5',1,'SqsCreateQueueRequest']]]
+  ['label',['label',['../classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941',1,'SqsAddPermissionRequest']]]
 ];

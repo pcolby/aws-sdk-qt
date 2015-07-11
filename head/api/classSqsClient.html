@@ -113,6 +113,9 @@ Collaboration diagram for SqsClient:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
+<tr class="memitem:ad667aac3b84e3f3992f3b41de704412f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#ad667aac3b84e3f3992f3b41de704412f">addPermission</a> (const <a class="el" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:ad667aac3b84e3f3992f3b41de704412f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add permissions to an SQS queue.  <a href="#ad667aac3b84e3f3992f3b41de704412f">More...</a><br /></td></tr>
+<tr class="separator:ad667aac3b84e3f3992f3b41de704412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97cecd89ba532531052a3e52a6aa2748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request)</td></tr>
 <tr class="memdesc:a97cecd89ba532531052a3e52a6aa2748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a97cecd89ba532531052a3e52a6aa2748">More...</a><br /></td></tr>
 <tr class="separator:a97cecd89ba532531052a3e52a6aa2748"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,6 +286,40 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad667aac3b84e3f3992f3b41de704412f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> * SqsClient::addPermission </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add permissions to an SQS queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a97cecd89ba532531052a3e52a6aa2748"></a>
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +345,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create an SQS queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>The request to send to Amazon.</td></tr>
+    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
   </table>
   </dd>
 </dl>
@@ -371,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 5 2015 20:49:35 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 11 2015 10:58:51 for libqtaws by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
