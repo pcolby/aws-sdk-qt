@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-05 20:49:51</td>
+            <td class="headerValue">2015-07-11 10:16:25</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -122,26 +122,28 @@
 <span class="lineNum">      60 </span>            :                                        const AwsAbstractSignature &amp;signature,
 <span class="lineNum">      61 </span>            :                                        const AwsAbstractCredentials &amp;credentials) const;
 <span class="lineNum">      62 </span>            : 
-<span class="lineNum">      63 </span>            : protected:
-<span class="lineNum">      64 </span>            :     /// @cond internal
-<span class="lineNum">      65 </span>            :     AwsAbstractRequestPrivate * const d_ptr; ///&lt; Internal d-pointer.
-<span class="lineNum">      66 </span>            :     AwsAbstractRequest(AwsAbstractRequestPrivate * const d);
-<span class="lineNum">      67 </span>            :     /// @endcond
-<span class="lineNum">      68 </span>            : 
-<span class="lineNum">      69 </span>            :     void setData(const QByteArray &amp;data);
-<span class="lineNum">      70 </span>            :     void setOperation(const QNetworkAccessManager::Operation operation);
-<span class="lineNum">      71 </span>            : 
-<span class="lineNum">      72 </span>            :     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const = 0;
-<span class="lineNum">      73 </span>            :     virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const = 0;
-<a name="74"><span class="lineNum">      74 </span>            : </a>
-<span class="lineNum">      75 </span>            : private:
-<span class="lineNum">      76 </span><span class="lineCov">       2350 :     Q_DECLARE_PRIVATE(AwsAbstractRequest)</span>
-<span class="lineNum">      77 </span>            :     friend class TestAwsAbstractRequest;
-<span class="lineNum">      78 </span>            : };
-<span class="lineNum">      79 </span>            : 
-<span class="lineNum">      80 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      63 </span>            :     virtual bool operator==(const AwsAbstractRequest &amp;other) const;
+<span class="lineNum">      64 </span>            : 
+<span class="lineNum">      65 </span>            : protected:
+<span class="lineNum">      66 </span>            :     /// @cond internal
+<span class="lineNum">      67 </span>            :     AwsAbstractRequestPrivate * const d_ptr; ///&lt; Internal d-pointer.
+<span class="lineNum">      68 </span>            :     AwsAbstractRequest(AwsAbstractRequestPrivate * const d);
+<span class="lineNum">      69 </span>            :     /// @endcond
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            :     void setData(const QByteArray &amp;data);
+<span class="lineNum">      72 </span>            :     void setOperation(const QNetworkAccessManager::Operation operation);
+<span class="lineNum">      73 </span>            : 
+<span class="lineNum">      74 </span>            :     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const = 0;
+<span class="lineNum">      75 </span>            :     virtual QNetworkRequest unsignedRequest(const QUrl &amp;endpoint) const = 0;
+<a name="76"><span class="lineNum">      76 </span>            : </a>
+<span class="lineNum">      77 </span>            : private:
+<span class="lineNum">      78 </span><span class="lineCov">       7664 :     Q_DECLARE_PRIVATE(AwsAbstractRequest)</span>
+<span class="lineNum">      79 </span>            :     friend class TestAwsAbstractRequest;
+<span class="lineNum">      80 </span>            : };
 <span class="lineNum">      81 </span>            : 
-<span class="lineNum">      82 </span>            : #endif
+<span class="lineNum">      82 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      83 </span>            : 
+<span class="lineNum">      84 </span>            : #endif
 </pre>
       </td>
     </tr>
