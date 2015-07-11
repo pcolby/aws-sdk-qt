@@ -52,7 +52,7 @@ SqsSendMessageBatchResponse::SqsSendMessageBatchResponse(const SqsSendMessageBat
 
 bool SqsSendMessageBatchResponse::isValid() const
 {
-    Q_D(const SqsSendMessageBatchResponse);
+    //Q_D(const SqsSendMessageBatchResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

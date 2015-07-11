@@ -52,7 +52,7 @@ SqsGetQueueAttributesResponse::SqsGetQueueAttributesResponse(const SqsGetQueueAt
 
 bool SqsGetQueueAttributesResponse::isValid() const
 {
-    Q_D(const SqsGetQueueAttributesResponse);
+    //Q_D(const SqsGetQueueAttributesResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

@@ -52,7 +52,7 @@ SqsListDeadLetterSourceQueuesResponse::SqsListDeadLetterSourceQueuesResponse(con
 
 bool SqsListDeadLetterSourceQueuesResponse::isValid() const
 {
-    Q_D(const SqsListDeadLetterSourceQueuesResponse);
+    //Q_D(const SqsListDeadLetterSourceQueuesResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

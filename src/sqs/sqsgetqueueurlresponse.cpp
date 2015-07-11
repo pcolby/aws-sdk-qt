@@ -52,7 +52,7 @@ SqsGetQueueUrlResponse::SqsGetQueueUrlResponse(const SqsGetQueueUrlRequest &requ
 
 bool SqsGetQueueUrlResponse::isValid() const
 {
-    Q_D(const SqsGetQueueUrlResponse);
+    //Q_D(const SqsGetQueueUrlResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

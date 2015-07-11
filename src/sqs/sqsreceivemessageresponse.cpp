@@ -52,7 +52,7 @@ SqsReceiveMessageResponse::SqsReceiveMessageResponse(const SqsReceiveMessageRequ
 
 bool SqsReceiveMessageResponse::isValid() const
 {
-    Q_D(const SqsReceiveMessageResponse);
+    //Q_D(const SqsReceiveMessageResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

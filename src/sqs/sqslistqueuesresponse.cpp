@@ -52,7 +52,7 @@ SqsListQueuesResponse::SqsListQueuesResponse(const SqsListQueuesRequest &request
 
 bool SqsListQueuesResponse::isValid() const
 {
-    Q_D(const SqsListQueuesResponse);
+    //Q_D(const SqsListQueuesResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

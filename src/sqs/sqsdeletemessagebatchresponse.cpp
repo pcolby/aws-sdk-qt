@@ -52,7 +52,7 @@ SqsDeleteMessageBatchResponse::SqsDeleteMessageBatchResponse(const SqsDeleteMess
 
 bool SqsDeleteMessageBatchResponse::isValid() const
 {
-    Q_D(const SqsDeleteMessageBatchResponse);
+    //Q_D(const SqsDeleteMessageBatchResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }

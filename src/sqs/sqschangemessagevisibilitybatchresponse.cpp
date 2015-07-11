@@ -52,7 +52,7 @@ SqsChangeMessageVisibilityBatchResponse::SqsChangeMessageVisibilityBatchResponse
 
 bool SqsChangeMessageVisibilityBatchResponse::isValid() const
 {
-    Q_D(const SqsChangeMessageVisibilityBatchResponse);
+    //Q_D(const SqsChangeMessageVisibilityBatchResponse);
     /// @todo
     return ((false) && (SqsResponse::isValid()));
 }
