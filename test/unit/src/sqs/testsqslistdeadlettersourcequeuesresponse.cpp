@@ -84,6 +84,7 @@ void TestSqsListDeadLetterSourceQueuesResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsListDeadLetterSourceQueuesRequest request;
     SqsListDeadLetterSourceQueuesResponse response(request, NULL);

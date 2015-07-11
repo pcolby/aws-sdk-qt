@@ -84,6 +84,7 @@ void TestSqsListQueuesResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsListQueuesRequest request;
     SqsListQueuesResponse response(request, NULL);

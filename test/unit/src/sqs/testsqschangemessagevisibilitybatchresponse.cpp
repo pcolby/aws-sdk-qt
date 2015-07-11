@@ -84,6 +84,7 @@ void TestSqsChangeMessageVisibilityBatchResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsChangeMessageVisibilityBatchRequest request;
     SqsChangeMessageVisibilityBatchResponse response(request, NULL);

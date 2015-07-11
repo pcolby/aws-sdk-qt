@@ -84,6 +84,7 @@ void TestSqsSendMessageResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsSendMessageRequest request;
     SqsSendMessageResponse response(request, NULL);

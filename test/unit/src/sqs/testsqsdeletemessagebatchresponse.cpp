@@ -84,6 +84,7 @@ void TestSqsDeleteMessageBatchResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsDeleteMessageBatchRequest request;
     SqsDeleteMessageBatchResponse response(request, NULL);

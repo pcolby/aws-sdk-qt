@@ -84,6 +84,7 @@ void TestSqsGetQueueUrlResponse::isValid()
 {
     QFETCH(QByteArray, xml);
     QFETCH(bool, isValid);
+    Q_UNUSED(isValid) ///< @todo Remove this.
 
     SqsGetQueueUrlRequest request;
     SqsGetQueueUrlResponse response(request, NULL);
