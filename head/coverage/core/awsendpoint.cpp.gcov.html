@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - libqtaws 0.1.0 - core/awsendpoint.cpp</title>
+  <title>LCOV - libqtaws 0.2.0 - core/awsendpoint.cpp</title>
   <link rel="stylesheet" type="text/css" href="../gcov.css">
 </head>
 
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test:</td>
-            <td class="headerValue">libqtaws 0.1.0</td>
+            <td class="headerValue">libqtaws 0.2.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">194</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-11 10:16:25</td>
+            <td class="headerValue">2015-07-12 21:06:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">25</td>
@@ -133,46 +133,46 @@
 <span class="lineNum">      71 </span>            :  *
 <a name="72"><span class="lineNum">      72 </span>            :  * @param  hostName  Name of an AWS host, encoded as UTF-8.</a>
 <span class="lineNum">      73 </span>            :  */
-<span class="lineNum">      74 </span><span class="lineCov">       1674 : AwsEndpoint::AwsEndpoint(const QByteArray &amp;hostName)</span>
-<span class="lineNum">      75 </span><span class="lineCov">       1674 :     : d_ptr(new AwsEndpointPrivate(this))</span>
+<span class="lineNum">      74 </span><span class="lineCov">       3162 : AwsEndpoint::AwsEndpoint(const QByteArray &amp;hostName)</span>
+<span class="lineNum">      75 </span><span class="lineCov">       3162 :     : d_ptr(new AwsEndpointPrivate(this))</span>
 <span class="lineNum">      76 </span>            : {
-<span class="lineNum">      77 </span><span class="lineCov">       1674 :     Q_D(AwsEndpoint);</span>
-<span class="lineNum">      78 </span><span class="lineCov">       1674 :     d-&gt;hostName = QString::fromUtf8(hostName);</span>
-<span class="lineNum">      79 </span><span class="lineCov">       1674 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
-<span class="lineNum">      80 </span><span class="lineCov">       1674 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
-<span class="lineNum">      81 </span><span class="lineCov">       1656 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
-<span class="lineNum">      82 </span><span class="lineCov">       1656 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
+<span class="lineNum">      77 </span><span class="lineCov">       3162 :     Q_D(AwsEndpoint);</span>
+<span class="lineNum">      78 </span><span class="lineCov">       3162 :     d-&gt;hostName = QString::fromUtf8(hostName);</span>
+<span class="lineNum">      79 </span><span class="lineCov">       3162 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">      80 </span><span class="lineCov">       3162 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
+<span class="lineNum">      81 </span><span class="lineCov">       3128 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
+<span class="lineNum">      82 </span><span class="lineCov">       3128 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
 <span class="lineNum">      83 </span>            :         }
-<span class="lineNum">      84 </span><span class="lineCov">       1656 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
-<span class="lineNum">      85 </span><span class="lineCov">       1674 :     }</span>
-<span class="lineNum">      86 </span><span class="lineCov">       1674 : }</span>
+<span class="lineNum">      84 </span><span class="lineCov">       3128 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
+<span class="lineNum">      85 </span><span class="lineCov">       3162 :     }</span>
+<span class="lineNum">      86 </span><span class="lineCov">       3162 : }</span>
 <span class="lineNum">      87 </span>            : 
 <span class="lineNum">      88 </span>            : /**
 <span class="lineNum">      89 </span>            :  * @brief  Constructs a new AwsEndpoint object.
 <span class="lineNum">      90 </span>            :  *
 <a name="91"><span class="lineNum">      91 </span>            :  * @param  hostName  Name of an AWS host.</a>
 <span class="lineNum">      92 </span>            :  */
-<span class="lineNum">      93 </span><span class="lineCov">       8946 : AwsEndpoint::AwsEndpoint(const QString &amp;hostName)</span>
-<span class="lineNum">      94 </span><span class="lineCov">       8946 :     : d_ptr(new AwsEndpointPrivate(this))</span>
+<span class="lineNum">      93 </span><span class="lineCov">      16968 : AwsEndpoint::AwsEndpoint(const QString &amp;hostName)</span>
+<span class="lineNum">      94 </span><span class="lineCov">      16968 :     : d_ptr(new AwsEndpointPrivate(this))</span>
 <span class="lineNum">      95 </span>            : {
-<span class="lineNum">      96 </span><span class="lineCov">       8946 :     Q_D(AwsEndpoint);</span>
-<span class="lineNum">      97 </span><span class="lineCov">       8946 :     d-&gt;hostName = hostName;</span>
-<span class="lineNum">      98 </span><span class="lineCov">       8946 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
-<span class="lineNum">      99 </span><span class="lineCov">       8946 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
-<span class="lineNum">     100 </span><span class="lineCov">       8829 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
-<span class="lineNum">     101 </span><span class="lineCov">       8829 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
+<span class="lineNum">      96 </span><span class="lineCov">      16968 :     Q_D(AwsEndpoint);</span>
+<span class="lineNum">      97 </span><span class="lineCov">      16968 :     d-&gt;hostName = hostName;</span>
+<span class="lineNum">      98 </span><span class="lineCov">      16968 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">      99 </span><span class="lineCov">      16968 :     if (AwsEndpointPrivate::hosts.contains(d-&gt;hostName)) {</span>
+<span class="lineNum">     100 </span><span class="lineCov">      16747 :         if (!AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.empty()) {</span>
+<span class="lineNum">     101 </span><span class="lineCov">      16747 :             d-&gt;regionName = AwsEndpointPrivate::hosts[d-&gt;hostName].regionNames.first();</span>
 <span class="lineNum">     102 </span>            :         }
-<span class="lineNum">     103 </span><span class="lineCov">       8829 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
-<span class="lineNum">     104 </span><span class="lineCov">       8946 :     }</span>
-<span class="lineNum">     105 </span><span class="lineCov">       8946 : }</span>
+<span class="lineNum">     103 </span><span class="lineCov">      16747 :         d-&gt;serviceName = AwsEndpointPrivate::hosts[d-&gt;hostName].serviceName;</span>
+<span class="lineNum">     104 </span><span class="lineCov">      16968 :     }</span>
+<span class="lineNum">     105 </span><span class="lineCov">      16968 : }</span>
 <span class="lineNum">     106 </span>            : 
 <span class="lineNum">     107 </span>            : /**
 <a name="108"><span class="lineNum">     108 </span>            :  * @brief AwsEndpoint destructor.</a>
 <span class="lineNum">     109 </span>            :  */
-<span class="lineNum">     110 </span><span class="lineCov">      10620 : AwsEndpoint::~AwsEndpoint()</span>
+<span class="lineNum">     110 </span><span class="lineCov">      20130 : AwsEndpoint::~AwsEndpoint()</span>
 <span class="lineNum">     111 </span>            : {
-<span class="lineNum">     112 </span><span class="lineCov">      10620 :     delete d_ptr;</span>
-<span class="lineNum">     113 </span><span class="lineCov">      10620 : }</span>
+<span class="lineNum">     112 </span><span class="lineCov">      20130 :     delete d_ptr;</span>
+<span class="lineNum">     113 </span><span class="lineCov">      20130 : }</span>
 <span class="lineNum">     114 </span>            : 
 <span class="lineNum">     115 </span>            : /**
 <span class="lineNum">     116 </span>            :  * @brief  Get a QUrl for an AWS endpoint.
@@ -222,29 +222,29 @@
 <span class="lineNum">     160 </span>            :  * @return  A QUrl representing the AWS endpoint, or an invalid QUrl if there
 <a name="161"><span class="lineNum">     161 </span>            :  *          is no such _known_ AWS endpoint.</a>
 <span class="lineNum">     162 </span>            :  */
-<span class="lineNum">     163 </span><span class="lineCov">      18081 : QUrl AwsEndpoint::getEndpoint(const QString &amp;regionName, const QString &amp;serviceName,</span>
+<span class="lineNum">     163 </span><span class="lineCov">      34397 : QUrl AwsEndpoint::getEndpoint(const QString &amp;regionName, const QString &amp;serviceName,</span>
 <span class="lineNum">     164 </span>            :                               const Transports transport)
 <span class="lineNum">     165 </span>            : {
-<span class="lineNum">     166 </span><span class="lineCov">      18081 :     AwsEndpointPrivate::loadEndpointData();</span>
-<span class="lineNum">     167 </span><span class="lineCov">      18081 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
-<span class="lineNum">     168 </span><span class="lineCov">      36081 :     if ((!AwsEndpointPrivate::regions.contains(regionName)) ||</span>
-<span class="lineNum">     169 </span><span class="lineCov">      18000 :         (!AwsEndpointPrivate::regions[regionName].services.contains(serviceName))) {</span>
-<span class="lineNum">     170 </span><span class="lineCov">        369 :         return QUrl();</span>
+<span class="lineNum">     166 </span><span class="lineCov">      34397 :     AwsEndpointPrivate::loadEndpointData();</span>
+<span class="lineNum">     167 </span><span class="lineCov">      34397 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">     168 </span><span class="lineCov">      68629 :     if ((!AwsEndpointPrivate::regions.contains(regionName)) ||</span>
+<span class="lineNum">     169 </span><span class="lineCov">      34232 :         (!AwsEndpointPrivate::regions[regionName].services.contains(serviceName))) {</span>
+<span class="lineNum">     170 </span><span class="lineCov">        709 :         return QUrl();</span>
 <span class="lineNum">     171 </span>            :     }
 <span class="lineNum">     172 </span>            :     const AwsEndpointPrivate::RegionEndpointInfo &amp;endpointInfo =
-<span class="lineNum">     173 </span><span class="lineCov">      17712 :         AwsEndpointPrivate::regions[regionName].services[serviceName];</span>
-<span class="lineNum">     174 </span><span class="lineCov">      17712 :     if (!(endpointInfo.transports &amp; transport)) {</span>
-<span class="lineNum">     175 </span><span class="lineCov">       4095 :         return QUrl();</span>
+<span class="lineNum">     173 </span><span class="lineCov">      33688 :         AwsEndpointPrivate::regions[regionName].services[serviceName];</span>
+<span class="lineNum">     174 </span><span class="lineCov">      33688 :     if (!(endpointInfo.transports &amp; transport)) {</span>
+<span class="lineNum">     175 </span><span class="lineCov">       7735 :         return QUrl();</span>
 <span class="lineNum">     176 </span>            :     }
 <span class="lineNum">     177 </span>            : 
-<span class="lineNum">     178 </span><span class="lineCov">      27234 :     QUrl url;</span>
-<span class="lineNum">     179 </span><span class="lineCov">      13617 :     url.setHost(endpointInfo.hostName);</span>
-<span class="lineNum">     180 </span><span class="lineCov">      13617 :     if ((endpointInfo.transports &amp; HTTPS) &amp;&amp; (transport &amp; HTTPS))</span>
-<span class="lineNum">     181 </span><span class="lineCov">      11799 :         url.setScheme(QLatin1String(&quot;https&quot;));</span>
-<span class="lineNum">     182 </span><span class="lineCov">       1818 :     else if ((endpointInfo.transports &amp; HTTP) &amp;&amp; (transport &amp; HTTP))</span>
-<span class="lineNum">     183 </span><span class="lineCov">       1800 :         url.setScheme(QLatin1String(&quot;http&quot;));</span>
+<span class="lineNum">     178 </span><span class="lineCov">      51906 :     QUrl url;</span>
+<span class="lineNum">     179 </span><span class="lineCov">      25953 :     url.setHost(endpointInfo.hostName);</span>
+<span class="lineNum">     180 </span><span class="lineCov">      25953 :     if ((endpointInfo.transports &amp; HTTPS) &amp;&amp; (transport &amp; HTTPS))</span>
+<span class="lineNum">     181 </span><span class="lineCov">      22519 :         url.setScheme(QLatin1String(&quot;https&quot;));</span>
+<span class="lineNum">     182 </span><span class="lineCov">       3434 :     else if ((endpointInfo.transports &amp; HTTP) &amp;&amp; (transport &amp; HTTP))</span>
+<span class="lineNum">     183 </span><span class="lineCov">       3400 :         url.setScheme(QLatin1String(&quot;http&quot;));</span>
 <span class="lineNum">     184 </span>            :     /// @todo  Handle SMTP here?
-<span class="lineNum">     185 </span><span class="lineCov">      31698 :     return url;</span>
+<span class="lineNum">     185 </span><span class="lineCov">      60350 :     return url;</span>
 <span class="lineNum">     186 </span>            : }
 <span class="lineNum">     187 </span>            : 
 <span class="lineNum">     188 </span>            : /**
@@ -252,10 +252,10 @@
 <span class="lineNum">     190 </span>            :  *
 <a name="191"><span class="lineNum">     191 </span>            :  * @return  Name of host represented by this endpoint.</a>
 <span class="lineNum">     192 </span>            :  */
-<span class="lineNum">     193 </span><span class="lineCov">       6696 : QString AwsEndpoint::hostName() const</span>
+<span class="lineNum">     193 </span><span class="lineCov">      12648 : QString AwsEndpoint::hostName() const</span>
 <span class="lineNum">     194 </span>            : {
-<span class="lineNum">     195 </span><span class="lineCov">       6696 :     Q_D(const AwsEndpoint);</span>
-<span class="lineNum">     196 </span><span class="lineCov">       6696 :     return d-&gt;hostName;</span>
+<span class="lineNum">     195 </span><span class="lineCov">      12648 :     Q_D(const AwsEndpoint);</span>
+<span class="lineNum">     196 </span><span class="lineCov">      12648 :     return d-&gt;hostName;</span>
 <span class="lineNum">     197 </span>            : }
 <span class="lineNum">     198 </span>            : 
 <span class="lineNum">     199 </span>            : /**
@@ -268,13 +268,13 @@
 <span class="lineNum">     206 </span>            :  * @return `true` if the service is supported in the \p regionName region for at least
 <a name="207"><span class="lineNum">     207 </span>            :  *         one of the specified transports, `false` otherwise.</a>
 <span class="lineNum">     208 </span>            :  */
-<span class="lineNum">     209 </span><span class="lineCov">      32616 : bool AwsEndpoint::isSupported(const QString &amp;regionName, const QString &amp;serviceName, const Transports transport)</span>
+<span class="lineNum">     209 </span><span class="lineCov">      61608 : bool AwsEndpoint::isSupported(const QString &amp;regionName, const QString &amp;serviceName, const Transports transport)</span>
 <span class="lineNum">     210 </span>            : {
-<span class="lineNum">     211 </span><span class="lineCov">      32616 :     AwsEndpointPrivate::loadEndpointData();</span>
-<span class="lineNum">     212 </span><span class="lineCov">      32616 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
-<span class="lineNum">     213 </span><span class="lineCov">      65178 :     return ((AwsEndpointPrivate::regions.contains(regionName)) &amp;&amp;</span>
-<span class="lineNum">     214 </span><span class="lineCov">     130356 :             (AwsEndpointPrivate::regions[regionName].services.contains(serviceName)) &amp;&amp;</span>
-<span class="lineNum">     215 </span><span class="lineCov">      97740 :             (AwsEndpointPrivate::regions[regionName].services[serviceName].transports &amp; transport));</span>
+<span class="lineNum">     211 </span><span class="lineCov">      61608 :     AwsEndpointPrivate::loadEndpointData();</span>
+<span class="lineNum">     212 </span><span class="lineCov">      61608 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">     213 </span><span class="lineCov">     123114 :     return ((AwsEndpointPrivate::regions.contains(regionName)) &amp;&amp;</span>
+<span class="lineNum">     214 </span><span class="lineCov">     246228 :             (AwsEndpointPrivate::regions[regionName].services.contains(serviceName)) &amp;&amp;</span>
+<span class="lineNum">     215 </span><span class="lineCov">     184620 :             (AwsEndpointPrivate::regions[regionName].services[serviceName].transports &amp; transport));</span>
 <span class="lineNum">     216 </span>            : }
 <span class="lineNum">     217 </span>            : 
 <span class="lineNum">     218 </span>            : /**
@@ -284,9 +284,9 @@
 <span class="lineNum">     222 </span>            :  *
 <a name="223"><span class="lineNum">     223 </span>            :  * @return `true` if the transport is supported by this endpoint, `false` otherwise.</a>
 <span class="lineNum">     224 </span>            :  */
-<span class="lineNum">     225 </span><span class="lineCov">       5013 : bool AwsEndpoint::isSupported(const Transport transport) const</span>
+<span class="lineNum">     225 </span><span class="lineCov">       9469 : bool AwsEndpoint::isSupported(const Transport transport) const</span>
 <span class="lineNum">     226 </span>            : {
-<span class="lineNum">     227 </span><span class="lineCov">       5013 :     return isSupported(regionName(), serviceName(), AwsEndpoint::Transports(transport));</span>
+<span class="lineNum">     227 </span><span class="lineCov">       9469 :     return isSupported(regionName(), serviceName(), AwsEndpoint::Transports(transport));</span>
 <span class="lineNum">     228 </span>            : }
 <span class="lineNum">     229 </span>            : 
 <span class="lineNum">     230 </span>            : /**
@@ -305,9 +305,9 @@
 <span class="lineNum">     243 </span>            :  *
 <a name="244"><span class="lineNum">     244 </span>            :  * @return `true` if this endpoint is valid, `false` otherwise.</a>
 <span class="lineNum">     245 </span>            :  */
-<span class="lineNum">     246 </span><span class="lineCov">       3348 : bool AwsEndpoint::isValid() const</span>
+<span class="lineNum">     246 </span><span class="lineCov">       6324 : bool AwsEndpoint::isValid() const</span>
 <span class="lineNum">     247 </span>            : {
-<span class="lineNum">     248 </span><span class="lineCov">       3348 :     return ((!hostName().isEmpty()) &amp;&amp; (!regionName().isEmpty()) &amp;&amp; (!serviceName().isEmpty()));</span>
+<span class="lineNum">     248 </span><span class="lineCov">       6324 :     return ((!hostName().isEmpty()) &amp;&amp; (!regionName().isEmpty()) &amp;&amp; (!serviceName().isEmpty()));</span>
 <span class="lineNum">     249 </span>            : }
 <span class="lineNum">     250 </span>            : 
 <span class="lineNum">     251 </span>            : /**
@@ -321,9 +321,9 @@
 <span class="lineNum">     259 </span>            :  *
 <a name="260"><span class="lineNum">     260 </span>            :  * @see    serviceName</a>
 <span class="lineNum">     261 </span>            :  */
-<span class="lineNum">     262 </span><span class="lineCov">        315 : QString AwsEndpoint::fullServiceName() const</span>
+<span class="lineNum">     262 </span><span class="lineCov">        595 : QString AwsEndpoint::fullServiceName() const</span>
 <span class="lineNum">     263 </span>            : {
-<span class="lineNum">     264 </span><span class="lineCov">        315 :     return fullServiceName(serviceName());</span>
+<span class="lineNum">     264 </span><span class="lineCov">        595 :     return fullServiceName(serviceName());</span>
 <span class="lineNum">     265 </span>            : }
 <span class="lineNum">     266 </span>            : 
 <span class="lineNum">     267 </span>            : /**
@@ -339,13 +339,13 @@
 <span class="lineNum">     277 </span>            :  *
 <a name="278"><span class="lineNum">     278 </span>            :  * @see    serviceName</a>
 <span class="lineNum">     279 </span>            :  */
-<span class="lineNum">     280 </span><span class="lineCov">        630 : QString AwsEndpoint::fullServiceName(const QString &amp;serviceName)</span>
+<span class="lineNum">     280 </span><span class="lineCov">       1190 : QString AwsEndpoint::fullServiceName(const QString &amp;serviceName)</span>
 <span class="lineNum">     281 </span>            : {
-<span class="lineNum">     282 </span><span class="lineCov">        630 :     AwsEndpointPrivate::loadEndpointData();</span>
-<span class="lineNum">     283 </span><span class="lineCov">        630 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">     282 </span><span class="lineCov">       1190 :     AwsEndpointPrivate::loadEndpointData();</span>
+<span class="lineNum">     283 </span><span class="lineCov">       1190 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
 <span class="lineNum">     284 </span>            :     const QHash&lt;QString, AwsEndpointPrivate::ServiceInfo&gt;::const_iterator
-<span class="lineNum">     285 </span><span class="lineCov">        630 :             service = AwsEndpointPrivate::services.constFind(serviceName);</span>
-<span class="lineNum">     286 </span><span class="lineCov">        630 :     return (service == AwsEndpointPrivate::services.constEnd()) ? QString() : service.value().fullName;</span>
+<span class="lineNum">     285 </span><span class="lineCov">       1190 :             service = AwsEndpointPrivate::services.constFind(serviceName);</span>
+<span class="lineNum">     286 </span><span class="lineCov">       1190 :     return (service == AwsEndpointPrivate::services.constEnd()) ? QString() : service.value().fullName;</span>
 <span class="lineNum">     287 </span>            : }
 <span class="lineNum">     288 </span>            : 
 <span class="lineNum">     289 </span>            : /**
@@ -363,10 +363,10 @@
 <span class="lineNum">     301 </span>            :  *
 <a name="302"><span class="lineNum">     302 </span>            :  * @see supportedRegions</a>
 <span class="lineNum">     303 </span>            :  */
-<span class="lineNum">     304 </span><span class="lineCov">      12789 : QString AwsEndpoint::regionName() const</span>
+<span class="lineNum">     304 </span><span class="lineCov">      24297 : QString AwsEndpoint::regionName() const</span>
 <span class="lineNum">     305 </span>            : {
-<span class="lineNum">     306 </span><span class="lineCov">      12789 :     Q_D(const AwsEndpoint);</span>
-<span class="lineNum">     307 </span><span class="lineCov">      12789 :     return d-&gt;regionName;</span>
+<span class="lineNum">     306 </span><span class="lineCov">      24297 :     Q_D(const AwsEndpoint);</span>
+<span class="lineNum">     307 </span><span class="lineCov">      24297 :     return d-&gt;regionName;</span>
 <span class="lineNum">     308 </span>            : }
 <span class="lineNum">     309 </span>            : 
 <span class="lineNum">     310 </span>            : /**
@@ -376,10 +376,10 @@
 <span class="lineNum">     314 </span>            :  *
 <a name="315"><span class="lineNum">     315 </span>            :  * @see    fullServiceName</a>
 <span class="lineNum">     316 </span>            :  */
-<span class="lineNum">     317 </span><span class="lineCov">      14490 : QString AwsEndpoint::serviceName() const</span>
+<span class="lineNum">     317 </span><span class="lineCov">      27510 : QString AwsEndpoint::serviceName() const</span>
 <span class="lineNum">     318 </span>            : {
-<span class="lineNum">     319 </span><span class="lineCov">      14490 :     Q_D(const AwsEndpoint);</span>
-<span class="lineNum">     320 </span><span class="lineCov">      14490 :     return d-&gt;serviceName;</span>
+<span class="lineNum">     319 </span><span class="lineCov">      27510 :     Q_D(const AwsEndpoint);</span>
+<span class="lineNum">     320 </span><span class="lineCov">      27510 :     return d-&gt;serviceName;</span>
 <span class="lineNum">     321 </span>            : }
 <span class="lineNum">     322 </span>            : 
 <span class="lineNum">     323 </span>            : /**
@@ -395,9 +395,9 @@
 <span class="lineNum">     333 </span>            :  *
 <a name="334"><span class="lineNum">     334 </span>            :  * @see    regionName</a>
 <span class="lineNum">     335 </span>            :  */
-<span class="lineNum">     336 </span><span class="lineCov">       1386 : QStringList AwsEndpoint::supportedRegions(const Transports transport) const</span>
+<span class="lineNum">     336 </span><span class="lineCov">       2618 : QStringList AwsEndpoint::supportedRegions(const Transports transport) const</span>
 <span class="lineNum">     337 </span>            : {
-<span class="lineNum">     338 </span><span class="lineCov">       1386 :     return supportedRegions(serviceName(), transport);</span>
+<span class="lineNum">     338 </span><span class="lineCov">       2618 :     return supportedRegions(serviceName(), transport);</span>
 <span class="lineNum">     339 </span>            : }
 <span class="lineNum">     340 </span>            : 
 <span class="lineNum">     341 </span>            : /**
@@ -409,21 +409,21 @@
 <span class="lineNum">     347 </span>            :  * @return A list of AWS regions supported for the given service, for
 <a name="348"><span class="lineNum">     348 </span>            :  *         _at least one_ of the specified transports.</a>
 <span class="lineNum">     349 </span>            :  */
-<span class="lineNum">     350 </span><span class="lineCov">       3420 : QStringList AwsEndpoint::supportedRegions(const QString &amp;serviceName, const Transports transport)</span>
+<span class="lineNum">     350 </span><span class="lineCov">       6460 : QStringList AwsEndpoint::supportedRegions(const QString &amp;serviceName, const Transports transport)</span>
 <span class="lineNum">     351 </span>            : {
-<span class="lineNum">     352 </span><span class="lineCov">       3420 :     AwsEndpointPrivate::loadEndpointData();</span>
-<span class="lineNum">     353 </span><span class="lineCov">       3420 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">     352 </span><span class="lineCov">       6460 :     AwsEndpointPrivate::loadEndpointData();</span>
+<span class="lineNum">     353 </span><span class="lineCov">       6460 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
 <span class="lineNum">     354 </span>            : 
-<span class="lineNum">     355 </span><span class="lineCov">       3420 :     if (transport == AnyTransport) {</span>
-<span class="lineNum">     356 </span><span class="lineCov">        576 :         return AwsEndpointPrivate::services[serviceName].regionNames;</span>
+<span class="lineNum">     355 </span><span class="lineCov">       6460 :     if (transport == AnyTransport) {</span>
+<span class="lineNum">     356 </span><span class="lineCov">       1088 :         return AwsEndpointPrivate::services[serviceName].regionNames;</span>
 <span class="lineNum">     357 </span>            :     }
 <span class="lineNum">     358 </span>            : 
-<span class="lineNum">     359 </span><span class="lineCov">       5688 :     QStringList regions;</span>
-<span class="lineNum">     360 </span><span class="lineCov">      22455 :     foreach (const QString &amp;regionName, AwsEndpointPrivate::services[serviceName].regionNames) {</span>
-<span class="lineNum">     361 </span><span class="lineCov">      19611 :         if (AwsEndpointPrivate::regions[regionName].services[serviceName].transports &amp; transport)</span>
-<span class="lineNum">     362 </span><span class="lineCov">      15462 :             regions.append(regionName);</span>
-<span class="lineNum">     363 </span><span class="lineCov">       2844 :     }</span>
-<span class="lineNum">     364 </span><span class="lineCov">       6264 :     return regions;</span>
+<span class="lineNum">     359 </span><span class="lineCov">      10744 :     QStringList regions;</span>
+<span class="lineNum">     360 </span><span class="lineCov">      42415 :     foreach (const QString &amp;regionName, AwsEndpointPrivate::services[serviceName].regionNames) {</span>
+<span class="lineNum">     361 </span><span class="lineCov">      37043 :         if (AwsEndpointPrivate::regions[regionName].services[serviceName].transports &amp; transport)</span>
+<span class="lineNum">     362 </span><span class="lineCov">      29206 :             regions.append(regionName);</span>
+<span class="lineNum">     363 </span><span class="lineCov">       5372 :     }</span>
+<span class="lineNum">     364 </span><span class="lineCov">      11832 :     return regions;</span>
 <span class="lineNum">     365 </span>            : }
 <span class="lineNum">     366 </span>            : 
 <span class="lineNum">     367 </span>            : /**
@@ -435,22 +435,22 @@
 <span class="lineNum">     373 </span>            :  * @return A list of AWS services supported for the given region, for
 <a name="374"><span class="lineNum">     374 </span>            :  *         _at least one_ of the specified transports.</a>
 <span class="lineNum">     375 </span>            :  */
-<span class="lineNum">     376 </span><span class="lineCov">       1152 : QStringList AwsEndpoint::supportedServices(const QString &amp;regionName, const Transports transport)</span>
+<span class="lineNum">     376 </span><span class="lineCov">       2176 : QStringList AwsEndpoint::supportedServices(const QString &amp;regionName, const Transports transport)</span>
 <span class="lineNum">     377 </span>            : {
-<span class="lineNum">     378 </span><span class="lineCov">       1152 :     AwsEndpointPrivate::loadEndpointData();</span>
-<span class="lineNum">     379 </span><span class="lineCov">       1152 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
+<span class="lineNum">     378 </span><span class="lineCov">       2176 :     AwsEndpointPrivate::loadEndpointData();</span>
+<span class="lineNum">     379 </span><span class="lineCov">       2176 :     QMutexLocker locker(&amp;AwsEndpointPrivate::mutex);</span>
 <span class="lineNum">     380 </span>            : 
-<span class="lineNum">     381 </span><span class="lineCov">       1152 :     if (transport == AnyTransport) {</span>
-<span class="lineNum">     382 </span><span class="lineCov">        162 :         return AwsEndpointPrivate::regions[regionName].services.keys();</span>
+<span class="lineNum">     381 </span><span class="lineCov">       2176 :     if (transport == AnyTransport) {</span>
+<span class="lineNum">     382 </span><span class="lineCov">        306 :         return AwsEndpointPrivate::regions[regionName].services.keys();</span>
 <span class="lineNum">     383 </span>            :     }
 <span class="lineNum">     384 </span>            : 
-<span class="lineNum">     385 </span><span class="lineCov">       1980 :     QStringList serviceNames;</span>
-<span class="lineNum">     386 </span><span class="lineCov">        990 :     const AwsEndpointPrivate::RegionServices &amp;services = AwsEndpointPrivate::regions[regionName].services;</span>
-<span class="lineNum">     387 </span><span class="lineCov">      24642 :     for (AwsEndpointPrivate::RegionServices::const_iterator iter = services.constBegin(); iter != services.constEnd(); ++iter) {</span>
-<span class="lineNum">     388 </span><span class="lineCov">      23652 :         if (iter.value().transports &amp; transport)</span>
-<span class="lineNum">     389 </span><span class="lineCov">      15462 :             serviceNames.append(iter.key());</span>
+<span class="lineNum">     385 </span><span class="lineCov">       3740 :     QStringList serviceNames;</span>
+<span class="lineNum">     386 </span><span class="lineCov">       1870 :     const AwsEndpointPrivate::RegionServices &amp;services = AwsEndpointPrivate::regions[regionName].services;</span>
+<span class="lineNum">     387 </span><span class="lineCov">      46546 :     for (AwsEndpointPrivate::RegionServices::const_iterator iter = services.constBegin(); iter != services.constEnd(); ++iter) {</span>
+<span class="lineNum">     388 </span><span class="lineCov">      44676 :         if (iter.value().transports &amp; transport)</span>
+<span class="lineNum">     389 </span><span class="lineCov">      29206 :             serviceNames.append(iter.key());</span>
 <span class="lineNum">     390 </span>            :     }
-<span class="lineNum">     391 </span><span class="lineCov">       2142 :     return serviceNames;</span>
+<span class="lineNum">     391 </span><span class="lineCov">       4046 :     return serviceNames;</span>
 <span class="lineNum">     392 </span>            : }
 <span class="lineNum">     393 </span>            : 
 <span class="lineNum">     394 </span>            : /**
@@ -461,11 +461,11 @@
 <span class="lineNum">     399 </span>            :  * @brief  Private implementation for AwsEndpoint.
 <span class="lineNum">     400 </span>            :  */
 <span class="lineNum">     401 </span>            : 
-<span class="lineNum">     402 </span><span class="lineCov">         16 : QHash&lt;QString, AwsEndpointPrivate::HostInfo&gt; AwsEndpointPrivate::hosts;       ///&lt; Hash of hostnames to HostInfo.</span>
-<span class="lineNum">     403 </span><span class="lineCov">         16 : QHash&lt;QString, AwsEndpointPrivate::RegionInfo&gt; AwsEndpointPrivate::regions;   ///&lt; Hash of region names to RegionInfo.</span>
-<span class="lineNum">     404 </span><span class="lineCov">         16 : QHash&lt;QString, AwsEndpointPrivate::ServiceInfo&gt; AwsEndpointPrivate::services; ///&lt; Hash of service names to ServiceInfo.</span>
+<span class="lineNum">     402 </span><span class="lineCov">         37 : QHash&lt;QString, AwsEndpointPrivate::HostInfo&gt; AwsEndpointPrivate::hosts;       ///&lt; Hash of hostnames to HostInfo.</span>
+<span class="lineNum">     403 </span><span class="lineCov">         37 : QHash&lt;QString, AwsEndpointPrivate::RegionInfo&gt; AwsEndpointPrivate::regions;   ///&lt; Hash of region names to RegionInfo.</span>
+<span class="lineNum">     404 </span><span class="lineCov">         37 : QHash&lt;QString, AwsEndpointPrivate::ServiceInfo&gt; AwsEndpointPrivate::services; ///&lt; Hash of service names to ServiceInfo.</span>
 <span class="lineNum">     405 </span>            : 
-<span class="lineNum">     406 </span><span class="lineCov">         16 : QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///&lt; Mutex for protecting access to static members.</span>
+<span class="lineNum">     406 </span><span class="lineCov">         37 : QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///&lt; Mutex for protecting access to static members.</span>
 <span class="lineNum">     407 </span>            : 
 <span class="lineNum">     408 </span>            : /**
 <span class="lineNum">     409 </span>            :  * @internal
@@ -476,11 +476,11 @@
 <span class="lineNum">     414 </span>            :  *
 <a name="415"><span class="lineNum">     415 </span>            :  * @see   http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</a>
 <span class="lineNum">     416 </span>            :  */
-<span class="lineNum">     417 </span><span class="lineCov">      10620 : AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)</span>
-<span class="lineNum">     418 </span><span class="lineCov">      10620 :     : q_ptr(q)</span>
+<span class="lineNum">     417 </span><span class="lineCov">      20130 : AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)</span>
+<span class="lineNum">     418 </span><span class="lineCov">      20130 :     : q_ptr(q)</span>
 <span class="lineNum">     419 </span>            : {
-<span class="lineNum">     420 </span><span class="lineCov">      10620 :     loadEndpointData();</span>
-<span class="lineNum">     421 </span><span class="lineCov">      10620 : }</span>
+<span class="lineNum">     420 </span><span class="lineCov">      20130 :     loadEndpointData();</span>
+<span class="lineNum">     421 </span><span class="lineCov">      20130 : }</span>
 <span class="lineNum">     422 </span>            : 
 <span class="lineNum">     423 </span>            : /**
 <span class="lineNum">     424 </span>            :  * @internal
@@ -496,16 +496,16 @@
 <span class="lineNum">     434 </span>            :  *
 <a name="435"><span class="lineNum">     435 </span>            :  * @param  fileName  Name of the endpoint XML data file to load.</a>
 <span class="lineNum">     436 </span>            :  */
-<span class="lineNum">     437 </span><span class="lineCov">      66546 : void AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName)</span>
+<span class="lineNum">     437 </span><span class="lineCov">     126012 : void AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName)</span>
 <span class="lineNum">     438 </span>            : {
-<span class="lineNum">     439 </span><span class="lineCov">      66546 :     QMutexLocker locker(&amp;mutex);</span>
-<span class="lineNum">     440 </span><span class="lineCov">      66546 :     if (!hosts.empty()) {</span>
-<span class="lineNum">     441 </span><span class="lineCov">      94149 :         return; // Already loaded.</span>
+<span class="lineNum">     439 </span><span class="lineCov">     126012 :     QMutexLocker locker(&amp;mutex);</span>
+<span class="lineNum">     440 </span><span class="lineCov">     126012 :     if (!hosts.empty()) {</span>
+<span class="lineNum">     441 </span><span class="lineCov">     178459 :         return; // Already loaded.</span>
 <span class="lineNum">     442 </span>            :     }
 <span class="lineNum">     443 </span>            : 
 <span class="lineNum">     444 </span>            :     // Open the data file.
-<span class="lineNum">     445 </span><span class="lineCov">      77886 :     QFile file(fileName);</span>
-<span class="lineNum">     446 </span><span class="lineCov">      77886 :     loadEndpointData(file);</span>
+<span class="lineNum">     445 </span><span class="lineCov">     147130 :     QFile file(fileName);</span>
+<span class="lineNum">     446 </span><span class="lineCov">     147130 :     loadEndpointData(file);</span>
 <span class="lineNum">     447 </span>            : }
 <span class="lineNum">     448 </span>            : 
 <span class="lineNum">     449 </span>            : /**
@@ -522,22 +522,22 @@
 <span class="lineNum">     460 </span>            :  *
 <a name="461"><span class="lineNum">     461 </span>            :  * @param  device Device to parse XML data from.</a>
 <span class="lineNum">     462 </span>            :  */
-<span class="lineNum">     463 </span><span class="lineCov">      38961 : void AwsEndpointPrivate::loadEndpointData(QIODevice &amp;device)</span>
+<span class="lineNum">     463 </span><span class="lineCov">      73599 : void AwsEndpointPrivate::loadEndpointData(QIODevice &amp;device)</span>
 <span class="lineNum">     464 </span>            : {
-<span class="lineNum">     465 </span><span class="lineCov">      38961 :     QMutexLocker locker(&amp;mutex);</span>
-<span class="lineNum">     466 </span><span class="lineCov">      38961 :     if (!hosts.empty()) {</span>
-<span class="lineNum">     467 </span><span class="lineCov">          9 :         return; // Already loaded.</span>
+<span class="lineNum">     465 </span><span class="lineCov">      73599 :     QMutexLocker locker(&amp;mutex);</span>
+<span class="lineNum">     466 </span><span class="lineCov">      73599 :     if (!hosts.empty()) {</span>
+<span class="lineNum">     467 </span><span class="lineCov">         17 :         return; // Already loaded.</span>
 <span class="lineNum">     468 </span>            :     }
 <span class="lineNum">     469 </span>            : 
 <span class="lineNum">     470 </span>            :     // Open the device, if not already open.
-<span class="lineNum">     471 </span><span class="lineCov">      38952 :     if ((!device.isOpen()) &amp;&amp; (!device.open(QIODevice::ReadOnly))) {</span>
-<span class="lineNum">     472 </span><span class="lineCov">          9 :         qWarning() &lt;&lt; &quot;AwsEndpoint:&quot; &lt;&lt; device.errorString();</span>
-<span class="lineNum">     473 </span><span class="lineCov">          9 :         return;</span>
+<span class="lineNum">     471 </span><span class="lineCov">      73582 :     if ((!device.isOpen()) &amp;&amp; (!device.open(QIODevice::ReadOnly))) {</span>
+<span class="lineNum">     472 </span><span class="lineCov">         17 :         qWarning() &lt;&lt; &quot;AwsEndpoint:&quot; &lt;&lt; device.errorString();</span>
+<span class="lineNum">     473 </span><span class="lineCov">         17 :         return;</span>
 <span class="lineNum">     474 </span>            :     }
 <span class="lineNum">     475 </span>            : 
 <span class="lineNum">     476 </span>            :     // Parse the data.
-<span class="lineNum">     477 </span><span class="lineCov">      77886 :     QXmlStreamReader xml(&amp;device);</span>
-<span class="lineNum">     478 </span><span class="lineCov">      77886 :     loadEndpointData(xml);</span>
+<span class="lineNum">     477 </span><span class="lineCov">     147130 :     QXmlStreamReader xml(&amp;device);</span>
+<span class="lineNum">     478 </span><span class="lineCov">     147130 :     loadEndpointData(xml);</span>
 <span class="lineNum">     479 </span>            : }
 <span class="lineNum">     480 </span>            : 
 <span class="lineNum">     481 </span>            : /**
@@ -554,30 +554,30 @@
 <span class="lineNum">     492 </span>            :  *
 <a name="493"><span class="lineNum">     493 </span>            :  * @param  xml  XML document to parse.</a>
 <span class="lineNum">     494 </span>            :  */
-<span class="lineNum">     495 </span><span class="lineCov">      38961 : void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     495 </span><span class="lineCov">      73599 : void AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     496 </span>            : {
-<span class="lineNum">     497 </span><span class="lineCov">      38961 :     QMutexLocker locker(&amp;mutex);</span>
-<span class="lineNum">     498 </span><span class="lineCov">      38961 :     if (!hosts.empty()) {</span>
-<span class="lineNum">     499 </span><span class="lineCov">      38961 :         return; // Already loaded.</span>
+<span class="lineNum">     497 </span><span class="lineCov">      73599 :     QMutexLocker locker(&amp;mutex);</span>
+<span class="lineNum">     498 </span><span class="lineCov">      73599 :     if (!hosts.empty()) {</span>
+<span class="lineNum">     499 </span><span class="lineCov">      73599 :         return; // Already loaded.</span>
 <span class="lineNum">     500 </span>            :     }
 <span class="lineNum">     501 </span>            : 
 <span class="lineNum">     502 </span>            :     // Parse the XML data.
-<span class="lineNum">     503 </span><span class="lineCov">     194760 :     while (xml.readNextStartElement()) {</span>
-<span class="lineNum">     504 </span><span class="lineCov">     116838 :         if (xml.name() == QLatin1String(&quot;Regions&quot;)) {</span>
-<span class="lineNum">     505 </span><span class="lineCov">      38943 :             parseRegions(xml);</span>
-<span class="lineNum">     506 </span><span class="lineCov">      77895 :         } else if (xml.name() == QLatin1String(&quot;Services&quot;)) {</span>
-<span class="lineNum">     507 </span><span class="lineCov">      38943 :             parseServices(xml);</span>
-<span class="lineNum">     508 </span><span class="lineCov">      38952 :         } else if (xml.name() != QLatin1String(&quot;XML&quot;)) {</span>
-<span class="lineNum">     509 </span><span class="lineCov">          9 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     503 </span><span class="lineCov">     367910 :     while (xml.readNextStartElement()) {</span>
+<span class="lineNum">     504 </span><span class="lineCov">     220712 :         if (xml.name() == QLatin1String(&quot;Regions&quot;)) {</span>
+<span class="lineNum">     505 </span><span class="lineCov">      73565 :             parseRegions(xml);</span>
+<span class="lineNum">     506 </span><span class="lineCov">     147147 :         } else if (xml.name() == QLatin1String(&quot;Services&quot;)) {</span>
+<span class="lineNum">     507 </span><span class="lineCov">      73565 :             parseServices(xml);</span>
+<span class="lineNum">     508 </span><span class="lineCov">      73582 :         } else if (xml.name() != QLatin1String(&quot;XML&quot;)) {</span>
+<span class="lineNum">     509 </span><span class="lineCov">         17 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
 <span class="lineNum">     510 </span>            :         }
 <span class="lineNum">     511 </span>            :     }
-<span class="lineNum">     512 </span><span class="lineCov">      38961 :     if (xml.hasError()) {</span>
-<span class="lineNum">     513 </span><span class="lineCov">          9 :         qWarning() &lt;&lt; &quot;AwsEndpoint:&quot; &lt;&lt; xml.errorString();</span>
+<span class="lineNum">     512 </span><span class="lineCov">      73599 :     if (xml.hasError()) {</span>
+<span class="lineNum">     513 </span><span class="lineCov">         17 :         qWarning() &lt;&lt; &quot;AwsEndpoint:&quot; &lt;&lt; xml.errorString();</span>
 <span class="lineNum">     514 </span>            :     }
-<span class="lineNum">     515 </span><span class="lineCov">      38961 :     Q_ASSERT(!xml.hasError());</span>
-<span class="lineNum">     516 </span><span class="lineCov">      38961 :     Q_ASSERT(!hosts.isEmpty());</span>
-<span class="lineNum">     517 </span><span class="lineCov">      38961 :     Q_ASSERT(!regions.isEmpty());</span>
-<span class="lineNum">     518 </span><span class="lineCov">      38961 :     Q_ASSERT(!services.isEmpty());</span>
+<span class="lineNum">     515 </span><span class="lineCov">      73599 :     Q_ASSERT(!xml.hasError());</span>
+<span class="lineNum">     516 </span><span class="lineCov">      73599 :     Q_ASSERT(!hosts.isEmpty());</span>
+<span class="lineNum">     517 </span><span class="lineCov">      73599 :     Q_ASSERT(!regions.isEmpty());</span>
+<span class="lineNum">     518 </span><span class="lineCov">      73599 :     Q_ASSERT(!services.isEmpty());</span>
 <span class="lineNum">     519 </span>            : }
 <span class="lineNum">     520 </span>            : 
 <span class="lineNum">     521 </span>            : /**
@@ -612,51 +612,51 @@
 <span class="lineNum">     550 </span>            :  *
 <a name="551"><span class="lineNum">     551 </span>            :  * @see    parseRegion</a>
 <span class="lineNum">     552 </span>            :  */
-<span class="lineNum">     553 </span><span class="lineCov">     350577 : void AwsEndpointPrivate::parseRegion(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     553 </span><span class="lineCov">     662255 : void AwsEndpointPrivate::parseRegion(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     554 </span>            : {
-<span class="lineNum">     555 </span><span class="lineCov">     350577 :     QString regionName;</span>
-<span class="lineNum">     556 </span><span class="lineCov">    9580626 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
-<span class="lineNum">     557 </span><span class="lineCov">    8879472 :         if (xml.name() == QLatin1String(&quot;Name&quot;)) {</span>
-<span class="lineNum">     558 </span><span class="lineCov">     350577 :             regionName = xml.readElementText();</span>
-<span class="lineNum">     559 </span><span class="lineCov">    8528895 :         } else if (xml.name() == QLatin1String(&quot;Endpoint&quot;)) {</span>
-<span class="lineNum">     560 </span><span class="lineCov">    8528805 :             Q_ASSERT(!regionName.isEmpty());</span>
-<span class="lineNum">     561 </span><span class="lineCov">    8528805 :             RegionEndpointInfo endpoint;</span>
-<span class="lineNum">     562 </span><span class="lineCov">   17057610 :             QString serviceName;</span>
-<span class="lineNum">     563 </span><span class="lineCov">   51172794 :             while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
-<span class="lineNum">     564 </span><span class="lineCov">   34115184 :                 if (xml.name() == QLatin1String(&quot;ServiceName&quot;)) {</span>
-<span class="lineNum">     565 </span><span class="lineCov">    8528805 :                     serviceName = xml.readElementText();</span>
-<span class="lineNum">     566 </span><span class="lineCov">   25586379 :                 } else if (xml.name() == QLatin1String(&quot;Http&quot;)) {</span>
-<span class="lineNum">     567 </span><span class="lineCov">    8528733 :                     if (xml.readElementText() == QLatin1String(&quot;true&quot;)) {</span>
-<span class="lineNum">     568 </span><span class="lineCov">    3894408 :                         endpoint.transports |= AwsEndpoint::HTTP;</span>
+<span class="lineNum">     555 </span><span class="lineCov">     662255 :     QString regionName;</span>
+<span class="lineNum">     556 </span><span class="lineCov">   18098214 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
+<span class="lineNum">     557 </span><span class="lineCov">   16773704 :         if (xml.name() == QLatin1String(&quot;Name&quot;)) {</span>
+<span class="lineNum">     558 </span><span class="lineCov">     662255 :             regionName = xml.readElementText();</span>
+<span class="lineNum">     559 </span><span class="lineCov">   16111449 :         } else if (xml.name() == QLatin1String(&quot;Endpoint&quot;)) {</span>
+<span class="lineNum">     560 </span><span class="lineCov">   16111279 :             Q_ASSERT(!regionName.isEmpty());</span>
+<span class="lineNum">     561 </span><span class="lineCov">   16111279 :             RegionEndpointInfo endpoint;</span>
+<span class="lineNum">     562 </span><span class="lineCov">   32222558 :             QString serviceName;</span>
+<span class="lineNum">     563 </span><span class="lineCov">   96667606 :             while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
+<span class="lineNum">     564 </span><span class="lineCov">   64445048 :                 if (xml.name() == QLatin1String(&quot;ServiceName&quot;)) {</span>
+<span class="lineNum">     565 </span><span class="lineCov">   16111279 :                     serviceName = xml.readElementText();</span>
+<span class="lineNum">     566 </span><span class="lineCov">   48333769 :                 } else if (xml.name() == QLatin1String(&quot;Http&quot;)) {</span>
+<span class="lineNum">     567 </span><span class="lineCov">   16111143 :                     if (xml.readElementText() == QLatin1String(&quot;true&quot;)) {</span>
+<span class="lineNum">     568 </span><span class="lineCov">    7356704 :                         endpoint.transports |= AwsEndpoint::HTTP;</span>
 <span class="lineNum">     569 </span>            :                     }
-<span class="lineNum">     570 </span><span class="lineCov">   17057646 :                 } else if (xml.name() == QLatin1String(&quot;Https&quot;)) {</span>
-<span class="lineNum">     571 </span><span class="lineCov">    8528733 :                     if (xml.readElementText() == QLatin1String(&quot;true&quot;)) {</span>
-<span class="lineNum">     572 </span><span class="lineCov">    8528625 :                         endpoint.transports |= AwsEndpoint::HTTPS;</span>
+<span class="lineNum">     570 </span><span class="lineCov">   32222626 :                 } else if (xml.name() == QLatin1String(&quot;Https&quot;)) {</span>
+<span class="lineNum">     571 </span><span class="lineCov">   16111143 :                     if (xml.readElementText() == QLatin1String(&quot;true&quot;)) {</span>
+<span class="lineNum">     572 </span><span class="lineCov">   16110939 :                         endpoint.transports |= AwsEndpoint::HTTPS;</span>
 <span class="lineNum">     573 </span>            :                     }
-<span class="lineNum">     574 </span><span class="lineCov">    8528913 :                 } else if (xml.name() == QLatin1String(&quot;Hostname&quot;)) {</span>
-<span class="lineNum">     575 </span><span class="lineCov">    8528805 :                     endpoint.hostName = xml.readElementText();</span>
+<span class="lineNum">     574 </span><span class="lineCov">   16111483 :                 } else if (xml.name() == QLatin1String(&quot;Hostname&quot;)) {</span>
+<span class="lineNum">     575 </span><span class="lineCov">   16111279 :                     endpoint.hostName = xml.readElementText();</span>
 <span class="lineNum">     576 </span>            :                 } else {
-<span class="lineNum">     577 </span><span class="lineCov">        108 :                     qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     578 </span><span class="lineCov">        108 :                     xml.skipCurrentElement();</span>
+<span class="lineNum">     577 </span><span class="lineCov">        204 :                     qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     578 </span><span class="lineCov">        204 :                     xml.skipCurrentElement();</span>
 <span class="lineNum">     579 </span>            :                 }
 <span class="lineNum">     580 </span>            :             }
-<span class="lineNum">     581 </span><span class="lineCov">    8528805 :             Q_ASSERT(!serviceName.isEmpty());</span>
+<span class="lineNum">     581 </span><span class="lineCov">   16111279 :             Q_ASSERT(!serviceName.isEmpty());</span>
 <span class="lineNum">     582 </span>            : 
-<span class="lineNum">     583 </span><span class="lineCov">    8528805 :             if (serviceName == QLatin1String(&quot;email&quot;)) {</span>
-<span class="lineNum">     584 </span><span class="lineCov">      38943 :                 endpoint.transports |= AwsEndpoint::SMTP;</span>
+<span class="lineNum">     583 </span><span class="lineCov">   16111279 :             if (serviceName == QLatin1String(&quot;email&quot;)) {</span>
+<span class="lineNum">     584 </span><span class="lineCov">      73565 :                 endpoint.transports |= AwsEndpoint::SMTP;</span>
 <span class="lineNum">     585 </span>            :             }
 <span class="lineNum">     586 </span>            : 
-<span class="lineNum">     587 </span><span class="lineCov">    8528805 :             Q_ASSERT((!hosts.contains(endpoint.hostName)) || (hosts.value(endpoint.hostName).serviceName == serviceName));</span>
-<span class="lineNum">     588 </span><span class="lineCov">    8528805 :             hosts[endpoint.hostName].regionNames.append(regionName);</span>
-<span class="lineNum">     589 </span><span class="lineCov">    8528805 :             hosts[endpoint.hostName].serviceName  = serviceName;</span>
-<span class="lineNum">     590 </span><span class="lineCov">   17057610 :             regions[regionName].services[serviceName] = endpoint;</span>
+<span class="lineNum">     587 </span><span class="lineCov">   16111279 :             Q_ASSERT((!hosts.contains(endpoint.hostName)) || (hosts.value(endpoint.hostName).serviceName == serviceName));</span>
+<span class="lineNum">     588 </span><span class="lineCov">   16111279 :             hosts[endpoint.hostName].regionNames.append(regionName);</span>
+<span class="lineNum">     589 </span><span class="lineCov">   16111279 :             hosts[endpoint.hostName].serviceName  = serviceName;</span>
+<span class="lineNum">     590 </span><span class="lineCov">   32222558 :             regions[regionName].services[serviceName] = endpoint;</span>
 <span class="lineNum">     591 </span>            :             //qDebug() &lt;&lt; regionName &lt;&lt; serviceName &lt;&lt; (int)endpoint.transports &lt;&lt; endpoint.hostName;
 <span class="lineNum">     592 </span>            :         } else {
-<span class="lineNum">     593 </span><span class="lineCov">         90 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     594 </span><span class="lineCov">         90 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     593 </span><span class="lineCov">        170 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     594 </span><span class="lineCov">        170 :             xml.skipCurrentElement();</span>
 <span class="lineNum">     595 </span>            :         }
-<span class="lineNum">     596 </span><span class="lineCov">     350577 :     }</span>
-<span class="lineNum">     597 </span><span class="lineCov">     350577 : }</span>
+<span class="lineNum">     596 </span><span class="lineCov">     662255 :     }</span>
+<span class="lineNum">     597 </span><span class="lineCov">     662255 : }</span>
 <span class="lineNum">     598 </span>            : 
 <span class="lineNum">     599 </span>            : /**
 <span class="lineNum">     600 </span>            :  * @internal
@@ -673,17 +673,17 @@
 <span class="lineNum">     611 </span>            :  *
 <a name="612"><span class="lineNum">     612 </span>            :  * @see    parseRegion</a>
 <span class="lineNum">     613 </span>            :  */
-<span class="lineNum">     614 </span><span class="lineCov">      38970 : void AwsEndpointPrivate::parseRegions(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     614 </span><span class="lineCov">      73616 : void AwsEndpointPrivate::parseRegions(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     615 </span>            : {
-<span class="lineNum">     616 </span><span class="lineCov">     428562 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
-<span class="lineNum">     617 </span><span class="lineCov">     350622 :         if (xml.name() == QLatin1String(&quot;Region&quot;)) {</span>
-<span class="lineNum">     618 </span><span class="lineCov">     350541 :             parseRegion(xml);</span>
+<span class="lineNum">     616 </span><span class="lineCov">     809572 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
+<span class="lineNum">     617 </span><span class="lineCov">     662340 :         if (xml.name() == QLatin1String(&quot;Region&quot;)) {</span>
+<span class="lineNum">     618 </span><span class="lineCov">     662187 :             parseRegion(xml);</span>
 <span class="lineNum">     619 </span>            :         } else {
-<span class="lineNum">     620 </span><span class="lineCov">         81 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     621 </span><span class="lineCov">         81 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     620 </span><span class="lineCov">        153 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     621 </span><span class="lineCov">        153 :             xml.skipCurrentElement();</span>
 <span class="lineNum">     622 </span>            :         }
 <span class="lineNum">     623 </span>            :     }
-<span class="lineNum">     624 </span><span class="lineCov">      38970 : }</span>
+<span class="lineNum">     624 </span><span class="lineCov">      73616 : }</span>
 <span class="lineNum">     625 </span>            : 
 <span class="lineNum">     626 </span>            : /**
 <span class="lineNum">     627 </span>            :  * @internal
@@ -713,26 +713,26 @@
 <span class="lineNum">     651 </span>            :  *
 <a name="652"><span class="lineNum">     652 </span>            :  * @see    parseServices</a>
 <span class="lineNum">     653 </span>            :  */
-<span class="lineNum">     654 </span><span class="lineCov">    1246212 : void AwsEndpointPrivate::parseService(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     654 </span><span class="lineCov">    2354148 : void AwsEndpointPrivate::parseService(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     655 </span>            : {
-<span class="lineNum">     656 </span><span class="lineCov">    1246212 :     QString serviceName;</span>
-<span class="lineNum">     657 </span><span class="lineCov">   13513563 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
-<span class="lineNum">     658 </span><span class="lineCov">   11021139 :         if (xml.name() == QLatin1String(&quot;Name&quot;)) {</span>
-<span class="lineNum">     659 </span><span class="lineCov">    1246212 :             serviceName = xml.readElementText();</span>
-<span class="lineNum">     660 </span><span class="lineCov">    9774927 :         } else if (xml.name() == QLatin1String(&quot;FullName&quot;)) {</span>
-<span class="lineNum">     661 </span><span class="lineCov">    1246212 :             Q_ASSERT(!serviceName.isEmpty());</span>
-<span class="lineNum">     662 </span><span class="lineCov">    1246212 :             services[serviceName].fullName = xml.readElementText();</span>
-<span class="lineNum">     663 </span><span class="lineCov">    8528715 :         } else if (xml.name() == QLatin1String(&quot;RegionName&quot;)) {</span>
-<span class="lineNum">     664 </span><span class="lineCov">    8528643 :             Q_ASSERT(!serviceName.isEmpty());</span>
-<span class="lineNum">     665 </span><span class="lineCov">    8528643 :             const QString &amp;regionName = xml.readElementText();</span>
-<span class="lineNum">     666 </span><span class="lineCov">    8528643 :             services[serviceName].regionNames.append(regionName);</span>
+<span class="lineNum">     656 </span><span class="lineCov">    2354148 :     QString serviceName;</span>
+<span class="lineNum">     657 </span><span class="lineCov">   25527701 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
+<span class="lineNum">     658 </span><span class="lineCov">   20819405 :         if (xml.name() == QLatin1String(&quot;Name&quot;)) {</span>
+<span class="lineNum">     659 </span><span class="lineCov">    2354148 :             serviceName = xml.readElementText();</span>
+<span class="lineNum">     660 </span><span class="lineCov">   18465257 :         } else if (xml.name() == QLatin1String(&quot;FullName&quot;)) {</span>
+<span class="lineNum">     661 </span><span class="lineCov">    2354148 :             Q_ASSERT(!serviceName.isEmpty());</span>
+<span class="lineNum">     662 </span><span class="lineCov">    2354148 :             services[serviceName].fullName = xml.readElementText();</span>
+<span class="lineNum">     663 </span><span class="lineCov">   16111109 :         } else if (xml.name() == QLatin1String(&quot;RegionName&quot;)) {</span>
+<span class="lineNum">     664 </span><span class="lineCov">   16110973 :             Q_ASSERT(!serviceName.isEmpty());</span>
+<span class="lineNum">     665 </span><span class="lineCov">   16110973 :             const QString &amp;regionName = xml.readElementText();</span>
+<span class="lineNum">     666 </span><span class="lineCov">   16110973 :             services[serviceName].regionNames.append(regionName);</span>
 <span class="lineNum">     667 </span>            :             //qDebug() &lt;&lt; serviceName &lt;&lt; services[serviceName].fullName &lt;&lt; regionName;
 <span class="lineNum">     668 </span>            :         } else {
-<span class="lineNum">     669 </span><span class="lineCov">         72 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     670 </span><span class="lineCov">         72 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     669 </span><span class="lineCov">        136 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     670 </span><span class="lineCov">        136 :             xml.skipCurrentElement();</span>
 <span class="lineNum">     671 </span>            :         }
-<span class="lineNum">     672 </span><span class="lineCov">    1246212 :     }</span>
-<span class="lineNum">     673 </span><span class="lineCov">    1246212 : }</span>
+<span class="lineNum">     672 </span><span class="lineCov">    2354148 :     }</span>
+<span class="lineNum">     673 </span><span class="lineCov">    2354148 : }</span>
 <span class="lineNum">     674 </span>            : 
 <span class="lineNum">     675 </span>            : /**
 <span class="lineNum">     676 </span>            :  * @internal
@@ -748,17 +748,17 @@
 <span class="lineNum">     686 </span>            :  *
 <a name="687"><span class="lineNum">     687 </span>            :  * @see    parseService</a>
 <span class="lineNum">     688 </span>            :  */
-<span class="lineNum">     689 </span><span class="lineCov">      38952 : void AwsEndpointPrivate::parseServices(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     689 </span><span class="lineCov">      73582 : void AwsEndpointPrivate::parseServices(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     690 </span>            : {
-<span class="lineNum">     691 </span><span class="lineCov">    1324107 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
-<span class="lineNum">     692 </span><span class="lineCov">    1246203 :         if (xml.name() == QLatin1String(&quot;Service&quot;)) {</span>
-<span class="lineNum">     693 </span><span class="lineCov">    1246194 :             parseService(xml);</span>
+<span class="lineNum">     691 </span><span class="lineCov">    2501295 :     while ((!xml.atEnd()) &amp;&amp; (xml.readNextStartElement())) {</span>
+<span class="lineNum">     692 </span><span class="lineCov">    2354131 :         if (xml.name() == QLatin1String(&quot;Service&quot;)) {</span>
+<span class="lineNum">     693 </span><span class="lineCov">    2354114 :             parseService(xml);</span>
 <span class="lineNum">     694 </span>            :         } else {
-<span class="lineNum">     695 </span><span class="lineCov">          9 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     696 </span><span class="lineCov">          9 :             xml.skipCurrentElement();</span>
+<span class="lineNum">     695 </span><span class="lineCov">         17 :             qDebug() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     696 </span><span class="lineCov">         17 :             xml.skipCurrentElement();</span>
 <a name="697"><span class="lineNum">     697 </span>            :         }</a>
 <span class="lineNum">     698 </span>            :     }
-<span class="lineNum">     699 </span><span class="lineCov">      39000 : }</span>
+<span class="lineNum">     699 </span><span class="lineCov">      73693 : }</span>
 <span class="lineNum">     700 </span>            : 
 <span class="lineNum">     701 </span>            : QTAWS_END_NAMESPACE
 </pre>

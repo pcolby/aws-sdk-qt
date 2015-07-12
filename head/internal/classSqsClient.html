@@ -117,12 +117,42 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ad667aac3b84e3f3992f3b41de704412f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#ad667aac3b84e3f3992f3b41de704412f">addPermission</a> (const <a class="el" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;request)</td></tr>
 <tr class="memdesc:ad667aac3b84e3f3992f3b41de704412f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add permissions to an SQS queue.  <a href="#ad667aac3b84e3f3992f3b41de704412f">More...</a><br /></td></tr>
 <tr class="separator:ad667aac3b84e3f3992f3b41de704412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34259be0c42a31fb65a912a10b278a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a34259be0c42a31fb65a912a10b278a0a">changeMessageVisibility</a> (const <a class="el" href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a34259be0c42a31fb65a912a10b278a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the visibility timeout of a received SQS message.  <a href="#a34259be0c42a31fb65a912a10b278a0a">More...</a><br /></td></tr>
+<tr class="separator:a34259be0c42a31fb65a912a10b278a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac662b0d131de7571bed4af578596e1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#ac662b0d131de7571bed4af578596e1b7">changeMessageVisibility</a> (const QString &amp;queueUrl, const QString &amp;receiptHandle, const int visbilityTimeout)</td></tr>
+<tr class="memdesc:ac662b0d131de7571bed4af578596e1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the visibility timeout of a received SQS message.  <a href="#ac662b0d131de7571bed4af578596e1b7">More...</a><br /></td></tr>
+<tr class="separator:ac662b0d131de7571bed4af578596e1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97cecd89ba532531052a3e52a6aa2748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request)</td></tr>
 <tr class="memdesc:a97cecd89ba532531052a3e52a6aa2748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a97cecd89ba532531052a3e52a6aa2748">More...</a><br /></td></tr>
 <tr class="separator:a97cecd89ba532531052a3e52a6aa2748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a622a5f5d3ff78f6029e808874c1c918c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a622a5f5d3ff78f6029e808874c1c918c">createQueue</a> (const QString &amp;queueName, const QVariantMap &amp;attributes=QVariantMap())</td></tr>
 <tr class="memdesc:a622a5f5d3ff78f6029e808874c1c918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a622a5f5d3ff78f6029e808874c1c918c">More...</a><br /></td></tr>
 <tr class="separator:a622a5f5d3ff78f6029e808874c1c918c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa728cd5c0145a5dca038a010faae810d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#aa728cd5c0145a5dca038a010faae810d">deleteMessage</a> (const <a class="el" href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:aa728cd5c0145a5dca038a010faae810d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the specified message from the specified queue.  <a href="#aa728cd5c0145a5dca038a010faae810d">More...</a><br /></td></tr>
+<tr class="separator:aa728cd5c0145a5dca038a010faae810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43bec38486fe81c185846c1e0b9cad3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a43bec38486fe81c185846c1e0b9cad3b">deleteMessage</a> (const QString &amp;queueUrl, const QString &amp;receiptHandle)</td></tr>
+<tr class="memdesc:a43bec38486fe81c185846c1e0b9cad3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the specified message from the specified queue.  <a href="#a43bec38486fe81c185846c1e0b9cad3b">More...</a><br /></td></tr>
+<tr class="separator:a43bec38486fe81c185846c1e0b9cad3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc74382b9ede5f81d843482aa471427c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#acc74382b9ede5f81d843482aa471427c">deleteQueue</a> (const <a class="el" href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:acc74382b9ede5f81d843482aa471427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the queue specified by the queue URL.  <a href="#acc74382b9ede5f81d843482aa471427c">More...</a><br /></td></tr>
+<tr class="separator:acc74382b9ede5f81d843482aa471427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f648586408c93aa7d03a1561727c479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a2f648586408c93aa7d03a1561727c479">deleteQueue</a> (const QString &amp;queueUrl)</td></tr>
+<tr class="memdesc:a2f648586408c93aa7d03a1561727c479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the queue specified by the queue URL.  <a href="#a2f648586408c93aa7d03a1561727c479">More...</a><br /></td></tr>
+<tr class="separator:a2f648586408c93aa7d03a1561727c479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e15a63268cd45debd8620c0b3da3ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a31e15a63268cd45debd8620c0b3da3ba">purgeQueue</a> (const <a class="el" href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a31e15a63268cd45debd8620c0b3da3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the messages in a queue specified by the queue URL.  <a href="#a31e15a63268cd45debd8620c0b3da3ba">More...</a><br /></td></tr>
+<tr class="separator:a31e15a63268cd45debd8620c0b3da3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a678bc3d5b5bc4e018ced2f6900ba8eac">purgeQueue</a> (const QString &amp;queueUrl)</td></tr>
+<tr class="memdesc:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the messages in a queue specified by the queue URL.  <a href="#a678bc3d5b5bc4e018ced2f6900ba8eac">More...</a><br /></td></tr>
+<tr class="separator:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa17561da4859f8edf2436e3a03c843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a9fa17561da4859f8edf2436e3a03c843">removePermission</a> (const <a class="el" href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a9fa17561da4859f8edf2436e3a03c843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes any permissions in the queue policy that matches the specified <em>label</em>.  <a href="#a9fa17561da4859f8edf2436e3a03c843">More...</a><br /></td></tr>
+<tr class="separator:a9fa17561da4859f8edf2436e3a03c843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a3ce4dd69e0f4c0e283c8836eca33425c">removePermission</a> (const QString &amp;queueUrl, const QString &amp;label)</td></tr>
+<tr class="memdesc:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes any permissions in the queue policy that matches the specified <em>label</em>.  <a href="#a3ce4dd69e0f4c0e283c8836eca33425c">More...</a><br /></td></tr>
+<tr class="separator:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -200,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 <a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8h_source.html#l00040">40</a> of file <a class="el" href="sqsclient_8h_source.html">sqsclient.h</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8h_source.html#l00054">54</a> of file <a class="el" href="sqsclient_8h_source.html">sqsclient.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a11d7f7cc3790eac9b2c237089c57ab3f"></a>
 <div class="memitem">
@@ -249,18 +279,18 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00055">55</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00067">67</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00121">AwsAbstractClient::region()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    d-&gt;networkAccessManager = manager;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    d-&gt;serviceName = SQS_SERVICE_NAME;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00040">sqsclient.h:40</a></div></div>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    d-&gt;networkAccessManager = manager;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    d-&gt;serviceName = SQS_SERVICE_NAME;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00054">sqsclient.h:54</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classSqsClientPrivate_html"><div class="ttname"><a href="classSqsClientPrivate.html">SqsClientPrivate</a></div><div class="ttdoc">Private implementation for SqsClient. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient__p_8h_source.html#l00031">sqsclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
@@ -317,19 +347,19 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00084">84</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00096">96</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    d-&gt;networkAccessManager = manager;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    d-&gt;serviceName = SQS_SERVICE_NAME;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    : <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classSqsClientPrivate.html">SqsClientPrivate</a>(<span class="keyword">this</span>), parent)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    Q_D(<a class="code" href="classSqsClient.html">SqsClient</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    d-&gt;networkAccessManager = manager;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    d-&gt;serviceName = SQS_SERVICE_NAME;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
-<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00040">sqsclient.h:40</a></div></div>
+<div class="ttc" id="classSqsClient_html"><div class="ttname"><a href="classSqsClient.html">SqsClient</a></div><div class="ttdoc">Client for Amazon&#39;s Simple Queue Service (SQS) </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8h_source.html#l00054">sqsclient.h:54</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classSqsClientPrivate_html"><div class="ttname"><a href="classSqsClientPrivate.html">SqsClientPrivate</a></div><div class="ttdoc">Private implementation for SqsClient. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient__p_8h_source.html#l00031">sqsclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
@@ -362,21 +392,129 @@ Additional Inherited Members</h2></td></tr>
 <p>Add permissions to an SQS queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00106">106</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00118">118</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
 <div class="ttc" id="classSqsAddPermissionResponse_html"><div class="ttname"><a href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a></div><div class="ttdoc">Handles SQS AddPermission responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionresponse_8h_source.html#l00030">sqsaddpermissionresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a34259be0c42a31fb65a912a10b278a0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> * SqsClient::changeMessageVisibility </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the visibility timeout of a received SQS message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00132">132</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00149">changeMessageVisibility()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
+<div class="ttc" id="classSqsChangeMessageVisibilityResponse_html"><div class="ttname"><a href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a></div><div class="ttdoc">Handles SQS ChangeMessageVisibility responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilityresponse_8h_source.html#l00030">sqschangemessagevisibilityresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac662b0d131de7571bed4af578596e1b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> * SqsClient::changeMessageVisibility </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>receiptHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>visbilityTimeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the visibility timeout of a received SQS message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the queue <em>receiptHandle</em> relates to. </td></tr>
+    <tr><td class="paramname">receiptHandle</td><td>Handle for the message to set the timeout for. </td></tr>
+    <tr><td class="paramname">visbilityTimeout</td><td>New value (in seconds) for the message's visibility timeout.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00149">149</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00132">changeMessageVisibility()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a> request(</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        queueUrl, receiptHandle, visbilityTimeout);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#a34259be0c42a31fb65a912a10b278a0a">changeMessageVisibility</a>(request);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="ttc" id="classSqsChangeMessageVisibilityRequest_html"><div class="ttname"><a href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a></div><div class="ttdoc">Implements SQS ChangeMessageVisibility requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqschangemessagevisibilityrequest_8h_source.html#l00029">sqschangemessagevisibilityrequest.h:29</a></div></div>
+<div class="ttc" id="classSqsClient_html_a34259be0c42a31fb65a912a10b278a0a"><div class="ttname"><a href="classSqsClient.html#a34259be0c42a31fb65a912a10b278a0a">SqsClient::changeMessageVisibility</a></div><div class="ttdeci">SqsChangeMessageVisibilityResponse * changeMessageVisibility(const SqsChangeMessageVisibilityRequest &amp;request)</div><div class="ttdoc">Change the visibility timeout of a received SQS message. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00132">sqsclient.cpp:132</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -405,21 +543,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Create an SQS queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00120">120</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00167">167</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
 
-<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00141">createQueue()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00188">createQueue()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
 <div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
 <div class="ttc" id="classSqsCreateQueueResponse_html"><div class="ttname"><a href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a></div><div class="ttdoc">Handles SQS CreateQueue responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeueresponse_8h_source.html#l00030">sqscreatequeueresponse.h:30</a></div></div>
 </div><!-- fragment -->
@@ -470,16 +608,399 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. ">SqsCreateQueueRequest</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00141">141</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00188">188</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsclient_8cpp_source.html#l00120">createQueue()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00226">SqsCreateQueueRequest::setAttributes()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> request(queueName);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    request.setAttributes(attributes);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a>(request);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
-<div class="ttc" id="classSqsClient_html_a97cecd89ba532531052a3e52a6aa2748"><div class="ttname"><a href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">SqsClient::createQueue</a></div><div class="ttdeci">SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &amp;request)</div><div class="ttdoc">Create an SQS queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00120">sqsclient.cpp:120</a></div></div>
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00167">createQueue()</a>, and <a class="el" href="sqscreatequeuerequest_8cpp_source.html#l00226">SqsCreateQueueRequest::setAttributes()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;{</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> request(queueName);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    request.setAttributes(attributes);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a>(request);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="ttc" id="classSqsClient_html_a97cecd89ba532531052a3e52a6aa2748"><div class="ttname"><a href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">SqsClient::createQueue</a></div><div class="ttdeci">SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &amp;request)</div><div class="ttdoc">Create an SQS queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00167">sqsclient.cpp:167</a></div></div>
 <div class="ttc" id="classSqsCreateQueueRequest_html"><div class="ttname"><a href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a></div><div class="ttdoc">Implements SQS CreateQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqscreatequeuerequest_8h_source.html#l00031">sqscreatequeuerequest.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa728cd5c0145a5dca038a010faae810d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> * SqsClient::deleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the specified message from the specified queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00205">205</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00223">deleteMessage()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
+<div class="ttc" id="classSqsDeleteMessageResponse_html"><div class="ttname"><a href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a></div><div class="ttdoc">Handles SQS DeleteMessage responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsdeletemessageresponse_8h_source.html#l00030">sqsdeletemessageresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a43bec38486fe81c185846c1e0b9cad3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> * SqsClient::deleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>receiptHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the specified message from the specified queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on. </td></tr>
+    <tr><td class="paramname">receiptHandle</td><td>Receipt handle associated with the message to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteMessageRequest.html" title="Implements SQS DeleteMessage requests. ">SqsDeleteMessageRequest</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00223">223</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00205">deleteMessage()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a> request(queueUrl, receiptHandle);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#aa728cd5c0145a5dca038a010faae810d">deleteMessage</a>(request);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="ttc" id="classSqsDeleteMessageRequest_html"><div class="ttname"><a href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a></div><div class="ttdoc">Implements SQS DeleteMessage requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsdeletemessagerequest_8h_source.html#l00029">sqsdeletemessagerequest.h:29</a></div></div>
+<div class="ttc" id="classSqsClient_html_aa728cd5c0145a5dca038a010faae810d"><div class="ttname"><a href="classSqsClient.html#aa728cd5c0145a5dca038a010faae810d">SqsClient::deleteMessage</a></div><div class="ttdeci">SqsDeleteMessageResponse * deleteMessage(const SqsDeleteMessageRequest &amp;request)</div><div class="ttdoc">Deletes the specified message from the specified queue. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00205">sqsclient.cpp:205</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="acc74382b9ede5f81d843482aa471427c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> * SqsClient::deleteQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteQueueRequest.html" title="Implements SQS DeleteQueue requests. ">SqsDeleteQueueRequest</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00241">241</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00257">deleteQueue()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
+<div class="ttc" id="classSqsDeleteQueueResponse_html"><div class="ttname"><a href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a></div><div class="ttdoc">Handles SQS DeleteQueue responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsdeletequeueresponse_8h_source.html#l00030">sqsdeletequeueresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2f648586408c93aa7d03a1561727c479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> * SqsClient::deleteQueue </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteQueueRequest.html" title="Implements SQS DeleteQueue requests. ">SqsDeleteQueueRequest</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00257">257</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00241">deleteQueue()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a> request(queueUrl);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#acc74382b9ede5f81d843482aa471427c">deleteQueue</a>(request);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="ttc" id="classSqsClient_html_acc74382b9ede5f81d843482aa471427c"><div class="ttname"><a href="classSqsClient.html#acc74382b9ede5f81d843482aa471427c">SqsClient::deleteQueue</a></div><div class="ttdeci">SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &amp;request)</div><div class="ttdoc">Deletes the queue specified by the queue URL. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00241">sqsclient.cpp:241</a></div></div>
+<div class="ttc" id="classSqsDeleteQueueRequest_html"><div class="ttname"><a href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a></div><div class="ttdoc">Implements SQS DeleteQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsdeletequeuerequest_8h_source.html#l00029">sqsdeletequeuerequest.h:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a31e15a63268cd45debd8620c0b3da3ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> * SqsClient::purgeQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the messages in a queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00272">272</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00288">purgeQueue()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
+<div class="ttc" id="classSqsPurgeQueueResponse_html"><div class="ttname"><a href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a></div><div class="ttdoc">Handles SQS PurgeQueue responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqspurgequeueresponse_8h_source.html#l00030">sqspurgequeueresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a678bc3d5b5bc4e018ced2f6900ba8eac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> * SqsClient::purgeQueue </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the messages in a queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsPurgeQueueResponse.html" title="Handles SQS PurgeQueue responses. ">SqsPurgeQueueResponse</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00288">288</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00272">purgeQueue()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a> request(queueUrl);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#a31e15a63268cd45debd8620c0b3da3ba">purgeQueue</a>(request);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
+<div class="ttc" id="classSqsClient_html_a31e15a63268cd45debd8620c0b3da3ba"><div class="ttname"><a href="classSqsClient.html#a31e15a63268cd45debd8620c0b3da3ba">SqsClient::purgeQueue</a></div><div class="ttdeci">SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &amp;request)</div><div class="ttdoc">Deletes the messages in a queue specified by the queue URL. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00272">sqsclient.cpp:272</a></div></div>
+<div class="ttc" id="classSqsPurgeQueueRequest_html"><div class="ttname"><a href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a></div><div class="ttdoc">Implements SQS PurgeQueue requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqspurgequeuerequest_8h_source.html#l00029">sqspurgequeuerequest.h:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a9fa17561da4859f8edf2436e3a03c843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> * SqsClient::removePermission </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revokes any permissions in the queue policy that matches the specified <em>label</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00304">304</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00140">AwsAbstractClient::send()</a>.</p>
+
+<p>Referenced by <a class="el" href="sqsclient_8cpp_source.html#l00323">removePermission()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> qobject_cast&lt;<a class="code" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> *&gt;(<a class="code" href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">send</a>(request));</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="ttc" id="classAwsAbstractClient_html_a831490c9df803ccf8431ae4af0b2e687"><div class="ttname"><a href="classAwsAbstractClient.html#a831490c9df803ccf8431ae4af0b2e687">AwsAbstractClient::send</a></div><div class="ttdeci">virtual AwsAbstractResponse * send(const AwsAbstractRequest &amp;request)</div><div class="ttdoc">Send an AWS request. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00140">awsabstractclient.cpp:140</a></div></div>
+<div class="ttc" id="classSqsRemovePermissionResponse_html"><div class="ttname"><a href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a></div><div class="ttdoc">Handles SQS RemovePermission responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqsremovepermissionresponse_8h_source.html#l00030">sqsremovepermissionresponse.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3ce4dd69e0f4c0e283c8836eca33425c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> * SqsClient::removePermission </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revokes any permissions in the queue policy that matches the specified <em>label</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on. </td></tr>
+    <tr><td class="paramname">label</td><td>Identification of the permission to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsRemovePermissionRequest.html" title="Implements SQS RemovePermission requests. ">SqsRemovePermissionRequest</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="sqsclient_8cpp_source.html#l00323">323</a> of file <a class="el" href="sqsclient_8cpp_source.html">sqsclient.cpp</a>.</p>
+
+<p>References <a class="el" href="sqsclient_8cpp_source.html#l00304">removePermission()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">const</span> <a class="code" href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a> request(queueUrl, label);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsClient.html#a9fa17561da4859f8edf2436e3a03c843">removePermission</a>(request);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}</div>
+<div class="ttc" id="classSqsRemovePermissionRequest_html"><div class="ttname"><a href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a></div><div class="ttdoc">Implements SQS RemovePermission requests. </div><div class="ttdef"><b>Definition:</b> <a href="sqsremovepermissionrequest_8h_source.html#l00029">sqsremovepermissionrequest.h:29</a></div></div>
+<div class="ttc" id="classSqsClient_html_a9fa17561da4859f8edf2436e3a03c843"><div class="ttname"><a href="classSqsClient.html#a9fa17561da4859f8edf2436e3a03c843">SqsClient::removePermission</a></div><div class="ttdeci">SqsRemovePermissionResponse * removePermission(const SqsRemovePermissionRequest &amp;request)</div><div class="ttdoc">Revokes any permissions in the queue policy that matches the specified label. </div><div class="ttdef"><b>Definition:</b> <a href="sqsclient_8cpp_source.html#l00304">sqsclient.cpp:304</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -116,12 +116,42 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ad667aac3b84e3f3992f3b41de704412f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsAddPermissionResponse.html">SqsAddPermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#ad667aac3b84e3f3992f3b41de704412f">addPermission</a> (const <a class="el" href="classSqsAddPermissionRequest.html">SqsAddPermissionRequest</a> &amp;request)</td></tr>
 <tr class="memdesc:ad667aac3b84e3f3992f3b41de704412f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add permissions to an SQS queue.  <a href="#ad667aac3b84e3f3992f3b41de704412f">More...</a><br /></td></tr>
 <tr class="separator:ad667aac3b84e3f3992f3b41de704412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34259be0c42a31fb65a912a10b278a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a34259be0c42a31fb65a912a10b278a0a">changeMessageVisibility</a> (const <a class="el" href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a34259be0c42a31fb65a912a10b278a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the visibility timeout of a received SQS message.  <a href="#a34259be0c42a31fb65a912a10b278a0a">More...</a><br /></td></tr>
+<tr class="separator:a34259be0c42a31fb65a912a10b278a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac662b0d131de7571bed4af578596e1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#ac662b0d131de7571bed4af578596e1b7">changeMessageVisibility</a> (const QString &amp;queueUrl, const QString &amp;receiptHandle, const int visbilityTimeout)</td></tr>
+<tr class="memdesc:ac662b0d131de7571bed4af578596e1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the visibility timeout of a received SQS message.  <a href="#ac662b0d131de7571bed4af578596e1b7">More...</a><br /></td></tr>
+<tr class="separator:ac662b0d131de7571bed4af578596e1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97cecd89ba532531052a3e52a6aa2748"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a97cecd89ba532531052a3e52a6aa2748">createQueue</a> (const <a class="el" href="classSqsCreateQueueRequest.html">SqsCreateQueueRequest</a> &amp;request)</td></tr>
 <tr class="memdesc:a97cecd89ba532531052a3e52a6aa2748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a97cecd89ba532531052a3e52a6aa2748">More...</a><br /></td></tr>
 <tr class="separator:a97cecd89ba532531052a3e52a6aa2748"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a622a5f5d3ff78f6029e808874c1c918c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsCreateQueueResponse.html">SqsCreateQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a622a5f5d3ff78f6029e808874c1c918c">createQueue</a> (const QString &amp;queueName, const QVariantMap &amp;attributes=QVariantMap())</td></tr>
 <tr class="memdesc:a622a5f5d3ff78f6029e808874c1c918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an SQS queue.  <a href="#a622a5f5d3ff78f6029e808874c1c918c">More...</a><br /></td></tr>
 <tr class="separator:a622a5f5d3ff78f6029e808874c1c918c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa728cd5c0145a5dca038a010faae810d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#aa728cd5c0145a5dca038a010faae810d">deleteMessage</a> (const <a class="el" href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:aa728cd5c0145a5dca038a010faae810d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the specified message from the specified queue.  <a href="#aa728cd5c0145a5dca038a010faae810d">More...</a><br /></td></tr>
+<tr class="separator:aa728cd5c0145a5dca038a010faae810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43bec38486fe81c185846c1e0b9cad3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a43bec38486fe81c185846c1e0b9cad3b">deleteMessage</a> (const QString &amp;queueUrl, const QString &amp;receiptHandle)</td></tr>
+<tr class="memdesc:a43bec38486fe81c185846c1e0b9cad3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the specified message from the specified queue.  <a href="#a43bec38486fe81c185846c1e0b9cad3b">More...</a><br /></td></tr>
+<tr class="separator:a43bec38486fe81c185846c1e0b9cad3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc74382b9ede5f81d843482aa471427c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#acc74382b9ede5f81d843482aa471427c">deleteQueue</a> (const <a class="el" href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:acc74382b9ede5f81d843482aa471427c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the queue specified by the queue URL.  <a href="#acc74382b9ede5f81d843482aa471427c">More...</a><br /></td></tr>
+<tr class="separator:acc74382b9ede5f81d843482aa471427c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f648586408c93aa7d03a1561727c479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a2f648586408c93aa7d03a1561727c479">deleteQueue</a> (const QString &amp;queueUrl)</td></tr>
+<tr class="memdesc:a2f648586408c93aa7d03a1561727c479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the queue specified by the queue URL.  <a href="#a2f648586408c93aa7d03a1561727c479">More...</a><br /></td></tr>
+<tr class="separator:a2f648586408c93aa7d03a1561727c479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e15a63268cd45debd8620c0b3da3ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a31e15a63268cd45debd8620c0b3da3ba">purgeQueue</a> (const <a class="el" href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a31e15a63268cd45debd8620c0b3da3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the messages in a queue specified by the queue URL.  <a href="#a31e15a63268cd45debd8620c0b3da3ba">More...</a><br /></td></tr>
+<tr class="separator:a31e15a63268cd45debd8620c0b3da3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a678bc3d5b5bc4e018ced2f6900ba8eac">purgeQueue</a> (const QString &amp;queueUrl)</td></tr>
+<tr class="memdesc:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the messages in a queue specified by the queue URL.  <a href="#a678bc3d5b5bc4e018ced2f6900ba8eac">More...</a><br /></td></tr>
+<tr class="separator:a678bc3d5b5bc4e018ced2f6900ba8eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa17561da4859f8edf2436e3a03c843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a9fa17561da4859f8edf2436e3a03c843">removePermission</a> (const <a class="el" href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a9fa17561da4859f8edf2436e3a03c843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes any permissions in the queue policy that matches the specified <em>label</em>.  <a href="#a9fa17561da4859f8edf2436e3a03c843">More...</a><br /></td></tr>
+<tr class="separator:a9fa17561da4859f8edf2436e3a03c843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqsClient.html#a3ce4dd69e0f4c0e283c8836eca33425c">removePermission</a> (const QString &amp;queueUrl, const QString &amp;label)</td></tr>
+<tr class="memdesc:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revokes any permissions in the queue policy that matches the specified <em>label</em>.  <a href="#a3ce4dd69e0f4c0e283c8836eca33425c">More...</a><br /></td></tr>
+<tr class="separator:a3ce4dd69e0f4c0e283c8836eca33425c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -311,7 +341,93 @@ Additional Inherited Members</h2></td></tr>
 <p>Add permissions to an SQS queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a34259be0c42a31fb65a912a10b278a0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> * SqsClient::changeMessageVisibility </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsChangeMessageVisibilityRequest.html">SqsChangeMessageVisibilityRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the visibility timeout of a received SQS message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac662b0d131de7571bed4af578596e1b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsChangeMessageVisibilityResponse.html">SqsChangeMessageVisibilityResponse</a> * SqsClient::changeMessageVisibility </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>receiptHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>visbilityTimeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the visibility timeout of a received SQS message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the queue <em>receiptHandle</em> relates to. </td></tr>
+    <tr><td class="paramname">receiptHandle</td><td>Handle for the message to set the timeout for. </td></tr>
+    <tr><td class="paramname">visbilityTimeout</td><td>New value (in seconds) for the message's visibility timeout.</td></tr>
   </table>
   </dd>
 </dl>
@@ -345,7 +461,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create an SQS queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>The request to send to SQS.</td></tr>
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
   </table>
   </dd>
 </dl>
@@ -398,6 +514,305 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsCreateQueueRequest.html" title="Implements SQS CreateQueue requests. ">SqsCreateQueueRequest</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa728cd5c0145a5dca038a010faae810d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> * SqsClient::deleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsDeleteMessageRequest.html">SqsDeleteMessageRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the specified message from the specified queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a43bec38486fe81c185846c1e0b9cad3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteMessageResponse.html">SqsDeleteMessageResponse</a> * SqsClient::deleteMessage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>receiptHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the specified message from the specified queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on. </td></tr>
+    <tr><td class="paramname">receiptHandle</td><td>Receipt handle associated with the message to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteMessageRequest.html" title="Implements SQS DeleteMessage requests. ">SqsDeleteMessageRequest</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc74382b9ede5f81d843482aa471427c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> * SqsClient::deleteQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsDeleteQueueRequest.html">SqsDeleteQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteQueueRequest.html" title="Implements SQS DeleteQueue requests. ">SqsDeleteQueueRequest</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f648586408c93aa7d03a1561727c479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsDeleteQueueResponse.html">SqsDeleteQueueResponse</a> * SqsClient::deleteQueue </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsDeleteQueueRequest.html" title="Implements SQS DeleteQueue requests. ">SqsDeleteQueueRequest</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a31e15a63268cd45debd8620c0b3da3ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> * SqsClient::purgeQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsPurgeQueueRequest.html">SqsPurgeQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the messages in a queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a678bc3d5b5bc4e018ced2f6900ba8eac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsPurgeQueueResponse.html">SqsPurgeQueueResponse</a> * SqsClient::purgeQueue </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the messages in a queue specified by the queue URL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsPurgeQueueResponse.html" title="Handles SQS PurgeQueue responses. ">SqsPurgeQueueResponse</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9fa17561da4859f8edf2436e3a03c843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> * SqsClient::removePermission </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSqsRemovePermissionRequest.html">SqsRemovePermissionRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revokes any permissions in the queue policy that matches the specified <em>label</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Request to send to SQS.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ce4dd69e0f4c0e283c8836eca33425c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSqsRemovePermissionResponse.html">SqsRemovePermissionResponse</a> * SqsClient::removePermission </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>queueUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Revokes any permissions in the queue policy that matches the specified <em>label</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueUrl</td><td>URL of the Amazon SQS queue to take action on. </td></tr>
+    <tr><td class="paramname">label</td><td>Identification of the permission to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to a related response object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The caller is to take responsbility for the resulting pointer.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsRemovePermissionRequest.html" title="Implements SQS RemovePermission requests. ">SqsRemovePermissionRequest</a> </dd></dl>
 
 </div>
 </div>

@@ -8,5 +8,6 @@ var searchData=
   ['permissibleaction',['PermissibleAction',['../classSqsAddPermissionRequest.html#aa50169f5f2d7792d6d71cdd88d7b1b1f',1,'SqsAddPermissionRequest']]],
   ['permissions',['permissions',['../classSqsAddPermissionRequest.html#a8ff0481adb6e5c912ef1b0f12fb6f222',1,'SqsAddPermissionRequest::permissions(const QString &amp;accountId) const '],['../classSqsAddPermissionRequest.html#ab92983d30ec4e26e717c89ebaaaa6fb1',1,'SqsAddPermissionRequest::permissions() const ']]],
   ['permissionsmap',['PermissionsMap',['../classSqsAddPermissionRequest.html#af05ff2d54739e2ca3c4c76675a34ed19',1,'SqsAddPermissionRequest']]],
-  ['policy',['policy',['../classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4',1,'SqsCreateQueueRequest']]]
+  ['policy',['policy',['../classSqsCreateQueueRequest.html#a9736f270bdb95b6f9911d7f86bcd61e4',1,'SqsCreateQueueRequest']]],
+  ['purgequeue',['purgeQueue',['../classSqsClient.html#a31e15a63268cd45debd8620c0b3da3ba',1,'SqsClient::purgeQueue(const SqsPurgeQueueRequest &amp;request)'],['../classSqsClient.html#a678bc3d5b5bc4e018ced2f6900ba8eac',1,'SqsClient::purgeQueue(const QString &amp;queueUrl)']]]
 ];

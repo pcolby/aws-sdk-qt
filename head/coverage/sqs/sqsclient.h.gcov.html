@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - libqtaws 0.1.0 - sqs/sqsclient.h</title>
+  <title>LCOV - libqtaws 0.2.0 - sqs/sqsclient.h</title>
   <link rel="stylesheet" type="text/css" href="../gcov.css">
 </head>
 
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test:</td>
-            <td class="headerValue">libqtaws 0.1.0</td>
+            <td class="headerValue">libqtaws 0.2.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">2</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-11 10:16:25</td>
+            <td class="headerValue">2015-07-12 21:06:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -96,59 +96,95 @@
 <span class="lineNum">      34 </span>            : class SqsClientPrivate;
 <span class="lineNum">      35 </span>            : class SqsAddPermissionRequest;
 <span class="lineNum">      36 </span>            : class SqsAddPermissionResponse;
-<span class="lineNum">      37 </span>            : class SqsCreateQueueRequest;
-<a name="38"><span class="lineNum">      38 </span>            : class SqsCreateQueueResponse;</a>
-<span class="lineNum">      39 </span>            : 
-<span class="lineNum">      40 </span><span class="lineCov">        198 : class QTAWS_EXPORT SqsClient : public AwsAbstractClient {</span>
-<span class="lineNum">      41 </span>            :     Q_OBJECT
-<span class="lineNum">      42 </span>            : 
-<span class="lineNum">      43 </span>            : public:
-<span class="lineNum">      44 </span>            :     SqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
-<span class="lineNum">      45 </span>            :               AwsAbstractCredentials * credentials = NULL,
-<span class="lineNum">      46 </span>            :               QNetworkAccessManager * const manager = NULL,
-<span class="lineNum">      47 </span>            :               QObject * const parent = 0);
-<span class="lineNum">      48 </span>            : 
-<span class="lineNum">      49 </span>            :     SqsClient(const QUrl &amp;endpoint, AwsAbstractCredentials * credentials = NULL,
-<span class="lineNum">      50 </span>            :               QNetworkAccessManager * const manager = NULL,
-<span class="lineNum">      51 </span>            :               QObject * const parent = 0);
-<span class="lineNum">      52 </span>            : 
-<span class="lineNum">      53 </span>            : public slots:
-<span class="lineNum">      54 </span>            :     SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &amp;request);
-<span class="lineNum">      55 </span>            : 
-<span class="lineNum">      56 </span>            :     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &amp;request);
-<span class="lineNum">      57 </span>            :     SqsCreateQueueResponse * createQueue(const QString &amp;queueName,
-<span class="lineNum">      58 </span>            :                                          const QVariantMap &amp;attributes = QVariantMap());
-<span class="lineNum">      59 </span>            : 
-<span class="lineNum">      60 </span>            : /*
-<span class="lineNum">      61 </span>            :     void changeMessageVisibility(const QString &amp;queueUrl, const QString &amp;receiptHandle, const int visbilityTimeout);
-<span class="lineNum">      62 </span>            :     void changeMessageVisibilityBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles, const int visbilityTimeout);
-<span class="lineNum">      63 </span>            :     void deleteMessage(const QString &amp;queueUrl, const QString &amp;receiptHandle);
-<span class="lineNum">      64 </span>            :     void deleteMessageBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles);
-<span class="lineNum">      65 </span>            :     void deleteQueue(const QString &amp;queueUrl);
-<span class="lineNum">      66 </span>            :     void getQueueUrl(const QString &amp;queueName, const QString &amp;queueOwnerAWSAccountId = QString());
-<span class="lineNum">      67 </span>            :     void listDeadLetterSourceQueues(const QString &amp;queueUrl);
-<span class="lineNum">      68 </span>            :     void listQueues(const QString &amp;queueNamePrefix = QString());
-<span class="lineNum">      69 </span>            :     void purgeQueue(const QString &amp;queueUrl);
-<span class="lineNum">      70 </span>            :     void receiveMessage(const QString &amp;queueName, ...);
-<span class="lineNum">      71 </span>            :     void receiveMessage(const SqsReceiveMessageRequest &amp;request);
-<span class="lineNum">      72 </span>            :     void removePermission(const QString &amp;lablel, const QString &amp;queueUrl);
-<span class="lineNum">      73 </span>            :     void sendMessage(const QString &amp;queueUrl, const QByteArray &amp;message, ...);
-<span class="lineNum">      74 </span>            :     void sendMessage(const SqsSendMessageRequest &amp;request);
-<span class="lineNum">      75 </span>            :     void sendMessageBatch(const QString &amp;queueUrl, const QByteArrayList &amp;messages, ...);
-<span class="lineNum">      76 </span>            :     void sendMessageBatch(const SqsSendMessageRequestList &amp;requests);
-<span class="lineNum">      77 </span>            :     void setQueueAttributes(const QString &amp;queueUrl, const QStringMap &amp;attributes = QStringMap());
-<span class="lineNum">      78 </span>            :     void setQueueAttributes(const SqsSetQueueAttributesRequest &amp;request);
-<span class="lineNum">      79 </span>            : */
-<a name="80"><span class="lineNum">      80 </span>            : </a>
-<span class="lineNum">      81 </span>            : private:
-<span class="lineNum">      82 </span><span class="lineCov">        198 :     Q_DECLARE_PRIVATE(SqsClient)</span>
-<span class="lineNum">      83 </span>            :     Q_DISABLE_COPY(SqsClient)
-<span class="lineNum">      84 </span>            :     friend class TestSqsClient;
-<span class="lineNum">      85 </span>            : };
-<span class="lineNum">      86 </span>            : 
-<span class="lineNum">      87 </span>            : QTAWS_END_NAMESPACE
-<span class="lineNum">      88 </span>            : 
-<span class="lineNum">      89 </span>            : #endif
+<span class="lineNum">      37 </span>            : class SqsChangeMessageVisibilityRequest;
+<span class="lineNum">      38 </span>            : class SqsChangeMessageVisibilityResponse;
+<span class="lineNum">      39 </span>            : class SqsChangeMessageVisibilityBatchRequest;
+<span class="lineNum">      40 </span>            : class SqsChangeMessageVisibilityBatchResponse;
+<span class="lineNum">      41 </span>            : class SqsCreateQueueRequest;
+<span class="lineNum">      42 </span>            : class SqsCreateQueueResponse;
+<span class="lineNum">      43 </span>            : class SqsDeleteMessageRequest;
+<span class="lineNum">      44 </span>            : class SqsDeleteMessageResponse;
+<span class="lineNum">      45 </span>            : class SqsDeleteQueueRequest;
+<span class="lineNum">      46 </span>            : class SqsDeleteQueueResponse;
+<span class="lineNum">      47 </span>            : class SqsPurgeQueueRequest;
+<span class="lineNum">      48 </span>            : class SqsPurgeQueueResponse;
+<span class="lineNum">      49 </span>            : class SqsRemovePermissionRequest;
+<span class="lineNum">      50 </span>            : class SqsRemovePermissionResponse;
+<span class="lineNum">      51 </span>            : class SqsSetQueueAttributesRequest;
+<a name="52"><span class="lineNum">      52 </span>            : class SqsSetQueueAttributesResponse;</a>
+<span class="lineNum">      53 </span>            : 
+<span class="lineNum">      54 </span><span class="lineCov">         54 : class QTAWS_EXPORT SqsClient : public AwsAbstractClient {</span>
+<span class="lineNum">      55 </span>            :     Q_OBJECT
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : public:
+<span class="lineNum">      58 </span>            :     SqsClient(const AwsRegion::Region region = AwsRegion::InvalidRegion,
+<span class="lineNum">      59 </span>            :               AwsAbstractCredentials * credentials = NULL,
+<span class="lineNum">      60 </span>            :               QNetworkAccessManager * const manager = NULL,
+<span class="lineNum">      61 </span>            :               QObject * const parent = 0);
+<span class="lineNum">      62 </span>            : 
+<span class="lineNum">      63 </span>            :     SqsClient(const QUrl &amp;endpoint, AwsAbstractCredentials * credentials = NULL,
+<span class="lineNum">      64 </span>            :               QNetworkAccessManager * const manager = NULL,
+<span class="lineNum">      65 </span>            :               QObject * const parent = 0);
+<span class="lineNum">      66 </span>            : 
+<span class="lineNum">      67 </span>            : public slots:
+<span class="lineNum">      68 </span>            :     SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &amp;request);
+<span class="lineNum">      69 </span>            : 
+<span class="lineNum">      70 </span>            :     SqsChangeMessageVisibilityResponse * changeMessageVisibility(
+<span class="lineNum">      71 </span>            :         const SqsChangeMessageVisibilityRequest &amp;request);
+<span class="lineNum">      72 </span>            :     SqsChangeMessageVisibilityResponse * changeMessageVisibility(
+<span class="lineNum">      73 </span>            :         const QString &amp;queueUrl, const QString &amp;receiptHandle,
+<span class="lineNum">      74 </span>            :         const int visbilityTimeout);
+<span class="lineNum">      75 </span>            : 
+<span class="lineNum">      76 </span>            :     //SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(
+<span class="lineNum">      77 </span>            :     //    const SqsChangeMessageVisibilityBatchRequest &amp;request);
+<span class="lineNum">      78 </span>            :     //SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(
+<span class="lineNum">      79 </span>            :     //    const QString &amp;queueUrl, const QStringList &amp;receiptHandles,
+<span class="lineNum">      80 </span>            :     //    const int visbilityTimeout);
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span>            :     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &amp;request);
+<span class="lineNum">      83 </span>            :     SqsCreateQueueResponse * createQueue(const QString &amp;queueName,
+<span class="lineNum">      84 </span>            :                                          const QVariantMap &amp;attributes = QVariantMap());
+<span class="lineNum">      85 </span>            : 
+<span class="lineNum">      86 </span>            :     SqsDeleteMessageResponse * deleteMessage(const SqsDeleteMessageRequest &amp;request);
+<span class="lineNum">      87 </span>            :     SqsDeleteMessageResponse * deleteMessage(const QString &amp;queueUrl,
+<span class="lineNum">      88 </span>            :                                              const QString &amp;receiptHandle);
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span>            :     //void deleteMessageBatch(const QString &amp;queueUrl, const QStringList &amp;receiptHandles);
+<span class="lineNum">      91 </span>            : 
+<span class="lineNum">      92 </span>            :     SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &amp;request);
+<span class="lineNum">      93 </span>            :     SqsDeleteQueueResponse * deleteQueue(const QString &amp;queueUrl);
+<span class="lineNum">      94 </span>            : 
+<span class="lineNum">      95 </span>            :     //void getQueueUrl(const QString &amp;queueName, const QString &amp;queueOwnerAWSAccountId = QString());
+<span class="lineNum">      96 </span>            :     //void listDeadLetterSourceQueues(const QString &amp;queueUrl);
+<span class="lineNum">      97 </span>            :     //void listQueues(const QString &amp;queueNamePrefix = QString());
+<span class="lineNum">      98 </span>            : 
+<span class="lineNum">      99 </span>            :     SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &amp;request);
+<span class="lineNum">     100 </span>            :     SqsPurgeQueueResponse * purgeQueue(const QString &amp;queueUrl);
+<span class="lineNum">     101 </span>            : 
+<span class="lineNum">     102 </span>            :     //void receiveMessage(const QString &amp;queueName, ...);
+<span class="lineNum">     103 </span>            :     //void receiveMessage(const SqsReceiveMessageRequest &amp;request);
+<span class="lineNum">     104 </span>            : 
+<span class="lineNum">     105 </span>            :     SqsRemovePermissionResponse * removePermission(
+<span class="lineNum">     106 </span>            :         const SqsRemovePermissionRequest &amp;request);
+<span class="lineNum">     107 </span>            :     SqsRemovePermissionResponse * removePermission(
+<span class="lineNum">     108 </span>            :         const QString &amp;queueUrl, const QString &amp;label);
+<span class="lineNum">     109 </span>            : 
+<span class="lineNum">     110 </span>            :     //void sendMessage(const QString &amp;queueUrl, const QByteArray &amp;message, ...);
+<span class="lineNum">     111 </span>            :     //void sendMessage(const SqsSendMessageRequest &amp;request);
+<span class="lineNum">     112 </span>            :     //void sendMessageBatch(const QString &amp;queueUrl, const QByteArrayList &amp;messages, ...);
+<span class="lineNum">     113 </span>            :     //void sendMessageBatch(const SqsSendMessageRequestList &amp;requests);
+<span class="lineNum">     114 </span>            :     //void setQueueAttributes(const QString &amp;queueUrl, const QStringMap &amp;attributes = QStringMap());
+<span class="lineNum">     115 </span>            :     //void setQueueAttributes(const SqsSetQueueAttributesRequest &amp;request);
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<span class="lineNum">     117 </span>            : private:
+<span class="lineNum">     118 </span><span class="lineCov">        328 :     Q_DECLARE_PRIVATE(SqsClient)</span>
+<span class="lineNum">     119 </span>            :     Q_DISABLE_COPY(SqsClient)
+<span class="lineNum">     120 </span>            :     friend class TestSqsClient;
+<span class="lineNum">     121 </span>            : };
+<span class="lineNum">     122 </span>            : 
+<span class="lineNum">     123 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">     124 </span>            : 
+<span class="lineNum">     125 </span>            : #endif
 </pre>
       </td>
     </tr>

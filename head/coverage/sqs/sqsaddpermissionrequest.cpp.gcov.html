@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>LCOV - libqtaws 0.1.0 - sqs/sqsaddpermissionrequest.cpp</title>
+  <title>LCOV - libqtaws 0.2.0 - sqs/sqsaddpermissionrequest.cpp</title>
   <link rel="stylesheet" type="text/css" href="../gcov.css">
 </head>
 
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test:</td>
-            <td class="headerValue">libqtaws 0.1.0</td>
+            <td class="headerValue">libqtaws 0.2.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">69</td>
@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-11 10:16:25</td>
+            <td class="headerValue">2015-07-12 21:06:37</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">17</td>
@@ -109,40 +109,40 @@
 <span class="lineNum">      47 </span>            :  * @param  permissions  Permissions to grant.
 <a name="48"><span class="lineNum">      48 </span>            :  * @param  queueUrl     URL of the queue \a permissions are to be granted on.</a>
 <span class="lineNum">      49 </span>            :  */
-<span class="lineNum">      50 </span><span class="lineCov">        181 : SqsAddPermissionRequest::SqsAddPermissionRequest(</span>
+<span class="lineNum">      50 </span><span class="lineCov">        150 : SqsAddPermissionRequest::SqsAddPermissionRequest(</span>
 <span class="lineNum">      51 </span>            :     const QString &amp;label, const PermissionsMap &amp;permissions, const QString &amp;queueUrl)
-<span class="lineNum">      52 </span><span class="lineCov">        181 :     : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))</span>
+<span class="lineNum">      52 </span><span class="lineCov">        150 :     : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))</span>
 <span class="lineNum">      53 </span>            : {
-<span class="lineNum">      54 </span><span class="lineCov">        181 :     setLabel(label);</span>
-<span class="lineNum">      55 </span><span class="lineCov">        181 :     setQueueUrl(queueUrl);</span>
-<span class="lineNum">      56 </span><span class="lineCov">        181 :     setPermissions(permissions);</span>
-<span class="lineNum">      57 </span><span class="lineCov">        181 : }</span>
+<span class="lineNum">      54 </span><span class="lineCov">        150 :     setLabel(label);</span>
+<span class="lineNum">      55 </span><span class="lineCov">        150 :     setQueueUrl(queueUrl);</span>
+<span class="lineNum">      56 </span><span class="lineCov">        150 :     setPermissions(permissions);</span>
+<span class="lineNum">      57 </span><span class="lineCov">        150 : }</span>
 <span class="lineNum">      58 </span>            : 
 <span class="lineNum">      59 </span>            : /**
 <span class="lineNum">      60 </span>            :  * @brief  Constructs a new SqsAddPermissionRequest object by copying another.
 <span class="lineNum">      61 </span>            :  *
 <a name="62"><span class="lineNum">      62 </span>            :  * @param  other  Instance to copy.</a>
 <span class="lineNum">      63 </span>            :  */
-<span class="lineNum">      64 </span><span class="lineCov">        159 : SqsAddPermissionRequest::SqsAddPermissionRequest(const SqsAddPermissionRequest &amp;other)</span>
-<span class="lineNum">      65 </span><span class="lineCov">        159 :     : SqsRequest(new SqsAddPermissionRequestPrivate(*other.d_func(), this))</span>
+<span class="lineNum">      64 </span><span class="lineCov">        126 : SqsAddPermissionRequest::SqsAddPermissionRequest(const SqsAddPermissionRequest &amp;other)</span>
+<span class="lineNum">      65 </span><span class="lineCov">        126 :     : SqsRequest(new SqsAddPermissionRequestPrivate(*other.d_func(), this))</span>
 <span class="lineNum">      66 </span>            : {
 <span class="lineNum">      67 </span>            : 
-<span class="lineNum">      68 </span><span class="lineCov">        159 : }</span>
+<span class="lineNum">      68 </span><span class="lineCov">        126 : }</span>
 <span class="lineNum">      69 </span>            : 
 <span class="lineNum">      70 </span>            : /**
 <a name="71"><span class="lineNum">      71 </span>            :  * @brief  Constructs a new SqsAddPermissionRequest object.</a>
 <span class="lineNum">      72 </span>            :  */
-<span class="lineNum">      73 </span><span class="lineCov">        448 : SqsAddPermissionRequest::SqsAddPermissionRequest()</span>
-<span class="lineNum">      74 </span><span class="lineCov">        448 :     : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))</span>
+<span class="lineNum">      73 </span><span class="lineCov">        352 : SqsAddPermissionRequest::SqsAddPermissionRequest()</span>
+<span class="lineNum">      74 </span><span class="lineCov">        352 :     : SqsRequest(new SqsAddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))</span>
 <span class="lineNum">      75 </span>            : {
 <span class="lineNum">      76 </span>            : 
-<a name="77"><span class="lineNum">      77 </span><span class="lineCov">        448 : }</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">        352 : }</span></a>
 <span class="lineNum">      78 </span>            : 
-<span class="lineNum">      79 </span><span class="lineCov">         59 : bool SqsAddPermissionRequest::isValid() const</span>
+<span class="lineNum">      79 </span><span class="lineCov">         54 : bool SqsAddPermissionRequest::isValid() const</span>
 <span class="lineNum">      80 </span>            : {
-<span class="lineNum">      81 </span><span class="lineCov">        314 :     return ((isValidQueueName(label())) &amp;&amp;</span>
-<span class="lineNum">      82 </span><span class="lineCov">        333 :             (!permissions().isEmpty()) &amp;&amp;</span>
-<span class="lineNum">      83 </span><span class="lineCov">        176 :             (!queueUrl().isEmpty()));</span>
+<span class="lineNum">      81 </span><span class="lineCov">        292 :     return ((isValidQueueName(label())) &amp;&amp;</span>
+<span class="lineNum">      82 </span><span class="lineCov">        314 :             (!permissions().isEmpty()) &amp;&amp;</span>
+<span class="lineNum">      83 </span><span class="lineCov">        168 :             (!queueUrl().isEmpty()));</span>
 <span class="lineNum">      84 </span>            : }
 <span class="lineNum">      85 </span>            : 
 <span class="lineNum">      86 </span>            : /**
@@ -150,9 +150,9 @@
 <span class="lineNum">      88 </span>            :  *
 <a name="89"><span class="lineNum">      89 </span>            :  * @return The label for this AddPermission request.</a>
 <span class="lineNum">      90 </span>            :  */
-<span class="lineNum">      91 </span><span class="lineCov">        259 : QString SqsAddPermissionRequest::label() const</span>
+<span class="lineNum">      91 </span><span class="lineCov">        214 : QString SqsAddPermissionRequest::label() const</span>
 <span class="lineNum">      92 </span>            : {
-<span class="lineNum">      93 </span><span class="lineCov">        259 :     return parameter(LABEL).toString();</span>
+<span class="lineNum">      93 </span><span class="lineCov">        214 :     return parameter(LABEL).toString();</span>
 <span class="lineNum">      94 </span>            : }
 <span class="lineNum">      95 </span>            : 
 <span class="lineNum">      96 </span>            : /**
@@ -162,10 +162,10 @@
 <span class="lineNum">     100 </span>            :  *
 <a name="101"><span class="lineNum">     101 </span>            :  * @return A set of action flags that will be allowed for \a accountId.</a>
 <span class="lineNum">     102 </span>            :  */
-<span class="lineNum">     103 </span><span class="lineCov">       1190 : SqsAddPermissionRequest::PermissibleActions SqsAddPermissionRequest::permissions(</span>
+<span class="lineNum">     103 </span><span class="lineCov">        952 : SqsAddPermissionRequest::PermissibleActions SqsAddPermissionRequest::permissions(</span>
 <span class="lineNum">     104 </span>            :     const QString &amp;accountId) const
 <span class="lineNum">     105 </span>            : {
-<span class="lineNum">     106 </span><span class="lineCov">       1190 :     return permissions().value(accountId);</span>
+<span class="lineNum">     106 </span><span class="lineCov">        952 :     return permissions().value(accountId);</span>
 <span class="lineNum">     107 </span>            : }
 <span class="lineNum">     108 </span>            : 
 <span class="lineNum">     109 </span>            : /**
@@ -173,20 +173,20 @@
 <span class="lineNum">     111 </span>            :  *
 <a name="112"><span class="lineNum">     112 </span>            :  * @return A map of all permissions to be set.</a>
 <span class="lineNum">     113 </span>            :  */
-<span class="lineNum">     114 </span><span class="lineCov">       1389 : SqsAddPermissionRequest::PermissionsMap SqsAddPermissionRequest::permissions() const</span>
+<span class="lineNum">     114 </span><span class="lineCov">       1118 : SqsAddPermissionRequest::PermissionsMap SqsAddPermissionRequest::permissions() const</span>
 <span class="lineNum">     115 </span>            : {
-<span class="lineNum">     116 </span><span class="lineCov">       1389 :     Q_D(const SqsAddPermissionRequest);</span>
-<span class="lineNum">     117 </span><span class="lineCov">       1389 :     return d-&gt;permissions;</span>
+<span class="lineNum">     116 </span><span class="lineCov">       1118 :     Q_D(const SqsAddPermissionRequest);</span>
+<span class="lineNum">     117 </span><span class="lineCov">       1118 :     return d-&gt;permissions;</span>
 <span class="lineNum">     118 </span>            : }
 <span class="lineNum">     119 </span>            : 
 <span class="lineNum">     120 </span>            : /**
-<span class="lineNum">     121 </span>            :  * @brief  Get the URL of the queue this request will add permissions to.
+<span class="lineNum">     121 </span>            :  * @brief  Get the URL of the Amazon SQS queue to take action on.
 <span class="lineNum">     122 </span>            :  *
-<a name="123"><span class="lineNum">     123 </span>            :  * @return A queue URL, or any empty string is not set.</a>
+<a name="123"><span class="lineNum">     123 </span>            :  * @return The queue URL, or an empty string if not set.</a>
 <span class="lineNum">     124 </span>            :  */
-<span class="lineNum">     125 </span><span class="lineCov">        229 : QString SqsAddPermissionRequest::queueUrl() const</span>
+<span class="lineNum">     125 </span><span class="lineCov">        190 : QString SqsAddPermissionRequest::queueUrl() const</span>
 <span class="lineNum">     126 </span>            : {
-<span class="lineNum">     127 </span><span class="lineCov">        229 :     return parameter(QUEUE_URL).toString();</span>
+<span class="lineNum">     127 </span><span class="lineCov">        190 :     return parameter(QUEUE_URL).toString();</span>
 <span class="lineNum">     128 </span>            : }
 <span class="lineNum">     129 </span>            : 
 <span class="lineNum">     130 </span>            : /**
@@ -194,20 +194,20 @@
 <span class="lineNum">     132 </span>            :  *
 <a name="133"><span class="lineNum">     133 </span>            :  * @param  label  Unique label to use.</a>
 <span class="lineNum">     134 </span>            :  */
-<span class="lineNum">     135 </span><span class="lineCov">        231 : void SqsAddPermissionRequest::setLabel(const QString &amp;label)</span>
+<span class="lineNum">     135 </span><span class="lineCov">        190 : void SqsAddPermissionRequest::setLabel(const QString &amp;label)</span>
 <span class="lineNum">     136 </span>            : {
-<span class="lineNum">     137 </span><span class="lineCov">        231 :     setParameter(LABEL, label);</span>
-<span class="lineNum">     138 </span><span class="lineCov">        231 : }</span>
+<span class="lineNum">     137 </span><span class="lineCov">        190 :     setParameter(LABEL, label);</span>
+<span class="lineNum">     138 </span><span class="lineCov">        190 : }</span>
 <span class="lineNum">     139 </span>            : 
 <span class="lineNum">     140 </span>            : /**
 <span class="lineNum">     141 </span>            :  * @brief  Set the URL of the queue to add permissions to.
 <span class="lineNum">     142 </span>            :  *
 <a name="143"><span class="lineNum">     143 </span>            :  * @param  queueUrl  SQS queue URL.</a>
 <span class="lineNum">     144 </span>            :  */
-<span class="lineNum">     145 </span><span class="lineCov">        231 : void SqsAddPermissionRequest::setQueueUrl(const QString &amp;queueUrl)</span>
+<span class="lineNum">     145 </span><span class="lineCov">        190 : void SqsAddPermissionRequest::setQueueUrl(const QString &amp;queueUrl)</span>
 <span class="lineNum">     146 </span>            : {
-<span class="lineNum">     147 </span><span class="lineCov">        231 :     setParameter(QUEUE_URL, queueUrl);</span>
-<span class="lineNum">     148 </span><span class="lineCov">        231 : }</span>
+<span class="lineNum">     147 </span><span class="lineCov">        190 :     setParameter(QUEUE_URL, queueUrl);</span>
+<span class="lineNum">     148 </span><span class="lineCov">        190 : }</span>
 <span class="lineNum">     149 </span>            : 
 <span class="lineNum">     150 </span>            : /**
 <span class="lineNum">     151 </span>            :  * @brief  Set a permissions to be added for a given principal.
@@ -222,17 +222,17 @@
 <span class="lineNum">     160 </span>            :  * @param  action     Action to permit or not.
 <a name="161"><span class="lineNum">     161 </span>            :  * @param  permitted  Whether \a action should be permitted or not for \a accountId.</a>
 <span class="lineNum">     162 </span>            :  */
-<span class="lineNum">     163 </span><span class="lineCov">        840 : void SqsAddPermissionRequest::setPermission(</span>
+<span class="lineNum">     163 </span><span class="lineCov">        672 : void SqsAddPermissionRequest::setPermission(</span>
 <span class="lineNum">     164 </span>            :     const QString &amp;accountId, const PermissibleAction action, const bool permitted)
 <span class="lineNum">     165 </span>            : {
-<span class="lineNum">     166 </span><span class="lineCov">        840 :     PermissibleActions actions = permissions(accountId);</span>
-<span class="lineNum">     167 </span><span class="lineCov">        840 :     if (permitted) {</span>
-<span class="lineNum">     168 </span><span class="lineCov">        240 :         actions |= action;</span>
+<span class="lineNum">     166 </span><span class="lineCov">        672 :     PermissibleActions actions = permissions(accountId);</span>
+<span class="lineNum">     167 </span><span class="lineCov">        672 :     if (permitted) {</span>
+<span class="lineNum">     168 </span><span class="lineCov">        192 :         actions |= action;</span>
 <span class="lineNum">     169 </span>            :     } else {
-<span class="lineNum">     170 </span><span class="lineCov">        600 :         actions &amp;= ~action;</span>
+<span class="lineNum">     170 </span><span class="lineCov">        480 :         actions &amp;= ~action;</span>
 <span class="lineNum">     171 </span>            :     }
-<span class="lineNum">     172 </span><span class="lineCov">        840 :     setPermissions(accountId, actions);</span>
-<span class="lineNum">     173 </span><span class="lineCov">        840 : }</span>
+<span class="lineNum">     172 </span><span class="lineCov">        672 :     setPermissions(accountId, actions);</span>
+<span class="lineNum">     173 </span><span class="lineCov">        672 : }</span>
 <span class="lineNum">     174 </span>            : 
 <span class="lineNum">     175 </span>            : /**
 <span class="lineNum">     176 </span>            :  * @brief  Set the permissions to be added for a given principal.
@@ -246,12 +246,12 @@
 <span class="lineNum">     184 </span>            :  * @param  accountId  Principal to set permssions for.
 <a name="185"><span class="lineNum">     185 </span>            :  * @param  actions    Set of actions to permit for \a accountId.</a>
 <span class="lineNum">     186 </span>            :  */
-<span class="lineNum">     187 </span><span class="lineCov">        980 : void SqsAddPermissionRequest::setPermissions(</span>
+<span class="lineNum">     187 </span><span class="lineCov">        784 : void SqsAddPermissionRequest::setPermissions(</span>
 <span class="lineNum">     188 </span>            :     const QString &amp;accountId, const PermissibleActions &amp;actions)
 <span class="lineNum">     189 </span>            : {
-<span class="lineNum">     190 </span><span class="lineCov">        980 :     Q_D(SqsAddPermissionRequest);</span>
-<span class="lineNum">     191 </span><span class="lineCov">        980 :     d-&gt;permissions.insert(accountId, actions);</span>
-<span class="lineNum">     192 </span><span class="lineCov">        980 : }</span>
+<span class="lineNum">     190 </span><span class="lineCov">        784 :     Q_D(SqsAddPermissionRequest);</span>
+<span class="lineNum">     191 </span><span class="lineCov">        784 :     d-&gt;permissions.insert(accountId, actions);</span>
+<span class="lineNum">     192 </span><span class="lineCov">        784 : }</span>
 <span class="lineNum">     193 </span>            : 
 <span class="lineNum">     194 </span>            : /**
 <span class="lineNum">     195 </span>            :  * @brief  Set all of the permissions this request will add to SQS.
@@ -262,11 +262,11 @@
 <span class="lineNum">     200 </span>            :  *
 <a name="201"><span class="lineNum">     201 </span>            :  * @see    permissions</a>
 <span class="lineNum">     202 </span>            :  */
-<span class="lineNum">     203 </span><span class="lineCov">        211 : void SqsAddPermissionRequest::setPermissions(const PermissionsMap &amp;permissions)</span>
+<span class="lineNum">     203 </span><span class="lineCov">        174 : void SqsAddPermissionRequest::setPermissions(const PermissionsMap &amp;permissions)</span>
 <span class="lineNum">     204 </span>            : {
-<span class="lineNum">     205 </span><span class="lineCov">        211 :     Q_D(SqsAddPermissionRequest);</span>
-<span class="lineNum">     206 </span><span class="lineCov">        211 :     d-&gt;permissions = permissions;</span>
-<span class="lineNum">     207 </span><span class="lineCov">        211 : }</span>
+<span class="lineNum">     205 </span><span class="lineCov">        174 :     Q_D(SqsAddPermissionRequest);</span>
+<span class="lineNum">     206 </span><span class="lineCov">        174 :     d-&gt;permissions = permissions;</span>
+<span class="lineNum">     207 </span><span class="lineCov">        174 : }</span>
 <span class="lineNum">     208 </span>            : 
 <span class="lineNum">     209 </span>            : /**
 <span class="lineNum">     210 </span>            :  * @brief  Construct an SqsAddPermissionResponse object.
@@ -277,9 +277,9 @@
 <span class="lineNum">     215 </span>            :  *
 <a name="216"><span class="lineNum">     216 </span>            :  * @see  AwsAbstractClient::send</a>
 <span class="lineNum">     217 </span>            :  */
-<span class="lineNum">     218 </span><span class="lineCov">         19 : AwsAbstractResponse * SqsAddPermissionRequest::response(QNetworkReply * const reply) const</span>
+<span class="lineNum">     218 </span><span class="lineCov">         22 : AwsAbstractResponse * SqsAddPermissionRequest::response(QNetworkReply * const reply) const</span>
 <span class="lineNum">     219 </span>            : {
-<span class="lineNum">     220 </span><span class="lineCov">         19 :     return new SqsAddPermissionResponse(*this, reply);</span>
+<span class="lineNum">     220 </span><span class="lineCov">         22 :     return new SqsAddPermissionResponse(*this, reply);</span>
 <span class="lineNum">     221 </span>            : }
 <span class="lineNum">     222 </span>            : 
 <span class="lineNum">     223 </span>            : /**
@@ -298,12 +298,12 @@
 <span class="lineNum">     236 </span>            :  * @param  action  SQS action being performed.
 <a name="237"><span class="lineNum">     237 </span>            :  * @param  q       Pointer to this object's public SqsAddPermissionRequest instance.</a>
 <span class="lineNum">     238 </span>            :  */
-<span class="lineNum">     239 </span><span class="lineCov">        629 : SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(</span>
+<span class="lineNum">     239 </span><span class="lineCov">        502 : SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(</span>
 <span class="lineNum">     240 </span>            :     const SqsRequest::Action action, SqsAddPermissionRequest * const q)
-<span class="lineNum">     241 </span><span class="lineCov">        629 :     : SqsRequestPrivate(action, q)</span>
+<span class="lineNum">     241 </span><span class="lineCov">        502 :     : SqsRequestPrivate(action, q)</span>
 <span class="lineNum">     242 </span>            : {
 <span class="lineNum">     243 </span>            : 
-<span class="lineNum">     244 </span><span class="lineCov">        629 : }</span>
+<span class="lineNum">     244 </span><span class="lineCov">        502 : }</span>
 <span class="lineNum">     245 </span>            : 
 <span class="lineNum">     246 </span>            : /**
 <span class="lineNum">     247 </span>            :  * @internal
@@ -316,22 +316,22 @@
 <span class="lineNum">     254 </span>            :  * @param  other  Instance to copy.
 <a name="255"><span class="lineNum">     255 </span>            :  * @param  q      Pointer to this object's public SqsAddPermissionRequest instance.</a>
 <span class="lineNum">     256 </span>            :  */
-<span class="lineNum">     257 </span><span class="lineCov">        159 : SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(</span>
+<span class="lineNum">     257 </span><span class="lineCov">        126 : SqsAddPermissionRequestPrivate::SqsAddPermissionRequestPrivate(</span>
 <span class="lineNum">     258 </span>            :     const SqsAddPermissionRequestPrivate &amp;other, SqsAddPermissionRequest * const q)
-<span class="lineNum">     259 </span><span class="lineCov">        159 :     : SqsRequestPrivate(other, q), permissions(other.permissions)</span>
+<span class="lineNum">     259 </span><span class="lineCov">        126 :     : SqsRequestPrivate(other, q), permissions(other.permissions)</span>
 <span class="lineNum">     260 </span>            : {
 <span class="lineNum">     261 </span>            : 
-<a name="262"><span class="lineNum">     262 </span><span class="lineCov">        159 : }</span></a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">        126 : }</span></a>
 <span class="lineNum">     263 </span>            : 
-<span class="lineNum">     264 </span><span class="lineCov">         49 : QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const</span>
+<span class="lineNum">     264 </span><span class="lineCov">         46 : QUrlQuery SqsAddPermissionRequestPrivate::urlQuery() const</span>
 <span class="lineNum">     265 </span>            : {
-<span class="lineNum">     266 </span><span class="lineCov">         49 :     QUrlQuery query = SqsRequestPrivate::urlQuery();</span>
-<span class="lineNum">     267 </span><span class="lineCov">         49 :     int index = 1; // SQS attributes are 1-indexed.</span>
-<span class="lineNum">     268 </span><span class="lineCov">        324 :     for (SqsAddPermissionRequest::PermissionsMap::const_iterator iter = permissions.cbegin();</span>
-<span class="lineNum">     269 </span><span class="lineCov">        216 :          iter != permissions.cend(); ++iter)</span>
+<span class="lineNum">     266 </span><span class="lineCov">         46 :     QUrlQuery query = SqsRequestPrivate::urlQuery();</span>
+<span class="lineNum">     267 </span><span class="lineCov">         46 :     int index = 1; // SQS attributes are 1-indexed.</span>
+<span class="lineNum">     268 </span><span class="lineCov">        300 :     for (SqsAddPermissionRequest::PermissionsMap::const_iterator iter = permissions.cbegin();</span>
+<span class="lineNum">     269 </span><span class="lineCov">        200 :          iter != permissions.cend(); ++iter)</span>
 <span class="lineNum">     270 </span>            :     {
-<span class="lineNum">     271 </span><span class="lineCov">         59 :         SqsAddPermissionRequest::PermissibleActions actions = iter.value();</span>
-<span class="lineNum">     272 </span><span class="lineCov">         59 :         if (!actions) continue;</span>
+<span class="lineNum">     271 </span><span class="lineCov">         54 :         SqsAddPermissionRequest::PermissibleActions actions = iter.value();</span>
+<span class="lineNum">     272 </span><span class="lineCov">         54 :         if (!actions) continue;</span>
 <span class="lineNum">     273 </span>            : 
 <span class="lineNum">     274 </span>            :         // Add the specified permissions.
 <span class="lineNum">     275 </span>            :         #define IF_ACTION_SET_PARAMETER(action) \
@@ -348,16 +348,16 @@
 <span class="lineNum">     286 </span>            :                 actions &amp;= ~SqsAddPermissionRequest::action##Action; \
 <span class="lineNum">     287 </span>            :                 ++index; \
 <span class="lineNum">     288 </span>            :             }
-<span class="lineNum">     289 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(SendMessage)</span>
-<span class="lineNum">     290 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(ReceiveMessage)</span>
-<span class="lineNum">     291 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(DeleteMessage)</span>
-<span class="lineNum">     292 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(ChangeMessageVisibility)</span>
-<span class="lineNum">     293 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(GetQueueAttributes)</span>
-<span class="lineNum">     294 </span><span class="lineCov">         59 :         IF_ACTION_SET_PARAMETER(GetQueueUrl)</span>
+<span class="lineNum">     289 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(SendMessage)</span>
+<span class="lineNum">     290 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(ReceiveMessage)</span>
+<span class="lineNum">     291 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(DeleteMessage)</span>
+<span class="lineNum">     292 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(ChangeMessageVisibility)</span>
+<span class="lineNum">     293 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(GetQueueAttributes)</span>
+<span class="lineNum">     294 </span><span class="lineCov">         54 :         IF_ACTION_SET_PARAMETER(GetQueueUrl)</span>
 <span class="lineNum">     295 </span>            :         #undef IF_ACTION_SET_PARAMETER
-<span class="lineNum">     296 </span><span class="lineCov">         59 :         Q_ASSERT(actions); // Sanity check.</span>
+<span class="lineNum">     296 </span><span class="lineCov">         54 :         Q_ASSERT(actions); // Sanity check.</span>
 <span class="lineNum">     297 </span>            :     }
-<span class="lineNum">     298 </span><span class="lineCov">         49 :     return query;</span>
+<span class="lineNum">     298 </span><span class="lineCov">         46 :     return query;</span>
 <span class="lineNum">     299 </span>            : }
 <span class="lineNum">     300 </span>            : 
 <span class="lineNum">     301 </span>            : QTAWS_END_NAMESPACE
