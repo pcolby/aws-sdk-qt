@@ -29,11 +29,21 @@ class SqsChangeMessageVisibilityRequestPrivate;
 class QTAWS_EXPORT SqsChangeMessageVisibilityRequest : public SqsRequest {
 
 public:
-  //SqsChangeMessageVisibilityRequest(...); ///< @todo
+    SqsChangeMessageVisibilityRequest(const QString &queueUrl,
+                                      const QString &receiptHandle,
+                                      const int visbilityTimeout);
     SqsChangeMessageVisibilityRequest(const SqsChangeMessageVisibilityRequest &other);
     SqsChangeMessageVisibilityRequest();
 
     virtual bool isValid() const;
+
+    QString queueUrl() const;
+    QString receiptHandle() const;
+    int visibilityTimeout() const;
+
+    void setQueueUrl(const QString &queueUrl);
+    void setReceiptHandle(const QString &receiptHandle);
+    void setVisibilityTimeout(const int timeout);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;

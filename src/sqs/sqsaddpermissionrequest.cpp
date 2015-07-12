@@ -118,9 +118,9 @@ SqsAddPermissionRequest::PermissionsMap SqsAddPermissionRequest::permissions() c
 }
 
 /**
- * @brief  Get the URL of the queue this request will add permissions to.
+ * @brief  Get the URL of the Amazon SQS queue to take action on.
  *
- * @return A queue URL, or any empty string is not set.
+ * @return The queue URL, or an empty string if not set.
  */
 QString SqsAddPermissionRequest::queueUrl() const
 {

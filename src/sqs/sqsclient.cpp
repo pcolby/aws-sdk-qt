@@ -23,9 +23,21 @@
 #include "core/awssignaturev4.h"
 #include "sqsaddpermissionrequest.h"
 #include "sqsaddpermissionresponse.h"
+#include "sqschangemessagevisibilityrequest.h"
+#include "sqschangemessagevisibilityresponse.h"
 #include "sqscreatequeuerequest.h"
 #include "sqscreatequeueresponse.h"
+#include "sqsdeletemessagerequest.h"
+#include "sqsdeletemessageresponse.h"
+#include "sqsdeletequeuerequest.h"
+#include "sqsdeletequeueresponse.h"
+#include "sqspurgequeuerequest.h"
+#include "sqspurgequeueresponse.h"
+#include "sqsremovepermissionrequest.h"
+#include "sqsremovepermissionresponse.h"
 #include "sqsrequest.h"
+#include "sqssetqueueattributesrequest.h"
+#include "sqssetqueueattributesresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -97,7 +109,7 @@ SqsClient::SqsClient(const QUrl &endpoint,
 /**
  * @brief  Add permissions to an SQS queue.
  *
- * @param  request  The request to send to SQS.
+ * @param  request  Request to send to SQS.
  *
  * @return A pointer to a related response object.
  *
@@ -109,9 +121,43 @@ SqsAddPermissionResponse * SqsClient::addPermission(const SqsAddPermissionReques
 }
 
 /**
+ * @brief  Change the visibility timeout of a received SQS message.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(
+    const SqsChangeMessageVisibilityRequest &request)
+{
+    return qobject_cast<SqsChangeMessageVisibilityResponse *>(send(request));
+}
+
+/**
+ * @brief  Change the visibility timeout of a received SQS message.
+ *
+ * @param  queueUrl       URL of the queue \a receiptHandle relates to.
+ * @param  receiptHandle  Handle for the message to set the timeout for.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(
+    const QString &queueUrl, const QString &receiptHandle,
+    const int visbilityTimeout)
+{
+    const SqsChangeMessageVisibilityRequest request(
+        queueUrl, receiptHandle, visbilityTimeout);
+    return changeMessageVisibility(request);
+}
+
+/**
  * @brief  Create an SQS queue.
  *
- * @param  request  The request to send to SQS.
+ * @param  request  Request to send to SQS.
  *
  * @return A pointer to a related response object.
  *
@@ -144,6 +190,139 @@ SqsCreateQueueResponse * SqsClient::createQueue(const QString &queueName,
     SqsCreateQueueRequest request(queueName);
     request.setAttributes(attributes);
     return createQueue(request);
+}
+
+/**
+ * @brief  Deletes the specified message from the specified queue.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsDeleteMessageResponse * SqsClient::deleteMessage(
+    const SqsDeleteMessageRequest &request)
+{
+    return qobject_cast<SqsDeleteMessageResponse *>(send(request));
+}
+
+/**
+ * @brief  Deletes the specified message from the specified queue.
+ *
+ * @param  queueUrl       URL of the Amazon SQS queue to take action on.
+ * @param  receiptHandle  Receipt handle associated with the message to delete.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsDeleteMessageRequest
+ */
+SqsDeleteMessageResponse * SqsClient::deleteMessage(
+    const QString &queueUrl, const QString &receiptHandle)
+{
+    const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
+    return deleteMessage(request);
+}
+
+/**
+ * @brief  Deletes the queue specified by the queue URL.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsDeleteQueueRequest
+ */
+SqsDeleteQueueResponse * SqsClient::deleteQueue(const SqsDeleteQueueRequest &request)
+{
+    return qobject_cast<SqsDeleteQueueResponse *>(send(request));
+}
+
+/**
+ * @brief  Deletes the queue specified by the queue URL.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsDeleteQueueRequest
+ */
+SqsDeleteQueueResponse * SqsClient::deleteQueue(const QString &queueUrl)
+{
+    const SqsDeleteQueueRequest request(queueUrl);
+    return deleteQueue(request);
+}
+
+/**
+ * @brief  Deletes the messages in a queue specified by the queue URL.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsPurgeQueueResponse * SqsClient::purgeQueue(const SqsPurgeQueueRequest &request)
+{
+    return qobject_cast<SqsPurgeQueueResponse *>(send(request));
+}
+
+/**
+ * @brief  Deletes the messages in a queue specified by the queue URL.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsPurgeQueueResponse
+ */
+SqsPurgeQueueResponse * SqsClient::purgeQueue(const QString &queueUrl)
+{
+    const SqsPurgeQueueRequest request(queueUrl);
+    return purgeQueue(request);
+}
+
+/**
+ * @brief  Revokes any permissions in the queue policy that matches the
+ *         specified \a label.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsRemovePermissionResponse * SqsClient::removePermission(
+    const SqsRemovePermissionRequest &request)
+{
+    return qobject_cast<SqsRemovePermissionResponse *>(send(request));
+}
+
+/**
+ * @brief  Revokes any permissions in the queue policy that matches the
+ *         specified \a label.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsRemovePermissionRequest
+ */
+SqsRemovePermissionResponse * SqsClient::removePermission(
+    const QString &queueUrl, const QString &label)
+{
+    const SqsRemovePermissionRequest request(queueUrl, label);
+    return removePermission(request);
 }
 
 /**

@@ -29,11 +29,15 @@ class SqsPurgeQueueRequestPrivate;
 class QTAWS_EXPORT SqsPurgeQueueRequest : public SqsRequest {
 
 public:
-  //SqsPurgeQueueRequest(...); ///< @todo
+    SqsPurgeQueueRequest(const QString &queueUrl);
     SqsPurgeQueueRequest(const SqsPurgeQueueRequest &other);
     SqsPurgeQueueRequest();
 
     virtual bool isValid() const;
+
+    QString queueUrl() const;
+
+    void setQueueUrl(const QString &queueUrl);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;

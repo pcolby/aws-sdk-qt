@@ -22,6 +22,9 @@
 #include "sqsdeletemessageresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_URL      QLatin1String("QueueUrl")
+#define RECEIPT_HANDLE QLatin1String("ReceiptHandle")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -36,16 +39,16 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsDeleteMessageRequest.
  *
- * @todo
+ * @param  queueUrl       URL of the Amazon SQS queue to take action on.
+ * @param  receiptHandle  Receipt handle associated with the message to delete.
  */
-/*SqsDeleteMessageRequest::SqsDeleteMessageRequest(
-    ...
-    : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))
+SqsDeleteMessageRequest::SqsDeleteMessageRequest(const QString &queueUrl,
+                                                 const QString &receiptHandle)
+        : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))
 {
-    setLabel(label);
     setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+    setReceiptHandle(receiptHandle);
+}
 
 /**
  * @brief  Constructs a new SqsDeleteMessageRequest object by copying another.
@@ -69,8 +72,50 @@ SqsDeleteMessageRequest::SqsDeleteMessageRequest()
 
 bool SqsDeleteMessageRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return ((!queueUrl().isEmpty()) &&
+            (!receiptHandle().isEmpty()));
+}
+
+/**
+ * @brief  Get the URL of the Amazon SQS queue to take action on.
+ *
+ * @return The queue URL, or an empty string if not set.
+ */
+QString SqsDeleteMessageRequest::queueUrl() const
+{
+    return parameter(QUEUE_URL).toString();
+}
+
+/**
+ * @brief  Get the receipt handle associated with the message whose visibility
+ *         timeout should be changed.
+ *
+ * @return The receipt handle, or an empty string if not set.
+ */
+QString SqsDeleteMessageRequest::receiptHandle() const
+{
+    return parameter(RECEIPT_HANDLE).toString();
+}
+
+/**
+ * @brief  Set the URL of the Amazon SQS queue to take action on.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ */
+void SqsDeleteMessageRequest::setQueueUrl(const QString &queueUrl)
+{
+    setParameter(QUEUE_URL, queueUrl);
+}
+
+/**
+ * @brief  Set the receipt handle associated with the message whose visibility
+ *         timeout should be changed.
+ *
+ * @param  receiptHandle  Handle of the message to change.
+ */
+void SqsDeleteMessageRequest::setReceiptHandle(const QString &receiptHandle)
+{
+    setParameter(RECEIPT_HANDLE, receiptHandle);
 }
 
 /**

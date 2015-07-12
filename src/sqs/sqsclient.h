@@ -34,8 +34,22 @@ class AwsAbstractCredentials;
 class SqsClientPrivate;
 class SqsAddPermissionRequest;
 class SqsAddPermissionResponse;
+class SqsChangeMessageVisibilityRequest;
+class SqsChangeMessageVisibilityResponse;
+class SqsChangeMessageVisibilityBatchRequest;
+class SqsChangeMessageVisibilityBatchResponse;
 class SqsCreateQueueRequest;
 class SqsCreateQueueResponse;
+class SqsDeleteMessageRequest;
+class SqsDeleteMessageResponse;
+class SqsDeleteQueueRequest;
+class SqsDeleteQueueResponse;
+class SqsPurgeQueueRequest;
+class SqsPurgeQueueResponse;
+class SqsRemovePermissionRequest;
+class SqsRemovePermissionResponse;
+class SqsSetQueueAttributesRequest;
+class SqsSetQueueAttributesResponse;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
@@ -53,30 +67,52 @@ public:
 public slots:
     SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &request);
 
+    SqsChangeMessageVisibilityResponse * changeMessageVisibility(
+        const SqsChangeMessageVisibilityRequest &request);
+    SqsChangeMessageVisibilityResponse * changeMessageVisibility(
+        const QString &queueUrl, const QString &receiptHandle,
+        const int visbilityTimeout);
+
+    //SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(
+    //    const SqsChangeMessageVisibilityBatchRequest &request);
+    //SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(
+    //    const QString &queueUrl, const QStringList &receiptHandles,
+    //    const int visbilityTimeout);
+
     SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
     SqsCreateQueueResponse * createQueue(const QString &queueName,
                                          const QVariantMap &attributes = QVariantMap());
 
-/*
-    void changeMessageVisibility(const QString &queueUrl, const QString &receiptHandle, const int visbilityTimeout);
-    void changeMessageVisibilityBatch(const QString &queueUrl, const QStringList &receiptHandles, const int visbilityTimeout);
-    void deleteMessage(const QString &queueUrl, const QString &receiptHandle);
-    void deleteMessageBatch(const QString &queueUrl, const QStringList &receiptHandles);
-    void deleteQueue(const QString &queueUrl);
-    void getQueueUrl(const QString &queueName, const QString &queueOwnerAWSAccountId = QString());
-    void listDeadLetterSourceQueues(const QString &queueUrl);
-    void listQueues(const QString &queueNamePrefix = QString());
-    void purgeQueue(const QString &queueUrl);
-    void receiveMessage(const QString &queueName, ...);
-    void receiveMessage(const SqsReceiveMessageRequest &request);
-    void removePermission(const QString &lablel, const QString &queueUrl);
-    void sendMessage(const QString &queueUrl, const QByteArray &message, ...);
-    void sendMessage(const SqsSendMessageRequest &request);
-    void sendMessageBatch(const QString &queueUrl, const QByteArrayList &messages, ...);
-    void sendMessageBatch(const SqsSendMessageRequestList &requests);
-    void setQueueAttributes(const QString &queueUrl, const QStringMap &attributes = QStringMap());
-    void setQueueAttributes(const SqsSetQueueAttributesRequest &request);
-*/
+    SqsDeleteMessageResponse * deleteMessage(const SqsDeleteMessageRequest &request);
+    SqsDeleteMessageResponse * deleteMessage(const QString &queueUrl,
+                                             const QString &receiptHandle);
+
+    //void deleteMessageBatch(const QString &queueUrl, const QStringList &receiptHandles);
+
+    SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &request);
+    SqsDeleteQueueResponse * deleteQueue(const QString &queueUrl);
+
+    //void getQueueUrl(const QString &queueName, const QString &queueOwnerAWSAccountId = QString());
+    //void listDeadLetterSourceQueues(const QString &queueUrl);
+    //void listQueues(const QString &queueNamePrefix = QString());
+
+    SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &request);
+    SqsPurgeQueueResponse * purgeQueue(const QString &queueUrl);
+
+    //void receiveMessage(const QString &queueName, ...);
+    //void receiveMessage(const SqsReceiveMessageRequest &request);
+
+    SqsRemovePermissionResponse * removePermission(
+        const SqsRemovePermissionRequest &request);
+    SqsRemovePermissionResponse * removePermission(
+        const QString &queueUrl, const QString &label);
+
+    //void sendMessage(const QString &queueUrl, const QByteArray &message, ...);
+    //void sendMessage(const SqsSendMessageRequest &request);
+    //void sendMessageBatch(const QString &queueUrl, const QByteArrayList &messages, ...);
+    //void sendMessageBatch(const SqsSendMessageRequestList &requests);
+    //void setQueueAttributes(const QString &queueUrl, const QStringMap &attributes = QStringMap());
+    //void setQueueAttributes(const SqsSetQueueAttributesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)

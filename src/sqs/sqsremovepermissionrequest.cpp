@@ -22,6 +22,9 @@
 #include "sqsremovepermissionresponse.h"
 #include "sqsrequest_p.h"
 
+#define LABEL     QLatin1String("Label")
+#define QUEUE_URL QLatin1String("QueueUrl")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -36,16 +39,16 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsRemovePermissionRequest.
  *
- * @todo
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ * @param  label     Identification of the permission to remove.
  */
-/*SqsRemovePermissionRequest::SqsRemovePermissionRequest(
-    ...
+SqsRemovePermissionRequest::SqsRemovePermissionRequest(const QString &queueUrl,
+                                                       const QString &label)
     : SqsRequest(new SqsRemovePermissionRequestPrivate(SqsRequest::RemovePermissionAction, this))
 {
     setLabel(label);
     setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+}
 
 /**
  * @brief  Constructs a new SqsRemovePermissionRequest object by copying another.
@@ -71,6 +74,46 @@ bool SqsRemovePermissionRequest::isValid() const
 {
     /// @todo
     return false;
+}
+
+/**
+ * @brief  Get the identification of the permission to remove.
+ *
+ * @return The identification of the permission to remove.
+ */
+QString SqsRemovePermissionRequest::label() const
+{
+    return parameter(LABEL).toString();
+}
+
+/**
+ * @brief  Get the URL of the Amazon SQS queue to take action on.
+ *
+ * @return The queue URL, or an empty string if not set.
+ */
+QString SqsRemovePermissionRequest::queueUrl() const
+{
+    return parameter(QUEUE_URL).toString();
+}
+
+/**
+ * @brief  Set the identification of the permission to remove.
+ *
+ * @param  label  The identification of the permission to remove.
+ */
+void SqsRemovePermissionRequest::setLabel(const QString &label)
+{
+    setParameter(LABEL, label);
+}
+
+/**
+ * @brief  Set the URL of the queue to add permissions to.
+ *
+ * @param  queueUrl  SQS queue URL.
+ */
+void SqsRemovePermissionRequest::setQueueUrl(const QString &queueUrl)
+{
+    setParameter(QUEUE_URL, queueUrl);
 }
 
 /**

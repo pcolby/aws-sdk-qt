@@ -22,6 +22,10 @@
 #include "sqschangemessagevisibilityresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_URL          QLatin1String("QueueUrl")
+#define RECEIPT_HANDLE     QLatin1String("ReceiptHandle")
+#define VISIBILITY_TIMEOUT QLatin1String("VisibilityTimeout")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -36,16 +40,20 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsChangeMessageVisibilityRequest.
  *
- * @todo
+ * @param  queueUrl          URL of the Amazon SQS queue to take action on.
+ * @param  receiptHandle     Receipt handle associated with the message whose
+ *                           visibility timeout should be changed.
+ * @param  visbilityTimeout  New value (in seconds) for the message's visibility
+ *                           timeout.
  */
-/*SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest(
-    ...
+SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest(
+    const QString &queueUrl, const QString &receiptHandle, const int visbilityTimeout)
     : SqsRequest(new SqsChangeMessageVisibilityRequestPrivate(SqsRequest::ChangeMessageVisibilityAction, this))
 {
-    setLabel(label);
     setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+    setReceiptHandle(receiptHandle);
+    setVisibilityTimeout(visbilityTimeout);
+}
 
 /**
  * @brief  Constructs a new SqsChangeMessageVisibilityRequest object by copying another.
@@ -69,8 +77,71 @@ SqsChangeMessageVisibilityRequest::SqsChangeMessageVisibilityRequest()
 
 bool SqsChangeMessageVisibilityRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return ((!queueUrl().isEmpty()) &&
+            (!receiptHandle().isEmpty()) &&
+            (visibilityTimeout() >= 0));
+}
+
+/**
+ * @brief  Get the URL of the Amazon SQS queue to take action on.
+ *
+ * @return The queue URL, or an empty string if not set.
+ */
+QString SqsChangeMessageVisibilityRequest::queueUrl() const
+{
+    return parameter(QUEUE_URL).toString();
+}
+
+/**
+ * @brief  Get the receipt handle associated with the message whose visibility
+ *         timeout should be changed.
+ *
+ * @return The receipt handle, or an empty string if not set.
+ */
+QString SqsChangeMessageVisibilityRequest::receiptHandle() const
+{
+    return parameter(RECEIPT_HANDLE).toString();
+}
+
+/**
+ * @brief  The value (in seconds) for the message's visibility timeout.
+ *
+ * @return The new message visbility timeout period (in seconds), or -1 if not set.
+ */
+int SqsChangeMessageVisibilityRequest::visibilityTimeout() const
+{
+    return parameter(VISIBILITY_TIMEOUT, -1).toInt();
+}
+
+/**
+ * @brief  Set the URL of the Amazon SQS queue to take action on.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ */
+void SqsChangeMessageVisibilityRequest::setQueueUrl(const QString &queueUrl)
+{
+    setParameter(QUEUE_URL, queueUrl);
+}
+
+/**
+ * @brief  Set the receipt handle associated with the message whose visibility
+ *         timeout should be changed.
+ *
+ * @param  receiptHandle  Handle of the message to change.
+ */
+void SqsChangeMessageVisibilityRequest::setReceiptHandle(const QString &receiptHandle)
+{
+    setParameter(RECEIPT_HANDLE, receiptHandle);
+}
+
+/**
+ * @brief  Set the value (in seconds) for the message's visibility timeout.
+ *
+ * @param  timeout  New message visbility timeout period (in seconds) to set.
+ */
+void SqsChangeMessageVisibilityRequest::setVisibilityTimeout(const int timeout)
+{
+    setParameter(VISIBILITY_TIMEOUT, timeout);
 }
 
 /**

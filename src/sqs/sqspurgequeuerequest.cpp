@@ -22,6 +22,8 @@
 #include "sqspurgequeueresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_URL QLatin1String("QueueUrl")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -36,16 +38,13 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsPurgeQueueRequest.
  *
- * @todo
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
  */
-/*SqsPurgeQueueRequest::SqsPurgeQueueRequest(
-    ...
+SqsPurgeQueueRequest::SqsPurgeQueueRequest(const QString &queueUrl)
     : SqsRequest(new SqsPurgeQueueRequestPrivate(SqsRequest::PurgeQueueAction, this))
 {
-    setLabel(label);
     setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+}
 
 /**
  * @brief  Constructs a new SqsPurgeQueueRequest object by copying another.
@@ -69,8 +68,27 @@ SqsPurgeQueueRequest::SqsPurgeQueueRequest()
 
 bool SqsPurgeQueueRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return (!queueUrl().isEmpty());
+}
+
+/**
+ * @brief  Get the URL of the Amazon SQS queue to take action on.
+ *
+ * @return The queue URL, or an empty string if not set.
+ */
+QString SqsPurgeQueueRequest::queueUrl() const
+{
+    return parameter(QUEUE_URL).toString();
+}
+
+/**
+ * @brief  Set the URL of the Amazon SQS queue to take action on.
+ *
+ * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ */
+void SqsPurgeQueueRequest::setQueueUrl(const QString &queueUrl)
+{
+    setParameter(QUEUE_URL, queueUrl);
 }
 
 /**

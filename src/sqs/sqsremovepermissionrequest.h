@@ -29,11 +29,17 @@ class SqsRemovePermissionRequestPrivate;
 class QTAWS_EXPORT SqsRemovePermissionRequest : public SqsRequest {
 
 public:
-  //SqsRemovePermissionRequest(...); ///< @todo
+    SqsRemovePermissionRequest(const QString &queueUrl, const QString &label);
     SqsRemovePermissionRequest(const SqsRemovePermissionRequest &other);
     SqsRemovePermissionRequest();
 
     virtual bool isValid() const;
+
+    QString label() const;
+    QString queueUrl() const;
+
+    void setLabel(const QString &label);
+    void setQueueUrl(const QString &queueUrl);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;

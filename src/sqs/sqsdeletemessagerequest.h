@@ -29,11 +29,17 @@ class SqsDeleteMessageRequestPrivate;
 class QTAWS_EXPORT SqsDeleteMessageRequest : public SqsRequest {
 
 public:
-  //SqsDeleteMessageRequest(...); ///< @todo
+    SqsDeleteMessageRequest(const QString &queueUrl, const QString &receiptHandle);
     SqsDeleteMessageRequest(const SqsDeleteMessageRequest &other);
     SqsDeleteMessageRequest();
 
     virtual bool isValid() const;
+
+    QString queueUrl() const;
+    QString receiptHandle() const;
+
+    void setQueueUrl(const QString &queueUrl);
+    void setReceiptHandle(const QString &receiptHandle);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
