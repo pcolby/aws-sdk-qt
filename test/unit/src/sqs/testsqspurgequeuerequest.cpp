@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsPurgeQueueRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,25 @@ protected:
 
 void TestSqsPurgeQueueRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << false;
+
+    QTest::newRow("example")
+        << QString::fromLatin1("http://example.com/queue")
+        << true;
 }
 
 void TestSqsPurgeQueueRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    //const SqsPurgeQueueRequest request(label, permissions, queueUrl);
+    const SqsPurgeQueueRequest request(queueUrl);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsPurgeQueueRequest::construct_copy_data()
@@ -69,13 +76,13 @@ void TestSqsPurgeQueueRequest::construct_copy_data()
 
 void TestSqsPurgeQueueRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    const SqsPurgeQueueRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsPurgeQueueRequest request1(queueUrl);
+    QCOMPARE(request1.queueUrl(), queueUrl);
 
     const SqsPurgeQueueRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +91,35 @@ void TestSqsPurgeQueueRequest::construct_default()
 {
     SqsPurgeQueueRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
 }
 
 void TestSqsPurgeQueueRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsPurgeQueueRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(bool, isValid);
 
-    const SqsPurgeQueueRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsPurgeQueueRequest request(queueUrl);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsPurgeQueueRequest::queueUrl_data()
+{
+    isValid_data();
+}
+
+void TestSqsPurgeQueueRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+    SqsPurgeQueueRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsPurgeQueueRequest::response()
@@ -111,8 +133,3 @@ void TestSqsPurgeQueueRequest::response()
         qobject_cast<const SqsPurgeQueueResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

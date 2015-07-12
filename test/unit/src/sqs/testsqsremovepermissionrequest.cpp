@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsRemovePermissionRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,30 @@ protected:
 
 void TestSqsRemovePermissionRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("label");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << false;
+
+    QTest::newRow("example")
+        << QString::fromLatin1("http://example.com/queue")
+        << QString::fromLatin1("let-foo-do-bar")
+        << true;
 }
 
 void TestSqsRemovePermissionRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, label);
 
-    //const SqsRemovePermissionRequest request(label, permissions, queueUrl);
+    const SqsRemovePermissionRequest request(queueUrl, label);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
+    QCOMPARE(request.label(), label);
 }
 
 void TestSqsRemovePermissionRequest::construct_copy_data()
@@ -69,13 +81,16 @@ void TestSqsRemovePermissionRequest::construct_copy_data()
 
 void TestSqsRemovePermissionRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, label);
 
-    const SqsRemovePermissionRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsRemovePermissionRequest request1(queueUrl, label);
+    QCOMPARE(request1.queueUrl(), queueUrl);
+    QCOMPARE(request1.label(), label);
 
     const SqsRemovePermissionRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
+    QCOMPARE(request2.label(), label);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +99,51 @@ void TestSqsRemovePermissionRequest::construct_default()
 {
     SqsRemovePermissionRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
+    QCOMPARE(request.label(), QString());
 }
 
 void TestSqsRemovePermissionRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsRemovePermissionRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, label);
+    QFETCH(bool, isValid);
 
-    const SqsRemovePermissionRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsRemovePermissionRequest request(queueUrl, label);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsRemovePermissionRequest::label_data()
+{
+    isValid_data();
+}
+
+void TestSqsRemovePermissionRequest::label()
+{
+    QFETCH(QString, label);
+    SqsRemovePermissionRequest request;
+    QCOMPARE(request.label(), QString());
+    request.setLabel(label);
+    QCOMPARE(request.label(), label);
+}
+
+void TestSqsRemovePermissionRequest::queueUrl_data()
+{
+    isValid_data();
+}
+
+void TestSqsRemovePermissionRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+    SqsRemovePermissionRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsRemovePermissionRequest::response()
@@ -111,8 +157,3 @@ void TestSqsRemovePermissionRequest::response()
         qobject_cast<const SqsRemovePermissionResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsChangeMessageVisibilityRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,36 @@ protected:
 
 void TestSqsChangeMessageVisibilityRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("receiptHandle");
+    QTest::addColumn<int>("visibilityTimeout");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << 0
+        << false;
+
+    QTest::newRow("example")
+        << QString::fromLatin1("http://example.com/queue")
+        << QString::fromLatin1("abc123")
+        << 123
+        << true;
 }
 
 void TestSqsChangeMessageVisibilityRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+    QFETCH(int, visibilityTimeout);
 
-    //const SqsChangeMessageVisibilityRequest request(label, permissions, queueUrl);
+    const SqsChangeMessageVisibilityRequest request(
+        queueUrl, receiptHandle, visibilityTimeout);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
+    QCOMPARE(request.receiptHandle(), receiptHandle);
+    QCOMPARE(request.visibilityTimeout(), visibilityTimeout);
 }
 
 void TestSqsChangeMessageVisibilityRequest::construct_copy_data()
@@ -69,13 +87,20 @@ void TestSqsChangeMessageVisibilityRequest::construct_copy_data()
 
 void TestSqsChangeMessageVisibilityRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+    QFETCH(int, visibilityTimeout);
 
-    const SqsChangeMessageVisibilityRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsChangeMessageVisibilityRequest request1(
+        queueUrl, receiptHandle, visibilityTimeout);
+    QCOMPARE(request1.queueUrl(), queueUrl);
+    QCOMPARE(request1.receiptHandle(), receiptHandle);
+    QCOMPARE(request1.visibilityTimeout(), visibilityTimeout);
 
     const SqsChangeMessageVisibilityRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
+    QCOMPARE(request2.receiptHandle(), receiptHandle);
+    QCOMPARE(request2.visibilityTimeout(), visibilityTimeout);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +109,68 @@ void TestSqsChangeMessageVisibilityRequest::construct_default()
 {
     SqsChangeMessageVisibilityRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
+    QCOMPARE(request.receiptHandle(), QString());
+    QCOMPARE(request.visibilityTimeout(), -1);
 }
 
 void TestSqsChangeMessageVisibilityRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsChangeMessageVisibilityRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+    QFETCH(int, visibilityTimeout);
+    QFETCH(bool, isValid);
 
-    const SqsChangeMessageVisibilityRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsChangeMessageVisibilityRequest request(
+        queueUrl, receiptHandle, visibilityTimeout);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsChangeMessageVisibilityRequest::queueUrl_data()
+{
+    isValid_data();
+}
+
+void TestSqsChangeMessageVisibilityRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+    SqsChangeMessageVisibilityRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
+}
+
+void TestSqsChangeMessageVisibilityRequest::receiptHandle_data()
+{
+    isValid_data();
+}
+
+void TestSqsChangeMessageVisibilityRequest::receiptHandle()
+{
+    QFETCH(QString, receiptHandle);
+    SqsChangeMessageVisibilityRequest request;
+    QCOMPARE(request.receiptHandle(), QString());
+    request.setReceiptHandle(receiptHandle);
+    QCOMPARE(request.receiptHandle(), receiptHandle);
+}
+
+void TestSqsChangeMessageVisibilityRequest::visibilityTimeout_data()
+{
+    isValid_data();
+}
+
+void TestSqsChangeMessageVisibilityRequest::visibilityTimeout()
+{
+    QFETCH(int, visibilityTimeout);
+    SqsChangeMessageVisibilityRequest request;
+    QCOMPARE(request.visibilityTimeout(), -1);
+    request.setVisibilityTimeout(visibilityTimeout);
+    QCOMPARE(request.visibilityTimeout(), visibilityTimeout);
 }
 
 void TestSqsChangeMessageVisibilityRequest::response()
@@ -111,8 +184,3 @@ void TestSqsChangeMessageVisibilityRequest::response()
         qobject_cast<const SqsChangeMessageVisibilityResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

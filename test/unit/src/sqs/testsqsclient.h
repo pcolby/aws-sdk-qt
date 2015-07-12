@@ -32,12 +32,50 @@ private slots:
     void addPermission_data();
     void addPermission();
 
-    /// @todo changeMessageVisbility{,Batch}
+    void changeMessageVisbility_data();
+    void changeMessageVisbility();
+
+    //void changeMessageVisbilityBatch_data();
+    //void changeMessageVisbilityBatch();
 
     void createQueue_data();
     void createQueue();
 
-    /// @todo Lots more requests go here.
+    void deleteMessage_data();
+    void deleteMessage();
+
+    //void deleteMessageBatch_batch();
+    //void deleteMessageBatch();
+
+    void deleteQueue_data();
+    void deleteQueue();
+
+    //void getQueueUrl_data();
+    //void getQueueUrl();
+
+    //void listDeadLetterSourceQueues_data();
+    //void listDeadLetterSourceQueues();
+
+    //void listQueues_data();
+    //void listQueues();
+
+    void purgeQueue_data();
+    void purgeQueue();
+
+    //void receiveMessage_data();
+    //void receiveMessage();
+
+    void removePermission_data();
+    void removePermission();
+
+    //void sendMessage();
+    //void sendMessage();
+
+    //void sendMessageBatch();
+    //void sendMessageBatch();
+
+    //void setQueueAttributes();
+    //void setQueueAttributes();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS

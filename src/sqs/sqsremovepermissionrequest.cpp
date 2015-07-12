@@ -72,8 +72,8 @@ SqsRemovePermissionRequest::SqsRemovePermissionRequest()
 
 bool SqsRemovePermissionRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return ((!queueUrl().isEmpty()) &&
+            (!label().isEmpty()));
 }
 
 /**

@@ -23,9 +23,39 @@
 #include "core/awsanonymouscredentials.h"
 #include "sqs/sqsaddpermissionrequest.h"
 #include "sqs/sqsaddpermissionresponse.h"
+#include "sqs/sqschangemessagevisibilitybatchrequest.h"
+#include "sqs/sqschangemessagevisibilitybatchresponse.h"
+#include "sqs/sqschangemessagevisibilityrequest.h"
+#include "sqs/sqschangemessagevisibilityresponse.h"
 #include "sqs/sqsclient.h"
 #include "sqs/sqscreatequeuerequest.h"
 #include "sqs/sqscreatequeueresponse.h"
+#include "sqs/sqsdeletemessagebatchrequest.h"
+#include "sqs/sqsdeletemessagebatchresponse.h"
+#include "sqs/sqsdeletemessagerequest.h"
+#include "sqs/sqsdeletemessageresponse.h"
+#include "sqs/sqsdeletequeuerequest.h"
+#include "sqs/sqsdeletequeueresponse.h"
+#include "sqs/sqsgetqueueattributesrequest.h"
+#include "sqs/sqsgetqueueattributesresponse.h"
+#include "sqs/sqsgetqueueurlrequest.h"
+#include "sqs/sqsgetqueueurlresponse.h"
+#include "sqs/sqslistdeadlettersourcequeuesrequest.h"
+#include "sqs/sqslistdeadlettersourcequeuesresponse.h"
+#include "sqs/sqslistqueuesrequest.h"
+#include "sqs/sqslistqueuesresponse.h"
+#include "sqs/sqspurgequeuerequest.h"
+#include "sqs/sqspurgequeueresponse.h"
+#include "sqs/sqsreceivemessagerequest.h"
+#include "sqs/sqsreceivemessageresponse.h"
+#include "sqs/sqsremovepermissionrequest.h"
+#include "sqs/sqsremovepermissionresponse.h"
+#include "sqs/sqssendmessagebatchrequest.h"
+#include "sqs/sqssendmessagebatchresponse.h"
+#include "sqs/sqssendmessagerequest.h"
+#include "sqs/sqssendmessageresponse.h"
+#include "sqs/sqssetqueueattributesrequest.h"
+#include "sqs/sqssetqueueattributesresponse.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #include "sqs/sqsclient_p.h"
@@ -167,6 +197,56 @@ void TestSqsClient::addPermission()
     delete response;
 }
 
+void TestSqsClient::changeMessageVisbility_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("receiptHandle");
+    QTest::addColumn<int>("visibilityTimeout");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo")
+        << QString::fromLatin1("abc123")
+        << 1024;
+}
+
+void TestSqsClient::changeMessageVisbility()
+{
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+    QFETCH(int, visibilityTimeout);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsChangeMessageVisibilityResponse * const response =
+            sqs.changeMessageVisibility(queueUrl, receiptHandle, visibilityTimeout);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::ChangeMessageVisibilityAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        QCOMPARE(response->request()->receiptHandle(), receiptHandle);
+        QCOMPARE(response->request()->visibilityTimeout(), visibilityTimeout);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        const SqsChangeMessageVisibilityRequest request(
+            queueUrl, receiptHandle, visibilityTimeout);
+        const SqsChangeMessageVisibilityResponse * const response =
+            sqs.changeMessageVisibility(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+//void TestSqsClient::changeMessageVisbilityBatch_data();
+//void TestSqsClient::changeMessageVisbilityBatch();
+
 void TestSqsClient::createQueue_data()
 {
     QTest::addColumn<QString>("queueName");
@@ -212,6 +292,182 @@ void TestSqsClient::createQueue()
         delete response;
     }
 }
+
+void TestSqsClient::deleteMessage_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("receiptHandle");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo")
+        << QString::fromLatin1("abc123");
+}
+
+void TestSqsClient::deleteMessage()
+{
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsDeleteMessageResponse * const response =
+            sqs.deleteMessage(queueUrl, receiptHandle);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::DeleteMessageAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
+        const SqsDeleteMessageResponse * const response = sqs.deleteMessage(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+//void TestSqsClient::deleteMessageBatch_batch();
+//void TestSqsClient::deleteMessageBatch();
+
+void TestSqsClient::deleteQueue_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo");
+}
+
+void TestSqsClient::deleteQueue()
+{
+    QFETCH(QString, queueUrl);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsDeleteQueueResponse * const response = sqs.deleteQueue(queueUrl);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::DeleteQueueAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        const SqsDeleteQueueRequest request(queueUrl);
+        const SqsDeleteQueueResponse * const response = sqs.deleteQueue(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+//void TestSqsClient::getQueueUrl_data();
+//void TestSqsClient::getQueueUrl();
+
+//void TestSqsClient::listDeadLetterSourceQueues_data();
+//void TestSqsClient::listDeadLetterSourceQueues();
+
+//void TestSqsClient::listQueues_data();
+//void TestSqsClient::listQueues();
+
+void TestSqsClient::purgeQueue_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo");
+}
+
+void TestSqsClient::purgeQueue()
+{
+    QFETCH(QString, queueUrl);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsPurgeQueueResponse * const response = sqs.purgeQueue(queueUrl);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::PurgeQueueAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        const SqsPurgeQueueRequest request(queueUrl);
+        const SqsPurgeQueueResponse * const response = sqs.purgeQueue(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+//void TestSqsClient::receiveMessage_data();
+//void TestSqsClient::receiveMessage();
+
+void TestSqsClient::removePermission_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("label");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo")
+        << QString::fromLatin1("bar");
+}
+
+void TestSqsClient::removePermission()
+{
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, label);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsRemovePermissionResponse * const response =
+            sqs.removePermission(queueUrl, label);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::RemovePermissionAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsCreateQueueRequest overload.
+        const SqsRemovePermissionRequest request(queueUrl, label);
+        const SqsRemovePermissionResponse * const response = sqs.removePermission(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+//void TestSqsClient::sendMessage();
+//void TestSqsClient::sendMessage();
+
+//void TestSqsClient::sendMessageBatch();
+//void TestSqsClient::sendMessageBatch();
+
+//void TestSqsClient::setQueueAttributes();
+//void TestSqsClient::setQueueAttributes();
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
 #endif

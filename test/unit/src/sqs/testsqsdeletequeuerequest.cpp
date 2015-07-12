@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsDeleteQueueRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,25 @@ protected:
 
 void TestSqsDeleteQueueRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << false;
+
+    QTest::newRow("example")
+        << QString::fromLatin1("http://example.com/queue")
+        << true;
 }
 
 void TestSqsDeleteQueueRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    //const SqsDeleteQueueRequest request(label, permissions, queueUrl);
+    const SqsDeleteQueueRequest request(queueUrl);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsDeleteQueueRequest::construct_copy_data()
@@ -69,13 +76,13 @@ void TestSqsDeleteQueueRequest::construct_copy_data()
 
 void TestSqsDeleteQueueRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    const SqsDeleteQueueRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsDeleteQueueRequest request1(queueUrl);
+    QCOMPARE(request1.queueUrl(), queueUrl);
 
     const SqsDeleteQueueRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +91,35 @@ void TestSqsDeleteQueueRequest::construct_default()
 {
     SqsDeleteQueueRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
 }
 
 void TestSqsDeleteQueueRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsDeleteQueueRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(bool, isValid);
 
-    const SqsDeleteQueueRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsDeleteQueueRequest request(queueUrl);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsDeleteQueueRequest::queueUrl_data()
+{
+    isValid_data();
+}
+
+void TestSqsDeleteQueueRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+    SqsDeleteQueueRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsDeleteQueueRequest::response()
@@ -111,8 +133,3 @@ void TestSqsDeleteQueueRequest::response()
         qobject_cast<const SqsDeleteQueueResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

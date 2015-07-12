@@ -34,13 +34,19 @@ private slots:
     void isValid_data();
     void isValid();
 
-    /// @todo
+    void queueUrl_data();
+    void queueUrl();
+
+    void receiptHandle_data();
+    void receiptHandle();
+
+    void visibilityTimeout_data();
+    void visibilityTimeout();
 
     void response();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    /// @todo
     // Nothing to see here.
     #endif
 };

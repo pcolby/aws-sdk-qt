@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsDeleteMessageRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,30 @@ protected:
 
 void TestSqsDeleteMessageRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<QString>("receiptHandle");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null")
+        << QString()
+        << QString()
+        << false;
+
+    QTest::newRow("example")
+        << QString::fromLatin1("http://example.com/queue")
+        << QString::fromLatin1("abc123")
+        << true;
 }
 
 void TestSqsDeleteMessageRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
 
-    //const SqsDeleteMessageRequest request(label, permissions, queueUrl);
+    const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
+    QCOMPARE(request.receiptHandle(), receiptHandle);
 }
 
 void TestSqsDeleteMessageRequest::construct_copy_data()
@@ -69,13 +81,16 @@ void TestSqsDeleteMessageRequest::construct_copy_data()
 
 void TestSqsDeleteMessageRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
 
-    const SqsDeleteMessageRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsDeleteMessageRequest request1(queueUrl, receiptHandle);
+    QCOMPARE(request1.queueUrl(), queueUrl);
+    QCOMPARE(request1.receiptHandle(), receiptHandle);
 
     const SqsDeleteMessageRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
+    QCOMPARE(request2.receiptHandle(), receiptHandle);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +99,52 @@ void TestSqsDeleteMessageRequest::construct_default()
 {
     SqsDeleteMessageRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
+    QCOMPARE(request.receiptHandle(), QString());
 }
 
 void TestSqsDeleteMessageRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsDeleteMessageRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(QString, receiptHandle);
+    QFETCH(bool, isValid);
 
-    const SqsDeleteMessageRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
+
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsDeleteMessageRequest::queueUrl_data()
+{
+    isValid_data();
+}
+
+void TestSqsDeleteMessageRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+    SqsDeleteMessageRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
+}
+
+void TestSqsDeleteMessageRequest::receiptHandle_data()
+{
+    isValid_data();
+}
+
+void TestSqsDeleteMessageRequest::receiptHandle()
+{
+    QFETCH(QString, receiptHandle);
+    SqsDeleteMessageRequest request;
+    QCOMPARE(request.receiptHandle(), QString());
+    request.setReceiptHandle(receiptHandle);
+    QCOMPARE(request.receiptHandle(), receiptHandle);
 }
 
 void TestSqsDeleteMessageRequest::response()
@@ -111,8 +158,3 @@ void TestSqsDeleteMessageRequest::response()
         qobject_cast<const SqsDeleteMessageResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif
