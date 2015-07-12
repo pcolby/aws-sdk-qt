@@ -138,8 +138,9 @@ SqsChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(
 /**
  * @brief  Change the visibility timeout of a received SQS message.
  *
- * @param  queueUrl       URL of the queue \a receiptHandle relates to.
- * @param  receiptHandle  Handle for the message to set the timeout for.
+ * @param  queueUrl          URL of the queue \a receiptHandle relates to.
+ * @param  receiptHandle     Handle for the message to set the timeout for.
+ * @param  visbilityTimeout  New value (in seconds) for the message's visibility timeout.
  *
  * @return A pointer to a related response object.
  *
@@ -311,6 +312,7 @@ SqsRemovePermissionResponse * SqsClient::removePermission(
  *         specified \a label.
  *
  * @param  queueUrl  URL of the Amazon SQS queue to take action on.
+ * @param  label     Identification of the permission to remove.
  *
  * @return A pointer to a related response object.
  *
