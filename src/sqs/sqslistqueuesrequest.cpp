@@ -22,6 +22,8 @@
 #include "sqslistqueuesresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_NAME_PREFIX QLatin1String("QueueNamePrefix")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -30,22 +32,19 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Implements SQS ListQueues requests.
  *
  * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ListQueues.html
- * @see    SqsRemovePermissionRequest
  */
 
 /**
  * @brief  Constructs a new SqsListQueuesRequest.
  *
- * @todo
+ * @param  queueNamePrefix  String to use for filtering the list results.
  */
-/*SqsListQueuesRequest::SqsListQueuesRequest(
-    ...
+SqsListQueuesRequest::SqsListQueuesRequest(
+    const QString &queueNamePrefix)
     : SqsRequest(new SqsListQueuesRequestPrivate(SqsRequest::ListQueuesAction, this))
 {
-    setLabel(label);
-    setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+    setQueueNamePrefix(queueNamePrefix);
+}
 
 /**
  * @brief  Constructs a new SqsListQueuesRequest object by copying another.
@@ -69,8 +68,27 @@ SqsListQueuesRequest::SqsListQueuesRequest()
 
 bool SqsListQueuesRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return true;
+}
+
+/**
+ * @brief  Get the string to use for filtering the list results.
+ *
+ * @return A string to use for filtering the list results.
+ */
+QString SqsListQueuesRequest::queueNamePrefix() const
+{
+    return parameter(QUEUE_NAME_PREFIX).toString();
+}
+
+/**
+ * @brief  Set a string to use for filtering the list results.
+ *
+ * @param  queueNamePrefix  The string to use for filtering the list results.
+ */
+void SqsListQueuesRequest::setQueueNamePrefix(const QString &queueNamePrefix)
+{
+    setParameter(QUEUE_NAME_PREFIX, queueNamePrefix);
 }
 
 /**

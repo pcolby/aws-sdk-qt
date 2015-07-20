@@ -187,7 +187,7 @@ void TestSqsClient::addPermission()
     MockNetworkAccessManager manager;
     SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
 
-    // Verify the explicit SqsCreateQueueRequest overload.
+    // Verify the explicit SqsAddPermissionRequest overload.
     const SqsAddPermissionRequest request(label, permissions, queueUrl);
     const SqsAddPermissionResponse * const response = sqs.addPermission(request);
     QVERIFY(response);
@@ -231,7 +231,7 @@ void TestSqsClient::changeMessageVisbility()
         delete response;
     }
 
-    {   // Verify the explicit SqsCreateQueueRequest overload.
+    {   // Verify the explicit SqsChangeMessageVisibilityRequest overload.
         const SqsChangeMessageVisibilityRequest request(
             queueUrl, receiptHandle, visibilityTimeout);
         const SqsChangeMessageVisibilityResponse * const response =
@@ -322,7 +322,7 @@ void TestSqsClient::deleteMessage()
         delete response;
     }
 
-    {   // Verify the explicit SqsCreateQueueRequest overload.
+    {   // Verify the explicit SqsDeleteMessageRequest overload.
         const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
         const SqsDeleteMessageResponse * const response = sqs.deleteMessage(request);
         QVERIFY(response);
@@ -361,7 +361,7 @@ void TestSqsClient::deleteQueue()
         delete response;
     }
 
-    {   // Verify the explicit SqsCreateQueueRequest overload.
+    {   // Verify the explicit SqsDeleteQueueRequest overload.
         const SqsDeleteQueueRequest request(queueUrl);
         const SqsDeleteQueueResponse * const response = sqs.deleteQueue(request);
         QVERIFY(response);
@@ -372,14 +372,113 @@ void TestSqsClient::deleteQueue()
     }
 }
 
-//void TestSqsClient::getQueueUrl_data();
-//void TestSqsClient::getQueueUrl();
+void TestSqsClient::getQueueUrl_data()
+{
+    QTest::addColumn<QString>("queueName");
 
-//void TestSqsClient::listDeadLetterSourceQueues_data();
-//void TestSqsClient::listDeadLetterSourceQueues();
+    QTest::newRow("foo") << QString::fromLatin1("foo");
+}
 
-//void TestSqsClient::listQueues_data();
-//void TestSqsClient::listQueues();
+void TestSqsClient::getQueueUrl()
+{
+    QFETCH(QString, queueName);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsGetQueueUrlResponse * const response = sqs.getQueueUrl(queueName);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::GetQueueUrlAction);
+        QCOMPARE(response->request()->queueName(), queueName);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsGetQueueUrlRequest overload.
+        const SqsGetQueueUrlRequest request(queueName);
+        const SqsGetQueueUrlResponse * const response = sqs.getQueueUrl(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+void TestSqsClient::listDeadLetterSourceQueues_data()
+{
+    QTest::addColumn<QString>("queueUrl");
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/foo");
+}
+
+void TestSqsClient::listDeadLetterSourceQueues()
+{
+    QFETCH(QString, queueUrl);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsListDeadLetterSourceQueuesResponse * const response =
+            sqs.listDeadLetterSourceQueues(queueUrl);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::ListDeadLetterSourceQueuesAction);
+        QCOMPARE(response->request()->queueUrl(), queueUrl);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsListDeadLetterSourceQueuesRequest overload.
+        const SqsListDeadLetterSourceQueuesRequest request(queueUrl);
+        const SqsListDeadLetterSourceQueuesResponse * const response =
+            sqs.listDeadLetterSourceQueues(request);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
+
+void TestSqsClient::listQueues_data()
+{
+    QTest::addColumn<QString>("queueNamePrefix");
+
+    QTest::newRow("foo") << QString::fromLatin1("foo");
+}
+
+void TestSqsClient::listQueues()
+{
+    QFETCH(QString, queueNamePrefix);
+
+    AwsAnonymousCredentials credentials;
+    MockNetworkAccessManager manager;
+    SqsClient sqs(AwsRegion::US_East_1, &credentials, &manager, this);
+
+    {   // Verify the convenience overload.
+        const SqsListQueuesResponse * const response = sqs.listQueues(queueNamePrefix);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QCOMPARE(response->request()->action(), SqsRequest::ListQueuesAction);
+        QCOMPARE(response->request()->queueNamePrefix(), queueNamePrefix);
+        delete response;
+    }
+
+    {   // Verify the explicit SqsListQueuesRequest overload.
+        const SqsListQueuesRequest request(queueNamePrefix);
+        const SqsListQueuesResponse * const response = sqs.listQueues(queueNamePrefix);
+        QVERIFY(response);
+        QVERIFY(response->request());
+        QVERIFY(response->request() != &request); // A copy, not a reference.
+        QCOMPARE(*response->request(), request);
+        delete response;
+    }
+}
 
 void TestSqsClient::purgeQueue_data()
 {
@@ -406,7 +505,7 @@ void TestSqsClient::purgeQueue()
         delete response;
     }
 
-    {   // Verify the explicit SqsCreateQueueRequest overload.
+    {   // Verify the explicit SqsPurgeQueueRequest overload.
         const SqsPurgeQueueRequest request(queueUrl);
         const SqsPurgeQueueResponse * const response = sqs.purgeQueue(request);
         QVERIFY(response);
@@ -449,7 +548,7 @@ void TestSqsClient::removePermission()
         delete response;
     }
 
-    {   // Verify the explicit SqsCreateQueueRequest overload.
+    {   // Verify the explicit SqsRemovePermissionRequest overload.
         const SqsRemovePermissionRequest request(queueUrl, label);
         const SqsRemovePermissionResponse * const response = sqs.removePermission(request);
         QVERIFY(response);

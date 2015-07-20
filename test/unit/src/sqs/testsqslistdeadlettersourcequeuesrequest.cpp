@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsListDeadLetterSourceQueuesRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,23 @@ protected:
 
 void TestSqsListDeadLetterSourceQueuesRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueUrl");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null") << QString() << false;
+
+    QTest::newRow("foo")
+        << QString::fromLatin1("http://example.com/bar/baz")
+        << true;
 }
 
 void TestSqsListDeadLetterSourceQueuesRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    //const SqsListDeadLetterSourceQueuesRequest request(label, permissions, queueUrl);
+    const SqsListDeadLetterSourceQueuesRequest request(queueUrl);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsListDeadLetterSourceQueuesRequest::construct_copy_data()
@@ -69,13 +74,13 @@ void TestSqsListDeadLetterSourceQueuesRequest::construct_copy_data()
 
 void TestSqsListDeadLetterSourceQueuesRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
 
-    const SqsListDeadLetterSourceQueuesRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsListDeadLetterSourceQueuesRequest request1(queueUrl);
+    QCOMPARE(request1.queueUrl(), queueUrl);
 
     const SqsListDeadLetterSourceQueuesRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueUrl(), queueUrl);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +89,37 @@ void TestSqsListDeadLetterSourceQueuesRequest::construct_default()
 {
     SqsListDeadLetterSourceQueuesRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueUrl(), QString());
 }
 
 void TestSqsListDeadLetterSourceQueuesRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsListDeadLetterSourceQueuesRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueUrl);
+    QFETCH(bool, isValid);
 
-    const SqsListDeadLetterSourceQueuesRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsListDeadLetterSourceQueuesRequest request(queueUrl);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsListDeadLetterSourceQueuesRequest::queueUrl_data()
+{
+    construct_params_data();
+}
+
+void TestSqsListDeadLetterSourceQueuesRequest::queueUrl()
+{
+    QFETCH(QString, queueUrl);
+
+    SqsListDeadLetterSourceQueuesRequest request;
+    QCOMPARE(request.queueUrl(), QString());
+
+    request.setQueueUrl(queueUrl);
+    QCOMPARE(request.queueUrl(), queueUrl);
 }
 
 void TestSqsListDeadLetterSourceQueuesRequest::response()
@@ -111,8 +133,3 @@ void TestSqsListDeadLetterSourceQueuesRequest::response()
         qobject_cast<const SqsListDeadLetterSourceQueuesResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

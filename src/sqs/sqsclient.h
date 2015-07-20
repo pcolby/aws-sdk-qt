@@ -44,6 +44,12 @@ class SqsDeleteMessageRequest;
 class SqsDeleteMessageResponse;
 class SqsDeleteQueueRequest;
 class SqsDeleteQueueResponse;
+class SqsGetQueueUrlRequest;
+class SqsGetQueueUrlResponse;
+class SqsListDeadLetterSourceQueuesRequest;
+class SqsListDeadLetterSourceQueuesResponse;
+class SqsListQueuesRequest;
+class SqsListQueuesResponse;
 class SqsPurgeQueueRequest;
 class SqsPurgeQueueResponse;
 class SqsRemovePermissionRequest;
@@ -92,9 +98,17 @@ public slots:
     SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &request);
     SqsDeleteQueueResponse * deleteQueue(const QString &queueUrl);
 
-    //void getQueueUrl(const QString &queueName, const QString &queueOwnerAWSAccountId = QString());
-    //void listDeadLetterSourceQueues(const QString &queueUrl);
-    //void listQueues(const QString &queueNamePrefix = QString());
+    SqsGetQueueUrlResponse * getQueueUrl(const SqsGetQueueUrlRequest &request);
+    SqsGetQueueUrlResponse * getQueueUrl(
+        const QString &queueName, const QString &queueOwnerAWSAccountId = QString());
+
+    SqsListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(
+        const SqsListDeadLetterSourceQueuesRequest &request);
+    SqsListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(
+        const QString &queueUrl);
+
+    SqsListQueuesResponse * listQueues(const SqsListQueuesRequest &request);
+    SqsListQueuesResponse * listQueues(const QString &queueNamePrefix = QString());
 
     SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &request);
     SqsPurgeQueueResponse * purgeQueue(const QString &queueUrl);

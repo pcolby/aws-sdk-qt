@@ -22,6 +22,8 @@
 #include "sqslistdeadlettersourcequeuesresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_URL QLatin1String("QueueUrl")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -36,16 +38,14 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest.
  *
- * @todo
+ * @param  queueUrl  URL of a dead letter queue.
  */
-/*SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(
-    ...
+SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(
+    const QString &queueUrl)
     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))
 {
-    setLabel(label);
     setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+}
 
 /**
  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest object by copying another.
@@ -69,8 +69,27 @@ SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest()
 
 bool SqsListDeadLetterSourceQueuesRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return (!queueUrl().isEmpty());
+}
+
+/**
+ * @brief  Get the queue URL of a dead letter queue.
+ *
+ * @return The queue URL of a dead letter queue.
+ */
+QString SqsListDeadLetterSourceQueuesRequest::queueUrl() const
+{
+    return parameter(QUEUE_URL).toString();
+}
+
+/**
+ * @brief  Set the queue URL of a dead letter queue.
+ *
+ * @param  queueUrl  URL of a dead letter queue.
+ */
+void SqsListDeadLetterSourceQueuesRequest::setQueueUrl(const QString &queueUrl)
+{
+    setParameter(QUEUE_URL, queueUrl);
 }
 
 /**

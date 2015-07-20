@@ -22,6 +22,9 @@
 #include "sqsgetqueueurlresponse.h"
 #include "sqsrequest_p.h"
 
+#define QUEUE_NAME                 QLatin1String("QueueName")
+#define QUEUE_OWNER_AWS_ACCOUNT_ID QLatin1String("QueueOwnerAWSAccountId")
+
 QTAWS_BEGIN_NAMESPACE
 
 /**
@@ -30,22 +33,23 @@ QTAWS_BEGIN_NAMESPACE
  * @brief  Implements SQS GetQueueUrl requests.
  *
  * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_GetQueueUrl.html
- * @see    SqsRemovePermissionRequest
  */
 
 /**
  * @brief  Constructs a new SqsGetQueueUrlRequest.
  *
- * @todo
+ * @param  queueName               Name of the queue whose URL must be fetched.
+ * @param  queueOwnerAWSAccountId  The AWS account ID of the account that created the queue.
+ *
+ * @see    setQueueOwnerAWSAccountId
  */
-/*SqsGetQueueUrlRequest::SqsGetQueueUrlRequest(
-    ...
+SqsGetQueueUrlRequest::SqsGetQueueUrlRequest(
+    const QString &queueName, const QString &queueOwnerAWSAccountId)
     : SqsRequest(new SqsGetQueueUrlRequestPrivate(SqsRequest::GetQueueUrlAction, this))
 {
-    setLabel(label);
-    setQueueUrl(queueUrl);
-    setPermissions(permissions);
-}*/
+    setQueueName(queueName);
+    setQueueOwnerAWSAccountId(queueOwnerAWSAccountId);
+}
 
 /**
  * @brief  Constructs a new SqsGetQueueUrlRequest object by copying another.
@@ -69,8 +73,56 @@ SqsGetQueueUrlRequest::SqsGetQueueUrlRequest()
 
 bool SqsGetQueueUrlRequest::isValid() const
 {
-    /// @todo
-    return false;
+    return isValidQueueName(queueName());
+}
+
+/**
+ * @brief  Get the name of the queue whose URL must be fetched.
+ *
+ * @return The name of the queue whose URL must be fetched.
+ */
+QString SqsGetQueueUrlRequest::queueName() const
+{
+    return parameter(QUEUE_NAME).toString();
+}
+
+/**
+ * @brief  Get the AWS account ID of the account that created the queue.
+ *
+ * @return The AWS account ID of the account that created the queue
+ *
+ * @see setQueueOwnerAWSAccountId
+ */
+QString SqsGetQueueUrlRequest::queueOwnerAWSAccountId() const
+{
+    return parameter(QUEUE_OWNER_AWS_ACCOUNT_ID).toString();
+}
+
+/**
+ * @brief  Set the name of the queue whose URL must be fetched.
+ *
+ * @param  queueName  Name of the queue whose URL must be fetched.
+ */
+void SqsGetQueueUrlRequest::setQueueName(const QString &queueName)
+{
+    setParameter(QUEUE_NAME, queueName);
+}
+
+/**
+ * @brief Set the AWS account ID of the account that created the queue.
+ *
+ * Use this method to access a queue that belongs another AWS account.
+ *
+ * @param  queueOwnerAWSAccountId  AWS account ID of the account that created the queue.
+ */
+void SqsGetQueueUrlRequest::setQueueOwnerAWSAccountId(
+    const QString &queueOwnerAWSAccountId)
+{
+    if (queueOwnerAWSAccountId.isNull()) {
+        clearParameter(QUEUE_OWNER_AWS_ACCOUNT_ID);
+    } else {
+        setParameter(QUEUE_OWNER_AWS_ACCOUNT_ID, queueOwnerAWSAccountId);
+    }
 }
 
 /**

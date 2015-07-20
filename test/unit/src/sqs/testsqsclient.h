@@ -50,14 +50,14 @@ private slots:
     void deleteQueue_data();
     void deleteQueue();
 
-    //void getQueueUrl_data();
-    //void getQueueUrl();
+    void getQueueUrl_data();
+    void getQueueUrl();
 
-    //void listDeadLetterSourceQueues_data();
-    //void listDeadLetterSourceQueues();
+    void listDeadLetterSourceQueues_data();
+    void listDeadLetterSourceQueues();
 
-    //void listQueues_data();
-    //void listQueues();
+    void listQueues_data();
+    void listQueues();
 
     void purgeQueue_data();
     void purgeQueue();

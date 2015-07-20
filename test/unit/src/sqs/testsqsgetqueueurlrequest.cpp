@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsGetQueueUrlRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,37 @@ protected:
 
 void TestSqsGetQueueUrlRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueName");
+    QTest::addColumn<QString>("queueOwnerAWSAccountId");
+    QTest::addColumn<bool>("isValid");
+
+    QTest::newRow("null") << QString() << QString() << false;
+
+    QTest::newRow("name")
+        << QString::fromLatin1("example-queue")
+        << QString()
+        << true;
+
+    QTest::newRow("url+account")
+        << QString::fromLatin1("example-queue")
+        << QString::fromLatin1("account-123")
+        << true;
+
+    QTest::newRow("no-name")
+        << QString()
+        << QString::fromLatin1("account-123")
+        << false;
 }
 
 void TestSqsGetQueueUrlRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueName);
+    QFETCH(QString, queueOwnerAWSAccountId);
 
-    //const SqsGetQueueUrlRequest request(label, permissions, queueUrl);
+    const SqsGetQueueUrlRequest request(queueName, queueOwnerAWSAccountId);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueName(), queueName);
+    QCOMPARE(request.queueOwnerAWSAccountId(), queueOwnerAWSAccountId);
 }
 
 void TestSqsGetQueueUrlRequest::construct_copy_data()
@@ -69,13 +88,16 @@ void TestSqsGetQueueUrlRequest::construct_copy_data()
 
 void TestSqsGetQueueUrlRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueName);
+    QFETCH(QString, queueOwnerAWSAccountId);
 
-    const SqsGetQueueUrlRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsGetQueueUrlRequest request1(queueName, queueOwnerAWSAccountId);
+    QCOMPARE(request1.queueName(), queueName);
+    QCOMPARE(request1.queueOwnerAWSAccountId(), queueOwnerAWSAccountId);
 
     const SqsGetQueueUrlRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueName(), queueName);
+    QCOMPARE(request2.queueOwnerAWSAccountId(), queueOwnerAWSAccountId);
 
     QCOMPARE(request1, request2);
 }
@@ -84,20 +106,55 @@ void TestSqsGetQueueUrlRequest::construct_default()
 {
     SqsGetQueueUrlRequest request;
     QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueName(), QString());
+    QCOMPARE(request.queueOwnerAWSAccountId(), QString());
 }
 
 void TestSqsGetQueueUrlRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsGetQueueUrlRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueName);
+    QFETCH(QString, queueOwnerAWSAccountId);
+    QFETCH(bool, isValid);
 
-    const SqsGetQueueUrlRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+    const SqsGetQueueUrlRequest request(queueName, queueOwnerAWSAccountId);
+    QCOMPARE(request.isValid(), isValid);
+}
+
+void TestSqsGetQueueUrlRequest::queueName_data()
+{
+    construct_params_data();
+}
+
+void TestSqsGetQueueUrlRequest::queueName()
+{
+    QFETCH(QString, queueName);
+
+    SqsGetQueueUrlRequest request;
+    QCOMPARE(request.queueName(), QString());
+
+    request.setQueueName(queueName);
+    QCOMPARE(request.queueName(), queueName);
+}
+
+void TestSqsGetQueueUrlRequest::queueOwnerAWSAccountId_data()
+{
+    construct_params_data();
+}
+
+void TestSqsGetQueueUrlRequest::queueOwnerAWSAccountId()
+{
+    QFETCH(QString, queueOwnerAWSAccountId);
+
+    SqsGetQueueUrlRequest request;
+    QCOMPARE(request.queueOwnerAWSAccountId(), QString());
+
+    request.setQueueOwnerAWSAccountId(queueOwnerAWSAccountId);
+    QCOMPARE(request.queueOwnerAWSAccountId(), queueOwnerAWSAccountId);
 }
 
 void TestSqsGetQueueUrlRequest::response()
@@ -111,8 +168,3 @@ void TestSqsGetQueueUrlRequest::response()
         qobject_cast<const SqsGetQueueUrlResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

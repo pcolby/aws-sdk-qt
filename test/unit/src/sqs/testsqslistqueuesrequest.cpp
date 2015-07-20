@@ -29,8 +29,6 @@
 
 #include <QDebug>
 
-/// @todo Q_DECLARE_METATYPE(...)
-
 namespace TestSqsListQueuesRequest_Mocks {
 
 class MockNetworkReply : public QNetworkReply {
@@ -50,16 +48,20 @@ protected:
 
 void TestSqsListQueuesRequest::construct_params_data()
 {
-    /// @todo
+    QTest::addColumn<QString>("queueNamePrefix");
+
+    QTest::newRow("null") << QString();
+
+    QTest::newRow("foo") << QString::fromLatin1("foo");
 }
 
 void TestSqsListQueuesRequest::construct_params()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueNamePrefix);
 
-    //const SqsListQueuesRequest request(label, permissions, queueUrl);
+    const SqsListQueuesRequest request(queueNamePrefix);
 
-    //QCOMPARE( @todo );
+    QCOMPARE(request.queueNamePrefix(), queueNamePrefix);
 }
 
 void TestSqsListQueuesRequest::construct_copy_data()
@@ -69,13 +71,13 @@ void TestSqsListQueuesRequest::construct_copy_data()
 
 void TestSqsListQueuesRequest::construct_copy()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueNamePrefix);
 
-    const SqsListQueuesRequest request1/*( @todo )*/;
-    //QCOMPARE(request1...);
+    const SqsListQueuesRequest request1(queueNamePrefix);
+    QCOMPARE(request1.queueNamePrefix(), queueNamePrefix);
 
     const SqsListQueuesRequest request2(request1);
-    //QCOMPARE(request2...);
+    QCOMPARE(request2.queueNamePrefix(), queueNamePrefix);
 
     QCOMPARE(request1, request2);
 }
@@ -83,21 +85,36 @@ void TestSqsListQueuesRequest::construct_copy()
 void TestSqsListQueuesRequest::construct_default()
 {
     SqsListQueuesRequest request;
-    QCOMPARE(request.isValid(), false);
-    //QCOMPARE( @todo );
+    QCOMPARE(request.isValid(), true);
+    QCOMPARE(request.queueNamePrefix(), QString());
 }
 
 void TestSqsListQueuesRequest::isValid_data()
 {
-    /// @todo
+    construct_params_data();
 }
 
 void TestSqsListQueuesRequest::isValid()
 {
-    //QFETCH( @todo );
+    QFETCH(QString, queueNamePrefix);
+    const SqsListQueuesRequest request(queueNamePrefix);
+    QCOMPARE(request.isValid(), true);
+}
 
-    const SqsListQueuesRequest request/*( @todo )*/;
-    //QCOMPARE(request.isValid(), isValid);
+void TestSqsListQueuesRequest::queueNamePrefix_data()
+{
+    construct_params_data();
+}
+
+void TestSqsListQueuesRequest::queueNamePrefix()
+{
+    QFETCH(QString, queueNamePrefix);
+
+    SqsListQueuesRequest request;
+    QCOMPARE(request.queueNamePrefix(), QString());
+
+    request.setQueueNamePrefix(queueNamePrefix);
+    QCOMPARE(request.queueNamePrefix(), queueNamePrefix);
 }
 
 void TestSqsListQueuesRequest::response()
@@ -111,8 +128,3 @@ void TestSqsListQueuesRequest::response()
         qobject_cast<const SqsListQueuesResponse *>(abstractResponse);
     QVERIFY(sqsResponse);
 }
-
-// AwsAbstractResponsePrivate functions.
-#ifdef QTAWS_ENABLE_PRIVATE_TESTS
-/// @todo
-#endif

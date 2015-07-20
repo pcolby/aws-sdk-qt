@@ -23,19 +23,36 @@
 #include "core/awssignaturev4.h"
 #include "sqsaddpermissionrequest.h"
 #include "sqsaddpermissionresponse.h"
+#include "sqschangemessagevisibilitybatchrequest.h"
+#include "sqschangemessagevisibilitybatchresponse.h"
 #include "sqschangemessagevisibilityrequest.h"
 #include "sqschangemessagevisibilityresponse.h"
 #include "sqscreatequeuerequest.h"
 #include "sqscreatequeueresponse.h"
+#include "sqsdeletemessagebatchrequest.h"
+#include "sqsdeletemessagebatchresponse.h"
 #include "sqsdeletemessagerequest.h"
 #include "sqsdeletemessageresponse.h"
 #include "sqsdeletequeuerequest.h"
 #include "sqsdeletequeueresponse.h"
+#include "sqsgetqueueattributesrequest.h"
+#include "sqsgetqueueattributesresponse.h"
+#include "sqsgetqueueurlrequest.h"
+#include "sqsgetqueueurlresponse.h"
+#include "sqslistdeadlettersourcequeuesrequest.h"
+#include "sqslistdeadlettersourcequeuesresponse.h"
+#include "sqslistqueuesrequest.h"
+#include "sqslistqueuesresponse.h"
 #include "sqspurgequeuerequest.h"
 #include "sqspurgequeueresponse.h"
+#include "sqsreceivemessagerequest.h"
+#include "sqsreceivemessageresponse.h"
 #include "sqsremovepermissionrequest.h"
 #include "sqsremovepermissionresponse.h"
-#include "sqsrequest.h"
+#include "sqssendmessagebatchrequest.h"
+#include "sqssendmessagebatchresponse.h"
+#include "sqssendmessagerequest.h"
+#include "sqssendmessageresponse.h"
 #include "sqssetqueueattributesrequest.h"
 #include "sqssetqueueattributesresponse.h"
 
@@ -258,6 +275,105 @@ SqsDeleteQueueResponse * SqsClient::deleteQueue(const QString &queueUrl)
 {
     const SqsDeleteQueueRequest request(queueUrl);
     return deleteQueue(request);
+}
+
+/**
+ * @brief  Gets the URL of an existing queue.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsGetQueueUrlResponse * SqsClient::getQueueUrl(const SqsGetQueueUrlRequest &request)
+{
+    return qobject_cast<SqsGetQueueUrlResponse *>(send(request));
+}
+
+/**
+ * @brief  Gets the URL of an existing queue.
+ *
+ * @param  queueName               Name of the queue whose URL must be fetched.
+ * @param  queueOwnerAWSAccountId  The AWS account ID of the account that created the queue.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsGetQueueUrlRequest
+ */
+SqsGetQueueUrlResponse * SqsClient::getQueueUrl(
+    const QString &queueName, const QString &queueOwnerAWSAccountId)
+{
+    const SqsGetQueueUrlRequest request(queueName, queueOwnerAWSAccountId);
+    return getQueueUrl(request);
+}
+
+/**
+ * @brief  Get a list of queues that have the RedrivePolicy queue attribute
+ *         configured with a dead letter queue.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(
+    const SqsListDeadLetterSourceQueuesRequest &request)
+{
+    return qobject_cast<SqsListDeadLetterSourceQueuesResponse *>(send(request));
+}
+
+/**
+ * @brief  Get a list of queues that have the RedrivePolicy queue attribute
+ *         configured with a dead letter queue.
+ *
+ * @param  queueUrl  URL of a dead letter queue.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsListDeadLetterSourceQueuesRequest
+ */
+SqsListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(
+    const QString &queueUrl)
+{
+    const SqsListDeadLetterSourceQueuesRequest request(queueUrl);
+    return listDeadLetterSourceQueues(request);
+}
+
+/**
+ * @brief  Get a list of queues belonging to the authorized account.
+ *
+ * @param  request  Request to send to SQS.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SqsListQueuesResponse * SqsClient::listQueues(const SqsListQueuesRequest &request)
+{
+    return qobject_cast<SqsListQueuesResponse *>(send(request));
+}
+
+/**
+ * @brief  Get a list of queues belonging to the authorized account.
+ *
+ * @param  queueNamePrefix  String to use for filtering the list results.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ *
+ * @see    SqsListQueuesRequest
+ */
+SqsListQueuesResponse * SqsClient::listQueues(const QString &queueNamePrefix)
+{
+    const SqsListQueuesRequest request(queueNamePrefix);
+    return listQueues(request);
 }
 
 /**

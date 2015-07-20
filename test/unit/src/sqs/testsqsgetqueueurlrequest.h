@@ -34,13 +34,16 @@ private slots:
     void isValid_data();
     void isValid();
 
-    /// @todo
+    void queueName_data();
+    void queueName();
+
+    void queueOwnerAWSAccountId_data();
+    void queueOwnerAWSAccountId();
 
     void response();
 
     // AwsAbstractResponsePrivate functions.
     #ifdef QTAWS_ENABLE_PRIVATE_TESTS
-    /// @todo
     // Nothing to see here.
     #endif
 };

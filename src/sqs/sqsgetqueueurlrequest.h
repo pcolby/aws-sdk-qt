@@ -29,11 +29,18 @@ class SqsGetQueueUrlRequestPrivate;
 class QTAWS_EXPORT SqsGetQueueUrlRequest : public SqsRequest {
 
 public:
-  //SqsGetQueueUrlRequest(...); ///< @todo
+    SqsGetQueueUrlRequest(const QString &queueName,
+                          const QString &queueOwnerAWSAccountId = QString());
     SqsGetQueueUrlRequest(const SqsGetQueueUrlRequest &other);
     SqsGetQueueUrlRequest();
 
     virtual bool isValid() const;
+
+    QString queueName() const;
+    QString queueOwnerAWSAccountId() const;
+
+    void setQueueName(const QString &queueName);
+    void setQueueOwnerAWSAccountId(const QString &queueOwnerAWSAccountId);
 
 protected:
     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
