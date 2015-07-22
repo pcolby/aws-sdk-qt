@@ -1,0 +1,44 @@
+version: 0.2.0.{build}
+branches:
+  only:
+  - appveyor
+environment:
+  QTDIR: C:\Qt\5.4\msvc2013_64_opengl
+build_script:
+- set
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 9.0\"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 10.0\"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 11.0\"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"
+- dir "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"
+- dir "C:\Program Files\Microsoft SDKs"
+- dir "C:\Program Files\Microsoft SDKs\Windows"
+- rem @todo Move to install
+- dir "%ProgramFiles(x86)%\Microsoft Visual Studio *"
+- dir "%SystemDrive%\Qt\5.*"
+- '%QTDIR%\bin\qtenv2.bat'
+- qmake -v
+- rem @todo Detect mingw-vs-vs and 86-vs-64.
+- '"%ProgramFiles(x86)%\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" amd64'
+- if %QTDIR:msvc=%==%QTDIR% (
+- '  g++ --version'
+- '  mingw32-make --version'
+- '  set make=mingw32-make'
+- ) else (
+- '  if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=amd64'
+- '  "%ProgramFiles(x86)%\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" %ARCH%'
+- '  nmake /? > nul'
+- '  set make=nmake'
+- )
+- rem @todo Move to before_build
+- mkdir %APPVEYOR_BUILD_FOLDER%-build
+- cd %APPVEYOR_BUILD_FOLDER%-build
+- qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
+- rem @todo Leave here in build_script
+- '%make% all'
+test_script:
+- rem @todo output using Qt's -xunitxml option
+- nmake.exe check
+- rem @todo after_test upload results
