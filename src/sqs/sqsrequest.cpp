@@ -109,8 +109,7 @@ SqsRequest::Action SqsRequest::action() const
  */
 QString SqsRequest::actionString() const
 {
-    Q_D(const SqsRequest);
-    return d->toString(action());
+    return SqsRequestPrivate::toString(action());
 }
 
 /**
