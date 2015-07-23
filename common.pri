@@ -5,5 +5,5 @@ TOPDIR = $$PWD
 CONFIG += warn_on
 
 # Treat warnings as errors.
-win32:QMAKE_CXXFLAGS_WARN_ON += /WX
-else: QMAKE_CXXFLAGS_WARN_ON += -Werror
+win32-msvc*:QMAKE_CXXFLAGS_WARN_ON += /WX
+else:       QMAKE_CXXFLAGS_WARN_ON += -Werror
