@@ -3,34 +3,34 @@ branches:
   only:
   - appveyor
 init:
-- rem set
-- dir "%ProgramFiles(x86)%\Microsoft Visual Studio *" /b /o
-- dir "%ProgramFiles%\Microsoft SDKs\Windows" /b /o
-- dir "%SystemDrive%\Qt\5.*" /b /o
+  - rem set
+  - dir "%ProgramFiles(x86)%\Microsoft Visual Studio *" /b /o
+  - dir "%ProgramFiles%\Microsoft SDKs\Windows" /b /o
+  - dir "%SystemDrive%\Qt\5.*" /b /o
 environment:
   VSVER: 14.0
   matrix:
-  - QTDIR: C:\Qt\5.4\msvc2013_opengl
-  - QTDIR: C:\Qt\5.4\msvc2013_64_opengl
-  - QTDIR: C:\Qt\5.5\mingw492_32
+    - QTDIR: C:\Qt\5.4\msvc2013_opengl
+    - QTDIR: C:\Qt\5.4\msvc2013_64_opengl
+    - QTDIR: C:\Qt\5.5\mingw492_32
 install:
-- '%QTDIR%\bin\qtenv2.bat'
-- qmake -v
-- if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
-- if %QTDIR:msvc=%==%QTDIR% g++ --version
-- if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
-- if %QTDIR:msvc=%==%QTDIR% %make% --version
-- if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VCVER%\VC\vcvarsall.bat" %ARCH%
-- if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
-- if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+  - '%QTDIR%\bin\qtenv2.bat'
+  - qmake -v
+  - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
+  - if %QTDIR:msvc=%==%QTDIR% g++ --version
+  - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
+  - if %QTDIR:msvc=%==%QTDIR% %make% --version
+  - if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VCVER%\VC\vcvarsall.bat" %ARCH%
+  - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
+  - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
 build_script:
-- rem @todo Move to before_build
-- mkdir %APPVEYOR_BUILD_FOLDER%-build
-- cd %APPVEYOR_BUILD_FOLDER%-build
-- qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
-- rem @todo Leave here in build_script
-- '%make% all'
+  - rem @todo Move to before_build
+  - mkdir %APPVEYOR_BUILD_FOLDER%-build
+  - cd %APPVEYOR_BUILD_FOLDER%-build
+  - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
+  - rem @todo Leave here in build_script
+  - '%make% all'
 test_script:
-- rem @todo output using Qt's -xunitxml option
-- nmake.exe check
-- rem @todo after_test upload results
+  - rem @todo output using Qt's -xunitxml option
+  - nmake.exe check
+  - rem @todo after_test upload results
