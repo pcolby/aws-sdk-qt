@@ -1,37 +1,29 @@
-version: 0.2.0.{build}
+version: '{branch}-{build}'
 branches:
   only:
   - appveyor
+init:
+- rem set
+- dir "%ProgramFiles(x86)%\Microsoft Visual Studio *" /b /o
+- dir "%ProgramFiles%\Microsoft SDKs\Windows" /b /o
+- dir "%SystemDrive%\Qt\5.*" /b /o
 environment:
-  QTDIR: C:\Qt\5.4\msvc2013_64_opengl
-build_script:
-- set
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 9.0\"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 10.0\"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 11.0\"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"
-- dir "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"
-- dir "C:\Program Files\Microsoft SDKs"
-- dir "C:\Program Files\Microsoft SDKs\Windows"
-- rem @todo Move to install
-- dir "%ProgramFiles(x86)%\Microsoft Visual Studio *"
-- dir "%SystemDrive%\Qt\5.*"
+  VSVER: 14.0
+  matrix:
+  - QTDIR: C:\Qt\5.4\msvc2013_opengl
+  - QTDIR: C:\Qt\5.4\msvc2013_64_opengl
+  - QTDIR: C:\Qt\5.5\mingw492_32
+install:
 - '%QTDIR%\bin\qtenv2.bat'
 - qmake -v
-- rem @todo Detect mingw-vs-vs and 86-vs-64.
-- '"%ProgramFiles(x86)%\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" amd64'
-- if %QTDIR:msvc=%==%QTDIR% (
-- '  g++ --version'
-- '  mingw32-make --version'
-- '  set make=mingw32-make'
-- ) else (
-- '  if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=amd64'
-- '  "%ProgramFiles(x86)%\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" %ARCH%'
-- '  nmake /? > nul'
-- '  set make=nmake'
-- )
+- if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
+- if %QTDIR:msvc=%==%QTDIR% g++ --version
+- if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
+- if %QTDIR:msvc=%==%QTDIR% %make% --version
+- if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VCVER%\VC\vcvarsall.bat" %ARCH%
+- if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
+- if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+build_script:
 - rem @todo Move to before_build
 - mkdir %APPVEYOR_BUILD_FOLDER%-build
 - cd %APPVEYOR_BUILD_FOLDER%-build
