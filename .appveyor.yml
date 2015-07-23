@@ -1,3 +1,4 @@
+# Tip: https://ci.appveyor.com/tools/validate-yaml
 version: '{branch}-{build}'
 branches:
   only:
@@ -22,7 +23,7 @@ install:
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
   - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
   - if %QTDIR:msvc=%==%QTDIR% %make% --version
-  - if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VCVER%\VC\vcvarsall.bat" %ARCH%
+  - if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VSVER%\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
 before_build:
