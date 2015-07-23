@@ -31,8 +31,8 @@ before_build:
   - cd %APPVEYOR_BUILD_FOLDER%-build
   - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
 build_script:
-  - %make% all
+  - '%make% all'
 test_script:
   # @todo output using Qt's -xunitxml option
-  - %make% check
+  - '%make% check'
 # @todo after_test upload results
