@@ -66,6 +66,7 @@ void TestSqsPurgeQueueRequest::construct_params()
 
     const SqsPurgeQueueRequest request(queueUrl);
 
+    QCOMPARE(request.action(), SqsRequest::PurgeQueueAction);
     QCOMPARE(request.queueUrl(), queueUrl);
 }
 
@@ -90,6 +91,7 @@ void TestSqsPurgeQueueRequest::construct_copy()
 void TestSqsPurgeQueueRequest::construct_default()
 {
     SqsPurgeQueueRequest request;
+    QCOMPARE(request.action(), SqsRequest::PurgeQueueAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
 }

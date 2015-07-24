@@ -77,6 +77,7 @@ void TestSqsGetQueueUrlRequest::construct_params()
 
     const SqsGetQueueUrlRequest request(queueName, queueOwnerAWSAccountId);
 
+    QCOMPARE(request.action(), SqsRequest::GetQueueUrlAction);
     QCOMPARE(request.queueName(), queueName);
     QCOMPARE(request.queueOwnerAWSAccountId(), queueOwnerAWSAccountId);
 }
@@ -105,6 +106,7 @@ void TestSqsGetQueueUrlRequest::construct_copy()
 void TestSqsGetQueueUrlRequest::construct_default()
 {
     SqsGetQueueUrlRequest request;
+    QCOMPARE(request.action(), SqsRequest::GetQueueUrlAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueName(), QString());
     QCOMPARE(request.queueOwnerAWSAccountId(), QString());

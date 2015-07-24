@@ -92,6 +92,7 @@ void TestSqsAddPermissionRequest::construct_params()
 
     const SqsAddPermissionRequest request(label, permissions, queueUrl);
 
+    QCOMPARE(request.action(), SqsRequest::AddPermissionAction);
     QCOMPARE(request.label(), label);
     QCOMPARE(request.permissions(), permissions);
     QCOMPARE(request.queueUrl(), queueUrl);
@@ -124,6 +125,7 @@ void TestSqsAddPermissionRequest::construct_copy()
 void TestSqsAddPermissionRequest::construct_default()
 {
     SqsAddPermissionRequest request;
+    QCOMPARE(request.action(), SqsRequest::AddPermissionAction);
     QCOMPARE(request.label(), QString());
     QCOMPARE(request.permissions(), SqsAddPermissionRequest::PermissionsMap());
     QCOMPARE(request.queueUrl(), QString());

@@ -32,7 +32,7 @@ class QTAWS_EXPORT SqsSetQueueAttributesResponse : public SqsResponse {
 
 public:
     SqsSetQueueAttributesResponse(const SqsSetQueueAttributesRequest &request,
-                             QNetworkReply * const reply, QObject * const parent = 0);
+                                  QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual const SqsSetQueueAttributesRequest * request() const;
 

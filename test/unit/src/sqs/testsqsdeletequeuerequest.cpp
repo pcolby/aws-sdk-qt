@@ -66,6 +66,7 @@ void TestSqsDeleteQueueRequest::construct_params()
 
     const SqsDeleteQueueRequest request(queueUrl);
 
+    QCOMPARE(request.action(), SqsRequest::DeleteQueueAction);
     QCOMPARE(request.queueUrl(), queueUrl);
 }
 
@@ -90,6 +91,7 @@ void TestSqsDeleteQueueRequest::construct_copy()
 void TestSqsDeleteQueueRequest::construct_default()
 {
     SqsDeleteQueueRequest request;
+    QCOMPARE(request.action(), SqsRequest::DeleteQueueAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
 }

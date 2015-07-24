@@ -70,6 +70,7 @@ void TestSqsRemovePermissionRequest::construct_params()
 
     const SqsRemovePermissionRequest request(queueUrl, label);
 
+    QCOMPARE(request.action(), SqsRequest::RemovePermissionAction);
     QCOMPARE(request.queueUrl(), queueUrl);
     QCOMPARE(request.label(), label);
 }
@@ -98,6 +99,7 @@ void TestSqsRemovePermissionRequest::construct_copy()
 void TestSqsRemovePermissionRequest::construct_default()
 {
     SqsRemovePermissionRequest request;
+    QCOMPARE(request.action(), SqsRequest::RemovePermissionAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
     QCOMPARE(request.label(), QString());

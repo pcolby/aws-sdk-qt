@@ -23,7 +23,6 @@ class TestSqsDeleteMessageResponse : public QObject {
     Q_OBJECT
 
 private slots:
-    void construct_data();
     void construct();
 
     void request();

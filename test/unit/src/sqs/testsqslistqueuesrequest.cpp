@@ -61,6 +61,7 @@ void TestSqsListQueuesRequest::construct_params()
 
     const SqsListQueuesRequest request(queueNamePrefix);
 
+    QCOMPARE(request.action(), SqsRequest::ListQueuesAction);
     QCOMPARE(request.queueNamePrefix(), queueNamePrefix);
 }
 
@@ -85,6 +86,7 @@ void TestSqsListQueuesRequest::construct_copy()
 void TestSqsListQueuesRequest::construct_default()
 {
     SqsListQueuesRequest request;
+    QCOMPARE(request.action(), SqsRequest::ListQueuesAction);
     QCOMPARE(request.isValid(), true);
     QCOMPARE(request.queueNamePrefix(), QString());
 }

@@ -32,16 +32,9 @@ namespace TestSqsPurgeQueueResponse_Mocks {
 
 } using namespace TestSqsPurgeQueueResponse_Mocks;
 
-void TestSqsPurgeQueueResponse::construct_data()
-{
-    //QTest::addColumn<QString>("queueName");
-    //QTest::newRow("example") << QString::fromLatin1("example");
-}
-
 void TestSqsPurgeQueueResponse::construct()
 {
-    //QFETCH(QString, queueName);
-    const SqsPurgeQueueRequest request/**( @todo )*/;
+    const SqsPurgeQueueRequest request(QString::fromLatin1("https://example.com/queue"));
     SqsPurgeQueueResponse response(request, NULL);
     QCOMPARE(response.isValid(), true);
     QVERIFY(response.request());
@@ -50,11 +43,8 @@ void TestSqsPurgeQueueResponse::construct()
 
 void TestSqsPurgeQueueResponse::request()
 {
-    //const QString queueName = QString::fromLatin1("sentinel-queue-name");
-
-    SqsPurgeQueueRequest request/**( @todo )*/;
-    //QCOMPARE(request.queueName(), queueName);
-    SqsPurgeQueueResponse response(request, NULL);
+    const SqsPurgeQueueRequest request(QString::fromLatin1("https://example.com/queue"));
+    const SqsPurgeQueueResponse response(request, NULL);
 
     // Verify that the response took a copy of (not a reference to) the request.
     QVERIFY(response.request());

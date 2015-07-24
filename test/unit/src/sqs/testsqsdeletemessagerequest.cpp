@@ -70,6 +70,7 @@ void TestSqsDeleteMessageRequest::construct_params()
 
     const SqsDeleteMessageRequest request(queueUrl, receiptHandle);
 
+    QCOMPARE(request.action(), SqsRequest::DeleteMessageAction);
     QCOMPARE(request.queueUrl(), queueUrl);
     QCOMPARE(request.receiptHandle(), receiptHandle);
 }
@@ -98,6 +99,7 @@ void TestSqsDeleteMessageRequest::construct_copy()
 void TestSqsDeleteMessageRequest::construct_default()
 {
     SqsDeleteMessageRequest request;
+    QCOMPARE(request.action(), SqsRequest::DeleteMessageAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
     QCOMPARE(request.receiptHandle(), QString());

@@ -59,6 +59,7 @@ void TestSqsDeleteMessageBatchRequest::construct_params()
 
     //const SqsDeleteMessageBatchRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::DeleteMessageBatchAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsDeleteMessageBatchRequest::construct_copy()
 void TestSqsDeleteMessageBatchRequest::construct_default()
 {
     SqsDeleteMessageBatchRequest request;
+    QCOMPARE(request.action(), SqsRequest::DeleteMessageBatchAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }
