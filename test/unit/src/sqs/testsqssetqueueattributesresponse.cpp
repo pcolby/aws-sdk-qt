@@ -30,31 +30,39 @@
 
 namespace TestSqsSetQueueAttributesResponse_Mocks {
 
-} using namespace TestSqsSetQueueAttributesResponse_Mocks;
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
-void TestSqsSetQueueAttributesResponse::construct_data()
-{
-    //QTest::addColumn<QString>("queueName");
-    //QTest::newRow("example") << QString::fromLatin1("example");
-}
+} using namespace TestSqsSetQueueAttributesResponse_Mocks;
 
 void TestSqsSetQueueAttributesResponse::construct()
 {
-    //QFETCH(QString, queueName);
+    MockNetworkReply reply;
     const SqsSetQueueAttributesRequest request/**( @todo )*/;
-    SqsSetQueueAttributesResponse response(request, NULL);
-    QCOMPARE(response.isValid(), true);
+    SqsSetQueueAttributesResponse response(request, &reply, this);
     QVERIFY(response.request());
     QCOMPARE(*response.request(), request);
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    QCOMPARE(response.d_func()->reply, &reply);
+#endif
+    QCOMPARE(response.parent(), this);
+    QCOMPARE(response.isValid(), true);
 }
 
 void TestSqsSetQueueAttributesResponse::request()
 {
-    //const QString queueName = QString::fromLatin1("sentinel-queue-name");
-
-    SqsSetQueueAttributesRequest request/**( @todo )*/;
-    //QCOMPARE(request.queueName(), queueName);
-    SqsSetQueueAttributesResponse response(request, NULL);
+    const SqsSetQueueAttributesRequest request/**( @todo )*/;
+    const SqsSetQueueAttributesResponse response(request, NULL);
 
     // Verify that the response took a copy of (not a reference to) the request.
     QVERIFY(response.request());

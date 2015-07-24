@@ -30,31 +30,39 @@
 
 namespace TestSqsDeleteMessageResponse_Mocks {
 
-} using namespace TestSqsDeleteMessageResponse_Mocks;
+class MockNetworkReply : public QNetworkReply {
+public:
+    MockNetworkReply(QObject * const parent = 0)
+        : QNetworkReply(parent) { }
+protected:
+    virtual void abort() { }
+    virtual qint64 readData(char * data, qint64 maxSize) {
+        Q_UNUSED(data)
+        Q_UNUSED(maxSize)
+        return -1;
+    }
+};
 
-void TestSqsDeleteMessageResponse::construct_data()
-{
-    //QTest::addColumn<QString>("queueName");
-    //QTest::newRow("example") << QString::fromLatin1("example");
-}
+} using namespace TestSqsDeleteMessageResponse_Mocks;
 
 void TestSqsDeleteMessageResponse::construct()
 {
-    //QFETCH(QString, queueName);
-    const SqsDeleteMessageRequest request/**( @todo )*/;
-    SqsDeleteMessageResponse response(request, NULL);
-    QCOMPARE(response.isValid(), true);
+    MockNetworkReply reply;
+    const SqsDeleteMessageRequest request(QLatin1String("foo"), QLatin1String("bar"));
+    const SqsDeleteMessageResponse response(request, &reply, this);
     QVERIFY(response.request());
     QCOMPARE(*response.request(), request);
+#ifdef QTAWS_ENABLE_PRIVATE_TESTS
+    QCOMPARE(response.d_func()->reply, &reply);
+#endif
+    QCOMPARE(response.parent(), this);
+    QCOMPARE(response.isValid(), true);
 }
 
 void TestSqsDeleteMessageResponse::request()
 {
-    //const QString queueName = QString::fromLatin1("sentinel-queue-name");
-
-    SqsDeleteMessageRequest request/**( @todo )*/;
-    //QCOMPARE(request.queueName(), queueName);
-    SqsDeleteMessageResponse response(request, NULL);
+    const SqsDeleteMessageRequest request(QLatin1String("foo"), QLatin1String("bar"));
+    const SqsDeleteMessageResponse response(request, NULL);
 
     // Verify that the response took a copy of (not a reference to) the request.
     QVERIFY(response.request());

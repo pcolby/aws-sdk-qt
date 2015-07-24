@@ -32,7 +32,7 @@ class QTAWS_EXPORT SqsPurgeQueueResponse : public SqsResponse {
 
 public:
     SqsPurgeQueueResponse(const SqsPurgeQueueRequest &request,
-                             QNetworkReply * const reply, QObject * const parent = 0);
+                          QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual const SqsPurgeQueueRequest * request() const;
 
