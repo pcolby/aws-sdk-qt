@@ -6,6 +6,7 @@ TEMPLATE = lib
 DEFINES += QTAWS_LIBRARY
 QT += network
 QT -= gui
+win32:CONFIG += skip_target_version_ext
 
 # Disable automatic ASCII conversions (best practice, especially for i18n support).
 DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
