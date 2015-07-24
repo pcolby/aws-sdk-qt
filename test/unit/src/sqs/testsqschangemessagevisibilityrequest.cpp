@@ -75,6 +75,7 @@ void TestSqsChangeMessageVisibilityRequest::construct_params()
     const SqsChangeMessageVisibilityRequest request(
         queueUrl, receiptHandle, visibilityTimeout);
 
+    QCOMPARE(request.action(), SqsRequest::ChangeMessageVisibilityAction);
     QCOMPARE(request.queueUrl(), queueUrl);
     QCOMPARE(request.receiptHandle(), receiptHandle);
     QCOMPARE(request.visibilityTimeout(), visibilityTimeout);
@@ -108,6 +109,7 @@ void TestSqsChangeMessageVisibilityRequest::construct_copy()
 void TestSqsChangeMessageVisibilityRequest::construct_default()
 {
     SqsChangeMessageVisibilityRequest request;
+    QCOMPARE(request.action(), SqsRequest::ChangeMessageVisibilityAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
     QCOMPARE(request.receiptHandle(), QString());

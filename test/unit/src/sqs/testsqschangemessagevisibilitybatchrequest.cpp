@@ -59,6 +59,7 @@ void TestSqsChangeMessageVisibilityBatchRequest::construct_params()
 
     //const SqsChangeMessageVisibilityBatchRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::ChangeMessageVisibilityBatchAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsChangeMessageVisibilityBatchRequest::construct_copy()
 void TestSqsChangeMessageVisibilityBatchRequest::construct_default()
 {
     SqsChangeMessageVisibilityBatchRequest request;
+    QCOMPARE(request.action(), SqsRequest::ChangeMessageVisibilityBatchAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }

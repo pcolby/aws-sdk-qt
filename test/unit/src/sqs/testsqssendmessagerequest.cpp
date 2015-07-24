@@ -59,6 +59,7 @@ void TestSqsSendMessageRequest::construct_params()
 
     //const SqsSendMessageRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::SendMessageAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsSendMessageRequest::construct_copy()
 void TestSqsSendMessageRequest::construct_default()
 {
     SqsSendMessageRequest request;
+    QCOMPARE(request.action(), SqsRequest::SendMessageAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }

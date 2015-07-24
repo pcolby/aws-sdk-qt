@@ -59,6 +59,7 @@ void TestSqsGetQueueAttributesRequest::construct_params()
 
     //const SqsGetQueueAttributesRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::GetQueueAttributesAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsGetQueueAttributesRequest::construct_copy()
 void TestSqsGetQueueAttributesRequest::construct_default()
 {
     SqsGetQueueAttributesRequest request;
+    QCOMPARE(request.action(), SqsRequest::GetQueueAttributesAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }

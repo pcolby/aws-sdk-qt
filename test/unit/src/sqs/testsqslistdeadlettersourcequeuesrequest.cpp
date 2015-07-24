@@ -64,6 +64,7 @@ void TestSqsListDeadLetterSourceQueuesRequest::construct_params()
 
     const SqsListDeadLetterSourceQueuesRequest request(queueUrl);
 
+    QCOMPARE(request.action(), SqsRequest::ListDeadLetterSourceQueuesAction);
     QCOMPARE(request.queueUrl(), queueUrl);
 }
 
@@ -88,6 +89,7 @@ void TestSqsListDeadLetterSourceQueuesRequest::construct_copy()
 void TestSqsListDeadLetterSourceQueuesRequest::construct_default()
 {
     SqsListDeadLetterSourceQueuesRequest request;
+    QCOMPARE(request.action(), SqsRequest::ListDeadLetterSourceQueuesAction);
     QCOMPARE(request.isValid(), false);
     QCOMPARE(request.queueUrl(), QString());
 }

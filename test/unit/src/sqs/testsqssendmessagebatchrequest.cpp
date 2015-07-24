@@ -59,6 +59,7 @@ void TestSqsSendMessageBatchRequest::construct_params()
 
     //const SqsSendMessageBatchRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::SendMessageBatchAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsSendMessageBatchRequest::construct_copy()
 void TestSqsSendMessageBatchRequest::construct_default()
 {
     SqsSendMessageBatchRequest request;
+    QCOMPARE(request.action(), SqsRequest::SendMessageBatchAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }

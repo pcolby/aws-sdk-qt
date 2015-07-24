@@ -59,6 +59,7 @@ void TestSqsReceiveMessageRequest::construct_params()
 
     //const SqsReceiveMessageRequest request(label, permissions, queueUrl);
 
+    //QCOMPARE(request.action(), SqsRequest::ReceiveMessageAction);
     //QCOMPARE( @todo );
 }
 
@@ -83,6 +84,7 @@ void TestSqsReceiveMessageRequest::construct_copy()
 void TestSqsReceiveMessageRequest::construct_default()
 {
     SqsReceiveMessageRequest request;
+    QCOMPARE(request.action(), SqsRequest::ReceiveMessageAction);
     QCOMPARE(request.isValid(), false);
     //QCOMPARE( @todo );
 }
