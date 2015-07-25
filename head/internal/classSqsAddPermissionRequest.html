@@ -452,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00079">79</a> of file <a class="el" href="sqsaddpermissionrequest_8cpp_source.html">sqsaddpermissionrequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00182">SqsRequest::isValidQueueName()</a>, <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00091">label()</a>, <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00114">permissions()</a>, and <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00125">queueUrl()</a>.</p>
+<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00181">SqsRequest::isValidQueueName()</a>, <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00091">label()</a>, <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00114">permissions()</a>, and <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00125">queueUrl()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> ((<a class="code" href="classSqsRequest.html#afc2ab3332db546be3c5ede7a90ac98a9">isValidQueueName</a>(<a class="code" href="classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941">label</a>())) &amp;&amp;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            (!<a class="code" href="classSqsAddPermissionRequest.html#ab92983d30ec4e26e717c89ebaaaa6fb1">permissions</a>().isEmpty()) &amp;&amp;</div>
@@ -461,7 +461,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="classSqsAddPermissionRequest_html_aeffc45edace5585a7b9ed00af5711f09"><div class="ttname"><a href="classSqsAddPermissionRequest.html#aeffc45edace5585a7b9ed00af5711f09">SqsAddPermissionRequest::queueUrl</a></div><div class="ttdeci">QString queueUrl() const </div><div class="ttdoc">Get the URL of the Amazon SQS queue to take action on. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionrequest_8cpp_source.html#l00125">sqsaddpermissionrequest.cpp:125</a></div></div>
 <div class="ttc" id="classSqsAddPermissionRequest_html_a348c7a324e531449333c8dea99f9e941"><div class="ttname"><a href="classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941">SqsAddPermissionRequest::label</a></div><div class="ttdeci">QString label() const </div><div class="ttdoc">Get the label for this AddPermission request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionrequest_8cpp_source.html#l00091">sqsaddpermissionrequest.cpp:91</a></div></div>
 <div class="ttc" id="classSqsAddPermissionRequest_html_ab92983d30ec4e26e717c89ebaaaa6fb1"><div class="ttname"><a href="classSqsAddPermissionRequest.html#ab92983d30ec4e26e717c89ebaaaa6fb1">SqsAddPermissionRequest::permissions</a></div><div class="ttdeci">PermissionsMap permissions() const </div><div class="ttdoc">Get all of the permissions to be set in the request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionrequest_8cpp_source.html#l00114">sqsaddpermissionrequest.cpp:114</a></div></div>
-<div class="ttc" id="classSqsRequest_html_afc2ab3332db546be3c5ede7a90ac98a9"><div class="ttname"><a href="classSqsRequest.html#afc2ab3332db546be3c5ede7a90ac98a9">SqsRequest::isValidQueueName</a></div><div class="ttdeci">static bool isValidQueueName(const QString &amp;queueName)</div><div class="ttdoc">Check if queueName is a valid SQS queue name. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00182">sqsrequest.cpp:182</a></div></div>
+<div class="ttc" id="classSqsRequest_html_afc2ab3332db546be3c5ede7a90ac98a9"><div class="ttname"><a href="classSqsRequest.html#afc2ab3332db546be3c5ede7a90ac98a9">SqsRequest::isValidQueueName</a></div><div class="ttdeci">static bool isValidQueueName(const QString &amp;queueName)</div><div class="ttdoc">Check if queueName is a valid SQS queue name. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00181">sqsrequest.cpp:181</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -483,13 +483,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00091">91</a> of file <a class="el" href="sqsaddpermissionrequest_8cpp_source.html">sqsaddpermissionrequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00218">SqsRequest::parameter()</a>.</p>
+<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00217">SqsRequest::parameter()</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00079">isValid()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(LABEL).toString();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00218">sqsrequest.cpp:218</a></div></div>
+<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00217">sqsrequest.cpp:217</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -571,13 +571,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00125">125</a> of file <a class="el" href="sqsaddpermissionrequest_8cpp_source.html">sqsaddpermissionrequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00218">SqsRequest::parameter()</a>.</p>
+<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00217">SqsRequest::parameter()</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00079">isValid()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">parameter</a>(QUEUE_URL).toString();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00218">sqsrequest.cpp:218</a></div></div>
+<div class="ttc" id="classSqsRequest_html_a7771fde933d1146ef6cfcafa4d9f98f8"><div class="ttname"><a href="classSqsRequest.html#a7771fde933d1146ef6cfcafa4d9f98f8">SqsRequest::parameter</a></div><div class="ttdeci">QVariant parameter(const QString &amp;name, const QVariant &amp;defaultValue=QVariant()) const </div><div class="ttdoc">Get the value of a parameter included with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00217">sqsrequest.cpp:217</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -647,14 +647,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00135">135</a> of file <a class="el" href="sqsaddpermissionrequest_8cpp_source.html">sqsaddpermissionrequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00241">SqsRequest::setParameter()</a>.</p>
+<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00240">SqsRequest::setParameter()</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00050">SqsAddPermissionRequest()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(LABEL, <a class="code" href="classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941">label</a>);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 <div class="ttc" id="classSqsAddPermissionRequest_html_a348c7a324e531449333c8dea99f9e941"><div class="ttname"><a href="classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941">SqsAddPermissionRequest::label</a></div><div class="ttdeci">QString label() const </div><div class="ttdoc">Get the label for this AddPermission request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionrequest_8cpp_source.html#l00091">sqsaddpermissionrequest.cpp:91</a></div></div>
-<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00241">sqsrequest.cpp:241</a></div></div>
+<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00240">sqsrequest.cpp:240</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -822,14 +822,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00145">145</a> of file <a class="el" href="sqsaddpermissionrequest_8cpp_source.html">sqsaddpermissionrequest.cpp</a>.</p>
 
-<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00241">SqsRequest::setParameter()</a>.</p>
+<p>References <a class="el" href="sqsrequest_8cpp_source.html#l00240">SqsRequest::setParameter()</a>.</p>
 
 <p>Referenced by <a class="el" href="sqsaddpermissionrequest_8cpp_source.html#l00050">SqsAddPermissionRequest()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">setParameter</a>(QUEUE_URL, <a class="code" href="classSqsAddPermissionRequest.html#aeffc45edace5585a7b9ed00af5711f09">queueUrl</a>);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
 <div class="ttc" id="classSqsAddPermissionRequest_html_aeffc45edace5585a7b9ed00af5711f09"><div class="ttname"><a href="classSqsAddPermissionRequest.html#aeffc45edace5585a7b9ed00af5711f09">SqsAddPermissionRequest::queueUrl</a></div><div class="ttdeci">QString queueUrl() const </div><div class="ttdoc">Get the URL of the Amazon SQS queue to take action on. </div><div class="ttdef"><b>Definition:</b> <a href="sqsaddpermissionrequest_8cpp_source.html#l00125">sqsaddpermissionrequest.cpp:125</a></div></div>
-<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00241">sqsrequest.cpp:241</a></div></div>
+<div class="ttc" id="classSqsRequest_html_aba3b273c56f72bcd6a6fa84203406a95"><div class="ttname"><a href="classSqsRequest.html#aba3b273c56f72bcd6a6fa84203406a95">SqsRequest::setParameter</a></div><div class="ttdeci">void setParameter(const QString &amp;name, const QVariant &amp;value)</div><div class="ttdoc">Set a parameter to include with this SQS request. </div><div class="ttdef"><b>Definition:</b> <a href="sqsrequest_8cpp_source.html#l00240">sqsrequest.cpp:240</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

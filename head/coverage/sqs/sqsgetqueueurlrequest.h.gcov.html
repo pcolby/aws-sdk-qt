@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-12 21:06:37</td>
+            <td class="headerValue">2015-07-25 19:53:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">3</td>
@@ -88,26 +88,33 @@
 <span class="lineNum">      26 </span>            : 
 <a name="27"><span class="lineNum">      27 </span>            : class SqsGetQueueUrlRequestPrivate;</a>
 <span class="lineNum">      28 </span>            : 
-<span class="lineNum">      29 </span><span class="lineCov">        328 : class QTAWS_EXPORT SqsGetQueueUrlRequest : public SqsRequest {</span>
+<span class="lineNum">      29 </span><span class="lineCov">        136 : class QTAWS_EXPORT SqsGetQueueUrlRequest : public SqsRequest {</span>
 <span class="lineNum">      30 </span>            : 
 <span class="lineNum">      31 </span>            : public:
-<span class="lineNum">      32 </span>            :   //SqsGetQueueUrlRequest(...); ///&lt; @todo
-<span class="lineNum">      33 </span>            :     SqsGetQueueUrlRequest(const SqsGetQueueUrlRequest &amp;other);
-<span class="lineNum">      34 </span>            :     SqsGetQueueUrlRequest();
-<span class="lineNum">      35 </span>            : 
-<span class="lineNum">      36 </span>            :     virtual bool isValid() const;
-<span class="lineNum">      37 </span>            : 
-<span class="lineNum">      38 </span>            : protected:
-<span class="lineNum">      39 </span>            :     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
-<a name="40"><span class="lineNum">      40 </span>            : </a>
-<span class="lineNum">      41 </span>            : private:
-<span class="lineNum">      42 </span><span class="lineCov">        126 :     Q_DECLARE_PRIVATE(SqsGetQueueUrlRequest)</span>
-<span class="lineNum">      43 </span>            :     friend class TestSqsGetQueueUrlRequest;
-<span class="lineNum">      44 </span>            : };
-<span class="lineNum">      45 </span>            : 
-<span class="lineNum">      46 </span>            : QTAWS_END_NAMESPACE
-<span class="lineNum">      47 </span>            : 
-<span class="lineNum">      48 </span>            : #endif
+<span class="lineNum">      32 </span>            :     SqsGetQueueUrlRequest(const QString &amp;queueName,
+<span class="lineNum">      33 </span>            :                           const QString &amp;queueOwnerAWSAccountId = QString());
+<span class="lineNum">      34 </span>            :     SqsGetQueueUrlRequest(const SqsGetQueueUrlRequest &amp;other);
+<span class="lineNum">      35 </span>            :     SqsGetQueueUrlRequest();
+<span class="lineNum">      36 </span>            : 
+<span class="lineNum">      37 </span>            :     virtual bool isValid() const;
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            :     QString queueName() const;
+<span class="lineNum">      40 </span>            :     QString queueOwnerAWSAccountId() const;
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span>            :     void setQueueName(const QString &amp;queueName);
+<span class="lineNum">      43 </span>            :     void setQueueOwnerAWSAccountId(const QString &amp;queueOwnerAWSAccountId);
+<span class="lineNum">      44 </span>            : 
+<span class="lineNum">      45 </span>            : protected:
+<span class="lineNum">      46 </span>            :     virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+<a name="47"><span class="lineNum">      47 </span>            : </a>
+<span class="lineNum">      48 </span>            : private:
+<span class="lineNum">      49 </span><span class="lineCov">         38 :     Q_DECLARE_PRIVATE(SqsGetQueueUrlRequest)</span>
+<span class="lineNum">      50 </span>            :     friend class TestSqsGetQueueUrlRequest;
+<span class="lineNum">      51 </span>            : };
+<span class="lineNum">      52 </span>            : 
+<span class="lineNum">      53 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      54 </span>            : 
+<span class="lineNum">      55 </span>            : #endif
 </pre>
       </td>
     </tr>

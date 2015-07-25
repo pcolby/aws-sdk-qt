@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-12 21:06:37</td>
+            <td class="headerValue">2015-07-25 19:53:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">21</td>
@@ -102,11 +102,11 @@
 <span class="lineNum">      40 </span>            :  *
 <a name="41"><span class="lineNum">      41 </span>            :  * @param  xml     XML stream to parse an SQS ErrorResponse from.</a>
 <span class="lineNum">      42 </span>            :  */
-<span class="lineNum">      43 </span><span class="lineCov">        663 : SqsError::SqsError(QXmlStreamReader &amp;xml) : d_ptr(new SqsErrorPrivate(this))</span>
+<span class="lineNum">      43 </span><span class="lineCov">       1092 : SqsError::SqsError(QXmlStreamReader &amp;xml) : d_ptr(new SqsErrorPrivate(this))</span>
 <span class="lineNum">      44 </span>            : {
-<span class="lineNum">      45 </span><span class="lineCov">        663 :     Q_D(SqsError);</span>
-<span class="lineNum">      46 </span><span class="lineCov">        663 :     d-&gt;parse(xml);</span>
-<span class="lineNum">      47 </span><span class="lineCov">        663 : }</span>
+<span class="lineNum">      45 </span><span class="lineCov">       1092 :     Q_D(SqsError);</span>
+<span class="lineNum">      46 </span><span class="lineCov">       1092 :     d-&gt;parse(xml);</span>
+<span class="lineNum">      47 </span><span class="lineCov">       1092 : }</span>
 <span class="lineNum">      48 </span>            : 
 <span class="lineNum">      49 </span>            : /**
 <span class="lineNum">      50 </span>            :  * @internal
@@ -123,10 +123,10 @@
 <span class="lineNum">      61 </span>            :  *
 <a name="62"><span class="lineNum">      62 </span>            :  * @see   http://doc.qt.io/qt-5/containers.html</a>
 <span class="lineNum">      63 </span>            :  */
-<span class="lineNum">      64 </span><span class="lineCov">        136 : SqsError::SqsError() : d_ptr(new SqsErrorPrivate(this))</span>
+<span class="lineNum">      64 </span><span class="lineCov">        224 : SqsError::SqsError() : d_ptr(new SqsErrorPrivate(this))</span>
 <span class="lineNum">      65 </span>            : {
 <span class="lineNum">      66 </span>            : 
-<span class="lineNum">      67 </span><span class="lineCov">        136 : }</span>
+<span class="lineNum">      67 </span><span class="lineCov">        224 : }</span>
 <span class="lineNum">      68 </span>            : 
 <span class="lineNum">      69 </span>            : /**
 <span class="lineNum">      70 </span>            :  * @internal
@@ -138,10 +138,10 @@
 <span class="lineNum">      76 </span>            :  *
 <a name="77"><span class="lineNum">      77 </span>            :  * @param  d  Pointer to private data (aka D-Pointer).</a>
 <span class="lineNum">      78 </span>            :  */
-<span class="lineNum">      79 </span><span class="lineCov">         17 : SqsError::SqsError(SqsErrorPrivate * const d) : d_ptr(d)</span>
+<span class="lineNum">      79 </span><span class="lineCov">         28 : SqsError::SqsError(SqsErrorPrivate * const d) : d_ptr(d)</span>
 <span class="lineNum">      80 </span>            : {
 <span class="lineNum">      81 </span>            : 
-<span class="lineNum">      82 </span><span class="lineCov">         17 : }</span>
+<span class="lineNum">      82 </span><span class="lineCov">         28 : }</span>
 <span class="lineNum">      83 </span>            : 
 <span class="lineNum">      84 </span>            : /**
 <span class="lineNum">      85 </span>            :  * @internal
@@ -159,11 +159,11 @@
 <span class="lineNum">      97 </span>            :  *
 <a name="98"><span class="lineNum">      98 </span>            :  * @see    http://doc.qt.io/qt-5/containers.html</a>
 <span class="lineNum">      99 </span>            :  */
-<span class="lineNum">     100 </span><span class="lineCov">        697 : SqsError::SqsError(const SqsError &amp;other)</span>
-<span class="lineNum">     101 </span><span class="lineCov">        697 :     : d_ptr(new SqsErrorPrivate(other.d_func(), this))</span>
+<span class="lineNum">     100 </span><span class="lineCov">       1148 : SqsError::SqsError(const SqsError &amp;other)</span>
+<span class="lineNum">     101 </span><span class="lineCov">       1148 :     : d_ptr(new SqsErrorPrivate(other.d_func(), this))</span>
 <span class="lineNum">     102 </span>            : {
 <span class="lineNum">     103 </span>            : 
-<span class="lineNum">     104 </span><span class="lineCov">        697 : }</span>
+<span class="lineNum">     104 </span><span class="lineCov">       1148 : }</span>
 <span class="lineNum">     105 </span>            : 
 <span class="lineNum">     106 </span>            : /**
 <span class="lineNum">     107 </span>            :  * @internal
@@ -183,25 +183,25 @@
 <span class="lineNum">     121 </span>            :  *
 <a name="122"><span class="lineNum">     122 </span>            :  * @see   http://doc.qt.io/qt-5/containers.html</a>
 <span class="lineNum">     123 </span>            :  */
-<span class="lineNum">     124 </span><span class="lineCov">         51 : SqsError &amp;SqsError::operator=(const SqsError &amp;other)</span>
+<span class="lineNum">     124 </span><span class="lineCov">         84 : SqsError &amp;SqsError::operator=(const SqsError &amp;other)</span>
 <span class="lineNum">     125 </span>            : {
-<span class="lineNum">     126 </span><span class="lineCov">         51 :     Q_D(SqsError);</span>
-<span class="lineNum">     127 </span><span class="lineCov">         51 :     d-&gt;code = other.code();</span>
-<span class="lineNum">     128 </span><span class="lineCov">         51 :     d-&gt;detail = other.detail();</span>
-<span class="lineNum">     129 </span><span class="lineCov">         51 :     d-&gt;message = other.message();</span>
-<span class="lineNum">     130 </span><span class="lineCov">         51 :     d-&gt;rawCode = other.rawCode();</span>
-<span class="lineNum">     131 </span><span class="lineCov">         51 :     d-&gt;rawType = other.rawType();</span>
-<span class="lineNum">     132 </span><span class="lineCov">         51 :     d-&gt;type = other.type();</span>
-<span class="lineNum">     133 </span><span class="lineCov">         51 :     return *this;</span>
+<span class="lineNum">     126 </span><span class="lineCov">         84 :     Q_D(SqsError);</span>
+<span class="lineNum">     127 </span><span class="lineCov">         84 :     d-&gt;code = other.code();</span>
+<span class="lineNum">     128 </span><span class="lineCov">         84 :     d-&gt;detail = other.detail();</span>
+<span class="lineNum">     129 </span><span class="lineCov">         84 :     d-&gt;message = other.message();</span>
+<span class="lineNum">     130 </span><span class="lineCov">         84 :     d-&gt;rawCode = other.rawCode();</span>
+<span class="lineNum">     131 </span><span class="lineCov">         84 :     d-&gt;rawType = other.rawType();</span>
+<span class="lineNum">     132 </span><span class="lineCov">         84 :     d-&gt;type = other.type();</span>
+<span class="lineNum">     133 </span><span class="lineCov">         84 :     return *this;</span>
 <span class="lineNum">     134 </span>            : }
 <span class="lineNum">     135 </span>            : 
 <span class="lineNum">     136 </span>            : /**
 <a name="137"><span class="lineNum">     137 </span>            :  * @brief SqsError destructor.</a>
 <span class="lineNum">     138 </span>            :  */
-<span class="lineNum">     139 </span><span class="lineCov">       2159 : SqsError::~SqsError()</span>
+<span class="lineNum">     139 </span><span class="lineCov">       3556 : SqsError::~SqsError()</span>
 <span class="lineNum">     140 </span>            : {
-<span class="lineNum">     141 </span><span class="lineCov">       1513 :     delete d_ptr;</span>
-<span class="lineNum">     142 </span><span class="lineCov">       2159 : }</span>
+<span class="lineNum">     141 </span><span class="lineCov">       2492 :     delete d_ptr;</span>
+<span class="lineNum">     142 </span><span class="lineCov">       3556 : }</span>
 <span class="lineNum">     143 </span>            : 
 <span class="lineNum">     144 </span>            : /**
 <span class="lineNum">     145 </span>            :  * @brief  Get the parsed SQS error code.
@@ -210,10 +210,10 @@
 <span class="lineNum">     148 </span>            :  *
 <a name="149"><span class="lineNum">     149 </span>            :  * @see rawCode</a>
 <span class="lineNum">     150 </span>            :  */
-<span class="lineNum">     151 </span><span class="lineCov">        952 : SqsError::ErrorCode SqsError::code() const</span>
+<span class="lineNum">     151 </span><span class="lineCov">       1568 : SqsError::ErrorCode SqsError::code() const</span>
 <span class="lineNum">     152 </span>            : {
-<span class="lineNum">     153 </span><span class="lineCov">        952 :     Q_D(const SqsError);</span>
-<span class="lineNum">     154 </span><span class="lineCov">        952 :     return d-&gt;code;</span>
+<span class="lineNum">     153 </span><span class="lineCov">       1568 :     Q_D(const SqsError);</span>
+<span class="lineNum">     154 </span><span class="lineCov">       1568 :     return d-&gt;code;</span>
 <span class="lineNum">     155 </span>            : }
 <span class="lineNum">     156 </span>            : 
 <span class="lineNum">     157 </span>            : /**
@@ -221,10 +221,10 @@
 <span class="lineNum">     159 </span>            :  *
 <a name="160"><span class="lineNum">     160 </span>            :  * @return SQS error detail, or an empty QVariantMap if not found.</a>
 <span class="lineNum">     161 </span>            :  */
-<span class="lineNum">     162 </span><span class="lineCov">        952 : QVariantMap SqsError::detail() const</span>
+<span class="lineNum">     162 </span><span class="lineCov">       1568 : QVariantMap SqsError::detail() const</span>
 <span class="lineNum">     163 </span>            : {
-<span class="lineNum">     164 </span><span class="lineCov">        952 :     Q_D(const SqsError);</span>
-<span class="lineNum">     165 </span><span class="lineCov">        952 :     return d-&gt;detail;</span>
+<span class="lineNum">     164 </span><span class="lineCov">       1568 :     Q_D(const SqsError);</span>
+<span class="lineNum">     165 </span><span class="lineCov">       1568 :     return d-&gt;detail;</span>
 <span class="lineNum">     166 </span>            : }
 <span class="lineNum">     167 </span>            : 
 <span class="lineNum">     168 </span>            : /**
@@ -232,10 +232,10 @@
 <span class="lineNum">     170 </span>            :  *
 <a name="171"><span class="lineNum">     171 </span>            :  * @return SQS error message, or a null QString if not found.</a>
 <span class="lineNum">     172 </span>            :  */
-<span class="lineNum">     173 </span><span class="lineCov">       1003 : QString SqsError::message() const</span>
+<span class="lineNum">     173 </span><span class="lineCov">       1652 : QString SqsError::message() const</span>
 <span class="lineNum">     174 </span>            : {
-<span class="lineNum">     175 </span><span class="lineCov">       1003 :     Q_D(const SqsError);</span>
-<span class="lineNum">     176 </span><span class="lineCov">       1003 :     return d-&gt;message;</span>
+<span class="lineNum">     175 </span><span class="lineCov">       1652 :     Q_D(const SqsError);</span>
+<span class="lineNum">     176 </span><span class="lineCov">       1652 :     return d-&gt;message;</span>
 <span class="lineNum">     177 </span>            : }
 <span class="lineNum">     178 </span>            : 
 <span class="lineNum">     179 </span>            : /**
@@ -249,10 +249,10 @@
 <span class="lineNum">     187 </span>            :  *
 <a name="188"><span class="lineNum">     188 </span>            :  * @see code</a>
 <span class="lineNum">     189 </span>            :  */
-<span class="lineNum">     190 </span><span class="lineCov">        374 : QString SqsError::rawCode() const</span>
+<span class="lineNum">     190 </span><span class="lineCov">        616 : QString SqsError::rawCode() const</span>
 <span class="lineNum">     191 </span>            : {
-<span class="lineNum">     192 </span><span class="lineCov">        374 :     Q_D(const SqsError);</span>
-<span class="lineNum">     193 </span><span class="lineCov">        374 :     return d-&gt;rawCode;</span>
+<span class="lineNum">     192 </span><span class="lineCov">        616 :     Q_D(const SqsError);</span>
+<span class="lineNum">     193 </span><span class="lineCov">        616 :     return d-&gt;rawCode;</span>
 <span class="lineNum">     194 </span>            : }
 <span class="lineNum">     195 </span>            : 
 <span class="lineNum">     196 </span>            : /**
@@ -266,10 +266,10 @@
 <span class="lineNum">     204 </span>            :  *
 <a name="205"><span class="lineNum">     205 </span>            :  * @see type</a>
 <span class="lineNum">     206 </span>            :  */
-<span class="lineNum">     207 </span><span class="lineCov">        374 : QString SqsError::rawType() const</span>
+<span class="lineNum">     207 </span><span class="lineCov">        616 : QString SqsError::rawType() const</span>
 <span class="lineNum">     208 </span>            : {
-<span class="lineNum">     209 </span><span class="lineCov">        374 :     Q_D(const SqsError);</span>
-<span class="lineNum">     210 </span><span class="lineCov">        374 :     return d-&gt;rawType;</span>
+<span class="lineNum">     209 </span><span class="lineCov">        616 :     Q_D(const SqsError);</span>
+<span class="lineNum">     210 </span><span class="lineCov">        616 :     return d-&gt;rawType;</span>
 <span class="lineNum">     211 </span>            : }
 <span class="lineNum">     212 </span>            : 
 <span class="lineNum">     213 </span>            : /**
@@ -279,10 +279,10 @@
 <span class="lineNum">     217 </span>            :  *
 <a name="218"><span class="lineNum">     218 </span>            :  * @see rawType</a>
 <span class="lineNum">     219 </span>            :  */
-<span class="lineNum">     220 </span><span class="lineCov">        918 : SqsError::ErrorType SqsError::type() const</span>
+<span class="lineNum">     220 </span><span class="lineCov">       1512 : SqsError::ErrorType SqsError::type() const</span>
 <span class="lineNum">     221 </span>            : {
-<span class="lineNum">     222 </span><span class="lineCov">        918 :     Q_D(const SqsError);</span>
-<span class="lineNum">     223 </span><span class="lineCov">        918 :     return d-&gt;type;</span>
+<span class="lineNum">     222 </span><span class="lineCov">       1512 :     Q_D(const SqsError);</span>
+<span class="lineNum">     223 </span><span class="lineCov">       1512 :     return d-&gt;type;</span>
 <span class="lineNum">     224 </span>            : }
 <span class="lineNum">     225 </span>            : 
 <span class="lineNum">     226 </span>            : /**
@@ -292,12 +292,12 @@
 <span class="lineNum">     230 </span>            :  *
 <a name="231"><span class="lineNum">     231 </span>            :  * @return \c true if \c this and \a other are considered equal</a>
 <span class="lineNum">     232 </span>            :  */
-<span class="lineNum">     233 </span><span class="lineCov">        289 : bool SqsError::operator==(const SqsError &amp;other) const</span>
+<span class="lineNum">     233 </span><span class="lineCov">        476 : bool SqsError::operator==(const SqsError &amp;other) const</span>
 <span class="lineNum">     234 </span>            : {
-<span class="lineNum">     235 </span><span class="lineCov">       1156 :     return ((code() == other.code()) &amp;&amp;</span>
-<span class="lineNum">     236 </span><span class="lineCov">       2312 :             (detail() == other.detail()) &amp;&amp;</span>
-<span class="lineNum">     237 </span><span class="lineCov">       2006 :             (message() == other.message()) &amp;&amp;</span>
-<span class="lineNum">     238 </span><span class="lineCov">        850 :             (type() == other.type()));</span>
+<span class="lineNum">     235 </span><span class="lineCov">       1904 :     return ((code() == other.code()) &amp;&amp;</span>
+<span class="lineNum">     236 </span><span class="lineCov">       3808 :             (detail() == other.detail()) &amp;&amp;</span>
+<span class="lineNum">     237 </span><span class="lineCov">       3304 :             (message() == other.message()) &amp;&amp;</span>
+<span class="lineNum">     238 </span><span class="lineCov">       1400 :             (type() == other.type()));</span>
 <span class="lineNum">     239 </span>            : }
 <span class="lineNum">     240 </span>            : 
 <span class="lineNum">     241 </span>            : /**
@@ -315,11 +315,11 @@
 <span class="lineNum">     253 </span>            :  *
 <a name="254"><span class="lineNum">     254 </span>            :  * @param  q  Pointer to this object's public SqsError instance.</a>
 <span class="lineNum">     255 </span>            :  */
-<span class="lineNum">     256 </span><span class="lineCov">        816 : SqsErrorPrivate::SqsErrorPrivate(SqsError * const q)</span>
-<span class="lineNum">     257 </span><span class="lineCov">        816 :     : code(SqsError::OtherError), type(SqsError::OtherType), q_ptr(q)</span>
+<span class="lineNum">     256 </span><span class="lineCov">       1344 : SqsErrorPrivate::SqsErrorPrivate(SqsError * const q)</span>
+<span class="lineNum">     257 </span><span class="lineCov">       1344 :     : code(SqsError::OtherError), type(SqsError::OtherType), q_ptr(q)</span>
 <span class="lineNum">     258 </span>            : {
 <span class="lineNum">     259 </span>            : 
-<span class="lineNum">     260 </span><span class="lineCov">        816 : }</span>
+<span class="lineNum">     260 </span><span class="lineCov">       1344 : }</span>
 <span class="lineNum">     261 </span>            : 
 <span class="lineNum">     262 </span>            : /**
 <span class="lineNum">     263 </span>            :  * @internal
@@ -332,13 +332,13 @@
 <span class="lineNum">     270 </span>            :  * @param  other  Instance to copy.
 <a name="271"><span class="lineNum">     271 </span>            :  * @param  q      Pointer to this object's public SqsError instance.</a>
 <span class="lineNum">     272 </span>            :  */
-<span class="lineNum">     273 </span><span class="lineCov">        697 : SqsErrorPrivate::SqsErrorPrivate(const SqsErrorPrivate * const other, SqsError * const q)</span>
+<span class="lineNum">     273 </span><span class="lineCov">       1148 : SqsErrorPrivate::SqsErrorPrivate(const SqsErrorPrivate * const other, SqsError * const q)</span>
 <span class="lineNum">     274 </span>            :     : code(other-&gt;code), detail(other-&gt;detail), message(other-&gt;message),
 <span class="lineNum">     275 </span>            :       rawCode(other-&gt;rawCode), rawType(other-&gt;rawType), type(other-&gt;type),
-<span class="lineNum">     276 </span><span class="lineCov">        697 :       q_ptr(q)</span>
+<span class="lineNum">     276 </span><span class="lineCov">       1148 :       q_ptr(q)</span>
 <span class="lineNum">     277 </span>            : {
 <span class="lineNum">     278 </span>            : 
-<span class="lineNum">     279 </span><span class="lineCov">        697 : }</span>
+<span class="lineNum">     279 </span><span class="lineCov">       1148 : }</span>
 <span class="lineNum">     280 </span>            : 
 <span class="lineNum">     281 </span>            : /**
 <span class="lineNum">     282 </span>            :  * @brief SqsErrorPrivate destructor.
@@ -346,10 +346,10 @@
 <span class="lineNum">     284 </span>            :  * This virtual destructor does nothing (yet) - its here to allow for safe
 <a name="285"><span class="lineNum">     285 </span>            :  * polymorphic destruction.</a>
 <span class="lineNum">     286 </span>            :  */
-<span class="lineNum">     287 </span><span class="lineCov">       3026 : SqsErrorPrivate::~SqsErrorPrivate()</span>
+<span class="lineNum">     287 </span><span class="lineCov">       4984 : SqsErrorPrivate::~SqsErrorPrivate()</span>
 <span class="lineNum">     288 </span>            : {
 <span class="lineNum">     289 </span>            : 
-<span class="lineNum">     290 </span><span class="lineCov">       3026 : }</span>
+<span class="lineNum">     290 </span><span class="lineCov">       4984 : }</span>
 <span class="lineNum">     291 </span>            : 
 <span class="lineNum">     292 </span>            : /**
 <span class="lineNum">     293 </span>            :  * @brief  Parse an SQS Error element.
@@ -372,24 +372,24 @@
 <span class="lineNum">     310 </span>            :  *
 <a name="311"><span class="lineNum">     311 </span>            :  * @see http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a>
 <span class="lineNum">     312 </span>            :  */
-<span class="lineNum">     313 </span><span class="lineCov">        714 : void SqsErrorPrivate::parse(QXmlStreamReader &amp;xml)</span>
+<span class="lineNum">     313 </span><span class="lineCov">       1176 : void SqsErrorPrivate::parse(QXmlStreamReader &amp;xml)</span>
 <span class="lineNum">     314 </span>            : {
-<span class="lineNum">     315 </span><span class="lineCov">        714 :     if ((xml.tokenType() == QXmlStreamReader::NoToken) &amp;&amp; (!xml.readNextStartElement())) {</span>
-<span class="lineNum">     316 </span><span class="lineCov">        714 :         return;</span>
+<span class="lineNum">     315 </span><span class="lineCov">       1176 :     if ((xml.tokenType() == QXmlStreamReader::NoToken) &amp;&amp; (!xml.readNextStartElement())) {</span>
+<span class="lineNum">     316 </span><span class="lineCov">       1176 :         return;</span>
 <span class="lineNum">     317 </span>            :     }
-<span class="lineNum">     318 </span><span class="lineCov">        714 :     Q_ASSERT(xml.name() == QLatin1String(&quot;Error&quot;));</span>
-<span class="lineNum">     319 </span><span class="lineCov">       3485 :     while (xml.readNextStartElement()) {</span>
-<span class="lineNum">     320 </span><span class="lineCov">       2057 :         if (xml.name() == QLatin1String(&quot;Type&quot;)) {</span>
-<span class="lineNum">     321 </span><span class="lineCov">        442 :             type = typeFromString(rawType = xml.readElementText());</span>
-<span class="lineNum">     322 </span><span class="lineCov">       1615 :         } else if (xml.name() == QLatin1String(&quot;Code&quot;)) {</span>
-<span class="lineNum">     323 </span><span class="lineCov">        442 :             code = codeFromString(rawCode = xml.readElementText());</span>
-<span class="lineNum">     324 </span><span class="lineCov">       1173 :         } else if (xml.name() == QLatin1String(&quot;Message&quot;)) {</span>
-<span class="lineNum">     325 </span><span class="lineCov">        646 :             message = xml.readElementText();</span>
-<span class="lineNum">     326 </span><span class="lineCov">        527 :         } else if (xml.name() == QLatin1String(&quot;Detail&quot;)) {</span>
-<span class="lineNum">     327 </span><span class="lineCov">        442 :             detail = AwsAbstractResponse::toVariant(xml);</span>
+<span class="lineNum">     318 </span><span class="lineCov">       1176 :     Q_ASSERT(xml.name() == QLatin1String(&quot;Error&quot;));</span>
+<span class="lineNum">     319 </span><span class="lineCov">       5740 :     while (xml.readNextStartElement()) {</span>
+<span class="lineNum">     320 </span><span class="lineCov">       3388 :         if (xml.name() == QLatin1String(&quot;Type&quot;)) {</span>
+<span class="lineNum">     321 </span><span class="lineCov">        728 :             type = typeFromString(rawType = xml.readElementText());</span>
+<span class="lineNum">     322 </span><span class="lineCov">       2660 :         } else if (xml.name() == QLatin1String(&quot;Code&quot;)) {</span>
+<span class="lineNum">     323 </span><span class="lineCov">        728 :             code = codeFromString(rawCode = xml.readElementText());</span>
+<span class="lineNum">     324 </span><span class="lineCov">       1932 :         } else if (xml.name() == QLatin1String(&quot;Message&quot;)) {</span>
+<span class="lineNum">     325 </span><span class="lineCov">       1064 :             message = xml.readElementText();</span>
+<span class="lineNum">     326 </span><span class="lineCov">        868 :         } else if (xml.name() == QLatin1String(&quot;Detail&quot;)) {</span>
+<span class="lineNum">     327 </span><span class="lineCov">        728 :             detail = AwsAbstractResponse::toVariant(xml);</span>
 <span class="lineNum">     328 </span>            :         } else {
-<span class="lineNum">     329 </span><span class="lineCov">         85 :            qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
-<span class="lineNum">     330 </span><span class="lineCov">         85 :            xml.skipCurrentElement();</span>
+<span class="lineNum">     329 </span><span class="lineCov">        140 :            qWarning() &lt;&lt; &quot;ignoring&quot; &lt;&lt; xml.name();</span>
+<span class="lineNum">     330 </span><span class="lineCov">        140 :            xml.skipCurrentElement();</span>
 <span class="lineNum">     331 </span>            :         }
 <span class="lineNum">     332 </span>            :     }
 <span class="lineNum">     333 </span>            : }
@@ -401,30 +401,30 @@
 <span class="lineNum">     339 </span>            :  *
 <a name="340"><span class="lineNum">     340 </span>            :  * @return ErrorCode equivalent to \a code, or SqsError::OtherError if not recognised.</a>
 <span class="lineNum">     341 </span>            :  */
-<span class="lineNum">     342 </span><span class="lineCov">        782 : SqsError::ErrorCode SqsErrorPrivate::codeFromString(const QString &amp;code)</span>
+<span class="lineNum">     342 </span><span class="lineCov">       1288 : SqsError::ErrorCode SqsErrorPrivate::codeFromString(const QString &amp;code)</span>
 <span class="lineNum">     343 </span>            : {
 <span class="lineNum">     344 </span>            :     #define IfStringReturnErrorResponse(str) \
 <span class="lineNum">     345 </span>            :         if (code == QLatin1String(#str)) return SqsError::str
-<span class="lineNum">     346 </span><span class="lineCov">        782 :     IfStringReturnErrorResponse(AccessDenied);</span>
-<span class="lineNum">     347 </span><span class="lineCov">        476 :     IfStringReturnErrorResponse(IncompleteSignature);</span>
-<span class="lineNum">     348 </span><span class="lineCov">        459 :     IfStringReturnErrorResponse(InternalFailure);</span>
-<span class="lineNum">     349 </span><span class="lineCov">        442 :     IfStringReturnErrorResponse(InvalidAction);</span>
-<span class="lineNum">     350 </span><span class="lineCov">        425 :     IfStringReturnErrorResponse(InvalidClientTokenId);</span>
-<span class="lineNum">     351 </span><span class="lineCov">        408 :     IfStringReturnErrorResponse(InvalidParameterCombination);</span>
-<span class="lineNum">     352 </span><span class="lineCov">        391 :     IfStringReturnErrorResponse(InvalidParameterValue);</span>
-<span class="lineNum">     353 </span><span class="lineCov">        374 :     IfStringReturnErrorResponse(InvalidQueryParameter);</span>
-<span class="lineNum">     354 </span><span class="lineCov">        357 :     IfStringReturnErrorResponse(MalformedQueryString);</span>
-<span class="lineNum">     355 </span><span class="lineCov">        340 :     IfStringReturnErrorResponse(MissingAction);</span>
-<span class="lineNum">     356 </span><span class="lineCov">        323 :     IfStringReturnErrorResponse(MissingAuthenticationToken);</span>
-<span class="lineNum">     357 </span><span class="lineCov">        306 :     IfStringReturnErrorResponse(MissingParameter);</span>
-<span class="lineNum">     358 </span><span class="lineCov">        289 :     IfStringReturnErrorResponse(OptInRequired);</span>
-<span class="lineNum">     359 </span><span class="lineCov">        272 :     IfStringReturnErrorResponse(RequestExpired);</span>
-<span class="lineNum">     360 </span><span class="lineCov">        255 :     IfStringReturnErrorResponse(ServiceUnavailable);</span>
-<span class="lineNum">     361 </span><span class="lineCov">        238 :     IfStringReturnErrorResponse(Throttling);</span>
-<span class="lineNum">     362 </span><span class="lineCov">        221 :     IfStringReturnErrorResponse(ValidationError);</span>
+<span class="lineNum">     346 </span><span class="lineCov">       1288 :     IfStringReturnErrorResponse(AccessDenied);</span>
+<span class="lineNum">     347 </span><span class="lineCov">        784 :     IfStringReturnErrorResponse(IncompleteSignature);</span>
+<span class="lineNum">     348 </span><span class="lineCov">        756 :     IfStringReturnErrorResponse(InternalFailure);</span>
+<span class="lineNum">     349 </span><span class="lineCov">        728 :     IfStringReturnErrorResponse(InvalidAction);</span>
+<span class="lineNum">     350 </span><span class="lineCov">        700 :     IfStringReturnErrorResponse(InvalidClientTokenId);</span>
+<span class="lineNum">     351 </span><span class="lineCov">        672 :     IfStringReturnErrorResponse(InvalidParameterCombination);</span>
+<span class="lineNum">     352 </span><span class="lineCov">        644 :     IfStringReturnErrorResponse(InvalidParameterValue);</span>
+<span class="lineNum">     353 </span><span class="lineCov">        616 :     IfStringReturnErrorResponse(InvalidQueryParameter);</span>
+<span class="lineNum">     354 </span><span class="lineCov">        588 :     IfStringReturnErrorResponse(MalformedQueryString);</span>
+<span class="lineNum">     355 </span><span class="lineCov">        560 :     IfStringReturnErrorResponse(MissingAction);</span>
+<span class="lineNum">     356 </span><span class="lineCov">        532 :     IfStringReturnErrorResponse(MissingAuthenticationToken);</span>
+<span class="lineNum">     357 </span><span class="lineCov">        504 :     IfStringReturnErrorResponse(MissingParameter);</span>
+<span class="lineNum">     358 </span><span class="lineCov">        476 :     IfStringReturnErrorResponse(OptInRequired);</span>
+<span class="lineNum">     359 </span><span class="lineCov">        448 :     IfStringReturnErrorResponse(RequestExpired);</span>
+<span class="lineNum">     360 </span><span class="lineCov">        420 :     IfStringReturnErrorResponse(ServiceUnavailable);</span>
+<span class="lineNum">     361 </span><span class="lineCov">        392 :     IfStringReturnErrorResponse(Throttling);</span>
+<span class="lineNum">     362 </span><span class="lineCov">        364 :     IfStringReturnErrorResponse(ValidationError);</span>
 <span class="lineNum">     363 </span>            :     #undef IfStringReturnErrorResponse
-<span class="lineNum">     364 </span><span class="lineCov">        204 :     qWarning() &lt;&lt; &quot;unknown SQS error code&quot; &lt;&lt; code;</span>
-<span class="lineNum">     365 </span><span class="lineCov">        204 :     return SqsError::OtherError;</span>
+<span class="lineNum">     364 </span><span class="lineCov">        336 :     qWarning() &lt;&lt; &quot;unknown SQS error code&quot; &lt;&lt; code;</span>
+<span class="lineNum">     365 </span><span class="lineCov">        336 :     return SqsError::OtherError;</span>
 <span class="lineNum">     366 </span>            : }
 <span class="lineNum">     367 </span>            : 
 <span class="lineNum">     368 </span>            : /**
@@ -434,15 +434,15 @@
 <span class="lineNum">     372 </span>            :  *
 <a name="373"><span class="lineNum">     373 </span>            :  * @return ErrorType equivalent to \a type, or SqsError::OtherType if not recognised.</a>
 <span class="lineNum">     374 </span>            :  */
-<span class="lineNum">     375 </span><span class="lineCov">        527 : SqsError::ErrorType SqsErrorPrivate::typeFromString(const QString &amp;type)</span>
+<span class="lineNum">     375 </span><span class="lineCov">        868 : SqsError::ErrorType SqsErrorPrivate::typeFromString(const QString &amp;type)</span>
 <span class="lineNum">     376 </span>            : {
 <span class="lineNum">     377 </span>            :     #define IfStringReturnErrorType(str) \
 <span class="lineNum">     378 </span>            :         if (type == QLatin1String(#str)) return SqsError::str##Type
-<span class="lineNum">     379 </span><span class="lineCov">        527 :     IfStringReturnErrorType(Receiver);</span>
-<span class="lineNum">     380 </span><span class="lineCov">        425 :     IfStringReturnErrorType(Sender);</span>
+<span class="lineNum">     379 </span><span class="lineCov">        868 :     IfStringReturnErrorType(Receiver);</span>
+<span class="lineNum">     380 </span><span class="lineCov">        700 :     IfStringReturnErrorType(Sender);</span>
 <span class="lineNum">     381 </span>            :     #undef IfStringReturnErrorType
-<span class="lineNum">     382 </span><span class="lineCov">        136 :     qWarning() &lt;&lt; &quot;unknown SQS error type&quot; &lt;&lt; type;</span>
-<span class="lineNum">     383 </span><span class="lineCov">        136 :     return SqsError::OtherType;</span>
+<span class="lineNum">     382 </span><span class="lineCov">        224 :     qWarning() &lt;&lt; &quot;unknown SQS error type&quot; &lt;&lt; type;</span>
+<span class="lineNum">     383 </span><span class="lineCov">        224 :     return SqsError::OtherType;</span>
 <span class="lineNum">     384 </span>            : }
 <span class="lineNum">     385 </span>            : 
 <span class="lineNum">     386 </span>            : QTAWS_END_NAMESPACE

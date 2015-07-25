@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-12 21:06:37</td>
+            <td class="headerValue">2015-07-25 19:53:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">11</td>
@@ -104,38 +104,38 @@
 <span class="lineNum">      42 </span>            :  * @param  queueUrl       URL of the Amazon SQS queue to take action on.
 <a name="43"><span class="lineNum">      43 </span>            :  * @param  receiptHandle  Receipt handle associated with the message to delete.</a>
 <span class="lineNum">      44 </span>            :  */
-<span class="lineNum">      45 </span><span class="lineCov">         52 : SqsDeleteMessageRequest::SqsDeleteMessageRequest(const QString &amp;queueUrl,</span>
+<span class="lineNum">      45 </span><span class="lineCov">         20 : SqsDeleteMessageRequest::SqsDeleteMessageRequest(const QString &amp;queueUrl,</span>
 <span class="lineNum">      46 </span>            :                                                  const QString &amp;receiptHandle)
-<span class="lineNum">      47 </span><span class="lineCov">         52 :         : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))</span>
+<span class="lineNum">      47 </span><span class="lineCov">         20 :         : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))</span>
 <span class="lineNum">      48 </span>            : {
-<span class="lineNum">      49 </span><span class="lineCov">         52 :     setQueueUrl(queueUrl);</span>
-<span class="lineNum">      50 </span><span class="lineCov">         52 :     setReceiptHandle(receiptHandle);</span>
-<span class="lineNum">      51 </span><span class="lineCov">         52 : }</span>
+<span class="lineNum">      49 </span><span class="lineCov">         20 :     setQueueUrl(queueUrl);</span>
+<span class="lineNum">      50 </span><span class="lineCov">         20 :     setReceiptHandle(receiptHandle);</span>
+<span class="lineNum">      51 </span><span class="lineCov">         20 : }</span>
 <span class="lineNum">      52 </span>            : 
 <span class="lineNum">      53 </span>            : /**
 <span class="lineNum">      54 </span>            :  * @brief  Constructs a new SqsDeleteMessageRequest object by copying another.
 <span class="lineNum">      55 </span>            :  *
 <a name="56"><span class="lineNum">      56 </span>            :  * @param  other  Instance to copy.</a>
 <span class="lineNum">      57 </span>            :  */
-<span class="lineNum">      58 </span><span class="lineCov">        113 : SqsDeleteMessageRequest::SqsDeleteMessageRequest(const SqsDeleteMessageRequest &amp;other)</span>
-<span class="lineNum">      59 </span><span class="lineCov">        113 :     : SqsRequest(new SqsDeleteMessageRequestPrivate(*other.d_func(), this))</span>
+<span class="lineNum">      58 </span><span class="lineCov">         30 : SqsDeleteMessageRequest::SqsDeleteMessageRequest(const SqsDeleteMessageRequest &amp;other)</span>
+<span class="lineNum">      59 </span><span class="lineCov">         30 :     : SqsRequest(new SqsDeleteMessageRequestPrivate(*other.d_func(), this))</span>
 <span class="lineNum">      60 </span>            : {
 <span class="lineNum">      61 </span>            : 
-<span class="lineNum">      62 </span><span class="lineCov">        113 : }</span>
+<span class="lineNum">      62 </span><span class="lineCov">         30 : }</span>
 <span class="lineNum">      63 </span>            : 
 <span class="lineNum">      64 </span>            : /**
 <a name="65"><span class="lineNum">      65 </span>            :  * @brief  Constructs a new SqsDeleteMessageRequest object.</a>
 <span class="lineNum">      66 </span>            :  */
-<span class="lineNum">      67 </span><span class="lineCov">        126 : SqsDeleteMessageRequest::SqsDeleteMessageRequest()</span>
-<span class="lineNum">      68 </span><span class="lineCov">        126 :     : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))</span>
+<span class="lineNum">      67 </span><span class="lineCov">         28 : SqsDeleteMessageRequest::SqsDeleteMessageRequest()</span>
+<span class="lineNum">      68 </span><span class="lineCov">         28 :     : SqsRequest(new SqsDeleteMessageRequestPrivate(SqsRequest::DeleteMessageAction, this))</span>
 <span class="lineNum">      69 </span>            : {
 <span class="lineNum">      70 </span>            : 
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">        126 : }</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         28 : }</span></a>
 <span class="lineNum">      72 </span>            : 
-<span class="lineNum">      73 </span><span class="lineCov">         32 : bool SqsDeleteMessageRequest::isValid() const</span>
+<span class="lineNum">      73 </span><span class="lineCov">         10 : bool SqsDeleteMessageRequest::isValid() const</span>
 <span class="lineNum">      74 </span>            : {
-<span class="lineNum">      75 </span><span class="lineCov">        130 :     return ((!queueUrl().isEmpty()) &amp;&amp;</span>
-<span class="lineNum">      76 </span><span class="lineCov">         98 :             (!receiptHandle().isEmpty()));</span>
+<span class="lineNum">      75 </span><span class="lineCov">         42 :     return ((!queueUrl().isEmpty()) &amp;&amp;</span>
+<span class="lineNum">      76 </span><span class="lineCov">         32 :             (!receiptHandle().isEmpty()));</span>
 <span class="lineNum">      77 </span>            : }
 <span class="lineNum">      78 </span>            : 
 <span class="lineNum">      79 </span>            : /**
@@ -143,9 +143,9 @@
 <span class="lineNum">      81 </span>            :  *
 <a name="82"><span class="lineNum">      82 </span>            :  * @return The queue URL, or an empty string if not set.</a>
 <span class="lineNum">      83 </span>            :  */
-<span class="lineNum">      84 </span><span class="lineCov">        114 : QString SqsDeleteMessageRequest::queueUrl() const</span>
+<span class="lineNum">      84 </span><span class="lineCov">         34 : QString SqsDeleteMessageRequest::queueUrl() const</span>
 <span class="lineNum">      85 </span>            : {
-<span class="lineNum">      86 </span><span class="lineCov">        114 :     return parameter(QUEUE_URL).toString();</span>
+<span class="lineNum">      86 </span><span class="lineCov">         34 :     return parameter(QUEUE_URL).toString();</span>
 <span class="lineNum">      87 </span>            : }
 <span class="lineNum">      88 </span>            : 
 <span class="lineNum">      89 </span>            : /**
@@ -154,9 +154,9 @@
 <span class="lineNum">      92 </span>            :  *
 <a name="93"><span class="lineNum">      93 </span>            :  * @return The receipt handle, or an empty string if not set.</a>
 <span class="lineNum">      94 </span>            :  */
-<span class="lineNum">      95 </span><span class="lineCov">         94 : QString SqsDeleteMessageRequest::receiptHandle() const</span>
+<span class="lineNum">      95 </span><span class="lineCov">         28 : QString SqsDeleteMessageRequest::receiptHandle() const</span>
 <span class="lineNum">      96 </span>            : {
-<span class="lineNum">      97 </span><span class="lineCov">         94 :     return parameter(RECEIPT_HANDLE).toString();</span>
+<span class="lineNum">      97 </span><span class="lineCov">         28 :     return parameter(RECEIPT_HANDLE).toString();</span>
 <span class="lineNum">      98 </span>            : }
 <span class="lineNum">      99 </span>            : 
 <span class="lineNum">     100 </span>            : /**
@@ -164,10 +164,10 @@
 <span class="lineNum">     102 </span>            :  *
 <a name="103"><span class="lineNum">     103 </span>            :  * @param  queueUrl  URL of the Amazon SQS queue to take action on.</a>
 <span class="lineNum">     104 </span>            :  */
-<span class="lineNum">     105 </span><span class="lineCov">         66 : void SqsDeleteMessageRequest::setQueueUrl(const QString &amp;queueUrl)</span>
+<span class="lineNum">     105 </span><span class="lineCov">         24 : void SqsDeleteMessageRequest::setQueueUrl(const QString &amp;queueUrl)</span>
 <span class="lineNum">     106 </span>            : {
-<span class="lineNum">     107 </span><span class="lineCov">         66 :     setParameter(QUEUE_URL, queueUrl);</span>
-<span class="lineNum">     108 </span><span class="lineCov">         66 : }</span>
+<span class="lineNum">     107 </span><span class="lineCov">         24 :     setParameter(QUEUE_URL, queueUrl);</span>
+<span class="lineNum">     108 </span><span class="lineCov">         24 : }</span>
 <span class="lineNum">     109 </span>            : 
 <span class="lineNum">     110 </span>            : /**
 <span class="lineNum">     111 </span>            :  * @brief  Set the receipt handle associated with the message whose visibility
@@ -175,10 +175,10 @@
 <span class="lineNum">     113 </span>            :  *
 <a name="114"><span class="lineNum">     114 </span>            :  * @param  receiptHandle  Handle of the message to change.</a>
 <span class="lineNum">     115 </span>            :  */
-<span class="lineNum">     116 </span><span class="lineCov">         66 : void SqsDeleteMessageRequest::setReceiptHandle(const QString &amp;receiptHandle)</span>
+<span class="lineNum">     116 </span><span class="lineCov">         24 : void SqsDeleteMessageRequest::setReceiptHandle(const QString &amp;receiptHandle)</span>
 <span class="lineNum">     117 </span>            : {
-<span class="lineNum">     118 </span><span class="lineCov">         66 :     setParameter(RECEIPT_HANDLE, receiptHandle);</span>
-<span class="lineNum">     119 </span><span class="lineCov">         66 : }</span>
+<span class="lineNum">     118 </span><span class="lineCov">         24 :     setParameter(RECEIPT_HANDLE, receiptHandle);</span>
+<span class="lineNum">     119 </span><span class="lineCov">         24 : }</span>
 <span class="lineNum">     120 </span>            : 
 <span class="lineNum">     121 </span>            : /**
 <span class="lineNum">     122 </span>            :  * @brief  Construct an SqsDeleteMessageResponse object.
@@ -189,9 +189,9 @@
 <span class="lineNum">     127 </span>            :  *
 <a name="128"><span class="lineNum">     128 </span>            :  * @see  AwsAbstractClient::send</a>
 <span class="lineNum">     129 </span>            :  */
-<span class="lineNum">     130 </span><span class="lineCov">         18 : AwsAbstractResponse * SqsDeleteMessageRequest::response(QNetworkReply * const reply) const</span>
+<span class="lineNum">     130 </span><span class="lineCov">          6 : AwsAbstractResponse * SqsDeleteMessageRequest::response(QNetworkReply * const reply) const</span>
 <span class="lineNum">     131 </span>            : {
-<span class="lineNum">     132 </span><span class="lineCov">         18 :     return new SqsDeleteMessageResponse(*this, reply);</span>
+<span class="lineNum">     132 </span><span class="lineCov">          6 :     return new SqsDeleteMessageResponse(*this, reply);</span>
 <span class="lineNum">     133 </span>            : }
 <span class="lineNum">     134 </span>            : 
 <span class="lineNum">     135 </span>            : /**
@@ -210,12 +210,12 @@
 <span class="lineNum">     148 </span>            :  * @param  action  SQS action being performed.
 <a name="149"><span class="lineNum">     149 </span>            :  * @param  q       Pointer to this object's public SqsDeleteMessageRequest instance.</a>
 <span class="lineNum">     150 </span>            :  */
-<span class="lineNum">     151 </span><span class="lineCov">        178 : SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(</span>
+<span class="lineNum">     151 </span><span class="lineCov">         48 : SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(</span>
 <span class="lineNum">     152 </span>            :     const SqsRequest::Action action, SqsDeleteMessageRequest * const q)
-<span class="lineNum">     153 </span><span class="lineCov">        178 :     : SqsRequestPrivate(action, q)</span>
+<span class="lineNum">     153 </span><span class="lineCov">         48 :     : SqsRequestPrivate(action, q)</span>
 <span class="lineNum">     154 </span>            : {
 <span class="lineNum">     155 </span>            : 
-<span class="lineNum">     156 </span><span class="lineCov">        178 : }</span>
+<span class="lineNum">     156 </span><span class="lineCov">         48 : }</span>
 <span class="lineNum">     157 </span>            : 
 <span class="lineNum">     158 </span>            : /**
 <span class="lineNum">     159 </span>            :  * @internal
@@ -228,12 +228,12 @@
 <span class="lineNum">     166 </span>            :  * @param  other  Instance to copy.
 <a name="167"><span class="lineNum">     167 </span>            :  * @param  q      Pointer to this object's public SqsDeleteMessageRequest instance.</a>
 <span class="lineNum">     168 </span>            :  */
-<span class="lineNum">     169 </span><span class="lineCov">        113 : SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(</span>
+<span class="lineNum">     169 </span><span class="lineCov">         30 : SqsDeleteMessageRequestPrivate::SqsDeleteMessageRequestPrivate(</span>
 <span class="lineNum">     170 </span>            :     const SqsDeleteMessageRequestPrivate &amp;other, SqsDeleteMessageRequest * const q)
-<span class="lineNum">     171 </span><span class="lineCov">        113 :     : SqsRequestPrivate(other, q)</span>
+<span class="lineNum">     171 </span><span class="lineCov">         30 :     : SqsRequestPrivate(other, q)</span>
 <span class="lineNum">     172 </span>            : {
 <span class="lineNum">     173 </span>            : 
-<span class="lineNum">     174 </span><span class="lineCov">        113 : }</span>
+<span class="lineNum">     174 </span><span class="lineCov">         30 : }</span>
 <span class="lineNum">     175 </span>            : 
 <span class="lineNum">     176 </span>            : QTAWS_END_NAMESPACE
 </pre>

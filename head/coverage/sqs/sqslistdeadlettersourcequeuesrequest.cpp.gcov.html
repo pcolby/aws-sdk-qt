@@ -31,17 +31,17 @@
             <td class="headerValue">libqtaws 0.2.0</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">16</td>
-            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">25</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2015-07-12 21:06:37</td>
+            <td class="headerValue">2015-07-25 19:53:10</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">9</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
@@ -84,113 +84,132 @@
 <span class="lineNum">      22 </span>            : #include &quot;sqslistdeadlettersourcequeuesresponse.h&quot;
 <span class="lineNum">      23 </span>            : #include &quot;sqsrequest_p.h&quot;
 <span class="lineNum">      24 </span>            : 
-<span class="lineNum">      25 </span>            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      25 </span>            : #define QUEUE_URL QLatin1String(&quot;QueueUrl&quot;)
 <span class="lineNum">      26 </span>            : 
-<span class="lineNum">      27 </span>            : /**
-<span class="lineNum">      28 </span>            :  * @class  SqsListDeadLetterSourceQueuesRequest
-<span class="lineNum">      29 </span>            :  *
-<span class="lineNum">      30 </span>            :  * @brief  Implements SQS ListDeadLetterSourceQueues requests.
+<span class="lineNum">      27 </span>            : QTAWS_BEGIN_NAMESPACE
+<span class="lineNum">      28 </span>            : 
+<span class="lineNum">      29 </span>            : /**
+<span class="lineNum">      30 </span>            :  * @class  SqsListDeadLetterSourceQueuesRequest
 <span class="lineNum">      31 </span>            :  *
-<span class="lineNum">      32 </span>            :  * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ListDeadLetterSourceQueues.html
-<span class="lineNum">      33 </span>            :  * @see    SqsRemovePermissionRequest
-<span class="lineNum">      34 </span>            :  */
-<span class="lineNum">      35 </span>            : 
-<span class="lineNum">      36 </span>            : /**
-<span class="lineNum">      37 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest.
-<span class="lineNum">      38 </span>            :  *
-<span class="lineNum">      39 </span>            :  * @todo
-<span class="lineNum">      40 </span>            :  */
-<span class="lineNum">      41 </span>            : /*SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(
-<span class="lineNum">      42 </span>            :     ...
-<span class="lineNum">      43 </span>            :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))
-<span class="lineNum">      44 </span>            : {
-<span class="lineNum">      45 </span>            :     setLabel(label);
-<span class="lineNum">      46 </span>            :     setQueueUrl(queueUrl);
-<span class="lineNum">      47 </span>            :     setPermissions(permissions);
-<span class="lineNum">      48 </span>            : }*/
+<span class="lineNum">      32 </span>            :  * @brief  Implements SQS ListDeadLetterSourceQueues requests.
+<span class="lineNum">      33 </span>            :  *
+<span class="lineNum">      34 </span>            :  * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_ListDeadLetterSourceQueues.html
+<span class="lineNum">      35 </span>            :  * @see    SqsRemovePermissionRequest
+<span class="lineNum">      36 </span>            :  */
+<span class="lineNum">      37 </span>            : 
+<span class="lineNum">      38 </span>            : /**
+<span class="lineNum">      39 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest.
+<span class="lineNum">      40 </span>            :  *
+<a name="41"><span class="lineNum">      41 </span>            :  * @param  queueUrl  URL of a dead letter queue.</a>
+<span class="lineNum">      42 </span>            :  */
+<span class="lineNum">      43 </span><span class="lineCov">         16 : SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(</span>
+<span class="lineNum">      44 </span>            :     const QString &amp;queueUrl)
+<span class="lineNum">      45 </span><span class="lineCov">         16 :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))</span>
+<span class="lineNum">      46 </span>            : {
+<span class="lineNum">      47 </span><span class="lineCov">         16 :     setQueueUrl(queueUrl);</span>
+<span class="lineNum">      48 </span><span class="lineCov">         16 : }</span>
 <span class="lineNum">      49 </span>            : 
 <span class="lineNum">      50 </span>            : /**
 <span class="lineNum">      51 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest object by copying another.
 <span class="lineNum">      52 </span>            :  *
 <a name="53"><span class="lineNum">      53 </span>            :  * @param  other  Instance to copy.</a>
 <span class="lineNum">      54 </span>            :  */
-<span class="lineNum">      55 </span><span class="lineCov">        126 : SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &amp;other)</span>
-<span class="lineNum">      56 </span><span class="lineCov">        126 :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(*other.d_func(), this))</span>
+<span class="lineNum">      55 </span><span class="lineCov">         34 : SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest(const SqsListDeadLetterSourceQueuesRequest &amp;other)</span>
+<span class="lineNum">      56 </span><span class="lineCov">         34 :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(*other.d_func(), this))</span>
 <span class="lineNum">      57 </span>            : {
 <span class="lineNum">      58 </span>            : 
-<span class="lineNum">      59 </span><span class="lineCov">        126 : }</span>
+<span class="lineNum">      59 </span><span class="lineCov">         34 : }</span>
 <span class="lineNum">      60 </span>            : 
 <span class="lineNum">      61 </span>            : /**
 <a name="62"><span class="lineNum">      62 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesRequest object.</a>
 <span class="lineNum">      63 </span>            :  */
-<span class="lineNum">      64 </span><span class="lineCov">        144 : SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest()</span>
-<span class="lineNum">      65 </span><span class="lineCov">        144 :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))</span>
+<span class="lineNum">      64 </span><span class="lineCov">         32 : SqsListDeadLetterSourceQueuesRequest::SqsListDeadLetterSourceQueuesRequest()</span>
+<span class="lineNum">      65 </span><span class="lineCov">         32 :     : SqsRequest(new SqsListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))</span>
 <span class="lineNum">      66 </span>            : {
 <span class="lineNum">      67 </span>            : 
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">        144 : }</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">         32 : }</span></a>
 <span class="lineNum">      69 </span>            : 
-<span class="lineNum">      70 </span><span class="lineCov">          9 : bool SqsListDeadLetterSourceQueuesRequest::isValid() const</span>
+<span class="lineNum">      70 </span><span class="lineCov">         10 : bool SqsListDeadLetterSourceQueuesRequest::isValid() const</span>
 <span class="lineNum">      71 </span>            : {
-<span class="lineNum">      72 </span>            :     /// @todo
-<span class="lineNum">      73 </span><span class="lineCov">          9 :     return false;</span>
-<span class="lineNum">      74 </span>            : }
-<span class="lineNum">      75 </span>            : 
-<span class="lineNum">      76 </span>            : /**
-<span class="lineNum">      77 </span>            :  * @brief  Construct an SqsListDeadLetterSourceQueuesResponse object.
-<span class="lineNum">      78 </span>            :  *
-<span class="lineNum">      79 </span>            :  * @param  reply  Network reply this response should observe.
-<span class="lineNum">      80 </span>            :  *
-<span class="lineNum">      81 </span>            :  * @return An SqsListDeadLetterSourceQueuesResponse instance for \a reply.
-<span class="lineNum">      82 </span>            :  *
-<a name="83"><span class="lineNum">      83 </span>            :  * @see  AwsAbstractClient::send</a>
-<span class="lineNum">      84 </span>            :  */
-<span class="lineNum">      85 </span><span class="lineCov">          9 : AwsAbstractResponse * SqsListDeadLetterSourceQueuesRequest::response(QNetworkReply * const reply) const</span>
-<span class="lineNum">      86 </span>            : {
-<span class="lineNum">      87 </span><span class="lineCov">          9 :     return new SqsListDeadLetterSourceQueuesResponse(*this, reply);</span>
-<span class="lineNum">      88 </span>            : }
-<span class="lineNum">      89 </span>            : 
-<span class="lineNum">      90 </span>            : /**
-<span class="lineNum">      91 </span>            :  * @internal
-<span class="lineNum">      92 </span>            :  *
-<span class="lineNum">      93 </span>            :  * @class  SqsListDeadLetterSourceQueuesRequestPrivate
-<span class="lineNum">      94 </span>            :  *
-<span class="lineNum">      95 </span>            :  * @brief  Private implementation for SqsListDeadLetterSourceQueuesRequest.
-<span class="lineNum">      96 </span>            :  */
-<span class="lineNum">      97 </span>            : 
-<span class="lineNum">      98 </span>            : /**
-<span class="lineNum">      99 </span>            :  * @internal
-<span class="lineNum">     100 </span>            :  *
-<span class="lineNum">     101 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesResponsePrivate object.
-<span class="lineNum">     102 </span>            :  *
-<span class="lineNum">     103 </span>            :  * @param  action  SQS action being performed.
-<a name="104"><span class="lineNum">     104 </span>            :  * @param  q       Pointer to this object's public SqsListDeadLetterSourceQueuesRequest instance.</a>
-<span class="lineNum">     105 </span>            :  */
-<span class="lineNum">     106 </span><span class="lineCov">        144 : SqsListDeadLetterSourceQueuesRequestPrivate::SqsListDeadLetterSourceQueuesRequestPrivate(</span>
-<span class="lineNum">     107 </span>            :     const SqsRequest::Action action, SqsListDeadLetterSourceQueuesRequest * const q)
-<span class="lineNum">     108 </span><span class="lineCov">        144 :     : SqsRequestPrivate(action, q)</span>
-<span class="lineNum">     109 </span>            : {
-<span class="lineNum">     110 </span>            : 
-<span class="lineNum">     111 </span><span class="lineCov">        144 : }</span>
-<span class="lineNum">     112 </span>            : 
-<span class="lineNum">     113 </span>            : /**
-<span class="lineNum">     114 </span>            :  * @internal
-<span class="lineNum">     115 </span>            :  *
-<span class="lineNum">     116 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesResponsePrivate object, copying another.
-<span class="lineNum">     117 </span>            :  *
-<span class="lineNum">     118 </span>            :  * This copy-like constructor exists for the benefit of the SqsListDeadLetterSourceQueuesResponse
-<span class="lineNum">     119 </span>            :  * class' copy constructor.
-<span class="lineNum">     120 </span>            :  *
-<span class="lineNum">     121 </span>            :  * @param  other  Instance to copy.
-<a name="122"><span class="lineNum">     122 </span>            :  * @param  q      Pointer to this object's public SqsListDeadLetterSourceQueuesRequest instance.</a>
-<span class="lineNum">     123 </span>            :  */
-<span class="lineNum">     124 </span><span class="lineCov">        126 : SqsListDeadLetterSourceQueuesRequestPrivate::SqsListDeadLetterSourceQueuesRequestPrivate(</span>
-<span class="lineNum">     125 </span>            :     const SqsListDeadLetterSourceQueuesRequestPrivate &amp;other, SqsListDeadLetterSourceQueuesRequest * const q)
-<span class="lineNum">     126 </span><span class="lineCov">        126 :     : SqsRequestPrivate(other, q)</span>
-<span class="lineNum">     127 </span>            : {
-<span class="lineNum">     128 </span>            : 
-<span class="lineNum">     129 </span><span class="lineCov">        126 : }</span>
-<span class="lineNum">     130 </span>            : 
-<span class="lineNum">     131 </span>            : QTAWS_END_NAMESPACE
+<span class="lineNum">      72 </span><span class="lineCov">         10 :     return (!queueUrl().isEmpty());</span>
+<span class="lineNum">      73 </span>            : }
+<span class="lineNum">      74 </span>            : 
+<span class="lineNum">      75 </span>            : /**
+<span class="lineNum">      76 </span>            :  * @brief  Get the queue URL of a dead letter queue.
+<span class="lineNum">      77 </span>            :  *
+<a name="78"><span class="lineNum">      78 </span>            :  * @return The queue URL of a dead letter queue.</a>
+<span class="lineNum">      79 </span>            :  */
+<span class="lineNum">      80 </span><span class="lineCov">         34 : QString SqsListDeadLetterSourceQueuesRequest::queueUrl() const</span>
+<span class="lineNum">      81 </span>            : {
+<span class="lineNum">      82 </span><span class="lineCov">         34 :     return parameter(QUEUE_URL).toString();</span>
+<span class="lineNum">      83 </span>            : }
+<span class="lineNum">      84 </span>            : 
+<span class="lineNum">      85 </span>            : /**
+<span class="lineNum">      86 </span>            :  * @brief  Set the queue URL of a dead letter queue.
+<span class="lineNum">      87 </span>            :  *
+<a name="88"><span class="lineNum">      88 </span>            :  * @param  queueUrl  URL of a dead letter queue.</a>
+<span class="lineNum">      89 </span>            :  */
+<span class="lineNum">      90 </span><span class="lineCov">         20 : void SqsListDeadLetterSourceQueuesRequest::setQueueUrl(const QString &amp;queueUrl)</span>
+<span class="lineNum">      91 </span>            : {
+<span class="lineNum">      92 </span><span class="lineCov">         20 :     setParameter(QUEUE_URL, queueUrl);</span>
+<span class="lineNum">      93 </span><span class="lineCov">         20 : }</span>
+<span class="lineNum">      94 </span>            : 
+<span class="lineNum">      95 </span>            : /**
+<span class="lineNum">      96 </span>            :  * @brief  Construct an SqsListDeadLetterSourceQueuesResponse object.
+<span class="lineNum">      97 </span>            :  *
+<span class="lineNum">      98 </span>            :  * @param  reply  Network reply this response should observe.
+<span class="lineNum">      99 </span>            :  *
+<span class="lineNum">     100 </span>            :  * @return An SqsListDeadLetterSourceQueuesResponse instance for \a reply.
+<span class="lineNum">     101 </span>            :  *
+<a name="102"><span class="lineNum">     102 </span>            :  * @see  AwsAbstractClient::send</a>
+<span class="lineNum">     103 </span>            :  */
+<span class="lineNum">     104 </span><span class="lineCov">          6 : AwsAbstractResponse * SqsListDeadLetterSourceQueuesRequest::response(QNetworkReply * const reply) const</span>
+<span class="lineNum">     105 </span>            : {
+<span class="lineNum">     106 </span><span class="lineCov">          6 :     return new SqsListDeadLetterSourceQueuesResponse(*this, reply);</span>
+<span class="lineNum">     107 </span>            : }
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span>            : /**
+<span class="lineNum">     110 </span>            :  * @internal
+<span class="lineNum">     111 </span>            :  *
+<span class="lineNum">     112 </span>            :  * @class  SqsListDeadLetterSourceQueuesRequestPrivate
+<span class="lineNum">     113 </span>            :  *
+<span class="lineNum">     114 </span>            :  * @brief  Private implementation for SqsListDeadLetterSourceQueuesRequest.
+<span class="lineNum">     115 </span>            :  */
+<span class="lineNum">     116 </span>            : 
+<span class="lineNum">     117 </span>            : /**
+<span class="lineNum">     118 </span>            :  * @internal
+<span class="lineNum">     119 </span>            :  *
+<span class="lineNum">     120 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesResponsePrivate object.
+<span class="lineNum">     121 </span>            :  *
+<span class="lineNum">     122 </span>            :  * @param  action  SQS action being performed.
+<a name="123"><span class="lineNum">     123 </span>            :  * @param  q       Pointer to this object's public SqsListDeadLetterSourceQueuesRequest instance.</a>
+<span class="lineNum">     124 </span>            :  */
+<span class="lineNum">     125 </span><span class="lineCov">         48 : SqsListDeadLetterSourceQueuesRequestPrivate::SqsListDeadLetterSourceQueuesRequestPrivate(</span>
+<span class="lineNum">     126 </span>            :     const SqsRequest::Action action, SqsListDeadLetterSourceQueuesRequest * const q)
+<span class="lineNum">     127 </span><span class="lineCov">         48 :     : SqsRequestPrivate(action, q)</span>
+<span class="lineNum">     128 </span>            : {
+<span class="lineNum">     129 </span>            : 
+<span class="lineNum">     130 </span><span class="lineCov">         48 : }</span>
+<span class="lineNum">     131 </span>            : 
+<span class="lineNum">     132 </span>            : /**
+<span class="lineNum">     133 </span>            :  * @internal
+<span class="lineNum">     134 </span>            :  *
+<span class="lineNum">     135 </span>            :  * @brief  Constructs a new SqsListDeadLetterSourceQueuesResponsePrivate object, copying another.
+<span class="lineNum">     136 </span>            :  *
+<span class="lineNum">     137 </span>            :  * This copy-like constructor exists for the benefit of the SqsListDeadLetterSourceQueuesResponse
+<span class="lineNum">     138 </span>            :  * class' copy constructor.
+<span class="lineNum">     139 </span>            :  *
+<span class="lineNum">     140 </span>            :  * @param  other  Instance to copy.
+<a name="141"><span class="lineNum">     141 </span>            :  * @param  q      Pointer to this object's public SqsListDeadLetterSourceQueuesRequest instance.</a>
+<span class="lineNum">     142 </span>            :  */
+<span class="lineNum">     143 </span><span class="lineCov">         34 : SqsListDeadLetterSourceQueuesRequestPrivate::SqsListDeadLetterSourceQueuesRequestPrivate(</span>
+<span class="lineNum">     144 </span>            :     const SqsListDeadLetterSourceQueuesRequestPrivate &amp;other, SqsListDeadLetterSourceQueuesRequest * const q)
+<span class="lineNum">     145 </span><span class="lineCov">         34 :     : SqsRequestPrivate(other, q)</span>
+<span class="lineNum">     146 </span>            : {
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span><span class="lineCov">         34 : }</span>
+<span class="lineNum">     149 </span>            : 
+<span class="lineNum">     150 </span>            : QTAWS_END_NAMESPACE
 </pre>
       </td>
     </tr>
