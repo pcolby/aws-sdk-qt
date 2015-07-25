@@ -4,7 +4,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/libqtaws.svg "Codecov")](https://codecov.io/github/pcolby/libqtaws)
 [![Coverage Status](https://img.shields.io/coveralls/pcolby/libqtaws.svg "Coveralls")](https://coveralls.io/r/pcolby/libqtaws)
 [![Coverity Scan Status](https://img.shields.io/coverity/scan/5528.svg "Coverity Scan")](https://scan.coverity.com/projects/5528)
-[![GitHub Issues](http://img.shields.io/github/issues/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/issues)
+[![GitHub Issues](http://img.shields.io/github/issues-raw/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/issues)
 [![GitHub Release](http://img.shields.io/github/release/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/releases/latest)
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 
