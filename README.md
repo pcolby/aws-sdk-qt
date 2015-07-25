@@ -1,8 +1,8 @@
 # Libqtaws
 [![Build Status](https://img.shields.io/travis/pcolby/libqtaws/master.svg "Linux (Travis CI)")](https://travis-ci.org/pcolby/libqtaws)
 [![Build Status](https://img.shields.io/appveyor/ci/pcolby/libqtaws.svg "Windows (AppVeyor)")](https://ci.appveyor.com/project/pcolby/libqtaws)
-[![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/libqtaws.svg "Codecov")](https://codecov.io/github/pcolby/libqtaws)
-[![Coverage Status](https://img.shields.io/coveralls/pcolby/libqtaws.svg "Coveralls")](https://coveralls.io/r/pcolby/libqtaws)
+[![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/libqtaws.svg?label=codecov)](https://codecov.io/github/pcolby/libqtaws)
+[![Coverage Status](https://img.shields.io/coveralls/pcolby/libqtaws.svg?label=coveralls)](https://coveralls.io/r/pcolby/libqtaws)
 [![Coverity Scan Status](https://img.shields.io/coverity/scan/5528.svg "Coverity Scan")](https://scan.coverity.com/projects/5528)
 [![GitHub Issues](http://img.shields.io/github/issues-raw/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/issues)
 [![GitHub Release](http://img.shields.io/github/release/pcolby/libqtaws.svg)](https://github.com/pcolby/libqtaws/releases/latest)
