@@ -26,6 +26,7 @@
 #include "core/awsabstractresponse_p.h"
 #endif
 
+#include <QDataStream>
 #include <QDebug>
 
 Q_DECLARE_METATYPE(QNetworkAccessManager::Operation)
