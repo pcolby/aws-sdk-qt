@@ -1,4 +1,5 @@
 include(../common.pri)
+INCLUDEPATH = $$TOPDIR/src
 
 # Create a library.
 TARGET = qtaws
