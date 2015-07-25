@@ -23,6 +23,7 @@
 #include "core/awsabstractclient.h"
 #include "core/awsabstractrequest.h"
 #include "core/awsabstractresponse.h"
+#include "core/awsabstractsignature.h"
 #include "core/awsbasiccredentials.h"
 
 #ifdef QTAWS_ENABLE_PRIVATE_TESTS
