@@ -66,7 +66,7 @@ script:
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
     .
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
-  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
 after_success:
   # Generate LCOV coverage reports

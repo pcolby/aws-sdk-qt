@@ -40,5 +40,5 @@ build_script:
   - '%make% all'
 test_script:
   # @todo output using Qt's -xunitxml option
-  - '%make% check'
+  - '%make% check TESTARGS=-silent'
 # @todo after_test upload results
