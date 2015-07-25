@@ -19,7 +19,8 @@ environment:
     - QTDIR: C:\Qt\5.5\msvc2013
     - QTDIR: C:\Qt\5.5\msvc2013_64
 install:
-  - choco install doxygen.portable graphviz.portable
+  - choco install doxygen.portable
+  - choco install graphviz.portable || exit 0 # graphviz is optional (and unreliable).
   # Setup the build toolchains.
   - '%QTDIR%\bin\qtenv2.bat'
   - qmake -v
