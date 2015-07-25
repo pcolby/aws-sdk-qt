@@ -1,8 +1,5 @@
 # Tip: https://ci.appveyor.com/tools/validate-yaml
 version: '{branch}-{build}'
-branches:
-  only:
-  - appveyor
 init:
   # Gather some basic build environment details.
   - rem set
