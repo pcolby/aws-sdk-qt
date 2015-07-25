@@ -323,7 +323,7 @@ void TestSqsRequest::equality_data()
         << false;
 
     QVariantMap mapB = mapA;
-    mapB.insert(QLatin1String("bar"), 456.0);
+    mapB.insert(QLatin1String("bar"), 456.7);
     QTest::newRow("diff-map")
         << QNetworkAccessManager::GetOperation
         << QNetworkAccessManager::GetOperation
@@ -553,7 +553,7 @@ void TestSqsRequest::unsignedRequest_data()
     QVariantMap childMap;
     childMap.insert(QLatin1String("qux"),  123);
     childMap.insert(QLatin1String("quux"), QLatin1String("abc"));
-    childMap.insert(QLatin1String("corge"), 456.0);
+    childMap.insert(QLatin1String("corge"), 456.7);
     map.insert(QLatin1String("corge;index:%1;value:%2"), childMap);
     QTest::newRow("complex")
         << SqsRequest::DeleteMessageAction
@@ -567,7 +567,7 @@ void TestSqsRequest::unsignedRequest_data()
             "&bar=2"
             "&baz=3"
             "&corge;index:1;value:Name=corge"
-            "&corge;index:1;value:Value=456.0"
+            "&corge;index:1;value:Value=456.7"
             "&corge;index:2;value:Name=quux"
             "&corge;index:2;value:Value=abc"
             "&corge;index:3;value:Name=qux"
