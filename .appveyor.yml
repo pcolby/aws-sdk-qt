@@ -42,3 +42,5 @@ test_script:
   # @todo output using Qt's -xunitxml option
   - '%make% check TESTARGS=-silent'
 # @todo after_test upload results
+artifacts:
+  - path: '%APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll'
