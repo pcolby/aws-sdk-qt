@@ -40,7 +40,7 @@ before_build:
   - cd %APPVEYOR_BUILD_FOLDER%-build
   - qmake -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
 build_script:
-  - '%make% all'
+  - '%make%'
 after_build:
   - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
   - mkdir %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%
