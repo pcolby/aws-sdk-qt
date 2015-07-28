@@ -50,7 +50,7 @@ test_script:
   - '%make% check TESTARGS=-silent'
 # @todo after_test upload results
 artifacts:
-  - path: '%APPVEYOR_BUILD_FOLDER%\qtawsd.dll'
-  - path: '%APPVEYOR_BUILD_FOLDER%\qtaws.dll'
-  - path: '%APPVEYOR_BUILD_FOLDER%\debug\qtaws.dll'
-  - path: '%APPVEYOR_BUILD_FOLDER%\release\qtaws.dll'
+  - path: qtawsd.dll
+  - path: qtaws.dll
+  - path: debug\qtaws.dll
+  - path: release\qtaws.dll
