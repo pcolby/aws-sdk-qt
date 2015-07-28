@@ -47,7 +47,7 @@ after_build:
   - mklink %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
 test_script:
   # @todo output using Qt's -xunitxml option
-  - '%make% check TESTARGS=-silent'
+  - if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 # @todo after_test upload results
 artifacts:
   - path: qtaws.dll
