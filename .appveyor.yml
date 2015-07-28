@@ -18,6 +18,9 @@ environment:
     - QTDIR: C:\Qt\5.5\mingw492_32
     - QTDIR: C:\Qt\5.5\msvc2013
     - QTDIR: C:\Qt\5.5\msvc2013_64
+configuration:
+  - debug
+  - release
 install:
   - choco install doxygen.portable
   - choco install graphviz.portable || exit 0 # graphviz is optional (and unreliable).
@@ -35,22 +38,17 @@ before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
   - cd %APPVEYOR_BUILD_FOLDER%-build
-  - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
+  - qmake -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
 build_script:
   - '%make% all'
 after_build:
-  - mklink %APPVEYOR_BUILD_FOLDER%\qtawsd.dll %APPVEYOR_BUILD_FOLDER%-build\debug\qtaws.dll
-  - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll
-  - mkdir %APPVEYOR_BUILD_FOLDER%\debug
-  - mkdir %APPVEYOR_BUILD_FOLDER%\release
-  - mklink %APPVEYOR_BUILD_FOLDER%\debug\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\debug\qtaws.dll
-  - mklink %APPVEYOR_BUILD_FOLDER%\release\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll
+  - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
+  - mkdir %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%
+  - mklink %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
 test_script:
   # @todo output using Qt's -xunitxml option
   - '%make% check TESTARGS=-silent'
 # @todo after_test upload results
 artifacts:
-  - path: qtawsd.dll
   - path: qtaws.dll
-  - path: debug\qtaws.dll
-  - path: release\qtaws.dll
+  - path: $(CONFIGURATION)\qtaws.dll
