@@ -38,9 +38,19 @@ before_build:
   - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release %APPVEYOR_BUILD_FOLDER%
 build_script:
   - '%make% all'
+after_build:
+  - mklink %APPVEYOR_BUILD_FOLDER%\qtawsd.dll %APPVEYOR_BUILD_FOLDER%-build\debug\qtaws.dll
+  - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll
+  - mkdir %APPVEYOR_BUILD_FOLDER%\debug
+  - mkdir %APPVEYOR_BUILD_FOLDER%\release
+  - mklink %APPVEYOR_BUILD_FOLDER%\debug\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\debug\qtaws.dll
+  - mklink %APPVEYOR_BUILD_FOLDER%\release\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll
 test_script:
   # @todo output using Qt's -xunitxml option
   - '%make% check TESTARGS=-silent'
 # @todo after_test upload results
 artifacts:
-  - path: '%APPVEYOR_BUILD_FOLDER%-build\release\qtaws.dll'
+  - path: '%APPVEYOR_BUILD_FOLDER%\qtawsd.dll'
+  - path: '%APPVEYOR_BUILD_FOLDER%\qtaws.dll'
+  - path: '%APPVEYOR_BUILD_FOLDER%\debug\qtaws.dll'
+  - path: '%APPVEYOR_BUILD_FOLDER%\release\qtaws.dll'
