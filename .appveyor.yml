@@ -42,13 +42,12 @@ before_build:
 build_script:
   - '%make%'
 after_build:
+  # Add a link to the build output within the source directory. This is needed because AppVeyor does
+  # not support extracting artifacts from out-of-source build directories. See 'artifacts' below.
   - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
-  - mkdir %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%
-  - mklink %APPVEYOR_BUILD_FOLDER%\%CONFIGURATION%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
 test_script:
   # @todo output using Qt's -xunitxml option
   - if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 # @todo after_test upload results
 artifacts:
   - path: qtaws.dll
-  - path: $(CONFIGURATION)\qtaws.dll
