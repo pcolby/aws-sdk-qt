@@ -1,4 +1,6 @@
 # Libqtaws
+
+[![Join the chat at https://gitter.im/pcolby/libqtaws](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pcolby/libqtaws?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://img.shields.io/travis/pcolby/libqtaws/master.svg "Linux (Travis CI)")](https://travis-ci.org/pcolby/libqtaws)
 [![Build Status](https://img.shields.io/appveyor/ci/pcolby/libqtaws.svg "Windows (AppVeyor)")](https://ci.appveyor.com/project/pcolby/libqtaws)
 [![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/libqtaws.svg?label=codecov)](https://codecov.io/github/pcolby/libqtaws)
