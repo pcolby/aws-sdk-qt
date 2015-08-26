@@ -34,7 +34,7 @@ before_install:
   - sudo apt-get -qy update
 
 install:
-  - export SHORT_VER=`echo $QTVER | cut -b1-2`; fi
+  - export SHORT_VER=`echo $QTVER | cut -b1-2`
   - sudo apt-get -qy install cppcheck doxygen graphviz lcov rubygems qt${SHORT_VER}base
 
 before_script:
