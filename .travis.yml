@@ -9,6 +9,12 @@ env:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
+  matrix:
+    - QTVER=511
+    - QTVER=521
+    - QTVER=532
+    - QTVER=541
+    - QTVER=55
 
 addons:
   coverity_scan:
@@ -24,41 +30,19 @@ addons:
     branch_pattern: coverity
 
 before_install:
-  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq cppcheck doxygen graphviz qt5-qmake qtbase5-dev
-  - sudo apt-get install -qq lcov rubygems
-  - gem install lcoveralls
+  - sudo add-apt-repository -y ppa:beineri/opt-qt$QTVER
+  - sudo apt-get -qy update
 
 install:
-  # Fetch Qt 5.1's QMessageAuthenticationCode class, and dependencies, for Qt 5.0 support.
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha-private.h
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha.h
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha224-256.c
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/3rdparty/rfc6234/sha384-512.c
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/corelib/tools/qmessageauthenticationcode.cpp
-  - wget -P src/core/ https://code.qt.io/cgit/qt/qtbase.git/plain/src/corelib/tools/qmessageauthenticationcode.h
-  # Fixup some includes / paths.
-  - sed -i -re 's/"qvarlengtharray.h"/<QVarLengthArray>/' -e 's:\.\./\.\./3rdparty/rfc6234/::' src/core/qmessageauthenticationcode.cpp
-  # No Sha3_* constants in Qt5.0
-  - sed -i -re 's:(^\s*)(.*Sha3_):\1//\2:' src/core/qmessageauthenticationcode.cpp
-  # Restore the rfc6234 code's original stdint types (Nokia commented them out).
-  - sed -i -re 's:^#define u?int://&:' src/core/qmessageauthenticationcode.cpp
-  - sed -i -re 's:^//\s*(#include <stdint.h>):\1:' src/core/sha.h
-  # Restore the addTemp and SHA*AddLength macros (Nokia commented out / renamed).
-  - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA224_256AddLength)M/\1/' src/core/sha224-256.c
-  - sed -i -re 's:^/\*\s*(static.*addTemp;)\s*\*/:\1:' -e 's/(SHA384_512AddLength)M/\1/' src/core/sha384-512.c
-  # Apply the QTBUG-32100 fixes for Qt 5.0 with Clang on Travis CI
-  - sudo patch -p0 /usr/include/qt5/QtCore/qabstractitemmodel.h .travis/qabstractitemmodel.diff
-  - sudo patch -p0 /usr/include/qt5/QtCore/qurl.h .travis/qurl.diff
-  - sudo patch -p0 /usr/include/qt5/QtNetwork/qhostaddress.h .travis/qhostaddress.diff
+  - export SHORT_VER=`echo $QTVER | cut -b1-2`; fi
+  - sudo apt-get -qy install cppcheck doxygen graphviz lcov rubygems qt${SHORT_VER}base
 
 before_script:
   - mkdir -p $TRAVIS_BUILD_DIR-build
   - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
   - pushd "$TRAVIS_BUILD_DIR-build"
-  - qmake -qt=qt5 -v
-  - qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+  - . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh
+  - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
   - popd
 
 script:
