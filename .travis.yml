@@ -26,7 +26,7 @@ addons:
       cp -a "$TRAVIS_BUILD_DIR" "$TRAVIS_BUILD_DIR-scan" &&
       pushd "$TRAVIS_BUILD_DIR-scan" &&
       qmake -qt=qt5 -Wall -Wlogic -Wparser CONFIG+=debug_and_release
-    build_command: make -j2 all
+    build_command: make all
     branch_pattern: coverity
 
 before_install:
@@ -49,12 +49,12 @@ script:
   - cppcheck --error-exitcode=1 --quiet
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
     .
-  - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
-  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
+  - make -C "$TRAVIS_BUILD_DIR-build" all
+  - make -C "$TRAVIS_BUILD_DIR-build" check TESTARGS=-silent
 
 after_success:
   # Generate LCOV coverage reports
-  - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" -j2 coverage
+  - make -C "$TRAVIS_BUILD_DIR-build/test/unit/all" coverage
   - sed -i -e "s|^SF:/home/travis/build/libqtaws|SF:$TRAVIS_BUILD_DIR|"
     "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
   # Report code coverage to coveralls.io
