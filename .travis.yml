@@ -36,6 +36,7 @@ before_install:
 install:
   - export SHORT_VER=`echo $QTVER | cut -b1-2`
   - sudo apt-get -qy install cppcheck doxygen graphviz lcov rubygems qt${SHORT_VER}base
+  - gem install lcoveralls
 
 before_script:
   - mkdir -p $TRAVIS_BUILD_DIR-build
