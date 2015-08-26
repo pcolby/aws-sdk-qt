@@ -63,3 +63,8 @@ after_success:
   # Report code coverage to codecov.io
   - curl https://codecov.io/bash > /tmp/codecov.sh
   - bash /tmp/codecov.sh -f "$TRAVIS_BUILD_DIR-build/release/unit-test-all-tmp/coverage.info"
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/fbd7a436c2f67325cffc
