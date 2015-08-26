@@ -1,11 +1,12 @@
-# Tip: https://ci.appveyor.com/tools/validate-yaml
 version: '{branch}-{build}'
+
 init:
   # Gather some basic build environment details.
   - rem set
   - dir "%ProgramFiles(x86)%\Microsoft Visual Studio *" /b /o
   - dir "%ProgramFiles%\Microsoft SDKs\Windows" /b /o
   - dir "%SystemDrive%\Qt\5.*" /b /o
+
 environment:
   VSVER: 12.0 # Visual Studio 2013
   matrix:
@@ -18,9 +19,11 @@ environment:
     - QTDIR: C:\Qt\5.5\mingw492_32
     - QTDIR: C:\Qt\5.5\msvc2013
     - QTDIR: C:\Qt\5.5\msvc2013_64
+
 configuration:
   - debug
   - release
+
 install:
   - choco install doxygen.portable
   - choco install graphviz.portable || exit 0 # graphviz is optional (and unreliable).
@@ -34,20 +37,29 @@ install:
   - if not %QTDIR:msvc=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio %VSVER%\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+
 before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
   - cd %APPVEYOR_BUILD_FOLDER%-build
   - qmake -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
+
 build_script:
   - '%make%'
+
 after_build:
   # Add a link to the build output within the source directory. This is needed because AppVeyor does
   # not support extracting artifacts from out-of-source build directories. See 'artifacts' below.
   - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
+
 test_script:
   # @todo output using Qt's -xunitxml option
   - if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 # @todo after_test upload results
+
 artifacts:
   - path: qtaws.dll
+
+notifications:
+  - provider: Webhook
+    url: https://webhooks.gitter.im/e/db2b6ec088084f138e57
