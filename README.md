@@ -34,20 +34,14 @@ services, please do so!  See the `SqsClient` and related classes for the
 patterns to use when adding new AWS service client classes.
 
 ## Requirements
-### Qt 5.1
+### Qt 5.1+
 Libqtaws requires Qt 5.1+  The library uses Qt's QMessageAuthenticationCode
 class for generating HMAC codes for AWS request signatures, and that class was
 first added in Qt 5.1.0.
 
 It is possible to make the library work with Qt 5.0 by backporting
-QMessageAuthenticationCode from Qt 5.1 to Qt 5.0 - indeed, this is what this
-project does for [travis-ci](https://travis-ci.org/) support
-(see [.travis.yml](.travis.yml) for example), but that is not officially
-supported (might become so, if enough people show interest).
-
-Note, the library will soon depend on Qt5's built-in JSON support too, so it is
-unlikely that libqtaws will ever officially support version of Qt earlier than
-5.0.
+QMessageAuthenticationCode from Qt 5.1 to Qt 5.0, but that is not officially
+supported.
 
 ## Building
 This library supports out-of-source builds (highly recommended), for example:
