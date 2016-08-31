@@ -78,7 +78,7 @@ before_script:
   - popd
 
 script:
-  - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
+  - make -C "$TRAVIS_BUILD_DIR-build" all
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
 after_success:
