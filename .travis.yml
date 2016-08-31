@@ -1,5 +1,11 @@
 language: cpp
 
+os:
+  - linux
+  - osx
+
+dist: trusty
+
 compiler:
   - clang
   - gcc
@@ -10,11 +16,24 @@ env:
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
   matrix:
-    - QTVER=511
-    - QTVER=521
-    - QTVER=532
-    - QTVER=541
-    - QTVER=55
+    - QT=5  BREW=5
+    - QT=5  BREW=ex PPA=ubuntu-sdk-team/ppa
+    - QT=51 BREW=ex PPA=beineri/opt-qt511-trusty
+    - QT=52 BREW=52 PPA=beineri/opt-qt521-trusty
+    - QT=53 BREW=5  PPA=beineri/opt-qt532-trusty
+    - QT=54 BREW=ex PPA=beineri/opt-qt542-trusty
+    - QT=55 BREW=55 PPA=beineri/opt-qt551-trusty
+    - QT=56 BREW=ex PPA=beineri/opt-qt561-trusty
+    - QT=57 BREW=ex PPA=beineri/opt-qt57-trusty
+
+matrix:
+  exclude:
+    - { os: osx, env: QT=5  BREW=ex PPA=ubuntu-sdk-team/ppa      }
+    - { os: osx, env: QT=51 BREW=ex PPA=beineri/opt-qt511-trusty }
+    - { os: osx, env: QT=54 BREW=ex PPA=beineri/opt-qt542-trusty }
+    - { os: osx, env: QT=56 BREW=ex PPA=beineri/opt-qt561-trusty }
+    - { os: osx, env: QT=57 BREW=ex PPA=beineri/opt-qt57-trusty  }
+    - { os: osx, compiler: gcc, env: QT=5  BREW=5 } # Qt 5.6 no longer supports gcc on OS X.
 
 addons:
   coverity_scan:
@@ -30,28 +49,37 @@ addons:
     branch_pattern: coverity
 
 before_install:
-  - sudo add-apt-repository -y ppa:beineri/opt-qt$QTVER
-  - sudo apt-get -qy update
+  - '[[ "$TRAVIS_OS_NAME" != linux || -z "$PPA" ]] || sudo add-apt-repository -y ppa:$PPA'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy update'
+  - '[[ "$TRAVIS_OS_NAME" != osx || "$QT" == 53 ]] || brew update' # Travis image has (old) 5.3.2.
 
 install:
-  - export SHORT_VER=`echo $QTVER | cut -b1-2`
-  - sudo apt-get -qy install cppcheck doxygen graphviz lcov rubygems qt${SHORT_VER}base
-  - gem install lcoveralls
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck doxygen lcov rubygems'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || sudo apt-get -qy install qt${QT}base qt${QT}xmlpatterns'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || sudo apt-get -qy install qt5-qmake qtbase5-dev libqt5xmlpatterns5-dev'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || gem install lcoveralls'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cppcheck qt$BREW'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt$BREW'
 
 before_script:
-  - mkdir -p $TRAVIS_BUILD_DIR-build
-  - if [ "$CXX" = "clang++" ]; then export QMAKESPEC=linux-clang; fi
-  - pushd "$TRAVIS_BUILD_DIR-build"
-  - . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh
-  - qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
-  - popd
-
-script:
   - cppcheck --error-exitcode=1 --quiet
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
     .
-  - make -C "$TRAVIS_BUILD_DIR-build" all
-  - make -C "$TRAVIS_BUILD_DIR-build" check TESTARGS=-silent
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != clang++ ]] || export QMAKESPEC=linux-clang'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != g++     ]] || export QMAKESPEC=macx-g++'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
+  - mkdir -p "$TRAVIS_BUILD_DIR-build"
+  - pushd "$TRAVIS_BUILD_DIR-build"
+  - qmake -v
+  - qmake -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+  - popd
+
+script:
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 all
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
 after_success:
   # Generate LCOV coverage reports
