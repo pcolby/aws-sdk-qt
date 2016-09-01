@@ -18,7 +18,7 @@ clients, including generic classes for managing the building of AWS requests
 
 The first [0.1.0](https://github.com/pcolby/libqtaws/releases/tag/v0.1.0)
 release included just the signature, endpoint and region classes.  But that
-release was very [100% documented](http://pcolby.github.io/libqtaws/0.1.0/api/annotated.html)
+release was [100% documented](http://pcolby.github.io/libqtaws/0.1.0/api/annotated.html)
 (including the [internal code](http://pcolby.github.io/libqtaws/0.1.0/internal/annotated.html))
 and 100% [unit tested](http://pcolby.github.io/libqtaws/0.1.0/coverage/).
 
