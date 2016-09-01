@@ -1,0 +1,4 @@
+<map id="SqsDeleteMessageBatchResponse" name="SqsDeleteMessageBatchResponse">
+<area shape="rect" id="node2" href="$classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="68,155,172,181"/>
+<area shape="rect" id="node3" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="42,80,198,107"/>
+</map>

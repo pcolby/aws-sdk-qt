@@ -1,0 +1,5 @@
+<map id="SqsAddPermissionRequest" name="SqsAddPermissionRequest">
+<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="49,95,144,121"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="125,5,271,32"/>
+<area shape="rect" id="node4" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="169,95,355,121"/>
+</map>

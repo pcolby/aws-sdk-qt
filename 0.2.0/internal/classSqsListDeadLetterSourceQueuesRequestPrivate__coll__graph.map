@@ -1,0 +1,5 @@
+<map id="SqsListDeadLetterSourceQueuesRequestPrivate" name="SqsListDeadLetterSourceQueuesRequestPrivate">
+<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="46,95,181,121"/>
+<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="121,5,308,32"/>
+<area shape="rect" id="node4" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="205,95,352,121"/>
+</map>
