@@ -1,10 +1,26 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
+#include <QJsonDocument>
 
 bool processApiDescription(const QString &filename, const QDir &outputDir)
 {
     qDebug() << "processing" << filename << outputDir.absolutePath();
+
+    QFile file(filename);
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "failed to open file for reading" << filename;
+        return false;
+    }
+
+    QJsonParseError error;
+    const QJsonDocument json = QJsonDocument::fromJson(file.readAll(), &error);
+    if (error.error != QJsonParseError::NoError) {
+        qWarning() << "failed to parse JSON file" << filename << '-'
+                   << error.errorString() << "at offset" << error.offset;
+        return false;
+    }
+
     return true;
 }
 
@@ -44,8 +60,8 @@ int main(int argc, char *argv[]) {
     }
 
     QStringList inputPaths = arguments;
-    inputPaths.removeFirst();
-    inputPaths.removeLast();
+    if (!inputPaths.isEmpty()) inputPaths.removeFirst();
+    if (!inputPaths.isEmpty()) inputPaths.removeLast();
     if (inputPaths.isEmpty()) {
         inputPaths.append(QLatin1String("api-descriptions"));
     }
