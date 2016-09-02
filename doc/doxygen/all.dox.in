@@ -1,6 +1,6 @@
 @INCLUDE_PATH          = "$$DOXDIR"
 @INCLUDE               = common.dox
-PROJECT_NUMBER         = "$$VERSION-prerelease"
+PROJECT_NUMBER         = "$$PROJECT_NUMBER"
 PROJECT_BRIEF          = "Unofficial AWS library for Qt - Internal Documentation"
 STRIP_FROM_PATH        = "$$TOPDIR/src"
 EXTRACT_PRIVATE        = YES
