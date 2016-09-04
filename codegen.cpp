@@ -33,8 +33,8 @@ bool processInputPath(const QString &path, const QDir &outputDir)
 
     const QDir dir(info.absoluteFilePath(), QLatin1String("*.json"),
                    QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable);
-    foreach (const QString &entry, dir.entryList()) {
-        if (!processApiDescription(entry, outputDir))
+    foreach (const QFileInfo &entry, dir.entryInfoList()) {
+        if (!processApiDescription(entry.absoluteFilePath(), outputDir))
             return false;
     }
     return true;
@@ -63,7 +63,10 @@ int main(int argc, char *argv[]) {
     if (!inputPaths.isEmpty()) inputPaths.removeFirst();
     if (!inputPaths.isEmpty()) inputPaths.removeLast();
     if (inputPaths.isEmpty()) {
-        inputPaths.append(QLatin1String("api-descriptions"));
+        #ifndef DEFAULT_API_DESCRIPTIONS_DIR
+        #define DEFAULT_API_DESCRIPTIONS_DIR "api-descriptions"
+        #endif
+        inputPaths.append(DEFAULT_API_DESCRIPTIONS_DIR);
     }
 
     const QDir outputDir = (arguments.size() > 1) ? QDir(arguments.last()) : QDir::current();
