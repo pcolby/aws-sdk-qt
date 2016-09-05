@@ -1,0 +1,4 @@
+{
+    "description": "Schema for AWS API description documents",
+    "type": "object"
+}
