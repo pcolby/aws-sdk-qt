@@ -1,0 +1,2 @@
+# Skip CI builds on the codegen branch for now.
+branches: { except: [ codegen ] }
