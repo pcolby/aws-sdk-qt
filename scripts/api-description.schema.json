@@ -1,4 +1,161 @@
 {
-    "description": "Schema for AWS API description documents",
-    "type": "object"
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AWS API Description schema",
+  "description": "Schema for AWS API description documents",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string"
+        },
+        "endpointPrefix": {
+          "type": "string"
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "serviceAbbreviation": {
+          "type": "string"
+        },
+        "serviceFullName": {
+          "type": "string"
+        },
+        "signatureVersion": {
+          "type": "string"
+        },
+        "xmlNamespace": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "endpointPrefix",
+        "protocol",
+        "serviceFullName",
+        "signatureVersion"
+      ]
+    },
+    "operations": {
+      "type": "object",
+      "patternProperties": {
+        "[A-Za-z]+": {
+          "type": "object",
+            "properties": {
+            "name": {
+              "type": "string"
+            },
+            "http": {
+              "type": "object",
+              "properties": {
+                "method": {
+                 "type": "string"
+                },
+                "requestUri": {
+                 "type": "string"
+                }
+              },
+              "required": [
+                "method",
+                "requestUri"
+              ]
+            },
+            "input": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shape"
+              ]
+            },
+            "output": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string"
+                },
+                "resultWrapper": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shape"
+              ]
+            },
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "shape"
+                ]
+              }
+            },
+            "documentation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "http"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "shapes": {
+      "type": "object",
+      "patternProperties": {
+        "[A-Za-z]+": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "member": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string"
+                },
+                "locationName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shape"
+              ]
+            },
+            "flattened": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "documentation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "metadata",
+    "operations",
+    "shapes"
+  ]
 }
