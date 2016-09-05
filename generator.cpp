@@ -1,0 +1,85 @@
+/*
+    Copyright 2013-2016 Paul Colby
+
+    This file is part of libqtaws.
+
+    Libqtaws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Libqtaws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "generator.h"
+
+#include <QDebug>
+#include <QJsonParseError>
+
+Generator::Generator(const QDir &outputDir)
+    : outputDir(outputDir)
+{
+
+}
+
+bool Generator::addApiDescription(const QJsonObject &description)
+{
+    const QString endpointPrefix = description
+        .value(QLatin1String("metadata")).toObject()
+        .value(QLatin1String("endpointPrefix")).toString();
+    if (endpointPrefix.isNull()) {
+        qWarning() << "endpointPrefix is missing, or not a string";
+        return false;
+    }
+
+    auto iter = apiDescriptions.find(endpointPrefix);
+    if (iter != apiDescriptions.end()) {
+        // compare version.
+    } else {
+        apiDescriptions.insert(endpointPrefix, description);
+    }
+
+    return true;
+}
+
+bool Generator::addApiDescription(const QString &fileName)
+{
+    qDebug() << "adding" << fileName;
+
+    QFile file(fileName);
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "failed to open file for reading" << fileName;
+        return false;
+    }
+
+    QJsonParseError parseError;
+    const QJsonDocument json = QJsonDocument::fromJson(file.readAll(), &parseError);
+    if (parseError.error != QJsonParseError::NoError) {
+        qWarning() << "failed to parse JSON file" << fileName << '-'
+                   << parseError.errorString() << "at offset" << parseError.offset;
+        return false;
+    }
+
+    if (!json.isObject()) {
+        qWarning() << "content is not a JSON object" << fileName;
+        return false;
+    }
+
+    if (!addApiDescription(json.object())) {
+        qWarning() << "failed to add" << fileName;
+        return false;
+    }
+    return true;
+}
+
+int Generator::generate()
+{
+
+    return 0;
+}
