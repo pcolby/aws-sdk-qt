@@ -13,7 +13,16 @@
         "apiVersion": {
           "type": "string"
         },
+        "checksumFormat": {
+          "type": "string"
+        },
         "endpointPrefix": {
+          "type": "string"
+        },
+        "globalEndpoint": {
+          "type": "string"
+        },
+        "jsonVersion": {
           "type": "string"
         },
         "protocol": {
@@ -28,6 +37,15 @@
         "signatureVersion": {
           "type": "string"
         },
+        "signingName": {
+          "type": "string"
+        },
+        "targetPrefix": {
+          "type": "string"
+        },
+        "timestampFormat": {
+          "type": "string"
+        },
         "xmlNamespace": {
           "type": "string"
         }
@@ -38,7 +56,8 @@
         "protocol",
         "serviceFullName",
         "signatureVersion"
-      ]
+      ],
+      "additionalProperties": false
     },
     "operations": {
       "type": "object",
