@@ -122,14 +122,33 @@
                 ]
               }
             },
+            "documentationUrl": {
+              "type": "string"
+            },
             "documentation": {
               "type": "string"
+            },
+            "deprecated": {
+              "type": "boolean"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "authtype": {
+              "type": "string",
+              "enum": [
+                "none"
+              ]
+            },
+            "idempotent": {
+              "type": "boolean"
             }
           },
           "required": [
             "name",
             "http"
-          ]
+          ],
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
