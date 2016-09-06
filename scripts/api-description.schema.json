@@ -62,7 +62,7 @@
     "operations": {
       "type": "object",
       "patternProperties": {
-        "[A-Za-z]+": {
+        "^[A-Za-z0-9]+$": {
           "type": "object",
             "properties": {
             "name": {
@@ -156,11 +156,34 @@
     "shapes": {
       "type": "object",
       "patternProperties": {
-        "[A-Za-z]+": {
+        "^[A-Za-z0-9]+$": {
           "type": "object",
           "properties": {
             "type": {
               "type": "string"
+            },
+            "enum": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[-A-Za-z0-9./_ ():*]+$",
+                "comment": "the space is probably not appropriate; see https://github.com/aws/aws-sdk-cpp/pull/288"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "max": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "pattern": {
+              "type": "string",
+              "format": "regex"
+            },
+            "sensitive": {
+              "type": "boolean"
             },
             "member": {
               "type": "object",
@@ -176,13 +199,204 @@
                 "shape"
               ]
             },
+            "members": {
+              "type": "object",
+              "patternProperties": {
+                "^[A-Za-z]+$": {
+                  "type": "object",
+                  "properties": {
+                    "shape": {
+                      "type": "string"
+                    },
+                    "location": {
+                      "type": "string",
+                      "enum": [
+                        "header",
+                        "headers",
+                        "querystring",
+                        "uri",
+                        "statusCode"
+                      ]
+                    },
+                    "locationName": {
+                      "type": "string"
+                    },
+                    "queryName": {
+                      "type": "string"
+                    },
+                    "documentation": {
+                      "type": "string"
+                    },
+                    "box": {
+                      "type": "boolean"
+                    },
+                    "deprecated": {
+                      "type": "boolean"
+                    },
+                    "flattened": {
+                      "type": "boolean"
+                    },
+                    "idempotencyToken": {
+                      "type": "boolean"
+                    },
+                    "streaming": {
+                      "type": "boolean"
+                    },
+                    "locationName": {
+                      "type": "string"
+                    },
+                    "xmlAttribute": {
+                      "type": "boolean"
+                    },
+                    "xmlNamespace": {
+                      "type": "object",
+                      "properties": {
+                        "uri": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      },
+                      "required": [
+                        "uri"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "shape"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "documentation": {
+              "type": "string"
+            },
+            "key": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9]+$"
+                },
+                "locationName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shape"
+              ],
+              "additionalProperties": false
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9]+$"
+                },
+                "locationName": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shape"
+              ],
+              "additionalProperties": false
+            },
+            "box": {
+              "type": "boolean"
+            },
+            "deprecated": {
+              "type": "boolean"
+            },
+            "payload": {
+              "type": "string",
+              "pattern": "^[A-Za-z]+$"
+            },
+            "timestampFormat": {
+              "type": "string",
+              "enum": [
+                "iso8601",
+                "rfc822"
+              ]
+            },
+            "error": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9.]+$"
+                },
+                "httpStatusCode": {
+                  "type": "integer",
+                  "min": 400,
+                  "max": 599
+                },
+                "required": [
+                  "code",
+                  "httpStatusCode"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "exception": {
+              "type": "boolean"
+            },
+            "fault": {
+              "type": "boolean"
+            },
+            "wrapper": {
+              "type": "boolean"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9]+$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "xmlNamespace": {
+              "type": "object",
+              "properties": {
+                "prefix": {
+                  "type": "string"
+                },
+                "uri": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "uri"
+              ],
+              "additionalProperties": false
+            },
+            "xmlOrder": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z]+$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
             "flattened": {
+              "type": "boolean"
+            },
+            "locationName": {
+              "type": "string"
+            },
+            "streaming": {
               "type": "boolean"
             }
           },
           "required": [
             "type"
-          ]
+          ],
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
