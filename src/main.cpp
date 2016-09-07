@@ -20,6 +20,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
+#include <QFileInfo>
 #include <QJsonDocument>
 
 #include "generator.h"
@@ -42,7 +43,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    Generator generator(arguments.last());
+    const QFileInfo outputDir(arguments.last());
+    if ((!outputDir.exists()) || (!outputDir.isDir()) || (!outputDir.isWritable())) {
+        qWarning() << "output directory does not exist, is not a directory, or is not writeable"
+                   << outputDir.absoluteFilePath();
+        return 2;
+    }
+
+    Generator generator(outputDir.absoluteFilePath());
     foreach (const QFileInfo &entry,
              QDir(QLatin1String(":/api-descriptions"), QLatin1String("*.json"),
                   QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList()) {
@@ -51,7 +59,7 @@ int main(int argc, char *argv[])
         if (!generator.generate(
                 getServiceNameFromFileName(entry.fileName()),
                 QJsonDocument::fromJson(file.readAll()).object())) {
-            return 1;
+            return 3;
         }
     }
     return 0;
