@@ -24,14 +24,22 @@
 
 #include "generator.h"
 
-int main(int argc, char *argv[]) {
+QString getServiceNameFromFileName(const QString &fileName)
+{
+    // <servce-name>-yyyy-mm-dd.normal.json
+    Q_ASSERT(fileName.endsWith(QLatin1String(".normal.json")));
+    return fileName.left(fileName.size() - 23);
+}
+
+int main(int argc, char *argv[])
+{
     QCoreApplication app(argc, argv);
 
     const QStringList arguments = QCoreApplication::arguments();
-    if (arguments.contains(QLatin1String("-h"))) {
+    if (arguments.size() != 2) {
         qInfo() << QString::fromLatin1("Usage: %1 output-dir")
                    .arg(QCoreApplication::applicationName());
-        return 0;
+        return 1;
     }
 
     Generator generator(arguments.last());
@@ -40,7 +48,9 @@ int main(int argc, char *argv[]) {
                   QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList()) {
         QFile file(entry.absoluteFilePath());
         file.open(QFile::ReadOnly);
-        if (!generator.generate(QJsonDocument::fromJson(file.readAll()).object())) {
+        if (!generator.generate(
+                getServiceNameFromFileName(entry.fileName()),
+                QJsonDocument::fromJson(file.readAll()).object())) {
             return 1;
         }
     }

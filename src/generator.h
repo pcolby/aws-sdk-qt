@@ -25,7 +25,7 @@ class Generator {
 public:
     Generator(const QDir &outputDir);
 
-    bool generate(const QJsonObject &description);
+    bool generate(const QString &serviceName, const QJsonObject &description);
 
 private:
     QDir outputDir;

@@ -28,9 +28,10 @@ Generator::Generator(const QDir &outputDir)
 
 }
 
-bool Generator::generate(const QJsonObject &description)
+bool Generator::generate(const QString &serviceName,
+                         const QJsonObject &description)
 {
-    qDebug() << "generating" << description
+    qDebug() << "generating" << serviceName << description
         .value(QLatin1String("metadata")).toObject()
         .value(QLatin1String("endpointPrefix")).toString();
 
