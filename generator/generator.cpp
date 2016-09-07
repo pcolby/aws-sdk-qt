@@ -92,7 +92,7 @@ bool Generator::generateApi(const QJsonObject &description)
         .value(QLatin1String("metadata")).toObject()
         .value(QLatin1String("endpointPrefix")).toString();
 
-    /// @todo Generato model classes.
+    /// @todo Generate model classes.
 
     /// @todo Generate request / response classes.
 
