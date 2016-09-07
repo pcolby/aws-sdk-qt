@@ -18,7 +18,14 @@ code generator has no special requirements.
 
 ## License
 
-While the [libqtaws] library is made available under the LGPL, this code
-generator is released under the GPL.
+While the [libqtaws] library is made available under the [LGPL], this code
+generator is released under the [GPL].
+
+The [API descriptions](descriptions) are copied verbatim from the [aws-sdk-cpp](
+https://github.com/aws/aws-sdk-cpp/tree/master/code-generation/api-descriptions)
+project, which provides those descriptions under the [ASL].
 
 [libqtaws]: https://github.com/pcolby/libqtaws
+[ASL]: http://www.apache.org/licenses/LICENSE-2.0 "Apache License"
+[LGPL]:https://www.gnu.org/licenses/lgpl.html "GNU Lesser General Public License"
+[GPL]: https://www.gnu.org/licenses/gpl.html "GNU General Public License"
