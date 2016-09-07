@@ -39,10 +39,7 @@ int main(int argc, char *argv[]) {
     if (!inputPaths.isEmpty()) inputPaths.removeFirst();
     if (!inputPaths.isEmpty()) inputPaths.removeLast();
     if (inputPaths.isEmpty()) {
-        #ifndef DEFAULT_API_DESCRIPTIONS_DIR
-        #define DEFAULT_API_DESCRIPTIONS_DIR "api-descriptions"
-        #endif
-        inputPaths.append(DEFAULT_API_DESCRIPTIONS_DIR);
+        inputPaths.append(QLatin1String(":/api-descriptions"));
     }
 
     foreach (const QString &path, inputPaths) {
