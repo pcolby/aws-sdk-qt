@@ -22,26 +22,33 @@ release was [100% documented](http://pcolby.github.io/libqtaws/0.1.0/api/annotat
 (including the [internal code](http://pcolby.github.io/libqtaws/0.1.0/internal/annotated.html))
 and 100% [unit tested](http://pcolby.github.io/libqtaws/0.1.0/coverage/).
 
-Work is now progressing on the SQS client classes - the basics of which are in
-place now, but need to be documented and unit tested before I could consider
-them complete.
+Work then progressed for the SQS client classes - the basics of which are in
+place now (see the [0.2.0 pre-release](https://github.com/pcolby/libqtaws/releases/tag/v0.2.0)),
+however that work was put on hold when Amazon released their official
+[AWS SDK for C++](https://github.com/aws/aws-sdk-cpp "aws-sdk-cpp"), while this
+project re-evaluated its value proposition, as well as a potential shift to
+becoming a light Qt-based wrapper for Amazon's SDK (which was not deemed a good
+fit in the end).
 
-After SQS, other Amazon services (such as SNS, DynamoDN, S3, EC2, etc) will be
-added in the order people ask for them.
+However, now that Amazon has made public the API descriptions used to
+generate most of the C++ SDK, effort is now being put into a Qt-based code
+generator that will create the bulk of the service client and model classes from
+those API descriptions.
 
-Of course, if you want to contribute your own classes for access specific AWS
-services, please do so!  See the `SqsClient` and related classes for the
-patterns to use when adding new AWS service client classes.
+Note that the API descriptions do not cover things like the signature, endpoint
+and region classes, which is where the bulk of the development effort has been
+to date, making all the investment in this project so far still completely
+worthwhile :)
 
 ## Requirements
 ### Qt 5.1+
-Libqtaws requires Qt 5.1+  The library uses Qt's QMessageAuthenticationCode
-class for generating HMAC codes for AWS request signatures, and that class was
-first added in Qt 5.1.0.
+Libqtaws requires Qt 5.1 or later, as the library makes use of Qt's
+QMessageAuthenticationCode class for generating HMAC codes for AWS request
+signatures, and that class was first added in Qt 5.1.0.
 
-It is possible to make the library work with Qt 5.0 by backporting
-QMessageAuthenticationCode from Qt 5.1 to Qt 5.0, but that is not officially
-supported.
+Backporting QMessageAuthenticationCode to Qt 5.0 is [relatively simple](
+https://github.com/pcolby/libqtaws/blob/196b5cd5e571d6883d288705234770a5e606d1f0/.travis.yml#L34),
+but outside the scope of this project.
 
 ## Building
 This library supports out-of-source builds (highly recommended), for example:
