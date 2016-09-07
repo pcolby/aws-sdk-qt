@@ -20,6 +20,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
+#include <QJsonDocument>
 
 #include "generator.h"
 
@@ -28,33 +29,20 @@ int main(int argc, char *argv[]) {
 
     const QStringList arguments = QCoreApplication::arguments();
     if (arguments.contains(QLatin1String("-h"))) {
-        qInfo() << QString::fromLatin1("Usage: %1 [[input-dir-or-file ...] [output-dir]")
+        qInfo() << QString::fromLatin1("Usage: %1 output-dir")
                    .arg(QCoreApplication::applicationName());
         return 0;
     }
 
-    Generator generator((arguments.size() > 1) ? QDir(arguments.last()) : QDir::current());
-
-    QStringList inputPaths = arguments;
-    if (!inputPaths.isEmpty()) inputPaths.removeFirst();
-    if (!inputPaths.isEmpty()) inputPaths.removeLast();
-    if (inputPaths.isEmpty()) {
-        inputPaths.append(QLatin1String(":/api-descriptions"));
-    }
-
-    foreach (const QString &path, inputPaths) {
-        const QFileInfo info(path);
-        if (!info.isDir()) {
-            return generator.addApiDescription(path);
-        }
-
-        const QDir dir(info.absoluteFilePath(), QLatin1String("*.json"),
-                       QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable);
-        foreach (const QFileInfo &entry, dir.entryInfoList()) {
-            if (!generator.addApiDescription(entry.absoluteFilePath()))
-                return false;
+    Generator generator(arguments.last());
+    foreach (const QFileInfo &entry,
+             QDir(QLatin1String(":/api-descriptions"), QLatin1String("*.json"),
+                  QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList()) {
+        QFile file(entry.absoluteFilePath());
+        file.open(QFile::ReadOnly);
+        if (!generator.generate(QJsonDocument::fromJson(file.readAll()).object())) {
+            return 1;
         }
     }
-
-    return generator.generate() ? 0 : 1;
+    return 0;
 }

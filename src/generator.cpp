@@ -28,65 +28,7 @@ Generator::Generator(const QDir &outputDir)
 
 }
 
-bool Generator::addApiDescription(const QJsonObject &description)
-{
-    const QString endpointPrefix = description
-        .value(QLatin1String("metadata")).toObject()
-        .value(QLatin1String("endpointPrefix")).toString();
-    if (endpointPrefix.isNull()) {
-        qWarning() << "endpointPrefix is missing, or not a string";
-        return false;
-    }
-
-    auto iter = apiDescriptions.find(endpointPrefix);
-    if (iter != apiDescriptions.end()) {
-        // compare version.
-    } else {
-        apiDescriptions.insert(endpointPrefix, description);
-    }
-
-    return true;
-}
-
-bool Generator::addApiDescription(const QString &fileName)
-{
-    qDebug() << "adding" << fileName;
-
-    QFile file(fileName);
-    if (!file.open(QFile::ReadOnly)) {
-        qWarning() << "failed to open file for reading" << fileName;
-        return false;
-    }
-
-    QJsonParseError parseError;
-    const QJsonDocument json = QJsonDocument::fromJson(file.readAll(), &parseError);
-    if (parseError.error != QJsonParseError::NoError) {
-        qWarning() << "failed to parse JSON file" << fileName << '-'
-                   << parseError.errorString() << "at offset" << parseError.offset;
-        return false;
-    }
-
-    if (!json.isObject()) {
-        qWarning() << "content is not a JSON object" << fileName;
-        return false;
-    }
-
-    if (!addApiDescription(json.object())) {
-        qWarning() << "failed to add" << fileName;
-        return false;
-    }
-    return true;
-}
-
-int Generator::generate()
-{
-    foreach (const QJsonObject &description, apiDescriptions) {
-        generateApi(description);
-    }
-    return 0;
-}
-
-bool Generator::generateApi(const QJsonObject &description)
+bool Generator::generate(const QJsonObject &description)
 {
     qDebug() << "generating" << description
         .value(QLatin1String("metadata")).toObject()

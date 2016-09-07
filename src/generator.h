@@ -19,23 +19,15 @@
 
 #include <QDir>
 #include <QJsonObject>
-#include <QMap>
-#include <QString>
 
 class Generator {
 
 public:
     Generator(const QDir &outputDir);
-    bool addApiDescription(const QJsonObject &description);
-    bool addApiDescription(const QString &fileName);
 
-    int generate();
-
-protected:
-    bool generateApi(const QJsonObject &description);
+    bool generate(const QJsonObject &description);
 
 private:
     QDir outputDir;
-    QMap<QString, QJsonObject> apiDescriptions;
 
 };
