@@ -31,6 +31,9 @@ public:
 
     int generate();
 
+protected:
+    bool generateApi(const QJsonObject &description);
+
 private:
     QDir outputDir;
     QMap<QString, QJsonObject> apiDescriptions;

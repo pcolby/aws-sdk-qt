@@ -80,6 +80,25 @@ bool Generator::addApiDescription(const QString &fileName)
 
 int Generator::generate()
 {
-
+    foreach (const QJsonObject &description, apiDescriptions) {
+        generateApi(description);
+    }
     return 0;
+}
+
+bool Generator::generateApi(const QJsonObject &description)
+{
+    qDebug() << "generating" << description
+        .value(QLatin1String("metadata")).toObject()
+        .value(QLatin1String("endpointPrefix")).toString();
+
+    /// @todo Generato model classes.
+
+    /// @todo Generate request / response classes.
+
+    /// @todo Generate service client.
+
+    /// @todo Generate ancillary project files.
+
+    return true;
 }
