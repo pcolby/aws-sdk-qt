@@ -40,6 +40,9 @@ bool Generator::generate(const QString &serviceFileName,
     const QString className = getClassName(metaData) + QLatin1String("Client");
 
     QMap<QString, QString> tags;
+    for (auto iter = metaData.constBegin(); iter != metaData.constEnd(); ++iter) {
+        tags.insert(QLatin1String("metadata.") + iter.key(), iter.value().toString());
+    }
     tags.insert(QLatin1String("TargetLibName"), serviceFileName);
     tags.insert(QLatin1String("ClassName"), className);
     tags.insert(QLatin1String("HeaderName"), className.toLower());
