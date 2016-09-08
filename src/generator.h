@@ -28,9 +28,9 @@ public:
     bool generate(const QString &serviceName, const QJsonObject &description);
 
 protected:
-    QString readAll(const QString &fileName);
-    void replaceAll(const QMap<QString, QString> &tokens, QString &string);
-    bool writeAll(const QString &fileName, const QString &content);
+    static QString readAll(const QString &fileName);
+    static void replaceAll(const QMap<QString, QString> &tokens, QString &string);
+    static bool writeAll(const QString &fileName, const QString &content);
 
 private:
     QDir outputDir;
