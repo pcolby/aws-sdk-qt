@@ -21,6 +21,7 @@
 
 #include <QDebug>
 #include <QJsonParseError>
+#include <QRegularExpression>
 
 Generator::Generator(const QDir &outputDir)
     : outputDir(outputDir)
@@ -45,8 +46,10 @@ bool Generator::generate(const QString &serviceName,
     /// @todo Generate service client.
 
     /// @todo Generate ancillary project files.
-    const QString qmakeProjectFile = readAll(QLatin1String(":/templates/service.pro"));
-    /// @todo search and replace tokens.
+    QString qmakeProjectFile = readAll(QLatin1String(":/templates/service.pro"));
+    QMap<QString, QString> tokens;
+    tokens.insert(QLatin1String("serviceName"), serviceName);
+    replaceAll(tokens, qmakeProjectFile);
     writeAll(QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceName), qmakeProjectFile);
 
     return true;
@@ -64,6 +67,14 @@ QString Generator::readAll(const QString &fileName)
         return QString();
     }
     return QString::fromUtf8(file.readAll());
+}
+
+void Generator::replaceAll(const QMap<QString, QString> &tokens, QString &string)
+{
+    for (auto iter = tokens.constBegin(); iter != tokens.constEnd(); ++iter) {
+        string.replace(QRegularExpression(QString::fromLatin1("{{\\s*%1\\s*}}")
+            .arg(QRegularExpression::escape(iter.key()))), iter.value());
+    }
 }
 
 bool Generator::writeAll(const QString &fileName, const QString &content)

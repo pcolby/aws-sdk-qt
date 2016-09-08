@@ -29,6 +29,7 @@ public:
 
 protected:
     QString readAll(const QString &fileName);
+    void replaceAll(const QMap<QString, QString> &tokens, QString &string);
     bool writeAll(const QString &fileName, const QString &content);
 
 private:
