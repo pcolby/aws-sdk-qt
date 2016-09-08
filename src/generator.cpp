@@ -50,7 +50,8 @@ bool Generator::generate(const QString &serviceFileName,
     tags.insert(QLatin1String("SignatureVersion"), metaData.value(QLatin1String("signatureVersion")).toString().toUpper());
     tags.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
     /// @todo Break this string over multiple lines nicely.
-    tags.insert(QLatin1String("ClassDocumentation"), description.value(QLatin1String("documentation")).toString());
+    tags.insert(QLatin1String("ClassDocumentation"),
+        formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     /// @todo Generate model classes.
 
@@ -69,6 +70,25 @@ bool Generator::generate(const QString &serviceFileName,
                 QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceFileName));
 
     return true;
+}
+
+QString Generator::formatHtmlDocumentation(const QString &html)
+{
+    QString content(html);
+
+    content.replace(QRegularExpression(QLatin1String("<br?/>")), QLatin1String("\n\n"));
+    content.replace(QRegularExpression(QLatin1String("</?p>")), QLatin1String("\n\n"));
+
+    /// @todo There's a lot more we could do here...
+
+    content = content.trimmed();
+    content.replace(QRegularExpression(QLatin1String(" *\n")), QLatin1String("\n"));
+    content.replace(QRegularExpression(QLatin1String("\n\n\n"),
+       QRegularExpression::MultilineOption), QLatin1String("\n"));
+
+    content.replace(QRegularExpression(QLatin1String("\n([^\n])")), QLatin1String("\n + \\1"));
+    content.replace(QRegularExpression(QLatin1String("\n\n")), QLatin1String("\n *\n"));
+    return content;
 }
 
 QString Generator::getClassBrief(const QJsonObject &metaData)
