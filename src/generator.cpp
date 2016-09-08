@@ -36,7 +36,7 @@ bool Generator::generate(const QString &serviceFileName,
     outputDir.mkdir(serviceFileName);
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
-    const QJsonObject metaData = description .value(QLatin1String("metadata")).toObject();
+    const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString className = getClassName(metaData) + QLatin1String("Client");
 
     QMap<QString, QString> tags;
@@ -47,6 +47,7 @@ bool Generator::generate(const QString &serviceFileName,
     tags.insert(QLatin1String("ClassName"), className);
     tags.insert(QLatin1String("HeaderName"), className.toLower());
     tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
+    tags.insert(QLatin1String("SignatureVersion"), metaData.value(QLatin1String("signatureVersion")).toString().toUpper());
     tags.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
     /// @todo Break this string over multiple lines nicely.
     tags.insert(QLatin1String("ClassDocumentation"), description.value(QLatin1String("documentation")).toString());

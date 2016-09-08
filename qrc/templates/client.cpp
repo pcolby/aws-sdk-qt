@@ -107,8 +107,7 @@ QTAWS_BEGIN_NAMESPACE
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
-    signature = new AwsSignatureV4();
+    signature = new AwsSignature{{SignatureVersion}}();
 }
 
 QTAWS_END_NAMESPACE
