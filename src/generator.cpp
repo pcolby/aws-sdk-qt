@@ -46,11 +46,10 @@ bool Generator::generate(const QString &serviceName,
     /// @todo Generate service client.
 
     /// @todo Generate ancillary project files.
-    QString qmakeProjectFile = readAll(QLatin1String(":/templates/service.pro"));
-    QMap<QString, QString> tokens;
-    tokens.insert(QLatin1String("serviceName"), serviceName);
-    replaceAll(tokens, qmakeProjectFile);
-    writeAll(QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceName), qmakeProjectFile);
+    QMap<QString, QString> tags;
+    tags.insert(QLatin1String("serviceName"), serviceName);
+    replaceTags(tags, QLatin1String(":/templates/service.pro"),
+                QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceName));
 
     return true;
 }
@@ -69,13 +68,24 @@ QString Generator::readAll(const QString &fileName)
     return QString::fromUtf8(file.readAll());
 }
 
-void Generator::replaceAll(const QMap<QString, QString> &tokens, QString &string)
+QString Generator::replaceTags(const QMap<QString, QString> &tags,
+                               const QString &input)
 {
-    for (auto iter = tokens.constBegin(); iter != tokens.constEnd(); ++iter) {
-        string.replace(QRegularExpression(QString::fromLatin1("{{\\s*%1\\s*}}")
+    QString output(input);
+    for (auto iter = tags.constBegin(); iter != tags.constEnd(); ++iter) {
+        output.replace(QRegularExpression(QString::fromLatin1("{{\\s*%1\\s*}}")
             .arg(QRegularExpression::escape(iter.key()))), iter.value());
     }
+    return output;
 }
+
+bool Generator::replaceTags(const QMap<QString, QString> &tags,
+                            const QString &inFile, const QString &outFile)
+{
+    const QString input = readAll(inFile);
+    return (input.isNull()) ? false : writeAll(outFile, replaceTags(tags, input));
+}
+
 
 bool Generator::writeAll(const QString &fileName, const QString &content)
 {

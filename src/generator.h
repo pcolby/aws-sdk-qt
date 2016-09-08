@@ -29,7 +29,10 @@ public:
 
 protected:
     static QString readAll(const QString &fileName);
-    static void replaceAll(const QMap<QString, QString> &tokens, QString &string);
+    static QString replaceTags(const QMap<QString, QString> &tags,
+                               const QString &input);
+    static bool replaceTags(const QMap<QString, QString> &tags,
+                            const QString &inFile, const QString &outFile);
     static bool writeAll(const QString &fileName, const QString &content);
 
 private:
