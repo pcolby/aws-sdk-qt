@@ -44,6 +44,8 @@ bool Generator::generate(const QString &serviceFileName,
     tags.insert(QLatin1String("ClassName"), className);
     tags.insert(QLatin1String("HeaderName"), className.toLower());
     tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
+    /// @todo Break this string over multiple lines nicely.
+    tags.insert(QLatin1String("Documentation"), description.value(QLatin1String("documentation")).toString());
 
     /// @todo Generate model classes.
 

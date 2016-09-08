@@ -30,10 +30,7 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  {{ClassName}}
  *
- * @brief  {{ClassBrief}}
- *
- * @see    http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/
- * @see    http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl
+ * {{Documentation}}
  */
 
 /**
