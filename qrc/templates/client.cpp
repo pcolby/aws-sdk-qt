@@ -30,7 +30,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  {{ClassName}}
  *
- * {{Documentation}}
+ * @brief  {{ClassBrief}}
+ *
+ * {{ClassDocumentation}}
  */
 
 /**

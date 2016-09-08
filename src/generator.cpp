@@ -47,8 +47,9 @@ bool Generator::generate(const QString &serviceFileName,
     tags.insert(QLatin1String("ClassName"), className);
     tags.insert(QLatin1String("HeaderName"), className.toLower());
     tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
+    tags.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
     /// @todo Break this string over multiple lines nicely.
-    tags.insert(QLatin1String("Documentation"), description.value(QLatin1String("documentation")).toString());
+    tags.insert(QLatin1String("ClassDocumentation"), description.value(QLatin1String("documentation")).toString());
 
     /// @todo Generate model classes.
 
@@ -67,6 +68,21 @@ bool Generator::generate(const QString &serviceFileName,
                 QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceFileName));
 
     return true;
+}
+
+QString Generator::getClassBrief(const QJsonObject &metaData)
+{
+    QString brief = QString::fromLatin1("Client for %1").arg(
+        metaData.value(QLatin1String("serviceFullName")).toString());
+
+    QString serviceAbbreviation =
+        metaData.value(QLatin1String("serviceAbbreviation")).toString();
+    serviceAbbreviation.replace(QRegularExpression("Amazon|AWS"), QString());
+
+    if ((!serviceAbbreviation.isEmpty()) && (!brief.contains(serviceAbbreviation))) {
+        brief += QString::fromLatin1(" (%1)").arg(serviceAbbreviation);
+    }
+    return brief;
 }
 
 QString Generator::getClassName(const QJsonObject &metaData)
