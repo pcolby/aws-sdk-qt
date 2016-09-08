@@ -1,0 +1,112 @@
+/*
+    Copyright 2013-2016 Paul Colby
+
+    This file is part of libqtaws.
+
+    Libqtaws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Libqtaws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "kmsclient.h"
+#include "kmsclient_p.h"
+
+#include "core/awssignaturev4.h"
+
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+
+QTAWS_BEGIN_NAMESPACE
+
+/**
+ * @class  KMSClient
+ *
+ * <fullname>AWS Key Management Service</fullname> <p>AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS operations that you can call programmatically. For general information about AWS KMS, see the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/">AWS Key Management Service Developer Guide</a>.</p> <note> <p>AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying requests automatically. For more information about the AWS SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p> </note> <p>We recommend that you use the AWS SDKs to make programmatic API calls to AWS KMS.</p> <p>Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher suites with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman (ECDHE). Most modern systems such as Java 7 and later support these modes.</p> <p> <b>Signing Requests</b> </p> <p>Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i> use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security credentials that you can use to sign requests.</p> <p>All AWS KMS operations require <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>.</p> <p> <b>Logging API Requests</b> </p> <p>AWS KMS supports AWS CloudTrail, a service that logs AWS API calls and related events for your AWS account and delivers them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail, including how to turn it on and find your log files, see the <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User Guide</a>.</p> <p> <b>Additional Resources</b> </p> <p>For more information about credentials and request signing, see the following:</p> <ul> <li> <p> <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This topic provides general information about the types of credentials used for accessing AWS.</p> </li> <li> <p> <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> - This section of the <i>IAM User Guide</i> describes how to create and use temporary security credentials.</p> </li> <li> <p> <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a> - This set of topics walks you through the process of signing a request using an access key ID and a secret access key.</p> </li> </ul> <p> <b>Commonly Used APIs</b> </p> <p>Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely perform actions other than these, such as creating keys and assigning policies, by using the console.</p> <ul> <li> <p> <a>Encrypt</a> </p> </li> <li> <p> <a>Decrypt</a> </p> </li> <li> <p> <a>GenerateDataKey</a> </p> </li> <li> <p> <a>GenerateDataKeyWithoutPlaintext</a> </p> </li> </ul>
+ */
+
+/**
+ * @brief  Constructs a new KMSClient object.
+ *
+ * @param  region       AWS region for this client to service requests for.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
+ */
+KMSClient::KMSClient(
+    const AwsRegion::Region region,
+    AwsAbstractCredentials * credentials,
+    QNetworkAccessManager * const manager,
+    QObject * const parent)
+: AwsAbstractClient(new KMSClientPrivate(this), parent)
+{
+    Q_D(KMSClient);
+    d->region = region;
+    d->credentials = credentials;
+    d->networkAccessManager = manager;
+    d->serviceName = QLatin1String("{{servicename}}");
+}
+
+/**
+ * @brief  Constructs a new KMSClient object.
+ *
+ * This overload allows the caller to specify the specific endpoint to send
+ * requests to.  Typically, it is easier to use the alternative constructor,
+ * which allows the caller to specify an AWS region instead, in which case this
+ * client will determine the correct endpoint for the given region
+ * automatically (via AwsEndpoint::getEndpoint).
+ *
+ * @param  endpoint     Endpoint for building requests URLs.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
+ *
+ * @see  AwsEndpoint::getEndpoint
+ */
+KMSClient::KMSClient(
+    const QUrl &endpoint,
+    AwsAbstractCredentials * credentials,
+    QNetworkAccessManager * const manager,
+    QObject * const parent)
+: AwsAbstractClient(new KMSClientPrivate(this), parent)
+{
+    Q_D(KMSClient);
+    d->endpoint = endpoint;
+    d->credentials = credentials;
+    d->networkAccessManager = manager;
+    d->serviceName = QLatin1String("{{servicename}}");
+}
+
+/// @todo {{publicSlots}}
+
+/**
+ * @internal
+ *
+ * @class  KMSClientPrivate
+ *
+ * @brief  Private implementation for KMSClient.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new KMSClientPrivate object.
+ *
+ * @param  q  Pointer to this object's public KMSClient instance.
+ */
+KMSClientPrivate::KMSClientPrivate(KMSClient * const q)
+    : AwsAbstractClientPrivate(q)
+{
+    /// @todo Get signature version from API description.
+    signature = new AwsSignatureV4();
+}
+
+QTAWS_END_NAMESPACE
