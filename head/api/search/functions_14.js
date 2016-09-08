@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['_7eawsabstractclient',['~AwsAbstractClient',['../classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7',1,'AwsAbstractClient']]],
-  ['_7eawsabstractcredentials',['~AwsAbstractCredentials',['../classAwsAbstractCredentials.html#a65457d8b5203dc40022839e3b1d4b0f2',1,'AwsAbstractCredentials']]],
-  ['_7eawsabstractrequest',['~AwsAbstractRequest',['../classAwsAbstractRequest.html#aa4ac7b7e84c998e6fe7a674049344b30',1,'AwsAbstractRequest']]],
-  ['_7eawsabstractresponse',['~AwsAbstractResponse',['../classAwsAbstractResponse.html#a8e25480ed0d6ef4292e71b83947384ef',1,'AwsAbstractResponse']]],
-  ['_7eawsabstractsignature',['~AwsAbstractSignature',['../classAwsAbstractSignature.html#a39c9eacd36bcf13ee629f1dcb7f23d5a',1,'AwsAbstractSignature']]],
-  ['_7eawsendpoint',['~AwsEndpoint',['../classAwsEndpoint.html#ad10ffff1f4b7487d93a34de1d9efb5a8',1,'AwsEndpoint']]],
-  ['_7eawsregion',['~AwsRegion',['../classAwsRegion.html#a86af1617f050770622fc3cc782466472',1,'AwsRegion']]],
-  ['_7esqserror',['~SqsError',['../classSqsError.html#ae6b9523e9649002c77aed81f4d5c90a3',1,'SqsError']]]
+  ['wafclient',['WAFClient',['../classWAFClient.html#a5c026a75a24236b3c37794b5cc8d9c1b',1,'WAFClient::WAFClient(const AwsRegion::Region region=AwsRegion::InvalidRegion, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)'],['../classWAFClient.html#a69744d472db95199df6a70e437d61b0a',1,'WAFClient::WAFClient(const QUrl &amp;endpoint, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)']]],
+  ['workspacesclient',['WorkSpacesClient',['../classWorkSpacesClient.html#ac739db93545e4e3d19e655a8dfe91f46',1,'WorkSpacesClient::WorkSpacesClient(const AwsRegion::Region region=AwsRegion::InvalidRegion, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)'],['../classWorkSpacesClient.html#a421f24e4eb741236812cd95fe452d521',1,'WorkSpacesClient::WorkSpacesClient(const QUrl &amp;endpoint, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)']]]
 ];

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libqtaws
-   &#160;<span id="projectnumber">0.2.0-prerelease</span>
+   &#160;<span id="projectnumber">0.3.0-pre-alpha</span>
    </div>
    <div id="projectbrief">UnofficialAWSlibraryforQt</div>
   </td>
@@ -85,13 +85,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Libqtaws is an open-source (LGPL) library for consuming <a href="http://aws.amazon.com/">Amazon Web Services (AWS)</a> from <a href="http://qt-project.org/">Qt</a> applications.</p>
 <p>The library is still in early stages of development, but already includes much of the basic framework plumbing required for implementing asynchronous AWS clients, including generic classes for managing the building of AWS requests (including all five AWS signature types) and processing of AWS responses.</p>
 <p>The first <a href="https://github.com/pcolby/libqtaws/releases/tag/v0.1.0">0.1.0</a> release included just the signature, endpoint and region classes. But that release was <a href="http://pcolby.github.io/libqtaws/0.1.0/api/annotated.html">100% documented</a> (including the <a href="http://pcolby.github.io/libqtaws/0.1.0/internal/annotated.html">internal code</a>) and 100% <a href="http://pcolby.github.io/libqtaws/0.1.0/coverage/">unit tested</a>.</p>
-<p>Work is now progressing on the SQS client classes - the basics of which are in place now, but need to be documented and unit tested before I could consider them complete.</p>
-<p>After SQS, other Amazon services (such as SNS, DynamoDN, S3, EC2, etc) will be added in the order people ask for them.</p>
-<p>Of course, if you want to contribute your own classes for access specific AWS services, please do so! See the <code><a class="el" href="classSqsClient.html" title="Client for Amazon&#39;s Simple Queue Service (SQS) ">SqsClient</a></code> and related classes for the patterns to use when adding new AWS service client classes.</p>
+<p>Work then progressed for the SQS client classes - the basics of which are in place now (see the <a href="https://github.com/pcolby/libqtaws/releases/tag/v0.2.0">0.2.0 pre-release</a>), however that work was put on hold when Amazon released their official <a href="https://github.com/aws/aws-sdk-cpp" title="aws-sdk-cpp">AWS SDK for C++</a>, while this project re-evaluated its value proposition, as well as a potential shift to becoming a light Qt-based wrapper for Amazon's SDK (which was not deemed a good fit in the end).</p>
+<p>However, now that Amazon has made public the API descriptions used to generate most of the C++ SDK, effort is now being put into a Qt-based code generator that will create the bulk of the service client and model classes from those API descriptions.</p>
+<p>Note that the API descriptions do not cover things like the signature, endpoint and region classes, which is where the bulk of the development effort has been to date, making all the investment in this project so far still completely worthwhile :)</p>
 <h2>Requirements</h2>
 <h3>Qt 5.1+</h3>
-<p>Libqtaws requires Qt 5.1+ The library uses Qt's QMessageAuthenticationCode class for generating HMAC codes for AWS request signatures, and that class was first added in Qt 5.1.0.</p>
-<p>It is possible to make the library work with Qt 5.0 by backporting QMessageAuthenticationCode from Qt 5.1 to Qt 5.0, but that is not officially supported.</p>
+<p>Libqtaws requires Qt 5.1 or later, as the library makes use of Qt's QMessageAuthenticationCode class for generating HMAC codes for AWS request signatures, and that class was first added in Qt 5.1.0.</p>
+<p>Backporting QMessageAuthenticationCode to Qt 5.0 is <a href="https://github.com/pcolby/libqtaws/blob/196b5cd5e571d6883d288705234770a5e606d1f0/.travis.yml#L34">relatively simple</a>, but outside the scope of this project.</p>
 <h2>Building</h2>
 <p>This library supports out-of-source builds (highly recommended), for example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir -p &lt;tmp-build-dir&gt;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pushd &lt;tmp-build-dir&gt;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release &lt;path-to-cloned-repo&gt;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;make # or `nmake` on Windows</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;make check</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;popd</div></div><!-- fragment --><h2>API Documentation</h2>

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['macroregion',['MacroRegion',['../classAwsRegion.html#ad78b2e6bccc468cc75998dfaa5100c14',1,'AwsRegion']]],
-  ['maximummessagesize',['maximumMessageSize',['../classSqsCreateQueueRequest.html#a10839f9117063bb37b926ce03d619f22',1,'SqsCreateQueueRequest']]],
-  ['message',['message',['../classSqsErrorPrivate.html#a34aed834629101bfc33d0b0ed5464082',1,'SqsErrorPrivate::message()'],['../classSqsError.html#a4c14570f97be4e93c9d9edf61cc4c0fb',1,'SqsError::message()']]],
-  ['messageretentionperiod',['messageRetentionPeriod',['../classSqsCreateQueueRequest.html#a68919e7b2195b7df245150ecc2c449f5',1,'SqsCreateQueueRequest']]],
-  ['mutex',['mutex',['../classAwsEndpointPrivate.html#a0d033c2430576d80008adcb459ab043d',1,'AwsEndpointPrivate']]]
+  ['libqtaws',['Libqtaws',['../index.html',1,'']]],
+  ['label',['label',['../classSqsAddPermissionRequest.html#a348c7a324e531449333c8dea99f9e941',1,'SqsAddPermissionRequest::label()'],['../classSqsRemovePermissionRequest.html#ace81b6c665960730c4453df92a89aa5a',1,'SqsRemovePermissionRequest::label()']]],
+  ['lambdaclient',['LambdaClient',['../classLambdaClient.html',1,'LambdaClient'],['../classLambdaClient.html#a8d4d5a7cda387d597d30c4872f902fc3',1,'LambdaClient::LambdaClient(const AwsRegion::Region region=AwsRegion::InvalidRegion, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)'],['../classLambdaClient.html#aa6ab5935c79926c432f0bdf28dddc24d',1,'LambdaClient::LambdaClient(const QUrl &amp;endpoint, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)']]],
+  ['lambdaclientprivate',['LambdaClientPrivate',['../classLambdaClientPrivate.html',1,'LambdaClientPrivate'],['../classLambdaClientPrivate.html#a6a44ff9931ad00b9392e722040f553c4',1,'LambdaClientPrivate::LambdaClientPrivate()']]],
+  ['listdeadlettersourcequeues',['listDeadLetterSourceQueues',['../classSqsClient.html#a4a47f3f7b4972f3809d02f69a7bb9fa8',1,'SqsClient::listDeadLetterSourceQueues(const SqsListDeadLetterSourceQueuesRequest &amp;request)'],['../classSqsClient.html#ada021b2c7d2c18d0466595f68800b4e1',1,'SqsClient::listDeadLetterSourceQueues(const QString &amp;queueUrl)']]],
+  ['listqueues',['listQueues',['../classSqsClient.html#aa153c311756c4f1b997c30bb1653014e',1,'SqsClient::listQueues(const SqsListQueuesRequest &amp;request)'],['../classSqsClient.html#a7218de2eeda5dc543f303ece9c1cb5eb',1,'SqsClient::listQueues(const QString &amp;queueNamePrefix=QString())']]],
+  ['loadendpointdata',['loadEndpointData',['../classAwsEndpointPrivate.html#a1e594bf504839850ffe62e03447a4482',1,'AwsEndpointPrivate::loadEndpointData(const QString &amp;fileName=QLatin1String(&quot;:/aws/endpoints.xml&quot;))'],['../classAwsEndpointPrivate.html#a2da95b6e7dc38cb13d2d4630dafd5931',1,'AwsEndpointPrivate::loadEndpointData(QIODevice &amp;device)'],['../classAwsEndpointPrivate.html#a54614bd30c14349459d9c8ed1ca65536',1,'AwsEndpointPrivate::loadEndpointData(QXmlStreamReader &amp;xml)']]]
 ];

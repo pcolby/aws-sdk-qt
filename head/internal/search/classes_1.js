@@ -1,4 +1,31 @@
 var searchData=
 [
-  ['hostinfo',['HostInfo',['../structAwsEndpointPrivate_1_1HostInfo.html',1,'AwsEndpointPrivate']]]
+  ['cloudformationclient',['CloudFormationClient',['../classCloudFormationClient.html',1,'']]],
+  ['cloudformationclientprivate',['CloudFormationClientPrivate',['../classCloudFormationClientPrivate.html',1,'']]],
+  ['cloudfrontclient',['CloudFrontClient',['../classCloudFrontClient.html',1,'']]],
+  ['cloudfrontclientprivate',['CloudFrontClientPrivate',['../classCloudFrontClientPrivate.html',1,'']]],
+  ['cloudhsmclient',['CloudHSMClient',['../classCloudHSMClient.html',1,'']]],
+  ['cloudhsmclientprivate',['CloudHSMClientPrivate',['../classCloudHSMClientPrivate.html',1,'']]],
+  ['cloudsearchclient',['CloudSearchClient',['../classCloudSearchClient.html',1,'']]],
+  ['cloudsearchclientprivate',['CloudSearchClientPrivate',['../classCloudSearchClientPrivate.html',1,'']]],
+  ['cloudsearchdomainclient',['CloudSearchDomainClient',['../classCloudSearchDomainClient.html',1,'']]],
+  ['cloudsearchdomainclientprivate',['CloudSearchDomainClientPrivate',['../classCloudSearchDomainClientPrivate.html',1,'']]],
+  ['cloudtrailclient',['CloudTrailClient',['../classCloudTrailClient.html',1,'']]],
+  ['cloudtrailclientprivate',['CloudTrailClientPrivate',['../classCloudTrailClientPrivate.html',1,'']]],
+  ['cloudwatchclient',['CloudWatchClient',['../classCloudWatchClient.html',1,'']]],
+  ['cloudwatchclientprivate',['CloudWatchClientPrivate',['../classCloudWatchClientPrivate.html',1,'']]],
+  ['cloudwatcheventsclient',['CloudWatchEventsClient',['../classCloudWatchEventsClient.html',1,'']]],
+  ['cloudwatcheventsclientprivate',['CloudWatchEventsClientPrivate',['../classCloudWatchEventsClientPrivate.html',1,'']]],
+  ['cloudwatchlogsclient',['CloudWatchLogsClient',['../classCloudWatchLogsClient.html',1,'']]],
+  ['cloudwatchlogsclientprivate',['CloudWatchLogsClientPrivate',['../classCloudWatchLogsClientPrivate.html',1,'']]],
+  ['codecommitclient',['CodeCommitClient',['../classCodeCommitClient.html',1,'']]],
+  ['codecommitclientprivate',['CodeCommitClientPrivate',['../classCodeCommitClientPrivate.html',1,'']]],
+  ['codedeployclient',['CodeDeployClient',['../classCodeDeployClient.html',1,'']]],
+  ['codedeployclientprivate',['CodeDeployClientPrivate',['../classCodeDeployClientPrivate.html',1,'']]],
+  ['codepipelineclient',['CodePipelineClient',['../classCodePipelineClient.html',1,'']]],
+  ['codepipelineclientprivate',['CodePipelineClientPrivate',['../classCodePipelineClientPrivate.html',1,'']]],
+  ['cognitosyncclient',['CognitoSyncClient',['../classCognitoSyncClient.html',1,'']]],
+  ['cognitosyncclientprivate',['CognitoSyncClientPrivate',['../classCognitoSyncClientPrivate.html',1,'']]],
+  ['configserviceclient',['ConfigServiceClient',['../classConfigServiceClient.html',1,'']]],
+  ['configserviceclientprivate',['ConfigServiceClientPrivate',['../classConfigServiceClientPrivate.html',1,'']]]
 ];

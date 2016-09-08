@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libqtaws
-   &#160;<span id="projectnumber">0.2.0-prerelease</span>
+   &#160;<span id="projectnumber">0.3.0-pre-alpha</span>
    </div>
    <div id="projectbrief">UnofficialAWSlibraryforQt-InternalDocumentation</div>
   </td>
@@ -313,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if this response is considered valid, <code>false</code> otherwise.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function may be equivalent to !hasError, however, it is not safe for this function's implementation to be just that, since derived classes may assume the inverse, resulting in an infinite cycle between the two functions.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSqsResponse.html#ab8b8ebf0caeccc782243d969b9267d50" title="Did any error occurr processing this reponse? ">hasError</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000210">Todo:</a></b></dt><dd></dd></dl>
 
 <p>Reimplemented from <a class="el" href="classSqsResponse.html#af63b2edc3a70a84718b80433978b1bf6">SqsResponse</a>.</p>
 
@@ -356,7 +356,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000211">Todo:</a></b></dt><dd></dd></dl>
 
 <p>Definition at line <a class="el" href="sqslistqueuesresponse_8cpp_source.html#l00086">86</a> of file <a class="el" href="sqslistqueuesresponse_8cpp_source.html">sqslistqueuesresponse.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Q_D(<a class="code" href="classSqsListQueuesResponse.html">SqsListQueuesResponse</a>);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    QXmlStreamReader xml(&amp;response);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">while</span> (xml.readNextStartElement()) {<span class="comment"></span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">        /// @todo</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>        <span class="keywordflow">if</span> (xml.name() == QLatin1String(<span class="stringliteral">&quot;ListQueuesResponse&quot;</span>)) {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            d-&gt;parseListQueuesResponse(xml);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            qWarning() &lt;&lt; <span class="stringliteral">&quot;ignoring&quot;</span> &lt;&lt; xml.name();</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            xml.skipCurrentElement();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div><div class="ttc" id="classSqsListQueuesResponse_html"><div class="ttname"><a href="classSqsListQueuesResponse.html">SqsListQueuesResponse</a></div><div class="ttdoc">Handles SQS ListQueues responses. </div><div class="ttdef"><b>Definition:</b> <a href="sqslistqueuesresponse_8h_source.html#l00030">sqslistqueuesresponse.h:30</a></div></div>

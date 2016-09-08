@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['acmclient',['ACMClient',['../classACMClient.html',1,'']]],
+  ['apigatewayclient',['APIGatewayClient',['../classAPIGatewayClient.html',1,'']]],
+  ['applicationautoscalingclient',['ApplicationAutoScalingClient',['../classApplicationAutoScalingClient.html',1,'']]],
+  ['applicationdiscoveryserviceclient',['ApplicationDiscoveryServiceClient',['../classApplicationDiscoveryServiceClient.html',1,'']]],
+  ['autoscalingclient',['AutoScalingClient',['../classAutoScalingClient.html',1,'']]],
   ['awsabstractclient',['AwsAbstractClient',['../classAwsAbstractClient.html',1,'']]],
   ['awsabstractcredentials',['AwsAbstractCredentials',['../classAwsAbstractCredentials.html',1,'']]],
   ['awsabstractrequest',['AwsAbstractRequest',['../classAwsAbstractRequest.html',1,'']]],
