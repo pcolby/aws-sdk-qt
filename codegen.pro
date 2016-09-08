@@ -13,4 +13,4 @@ else:       QMAKE_CXXFLAGS_WARN_ON += -Werror
 VPATH += qrc src
 HEADERS += generator.h
 SOURCES += generator.cpp main.cpp
-RESOURCES += api-descriptions.qrc
+RESOURCES += api-descriptions.qrc templates.qrc

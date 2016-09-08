@@ -25,7 +25,7 @@
 Generator::Generator(const QDir &outputDir)
     : outputDir(outputDir)
 {
-
+    Q_ASSERT(outputDir.exists());
 }
 
 bool Generator::generate(const QString &serviceName,
@@ -35,6 +35,9 @@ bool Generator::generate(const QString &serviceName,
         .value(QLatin1String("metadata")).toObject()
         .value(QLatin1String("endpointPrefix")).toString();
 
+    outputDir.mkdir(serviceName);
+    const QString projectDir = outputDir.absoluteFilePath(serviceName);
+
     /// @todo Generate model classes.
 
     /// @todo Generate request / response classes.
@@ -42,6 +45,37 @@ bool Generator::generate(const QString &serviceName,
     /// @todo Generate service client.
 
     /// @todo Generate ancillary project files.
+    const QString qmakeProjectFile = readAll(QLatin1String(":/templates/service.pro"));
+    /// @todo search and replace tokens.
+    writeAll(QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceName), qmakeProjectFile);
 
+    return true;
+}
+
+QString Generator::readAll(const QString &fileName)
+{
+    QFile file(fileName);
+    if (!file.exists()) {
+        qWarning() << "file does not exist" << fileName;
+        return QString();
+    }
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "failed to open file for reading" << fileName;
+        return QString();
+    }
+    return QString::fromUtf8(file.readAll());
+}
+
+bool Generator::writeAll(const QString &fileName, const QString &content)
+{
+    QFile file(fileName);
+    if (!file.open(QFile::WriteOnly)) {
+        qWarning() << "failed to open file for writing" << fileName;
+        return false;
+    }
+    if (file.write(content.toUtf8()) < 0) {
+        qWarning() << "failed to write to file" << fileName;
+        return false;
+    }
     return true;
 }

@@ -27,6 +27,10 @@ public:
 
     bool generate(const QString &serviceName, const QJsonObject &description);
 
+protected:
+    QString readAll(const QString &fileName);
+    bool writeAll(const QString &fileName, const QString &content);
+
 private:
     QDir outputDir;
 
