@@ -27,6 +27,12 @@
 
 QString getServiceNameFromFileName(const QString &fileName)
 {
+    /// @todo Just for now, put SQS into a different folder so we don't blow
+    /// away our existing SQS client code; this will go away when we're ready.
+    if (fileName.startsWith(QLatin1String("sqs"))) {
+        return QLatin1String("sqs2");
+    }
+
     // <servce-name>-yyyy-mm-dd.normal.json
     Q_ASSERT(fileName.endsWith(QLatin1String(".normal.json")));
     return fileName.left(fileName.size() - 23);
