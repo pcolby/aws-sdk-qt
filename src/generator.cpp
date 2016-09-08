@@ -29,29 +29,52 @@ Generator::Generator(const QDir &outputDir)
     Q_ASSERT(outputDir.exists());
 }
 
-bool Generator::generate(const QString &serviceName,
+bool Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {
-    qDebug() << "generating" << serviceName << description
-        .value(QLatin1String("metadata")).toObject()
-        .value(QLatin1String("endpointPrefix")).toString();
+    qDebug() << "generating" << serviceFileName;
+    outputDir.mkdir(serviceFileName);
+    const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
-    outputDir.mkdir(serviceName);
-    const QString projectDir = outputDir.absoluteFilePath(serviceName);
+    const QJsonObject metaData = description .value(QLatin1String("metadata")).toObject();
+    const QString className = getClassName(metaData) + QLatin1String("Client");
+
+    QMap<QString, QString> tags;
+    tags.insert(QLatin1String("TargetLibName"), serviceFileName);
+    tags.insert(QLatin1String("ClassName"), className);
+    tags.insert(QLatin1String("HeaderName"), className.toLower());
+    tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
 
     /// @todo Generate model classes.
 
     /// @todo Generate request / response classes.
 
     /// @todo Generate service client.
+    replaceTags(tags, QLatin1String(":/templates/client.cpp"),
+                QString::fromLatin1("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
+    replaceTags(tags, QLatin1String(":/templates/client.h"),
+                QString::fromLatin1("%1/%2.h").arg(projectDir).arg(className.toLower()));
+    replaceTags(tags, QLatin1String(":/templates/client_p.h"),
+                QString::fromLatin1("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
 
     /// @todo Generate ancillary project files.
-    QMap<QString, QString> tags;
-    tags.insert(QLatin1String("serviceName"), serviceName);
     replaceTags(tags, QLatin1String(":/templates/service.pro"),
-                QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceName));
+                QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceFileName));
 
     return true;
+}
+
+QString Generator::getClassName(const QJsonObject &metaData)
+{
+    // Replicate what aws-sdk-cpp does; ie use the abbreviated name, if present
+    // otherwise fall back to the full service name.
+    QString className = metaData.value(QLatin1String("serviceAbbreviation")).toString();
+    if (className.isEmpty()) {
+        className = metaData.value(QLatin1String("serviceFullName")).toString();
+    }
+
+    // Trim, the same as aws-sdk-cpp too.
+    return className.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
 }
 
 QString Generator::readAll(const QString &fileName)

@@ -25,9 +25,10 @@ class Generator {
 public:
     Generator(const QDir &outputDir);
 
-    bool generate(const QString &serviceName, const QJsonObject &description);
+    bool generate(const QString &serviceFileName, const QJsonObject &description);
 
 protected:
+    static QString getClassName(const QJsonObject &metaData);
     static QString readAll(const QString &fileName);
     static QString replaceTags(const QMap<QString, QString> &tags,
                                const QString &input);

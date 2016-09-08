@@ -1,4 +1,4 @@
-TARGET = {{ serviceName }}
+TARGET = {{ TargetLibName }}
 TEMPLATE = lib
 QT -= gui
 DEFINES += QTAWS_LIBRARY
