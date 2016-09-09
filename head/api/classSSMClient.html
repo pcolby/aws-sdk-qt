@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SSMClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Amazon Simple Systems Management Service client.  
+ <a href="classSSMClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SSMClient:</div>
 <div class="dyncontent">
@@ -112,10 +115,10 @@ Collaboration diagram for SSMClient:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae87b55c757c03ef5153936dae428a7bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSSMClient.html#ae87b55c757c03ef5153936dae428a7bd">SSMClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ae87b55c757c03ef5153936dae428a7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSSMClient.html">SSMClient</a> object.  <a href="#ae87b55c757c03ef5153936dae428a7bd">More...</a><br /></td></tr>
+<tr class="memdesc:ae87b55c757c03ef5153936dae428a7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSSMClient.html" title="Amazon Simple Systems Management Service client. ">SSMClient</a> object.  <a href="#ae87b55c757c03ef5153936dae428a7bd">More...</a><br /></td></tr>
 <tr class="separator:ae87b55c757c03ef5153936dae428a7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab471c76dcd1d5006643b0454bc2d2b43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSSMClient.html#ab471c76dcd1d5006643b0454bc2d2b43">SSMClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ab471c76dcd1d5006643b0454bc2d2b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSSMClient.html">SSMClient</a> object.  <a href="#ab471c76dcd1d5006643b0454bc2d2b43">More...</a><br /></td></tr>
+<tr class="memdesc:ab471c76dcd1d5006643b0454bc2d2b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classSSMClient.html" title="Amazon Simple Systems Management Service client. ">SSMClient</a> object.  <a href="#ab471c76dcd1d5006643b0454bc2d2b43">More...</a><br /></td></tr>
 <tr class="separator:ab471c76dcd1d5006643b0454bc2d2b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -164,7 +167,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Amazon EC2 Simple Systems Manager (SSM) enables you to remotely manage the configuration of your Amazon EC2 instances, virtual machines (VMs), or servers in your on-premises environment or in an environment provided by other cloud providers using scripts, commands, or the Amazon EC2 console. SSM includes an on-demand solution called <em>Amazon EC2 Run Command</em> and a lightweight instance configuration solution called <em>SSM Config</em>. </p>
+<div class="textblock"><p>Amazon Simple Systems Management Service client. </p>
+<p>Amazon EC2 Simple Systems Manager (SSM) enables you to remotely manage the configuration of your Amazon EC2 instances, virtual machines (VMs), or servers in your on-premises environment or in an environment provided by other cloud providers using scripts, commands, or the Amazon EC2 console. SSM includes an on-demand solution called <em>Amazon EC2 Run Command</em> and a lightweight instance configuration solution called <em>SSM Config</em>. </p>
 <p>This references is intended to be used with the EC2 Run Command User Guide for <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/execute-remote-commands.html">Linux</a> or <a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/execute-remote-commands.html">Windows</a>.</p>
 <p>&lt;note&gt; </p>
 <p>You must register your on-premises servers and VMs through an activation process before you can configure them using Run Command. Registered servers and VMs are called <em>managed instances</em>. For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/managed-instances.html">Setting Up Run Command On Managed Instances (On-Premises Servers and VMs) on Linux</a> or <a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/managed-instances.html">Setting Up Run Command On Managed Instances (On-Premises Servers and VMs) on Windows</a>.</p>
@@ -299,7 +303,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classSSMClient.html">SSMClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classSSMClient.html" title="Amazon Simple Systems Management Service client. ">SSMClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -348,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classSSMClient.html">SSMClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classSSMClient.html" title="Amazon Simple Systems Management Service client. ">SSMClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

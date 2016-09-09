@@ -4,6 +4,6 @@ var searchData=
   ['kinesisanalyticsclientprivate',['KinesisAnalyticsClientPrivate',['../classKinesisAnalyticsClientPrivate.html',1,'']]],
   ['kinesisclient',['KinesisClient',['../classKinesisClient.html',1,'']]],
   ['kinesisclientprivate',['KinesisClientPrivate',['../classKinesisClientPrivate.html',1,'']]],
-  ['kmsclient',['KMSClient',['../classKMSClient.html',1,'']]],
-  ['kmsclientprivate',['KMSClientPrivate',['../classKMSClientPrivate.html',1,'']]]
+  ['kmsclient',['KmsClient',['../classKmsClient.html',1,'']]],
+  ['kmsclientprivate',['KmsClientPrivate',['../classKmsClientPrivate.html',1,'']]]
 ];

@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classCloudFormationClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CloudFormationClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for AWS CloudFormation.  
+ <a href="classCloudFormationClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CloudFormationClient:</div>
 <div class="dyncontent">
@@ -109,13 +113,88 @@ Collaboration diagram for CloudFormationClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a190226adb6656c4c5ec997222bcf2ba6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a190226adb6656c4c5ec997222bcf2ba6"></a>
+CloudFormationCancelUpdateStackResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>cancelUpdateStack</b> (const CloudFormationCancelUpdateStackRequest &amp;request)</td></tr>
+<tr class="separator:a190226adb6656c4c5ec997222bcf2ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1cab0e607ac2c732aa483431621035f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1cab0e607ac2c732aa483431621035f"></a>
+CloudFormationContinueUpdateRollbackResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>continueUpdateRollback</b> (const CloudFormationContinueUpdateRollbackRequest &amp;request)</td></tr>
+<tr class="separator:ac1cab0e607ac2c732aa483431621035f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5baa0b96f4262d91f5ccfd3a169e4a95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5baa0b96f4262d91f5ccfd3a169e4a95"></a>
+CloudFormationCreateChangeSetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createChangeSet</b> (const CloudFormationCreateChangeSetRequest &amp;request)</td></tr>
+<tr class="separator:a5baa0b96f4262d91f5ccfd3a169e4a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86745db157d81854c1c0fd52a4eba12b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86745db157d81854c1c0fd52a4eba12b"></a>
+CloudFormationCreateStackResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createStack</b> (const CloudFormationCreateStackRequest &amp;request)</td></tr>
+<tr class="separator:a86745db157d81854c1c0fd52a4eba12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d7f0a33f2ec13c7ae790f9401eabc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7d7f0a33f2ec13c7ae790f9401eabc6"></a>
+CloudFormationDeleteChangeSetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteChangeSet</b> (const CloudFormationDeleteChangeSetRequest &amp;request)</td></tr>
+<tr class="separator:af7d7f0a33f2ec13c7ae790f9401eabc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893a5b545015e92c11a5f4c29e838017"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a893a5b545015e92c11a5f4c29e838017"></a>
+CloudFormationDeleteStackResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteStack</b> (const CloudFormationDeleteStackRequest &amp;request)</td></tr>
+<tr class="separator:a893a5b545015e92c11a5f4c29e838017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb7d031db6e894bdf4cf833b17a5088"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb7d031db6e894bdf4cf833b17a5088"></a>
+CloudFormationDescribeAccountLimitsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeAccountLimits</b> (const CloudFormationDescribeAccountLimitsRequest &amp;request)</td></tr>
+<tr class="separator:affb7d031db6e894bdf4cf833b17a5088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c65019fd717da7dcf73b28cdcb61cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9c65019fd717da7dcf73b28cdcb61cb"></a>
+CloudFormationDescribeChangeSetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeChangeSet</b> (const CloudFormationDescribeChangeSetRequest &amp;request)</td></tr>
+<tr class="separator:aa9c65019fd717da7dcf73b28cdcb61cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae334fb3f7a06645b2b965a9c619dffe2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae334fb3f7a06645b2b965a9c619dffe2"></a>
+CloudFormationDescribeStackEventsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeStackEvents</b> (const CloudFormationDescribeStackEventsRequest &amp;request)</td></tr>
+<tr class="separator:ae334fb3f7a06645b2b965a9c619dffe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fad7efc78be6d624205b201c66bf4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5fad7efc78be6d624205b201c66bf4c"></a>
+CloudFormationDescribeStackResourceResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeStackResource</b> (const CloudFormationDescribeStackResourceRequest &amp;request)</td></tr>
+<tr class="separator:ae5fad7efc78be6d624205b201c66bf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4db8a46fbd896e190d6b4720539203"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc4db8a46fbd896e190d6b4720539203"></a>
+CloudFormationDescribeStackResourcesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeStackResources</b> (const CloudFormationDescribeStackResourcesRequest &amp;request)</td></tr>
+<tr class="separator:acc4db8a46fbd896e190d6b4720539203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be4c927c583ade049d6b995d93a9686"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7be4c927c583ade049d6b995d93a9686"></a>
+CloudFormationDescribeStacksResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeStacks</b> (const CloudFormationDescribeStacksRequest &amp;request)</td></tr>
+<tr class="separator:a7be4c927c583ade049d6b995d93a9686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2ab306b12b144d97eb1030319a4360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad2ab306b12b144d97eb1030319a4360"></a>
+CloudFormationEstimateTemplateCostResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>estimateTemplateCost</b> (const CloudFormationEstimateTemplateCostRequest &amp;request)</td></tr>
+<tr class="separator:aad2ab306b12b144d97eb1030319a4360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48bd4a2681f5938650f0828f51c3f2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab48bd4a2681f5938650f0828f51c3f2c"></a>
+CloudFormationExecuteChangeSetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>executeChangeSet</b> (const CloudFormationExecuteChangeSetRequest &amp;request)</td></tr>
+<tr class="separator:ab48bd4a2681f5938650f0828f51c3f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fff8cbb9565e0714ae26f1912aec52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fff8cbb9565e0714ae26f1912aec52f"></a>
+CloudFormationGetStackPolicyResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getStackPolicy</b> (const CloudFormationGetStackPolicyRequest &amp;request)</td></tr>
+<tr class="separator:a5fff8cbb9565e0714ae26f1912aec52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3608d8841fb7ff04dd1b8a98c8558db0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3608d8841fb7ff04dd1b8a98c8558db0"></a>
+CloudFormationGetTemplateResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getTemplate</b> (const CloudFormationGetTemplateRequest &amp;request)</td></tr>
+<tr class="separator:a3608d8841fb7ff04dd1b8a98c8558db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdffb8d9db9f9226e726bfbc928fe11f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdffb8d9db9f9226e726bfbc928fe11f"></a>
+CloudFormationGetTemplateSummaryResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getTemplateSummary</b> (const CloudFormationGetTemplateSummaryRequest &amp;request)</td></tr>
+<tr class="separator:abdffb8d9db9f9226e726bfbc928fe11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2603c09176665471c508c565b1a947"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b2603c09176665471c508c565b1a947"></a>
+CloudFormationListChangeSetsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listChangeSets</b> (const CloudFormationListChangeSetsRequest &amp;request)</td></tr>
+<tr class="separator:a9b2603c09176665471c508c565b1a947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75362df927faf048abb68ea5668c4eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75362df927faf048abb68ea5668c4eb1"></a>
+CloudFormationListStackResourcesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listStackResources</b> (const CloudFormationListStackResourcesRequest &amp;request)</td></tr>
+<tr class="separator:a75362df927faf048abb68ea5668c4eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6368ff9d05bbcc857e740b69a4e3bcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6368ff9d05bbcc857e740b69a4e3bcd"></a>
+CloudFormationListStacksResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listStacks</b> (const CloudFormationListStacksRequest &amp;request)</td></tr>
+<tr class="separator:ac6368ff9d05bbcc857e740b69a4e3bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917c08ff3af38911736e896d30593624"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a917c08ff3af38911736e896d30593624"></a>
+CloudFormationSetStackPolicyResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>setStackPolicy</b> (const CloudFormationSetStackPolicyRequest &amp;request)</td></tr>
+<tr class="separator:a917c08ff3af38911736e896d30593624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87781458248ff3e833f05e35347e1257"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87781458248ff3e833f05e35347e1257"></a>
+CloudFormationSignalResourceResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>signalResource</b> (const CloudFormationSignalResourceRequest &amp;request)</td></tr>
+<tr class="separator:a87781458248ff3e833f05e35347e1257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1f21d104ef165fdac0da053d0bba1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e1f21d104ef165fdac0da053d0bba1d"></a>
+CloudFormationUpdateStackResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateStack</b> (const CloudFormationUpdateStackRequest &amp;request)</td></tr>
+<tr class="separator:a5e1f21d104ef165fdac0da053d0bba1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156803f96cf3a9ab57609a2e1e238359"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a156803f96cf3a9ab57609a2e1e238359"></a>
+CloudFormationValidateTemplateResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>validateTemplate</b> (const CloudFormationValidateTemplateRequest &amp;request)</td></tr>
+<tr class="separator:a156803f96cf3a9ab57609a2e1e238359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bafe0264f4120c84a87f3597510b360"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCloudFormationClient.html#a4bafe0264f4120c84a87f3597510b360">CloudFormationClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a4bafe0264f4120c84a87f3597510b360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCloudFormationClient.html">CloudFormationClient</a> object.  <a href="#a4bafe0264f4120c84a87f3597510b360">More...</a><br /></td></tr>
+<tr class="memdesc:a4bafe0264f4120c84a87f3597510b360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCloudFormationClient.html" title="Client for AWS CloudFormation. ">CloudFormationClient</a> object.  <a href="#a4bafe0264f4120c84a87f3597510b360">More...</a><br /></td></tr>
 <tr class="separator:a4bafe0264f4120c84a87f3597510b360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fad3d11263b47bcb7013bbdb55563c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCloudFormationClient.html#a5fad3d11263b47bcb7013bbdb55563c4">CloudFormationClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a5fad3d11263b47bcb7013bbdb55563c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCloudFormationClient.html">CloudFormationClient</a> object.  <a href="#a5fad3d11263b47bcb7013bbdb55563c4">More...</a><br /></td></tr>
+<tr class="memdesc:a5fad3d11263b47bcb7013bbdb55563c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCloudFormationClient.html" title="Client for AWS CloudFormation. ">CloudFormationClient</a> object.  <a href="#a5fad3d11263b47bcb7013bbdb55563c4">More...</a><br /></td></tr>
 <tr class="separator:a5fad3d11263b47bcb7013bbdb55563c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -164,11 +243,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;fullname&gt;AWS CloudFormation&lt;/fullname&gt; </p>
-<p>AWS CloudFormation enables you to create and manage AWS infrastructure deployments predictably and repeatedly. AWS CloudFormation helps you leverage AWS products such as Amazon EC2, EBS, Amazon SNS, ELB, and Auto Scaling to build highly-reliable, highly scalable, cost effective applications without worrying about creating and configuring the underlying AWS infrastructure.</p>
-<p>With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of the stack together and manages all dependencies between the resources for you.</p>
-<p>For more information about this product, go to the <a href="http://aws.amazon.com/cloudformation/">CloudFormation Product Page</a>.</p>
-<p>Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS product, you can find the product's technical documentation at <a href="http://docs.aws.amazon.com/">http://docs.aws.amazon.com/</a>.</p>
+<div class="textblock"><p>Client for AWS CloudFormation. </p>
+<p>&lt;fullname&gt;AWS CloudFormation&lt;/fullname&gt;</p>
+<ul>
+<li>AWS CloudFormation enables you to create and manage AWS infrastructure deployments predictably and repeatedly. AWS CloudFormation helps you leverage AWS products such as Amazon EC2, EBS, Amazon SNS, ELB, and Auto Scaling to build highly-reliable, highly scalable, cost effective applications without worrying about creating and configuring the underlying AWS infrastructure.</li>
+<li>With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member resources of the stack together and manages all dependencies between the resources for you.</li>
+<li>For more information about this product, go to the <a href="http://aws.amazon.com/cloudformation/">CloudFormation Product Page</a>.</li>
+<li>Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific AWS product, you can find the product's technical documentation at <a href="http://docs.aws.amazon.com/">http://docs.aws.amazon.com/</a>. </li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4bafe0264f4120c84a87f3597510b360"></a>
 <div class="memitem">
@@ -206,7 +288,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classCloudFormationClient.html">CloudFormationClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classCloudFormationClient.html" title="Client for AWS CloudFormation. ">CloudFormationClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -255,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classCloudFormationClient.html">CloudFormationClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classCloudFormationClient.html" title="Client for AWS CloudFormation. ">CloudFormationClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

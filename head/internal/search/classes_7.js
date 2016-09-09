@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['iamclient',['IAMClient',['../classIAMClient.html',1,'']]],
-  ['iamclientprivate',['IAMClientPrivate',['../classIAMClientPrivate.html',1,'']]],
+  ['iamclient',['IamClient',['../classIamClient.html',1,'']]],
+  ['iamclientprivate',['IamClientPrivate',['../classIamClientPrivate.html',1,'']]],
   ['importexportclient',['ImportExportClient',['../classImportExportClient.html',1,'']]],
   ['importexportclientprivate',['ImportExportClientPrivate',['../classImportExportClientPrivate.html',1,'']]],
   ['inspectorclient',['InspectorClient',['../classInspectorClient.html',1,'']]],

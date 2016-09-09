@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['acmclient',['ACMClient',['../classACMClient.html',1,'']]],
+  ['acmclient',['AcmClient',['../classAcmClient.html',1,'']]],
   ['apigatewayclient',['APIGatewayClient',['../classAPIGatewayClient.html',1,'']]],
   ['applicationautoscalingclient',['ApplicationAutoScalingClient',['../classApplicationAutoScalingClient.html',1,'']]],
   ['applicationdiscoveryserviceclient',['ApplicationDiscoveryServiceClient',['../classApplicationDiscoveryServiceClient.html',1,'']]],

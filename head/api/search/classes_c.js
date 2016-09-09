@@ -2,17 +2,17 @@ var searchData=
 [
   ['s3client',['S3Client',['../classS3Client.html',1,'']]],
   ['servicecatalogclient',['ServiceCatalogClient',['../classServiceCatalogClient.html',1,'']]],
-  ['sesclient',['SESClient',['../classSESClient.html',1,'']]],
+  ['sesclient',['SesClient',['../classSesClient.html',1,'']]],
   ['simpledbclient',['SimpleDBClient',['../classSimpleDBClient.html',1,'']]],
   ['snowballclient',['SnowballClient',['../classSnowballClient.html',1,'']]],
-  ['snsclient',['SNSClient',['../classSNSClient.html',1,'']]],
+  ['snsclient',['SnsClient',['../classSnsClient.html',1,'']]],
   ['sqsaddpermissionrequest',['SqsAddPermissionRequest',['../classSqsAddPermissionRequest.html',1,'']]],
   ['sqsaddpermissionresponse',['SqsAddPermissionResponse',['../classSqsAddPermissionResponse.html',1,'']]],
   ['sqschangemessagevisibilitybatchrequest',['SqsChangeMessageVisibilityBatchRequest',['../classSqsChangeMessageVisibilityBatchRequest.html',1,'']]],
   ['sqschangemessagevisibilitybatchresponse',['SqsChangeMessageVisibilityBatchResponse',['../classSqsChangeMessageVisibilityBatchResponse.html',1,'']]],
   ['sqschangemessagevisibilityrequest',['SqsChangeMessageVisibilityRequest',['../classSqsChangeMessageVisibilityRequest.html',1,'']]],
   ['sqschangemessagevisibilityresponse',['SqsChangeMessageVisibilityResponse',['../classSqsChangeMessageVisibilityResponse.html',1,'']]],
-  ['sqsclient',['SqsClient',['../classSqsClient.html',1,'SqsClient'],['../classSQSClient.html',1,'SQSClient']]],
+  ['sqsclient',['SqsClient',['../classSqsClient.html',1,'']]],
   ['sqscreatequeuerequest',['SqsCreateQueueRequest',['../classSqsCreateQueueRequest.html',1,'']]],
   ['sqscreatequeueresponse',['SqsCreateQueueResponse',['../classSqsCreateQueueResponse.html',1,'']]],
   ['sqsdeletemessagebatchrequest',['SqsDeleteMessageBatchRequest',['../classSqsDeleteMessageBatchRequest.html',1,'']]],
@@ -44,9 +44,9 @@ var searchData=
   ['sqssendmessageresponse',['SqsSendMessageResponse',['../classSqsSendMessageResponse.html',1,'']]],
   ['sqssetqueueattributesrequest',['SqsSetQueueAttributesRequest',['../classSqsSetQueueAttributesRequest.html',1,'']]],
   ['sqssetqueueattributesresponse',['SqsSetQueueAttributesResponse',['../classSqsSetQueueAttributesResponse.html',1,'']]],
-  ['ssmclient',['SSMClient',['../classSSMClient.html',1,'']]],
+  ['ssmclient',['SsmClient',['../classSsmClient.html',1,'']]],
   ['storagegatewayclient',['StorageGatewayClient',['../classStorageGatewayClient.html',1,'']]],
-  ['stsclient',['STSClient',['../classSTSClient.html',1,'']]],
+  ['stsclient',['StsClient',['../classStsClient.html',1,'']]],
   ['supportclient',['SupportClient',['../classSupportClient.html',1,'']]],
-  ['swfclient',['SWFClient',['../classSWFClient.html',1,'']]]
+  ['swfclient',['SwfClient',['../classSwfClient.html',1,'']]]
 ];

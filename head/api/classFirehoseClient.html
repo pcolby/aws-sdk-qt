@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classFirehoseClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">FirehoseClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for Amazon Kinesis Firehose.  
+ <a href="classFirehoseClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FirehoseClient:</div>
 <div class="dyncontent">
@@ -109,13 +113,37 @@ Collaboration diagram for FirehoseClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a75c8400fdc2b38a8c0b6df625e36b13b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75c8400fdc2b38a8c0b6df625e36b13b"></a>
+FirehoseCreateDeliveryStreamResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createDeliveryStream</b> (const FirehoseCreateDeliveryStreamRequest &amp;request)</td></tr>
+<tr class="separator:a75c8400fdc2b38a8c0b6df625e36b13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571ac0d5bfd837cb439595d4b7b202ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a571ac0d5bfd837cb439595d4b7b202ef"></a>
+FirehoseDeleteDeliveryStreamResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteDeliveryStream</b> (const FirehoseDeleteDeliveryStreamRequest &amp;request)</td></tr>
+<tr class="separator:a571ac0d5bfd837cb439595d4b7b202ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf46e870e844f907b08ba1861aa8b788"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf46e870e844f907b08ba1861aa8b788"></a>
+FirehoseDescribeDeliveryStreamResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeDeliveryStream</b> (const FirehoseDescribeDeliveryStreamRequest &amp;request)</td></tr>
+<tr class="separator:aaf46e870e844f907b08ba1861aa8b788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25c91c3b9cf1925ae837b2e3cb007d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad25c91c3b9cf1925ae837b2e3cb007d0"></a>
+FirehoseListDeliveryStreamsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listDeliveryStreams</b> (const FirehoseListDeliveryStreamsRequest &amp;request)</td></tr>
+<tr class="separator:ad25c91c3b9cf1925ae837b2e3cb007d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d8cdef9350f52bd031973e05a6f875"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24d8cdef9350f52bd031973e05a6f875"></a>
+FirehosePutRecordResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>putRecord</b> (const FirehosePutRecordRequest &amp;request)</td></tr>
+<tr class="separator:a24d8cdef9350f52bd031973e05a6f875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7023cef0adae3272d907aa07ecea8a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7023cef0adae3272d907aa07ecea8a7"></a>
+FirehosePutRecordBatchResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>putRecordBatch</b> (const FirehosePutRecordBatchRequest &amp;request)</td></tr>
+<tr class="separator:af7023cef0adae3272d907aa07ecea8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0503797bd2f711980629b92d5a0f5e57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0503797bd2f711980629b92d5a0f5e57"></a>
+FirehoseUpdateDestinationResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateDestination</b> (const FirehoseUpdateDestinationRequest &amp;request)</td></tr>
+<tr class="separator:a0503797bd2f711980629b92d5a0f5e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8826a8c06e878562a0061c2e9adde65e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFirehoseClient.html#a8826a8c06e878562a0061c2e9adde65e">FirehoseClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a8826a8c06e878562a0061c2e9adde65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classFirehoseClient.html">FirehoseClient</a> object.  <a href="#a8826a8c06e878562a0061c2e9adde65e">More...</a><br /></td></tr>
+<tr class="memdesc:a8826a8c06e878562a0061c2e9adde65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classFirehoseClient.html" title="Client for Amazon Kinesis Firehose. ">FirehoseClient</a> object.  <a href="#a8826a8c06e878562a0061c2e9adde65e">More...</a><br /></td></tr>
 <tr class="separator:a8826a8c06e878562a0061c2e9adde65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d66b46e8f98cba375f2695e4723b9b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFirehoseClient.html#a5d66b46e8f98cba375f2695e4723b9b9">FirehoseClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a5d66b46e8f98cba375f2695e4723b9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classFirehoseClient.html">FirehoseClient</a> object.  <a href="#a5d66b46e8f98cba375f2695e4723b9b9">More...</a><br /></td></tr>
+<tr class="memdesc:a5d66b46e8f98cba375f2695e4723b9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classFirehoseClient.html" title="Client for Amazon Kinesis Firehose. ">FirehoseClient</a> object.  <a href="#a5d66b46e8f98cba375f2695e4723b9b9">More...</a><br /></td></tr>
 <tr class="separator:a5d66b46e8f98cba375f2695e4723b9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -164,8 +192,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;fullname&gt;Amazon Kinesis Firehose API Reference&lt;/fullname&gt; </p>
-<p>Amazon Kinesis Firehose is a fully-managed service that delivers real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon Redshift.</p>
+<div class="textblock"><p>Client for Amazon Kinesis Firehose. </p>
+<p>&lt;fullname&gt;Amazon Kinesis Firehose API Reference&lt;/fullname&gt;</p>
+<ul>
+<li>Amazon Kinesis Firehose is a fully-managed service that delivers real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), and Amazon Redshift. </li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8826a8c06e878562a0061c2e9adde65e"></a>
 <div class="memitem">
@@ -203,7 +234,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classFirehoseClient.html">FirehoseClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classFirehoseClient.html" title="Client for Amazon Kinesis Firehose. ">FirehoseClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -252,7 +283,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classFirehoseClient.html">FirehoseClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classFirehoseClient.html" title="Client for Amazon Kinesis Firehose. ">FirehoseClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

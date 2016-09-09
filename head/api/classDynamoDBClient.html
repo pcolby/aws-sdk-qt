@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classDynamoDBClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DynamoDBClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for Amazon DynamoDB.  
+ <a href="classDynamoDBClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for DynamoDBClient:</div>
 <div class="dyncontent">
@@ -109,13 +113,58 @@ Collaboration diagram for DynamoDBClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a6d191b37e865c4edd6c6a5928be6b131"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d191b37e865c4edd6c6a5928be6b131"></a>
+DynamoDBBatchGetItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>batchGetItem</b> (const DynamoDBBatchGetItemRequest &amp;request)</td></tr>
+<tr class="separator:a6d191b37e865c4edd6c6a5928be6b131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a136caed994503b36119c881f53d3a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a136caed994503b36119c881f53d3a4"></a>
+DynamoDBBatchWriteItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>batchWriteItem</b> (const DynamoDBBatchWriteItemRequest &amp;request)</td></tr>
+<tr class="separator:a1a136caed994503b36119c881f53d3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acf2eabc327eb36022979a7793cf511"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4acf2eabc327eb36022979a7793cf511"></a>
+DynamoDBCreateTableResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createTable</b> (const DynamoDBCreateTableRequest &amp;request)</td></tr>
+<tr class="separator:a4acf2eabc327eb36022979a7793cf511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728de494f57a095a208cfcf35459e861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728de494f57a095a208cfcf35459e861"></a>
+DynamoDBDeleteItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteItem</b> (const DynamoDBDeleteItemRequest &amp;request)</td></tr>
+<tr class="separator:a728de494f57a095a208cfcf35459e861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfad08740182bd283495eb71e5dbcf11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfad08740182bd283495eb71e5dbcf11"></a>
+DynamoDBDeleteTableResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteTable</b> (const DynamoDBDeleteTableRequest &amp;request)</td></tr>
+<tr class="separator:acfad08740182bd283495eb71e5dbcf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fc0f2e9acbb6f7735145804e2ff10a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73fc0f2e9acbb6f7735145804e2ff10a"></a>
+DynamoDBDescribeLimitsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeLimits</b> (const DynamoDBDescribeLimitsRequest &amp;request)</td></tr>
+<tr class="separator:a73fc0f2e9acbb6f7735145804e2ff10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa471c893f4f1c5b52c2d4f3cacd5c9ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa471c893f4f1c5b52c2d4f3cacd5c9ef"></a>
+DynamoDBDescribeTableResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeTable</b> (const DynamoDBDescribeTableRequest &amp;request)</td></tr>
+<tr class="separator:aa471c893f4f1c5b52c2d4f3cacd5c9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3f4ab015b82161bd7f9f0788ecc12b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c3f4ab015b82161bd7f9f0788ecc12b"></a>
+DynamoDBGetItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getItem</b> (const DynamoDBGetItemRequest &amp;request)</td></tr>
+<tr class="separator:a6c3f4ab015b82161bd7f9f0788ecc12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad644c2331c3822687acc9d6212764f28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad644c2331c3822687acc9d6212764f28"></a>
+DynamoDBListTablesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listTables</b> (const DynamoDBListTablesRequest &amp;request)</td></tr>
+<tr class="separator:ad644c2331c3822687acc9d6212764f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179090a9d46632fdf95090e51e251151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a179090a9d46632fdf95090e51e251151"></a>
+DynamoDBPutItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>putItem</b> (const DynamoDBPutItemRequest &amp;request)</td></tr>
+<tr class="separator:a179090a9d46632fdf95090e51e251151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac261ab47fdb35047879b2a5b6c005432"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac261ab47fdb35047879b2a5b6c005432"></a>
+DynamoDBQueryResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>query</b> (const DynamoDBQueryRequest &amp;request)</td></tr>
+<tr class="separator:ac261ab47fdb35047879b2a5b6c005432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a5e91b8fb0d632b52f5fa0d6afd651"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a5e91b8fb0d632b52f5fa0d6afd651"></a>
+DynamoDBScanResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>scan</b> (const DynamoDBScanRequest &amp;request)</td></tr>
+<tr class="separator:a08a5e91b8fb0d632b52f5fa0d6afd651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece9dced09001c9106bd0450e9e15b45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece9dced09001c9106bd0450e9e15b45"></a>
+DynamoDBUpdateItemResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateItem</b> (const DynamoDBUpdateItemRequest &amp;request)</td></tr>
+<tr class="separator:aece9dced09001c9106bd0450e9e15b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5089e848651019973e1afdcbeae2b44e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5089e848651019973e1afdcbeae2b44e"></a>
+DynamoDBUpdateTableResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateTable</b> (const DynamoDBUpdateTableRequest &amp;request)</td></tr>
+<tr class="separator:a5089e848651019973e1afdcbeae2b44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1786b9a898ffc50df57bb1c16d979c5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamoDBClient.html#a1786b9a898ffc50df57bb1c16d979c5c">DynamoDBClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a1786b9a898ffc50df57bb1c16d979c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classDynamoDBClient.html">DynamoDBClient</a> object.  <a href="#a1786b9a898ffc50df57bb1c16d979c5c">More...</a><br /></td></tr>
+<tr class="memdesc:a1786b9a898ffc50df57bb1c16d979c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classDynamoDBClient.html" title="Client for Amazon DynamoDB. ">DynamoDBClient</a> object.  <a href="#a1786b9a898ffc50df57bb1c16d979c5c">More...</a><br /></td></tr>
 <tr class="separator:a1786b9a898ffc50df57bb1c16d979c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0d149930b9161d8636359b57f7c0e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDynamoDBClient.html#aec0d149930b9161d8636359b57f7c0e7">DynamoDBClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:aec0d149930b9161d8636359b57f7c0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classDynamoDBClient.html">DynamoDBClient</a> object.  <a href="#aec0d149930b9161d8636359b57f7c0e7">More...</a><br /></td></tr>
+<tr class="memdesc:aec0d149930b9161d8636359b57f7c0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classDynamoDBClient.html" title="Client for Amazon DynamoDB. ">DynamoDBClient</a> object.  <a href="#aec0d149930b9161d8636359b57f7c0e7">More...</a><br /></td></tr>
 <tr class="separator:aec0d149930b9161d8636359b57f7c0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -164,106 +213,73 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;fullname&gt;Amazon DynamoDB&lt;/fullname&gt; </p>
-<p>This is the Amazon DynamoDB API Reference. This guide provides descriptions of the low-level DynamoDB API.</p>
-<p>This guide is intended for use with the following DynamoDB documentation:</p>
+<div class="textblock"><p>Client for Amazon DynamoDB. </p>
+<p>&lt;fullname&gt;Amazon DynamoDB&lt;/fullname&gt;</p>
 <ul>
+<li>This is the Amazon DynamoDB API Reference. This guide provides descriptions of the low-level DynamoDB API.</li>
+<li>This guide is intended for use with the following DynamoDB documentation:</li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p><a href="http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/">Amazon DynamoDB Getting Started Guide</a> - provides hands-on exercises that help you learn the basics of working with DynamoDB. <em>If you are new to DynamoDB, we recommend that you begin with the Getting Started Guide.</em> </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a> - contains detailed information about DynamoDB concepts, usage, and best practices.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><a href="http://docs.aws.amazon.com/dynamodbstreams/latest/APIReference/">Amazon DynamoDB Streams API Reference</a> - provides descriptions and samples of the DynamoDB Streams API. (For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with DynamoDB Streams</a> in the Amazon DynamoDB Developer Guide.)</p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>Instead of making the requests to the low-level DynamoDB API directly from your application, we recommend that you use the AWS Software Development Kits (SDKs). The easy-to-use libraries in the AWS SDKs make it unnecessary to call the low-level DynamoDB API directly from your application. The libraries take care of request authentication, serialization, and connection management. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/UsingAWSSDK.html">Using the AWS SDKs with DynamoDB</a> in the Amazon DynamoDB Developer Guide.</p>
-<p>If you decide to code against the low-level DynamoDB API directly, you will need to write the necessary code to authenticate your requests. For more information on signing your requests, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/API.html">Using the DynamoDB API</a> in the <em>Amazon DynamoDB Developer Guide</em>.</p>
-<p>The following are short descriptions of each low-level API action, organized by function.</p>
-<p><b>Managing Tables</b> </p>
-<ul>
-<li>
-<p class="startli"></p>
-<p><em>CreateTable</em> - Creates a table with user-specified provisioned throughput settings. You must define a primary key for the table - either a simple primary key (partition key), or a composite primary key (partition key and sort key). Optionally, you can create one or more secondary indexes, which provide fast data access using non-key attributes.</p>
-<p class="endli"></p>
 </li>
+<li><a href="http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/">Amazon DynamoDB Getting Started Guide</a> - provides hands-on exercises that help you learn the basics of working with DynamoDB. <em>If you are new to DynamoDB, we recommend that you begin with the Getting Started Guide.</em></li>
+<li></li>
+<li><a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a> - contains detailed information about DynamoDB concepts, usage, and best practices.</li>
+<li></li>
+<li><a href="http://docs.aws.amazon.com/dynamodbstreams/latest/APIReference/">Amazon DynamoDB Streams API Reference</a> - provides descriptions and samples of the DynamoDB Streams API. (For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with DynamoDB Streams</a> in the Amazon DynamoDB Developer Guide.)</li>
+<li></li>
+<li>Instead of making the requests to the low-level DynamoDB API directly from your application, we recommend that you use the AWS Software Development Kits (SDKs). The easy-to-use libraries in the AWS SDKs make it unnecessary to call the low-level DynamoDB API directly from your application. The libraries take care of request authentication, serialization, and connection management. For more information, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/UsingAWSSDK.html">Using the AWS SDKs with DynamoDB</a> in the Amazon DynamoDB Developer Guide.</li>
+<li>If you decide to code against the low-level DynamoDB API directly, you will need to write the necessary code to authenticate your requests. For more information on signing your requests, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/API.html">Using the DynamoDB API</a> in the <em>Amazon DynamoDB Developer Guide</em>.</li>
+<li>The following are short descriptions of each low-level API action, organized by function.</li>
+<li><b>Managing Tables</b></li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p><em>DescribeTable</em> - Returns metadata for a table, such as table size, status, and index information.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>UpdateTable</em> - Modifies the provisioned throughput settings for a table. Optionally, you can modify the provisioned throughput settings for global secondary indexes on the table.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>ListTables</em> - Returns a list of all tables associated with the current AWS account and endpoint.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>DeleteTable</em> - Deletes a table and all of its indexes.</p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>For conceptual information about managing tables, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html">Working with Tables</a> in the <em>Amazon DynamoDB Developer Guide</em>.</p>
-<p><b>Reading Data</b> </p>
-<ul>
-<li>
-<p class="startli"></p>
-<p><em>GetItem</em> - Returns a set of attributes for the item that has a given primary key. By default, <em>GetItem</em> performs an eventually consistent read; however, applications can request a strongly consistent read instead.</p>
-<p class="endli"></p>
 </li>
+<li><em>CreateTable</em> - Creates a table with user-specified provisioned throughput settings. You must define a primary key for the table - either a simple primary key (partition key), or a composite primary key (partition key and sort key). Optionally, you can create one or more secondary indexes, which provide fast data access using non-key attributes.</li>
+<li></li>
+<li><em>DescribeTable</em> - Returns metadata for a table, such as table size, status, and index information.</li>
+<li></li>
+<li><em>UpdateTable</em> - Modifies the provisioned throughput settings for a table. Optionally, you can modify the provisioned throughput settings for global secondary indexes on the table.</li>
+<li></li>
+<li><em>ListTables</em> - Returns a list of all tables associated with the current AWS account and endpoint.</li>
+<li></li>
+<li><em>DeleteTable</em> - Deletes a table and all of its indexes.</li>
+<li></li>
+<li>For conceptual information about managing tables, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html">Working with Tables</a> in the <em>Amazon DynamoDB Developer Guide</em>.</li>
+<li><b>Reading Data</b></li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p><em>BatchGetItem</em> - Performs multiple <em>GetItem</em> requests for data items using their primary keys, from one table or multiple tables. The response from <em>BatchGetItem</em> has a size limit of 16 MB and returns a maximum of 100 items. Both eventually consistent and strongly consistent reads can be used.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>Query</em> - Returns one or more items from a table or a secondary index. You must provide a specific value for the partition key. You can narrow the scope of the query using comparison operators against a sort key value, or on the index key. <em>Query</em> supports either eventual or strong consistency. A single response has a size limit of 1 MB.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>Scan</em> - Reads every item in a table; the result set is eventually consistent. You can limit the number of items returned by filtering the data attributes, using conditional expressions. <em>Scan</em> can be used to enable ad-hoc querying of a table against non-key attributes; however, since this is a full table scan without using an index, <em>Scan</em> should not be used for any application query use case that requires predictable performance.</p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>For conceptual information about reading data, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working with Items</a> and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html">Query and Scan Operations</a> in the <em>Amazon DynamoDB Developer Guide</em>.</p>
-<p><b>Modifying Data</b> </p>
-<ul>
-<li>
-<p class="startli"></p>
-<p><em>PutItem</em> - Creates a new item, or replaces an existing item with a new item (including all the attributes). By default, if an item in the table already exists with the same primary key, the new item completely replaces the existing item. You can use conditional operators to replace an item only if its attribute values match certain conditions, or to insert a new item only if that item doesn't already exist.</p>
-<p class="endli"></p>
 </li>
+<li><em>GetItem</em> - Returns a set of attributes for the item that has a given primary key. By default, <em>GetItem</em> performs an eventually consistent read; however, applications can request a strongly consistent read instead.</li>
+<li></li>
+<li><em>BatchGetItem</em> - Performs multiple <em>GetItem</em> requests for data items using their primary keys, from one table or multiple tables. The response from <em>BatchGetItem</em> has a size limit of 16 MB and returns a maximum of 100 items. Both eventually consistent and strongly consistent reads can be used.</li>
+<li></li>
+<li><em>Query</em> - Returns one or more items from a table or a secondary index. You must provide a specific value for the partition key. You can narrow the scope of the query using comparison operators against a sort key value, or on the index key. <em>Query</em> supports either eventual or strong consistency. A single response has a size limit of 1 MB.</li>
+<li></li>
+<li><em>Scan</em> - Reads every item in a table; the result set is eventually consistent. You can limit the number of items returned by filtering the data attributes, using conditional expressions. <em>Scan</em> can be used to enable ad-hoc querying of a table against non-key attributes; however, since this is a full table scan without using an index, <em>Scan</em> should not be used for any application query use case that requires predictable performance.</li>
+<li></li>
+<li>For conceptual information about reading data, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working with Items</a> and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html">Query and Scan Operations</a> in the <em>Amazon DynamoDB Developer Guide</em>.</li>
+<li><b>Modifying Data</b></li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p><em>UpdateItem</em> - Modifies the attributes of an existing item. You can also use conditional operators to perform an update only if the item's attribute values match certain conditions.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>DeleteItem</em> - Deletes an item in a table by primary key. You can use conditional operators to perform a delete an item only if the item's attribute values match certain conditions.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><em>BatchWriteItem</em> - Performs multiple <em>PutItem</em> and <em>DeleteItem</em> requests across multiple tables in a single request. A failure of any request(s) in the batch will not cause the entire <em>BatchWriteItem</em> operation to fail. Supports batches of up to 25 items to put or delete, with a maximum total request size of 16 MB. </p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>For conceptual information about modifying data, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working with Items</a> and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html">Query and Scan Operations</a> in the <em>Amazon DynamoDB Developer Guide</em>.</p>
+</li>
+<li><em>PutItem</em> - Creates a new item, or replaces an existing item with a new item (including all the attributes). By default, if an item in the table already exists with the same primary key, the new item completely replaces the existing item. You can use conditional operators to replace an item only if its attribute values match certain conditions, or to insert a new item only if that item doesn't already exist.</li>
+<li></li>
+<li><em>UpdateItem</em> - Modifies the attributes of an existing item. You can also use conditional operators to perform an update only if the item's attribute values match certain conditions.</li>
+<li></li>
+<li><em>DeleteItem</em> - Deletes an item in a table by primary key. You can use conditional operators to perform a delete an item only if the item's attribute values match certain conditions.</li>
+<li></li>
+<li><em>BatchWriteItem</em> - Performs multiple <em>PutItem</em> and <em>DeleteItem</em> requests across multiple tables in a single request. A failure of any request(s) in the batch will not cause the entire <em>BatchWriteItem</em> operation to fail. Supports batches of up to 25 items to put or delete, with a maximum total request size of 16 MB.</li>
+<li></li>
+<li>For conceptual information about modifying data, see <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working with Items</a> and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html">Query and Scan Operations</a> in the <em>Amazon DynamoDB Developer Guide</em>. </li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1786b9a898ffc50df57bb1c16d979c5c"></a>
 <div class="memitem">
@@ -301,7 +317,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classDynamoDBClient.html">DynamoDBClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classDynamoDBClient.html" title="Client for Amazon DynamoDB. ">DynamoDBClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -350,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classDynamoDBClient.html">DynamoDBClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classDynamoDBClient.html" title="Client for Amazon DynamoDB. ">DynamoDBClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

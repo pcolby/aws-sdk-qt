@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classCodeCommitClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CodeCommitClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for AWS CodeCommit.  
+ <a href="classCodeCommitClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CodeCommitClient:</div>
 <div class="dyncontent">
@@ -109,13 +113,61 @@ Collaboration diagram for CodeCommitClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a9d686e24636ae453a0d49e7febc62af7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d686e24636ae453a0d49e7febc62af7"></a>
+CodeCommitBatchGetRepositoriesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>batchGetRepositories</b> (const CodeCommitBatchGetRepositoriesRequest &amp;request)</td></tr>
+<tr class="separator:a9d686e24636ae453a0d49e7febc62af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5bff6460f4b1fc2439c751d7ab0cfd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5bff6460f4b1fc2439c751d7ab0cfd7"></a>
+CodeCommitCreateBranchResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createBranch</b> (const CodeCommitCreateBranchRequest &amp;request)</td></tr>
+<tr class="separator:ac5bff6460f4b1fc2439c751d7ab0cfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1707f42ff1f6d4bf3c6c4a0c8639224e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1707f42ff1f6d4bf3c6c4a0c8639224e"></a>
+CodeCommitCreateRepositoryResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createRepository</b> (const CodeCommitCreateRepositoryRequest &amp;request)</td></tr>
+<tr class="separator:a1707f42ff1f6d4bf3c6c4a0c8639224e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ccf2b9b3a9df79396915b85553fb33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92ccf2b9b3a9df79396915b85553fb33"></a>
+CodeCommitDeleteRepositoryResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteRepository</b> (const CodeCommitDeleteRepositoryRequest &amp;request)</td></tr>
+<tr class="separator:a92ccf2b9b3a9df79396915b85553fb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f4d2266d58427ca821608d7ef066f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9f4d2266d58427ca821608d7ef066f7"></a>
+CodeCommitGetBranchResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getBranch</b> (const CodeCommitGetBranchRequest &amp;request)</td></tr>
+<tr class="separator:ab9f4d2266d58427ca821608d7ef066f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70c3dd738051dbd33ead12ca3a1b257"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa70c3dd738051dbd33ead12ca3a1b257"></a>
+CodeCommitGetCommitResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getCommit</b> (const CodeCommitGetCommitRequest &amp;request)</td></tr>
+<tr class="separator:aa70c3dd738051dbd33ead12ca3a1b257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e5fa9e3a179b6a16f6a046ed59323f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e5fa9e3a179b6a16f6a046ed59323f2"></a>
+CodeCommitGetRepositoryResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getRepository</b> (const CodeCommitGetRepositoryRequest &amp;request)</td></tr>
+<tr class="separator:a2e5fa9e3a179b6a16f6a046ed59323f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc5fb4f27b317fb5794a182e64253ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdc5fb4f27b317fb5794a182e64253ac"></a>
+CodeCommitGetRepositoryTriggersResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getRepositoryTriggers</b> (const CodeCommitGetRepositoryTriggersRequest &amp;request)</td></tr>
+<tr class="separator:afdc5fb4f27b317fb5794a182e64253ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7b125f6e3234ee915708be7ccbc0df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd7b125f6e3234ee915708be7ccbc0df"></a>
+CodeCommitListBranchesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listBranches</b> (const CodeCommitListBranchesRequest &amp;request)</td></tr>
+<tr class="separator:acd7b125f6e3234ee915708be7ccbc0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65448a90026a26f77c6ed6364d69bf3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65448a90026a26f77c6ed6364d69bf3f"></a>
+CodeCommitListRepositoriesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listRepositories</b> (const CodeCommitListRepositoriesRequest &amp;request)</td></tr>
+<tr class="separator:a65448a90026a26f77c6ed6364d69bf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ffc189d0bc7b301ddc8549816d6fc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54ffc189d0bc7b301ddc8549816d6fc1"></a>
+CodeCommitPutRepositoryTriggersResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>putRepositoryTriggers</b> (const CodeCommitPutRepositoryTriggersRequest &amp;request)</td></tr>
+<tr class="separator:a54ffc189d0bc7b301ddc8549816d6fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9eb53f28adda3fa7672bf19df611b11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9eb53f28adda3fa7672bf19df611b11"></a>
+CodeCommitTestRepositoryTriggersResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>testRepositoryTriggers</b> (const CodeCommitTestRepositoryTriggersRequest &amp;request)</td></tr>
+<tr class="separator:aa9eb53f28adda3fa7672bf19df611b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a98fca3bcbec3c1fe96ed8cbff3f6e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a98fca3bcbec3c1fe96ed8cbff3f6e0"></a>
+CodeCommitUpdateDefaultBranchResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateDefaultBranch</b> (const CodeCommitUpdateDefaultBranchRequest &amp;request)</td></tr>
+<tr class="separator:a3a98fca3bcbec3c1fe96ed8cbff3f6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c40a764d2adba1c849af6e284727cf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c40a764d2adba1c849af6e284727cf9"></a>
+CodeCommitUpdateRepositoryDescriptionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateRepositoryDescription</b> (const CodeCommitUpdateRepositoryDescriptionRequest &amp;request)</td></tr>
+<tr class="separator:a4c40a764d2adba1c849af6e284727cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279614a504141849ce0354c448b7120e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a279614a504141849ce0354c448b7120e"></a>
+CodeCommitUpdateRepositoryNameResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateRepositoryName</b> (const CodeCommitUpdateRepositoryNameRequest &amp;request)</td></tr>
+<tr class="separator:a279614a504141849ce0354c448b7120e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4470ebd2101ca606cb399e212f622f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeCommitClient.html#ae4470ebd2101ca606cb399e212f622f4">CodeCommitClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ae4470ebd2101ca606cb399e212f622f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCodeCommitClient.html">CodeCommitClient</a> object.  <a href="#ae4470ebd2101ca606cb399e212f622f4">More...</a><br /></td></tr>
+<tr class="memdesc:ae4470ebd2101ca606cb399e212f622f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCodeCommitClient.html" title="Client for AWS CodeCommit. ">CodeCommitClient</a> object.  <a href="#ae4470ebd2101ca606cb399e212f622f4">More...</a><br /></td></tr>
 <tr class="separator:ae4470ebd2101ca606cb399e212f622f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e6be717960c8c50a09e30282b05981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCodeCommitClient.html#ad0e6be717960c8c50a09e30282b05981">CodeCommitClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:ad0e6be717960c8c50a09e30282b05981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCodeCommitClient.html">CodeCommitClient</a> object.  <a href="#ad0e6be717960c8c50a09e30282b05981">More...</a><br /></td></tr>
+<tr class="memdesc:ad0e6be717960c8c50a09e30282b05981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classCodeCommitClient.html" title="Client for AWS CodeCommit. ">CodeCommitClient</a> object.  <a href="#ad0e6be717960c8c50a09e30282b05981">More...</a><br /></td></tr>
 <tr class="separator:ad0e6be717960c8c50a09e30282b05981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -164,10 +216,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a102e5e03d1339a8e0483f6d146bfc360 inherit pro_methods_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;fullname&gt;AWS CodeCommit&lt;/fullname&gt; </p>
-<p>This is the <em>AWS CodeCommit API Reference</em>. This reference provides descriptions of the operations and data types for AWS CodeCommit API.</p>
-<p>You can use the AWS CodeCommit API to work with the following objects:</p>
+<div class="textblock"><p>Client for AWS CodeCommit. </p>
+<p>&lt;fullname&gt;AWS CodeCommit&lt;/fullname&gt;</p>
 <ul>
+<li>This is the <em>AWS CodeCommit API Reference</em>. This reference provides descriptions of the operations and data types for AWS CodeCommit API.</li>
+<li>You can use the AWS CodeCommit API to work with the following objects:</li>
+<li><ul>
 <li>
 Repositories, by calling the following: <ul>
 <li>
@@ -215,7 +269,9 @@ TestRepositoryTriggers, which tests the functionality of a repository trigger by
 </ul>
 </li>
 </ul>
-<p>For information about how to use AWS CodeCommit, see the <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS CodeCommit User Guide</a>.</p>
+</li>
+<li>For information about how to use AWS CodeCommit, see the <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS CodeCommit User Guide</a>. </li>
+</ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae4470ebd2101ca606cb399e212f622f4"></a>
 <div class="memitem">
@@ -253,7 +309,7 @@ TestRepositoryTriggers, which tests the functionality of a repository trigger by
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classCodeCommitClient.html">CodeCommitClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classCodeCommitClient.html" title="Client for AWS CodeCommit. ">CodeCommitClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -302,7 +358,7 @@ TestRepositoryTriggers, which tests the functionality of a repository trigger by
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classCodeCommitClient.html">CodeCommitClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classCodeCommitClient.html" title="Client for AWS CodeCommit. ">CodeCommitClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

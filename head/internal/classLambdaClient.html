@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classLambdaClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LambdaClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for AWS Lambda.  
+ <a href="classLambdaClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for LambdaClient:</div>
 <div class="dyncontent">
@@ -114,13 +118,88 @@ Collaboration diagram for LambdaClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a4fef907c481f043dc7297040143c18b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fef907c481f043dc7297040143c18b8"></a>
+LambdaAddPermissionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>addPermission</b> (const LambdaAddPermissionRequest &amp;request)</td></tr>
+<tr class="separator:a4fef907c481f043dc7297040143c18b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4128b9004bba95a83a6c892d553513bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4128b9004bba95a83a6c892d553513bb"></a>
+LambdaCreateAliasResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createAlias</b> (const LambdaCreateAliasRequest &amp;request)</td></tr>
+<tr class="separator:a4128b9004bba95a83a6c892d553513bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a43174cfffc9e0e7e13ff65278866d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88a43174cfffc9e0e7e13ff65278866d"></a>
+LambdaCreateEventSourceMappingResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createEventSourceMapping</b> (const LambdaCreateEventSourceMappingRequest &amp;request)</td></tr>
+<tr class="separator:a88a43174cfffc9e0e7e13ff65278866d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efa1970b26278af95bac402dab62b16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5efa1970b26278af95bac402dab62b16"></a>
+LambdaCreateFunctionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>createFunction</b> (const LambdaCreateFunctionRequest &amp;request)</td></tr>
+<tr class="separator:a5efa1970b26278af95bac402dab62b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6617c94e4ffa76bf9ab4b1ac11c10822"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6617c94e4ffa76bf9ab4b1ac11c10822"></a>
+LambdaDeleteAliasResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteAlias</b> (const LambdaDeleteAliasRequest &amp;request)</td></tr>
+<tr class="separator:a6617c94e4ffa76bf9ab4b1ac11c10822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2442225e7c6d09f14661c9d0b4282698"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2442225e7c6d09f14661c9d0b4282698"></a>
+LambdaDeleteEventSourceMappingResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteEventSourceMapping</b> (const LambdaDeleteEventSourceMappingRequest &amp;request)</td></tr>
+<tr class="separator:a2442225e7c6d09f14661c9d0b4282698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3544ebdebfc399763a047c60fdb91167"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3544ebdebfc399763a047c60fdb91167"></a>
+LambdaDeleteFunctionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteFunction</b> (const LambdaDeleteFunctionRequest &amp;request)</td></tr>
+<tr class="separator:a3544ebdebfc399763a047c60fdb91167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe0cb339941cfaed9f03077fbf478bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fe0cb339941cfaed9f03077fbf478bc"></a>
+LambdaGetAliasResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getAlias</b> (const LambdaGetAliasRequest &amp;request)</td></tr>
+<tr class="separator:a0fe0cb339941cfaed9f03077fbf478bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3aaa814882b9b53cd39548050ebe3a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3aaa814882b9b53cd39548050ebe3a6"></a>
+LambdaGetEventSourceMappingResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getEventSourceMapping</b> (const LambdaGetEventSourceMappingRequest &amp;request)</td></tr>
+<tr class="separator:ac3aaa814882b9b53cd39548050ebe3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3472e18afe5b6ec2a564f3260669e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb3472e18afe5b6ec2a564f3260669e6"></a>
+LambdaGetFunctionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getFunction</b> (const LambdaGetFunctionRequest &amp;request)</td></tr>
+<tr class="separator:adb3472e18afe5b6ec2a564f3260669e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9168d33cda7f24b53ab51459ab798009"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9168d33cda7f24b53ab51459ab798009"></a>
+LambdaGetFunctionConfigurationResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getFunctionConfiguration</b> (const LambdaGetFunctionConfigurationRequest &amp;request)</td></tr>
+<tr class="separator:a9168d33cda7f24b53ab51459ab798009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6010a52689b2e0f1229feff4bdfb007b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6010a52689b2e0f1229feff4bdfb007b"></a>
+LambdaGetPolicyResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>getPolicy</b> (const LambdaGetPolicyRequest &amp;request)</td></tr>
+<tr class="separator:a6010a52689b2e0f1229feff4bdfb007b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b56541f996e7ab62988f32998581a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74b56541f996e7ab62988f32998581a0"></a>
+LambdaInvokeResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>invoke</b> (const LambdaInvokeRequest &amp;request)</td></tr>
+<tr class="separator:a74b56541f996e7ab62988f32998581a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69072735fd3fb2cef7e9087caa8815f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69072735fd3fb2cef7e9087caa8815f3"></a>
+LambdaInvokeAsyncResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>invokeAsync</b> (const LambdaInvokeAsyncRequest &amp;request)</td></tr>
+<tr class="separator:a69072735fd3fb2cef7e9087caa8815f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af59275f8d8dcf73aa8aaa73b7cb57502"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af59275f8d8dcf73aa8aaa73b7cb57502"></a>
+LambdaListAliasesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listAliases</b> (const LambdaListAliasesRequest &amp;request)</td></tr>
+<tr class="separator:af59275f8d8dcf73aa8aaa73b7cb57502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a7caf081ec5e2d0d8b0613f63eb625"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8a7caf081ec5e2d0d8b0613f63eb625"></a>
+LambdaListEventSourceMappingsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listEventSourceMappings</b> (const LambdaListEventSourceMappingsRequest &amp;request)</td></tr>
+<tr class="separator:ad8a7caf081ec5e2d0d8b0613f63eb625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75285124141ced1b95e8e45f817fd9ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75285124141ced1b95e8e45f817fd9ef"></a>
+LambdaListFunctionsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listFunctions</b> (const LambdaListFunctionsRequest &amp;request)</td></tr>
+<tr class="separator:a75285124141ced1b95e8e45f817fd9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac598e06f5e32e299f6d9ba6dc14c9145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac598e06f5e32e299f6d9ba6dc14c9145"></a>
+LambdaListVersionsByFunctionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>listVersionsByFunction</b> (const LambdaListVersionsByFunctionRequest &amp;request)</td></tr>
+<tr class="separator:ac598e06f5e32e299f6d9ba6dc14c9145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9ecac1e1ccba0ce958931e4932d441"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab9ecac1e1ccba0ce958931e4932d441"></a>
+LambdaPublishVersionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>publishVersion</b> (const LambdaPublishVersionRequest &amp;request)</td></tr>
+<tr class="separator:aab9ecac1e1ccba0ce958931e4932d441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0788f0cb9dc99fbccee56082a37446d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0788f0cb9dc99fbccee56082a37446d"></a>
+LambdaRemovePermissionResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>removePermission</b> (const LambdaRemovePermissionRequest &amp;request)</td></tr>
+<tr class="separator:af0788f0cb9dc99fbccee56082a37446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b2f57fcdd893edda965c2310a24476"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2b2f57fcdd893edda965c2310a24476"></a>
+LambdaUpdateAliasResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateAlias</b> (const LambdaUpdateAliasRequest &amp;request)</td></tr>
+<tr class="separator:ab2b2f57fcdd893edda965c2310a24476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf08d27e3aca02432d712fe4bbf5f7e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf08d27e3aca02432d712fe4bbf5f7e4"></a>
+LambdaUpdateEventSourceMappingResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateEventSourceMapping</b> (const LambdaUpdateEventSourceMappingRequest &amp;request)</td></tr>
+<tr class="separator:acf08d27e3aca02432d712fe4bbf5f7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ec39bd7f2e0646c782f10a085f349c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29ec39bd7f2e0646c782f10a085f349c"></a>
+LambdaUpdateFunctionCodeResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateFunctionCode</b> (const LambdaUpdateFunctionCodeRequest &amp;request)</td></tr>
+<tr class="separator:a29ec39bd7f2e0646c782f10a085f349c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5967e8bb9f1007306d24bc09dba26b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5967e8bb9f1007306d24bc09dba26b4"></a>
+LambdaUpdateFunctionConfigurationResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>updateFunctionConfiguration</b> (const LambdaUpdateFunctionConfigurationRequest &amp;request)</td></tr>
+<tr class="separator:aa5967e8bb9f1007306d24bc09dba26b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d4d5a7cda387d597d30c4872f902fc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLambdaClient.html#a8d4d5a7cda387d597d30c4872f902fc3">LambdaClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:a8d4d5a7cda387d597d30c4872f902fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classLambdaClient.html">LambdaClient</a> object.  <a href="#a8d4d5a7cda387d597d30c4872f902fc3">More...</a><br /></td></tr>
+<tr class="memdesc:a8d4d5a7cda387d597d30c4872f902fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classLambdaClient.html" title="Client for AWS Lambda. ">LambdaClient</a> object.  <a href="#a8d4d5a7cda387d597d30c4872f902fc3">More...</a><br /></td></tr>
 <tr class="separator:a8d4d5a7cda387d597d30c4872f902fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ab5935c79926c432f0bdf28dddc24d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLambdaClient.html#aa6ab5935c79926c432f0bdf28dddc24d">LambdaClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:aa6ab5935c79926c432f0bdf28dddc24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classLambdaClient.html">LambdaClient</a> object.  <a href="#aa6ab5935c79926c432f0bdf28dddc24d">More...</a><br /></td></tr>
+<tr class="memdesc:aa6ab5935c79926c432f0bdf28dddc24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classLambdaClient.html" title="Client for AWS Lambda. ">LambdaClient</a> object.  <a href="#aa6ab5935c79926c432f0bdf28dddc24d">More...</a><br /></td></tr>
 <tr class="separator:aa6ab5935c79926c432f0bdf28dddc24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -177,9 +256,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac92df733e1ee5b1233b4349893b5cd68 inherit pro_attribs_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>&lt;fullname&gt;AWS Lambda&lt;/fullname&gt; </p>
-<p><b>Overview</b> </p>
-<p>This is the <em>AWS Lambda API Reference</em>. The AWS Lambda Developer Guide provides additional information. For the service overview, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for information about how the service works, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <em>AWS Lambda Developer Guide</em>.</p>
+<div class="textblock"><p>Client for AWS Lambda. </p>
+<p>&lt;fullname&gt;AWS Lambda&lt;/fullname&gt;</p>
+<ul>
+<li><b>Overview</b></li>
+<li>This is the <em>AWS Lambda API Reference</em>. The AWS Lambda Developer Guide provides additional information. For the service overview, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for information about how the service works, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <em>AWS Lambda Developer Guide</em>. </li>
+</ul>
 
 <p>Definition at line <a class="el" href="lambdaclient_8h_source.html#l00033">33</a> of file <a class="el" href="lambdaclient_8h_source.html">lambdaclient.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -219,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classLambdaClient.html">LambdaClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classLambdaClient.html" title="Client for AWS Lambda. ">LambdaClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -230,10 +312,10 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="lambdaclient_8cpp_source.html#l00044">44</a> of file <a class="el" href="lambdaclient_8cpp_source.html">lambdaclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lambdaclient_8cpp_source.html#l00050">50</a> of file <a class="el" href="lambdaclient_8cpp_source.html">lambdaclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00121">AwsAbstractClient::region()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classLambdaClientPrivate.html">LambdaClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Q_D(<a class="code" href="classLambdaClient.html">LambdaClient</a>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="classLambdaClient_html"><div class="ttname"><a href="classLambdaClient.html">LambdaClient</a></div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient_8h_source.html#l00033">lambdaclient.h:33</a></div></div>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classLambdaClientPrivate.html">LambdaClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    Q_D(<a class="code" href="classLambdaClient.html">LambdaClient</a>);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="classLambdaClient_html"><div class="ttname"><a href="classLambdaClient.html">LambdaClient</a></div><div class="ttdoc">Client for AWS Lambda. </div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient_8h_source.html#l00033">lambdaclient.h:33</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classLambdaClientPrivate_html"><div class="ttname"><a href="classLambdaClientPrivate.html">LambdaClientPrivate</a></div><div class="ttdoc">Private implementation for LambdaClient. </div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient__p_8h_source.html#l00031">lambdaclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
@@ -277,7 +359,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classLambdaClient.html">LambdaClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classLambdaClient.html" title="Client for AWS Lambda. ">LambdaClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -290,10 +372,10 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="lambdaclient_8cpp_source.html#l00074">74</a> of file <a class="el" href="lambdaclient_8cpp_source.html">lambdaclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lambdaclient_8cpp_source.html#l00080">80</a> of file <a class="el" href="lambdaclient_8cpp_source.html">lambdaclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classLambdaClientPrivate.html">LambdaClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_D(<a class="code" href="classLambdaClient.html">LambdaClient</a>);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div><div class="ttc" id="classLambdaClient_html"><div class="ttname"><a href="classLambdaClient.html">LambdaClient</a></div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient_8h_source.html#l00033">lambdaclient.h:33</a></div></div>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classLambdaClientPrivate.html">LambdaClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    Q_D(<a class="code" href="classLambdaClient.html">LambdaClient</a>);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="ttc" id="classLambdaClient_html"><div class="ttname"><a href="classLambdaClient.html">LambdaClient</a></div><div class="ttdoc">Client for AWS Lambda. </div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient_8h_source.html#l00033">lambdaclient.h:33</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classLambdaClientPrivate_html"><div class="ttname"><a href="classLambdaClientPrivate.html">LambdaClientPrivate</a></div><div class="ttdoc">Private implementation for LambdaClient. </div><div class="ttdef"><b>Definition:</b> <a href="lambdaclient__p_8h_source.html#l00031">lambdaclient_p.h:31</a></div></div>

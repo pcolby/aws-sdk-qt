@@ -86,12 +86,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classApplicationAutoScalingClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ApplicationAutoScalingClient Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client for Application Auto Scaling.  
+ <a href="classApplicationAutoScalingClient.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ApplicationAutoScalingClient:</div>
 <div class="dyncontent">
@@ -114,13 +118,37 @@ Collaboration diagram for ApplicationAutoScalingClient:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a5013c75e4e6d26921f705397c850c43b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5013c75e4e6d26921f705397c850c43b"></a>
+ApplicationAutoScalingDeleteScalingPolicyResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deleteScalingPolicy</b> (const ApplicationAutoScalingDeleteScalingPolicyRequest &amp;request)</td></tr>
+<tr class="separator:a5013c75e4e6d26921f705397c850c43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad429dd4db77a2343eecd6549f7b9d44b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad429dd4db77a2343eecd6549f7b9d44b"></a>
+ApplicationAutoScalingDeregisterScalableTargetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>deregisterScalableTarget</b> (const ApplicationAutoScalingDeregisterScalableTargetRequest &amp;request)</td></tr>
+<tr class="separator:ad429dd4db77a2343eecd6549f7b9d44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44c1c2d1c8149a0c6f168ef1807acb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad44c1c2d1c8149a0c6f168ef1807acb3"></a>
+ApplicationAutoScalingDescribeScalableTargetsResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeScalableTargets</b> (const ApplicationAutoScalingDescribeScalableTargetsRequest &amp;request)</td></tr>
+<tr class="separator:ad44c1c2d1c8149a0c6f168ef1807acb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a87f9c491fdb8d27a958aa4aaec787"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66a87f9c491fdb8d27a958aa4aaec787"></a>
+ApplicationAutoScalingDescribeScalingActivitiesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeScalingActivities</b> (const ApplicationAutoScalingDescribeScalingActivitiesRequest &amp;request)</td></tr>
+<tr class="separator:a66a87f9c491fdb8d27a958aa4aaec787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f66d3948528315a521d64f3880498e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7f66d3948528315a521d64f3880498e"></a>
+ApplicationAutoScalingDescribeScalingPoliciesResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>describeScalingPolicies</b> (const ApplicationAutoScalingDescribeScalingPoliciesRequest &amp;request)</td></tr>
+<tr class="separator:ab7f66d3948528315a521d64f3880498e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af189275849a9d2e88940735fbdc5f018"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af189275849a9d2e88940735fbdc5f018"></a>
+ApplicationAutoScalingPutScalingPolicyResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>putScalingPolicy</b> (const ApplicationAutoScalingPutScalingPolicyRequest &amp;request)</td></tr>
+<tr class="separator:af189275849a9d2e88940735fbdc5f018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aed814ea423e0227356c1799e0962b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11aed814ea423e0227356c1799e0962b"></a>
+ApplicationAutoScalingRegisterScalableTargetResponse *&#160;</td><td class="memItemRight" valign="bottom"><b>registerScalableTarget</b> (const ApplicationAutoScalingRegisterScalableTargetRequest &amp;request)</td></tr>
+<tr class="separator:a11aed814ea423e0227356c1799e0962b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeabb996a198ddbee598543c64d31059d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplicationAutoScalingClient.html#aeabb996a198ddbee598543c64d31059d">ApplicationAutoScalingClient</a> (const <a class="el" href="classAwsRegion.html#aacff2316d6b458313e7315540f5cf39d">AwsRegion::Region</a> <a class="el" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>=AwsRegion::InvalidRegion, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:aeabb996a198ddbee598543c64d31059d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a> object.  <a href="#aeabb996a198ddbee598543c64d31059d">More...</a><br /></td></tr>
+<tr class="memdesc:aeabb996a198ddbee598543c64d31059d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classApplicationAutoScalingClient.html" title="Client for Application Auto Scaling. ">ApplicationAutoScalingClient</a> object.  <a href="#aeabb996a198ddbee598543c64d31059d">More...</a><br /></td></tr>
 <tr class="separator:aeabb996a198ddbee598543c64d31059d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac32d3163ce31a490aaf44feac02c72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApplicationAutoScalingClient.html#adac32d3163ce31a490aaf44feac02c72">ApplicationAutoScalingClient</a> (const QUrl &amp;<a class="el" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>, <a class="el" href="classAwsAbstractCredentials.html">AwsAbstractCredentials</a> *<a class="el" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)</td></tr>
-<tr class="memdesc:adac32d3163ce31a490aaf44feac02c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a> object.  <a href="#adac32d3163ce31a490aaf44feac02c72">More...</a><br /></td></tr>
+<tr class="memdesc:adac32d3163ce31a490aaf44feac02c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classApplicationAutoScalingClient.html" title="Client for Application Auto Scaling. ">ApplicationAutoScalingClient</a> object.  <a href="#adac32d3163ce31a490aaf44feac02c72">More...</a><br /></td></tr>
 <tr class="separator:adac32d3163ce31a490aaf44feac02c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAwsAbstractClient"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAwsAbstractClient')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAwsAbstractClient.html">AwsAbstractClient</a></td></tr>
 <tr class="memitem:a5fec7f973e9a614f8114e9598f361595 inherit pub_methods_classAwsAbstractClient"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a> (QObject *const parent=0)</td></tr>
@@ -177,80 +205,53 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac92df733e1ee5b1233b4349893b5cd68 inherit pro_attribs_classAwsAbstractClient"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto Scaling.</p>
-<p>Application Auto Scaling supports scaling the following AWS resources:</p>
+<div class="textblock"><p>Client for Application Auto Scaling. </p>
+<p>Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto Scaling.</p>
 <ul>
+<li>Application Auto Scaling supports scaling the following AWS resources:</li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p>Amazon ECS services</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p>Amazon EC2 Spot fleet instances</p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>You can use Application Auto Scaling to accomplish the following tasks:</p>
-<ul>
-<li>
-<p class="startli"></p>
-<p>Define scaling policies for automatically adjusting your AWS resources</p>
-<p class="endli"></p>
 </li>
+<li>Amazon ECS services</li>
+<li></li>
+<li>Amazon EC2 Spot fleet instances</li>
+<li></li>
+<li>You can use Application Auto Scaling to accomplish the following tasks:</li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p>Scale your resources in response to CloudWatch alarms</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p>View history of your scaling events </p>
-<p class="endli"></p>
 </li>
 </ul>
-<p>Application Auto Scaling is available in the following regions:</p>
-<ul>
-<li>
-<p class="startli"></p>
-<p><code>us-east-1</code> </p>
-<p class="endli"></p>
 </li>
+<li>Define scaling policies for automatically adjusting your AWS resources</li>
+<li></li>
+<li>Scale your resources in response to CloudWatch alarms</li>
+<li></li>
+<li>View history of your scaling events</li>
+<li></li>
+<li>Application Auto Scaling is available in the following regions:</li>
+<li><ul>
 <li>
-<p class="startli"></p>
-<p><code>us-west-1</code> </p>
-<p class="endli"></p>
 </li>
-<li>
-<p class="startli"></p>
-<p><code>us-west-2</code> </p>
-<p class="endli"></p>
+</ul>
 </li>
-<li>
-<p class="startli"></p>
-<p><code>ap-southeast-1</code> </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><code>ap-southeast-2</code> </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><code>ap-northeast-1</code> </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><code>eu-central-1</code> </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli"></p>
-<p><code>eu-west-1</code> </p>
-<p class="endli"></p>
-</li>
+<li><code>us-east-1</code></li>
+<li></li>
+<li><code>us-west-1</code></li>
+<li></li>
+<li><code>us-west-2</code></li>
+<li></li>
+<li><code>ap-southeast-1</code></li>
+<li></li>
+<li><code>ap-southeast-2</code></li>
+<li></li>
+<li><code>ap-northeast-1</code></li>
+<li></li>
+<li><code>eu-central-1</code></li>
+<li></li>
+<li><code>eu-west-1</code></li>
+<li></li>
 </ul>
 
 <p>Definition at line <a class="el" href="applicationautoscalingclient_8h_source.html#l00033">33</a> of file <a class="el" href="applicationautoscalingclient_8h_source.html">applicationautoscalingclient.h</a>.</p>
@@ -291,7 +292,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classApplicationAutoScalingClient.html" title="Client for Application Auto Scaling. ">ApplicationAutoScalingClient</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">region</td><td>AWS region for this client to service requests for. </td></tr>
@@ -302,14 +303,14 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="applicationautoscalingclient_8cpp_source.html#l00044">44</a> of file <a class="el" href="applicationautoscalingclient_8cpp_source.html">applicationautoscalingclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="applicationautoscalingclient_8cpp_source.html#l00110">110</a> of file <a class="el" href="applicationautoscalingclient_8cpp_source.html">applicationautoscalingclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00121">AwsAbstractClient::region()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Q_D(<a class="code" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Q_D(<a class="code" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a>);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    d-&gt;region = <a class="code" href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">region</a>;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div><div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classApplicationAutoScalingClientPrivate_html"><div class="ttname"><a href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a></div><div class="ttdoc">Private implementation for ApplicationAutoScalingClient. </div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient__p_8h_source.html#l00031">applicationautoscalingclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_ad5db29e88d5924f6d0e8005fba0b3266"><div class="ttname"><a href="classAwsAbstractClient.html#ad5db29e88d5924f6d0e8005fba0b3266">AwsAbstractClient::region</a></div><div class="ttdeci">AwsRegion::Region region() const </div><div class="ttdoc">Get the AWS region associated with this client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00121">awsabstractclient.cpp:121</a></div></div>
-<div class="ttc" id="classApplicationAutoScalingClient_html"><div class="ttname"><a href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a></div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient_8h_source.html#l00033">applicationautoscalingclient.h:33</a></div></div>
+<div class="ttc" id="classApplicationAutoScalingClient_html"><div class="ttname"><a href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a></div><div class="ttdoc">Client for Application Auto Scaling. </div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient_8h_source.html#l00033">applicationautoscalingclient.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -349,7 +350,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a> object. </p>
+<p>Constructs a new <a class="el" href="classApplicationAutoScalingClient.html" title="Client for Application Auto Scaling. ">ApplicationAutoScalingClient</a> object. </p>
 <p>This overload allows the caller to specify the specific endpoint to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via <a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -362,14 +363,14 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAwsEndpoint.html#a972e747803e29799e4b2ca6c211c7240" title="Get a QUrl for an AWS endpoint. ">AwsEndpoint::getEndpoint</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="applicationautoscalingclient_8cpp_source.html#l00074">74</a> of file <a class="el" href="applicationautoscalingclient_8cpp_source.html">applicationautoscalingclient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="applicationautoscalingclient_8cpp_source.html#l00140">140</a> of file <a class="el" href="applicationautoscalingclient_8cpp_source.html">applicationautoscalingclient.cpp</a>.</p>
 
 <p>References <a class="el" href="awsabstractclient_8cpp_source.html#l00271">AwsAbstractClient::credentials()</a>, and <a class="el" href="awsabstractclient_8cpp_source.html#l00094">AwsAbstractClient::endpoint()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Q_D(<a class="code" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a>);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div><div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;: <a class="code" href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient</a>(<span class="keyword">new</span> <a class="code" href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a>(<span class="keyword">this</span>), parent)</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    Q_D(<a class="code" href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a>);</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    d-&gt;endpoint = <a class="code" href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">endpoint</a>;</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    d-&gt;credentials = <a class="code" href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">credentials</a>;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    d-&gt;networkAccessManager = manager;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    d-&gt;serviceName = QLatin1String(<span class="stringliteral">&quot;{{servicename}}&quot;</span>);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div><div class="ttc" id="classAwsAbstractClient_html_a816b91835077442e552939f43991cb63"><div class="ttname"><a href="classAwsAbstractClient.html#a816b91835077442e552939f43991cb63">AwsAbstractClient::endpoint</a></div><div class="ttdeci">QUrl endpoint() const </div><div class="ttdoc">Get the endpoint associated with this AWS client. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00094">awsabstractclient.cpp:94</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a70c1daf62292148cdfa627fa9957eb40"><div class="ttname"><a href="classAwsAbstractClient.html#a70c1daf62292148cdfa627fa9957eb40">AwsAbstractClient::credentials</a></div><div class="ttdeci">virtual AwsAbstractCredentials * credentials() const </div><div class="ttdoc">Get the credentials object to be used for signing requests. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00271">awsabstractclient.cpp:271</a></div></div>
 <div class="ttc" id="classApplicationAutoScalingClientPrivate_html"><div class="ttname"><a href="classApplicationAutoScalingClientPrivate.html">ApplicationAutoScalingClientPrivate</a></div><div class="ttdoc">Private implementation for ApplicationAutoScalingClient. </div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient__p_8h_source.html#l00031">applicationautoscalingclient_p.h:31</a></div></div>
 <div class="ttc" id="classAwsAbstractClient_html_a5fec7f973e9a614f8114e9598f361595"><div class="ttname"><a href="classAwsAbstractClient.html#a5fec7f973e9a614f8114e9598f361595">AwsAbstractClient::AwsAbstractClient</a></div><div class="ttdeci">AwsAbstractClient(QObject *const parent=0)</div><div class="ttdoc">Constructs a new AwsAbstractClient object. </div><div class="ttdef"><b>Definition:</b> <a href="awsabstractclient_8cpp_source.html#l00044">awsabstractclient.cpp:44</a></div></div>
-<div class="ttc" id="classApplicationAutoScalingClient_html"><div class="ttname"><a href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a></div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient_8h_source.html#l00033">applicationautoscalingclient.h:33</a></div></div>
+<div class="ttc" id="classApplicationAutoScalingClient_html"><div class="ttname"><a href="classApplicationAutoScalingClient.html">ApplicationAutoScalingClient</a></div><div class="ttdoc">Client for Application Auto Scaling. </div><div class="ttdef"><b>Definition:</b> <a href="applicationautoscalingclient_8h_source.html#l00033">applicationautoscalingclient.h:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

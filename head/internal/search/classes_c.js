@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['rdsclient',['RDSClient',['../classRDSClient.html',1,'']]],
-  ['rdsclientprivate',['RDSClientPrivate',['../classRDSClientPrivate.html',1,'']]],
+  ['rdsclient',['RdsClient',['../classRdsClient.html',1,'']]],
+  ['rdsclientprivate',['RdsClientPrivate',['../classRdsClientPrivate.html',1,'']]],
   ['redshiftclient',['RedshiftClient',['../classRedshiftClient.html',1,'']]],
   ['redshiftclientprivate',['RedshiftClientPrivate',['../classRedshiftClientPrivate.html',1,'']]],
   ['regionendpointinfo',['RegionEndpointInfo',['../structAwsEndpointPrivate_1_1RegionEndpointInfo.html',1,'AwsEndpointPrivate']]],

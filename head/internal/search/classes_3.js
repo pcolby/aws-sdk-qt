@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['ec2client',['EC2Client',['../classEC2Client.html',1,'']]],
-  ['ec2clientprivate',['EC2ClientPrivate',['../classEC2ClientPrivate.html',1,'']]],
-  ['ecrclient',['ECRClient',['../classECRClient.html',1,'']]],
-  ['ecrclientprivate',['ECRClientPrivate',['../classECRClientPrivate.html',1,'']]],
-  ['ecsclient',['ECSClient',['../classECSClient.html',1,'']]],
-  ['ecsclientprivate',['ECSClientPrivate',['../classECSClientPrivate.html',1,'']]],
-  ['efsclient',['EFSClient',['../classEFSClient.html',1,'']]],
-  ['efsclientprivate',['EFSClientPrivate',['../classEFSClientPrivate.html',1,'']]],
+  ['ec2client',['Ec2Client',['../classEc2Client.html',1,'']]],
+  ['ec2clientprivate',['Ec2ClientPrivate',['../classEc2ClientPrivate.html',1,'']]],
+  ['ecrclient',['EcrClient',['../classEcrClient.html',1,'']]],
+  ['ecrclientprivate',['EcrClientPrivate',['../classEcrClientPrivate.html',1,'']]],
+  ['ecsclient',['EcsClient',['../classEcsClient.html',1,'']]],
+  ['ecsclientprivate',['EcsClientPrivate',['../classEcsClientPrivate.html',1,'']]],
+  ['efsclient',['EfsClient',['../classEfsClient.html',1,'']]],
+  ['efsclientprivate',['EfsClientPrivate',['../classEfsClientPrivate.html',1,'']]],
   ['elasticacheclient',['ElastiCacheClient',['../classElastiCacheClient.html',1,'']]],
   ['elasticacheclientprivate',['ElastiCacheClientPrivate',['../classElastiCacheClientPrivate.html',1,'']]],
   ['elasticbeanstalkclient',['ElasticBeanstalkClient',['../classElasticBeanstalkClient.html',1,'']]],
@@ -20,6 +20,6 @@ var searchData=
   ['elasticsearchserviceclientprivate',['ElasticsearchServiceClientPrivate',['../classElasticsearchServiceClientPrivate.html',1,'']]],
   ['elastictranscoderclient',['ElasticTranscoderClient',['../classElasticTranscoderClient.html',1,'']]],
   ['elastictranscoderclientprivate',['ElasticTranscoderClientPrivate',['../classElasticTranscoderClientPrivate.html',1,'']]],
-  ['emrclient',['EMRClient',['../classEMRClient.html',1,'']]],
-  ['emrclientprivate',['EMRClientPrivate',['../classEMRClientPrivate.html',1,'']]]
+  ['emrclient',['EmrClient',['../classEmrClient.html',1,'']]],
+  ['emrclientprivate',['EmrClientPrivate',['../classEmrClientPrivate.html',1,'']]]
 ];

@@ -1,0 +1,8 @@
+<map id="IamClient" name="IamClient">
+<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="65,81,195,108"/>
+<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="108,171,280,197"/>
+<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="234,81,397,108"/>
+<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="304,171,508,197"/>
+<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="489,81,641,108"/>
+<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="532,171,725,197"/>
+</map>

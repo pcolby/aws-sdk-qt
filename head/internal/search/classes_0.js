@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['acmclient',['ACMClient',['../classACMClient.html',1,'']]],
-  ['acmclientprivate',['ACMClientPrivate',['../classACMClientPrivate.html',1,'']]],
+  ['acmclient',['AcmClient',['../classAcmClient.html',1,'']]],
+  ['acmclientprivate',['AcmClientPrivate',['../classAcmClientPrivate.html',1,'']]],
   ['apigatewayclient',['APIGatewayClient',['../classAPIGatewayClient.html',1,'']]],
   ['apigatewayclientprivate',['APIGatewayClientPrivate',['../classAPIGatewayClientPrivate.html',1,'']]],
   ['applicationautoscalingclient',['ApplicationAutoScalingClient',['../classApplicationAutoScalingClient.html',1,'']]],
