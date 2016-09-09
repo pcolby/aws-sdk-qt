@@ -120,7 +120,14 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
     }
 
     // Trim, the same as aws-sdk-cpp too.
-    return prefix.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
+    prefix.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
+
+    // If the entire string is all uppercase, then lowercase all but the first
+    // letter - just for improved readability when using the generated classes.
+    if (prefix.contains(QRegularExpression(QLatin1String("^[^a-z]+$")))) {
+        prefix.replace(1, prefix.size()-1, prefix.mid(1).toLower());
+    }
+    return prefix;
 }
 
 QString Generator::getFunctionSignature(
