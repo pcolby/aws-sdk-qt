@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  KinesisClient
  *
- * <fullname>Amazon Kinesis Streams Service API Reference</fullname> <p>Amazon Kinesis Streams is a managed service that scales elastically for real time processing of streaming big data.</p>
+ * @brief  Client for Amazon Kinesis
+ *
+ * <fullname>Amazon Kinesis Streams Service API Reference</fullname>
+ *
+ + Amazon Kinesis Streams is a managed service that scales elastically for real time processing of streaming big data.
  */
 
 /**
@@ -105,7 +109,6 @@ KinesisClient::KinesisClient(
 KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

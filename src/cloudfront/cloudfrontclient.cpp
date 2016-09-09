@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  CloudFrontClient
  *
- * <fullname>Amazon CloudFront</fullname> <p>Amazon CloudFront is a global content delivery network (CDN) service that accelerates delivery of your websites, APIs, video content or other web assets. It integrates with other Amazon Web Services products to give developers and businesses an easy way to accelerate content to end users with no minimum usage commitments.</p>
+ * @brief  Client for Amazon CloudFront
+ *
+ * <fullname>Amazon CloudFront</fullname>
+ *
+ + Amazon CloudFront is a global content delivery network (CDN) service that accelerates delivery of your websites, APIs, video content or other web assets. It integrates with other Amazon Web Services products to give developers and businesses an easy way to accelerate content to end users with no minimum usage commitments.
  */
 
 /**
@@ -105,7 +109,6 @@ CloudFrontClient::CloudFrontClient(
 CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

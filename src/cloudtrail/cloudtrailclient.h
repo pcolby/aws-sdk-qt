@@ -45,7 +45,19 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudTrailAddTagsResponse * addTags(const CloudTrailAddTagsRequest &request);
+    CloudTrailCreateTrailResponse * createTrail(const CloudTrailCreateTrailRequest &request);
+    CloudTrailDeleteTrailResponse * deleteTrail(const CloudTrailDeleteTrailRequest &request);
+    CloudTrailDescribeTrailsResponse * describeTrails(const CloudTrailDescribeTrailsRequest &request);
+    CloudTrailGetTrailStatusResponse * getTrailStatus(const CloudTrailGetTrailStatusRequest &request);
+    CloudTrailListPublicKeysResponse * listPublicKeys(const CloudTrailListPublicKeysRequest &request);
+    CloudTrailListTagsResponse * listTags(const CloudTrailListTagsRequest &request);
+    CloudTrailLookupEventsResponse * lookupEvents(const CloudTrailLookupEventsRequest &request);
+    CloudTrailRemoveTagsResponse * removeTags(const CloudTrailRemoveTagsRequest &request);
+    CloudTrailStartLoggingResponse * startLogging(const CloudTrailStartLoggingRequest &request);
+    CloudTrailStopLoggingResponse * stopLogging(const CloudTrailStopLoggingRequest &request);
+    CloudTrailUpdateTrailResponse * updateTrail(const CloudTrailUpdateTrailRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudTrailClient)

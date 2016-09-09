@@ -45,7 +45,21 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SupportAddAttachmentsToSetResponse * addAttachmentsToSet(const SupportAddAttachmentsToSetRequest &request);
+    SupportAddCommunicationToCaseResponse * addCommunicationToCase(const SupportAddCommunicationToCaseRequest &request);
+    SupportCreateCaseResponse * createCase(const SupportCreateCaseRequest &request);
+    SupportDescribeAttachmentResponse * describeAttachment(const SupportDescribeAttachmentRequest &request);
+    SupportDescribeCasesResponse * describeCases(const SupportDescribeCasesRequest &request);
+    SupportDescribeCommunicationsResponse * describeCommunications(const SupportDescribeCommunicationsRequest &request);
+    SupportDescribeServicesResponse * describeServices(const SupportDescribeServicesRequest &request);
+    SupportDescribeSeverityLevelsResponse * describeSeverityLevels(const SupportDescribeSeverityLevelsRequest &request);
+    SupportDescribeTrustedAdvisorCheckRefreshStatusesResponse * describeTrustedAdvisorCheckRefreshStatuses(const SupportDescribeTrustedAdvisorCheckRefreshStatusesRequest &request);
+    SupportDescribeTrustedAdvisorCheckResultResponse * describeTrustedAdvisorCheckResult(const SupportDescribeTrustedAdvisorCheckResultRequest &request);
+    SupportDescribeTrustedAdvisorCheckSummariesResponse * describeTrustedAdvisorCheckSummaries(const SupportDescribeTrustedAdvisorCheckSummariesRequest &request);
+    SupportDescribeTrustedAdvisorChecksResponse * describeTrustedAdvisorChecks(const SupportDescribeTrustedAdvisorChecksRequest &request);
+    SupportRefreshTrustedAdvisorCheckResponse * refreshTrustedAdvisorCheck(const SupportRefreshTrustedAdvisorCheckRequest &request);
+    SupportResolveCaseResponse * resolveCase(const SupportResolveCaseRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SupportClient)

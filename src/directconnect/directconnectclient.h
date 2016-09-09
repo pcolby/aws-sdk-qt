@@ -45,7 +45,28 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    DirectConnectAllocateConnectionOnInterconnectResponse * allocateConnectionOnInterconnect(const DirectConnectAllocateConnectionOnInterconnectRequest &request);
+    DirectConnectAllocatePrivateVirtualInterfaceResponse * allocatePrivateVirtualInterface(const DirectConnectAllocatePrivateVirtualInterfaceRequest &request);
+    DirectConnectAllocatePublicVirtualInterfaceResponse * allocatePublicVirtualInterface(const DirectConnectAllocatePublicVirtualInterfaceRequest &request);
+    DirectConnectConfirmConnectionResponse * confirmConnection(const DirectConnectConfirmConnectionRequest &request);
+    DirectConnectConfirmPrivateVirtualInterfaceResponse * confirmPrivateVirtualInterface(const DirectConnectConfirmPrivateVirtualInterfaceRequest &request);
+    DirectConnectConfirmPublicVirtualInterfaceResponse * confirmPublicVirtualInterface(const DirectConnectConfirmPublicVirtualInterfaceRequest &request);
+    DirectConnectCreateConnectionResponse * createConnection(const DirectConnectCreateConnectionRequest &request);
+    DirectConnectCreateInterconnectResponse * createInterconnect(const DirectConnectCreateInterconnectRequest &request);
+    DirectConnectCreatePrivateVirtualInterfaceResponse * createPrivateVirtualInterface(const DirectConnectCreatePrivateVirtualInterfaceRequest &request);
+    DirectConnectCreatePublicVirtualInterfaceResponse * createPublicVirtualInterface(const DirectConnectCreatePublicVirtualInterfaceRequest &request);
+    DirectConnectDeleteConnectionResponse * deleteConnection(const DirectConnectDeleteConnectionRequest &request);
+    DirectConnectDeleteInterconnectResponse * deleteInterconnect(const DirectConnectDeleteInterconnectRequest &request);
+    DirectConnectDeleteVirtualInterfaceResponse * deleteVirtualInterface(const DirectConnectDeleteVirtualInterfaceRequest &request);
+    DirectConnectDescribeConnectionLoaResponse * describeConnectionLoa(const DirectConnectDescribeConnectionLoaRequest &request);
+    DirectConnectDescribeConnectionsResponse * describeConnections(const DirectConnectDescribeConnectionsRequest &request);
+    DirectConnectDescribeConnectionsOnInterconnectResponse * describeConnectionsOnInterconnect(const DirectConnectDescribeConnectionsOnInterconnectRequest &request);
+    DirectConnectDescribeInterconnectLoaResponse * describeInterconnectLoa(const DirectConnectDescribeInterconnectLoaRequest &request);
+    DirectConnectDescribeInterconnectsResponse * describeInterconnects(const DirectConnectDescribeInterconnectsRequest &request);
+    DirectConnectDescribeLocationsResponse * describeLocations();
+    DirectConnectDescribeVirtualGatewaysResponse * describeVirtualGateways();
+    DirectConnectDescribeVirtualInterfacesResponse * describeVirtualInterfaces(const DirectConnectDescribeVirtualInterfacesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DirectConnectClient)

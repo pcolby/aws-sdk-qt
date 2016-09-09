@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  MachineLearningClient
  *
+ * @brief  Client for Amazon Machine Learning
+ *
  * Definition of the public APIs exposed by Amazon Machine Learning
  */
 
@@ -105,7 +107,6 @@ MachineLearningClient::MachineLearningClient(
 MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

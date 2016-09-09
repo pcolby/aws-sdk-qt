@@ -45,7 +45,17 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ElasticsearchServiceAddTagsResponse * addTags(const ElasticsearchServiceAddTagsRequest &request);
+    ElasticsearchServiceCreateElasticsearchDomainResponse * createElasticsearchDomain(const ElasticsearchServiceCreateElasticsearchDomainRequest &request);
+    ElasticsearchServiceDeleteElasticsearchDomainResponse * deleteElasticsearchDomain(const ElasticsearchServiceDeleteElasticsearchDomainRequest &request);
+    ElasticsearchServiceDescribeElasticsearchDomainResponse * describeElasticsearchDomain(const ElasticsearchServiceDescribeElasticsearchDomainRequest &request);
+    ElasticsearchServiceDescribeElasticsearchDomainConfigResponse * describeElasticsearchDomainConfig(const ElasticsearchServiceDescribeElasticsearchDomainConfigRequest &request);
+    ElasticsearchServiceDescribeElasticsearchDomainsResponse * describeElasticsearchDomains(const ElasticsearchServiceDescribeElasticsearchDomainsRequest &request);
+    ElasticsearchServiceListDomainNamesResponse * listDomainNames();
+    ElasticsearchServiceListTagsResponse * listTags(const ElasticsearchServiceListTagsRequest &request);
+    ElasticsearchServiceRemoveTagsResponse * removeTags(const ElasticsearchServiceRemoveTagsRequest &request);
+    ElasticsearchServiceUpdateElasticsearchDomainConfigResponse * updateElasticsearchDomainConfig(const ElasticsearchServiceUpdateElasticsearchDomainConfigRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticsearchServiceClient)

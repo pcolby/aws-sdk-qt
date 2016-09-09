@@ -45,7 +45,9 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    MarketplaceCommerceAnalyticsGenerateDataSetResponse * generateDataSet(const MarketplaceCommerceAnalyticsGenerateDataSetRequest &request);
+    MarketplaceCommerceAnalyticsStartSupportDataExportResponse * startSupportDataExport(const MarketplaceCommerceAnalyticsStartSupportDataExportRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MarketplaceCommerceAnalyticsClient)

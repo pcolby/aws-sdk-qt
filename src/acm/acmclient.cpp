@@ -28,27 +28,31 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  ACMClient
+ * @class  AcmClient
  *
- * <fullname>AWS Certificate Manager</fullname> <p>Welcome to the AWS Certificate Manager (ACM) Command Reference. This guide provides descriptions, syntax, and usage examples for each ACM command. You can use AWS Certificate Manager to request ACM Certificates for your AWS-based websites and applications. For general information about using ACM and for more information about using the console, see the <a href="http://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html">AWS Certificate Manager User Guide</a>. For more information about using the ACM API, see the <a href="http://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html">AWS Certificate Manager API Reference</a>.</p>
+ * @brief  Client for AWS Certificate Manager (ACM)
+ *
+ * <fullname>AWS Certificate Manager</fullname>
+ *
+ + Welcome to the AWS Certificate Manager (ACM) Command Reference. This guide provides descriptions, syntax, and usage examples for each ACM command. You can use AWS Certificate Manager to request ACM Certificates for your AWS-based websites and applications. For general information about using ACM and for more information about using the console, see the <a href="http://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html">AWS Certificate Manager User Guide</a>. For more information about using the ACM API, see the <a href="http://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html">AWS Certificate Manager API Reference</a>.
  */
 
 /**
- * @brief  Constructs a new ACMClient object.
+ * @brief  Constructs a new AcmClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-ACMClient::ACMClient(
+AcmClient::AcmClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ACMClientPrivate(this), parent)
+: AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
-    Q_D(ACMClient);
+    Q_D(AcmClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +60,7 @@ ACMClient::ACMClient(
 }
 
 /**
- * @brief  Constructs a new ACMClient object.
+ * @brief  Constructs a new AcmClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +75,14 @@ ACMClient::ACMClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-ACMClient::ACMClient(
+AcmClient::AcmClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ACMClientPrivate(this), parent)
+: AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
-    Q_D(ACMClient);
+    Q_D(AcmClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +94,21 @@ ACMClient::ACMClient(
 /**
  * @internal
  *
- * @class  ACMClientPrivate
+ * @class  AcmClientPrivate
  *
- * @brief  Private implementation for ACMClient.
+ * @brief  Private implementation for AcmClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new ACMClientPrivate object.
+ * @brief  Constructs a new AcmClientPrivate object.
  *
- * @param  q  Pointer to this object's public ACMClient instance.
+ * @param  q  Pointer to this object's public AcmClient instance.
  */
-ACMClientPrivate::ACMClientPrivate(ACMClient * const q)
+AcmClientPrivate::AcmClientPrivate(AcmClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

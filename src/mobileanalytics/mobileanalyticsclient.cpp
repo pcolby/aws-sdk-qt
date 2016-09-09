@@ -30,7 +30,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  MobileAnalyticsClient
  *
- * <p>Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at scale.</p>
+ * @brief  Client for Amazon Mobile Analytics
+ *
+ * Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at scale.
  */
 
 /**
@@ -105,7 +107,6 @@ MobileAnalyticsClient::MobileAnalyticsClient(
 MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

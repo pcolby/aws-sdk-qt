@@ -30,7 +30,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  SnowballClient
  *
- * <p>This is a test of the welcome page front matter.</p>
+ * @brief  Client for Amazon Import/Export Snowball
+ *
+ * This is a test of the welcome page front matter.
  */
 
 /**
@@ -105,7 +107,6 @@ SnowballClient::SnowballClient(
 SnowballClientPrivate::SnowballClientPrivate(SnowballClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

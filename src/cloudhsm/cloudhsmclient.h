@@ -45,7 +45,27 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudHSMAddTagsToResourceResponse * addTagsToResource(const CloudHSMAddTagsToResourceRequest &request);
+    CloudHSMCreateHapgResponse * createHapg(const CloudHSMCreateHapgRequest &request);
+    CloudHSMCreateHsmResponse * createHsm(const CloudHSMCreateHsmRequest &request);
+    CloudHSMCreateLunaClientResponse * createLunaClient(const CloudHSMCreateLunaClientRequest &request);
+    CloudHSMDeleteHapgResponse * deleteHapg(const CloudHSMDeleteHapgRequest &request);
+    CloudHSMDeleteHsmResponse * deleteHsm(const CloudHSMDeleteHsmRequest &request);
+    CloudHSMDeleteLunaClientResponse * deleteLunaClient(const CloudHSMDeleteLunaClientRequest &request);
+    CloudHSMDescribeHapgResponse * describeHapg(const CloudHSMDescribeHapgRequest &request);
+    CloudHSMDescribeHsmResponse * describeHsm(const CloudHSMDescribeHsmRequest &request);
+    CloudHSMDescribeLunaClientResponse * describeLunaClient(const CloudHSMDescribeLunaClientRequest &request);
+    CloudHSMGetConfigResponse * getConfig(const CloudHSMGetConfigRequest &request);
+    CloudHSMListAvailableZonesResponse * listAvailableZones(const CloudHSMListAvailableZonesRequest &request);
+    CloudHSMListHapgsResponse * listHapgs(const CloudHSMListHapgsRequest &request);
+    CloudHSMListHsmsResponse * listHsms(const CloudHSMListHsmsRequest &request);
+    CloudHSMListLunaClientsResponse * listLunaClients(const CloudHSMListLunaClientsRequest &request);
+    CloudHSMListTagsForResourceResponse * listTagsForResource(const CloudHSMListTagsForResourceRequest &request);
+    CloudHSMModifyHapgResponse * modifyHapg(const CloudHSMModifyHapgRequest &request);
+    CloudHSMModifyHsmResponse * modifyHsm(const CloudHSMModifyHsmRequest &request);
+    CloudHSMModifyLunaClientResponse * modifyLunaClient(const CloudHSMModifyLunaClientRequest &request);
+    CloudHSMRemoveTagsFromResourceResponse * removeTagsFromResource(const CloudHSMRemoveTagsFromResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudHSMClient)

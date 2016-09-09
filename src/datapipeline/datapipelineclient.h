@@ -45,7 +45,26 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    DataPipelineActivatePipelineResponse * activatePipeline(const DataPipelineActivatePipelineRequest &request);
+    DataPipelineAddTagsResponse * addTags(const DataPipelineAddTagsRequest &request);
+    DataPipelineCreatePipelineResponse * createPipeline(const DataPipelineCreatePipelineRequest &request);
+    DataPipelineDeactivatePipelineResponse * deactivatePipeline(const DataPipelineDeactivatePipelineRequest &request);
+    DataPipelineDeletePipelineResponse * deletePipeline(const DataPipelineDeletePipelineRequest &request);
+    DataPipelineDescribeObjectsResponse * describeObjects(const DataPipelineDescribeObjectsRequest &request);
+    DataPipelineDescribePipelinesResponse * describePipelines(const DataPipelineDescribePipelinesRequest &request);
+    DataPipelineEvaluateExpressionResponse * evaluateExpression(const DataPipelineEvaluateExpressionRequest &request);
+    DataPipelineGetPipelineDefinitionResponse * getPipelineDefinition(const DataPipelineGetPipelineDefinitionRequest &request);
+    DataPipelineListPipelinesResponse * listPipelines(const DataPipelineListPipelinesRequest &request);
+    DataPipelinePollForTaskResponse * pollForTask(const DataPipelinePollForTaskRequest &request);
+    DataPipelinePutPipelineDefinitionResponse * putPipelineDefinition(const DataPipelinePutPipelineDefinitionRequest &request);
+    DataPipelineQueryObjectsResponse * queryObjects(const DataPipelineQueryObjectsRequest &request);
+    DataPipelineRemoveTagsResponse * removeTags(const DataPipelineRemoveTagsRequest &request);
+    DataPipelineReportTaskProgressResponse * reportTaskProgress(const DataPipelineReportTaskProgressRequest &request);
+    DataPipelineReportTaskRunnerHeartbeatResponse * reportTaskRunnerHeartbeat(const DataPipelineReportTaskRunnerHeartbeatRequest &request);
+    DataPipelineSetStatusResponse * setStatus(const DataPipelineSetStatusRequest &request);
+    DataPipelineSetTaskStatusResponse * setTaskStatus(const DataPipelineSetTaskStatusRequest &request);
+    DataPipelineValidatePipelineDefinitionResponse * validatePipelineDefinition(const DataPipelineValidatePipelineDefinitionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DataPipelineClient)

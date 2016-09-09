@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class RDSClient;
+class RdsClient;
 
-class QTAWS_EXPORT RDSClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT RdsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    RDSClientPrivate(RDSClient * const q);
+    RdsClientPrivate(RdsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(RDSClient)
-    Q_DISABLE_COPY(RDSClientPrivate)
+    Q_DECLARE_PUBLIC(RdsClient)
+    Q_DISABLE_COPY(RdsClientPrivate)
 
 };
 

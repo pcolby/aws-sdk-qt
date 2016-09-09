@@ -45,7 +45,14 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ApplicationAutoScalingDeleteScalingPolicyResponse * deleteScalingPolicy(const ApplicationAutoScalingDeleteScalingPolicyRequest &request);
+    ApplicationAutoScalingDeregisterScalableTargetResponse * deregisterScalableTarget(const ApplicationAutoScalingDeregisterScalableTargetRequest &request);
+    ApplicationAutoScalingDescribeScalableTargetsResponse * describeScalableTargets(const ApplicationAutoScalingDescribeScalableTargetsRequest &request);
+    ApplicationAutoScalingDescribeScalingActivitiesResponse * describeScalingActivities(const ApplicationAutoScalingDescribeScalingActivitiesRequest &request);
+    ApplicationAutoScalingDescribeScalingPoliciesResponse * describeScalingPolicies(const ApplicationAutoScalingDescribeScalingPoliciesRequest &request);
+    ApplicationAutoScalingPutScalingPolicyResponse * putScalingPolicy(const ApplicationAutoScalingPutScalingPolicyRequest &request);
+    ApplicationAutoScalingRegisterScalableTargetResponse * registerScalableTarget(const ApplicationAutoScalingRegisterScalableTargetRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ApplicationAutoScalingClient)

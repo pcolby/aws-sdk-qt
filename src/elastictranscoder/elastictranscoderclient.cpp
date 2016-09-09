@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  ElasticTranscoderClient
  *
- * <fullname>AWS Elastic Transcoder Service</fullname> <p>The AWS Elastic Transcoder Service.</p>
+ * @brief  Client for Amazon Elastic Transcoder
+ *
+ * <fullname>AWS Elastic Transcoder Service</fullname>
+ *
+ + The AWS Elastic Transcoder Service.
  */
 
 /**
@@ -105,7 +109,6 @@ ElasticTranscoderClient::ElasticTranscoderClient(
 ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

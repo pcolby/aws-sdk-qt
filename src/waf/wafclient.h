@@ -28,28 +28,66 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class WAFClientPrivate;
+class WafClientPrivate;
 
-class QTAWS_EXPORT WAFClient : public AwsAbstractClient {
+class QTAWS_EXPORT WafClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    WAFClient(
+    WafClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WAFClient(
+    WafClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    WafCreateByteMatchSetResponse * createByteMatchSet(const WafCreateByteMatchSetRequest &request);
+    WafCreateIPSetResponse * createIPSet(const WafCreateIPSetRequest &request);
+    WafCreateRuleResponse * createRule(const WafCreateRuleRequest &request);
+    WafCreateSizeConstraintSetResponse * createSizeConstraintSet(const WafCreateSizeConstraintSetRequest &request);
+    WafCreateSqlInjectionMatchSetResponse * createSqlInjectionMatchSet(const WafCreateSqlInjectionMatchSetRequest &request);
+    WafCreateWebACLResponse * createWebACL(const WafCreateWebACLRequest &request);
+    WafCreateXssMatchSetResponse * createXssMatchSet(const WafCreateXssMatchSetRequest &request);
+    WafDeleteByteMatchSetResponse * deleteByteMatchSet(const WafDeleteByteMatchSetRequest &request);
+    WafDeleteIPSetResponse * deleteIPSet(const WafDeleteIPSetRequest &request);
+    WafDeleteRuleResponse * deleteRule(const WafDeleteRuleRequest &request);
+    WafDeleteSizeConstraintSetResponse * deleteSizeConstraintSet(const WafDeleteSizeConstraintSetRequest &request);
+    WafDeleteSqlInjectionMatchSetResponse * deleteSqlInjectionMatchSet(const WafDeleteSqlInjectionMatchSetRequest &request);
+    WafDeleteWebACLResponse * deleteWebACL(const WafDeleteWebACLRequest &request);
+    WafDeleteXssMatchSetResponse * deleteXssMatchSet(const WafDeleteXssMatchSetRequest &request);
+    WafGetByteMatchSetResponse * getByteMatchSet(const WafGetByteMatchSetRequest &request);
+    WafGetChangeTokenResponse * getChangeToken(const WafGetChangeTokenRequest &request);
+    WafGetChangeTokenStatusResponse * getChangeTokenStatus(const WafGetChangeTokenStatusRequest &request);
+    WafGetIPSetResponse * getIPSet(const WafGetIPSetRequest &request);
+    WafGetRuleResponse * getRule(const WafGetRuleRequest &request);
+    WafGetSampledRequestsResponse * getSampledRequests(const WafGetSampledRequestsRequest &request);
+    WafGetSizeConstraintSetResponse * getSizeConstraintSet(const WafGetSizeConstraintSetRequest &request);
+    WafGetSqlInjectionMatchSetResponse * getSqlInjectionMatchSet(const WafGetSqlInjectionMatchSetRequest &request);
+    WafGetWebACLResponse * getWebACL(const WafGetWebACLRequest &request);
+    WafGetXssMatchSetResponse * getXssMatchSet(const WafGetXssMatchSetRequest &request);
+    WafListByteMatchSetsResponse * listByteMatchSets(const WafListByteMatchSetsRequest &request);
+    WafListIPSetsResponse * listIPSets(const WafListIPSetsRequest &request);
+    WafListRulesResponse * listRules(const WafListRulesRequest &request);
+    WafListSizeConstraintSetsResponse * listSizeConstraintSets(const WafListSizeConstraintSetsRequest &request);
+    WafListSqlInjectionMatchSetsResponse * listSqlInjectionMatchSets(const WafListSqlInjectionMatchSetsRequest &request);
+    WafListWebACLsResponse * listWebACLs(const WafListWebACLsRequest &request);
+    WafListXssMatchSetsResponse * listXssMatchSets(const WafListXssMatchSetsRequest &request);
+    WafUpdateByteMatchSetResponse * updateByteMatchSet(const WafUpdateByteMatchSetRequest &request);
+    WafUpdateIPSetResponse * updateIPSet(const WafUpdateIPSetRequest &request);
+    WafUpdateRuleResponse * updateRule(const WafUpdateRuleRequest &request);
+    WafUpdateSizeConstraintSetResponse * updateSizeConstraintSet(const WafUpdateSizeConstraintSetRequest &request);
+    WafUpdateSqlInjectionMatchSetResponse * updateSqlInjectionMatchSet(const WafUpdateSqlInjectionMatchSetRequest &request);
+    WafUpdateWebACLResponse * updateWebACL(const WafUpdateWebACLRequest &request);
+    WafUpdateXssMatchSetResponse * updateXssMatchSet(const WafUpdateXssMatchSetRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(WAFClient)
-    Q_DISABLE_COPY(WAFClient)
+    Q_DECLARE_PRIVATE(WafClient)
+    Q_DISABLE_COPY(WafClient)
 
 };
 

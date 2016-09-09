@@ -28,28 +28,59 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class SWFClientPrivate;
+class SwfClientPrivate;
 
-class QTAWS_EXPORT SWFClient : public AwsAbstractClient {
+class QTAWS_EXPORT SwfClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SWFClient(
+    SwfClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SWFClient(
+    SwfClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SwfCountClosedWorkflowExecutionsResponse * countClosedWorkflowExecutions(const SwfCountClosedWorkflowExecutionsRequest &request);
+    SwfCountOpenWorkflowExecutionsResponse * countOpenWorkflowExecutions(const SwfCountOpenWorkflowExecutionsRequest &request);
+    SwfCountPendingActivityTasksResponse * countPendingActivityTasks(const SwfCountPendingActivityTasksRequest &request);
+    SwfCountPendingDecisionTasksResponse * countPendingDecisionTasks(const SwfCountPendingDecisionTasksRequest &request);
+    SwfDeprecateActivityTypeResponse * deprecateActivityType(const SwfDeprecateActivityTypeRequest &request);
+    SwfDeprecateDomainResponse * deprecateDomain(const SwfDeprecateDomainRequest &request);
+    SwfDeprecateWorkflowTypeResponse * deprecateWorkflowType(const SwfDeprecateWorkflowTypeRequest &request);
+    SwfDescribeActivityTypeResponse * describeActivityType(const SwfDescribeActivityTypeRequest &request);
+    SwfDescribeDomainResponse * describeDomain(const SwfDescribeDomainRequest &request);
+    SwfDescribeWorkflowExecutionResponse * describeWorkflowExecution(const SwfDescribeWorkflowExecutionRequest &request);
+    SwfDescribeWorkflowTypeResponse * describeWorkflowType(const SwfDescribeWorkflowTypeRequest &request);
+    SwfGetWorkflowExecutionHistoryResponse * getWorkflowExecutionHistory(const SwfGetWorkflowExecutionHistoryRequest &request);
+    SwfListActivityTypesResponse * listActivityTypes(const SwfListActivityTypesRequest &request);
+    SwfListClosedWorkflowExecutionsResponse * listClosedWorkflowExecutions(const SwfListClosedWorkflowExecutionsRequest &request);
+    SwfListDomainsResponse * listDomains(const SwfListDomainsRequest &request);
+    SwfListOpenWorkflowExecutionsResponse * listOpenWorkflowExecutions(const SwfListOpenWorkflowExecutionsRequest &request);
+    SwfListWorkflowTypesResponse * listWorkflowTypes(const SwfListWorkflowTypesRequest &request);
+    SwfPollForActivityTaskResponse * pollForActivityTask(const SwfPollForActivityTaskRequest &request);
+    SwfPollForDecisionTaskResponse * pollForDecisionTask(const SwfPollForDecisionTaskRequest &request);
+    SwfRecordActivityTaskHeartbeatResponse * recordActivityTaskHeartbeat(const SwfRecordActivityTaskHeartbeatRequest &request);
+    SwfRegisterActivityTypeResponse * registerActivityType(const SwfRegisterActivityTypeRequest &request);
+    SwfRegisterDomainResponse * registerDomain(const SwfRegisterDomainRequest &request);
+    SwfRegisterWorkflowTypeResponse * registerWorkflowType(const SwfRegisterWorkflowTypeRequest &request);
+    SwfRequestCancelWorkflowExecutionResponse * requestCancelWorkflowExecution(const SwfRequestCancelWorkflowExecutionRequest &request);
+    SwfRespondActivityTaskCanceledResponse * respondActivityTaskCanceled(const SwfRespondActivityTaskCanceledRequest &request);
+    SwfRespondActivityTaskCompletedResponse * respondActivityTaskCompleted(const SwfRespondActivityTaskCompletedRequest &request);
+    SwfRespondActivityTaskFailedResponse * respondActivityTaskFailed(const SwfRespondActivityTaskFailedRequest &request);
+    SwfRespondDecisionTaskCompletedResponse * respondDecisionTaskCompleted(const SwfRespondDecisionTaskCompletedRequest &request);
+    SwfSignalWorkflowExecutionResponse * signalWorkflowExecution(const SwfSignalWorkflowExecutionRequest &request);
+    SwfStartWorkflowExecutionResponse * startWorkflowExecution(const SwfStartWorkflowExecutionRequest &request);
+    SwfTerminateWorkflowExecutionResponse * terminateWorkflowExecution(const SwfTerminateWorkflowExecutionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SWFClient)
-    Q_DISABLE_COPY(SWFClient)
+    Q_DECLARE_PRIVATE(SwfClient)
+    Q_DISABLE_COPY(SwfClient)
 
 };
 

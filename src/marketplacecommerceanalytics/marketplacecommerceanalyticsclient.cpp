@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  MarketplaceCommerceAnalyticsClient
  *
+ * @brief  Client for AWS Marketplace Commerce Analytics
+ *
  * Provides AWS Marketplace business intelligence data on-demand.
  */
 
@@ -105,7 +107,6 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
 MarketplaceCommerceAnalyticsClientPrivate::MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

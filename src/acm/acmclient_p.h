@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class ACMClient;
+class AcmClient;
 
-class QTAWS_EXPORT ACMClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT AcmClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    ACMClientPrivate(ACMClient * const q);
+    AcmClientPrivate(AcmClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ACMClient)
-    Q_DISABLE_COPY(ACMClientPrivate)
+    Q_DECLARE_PUBLIC(AcmClient)
+    Q_DISABLE_COPY(AcmClientPrivate)
 
 };
 

@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class EC2Client;
+class Ec2Client;
 
-class QTAWS_EXPORT EC2ClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT Ec2ClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    EC2ClientPrivate(EC2Client * const q);
+    Ec2ClientPrivate(Ec2Client * const q);
 
 private:
-    Q_DECLARE_PUBLIC(EC2Client)
-    Q_DISABLE_COPY(EC2ClientPrivate)
+    Q_DECLARE_PUBLIC(Ec2Client)
+    Q_DISABLE_COPY(Ec2ClientPrivate)
 
 };
 

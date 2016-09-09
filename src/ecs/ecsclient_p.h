@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class ECSClient;
+class EcsClient;
 
-class QTAWS_EXPORT ECSClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT EcsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    ECSClientPrivate(ECSClient * const q);
+    EcsClientPrivate(EcsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ECSClient)
-    Q_DISABLE_COPY(ECSClientPrivate)
+    Q_DECLARE_PUBLIC(EcsClient)
+    Q_DISABLE_COPY(EcsClientPrivate)
 
 };
 

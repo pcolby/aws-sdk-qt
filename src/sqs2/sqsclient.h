@@ -28,28 +28,45 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class SQSClientPrivate;
+class SqsClientPrivate;
 
-class QTAWS_EXPORT SQSClient : public AwsAbstractClient {
+class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SQSClient(
+    SqsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SQSClient(
+    SqsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &request);
+    SqsChangeMessageVisibilityResponse * changeMessageVisibility(const SqsChangeMessageVisibilityRequest &request);
+    SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(const SqsChangeMessageVisibilityBatchRequest &request);
+    SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
+    SqsDeleteMessageResponse * deleteMessage(const SqsDeleteMessageRequest &request);
+    SqsDeleteMessageBatchResponse * deleteMessageBatch(const SqsDeleteMessageBatchRequest &request);
+    SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &request);
+    SqsGetQueueAttributesResponse * getQueueAttributes(const SqsGetQueueAttributesRequest &request);
+    SqsGetQueueUrlResponse * getQueueUrl(const SqsGetQueueUrlRequest &request);
+    SqsListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(const SqsListDeadLetterSourceQueuesRequest &request);
+    SqsListQueuesResponse * listQueues(const SqsListQueuesRequest &request);
+    SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &request);
+    SqsReceiveMessageResponse * receiveMessage(const SqsReceiveMessageRequest &request);
+    SqsRemovePermissionResponse * removePermission(const SqsRemovePermissionRequest &request);
+    SqsSendMessageResponse * sendMessage(const SqsSendMessageRequest &request);
+    SqsSendMessageBatchResponse * sendMessageBatch(const SqsSendMessageBatchRequest &request);
+    SqsSetQueueAttributesResponse * setQueueAttributes(const SqsSetQueueAttributesRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SQSClient)
-    Q_DISABLE_COPY(SQSClient)
+    Q_DECLARE_PRIVATE(SqsClient)
+    Q_DISABLE_COPY(SqsClient)
 
 };
 

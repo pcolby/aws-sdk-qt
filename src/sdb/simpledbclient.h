@@ -45,7 +45,17 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SimpleDBBatchDeleteAttributesResponse * batchDeleteAttributes(const SimpleDBBatchDeleteAttributesRequest &request);
+    SimpleDBBatchPutAttributesResponse * batchPutAttributes(const SimpleDBBatchPutAttributesRequest &request);
+    SimpleDBCreateDomainResponse * createDomain(const SimpleDBCreateDomainRequest &request);
+    SimpleDBDeleteAttributesResponse * deleteAttributes(const SimpleDBDeleteAttributesRequest &request);
+    SimpleDBDeleteDomainResponse * deleteDomain(const SimpleDBDeleteDomainRequest &request);
+    SimpleDBDomainMetadataResponse * domainMetadata(const SimpleDBDomainMetadataRequest &request);
+    SimpleDBGetAttributesResponse * getAttributes(const SimpleDBGetAttributesRequest &request);
+    SimpleDBListDomainsResponse * listDomains(const SimpleDBListDomainsRequest &request);
+    SimpleDBPutAttributesResponse * putAttributes(const SimpleDBPutAttributesRequest &request);
+    SimpleDBSelectResponse * select(const SimpleDBSelectRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SimpleDBClient)

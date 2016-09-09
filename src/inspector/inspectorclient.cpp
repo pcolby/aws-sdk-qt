@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  InspectorClient
  *
- * <fullname>Amazon Inspector</fullname> <p>Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues. For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html"> Amazon Inspector User Guide</a>.</p>
+ * @brief  Client for Amazon Inspector
+ *
+ * <fullname>Amazon Inspector</fullname>
+ *
+ + Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues. For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html"> Amazon Inspector User Guide</a>.
  */
 
 /**
@@ -105,7 +109,6 @@ InspectorClient::InspectorClient(
 InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

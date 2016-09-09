@@ -28,27 +28,33 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SNSClient
+ * @class  SnsClient
  *
- * <fullname>Amazon Simple Notification Service</fullname> <p>Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers over multiple delivery protocols. For more information about this product see <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>. </p> <p>We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>. </p>
+ * @brief  Client for Amazon Simple Notification Service ( SNS)
+ *
+ * <fullname>Amazon Simple Notification Service</fullname>
+ *
+ + Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers over multiple delivery protocols. For more information about this product see <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ *
+ + We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying requests, and handling error responses. For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.
  */
 
 /**
- * @brief  Constructs a new SNSClient object.
+ * @brief  Constructs a new SnsClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-SNSClient::SNSClient(
+SnsClient::SnsClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SNSClientPrivate(this), parent)
+: AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
-    Q_D(SNSClient);
+    Q_D(SnsClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +62,7 @@ SNSClient::SNSClient(
 }
 
 /**
- * @brief  Constructs a new SNSClient object.
+ * @brief  Constructs a new SnsClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +77,14 @@ SNSClient::SNSClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-SNSClient::SNSClient(
+SnsClient::SnsClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SNSClientPrivate(this), parent)
+: AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
-    Q_D(SNSClient);
+    Q_D(SnsClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +96,21 @@ SNSClient::SNSClient(
 /**
  * @internal
  *
- * @class  SNSClientPrivate
+ * @class  SnsClientPrivate
  *
- * @brief  Private implementation for SNSClient.
+ * @brief  Private implementation for SnsClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new SNSClientPrivate object.
+ * @brief  Constructs a new SnsClientPrivate object.
  *
- * @param  q  Pointer to this object's public SNSClient instance.
+ * @param  q  Pointer to this object's public SnsClient instance.
  */
-SNSClientPrivate::SNSClientPrivate(SNSClient * const q)
+SnsClientPrivate::SnsClientPrivate(SnsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

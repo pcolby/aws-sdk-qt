@@ -45,7 +45,18 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudWatchDeleteAlarmsResponse * deleteAlarms(const CloudWatchDeleteAlarmsRequest &request);
+    CloudWatchDescribeAlarmHistoryResponse * describeAlarmHistory(const CloudWatchDescribeAlarmHistoryRequest &request);
+    CloudWatchDescribeAlarmsResponse * describeAlarms(const CloudWatchDescribeAlarmsRequest &request);
+    CloudWatchDescribeAlarmsForMetricResponse * describeAlarmsForMetric(const CloudWatchDescribeAlarmsForMetricRequest &request);
+    CloudWatchDisableAlarmActionsResponse * disableAlarmActions(const CloudWatchDisableAlarmActionsRequest &request);
+    CloudWatchEnableAlarmActionsResponse * enableAlarmActions(const CloudWatchEnableAlarmActionsRequest &request);
+    CloudWatchGetMetricStatisticsResponse * getMetricStatistics(const CloudWatchGetMetricStatisticsRequest &request);
+    CloudWatchListMetricsResponse * listMetrics(const CloudWatchListMetricsRequest &request);
+    CloudWatchPutMetricAlarmResponse * putMetricAlarm(const CloudWatchPutMetricAlarmRequest &request);
+    CloudWatchPutMetricDataResponse * putMetricData(const CloudWatchPutMetricDataRequest &request);
+    CloudWatchSetAlarmStateResponse * setAlarmState(const CloudWatchSetAlarmStateRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchClient)

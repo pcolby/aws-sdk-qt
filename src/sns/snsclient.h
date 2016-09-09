@@ -28,28 +28,58 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class SNSClientPrivate;
+class SnsClientPrivate;
 
-class QTAWS_EXPORT SNSClient : public AwsAbstractClient {
+class QTAWS_EXPORT SnsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SNSClient(
+    SnsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SNSClient(
+    SnsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SnsAddPermissionResponse * addPermission(const SnsAddPermissionRequest &request);
+    SnsCheckIfPhoneNumberIsOptedOutResponse * checkIfPhoneNumberIsOptedOut(const SnsCheckIfPhoneNumberIsOptedOutRequest &request);
+    SnsConfirmSubscriptionResponse * confirmSubscription(const SnsConfirmSubscriptionRequest &request);
+    SnsCreatePlatformApplicationResponse * createPlatformApplication(const SnsCreatePlatformApplicationRequest &request);
+    SnsCreatePlatformEndpointResponse * createPlatformEndpoint(const SnsCreatePlatformEndpointRequest &request);
+    SnsCreateTopicResponse * createTopic(const SnsCreateTopicRequest &request);
+    SnsDeleteEndpointResponse * deleteEndpoint(const SnsDeleteEndpointRequest &request);
+    SnsDeletePlatformApplicationResponse * deletePlatformApplication(const SnsDeletePlatformApplicationRequest &request);
+    SnsDeleteTopicResponse * deleteTopic(const SnsDeleteTopicRequest &request);
+    SnsGetEndpointAttributesResponse * getEndpointAttributes(const SnsGetEndpointAttributesRequest &request);
+    SnsGetPlatformApplicationAttributesResponse * getPlatformApplicationAttributes(const SnsGetPlatformApplicationAttributesRequest &request);
+    SnsGetSMSAttributesResponse * getSMSAttributes(const SnsGetSMSAttributesRequest &request);
+    SnsGetSubscriptionAttributesResponse * getSubscriptionAttributes(const SnsGetSubscriptionAttributesRequest &request);
+    SnsGetTopicAttributesResponse * getTopicAttributes(const SnsGetTopicAttributesRequest &request);
+    SnsListEndpointsByPlatformApplicationResponse * listEndpointsByPlatformApplication(const SnsListEndpointsByPlatformApplicationRequest &request);
+    SnsListPhoneNumbersOptedOutResponse * listPhoneNumbersOptedOut(const SnsListPhoneNumbersOptedOutRequest &request);
+    SnsListPlatformApplicationsResponse * listPlatformApplications(const SnsListPlatformApplicationsRequest &request);
+    SnsListSubscriptionsResponse * listSubscriptions(const SnsListSubscriptionsRequest &request);
+    SnsListSubscriptionsByTopicResponse * listSubscriptionsByTopic(const SnsListSubscriptionsByTopicRequest &request);
+    SnsListTopicsResponse * listTopics(const SnsListTopicsRequest &request);
+    SnsOptInPhoneNumberResponse * optInPhoneNumber(const SnsOptInPhoneNumberRequest &request);
+    SnsPublishResponse * publish(const SnsPublishRequest &request);
+    SnsRemovePermissionResponse * removePermission(const SnsRemovePermissionRequest &request);
+    SnsSetEndpointAttributesResponse * setEndpointAttributes(const SnsSetEndpointAttributesRequest &request);
+    SnsSetPlatformApplicationAttributesResponse * setPlatformApplicationAttributes(const SnsSetPlatformApplicationAttributesRequest &request);
+    SnsSetSMSAttributesResponse * setSMSAttributes(const SnsSetSMSAttributesRequest &request);
+    SnsSetSubscriptionAttributesResponse * setSubscriptionAttributes(const SnsSetSubscriptionAttributesRequest &request);
+    SnsSetTopicAttributesResponse * setTopicAttributes(const SnsSetTopicAttributesRequest &request);
+    SnsSubscribeResponse * subscribe(const SnsSubscribeRequest &request);
+    SnsUnsubscribeResponse * unsubscribe(const SnsUnsubscribeRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SNSClient)
-    Q_DISABLE_COPY(SNSClient)
+    Q_DECLARE_PRIVATE(SnsClient)
+    Q_DISABLE_COPY(SnsClient)
 
 };
 

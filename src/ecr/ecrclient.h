@@ -28,28 +28,44 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class ECRClientPrivate;
+class EcrClientPrivate;
 
-class QTAWS_EXPORT ECRClient : public AwsAbstractClient {
+class QTAWS_EXPORT EcrClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ECRClient(
+    EcrClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ECRClient(
+    EcrClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    EcrBatchCheckLayerAvailabilityResponse * batchCheckLayerAvailability(const EcrBatchCheckLayerAvailabilityRequest &request);
+    EcrBatchDeleteImageResponse * batchDeleteImage(const EcrBatchDeleteImageRequest &request);
+    EcrBatchGetImageResponse * batchGetImage(const EcrBatchGetImageRequest &request);
+    EcrCompleteLayerUploadResponse * completeLayerUpload(const EcrCompleteLayerUploadRequest &request);
+    EcrCreateRepositoryResponse * createRepository(const EcrCreateRepositoryRequest &request);
+    EcrDeleteRepositoryResponse * deleteRepository(const EcrDeleteRepositoryRequest &request);
+    EcrDeleteRepositoryPolicyResponse * deleteRepositoryPolicy(const EcrDeleteRepositoryPolicyRequest &request);
+    EcrDescribeRepositoriesResponse * describeRepositories(const EcrDescribeRepositoriesRequest &request);
+    EcrGetAuthorizationTokenResponse * getAuthorizationToken(const EcrGetAuthorizationTokenRequest &request);
+    EcrGetDownloadUrlForLayerResponse * getDownloadUrlForLayer(const EcrGetDownloadUrlForLayerRequest &request);
+    EcrGetRepositoryPolicyResponse * getRepositoryPolicy(const EcrGetRepositoryPolicyRequest &request);
+    EcrInitiateLayerUploadResponse * initiateLayerUpload(const EcrInitiateLayerUploadRequest &request);
+    EcrListImagesResponse * listImages(const EcrListImagesRequest &request);
+    EcrPutImageResponse * putImage(const EcrPutImageRequest &request);
+    EcrSetRepositoryPolicyResponse * setRepositoryPolicy(const EcrSetRepositoryPolicyRequest &request);
+    EcrUploadLayerPartResponse * uploadLayerPart(const EcrUploadLayerPartRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ECRClient)
-    Q_DISABLE_COPY(ECRClient)
+    Q_DECLARE_PRIVATE(EcrClient)
+    Q_DISABLE_COPY(EcrClient)
 
 };
 

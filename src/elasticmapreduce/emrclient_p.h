@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class EMRClient;
+class EmrClient;
 
-class QTAWS_EXPORT EMRClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT EmrClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    EMRClientPrivate(EMRClient * const q);
+    EmrClientPrivate(EmrClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(EMRClient)
-    Q_DISABLE_COPY(EMRClientPrivate)
+    Q_DECLARE_PUBLIC(EmrClient)
+    Q_DISABLE_COPY(EmrClientPrivate)
 
 };
 

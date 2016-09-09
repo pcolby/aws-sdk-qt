@@ -30,7 +30,9 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  DeviceFarmClient
  *
- * <p>AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical phones, tablets, and other devices in the cloud.</p>
+ * @brief  Client for AWS Device Farm
+ *
+ * AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical phones, tablets, and other devices in the cloud.
  */
 
 /**
@@ -105,7 +107,6 @@ DeviceFarmClient::DeviceFarmClient(
 DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

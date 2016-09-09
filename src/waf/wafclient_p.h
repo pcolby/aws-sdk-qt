@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class WAFClient;
+class WafClient;
 
-class QTAWS_EXPORT WAFClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT WafClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    WAFClientPrivate(WAFClient * const q);
+    WafClientPrivate(WafClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(WAFClient)
-    Q_DISABLE_COPY(WAFClientPrivate)
+    Q_DECLARE_PUBLIC(WafClient)
+    Q_DISABLE_COPY(WafClientPrivate)
 
 };
 

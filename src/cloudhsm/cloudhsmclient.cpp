@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  CloudHSMClient
  *
+ * @brief  Client for Amazon CloudHSM
+ *
  * <fullname>AWS CloudHSM Service</fullname>
  */
 
@@ -105,7 +107,6 @@ CloudHSMClient::CloudHSMClient(
 CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

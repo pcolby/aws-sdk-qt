@@ -45,7 +45,39 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    InspectorAddAttributesToFindingsResponse * addAttributesToFindings(const InspectorAddAttributesToFindingsRequest &request);
+    InspectorCreateAssessmentTargetResponse * createAssessmentTarget(const InspectorCreateAssessmentTargetRequest &request);
+    InspectorCreateAssessmentTemplateResponse * createAssessmentTemplate(const InspectorCreateAssessmentTemplateRequest &request);
+    InspectorCreateResourceGroupResponse * createResourceGroup(const InspectorCreateResourceGroupRequest &request);
+    InspectorDeleteAssessmentRunResponse * deleteAssessmentRun(const InspectorDeleteAssessmentRunRequest &request);
+    InspectorDeleteAssessmentTargetResponse * deleteAssessmentTarget(const InspectorDeleteAssessmentTargetRequest &request);
+    InspectorDeleteAssessmentTemplateResponse * deleteAssessmentTemplate(const InspectorDeleteAssessmentTemplateRequest &request);
+    InspectorDescribeAssessmentRunsResponse * describeAssessmentRuns(const InspectorDescribeAssessmentRunsRequest &request);
+    InspectorDescribeAssessmentTargetsResponse * describeAssessmentTargets(const InspectorDescribeAssessmentTargetsRequest &request);
+    InspectorDescribeAssessmentTemplatesResponse * describeAssessmentTemplates(const InspectorDescribeAssessmentTemplatesRequest &request);
+    InspectorDescribeCrossAccountAccessRoleResponse * describeCrossAccountAccessRole();
+    InspectorDescribeFindingsResponse * describeFindings(const InspectorDescribeFindingsRequest &request);
+    InspectorDescribeResourceGroupsResponse * describeResourceGroups(const InspectorDescribeResourceGroupsRequest &request);
+    InspectorDescribeRulesPackagesResponse * describeRulesPackages(const InspectorDescribeRulesPackagesRequest &request);
+    InspectorGetTelemetryMetadataResponse * getTelemetryMetadata(const InspectorGetTelemetryMetadataRequest &request);
+    InspectorListAssessmentRunAgentsResponse * listAssessmentRunAgents(const InspectorListAssessmentRunAgentsRequest &request);
+    InspectorListAssessmentRunsResponse * listAssessmentRuns(const InspectorListAssessmentRunsRequest &request);
+    InspectorListAssessmentTargetsResponse * listAssessmentTargets(const InspectorListAssessmentTargetsRequest &request);
+    InspectorListAssessmentTemplatesResponse * listAssessmentTemplates(const InspectorListAssessmentTemplatesRequest &request);
+    InspectorListEventSubscriptionsResponse * listEventSubscriptions(const InspectorListEventSubscriptionsRequest &request);
+    InspectorListFindingsResponse * listFindings(const InspectorListFindingsRequest &request);
+    InspectorListRulesPackagesResponse * listRulesPackages(const InspectorListRulesPackagesRequest &request);
+    InspectorListTagsForResourceResponse * listTagsForResource(const InspectorListTagsForResourceRequest &request);
+    InspectorPreviewAgentsResponse * previewAgents(const InspectorPreviewAgentsRequest &request);
+    InspectorRegisterCrossAccountAccessRoleResponse * registerCrossAccountAccessRole(const InspectorRegisterCrossAccountAccessRoleRequest &request);
+    InspectorRemoveAttributesFromFindingsResponse * removeAttributesFromFindings(const InspectorRemoveAttributesFromFindingsRequest &request);
+    InspectorSetTagsForResourceResponse * setTagsForResource(const InspectorSetTagsForResourceRequest &request);
+    InspectorStartAssessmentRunResponse * startAssessmentRun(const InspectorStartAssessmentRunRequest &request);
+    InspectorStopAssessmentRunResponse * stopAssessmentRun(const InspectorStopAssessmentRunRequest &request);
+    InspectorSubscribeToEventResponse * subscribeToEvent(const InspectorSubscribeToEventRequest &request);
+    InspectorUnsubscribeFromEventResponse * unsubscribeFromEvent(const InspectorUnsubscribeFromEventRequest &request);
+    InspectorUpdateAssessmentTargetResponse * updateAssessmentTarget(const InspectorUpdateAssessmentTargetRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(InspectorClient)

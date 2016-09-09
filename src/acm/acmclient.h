@@ -28,28 +28,37 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class ACMClientPrivate;
+class AcmClientPrivate;
 
-class QTAWS_EXPORT ACMClient : public AwsAbstractClient {
+class QTAWS_EXPORT AcmClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ACMClient(
+    AcmClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ACMClient(
+    AcmClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    AcmAddTagsToCertificateResponse * addTagsToCertificate(const AcmAddTagsToCertificateRequest &request);
+    AcmDeleteCertificateResponse * deleteCertificate(const AcmDeleteCertificateRequest &request);
+    AcmDescribeCertificateResponse * describeCertificate(const AcmDescribeCertificateRequest &request);
+    AcmGetCertificateResponse * getCertificate(const AcmGetCertificateRequest &request);
+    AcmListCertificatesResponse * listCertificates(const AcmListCertificatesRequest &request);
+    AcmListTagsForCertificateResponse * listTagsForCertificate(const AcmListTagsForCertificateRequest &request);
+    AcmRemoveTagsFromCertificateResponse * removeTagsFromCertificate(const AcmRemoveTagsFromCertificateRequest &request);
+    AcmRequestCertificateResponse * requestCertificate(const AcmRequestCertificateRequest &request);
+    AcmResendValidationEmailResponse * resendValidationEmail(const AcmResendValidationEmailRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ACMClient)
-    Q_DISABLE_COPY(ACMClient)
+    Q_DECLARE_PRIVATE(AcmClient)
+    Q_DISABLE_COPY(AcmClient)
 
 };
 

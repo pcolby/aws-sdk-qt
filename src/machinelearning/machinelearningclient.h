@@ -45,7 +45,35 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    MachineLearningAddTagsResponse * addTags(const MachineLearningAddTagsRequest &request);
+    MachineLearningCreateBatchPredictionResponse * createBatchPrediction(const MachineLearningCreateBatchPredictionRequest &request);
+    MachineLearningCreateDataSourceFromRDSResponse * createDataSourceFromRDS(const MachineLearningCreateDataSourceFromRDSRequest &request);
+    MachineLearningCreateDataSourceFromRedshiftResponse * createDataSourceFromRedshift(const MachineLearningCreateDataSourceFromRedshiftRequest &request);
+    MachineLearningCreateDataSourceFromS3Response * createDataSourceFromS3(const MachineLearningCreateDataSourceFromS3Request &request);
+    MachineLearningCreateEvaluationResponse * createEvaluation(const MachineLearningCreateEvaluationRequest &request);
+    MachineLearningCreateMLModelResponse * createMLModel(const MachineLearningCreateMLModelRequest &request);
+    MachineLearningCreateRealtimeEndpointResponse * createRealtimeEndpoint(const MachineLearningCreateRealtimeEndpointRequest &request);
+    MachineLearningDeleteBatchPredictionResponse * deleteBatchPrediction(const MachineLearningDeleteBatchPredictionRequest &request);
+    MachineLearningDeleteDataSourceResponse * deleteDataSource(const MachineLearningDeleteDataSourceRequest &request);
+    MachineLearningDeleteEvaluationResponse * deleteEvaluation(const MachineLearningDeleteEvaluationRequest &request);
+    MachineLearningDeleteMLModelResponse * deleteMLModel(const MachineLearningDeleteMLModelRequest &request);
+    MachineLearningDeleteRealtimeEndpointResponse * deleteRealtimeEndpoint(const MachineLearningDeleteRealtimeEndpointRequest &request);
+    MachineLearningDeleteTagsResponse * deleteTags(const MachineLearningDeleteTagsRequest &request);
+    MachineLearningDescribeBatchPredictionsResponse * describeBatchPredictions(const MachineLearningDescribeBatchPredictionsRequest &request);
+    MachineLearningDescribeDataSourcesResponse * describeDataSources(const MachineLearningDescribeDataSourcesRequest &request);
+    MachineLearningDescribeEvaluationsResponse * describeEvaluations(const MachineLearningDescribeEvaluationsRequest &request);
+    MachineLearningDescribeMLModelsResponse * describeMLModels(const MachineLearningDescribeMLModelsRequest &request);
+    MachineLearningDescribeTagsResponse * describeTags(const MachineLearningDescribeTagsRequest &request);
+    MachineLearningGetBatchPredictionResponse * getBatchPrediction(const MachineLearningGetBatchPredictionRequest &request);
+    MachineLearningGetDataSourceResponse * getDataSource(const MachineLearningGetDataSourceRequest &request);
+    MachineLearningGetEvaluationResponse * getEvaluation(const MachineLearningGetEvaluationRequest &request);
+    MachineLearningGetMLModelResponse * getMLModel(const MachineLearningGetMLModelRequest &request);
+    MachineLearningPredictResponse * predict(const MachineLearningPredictRequest &request);
+    MachineLearningUpdateBatchPredictionResponse * updateBatchPrediction(const MachineLearningUpdateBatchPredictionRequest &request);
+    MachineLearningUpdateDataSourceResponse * updateDataSource(const MachineLearningUpdateDataSourceRequest &request);
+    MachineLearningUpdateEvaluationResponse * updateEvaluation(const MachineLearningUpdateEvaluationRequest &request);
+    MachineLearningUpdateMLModelResponse * updateMLModel(const MachineLearningUpdateMLModelRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MachineLearningClient)

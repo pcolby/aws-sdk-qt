@@ -28,27 +28,37 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SESClient
+ * @class  SesClient
  *
- * <fullname>Amazon Simple Email Service</fullname> <p> This is the API Reference for Amazon Simple Email Service (Amazon SES). This documentation is intended to be used in conjunction with the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>. </p> <note> <p> For a list of Amazon SES endpoints to use in service requests, see <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the Amazon SES Developer Guide. </p> </note>
+ * @brief  Client for Amazon Simple Email Service ( SES)
+ *
+ * <fullname>Amazon Simple Email Service</fullname>
+ *
+ +  This is the API Reference for Amazon Simple Email Service (Amazon SES). This documentation is intended to be used in conjunction with the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *
+ +  <note>
+ *
+ +  For a list of Amazon SES endpoints to use in service requests, see <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the Amazon SES Developer Guide.
+ *
+ +  </note>
  */
 
 /**
- * @brief  Constructs a new SESClient object.
+ * @brief  Constructs a new SesClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-SESClient::SESClient(
+SesClient::SesClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SESClientPrivate(this), parent)
+: AwsAbstractClient(new SesClientPrivate(this), parent)
 {
-    Q_D(SESClient);
+    Q_D(SesClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +66,7 @@ SESClient::SESClient(
 }
 
 /**
- * @brief  Constructs a new SESClient object.
+ * @brief  Constructs a new SesClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +81,14 @@ SESClient::SESClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-SESClient::SESClient(
+SesClient::SesClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SESClientPrivate(this), parent)
+: AwsAbstractClient(new SesClientPrivate(this), parent)
 {
-    Q_D(SESClient);
+    Q_D(SesClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +100,21 @@ SESClient::SESClient(
 /**
  * @internal
  *
- * @class  SESClientPrivate
+ * @class  SesClientPrivate
  *
- * @brief  Private implementation for SESClient.
+ * @brief  Private implementation for SesClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new SESClientPrivate object.
+ * @brief  Constructs a new SesClientPrivate object.
  *
- * @param  q  Pointer to this object's public SESClient instance.
+ * @param  q  Pointer to this object's public SesClient instance.
  */
-SESClientPrivate::SESClientPrivate(SESClient * const q)
+SesClientPrivate::SesClientPrivate(SesClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  DirectoryServiceClient
  *
- * <fullname>AWS Directory Service</fullname> <p>This is the <i>AWS Directory Service API Reference</i>. This guide provides detailed information about AWS Directory Service operations, data types, parameters, and errors.</p>
+ * @brief  Client for AWS Directory Service
+ *
+ * <fullname>AWS Directory Service</fullname>
+ *
+ + This is the <i>AWS Directory Service API Reference</i>. This guide provides detailed information about AWS Directory Service operations, data types, parameters, and errors.
  */
 
 /**
@@ -105,7 +109,6 @@ DirectoryServiceClient::DirectoryServiceClient(
 DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

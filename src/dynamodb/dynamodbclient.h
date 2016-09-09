@@ -45,7 +45,21 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    DynamoDBBatchGetItemResponse * batchGetItem(const DynamoDBBatchGetItemRequest &request);
+    DynamoDBBatchWriteItemResponse * batchWriteItem(const DynamoDBBatchWriteItemRequest &request);
+    DynamoDBCreateTableResponse * createTable(const DynamoDBCreateTableRequest &request);
+    DynamoDBDeleteItemResponse * deleteItem(const DynamoDBDeleteItemRequest &request);
+    DynamoDBDeleteTableResponse * deleteTable(const DynamoDBDeleteTableRequest &request);
+    DynamoDBDescribeLimitsResponse * describeLimits(const DynamoDBDescribeLimitsRequest &request);
+    DynamoDBDescribeTableResponse * describeTable(const DynamoDBDescribeTableRequest &request);
+    DynamoDBGetItemResponse * getItem(const DynamoDBGetItemRequest &request);
+    DynamoDBListTablesResponse * listTables(const DynamoDBListTablesRequest &request);
+    DynamoDBPutItemResponse * putItem(const DynamoDBPutItemRequest &request);
+    DynamoDBQueryResponse * query(const DynamoDBQueryRequest &request);
+    DynamoDBScanResponse * scan(const DynamoDBScanRequest &request);
+    DynamoDBUpdateItemResponse * updateItem(const DynamoDBUpdateItemRequest &request);
+    DynamoDBUpdateTableResponse * updateTable(const DynamoDBUpdateTableRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DynamoDBClient)

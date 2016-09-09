@@ -45,7 +45,31 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    LambdaAddPermissionResponse * addPermission(const LambdaAddPermissionRequest &request);
+    LambdaCreateAliasResponse * createAlias(const LambdaCreateAliasRequest &request);
+    LambdaCreateEventSourceMappingResponse * createEventSourceMapping(const LambdaCreateEventSourceMappingRequest &request);
+    LambdaCreateFunctionResponse * createFunction(const LambdaCreateFunctionRequest &request);
+    LambdaDeleteAliasResponse * deleteAlias(const LambdaDeleteAliasRequest &request);
+    LambdaDeleteEventSourceMappingResponse * deleteEventSourceMapping(const LambdaDeleteEventSourceMappingRequest &request);
+    LambdaDeleteFunctionResponse * deleteFunction(const LambdaDeleteFunctionRequest &request);
+    LambdaGetAliasResponse * getAlias(const LambdaGetAliasRequest &request);
+    LambdaGetEventSourceMappingResponse * getEventSourceMapping(const LambdaGetEventSourceMappingRequest &request);
+    LambdaGetFunctionResponse * getFunction(const LambdaGetFunctionRequest &request);
+    LambdaGetFunctionConfigurationResponse * getFunctionConfiguration(const LambdaGetFunctionConfigurationRequest &request);
+    LambdaGetPolicyResponse * getPolicy(const LambdaGetPolicyRequest &request);
+    LambdaInvokeResponse * invoke(const LambdaInvokeRequest &request);
+    LambdaInvokeAsyncResponse * invokeAsync(const LambdaInvokeAsyncRequest &request);
+    LambdaListAliasesResponse * listAliases(const LambdaListAliasesRequest &request);
+    LambdaListEventSourceMappingsResponse * listEventSourceMappings(const LambdaListEventSourceMappingsRequest &request);
+    LambdaListFunctionsResponse * listFunctions(const LambdaListFunctionsRequest &request);
+    LambdaListVersionsByFunctionResponse * listVersionsByFunction(const LambdaListVersionsByFunctionRequest &request);
+    LambdaPublishVersionResponse * publishVersion(const LambdaPublishVersionRequest &request);
+    LambdaRemovePermissionResponse * removePermission(const LambdaRemovePermissionRequest &request);
+    LambdaUpdateAliasResponse * updateAlias(const LambdaUpdateAliasRequest &request);
+    LambdaUpdateEventSourceMappingResponse * updateEventSourceMapping(const LambdaUpdateEventSourceMappingRequest &request);
+    LambdaUpdateFunctionCodeResponse * updateFunctionCode(const LambdaUpdateFunctionCodeRequest &request);
+    LambdaUpdateFunctionConfigurationResponse * updateFunctionConfiguration(const LambdaUpdateFunctionConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(LambdaClient)

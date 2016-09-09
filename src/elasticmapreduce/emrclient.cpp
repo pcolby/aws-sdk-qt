@@ -28,27 +28,29 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  EMRClient
+ * @class  EmrClient
  *
- * <p>Amazon Elastic MapReduce (Amazon EMR) is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine learning, scientific simulation, and data warehousing.</p>
+ * @brief  Client for Amazon Elastic MapReduce ( EMR)
+ *
+ * Amazon Elastic MapReduce (Amazon EMR) is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine learning, scientific simulation, and data warehousing.
  */
 
 /**
- * @brief  Constructs a new EMRClient object.
+ * @brief  Constructs a new EmrClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-EMRClient::EMRClient(
+EmrClient::EmrClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EMRClientPrivate(this), parent)
+: AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
-    Q_D(EMRClient);
+    Q_D(EmrClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +58,7 @@ EMRClient::EMRClient(
 }
 
 /**
- * @brief  Constructs a new EMRClient object.
+ * @brief  Constructs a new EmrClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +73,14 @@ EMRClient::EMRClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-EMRClient::EMRClient(
+EmrClient::EmrClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EMRClientPrivate(this), parent)
+: AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
-    Q_D(EMRClient);
+    Q_D(EmrClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +92,21 @@ EMRClient::EMRClient(
 /**
  * @internal
  *
- * @class  EMRClientPrivate
+ * @class  EmrClientPrivate
  *
- * @brief  Private implementation for EMRClient.
+ * @brief  Private implementation for EmrClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new EMRClientPrivate object.
+ * @brief  Constructs a new EmrClientPrivate object.
  *
- * @param  q  Pointer to this object's public EMRClient instance.
+ * @param  q  Pointer to this object's public EmrClient instance.
  */
-EMRClientPrivate::EMRClientPrivate(EMRClient * const q)
+EmrClientPrivate::EmrClientPrivate(EmrClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

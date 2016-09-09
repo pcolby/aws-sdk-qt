@@ -45,7 +45,32 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudWatchLogsCancelExportTaskResponse * cancelExportTask(const CloudWatchLogsCancelExportTaskRequest &request);
+    CloudWatchLogsCreateExportTaskResponse * createExportTask(const CloudWatchLogsCreateExportTaskRequest &request);
+    CloudWatchLogsCreateLogGroupResponse * createLogGroup(const CloudWatchLogsCreateLogGroupRequest &request);
+    CloudWatchLogsCreateLogStreamResponse * createLogStream(const CloudWatchLogsCreateLogStreamRequest &request);
+    CloudWatchLogsDeleteDestinationResponse * deleteDestination(const CloudWatchLogsDeleteDestinationRequest &request);
+    CloudWatchLogsDeleteLogGroupResponse * deleteLogGroup(const CloudWatchLogsDeleteLogGroupRequest &request);
+    CloudWatchLogsDeleteLogStreamResponse * deleteLogStream(const CloudWatchLogsDeleteLogStreamRequest &request);
+    CloudWatchLogsDeleteMetricFilterResponse * deleteMetricFilter(const CloudWatchLogsDeleteMetricFilterRequest &request);
+    CloudWatchLogsDeleteRetentionPolicyResponse * deleteRetentionPolicy(const CloudWatchLogsDeleteRetentionPolicyRequest &request);
+    CloudWatchLogsDeleteSubscriptionFilterResponse * deleteSubscriptionFilter(const CloudWatchLogsDeleteSubscriptionFilterRequest &request);
+    CloudWatchLogsDescribeDestinationsResponse * describeDestinations(const CloudWatchLogsDescribeDestinationsRequest &request);
+    CloudWatchLogsDescribeExportTasksResponse * describeExportTasks(const CloudWatchLogsDescribeExportTasksRequest &request);
+    CloudWatchLogsDescribeLogGroupsResponse * describeLogGroups(const CloudWatchLogsDescribeLogGroupsRequest &request);
+    CloudWatchLogsDescribeLogStreamsResponse * describeLogStreams(const CloudWatchLogsDescribeLogStreamsRequest &request);
+    CloudWatchLogsDescribeMetricFiltersResponse * describeMetricFilters(const CloudWatchLogsDescribeMetricFiltersRequest &request);
+    CloudWatchLogsDescribeSubscriptionFiltersResponse * describeSubscriptionFilters(const CloudWatchLogsDescribeSubscriptionFiltersRequest &request);
+    CloudWatchLogsFilterLogEventsResponse * filterLogEvents(const CloudWatchLogsFilterLogEventsRequest &request);
+    CloudWatchLogsGetLogEventsResponse * getLogEvents(const CloudWatchLogsGetLogEventsRequest &request);
+    CloudWatchLogsPutDestinationResponse * putDestination(const CloudWatchLogsPutDestinationRequest &request);
+    CloudWatchLogsPutDestinationPolicyResponse * putDestinationPolicy(const CloudWatchLogsPutDestinationPolicyRequest &request);
+    CloudWatchLogsPutLogEventsResponse * putLogEvents(const CloudWatchLogsPutLogEventsRequest &request);
+    CloudWatchLogsPutMetricFilterResponse * putMetricFilter(const CloudWatchLogsPutMetricFilterRequest &request);
+    CloudWatchLogsPutRetentionPolicyResponse * putRetentionPolicy(const CloudWatchLogsPutRetentionPolicyRequest &request);
+    CloudWatchLogsPutSubscriptionFilterResponse * putSubscriptionFilter(const CloudWatchLogsPutSubscriptionFilterRequest &request);
+    CloudWatchLogsTestMetricFilterResponse * testMetricFilter(const CloudWatchLogsTestMetricFilterRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchLogsClient)

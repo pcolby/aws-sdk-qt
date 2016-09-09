@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  KinesisAnalyticsClient
  *
+ * @brief  Client for Amazon Kinesis Analytics
+ *
  * 
  */
 
@@ -105,7 +107,6 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
 KinesisAnalyticsClientPrivate::KinesisAnalyticsClientPrivate(KinesisAnalyticsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

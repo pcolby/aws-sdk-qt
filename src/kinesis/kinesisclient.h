@@ -45,7 +45,24 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    KinesisAddTagsToStreamResponse * addTagsToStream(const KinesisAddTagsToStreamRequest &request);
+    KinesisCreateStreamResponse * createStream(const KinesisCreateStreamRequest &request);
+    KinesisDecreaseStreamRetentionPeriodResponse * decreaseStreamRetentionPeriod(const KinesisDecreaseStreamRetentionPeriodRequest &request);
+    KinesisDeleteStreamResponse * deleteStream(const KinesisDeleteStreamRequest &request);
+    KinesisDescribeStreamResponse * describeStream(const KinesisDescribeStreamRequest &request);
+    KinesisDisableEnhancedMonitoringResponse * disableEnhancedMonitoring(const KinesisDisableEnhancedMonitoringRequest &request);
+    KinesisEnableEnhancedMonitoringResponse * enableEnhancedMonitoring(const KinesisEnableEnhancedMonitoringRequest &request);
+    KinesisGetRecordsResponse * getRecords(const KinesisGetRecordsRequest &request);
+    KinesisGetShardIteratorResponse * getShardIterator(const KinesisGetShardIteratorRequest &request);
+    KinesisIncreaseStreamRetentionPeriodResponse * increaseStreamRetentionPeriod(const KinesisIncreaseStreamRetentionPeriodRequest &request);
+    KinesisListStreamsResponse * listStreams(const KinesisListStreamsRequest &request);
+    KinesisListTagsForStreamResponse * listTagsForStream(const KinesisListTagsForStreamRequest &request);
+    KinesisMergeShardsResponse * mergeShards(const KinesisMergeShardsRequest &request);
+    KinesisPutRecordResponse * putRecord(const KinesisPutRecordRequest &request);
+    KinesisPutRecordsResponse * putRecords(const KinesisPutRecordsRequest &request);
+    KinesisRemoveTagsFromStreamResponse * removeTagsFromStream(const KinesisRemoveTagsFromStreamRequest &request);
+    KinesisSplitShardResponse * splitShard(const KinesisSplitShardRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisClient)

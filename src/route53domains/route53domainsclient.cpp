@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  Route53DomainsClient
  *
+ * @brief  Client for Amazon Route 53 Domains
+ *
  * 
  */
 
@@ -105,7 +107,6 @@ Route53DomainsClient::Route53DomainsClient(
 Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

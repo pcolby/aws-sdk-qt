@@ -45,7 +45,33 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ConfigServiceDeleteConfigRuleResponse * deleteConfigRule(const ConfigServiceDeleteConfigRuleRequest &request);
+    ConfigServiceDeleteConfigurationRecorderResponse * deleteConfigurationRecorder(const ConfigServiceDeleteConfigurationRecorderRequest &request);
+    ConfigServiceDeleteDeliveryChannelResponse * deleteDeliveryChannel(const ConfigServiceDeleteDeliveryChannelRequest &request);
+    ConfigServiceDeleteEvaluationResultsResponse * deleteEvaluationResults(const ConfigServiceDeleteEvaluationResultsRequest &request);
+    ConfigServiceDeliverConfigSnapshotResponse * deliverConfigSnapshot(const ConfigServiceDeliverConfigSnapshotRequest &request);
+    ConfigServiceDescribeComplianceByConfigRuleResponse * describeComplianceByConfigRule(const ConfigServiceDescribeComplianceByConfigRuleRequest &request);
+    ConfigServiceDescribeComplianceByResourceResponse * describeComplianceByResource(const ConfigServiceDescribeComplianceByResourceRequest &request);
+    ConfigServiceDescribeConfigRuleEvaluationStatusResponse * describeConfigRuleEvaluationStatus(const ConfigServiceDescribeConfigRuleEvaluationStatusRequest &request);
+    ConfigServiceDescribeConfigRulesResponse * describeConfigRules(const ConfigServiceDescribeConfigRulesRequest &request);
+    ConfigServiceDescribeConfigurationRecorderStatusResponse * describeConfigurationRecorderStatus(const ConfigServiceDescribeConfigurationRecorderStatusRequest &request);
+    ConfigServiceDescribeConfigurationRecordersResponse * describeConfigurationRecorders(const ConfigServiceDescribeConfigurationRecordersRequest &request);
+    ConfigServiceDescribeDeliveryChannelStatusResponse * describeDeliveryChannelStatus(const ConfigServiceDescribeDeliveryChannelStatusRequest &request);
+    ConfigServiceDescribeDeliveryChannelsResponse * describeDeliveryChannels(const ConfigServiceDescribeDeliveryChannelsRequest &request);
+    ConfigServiceGetComplianceDetailsByConfigRuleResponse * getComplianceDetailsByConfigRule(const ConfigServiceGetComplianceDetailsByConfigRuleRequest &request);
+    ConfigServiceGetComplianceDetailsByResourceResponse * getComplianceDetailsByResource(const ConfigServiceGetComplianceDetailsByResourceRequest &request);
+    ConfigServiceGetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule();
+    ConfigServiceGetComplianceSummaryByResourceTypeResponse * getComplianceSummaryByResourceType(const ConfigServiceGetComplianceSummaryByResourceTypeRequest &request);
+    ConfigServiceGetResourceConfigHistoryResponse * getResourceConfigHistory(const ConfigServiceGetResourceConfigHistoryRequest &request);
+    ConfigServiceListDiscoveredResourcesResponse * listDiscoveredResources(const ConfigServiceListDiscoveredResourcesRequest &request);
+    ConfigServicePutConfigRuleResponse * putConfigRule(const ConfigServicePutConfigRuleRequest &request);
+    ConfigServicePutConfigurationRecorderResponse * putConfigurationRecorder(const ConfigServicePutConfigurationRecorderRequest &request);
+    ConfigServicePutDeliveryChannelResponse * putDeliveryChannel(const ConfigServicePutDeliveryChannelRequest &request);
+    ConfigServicePutEvaluationsResponse * putEvaluations(const ConfigServicePutEvaluationsRequest &request);
+    ConfigServiceStartConfigRulesEvaluationResponse * startConfigRulesEvaluation(const ConfigServiceStartConfigRulesEvaluationRequest &request);
+    ConfigServiceStartConfigurationRecorderResponse * startConfigurationRecorder(const ConfigServiceStartConfigurationRecorderRequest &request);
+    ConfigServiceStopConfigurationRecorderResponse * stopConfigurationRecorder(const ConfigServiceStopConfigurationRecorderRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ConfigServiceClient)

@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  AutoScalingClient
  *
- * <fullname>Auto Scaling</fullname> <p>Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies, schedules, and health checks. Use this service in conjunction with the Amazon CloudWatch and Elastic Load Balancing services.</p>
+ * @brief  Client for Auto Scaling
+ *
+ * <fullname>Auto Scaling</fullname>
+ *
+ + Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies, schedules, and health checks. Use this service in conjunction with the Amazon CloudWatch and Elastic Load Balancing services.
  */
 
 /**
@@ -105,7 +109,6 @@ AutoScalingClient::AutoScalingClient(
 AutoScalingClientPrivate::AutoScalingClientPrivate(AutoScalingClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

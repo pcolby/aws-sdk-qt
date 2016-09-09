@@ -45,7 +45,50 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    DeviceFarmCreateDevicePoolResponse * createDevicePool(const DeviceFarmCreateDevicePoolRequest &request);
+    DeviceFarmCreateProjectResponse * createProject(const DeviceFarmCreateProjectRequest &request);
+    DeviceFarmCreateRemoteAccessSessionResponse * createRemoteAccessSession(const DeviceFarmCreateRemoteAccessSessionRequest &request);
+    DeviceFarmCreateUploadResponse * createUpload(const DeviceFarmCreateUploadRequest &request);
+    DeviceFarmDeleteDevicePoolResponse * deleteDevicePool(const DeviceFarmDeleteDevicePoolRequest &request);
+    DeviceFarmDeleteProjectResponse * deleteProject(const DeviceFarmDeleteProjectRequest &request);
+    DeviceFarmDeleteRemoteAccessSessionResponse * deleteRemoteAccessSession(const DeviceFarmDeleteRemoteAccessSessionRequest &request);
+    DeviceFarmDeleteRunResponse * deleteRun(const DeviceFarmDeleteRunRequest &request);
+    DeviceFarmDeleteUploadResponse * deleteUpload(const DeviceFarmDeleteUploadRequest &request);
+    DeviceFarmGetAccountSettingsResponse * getAccountSettings(const DeviceFarmGetAccountSettingsRequest &request);
+    DeviceFarmGetDeviceResponse * getDevice(const DeviceFarmGetDeviceRequest &request);
+    DeviceFarmGetDevicePoolResponse * getDevicePool(const DeviceFarmGetDevicePoolRequest &request);
+    DeviceFarmGetDevicePoolCompatibilityResponse * getDevicePoolCompatibility(const DeviceFarmGetDevicePoolCompatibilityRequest &request);
+    DeviceFarmGetJobResponse * getJob(const DeviceFarmGetJobRequest &request);
+    DeviceFarmGetOfferingStatusResponse * getOfferingStatus(const DeviceFarmGetOfferingStatusRequest &request);
+    DeviceFarmGetProjectResponse * getProject(const DeviceFarmGetProjectRequest &request);
+    DeviceFarmGetRemoteAccessSessionResponse * getRemoteAccessSession(const DeviceFarmGetRemoteAccessSessionRequest &request);
+    DeviceFarmGetRunResponse * getRun(const DeviceFarmGetRunRequest &request);
+    DeviceFarmGetSuiteResponse * getSuite(const DeviceFarmGetSuiteRequest &request);
+    DeviceFarmGetTestResponse * getTest(const DeviceFarmGetTestRequest &request);
+    DeviceFarmGetUploadResponse * getUpload(const DeviceFarmGetUploadRequest &request);
+    DeviceFarmInstallToRemoteAccessSessionResponse * installToRemoteAccessSession(const DeviceFarmInstallToRemoteAccessSessionRequest &request);
+    DeviceFarmListArtifactsResponse * listArtifacts(const DeviceFarmListArtifactsRequest &request);
+    DeviceFarmListDevicePoolsResponse * listDevicePools(const DeviceFarmListDevicePoolsRequest &request);
+    DeviceFarmListDevicesResponse * listDevices(const DeviceFarmListDevicesRequest &request);
+    DeviceFarmListJobsResponse * listJobs(const DeviceFarmListJobsRequest &request);
+    DeviceFarmListOfferingTransactionsResponse * listOfferingTransactions(const DeviceFarmListOfferingTransactionsRequest &request);
+    DeviceFarmListOfferingsResponse * listOfferings(const DeviceFarmListOfferingsRequest &request);
+    DeviceFarmListProjectsResponse * listProjects(const DeviceFarmListProjectsRequest &request);
+    DeviceFarmListRemoteAccessSessionsResponse * listRemoteAccessSessions(const DeviceFarmListRemoteAccessSessionsRequest &request);
+    DeviceFarmListRunsResponse * listRuns(const DeviceFarmListRunsRequest &request);
+    DeviceFarmListSamplesResponse * listSamples(const DeviceFarmListSamplesRequest &request);
+    DeviceFarmListSuitesResponse * listSuites(const DeviceFarmListSuitesRequest &request);
+    DeviceFarmListTestsResponse * listTests(const DeviceFarmListTestsRequest &request);
+    DeviceFarmListUniqueProblemsResponse * listUniqueProblems(const DeviceFarmListUniqueProblemsRequest &request);
+    DeviceFarmListUploadsResponse * listUploads(const DeviceFarmListUploadsRequest &request);
+    DeviceFarmPurchaseOfferingResponse * purchaseOffering(const DeviceFarmPurchaseOfferingRequest &request);
+    DeviceFarmRenewOfferingResponse * renewOffering(const DeviceFarmRenewOfferingRequest &request);
+    DeviceFarmScheduleRunResponse * scheduleRun(const DeviceFarmScheduleRunRequest &request);
+    DeviceFarmStopRemoteAccessSessionResponse * stopRemoteAccessSession(const DeviceFarmStopRemoteAccessSessionRequest &request);
+    DeviceFarmStopRunResponse * stopRun(const DeviceFarmStopRunRequest &request);
+    DeviceFarmUpdateDevicePoolResponse * updateDevicePool(const DeviceFarmUpdateDevicePoolRequest &request);
+    DeviceFarmUpdateProjectResponse * updateProject(const DeviceFarmUpdateProjectRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DeviceFarmClient)

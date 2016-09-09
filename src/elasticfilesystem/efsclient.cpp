@@ -28,27 +28,29 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  EFSClient
+ * @class  EfsClient
+ *
+ * @brief  Client for Amazon Elastic File System (EFS)
  *
  * <fullname>Amazon Elastic File System</fullname>
  */
 
 /**
- * @brief  Constructs a new EFSClient object.
+ * @brief  Constructs a new EfsClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-EFSClient::EFSClient(
+EfsClient::EfsClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EFSClientPrivate(this), parent)
+: AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
-    Q_D(EFSClient);
+    Q_D(EfsClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +58,7 @@ EFSClient::EFSClient(
 }
 
 /**
- * @brief  Constructs a new EFSClient object.
+ * @brief  Constructs a new EfsClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +73,14 @@ EFSClient::EFSClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-EFSClient::EFSClient(
+EfsClient::EfsClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new EFSClientPrivate(this), parent)
+: AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
-    Q_D(EFSClient);
+    Q_D(EfsClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +92,21 @@ EFSClient::EFSClient(
 /**
  * @internal
  *
- * @class  EFSClientPrivate
+ * @class  EfsClientPrivate
  *
- * @brief  Private implementation for EFSClient.
+ * @brief  Private implementation for EfsClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new EFSClientPrivate object.
+ * @brief  Constructs a new EfsClientPrivate object.
  *
- * @param  q  Pointer to this object's public EFSClient instance.
+ * @param  q  Pointer to this object's public EfsClient instance.
  */
-EFSClientPrivate::EFSClientPrivate(EFSClient * const q)
+EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

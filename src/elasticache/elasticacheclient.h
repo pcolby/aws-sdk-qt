@@ -45,7 +45,45 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ElastiCacheAddTagsToResourceResponse * addTagsToResource(const ElastiCacheAddTagsToResourceRequest &request);
+    ElastiCacheAuthorizeCacheSecurityGroupIngressResponse * authorizeCacheSecurityGroupIngress(const ElastiCacheAuthorizeCacheSecurityGroupIngressRequest &request);
+    ElastiCacheCopySnapshotResponse * copySnapshot(const ElastiCacheCopySnapshotRequest &request);
+    ElastiCacheCreateCacheClusterResponse * createCacheCluster(const ElastiCacheCreateCacheClusterRequest &request);
+    ElastiCacheCreateCacheParameterGroupResponse * createCacheParameterGroup(const ElastiCacheCreateCacheParameterGroupRequest &request);
+    ElastiCacheCreateCacheSecurityGroupResponse * createCacheSecurityGroup(const ElastiCacheCreateCacheSecurityGroupRequest &request);
+    ElastiCacheCreateCacheSubnetGroupResponse * createCacheSubnetGroup(const ElastiCacheCreateCacheSubnetGroupRequest &request);
+    ElastiCacheCreateReplicationGroupResponse * createReplicationGroup(const ElastiCacheCreateReplicationGroupRequest &request);
+    ElastiCacheCreateSnapshotResponse * createSnapshot(const ElastiCacheCreateSnapshotRequest &request);
+    ElastiCacheDeleteCacheClusterResponse * deleteCacheCluster(const ElastiCacheDeleteCacheClusterRequest &request);
+    ElastiCacheDeleteCacheParameterGroupResponse * deleteCacheParameterGroup(const ElastiCacheDeleteCacheParameterGroupRequest &request);
+    ElastiCacheDeleteCacheSecurityGroupResponse * deleteCacheSecurityGroup(const ElastiCacheDeleteCacheSecurityGroupRequest &request);
+    ElastiCacheDeleteCacheSubnetGroupResponse * deleteCacheSubnetGroup(const ElastiCacheDeleteCacheSubnetGroupRequest &request);
+    ElastiCacheDeleteReplicationGroupResponse * deleteReplicationGroup(const ElastiCacheDeleteReplicationGroupRequest &request);
+    ElastiCacheDeleteSnapshotResponse * deleteSnapshot(const ElastiCacheDeleteSnapshotRequest &request);
+    ElastiCacheDescribeCacheClustersResponse * describeCacheClusters(const ElastiCacheDescribeCacheClustersRequest &request);
+    ElastiCacheDescribeCacheEngineVersionsResponse * describeCacheEngineVersions(const ElastiCacheDescribeCacheEngineVersionsRequest &request);
+    ElastiCacheDescribeCacheParameterGroupsResponse * describeCacheParameterGroups(const ElastiCacheDescribeCacheParameterGroupsRequest &request);
+    ElastiCacheDescribeCacheParametersResponse * describeCacheParameters(const ElastiCacheDescribeCacheParametersRequest &request);
+    ElastiCacheDescribeCacheSecurityGroupsResponse * describeCacheSecurityGroups(const ElastiCacheDescribeCacheSecurityGroupsRequest &request);
+    ElastiCacheDescribeCacheSubnetGroupsResponse * describeCacheSubnetGroups(const ElastiCacheDescribeCacheSubnetGroupsRequest &request);
+    ElastiCacheDescribeEngineDefaultParametersResponse * describeEngineDefaultParameters(const ElastiCacheDescribeEngineDefaultParametersRequest &request);
+    ElastiCacheDescribeEventsResponse * describeEvents(const ElastiCacheDescribeEventsRequest &request);
+    ElastiCacheDescribeReplicationGroupsResponse * describeReplicationGroups(const ElastiCacheDescribeReplicationGroupsRequest &request);
+    ElastiCacheDescribeReservedCacheNodesResponse * describeReservedCacheNodes(const ElastiCacheDescribeReservedCacheNodesRequest &request);
+    ElastiCacheDescribeReservedCacheNodesOfferingsResponse * describeReservedCacheNodesOfferings(const ElastiCacheDescribeReservedCacheNodesOfferingsRequest &request);
+    ElastiCacheDescribeSnapshotsResponse * describeSnapshots(const ElastiCacheDescribeSnapshotsRequest &request);
+    ElastiCacheListAllowedNodeTypeModificationsResponse * listAllowedNodeTypeModifications(const ElastiCacheListAllowedNodeTypeModificationsRequest &request);
+    ElastiCacheListTagsForResourceResponse * listTagsForResource(const ElastiCacheListTagsForResourceRequest &request);
+    ElastiCacheModifyCacheClusterResponse * modifyCacheCluster(const ElastiCacheModifyCacheClusterRequest &request);
+    ElastiCacheModifyCacheParameterGroupResponse * modifyCacheParameterGroup(const ElastiCacheModifyCacheParameterGroupRequest &request);
+    ElastiCacheModifyCacheSubnetGroupResponse * modifyCacheSubnetGroup(const ElastiCacheModifyCacheSubnetGroupRequest &request);
+    ElastiCacheModifyReplicationGroupResponse * modifyReplicationGroup(const ElastiCacheModifyReplicationGroupRequest &request);
+    ElastiCachePurchaseReservedCacheNodesOfferingResponse * purchaseReservedCacheNodesOffering(const ElastiCachePurchaseReservedCacheNodesOfferingRequest &request);
+    ElastiCacheRebootCacheClusterResponse * rebootCacheCluster(const ElastiCacheRebootCacheClusterRequest &request);
+    ElastiCacheRemoveTagsFromResourceResponse * removeTagsFromResource(const ElastiCacheRemoveTagsFromResourceRequest &request);
+    ElastiCacheResetCacheParameterGroupResponse * resetCacheParameterGroup(const ElastiCacheResetCacheParameterGroupRequest &request);
+    ElastiCacheRevokeCacheSecurityGroupIngressResponse * revokeCacheSecurityGroupIngress(const ElastiCacheRevokeCacheSecurityGroupIngressRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElastiCacheClient)

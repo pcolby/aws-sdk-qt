@@ -28,27 +28,31 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  ECSClient
+ * @class  EcsClient
  *
- * <p>Amazon EC2 Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of EC2 instances. Amazon ECS lets you launch and stop container-enabled applications with simple API calls, allows you to get the state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2 features like security groups, Amazon EBS volumes, and IAM roles.</p> <p>You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs, isolation policies, and availability requirements. Amazon EC2 Container Service eliminates the need for you to operate your own cluster management and configuration management systems or worry about scaling your management infrastructure.</p>
+ * @brief  Client for Amazon EC2 Container Service ( ECS)
+ *
+ * Amazon EC2 Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of EC2 instances. Amazon ECS lets you launch and stop container-enabled applications with simple API calls, allows you to get the state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2 features like security groups, Amazon EBS volumes, and IAM roles.
+ *
+ + You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs, isolation policies, and availability requirements. Amazon EC2 Container Service eliminates the need for you to operate your own cluster management and configuration management systems or worry about scaling your management infrastructure.
  */
 
 /**
- * @brief  Constructs a new ECSClient object.
+ * @brief  Constructs a new EcsClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-ECSClient::ECSClient(
+EcsClient::EcsClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ECSClientPrivate(this), parent)
+: AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
-    Q_D(ECSClient);
+    Q_D(EcsClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +60,7 @@ ECSClient::ECSClient(
 }
 
 /**
- * @brief  Constructs a new ECSClient object.
+ * @brief  Constructs a new EcsClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +75,14 @@ ECSClient::ECSClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-ECSClient::ECSClient(
+EcsClient::EcsClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ECSClientPrivate(this), parent)
+: AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
-    Q_D(ECSClient);
+    Q_D(EcsClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +94,21 @@ ECSClient::ECSClient(
 /**
  * @internal
  *
- * @class  ECSClientPrivate
+ * @class  EcsClientPrivate
  *
- * @brief  Private implementation for ECSClient.
+ * @brief  Private implementation for EcsClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new ECSClientPrivate object.
+ * @brief  Constructs a new EcsClientPrivate object.
  *
- * @param  q  Pointer to this object's public ECSClient instance.
+ * @param  q  Pointer to this object's public EcsClient instance.
  */
-ECSClientPrivate::ECSClientPrivate(ECSClient * const q)
+EcsClientPrivate::EcsClientPrivate(EcsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

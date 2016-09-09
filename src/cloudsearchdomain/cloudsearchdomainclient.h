@@ -45,7 +45,10 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudSearchDomainSearchResponse * search(const CloudSearchDomainSearchRequest &request);
+    CloudSearchDomainSuggestResponse * suggest(const CloudSearchDomainSuggestRequest &request);
+    CloudSearchDomainUploadDocumentsResponse * uploadDocuments(const CloudSearchDomainUploadDocumentsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudSearchDomainClient)

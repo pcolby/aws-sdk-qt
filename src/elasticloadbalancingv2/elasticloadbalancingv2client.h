@@ -45,7 +45,36 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ElasticLoadBalancingv2AddTagsResponse * addTags(const ElasticLoadBalancingv2AddTagsRequest &request);
+    ElasticLoadBalancingv2CreateListenerResponse * createListener(const ElasticLoadBalancingv2CreateListenerRequest &request);
+    ElasticLoadBalancingv2CreateLoadBalancerResponse * createLoadBalancer(const ElasticLoadBalancingv2CreateLoadBalancerRequest &request);
+    ElasticLoadBalancingv2CreateRuleResponse * createRule(const ElasticLoadBalancingv2CreateRuleRequest &request);
+    ElasticLoadBalancingv2CreateTargetGroupResponse * createTargetGroup(const ElasticLoadBalancingv2CreateTargetGroupRequest &request);
+    ElasticLoadBalancingv2DeleteListenerResponse * deleteListener(const ElasticLoadBalancingv2DeleteListenerRequest &request);
+    ElasticLoadBalancingv2DeleteLoadBalancerResponse * deleteLoadBalancer(const ElasticLoadBalancingv2DeleteLoadBalancerRequest &request);
+    ElasticLoadBalancingv2DeleteRuleResponse * deleteRule(const ElasticLoadBalancingv2DeleteRuleRequest &request);
+    ElasticLoadBalancingv2DeleteTargetGroupResponse * deleteTargetGroup(const ElasticLoadBalancingv2DeleteTargetGroupRequest &request);
+    ElasticLoadBalancingv2DeregisterTargetsResponse * deregisterTargets(const ElasticLoadBalancingv2DeregisterTargetsRequest &request);
+    ElasticLoadBalancingv2DescribeListenersResponse * describeListeners(const ElasticLoadBalancingv2DescribeListenersRequest &request);
+    ElasticLoadBalancingv2DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const ElasticLoadBalancingv2DescribeLoadBalancerAttributesRequest &request);
+    ElasticLoadBalancingv2DescribeLoadBalancersResponse * describeLoadBalancers(const ElasticLoadBalancingv2DescribeLoadBalancersRequest &request);
+    ElasticLoadBalancingv2DescribeRulesResponse * describeRules(const ElasticLoadBalancingv2DescribeRulesRequest &request);
+    ElasticLoadBalancingv2DescribeSSLPoliciesResponse * describeSSLPolicies(const ElasticLoadBalancingv2DescribeSSLPoliciesRequest &request);
+    ElasticLoadBalancingv2DescribeTagsResponse * describeTags(const ElasticLoadBalancingv2DescribeTagsRequest &request);
+    ElasticLoadBalancingv2DescribeTargetGroupAttributesResponse * describeTargetGroupAttributes(const ElasticLoadBalancingv2DescribeTargetGroupAttributesRequest &request);
+    ElasticLoadBalancingv2DescribeTargetGroupsResponse * describeTargetGroups(const ElasticLoadBalancingv2DescribeTargetGroupsRequest &request);
+    ElasticLoadBalancingv2DescribeTargetHealthResponse * describeTargetHealth(const ElasticLoadBalancingv2DescribeTargetHealthRequest &request);
+    ElasticLoadBalancingv2ModifyListenerResponse * modifyListener(const ElasticLoadBalancingv2ModifyListenerRequest &request);
+    ElasticLoadBalancingv2ModifyLoadBalancerAttributesResponse * modifyLoadBalancerAttributes(const ElasticLoadBalancingv2ModifyLoadBalancerAttributesRequest &request);
+    ElasticLoadBalancingv2ModifyRuleResponse * modifyRule(const ElasticLoadBalancingv2ModifyRuleRequest &request);
+    ElasticLoadBalancingv2ModifyTargetGroupResponse * modifyTargetGroup(const ElasticLoadBalancingv2ModifyTargetGroupRequest &request);
+    ElasticLoadBalancingv2ModifyTargetGroupAttributesResponse * modifyTargetGroupAttributes(const ElasticLoadBalancingv2ModifyTargetGroupAttributesRequest &request);
+    ElasticLoadBalancingv2RegisterTargetsResponse * registerTargets(const ElasticLoadBalancingv2RegisterTargetsRequest &request);
+    ElasticLoadBalancingv2RemoveTagsResponse * removeTags(const ElasticLoadBalancingv2RemoveTagsRequest &request);
+    ElasticLoadBalancingv2SetRulePrioritiesResponse * setRulePriorities(const ElasticLoadBalancingv2SetRulePrioritiesRequest &request);
+    ElasticLoadBalancingv2SetSecurityGroupsResponse * setSecurityGroups(const ElasticLoadBalancingv2SetSecurityGroupsRequest &request);
+    ElasticLoadBalancingv2SetSubnetsResponse * setSubnets(const ElasticLoadBalancingv2SetSubnetsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingv2Client)

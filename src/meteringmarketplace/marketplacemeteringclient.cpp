@@ -30,7 +30,21 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  MarketplaceMeteringClient
  *
- * <fullname>AWS Marketplace Metering Service</fullname> <p>This reference provides descriptions of the low-level AWS Marketplace Metering Service API. </p> <p>AWS Marketplace sellers can use this API to submit usage data for custom usage dimensions.</p> <p><b>Submitting Metering Records</b></p> <ul> <li> <p><i>MeterUsage</i>- Submits the metering record for a Marketplace product.</p> </li> </ul>
+ * @brief  Client for AWSMarketplace Metering
+ *
+ * <fullname>AWS Marketplace Metering Service</fullname>
+ *
+ + This reference provides descriptions of the low-level AWS Marketplace Metering Service API.
+ *
+ + AWS Marketplace sellers can use this API to submit usage data for custom usage dimensions.
+ *
+ + <b>Submitting Metering Records</b>
+ *
+ +  <ul> <li>
+ *
+ + <i>MeterUsage</i>- Submits the metering record for a Marketplace product.
+ *
+ +  </li> </ul>
  */
 
 /**
@@ -105,7 +119,6 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
 MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

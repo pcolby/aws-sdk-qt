@@ -45,7 +45,11 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    IoTDataPlaneDeleteThingShadowResponse * deleteThingShadow(const IoTDataPlaneDeleteThingShadowRequest &request);
+    IoTDataPlaneGetThingShadowResponse * getThingShadow(const IoTDataPlaneGetThingShadowRequest &request);
+    IoTDataPlanePublishResponse * publish(const IoTDataPlanePublishRequest &request);
+    IoTDataPlaneUpdateThingShadowResponse * updateThingShadow(const IoTDataPlaneUpdateThingShadowRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(IoTDataPlaneClient)

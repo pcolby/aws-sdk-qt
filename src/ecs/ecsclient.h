@@ -28,28 +28,55 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class ECSClientPrivate;
+class EcsClientPrivate;
 
-class QTAWS_EXPORT ECSClient : public AwsAbstractClient {
+class QTAWS_EXPORT EcsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ECSClient(
+    EcsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ECSClient(
+    EcsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    EcsCreateClusterResponse * createCluster(const EcsCreateClusterRequest &request);
+    EcsCreateServiceResponse * createService(const EcsCreateServiceRequest &request);
+    EcsDeleteClusterResponse * deleteCluster(const EcsDeleteClusterRequest &request);
+    EcsDeleteServiceResponse * deleteService(const EcsDeleteServiceRequest &request);
+    EcsDeregisterContainerInstanceResponse * deregisterContainerInstance(const EcsDeregisterContainerInstanceRequest &request);
+    EcsDeregisterTaskDefinitionResponse * deregisterTaskDefinition(const EcsDeregisterTaskDefinitionRequest &request);
+    EcsDescribeClustersResponse * describeClusters(const EcsDescribeClustersRequest &request);
+    EcsDescribeContainerInstancesResponse * describeContainerInstances(const EcsDescribeContainerInstancesRequest &request);
+    EcsDescribeServicesResponse * describeServices(const EcsDescribeServicesRequest &request);
+    EcsDescribeTaskDefinitionResponse * describeTaskDefinition(const EcsDescribeTaskDefinitionRequest &request);
+    EcsDescribeTasksResponse * describeTasks(const EcsDescribeTasksRequest &request);
+    EcsDiscoverPollEndpointResponse * discoverPollEndpoint(const EcsDiscoverPollEndpointRequest &request);
+    EcsListClustersResponse * listClusters(const EcsListClustersRequest &request);
+    EcsListContainerInstancesResponse * listContainerInstances(const EcsListContainerInstancesRequest &request);
+    EcsListServicesResponse * listServices(const EcsListServicesRequest &request);
+    EcsListTaskDefinitionFamiliesResponse * listTaskDefinitionFamilies(const EcsListTaskDefinitionFamiliesRequest &request);
+    EcsListTaskDefinitionsResponse * listTaskDefinitions(const EcsListTaskDefinitionsRequest &request);
+    EcsListTasksResponse * listTasks(const EcsListTasksRequest &request);
+    EcsRegisterContainerInstanceResponse * registerContainerInstance(const EcsRegisterContainerInstanceRequest &request);
+    EcsRegisterTaskDefinitionResponse * registerTaskDefinition(const EcsRegisterTaskDefinitionRequest &request);
+    EcsRunTaskResponse * runTask(const EcsRunTaskRequest &request);
+    EcsStartTaskResponse * startTask(const EcsStartTaskRequest &request);
+    EcsStopTaskResponse * stopTask(const EcsStopTaskRequest &request);
+    EcsSubmitContainerStateChangeResponse * submitContainerStateChange(const EcsSubmitContainerStateChangeRequest &request);
+    EcsSubmitTaskStateChangeResponse * submitTaskStateChange(const EcsSubmitTaskStateChangeRequest &request);
+    EcsUpdateContainerAgentResponse * updateContainerAgent(const EcsUpdateContainerAgentRequest &request);
+    EcsUpdateServiceResponse * updateService(const EcsUpdateServiceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ECSClient)
-    Q_DISABLE_COPY(ECSClient)
+    Q_DECLARE_PRIVATE(EcsClient)
+    Q_DISABLE_COPY(EcsClient)
 
 };
 

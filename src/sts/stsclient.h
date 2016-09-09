@@ -28,28 +28,35 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class STSClientPrivate;
+class StsClientPrivate;
 
-class QTAWS_EXPORT STSClient : public AwsAbstractClient {
+class QTAWS_EXPORT StsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    STSClient(
+    StsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    STSClient(
+    StsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    StsAssumeRoleResponse * assumeRole(const StsAssumeRoleRequest &request);
+    StsAssumeRoleWithSAMLResponse * assumeRoleWithSAML(const StsAssumeRoleWithSAMLRequest &request);
+    StsAssumeRoleWithWebIdentityResponse * assumeRoleWithWebIdentity(const StsAssumeRoleWithWebIdentityRequest &request);
+    StsDecodeAuthorizationMessageResponse * decodeAuthorizationMessage(const StsDecodeAuthorizationMessageRequest &request);
+    StsGetCallerIdentityResponse * getCallerIdentity(const StsGetCallerIdentityRequest &request);
+    StsGetFederationTokenResponse * getFederationToken(const StsGetFederationTokenRequest &request);
+    StsGetSessionTokenResponse * getSessionToken(const StsGetSessionTokenRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(STSClient)
-    Q_DISABLE_COPY(STSClient)
+    Q_DECLARE_PRIVATE(StsClient)
+    Q_DISABLE_COPY(StsClient)
 
 };
 

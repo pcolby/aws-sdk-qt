@@ -45,7 +45,13 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ImportExportCancelJobResponse * cancelJob(const ImportExportCancelJobRequest &request);
+    ImportExportCreateJobResponse * createJob(const ImportExportCreateJobRequest &request);
+    ImportExportGetShippingLabelResponse * getShippingLabel(const ImportExportGetShippingLabelRequest &request);
+    ImportExportGetStatusResponse * getStatus(const ImportExportGetStatusRequest &request);
+    ImportExportListJobsResponse * listJobs(const ImportExportListJobsRequest &request);
+    ImportExportUpdateJobResponse * updateJob(const ImportExportUpdateJobRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ImportExportClient)

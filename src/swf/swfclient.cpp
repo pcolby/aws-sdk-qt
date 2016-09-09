@@ -28,27 +28,35 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SWFClient
+ * @class  SwfClient
  *
- * <fullname>Amazon Simple Workflow Service</fullname> <p>The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies, scheduling, and concurrency in accordance with the logical flow of the application.</p> <p>Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying complexities such as tracking their progress and maintaining their state.</p> <p>This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <a href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>.</p>
+ * @brief  Client for Amazon Simple Workflow Service ( SWF)
+ *
+ * <fullname>Amazon Simple Workflow Service</fullname>
+ *
+ + The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to coordinate work across distributed components. In Amazon SWF, a <i>task</i> represents a logical unit of work that is performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies, scheduling, and concurrency in accordance with the logical flow of the application.
+ *
+ + Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying complexities such as tracking their progress and maintaining their state.
+ *
+ + This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <a href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>.
  */
 
 /**
- * @brief  Constructs a new SWFClient object.
+ * @brief  Constructs a new SwfClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-SWFClient::SWFClient(
+SwfClient::SwfClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SWFClientPrivate(this), parent)
+: AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
-    Q_D(SWFClient);
+    Q_D(SwfClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +64,7 @@ SWFClient::SWFClient(
 }
 
 /**
- * @brief  Constructs a new SWFClient object.
+ * @brief  Constructs a new SwfClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +79,14 @@ SWFClient::SWFClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-SWFClient::SWFClient(
+SwfClient::SwfClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SWFClientPrivate(this), parent)
+: AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
-    Q_D(SWFClient);
+    Q_D(SwfClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +98,21 @@ SWFClient::SWFClient(
 /**
  * @internal
  *
- * @class  SWFClientPrivate
+ * @class  SwfClientPrivate
  *
- * @brief  Private implementation for SWFClient.
+ * @brief  Private implementation for SwfClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new SWFClientPrivate object.
+ * @brief  Constructs a new SwfClientPrivate object.
  *
- * @param  q  Pointer to this object's public SWFClient instance.
+ * @param  q  Pointer to this object's public SwfClient instance.
  */
-SWFClientPrivate::SWFClientPrivate(SWFClient * const q)
+SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

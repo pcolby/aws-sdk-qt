@@ -28,28 +28,45 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class EMRClientPrivate;
+class EmrClientPrivate;
 
-class QTAWS_EXPORT EMRClient : public AwsAbstractClient {
+class QTAWS_EXPORT EmrClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    EMRClient(
+    EmrClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EMRClient(
+    EmrClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    EmrAddInstanceGroupsResponse * addInstanceGroups(const EmrAddInstanceGroupsRequest &request);
+    EmrAddJobFlowStepsResponse * addJobFlowSteps(const EmrAddJobFlowStepsRequest &request);
+    EmrAddTagsResponse * addTags(const EmrAddTagsRequest &request);
+    EmrDescribeClusterResponse * describeCluster(const EmrDescribeClusterRequest &request);
+    EmrDescribeJobFlowsResponse * describeJobFlows(const EmrDescribeJobFlowsRequest &request);
+    EmrDescribeStepResponse * describeStep(const EmrDescribeStepRequest &request);
+    EmrListBootstrapActionsResponse * listBootstrapActions(const EmrListBootstrapActionsRequest &request);
+    EmrListClustersResponse * listClusters(const EmrListClustersRequest &request);
+    EmrListInstanceGroupsResponse * listInstanceGroups(const EmrListInstanceGroupsRequest &request);
+    EmrListInstancesResponse * listInstances(const EmrListInstancesRequest &request);
+    EmrListStepsResponse * listSteps(const EmrListStepsRequest &request);
+    EmrModifyInstanceGroupsResponse * modifyInstanceGroups(const EmrModifyInstanceGroupsRequest &request);
+    EmrRemoveTagsResponse * removeTags(const EmrRemoveTagsRequest &request);
+    EmrRunJobFlowResponse * runJobFlow(const EmrRunJobFlowRequest &request);
+    EmrSetTerminationProtectionResponse * setTerminationProtection(const EmrSetTerminationProtectionRequest &request);
+    EmrSetVisibleToAllUsersResponse * setVisibleToAllUsers(const EmrSetVisibleToAllUsersRequest &request);
+    EmrTerminateJobFlowsResponse * terminateJobFlows(const EmrTerminateJobFlowsRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(EMRClient)
-    Q_DISABLE_COPY(EMRClient)
+    Q_DECLARE_PRIVATE(EmrClient)
+    Q_DISABLE_COPY(EmrClient)
 
 };
 

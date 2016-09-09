@@ -45,7 +45,31 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudSearchBuildSuggestersResponse * buildSuggesters(const CloudSearchBuildSuggestersRequest &request);
+    CloudSearchCreateDomainResponse * createDomain(const CloudSearchCreateDomainRequest &request);
+    CloudSearchDefineAnalysisSchemeResponse * defineAnalysisScheme(const CloudSearchDefineAnalysisSchemeRequest &request);
+    CloudSearchDefineExpressionResponse * defineExpression(const CloudSearchDefineExpressionRequest &request);
+    CloudSearchDefineIndexFieldResponse * defineIndexField(const CloudSearchDefineIndexFieldRequest &request);
+    CloudSearchDefineSuggesterResponse * defineSuggester(const CloudSearchDefineSuggesterRequest &request);
+    CloudSearchDeleteAnalysisSchemeResponse * deleteAnalysisScheme(const CloudSearchDeleteAnalysisSchemeRequest &request);
+    CloudSearchDeleteDomainResponse * deleteDomain(const CloudSearchDeleteDomainRequest &request);
+    CloudSearchDeleteExpressionResponse * deleteExpression(const CloudSearchDeleteExpressionRequest &request);
+    CloudSearchDeleteIndexFieldResponse * deleteIndexField(const CloudSearchDeleteIndexFieldRequest &request);
+    CloudSearchDeleteSuggesterResponse * deleteSuggester(const CloudSearchDeleteSuggesterRequest &request);
+    CloudSearchDescribeAnalysisSchemesResponse * describeAnalysisSchemes(const CloudSearchDescribeAnalysisSchemesRequest &request);
+    CloudSearchDescribeAvailabilityOptionsResponse * describeAvailabilityOptions(const CloudSearchDescribeAvailabilityOptionsRequest &request);
+    CloudSearchDescribeDomainsResponse * describeDomains(const CloudSearchDescribeDomainsRequest &request);
+    CloudSearchDescribeExpressionsResponse * describeExpressions(const CloudSearchDescribeExpressionsRequest &request);
+    CloudSearchDescribeIndexFieldsResponse * describeIndexFields(const CloudSearchDescribeIndexFieldsRequest &request);
+    CloudSearchDescribeScalingParametersResponse * describeScalingParameters(const CloudSearchDescribeScalingParametersRequest &request);
+    CloudSearchDescribeServiceAccessPoliciesResponse * describeServiceAccessPolicies(const CloudSearchDescribeServiceAccessPoliciesRequest &request);
+    CloudSearchDescribeSuggestersResponse * describeSuggesters(const CloudSearchDescribeSuggestersRequest &request);
+    CloudSearchIndexDocumentsResponse * indexDocuments(const CloudSearchIndexDocumentsRequest &request);
+    CloudSearchListDomainNamesResponse * listDomainNames();
+    CloudSearchUpdateAvailabilityOptionsResponse * updateAvailabilityOptions(const CloudSearchUpdateAvailabilityOptionsRequest &request);
+    CloudSearchUpdateScalingParametersResponse * updateScalingParameters(const CloudSearchUpdateScalingParametersRequest &request);
+    CloudSearchUpdateServiceAccessPoliciesResponse * updateServiceAccessPolicies(const CloudSearchUpdateServiceAccessPoliciesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudSearchClient)

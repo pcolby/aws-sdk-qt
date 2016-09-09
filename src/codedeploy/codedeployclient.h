@@ -45,7 +45,42 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CodeDeployAddTagsToOnPremisesInstancesResponse * addTagsToOnPremisesInstances(const CodeDeployAddTagsToOnPremisesInstancesRequest &request);
+    CodeDeployBatchGetApplicationRevisionsResponse * batchGetApplicationRevisions(const CodeDeployBatchGetApplicationRevisionsRequest &request);
+    CodeDeployBatchGetApplicationsResponse * batchGetApplications(const CodeDeployBatchGetApplicationsRequest &request);
+    CodeDeployBatchGetDeploymentGroupsResponse * batchGetDeploymentGroups(const CodeDeployBatchGetDeploymentGroupsRequest &request);
+    CodeDeployBatchGetDeploymentInstancesResponse * batchGetDeploymentInstances(const CodeDeployBatchGetDeploymentInstancesRequest &request);
+    CodeDeployBatchGetDeploymentsResponse * batchGetDeployments(const CodeDeployBatchGetDeploymentsRequest &request);
+    CodeDeployBatchGetOnPremisesInstancesResponse * batchGetOnPremisesInstances(const CodeDeployBatchGetOnPremisesInstancesRequest &request);
+    CodeDeployCreateApplicationResponse * createApplication(const CodeDeployCreateApplicationRequest &request);
+    CodeDeployCreateDeploymentResponse * createDeployment(const CodeDeployCreateDeploymentRequest &request);
+    CodeDeployCreateDeploymentConfigResponse * createDeploymentConfig(const CodeDeployCreateDeploymentConfigRequest &request);
+    CodeDeployCreateDeploymentGroupResponse * createDeploymentGroup(const CodeDeployCreateDeploymentGroupRequest &request);
+    CodeDeployDeleteApplicationResponse * deleteApplication(const CodeDeployDeleteApplicationRequest &request);
+    CodeDeployDeleteDeploymentConfigResponse * deleteDeploymentConfig(const CodeDeployDeleteDeploymentConfigRequest &request);
+    CodeDeployDeleteDeploymentGroupResponse * deleteDeploymentGroup(const CodeDeployDeleteDeploymentGroupRequest &request);
+    CodeDeployDeregisterOnPremisesInstanceResponse * deregisterOnPremisesInstance(const CodeDeployDeregisterOnPremisesInstanceRequest &request);
+    CodeDeployGetApplicationResponse * getApplication(const CodeDeployGetApplicationRequest &request);
+    CodeDeployGetApplicationRevisionResponse * getApplicationRevision(const CodeDeployGetApplicationRevisionRequest &request);
+    CodeDeployGetDeploymentResponse * getDeployment(const CodeDeployGetDeploymentRequest &request);
+    CodeDeployGetDeploymentConfigResponse * getDeploymentConfig(const CodeDeployGetDeploymentConfigRequest &request);
+    CodeDeployGetDeploymentGroupResponse * getDeploymentGroup(const CodeDeployGetDeploymentGroupRequest &request);
+    CodeDeployGetDeploymentInstanceResponse * getDeploymentInstance(const CodeDeployGetDeploymentInstanceRequest &request);
+    CodeDeployGetOnPremisesInstanceResponse * getOnPremisesInstance(const CodeDeployGetOnPremisesInstanceRequest &request);
+    CodeDeployListApplicationRevisionsResponse * listApplicationRevisions(const CodeDeployListApplicationRevisionsRequest &request);
+    CodeDeployListApplicationsResponse * listApplications(const CodeDeployListApplicationsRequest &request);
+    CodeDeployListDeploymentConfigsResponse * listDeploymentConfigs(const CodeDeployListDeploymentConfigsRequest &request);
+    CodeDeployListDeploymentGroupsResponse * listDeploymentGroups(const CodeDeployListDeploymentGroupsRequest &request);
+    CodeDeployListDeploymentInstancesResponse * listDeploymentInstances(const CodeDeployListDeploymentInstancesRequest &request);
+    CodeDeployListDeploymentsResponse * listDeployments(const CodeDeployListDeploymentsRequest &request);
+    CodeDeployListOnPremisesInstancesResponse * listOnPremisesInstances(const CodeDeployListOnPremisesInstancesRequest &request);
+    CodeDeployRegisterApplicationRevisionResponse * registerApplicationRevision(const CodeDeployRegisterApplicationRevisionRequest &request);
+    CodeDeployRegisterOnPremisesInstanceResponse * registerOnPremisesInstance(const CodeDeployRegisterOnPremisesInstanceRequest &request);
+    CodeDeployRemoveTagsFromOnPremisesInstancesResponse * removeTagsFromOnPremisesInstances(const CodeDeployRemoveTagsFromOnPremisesInstancesRequest &request);
+    CodeDeployStopDeploymentResponse * stopDeployment(const CodeDeployStopDeploymentRequest &request);
+    CodeDeployUpdateApplicationResponse * updateApplication(const CodeDeployUpdateApplicationRequest &request);
+    CodeDeployUpdateDeploymentGroupResponse * updateDeploymentGroup(const CodeDeployUpdateDeploymentGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodeDeployClient)

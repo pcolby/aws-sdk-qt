@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class STSClient;
+class StsClient;
 
-class QTAWS_EXPORT STSClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT StsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    STSClientPrivate(STSClient * const q);
+    StsClientPrivate(StsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(STSClient)
-    Q_DISABLE_COPY(STSClientPrivate)
+    Q_DECLARE_PUBLIC(StsClient)
+    Q_DISABLE_COPY(StsClientPrivate)
 
 };
 

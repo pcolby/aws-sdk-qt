@@ -28,27 +28,29 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  ECRClient
+ * @class  EcrClient
  *
- * <p>Amazon EC2 Container Registry (Amazon ECR) is a managed AWS Docker registry service. Customers can use the familiar Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR supports private Docker repositories with resource-based permissions using AWS IAM so that specific users or Amazon EC2 instances can access repositories and images. Developers can use the Docker CLI to author and manage images.</p>
+ * @brief  Client for Amazon EC2 Container Registry ( ECR)
+ *
+ * Amazon EC2 Container Registry (Amazon ECR) is a managed AWS Docker registry service. Customers can use the familiar Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR supports private Docker repositories with resource-based permissions using AWS IAM so that specific users or Amazon EC2 instances can access repositories and images. Developers can use the Docker CLI to author and manage images.
  */
 
 /**
- * @brief  Constructs a new ECRClient object.
+ * @brief  Constructs a new EcrClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-ECRClient::ECRClient(
+EcrClient::EcrClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ECRClientPrivate(this), parent)
+: AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
-    Q_D(ECRClient);
+    Q_D(EcrClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +58,7 @@ ECRClient::ECRClient(
 }
 
 /**
- * @brief  Constructs a new ECRClient object.
+ * @brief  Constructs a new EcrClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +73,14 @@ ECRClient::ECRClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-ECRClient::ECRClient(
+EcrClient::EcrClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new ECRClientPrivate(this), parent)
+: AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
-    Q_D(ECRClient);
+    Q_D(EcrClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +92,21 @@ ECRClient::ECRClient(
 /**
  * @internal
  *
- * @class  ECRClientPrivate
+ * @class  EcrClientPrivate
  *
- * @brief  Private implementation for ECRClient.
+ * @brief  Private implementation for EcrClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new ECRClientPrivate object.
+ * @brief  Constructs a new EcrClientPrivate object.
  *
- * @param  q  Pointer to this object's public ECRClient instance.
+ * @param  q  Pointer to this object's public EcrClient instance.
  */
-ECRClientPrivate::ECRClientPrivate(ECRClient * const q)
+EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

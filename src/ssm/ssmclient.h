@@ -28,28 +28,54 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class SSMClientPrivate;
+class SsmClientPrivate;
 
-class QTAWS_EXPORT SSMClient : public AwsAbstractClient {
+class QTAWS_EXPORT SsmClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SSMClient(
+    SsmClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SSMClient(
+    SsmClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SsmAddTagsToResourceResponse * addTagsToResource(const SsmAddTagsToResourceRequest &request);
+    SsmCancelCommandResponse * cancelCommand(const SsmCancelCommandRequest &request);
+    SsmCreateActivationResponse * createActivation(const SsmCreateActivationRequest &request);
+    SsmCreateAssociationResponse * createAssociation(const SsmCreateAssociationRequest &request);
+    SsmCreateAssociationBatchResponse * createAssociationBatch(const SsmCreateAssociationBatchRequest &request);
+    SsmCreateDocumentResponse * createDocument(const SsmCreateDocumentRequest &request);
+    SsmDeleteActivationResponse * deleteActivation(const SsmDeleteActivationRequest &request);
+    SsmDeleteAssociationResponse * deleteAssociation(const SsmDeleteAssociationRequest &request);
+    SsmDeleteDocumentResponse * deleteDocument(const SsmDeleteDocumentRequest &request);
+    SsmDeregisterManagedInstanceResponse * deregisterManagedInstance(const SsmDeregisterManagedInstanceRequest &request);
+    SsmDescribeActivationsResponse * describeActivations(const SsmDescribeActivationsRequest &request);
+    SsmDescribeAssociationResponse * describeAssociation(const SsmDescribeAssociationRequest &request);
+    SsmDescribeDocumentResponse * describeDocument(const SsmDescribeDocumentRequest &request);
+    SsmDescribeDocumentPermissionResponse * describeDocumentPermission(const SsmDescribeDocumentPermissionRequest &request);
+    SsmDescribeInstanceInformationResponse * describeInstanceInformation(const SsmDescribeInstanceInformationRequest &request);
+    SsmGetDocumentResponse * getDocument(const SsmGetDocumentRequest &request);
+    SsmListAssociationsResponse * listAssociations(const SsmListAssociationsRequest &request);
+    SsmListCommandInvocationsResponse * listCommandInvocations(const SsmListCommandInvocationsRequest &request);
+    SsmListCommandsResponse * listCommands(const SsmListCommandsRequest &request);
+    SsmListDocumentsResponse * listDocuments(const SsmListDocumentsRequest &request);
+    SsmListTagsForResourceResponse * listTagsForResource(const SsmListTagsForResourceRequest &request);
+    SsmModifyDocumentPermissionResponse * modifyDocumentPermission(const SsmModifyDocumentPermissionRequest &request);
+    SsmRemoveTagsFromResourceResponse * removeTagsFromResource(const SsmRemoveTagsFromResourceRequest &request);
+    SsmSendCommandResponse * sendCommand(const SsmSendCommandRequest &request);
+    SsmUpdateAssociationStatusResponse * updateAssociationStatus(const SsmUpdateAssociationStatusRequest &request);
+    SsmUpdateManagedInstanceRoleResponse * updateManagedInstanceRole(const SsmUpdateManagedInstanceRoleRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SSMClient)
-    Q_DISABLE_COPY(SSMClient)
+    Q_DECLARE_PRIVATE(SsmClient)
+    Q_DISABLE_COPY(SsmClient)
 
 };
 

@@ -28,28 +28,39 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class EFSClientPrivate;
+class EfsClientPrivate;
 
-class QTAWS_EXPORT EFSClient : public AwsAbstractClient {
+class QTAWS_EXPORT EfsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    EFSClient(
+    EfsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EFSClient(
+    EfsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    EfsCreateFileSystemResponse * createFileSystem(const EfsCreateFileSystemRequest &request);
+    EfsCreateMountTargetResponse * createMountTarget(const EfsCreateMountTargetRequest &request);
+    EfsCreateTagsResponse * createTags(const EfsCreateTagsRequest &request);
+    EfsDeleteFileSystemResponse * deleteFileSystem(const EfsDeleteFileSystemRequest &request);
+    EfsDeleteMountTargetResponse * deleteMountTarget(const EfsDeleteMountTargetRequest &request);
+    EfsDeleteTagsResponse * deleteTags(const EfsDeleteTagsRequest &request);
+    EfsDescribeFileSystemsResponse * describeFileSystems(const EfsDescribeFileSystemsRequest &request);
+    EfsDescribeMountTargetSecurityGroupsResponse * describeMountTargetSecurityGroups(const EfsDescribeMountTargetSecurityGroupsRequest &request);
+    EfsDescribeMountTargetsResponse * describeMountTargets(const EfsDescribeMountTargetsRequest &request);
+    EfsDescribeTagsResponse * describeTags(const EfsDescribeTagsRequest &request);
+    EfsModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const EfsModifyMountTargetSecurityGroupsRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(EFSClient)
-    Q_DISABLE_COPY(EFSClient)
+    Q_DECLARE_PRIVATE(EfsClient)
+    Q_DISABLE_COPY(EfsClient)
 
 };
 

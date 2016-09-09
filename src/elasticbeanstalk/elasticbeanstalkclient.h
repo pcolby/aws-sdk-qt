@@ -45,7 +45,43 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ElasticBeanstalkAbortEnvironmentUpdateResponse * abortEnvironmentUpdate(const ElasticBeanstalkAbortEnvironmentUpdateRequest &request);
+    ElasticBeanstalkApplyEnvironmentManagedActionResponse * applyEnvironmentManagedAction(const ElasticBeanstalkApplyEnvironmentManagedActionRequest &request);
+    ElasticBeanstalkCheckDNSAvailabilityResponse * checkDNSAvailability(const ElasticBeanstalkCheckDNSAvailabilityRequest &request);
+    ElasticBeanstalkComposeEnvironmentsResponse * composeEnvironments(const ElasticBeanstalkComposeEnvironmentsRequest &request);
+    ElasticBeanstalkCreateApplicationResponse * createApplication(const ElasticBeanstalkCreateApplicationRequest &request);
+    ElasticBeanstalkCreateApplicationVersionResponse * createApplicationVersion(const ElasticBeanstalkCreateApplicationVersionRequest &request);
+    ElasticBeanstalkCreateConfigurationTemplateResponse * createConfigurationTemplate(const ElasticBeanstalkCreateConfigurationTemplateRequest &request);
+    ElasticBeanstalkCreateEnvironmentResponse * createEnvironment(const ElasticBeanstalkCreateEnvironmentRequest &request);
+    ElasticBeanstalkCreateStorageLocationResponse * createStorageLocation();
+    ElasticBeanstalkDeleteApplicationResponse * deleteApplication(const ElasticBeanstalkDeleteApplicationRequest &request);
+    ElasticBeanstalkDeleteApplicationVersionResponse * deleteApplicationVersion(const ElasticBeanstalkDeleteApplicationVersionRequest &request);
+    ElasticBeanstalkDeleteConfigurationTemplateResponse * deleteConfigurationTemplate(const ElasticBeanstalkDeleteConfigurationTemplateRequest &request);
+    ElasticBeanstalkDeleteEnvironmentConfigurationResponse * deleteEnvironmentConfiguration(const ElasticBeanstalkDeleteEnvironmentConfigurationRequest &request);
+    ElasticBeanstalkDescribeApplicationVersionsResponse * describeApplicationVersions(const ElasticBeanstalkDescribeApplicationVersionsRequest &request);
+    ElasticBeanstalkDescribeApplicationsResponse * describeApplications(const ElasticBeanstalkDescribeApplicationsRequest &request);
+    ElasticBeanstalkDescribeConfigurationOptionsResponse * describeConfigurationOptions(const ElasticBeanstalkDescribeConfigurationOptionsRequest &request);
+    ElasticBeanstalkDescribeConfigurationSettingsResponse * describeConfigurationSettings(const ElasticBeanstalkDescribeConfigurationSettingsRequest &request);
+    ElasticBeanstalkDescribeEnvironmentHealthResponse * describeEnvironmentHealth(const ElasticBeanstalkDescribeEnvironmentHealthRequest &request);
+    ElasticBeanstalkDescribeEnvironmentManagedActionHistoryResponse * describeEnvironmentManagedActionHistory(const ElasticBeanstalkDescribeEnvironmentManagedActionHistoryRequest &request);
+    ElasticBeanstalkDescribeEnvironmentManagedActionsResponse * describeEnvironmentManagedActions(const ElasticBeanstalkDescribeEnvironmentManagedActionsRequest &request);
+    ElasticBeanstalkDescribeEnvironmentResourcesResponse * describeEnvironmentResources(const ElasticBeanstalkDescribeEnvironmentResourcesRequest &request);
+    ElasticBeanstalkDescribeEnvironmentsResponse * describeEnvironments(const ElasticBeanstalkDescribeEnvironmentsRequest &request);
+    ElasticBeanstalkDescribeEventsResponse * describeEvents(const ElasticBeanstalkDescribeEventsRequest &request);
+    ElasticBeanstalkDescribeInstancesHealthResponse * describeInstancesHealth(const ElasticBeanstalkDescribeInstancesHealthRequest &request);
+    ElasticBeanstalkListAvailableSolutionStacksResponse * listAvailableSolutionStacks();
+    ElasticBeanstalkRebuildEnvironmentResponse * rebuildEnvironment(const ElasticBeanstalkRebuildEnvironmentRequest &request);
+    ElasticBeanstalkRequestEnvironmentInfoResponse * requestEnvironmentInfo(const ElasticBeanstalkRequestEnvironmentInfoRequest &request);
+    ElasticBeanstalkRestartAppServerResponse * restartAppServer(const ElasticBeanstalkRestartAppServerRequest &request);
+    ElasticBeanstalkRetrieveEnvironmentInfoResponse * retrieveEnvironmentInfo(const ElasticBeanstalkRetrieveEnvironmentInfoRequest &request);
+    ElasticBeanstalkSwapEnvironmentCNAMEsResponse * swapEnvironmentCNAMEs(const ElasticBeanstalkSwapEnvironmentCNAMEsRequest &request);
+    ElasticBeanstalkTerminateEnvironmentResponse * terminateEnvironment(const ElasticBeanstalkTerminateEnvironmentRequest &request);
+    ElasticBeanstalkUpdateApplicationResponse * updateApplication(const ElasticBeanstalkUpdateApplicationRequest &request);
+    ElasticBeanstalkUpdateApplicationVersionResponse * updateApplicationVersion(const ElasticBeanstalkUpdateApplicationVersionRequest &request);
+    ElasticBeanstalkUpdateConfigurationTemplateResponse * updateConfigurationTemplate(const ElasticBeanstalkUpdateConfigurationTemplateRequest &request);
+    ElasticBeanstalkUpdateEnvironmentResponse * updateEnvironment(const ElasticBeanstalkUpdateEnvironmentRequest &request);
+    ElasticBeanstalkValidateConfigurationSettingsResponse * validateConfigurationSettings(const ElasticBeanstalkValidateConfigurationSettingsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticBeanstalkClient)

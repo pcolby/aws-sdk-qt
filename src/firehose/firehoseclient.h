@@ -45,7 +45,14 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    FirehoseCreateDeliveryStreamResponse * createDeliveryStream(const FirehoseCreateDeliveryStreamRequest &request);
+    FirehoseDeleteDeliveryStreamResponse * deleteDeliveryStream(const FirehoseDeleteDeliveryStreamRequest &request);
+    FirehoseDescribeDeliveryStreamResponse * describeDeliveryStream(const FirehoseDescribeDeliveryStreamRequest &request);
+    FirehoseListDeliveryStreamsResponse * listDeliveryStreams(const FirehoseListDeliveryStreamsRequest &request);
+    FirehosePutRecordResponse * putRecord(const FirehosePutRecordRequest &request);
+    FirehosePutRecordBatchResponse * putRecordBatch(const FirehosePutRecordBatchRequest &request);
+    FirehoseUpdateDestinationResponse * updateDestination(const FirehoseUpdateDestinationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(FirehoseClient)

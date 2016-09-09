@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class SWFClient;
+class SwfClient;
 
-class QTAWS_EXPORT SWFClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT SwfClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    SWFClientPrivate(SWFClient * const q);
+    SwfClientPrivate(SwfClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SWFClient)
-    Q_DISABLE_COPY(SWFClientPrivate)
+    Q_DECLARE_PUBLIC(SwfClient)
+    Q_DISABLE_COPY(SwfClientPrivate)
 
 };
 

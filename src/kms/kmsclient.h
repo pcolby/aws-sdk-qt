@@ -28,28 +28,60 @@ QTAWS_BEGIN_NAMESPACE
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
-class KMSClientPrivate;
+class KmsClientPrivate;
 
-class QTAWS_EXPORT KMSClient : public AwsAbstractClient {
+class QTAWS_EXPORT KmsClient : public AwsAbstractClient {
     Q_OBJECT
 
 public:
-    KMSClient(
+    KmsClient(
         const AwsRegion::Region region = AwsRegion::InvalidRegion,
         AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    KMSClient(
+    KmsClient(
         const QUrl &endpoint, AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    KmsCancelKeyDeletionResponse * cancelKeyDeletion(const KmsCancelKeyDeletionRequest &request);
+    KmsCreateAliasResponse * createAlias(const KmsCreateAliasRequest &request);
+    KmsCreateGrantResponse * createGrant(const KmsCreateGrantRequest &request);
+    KmsCreateKeyResponse * createKey(const KmsCreateKeyRequest &request);
+    KmsDecryptResponse * decrypt(const KmsDecryptRequest &request);
+    KmsDeleteAliasResponse * deleteAlias(const KmsDeleteAliasRequest &request);
+    KmsDeleteImportedKeyMaterialResponse * deleteImportedKeyMaterial(const KmsDeleteImportedKeyMaterialRequest &request);
+    KmsDescribeKeyResponse * describeKey(const KmsDescribeKeyRequest &request);
+    KmsDisableKeyResponse * disableKey(const KmsDisableKeyRequest &request);
+    KmsDisableKeyRotationResponse * disableKeyRotation(const KmsDisableKeyRotationRequest &request);
+    KmsEnableKeyResponse * enableKey(const KmsEnableKeyRequest &request);
+    KmsEnableKeyRotationResponse * enableKeyRotation(const KmsEnableKeyRotationRequest &request);
+    KmsEncryptResponse * encrypt(const KmsEncryptRequest &request);
+    KmsGenerateDataKeyResponse * generateDataKey(const KmsGenerateDataKeyRequest &request);
+    KmsGenerateDataKeyWithoutPlaintextResponse * generateDataKeyWithoutPlaintext(const KmsGenerateDataKeyWithoutPlaintextRequest &request);
+    KmsGenerateRandomResponse * generateRandom(const KmsGenerateRandomRequest &request);
+    KmsGetKeyPolicyResponse * getKeyPolicy(const KmsGetKeyPolicyRequest &request);
+    KmsGetKeyRotationStatusResponse * getKeyRotationStatus(const KmsGetKeyRotationStatusRequest &request);
+    KmsGetParametersForImportResponse * getParametersForImport(const KmsGetParametersForImportRequest &request);
+    KmsImportKeyMaterialResponse * importKeyMaterial(const KmsImportKeyMaterialRequest &request);
+    KmsListAliasesResponse * listAliases(const KmsListAliasesRequest &request);
+    KmsListGrantsResponse * listGrants(const KmsListGrantsRequest &request);
+    KmsListKeyPoliciesResponse * listKeyPolicies(const KmsListKeyPoliciesRequest &request);
+    KmsListKeysResponse * listKeys(const KmsListKeysRequest &request);
+    KmsListRetirableGrantsResponse * listRetirableGrants(const KmsListRetirableGrantsRequest &request);
+    KmsPutKeyPolicyResponse * putKeyPolicy(const KmsPutKeyPolicyRequest &request);
+    KmsReEncryptResponse * reEncrypt(const KmsReEncryptRequest &request);
+    KmsRetireGrantResponse * retireGrant(const KmsRetireGrantRequest &request);
+    KmsRevokeGrantResponse * revokeGrant(const KmsRevokeGrantRequest &request);
+    KmsScheduleKeyDeletionResponse * scheduleKeyDeletion(const KmsScheduleKeyDeletionRequest &request);
+    KmsUpdateAliasResponse * updateAlias(const KmsUpdateAliasRequest &request);
+    KmsUpdateKeyDescriptionResponse * updateKeyDescription(const KmsUpdateKeyDescriptionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(KMSClient)
-    Q_DISABLE_COPY(KMSClient)
+    Q_DECLARE_PRIVATE(KmsClient)
+    Q_DISABLE_COPY(KmsClient)
 
 };
 

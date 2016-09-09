@@ -30,7 +30,11 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  WorkSpacesClient
  *
- * <fullname>Amazon WorkSpaces Service</fullname> <p>This reference provides detailed information about the Amazon WorkSpaces operations.</p>
+ * @brief  Client for Amazon WorkSpaces
+ *
+ * <fullname>Amazon WorkSpaces Service</fullname>
+ *
+ + This reference provides detailed information about the Amazon WorkSpaces operations.
  */
 
 /**
@@ -105,7 +109,6 @@ WorkSpacesClient::WorkSpacesClient(
 WorkSpacesClientPrivate::WorkSpacesClientPrivate(WorkSpacesClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

@@ -30,7 +30,73 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  ApplicationAutoScalingClient
  *
- * <p>Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto Scaling.</p> <p>Application Auto Scaling supports scaling the following AWS resources:</p> <ul> <li> <p>Amazon ECS services</p> </li> <li> <p>Amazon EC2 Spot fleet instances</p> </li> </ul> <p>You can use Application Auto Scaling to accomplish the following tasks:</p> <ul> <li> <p>Define scaling policies for automatically adjusting your AWS resources</p> </li> <li> <p>Scale your resources in response to CloudWatch alarms</p> </li> <li> <p>View history of your scaling events </p> </li> </ul> <p>Application Auto Scaling is available in the following regions:</p> <ul> <li> <p> <code>us-east-1</code> </p> </li> <li> <p> <code>us-west-1</code> </p> </li> <li> <p> <code>us-west-2</code> </p> </li> <li> <p> <code>ap-southeast-1</code> </p> </li> <li> <p> <code>ap-southeast-2</code> </p> </li> <li> <p> <code>ap-northeast-1</code> </p> </li> <li> <p> <code>eu-central-1</code> </p> </li> <li> <p> <code>eu-west-1</code> </p> </li> </ul>
+ * @brief  Client for Application Auto Scaling
+ *
+ * Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto Scaling.
+ *
+ + Application Auto Scaling supports scaling the following AWS resources:
+ *
+ +  <ul> <li>
+ *
+ + Amazon ECS services
+ *
+ +  </li> <li>
+ *
+ + Amazon EC2 Spot fleet instances
+ *
+ +  </li> </ul>
+ *
+ + You can use Application Auto Scaling to accomplish the following tasks:
+ *
+ +  <ul> <li>
+ *
+ + Define scaling policies for automatically adjusting your AWS resources
+ *
+ +  </li> <li>
+ *
+ + Scale your resources in response to CloudWatch alarms
+ *
+ +  </li> <li>
+ *
+ + View history of your scaling events
+ *
+ +  </li> </ul>
+ *
+ + Application Auto Scaling is available in the following regions:
+ *
+ +  <ul> <li>
+ *
+ +  <code>us-east-1</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>us-west-1</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>us-west-2</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>ap-southeast-1</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>ap-southeast-2</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>ap-northeast-1</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>eu-central-1</code>
+ *
+ +  </li> <li>
+ *
+ +  <code>eu-west-1</code>
+ *
+ +  </li> </ul>
  */
 
 /**
@@ -105,7 +171,6 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
 ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

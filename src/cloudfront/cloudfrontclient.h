@@ -45,7 +45,34 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudFrontCreateCloudFrontOriginAccessIdentityResponse * createCloudFrontOriginAccessIdentity(const CloudFrontCreateCloudFrontOriginAccessIdentityRequest &request);
+    CloudFrontCreateDistributionResponse * createDistribution(const CloudFrontCreateDistributionRequest &request);
+    CloudFrontCreateDistributionWithTagsResponse * createDistributionWithTags(const CloudFrontCreateDistributionWithTagsRequest &request);
+    CloudFrontCreateInvalidationResponse * createInvalidation(const CloudFrontCreateInvalidationRequest &request);
+    CloudFrontCreateStreamingDistributionResponse * createStreamingDistribution(const CloudFrontCreateStreamingDistributionRequest &request);
+    CloudFrontCreateStreamingDistributionWithTagsResponse * createStreamingDistributionWithTags(const CloudFrontCreateStreamingDistributionWithTagsRequest &request);
+    CloudFrontDeleteCloudFrontOriginAccessIdentityResponse * deleteCloudFrontOriginAccessIdentity(const CloudFrontDeleteCloudFrontOriginAccessIdentityRequest &request);
+    CloudFrontDeleteDistributionResponse * deleteDistribution(const CloudFrontDeleteDistributionRequest &request);
+    CloudFrontDeleteStreamingDistributionResponse * deleteStreamingDistribution(const CloudFrontDeleteStreamingDistributionRequest &request);
+    CloudFrontGetCloudFrontOriginAccessIdentityResponse * getCloudFrontOriginAccessIdentity(const CloudFrontGetCloudFrontOriginAccessIdentityRequest &request);
+    CloudFrontGetCloudFrontOriginAccessIdentityConfigResponse * getCloudFrontOriginAccessIdentityConfig(const CloudFrontGetCloudFrontOriginAccessIdentityConfigRequest &request);
+    CloudFrontGetDistributionResponse * getDistribution(const CloudFrontGetDistributionRequest &request);
+    CloudFrontGetDistributionConfigResponse * getDistributionConfig(const CloudFrontGetDistributionConfigRequest &request);
+    CloudFrontGetInvalidationResponse * getInvalidation(const CloudFrontGetInvalidationRequest &request);
+    CloudFrontGetStreamingDistributionResponse * getStreamingDistribution(const CloudFrontGetStreamingDistributionRequest &request);
+    CloudFrontGetStreamingDistributionConfigResponse * getStreamingDistributionConfig(const CloudFrontGetStreamingDistributionConfigRequest &request);
+    CloudFrontListCloudFrontOriginAccessIdentitiesResponse * listCloudFrontOriginAccessIdentities(const CloudFrontListCloudFrontOriginAccessIdentitiesRequest &request);
+    CloudFrontListDistributionsResponse * listDistributions(const CloudFrontListDistributionsRequest &request);
+    CloudFrontListDistributionsByWebACLIdResponse * listDistributionsByWebACLId(const CloudFrontListDistributionsByWebACLIdRequest &request);
+    CloudFrontListInvalidationsResponse * listInvalidations(const CloudFrontListInvalidationsRequest &request);
+    CloudFrontListStreamingDistributionsResponse * listStreamingDistributions(const CloudFrontListStreamingDistributionsRequest &request);
+    CloudFrontListTagsForResourceResponse * listTagsForResource(const CloudFrontListTagsForResourceRequest &request);
+    CloudFrontTagResourceResponse * tagResource(const CloudFrontTagResourceRequest &request);
+    CloudFrontUntagResourceResponse * untagResource(const CloudFrontUntagResourceRequest &request);
+    CloudFrontUpdateCloudFrontOriginAccessIdentityResponse * updateCloudFrontOriginAccessIdentity(const CloudFrontUpdateCloudFrontOriginAccessIdentityRequest &request);
+    CloudFrontUpdateDistributionResponse * updateDistribution(const CloudFrontUpdateDistributionRequest &request);
+    CloudFrontUpdateStreamingDistributionResponse * updateStreamingDistribution(const CloudFrontUpdateStreamingDistributionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudFrontClient)

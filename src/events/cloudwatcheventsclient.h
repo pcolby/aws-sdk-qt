@@ -45,7 +45,19 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CloudWatchEventsDeleteRuleResponse * deleteRule(const CloudWatchEventsDeleteRuleRequest &request);
+    CloudWatchEventsDescribeRuleResponse * describeRule(const CloudWatchEventsDescribeRuleRequest &request);
+    CloudWatchEventsDisableRuleResponse * disableRule(const CloudWatchEventsDisableRuleRequest &request);
+    CloudWatchEventsEnableRuleResponse * enableRule(const CloudWatchEventsEnableRuleRequest &request);
+    CloudWatchEventsListRuleNamesByTargetResponse * listRuleNamesByTarget(const CloudWatchEventsListRuleNamesByTargetRequest &request);
+    CloudWatchEventsListRulesResponse * listRules(const CloudWatchEventsListRulesRequest &request);
+    CloudWatchEventsListTargetsByRuleResponse * listTargetsByRule(const CloudWatchEventsListTargetsByRuleRequest &request);
+    CloudWatchEventsPutEventsResponse * putEvents(const CloudWatchEventsPutEventsRequest &request);
+    CloudWatchEventsPutRuleResponse * putRule(const CloudWatchEventsPutRuleRequest &request);
+    CloudWatchEventsPutTargetsResponse * putTargets(const CloudWatchEventsPutTargetsRequest &request);
+    CloudWatchEventsRemoveTargetsResponse * removeTargets(const CloudWatchEventsRemoveTargetsRequest &request);
+    CloudWatchEventsTestEventPatternResponse * testEventPattern(const CloudWatchEventsTestEventPatternRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchEventsClient)

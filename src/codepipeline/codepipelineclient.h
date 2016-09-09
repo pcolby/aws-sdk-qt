@@ -45,7 +45,33 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CodePipelineAcknowledgeJobResponse * acknowledgeJob(const CodePipelineAcknowledgeJobRequest &request);
+    CodePipelineAcknowledgeThirdPartyJobResponse * acknowledgeThirdPartyJob(const CodePipelineAcknowledgeThirdPartyJobRequest &request);
+    CodePipelineCreateCustomActionTypeResponse * createCustomActionType(const CodePipelineCreateCustomActionTypeRequest &request);
+    CodePipelineCreatePipelineResponse * createPipeline(const CodePipelineCreatePipelineRequest &request);
+    CodePipelineDeleteCustomActionTypeResponse * deleteCustomActionType(const CodePipelineDeleteCustomActionTypeRequest &request);
+    CodePipelineDeletePipelineResponse * deletePipeline(const CodePipelineDeletePipelineRequest &request);
+    CodePipelineDisableStageTransitionResponse * disableStageTransition(const CodePipelineDisableStageTransitionRequest &request);
+    CodePipelineEnableStageTransitionResponse * enableStageTransition(const CodePipelineEnableStageTransitionRequest &request);
+    CodePipelineGetJobDetailsResponse * getJobDetails(const CodePipelineGetJobDetailsRequest &request);
+    CodePipelineGetPipelineResponse * getPipeline(const CodePipelineGetPipelineRequest &request);
+    CodePipelineGetPipelineExecutionResponse * getPipelineExecution(const CodePipelineGetPipelineExecutionRequest &request);
+    CodePipelineGetPipelineStateResponse * getPipelineState(const CodePipelineGetPipelineStateRequest &request);
+    CodePipelineGetThirdPartyJobDetailsResponse * getThirdPartyJobDetails(const CodePipelineGetThirdPartyJobDetailsRequest &request);
+    CodePipelineListActionTypesResponse * listActionTypes(const CodePipelineListActionTypesRequest &request);
+    CodePipelineListPipelinesResponse * listPipelines(const CodePipelineListPipelinesRequest &request);
+    CodePipelinePollForJobsResponse * pollForJobs(const CodePipelinePollForJobsRequest &request);
+    CodePipelinePollForThirdPartyJobsResponse * pollForThirdPartyJobs(const CodePipelinePollForThirdPartyJobsRequest &request);
+    CodePipelinePutActionRevisionResponse * putActionRevision(const CodePipelinePutActionRevisionRequest &request);
+    CodePipelinePutApprovalResultResponse * putApprovalResult(const CodePipelinePutApprovalResultRequest &request);
+    CodePipelinePutJobFailureResultResponse * putJobFailureResult(const CodePipelinePutJobFailureResultRequest &request);
+    CodePipelinePutJobSuccessResultResponse * putJobSuccessResult(const CodePipelinePutJobSuccessResultRequest &request);
+    CodePipelinePutThirdPartyJobFailureResultResponse * putThirdPartyJobFailureResult(const CodePipelinePutThirdPartyJobFailureResultRequest &request);
+    CodePipelinePutThirdPartyJobSuccessResultResponse * putThirdPartyJobSuccessResult(const CodePipelinePutThirdPartyJobSuccessResultRequest &request);
+    CodePipelineRetryStageExecutionResponse * retryStageExecution(const CodePipelineRetryStageExecutionRequest &request);
+    CodePipelineStartPipelineExecutionResponse * startPipelineExecution(const CodePipelineStartPipelineExecutionRequest &request);
+    CodePipelineUpdatePipelineResponse * updatePipeline(const CodePipelineUpdatePipelineRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodePipelineClient)

@@ -45,7 +45,24 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ElasticTranscoderCancelJobResponse * cancelJob(const ElasticTranscoderCancelJobRequest &request);
+    ElasticTranscoderCreateJobResponse * createJob(const ElasticTranscoderCreateJobRequest &request);
+    ElasticTranscoderCreatePipelineResponse * createPipeline(const ElasticTranscoderCreatePipelineRequest &request);
+    ElasticTranscoderCreatePresetResponse * createPreset(const ElasticTranscoderCreatePresetRequest &request);
+    ElasticTranscoderDeletePipelineResponse * deletePipeline(const ElasticTranscoderDeletePipelineRequest &request);
+    ElasticTranscoderDeletePresetResponse * deletePreset(const ElasticTranscoderDeletePresetRequest &request);
+    ElasticTranscoderListJobsByPipelineResponse * listJobsByPipeline(const ElasticTranscoderListJobsByPipelineRequest &request);
+    ElasticTranscoderListJobsByStatusResponse * listJobsByStatus(const ElasticTranscoderListJobsByStatusRequest &request);
+    ElasticTranscoderListPipelinesResponse * listPipelines(const ElasticTranscoderListPipelinesRequest &request);
+    ElasticTranscoderListPresetsResponse * listPresets(const ElasticTranscoderListPresetsRequest &request);
+    ElasticTranscoderReadJobResponse * readJob(const ElasticTranscoderReadJobRequest &request);
+    ElasticTranscoderReadPipelineResponse * readPipeline(const ElasticTranscoderReadPipelineRequest &request);
+    ElasticTranscoderReadPresetResponse * readPreset(const ElasticTranscoderReadPresetRequest &request);
+    ElasticTranscoderTestRoleResponse * testRole(const ElasticTranscoderTestRoleRequest &request);
+    ElasticTranscoderUpdatePipelineResponse * updatePipeline(const ElasticTranscoderUpdatePipelineRequest &request);
+    ElasticTranscoderUpdatePipelineNotificationsResponse * updatePipelineNotifications(const ElasticTranscoderUpdatePipelineNotificationsRequest &request);
+    ElasticTranscoderUpdatePipelineStatusResponse * updatePipelineStatus(const ElasticTranscoderUpdatePipelineStatusRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticTranscoderClient)

@@ -45,7 +45,18 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ServiceCatalogDescribeProductResponse * describeProduct(const ServiceCatalogDescribeProductRequest &request);
+    ServiceCatalogDescribeProductViewResponse * describeProductView(const ServiceCatalogDescribeProductViewRequest &request);
+    ServiceCatalogDescribeProvisioningParametersResponse * describeProvisioningParameters(const ServiceCatalogDescribeProvisioningParametersRequest &request);
+    ServiceCatalogDescribeRecordResponse * describeRecord(const ServiceCatalogDescribeRecordRequest &request);
+    ServiceCatalogListLaunchPathsResponse * listLaunchPaths(const ServiceCatalogListLaunchPathsRequest &request);
+    ServiceCatalogListRecordHistoryResponse * listRecordHistory(const ServiceCatalogListRecordHistoryRequest &request);
+    ServiceCatalogProvisionProductResponse * provisionProduct(const ServiceCatalogProvisionProductRequest &request);
+    ServiceCatalogScanProvisionedProductsResponse * scanProvisionedProducts(const ServiceCatalogScanProvisionedProductsRequest &request);
+    ServiceCatalogSearchProductsResponse * searchProducts(const ServiceCatalogSearchProductsRequest &request);
+    ServiceCatalogTerminateProvisionedProductResponse * terminateProvisionedProduct(const ServiceCatalogTerminateProvisionedProductRequest &request);
+    ServiceCatalogUpdateProvisionedProductResponse * updateProvisionedProduct(const ServiceCatalogUpdateProvisionedProductRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ServiceCatalogClient)

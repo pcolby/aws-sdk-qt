@@ -45,7 +45,17 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    ApplicationDiscoveryServiceCreateTagsResponse * createTags(const ApplicationDiscoveryServiceCreateTagsRequest &request);
+    ApplicationDiscoveryServiceDeleteTagsResponse * deleteTags(const ApplicationDiscoveryServiceDeleteTagsRequest &request);
+    ApplicationDiscoveryServiceDescribeAgentsResponse * describeAgents(const ApplicationDiscoveryServiceDescribeAgentsRequest &request);
+    ApplicationDiscoveryServiceDescribeConfigurationsResponse * describeConfigurations(const ApplicationDiscoveryServiceDescribeConfigurationsRequest &request);
+    ApplicationDiscoveryServiceDescribeExportConfigurationsResponse * describeExportConfigurations(const ApplicationDiscoveryServiceDescribeExportConfigurationsRequest &request);
+    ApplicationDiscoveryServiceDescribeTagsResponse * describeTags(const ApplicationDiscoveryServiceDescribeTagsRequest &request);
+    ApplicationDiscoveryServiceExportConfigurationsResponse * exportConfigurations();
+    ApplicationDiscoveryServiceListConfigurationsResponse * listConfigurations(const ApplicationDiscoveryServiceListConfigurationsRequest &request);
+    ApplicationDiscoveryServiceStartDataCollectionByAgentIdsResponse * startDataCollectionByAgentIds(const ApplicationDiscoveryServiceStartDataCollectionByAgentIdsRequest &request);
+    ApplicationDiscoveryServiceStopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const ApplicationDiscoveryServiceStopDataCollectionByAgentIdsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceClient)

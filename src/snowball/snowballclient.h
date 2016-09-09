@@ -45,7 +45,18 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    SnowballCancelJobResponse * cancelJob(const SnowballCancelJobRequest &request);
+    SnowballCreateAddressResponse * createAddress(const SnowballCreateAddressRequest &request);
+    SnowballCreateJobResponse * createJob(const SnowballCreateJobRequest &request);
+    SnowballDescribeAddressResponse * describeAddress(const SnowballDescribeAddressRequest &request);
+    SnowballDescribeAddressesResponse * describeAddresses(const SnowballDescribeAddressesRequest &request);
+    SnowballDescribeJobResponse * describeJob(const SnowballDescribeJobRequest &request);
+    SnowballGetJobManifestResponse * getJobManifest(const SnowballGetJobManifestRequest &request);
+    SnowballGetJobUnlockCodeResponse * getJobUnlockCode(const SnowballGetJobUnlockCodeRequest &request);
+    SnowballGetSnowballUsageResponse * getSnowballUsage(const SnowballGetSnowballUsageRequest &request);
+    SnowballListJobsResponse * listJobs(const SnowballListJobsRequest &request);
+    SnowballUpdateJobResponse * updateJob(const SnowballUpdateJobRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SnowballClient)

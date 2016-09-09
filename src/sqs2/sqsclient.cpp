@@ -28,27 +28,77 @@
 QTAWS_BEGIN_NAMESPACE
 
 /**
- * @class  SQSClient
+ * @class  SqsClient
  *
- * <p>Welcome to the <i>Amazon Simple Queue Service API Reference</i>. This section describes who should read this guide, how the guide is organized, and other resources related to the Amazon Simple Queue Service (Amazon SQS).</p> <p>Amazon SQS offers reliable and scalable hosted queues for storing messages as they travel between computers. By using Amazon SQS, you can move data between distributed components of your applications that perform different tasks without losing messages or requiring each component to be always available.</p> <p>Helpful Links:</p> <ul> <li><p><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">Current WSDL (2012-11-05)</a></p></li> <li><p><a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making API Requests</a></p></li> <li><p><a href="http://aws.amazon.com/sqs/">Amazon SQS product page</a></p></li> <li><p><a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSMessageAttributes.html">Using Amazon SQS Message Attributes</a></p></li> <li><p><a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">Using Amazon SQS Dead Letter Queues</a></p></li> <li><p><a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a></p></li> </ul> <p>We also provide SDKs that enable you to access Amazon SQS from your preferred programming language. The SDKs contain functionality that automatically takes care of tasks such as:</p> <ul> <li><p>Cryptographically signing your service requests</p></li> <li><p>Retrying requests</p></li> <li><p>Handling error responses</p></li> </ul> <p>For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.</p>
+ * @brief  Client for Amazon Simple Queue Service ( SQS)
+ *
+ * Welcome to the <i>Amazon Simple Queue Service API Reference</i>. This section describes who should read this guide, how the guide is organized, and other resources related to the Amazon Simple Queue Service (Amazon SQS).
+ *
+ + Amazon SQS offers reliable and scalable hosted queues for storing messages as they travel between computers. By using Amazon SQS, you can move data between distributed components of your applications that perform different tasks without losing messages or requiring each component to be always available.
+ *
+ + Helpful Links:
+ *
+ +  <ul> <li>
+ *
+ + <a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">Current WSDL (2012-11-05)</a>
+ *
+ + </li> <li>
+ *
+ + <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making API Requests</a>
+ *
+ + </li> <li>
+ *
+ + <a href="http://aws.amazon.com/sqs/">Amazon SQS product page</a>
+ *
+ + </li> <li>
+ *
+ + <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSMessageAttributes.html">Using Amazon SQS Message Attributes</a>
+ *
+ + </li> <li>
+ *
+ + <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">Using Amazon SQS Dead Letter Queues</a>
+ *
+ + </li> <li>
+ *
+ + <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
+ *
+ + </li> </ul>
+ *
+ + We also provide SDKs that enable you to access Amazon SQS from your preferred programming language. The SDKs contain functionality that automatically takes care of tasks such as:
+ *
+ +  <ul> <li>
+ *
+ + Cryptographically signing your service requests
+ *
+ + </li> <li>
+ *
+ + Retrying requests
+ *
+ + </li> <li>
+ *
+ + Handling error responses
+ *
+ + </li> </ul>
+ *
+ + For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.
  */
 
 /**
- * @brief  Constructs a new SQSClient object.
+ * @brief  Constructs a new SqsClient object.
  *
  * @param  region       AWS region for this client to service requests for.
  * @param  credentials  AWS credentials to use for signing requests.
  * @param  manager      Network access manager for sending requests.
  * @param  parent       This object's parent.
  */
-SQSClient::SQSClient(
+SqsClient::SqsClient(
     const AwsRegion::Region region,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SQSClientPrivate(this), parent)
+: AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
-    Q_D(SQSClient);
+    Q_D(SqsClient);
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -56,7 +106,7 @@ SQSClient::SQSClient(
 }
 
 /**
- * @brief  Constructs a new SQSClient object.
+ * @brief  Constructs a new SqsClient object.
  *
  * This overload allows the caller to specify the specific endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -71,14 +121,14 @@ SQSClient::SQSClient(
  *
  * @see  AwsEndpoint::getEndpoint
  */
-SQSClient::SQSClient(
+SqsClient::SqsClient(
     const QUrl &endpoint,
     AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: AwsAbstractClient(new SQSClientPrivate(this), parent)
+: AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
-    Q_D(SQSClient);
+    Q_D(SqsClient);
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
@@ -90,22 +140,21 @@ SQSClient::SQSClient(
 /**
  * @internal
  *
- * @class  SQSClientPrivate
+ * @class  SqsClientPrivate
  *
- * @brief  Private implementation for SQSClient.
+ * @brief  Private implementation for SqsClient.
  */
 
 /**
  * @internal
  *
- * @brief  Constructs a new SQSClientPrivate object.
+ * @brief  Constructs a new SqsClientPrivate object.
  *
- * @param  q  Pointer to this object's public SQSClient instance.
+ * @param  q  Pointer to this object's public SqsClient instance.
  */
-SQSClientPrivate::SQSClientPrivate(SQSClient * const q)
+SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

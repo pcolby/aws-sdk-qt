@@ -45,7 +45,22 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CodeCommitBatchGetRepositoriesResponse * batchGetRepositories(const CodeCommitBatchGetRepositoriesRequest &request);
+    CodeCommitCreateBranchResponse * createBranch(const CodeCommitCreateBranchRequest &request);
+    CodeCommitCreateRepositoryResponse * createRepository(const CodeCommitCreateRepositoryRequest &request);
+    CodeCommitDeleteRepositoryResponse * deleteRepository(const CodeCommitDeleteRepositoryRequest &request);
+    CodeCommitGetBranchResponse * getBranch(const CodeCommitGetBranchRequest &request);
+    CodeCommitGetCommitResponse * getCommit(const CodeCommitGetCommitRequest &request);
+    CodeCommitGetRepositoryResponse * getRepository(const CodeCommitGetRepositoryRequest &request);
+    CodeCommitGetRepositoryTriggersResponse * getRepositoryTriggers(const CodeCommitGetRepositoryTriggersRequest &request);
+    CodeCommitListBranchesResponse * listBranches(const CodeCommitListBranchesRequest &request);
+    CodeCommitListRepositoriesResponse * listRepositories(const CodeCommitListRepositoriesRequest &request);
+    CodeCommitPutRepositoryTriggersResponse * putRepositoryTriggers(const CodeCommitPutRepositoryTriggersRequest &request);
+    CodeCommitTestRepositoryTriggersResponse * testRepositoryTriggers(const CodeCommitTestRepositoryTriggersRequest &request);
+    CodeCommitUpdateDefaultBranchResponse * updateDefaultBranch(const CodeCommitUpdateDefaultBranchRequest &request);
+    CodeCommitUpdateRepositoryDescriptionResponse * updateRepositoryDescription(const CodeCommitUpdateRepositoryDescriptionRequest &request);
+    CodeCommitUpdateRepositoryNameResponse * updateRepositoryName(const CodeCommitUpdateRepositoryNameRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodeCommitClient)

@@ -26,16 +26,16 @@ class QNetworkAccessManager;
 
 QTAWS_BEGIN_NAMESPACE
 
-class SESClient;
+class SesClient;
 
-class QTAWS_EXPORT SESClientPrivate : public AwsAbstractClientPrivate {
+class QTAWS_EXPORT SesClientPrivate : public AwsAbstractClientPrivate {
 
 public:
-    SESClientPrivate(SESClient * const q);
+    SesClientPrivate(SesClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SESClient)
-    Q_DISABLE_COPY(SESClientPrivate)
+    Q_DECLARE_PUBLIC(SesClient)
+    Q_DISABLE_COPY(SesClientPrivate)
 
 };
 

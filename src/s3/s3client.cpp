@@ -30,6 +30,8 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  S3Client
  *
+ * @brief  Client for Amazon Simple Storage Service ( S3)
+ *
  * 
  */
 
@@ -105,8 +107,7 @@ S3Client::S3Client(
 S3ClientPrivate::S3ClientPrivate(S3Client * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
-    signature = new AwsSignatureV4();
+    signature = new AwsSignatureS3();
 }
 
 QTAWS_END_NAMESPACE

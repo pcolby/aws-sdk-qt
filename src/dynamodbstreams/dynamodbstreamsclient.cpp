@@ -30,7 +30,43 @@ QTAWS_BEGIN_NAMESPACE
 /**
  * @class  DynamoDBStreamsClient
  *
- * <fullname>Amazon DynamoDB Streams</fullname> <p>This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams and processing stream records. For information about application development with DynamoDB Streams, see the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer Guide</a>.</p> <p>Note that this document is intended for use with the following DynamoDB documentation:</p> <ul> <li> <p> <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a> </p> </li> <li> <p> <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a> </p> </li> </ul> <p>The following are short descriptions of each low-level DynamoDB Streams API action, organized by function.</p> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li> <p><i>GetRecords</i> - Retrieves the stream records from within a shard.</p> </li> <li> <p><i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard ID.</p> </li> <li> <p><i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and endpoint.</p> </li> </ul>
+ * @brief  Client for Amazon DynamoDB Streams
+ *
+ * <fullname>Amazon DynamoDB Streams</fullname>
+ *
+ + This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams and processing stream records. For information about application development with DynamoDB Streams, see the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer Guide</a>.
+ *
+ + Note that this document is intended for use with the following DynamoDB documentation:
+ *
+ +  <ul> <li>
+ *
+ +  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
+ *
+ +  </li> <li>
+ *
+ +  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
+ *
+ +  </li> </ul>
+ *
+ + The following are short descriptions of each low-level DynamoDB Streams API action, organized by function.
+ *
+ +  <ul> <li>
+ *
+ + <i>DescribeStream</i> - Returns detailed information about a particular stream.
+ *
+ + </li> <li>
+ *
+ + <i>GetRecords</i> - Retrieves the stream records from within a shard.
+ *
+ +  </li> <li>
+ *
+ + <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard ID.
+ *
+ +  </li> <li>
+ *
+ + <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and endpoint.
+ *
+ +  </li> </ul>
  */
 
 /**
@@ -105,7 +141,6 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
 DynamoDBStreamsClientPrivate::DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q)
     : AwsAbstractClientPrivate(q)
 {
-    /// @todo Get signature version from API description.
     signature = new AwsSignatureV4();
 }
 

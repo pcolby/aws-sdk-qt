@@ -45,7 +45,21 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    WorkSpacesCreateTagsResponse * createTags(const WorkSpacesCreateTagsRequest &request);
+    WorkSpacesCreateWorkspacesResponse * createWorkspaces(const WorkSpacesCreateWorkspacesRequest &request);
+    WorkSpacesDeleteTagsResponse * deleteTags(const WorkSpacesDeleteTagsRequest &request);
+    WorkSpacesDescribeTagsResponse * describeTags(const WorkSpacesDescribeTagsRequest &request);
+    WorkSpacesDescribeWorkspaceBundlesResponse * describeWorkspaceBundles(const WorkSpacesDescribeWorkspaceBundlesRequest &request);
+    WorkSpacesDescribeWorkspaceDirectoriesResponse * describeWorkspaceDirectories(const WorkSpacesDescribeWorkspaceDirectoriesRequest &request);
+    WorkSpacesDescribeWorkspacesResponse * describeWorkspaces(const WorkSpacesDescribeWorkspacesRequest &request);
+    WorkSpacesDescribeWorkspacesConnectionStatusResponse * describeWorkspacesConnectionStatus(const WorkSpacesDescribeWorkspacesConnectionStatusRequest &request);
+    WorkSpacesModifyWorkspacePropertiesResponse * modifyWorkspaceProperties(const WorkSpacesModifyWorkspacePropertiesRequest &request);
+    WorkSpacesRebootWorkspacesResponse * rebootWorkspaces(const WorkSpacesRebootWorkspacesRequest &request);
+    WorkSpacesRebuildWorkspacesResponse * rebuildWorkspaces(const WorkSpacesRebuildWorkspacesRequest &request);
+    WorkSpacesStartWorkspacesResponse * startWorkspaces(const WorkSpacesStartWorkspacesRequest &request);
+    WorkSpacesStopWorkspacesResponse * stopWorkspaces(const WorkSpacesStopWorkspacesRequest &request);
+    WorkSpacesTerminateWorkspacesResponse * terminateWorkspaces(const WorkSpacesTerminateWorkspacesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(WorkSpacesClient)

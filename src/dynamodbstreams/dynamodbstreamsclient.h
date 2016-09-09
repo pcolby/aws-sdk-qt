@@ -45,7 +45,11 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    DynamoDBStreamsDescribeStreamResponse * describeStream(const DynamoDBStreamsDescribeStreamRequest &request);
+    DynamoDBStreamsGetRecordsResponse * getRecords(const DynamoDBStreamsGetRecordsRequest &request);
+    DynamoDBStreamsGetShardIteratorResponse * getShardIterator(const DynamoDBStreamsGetShardIteratorRequest &request);
+    DynamoDBStreamsListStreamsResponse * listStreams(const DynamoDBStreamsListStreamsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DynamoDBStreamsClient)

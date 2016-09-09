@@ -45,7 +45,24 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    CognitoSyncBulkPublishResponse * bulkPublish(const CognitoSyncBulkPublishRequest &request);
+    CognitoSyncDeleteDatasetResponse * deleteDataset(const CognitoSyncDeleteDatasetRequest &request);
+    CognitoSyncDescribeDatasetResponse * describeDataset(const CognitoSyncDescribeDatasetRequest &request);
+    CognitoSyncDescribeIdentityPoolUsageResponse * describeIdentityPoolUsage(const CognitoSyncDescribeIdentityPoolUsageRequest &request);
+    CognitoSyncDescribeIdentityUsageResponse * describeIdentityUsage(const CognitoSyncDescribeIdentityUsageRequest &request);
+    CognitoSyncGetBulkPublishDetailsResponse * getBulkPublishDetails(const CognitoSyncGetBulkPublishDetailsRequest &request);
+    CognitoSyncGetCognitoEventsResponse * getCognitoEvents(const CognitoSyncGetCognitoEventsRequest &request);
+    CognitoSyncGetIdentityPoolConfigurationResponse * getIdentityPoolConfiguration(const CognitoSyncGetIdentityPoolConfigurationRequest &request);
+    CognitoSyncListDatasetsResponse * listDatasets(const CognitoSyncListDatasetsRequest &request);
+    CognitoSyncListIdentityPoolUsageResponse * listIdentityPoolUsage(const CognitoSyncListIdentityPoolUsageRequest &request);
+    CognitoSyncListRecordsResponse * listRecords(const CognitoSyncListRecordsRequest &request);
+    CognitoSyncRegisterDeviceResponse * registerDevice(const CognitoSyncRegisterDeviceRequest &request);
+    CognitoSyncSetCognitoEventsResponse * setCognitoEvents(const CognitoSyncSetCognitoEventsRequest &request);
+    CognitoSyncSetIdentityPoolConfigurationResponse * setIdentityPoolConfiguration(const CognitoSyncSetIdentityPoolConfigurationRequest &request);
+    CognitoSyncSubscribeToDatasetResponse * subscribeToDataset(const CognitoSyncSubscribeToDatasetRequest &request);
+    CognitoSyncUnsubscribeFromDatasetResponse * unsubscribeFromDataset(const CognitoSyncUnsubscribeFromDatasetRequest &request);
+    CognitoSyncUpdateRecordsResponse * updateRecords(const CognitoSyncUpdateRecordsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CognitoSyncClient)

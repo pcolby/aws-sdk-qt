@@ -45,7 +45,20 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+    KinesisAnalyticsAddApplicationInputResponse * addApplicationInput(const KinesisAnalyticsAddApplicationInputRequest &request);
+    KinesisAnalyticsAddApplicationOutputResponse * addApplicationOutput(const KinesisAnalyticsAddApplicationOutputRequest &request);
+    KinesisAnalyticsAddApplicationReferenceDataSourceResponse * addApplicationReferenceDataSource(const KinesisAnalyticsAddApplicationReferenceDataSourceRequest &request);
+    KinesisAnalyticsCreateApplicationResponse * createApplication(const KinesisAnalyticsCreateApplicationRequest &request);
+    KinesisAnalyticsDeleteApplicationResponse * deleteApplication(const KinesisAnalyticsDeleteApplicationRequest &request);
+    KinesisAnalyticsDeleteApplicationOutputResponse * deleteApplicationOutput(const KinesisAnalyticsDeleteApplicationOutputRequest &request);
+    KinesisAnalyticsDeleteApplicationReferenceDataSourceResponse * deleteApplicationReferenceDataSource(const KinesisAnalyticsDeleteApplicationReferenceDataSourceRequest &request);
+    KinesisAnalyticsDescribeApplicationResponse * describeApplication(const KinesisAnalyticsDescribeApplicationRequest &request);
+    KinesisAnalyticsDiscoverInputSchemaResponse * discoverInputSchema(const KinesisAnalyticsDiscoverInputSchemaRequest &request);
+    KinesisAnalyticsListApplicationsResponse * listApplications(const KinesisAnalyticsListApplicationsRequest &request);
+    KinesisAnalyticsStartApplicationResponse * startApplication(const KinesisAnalyticsStartApplicationRequest &request);
+    KinesisAnalyticsStopApplicationResponse * stopApplication(const KinesisAnalyticsStopApplicationRequest &request);
+    KinesisAnalyticsUpdateApplicationResponse * updateApplication(const KinesisAnalyticsUpdateApplicationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisAnalyticsClient)
