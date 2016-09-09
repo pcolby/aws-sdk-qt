@@ -45,7 +45,8 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-/// @todo {{publicSlots}}
+public slots:
+{{OperationSignatures}}
 
 private:
     Q_DECLARE_PRIVATE({{ClassName}})

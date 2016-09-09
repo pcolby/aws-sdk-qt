@@ -31,6 +31,8 @@ protected:
     static QString formatHtmlDocumentation(const QString &html);
     static QString getClassBrief(const QJsonObject &metaData);
     static QString getClassName(const QJsonObject &metaData);
+    static QString getFunctionSignature(const QString &operationName, const QJsonObject &operation);
+    static QStringList getFunctionSignatures(const QJsonObject &operations);
     static QString readAll(const QString &fileName);
     static QString replaceTags(const QMap<QString, QString> &tags,
                                const QString &input);

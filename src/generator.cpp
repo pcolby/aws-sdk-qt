@@ -58,6 +58,8 @@ bool Generator::generate(const QString &serviceFileName,
     /// @todo Generate request / response classes.
 
     /// @todo Generate service client.
+    const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
+    tags.insert(QLatin1String("OperationSignatures"), getFunctionSignatures(operations).join(QLatin1Char('\n')));
     replaceTags(tags, QLatin1String(":/templates/client.cpp"),
                 QString::fromLatin1("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
     replaceTags(tags, QLatin1String(":/templates/client.h"),
@@ -117,6 +119,35 @@ QString Generator::getClassName(const QJsonObject &metaData)
 
     // Trim, the same as aws-sdk-cpp too.
     return className.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
+}
+
+QString Generator::getFunctionSignature(const QString &operationName, const QJsonObject &)
+{
+    // This is all covered by the JSON Schema validation of the resource files.
+    Q_ASSERT(operationName.size() > 1);
+    Q_ASSERT(operationName.at(0).isLetter());
+    Q_ASSERT(operationName.at(0).isUpper());
+
+    // The function name is just the operation name with a lower first letter.
+    const QString functionName = operationName.at(0).toLower() + operationName.mid(1);
+
+    // The return type is a pointer to an <OperationName>Response object.
+    const QString returnType = operationName + QLatin1String("Response *");
+
+    QString functionArguments;
+    /// @todo  Build this list from the operation information.
+
+    return QString::fromLatin1("    %1 %2(%3);")
+        .arg(returnType).arg(functionName).arg(functionArguments);
+}
+
+QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
+{
+    QStringList signatures;
+    for (auto iter = operations.constBegin(); iter != operations.constEnd(); ++iter) {
+        signatures.append(getFunctionSignature(iter.key(), iter.value().toObject()));
+    }
+    return signatures;
 }
 
 QString Generator::readAll(const QString &fileName)
