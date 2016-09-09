@@ -37,7 +37,8 @@ bool Generator::generate(const QString &serviceFileName,
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
-    const QString className = getClassName(metaData) + QLatin1String("Client");
+    const QString classNamePrefix = getClassNamePrefix(metaData);
+    const QString className = classNamePrefix + QLatin1String("Client");
 
     QMap<QString, QString> tags;
     for (auto iter = metaData.constBegin(); iter != metaData.constEnd(); ++iter) {
@@ -59,7 +60,8 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate service client.
     const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
-    tags.insert(QLatin1String("OperationSignatures"), getFunctionSignatures(operations).join(QLatin1Char('\n')));
+    tags.insert(QLatin1String("OperationSignatures"), getFunctionSignatures(
+                classNamePrefix,operations).join(QLatin1Char('\n')));
     replaceTags(tags, QLatin1String(":/templates/client.cpp"),
                 QString::fromLatin1("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
     replaceTags(tags, QLatin1String(":/templates/client.h"),
@@ -108,20 +110,22 @@ QString Generator::getClassBrief(const QJsonObject &metaData)
     return brief;
 }
 
-QString Generator::getClassName(const QJsonObject &metaData)
+QString Generator::getClassNamePrefix(const QJsonObject &metaData)
 {
     // Replicate what aws-sdk-cpp does; ie use the abbreviated name, if present
     // otherwise fall back to the full service name.
-    QString className = metaData.value(QLatin1String("serviceAbbreviation")).toString();
-    if (className.isEmpty()) {
-        className = metaData.value(QLatin1String("serviceFullName")).toString();
+    QString prefix = metaData.value(QLatin1String("serviceAbbreviation")).toString();
+    if (prefix.isEmpty()) {
+        prefix = metaData.value(QLatin1String("serviceFullName")).toString();
     }
 
     // Trim, the same as aws-sdk-cpp too.
-    return className.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
+    return prefix.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
 }
 
-QString Generator::getFunctionSignature(const QString &operationName, const QJsonObject &)
+QString Generator::getFunctionSignature(
+        const QString &classNamePrefix, const QString &operationName,
+        const QJsonObject &operation)
 {
     // This is all covered by the JSON Schema validation of the resource files.
     Q_ASSERT(operationName.size() > 1);
@@ -132,20 +136,29 @@ QString Generator::getFunctionSignature(const QString &operationName, const QJso
     const QString functionName = operationName.at(0).toLower() + operationName.mid(1);
 
     // The return type is a pointer to an <OperationName>Response object.
-    const QString returnType = operationName + QLatin1String("Response *");
+    // Note, we intentionally don't use operation.output.{resultwrapper,shape}
+    // values here, since the return type is a QNetworkResponse-derived class,
+    // so its more appropriate to keep to the *Response class naming convention
+    // (even, or perhaps especially, when the operation has no output property).
+    const QString returnType = classNamePrefix + operationName
+            + QLatin1String("Response *");
 
-    QString functionArguments;
-    /// @todo  Build this list from the operation information.
+    const QString functionArguments = operation.contains(QLatin1String("input"))
+            ? QString::fromLatin1("const %1%2Request &request")
+              .arg(classNamePrefix) .arg(operationName)
+            : QString(); // No input to this request.
 
     return QString::fromLatin1("    %1 %2(%3);")
-        .arg(returnType).arg(functionName).arg(functionArguments);
+            .arg(returnType).arg(functionName).arg(functionArguments);
 }
 
-QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
+QStringList Generator::getFunctionSignatures(
+        const QString &classNamePrefix, const QJsonObject &operations)
 {
     QStringList signatures;
     for (auto iter = operations.constBegin(); iter != operations.constEnd(); ++iter) {
-        signatures.append(getFunctionSignature(iter.key(), iter.value().toObject()));
+        signatures.append(getFunctionSignature(
+            classNamePrefix, iter.key(), iter.value().toObject()));
     }
     return signatures;
 }
