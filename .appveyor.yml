@@ -1,2 +1,46 @@
-# Skip CI builds on the codegen branch for now.
-branches: { except: [ codegen ] }
+version: '{branch}-{build}'
+
+environment:
+  matrix:
+    - QTDIR: C:\Qt\5.7\mingw53_32
+    - QTDIR: C:\Qt\5.7\msvc2013
+    - QTDIR: C:\Qt\5.7\msvc2013_64
+    - QTDIR: C:\Qt\5.7\msvc2015
+    - QTDIR: C:\Qt\5.7\msvc2015_64
+
+configuration:
+  - debug
+  - release
+
+install:
+  - '%QTDIR%\bin\qtenv2.bat'
+  - qmake -v
+  - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
+  - if %QTDIR:msvc=%==%QTDIR% g++ --version
+  - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
+  - if %QTDIR:msvc=%==%QTDIR% %make% --version
+  - if not %QTDIR:msvc2013=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %ARCH%
+  - if not %QTDIR:msvc2015=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %ARCH%
+  - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
+  - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+
+before_build:
+  # Prepare the out-of-source build directory.
+  - mkdir %APPVEYOR_BUILD_FOLDER%-build
+  - cd %APPVEYOR_BUILD_FOLDER%-build
+  - qmake -r -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
+
+build_script:
+  - '%make%'
+
+after_build:
+  # Add a link to the build output within the source directory. This is needed because AppVeyor does
+  # not support extracting artifacts from out-of-source build directories. See 'artifacts' below.
+  - mklink %APPVEYOR_BUILD_FOLDER%\codegen.exe %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\codegen.exe
+
+artifacts:
+  - path: codegen.exe
+
+notifications:
+  - provider: Webhook
+    url: https://webhooks.gitter.im/e/db2b6ec088084f138e57
