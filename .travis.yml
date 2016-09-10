@@ -10,14 +10,6 @@ compiler:
   - clang
   - gcc
 
-env:
-  matrix:
-    - QT=5  BREW=5
-    - QT=52 BREW=52 PPA=beineri/opt-qt521-trusty
-    - QT=53 BREW=5  PPA=beineri/opt-qt532-trusty
-    - QT=55 BREW=55 PPA=beineri/opt-qt551-trusty
-    - QT=57 BREW=ex PPA=beineri/opt-qt57-trusty
-
 matrix:
   exclude:
     # Qt 5.6+ no longer supports gcc on OS X.
