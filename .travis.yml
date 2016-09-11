@@ -28,8 +28,8 @@ install:
   - npm install tv4-cmd -g
 
 before_script:
-  - ./qrc/validate-api-descriptions.sh
   - cppcheck --enable=all --error-exitcode=1 --quiet --std=c++11 --suppress=missingIncludeSystem src
+  - '[ "$TRAVIS_OS_NAME" != linux ] || ./qrc/validate-api-descriptions.sh
   - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != clang++ ]] || export QMAKESPEC=linux-clang'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
   - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
