@@ -30,6 +30,7 @@ before_build:
   - qmake -o %APPVEYOR_BUILD_FOLDER%-build -r -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
 
 build_script:
+  - cd %APPVEYOR_BUILD_FOLDER%-build
   - '%make%'
 
 after_build:
