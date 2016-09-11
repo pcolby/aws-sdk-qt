@@ -25,6 +25,7 @@ install:
   - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install qt57base'
   - '[ "$TRAVIS_OS_NAME" != osx   ] || brew install cppcheck qt55'
   - '[ "$TRAVIS_OS_NAME" != osx   ] || brew link --force qt55'
+  - npm install tv4
 
 before_script:
   - cppcheck --error-exitcode=1 --quiet src
