@@ -60,6 +60,7 @@ install:
   - '[ "$TRAVIS_OS_NAME" != linux ] || gem install lcoveralls'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cppcheck doxygen graphviz qt$BREW'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt$BREW'
+  - qmake -v
 
 before_script:
   - cppcheck --error-exitcode=1 --quiet
@@ -72,10 +73,7 @@ before_script:
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
   - mkdir -p "$TRAVIS_BUILD_DIR-build"
-  - pushd "$TRAVIS_BUILD_DIR-build"
-  - qmake -v
-  - qmake -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
-  - popd
+  - qmake -o "$TRAVIS_BUILD_DIR-build" -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
 
 script:
   - make -C "$TRAVIS_BUILD_DIR-build" all
