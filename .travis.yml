@@ -40,8 +40,9 @@ before_script:
 
 script:
   - make -C "$TRAVIS_BUILD_DIR-build" all
-  - '"$TRAVIS_BUILD_DIR-build/debug/codegen" "$TRAVIS_BUILD_DIR-build"'
-  - '"$TRAVIS_BUILD_DIR-build/release/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/debug/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/release/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != osx   ] || find "$TRAVIS_BUILD_DIR-build/debug"'
 
 notifications:
   webhooks:
