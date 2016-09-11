@@ -21,11 +21,11 @@ before_install:
   - '[ "$TRAVIS_OS_NAME" != osx   ] || brew update'
 
 install:
-  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck'
-  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install qt57base'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck qt57base'
   - '[ "$TRAVIS_OS_NAME" != osx   ] || brew install cppcheck qt55'
   - '[ "$TRAVIS_OS_NAME" != osx   ] || brew link --force qt55'
   - npm install tv4-cmd -g
+  - qmake -v
 
 before_script:
   - cppcheck --enable=all --error-exitcode=1 --quiet --std=c++11 --suppress=missingIncludeSystem src
@@ -36,10 +36,7 @@ before_script:
   - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != g++     ]] || export QMAKESPEC=macx-g++'
   - '[ "$TRAVIS_OS_NAME" != linux ] || . /opt/qt57/bin/qt57-env.sh'
   - mkdir -p "$TRAVIS_BUILD_DIR-build"
-  - pushd "$TRAVIS_BUILD_DIR-build"
-  - qmake -v
-  - qmake -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
-  - popd
+  - qmake -o "$TRAVIS_BUILD_DIR-build" -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
 
 script:
   - make -C "$TRAVIS_BUILD_DIR-build" all
