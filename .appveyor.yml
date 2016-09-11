@@ -38,8 +38,8 @@ after_build:
   - mklink %APPVEYOR_BUILD_FOLDER%\codegen.exe %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\codegen.exe
 
 test_script:
-  - %APPVEYOR_BUILD_FOLDER%-build\debug\codegen.exe %APPVEYOR_BUILD_FOLDER%-build
-  - %APPVEYOR_BUILD_FOLDER%-build\release\codegen.exe %APPVEYOR_BUILD_FOLDER%-build
+  - '%APPVEYOR_BUILD_FOLDER%-build\debug\codegen.exe %APPVEYOR_BUILD_FOLDER%-build'
+  - '%APPVEYOR_BUILD_FOLDER%-build\release\codegen.exe %APPVEYOR_BUILD_FOLDER%-build'
 
 artifacts:
   - path: codegen.exe
