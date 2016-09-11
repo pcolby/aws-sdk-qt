@@ -40,7 +40,7 @@ before_script:
 
 script:
   - make -C "$TRAVIS_BUILD_DIR-build" all
-  - "$TRAVIS_BUILD_DIR-build/codegen" "$TRAVIS_BUILD_DIR-build"
+  - '"$TRAVIS_BUILD_DIR-build/codegen" "$TRAVIS_BUILD_DIR-build"'
 
 notifications:
   webhooks:
