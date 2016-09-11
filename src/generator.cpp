@@ -102,7 +102,7 @@ QString Generator::getClassBrief(const QJsonObject &metaData)
 
     QString serviceAbbreviation =
         metaData.value(QLatin1String("serviceAbbreviation")).toString();
-    serviceAbbreviation.replace(QRegularExpression("Amazon|AWS"), QString());
+    serviceAbbreviation.replace(QRegularExpression(QLatin1String("Amazon|AWS")), QString());
 
     if ((!serviceAbbreviation.isEmpty()) && (!brief.contains(serviceAbbreviation))) {
         brief += QString::fromLatin1(" (%1)").arg(serviceAbbreviation);
@@ -120,7 +120,7 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
     }
 
     // Trim, the same as aws-sdk-cpp too.
-    prefix.replace(QRegularExpression("[- _/]|Amazon|AWS"), QString());
+    prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
 
     // If the entire string is all uppercase, then lowercase all but the first
     // letter - just for improved readability when using the generated classes.
