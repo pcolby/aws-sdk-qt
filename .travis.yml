@@ -43,6 +43,7 @@ script:
   - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/debug/codegen" "$TRAVIS_BUILD_DIR-build"'
   - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/release/codegen" "$TRAVIS_BUILD_DIR-build"'
   - '[ "$TRAVIS_OS_NAME" != osx   ] || find "$TRAVIS_BUILD_DIR-build/debug"'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || "$TRAVIS_BUILD_DIR-build/debug/codegen.app" "$TRAVIS_BUILD_DIR-build"'
 
 notifications:
   webhooks:
