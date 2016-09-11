@@ -23,7 +23,7 @@
 class Generator {
 
 public:
-    Generator(const QDir &outputDir);
+    explicit Generator(const QDir &outputDir);
 
     bool generate(const QString &serviceFileName, const QJsonObject &description);
 
