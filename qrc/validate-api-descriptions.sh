@@ -1,7 +1,6 @@
 #!/bin/bash
 
-SELF=`readlink --canonicalize-existing "$0"` || exit
-SELF_DIR=`dirname "$SELF"` || exit
+SELF_DIR=`dirname -- "$0"` || exit
 DESC_DIR="$SELF_DIR/api-descriptions"
 DESC_SCHEMA="$SELF_DIR/api-description.schema.json"
 
