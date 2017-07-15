@@ -1,0 +1,51 @@
+language: cpp
+
+os:
+  - linux
+  - osx
+
+dist: trusty
+
+compiler:
+  - clang
+  - gcc
+
+matrix:
+  exclude:
+    # Qt 5.6+ no longer supports gcc on OS X.
+    - { os: osx, compiler: gcc }
+
+before_install:
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo add-apt-repository -y ppa:beineri/opt-qt57-trusty'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy update'
+  - '[ "$TRAVIS_OS_NAME" != osx   ] || brew update'
+
+install:
+  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck qt57base'
+  - '[ "$TRAVIS_OS_NAME" != osx   ] || brew install cppcheck qt55'
+  - '[ "$TRAVIS_OS_NAME" != osx   ] || brew link --force qt55'
+  - npm install tv4-cmd -g
+  - qmake -v
+
+before_script:
+  - ./qrc/validate-api-descriptions.sh
+  - cppcheck --enable=all --error-exitcode=1 --quiet --std=c++11 --suppress=missingIncludeSystem src
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != clang++ ]] || export QMAKESPEC=linux-clang'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != g++     ]] || export QMAKESPEC=macx-g++'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || . /opt/qt57/bin/qt57-env.sh'
+  - mkdir -p "$TRAVIS_BUILD_DIR-build"
+  - qmake -o "$TRAVIS_BUILD_DIR-build" -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+
+script:
+  - make -C "$TRAVIS_BUILD_DIR-build" all
+  - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/debug/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != linux ] || "$TRAVIS_BUILD_DIR-build/release/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || "$TRAVIS_BUILD_DIR-build/debug/codegen.app/Contents/MacOS/codegen" "$TRAVIS_BUILD_DIR-build"'
+  - '[ "$TRAVIS_OS_NAME" != osx ] || "$TRAVIS_BUILD_DIR-build/release/codegen.app/Contents/MacOS/codegen" "$TRAVIS_BUILD_DIR-build"'
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/fbd7a436c2f67325cffc

@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource>
+    <file>templates/client.cpp</file>
+    <file>templates/client.h</file>
+    <file>templates/client_p.h</file>
+    <file>templates/service.pro</file>
+  </qresource>
+</RCC>
