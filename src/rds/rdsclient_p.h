@@ -24,7 +24,8 @@
 
 class QNetworkAccessManager;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace RDS {
 
 class RdsClient;
 
@@ -39,6 +40,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace RDS
+} // namespace AWS
 
 #endif

@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace EC2 {
 
 /**
  * @class  Ec2Client
@@ -112,4 +113,5 @@ Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace EC2
+} // namespace AWS

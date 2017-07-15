@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ElasticsearchService {
+
 class ElasticsearchServiceClientPrivate;
 
 class QTAWS_EXPORT ElasticsearchServiceClient : public AwsAbstractClient {
@@ -46,16 +49,16 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ElasticsearchServiceAddTagsResponse * addTags(const ElasticsearchServiceAddTagsRequest &request);
-    ElasticsearchServiceCreateElasticsearchDomainResponse * createElasticsearchDomain(const ElasticsearchServiceCreateElasticsearchDomainRequest &request);
-    ElasticsearchServiceDeleteElasticsearchDomainResponse * deleteElasticsearchDomain(const ElasticsearchServiceDeleteElasticsearchDomainRequest &request);
-    ElasticsearchServiceDescribeElasticsearchDomainResponse * describeElasticsearchDomain(const ElasticsearchServiceDescribeElasticsearchDomainRequest &request);
-    ElasticsearchServiceDescribeElasticsearchDomainConfigResponse * describeElasticsearchDomainConfig(const ElasticsearchServiceDescribeElasticsearchDomainConfigRequest &request);
-    ElasticsearchServiceDescribeElasticsearchDomainsResponse * describeElasticsearchDomains(const ElasticsearchServiceDescribeElasticsearchDomainsRequest &request);
-    ElasticsearchServiceListDomainNamesResponse * listDomainNames();
-    ElasticsearchServiceListTagsResponse * listTags(const ElasticsearchServiceListTagsRequest &request);
-    ElasticsearchServiceRemoveTagsResponse * removeTags(const ElasticsearchServiceRemoveTagsRequest &request);
-    ElasticsearchServiceUpdateElasticsearchDomainConfigResponse * updateElasticsearchDomainConfig(const ElasticsearchServiceUpdateElasticsearchDomainConfigRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    CreateElasticsearchDomainResponse * createElasticsearchDomain(const CreateElasticsearchDomainRequest &request);
+    DeleteElasticsearchDomainResponse * deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request);
+    DescribeElasticsearchDomainResponse * describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request);
+    DescribeElasticsearchDomainConfigResponse * describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request);
+    DescribeElasticsearchDomainsResponse * describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request);
+    ListDomainNamesResponse * listDomainNames();
+    ListTagsResponse * listTags(const ListTagsRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    UpdateElasticsearchDomainConfigResponse * updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticsearchServiceClient)
@@ -63,6 +66,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticsearchService
+} // namespace AWS
 
 #endif

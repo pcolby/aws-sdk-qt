@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ElasticBeanstalk {
+
 class ElasticBeanstalkClientPrivate;
 
 class QTAWS_EXPORT ElasticBeanstalkClient : public AwsAbstractClient {
@@ -46,42 +49,42 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ElasticBeanstalkAbortEnvironmentUpdateResponse * abortEnvironmentUpdate(const ElasticBeanstalkAbortEnvironmentUpdateRequest &request);
-    ElasticBeanstalkApplyEnvironmentManagedActionResponse * applyEnvironmentManagedAction(const ElasticBeanstalkApplyEnvironmentManagedActionRequest &request);
-    ElasticBeanstalkCheckDNSAvailabilityResponse * checkDNSAvailability(const ElasticBeanstalkCheckDNSAvailabilityRequest &request);
-    ElasticBeanstalkComposeEnvironmentsResponse * composeEnvironments(const ElasticBeanstalkComposeEnvironmentsRequest &request);
-    ElasticBeanstalkCreateApplicationResponse * createApplication(const ElasticBeanstalkCreateApplicationRequest &request);
-    ElasticBeanstalkCreateApplicationVersionResponse * createApplicationVersion(const ElasticBeanstalkCreateApplicationVersionRequest &request);
-    ElasticBeanstalkCreateConfigurationTemplateResponse * createConfigurationTemplate(const ElasticBeanstalkCreateConfigurationTemplateRequest &request);
-    ElasticBeanstalkCreateEnvironmentResponse * createEnvironment(const ElasticBeanstalkCreateEnvironmentRequest &request);
-    ElasticBeanstalkCreateStorageLocationResponse * createStorageLocation();
-    ElasticBeanstalkDeleteApplicationResponse * deleteApplication(const ElasticBeanstalkDeleteApplicationRequest &request);
-    ElasticBeanstalkDeleteApplicationVersionResponse * deleteApplicationVersion(const ElasticBeanstalkDeleteApplicationVersionRequest &request);
-    ElasticBeanstalkDeleteConfigurationTemplateResponse * deleteConfigurationTemplate(const ElasticBeanstalkDeleteConfigurationTemplateRequest &request);
-    ElasticBeanstalkDeleteEnvironmentConfigurationResponse * deleteEnvironmentConfiguration(const ElasticBeanstalkDeleteEnvironmentConfigurationRequest &request);
-    ElasticBeanstalkDescribeApplicationVersionsResponse * describeApplicationVersions(const ElasticBeanstalkDescribeApplicationVersionsRequest &request);
-    ElasticBeanstalkDescribeApplicationsResponse * describeApplications(const ElasticBeanstalkDescribeApplicationsRequest &request);
-    ElasticBeanstalkDescribeConfigurationOptionsResponse * describeConfigurationOptions(const ElasticBeanstalkDescribeConfigurationOptionsRequest &request);
-    ElasticBeanstalkDescribeConfigurationSettingsResponse * describeConfigurationSettings(const ElasticBeanstalkDescribeConfigurationSettingsRequest &request);
-    ElasticBeanstalkDescribeEnvironmentHealthResponse * describeEnvironmentHealth(const ElasticBeanstalkDescribeEnvironmentHealthRequest &request);
-    ElasticBeanstalkDescribeEnvironmentManagedActionHistoryResponse * describeEnvironmentManagedActionHistory(const ElasticBeanstalkDescribeEnvironmentManagedActionHistoryRequest &request);
-    ElasticBeanstalkDescribeEnvironmentManagedActionsResponse * describeEnvironmentManagedActions(const ElasticBeanstalkDescribeEnvironmentManagedActionsRequest &request);
-    ElasticBeanstalkDescribeEnvironmentResourcesResponse * describeEnvironmentResources(const ElasticBeanstalkDescribeEnvironmentResourcesRequest &request);
-    ElasticBeanstalkDescribeEnvironmentsResponse * describeEnvironments(const ElasticBeanstalkDescribeEnvironmentsRequest &request);
-    ElasticBeanstalkDescribeEventsResponse * describeEvents(const ElasticBeanstalkDescribeEventsRequest &request);
-    ElasticBeanstalkDescribeInstancesHealthResponse * describeInstancesHealth(const ElasticBeanstalkDescribeInstancesHealthRequest &request);
-    ElasticBeanstalkListAvailableSolutionStacksResponse * listAvailableSolutionStacks();
-    ElasticBeanstalkRebuildEnvironmentResponse * rebuildEnvironment(const ElasticBeanstalkRebuildEnvironmentRequest &request);
-    ElasticBeanstalkRequestEnvironmentInfoResponse * requestEnvironmentInfo(const ElasticBeanstalkRequestEnvironmentInfoRequest &request);
-    ElasticBeanstalkRestartAppServerResponse * restartAppServer(const ElasticBeanstalkRestartAppServerRequest &request);
-    ElasticBeanstalkRetrieveEnvironmentInfoResponse * retrieveEnvironmentInfo(const ElasticBeanstalkRetrieveEnvironmentInfoRequest &request);
-    ElasticBeanstalkSwapEnvironmentCNAMEsResponse * swapEnvironmentCNAMEs(const ElasticBeanstalkSwapEnvironmentCNAMEsRequest &request);
-    ElasticBeanstalkTerminateEnvironmentResponse * terminateEnvironment(const ElasticBeanstalkTerminateEnvironmentRequest &request);
-    ElasticBeanstalkUpdateApplicationResponse * updateApplication(const ElasticBeanstalkUpdateApplicationRequest &request);
-    ElasticBeanstalkUpdateApplicationVersionResponse * updateApplicationVersion(const ElasticBeanstalkUpdateApplicationVersionRequest &request);
-    ElasticBeanstalkUpdateConfigurationTemplateResponse * updateConfigurationTemplate(const ElasticBeanstalkUpdateConfigurationTemplateRequest &request);
-    ElasticBeanstalkUpdateEnvironmentResponse * updateEnvironment(const ElasticBeanstalkUpdateEnvironmentRequest &request);
-    ElasticBeanstalkValidateConfigurationSettingsResponse * validateConfigurationSettings(const ElasticBeanstalkValidateConfigurationSettingsRequest &request);
+    AbortEnvironmentUpdateResponse * abortEnvironmentUpdate(const AbortEnvironmentUpdateRequest &request);
+    ApplyEnvironmentManagedActionResponse * applyEnvironmentManagedAction(const ApplyEnvironmentManagedActionRequest &request);
+    CheckDNSAvailabilityResponse * checkDNSAvailability(const CheckDNSAvailabilityRequest &request);
+    ComposeEnvironmentsResponse * composeEnvironments(const ComposeEnvironmentsRequest &request);
+    CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
+    CreateApplicationVersionResponse * createApplicationVersion(const CreateApplicationVersionRequest &request);
+    CreateConfigurationTemplateResponse * createConfigurationTemplate(const CreateConfigurationTemplateRequest &request);
+    CreateEnvironmentResponse * createEnvironment(const CreateEnvironmentRequest &request);
+    CreateStorageLocationResponse * createStorageLocation();
+    DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
+    DeleteApplicationVersionResponse * deleteApplicationVersion(const DeleteApplicationVersionRequest &request);
+    DeleteConfigurationTemplateResponse * deleteConfigurationTemplate(const DeleteConfigurationTemplateRequest &request);
+    DeleteEnvironmentConfigurationResponse * deleteEnvironmentConfiguration(const DeleteEnvironmentConfigurationRequest &request);
+    DescribeApplicationVersionsResponse * describeApplicationVersions(const DescribeApplicationVersionsRequest &request);
+    DescribeApplicationsResponse * describeApplications(const DescribeApplicationsRequest &request);
+    DescribeConfigurationOptionsResponse * describeConfigurationOptions(const DescribeConfigurationOptionsRequest &request);
+    DescribeConfigurationSettingsResponse * describeConfigurationSettings(const DescribeConfigurationSettingsRequest &request);
+    DescribeEnvironmentHealthResponse * describeEnvironmentHealth(const DescribeEnvironmentHealthRequest &request);
+    DescribeEnvironmentManagedActionHistoryResponse * describeEnvironmentManagedActionHistory(const DescribeEnvironmentManagedActionHistoryRequest &request);
+    DescribeEnvironmentManagedActionsResponse * describeEnvironmentManagedActions(const DescribeEnvironmentManagedActionsRequest &request);
+    DescribeEnvironmentResourcesResponse * describeEnvironmentResources(const DescribeEnvironmentResourcesRequest &request);
+    DescribeEnvironmentsResponse * describeEnvironments(const DescribeEnvironmentsRequest &request);
+    DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
+    DescribeInstancesHealthResponse * describeInstancesHealth(const DescribeInstancesHealthRequest &request);
+    ListAvailableSolutionStacksResponse * listAvailableSolutionStacks();
+    RebuildEnvironmentResponse * rebuildEnvironment(const RebuildEnvironmentRequest &request);
+    RequestEnvironmentInfoResponse * requestEnvironmentInfo(const RequestEnvironmentInfoRequest &request);
+    RestartAppServerResponse * restartAppServer(const RestartAppServerRequest &request);
+    RetrieveEnvironmentInfoResponse * retrieveEnvironmentInfo(const RetrieveEnvironmentInfoRequest &request);
+    SwapEnvironmentCNAMEsResponse * swapEnvironmentCNAMEs(const SwapEnvironmentCNAMEsRequest &request);
+    TerminateEnvironmentResponse * terminateEnvironment(const TerminateEnvironmentRequest &request);
+    UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
+    UpdateApplicationVersionResponse * updateApplicationVersion(const UpdateApplicationVersionRequest &request);
+    UpdateConfigurationTemplateResponse * updateConfigurationTemplate(const UpdateConfigurationTemplateRequest &request);
+    UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
+    ValidateConfigurationSettingsResponse * validateConfigurationSettings(const ValidateConfigurationSettingsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticBeanstalkClient)
@@ -89,6 +92,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticBeanstalk
+} // namespace AWS
 
 #endif

@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace STS {
 
 /**
  * @class  StsClient
@@ -132,4 +133,5 @@ StsClientPrivate::StsClientPrivate(StsClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace STS
+} // namespace AWS

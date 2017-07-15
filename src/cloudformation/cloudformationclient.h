@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudFormation {
+
 class CloudFormationClientPrivate;
 
 class QTAWS_EXPORT CloudFormationClient : public AwsAbstractClient {
@@ -46,30 +49,30 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudFormationCancelUpdateStackResponse * cancelUpdateStack(const CloudFormationCancelUpdateStackRequest &request);
-    CloudFormationContinueUpdateRollbackResponse * continueUpdateRollback(const CloudFormationContinueUpdateRollbackRequest &request);
-    CloudFormationCreateChangeSetResponse * createChangeSet(const CloudFormationCreateChangeSetRequest &request);
-    CloudFormationCreateStackResponse * createStack(const CloudFormationCreateStackRequest &request);
-    CloudFormationDeleteChangeSetResponse * deleteChangeSet(const CloudFormationDeleteChangeSetRequest &request);
-    CloudFormationDeleteStackResponse * deleteStack(const CloudFormationDeleteStackRequest &request);
-    CloudFormationDescribeAccountLimitsResponse * describeAccountLimits(const CloudFormationDescribeAccountLimitsRequest &request);
-    CloudFormationDescribeChangeSetResponse * describeChangeSet(const CloudFormationDescribeChangeSetRequest &request);
-    CloudFormationDescribeStackEventsResponse * describeStackEvents(const CloudFormationDescribeStackEventsRequest &request);
-    CloudFormationDescribeStackResourceResponse * describeStackResource(const CloudFormationDescribeStackResourceRequest &request);
-    CloudFormationDescribeStackResourcesResponse * describeStackResources(const CloudFormationDescribeStackResourcesRequest &request);
-    CloudFormationDescribeStacksResponse * describeStacks(const CloudFormationDescribeStacksRequest &request);
-    CloudFormationEstimateTemplateCostResponse * estimateTemplateCost(const CloudFormationEstimateTemplateCostRequest &request);
-    CloudFormationExecuteChangeSetResponse * executeChangeSet(const CloudFormationExecuteChangeSetRequest &request);
-    CloudFormationGetStackPolicyResponse * getStackPolicy(const CloudFormationGetStackPolicyRequest &request);
-    CloudFormationGetTemplateResponse * getTemplate(const CloudFormationGetTemplateRequest &request);
-    CloudFormationGetTemplateSummaryResponse * getTemplateSummary(const CloudFormationGetTemplateSummaryRequest &request);
-    CloudFormationListChangeSetsResponse * listChangeSets(const CloudFormationListChangeSetsRequest &request);
-    CloudFormationListStackResourcesResponse * listStackResources(const CloudFormationListStackResourcesRequest &request);
-    CloudFormationListStacksResponse * listStacks(const CloudFormationListStacksRequest &request);
-    CloudFormationSetStackPolicyResponse * setStackPolicy(const CloudFormationSetStackPolicyRequest &request);
-    CloudFormationSignalResourceResponse * signalResource(const CloudFormationSignalResourceRequest &request);
-    CloudFormationUpdateStackResponse * updateStack(const CloudFormationUpdateStackRequest &request);
-    CloudFormationValidateTemplateResponse * validateTemplate(const CloudFormationValidateTemplateRequest &request);
+    CancelUpdateStackResponse * cancelUpdateStack(const CancelUpdateStackRequest &request);
+    ContinueUpdateRollbackResponse * continueUpdateRollback(const ContinueUpdateRollbackRequest &request);
+    CreateChangeSetResponse * createChangeSet(const CreateChangeSetRequest &request);
+    CreateStackResponse * createStack(const CreateStackRequest &request);
+    DeleteChangeSetResponse * deleteChangeSet(const DeleteChangeSetRequest &request);
+    DeleteStackResponse * deleteStack(const DeleteStackRequest &request);
+    DescribeAccountLimitsResponse * describeAccountLimits(const DescribeAccountLimitsRequest &request);
+    DescribeChangeSetResponse * describeChangeSet(const DescribeChangeSetRequest &request);
+    DescribeStackEventsResponse * describeStackEvents(const DescribeStackEventsRequest &request);
+    DescribeStackResourceResponse * describeStackResource(const DescribeStackResourceRequest &request);
+    DescribeStackResourcesResponse * describeStackResources(const DescribeStackResourcesRequest &request);
+    DescribeStacksResponse * describeStacks(const DescribeStacksRequest &request);
+    EstimateTemplateCostResponse * estimateTemplateCost(const EstimateTemplateCostRequest &request);
+    ExecuteChangeSetResponse * executeChangeSet(const ExecuteChangeSetRequest &request);
+    GetStackPolicyResponse * getStackPolicy(const GetStackPolicyRequest &request);
+    GetTemplateResponse * getTemplate(const GetTemplateRequest &request);
+    GetTemplateSummaryResponse * getTemplateSummary(const GetTemplateSummaryRequest &request);
+    ListChangeSetsResponse * listChangeSets(const ListChangeSetsRequest &request);
+    ListStackResourcesResponse * listStackResources(const ListStackResourcesRequest &request);
+    ListStacksResponse * listStacks(const ListStacksRequest &request);
+    SetStackPolicyResponse * setStackPolicy(const SetStackPolicyRequest &request);
+    SignalResourceResponse * signalResource(const SignalResourceRequest &request);
+    UpdateStackResponse * updateStack(const UpdateStackRequest &request);
+    ValidateTemplateResponse * validateTemplate(const ValidateTemplateRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudFormationClient)
@@ -77,6 +80,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudFormation
+} // namespace AWS
 
 #endif

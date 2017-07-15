@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CodePipeline {
+
 class CodePipelineClientPrivate;
 
 class QTAWS_EXPORT CodePipelineClient : public AwsAbstractClient {
@@ -46,32 +49,32 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CodePipelineAcknowledgeJobResponse * acknowledgeJob(const CodePipelineAcknowledgeJobRequest &request);
-    CodePipelineAcknowledgeThirdPartyJobResponse * acknowledgeThirdPartyJob(const CodePipelineAcknowledgeThirdPartyJobRequest &request);
-    CodePipelineCreateCustomActionTypeResponse * createCustomActionType(const CodePipelineCreateCustomActionTypeRequest &request);
-    CodePipelineCreatePipelineResponse * createPipeline(const CodePipelineCreatePipelineRequest &request);
-    CodePipelineDeleteCustomActionTypeResponse * deleteCustomActionType(const CodePipelineDeleteCustomActionTypeRequest &request);
-    CodePipelineDeletePipelineResponse * deletePipeline(const CodePipelineDeletePipelineRequest &request);
-    CodePipelineDisableStageTransitionResponse * disableStageTransition(const CodePipelineDisableStageTransitionRequest &request);
-    CodePipelineEnableStageTransitionResponse * enableStageTransition(const CodePipelineEnableStageTransitionRequest &request);
-    CodePipelineGetJobDetailsResponse * getJobDetails(const CodePipelineGetJobDetailsRequest &request);
-    CodePipelineGetPipelineResponse * getPipeline(const CodePipelineGetPipelineRequest &request);
-    CodePipelineGetPipelineExecutionResponse * getPipelineExecution(const CodePipelineGetPipelineExecutionRequest &request);
-    CodePipelineGetPipelineStateResponse * getPipelineState(const CodePipelineGetPipelineStateRequest &request);
-    CodePipelineGetThirdPartyJobDetailsResponse * getThirdPartyJobDetails(const CodePipelineGetThirdPartyJobDetailsRequest &request);
-    CodePipelineListActionTypesResponse * listActionTypes(const CodePipelineListActionTypesRequest &request);
-    CodePipelineListPipelinesResponse * listPipelines(const CodePipelineListPipelinesRequest &request);
-    CodePipelinePollForJobsResponse * pollForJobs(const CodePipelinePollForJobsRequest &request);
-    CodePipelinePollForThirdPartyJobsResponse * pollForThirdPartyJobs(const CodePipelinePollForThirdPartyJobsRequest &request);
-    CodePipelinePutActionRevisionResponse * putActionRevision(const CodePipelinePutActionRevisionRequest &request);
-    CodePipelinePutApprovalResultResponse * putApprovalResult(const CodePipelinePutApprovalResultRequest &request);
-    CodePipelinePutJobFailureResultResponse * putJobFailureResult(const CodePipelinePutJobFailureResultRequest &request);
-    CodePipelinePutJobSuccessResultResponse * putJobSuccessResult(const CodePipelinePutJobSuccessResultRequest &request);
-    CodePipelinePutThirdPartyJobFailureResultResponse * putThirdPartyJobFailureResult(const CodePipelinePutThirdPartyJobFailureResultRequest &request);
-    CodePipelinePutThirdPartyJobSuccessResultResponse * putThirdPartyJobSuccessResult(const CodePipelinePutThirdPartyJobSuccessResultRequest &request);
-    CodePipelineRetryStageExecutionResponse * retryStageExecution(const CodePipelineRetryStageExecutionRequest &request);
-    CodePipelineStartPipelineExecutionResponse * startPipelineExecution(const CodePipelineStartPipelineExecutionRequest &request);
-    CodePipelineUpdatePipelineResponse * updatePipeline(const CodePipelineUpdatePipelineRequest &request);
+    AcknowledgeJobResponse * acknowledgeJob(const AcknowledgeJobRequest &request);
+    AcknowledgeThirdPartyJobResponse * acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request);
+    CreateCustomActionTypeResponse * createCustomActionType(const CreateCustomActionTypeRequest &request);
+    CreatePipelineResponse * createPipeline(const CreatePipelineRequest &request);
+    DeleteCustomActionTypeResponse * deleteCustomActionType(const DeleteCustomActionTypeRequest &request);
+    DeletePipelineResponse * deletePipeline(const DeletePipelineRequest &request);
+    DisableStageTransitionResponse * disableStageTransition(const DisableStageTransitionRequest &request);
+    EnableStageTransitionResponse * enableStageTransition(const EnableStageTransitionRequest &request);
+    GetJobDetailsResponse * getJobDetails(const GetJobDetailsRequest &request);
+    GetPipelineResponse * getPipeline(const GetPipelineRequest &request);
+    GetPipelineExecutionResponse * getPipelineExecution(const GetPipelineExecutionRequest &request);
+    GetPipelineStateResponse * getPipelineState(const GetPipelineStateRequest &request);
+    GetThirdPartyJobDetailsResponse * getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request);
+    ListActionTypesResponse * listActionTypes(const ListActionTypesRequest &request);
+    ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);
+    PollForJobsResponse * pollForJobs(const PollForJobsRequest &request);
+    PollForThirdPartyJobsResponse * pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request);
+    PutActionRevisionResponse * putActionRevision(const PutActionRevisionRequest &request);
+    PutApprovalResultResponse * putApprovalResult(const PutApprovalResultRequest &request);
+    PutJobFailureResultResponse * putJobFailureResult(const PutJobFailureResultRequest &request);
+    PutJobSuccessResultResponse * putJobSuccessResult(const PutJobSuccessResultRequest &request);
+    PutThirdPartyJobFailureResultResponse * putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request);
+    PutThirdPartyJobSuccessResultResponse * putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request);
+    RetryStageExecutionResponse * retryStageExecution(const RetryStageExecutionRequest &request);
+    StartPipelineExecutionResponse * startPipelineExecution(const StartPipelineExecutionRequest &request);
+    UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodePipelineClient)
@@ -79,6 +82,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CodePipeline
+} // namespace AWS
 
 #endif

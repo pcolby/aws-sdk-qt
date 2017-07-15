@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Lambda {
+
 class LambdaClientPrivate;
 
 class QTAWS_EXPORT LambdaClient : public AwsAbstractClient {
@@ -46,30 +49,30 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    LambdaAddPermissionResponse * addPermission(const LambdaAddPermissionRequest &request);
-    LambdaCreateAliasResponse * createAlias(const LambdaCreateAliasRequest &request);
-    LambdaCreateEventSourceMappingResponse * createEventSourceMapping(const LambdaCreateEventSourceMappingRequest &request);
-    LambdaCreateFunctionResponse * createFunction(const LambdaCreateFunctionRequest &request);
-    LambdaDeleteAliasResponse * deleteAlias(const LambdaDeleteAliasRequest &request);
-    LambdaDeleteEventSourceMappingResponse * deleteEventSourceMapping(const LambdaDeleteEventSourceMappingRequest &request);
-    LambdaDeleteFunctionResponse * deleteFunction(const LambdaDeleteFunctionRequest &request);
-    LambdaGetAliasResponse * getAlias(const LambdaGetAliasRequest &request);
-    LambdaGetEventSourceMappingResponse * getEventSourceMapping(const LambdaGetEventSourceMappingRequest &request);
-    LambdaGetFunctionResponse * getFunction(const LambdaGetFunctionRequest &request);
-    LambdaGetFunctionConfigurationResponse * getFunctionConfiguration(const LambdaGetFunctionConfigurationRequest &request);
-    LambdaGetPolicyResponse * getPolicy(const LambdaGetPolicyRequest &request);
-    LambdaInvokeResponse * invoke(const LambdaInvokeRequest &request);
-    LambdaInvokeAsyncResponse * invokeAsync(const LambdaInvokeAsyncRequest &request);
-    LambdaListAliasesResponse * listAliases(const LambdaListAliasesRequest &request);
-    LambdaListEventSourceMappingsResponse * listEventSourceMappings(const LambdaListEventSourceMappingsRequest &request);
-    LambdaListFunctionsResponse * listFunctions(const LambdaListFunctionsRequest &request);
-    LambdaListVersionsByFunctionResponse * listVersionsByFunction(const LambdaListVersionsByFunctionRequest &request);
-    LambdaPublishVersionResponse * publishVersion(const LambdaPublishVersionRequest &request);
-    LambdaRemovePermissionResponse * removePermission(const LambdaRemovePermissionRequest &request);
-    LambdaUpdateAliasResponse * updateAlias(const LambdaUpdateAliasRequest &request);
-    LambdaUpdateEventSourceMappingResponse * updateEventSourceMapping(const LambdaUpdateEventSourceMappingRequest &request);
-    LambdaUpdateFunctionCodeResponse * updateFunctionCode(const LambdaUpdateFunctionCodeRequest &request);
-    LambdaUpdateFunctionConfigurationResponse * updateFunctionConfiguration(const LambdaUpdateFunctionConfigurationRequest &request);
+    AddPermissionResponse * addPermission(const AddPermissionRequest &request);
+    CreateAliasResponse * createAlias(const CreateAliasRequest &request);
+    CreateEventSourceMappingResponse * createEventSourceMapping(const CreateEventSourceMappingRequest &request);
+    CreateFunctionResponse * createFunction(const CreateFunctionRequest &request);
+    DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
+    DeleteEventSourceMappingResponse * deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request);
+    DeleteFunctionResponse * deleteFunction(const DeleteFunctionRequest &request);
+    GetAliasResponse * getAlias(const GetAliasRequest &request);
+    GetEventSourceMappingResponse * getEventSourceMapping(const GetEventSourceMappingRequest &request);
+    GetFunctionResponse * getFunction(const GetFunctionRequest &request);
+    GetFunctionConfigurationResponse * getFunctionConfiguration(const GetFunctionConfigurationRequest &request);
+    GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
+    InvokeResponse * invoke(const InvokeRequest &request);
+    InvokeAsyncResponse * invokeAsync(const InvokeAsyncRequest &request);
+    ListAliasesResponse * listAliases(const ListAliasesRequest &request);
+    ListEventSourceMappingsResponse * listEventSourceMappings(const ListEventSourceMappingsRequest &request);
+    ListFunctionsResponse * listFunctions(const ListFunctionsRequest &request);
+    ListVersionsByFunctionResponse * listVersionsByFunction(const ListVersionsByFunctionRequest &request);
+    PublishVersionResponse * publishVersion(const PublishVersionRequest &request);
+    RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
+    UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
+    UpdateEventSourceMappingResponse * updateEventSourceMapping(const UpdateEventSourceMappingRequest &request);
+    UpdateFunctionCodeResponse * updateFunctionCode(const UpdateFunctionCodeRequest &request);
+    UpdateFunctionConfigurationResponse * updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(LambdaClient)
@@ -77,6 +80,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Lambda
+} // namespace AWS
 
 #endif

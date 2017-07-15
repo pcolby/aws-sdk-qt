@@ -24,7 +24,8 @@
 
 class QNetworkAccessManager;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Snowball {
 
 class SnowballClient;
 
@@ -39,6 +40,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Snowball
+} // namespace AWS
 
 #endif

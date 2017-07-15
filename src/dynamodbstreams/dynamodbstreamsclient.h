@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DynamoDBStreams {
+
 class DynamoDBStreamsClientPrivate;
 
 class QTAWS_EXPORT DynamoDBStreamsClient : public AwsAbstractClient {
@@ -46,10 +49,10 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DynamoDBStreamsDescribeStreamResponse * describeStream(const DynamoDBStreamsDescribeStreamRequest &request);
-    DynamoDBStreamsGetRecordsResponse * getRecords(const DynamoDBStreamsGetRecordsRequest &request);
-    DynamoDBStreamsGetShardIteratorResponse * getShardIterator(const DynamoDBStreamsGetShardIteratorRequest &request);
-    DynamoDBStreamsListStreamsResponse * listStreams(const DynamoDBStreamsListStreamsRequest &request);
+    DescribeStreamResponse * describeStream(const DescribeStreamRequest &request);
+    GetRecordsResponse * getRecords(const GetRecordsRequest &request);
+    GetShardIteratorResponse * getShardIterator(const GetShardIteratorRequest &request);
+    ListStreamsResponse * listStreams(const ListStreamsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DynamoDBStreamsClient)
@@ -57,6 +60,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DynamoDBStreams
+} // namespace AWS
 
 #endif

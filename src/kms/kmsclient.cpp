@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace KMS {
 
 /**
  * @class  KmsClient
@@ -172,4 +173,5 @@ KmsClientPrivate::KmsClientPrivate(KmsClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace KMS
+} // namespace AWS

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace STS {
+
 class StsClientPrivate;
 
 class QTAWS_EXPORT StsClient : public AwsAbstractClient {
@@ -46,13 +49,13 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    StsAssumeRoleResponse * assumeRole(const StsAssumeRoleRequest &request);
-    StsAssumeRoleWithSAMLResponse * assumeRoleWithSAML(const StsAssumeRoleWithSAMLRequest &request);
-    StsAssumeRoleWithWebIdentityResponse * assumeRoleWithWebIdentity(const StsAssumeRoleWithWebIdentityRequest &request);
-    StsDecodeAuthorizationMessageResponse * decodeAuthorizationMessage(const StsDecodeAuthorizationMessageRequest &request);
-    StsGetCallerIdentityResponse * getCallerIdentity(const StsGetCallerIdentityRequest &request);
-    StsGetFederationTokenResponse * getFederationToken(const StsGetFederationTokenRequest &request);
-    StsGetSessionTokenResponse * getSessionToken(const StsGetSessionTokenRequest &request);
+    AssumeRoleResponse * assumeRole(const AssumeRoleRequest &request);
+    AssumeRoleWithSAMLResponse * assumeRoleWithSAML(const AssumeRoleWithSAMLRequest &request);
+    AssumeRoleWithWebIdentityResponse * assumeRoleWithWebIdentity(const AssumeRoleWithWebIdentityRequest &request);
+    DecodeAuthorizationMessageResponse * decodeAuthorizationMessage(const DecodeAuthorizationMessageRequest &request);
+    GetCallerIdentityResponse * getCallerIdentity(const GetCallerIdentityRequest &request);
+    GetFederationTokenResponse * getFederationToken(const GetFederationTokenRequest &request);
+    GetSessionTokenResponse * getSessionToken(const GetSessionTokenRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(StsClient)
@@ -60,6 +63,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace STS
+} // namespace AWS
 
 #endif

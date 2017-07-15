@@ -24,7 +24,8 @@
 
 class QNetworkAccessManager;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace STS {
 
 class StsClient;
 
@@ -39,6 +40,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace STS
+} // namespace AWS
 
 #endif

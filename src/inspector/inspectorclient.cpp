@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Inspector {
 
 /**
  * @class  InspectorClient
@@ -112,4 +113,5 @@ InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Inspector
+} // namespace AWS

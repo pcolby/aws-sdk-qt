@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Redshift {
+
 class RedshiftClientPrivate;
 
 class QTAWS_EXPORT RedshiftClient : public AwsAbstractClient {
@@ -46,68 +49,68 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    RedshiftAuthorizeClusterSecurityGroupIngressResponse * authorizeClusterSecurityGroupIngress(const RedshiftAuthorizeClusterSecurityGroupIngressRequest &request);
-    RedshiftAuthorizeSnapshotAccessResponse * authorizeSnapshotAccess(const RedshiftAuthorizeSnapshotAccessRequest &request);
-    RedshiftCopyClusterSnapshotResponse * copyClusterSnapshot(const RedshiftCopyClusterSnapshotRequest &request);
-    RedshiftCreateClusterResponse * createCluster(const RedshiftCreateClusterRequest &request);
-    RedshiftCreateClusterParameterGroupResponse * createClusterParameterGroup(const RedshiftCreateClusterParameterGroupRequest &request);
-    RedshiftCreateClusterSecurityGroupResponse * createClusterSecurityGroup(const RedshiftCreateClusterSecurityGroupRequest &request);
-    RedshiftCreateClusterSnapshotResponse * createClusterSnapshot(const RedshiftCreateClusterSnapshotRequest &request);
-    RedshiftCreateClusterSubnetGroupResponse * createClusterSubnetGroup(const RedshiftCreateClusterSubnetGroupRequest &request);
-    RedshiftCreateEventSubscriptionResponse * createEventSubscription(const RedshiftCreateEventSubscriptionRequest &request);
-    RedshiftCreateHsmClientCertificateResponse * createHsmClientCertificate(const RedshiftCreateHsmClientCertificateRequest &request);
-    RedshiftCreateHsmConfigurationResponse * createHsmConfiguration(const RedshiftCreateHsmConfigurationRequest &request);
-    RedshiftCreateSnapshotCopyGrantResponse * createSnapshotCopyGrant(const RedshiftCreateSnapshotCopyGrantRequest &request);
-    RedshiftCreateTagsResponse * createTags(const RedshiftCreateTagsRequest &request);
-    RedshiftDeleteClusterResponse * deleteCluster(const RedshiftDeleteClusterRequest &request);
-    RedshiftDeleteClusterParameterGroupResponse * deleteClusterParameterGroup(const RedshiftDeleteClusterParameterGroupRequest &request);
-    RedshiftDeleteClusterSecurityGroupResponse * deleteClusterSecurityGroup(const RedshiftDeleteClusterSecurityGroupRequest &request);
-    RedshiftDeleteClusterSnapshotResponse * deleteClusterSnapshot(const RedshiftDeleteClusterSnapshotRequest &request);
-    RedshiftDeleteClusterSubnetGroupResponse * deleteClusterSubnetGroup(const RedshiftDeleteClusterSubnetGroupRequest &request);
-    RedshiftDeleteEventSubscriptionResponse * deleteEventSubscription(const RedshiftDeleteEventSubscriptionRequest &request);
-    RedshiftDeleteHsmClientCertificateResponse * deleteHsmClientCertificate(const RedshiftDeleteHsmClientCertificateRequest &request);
-    RedshiftDeleteHsmConfigurationResponse * deleteHsmConfiguration(const RedshiftDeleteHsmConfigurationRequest &request);
-    RedshiftDeleteSnapshotCopyGrantResponse * deleteSnapshotCopyGrant(const RedshiftDeleteSnapshotCopyGrantRequest &request);
-    RedshiftDeleteTagsResponse * deleteTags(const RedshiftDeleteTagsRequest &request);
-    RedshiftDescribeClusterParameterGroupsResponse * describeClusterParameterGroups(const RedshiftDescribeClusterParameterGroupsRequest &request);
-    RedshiftDescribeClusterParametersResponse * describeClusterParameters(const RedshiftDescribeClusterParametersRequest &request);
-    RedshiftDescribeClusterSecurityGroupsResponse * describeClusterSecurityGroups(const RedshiftDescribeClusterSecurityGroupsRequest &request);
-    RedshiftDescribeClusterSnapshotsResponse * describeClusterSnapshots(const RedshiftDescribeClusterSnapshotsRequest &request);
-    RedshiftDescribeClusterSubnetGroupsResponse * describeClusterSubnetGroups(const RedshiftDescribeClusterSubnetGroupsRequest &request);
-    RedshiftDescribeClusterVersionsResponse * describeClusterVersions(const RedshiftDescribeClusterVersionsRequest &request);
-    RedshiftDescribeClustersResponse * describeClusters(const RedshiftDescribeClustersRequest &request);
-    RedshiftDescribeDefaultClusterParametersResponse * describeDefaultClusterParameters(const RedshiftDescribeDefaultClusterParametersRequest &request);
-    RedshiftDescribeEventCategoriesResponse * describeEventCategories(const RedshiftDescribeEventCategoriesRequest &request);
-    RedshiftDescribeEventSubscriptionsResponse * describeEventSubscriptions(const RedshiftDescribeEventSubscriptionsRequest &request);
-    RedshiftDescribeEventsResponse * describeEvents(const RedshiftDescribeEventsRequest &request);
-    RedshiftDescribeHsmClientCertificatesResponse * describeHsmClientCertificates(const RedshiftDescribeHsmClientCertificatesRequest &request);
-    RedshiftDescribeHsmConfigurationsResponse * describeHsmConfigurations(const RedshiftDescribeHsmConfigurationsRequest &request);
-    RedshiftDescribeLoggingStatusResponse * describeLoggingStatus(const RedshiftDescribeLoggingStatusRequest &request);
-    RedshiftDescribeOrderableClusterOptionsResponse * describeOrderableClusterOptions(const RedshiftDescribeOrderableClusterOptionsRequest &request);
-    RedshiftDescribeReservedNodeOfferingsResponse * describeReservedNodeOfferings(const RedshiftDescribeReservedNodeOfferingsRequest &request);
-    RedshiftDescribeReservedNodesResponse * describeReservedNodes(const RedshiftDescribeReservedNodesRequest &request);
-    RedshiftDescribeResizeResponse * describeResize(const RedshiftDescribeResizeRequest &request);
-    RedshiftDescribeSnapshotCopyGrantsResponse * describeSnapshotCopyGrants(const RedshiftDescribeSnapshotCopyGrantsRequest &request);
-    RedshiftDescribeTableRestoreStatusResponse * describeTableRestoreStatus(const RedshiftDescribeTableRestoreStatusRequest &request);
-    RedshiftDescribeTagsResponse * describeTags(const RedshiftDescribeTagsRequest &request);
-    RedshiftDisableLoggingResponse * disableLogging(const RedshiftDisableLoggingRequest &request);
-    RedshiftDisableSnapshotCopyResponse * disableSnapshotCopy(const RedshiftDisableSnapshotCopyRequest &request);
-    RedshiftEnableLoggingResponse * enableLogging(const RedshiftEnableLoggingRequest &request);
-    RedshiftEnableSnapshotCopyResponse * enableSnapshotCopy(const RedshiftEnableSnapshotCopyRequest &request);
-    RedshiftModifyClusterResponse * modifyCluster(const RedshiftModifyClusterRequest &request);
-    RedshiftModifyClusterIamRolesResponse * modifyClusterIamRoles(const RedshiftModifyClusterIamRolesRequest &request);
-    RedshiftModifyClusterParameterGroupResponse * modifyClusterParameterGroup(const RedshiftModifyClusterParameterGroupRequest &request);
-    RedshiftModifyClusterSubnetGroupResponse * modifyClusterSubnetGroup(const RedshiftModifyClusterSubnetGroupRequest &request);
-    RedshiftModifyEventSubscriptionResponse * modifyEventSubscription(const RedshiftModifyEventSubscriptionRequest &request);
-    RedshiftModifySnapshotCopyRetentionPeriodResponse * modifySnapshotCopyRetentionPeriod(const RedshiftModifySnapshotCopyRetentionPeriodRequest &request);
-    RedshiftPurchaseReservedNodeOfferingResponse * purchaseReservedNodeOffering(const RedshiftPurchaseReservedNodeOfferingRequest &request);
-    RedshiftRebootClusterResponse * rebootCluster(const RedshiftRebootClusterRequest &request);
-    RedshiftResetClusterParameterGroupResponse * resetClusterParameterGroup(const RedshiftResetClusterParameterGroupRequest &request);
-    RedshiftRestoreFromClusterSnapshotResponse * restoreFromClusterSnapshot(const RedshiftRestoreFromClusterSnapshotRequest &request);
-    RedshiftRestoreTableFromClusterSnapshotResponse * restoreTableFromClusterSnapshot(const RedshiftRestoreTableFromClusterSnapshotRequest &request);
-    RedshiftRevokeClusterSecurityGroupIngressResponse * revokeClusterSecurityGroupIngress(const RedshiftRevokeClusterSecurityGroupIngressRequest &request);
-    RedshiftRevokeSnapshotAccessResponse * revokeSnapshotAccess(const RedshiftRevokeSnapshotAccessRequest &request);
-    RedshiftRotateEncryptionKeyResponse * rotateEncryptionKey(const RedshiftRotateEncryptionKeyRequest &request);
+    AuthorizeClusterSecurityGroupIngressResponse * authorizeClusterSecurityGroupIngress(const AuthorizeClusterSecurityGroupIngressRequest &request);
+    AuthorizeSnapshotAccessResponse * authorizeSnapshotAccess(const AuthorizeSnapshotAccessRequest &request);
+    CopyClusterSnapshotResponse * copyClusterSnapshot(const CopyClusterSnapshotRequest &request);
+    CreateClusterResponse * createCluster(const CreateClusterRequest &request);
+    CreateClusterParameterGroupResponse * createClusterParameterGroup(const CreateClusterParameterGroupRequest &request);
+    CreateClusterSecurityGroupResponse * createClusterSecurityGroup(const CreateClusterSecurityGroupRequest &request);
+    CreateClusterSnapshotResponse * createClusterSnapshot(const CreateClusterSnapshotRequest &request);
+    CreateClusterSubnetGroupResponse * createClusterSubnetGroup(const CreateClusterSubnetGroupRequest &request);
+    CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
+    CreateHsmClientCertificateResponse * createHsmClientCertificate(const CreateHsmClientCertificateRequest &request);
+    CreateHsmConfigurationResponse * createHsmConfiguration(const CreateHsmConfigurationRequest &request);
+    CreateSnapshotCopyGrantResponse * createSnapshotCopyGrant(const CreateSnapshotCopyGrantRequest &request);
+    CreateTagsResponse * createTags(const CreateTagsRequest &request);
+    DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
+    DeleteClusterParameterGroupResponse * deleteClusterParameterGroup(const DeleteClusterParameterGroupRequest &request);
+    DeleteClusterSecurityGroupResponse * deleteClusterSecurityGroup(const DeleteClusterSecurityGroupRequest &request);
+    DeleteClusterSnapshotResponse * deleteClusterSnapshot(const DeleteClusterSnapshotRequest &request);
+    DeleteClusterSubnetGroupResponse * deleteClusterSubnetGroup(const DeleteClusterSubnetGroupRequest &request);
+    DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
+    DeleteHsmClientCertificateResponse * deleteHsmClientCertificate(const DeleteHsmClientCertificateRequest &request);
+    DeleteHsmConfigurationResponse * deleteHsmConfiguration(const DeleteHsmConfigurationRequest &request);
+    DeleteSnapshotCopyGrantResponse * deleteSnapshotCopyGrant(const DeleteSnapshotCopyGrantRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeClusterParameterGroupsResponse * describeClusterParameterGroups(const DescribeClusterParameterGroupsRequest &request);
+    DescribeClusterParametersResponse * describeClusterParameters(const DescribeClusterParametersRequest &request);
+    DescribeClusterSecurityGroupsResponse * describeClusterSecurityGroups(const DescribeClusterSecurityGroupsRequest &request);
+    DescribeClusterSnapshotsResponse * describeClusterSnapshots(const DescribeClusterSnapshotsRequest &request);
+    DescribeClusterSubnetGroupsResponse * describeClusterSubnetGroups(const DescribeClusterSubnetGroupsRequest &request);
+    DescribeClusterVersionsResponse * describeClusterVersions(const DescribeClusterVersionsRequest &request);
+    DescribeClustersResponse * describeClusters(const DescribeClustersRequest &request);
+    DescribeDefaultClusterParametersResponse * describeDefaultClusterParameters(const DescribeDefaultClusterParametersRequest &request);
+    DescribeEventCategoriesResponse * describeEventCategories(const DescribeEventCategoriesRequest &request);
+    DescribeEventSubscriptionsResponse * describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request);
+    DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
+    DescribeHsmClientCertificatesResponse * describeHsmClientCertificates(const DescribeHsmClientCertificatesRequest &request);
+    DescribeHsmConfigurationsResponse * describeHsmConfigurations(const DescribeHsmConfigurationsRequest &request);
+    DescribeLoggingStatusResponse * describeLoggingStatus(const DescribeLoggingStatusRequest &request);
+    DescribeOrderableClusterOptionsResponse * describeOrderableClusterOptions(const DescribeOrderableClusterOptionsRequest &request);
+    DescribeReservedNodeOfferingsResponse * describeReservedNodeOfferings(const DescribeReservedNodeOfferingsRequest &request);
+    DescribeReservedNodesResponse * describeReservedNodes(const DescribeReservedNodesRequest &request);
+    DescribeResizeResponse * describeResize(const DescribeResizeRequest &request);
+    DescribeSnapshotCopyGrantsResponse * describeSnapshotCopyGrants(const DescribeSnapshotCopyGrantsRequest &request);
+    DescribeTableRestoreStatusResponse * describeTableRestoreStatus(const DescribeTableRestoreStatusRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DisableLoggingResponse * disableLogging(const DisableLoggingRequest &request);
+    DisableSnapshotCopyResponse * disableSnapshotCopy(const DisableSnapshotCopyRequest &request);
+    EnableLoggingResponse * enableLogging(const EnableLoggingRequest &request);
+    EnableSnapshotCopyResponse * enableSnapshotCopy(const EnableSnapshotCopyRequest &request);
+    ModifyClusterResponse * modifyCluster(const ModifyClusterRequest &request);
+    ModifyClusterIamRolesResponse * modifyClusterIamRoles(const ModifyClusterIamRolesRequest &request);
+    ModifyClusterParameterGroupResponse * modifyClusterParameterGroup(const ModifyClusterParameterGroupRequest &request);
+    ModifyClusterSubnetGroupResponse * modifyClusterSubnetGroup(const ModifyClusterSubnetGroupRequest &request);
+    ModifyEventSubscriptionResponse * modifyEventSubscription(const ModifyEventSubscriptionRequest &request);
+    ModifySnapshotCopyRetentionPeriodResponse * modifySnapshotCopyRetentionPeriod(const ModifySnapshotCopyRetentionPeriodRequest &request);
+    PurchaseReservedNodeOfferingResponse * purchaseReservedNodeOffering(const PurchaseReservedNodeOfferingRequest &request);
+    RebootClusterResponse * rebootCluster(const RebootClusterRequest &request);
+    ResetClusterParameterGroupResponse * resetClusterParameterGroup(const ResetClusterParameterGroupRequest &request);
+    RestoreFromClusterSnapshotResponse * restoreFromClusterSnapshot(const RestoreFromClusterSnapshotRequest &request);
+    RestoreTableFromClusterSnapshotResponse * restoreTableFromClusterSnapshot(const RestoreTableFromClusterSnapshotRequest &request);
+    RevokeClusterSecurityGroupIngressResponse * revokeClusterSecurityGroupIngress(const RevokeClusterSecurityGroupIngressRequest &request);
+    RevokeSnapshotAccessResponse * revokeSnapshotAccess(const RevokeSnapshotAccessRequest &request);
+    RotateEncryptionKeyResponse * rotateEncryptionKey(const RotateEncryptionKeyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RedshiftClient)
@@ -115,6 +118,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Redshift
+} // namespace AWS
 
 #endif

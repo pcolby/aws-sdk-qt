@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ElasticTranscoder {
+
 class ElasticTranscoderClientPrivate;
 
 class QTAWS_EXPORT ElasticTranscoderClient : public AwsAbstractClient {
@@ -46,23 +49,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ElasticTranscoderCancelJobResponse * cancelJob(const ElasticTranscoderCancelJobRequest &request);
-    ElasticTranscoderCreateJobResponse * createJob(const ElasticTranscoderCreateJobRequest &request);
-    ElasticTranscoderCreatePipelineResponse * createPipeline(const ElasticTranscoderCreatePipelineRequest &request);
-    ElasticTranscoderCreatePresetResponse * createPreset(const ElasticTranscoderCreatePresetRequest &request);
-    ElasticTranscoderDeletePipelineResponse * deletePipeline(const ElasticTranscoderDeletePipelineRequest &request);
-    ElasticTranscoderDeletePresetResponse * deletePreset(const ElasticTranscoderDeletePresetRequest &request);
-    ElasticTranscoderListJobsByPipelineResponse * listJobsByPipeline(const ElasticTranscoderListJobsByPipelineRequest &request);
-    ElasticTranscoderListJobsByStatusResponse * listJobsByStatus(const ElasticTranscoderListJobsByStatusRequest &request);
-    ElasticTranscoderListPipelinesResponse * listPipelines(const ElasticTranscoderListPipelinesRequest &request);
-    ElasticTranscoderListPresetsResponse * listPresets(const ElasticTranscoderListPresetsRequest &request);
-    ElasticTranscoderReadJobResponse * readJob(const ElasticTranscoderReadJobRequest &request);
-    ElasticTranscoderReadPipelineResponse * readPipeline(const ElasticTranscoderReadPipelineRequest &request);
-    ElasticTranscoderReadPresetResponse * readPreset(const ElasticTranscoderReadPresetRequest &request);
-    ElasticTranscoderTestRoleResponse * testRole(const ElasticTranscoderTestRoleRequest &request);
-    ElasticTranscoderUpdatePipelineResponse * updatePipeline(const ElasticTranscoderUpdatePipelineRequest &request);
-    ElasticTranscoderUpdatePipelineNotificationsResponse * updatePipelineNotifications(const ElasticTranscoderUpdatePipelineNotificationsRequest &request);
-    ElasticTranscoderUpdatePipelineStatusResponse * updatePipelineStatus(const ElasticTranscoderUpdatePipelineStatusRequest &request);
+    CancelJobResponse * cancelJob(const CancelJobRequest &request);
+    CreateJobResponse * createJob(const CreateJobRequest &request);
+    CreatePipelineResponse * createPipeline(const CreatePipelineRequest &request);
+    CreatePresetResponse * createPreset(const CreatePresetRequest &request);
+    DeletePipelineResponse * deletePipeline(const DeletePipelineRequest &request);
+    DeletePresetResponse * deletePreset(const DeletePresetRequest &request);
+    ListJobsByPipelineResponse * listJobsByPipeline(const ListJobsByPipelineRequest &request);
+    ListJobsByStatusResponse * listJobsByStatus(const ListJobsByStatusRequest &request);
+    ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);
+    ListPresetsResponse * listPresets(const ListPresetsRequest &request);
+    ReadJobResponse * readJob(const ReadJobRequest &request);
+    ReadPipelineResponse * readPipeline(const ReadPipelineRequest &request);
+    ReadPresetResponse * readPreset(const ReadPresetRequest &request);
+    TestRoleResponse * testRole(const TestRoleRequest &request);
+    UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
+    UpdatePipelineNotificationsResponse * updatePipelineNotifications(const UpdatePipelineNotificationsRequest &request);
+    UpdatePipelineStatusResponse * updatePipelineStatus(const UpdatePipelineStatusRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticTranscoderClient)
@@ -70,6 +73,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticTranscoder
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudHSM {
+
 class CloudHSMClientPrivate;
 
 class QTAWS_EXPORT CloudHSMClient : public AwsAbstractClient {
@@ -46,26 +49,26 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudHSMAddTagsToResourceResponse * addTagsToResource(const CloudHSMAddTagsToResourceRequest &request);
-    CloudHSMCreateHapgResponse * createHapg(const CloudHSMCreateHapgRequest &request);
-    CloudHSMCreateHsmResponse * createHsm(const CloudHSMCreateHsmRequest &request);
-    CloudHSMCreateLunaClientResponse * createLunaClient(const CloudHSMCreateLunaClientRequest &request);
-    CloudHSMDeleteHapgResponse * deleteHapg(const CloudHSMDeleteHapgRequest &request);
-    CloudHSMDeleteHsmResponse * deleteHsm(const CloudHSMDeleteHsmRequest &request);
-    CloudHSMDeleteLunaClientResponse * deleteLunaClient(const CloudHSMDeleteLunaClientRequest &request);
-    CloudHSMDescribeHapgResponse * describeHapg(const CloudHSMDescribeHapgRequest &request);
-    CloudHSMDescribeHsmResponse * describeHsm(const CloudHSMDescribeHsmRequest &request);
-    CloudHSMDescribeLunaClientResponse * describeLunaClient(const CloudHSMDescribeLunaClientRequest &request);
-    CloudHSMGetConfigResponse * getConfig(const CloudHSMGetConfigRequest &request);
-    CloudHSMListAvailableZonesResponse * listAvailableZones(const CloudHSMListAvailableZonesRequest &request);
-    CloudHSMListHapgsResponse * listHapgs(const CloudHSMListHapgsRequest &request);
-    CloudHSMListHsmsResponse * listHsms(const CloudHSMListHsmsRequest &request);
-    CloudHSMListLunaClientsResponse * listLunaClients(const CloudHSMListLunaClientsRequest &request);
-    CloudHSMListTagsForResourceResponse * listTagsForResource(const CloudHSMListTagsForResourceRequest &request);
-    CloudHSMModifyHapgResponse * modifyHapg(const CloudHSMModifyHapgRequest &request);
-    CloudHSMModifyHsmResponse * modifyHsm(const CloudHSMModifyHsmRequest &request);
-    CloudHSMModifyLunaClientResponse * modifyLunaClient(const CloudHSMModifyLunaClientRequest &request);
-    CloudHSMRemoveTagsFromResourceResponse * removeTagsFromResource(const CloudHSMRemoveTagsFromResourceRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    CreateHapgResponse * createHapg(const CreateHapgRequest &request);
+    CreateHsmResponse * createHsm(const CreateHsmRequest &request);
+    CreateLunaClientResponse * createLunaClient(const CreateLunaClientRequest &request);
+    DeleteHapgResponse * deleteHapg(const DeleteHapgRequest &request);
+    DeleteHsmResponse * deleteHsm(const DeleteHsmRequest &request);
+    DeleteLunaClientResponse * deleteLunaClient(const DeleteLunaClientRequest &request);
+    DescribeHapgResponse * describeHapg(const DescribeHapgRequest &request);
+    DescribeHsmResponse * describeHsm(const DescribeHsmRequest &request);
+    DescribeLunaClientResponse * describeLunaClient(const DescribeLunaClientRequest &request);
+    GetConfigResponse * getConfig(const GetConfigRequest &request);
+    ListAvailableZonesResponse * listAvailableZones(const ListAvailableZonesRequest &request);
+    ListHapgsResponse * listHapgs(const ListHapgsRequest &request);
+    ListHsmsResponse * listHsms(const ListHsmsRequest &request);
+    ListLunaClientsResponse * listLunaClients(const ListLunaClientsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ModifyHapgResponse * modifyHapg(const ModifyHapgRequest &request);
+    ModifyHsmResponse * modifyHsm(const ModifyHsmRequest &request);
+    ModifyLunaClientResponse * modifyLunaClient(const ModifyLunaClientRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudHSMClient)
@@ -73,6 +76,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudHSM
+} // namespace AWS
 
 #endif

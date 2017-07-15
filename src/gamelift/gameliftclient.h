@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace GameLift {
+
 class GameLiftClientPrivate;
 
 class QTAWS_EXPORT GameLiftClient : public AwsAbstractClient {
@@ -46,44 +49,44 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    GameLiftCreateAliasResponse * createAlias(const GameLiftCreateAliasRequest &request);
-    GameLiftCreateBuildResponse * createBuild(const GameLiftCreateBuildRequest &request);
-    GameLiftCreateFleetResponse * createFleet(const GameLiftCreateFleetRequest &request);
-    GameLiftCreateGameSessionResponse * createGameSession(const GameLiftCreateGameSessionRequest &request);
-    GameLiftCreatePlayerSessionResponse * createPlayerSession(const GameLiftCreatePlayerSessionRequest &request);
-    GameLiftCreatePlayerSessionsResponse * createPlayerSessions(const GameLiftCreatePlayerSessionsRequest &request);
-    GameLiftDeleteAliasResponse * deleteAlias(const GameLiftDeleteAliasRequest &request);
-    GameLiftDeleteBuildResponse * deleteBuild(const GameLiftDeleteBuildRequest &request);
-    GameLiftDeleteFleetResponse * deleteFleet(const GameLiftDeleteFleetRequest &request);
-    GameLiftDeleteScalingPolicyResponse * deleteScalingPolicy(const GameLiftDeleteScalingPolicyRequest &request);
-    GameLiftDescribeAliasResponse * describeAlias(const GameLiftDescribeAliasRequest &request);
-    GameLiftDescribeBuildResponse * describeBuild(const GameLiftDescribeBuildRequest &request);
-    GameLiftDescribeEC2InstanceLimitsResponse * describeEC2InstanceLimits(const GameLiftDescribeEC2InstanceLimitsRequest &request);
-    GameLiftDescribeFleetAttributesResponse * describeFleetAttributes(const GameLiftDescribeFleetAttributesRequest &request);
-    GameLiftDescribeFleetCapacityResponse * describeFleetCapacity(const GameLiftDescribeFleetCapacityRequest &request);
-    GameLiftDescribeFleetEventsResponse * describeFleetEvents(const GameLiftDescribeFleetEventsRequest &request);
-    GameLiftDescribeFleetPortSettingsResponse * describeFleetPortSettings(const GameLiftDescribeFleetPortSettingsRequest &request);
-    GameLiftDescribeFleetUtilizationResponse * describeFleetUtilization(const GameLiftDescribeFleetUtilizationRequest &request);
-    GameLiftDescribeGameSessionDetailsResponse * describeGameSessionDetails(const GameLiftDescribeGameSessionDetailsRequest &request);
-    GameLiftDescribeGameSessionsResponse * describeGameSessions(const GameLiftDescribeGameSessionsRequest &request);
-    GameLiftDescribePlayerSessionsResponse * describePlayerSessions(const GameLiftDescribePlayerSessionsRequest &request);
-    GameLiftDescribeRuntimeConfigurationResponse * describeRuntimeConfiguration(const GameLiftDescribeRuntimeConfigurationRequest &request);
-    GameLiftDescribeScalingPoliciesResponse * describeScalingPolicies(const GameLiftDescribeScalingPoliciesRequest &request);
-    GameLiftGetGameSessionLogUrlResponse * getGameSessionLogUrl(const GameLiftGetGameSessionLogUrlRequest &request);
-    GameLiftListAliasesResponse * listAliases(const GameLiftListAliasesRequest &request);
-    GameLiftListBuildsResponse * listBuilds(const GameLiftListBuildsRequest &request);
-    GameLiftListFleetsResponse * listFleets(const GameLiftListFleetsRequest &request);
-    GameLiftPutScalingPolicyResponse * putScalingPolicy(const GameLiftPutScalingPolicyRequest &request);
-    GameLiftRequestUploadCredentialsResponse * requestUploadCredentials(const GameLiftRequestUploadCredentialsRequest &request);
-    GameLiftResolveAliasResponse * resolveAlias(const GameLiftResolveAliasRequest &request);
-    GameLiftSearchGameSessionsResponse * searchGameSessions(const GameLiftSearchGameSessionsRequest &request);
-    GameLiftUpdateAliasResponse * updateAlias(const GameLiftUpdateAliasRequest &request);
-    GameLiftUpdateBuildResponse * updateBuild(const GameLiftUpdateBuildRequest &request);
-    GameLiftUpdateFleetAttributesResponse * updateFleetAttributes(const GameLiftUpdateFleetAttributesRequest &request);
-    GameLiftUpdateFleetCapacityResponse * updateFleetCapacity(const GameLiftUpdateFleetCapacityRequest &request);
-    GameLiftUpdateFleetPortSettingsResponse * updateFleetPortSettings(const GameLiftUpdateFleetPortSettingsRequest &request);
-    GameLiftUpdateGameSessionResponse * updateGameSession(const GameLiftUpdateGameSessionRequest &request);
-    GameLiftUpdateRuntimeConfigurationResponse * updateRuntimeConfiguration(const GameLiftUpdateRuntimeConfigurationRequest &request);
+    CreateAliasResponse * createAlias(const CreateAliasRequest &request);
+    CreateBuildResponse * createBuild(const CreateBuildRequest &request);
+    CreateFleetResponse * createFleet(const CreateFleetRequest &request);
+    CreateGameSessionResponse * createGameSession(const CreateGameSessionRequest &request);
+    CreatePlayerSessionResponse * createPlayerSession(const CreatePlayerSessionRequest &request);
+    CreatePlayerSessionsResponse * createPlayerSessions(const CreatePlayerSessionsRequest &request);
+    DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
+    DeleteBuildResponse * deleteBuild(const DeleteBuildRequest &request);
+    DeleteFleetResponse * deleteFleet(const DeleteFleetRequest &request);
+    DeleteScalingPolicyResponse * deleteScalingPolicy(const DeleteScalingPolicyRequest &request);
+    DescribeAliasResponse * describeAlias(const DescribeAliasRequest &request);
+    DescribeBuildResponse * describeBuild(const DescribeBuildRequest &request);
+    DescribeEC2InstanceLimitsResponse * describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request);
+    DescribeFleetAttributesResponse * describeFleetAttributes(const DescribeFleetAttributesRequest &request);
+    DescribeFleetCapacityResponse * describeFleetCapacity(const DescribeFleetCapacityRequest &request);
+    DescribeFleetEventsResponse * describeFleetEvents(const DescribeFleetEventsRequest &request);
+    DescribeFleetPortSettingsResponse * describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request);
+    DescribeFleetUtilizationResponse * describeFleetUtilization(const DescribeFleetUtilizationRequest &request);
+    DescribeGameSessionDetailsResponse * describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request);
+    DescribeGameSessionsResponse * describeGameSessions(const DescribeGameSessionsRequest &request);
+    DescribePlayerSessionsResponse * describePlayerSessions(const DescribePlayerSessionsRequest &request);
+    DescribeRuntimeConfigurationResponse * describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request);
+    DescribeScalingPoliciesResponse * describeScalingPolicies(const DescribeScalingPoliciesRequest &request);
+    GetGameSessionLogUrlResponse * getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request);
+    ListAliasesResponse * listAliases(const ListAliasesRequest &request);
+    ListBuildsResponse * listBuilds(const ListBuildsRequest &request);
+    ListFleetsResponse * listFleets(const ListFleetsRequest &request);
+    PutScalingPolicyResponse * putScalingPolicy(const PutScalingPolicyRequest &request);
+    RequestUploadCredentialsResponse * requestUploadCredentials(const RequestUploadCredentialsRequest &request);
+    ResolveAliasResponse * resolveAlias(const ResolveAliasRequest &request);
+    SearchGameSessionsResponse * searchGameSessions(const SearchGameSessionsRequest &request);
+    UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
+    UpdateBuildResponse * updateBuild(const UpdateBuildRequest &request);
+    UpdateFleetAttributesResponse * updateFleetAttributes(const UpdateFleetAttributesRequest &request);
+    UpdateFleetCapacityResponse * updateFleetCapacity(const UpdateFleetCapacityRequest &request);
+    UpdateFleetPortSettingsResponse * updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request);
+    UpdateGameSessionResponse * updateGameSession(const UpdateGameSessionRequest &request);
+    UpdateRuntimeConfigurationResponse * updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(GameLiftClient)
@@ -91,6 +94,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace GameLift
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudSearch {
+
 class CloudSearchClientPrivate;
 
 class QTAWS_EXPORT CloudSearchClient : public AwsAbstractClient {
@@ -46,30 +49,30 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudSearchBuildSuggestersResponse * buildSuggesters(const CloudSearchBuildSuggestersRequest &request);
-    CloudSearchCreateDomainResponse * createDomain(const CloudSearchCreateDomainRequest &request);
-    CloudSearchDefineAnalysisSchemeResponse * defineAnalysisScheme(const CloudSearchDefineAnalysisSchemeRequest &request);
-    CloudSearchDefineExpressionResponse * defineExpression(const CloudSearchDefineExpressionRequest &request);
-    CloudSearchDefineIndexFieldResponse * defineIndexField(const CloudSearchDefineIndexFieldRequest &request);
-    CloudSearchDefineSuggesterResponse * defineSuggester(const CloudSearchDefineSuggesterRequest &request);
-    CloudSearchDeleteAnalysisSchemeResponse * deleteAnalysisScheme(const CloudSearchDeleteAnalysisSchemeRequest &request);
-    CloudSearchDeleteDomainResponse * deleteDomain(const CloudSearchDeleteDomainRequest &request);
-    CloudSearchDeleteExpressionResponse * deleteExpression(const CloudSearchDeleteExpressionRequest &request);
-    CloudSearchDeleteIndexFieldResponse * deleteIndexField(const CloudSearchDeleteIndexFieldRequest &request);
-    CloudSearchDeleteSuggesterResponse * deleteSuggester(const CloudSearchDeleteSuggesterRequest &request);
-    CloudSearchDescribeAnalysisSchemesResponse * describeAnalysisSchemes(const CloudSearchDescribeAnalysisSchemesRequest &request);
-    CloudSearchDescribeAvailabilityOptionsResponse * describeAvailabilityOptions(const CloudSearchDescribeAvailabilityOptionsRequest &request);
-    CloudSearchDescribeDomainsResponse * describeDomains(const CloudSearchDescribeDomainsRequest &request);
-    CloudSearchDescribeExpressionsResponse * describeExpressions(const CloudSearchDescribeExpressionsRequest &request);
-    CloudSearchDescribeIndexFieldsResponse * describeIndexFields(const CloudSearchDescribeIndexFieldsRequest &request);
-    CloudSearchDescribeScalingParametersResponse * describeScalingParameters(const CloudSearchDescribeScalingParametersRequest &request);
-    CloudSearchDescribeServiceAccessPoliciesResponse * describeServiceAccessPolicies(const CloudSearchDescribeServiceAccessPoliciesRequest &request);
-    CloudSearchDescribeSuggestersResponse * describeSuggesters(const CloudSearchDescribeSuggestersRequest &request);
-    CloudSearchIndexDocumentsResponse * indexDocuments(const CloudSearchIndexDocumentsRequest &request);
-    CloudSearchListDomainNamesResponse * listDomainNames();
-    CloudSearchUpdateAvailabilityOptionsResponse * updateAvailabilityOptions(const CloudSearchUpdateAvailabilityOptionsRequest &request);
-    CloudSearchUpdateScalingParametersResponse * updateScalingParameters(const CloudSearchUpdateScalingParametersRequest &request);
-    CloudSearchUpdateServiceAccessPoliciesResponse * updateServiceAccessPolicies(const CloudSearchUpdateServiceAccessPoliciesRequest &request);
+    BuildSuggestersResponse * buildSuggesters(const BuildSuggestersRequest &request);
+    CreateDomainResponse * createDomain(const CreateDomainRequest &request);
+    DefineAnalysisSchemeResponse * defineAnalysisScheme(const DefineAnalysisSchemeRequest &request);
+    DefineExpressionResponse * defineExpression(const DefineExpressionRequest &request);
+    DefineIndexFieldResponse * defineIndexField(const DefineIndexFieldRequest &request);
+    DefineSuggesterResponse * defineSuggester(const DefineSuggesterRequest &request);
+    DeleteAnalysisSchemeResponse * deleteAnalysisScheme(const DeleteAnalysisSchemeRequest &request);
+    DeleteDomainResponse * deleteDomain(const DeleteDomainRequest &request);
+    DeleteExpressionResponse * deleteExpression(const DeleteExpressionRequest &request);
+    DeleteIndexFieldResponse * deleteIndexField(const DeleteIndexFieldRequest &request);
+    DeleteSuggesterResponse * deleteSuggester(const DeleteSuggesterRequest &request);
+    DescribeAnalysisSchemesResponse * describeAnalysisSchemes(const DescribeAnalysisSchemesRequest &request);
+    DescribeAvailabilityOptionsResponse * describeAvailabilityOptions(const DescribeAvailabilityOptionsRequest &request);
+    DescribeDomainsResponse * describeDomains(const DescribeDomainsRequest &request);
+    DescribeExpressionsResponse * describeExpressions(const DescribeExpressionsRequest &request);
+    DescribeIndexFieldsResponse * describeIndexFields(const DescribeIndexFieldsRequest &request);
+    DescribeScalingParametersResponse * describeScalingParameters(const DescribeScalingParametersRequest &request);
+    DescribeServiceAccessPoliciesResponse * describeServiceAccessPolicies(const DescribeServiceAccessPoliciesRequest &request);
+    DescribeSuggestersResponse * describeSuggesters(const DescribeSuggestersRequest &request);
+    IndexDocumentsResponse * indexDocuments(const IndexDocumentsRequest &request);
+    ListDomainNamesResponse * listDomainNames();
+    UpdateAvailabilityOptionsResponse * updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request);
+    UpdateScalingParametersResponse * updateScalingParameters(const UpdateScalingParametersRequest &request);
+    UpdateServiceAccessPoliciesResponse * updateServiceAccessPolicies(const UpdateServiceAccessPoliciesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudSearchClient)
@@ -77,6 +80,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudSearch
+} // namespace AWS
 
 #endif

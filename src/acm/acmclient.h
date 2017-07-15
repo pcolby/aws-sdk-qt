@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ACM {
+
 class AcmClientPrivate;
 
 class QTAWS_EXPORT AcmClient : public AwsAbstractClient {
@@ -46,15 +49,15 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    AcmAddTagsToCertificateResponse * addTagsToCertificate(const AcmAddTagsToCertificateRequest &request);
-    AcmDeleteCertificateResponse * deleteCertificate(const AcmDeleteCertificateRequest &request);
-    AcmDescribeCertificateResponse * describeCertificate(const AcmDescribeCertificateRequest &request);
-    AcmGetCertificateResponse * getCertificate(const AcmGetCertificateRequest &request);
-    AcmListCertificatesResponse * listCertificates(const AcmListCertificatesRequest &request);
-    AcmListTagsForCertificateResponse * listTagsForCertificate(const AcmListTagsForCertificateRequest &request);
-    AcmRemoveTagsFromCertificateResponse * removeTagsFromCertificate(const AcmRemoveTagsFromCertificateRequest &request);
-    AcmRequestCertificateResponse * requestCertificate(const AcmRequestCertificateRequest &request);
-    AcmResendValidationEmailResponse * resendValidationEmail(const AcmResendValidationEmailRequest &request);
+    AddTagsToCertificateResponse * addTagsToCertificate(const AddTagsToCertificateRequest &request);
+    DeleteCertificateResponse * deleteCertificate(const DeleteCertificateRequest &request);
+    DescribeCertificateResponse * describeCertificate(const DescribeCertificateRequest &request);
+    GetCertificateResponse * getCertificate(const GetCertificateRequest &request);
+    ListCertificatesResponse * listCertificates(const ListCertificatesRequest &request);
+    ListTagsForCertificateResponse * listTagsForCertificate(const ListTagsForCertificateRequest &request);
+    RemoveTagsFromCertificateResponse * removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request);
+    RequestCertificateResponse * requestCertificate(const RequestCertificateRequest &request);
+    ResendValidationEmailResponse * resendValidationEmail(const ResendValidationEmailRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AcmClient)
@@ -62,6 +65,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ACM
+} // namespace AWS
 
 #endif

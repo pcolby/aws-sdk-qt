@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ECR {
 
 /**
  * @class  EcrClient
@@ -110,4 +111,5 @@ EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ECR
+} // namespace AWS

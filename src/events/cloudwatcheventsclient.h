@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudWatchEvents {
+
 class CloudWatchEventsClientPrivate;
 
 class QTAWS_EXPORT CloudWatchEventsClient : public AwsAbstractClient {
@@ -46,18 +49,18 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudWatchEventsDeleteRuleResponse * deleteRule(const CloudWatchEventsDeleteRuleRequest &request);
-    CloudWatchEventsDescribeRuleResponse * describeRule(const CloudWatchEventsDescribeRuleRequest &request);
-    CloudWatchEventsDisableRuleResponse * disableRule(const CloudWatchEventsDisableRuleRequest &request);
-    CloudWatchEventsEnableRuleResponse * enableRule(const CloudWatchEventsEnableRuleRequest &request);
-    CloudWatchEventsListRuleNamesByTargetResponse * listRuleNamesByTarget(const CloudWatchEventsListRuleNamesByTargetRequest &request);
-    CloudWatchEventsListRulesResponse * listRules(const CloudWatchEventsListRulesRequest &request);
-    CloudWatchEventsListTargetsByRuleResponse * listTargetsByRule(const CloudWatchEventsListTargetsByRuleRequest &request);
-    CloudWatchEventsPutEventsResponse * putEvents(const CloudWatchEventsPutEventsRequest &request);
-    CloudWatchEventsPutRuleResponse * putRule(const CloudWatchEventsPutRuleRequest &request);
-    CloudWatchEventsPutTargetsResponse * putTargets(const CloudWatchEventsPutTargetsRequest &request);
-    CloudWatchEventsRemoveTargetsResponse * removeTargets(const CloudWatchEventsRemoveTargetsRequest &request);
-    CloudWatchEventsTestEventPatternResponse * testEventPattern(const CloudWatchEventsTestEventPatternRequest &request);
+    DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
+    DescribeRuleResponse * describeRule(const DescribeRuleRequest &request);
+    DisableRuleResponse * disableRule(const DisableRuleRequest &request);
+    EnableRuleResponse * enableRule(const EnableRuleRequest &request);
+    ListRuleNamesByTargetResponse * listRuleNamesByTarget(const ListRuleNamesByTargetRequest &request);
+    ListRulesResponse * listRules(const ListRulesRequest &request);
+    ListTargetsByRuleResponse * listTargetsByRule(const ListTargetsByRuleRequest &request);
+    PutEventsResponse * putEvents(const PutEventsRequest &request);
+    PutRuleResponse * putRule(const PutRuleRequest &request);
+    PutTargetsResponse * putTargets(const PutTargetsRequest &request);
+    RemoveTargetsResponse * removeTargets(const RemoveTargetsRequest &request);
+    TestEventPatternResponse * testEventPattern(const TestEventPatternRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchEventsClient)
@@ -65,6 +68,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudWatchEvents
+} // namespace AWS
 
 #endif

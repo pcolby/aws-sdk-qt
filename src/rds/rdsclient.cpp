@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace RDS {
 
 /**
  * @class  RdsClient
@@ -148,4 +149,5 @@ RdsClientPrivate::RdsClientPrivate(RdsClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace RDS
+} // namespace AWS

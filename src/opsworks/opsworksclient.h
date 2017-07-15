@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace OpsWorks {
+
 class OpsWorksClientPrivate;
 
 class QTAWS_EXPORT OpsWorksClient : public AwsAbstractClient {
@@ -46,76 +49,76 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    OpsWorksAssignInstanceResponse * assignInstance(const OpsWorksAssignInstanceRequest &request);
-    OpsWorksAssignVolumeResponse * assignVolume(const OpsWorksAssignVolumeRequest &request);
-    OpsWorksAssociateElasticIpResponse * associateElasticIp(const OpsWorksAssociateElasticIpRequest &request);
-    OpsWorksAttachElasticLoadBalancerResponse * attachElasticLoadBalancer(const OpsWorksAttachElasticLoadBalancerRequest &request);
-    OpsWorksCloneStackResponse * cloneStack(const OpsWorksCloneStackRequest &request);
-    OpsWorksCreateAppResponse * createApp(const OpsWorksCreateAppRequest &request);
-    OpsWorksCreateDeploymentResponse * createDeployment(const OpsWorksCreateDeploymentRequest &request);
-    OpsWorksCreateInstanceResponse * createInstance(const OpsWorksCreateInstanceRequest &request);
-    OpsWorksCreateLayerResponse * createLayer(const OpsWorksCreateLayerRequest &request);
-    OpsWorksCreateStackResponse * createStack(const OpsWorksCreateStackRequest &request);
-    OpsWorksCreateUserProfileResponse * createUserProfile(const OpsWorksCreateUserProfileRequest &request);
-    OpsWorksDeleteAppResponse * deleteApp(const OpsWorksDeleteAppRequest &request);
-    OpsWorksDeleteInstanceResponse * deleteInstance(const OpsWorksDeleteInstanceRequest &request);
-    OpsWorksDeleteLayerResponse * deleteLayer(const OpsWorksDeleteLayerRequest &request);
-    OpsWorksDeleteStackResponse * deleteStack(const OpsWorksDeleteStackRequest &request);
-    OpsWorksDeleteUserProfileResponse * deleteUserProfile(const OpsWorksDeleteUserProfileRequest &request);
-    OpsWorksDeregisterEcsClusterResponse * deregisterEcsCluster(const OpsWorksDeregisterEcsClusterRequest &request);
-    OpsWorksDeregisterElasticIpResponse * deregisterElasticIp(const OpsWorksDeregisterElasticIpRequest &request);
-    OpsWorksDeregisterInstanceResponse * deregisterInstance(const OpsWorksDeregisterInstanceRequest &request);
-    OpsWorksDeregisterRdsDbInstanceResponse * deregisterRdsDbInstance(const OpsWorksDeregisterRdsDbInstanceRequest &request);
-    OpsWorksDeregisterVolumeResponse * deregisterVolume(const OpsWorksDeregisterVolumeRequest &request);
-    OpsWorksDescribeAgentVersionsResponse * describeAgentVersions(const OpsWorksDescribeAgentVersionsRequest &request);
-    OpsWorksDescribeAppsResponse * describeApps(const OpsWorksDescribeAppsRequest &request);
-    OpsWorksDescribeCommandsResponse * describeCommands(const OpsWorksDescribeCommandsRequest &request);
-    OpsWorksDescribeDeploymentsResponse * describeDeployments(const OpsWorksDescribeDeploymentsRequest &request);
-    OpsWorksDescribeEcsClustersResponse * describeEcsClusters(const OpsWorksDescribeEcsClustersRequest &request);
-    OpsWorksDescribeElasticIpsResponse * describeElasticIps(const OpsWorksDescribeElasticIpsRequest &request);
-    OpsWorksDescribeElasticLoadBalancersResponse * describeElasticLoadBalancers(const OpsWorksDescribeElasticLoadBalancersRequest &request);
-    OpsWorksDescribeInstancesResponse * describeInstances(const OpsWorksDescribeInstancesRequest &request);
-    OpsWorksDescribeLayersResponse * describeLayers(const OpsWorksDescribeLayersRequest &request);
-    OpsWorksDescribeLoadBasedAutoScalingResponse * describeLoadBasedAutoScaling(const OpsWorksDescribeLoadBasedAutoScalingRequest &request);
-    OpsWorksDescribeMyUserProfileResponse * describeMyUserProfile();
-    OpsWorksDescribePermissionsResponse * describePermissions(const OpsWorksDescribePermissionsRequest &request);
-    OpsWorksDescribeRaidArraysResponse * describeRaidArrays(const OpsWorksDescribeRaidArraysRequest &request);
-    OpsWorksDescribeRdsDbInstancesResponse * describeRdsDbInstances(const OpsWorksDescribeRdsDbInstancesRequest &request);
-    OpsWorksDescribeServiceErrorsResponse * describeServiceErrors(const OpsWorksDescribeServiceErrorsRequest &request);
-    OpsWorksDescribeStackProvisioningParametersResponse * describeStackProvisioningParameters(const OpsWorksDescribeStackProvisioningParametersRequest &request);
-    OpsWorksDescribeStackSummaryResponse * describeStackSummary(const OpsWorksDescribeStackSummaryRequest &request);
-    OpsWorksDescribeStacksResponse * describeStacks(const OpsWorksDescribeStacksRequest &request);
-    OpsWorksDescribeTimeBasedAutoScalingResponse * describeTimeBasedAutoScaling(const OpsWorksDescribeTimeBasedAutoScalingRequest &request);
-    OpsWorksDescribeUserProfilesResponse * describeUserProfiles(const OpsWorksDescribeUserProfilesRequest &request);
-    OpsWorksDescribeVolumesResponse * describeVolumes(const OpsWorksDescribeVolumesRequest &request);
-    OpsWorksDetachElasticLoadBalancerResponse * detachElasticLoadBalancer(const OpsWorksDetachElasticLoadBalancerRequest &request);
-    OpsWorksDisassociateElasticIpResponse * disassociateElasticIp(const OpsWorksDisassociateElasticIpRequest &request);
-    OpsWorksGetHostnameSuggestionResponse * getHostnameSuggestion(const OpsWorksGetHostnameSuggestionRequest &request);
-    OpsWorksGrantAccessResponse * grantAccess(const OpsWorksGrantAccessRequest &request);
-    OpsWorksRebootInstanceResponse * rebootInstance(const OpsWorksRebootInstanceRequest &request);
-    OpsWorksRegisterEcsClusterResponse * registerEcsCluster(const OpsWorksRegisterEcsClusterRequest &request);
-    OpsWorksRegisterElasticIpResponse * registerElasticIp(const OpsWorksRegisterElasticIpRequest &request);
-    OpsWorksRegisterInstanceResponse * registerInstance(const OpsWorksRegisterInstanceRequest &request);
-    OpsWorksRegisterRdsDbInstanceResponse * registerRdsDbInstance(const OpsWorksRegisterRdsDbInstanceRequest &request);
-    OpsWorksRegisterVolumeResponse * registerVolume(const OpsWorksRegisterVolumeRequest &request);
-    OpsWorksSetLoadBasedAutoScalingResponse * setLoadBasedAutoScaling(const OpsWorksSetLoadBasedAutoScalingRequest &request);
-    OpsWorksSetPermissionResponse * setPermission(const OpsWorksSetPermissionRequest &request);
-    OpsWorksSetTimeBasedAutoScalingResponse * setTimeBasedAutoScaling(const OpsWorksSetTimeBasedAutoScalingRequest &request);
-    OpsWorksStartInstanceResponse * startInstance(const OpsWorksStartInstanceRequest &request);
-    OpsWorksStartStackResponse * startStack(const OpsWorksStartStackRequest &request);
-    OpsWorksStopInstanceResponse * stopInstance(const OpsWorksStopInstanceRequest &request);
-    OpsWorksStopStackResponse * stopStack(const OpsWorksStopStackRequest &request);
-    OpsWorksUnassignInstanceResponse * unassignInstance(const OpsWorksUnassignInstanceRequest &request);
-    OpsWorksUnassignVolumeResponse * unassignVolume(const OpsWorksUnassignVolumeRequest &request);
-    OpsWorksUpdateAppResponse * updateApp(const OpsWorksUpdateAppRequest &request);
-    OpsWorksUpdateElasticIpResponse * updateElasticIp(const OpsWorksUpdateElasticIpRequest &request);
-    OpsWorksUpdateInstanceResponse * updateInstance(const OpsWorksUpdateInstanceRequest &request);
-    OpsWorksUpdateLayerResponse * updateLayer(const OpsWorksUpdateLayerRequest &request);
-    OpsWorksUpdateMyUserProfileResponse * updateMyUserProfile(const OpsWorksUpdateMyUserProfileRequest &request);
-    OpsWorksUpdateRdsDbInstanceResponse * updateRdsDbInstance(const OpsWorksUpdateRdsDbInstanceRequest &request);
-    OpsWorksUpdateStackResponse * updateStack(const OpsWorksUpdateStackRequest &request);
-    OpsWorksUpdateUserProfileResponse * updateUserProfile(const OpsWorksUpdateUserProfileRequest &request);
-    OpsWorksUpdateVolumeResponse * updateVolume(const OpsWorksUpdateVolumeRequest &request);
+    AssignInstanceResponse * assignInstance(const AssignInstanceRequest &request);
+    AssignVolumeResponse * assignVolume(const AssignVolumeRequest &request);
+    AssociateElasticIpResponse * associateElasticIp(const AssociateElasticIpRequest &request);
+    AttachElasticLoadBalancerResponse * attachElasticLoadBalancer(const AttachElasticLoadBalancerRequest &request);
+    CloneStackResponse * cloneStack(const CloneStackRequest &request);
+    CreateAppResponse * createApp(const CreateAppRequest &request);
+    CreateDeploymentResponse * createDeployment(const CreateDeploymentRequest &request);
+    CreateInstanceResponse * createInstance(const CreateInstanceRequest &request);
+    CreateLayerResponse * createLayer(const CreateLayerRequest &request);
+    CreateStackResponse * createStack(const CreateStackRequest &request);
+    CreateUserProfileResponse * createUserProfile(const CreateUserProfileRequest &request);
+    DeleteAppResponse * deleteApp(const DeleteAppRequest &request);
+    DeleteInstanceResponse * deleteInstance(const DeleteInstanceRequest &request);
+    DeleteLayerResponse * deleteLayer(const DeleteLayerRequest &request);
+    DeleteStackResponse * deleteStack(const DeleteStackRequest &request);
+    DeleteUserProfileResponse * deleteUserProfile(const DeleteUserProfileRequest &request);
+    DeregisterEcsClusterResponse * deregisterEcsCluster(const DeregisterEcsClusterRequest &request);
+    DeregisterElasticIpResponse * deregisterElasticIp(const DeregisterElasticIpRequest &request);
+    DeregisterInstanceResponse * deregisterInstance(const DeregisterInstanceRequest &request);
+    DeregisterRdsDbInstanceResponse * deregisterRdsDbInstance(const DeregisterRdsDbInstanceRequest &request);
+    DeregisterVolumeResponse * deregisterVolume(const DeregisterVolumeRequest &request);
+    DescribeAgentVersionsResponse * describeAgentVersions(const DescribeAgentVersionsRequest &request);
+    DescribeAppsResponse * describeApps(const DescribeAppsRequest &request);
+    DescribeCommandsResponse * describeCommands(const DescribeCommandsRequest &request);
+    DescribeDeploymentsResponse * describeDeployments(const DescribeDeploymentsRequest &request);
+    DescribeEcsClustersResponse * describeEcsClusters(const DescribeEcsClustersRequest &request);
+    DescribeElasticIpsResponse * describeElasticIps(const DescribeElasticIpsRequest &request);
+    DescribeElasticLoadBalancersResponse * describeElasticLoadBalancers(const DescribeElasticLoadBalancersRequest &request);
+    DescribeInstancesResponse * describeInstances(const DescribeInstancesRequest &request);
+    DescribeLayersResponse * describeLayers(const DescribeLayersRequest &request);
+    DescribeLoadBasedAutoScalingResponse * describeLoadBasedAutoScaling(const DescribeLoadBasedAutoScalingRequest &request);
+    DescribeMyUserProfileResponse * describeMyUserProfile();
+    DescribePermissionsResponse * describePermissions(const DescribePermissionsRequest &request);
+    DescribeRaidArraysResponse * describeRaidArrays(const DescribeRaidArraysRequest &request);
+    DescribeRdsDbInstancesResponse * describeRdsDbInstances(const DescribeRdsDbInstancesRequest &request);
+    DescribeServiceErrorsResponse * describeServiceErrors(const DescribeServiceErrorsRequest &request);
+    DescribeStackProvisioningParametersResponse * describeStackProvisioningParameters(const DescribeStackProvisioningParametersRequest &request);
+    DescribeStackSummaryResponse * describeStackSummary(const DescribeStackSummaryRequest &request);
+    DescribeStacksResponse * describeStacks(const DescribeStacksRequest &request);
+    DescribeTimeBasedAutoScalingResponse * describeTimeBasedAutoScaling(const DescribeTimeBasedAutoScalingRequest &request);
+    DescribeUserProfilesResponse * describeUserProfiles(const DescribeUserProfilesRequest &request);
+    DescribeVolumesResponse * describeVolumes(const DescribeVolumesRequest &request);
+    DetachElasticLoadBalancerResponse * detachElasticLoadBalancer(const DetachElasticLoadBalancerRequest &request);
+    DisassociateElasticIpResponse * disassociateElasticIp(const DisassociateElasticIpRequest &request);
+    GetHostnameSuggestionResponse * getHostnameSuggestion(const GetHostnameSuggestionRequest &request);
+    GrantAccessResponse * grantAccess(const GrantAccessRequest &request);
+    RebootInstanceResponse * rebootInstance(const RebootInstanceRequest &request);
+    RegisterEcsClusterResponse * registerEcsCluster(const RegisterEcsClusterRequest &request);
+    RegisterElasticIpResponse * registerElasticIp(const RegisterElasticIpRequest &request);
+    RegisterInstanceResponse * registerInstance(const RegisterInstanceRequest &request);
+    RegisterRdsDbInstanceResponse * registerRdsDbInstance(const RegisterRdsDbInstanceRequest &request);
+    RegisterVolumeResponse * registerVolume(const RegisterVolumeRequest &request);
+    SetLoadBasedAutoScalingResponse * setLoadBasedAutoScaling(const SetLoadBasedAutoScalingRequest &request);
+    SetPermissionResponse * setPermission(const SetPermissionRequest &request);
+    SetTimeBasedAutoScalingResponse * setTimeBasedAutoScaling(const SetTimeBasedAutoScalingRequest &request);
+    StartInstanceResponse * startInstance(const StartInstanceRequest &request);
+    StartStackResponse * startStack(const StartStackRequest &request);
+    StopInstanceResponse * stopInstance(const StopInstanceRequest &request);
+    StopStackResponse * stopStack(const StopStackRequest &request);
+    UnassignInstanceResponse * unassignInstance(const UnassignInstanceRequest &request);
+    UnassignVolumeResponse * unassignVolume(const UnassignVolumeRequest &request);
+    UpdateAppResponse * updateApp(const UpdateAppRequest &request);
+    UpdateElasticIpResponse * updateElasticIp(const UpdateElasticIpRequest &request);
+    UpdateInstanceResponse * updateInstance(const UpdateInstanceRequest &request);
+    UpdateLayerResponse * updateLayer(const UpdateLayerRequest &request);
+    UpdateMyUserProfileResponse * updateMyUserProfile(const UpdateMyUserProfileRequest &request);
+    UpdateRdsDbInstanceResponse * updateRdsDbInstance(const UpdateRdsDbInstanceRequest &request);
+    UpdateStackResponse * updateStack(const UpdateStackRequest &request);
+    UpdateUserProfileResponse * updateUserProfile(const UpdateUserProfileRequest &request);
+    UpdateVolumeResponse * updateVolume(const UpdateVolumeRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(OpsWorksClient)
@@ -123,6 +126,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace OpsWorks
+} // namespace AWS
 
 #endif

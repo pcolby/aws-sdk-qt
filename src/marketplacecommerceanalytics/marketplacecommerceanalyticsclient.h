@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace MarketplaceCommerceAnalytics {
+
 class MarketplaceCommerceAnalyticsClientPrivate;
 
 class QTAWS_EXPORT MarketplaceCommerceAnalyticsClient : public AwsAbstractClient {
@@ -46,8 +49,8 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    MarketplaceCommerceAnalyticsGenerateDataSetResponse * generateDataSet(const MarketplaceCommerceAnalyticsGenerateDataSetRequest &request);
-    MarketplaceCommerceAnalyticsStartSupportDataExportResponse * startSupportDataExport(const MarketplaceCommerceAnalyticsStartSupportDataExportRequest &request);
+    GenerateDataSetResponse * generateDataSet(const GenerateDataSetRequest &request);
+    StartSupportDataExportResponse * startSupportDataExport(const StartSupportDataExportRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MarketplaceCommerceAnalyticsClient)
@@ -55,6 +58,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS
 
 #endif

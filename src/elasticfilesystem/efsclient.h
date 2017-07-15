@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace EFS {
+
 class EfsClientPrivate;
 
 class QTAWS_EXPORT EfsClient : public AwsAbstractClient {
@@ -46,17 +49,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    EfsCreateFileSystemResponse * createFileSystem(const EfsCreateFileSystemRequest &request);
-    EfsCreateMountTargetResponse * createMountTarget(const EfsCreateMountTargetRequest &request);
-    EfsCreateTagsResponse * createTags(const EfsCreateTagsRequest &request);
-    EfsDeleteFileSystemResponse * deleteFileSystem(const EfsDeleteFileSystemRequest &request);
-    EfsDeleteMountTargetResponse * deleteMountTarget(const EfsDeleteMountTargetRequest &request);
-    EfsDeleteTagsResponse * deleteTags(const EfsDeleteTagsRequest &request);
-    EfsDescribeFileSystemsResponse * describeFileSystems(const EfsDescribeFileSystemsRequest &request);
-    EfsDescribeMountTargetSecurityGroupsResponse * describeMountTargetSecurityGroups(const EfsDescribeMountTargetSecurityGroupsRequest &request);
-    EfsDescribeMountTargetsResponse * describeMountTargets(const EfsDescribeMountTargetsRequest &request);
-    EfsDescribeTagsResponse * describeTags(const EfsDescribeTagsRequest &request);
-    EfsModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const EfsModifyMountTargetSecurityGroupsRequest &request);
+    CreateFileSystemResponse * createFileSystem(const CreateFileSystemRequest &request);
+    CreateMountTargetResponse * createMountTarget(const CreateMountTargetRequest &request);
+    CreateTagsResponse * createTags(const CreateTagsRequest &request);
+    DeleteFileSystemResponse * deleteFileSystem(const DeleteFileSystemRequest &request);
+    DeleteMountTargetResponse * deleteMountTarget(const DeleteMountTargetRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeFileSystemsResponse * describeFileSystems(const DescribeFileSystemsRequest &request);
+    DescribeMountTargetSecurityGroupsResponse * describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request);
+    DescribeMountTargetsResponse * describeMountTargets(const DescribeMountTargetsRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    ModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EfsClient)
@@ -64,6 +67,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace EFS
+} // namespace AWS
 
 #endif

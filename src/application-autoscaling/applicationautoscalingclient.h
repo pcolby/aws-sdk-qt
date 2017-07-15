@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ApplicationAutoScaling {
+
 class ApplicationAutoScalingClientPrivate;
 
 class QTAWS_EXPORT ApplicationAutoScalingClient : public AwsAbstractClient {
@@ -46,13 +49,13 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ApplicationAutoScalingDeleteScalingPolicyResponse * deleteScalingPolicy(const ApplicationAutoScalingDeleteScalingPolicyRequest &request);
-    ApplicationAutoScalingDeregisterScalableTargetResponse * deregisterScalableTarget(const ApplicationAutoScalingDeregisterScalableTargetRequest &request);
-    ApplicationAutoScalingDescribeScalableTargetsResponse * describeScalableTargets(const ApplicationAutoScalingDescribeScalableTargetsRequest &request);
-    ApplicationAutoScalingDescribeScalingActivitiesResponse * describeScalingActivities(const ApplicationAutoScalingDescribeScalingActivitiesRequest &request);
-    ApplicationAutoScalingDescribeScalingPoliciesResponse * describeScalingPolicies(const ApplicationAutoScalingDescribeScalingPoliciesRequest &request);
-    ApplicationAutoScalingPutScalingPolicyResponse * putScalingPolicy(const ApplicationAutoScalingPutScalingPolicyRequest &request);
-    ApplicationAutoScalingRegisterScalableTargetResponse * registerScalableTarget(const ApplicationAutoScalingRegisterScalableTargetRequest &request);
+    DeleteScalingPolicyResponse * deleteScalingPolicy(const DeleteScalingPolicyRequest &request);
+    DeregisterScalableTargetResponse * deregisterScalableTarget(const DeregisterScalableTargetRequest &request);
+    DescribeScalableTargetsResponse * describeScalableTargets(const DescribeScalableTargetsRequest &request);
+    DescribeScalingActivitiesResponse * describeScalingActivities(const DescribeScalingActivitiesRequest &request);
+    DescribeScalingPoliciesResponse * describeScalingPolicies(const DescribeScalingPoliciesRequest &request);
+    PutScalingPolicyResponse * putScalingPolicy(const PutScalingPolicyRequest &request);
+    RegisterScalableTargetResponse * registerScalableTarget(const RegisterScalableTargetRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ApplicationAutoScalingClient)
@@ -60,6 +63,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ApplicationAutoScaling
+} // namespace AWS
 
 #endif

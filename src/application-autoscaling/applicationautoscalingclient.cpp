@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ApplicationAutoScaling {
 
 /**
  * @class  ApplicationAutoScalingClient
@@ -174,4 +175,5 @@ ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(Applica
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ApplicationAutoScaling
+} // namespace AWS

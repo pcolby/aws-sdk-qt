@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ElasticTranscoder {
 
 /**
  * @class  ElasticTranscoderClient
@@ -112,4 +113,5 @@ ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoder
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticTranscoder
+} // namespace AWS

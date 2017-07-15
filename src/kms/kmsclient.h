@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace KMS {
+
 class KmsClientPrivate;
 
 class QTAWS_EXPORT KmsClient : public AwsAbstractClient {
@@ -46,38 +49,38 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    KmsCancelKeyDeletionResponse * cancelKeyDeletion(const KmsCancelKeyDeletionRequest &request);
-    KmsCreateAliasResponse * createAlias(const KmsCreateAliasRequest &request);
-    KmsCreateGrantResponse * createGrant(const KmsCreateGrantRequest &request);
-    KmsCreateKeyResponse * createKey(const KmsCreateKeyRequest &request);
-    KmsDecryptResponse * decrypt(const KmsDecryptRequest &request);
-    KmsDeleteAliasResponse * deleteAlias(const KmsDeleteAliasRequest &request);
-    KmsDeleteImportedKeyMaterialResponse * deleteImportedKeyMaterial(const KmsDeleteImportedKeyMaterialRequest &request);
-    KmsDescribeKeyResponse * describeKey(const KmsDescribeKeyRequest &request);
-    KmsDisableKeyResponse * disableKey(const KmsDisableKeyRequest &request);
-    KmsDisableKeyRotationResponse * disableKeyRotation(const KmsDisableKeyRotationRequest &request);
-    KmsEnableKeyResponse * enableKey(const KmsEnableKeyRequest &request);
-    KmsEnableKeyRotationResponse * enableKeyRotation(const KmsEnableKeyRotationRequest &request);
-    KmsEncryptResponse * encrypt(const KmsEncryptRequest &request);
-    KmsGenerateDataKeyResponse * generateDataKey(const KmsGenerateDataKeyRequest &request);
-    KmsGenerateDataKeyWithoutPlaintextResponse * generateDataKeyWithoutPlaintext(const KmsGenerateDataKeyWithoutPlaintextRequest &request);
-    KmsGenerateRandomResponse * generateRandom(const KmsGenerateRandomRequest &request);
-    KmsGetKeyPolicyResponse * getKeyPolicy(const KmsGetKeyPolicyRequest &request);
-    KmsGetKeyRotationStatusResponse * getKeyRotationStatus(const KmsGetKeyRotationStatusRequest &request);
-    KmsGetParametersForImportResponse * getParametersForImport(const KmsGetParametersForImportRequest &request);
-    KmsImportKeyMaterialResponse * importKeyMaterial(const KmsImportKeyMaterialRequest &request);
-    KmsListAliasesResponse * listAliases(const KmsListAliasesRequest &request);
-    KmsListGrantsResponse * listGrants(const KmsListGrantsRequest &request);
-    KmsListKeyPoliciesResponse * listKeyPolicies(const KmsListKeyPoliciesRequest &request);
-    KmsListKeysResponse * listKeys(const KmsListKeysRequest &request);
-    KmsListRetirableGrantsResponse * listRetirableGrants(const KmsListRetirableGrantsRequest &request);
-    KmsPutKeyPolicyResponse * putKeyPolicy(const KmsPutKeyPolicyRequest &request);
-    KmsReEncryptResponse * reEncrypt(const KmsReEncryptRequest &request);
-    KmsRetireGrantResponse * retireGrant(const KmsRetireGrantRequest &request);
-    KmsRevokeGrantResponse * revokeGrant(const KmsRevokeGrantRequest &request);
-    KmsScheduleKeyDeletionResponse * scheduleKeyDeletion(const KmsScheduleKeyDeletionRequest &request);
-    KmsUpdateAliasResponse * updateAlias(const KmsUpdateAliasRequest &request);
-    KmsUpdateKeyDescriptionResponse * updateKeyDescription(const KmsUpdateKeyDescriptionRequest &request);
+    CancelKeyDeletionResponse * cancelKeyDeletion(const CancelKeyDeletionRequest &request);
+    CreateAliasResponse * createAlias(const CreateAliasRequest &request);
+    CreateGrantResponse * createGrant(const CreateGrantRequest &request);
+    CreateKeyResponse * createKey(const CreateKeyRequest &request);
+    DecryptResponse * decrypt(const DecryptRequest &request);
+    DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
+    DeleteImportedKeyMaterialResponse * deleteImportedKeyMaterial(const DeleteImportedKeyMaterialRequest &request);
+    DescribeKeyResponse * describeKey(const DescribeKeyRequest &request);
+    DisableKeyResponse * disableKey(const DisableKeyRequest &request);
+    DisableKeyRotationResponse * disableKeyRotation(const DisableKeyRotationRequest &request);
+    EnableKeyResponse * enableKey(const EnableKeyRequest &request);
+    EnableKeyRotationResponse * enableKeyRotation(const EnableKeyRotationRequest &request);
+    EncryptResponse * encrypt(const EncryptRequest &request);
+    GenerateDataKeyResponse * generateDataKey(const GenerateDataKeyRequest &request);
+    GenerateDataKeyWithoutPlaintextResponse * generateDataKeyWithoutPlaintext(const GenerateDataKeyWithoutPlaintextRequest &request);
+    GenerateRandomResponse * generateRandom(const GenerateRandomRequest &request);
+    GetKeyPolicyResponse * getKeyPolicy(const GetKeyPolicyRequest &request);
+    GetKeyRotationStatusResponse * getKeyRotationStatus(const GetKeyRotationStatusRequest &request);
+    GetParametersForImportResponse * getParametersForImport(const GetParametersForImportRequest &request);
+    ImportKeyMaterialResponse * importKeyMaterial(const ImportKeyMaterialRequest &request);
+    ListAliasesResponse * listAliases(const ListAliasesRequest &request);
+    ListGrantsResponse * listGrants(const ListGrantsRequest &request);
+    ListKeyPoliciesResponse * listKeyPolicies(const ListKeyPoliciesRequest &request);
+    ListKeysResponse * listKeys(const ListKeysRequest &request);
+    ListRetirableGrantsResponse * listRetirableGrants(const ListRetirableGrantsRequest &request);
+    PutKeyPolicyResponse * putKeyPolicy(const PutKeyPolicyRequest &request);
+    ReEncryptResponse * reEncrypt(const ReEncryptRequest &request);
+    RetireGrantResponse * retireGrant(const RetireGrantRequest &request);
+    RevokeGrantResponse * revokeGrant(const RevokeGrantRequest &request);
+    ScheduleKeyDeletionResponse * scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request);
+    UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
+    UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KmsClient)
@@ -85,6 +88,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace KMS
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace WorkSpaces {
+
 class WorkSpacesClientPrivate;
 
 class QTAWS_EXPORT WorkSpacesClient : public AwsAbstractClient {
@@ -46,20 +49,20 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    WorkSpacesCreateTagsResponse * createTags(const WorkSpacesCreateTagsRequest &request);
-    WorkSpacesCreateWorkspacesResponse * createWorkspaces(const WorkSpacesCreateWorkspacesRequest &request);
-    WorkSpacesDeleteTagsResponse * deleteTags(const WorkSpacesDeleteTagsRequest &request);
-    WorkSpacesDescribeTagsResponse * describeTags(const WorkSpacesDescribeTagsRequest &request);
-    WorkSpacesDescribeWorkspaceBundlesResponse * describeWorkspaceBundles(const WorkSpacesDescribeWorkspaceBundlesRequest &request);
-    WorkSpacesDescribeWorkspaceDirectoriesResponse * describeWorkspaceDirectories(const WorkSpacesDescribeWorkspaceDirectoriesRequest &request);
-    WorkSpacesDescribeWorkspacesResponse * describeWorkspaces(const WorkSpacesDescribeWorkspacesRequest &request);
-    WorkSpacesDescribeWorkspacesConnectionStatusResponse * describeWorkspacesConnectionStatus(const WorkSpacesDescribeWorkspacesConnectionStatusRequest &request);
-    WorkSpacesModifyWorkspacePropertiesResponse * modifyWorkspaceProperties(const WorkSpacesModifyWorkspacePropertiesRequest &request);
-    WorkSpacesRebootWorkspacesResponse * rebootWorkspaces(const WorkSpacesRebootWorkspacesRequest &request);
-    WorkSpacesRebuildWorkspacesResponse * rebuildWorkspaces(const WorkSpacesRebuildWorkspacesRequest &request);
-    WorkSpacesStartWorkspacesResponse * startWorkspaces(const WorkSpacesStartWorkspacesRequest &request);
-    WorkSpacesStopWorkspacesResponse * stopWorkspaces(const WorkSpacesStopWorkspacesRequest &request);
-    WorkSpacesTerminateWorkspacesResponse * terminateWorkspaces(const WorkSpacesTerminateWorkspacesRequest &request);
+    CreateTagsResponse * createTags(const CreateTagsRequest &request);
+    CreateWorkspacesResponse * createWorkspaces(const CreateWorkspacesRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DescribeWorkspaceBundlesResponse * describeWorkspaceBundles(const DescribeWorkspaceBundlesRequest &request);
+    DescribeWorkspaceDirectoriesResponse * describeWorkspaceDirectories(const DescribeWorkspaceDirectoriesRequest &request);
+    DescribeWorkspacesResponse * describeWorkspaces(const DescribeWorkspacesRequest &request);
+    DescribeWorkspacesConnectionStatusResponse * describeWorkspacesConnectionStatus(const DescribeWorkspacesConnectionStatusRequest &request);
+    ModifyWorkspacePropertiesResponse * modifyWorkspaceProperties(const ModifyWorkspacePropertiesRequest &request);
+    RebootWorkspacesResponse * rebootWorkspaces(const RebootWorkspacesRequest &request);
+    RebuildWorkspacesResponse * rebuildWorkspaces(const RebuildWorkspacesRequest &request);
+    StartWorkspacesResponse * startWorkspaces(const StartWorkspacesRequest &request);
+    StopWorkspacesResponse * stopWorkspaces(const StopWorkspacesRequest &request);
+    TerminateWorkspacesResponse * terminateWorkspaces(const TerminateWorkspacesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(WorkSpacesClient)
@@ -67,6 +70,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace WorkSpaces
+} // namespace AWS
 
 #endif

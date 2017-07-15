@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Redshift {
 
 /**
  * @class  RedshiftClient
@@ -118,4 +119,5 @@ RedshiftClientPrivate::RedshiftClientPrivate(RedshiftClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Redshift
+} // namespace AWS

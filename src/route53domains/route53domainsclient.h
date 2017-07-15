@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Route53Domains {
+
 class Route53DomainsClientPrivate;
 
 class QTAWS_EXPORT Route53DomainsClient : public AwsAbstractClient {
@@ -46,29 +49,29 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    Route53DomainsCheckDomainAvailabilityResponse * checkDomainAvailability(const Route53DomainsCheckDomainAvailabilityRequest &request);
-    Route53DomainsDeleteTagsForDomainResponse * deleteTagsForDomain(const Route53DomainsDeleteTagsForDomainRequest &request);
-    Route53DomainsDisableDomainAutoRenewResponse * disableDomainAutoRenew(const Route53DomainsDisableDomainAutoRenewRequest &request);
-    Route53DomainsDisableDomainTransferLockResponse * disableDomainTransferLock(const Route53DomainsDisableDomainTransferLockRequest &request);
-    Route53DomainsEnableDomainAutoRenewResponse * enableDomainAutoRenew(const Route53DomainsEnableDomainAutoRenewRequest &request);
-    Route53DomainsEnableDomainTransferLockResponse * enableDomainTransferLock(const Route53DomainsEnableDomainTransferLockRequest &request);
-    Route53DomainsGetContactReachabilityStatusResponse * getContactReachabilityStatus(const Route53DomainsGetContactReachabilityStatusRequest &request);
-    Route53DomainsGetDomainDetailResponse * getDomainDetail(const Route53DomainsGetDomainDetailRequest &request);
-    Route53DomainsGetDomainSuggestionsResponse * getDomainSuggestions(const Route53DomainsGetDomainSuggestionsRequest &request);
-    Route53DomainsGetOperationDetailResponse * getOperationDetail(const Route53DomainsGetOperationDetailRequest &request);
-    Route53DomainsListDomainsResponse * listDomains(const Route53DomainsListDomainsRequest &request);
-    Route53DomainsListOperationsResponse * listOperations(const Route53DomainsListOperationsRequest &request);
-    Route53DomainsListTagsForDomainResponse * listTagsForDomain(const Route53DomainsListTagsForDomainRequest &request);
-    Route53DomainsRegisterDomainResponse * registerDomain(const Route53DomainsRegisterDomainRequest &request);
-    Route53DomainsRenewDomainResponse * renewDomain(const Route53DomainsRenewDomainRequest &request);
-    Route53DomainsResendContactReachabilityEmailResponse * resendContactReachabilityEmail(const Route53DomainsResendContactReachabilityEmailRequest &request);
-    Route53DomainsRetrieveDomainAuthCodeResponse * retrieveDomainAuthCode(const Route53DomainsRetrieveDomainAuthCodeRequest &request);
-    Route53DomainsTransferDomainResponse * transferDomain(const Route53DomainsTransferDomainRequest &request);
-    Route53DomainsUpdateDomainContactResponse * updateDomainContact(const Route53DomainsUpdateDomainContactRequest &request);
-    Route53DomainsUpdateDomainContactPrivacyResponse * updateDomainContactPrivacy(const Route53DomainsUpdateDomainContactPrivacyRequest &request);
-    Route53DomainsUpdateDomainNameserversResponse * updateDomainNameservers(const Route53DomainsUpdateDomainNameserversRequest &request);
-    Route53DomainsUpdateTagsForDomainResponse * updateTagsForDomain(const Route53DomainsUpdateTagsForDomainRequest &request);
-    Route53DomainsViewBillingResponse * viewBilling(const Route53DomainsViewBillingRequest &request);
+    CheckDomainAvailabilityResponse * checkDomainAvailability(const CheckDomainAvailabilityRequest &request);
+    DeleteTagsForDomainResponse * deleteTagsForDomain(const DeleteTagsForDomainRequest &request);
+    DisableDomainAutoRenewResponse * disableDomainAutoRenew(const DisableDomainAutoRenewRequest &request);
+    DisableDomainTransferLockResponse * disableDomainTransferLock(const DisableDomainTransferLockRequest &request);
+    EnableDomainAutoRenewResponse * enableDomainAutoRenew(const EnableDomainAutoRenewRequest &request);
+    EnableDomainTransferLockResponse * enableDomainTransferLock(const EnableDomainTransferLockRequest &request);
+    GetContactReachabilityStatusResponse * getContactReachabilityStatus(const GetContactReachabilityStatusRequest &request);
+    GetDomainDetailResponse * getDomainDetail(const GetDomainDetailRequest &request);
+    GetDomainSuggestionsResponse * getDomainSuggestions(const GetDomainSuggestionsRequest &request);
+    GetOperationDetailResponse * getOperationDetail(const GetOperationDetailRequest &request);
+    ListDomainsResponse * listDomains(const ListDomainsRequest &request);
+    ListOperationsResponse * listOperations(const ListOperationsRequest &request);
+    ListTagsForDomainResponse * listTagsForDomain(const ListTagsForDomainRequest &request);
+    RegisterDomainResponse * registerDomain(const RegisterDomainRequest &request);
+    RenewDomainResponse * renewDomain(const RenewDomainRequest &request);
+    ResendContactReachabilityEmailResponse * resendContactReachabilityEmail(const ResendContactReachabilityEmailRequest &request);
+    RetrieveDomainAuthCodeResponse * retrieveDomainAuthCode(const RetrieveDomainAuthCodeRequest &request);
+    TransferDomainResponse * transferDomain(const TransferDomainRequest &request);
+    UpdateDomainContactResponse * updateDomainContact(const UpdateDomainContactRequest &request);
+    UpdateDomainContactPrivacyResponse * updateDomainContactPrivacy(const UpdateDomainContactPrivacyRequest &request);
+    UpdateDomainNameserversResponse * updateDomainNameservers(const UpdateDomainNameserversRequest &request);
+    UpdateTagsForDomainResponse * updateTagsForDomain(const UpdateTagsForDomainRequest &request);
+    ViewBillingResponse * viewBilling(const ViewBillingRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(Route53DomainsClient)
@@ -76,6 +79,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Route53Domains
+} // namespace AWS
 
 #endif

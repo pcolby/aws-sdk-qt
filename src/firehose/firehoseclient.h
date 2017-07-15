@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Firehose {
+
 class FirehoseClientPrivate;
 
 class QTAWS_EXPORT FirehoseClient : public AwsAbstractClient {
@@ -46,13 +49,13 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    FirehoseCreateDeliveryStreamResponse * createDeliveryStream(const FirehoseCreateDeliveryStreamRequest &request);
-    FirehoseDeleteDeliveryStreamResponse * deleteDeliveryStream(const FirehoseDeleteDeliveryStreamRequest &request);
-    FirehoseDescribeDeliveryStreamResponse * describeDeliveryStream(const FirehoseDescribeDeliveryStreamRequest &request);
-    FirehoseListDeliveryStreamsResponse * listDeliveryStreams(const FirehoseListDeliveryStreamsRequest &request);
-    FirehosePutRecordResponse * putRecord(const FirehosePutRecordRequest &request);
-    FirehosePutRecordBatchResponse * putRecordBatch(const FirehosePutRecordBatchRequest &request);
-    FirehoseUpdateDestinationResponse * updateDestination(const FirehoseUpdateDestinationRequest &request);
+    CreateDeliveryStreamResponse * createDeliveryStream(const CreateDeliveryStreamRequest &request);
+    DeleteDeliveryStreamResponse * deleteDeliveryStream(const DeleteDeliveryStreamRequest &request);
+    DescribeDeliveryStreamResponse * describeDeliveryStream(const DescribeDeliveryStreamRequest &request);
+    ListDeliveryStreamsResponse * listDeliveryStreams(const ListDeliveryStreamsRequest &request);
+    PutRecordResponse * putRecord(const PutRecordRequest &request);
+    PutRecordBatchResponse * putRecordBatch(const PutRecordBatchRequest &request);
+    UpdateDestinationResponse * updateDestination(const UpdateDestinationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(FirehoseClient)
@@ -60,6 +63,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Firehose
+} // namespace AWS
 
 #endif

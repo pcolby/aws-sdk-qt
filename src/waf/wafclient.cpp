@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace WAF {
 
 /**
  * @class  WafClient
@@ -110,4 +111,5 @@ WafClientPrivate::WafClientPrivate(WafClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace WAF
+} // namespace AWS

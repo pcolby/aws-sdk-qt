@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ImportExport {
 
 /**
  * @class  ImportExportClient
@@ -110,4 +111,5 @@ ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const 
     signature = new AwsSignatureV2();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ImportExport
+} // namespace AWS

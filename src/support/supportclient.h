@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Support {
+
 class SupportClientPrivate;
 
 class QTAWS_EXPORT SupportClient : public AwsAbstractClient {
@@ -46,20 +49,20 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SupportAddAttachmentsToSetResponse * addAttachmentsToSet(const SupportAddAttachmentsToSetRequest &request);
-    SupportAddCommunicationToCaseResponse * addCommunicationToCase(const SupportAddCommunicationToCaseRequest &request);
-    SupportCreateCaseResponse * createCase(const SupportCreateCaseRequest &request);
-    SupportDescribeAttachmentResponse * describeAttachment(const SupportDescribeAttachmentRequest &request);
-    SupportDescribeCasesResponse * describeCases(const SupportDescribeCasesRequest &request);
-    SupportDescribeCommunicationsResponse * describeCommunications(const SupportDescribeCommunicationsRequest &request);
-    SupportDescribeServicesResponse * describeServices(const SupportDescribeServicesRequest &request);
-    SupportDescribeSeverityLevelsResponse * describeSeverityLevels(const SupportDescribeSeverityLevelsRequest &request);
-    SupportDescribeTrustedAdvisorCheckRefreshStatusesResponse * describeTrustedAdvisorCheckRefreshStatuses(const SupportDescribeTrustedAdvisorCheckRefreshStatusesRequest &request);
-    SupportDescribeTrustedAdvisorCheckResultResponse * describeTrustedAdvisorCheckResult(const SupportDescribeTrustedAdvisorCheckResultRequest &request);
-    SupportDescribeTrustedAdvisorCheckSummariesResponse * describeTrustedAdvisorCheckSummaries(const SupportDescribeTrustedAdvisorCheckSummariesRequest &request);
-    SupportDescribeTrustedAdvisorChecksResponse * describeTrustedAdvisorChecks(const SupportDescribeTrustedAdvisorChecksRequest &request);
-    SupportRefreshTrustedAdvisorCheckResponse * refreshTrustedAdvisorCheck(const SupportRefreshTrustedAdvisorCheckRequest &request);
-    SupportResolveCaseResponse * resolveCase(const SupportResolveCaseRequest &request);
+    AddAttachmentsToSetResponse * addAttachmentsToSet(const AddAttachmentsToSetRequest &request);
+    AddCommunicationToCaseResponse * addCommunicationToCase(const AddCommunicationToCaseRequest &request);
+    CreateCaseResponse * createCase(const CreateCaseRequest &request);
+    DescribeAttachmentResponse * describeAttachment(const DescribeAttachmentRequest &request);
+    DescribeCasesResponse * describeCases(const DescribeCasesRequest &request);
+    DescribeCommunicationsResponse * describeCommunications(const DescribeCommunicationsRequest &request);
+    DescribeServicesResponse * describeServices(const DescribeServicesRequest &request);
+    DescribeSeverityLevelsResponse * describeSeverityLevels(const DescribeSeverityLevelsRequest &request);
+    DescribeTrustedAdvisorCheckRefreshStatusesResponse * describeTrustedAdvisorCheckRefreshStatuses(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request);
+    DescribeTrustedAdvisorCheckResultResponse * describeTrustedAdvisorCheckResult(const DescribeTrustedAdvisorCheckResultRequest &request);
+    DescribeTrustedAdvisorCheckSummariesResponse * describeTrustedAdvisorCheckSummaries(const DescribeTrustedAdvisorCheckSummariesRequest &request);
+    DescribeTrustedAdvisorChecksResponse * describeTrustedAdvisorChecks(const DescribeTrustedAdvisorChecksRequest &request);
+    RefreshTrustedAdvisorCheckResponse * refreshTrustedAdvisorCheck(const RefreshTrustedAdvisorCheckRequest &request);
+    ResolveCaseResponse * resolveCase(const ResolveCaseRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SupportClient)
@@ -67,6 +70,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Support
+} // namespace AWS
 
 #endif

@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ApplicationDiscoveryService {
 
 /**
  * @class  ApplicationDiscoveryServiceClient
@@ -372,4 +373,5 @@ ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPriva
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

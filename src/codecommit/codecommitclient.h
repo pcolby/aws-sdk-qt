@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CodeCommit {
+
 class CodeCommitClientPrivate;
 
 class QTAWS_EXPORT CodeCommitClient : public AwsAbstractClient {
@@ -46,21 +49,21 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CodeCommitBatchGetRepositoriesResponse * batchGetRepositories(const CodeCommitBatchGetRepositoriesRequest &request);
-    CodeCommitCreateBranchResponse * createBranch(const CodeCommitCreateBranchRequest &request);
-    CodeCommitCreateRepositoryResponse * createRepository(const CodeCommitCreateRepositoryRequest &request);
-    CodeCommitDeleteRepositoryResponse * deleteRepository(const CodeCommitDeleteRepositoryRequest &request);
-    CodeCommitGetBranchResponse * getBranch(const CodeCommitGetBranchRequest &request);
-    CodeCommitGetCommitResponse * getCommit(const CodeCommitGetCommitRequest &request);
-    CodeCommitGetRepositoryResponse * getRepository(const CodeCommitGetRepositoryRequest &request);
-    CodeCommitGetRepositoryTriggersResponse * getRepositoryTriggers(const CodeCommitGetRepositoryTriggersRequest &request);
-    CodeCommitListBranchesResponse * listBranches(const CodeCommitListBranchesRequest &request);
-    CodeCommitListRepositoriesResponse * listRepositories(const CodeCommitListRepositoriesRequest &request);
-    CodeCommitPutRepositoryTriggersResponse * putRepositoryTriggers(const CodeCommitPutRepositoryTriggersRequest &request);
-    CodeCommitTestRepositoryTriggersResponse * testRepositoryTriggers(const CodeCommitTestRepositoryTriggersRequest &request);
-    CodeCommitUpdateDefaultBranchResponse * updateDefaultBranch(const CodeCommitUpdateDefaultBranchRequest &request);
-    CodeCommitUpdateRepositoryDescriptionResponse * updateRepositoryDescription(const CodeCommitUpdateRepositoryDescriptionRequest &request);
-    CodeCommitUpdateRepositoryNameResponse * updateRepositoryName(const CodeCommitUpdateRepositoryNameRequest &request);
+    BatchGetRepositoriesResponse * batchGetRepositories(const BatchGetRepositoriesRequest &request);
+    CreateBranchResponse * createBranch(const CreateBranchRequest &request);
+    CreateRepositoryResponse * createRepository(const CreateRepositoryRequest &request);
+    DeleteRepositoryResponse * deleteRepository(const DeleteRepositoryRequest &request);
+    GetBranchResponse * getBranch(const GetBranchRequest &request);
+    GetCommitResponse * getCommit(const GetCommitRequest &request);
+    GetRepositoryResponse * getRepository(const GetRepositoryRequest &request);
+    GetRepositoryTriggersResponse * getRepositoryTriggers(const GetRepositoryTriggersRequest &request);
+    ListBranchesResponse * listBranches(const ListBranchesRequest &request);
+    ListRepositoriesResponse * listRepositories(const ListRepositoriesRequest &request);
+    PutRepositoryTriggersResponse * putRepositoryTriggers(const PutRepositoryTriggersRequest &request);
+    TestRepositoryTriggersResponse * testRepositoryTriggers(const TestRepositoryTriggersRequest &request);
+    UpdateDefaultBranchResponse * updateDefaultBranch(const UpdateDefaultBranchRequest &request);
+    UpdateRepositoryDescriptionResponse * updateRepositoryDescription(const UpdateRepositoryDescriptionRequest &request);
+    UpdateRepositoryNameResponse * updateRepositoryName(const UpdateRepositoryNameRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CodeCommitClient)
@@ -68,6 +71,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CodeCommit
+} // namespace AWS
 
 #endif

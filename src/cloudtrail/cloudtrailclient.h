@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudTrail {
+
 class CloudTrailClientPrivate;
 
 class QTAWS_EXPORT CloudTrailClient : public AwsAbstractClient {
@@ -46,18 +49,18 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudTrailAddTagsResponse * addTags(const CloudTrailAddTagsRequest &request);
-    CloudTrailCreateTrailResponse * createTrail(const CloudTrailCreateTrailRequest &request);
-    CloudTrailDeleteTrailResponse * deleteTrail(const CloudTrailDeleteTrailRequest &request);
-    CloudTrailDescribeTrailsResponse * describeTrails(const CloudTrailDescribeTrailsRequest &request);
-    CloudTrailGetTrailStatusResponse * getTrailStatus(const CloudTrailGetTrailStatusRequest &request);
-    CloudTrailListPublicKeysResponse * listPublicKeys(const CloudTrailListPublicKeysRequest &request);
-    CloudTrailListTagsResponse * listTags(const CloudTrailListTagsRequest &request);
-    CloudTrailLookupEventsResponse * lookupEvents(const CloudTrailLookupEventsRequest &request);
-    CloudTrailRemoveTagsResponse * removeTags(const CloudTrailRemoveTagsRequest &request);
-    CloudTrailStartLoggingResponse * startLogging(const CloudTrailStartLoggingRequest &request);
-    CloudTrailStopLoggingResponse * stopLogging(const CloudTrailStopLoggingRequest &request);
-    CloudTrailUpdateTrailResponse * updateTrail(const CloudTrailUpdateTrailRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    CreateTrailResponse * createTrail(const CreateTrailRequest &request);
+    DeleteTrailResponse * deleteTrail(const DeleteTrailRequest &request);
+    DescribeTrailsResponse * describeTrails(const DescribeTrailsRequest &request);
+    GetTrailStatusResponse * getTrailStatus(const GetTrailStatusRequest &request);
+    ListPublicKeysResponse * listPublicKeys(const ListPublicKeysRequest &request);
+    ListTagsResponse * listTags(const ListTagsRequest &request);
+    LookupEventsResponse * lookupEvents(const LookupEventsRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    StartLoggingResponse * startLogging(const StartLoggingRequest &request);
+    StopLoggingResponse * stopLogging(const StopLoggingRequest &request);
+    UpdateTrailResponse * updateTrail(const UpdateTrailRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudTrailClient)
@@ -65,6 +68,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudTrail
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DataPipeline {
+
 class DataPipelineClientPrivate;
 
 class QTAWS_EXPORT DataPipelineClient : public AwsAbstractClient {
@@ -46,25 +49,25 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DataPipelineActivatePipelineResponse * activatePipeline(const DataPipelineActivatePipelineRequest &request);
-    DataPipelineAddTagsResponse * addTags(const DataPipelineAddTagsRequest &request);
-    DataPipelineCreatePipelineResponse * createPipeline(const DataPipelineCreatePipelineRequest &request);
-    DataPipelineDeactivatePipelineResponse * deactivatePipeline(const DataPipelineDeactivatePipelineRequest &request);
-    DataPipelineDeletePipelineResponse * deletePipeline(const DataPipelineDeletePipelineRequest &request);
-    DataPipelineDescribeObjectsResponse * describeObjects(const DataPipelineDescribeObjectsRequest &request);
-    DataPipelineDescribePipelinesResponse * describePipelines(const DataPipelineDescribePipelinesRequest &request);
-    DataPipelineEvaluateExpressionResponse * evaluateExpression(const DataPipelineEvaluateExpressionRequest &request);
-    DataPipelineGetPipelineDefinitionResponse * getPipelineDefinition(const DataPipelineGetPipelineDefinitionRequest &request);
-    DataPipelineListPipelinesResponse * listPipelines(const DataPipelineListPipelinesRequest &request);
-    DataPipelinePollForTaskResponse * pollForTask(const DataPipelinePollForTaskRequest &request);
-    DataPipelinePutPipelineDefinitionResponse * putPipelineDefinition(const DataPipelinePutPipelineDefinitionRequest &request);
-    DataPipelineQueryObjectsResponse * queryObjects(const DataPipelineQueryObjectsRequest &request);
-    DataPipelineRemoveTagsResponse * removeTags(const DataPipelineRemoveTagsRequest &request);
-    DataPipelineReportTaskProgressResponse * reportTaskProgress(const DataPipelineReportTaskProgressRequest &request);
-    DataPipelineReportTaskRunnerHeartbeatResponse * reportTaskRunnerHeartbeat(const DataPipelineReportTaskRunnerHeartbeatRequest &request);
-    DataPipelineSetStatusResponse * setStatus(const DataPipelineSetStatusRequest &request);
-    DataPipelineSetTaskStatusResponse * setTaskStatus(const DataPipelineSetTaskStatusRequest &request);
-    DataPipelineValidatePipelineDefinitionResponse * validatePipelineDefinition(const DataPipelineValidatePipelineDefinitionRequest &request);
+    ActivatePipelineResponse * activatePipeline(const ActivatePipelineRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    CreatePipelineResponse * createPipeline(const CreatePipelineRequest &request);
+    DeactivatePipelineResponse * deactivatePipeline(const DeactivatePipelineRequest &request);
+    DeletePipelineResponse * deletePipeline(const DeletePipelineRequest &request);
+    DescribeObjectsResponse * describeObjects(const DescribeObjectsRequest &request);
+    DescribePipelinesResponse * describePipelines(const DescribePipelinesRequest &request);
+    EvaluateExpressionResponse * evaluateExpression(const EvaluateExpressionRequest &request);
+    GetPipelineDefinitionResponse * getPipelineDefinition(const GetPipelineDefinitionRequest &request);
+    ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);
+    PollForTaskResponse * pollForTask(const PollForTaskRequest &request);
+    PutPipelineDefinitionResponse * putPipelineDefinition(const PutPipelineDefinitionRequest &request);
+    QueryObjectsResponse * queryObjects(const QueryObjectsRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    ReportTaskProgressResponse * reportTaskProgress(const ReportTaskProgressRequest &request);
+    ReportTaskRunnerHeartbeatResponse * reportTaskRunnerHeartbeat(const ReportTaskRunnerHeartbeatRequest &request);
+    SetStatusResponse * setStatus(const SetStatusRequest &request);
+    SetTaskStatusResponse * setTaskStatus(const SetTaskStatusRequest &request);
+    ValidatePipelineDefinitionResponse * validatePipelineDefinition(const ValidatePipelineDefinitionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DataPipelineClient)
@@ -72,6 +75,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DataPipeline
+} // namespace AWS
 
 #endif

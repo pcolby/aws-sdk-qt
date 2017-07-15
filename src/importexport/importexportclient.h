@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ImportExport {
+
 class ImportExportClientPrivate;
 
 class QTAWS_EXPORT ImportExportClient : public AwsAbstractClient {
@@ -46,12 +49,12 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ImportExportCancelJobResponse * cancelJob(const ImportExportCancelJobRequest &request);
-    ImportExportCreateJobResponse * createJob(const ImportExportCreateJobRequest &request);
-    ImportExportGetShippingLabelResponse * getShippingLabel(const ImportExportGetShippingLabelRequest &request);
-    ImportExportGetStatusResponse * getStatus(const ImportExportGetStatusRequest &request);
-    ImportExportListJobsResponse * listJobs(const ImportExportListJobsRequest &request);
-    ImportExportUpdateJobResponse * updateJob(const ImportExportUpdateJobRequest &request);
+    CancelJobResponse * cancelJob(const CancelJobRequest &request);
+    CreateJobResponse * createJob(const CreateJobRequest &request);
+    GetShippingLabelResponse * getShippingLabel(const GetShippingLabelRequest &request);
+    GetStatusResponse * getStatus(const GetStatusRequest &request);
+    ListJobsResponse * listJobs(const ListJobsRequest &request);
+    UpdateJobResponse * updateJob(const UpdateJobRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ImportExportClient)
@@ -59,6 +62,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ImportExport
+} // namespace AWS
 
 #endif

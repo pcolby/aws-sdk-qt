@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Route53 {
+
 class Route53ClientPrivate;
 
 class QTAWS_EXPORT Route53Client : public AwsAbstractClient {
@@ -46,55 +49,55 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    Route53AssociateVPCWithHostedZoneResponse * associateVPCWithHostedZone(const Route53AssociateVPCWithHostedZoneRequest &request);
-    Route53ChangeResourceRecordSetsResponse * changeResourceRecordSets(const Route53ChangeResourceRecordSetsRequest &request);
-    Route53ChangeTagsForResourceResponse * changeTagsForResource(const Route53ChangeTagsForResourceRequest &request);
-    Route53CreateHealthCheckResponse * createHealthCheck(const Route53CreateHealthCheckRequest &request);
-    Route53CreateHostedZoneResponse * createHostedZone(const Route53CreateHostedZoneRequest &request);
-    Route53CreateReusableDelegationSetResponse * createReusableDelegationSet(const Route53CreateReusableDelegationSetRequest &request);
-    Route53CreateTrafficPolicyResponse * createTrafficPolicy(const Route53CreateTrafficPolicyRequest &request);
-    Route53CreateTrafficPolicyInstanceResponse * createTrafficPolicyInstance(const Route53CreateTrafficPolicyInstanceRequest &request);
-    Route53CreateTrafficPolicyVersionResponse * createTrafficPolicyVersion(const Route53CreateTrafficPolicyVersionRequest &request);
-    Route53DeleteHealthCheckResponse * deleteHealthCheck(const Route53DeleteHealthCheckRequest &request);
-    Route53DeleteHostedZoneResponse * deleteHostedZone(const Route53DeleteHostedZoneRequest &request);
-    Route53DeleteReusableDelegationSetResponse * deleteReusableDelegationSet(const Route53DeleteReusableDelegationSetRequest &request);
-    Route53DeleteTrafficPolicyResponse * deleteTrafficPolicy(const Route53DeleteTrafficPolicyRequest &request);
-    Route53DeleteTrafficPolicyInstanceResponse * deleteTrafficPolicyInstance(const Route53DeleteTrafficPolicyInstanceRequest &request);
-    Route53DisassociateVPCFromHostedZoneResponse * disassociateVPCFromHostedZone(const Route53DisassociateVPCFromHostedZoneRequest &request);
-    Route53GetChangeResponse * getChange(const Route53GetChangeRequest &request);
-    Route53GetChangeDetailsResponse * getChangeDetails(const Route53GetChangeDetailsRequest &request);
-    Route53GetCheckerIpRangesResponse * getCheckerIpRanges(const Route53GetCheckerIpRangesRequest &request);
-    Route53GetGeoLocationResponse * getGeoLocation(const Route53GetGeoLocationRequest &request);
-    Route53GetHealthCheckResponse * getHealthCheck(const Route53GetHealthCheckRequest &request);
-    Route53GetHealthCheckCountResponse * getHealthCheckCount(const Route53GetHealthCheckCountRequest &request);
-    Route53GetHealthCheckLastFailureReasonResponse * getHealthCheckLastFailureReason(const Route53GetHealthCheckLastFailureReasonRequest &request);
-    Route53GetHealthCheckStatusResponse * getHealthCheckStatus(const Route53GetHealthCheckStatusRequest &request);
-    Route53GetHostedZoneResponse * getHostedZone(const Route53GetHostedZoneRequest &request);
-    Route53GetHostedZoneCountResponse * getHostedZoneCount(const Route53GetHostedZoneCountRequest &request);
-    Route53GetReusableDelegationSetResponse * getReusableDelegationSet(const Route53GetReusableDelegationSetRequest &request);
-    Route53GetTrafficPolicyResponse * getTrafficPolicy(const Route53GetTrafficPolicyRequest &request);
-    Route53GetTrafficPolicyInstanceResponse * getTrafficPolicyInstance(const Route53GetTrafficPolicyInstanceRequest &request);
-    Route53GetTrafficPolicyInstanceCountResponse * getTrafficPolicyInstanceCount(const Route53GetTrafficPolicyInstanceCountRequest &request);
-    Route53ListChangeBatchesByHostedZoneResponse * listChangeBatchesByHostedZone(const Route53ListChangeBatchesByHostedZoneRequest &request);
-    Route53ListChangeBatchesByRRSetResponse * listChangeBatchesByRRSet(const Route53ListChangeBatchesByRRSetRequest &request);
-    Route53ListGeoLocationsResponse * listGeoLocations(const Route53ListGeoLocationsRequest &request);
-    Route53ListHealthChecksResponse * listHealthChecks(const Route53ListHealthChecksRequest &request);
-    Route53ListHostedZonesResponse * listHostedZones(const Route53ListHostedZonesRequest &request);
-    Route53ListHostedZonesByNameResponse * listHostedZonesByName(const Route53ListHostedZonesByNameRequest &request);
-    Route53ListResourceRecordSetsResponse * listResourceRecordSets(const Route53ListResourceRecordSetsRequest &request);
-    Route53ListReusableDelegationSetsResponse * listReusableDelegationSets(const Route53ListReusableDelegationSetsRequest &request);
-    Route53ListTagsForResourceResponse * listTagsForResource(const Route53ListTagsForResourceRequest &request);
-    Route53ListTagsForResourcesResponse * listTagsForResources(const Route53ListTagsForResourcesRequest &request);
-    Route53ListTrafficPoliciesResponse * listTrafficPolicies(const Route53ListTrafficPoliciesRequest &request);
-    Route53ListTrafficPolicyInstancesResponse * listTrafficPolicyInstances(const Route53ListTrafficPolicyInstancesRequest &request);
-    Route53ListTrafficPolicyInstancesByHostedZoneResponse * listTrafficPolicyInstancesByHostedZone(const Route53ListTrafficPolicyInstancesByHostedZoneRequest &request);
-    Route53ListTrafficPolicyInstancesByPolicyResponse * listTrafficPolicyInstancesByPolicy(const Route53ListTrafficPolicyInstancesByPolicyRequest &request);
-    Route53ListTrafficPolicyVersionsResponse * listTrafficPolicyVersions(const Route53ListTrafficPolicyVersionsRequest &request);
-    Route53TestDNSAnswerResponse * testDNSAnswer(const Route53TestDNSAnswerRequest &request);
-    Route53UpdateHealthCheckResponse * updateHealthCheck(const Route53UpdateHealthCheckRequest &request);
-    Route53UpdateHostedZoneCommentResponse * updateHostedZoneComment(const Route53UpdateHostedZoneCommentRequest &request);
-    Route53UpdateTrafficPolicyCommentResponse * updateTrafficPolicyComment(const Route53UpdateTrafficPolicyCommentRequest &request);
-    Route53UpdateTrafficPolicyInstanceResponse * updateTrafficPolicyInstance(const Route53UpdateTrafficPolicyInstanceRequest &request);
+    AssociateVPCWithHostedZoneResponse * associateVPCWithHostedZone(const AssociateVPCWithHostedZoneRequest &request);
+    ChangeResourceRecordSetsResponse * changeResourceRecordSets(const ChangeResourceRecordSetsRequest &request);
+    ChangeTagsForResourceResponse * changeTagsForResource(const ChangeTagsForResourceRequest &request);
+    CreateHealthCheckResponse * createHealthCheck(const CreateHealthCheckRequest &request);
+    CreateHostedZoneResponse * createHostedZone(const CreateHostedZoneRequest &request);
+    CreateReusableDelegationSetResponse * createReusableDelegationSet(const CreateReusableDelegationSetRequest &request);
+    CreateTrafficPolicyResponse * createTrafficPolicy(const CreateTrafficPolicyRequest &request);
+    CreateTrafficPolicyInstanceResponse * createTrafficPolicyInstance(const CreateTrafficPolicyInstanceRequest &request);
+    CreateTrafficPolicyVersionResponse * createTrafficPolicyVersion(const CreateTrafficPolicyVersionRequest &request);
+    DeleteHealthCheckResponse * deleteHealthCheck(const DeleteHealthCheckRequest &request);
+    DeleteHostedZoneResponse * deleteHostedZone(const DeleteHostedZoneRequest &request);
+    DeleteReusableDelegationSetResponse * deleteReusableDelegationSet(const DeleteReusableDelegationSetRequest &request);
+    DeleteTrafficPolicyResponse * deleteTrafficPolicy(const DeleteTrafficPolicyRequest &request);
+    DeleteTrafficPolicyInstanceResponse * deleteTrafficPolicyInstance(const DeleteTrafficPolicyInstanceRequest &request);
+    DisassociateVPCFromHostedZoneResponse * disassociateVPCFromHostedZone(const DisassociateVPCFromHostedZoneRequest &request);
+    GetChangeResponse * getChange(const GetChangeRequest &request);
+    GetChangeDetailsResponse * getChangeDetails(const GetChangeDetailsRequest &request);
+    GetCheckerIpRangesResponse * getCheckerIpRanges(const GetCheckerIpRangesRequest &request);
+    GetGeoLocationResponse * getGeoLocation(const GetGeoLocationRequest &request);
+    GetHealthCheckResponse * getHealthCheck(const GetHealthCheckRequest &request);
+    GetHealthCheckCountResponse * getHealthCheckCount(const GetHealthCheckCountRequest &request);
+    GetHealthCheckLastFailureReasonResponse * getHealthCheckLastFailureReason(const GetHealthCheckLastFailureReasonRequest &request);
+    GetHealthCheckStatusResponse * getHealthCheckStatus(const GetHealthCheckStatusRequest &request);
+    GetHostedZoneResponse * getHostedZone(const GetHostedZoneRequest &request);
+    GetHostedZoneCountResponse * getHostedZoneCount(const GetHostedZoneCountRequest &request);
+    GetReusableDelegationSetResponse * getReusableDelegationSet(const GetReusableDelegationSetRequest &request);
+    GetTrafficPolicyResponse * getTrafficPolicy(const GetTrafficPolicyRequest &request);
+    GetTrafficPolicyInstanceResponse * getTrafficPolicyInstance(const GetTrafficPolicyInstanceRequest &request);
+    GetTrafficPolicyInstanceCountResponse * getTrafficPolicyInstanceCount(const GetTrafficPolicyInstanceCountRequest &request);
+    ListChangeBatchesByHostedZoneResponse * listChangeBatchesByHostedZone(const ListChangeBatchesByHostedZoneRequest &request);
+    ListChangeBatchesByRRSetResponse * listChangeBatchesByRRSet(const ListChangeBatchesByRRSetRequest &request);
+    ListGeoLocationsResponse * listGeoLocations(const ListGeoLocationsRequest &request);
+    ListHealthChecksResponse * listHealthChecks(const ListHealthChecksRequest &request);
+    ListHostedZonesResponse * listHostedZones(const ListHostedZonesRequest &request);
+    ListHostedZonesByNameResponse * listHostedZonesByName(const ListHostedZonesByNameRequest &request);
+    ListResourceRecordSetsResponse * listResourceRecordSets(const ListResourceRecordSetsRequest &request);
+    ListReusableDelegationSetsResponse * listReusableDelegationSets(const ListReusableDelegationSetsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListTagsForResourcesResponse * listTagsForResources(const ListTagsForResourcesRequest &request);
+    ListTrafficPoliciesResponse * listTrafficPolicies(const ListTrafficPoliciesRequest &request);
+    ListTrafficPolicyInstancesResponse * listTrafficPolicyInstances(const ListTrafficPolicyInstancesRequest &request);
+    ListTrafficPolicyInstancesByHostedZoneResponse * listTrafficPolicyInstancesByHostedZone(const ListTrafficPolicyInstancesByHostedZoneRequest &request);
+    ListTrafficPolicyInstancesByPolicyResponse * listTrafficPolicyInstancesByPolicy(const ListTrafficPolicyInstancesByPolicyRequest &request);
+    ListTrafficPolicyVersionsResponse * listTrafficPolicyVersions(const ListTrafficPolicyVersionsRequest &request);
+    TestDNSAnswerResponse * testDNSAnswer(const TestDNSAnswerRequest &request);
+    UpdateHealthCheckResponse * updateHealthCheck(const UpdateHealthCheckRequest &request);
+    UpdateHostedZoneCommentResponse * updateHostedZoneComment(const UpdateHostedZoneCommentRequest &request);
+    UpdateTrafficPolicyCommentResponse * updateTrafficPolicyComment(const UpdateTrafficPolicyCommentRequest &request);
+    UpdateTrafficPolicyInstanceResponse * updateTrafficPolicyInstance(const UpdateTrafficPolicyInstanceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(Route53Client)
@@ -102,6 +105,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Route53
+} // namespace AWS
 
 #endif

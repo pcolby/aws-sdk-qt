@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace KinesisAnalytics {
+
 class KinesisAnalyticsClientPrivate;
 
 class QTAWS_EXPORT KinesisAnalyticsClient : public AwsAbstractClient {
@@ -46,19 +49,19 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    KinesisAnalyticsAddApplicationInputResponse * addApplicationInput(const KinesisAnalyticsAddApplicationInputRequest &request);
-    KinesisAnalyticsAddApplicationOutputResponse * addApplicationOutput(const KinesisAnalyticsAddApplicationOutputRequest &request);
-    KinesisAnalyticsAddApplicationReferenceDataSourceResponse * addApplicationReferenceDataSource(const KinesisAnalyticsAddApplicationReferenceDataSourceRequest &request);
-    KinesisAnalyticsCreateApplicationResponse * createApplication(const KinesisAnalyticsCreateApplicationRequest &request);
-    KinesisAnalyticsDeleteApplicationResponse * deleteApplication(const KinesisAnalyticsDeleteApplicationRequest &request);
-    KinesisAnalyticsDeleteApplicationOutputResponse * deleteApplicationOutput(const KinesisAnalyticsDeleteApplicationOutputRequest &request);
-    KinesisAnalyticsDeleteApplicationReferenceDataSourceResponse * deleteApplicationReferenceDataSource(const KinesisAnalyticsDeleteApplicationReferenceDataSourceRequest &request);
-    KinesisAnalyticsDescribeApplicationResponse * describeApplication(const KinesisAnalyticsDescribeApplicationRequest &request);
-    KinesisAnalyticsDiscoverInputSchemaResponse * discoverInputSchema(const KinesisAnalyticsDiscoverInputSchemaRequest &request);
-    KinesisAnalyticsListApplicationsResponse * listApplications(const KinesisAnalyticsListApplicationsRequest &request);
-    KinesisAnalyticsStartApplicationResponse * startApplication(const KinesisAnalyticsStartApplicationRequest &request);
-    KinesisAnalyticsStopApplicationResponse * stopApplication(const KinesisAnalyticsStopApplicationRequest &request);
-    KinesisAnalyticsUpdateApplicationResponse * updateApplication(const KinesisAnalyticsUpdateApplicationRequest &request);
+    AddApplicationInputResponse * addApplicationInput(const AddApplicationInputRequest &request);
+    AddApplicationOutputResponse * addApplicationOutput(const AddApplicationOutputRequest &request);
+    AddApplicationReferenceDataSourceResponse * addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request);
+    CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
+    DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
+    DeleteApplicationOutputResponse * deleteApplicationOutput(const DeleteApplicationOutputRequest &request);
+    DeleteApplicationReferenceDataSourceResponse * deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request);
+    DescribeApplicationResponse * describeApplication(const DescribeApplicationRequest &request);
+    DiscoverInputSchemaResponse * discoverInputSchema(const DiscoverInputSchemaRequest &request);
+    ListApplicationsResponse * listApplications(const ListApplicationsRequest &request);
+    StartApplicationResponse * startApplication(const StartApplicationRequest &request);
+    StopApplicationResponse * stopApplication(const StopApplicationRequest &request);
+    UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisAnalyticsClient)
@@ -66,6 +69,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace KinesisAnalytics
+} // namespace AWS
 
 #endif

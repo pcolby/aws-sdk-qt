@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace S3 {
 
 /**
  * @class  S3Client
@@ -110,4 +111,5 @@ S3ClientPrivate::S3ClientPrivate(S3Client * const q)
     signature = new AwsSignatureS3();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace S3
+} // namespace AWS

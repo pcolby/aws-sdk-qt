@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudWatch {
+
 class CloudWatchClientPrivate;
 
 class QTAWS_EXPORT CloudWatchClient : public AwsAbstractClient {
@@ -46,17 +49,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudWatchDeleteAlarmsResponse * deleteAlarms(const CloudWatchDeleteAlarmsRequest &request);
-    CloudWatchDescribeAlarmHistoryResponse * describeAlarmHistory(const CloudWatchDescribeAlarmHistoryRequest &request);
-    CloudWatchDescribeAlarmsResponse * describeAlarms(const CloudWatchDescribeAlarmsRequest &request);
-    CloudWatchDescribeAlarmsForMetricResponse * describeAlarmsForMetric(const CloudWatchDescribeAlarmsForMetricRequest &request);
-    CloudWatchDisableAlarmActionsResponse * disableAlarmActions(const CloudWatchDisableAlarmActionsRequest &request);
-    CloudWatchEnableAlarmActionsResponse * enableAlarmActions(const CloudWatchEnableAlarmActionsRequest &request);
-    CloudWatchGetMetricStatisticsResponse * getMetricStatistics(const CloudWatchGetMetricStatisticsRequest &request);
-    CloudWatchListMetricsResponse * listMetrics(const CloudWatchListMetricsRequest &request);
-    CloudWatchPutMetricAlarmResponse * putMetricAlarm(const CloudWatchPutMetricAlarmRequest &request);
-    CloudWatchPutMetricDataResponse * putMetricData(const CloudWatchPutMetricDataRequest &request);
-    CloudWatchSetAlarmStateResponse * setAlarmState(const CloudWatchSetAlarmStateRequest &request);
+    DeleteAlarmsResponse * deleteAlarms(const DeleteAlarmsRequest &request);
+    DescribeAlarmHistoryResponse * describeAlarmHistory(const DescribeAlarmHistoryRequest &request);
+    DescribeAlarmsResponse * describeAlarms(const DescribeAlarmsRequest &request);
+    DescribeAlarmsForMetricResponse * describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request);
+    DisableAlarmActionsResponse * disableAlarmActions(const DisableAlarmActionsRequest &request);
+    EnableAlarmActionsResponse * enableAlarmActions(const EnableAlarmActionsRequest &request);
+    GetMetricStatisticsResponse * getMetricStatistics(const GetMetricStatisticsRequest &request);
+    ListMetricsResponse * listMetrics(const ListMetricsRequest &request);
+    PutMetricAlarmResponse * putMetricAlarm(const PutMetricAlarmRequest &request);
+    PutMetricDataResponse * putMetricData(const PutMetricDataRequest &request);
+    SetAlarmStateResponse * setAlarmState(const SetAlarmStateRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchClient)
@@ -64,6 +67,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudWatch
+} // namespace AWS
 
 #endif

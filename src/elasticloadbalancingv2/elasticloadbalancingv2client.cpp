@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
 
 /**
  * @class  ElasticLoadBalancingv2Client
@@ -154,4 +155,5 @@ ElasticLoadBalancingv2ClientPrivate::ElasticLoadBalancingv2ClientPrivate(Elastic
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

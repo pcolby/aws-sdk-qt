@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CognitoSync {
+
 class CognitoSyncClientPrivate;
 
 class QTAWS_EXPORT CognitoSyncClient : public AwsAbstractClient {
@@ -46,23 +49,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CognitoSyncBulkPublishResponse * bulkPublish(const CognitoSyncBulkPublishRequest &request);
-    CognitoSyncDeleteDatasetResponse * deleteDataset(const CognitoSyncDeleteDatasetRequest &request);
-    CognitoSyncDescribeDatasetResponse * describeDataset(const CognitoSyncDescribeDatasetRequest &request);
-    CognitoSyncDescribeIdentityPoolUsageResponse * describeIdentityPoolUsage(const CognitoSyncDescribeIdentityPoolUsageRequest &request);
-    CognitoSyncDescribeIdentityUsageResponse * describeIdentityUsage(const CognitoSyncDescribeIdentityUsageRequest &request);
-    CognitoSyncGetBulkPublishDetailsResponse * getBulkPublishDetails(const CognitoSyncGetBulkPublishDetailsRequest &request);
-    CognitoSyncGetCognitoEventsResponse * getCognitoEvents(const CognitoSyncGetCognitoEventsRequest &request);
-    CognitoSyncGetIdentityPoolConfigurationResponse * getIdentityPoolConfiguration(const CognitoSyncGetIdentityPoolConfigurationRequest &request);
-    CognitoSyncListDatasetsResponse * listDatasets(const CognitoSyncListDatasetsRequest &request);
-    CognitoSyncListIdentityPoolUsageResponse * listIdentityPoolUsage(const CognitoSyncListIdentityPoolUsageRequest &request);
-    CognitoSyncListRecordsResponse * listRecords(const CognitoSyncListRecordsRequest &request);
-    CognitoSyncRegisterDeviceResponse * registerDevice(const CognitoSyncRegisterDeviceRequest &request);
-    CognitoSyncSetCognitoEventsResponse * setCognitoEvents(const CognitoSyncSetCognitoEventsRequest &request);
-    CognitoSyncSetIdentityPoolConfigurationResponse * setIdentityPoolConfiguration(const CognitoSyncSetIdentityPoolConfigurationRequest &request);
-    CognitoSyncSubscribeToDatasetResponse * subscribeToDataset(const CognitoSyncSubscribeToDatasetRequest &request);
-    CognitoSyncUnsubscribeFromDatasetResponse * unsubscribeFromDataset(const CognitoSyncUnsubscribeFromDatasetRequest &request);
-    CognitoSyncUpdateRecordsResponse * updateRecords(const CognitoSyncUpdateRecordsRequest &request);
+    BulkPublishResponse * bulkPublish(const BulkPublishRequest &request);
+    DeleteDatasetResponse * deleteDataset(const DeleteDatasetRequest &request);
+    DescribeDatasetResponse * describeDataset(const DescribeDatasetRequest &request);
+    DescribeIdentityPoolUsageResponse * describeIdentityPoolUsage(const DescribeIdentityPoolUsageRequest &request);
+    DescribeIdentityUsageResponse * describeIdentityUsage(const DescribeIdentityUsageRequest &request);
+    GetBulkPublishDetailsResponse * getBulkPublishDetails(const GetBulkPublishDetailsRequest &request);
+    GetCognitoEventsResponse * getCognitoEvents(const GetCognitoEventsRequest &request);
+    GetIdentityPoolConfigurationResponse * getIdentityPoolConfiguration(const GetIdentityPoolConfigurationRequest &request);
+    ListDatasetsResponse * listDatasets(const ListDatasetsRequest &request);
+    ListIdentityPoolUsageResponse * listIdentityPoolUsage(const ListIdentityPoolUsageRequest &request);
+    ListRecordsResponse * listRecords(const ListRecordsRequest &request);
+    RegisterDeviceResponse * registerDevice(const RegisterDeviceRequest &request);
+    SetCognitoEventsResponse * setCognitoEvents(const SetCognitoEventsRequest &request);
+    SetIdentityPoolConfigurationResponse * setIdentityPoolConfiguration(const SetIdentityPoolConfigurationRequest &request);
+    SubscribeToDatasetResponse * subscribeToDataset(const SubscribeToDatasetRequest &request);
+    UnsubscribeFromDatasetResponse * unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request);
+    UpdateRecordsResponse * updateRecords(const UpdateRecordsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CognitoSyncClient)
@@ -70,6 +73,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CognitoSync
+} // namespace AWS
 
 #endif

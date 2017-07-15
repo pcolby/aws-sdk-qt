@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ElastiCache {
 
 /**
  * @class  ElastiCacheClient
@@ -116,4 +117,5 @@ ElastiCacheClientPrivate::ElastiCacheClientPrivate(ElastiCacheClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ElastiCache
+} // namespace AWS

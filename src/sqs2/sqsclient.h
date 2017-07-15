@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SQS {
+
 class SqsClientPrivate;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
@@ -46,23 +49,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SqsAddPermissionResponse * addPermission(const SqsAddPermissionRequest &request);
-    SqsChangeMessageVisibilityResponse * changeMessageVisibility(const SqsChangeMessageVisibilityRequest &request);
-    SqsChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(const SqsChangeMessageVisibilityBatchRequest &request);
-    SqsCreateQueueResponse * createQueue(const SqsCreateQueueRequest &request);
-    SqsDeleteMessageResponse * deleteMessage(const SqsDeleteMessageRequest &request);
-    SqsDeleteMessageBatchResponse * deleteMessageBatch(const SqsDeleteMessageBatchRequest &request);
-    SqsDeleteQueueResponse * deleteQueue(const SqsDeleteQueueRequest &request);
-    SqsGetQueueAttributesResponse * getQueueAttributes(const SqsGetQueueAttributesRequest &request);
-    SqsGetQueueUrlResponse * getQueueUrl(const SqsGetQueueUrlRequest &request);
-    SqsListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(const SqsListDeadLetterSourceQueuesRequest &request);
-    SqsListQueuesResponse * listQueues(const SqsListQueuesRequest &request);
-    SqsPurgeQueueResponse * purgeQueue(const SqsPurgeQueueRequest &request);
-    SqsReceiveMessageResponse * receiveMessage(const SqsReceiveMessageRequest &request);
-    SqsRemovePermissionResponse * removePermission(const SqsRemovePermissionRequest &request);
-    SqsSendMessageResponse * sendMessage(const SqsSendMessageRequest &request);
-    SqsSendMessageBatchResponse * sendMessageBatch(const SqsSendMessageBatchRequest &request);
-    SqsSetQueueAttributesResponse * setQueueAttributes(const SqsSetQueueAttributesRequest &request);
+    AddPermissionResponse * addPermission(const AddPermissionRequest &request);
+    ChangeMessageVisibilityResponse * changeMessageVisibility(const ChangeMessageVisibilityRequest &request);
+    ChangeMessageVisibilityBatchResponse * changeMessageVisibilityBatch(const ChangeMessageVisibilityBatchRequest &request);
+    CreateQueueResponse * createQueue(const CreateQueueRequest &request);
+    DeleteMessageResponse * deleteMessage(const DeleteMessageRequest &request);
+    DeleteMessageBatchResponse * deleteMessageBatch(const DeleteMessageBatchRequest &request);
+    DeleteQueueResponse * deleteQueue(const DeleteQueueRequest &request);
+    GetQueueAttributesResponse * getQueueAttributes(const GetQueueAttributesRequest &request);
+    GetQueueUrlResponse * getQueueUrl(const GetQueueUrlRequest &request);
+    ListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request);
+    ListQueuesResponse * listQueues(const ListQueuesRequest &request);
+    PurgeQueueResponse * purgeQueue(const PurgeQueueRequest &request);
+    ReceiveMessageResponse * receiveMessage(const ReceiveMessageRequest &request);
+    RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
+    SendMessageResponse * sendMessage(const SendMessageRequest &request);
+    SendMessageBatchResponse * sendMessageBatch(const SendMessageBatchRequest &request);
+    SetQueueAttributesResponse * setQueueAttributes(const SetQueueAttributesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)
@@ -70,6 +73,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SQS
+} // namespace AWS
 
 #endif

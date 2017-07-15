@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace MachineLearning {
 
 /**
  * @class  MachineLearningClient
@@ -110,4 +111,5 @@ MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace MachineLearning
+} // namespace AWS

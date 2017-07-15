@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ECR {
+
 class EcrClientPrivate;
 
 class QTAWS_EXPORT EcrClient : public AwsAbstractClient {
@@ -46,22 +49,22 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    EcrBatchCheckLayerAvailabilityResponse * batchCheckLayerAvailability(const EcrBatchCheckLayerAvailabilityRequest &request);
-    EcrBatchDeleteImageResponse * batchDeleteImage(const EcrBatchDeleteImageRequest &request);
-    EcrBatchGetImageResponse * batchGetImage(const EcrBatchGetImageRequest &request);
-    EcrCompleteLayerUploadResponse * completeLayerUpload(const EcrCompleteLayerUploadRequest &request);
-    EcrCreateRepositoryResponse * createRepository(const EcrCreateRepositoryRequest &request);
-    EcrDeleteRepositoryResponse * deleteRepository(const EcrDeleteRepositoryRequest &request);
-    EcrDeleteRepositoryPolicyResponse * deleteRepositoryPolicy(const EcrDeleteRepositoryPolicyRequest &request);
-    EcrDescribeRepositoriesResponse * describeRepositories(const EcrDescribeRepositoriesRequest &request);
-    EcrGetAuthorizationTokenResponse * getAuthorizationToken(const EcrGetAuthorizationTokenRequest &request);
-    EcrGetDownloadUrlForLayerResponse * getDownloadUrlForLayer(const EcrGetDownloadUrlForLayerRequest &request);
-    EcrGetRepositoryPolicyResponse * getRepositoryPolicy(const EcrGetRepositoryPolicyRequest &request);
-    EcrInitiateLayerUploadResponse * initiateLayerUpload(const EcrInitiateLayerUploadRequest &request);
-    EcrListImagesResponse * listImages(const EcrListImagesRequest &request);
-    EcrPutImageResponse * putImage(const EcrPutImageRequest &request);
-    EcrSetRepositoryPolicyResponse * setRepositoryPolicy(const EcrSetRepositoryPolicyRequest &request);
-    EcrUploadLayerPartResponse * uploadLayerPart(const EcrUploadLayerPartRequest &request);
+    BatchCheckLayerAvailabilityResponse * batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request);
+    BatchDeleteImageResponse * batchDeleteImage(const BatchDeleteImageRequest &request);
+    BatchGetImageResponse * batchGetImage(const BatchGetImageRequest &request);
+    CompleteLayerUploadResponse * completeLayerUpload(const CompleteLayerUploadRequest &request);
+    CreateRepositoryResponse * createRepository(const CreateRepositoryRequest &request);
+    DeleteRepositoryResponse * deleteRepository(const DeleteRepositoryRequest &request);
+    DeleteRepositoryPolicyResponse * deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request);
+    DescribeRepositoriesResponse * describeRepositories(const DescribeRepositoriesRequest &request);
+    GetAuthorizationTokenResponse * getAuthorizationToken(const GetAuthorizationTokenRequest &request);
+    GetDownloadUrlForLayerResponse * getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request);
+    GetRepositoryPolicyResponse * getRepositoryPolicy(const GetRepositoryPolicyRequest &request);
+    InitiateLayerUploadResponse * initiateLayerUpload(const InitiateLayerUploadRequest &request);
+    ListImagesResponse * listImages(const ListImagesRequest &request);
+    PutImageResponse * putImage(const PutImageRequest &request);
+    SetRepositoryPolicyResponse * setRepositoryPolicy(const SetRepositoryPolicyRequest &request);
+    UploadLayerPartResponse * uploadLayerPart(const UploadLayerPartRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EcrClient)
@@ -69,6 +72,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ECR
+} // namespace AWS
 
 #endif

@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace DynamoDB {
 
 /**
  * @class  DynamoDBClient
@@ -204,4 +205,5 @@ DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace DynamoDB
+} // namespace AWS

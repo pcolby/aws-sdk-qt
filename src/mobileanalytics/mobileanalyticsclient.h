@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace MobileAnalytics {
+
 class MobileAnalyticsClientPrivate;
 
 class QTAWS_EXPORT MobileAnalyticsClient : public AwsAbstractClient {
@@ -46,7 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    MobileAnalyticsPutEventsResponse * putEvents(const MobileAnalyticsPutEventsRequest &request);
+    PutEventsResponse * putEvents(const PutEventsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MobileAnalyticsClient)
@@ -54,6 +57,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace MobileAnalytics
+} // namespace AWS
 
 #endif

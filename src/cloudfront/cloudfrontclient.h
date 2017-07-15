@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudFront {
+
 class CloudFrontClientPrivate;
 
 class QTAWS_EXPORT CloudFrontClient : public AwsAbstractClient {
@@ -46,33 +49,33 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudFrontCreateCloudFrontOriginAccessIdentityResponse * createCloudFrontOriginAccessIdentity(const CloudFrontCreateCloudFrontOriginAccessIdentityRequest &request);
-    CloudFrontCreateDistributionResponse * createDistribution(const CloudFrontCreateDistributionRequest &request);
-    CloudFrontCreateDistributionWithTagsResponse * createDistributionWithTags(const CloudFrontCreateDistributionWithTagsRequest &request);
-    CloudFrontCreateInvalidationResponse * createInvalidation(const CloudFrontCreateInvalidationRequest &request);
-    CloudFrontCreateStreamingDistributionResponse * createStreamingDistribution(const CloudFrontCreateStreamingDistributionRequest &request);
-    CloudFrontCreateStreamingDistributionWithTagsResponse * createStreamingDistributionWithTags(const CloudFrontCreateStreamingDistributionWithTagsRequest &request);
-    CloudFrontDeleteCloudFrontOriginAccessIdentityResponse * deleteCloudFrontOriginAccessIdentity(const CloudFrontDeleteCloudFrontOriginAccessIdentityRequest &request);
-    CloudFrontDeleteDistributionResponse * deleteDistribution(const CloudFrontDeleteDistributionRequest &request);
-    CloudFrontDeleteStreamingDistributionResponse * deleteStreamingDistribution(const CloudFrontDeleteStreamingDistributionRequest &request);
-    CloudFrontGetCloudFrontOriginAccessIdentityResponse * getCloudFrontOriginAccessIdentity(const CloudFrontGetCloudFrontOriginAccessIdentityRequest &request);
-    CloudFrontGetCloudFrontOriginAccessIdentityConfigResponse * getCloudFrontOriginAccessIdentityConfig(const CloudFrontGetCloudFrontOriginAccessIdentityConfigRequest &request);
-    CloudFrontGetDistributionResponse * getDistribution(const CloudFrontGetDistributionRequest &request);
-    CloudFrontGetDistributionConfigResponse * getDistributionConfig(const CloudFrontGetDistributionConfigRequest &request);
-    CloudFrontGetInvalidationResponse * getInvalidation(const CloudFrontGetInvalidationRequest &request);
-    CloudFrontGetStreamingDistributionResponse * getStreamingDistribution(const CloudFrontGetStreamingDistributionRequest &request);
-    CloudFrontGetStreamingDistributionConfigResponse * getStreamingDistributionConfig(const CloudFrontGetStreamingDistributionConfigRequest &request);
-    CloudFrontListCloudFrontOriginAccessIdentitiesResponse * listCloudFrontOriginAccessIdentities(const CloudFrontListCloudFrontOriginAccessIdentitiesRequest &request);
-    CloudFrontListDistributionsResponse * listDistributions(const CloudFrontListDistributionsRequest &request);
-    CloudFrontListDistributionsByWebACLIdResponse * listDistributionsByWebACLId(const CloudFrontListDistributionsByWebACLIdRequest &request);
-    CloudFrontListInvalidationsResponse * listInvalidations(const CloudFrontListInvalidationsRequest &request);
-    CloudFrontListStreamingDistributionsResponse * listStreamingDistributions(const CloudFrontListStreamingDistributionsRequest &request);
-    CloudFrontListTagsForResourceResponse * listTagsForResource(const CloudFrontListTagsForResourceRequest &request);
-    CloudFrontTagResourceResponse * tagResource(const CloudFrontTagResourceRequest &request);
-    CloudFrontUntagResourceResponse * untagResource(const CloudFrontUntagResourceRequest &request);
-    CloudFrontUpdateCloudFrontOriginAccessIdentityResponse * updateCloudFrontOriginAccessIdentity(const CloudFrontUpdateCloudFrontOriginAccessIdentityRequest &request);
-    CloudFrontUpdateDistributionResponse * updateDistribution(const CloudFrontUpdateDistributionRequest &request);
-    CloudFrontUpdateStreamingDistributionResponse * updateStreamingDistribution(const CloudFrontUpdateStreamingDistributionRequest &request);
+    CreateCloudFrontOriginAccessIdentityResponse * createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request);
+    CreateDistributionResponse * createDistribution(const CreateDistributionRequest &request);
+    CreateDistributionWithTagsResponse * createDistributionWithTags(const CreateDistributionWithTagsRequest &request);
+    CreateInvalidationResponse * createInvalidation(const CreateInvalidationRequest &request);
+    CreateStreamingDistributionResponse * createStreamingDistribution(const CreateStreamingDistributionRequest &request);
+    CreateStreamingDistributionWithTagsResponse * createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request);
+    DeleteCloudFrontOriginAccessIdentityResponse * deleteCloudFrontOriginAccessIdentity(const DeleteCloudFrontOriginAccessIdentityRequest &request);
+    DeleteDistributionResponse * deleteDistribution(const DeleteDistributionRequest &request);
+    DeleteStreamingDistributionResponse * deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request);
+    GetCloudFrontOriginAccessIdentityResponse * getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request);
+    GetCloudFrontOriginAccessIdentityConfigResponse * getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request);
+    GetDistributionResponse * getDistribution(const GetDistributionRequest &request);
+    GetDistributionConfigResponse * getDistributionConfig(const GetDistributionConfigRequest &request);
+    GetInvalidationResponse * getInvalidation(const GetInvalidationRequest &request);
+    GetStreamingDistributionResponse * getStreamingDistribution(const GetStreamingDistributionRequest &request);
+    GetStreamingDistributionConfigResponse * getStreamingDistributionConfig(const GetStreamingDistributionConfigRequest &request);
+    ListCloudFrontOriginAccessIdentitiesResponse * listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request);
+    ListDistributionsResponse * listDistributions(const ListDistributionsRequest &request);
+    ListDistributionsByWebACLIdResponse * listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request);
+    ListInvalidationsResponse * listInvalidations(const ListInvalidationsRequest &request);
+    ListStreamingDistributionsResponse * listStreamingDistributions(const ListStreamingDistributionsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateCloudFrontOriginAccessIdentityResponse * updateCloudFrontOriginAccessIdentity(const UpdateCloudFrontOriginAccessIdentityRequest &request);
+    UpdateDistributionResponse * updateDistribution(const UpdateDistributionRequest &request);
+    UpdateStreamingDistributionResponse * updateStreamingDistribution(const UpdateStreamingDistributionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudFrontClient)
@@ -80,6 +83,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudFront
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ElasticLoadBalancingv2 {
+
 class ElasticLoadBalancingv2ClientPrivate;
 
 class QTAWS_EXPORT ElasticLoadBalancingv2Client : public AwsAbstractClient {
@@ -46,35 +49,35 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ElasticLoadBalancingv2AddTagsResponse * addTags(const ElasticLoadBalancingv2AddTagsRequest &request);
-    ElasticLoadBalancingv2CreateListenerResponse * createListener(const ElasticLoadBalancingv2CreateListenerRequest &request);
-    ElasticLoadBalancingv2CreateLoadBalancerResponse * createLoadBalancer(const ElasticLoadBalancingv2CreateLoadBalancerRequest &request);
-    ElasticLoadBalancingv2CreateRuleResponse * createRule(const ElasticLoadBalancingv2CreateRuleRequest &request);
-    ElasticLoadBalancingv2CreateTargetGroupResponse * createTargetGroup(const ElasticLoadBalancingv2CreateTargetGroupRequest &request);
-    ElasticLoadBalancingv2DeleteListenerResponse * deleteListener(const ElasticLoadBalancingv2DeleteListenerRequest &request);
-    ElasticLoadBalancingv2DeleteLoadBalancerResponse * deleteLoadBalancer(const ElasticLoadBalancingv2DeleteLoadBalancerRequest &request);
-    ElasticLoadBalancingv2DeleteRuleResponse * deleteRule(const ElasticLoadBalancingv2DeleteRuleRequest &request);
-    ElasticLoadBalancingv2DeleteTargetGroupResponse * deleteTargetGroup(const ElasticLoadBalancingv2DeleteTargetGroupRequest &request);
-    ElasticLoadBalancingv2DeregisterTargetsResponse * deregisterTargets(const ElasticLoadBalancingv2DeregisterTargetsRequest &request);
-    ElasticLoadBalancingv2DescribeListenersResponse * describeListeners(const ElasticLoadBalancingv2DescribeListenersRequest &request);
-    ElasticLoadBalancingv2DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const ElasticLoadBalancingv2DescribeLoadBalancerAttributesRequest &request);
-    ElasticLoadBalancingv2DescribeLoadBalancersResponse * describeLoadBalancers(const ElasticLoadBalancingv2DescribeLoadBalancersRequest &request);
-    ElasticLoadBalancingv2DescribeRulesResponse * describeRules(const ElasticLoadBalancingv2DescribeRulesRequest &request);
-    ElasticLoadBalancingv2DescribeSSLPoliciesResponse * describeSSLPolicies(const ElasticLoadBalancingv2DescribeSSLPoliciesRequest &request);
-    ElasticLoadBalancingv2DescribeTagsResponse * describeTags(const ElasticLoadBalancingv2DescribeTagsRequest &request);
-    ElasticLoadBalancingv2DescribeTargetGroupAttributesResponse * describeTargetGroupAttributes(const ElasticLoadBalancingv2DescribeTargetGroupAttributesRequest &request);
-    ElasticLoadBalancingv2DescribeTargetGroupsResponse * describeTargetGroups(const ElasticLoadBalancingv2DescribeTargetGroupsRequest &request);
-    ElasticLoadBalancingv2DescribeTargetHealthResponse * describeTargetHealth(const ElasticLoadBalancingv2DescribeTargetHealthRequest &request);
-    ElasticLoadBalancingv2ModifyListenerResponse * modifyListener(const ElasticLoadBalancingv2ModifyListenerRequest &request);
-    ElasticLoadBalancingv2ModifyLoadBalancerAttributesResponse * modifyLoadBalancerAttributes(const ElasticLoadBalancingv2ModifyLoadBalancerAttributesRequest &request);
-    ElasticLoadBalancingv2ModifyRuleResponse * modifyRule(const ElasticLoadBalancingv2ModifyRuleRequest &request);
-    ElasticLoadBalancingv2ModifyTargetGroupResponse * modifyTargetGroup(const ElasticLoadBalancingv2ModifyTargetGroupRequest &request);
-    ElasticLoadBalancingv2ModifyTargetGroupAttributesResponse * modifyTargetGroupAttributes(const ElasticLoadBalancingv2ModifyTargetGroupAttributesRequest &request);
-    ElasticLoadBalancingv2RegisterTargetsResponse * registerTargets(const ElasticLoadBalancingv2RegisterTargetsRequest &request);
-    ElasticLoadBalancingv2RemoveTagsResponse * removeTags(const ElasticLoadBalancingv2RemoveTagsRequest &request);
-    ElasticLoadBalancingv2SetRulePrioritiesResponse * setRulePriorities(const ElasticLoadBalancingv2SetRulePrioritiesRequest &request);
-    ElasticLoadBalancingv2SetSecurityGroupsResponse * setSecurityGroups(const ElasticLoadBalancingv2SetSecurityGroupsRequest &request);
-    ElasticLoadBalancingv2SetSubnetsResponse * setSubnets(const ElasticLoadBalancingv2SetSubnetsRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    CreateListenerResponse * createListener(const CreateListenerRequest &request);
+    CreateLoadBalancerResponse * createLoadBalancer(const CreateLoadBalancerRequest &request);
+    CreateRuleResponse * createRule(const CreateRuleRequest &request);
+    CreateTargetGroupResponse * createTargetGroup(const CreateTargetGroupRequest &request);
+    DeleteListenerResponse * deleteListener(const DeleteListenerRequest &request);
+    DeleteLoadBalancerResponse * deleteLoadBalancer(const DeleteLoadBalancerRequest &request);
+    DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
+    DeleteTargetGroupResponse * deleteTargetGroup(const DeleteTargetGroupRequest &request);
+    DeregisterTargetsResponse * deregisterTargets(const DeregisterTargetsRequest &request);
+    DescribeListenersResponse * describeListeners(const DescribeListenersRequest &request);
+    DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request);
+    DescribeLoadBalancersResponse * describeLoadBalancers(const DescribeLoadBalancersRequest &request);
+    DescribeRulesResponse * describeRules(const DescribeRulesRequest &request);
+    DescribeSSLPoliciesResponse * describeSSLPolicies(const DescribeSSLPoliciesRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DescribeTargetGroupAttributesResponse * describeTargetGroupAttributes(const DescribeTargetGroupAttributesRequest &request);
+    DescribeTargetGroupsResponse * describeTargetGroups(const DescribeTargetGroupsRequest &request);
+    DescribeTargetHealthResponse * describeTargetHealth(const DescribeTargetHealthRequest &request);
+    ModifyListenerResponse * modifyListener(const ModifyListenerRequest &request);
+    ModifyLoadBalancerAttributesResponse * modifyLoadBalancerAttributes(const ModifyLoadBalancerAttributesRequest &request);
+    ModifyRuleResponse * modifyRule(const ModifyRuleRequest &request);
+    ModifyTargetGroupResponse * modifyTargetGroup(const ModifyTargetGroupRequest &request);
+    ModifyTargetGroupAttributesResponse * modifyTargetGroupAttributes(const ModifyTargetGroupAttributesRequest &request);
+    RegisterTargetsResponse * registerTargets(const RegisterTargetsRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    SetRulePrioritiesResponse * setRulePriorities(const SetRulePrioritiesRequest &request);
+    SetSecurityGroupsResponse * setSecurityGroups(const SetSecurityGroupsRequest &request);
+    SetSubnetsResponse * setSubnets(const SetSubnetsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingv2Client)
@@ -82,6 +85,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
 
 #endif

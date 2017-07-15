@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace DirectoryService {
 
 /**
  * @class  DirectoryServiceClient
@@ -112,4 +113,5 @@ DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceCli
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace DirectoryService
+} // namespace AWS

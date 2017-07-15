@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CloudWatchLogs {
 
 /**
  * @class  CloudWatchLogsClient
@@ -126,4 +127,5 @@ CloudWatchLogsClientPrivate::CloudWatchLogsClientPrivate(CloudWatchLogsClient * 
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CloudWatchLogs
+} // namespace AWS

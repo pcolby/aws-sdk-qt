@@ -24,7 +24,8 @@
 
 class QNetworkAccessManager;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingClient;
 
@@ -39,6 +40,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticLoadBalancing
+} // namespace AWS
 
 #endif

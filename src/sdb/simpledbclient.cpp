@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace SimpleDB {
 
 /**
  * @class  SimpleDBClient
@@ -114,4 +115,5 @@ SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q)
     signature = new AwsSignatureV2();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace SimpleDB
+} // namespace AWS

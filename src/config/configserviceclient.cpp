@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ConfigService {
 
 /**
  * @class  ConfigServiceClient
@@ -120,4 +121,5 @@ ConfigServiceClientPrivate::ConfigServiceClientPrivate(ConfigServiceClient * con
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ConfigService
+} // namespace AWS

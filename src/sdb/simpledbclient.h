@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SimpleDB {
+
 class SimpleDBClientPrivate;
 
 class QTAWS_EXPORT SimpleDBClient : public AwsAbstractClient {
@@ -46,16 +49,16 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SimpleDBBatchDeleteAttributesResponse * batchDeleteAttributes(const SimpleDBBatchDeleteAttributesRequest &request);
-    SimpleDBBatchPutAttributesResponse * batchPutAttributes(const SimpleDBBatchPutAttributesRequest &request);
-    SimpleDBCreateDomainResponse * createDomain(const SimpleDBCreateDomainRequest &request);
-    SimpleDBDeleteAttributesResponse * deleteAttributes(const SimpleDBDeleteAttributesRequest &request);
-    SimpleDBDeleteDomainResponse * deleteDomain(const SimpleDBDeleteDomainRequest &request);
-    SimpleDBDomainMetadataResponse * domainMetadata(const SimpleDBDomainMetadataRequest &request);
-    SimpleDBGetAttributesResponse * getAttributes(const SimpleDBGetAttributesRequest &request);
-    SimpleDBListDomainsResponse * listDomains(const SimpleDBListDomainsRequest &request);
-    SimpleDBPutAttributesResponse * putAttributes(const SimpleDBPutAttributesRequest &request);
-    SimpleDBSelectResponse * select(const SimpleDBSelectRequest &request);
+    BatchDeleteAttributesResponse * batchDeleteAttributes(const BatchDeleteAttributesRequest &request);
+    BatchPutAttributesResponse * batchPutAttributes(const BatchPutAttributesRequest &request);
+    CreateDomainResponse * createDomain(const CreateDomainRequest &request);
+    DeleteAttributesResponse * deleteAttributes(const DeleteAttributesRequest &request);
+    DeleteDomainResponse * deleteDomain(const DeleteDomainRequest &request);
+    DomainMetadataResponse * domainMetadata(const DomainMetadataRequest &request);
+    GetAttributesResponse * getAttributes(const GetAttributesRequest &request);
+    ListDomainsResponse * listDomains(const ListDomainsRequest &request);
+    PutAttributesResponse * putAttributes(const PutAttributesRequest &request);
+    SelectResponse * select(const SelectRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SimpleDBClient)
@@ -63,6 +66,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SimpleDB
+} // namespace AWS
 
 #endif

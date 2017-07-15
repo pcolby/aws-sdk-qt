@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CloudTrail {
 
 /**
  * @class  CloudTrailClient
@@ -122,4 +123,5 @@ CloudTrailClientPrivate::CloudTrailClientPrivate(CloudTrailClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CloudTrail
+} // namespace AWS

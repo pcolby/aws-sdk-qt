@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DynamoDB {
+
 class DynamoDBClientPrivate;
 
 class QTAWS_EXPORT DynamoDBClient : public AwsAbstractClient {
@@ -46,20 +49,20 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DynamoDBBatchGetItemResponse * batchGetItem(const DynamoDBBatchGetItemRequest &request);
-    DynamoDBBatchWriteItemResponse * batchWriteItem(const DynamoDBBatchWriteItemRequest &request);
-    DynamoDBCreateTableResponse * createTable(const DynamoDBCreateTableRequest &request);
-    DynamoDBDeleteItemResponse * deleteItem(const DynamoDBDeleteItemRequest &request);
-    DynamoDBDeleteTableResponse * deleteTable(const DynamoDBDeleteTableRequest &request);
-    DynamoDBDescribeLimitsResponse * describeLimits(const DynamoDBDescribeLimitsRequest &request);
-    DynamoDBDescribeTableResponse * describeTable(const DynamoDBDescribeTableRequest &request);
-    DynamoDBGetItemResponse * getItem(const DynamoDBGetItemRequest &request);
-    DynamoDBListTablesResponse * listTables(const DynamoDBListTablesRequest &request);
-    DynamoDBPutItemResponse * putItem(const DynamoDBPutItemRequest &request);
-    DynamoDBQueryResponse * query(const DynamoDBQueryRequest &request);
-    DynamoDBScanResponse * scan(const DynamoDBScanRequest &request);
-    DynamoDBUpdateItemResponse * updateItem(const DynamoDBUpdateItemRequest &request);
-    DynamoDBUpdateTableResponse * updateTable(const DynamoDBUpdateTableRequest &request);
+    BatchGetItemResponse * batchGetItem(const BatchGetItemRequest &request);
+    BatchWriteItemResponse * batchWriteItem(const BatchWriteItemRequest &request);
+    CreateTableResponse * createTable(const CreateTableRequest &request);
+    DeleteItemResponse * deleteItem(const DeleteItemRequest &request);
+    DeleteTableResponse * deleteTable(const DeleteTableRequest &request);
+    DescribeLimitsResponse * describeLimits(const DescribeLimitsRequest &request);
+    DescribeTableResponse * describeTable(const DescribeTableRequest &request);
+    GetItemResponse * getItem(const GetItemRequest &request);
+    ListTablesResponse * listTables(const ListTablesRequest &request);
+    PutItemResponse * putItem(const PutItemRequest &request);
+    QueryResponse * query(const QueryRequest &request);
+    ScanResponse * scan(const ScanRequest &request);
+    UpdateItemResponse * updateItem(const UpdateItemRequest &request);
+    UpdateTableResponse * updateTable(const UpdateTableRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DynamoDBClient)
@@ -67,6 +70,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DynamoDB
+} // namespace AWS
 
 #endif

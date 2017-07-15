@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CloudSearchDomain {
 
 /**
  * @class  CloudSearchDomainClient
@@ -114,4 +115,5 @@ CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomain
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CloudSearchDomain
+} // namespace AWS

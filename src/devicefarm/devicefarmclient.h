@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DeviceFarm {
+
 class DeviceFarmClientPrivate;
 
 class QTAWS_EXPORT DeviceFarmClient : public AwsAbstractClient {
@@ -46,49 +49,49 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DeviceFarmCreateDevicePoolResponse * createDevicePool(const DeviceFarmCreateDevicePoolRequest &request);
-    DeviceFarmCreateProjectResponse * createProject(const DeviceFarmCreateProjectRequest &request);
-    DeviceFarmCreateRemoteAccessSessionResponse * createRemoteAccessSession(const DeviceFarmCreateRemoteAccessSessionRequest &request);
-    DeviceFarmCreateUploadResponse * createUpload(const DeviceFarmCreateUploadRequest &request);
-    DeviceFarmDeleteDevicePoolResponse * deleteDevicePool(const DeviceFarmDeleteDevicePoolRequest &request);
-    DeviceFarmDeleteProjectResponse * deleteProject(const DeviceFarmDeleteProjectRequest &request);
-    DeviceFarmDeleteRemoteAccessSessionResponse * deleteRemoteAccessSession(const DeviceFarmDeleteRemoteAccessSessionRequest &request);
-    DeviceFarmDeleteRunResponse * deleteRun(const DeviceFarmDeleteRunRequest &request);
-    DeviceFarmDeleteUploadResponse * deleteUpload(const DeviceFarmDeleteUploadRequest &request);
-    DeviceFarmGetAccountSettingsResponse * getAccountSettings(const DeviceFarmGetAccountSettingsRequest &request);
-    DeviceFarmGetDeviceResponse * getDevice(const DeviceFarmGetDeviceRequest &request);
-    DeviceFarmGetDevicePoolResponse * getDevicePool(const DeviceFarmGetDevicePoolRequest &request);
-    DeviceFarmGetDevicePoolCompatibilityResponse * getDevicePoolCompatibility(const DeviceFarmGetDevicePoolCompatibilityRequest &request);
-    DeviceFarmGetJobResponse * getJob(const DeviceFarmGetJobRequest &request);
-    DeviceFarmGetOfferingStatusResponse * getOfferingStatus(const DeviceFarmGetOfferingStatusRequest &request);
-    DeviceFarmGetProjectResponse * getProject(const DeviceFarmGetProjectRequest &request);
-    DeviceFarmGetRemoteAccessSessionResponse * getRemoteAccessSession(const DeviceFarmGetRemoteAccessSessionRequest &request);
-    DeviceFarmGetRunResponse * getRun(const DeviceFarmGetRunRequest &request);
-    DeviceFarmGetSuiteResponse * getSuite(const DeviceFarmGetSuiteRequest &request);
-    DeviceFarmGetTestResponse * getTest(const DeviceFarmGetTestRequest &request);
-    DeviceFarmGetUploadResponse * getUpload(const DeviceFarmGetUploadRequest &request);
-    DeviceFarmInstallToRemoteAccessSessionResponse * installToRemoteAccessSession(const DeviceFarmInstallToRemoteAccessSessionRequest &request);
-    DeviceFarmListArtifactsResponse * listArtifacts(const DeviceFarmListArtifactsRequest &request);
-    DeviceFarmListDevicePoolsResponse * listDevicePools(const DeviceFarmListDevicePoolsRequest &request);
-    DeviceFarmListDevicesResponse * listDevices(const DeviceFarmListDevicesRequest &request);
-    DeviceFarmListJobsResponse * listJobs(const DeviceFarmListJobsRequest &request);
-    DeviceFarmListOfferingTransactionsResponse * listOfferingTransactions(const DeviceFarmListOfferingTransactionsRequest &request);
-    DeviceFarmListOfferingsResponse * listOfferings(const DeviceFarmListOfferingsRequest &request);
-    DeviceFarmListProjectsResponse * listProjects(const DeviceFarmListProjectsRequest &request);
-    DeviceFarmListRemoteAccessSessionsResponse * listRemoteAccessSessions(const DeviceFarmListRemoteAccessSessionsRequest &request);
-    DeviceFarmListRunsResponse * listRuns(const DeviceFarmListRunsRequest &request);
-    DeviceFarmListSamplesResponse * listSamples(const DeviceFarmListSamplesRequest &request);
-    DeviceFarmListSuitesResponse * listSuites(const DeviceFarmListSuitesRequest &request);
-    DeviceFarmListTestsResponse * listTests(const DeviceFarmListTestsRequest &request);
-    DeviceFarmListUniqueProblemsResponse * listUniqueProblems(const DeviceFarmListUniqueProblemsRequest &request);
-    DeviceFarmListUploadsResponse * listUploads(const DeviceFarmListUploadsRequest &request);
-    DeviceFarmPurchaseOfferingResponse * purchaseOffering(const DeviceFarmPurchaseOfferingRequest &request);
-    DeviceFarmRenewOfferingResponse * renewOffering(const DeviceFarmRenewOfferingRequest &request);
-    DeviceFarmScheduleRunResponse * scheduleRun(const DeviceFarmScheduleRunRequest &request);
-    DeviceFarmStopRemoteAccessSessionResponse * stopRemoteAccessSession(const DeviceFarmStopRemoteAccessSessionRequest &request);
-    DeviceFarmStopRunResponse * stopRun(const DeviceFarmStopRunRequest &request);
-    DeviceFarmUpdateDevicePoolResponse * updateDevicePool(const DeviceFarmUpdateDevicePoolRequest &request);
-    DeviceFarmUpdateProjectResponse * updateProject(const DeviceFarmUpdateProjectRequest &request);
+    CreateDevicePoolResponse * createDevicePool(const CreateDevicePoolRequest &request);
+    CreateProjectResponse * createProject(const CreateProjectRequest &request);
+    CreateRemoteAccessSessionResponse * createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request);
+    CreateUploadResponse * createUpload(const CreateUploadRequest &request);
+    DeleteDevicePoolResponse * deleteDevicePool(const DeleteDevicePoolRequest &request);
+    DeleteProjectResponse * deleteProject(const DeleteProjectRequest &request);
+    DeleteRemoteAccessSessionResponse * deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request);
+    DeleteRunResponse * deleteRun(const DeleteRunRequest &request);
+    DeleteUploadResponse * deleteUpload(const DeleteUploadRequest &request);
+    GetAccountSettingsResponse * getAccountSettings(const GetAccountSettingsRequest &request);
+    GetDeviceResponse * getDevice(const GetDeviceRequest &request);
+    GetDevicePoolResponse * getDevicePool(const GetDevicePoolRequest &request);
+    GetDevicePoolCompatibilityResponse * getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request);
+    GetJobResponse * getJob(const GetJobRequest &request);
+    GetOfferingStatusResponse * getOfferingStatus(const GetOfferingStatusRequest &request);
+    GetProjectResponse * getProject(const GetProjectRequest &request);
+    GetRemoteAccessSessionResponse * getRemoteAccessSession(const GetRemoteAccessSessionRequest &request);
+    GetRunResponse * getRun(const GetRunRequest &request);
+    GetSuiteResponse * getSuite(const GetSuiteRequest &request);
+    GetTestResponse * getTest(const GetTestRequest &request);
+    GetUploadResponse * getUpload(const GetUploadRequest &request);
+    InstallToRemoteAccessSessionResponse * installToRemoteAccessSession(const InstallToRemoteAccessSessionRequest &request);
+    ListArtifactsResponse * listArtifacts(const ListArtifactsRequest &request);
+    ListDevicePoolsResponse * listDevicePools(const ListDevicePoolsRequest &request);
+    ListDevicesResponse * listDevices(const ListDevicesRequest &request);
+    ListJobsResponse * listJobs(const ListJobsRequest &request);
+    ListOfferingTransactionsResponse * listOfferingTransactions(const ListOfferingTransactionsRequest &request);
+    ListOfferingsResponse * listOfferings(const ListOfferingsRequest &request);
+    ListProjectsResponse * listProjects(const ListProjectsRequest &request);
+    ListRemoteAccessSessionsResponse * listRemoteAccessSessions(const ListRemoteAccessSessionsRequest &request);
+    ListRunsResponse * listRuns(const ListRunsRequest &request);
+    ListSamplesResponse * listSamples(const ListSamplesRequest &request);
+    ListSuitesResponse * listSuites(const ListSuitesRequest &request);
+    ListTestsResponse * listTests(const ListTestsRequest &request);
+    ListUniqueProblemsResponse * listUniqueProblems(const ListUniqueProblemsRequest &request);
+    ListUploadsResponse * listUploads(const ListUploadsRequest &request);
+    PurchaseOfferingResponse * purchaseOffering(const PurchaseOfferingRequest &request);
+    RenewOfferingResponse * renewOffering(const RenewOfferingRequest &request);
+    ScheduleRunResponse * scheduleRun(const ScheduleRunRequest &request);
+    StopRemoteAccessSessionResponse * stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request);
+    StopRunResponse * stopRun(const StopRunRequest &request);
+    UpdateDevicePoolResponse * updateDevicePool(const UpdateDevicePoolRequest &request);
+    UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DeviceFarmClient)
@@ -96,6 +99,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DeviceFarm
+} // namespace AWS
 
 #endif

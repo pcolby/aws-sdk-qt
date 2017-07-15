@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ConfigService {
+
 class ConfigServiceClientPrivate;
 
 class QTAWS_EXPORT ConfigServiceClient : public AwsAbstractClient {
@@ -46,32 +49,32 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ConfigServiceDeleteConfigRuleResponse * deleteConfigRule(const ConfigServiceDeleteConfigRuleRequest &request);
-    ConfigServiceDeleteConfigurationRecorderResponse * deleteConfigurationRecorder(const ConfigServiceDeleteConfigurationRecorderRequest &request);
-    ConfigServiceDeleteDeliveryChannelResponse * deleteDeliveryChannel(const ConfigServiceDeleteDeliveryChannelRequest &request);
-    ConfigServiceDeleteEvaluationResultsResponse * deleteEvaluationResults(const ConfigServiceDeleteEvaluationResultsRequest &request);
-    ConfigServiceDeliverConfigSnapshotResponse * deliverConfigSnapshot(const ConfigServiceDeliverConfigSnapshotRequest &request);
-    ConfigServiceDescribeComplianceByConfigRuleResponse * describeComplianceByConfigRule(const ConfigServiceDescribeComplianceByConfigRuleRequest &request);
-    ConfigServiceDescribeComplianceByResourceResponse * describeComplianceByResource(const ConfigServiceDescribeComplianceByResourceRequest &request);
-    ConfigServiceDescribeConfigRuleEvaluationStatusResponse * describeConfigRuleEvaluationStatus(const ConfigServiceDescribeConfigRuleEvaluationStatusRequest &request);
-    ConfigServiceDescribeConfigRulesResponse * describeConfigRules(const ConfigServiceDescribeConfigRulesRequest &request);
-    ConfigServiceDescribeConfigurationRecorderStatusResponse * describeConfigurationRecorderStatus(const ConfigServiceDescribeConfigurationRecorderStatusRequest &request);
-    ConfigServiceDescribeConfigurationRecordersResponse * describeConfigurationRecorders(const ConfigServiceDescribeConfigurationRecordersRequest &request);
-    ConfigServiceDescribeDeliveryChannelStatusResponse * describeDeliveryChannelStatus(const ConfigServiceDescribeDeliveryChannelStatusRequest &request);
-    ConfigServiceDescribeDeliveryChannelsResponse * describeDeliveryChannels(const ConfigServiceDescribeDeliveryChannelsRequest &request);
-    ConfigServiceGetComplianceDetailsByConfigRuleResponse * getComplianceDetailsByConfigRule(const ConfigServiceGetComplianceDetailsByConfigRuleRequest &request);
-    ConfigServiceGetComplianceDetailsByResourceResponse * getComplianceDetailsByResource(const ConfigServiceGetComplianceDetailsByResourceRequest &request);
-    ConfigServiceGetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule();
-    ConfigServiceGetComplianceSummaryByResourceTypeResponse * getComplianceSummaryByResourceType(const ConfigServiceGetComplianceSummaryByResourceTypeRequest &request);
-    ConfigServiceGetResourceConfigHistoryResponse * getResourceConfigHistory(const ConfigServiceGetResourceConfigHistoryRequest &request);
-    ConfigServiceListDiscoveredResourcesResponse * listDiscoveredResources(const ConfigServiceListDiscoveredResourcesRequest &request);
-    ConfigServicePutConfigRuleResponse * putConfigRule(const ConfigServicePutConfigRuleRequest &request);
-    ConfigServicePutConfigurationRecorderResponse * putConfigurationRecorder(const ConfigServicePutConfigurationRecorderRequest &request);
-    ConfigServicePutDeliveryChannelResponse * putDeliveryChannel(const ConfigServicePutDeliveryChannelRequest &request);
-    ConfigServicePutEvaluationsResponse * putEvaluations(const ConfigServicePutEvaluationsRequest &request);
-    ConfigServiceStartConfigRulesEvaluationResponse * startConfigRulesEvaluation(const ConfigServiceStartConfigRulesEvaluationRequest &request);
-    ConfigServiceStartConfigurationRecorderResponse * startConfigurationRecorder(const ConfigServiceStartConfigurationRecorderRequest &request);
-    ConfigServiceStopConfigurationRecorderResponse * stopConfigurationRecorder(const ConfigServiceStopConfigurationRecorderRequest &request);
+    DeleteConfigRuleResponse * deleteConfigRule(const DeleteConfigRuleRequest &request);
+    DeleteConfigurationRecorderResponse * deleteConfigurationRecorder(const DeleteConfigurationRecorderRequest &request);
+    DeleteDeliveryChannelResponse * deleteDeliveryChannel(const DeleteDeliveryChannelRequest &request);
+    DeleteEvaluationResultsResponse * deleteEvaluationResults(const DeleteEvaluationResultsRequest &request);
+    DeliverConfigSnapshotResponse * deliverConfigSnapshot(const DeliverConfigSnapshotRequest &request);
+    DescribeComplianceByConfigRuleResponse * describeComplianceByConfigRule(const DescribeComplianceByConfigRuleRequest &request);
+    DescribeComplianceByResourceResponse * describeComplianceByResource(const DescribeComplianceByResourceRequest &request);
+    DescribeConfigRuleEvaluationStatusResponse * describeConfigRuleEvaluationStatus(const DescribeConfigRuleEvaluationStatusRequest &request);
+    DescribeConfigRulesResponse * describeConfigRules(const DescribeConfigRulesRequest &request);
+    DescribeConfigurationRecorderStatusResponse * describeConfigurationRecorderStatus(const DescribeConfigurationRecorderStatusRequest &request);
+    DescribeConfigurationRecordersResponse * describeConfigurationRecorders(const DescribeConfigurationRecordersRequest &request);
+    DescribeDeliveryChannelStatusResponse * describeDeliveryChannelStatus(const DescribeDeliveryChannelStatusRequest &request);
+    DescribeDeliveryChannelsResponse * describeDeliveryChannels(const DescribeDeliveryChannelsRequest &request);
+    GetComplianceDetailsByConfigRuleResponse * getComplianceDetailsByConfigRule(const GetComplianceDetailsByConfigRuleRequest &request);
+    GetComplianceDetailsByResourceResponse * getComplianceDetailsByResource(const GetComplianceDetailsByResourceRequest &request);
+    GetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule();
+    GetComplianceSummaryByResourceTypeResponse * getComplianceSummaryByResourceType(const GetComplianceSummaryByResourceTypeRequest &request);
+    GetResourceConfigHistoryResponse * getResourceConfigHistory(const GetResourceConfigHistoryRequest &request);
+    ListDiscoveredResourcesResponse * listDiscoveredResources(const ListDiscoveredResourcesRequest &request);
+    PutConfigRuleResponse * putConfigRule(const PutConfigRuleRequest &request);
+    PutConfigurationRecorderResponse * putConfigurationRecorder(const PutConfigurationRecorderRequest &request);
+    PutDeliveryChannelResponse * putDeliveryChannel(const PutDeliveryChannelRequest &request);
+    PutEvaluationsResponse * putEvaluations(const PutEvaluationsRequest &request);
+    StartConfigRulesEvaluationResponse * startConfigRulesEvaluation(const StartConfigRulesEvaluationRequest &request);
+    StartConfigurationRecorderResponse * startConfigurationRecorder(const StartConfigurationRecorderRequest &request);
+    StopConfigurationRecorderResponse * stopConfigurationRecorder(const StopConfigurationRecorderRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ConfigServiceClient)
@@ -79,6 +82,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ConfigService
+} // namespace AWS
 
 #endif

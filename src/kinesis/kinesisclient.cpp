@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Kinesis {
 
 /**
  * @class  KinesisClient
@@ -112,4 +113,5 @@ KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Kinesis
+} // namespace AWS

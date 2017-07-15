@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace IoTDataPlane {
+
 class IoTDataPlaneClientPrivate;
 
 class QTAWS_EXPORT IoTDataPlaneClient : public AwsAbstractClient {
@@ -46,10 +49,10 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    IoTDataPlaneDeleteThingShadowResponse * deleteThingShadow(const IoTDataPlaneDeleteThingShadowRequest &request);
-    IoTDataPlaneGetThingShadowResponse * getThingShadow(const IoTDataPlaneGetThingShadowRequest &request);
-    IoTDataPlanePublishResponse * publish(const IoTDataPlanePublishRequest &request);
-    IoTDataPlaneUpdateThingShadowResponse * updateThingShadow(const IoTDataPlaneUpdateThingShadowRequest &request);
+    DeleteThingShadowResponse * deleteThingShadow(const DeleteThingShadowRequest &request);
+    GetThingShadowResponse * getThingShadow(const GetThingShadowRequest &request);
+    PublishResponse * publish(const PublishRequest &request);
+    UpdateThingShadowResponse * updateThingShadow(const UpdateThingShadowRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(IoTDataPlaneClient)
@@ -57,6 +60,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace IoTDataPlane
+} // namespace AWS
 
 #endif

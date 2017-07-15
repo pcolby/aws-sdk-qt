@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace EMR {
+
 class EmrClientPrivate;
 
 class QTAWS_EXPORT EmrClient : public AwsAbstractClient {
@@ -46,23 +49,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    EmrAddInstanceGroupsResponse * addInstanceGroups(const EmrAddInstanceGroupsRequest &request);
-    EmrAddJobFlowStepsResponse * addJobFlowSteps(const EmrAddJobFlowStepsRequest &request);
-    EmrAddTagsResponse * addTags(const EmrAddTagsRequest &request);
-    EmrDescribeClusterResponse * describeCluster(const EmrDescribeClusterRequest &request);
-    EmrDescribeJobFlowsResponse * describeJobFlows(const EmrDescribeJobFlowsRequest &request);
-    EmrDescribeStepResponse * describeStep(const EmrDescribeStepRequest &request);
-    EmrListBootstrapActionsResponse * listBootstrapActions(const EmrListBootstrapActionsRequest &request);
-    EmrListClustersResponse * listClusters(const EmrListClustersRequest &request);
-    EmrListInstanceGroupsResponse * listInstanceGroups(const EmrListInstanceGroupsRequest &request);
-    EmrListInstancesResponse * listInstances(const EmrListInstancesRequest &request);
-    EmrListStepsResponse * listSteps(const EmrListStepsRequest &request);
-    EmrModifyInstanceGroupsResponse * modifyInstanceGroups(const EmrModifyInstanceGroupsRequest &request);
-    EmrRemoveTagsResponse * removeTags(const EmrRemoveTagsRequest &request);
-    EmrRunJobFlowResponse * runJobFlow(const EmrRunJobFlowRequest &request);
-    EmrSetTerminationProtectionResponse * setTerminationProtection(const EmrSetTerminationProtectionRequest &request);
-    EmrSetVisibleToAllUsersResponse * setVisibleToAllUsers(const EmrSetVisibleToAllUsersRequest &request);
-    EmrTerminateJobFlowsResponse * terminateJobFlows(const EmrTerminateJobFlowsRequest &request);
+    AddInstanceGroupsResponse * addInstanceGroups(const AddInstanceGroupsRequest &request);
+    AddJobFlowStepsResponse * addJobFlowSteps(const AddJobFlowStepsRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
+    DescribeJobFlowsResponse * describeJobFlows(const DescribeJobFlowsRequest &request);
+    DescribeStepResponse * describeStep(const DescribeStepRequest &request);
+    ListBootstrapActionsResponse * listBootstrapActions(const ListBootstrapActionsRequest &request);
+    ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListInstanceGroupsResponse * listInstanceGroups(const ListInstanceGroupsRequest &request);
+    ListInstancesResponse * listInstances(const ListInstancesRequest &request);
+    ListStepsResponse * listSteps(const ListStepsRequest &request);
+    ModifyInstanceGroupsResponse * modifyInstanceGroups(const ModifyInstanceGroupsRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    RunJobFlowResponse * runJobFlow(const RunJobFlowRequest &request);
+    SetTerminationProtectionResponse * setTerminationProtection(const SetTerminationProtectionRequest &request);
+    SetVisibleToAllUsersResponse * setVisibleToAllUsers(const SetVisibleToAllUsersRequest &request);
+    TerminateJobFlowsResponse * terminateJobFlows(const TerminateJobFlowsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EmrClient)
@@ -70,6 +73,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace EMR
+} // namespace AWS
 
 #endif

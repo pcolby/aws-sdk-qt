@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudWatchLogs {
+
 class CloudWatchLogsClientPrivate;
 
 class QTAWS_EXPORT CloudWatchLogsClient : public AwsAbstractClient {
@@ -46,31 +49,31 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudWatchLogsCancelExportTaskResponse * cancelExportTask(const CloudWatchLogsCancelExportTaskRequest &request);
-    CloudWatchLogsCreateExportTaskResponse * createExportTask(const CloudWatchLogsCreateExportTaskRequest &request);
-    CloudWatchLogsCreateLogGroupResponse * createLogGroup(const CloudWatchLogsCreateLogGroupRequest &request);
-    CloudWatchLogsCreateLogStreamResponse * createLogStream(const CloudWatchLogsCreateLogStreamRequest &request);
-    CloudWatchLogsDeleteDestinationResponse * deleteDestination(const CloudWatchLogsDeleteDestinationRequest &request);
-    CloudWatchLogsDeleteLogGroupResponse * deleteLogGroup(const CloudWatchLogsDeleteLogGroupRequest &request);
-    CloudWatchLogsDeleteLogStreamResponse * deleteLogStream(const CloudWatchLogsDeleteLogStreamRequest &request);
-    CloudWatchLogsDeleteMetricFilterResponse * deleteMetricFilter(const CloudWatchLogsDeleteMetricFilterRequest &request);
-    CloudWatchLogsDeleteRetentionPolicyResponse * deleteRetentionPolicy(const CloudWatchLogsDeleteRetentionPolicyRequest &request);
-    CloudWatchLogsDeleteSubscriptionFilterResponse * deleteSubscriptionFilter(const CloudWatchLogsDeleteSubscriptionFilterRequest &request);
-    CloudWatchLogsDescribeDestinationsResponse * describeDestinations(const CloudWatchLogsDescribeDestinationsRequest &request);
-    CloudWatchLogsDescribeExportTasksResponse * describeExportTasks(const CloudWatchLogsDescribeExportTasksRequest &request);
-    CloudWatchLogsDescribeLogGroupsResponse * describeLogGroups(const CloudWatchLogsDescribeLogGroupsRequest &request);
-    CloudWatchLogsDescribeLogStreamsResponse * describeLogStreams(const CloudWatchLogsDescribeLogStreamsRequest &request);
-    CloudWatchLogsDescribeMetricFiltersResponse * describeMetricFilters(const CloudWatchLogsDescribeMetricFiltersRequest &request);
-    CloudWatchLogsDescribeSubscriptionFiltersResponse * describeSubscriptionFilters(const CloudWatchLogsDescribeSubscriptionFiltersRequest &request);
-    CloudWatchLogsFilterLogEventsResponse * filterLogEvents(const CloudWatchLogsFilterLogEventsRequest &request);
-    CloudWatchLogsGetLogEventsResponse * getLogEvents(const CloudWatchLogsGetLogEventsRequest &request);
-    CloudWatchLogsPutDestinationResponse * putDestination(const CloudWatchLogsPutDestinationRequest &request);
-    CloudWatchLogsPutDestinationPolicyResponse * putDestinationPolicy(const CloudWatchLogsPutDestinationPolicyRequest &request);
-    CloudWatchLogsPutLogEventsResponse * putLogEvents(const CloudWatchLogsPutLogEventsRequest &request);
-    CloudWatchLogsPutMetricFilterResponse * putMetricFilter(const CloudWatchLogsPutMetricFilterRequest &request);
-    CloudWatchLogsPutRetentionPolicyResponse * putRetentionPolicy(const CloudWatchLogsPutRetentionPolicyRequest &request);
-    CloudWatchLogsPutSubscriptionFilterResponse * putSubscriptionFilter(const CloudWatchLogsPutSubscriptionFilterRequest &request);
-    CloudWatchLogsTestMetricFilterResponse * testMetricFilter(const CloudWatchLogsTestMetricFilterRequest &request);
+    CancelExportTaskResponse * cancelExportTask(const CancelExportTaskRequest &request);
+    CreateExportTaskResponse * createExportTask(const CreateExportTaskRequest &request);
+    CreateLogGroupResponse * createLogGroup(const CreateLogGroupRequest &request);
+    CreateLogStreamResponse * createLogStream(const CreateLogStreamRequest &request);
+    DeleteDestinationResponse * deleteDestination(const DeleteDestinationRequest &request);
+    DeleteLogGroupResponse * deleteLogGroup(const DeleteLogGroupRequest &request);
+    DeleteLogStreamResponse * deleteLogStream(const DeleteLogStreamRequest &request);
+    DeleteMetricFilterResponse * deleteMetricFilter(const DeleteMetricFilterRequest &request);
+    DeleteRetentionPolicyResponse * deleteRetentionPolicy(const DeleteRetentionPolicyRequest &request);
+    DeleteSubscriptionFilterResponse * deleteSubscriptionFilter(const DeleteSubscriptionFilterRequest &request);
+    DescribeDestinationsResponse * describeDestinations(const DescribeDestinationsRequest &request);
+    DescribeExportTasksResponse * describeExportTasks(const DescribeExportTasksRequest &request);
+    DescribeLogGroupsResponse * describeLogGroups(const DescribeLogGroupsRequest &request);
+    DescribeLogStreamsResponse * describeLogStreams(const DescribeLogStreamsRequest &request);
+    DescribeMetricFiltersResponse * describeMetricFilters(const DescribeMetricFiltersRequest &request);
+    DescribeSubscriptionFiltersResponse * describeSubscriptionFilters(const DescribeSubscriptionFiltersRequest &request);
+    FilterLogEventsResponse * filterLogEvents(const FilterLogEventsRequest &request);
+    GetLogEventsResponse * getLogEvents(const GetLogEventsRequest &request);
+    PutDestinationResponse * putDestination(const PutDestinationRequest &request);
+    PutDestinationPolicyResponse * putDestinationPolicy(const PutDestinationPolicyRequest &request);
+    PutLogEventsResponse * putLogEvents(const PutLogEventsRequest &request);
+    PutMetricFilterResponse * putMetricFilter(const PutMetricFilterRequest &request);
+    PutRetentionPolicyResponse * putRetentionPolicy(const PutRetentionPolicyRequest &request);
+    PutSubscriptionFilterResponse * putSubscriptionFilter(const PutSubscriptionFilterRequest &request);
+    TestMetricFilterResponse * testMetricFilter(const TestMetricFilterRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchLogsClient)
@@ -78,6 +81,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudWatchLogs
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ECS {
+
 class EcsClientPrivate;
 
 class QTAWS_EXPORT EcsClient : public AwsAbstractClient {
@@ -46,33 +49,33 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    EcsCreateClusterResponse * createCluster(const EcsCreateClusterRequest &request);
-    EcsCreateServiceResponse * createService(const EcsCreateServiceRequest &request);
-    EcsDeleteClusterResponse * deleteCluster(const EcsDeleteClusterRequest &request);
-    EcsDeleteServiceResponse * deleteService(const EcsDeleteServiceRequest &request);
-    EcsDeregisterContainerInstanceResponse * deregisterContainerInstance(const EcsDeregisterContainerInstanceRequest &request);
-    EcsDeregisterTaskDefinitionResponse * deregisterTaskDefinition(const EcsDeregisterTaskDefinitionRequest &request);
-    EcsDescribeClustersResponse * describeClusters(const EcsDescribeClustersRequest &request);
-    EcsDescribeContainerInstancesResponse * describeContainerInstances(const EcsDescribeContainerInstancesRequest &request);
-    EcsDescribeServicesResponse * describeServices(const EcsDescribeServicesRequest &request);
-    EcsDescribeTaskDefinitionResponse * describeTaskDefinition(const EcsDescribeTaskDefinitionRequest &request);
-    EcsDescribeTasksResponse * describeTasks(const EcsDescribeTasksRequest &request);
-    EcsDiscoverPollEndpointResponse * discoverPollEndpoint(const EcsDiscoverPollEndpointRequest &request);
-    EcsListClustersResponse * listClusters(const EcsListClustersRequest &request);
-    EcsListContainerInstancesResponse * listContainerInstances(const EcsListContainerInstancesRequest &request);
-    EcsListServicesResponse * listServices(const EcsListServicesRequest &request);
-    EcsListTaskDefinitionFamiliesResponse * listTaskDefinitionFamilies(const EcsListTaskDefinitionFamiliesRequest &request);
-    EcsListTaskDefinitionsResponse * listTaskDefinitions(const EcsListTaskDefinitionsRequest &request);
-    EcsListTasksResponse * listTasks(const EcsListTasksRequest &request);
-    EcsRegisterContainerInstanceResponse * registerContainerInstance(const EcsRegisterContainerInstanceRequest &request);
-    EcsRegisterTaskDefinitionResponse * registerTaskDefinition(const EcsRegisterTaskDefinitionRequest &request);
-    EcsRunTaskResponse * runTask(const EcsRunTaskRequest &request);
-    EcsStartTaskResponse * startTask(const EcsStartTaskRequest &request);
-    EcsStopTaskResponse * stopTask(const EcsStopTaskRequest &request);
-    EcsSubmitContainerStateChangeResponse * submitContainerStateChange(const EcsSubmitContainerStateChangeRequest &request);
-    EcsSubmitTaskStateChangeResponse * submitTaskStateChange(const EcsSubmitTaskStateChangeRequest &request);
-    EcsUpdateContainerAgentResponse * updateContainerAgent(const EcsUpdateContainerAgentRequest &request);
-    EcsUpdateServiceResponse * updateService(const EcsUpdateServiceRequest &request);
+    CreateClusterResponse * createCluster(const CreateClusterRequest &request);
+    CreateServiceResponse * createService(const CreateServiceRequest &request);
+    DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
+    DeleteServiceResponse * deleteService(const DeleteServiceRequest &request);
+    DeregisterContainerInstanceResponse * deregisterContainerInstance(const DeregisterContainerInstanceRequest &request);
+    DeregisterTaskDefinitionResponse * deregisterTaskDefinition(const DeregisterTaskDefinitionRequest &request);
+    DescribeClustersResponse * describeClusters(const DescribeClustersRequest &request);
+    DescribeContainerInstancesResponse * describeContainerInstances(const DescribeContainerInstancesRequest &request);
+    DescribeServicesResponse * describeServices(const DescribeServicesRequest &request);
+    DescribeTaskDefinitionResponse * describeTaskDefinition(const DescribeTaskDefinitionRequest &request);
+    DescribeTasksResponse * describeTasks(const DescribeTasksRequest &request);
+    DiscoverPollEndpointResponse * discoverPollEndpoint(const DiscoverPollEndpointRequest &request);
+    ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListContainerInstancesResponse * listContainerInstances(const ListContainerInstancesRequest &request);
+    ListServicesResponse * listServices(const ListServicesRequest &request);
+    ListTaskDefinitionFamiliesResponse * listTaskDefinitionFamilies(const ListTaskDefinitionFamiliesRequest &request);
+    ListTaskDefinitionsResponse * listTaskDefinitions(const ListTaskDefinitionsRequest &request);
+    ListTasksResponse * listTasks(const ListTasksRequest &request);
+    RegisterContainerInstanceResponse * registerContainerInstance(const RegisterContainerInstanceRequest &request);
+    RegisterTaskDefinitionResponse * registerTaskDefinition(const RegisterTaskDefinitionRequest &request);
+    RunTaskResponse * runTask(const RunTaskRequest &request);
+    StartTaskResponse * startTask(const StartTaskRequest &request);
+    StopTaskResponse * stopTask(const StopTaskRequest &request);
+    SubmitContainerStateChangeResponse * submitContainerStateChange(const SubmitContainerStateChangeRequest &request);
+    SubmitTaskStateChangeResponse * submitTaskStateChange(const SubmitTaskStateChangeRequest &request);
+    UpdateContainerAgentResponse * updateContainerAgent(const UpdateContainerAgentRequest &request);
+    UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EcsClient)
@@ -80,6 +83,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ECS
+} // namespace AWS
 
 #endif

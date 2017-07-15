@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace MarketplaceMetering {
+
 class MarketplaceMeteringClientPrivate;
 
 class QTAWS_EXPORT MarketplaceMeteringClient : public AwsAbstractClient {
@@ -46,7 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    MarketplaceMeteringMeterUsageResponse * meterUsage(const MarketplaceMeteringMeterUsageRequest &request);
+    MeterUsageResponse * meterUsage(const MeterUsageRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MarketplaceMeteringClient)
@@ -54,6 +57,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace MarketplaceMetering
+} // namespace AWS
 
 #endif

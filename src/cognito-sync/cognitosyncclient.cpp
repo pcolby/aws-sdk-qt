@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CognitoSync {
 
 /**
  * @class  CognitoSyncClient
@@ -116,4 +117,5 @@ CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CognitoSync
+} // namespace AWS

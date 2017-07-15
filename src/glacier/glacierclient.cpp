@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Glacier {
 
 /**
  * @class  GlacierClient
@@ -128,4 +129,5 @@ GlacierClientPrivate::GlacierClientPrivate(GlacierClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Glacier
+} // namespace AWS

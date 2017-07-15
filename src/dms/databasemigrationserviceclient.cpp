@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace DatabaseMigrationService {
 
 /**
  * @class  DatabaseMigrationServiceClient
@@ -112,4 +113,5 @@ DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(Dat
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace DatabaseMigrationService
+} // namespace AWS

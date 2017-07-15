@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace CloudSearchDomain {
+
 class CloudSearchDomainClientPrivate;
 
 class QTAWS_EXPORT CloudSearchDomainClient : public AwsAbstractClient {
@@ -46,9 +49,9 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    CloudSearchDomainSearchResponse * search(const CloudSearchDomainSearchRequest &request);
-    CloudSearchDomainSuggestResponse * suggest(const CloudSearchDomainSuggestRequest &request);
-    CloudSearchDomainUploadDocumentsResponse * uploadDocuments(const CloudSearchDomainUploadDocumentsRequest &request);
+    SearchResponse * search(const SearchRequest &request);
+    SuggestResponse * suggest(const SuggestRequest &request);
+    UploadDocumentsResponse * uploadDocuments(const UploadDocumentsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudSearchDomainClient)
@@ -56,6 +59,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace CloudSearchDomain
+} // namespace AWS
 
 #endif

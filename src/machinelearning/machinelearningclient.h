@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace MachineLearning {
+
 class MachineLearningClientPrivate;
 
 class QTAWS_EXPORT MachineLearningClient : public AwsAbstractClient {
@@ -46,34 +49,34 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    MachineLearningAddTagsResponse * addTags(const MachineLearningAddTagsRequest &request);
-    MachineLearningCreateBatchPredictionResponse * createBatchPrediction(const MachineLearningCreateBatchPredictionRequest &request);
-    MachineLearningCreateDataSourceFromRDSResponse * createDataSourceFromRDS(const MachineLearningCreateDataSourceFromRDSRequest &request);
-    MachineLearningCreateDataSourceFromRedshiftResponse * createDataSourceFromRedshift(const MachineLearningCreateDataSourceFromRedshiftRequest &request);
-    MachineLearningCreateDataSourceFromS3Response * createDataSourceFromS3(const MachineLearningCreateDataSourceFromS3Request &request);
-    MachineLearningCreateEvaluationResponse * createEvaluation(const MachineLearningCreateEvaluationRequest &request);
-    MachineLearningCreateMLModelResponse * createMLModel(const MachineLearningCreateMLModelRequest &request);
-    MachineLearningCreateRealtimeEndpointResponse * createRealtimeEndpoint(const MachineLearningCreateRealtimeEndpointRequest &request);
-    MachineLearningDeleteBatchPredictionResponse * deleteBatchPrediction(const MachineLearningDeleteBatchPredictionRequest &request);
-    MachineLearningDeleteDataSourceResponse * deleteDataSource(const MachineLearningDeleteDataSourceRequest &request);
-    MachineLearningDeleteEvaluationResponse * deleteEvaluation(const MachineLearningDeleteEvaluationRequest &request);
-    MachineLearningDeleteMLModelResponse * deleteMLModel(const MachineLearningDeleteMLModelRequest &request);
-    MachineLearningDeleteRealtimeEndpointResponse * deleteRealtimeEndpoint(const MachineLearningDeleteRealtimeEndpointRequest &request);
-    MachineLearningDeleteTagsResponse * deleteTags(const MachineLearningDeleteTagsRequest &request);
-    MachineLearningDescribeBatchPredictionsResponse * describeBatchPredictions(const MachineLearningDescribeBatchPredictionsRequest &request);
-    MachineLearningDescribeDataSourcesResponse * describeDataSources(const MachineLearningDescribeDataSourcesRequest &request);
-    MachineLearningDescribeEvaluationsResponse * describeEvaluations(const MachineLearningDescribeEvaluationsRequest &request);
-    MachineLearningDescribeMLModelsResponse * describeMLModels(const MachineLearningDescribeMLModelsRequest &request);
-    MachineLearningDescribeTagsResponse * describeTags(const MachineLearningDescribeTagsRequest &request);
-    MachineLearningGetBatchPredictionResponse * getBatchPrediction(const MachineLearningGetBatchPredictionRequest &request);
-    MachineLearningGetDataSourceResponse * getDataSource(const MachineLearningGetDataSourceRequest &request);
-    MachineLearningGetEvaluationResponse * getEvaluation(const MachineLearningGetEvaluationRequest &request);
-    MachineLearningGetMLModelResponse * getMLModel(const MachineLearningGetMLModelRequest &request);
-    MachineLearningPredictResponse * predict(const MachineLearningPredictRequest &request);
-    MachineLearningUpdateBatchPredictionResponse * updateBatchPrediction(const MachineLearningUpdateBatchPredictionRequest &request);
-    MachineLearningUpdateDataSourceResponse * updateDataSource(const MachineLearningUpdateDataSourceRequest &request);
-    MachineLearningUpdateEvaluationResponse * updateEvaluation(const MachineLearningUpdateEvaluationRequest &request);
-    MachineLearningUpdateMLModelResponse * updateMLModel(const MachineLearningUpdateMLModelRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    CreateBatchPredictionResponse * createBatchPrediction(const CreateBatchPredictionRequest &request);
+    CreateDataSourceFromRDSResponse * createDataSourceFromRDS(const CreateDataSourceFromRDSRequest &request);
+    CreateDataSourceFromRedshiftResponse * createDataSourceFromRedshift(const CreateDataSourceFromRedshiftRequest &request);
+    CreateDataSourceFromS3Response * createDataSourceFromS3(const CreateDataSourceFromS3Request &request);
+    CreateEvaluationResponse * createEvaluation(const CreateEvaluationRequest &request);
+    CreateMLModelResponse * createMLModel(const CreateMLModelRequest &request);
+    CreateRealtimeEndpointResponse * createRealtimeEndpoint(const CreateRealtimeEndpointRequest &request);
+    DeleteBatchPredictionResponse * deleteBatchPrediction(const DeleteBatchPredictionRequest &request);
+    DeleteDataSourceResponse * deleteDataSource(const DeleteDataSourceRequest &request);
+    DeleteEvaluationResponse * deleteEvaluation(const DeleteEvaluationRequest &request);
+    DeleteMLModelResponse * deleteMLModel(const DeleteMLModelRequest &request);
+    DeleteRealtimeEndpointResponse * deleteRealtimeEndpoint(const DeleteRealtimeEndpointRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeBatchPredictionsResponse * describeBatchPredictions(const DescribeBatchPredictionsRequest &request);
+    DescribeDataSourcesResponse * describeDataSources(const DescribeDataSourcesRequest &request);
+    DescribeEvaluationsResponse * describeEvaluations(const DescribeEvaluationsRequest &request);
+    DescribeMLModelsResponse * describeMLModels(const DescribeMLModelsRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    GetBatchPredictionResponse * getBatchPrediction(const GetBatchPredictionRequest &request);
+    GetDataSourceResponse * getDataSource(const GetDataSourceRequest &request);
+    GetEvaluationResponse * getEvaluation(const GetEvaluationRequest &request);
+    GetMLModelResponse * getMLModel(const GetMLModelRequest &request);
+    PredictResponse * predict(const PredictRequest &request);
+    UpdateBatchPredictionResponse * updateBatchPrediction(const UpdateBatchPredictionRequest &request);
+    UpdateDataSourceResponse * updateDataSource(const UpdateDataSourceRequest &request);
+    UpdateEvaluationResponse * updateEvaluation(const UpdateEvaluationRequest &request);
+    UpdateMLModelResponse * updateMLModel(const UpdateMLModelRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MachineLearningClient)
@@ -81,6 +84,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace MachineLearning
+} // namespace AWS
 
 #endif

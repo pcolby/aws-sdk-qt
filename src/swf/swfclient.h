@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SWF {
+
 class SwfClientPrivate;
 
 class QTAWS_EXPORT SwfClient : public AwsAbstractClient {
@@ -46,37 +49,37 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SwfCountClosedWorkflowExecutionsResponse * countClosedWorkflowExecutions(const SwfCountClosedWorkflowExecutionsRequest &request);
-    SwfCountOpenWorkflowExecutionsResponse * countOpenWorkflowExecutions(const SwfCountOpenWorkflowExecutionsRequest &request);
-    SwfCountPendingActivityTasksResponse * countPendingActivityTasks(const SwfCountPendingActivityTasksRequest &request);
-    SwfCountPendingDecisionTasksResponse * countPendingDecisionTasks(const SwfCountPendingDecisionTasksRequest &request);
-    SwfDeprecateActivityTypeResponse * deprecateActivityType(const SwfDeprecateActivityTypeRequest &request);
-    SwfDeprecateDomainResponse * deprecateDomain(const SwfDeprecateDomainRequest &request);
-    SwfDeprecateWorkflowTypeResponse * deprecateWorkflowType(const SwfDeprecateWorkflowTypeRequest &request);
-    SwfDescribeActivityTypeResponse * describeActivityType(const SwfDescribeActivityTypeRequest &request);
-    SwfDescribeDomainResponse * describeDomain(const SwfDescribeDomainRequest &request);
-    SwfDescribeWorkflowExecutionResponse * describeWorkflowExecution(const SwfDescribeWorkflowExecutionRequest &request);
-    SwfDescribeWorkflowTypeResponse * describeWorkflowType(const SwfDescribeWorkflowTypeRequest &request);
-    SwfGetWorkflowExecutionHistoryResponse * getWorkflowExecutionHistory(const SwfGetWorkflowExecutionHistoryRequest &request);
-    SwfListActivityTypesResponse * listActivityTypes(const SwfListActivityTypesRequest &request);
-    SwfListClosedWorkflowExecutionsResponse * listClosedWorkflowExecutions(const SwfListClosedWorkflowExecutionsRequest &request);
-    SwfListDomainsResponse * listDomains(const SwfListDomainsRequest &request);
-    SwfListOpenWorkflowExecutionsResponse * listOpenWorkflowExecutions(const SwfListOpenWorkflowExecutionsRequest &request);
-    SwfListWorkflowTypesResponse * listWorkflowTypes(const SwfListWorkflowTypesRequest &request);
-    SwfPollForActivityTaskResponse * pollForActivityTask(const SwfPollForActivityTaskRequest &request);
-    SwfPollForDecisionTaskResponse * pollForDecisionTask(const SwfPollForDecisionTaskRequest &request);
-    SwfRecordActivityTaskHeartbeatResponse * recordActivityTaskHeartbeat(const SwfRecordActivityTaskHeartbeatRequest &request);
-    SwfRegisterActivityTypeResponse * registerActivityType(const SwfRegisterActivityTypeRequest &request);
-    SwfRegisterDomainResponse * registerDomain(const SwfRegisterDomainRequest &request);
-    SwfRegisterWorkflowTypeResponse * registerWorkflowType(const SwfRegisterWorkflowTypeRequest &request);
-    SwfRequestCancelWorkflowExecutionResponse * requestCancelWorkflowExecution(const SwfRequestCancelWorkflowExecutionRequest &request);
-    SwfRespondActivityTaskCanceledResponse * respondActivityTaskCanceled(const SwfRespondActivityTaskCanceledRequest &request);
-    SwfRespondActivityTaskCompletedResponse * respondActivityTaskCompleted(const SwfRespondActivityTaskCompletedRequest &request);
-    SwfRespondActivityTaskFailedResponse * respondActivityTaskFailed(const SwfRespondActivityTaskFailedRequest &request);
-    SwfRespondDecisionTaskCompletedResponse * respondDecisionTaskCompleted(const SwfRespondDecisionTaskCompletedRequest &request);
-    SwfSignalWorkflowExecutionResponse * signalWorkflowExecution(const SwfSignalWorkflowExecutionRequest &request);
-    SwfStartWorkflowExecutionResponse * startWorkflowExecution(const SwfStartWorkflowExecutionRequest &request);
-    SwfTerminateWorkflowExecutionResponse * terminateWorkflowExecution(const SwfTerminateWorkflowExecutionRequest &request);
+    CountClosedWorkflowExecutionsResponse * countClosedWorkflowExecutions(const CountClosedWorkflowExecutionsRequest &request);
+    CountOpenWorkflowExecutionsResponse * countOpenWorkflowExecutions(const CountOpenWorkflowExecutionsRequest &request);
+    CountPendingActivityTasksResponse * countPendingActivityTasks(const CountPendingActivityTasksRequest &request);
+    CountPendingDecisionTasksResponse * countPendingDecisionTasks(const CountPendingDecisionTasksRequest &request);
+    DeprecateActivityTypeResponse * deprecateActivityType(const DeprecateActivityTypeRequest &request);
+    DeprecateDomainResponse * deprecateDomain(const DeprecateDomainRequest &request);
+    DeprecateWorkflowTypeResponse * deprecateWorkflowType(const DeprecateWorkflowTypeRequest &request);
+    DescribeActivityTypeResponse * describeActivityType(const DescribeActivityTypeRequest &request);
+    DescribeDomainResponse * describeDomain(const DescribeDomainRequest &request);
+    DescribeWorkflowExecutionResponse * describeWorkflowExecution(const DescribeWorkflowExecutionRequest &request);
+    DescribeWorkflowTypeResponse * describeWorkflowType(const DescribeWorkflowTypeRequest &request);
+    GetWorkflowExecutionHistoryResponse * getWorkflowExecutionHistory(const GetWorkflowExecutionHistoryRequest &request);
+    ListActivityTypesResponse * listActivityTypes(const ListActivityTypesRequest &request);
+    ListClosedWorkflowExecutionsResponse * listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request);
+    ListDomainsResponse * listDomains(const ListDomainsRequest &request);
+    ListOpenWorkflowExecutionsResponse * listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request);
+    ListWorkflowTypesResponse * listWorkflowTypes(const ListWorkflowTypesRequest &request);
+    PollForActivityTaskResponse * pollForActivityTask(const PollForActivityTaskRequest &request);
+    PollForDecisionTaskResponse * pollForDecisionTask(const PollForDecisionTaskRequest &request);
+    RecordActivityTaskHeartbeatResponse * recordActivityTaskHeartbeat(const RecordActivityTaskHeartbeatRequest &request);
+    RegisterActivityTypeResponse * registerActivityType(const RegisterActivityTypeRequest &request);
+    RegisterDomainResponse * registerDomain(const RegisterDomainRequest &request);
+    RegisterWorkflowTypeResponse * registerWorkflowType(const RegisterWorkflowTypeRequest &request);
+    RequestCancelWorkflowExecutionResponse * requestCancelWorkflowExecution(const RequestCancelWorkflowExecutionRequest &request);
+    RespondActivityTaskCanceledResponse * respondActivityTaskCanceled(const RespondActivityTaskCanceledRequest &request);
+    RespondActivityTaskCompletedResponse * respondActivityTaskCompleted(const RespondActivityTaskCompletedRequest &request);
+    RespondActivityTaskFailedResponse * respondActivityTaskFailed(const RespondActivityTaskFailedRequest &request);
+    RespondDecisionTaskCompletedResponse * respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request);
+    SignalWorkflowExecutionResponse * signalWorkflowExecution(const SignalWorkflowExecutionRequest &request);
+    StartWorkflowExecutionResponse * startWorkflowExecution(const StartWorkflowExecutionRequest &request);
+    TerminateWorkflowExecutionResponse * terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SwfClient)
@@ -84,6 +87,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SWF
+} // namespace AWS
 
 #endif

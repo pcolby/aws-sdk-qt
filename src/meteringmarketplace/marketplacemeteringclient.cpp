@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace MarketplaceMetering {
 
 /**
  * @class  MarketplaceMeteringClient
@@ -122,4 +123,5 @@ MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMe
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace MarketplaceMetering
+} // namespace AWS

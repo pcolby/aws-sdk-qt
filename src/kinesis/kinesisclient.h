@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Kinesis {
+
 class KinesisClientPrivate;
 
 class QTAWS_EXPORT KinesisClient : public AwsAbstractClient {
@@ -46,23 +49,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    KinesisAddTagsToStreamResponse * addTagsToStream(const KinesisAddTagsToStreamRequest &request);
-    KinesisCreateStreamResponse * createStream(const KinesisCreateStreamRequest &request);
-    KinesisDecreaseStreamRetentionPeriodResponse * decreaseStreamRetentionPeriod(const KinesisDecreaseStreamRetentionPeriodRequest &request);
-    KinesisDeleteStreamResponse * deleteStream(const KinesisDeleteStreamRequest &request);
-    KinesisDescribeStreamResponse * describeStream(const KinesisDescribeStreamRequest &request);
-    KinesisDisableEnhancedMonitoringResponse * disableEnhancedMonitoring(const KinesisDisableEnhancedMonitoringRequest &request);
-    KinesisEnableEnhancedMonitoringResponse * enableEnhancedMonitoring(const KinesisEnableEnhancedMonitoringRequest &request);
-    KinesisGetRecordsResponse * getRecords(const KinesisGetRecordsRequest &request);
-    KinesisGetShardIteratorResponse * getShardIterator(const KinesisGetShardIteratorRequest &request);
-    KinesisIncreaseStreamRetentionPeriodResponse * increaseStreamRetentionPeriod(const KinesisIncreaseStreamRetentionPeriodRequest &request);
-    KinesisListStreamsResponse * listStreams(const KinesisListStreamsRequest &request);
-    KinesisListTagsForStreamResponse * listTagsForStream(const KinesisListTagsForStreamRequest &request);
-    KinesisMergeShardsResponse * mergeShards(const KinesisMergeShardsRequest &request);
-    KinesisPutRecordResponse * putRecord(const KinesisPutRecordRequest &request);
-    KinesisPutRecordsResponse * putRecords(const KinesisPutRecordsRequest &request);
-    KinesisRemoveTagsFromStreamResponse * removeTagsFromStream(const KinesisRemoveTagsFromStreamRequest &request);
-    KinesisSplitShardResponse * splitShard(const KinesisSplitShardRequest &request);
+    AddTagsToStreamResponse * addTagsToStream(const AddTagsToStreamRequest &request);
+    CreateStreamResponse * createStream(const CreateStreamRequest &request);
+    DecreaseStreamRetentionPeriodResponse * decreaseStreamRetentionPeriod(const DecreaseStreamRetentionPeriodRequest &request);
+    DeleteStreamResponse * deleteStream(const DeleteStreamRequest &request);
+    DescribeStreamResponse * describeStream(const DescribeStreamRequest &request);
+    DisableEnhancedMonitoringResponse * disableEnhancedMonitoring(const DisableEnhancedMonitoringRequest &request);
+    EnableEnhancedMonitoringResponse * enableEnhancedMonitoring(const EnableEnhancedMonitoringRequest &request);
+    GetRecordsResponse * getRecords(const GetRecordsRequest &request);
+    GetShardIteratorResponse * getShardIterator(const GetShardIteratorRequest &request);
+    IncreaseStreamRetentionPeriodResponse * increaseStreamRetentionPeriod(const IncreaseStreamRetentionPeriodRequest &request);
+    ListStreamsResponse * listStreams(const ListStreamsRequest &request);
+    ListTagsForStreamResponse * listTagsForStream(const ListTagsForStreamRequest &request);
+    MergeShardsResponse * mergeShards(const MergeShardsRequest &request);
+    PutRecordResponse * putRecord(const PutRecordRequest &request);
+    PutRecordsResponse * putRecords(const PutRecordsRequest &request);
+    RemoveTagsFromStreamResponse * removeTagsFromStream(const RemoveTagsFromStreamRequest &request);
+    SplitShardResponse * splitShard(const SplitShardRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisClient)
@@ -70,6 +73,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Kinesis
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Glacier {
+
 class GlacierClientPrivate;
 
 class QTAWS_EXPORT GlacierClient : public AwsAbstractClient {
@@ -46,37 +49,37 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    GlacierAbortMultipartUploadResponse * abortMultipartUpload(const GlacierAbortMultipartUploadRequest &request);
-    GlacierAbortVaultLockResponse * abortVaultLock(const GlacierAbortVaultLockRequest &request);
-    GlacierAddTagsToVaultResponse * addTagsToVault(const GlacierAddTagsToVaultRequest &request);
-    GlacierCompleteMultipartUploadResponse * completeMultipartUpload(const GlacierCompleteMultipartUploadRequest &request);
-    GlacierCompleteVaultLockResponse * completeVaultLock(const GlacierCompleteVaultLockRequest &request);
-    GlacierCreateVaultResponse * createVault(const GlacierCreateVaultRequest &request);
-    GlacierDeleteArchiveResponse * deleteArchive(const GlacierDeleteArchiveRequest &request);
-    GlacierDeleteVaultResponse * deleteVault(const GlacierDeleteVaultRequest &request);
-    GlacierDeleteVaultAccessPolicyResponse * deleteVaultAccessPolicy(const GlacierDeleteVaultAccessPolicyRequest &request);
-    GlacierDeleteVaultNotificationsResponse * deleteVaultNotifications(const GlacierDeleteVaultNotificationsRequest &request);
-    GlacierDescribeJobResponse * describeJob(const GlacierDescribeJobRequest &request);
-    GlacierDescribeVaultResponse * describeVault(const GlacierDescribeVaultRequest &request);
-    GlacierGetDataRetrievalPolicyResponse * getDataRetrievalPolicy(const GlacierGetDataRetrievalPolicyRequest &request);
-    GlacierGetJobOutputResponse * getJobOutput(const GlacierGetJobOutputRequest &request);
-    GlacierGetVaultAccessPolicyResponse * getVaultAccessPolicy(const GlacierGetVaultAccessPolicyRequest &request);
-    GlacierGetVaultLockResponse * getVaultLock(const GlacierGetVaultLockRequest &request);
-    GlacierGetVaultNotificationsResponse * getVaultNotifications(const GlacierGetVaultNotificationsRequest &request);
-    GlacierInitiateJobResponse * initiateJob(const GlacierInitiateJobRequest &request);
-    GlacierInitiateMultipartUploadResponse * initiateMultipartUpload(const GlacierInitiateMultipartUploadRequest &request);
-    GlacierInitiateVaultLockResponse * initiateVaultLock(const GlacierInitiateVaultLockRequest &request);
-    GlacierListJobsResponse * listJobs(const GlacierListJobsRequest &request);
-    GlacierListMultipartUploadsResponse * listMultipartUploads(const GlacierListMultipartUploadsRequest &request);
-    GlacierListPartsResponse * listParts(const GlacierListPartsRequest &request);
-    GlacierListTagsForVaultResponse * listTagsForVault(const GlacierListTagsForVaultRequest &request);
-    GlacierListVaultsResponse * listVaults(const GlacierListVaultsRequest &request);
-    GlacierRemoveTagsFromVaultResponse * removeTagsFromVault(const GlacierRemoveTagsFromVaultRequest &request);
-    GlacierSetDataRetrievalPolicyResponse * setDataRetrievalPolicy(const GlacierSetDataRetrievalPolicyRequest &request);
-    GlacierSetVaultAccessPolicyResponse * setVaultAccessPolicy(const GlacierSetVaultAccessPolicyRequest &request);
-    GlacierSetVaultNotificationsResponse * setVaultNotifications(const GlacierSetVaultNotificationsRequest &request);
-    GlacierUploadArchiveResponse * uploadArchive(const GlacierUploadArchiveRequest &request);
-    GlacierUploadMultipartPartResponse * uploadMultipartPart(const GlacierUploadMultipartPartRequest &request);
+    AbortMultipartUploadResponse * abortMultipartUpload(const AbortMultipartUploadRequest &request);
+    AbortVaultLockResponse * abortVaultLock(const AbortVaultLockRequest &request);
+    AddTagsToVaultResponse * addTagsToVault(const AddTagsToVaultRequest &request);
+    CompleteMultipartUploadResponse * completeMultipartUpload(const CompleteMultipartUploadRequest &request);
+    CompleteVaultLockResponse * completeVaultLock(const CompleteVaultLockRequest &request);
+    CreateVaultResponse * createVault(const CreateVaultRequest &request);
+    DeleteArchiveResponse * deleteArchive(const DeleteArchiveRequest &request);
+    DeleteVaultResponse * deleteVault(const DeleteVaultRequest &request);
+    DeleteVaultAccessPolicyResponse * deleteVaultAccessPolicy(const DeleteVaultAccessPolicyRequest &request);
+    DeleteVaultNotificationsResponse * deleteVaultNotifications(const DeleteVaultNotificationsRequest &request);
+    DescribeJobResponse * describeJob(const DescribeJobRequest &request);
+    DescribeVaultResponse * describeVault(const DescribeVaultRequest &request);
+    GetDataRetrievalPolicyResponse * getDataRetrievalPolicy(const GetDataRetrievalPolicyRequest &request);
+    GetJobOutputResponse * getJobOutput(const GetJobOutputRequest &request);
+    GetVaultAccessPolicyResponse * getVaultAccessPolicy(const GetVaultAccessPolicyRequest &request);
+    GetVaultLockResponse * getVaultLock(const GetVaultLockRequest &request);
+    GetVaultNotificationsResponse * getVaultNotifications(const GetVaultNotificationsRequest &request);
+    InitiateJobResponse * initiateJob(const InitiateJobRequest &request);
+    InitiateMultipartUploadResponse * initiateMultipartUpload(const InitiateMultipartUploadRequest &request);
+    InitiateVaultLockResponse * initiateVaultLock(const InitiateVaultLockRequest &request);
+    ListJobsResponse * listJobs(const ListJobsRequest &request);
+    ListMultipartUploadsResponse * listMultipartUploads(const ListMultipartUploadsRequest &request);
+    ListPartsResponse * listParts(const ListPartsRequest &request);
+    ListTagsForVaultResponse * listTagsForVault(const ListTagsForVaultRequest &request);
+    ListVaultsResponse * listVaults(const ListVaultsRequest &request);
+    RemoveTagsFromVaultResponse * removeTagsFromVault(const RemoveTagsFromVaultRequest &request);
+    SetDataRetrievalPolicyResponse * setDataRetrievalPolicy(const SetDataRetrievalPolicyRequest &request);
+    SetVaultAccessPolicyResponse * setVaultAccessPolicy(const SetVaultAccessPolicyRequest &request);
+    SetVaultNotificationsResponse * setVaultNotifications(const SetVaultNotificationsRequest &request);
+    UploadArchiveResponse * uploadArchive(const UploadArchiveRequest &request);
+    UploadMultipartPartResponse * uploadMultipartPart(const UploadMultipartPartRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(GlacierClient)
@@ -84,6 +87,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Glacier
+} // namespace AWS
 
 #endif

@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DirectConnect {
+
 class DirectConnectClientPrivate;
 
 class QTAWS_EXPORT DirectConnectClient : public AwsAbstractClient {
@@ -46,27 +49,27 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DirectConnectAllocateConnectionOnInterconnectResponse * allocateConnectionOnInterconnect(const DirectConnectAllocateConnectionOnInterconnectRequest &request);
-    DirectConnectAllocatePrivateVirtualInterfaceResponse * allocatePrivateVirtualInterface(const DirectConnectAllocatePrivateVirtualInterfaceRequest &request);
-    DirectConnectAllocatePublicVirtualInterfaceResponse * allocatePublicVirtualInterface(const DirectConnectAllocatePublicVirtualInterfaceRequest &request);
-    DirectConnectConfirmConnectionResponse * confirmConnection(const DirectConnectConfirmConnectionRequest &request);
-    DirectConnectConfirmPrivateVirtualInterfaceResponse * confirmPrivateVirtualInterface(const DirectConnectConfirmPrivateVirtualInterfaceRequest &request);
-    DirectConnectConfirmPublicVirtualInterfaceResponse * confirmPublicVirtualInterface(const DirectConnectConfirmPublicVirtualInterfaceRequest &request);
-    DirectConnectCreateConnectionResponse * createConnection(const DirectConnectCreateConnectionRequest &request);
-    DirectConnectCreateInterconnectResponse * createInterconnect(const DirectConnectCreateInterconnectRequest &request);
-    DirectConnectCreatePrivateVirtualInterfaceResponse * createPrivateVirtualInterface(const DirectConnectCreatePrivateVirtualInterfaceRequest &request);
-    DirectConnectCreatePublicVirtualInterfaceResponse * createPublicVirtualInterface(const DirectConnectCreatePublicVirtualInterfaceRequest &request);
-    DirectConnectDeleteConnectionResponse * deleteConnection(const DirectConnectDeleteConnectionRequest &request);
-    DirectConnectDeleteInterconnectResponse * deleteInterconnect(const DirectConnectDeleteInterconnectRequest &request);
-    DirectConnectDeleteVirtualInterfaceResponse * deleteVirtualInterface(const DirectConnectDeleteVirtualInterfaceRequest &request);
-    DirectConnectDescribeConnectionLoaResponse * describeConnectionLoa(const DirectConnectDescribeConnectionLoaRequest &request);
-    DirectConnectDescribeConnectionsResponse * describeConnections(const DirectConnectDescribeConnectionsRequest &request);
-    DirectConnectDescribeConnectionsOnInterconnectResponse * describeConnectionsOnInterconnect(const DirectConnectDescribeConnectionsOnInterconnectRequest &request);
-    DirectConnectDescribeInterconnectLoaResponse * describeInterconnectLoa(const DirectConnectDescribeInterconnectLoaRequest &request);
-    DirectConnectDescribeInterconnectsResponse * describeInterconnects(const DirectConnectDescribeInterconnectsRequest &request);
-    DirectConnectDescribeLocationsResponse * describeLocations();
-    DirectConnectDescribeVirtualGatewaysResponse * describeVirtualGateways();
-    DirectConnectDescribeVirtualInterfacesResponse * describeVirtualInterfaces(const DirectConnectDescribeVirtualInterfacesRequest &request);
+    AllocateConnectionOnInterconnectResponse * allocateConnectionOnInterconnect(const AllocateConnectionOnInterconnectRequest &request);
+    AllocatePrivateVirtualInterfaceResponse * allocatePrivateVirtualInterface(const AllocatePrivateVirtualInterfaceRequest &request);
+    AllocatePublicVirtualInterfaceResponse * allocatePublicVirtualInterface(const AllocatePublicVirtualInterfaceRequest &request);
+    ConfirmConnectionResponse * confirmConnection(const ConfirmConnectionRequest &request);
+    ConfirmPrivateVirtualInterfaceResponse * confirmPrivateVirtualInterface(const ConfirmPrivateVirtualInterfaceRequest &request);
+    ConfirmPublicVirtualInterfaceResponse * confirmPublicVirtualInterface(const ConfirmPublicVirtualInterfaceRequest &request);
+    CreateConnectionResponse * createConnection(const CreateConnectionRequest &request);
+    CreateInterconnectResponse * createInterconnect(const CreateInterconnectRequest &request);
+    CreatePrivateVirtualInterfaceResponse * createPrivateVirtualInterface(const CreatePrivateVirtualInterfaceRequest &request);
+    CreatePublicVirtualInterfaceResponse * createPublicVirtualInterface(const CreatePublicVirtualInterfaceRequest &request);
+    DeleteConnectionResponse * deleteConnection(const DeleteConnectionRequest &request);
+    DeleteInterconnectResponse * deleteInterconnect(const DeleteInterconnectRequest &request);
+    DeleteVirtualInterfaceResponse * deleteVirtualInterface(const DeleteVirtualInterfaceRequest &request);
+    DescribeConnectionLoaResponse * describeConnectionLoa(const DescribeConnectionLoaRequest &request);
+    DescribeConnectionsResponse * describeConnections(const DescribeConnectionsRequest &request);
+    DescribeConnectionsOnInterconnectResponse * describeConnectionsOnInterconnect(const DescribeConnectionsOnInterconnectRequest &request);
+    DescribeInterconnectLoaResponse * describeInterconnectLoa(const DescribeInterconnectLoaRequest &request);
+    DescribeInterconnectsResponse * describeInterconnects(const DescribeInterconnectsRequest &request);
+    DescribeLocationsResponse * describeLocations();
+    DescribeVirtualGatewaysResponse * describeVirtualGateways();
+    DescribeVirtualInterfacesResponse * describeVirtualInterfaces(const DescribeVirtualInterfacesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DirectConnectClient)
@@ -74,6 +77,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DirectConnect
+} // namespace AWS
 
 #endif

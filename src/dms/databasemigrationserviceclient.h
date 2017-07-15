@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DatabaseMigrationService {
+
 class DatabaseMigrationServiceClientPrivate;
 
 class QTAWS_EXPORT DatabaseMigrationServiceClient : public AwsAbstractClient {
@@ -46,38 +49,38 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DatabaseMigrationServiceAddTagsToResourceResponse * addTagsToResource(const DatabaseMigrationServiceAddTagsToResourceRequest &request);
-    DatabaseMigrationServiceCreateEndpointResponse * createEndpoint(const DatabaseMigrationServiceCreateEndpointRequest &request);
-    DatabaseMigrationServiceCreateReplicationInstanceResponse * createReplicationInstance(const DatabaseMigrationServiceCreateReplicationInstanceRequest &request);
-    DatabaseMigrationServiceCreateReplicationSubnetGroupResponse * createReplicationSubnetGroup(const DatabaseMigrationServiceCreateReplicationSubnetGroupRequest &request);
-    DatabaseMigrationServiceCreateReplicationTaskResponse * createReplicationTask(const DatabaseMigrationServiceCreateReplicationTaskRequest &request);
-    DatabaseMigrationServiceDeleteCertificateResponse * deleteCertificate(const DatabaseMigrationServiceDeleteCertificateRequest &request);
-    DatabaseMigrationServiceDeleteEndpointResponse * deleteEndpoint(const DatabaseMigrationServiceDeleteEndpointRequest &request);
-    DatabaseMigrationServiceDeleteReplicationInstanceResponse * deleteReplicationInstance(const DatabaseMigrationServiceDeleteReplicationInstanceRequest &request);
-    DatabaseMigrationServiceDeleteReplicationSubnetGroupResponse * deleteReplicationSubnetGroup(const DatabaseMigrationServiceDeleteReplicationSubnetGroupRequest &request);
-    DatabaseMigrationServiceDeleteReplicationTaskResponse * deleteReplicationTask(const DatabaseMigrationServiceDeleteReplicationTaskRequest &request);
-    DatabaseMigrationServiceDescribeAccountAttributesResponse * describeAccountAttributes(const DatabaseMigrationServiceDescribeAccountAttributesRequest &request);
-    DatabaseMigrationServiceDescribeCertificatesResponse * describeCertificates(const DatabaseMigrationServiceDescribeCertificatesRequest &request);
-    DatabaseMigrationServiceDescribeConnectionsResponse * describeConnections(const DatabaseMigrationServiceDescribeConnectionsRequest &request);
-    DatabaseMigrationServiceDescribeEndpointTypesResponse * describeEndpointTypes(const DatabaseMigrationServiceDescribeEndpointTypesRequest &request);
-    DatabaseMigrationServiceDescribeEndpointsResponse * describeEndpoints(const DatabaseMigrationServiceDescribeEndpointsRequest &request);
-    DatabaseMigrationServiceDescribeOrderableReplicationInstancesResponse * describeOrderableReplicationInstances(const DatabaseMigrationServiceDescribeOrderableReplicationInstancesRequest &request);
-    DatabaseMigrationServiceDescribeRefreshSchemasStatusResponse * describeRefreshSchemasStatus(const DatabaseMigrationServiceDescribeRefreshSchemasStatusRequest &request);
-    DatabaseMigrationServiceDescribeReplicationInstancesResponse * describeReplicationInstances(const DatabaseMigrationServiceDescribeReplicationInstancesRequest &request);
-    DatabaseMigrationServiceDescribeReplicationSubnetGroupsResponse * describeReplicationSubnetGroups(const DatabaseMigrationServiceDescribeReplicationSubnetGroupsRequest &request);
-    DatabaseMigrationServiceDescribeReplicationTasksResponse * describeReplicationTasks(const DatabaseMigrationServiceDescribeReplicationTasksRequest &request);
-    DatabaseMigrationServiceDescribeSchemasResponse * describeSchemas(const DatabaseMigrationServiceDescribeSchemasRequest &request);
-    DatabaseMigrationServiceDescribeTableStatisticsResponse * describeTableStatistics(const DatabaseMigrationServiceDescribeTableStatisticsRequest &request);
-    DatabaseMigrationServiceImportCertificateResponse * importCertificate(const DatabaseMigrationServiceImportCertificateRequest &request);
-    DatabaseMigrationServiceListTagsForResourceResponse * listTagsForResource(const DatabaseMigrationServiceListTagsForResourceRequest &request);
-    DatabaseMigrationServiceModifyEndpointResponse * modifyEndpoint(const DatabaseMigrationServiceModifyEndpointRequest &request);
-    DatabaseMigrationServiceModifyReplicationInstanceResponse * modifyReplicationInstance(const DatabaseMigrationServiceModifyReplicationInstanceRequest &request);
-    DatabaseMigrationServiceModifyReplicationSubnetGroupResponse * modifyReplicationSubnetGroup(const DatabaseMigrationServiceModifyReplicationSubnetGroupRequest &request);
-    DatabaseMigrationServiceRefreshSchemasResponse * refreshSchemas(const DatabaseMigrationServiceRefreshSchemasRequest &request);
-    DatabaseMigrationServiceRemoveTagsFromResourceResponse * removeTagsFromResource(const DatabaseMigrationServiceRemoveTagsFromResourceRequest &request);
-    DatabaseMigrationServiceStartReplicationTaskResponse * startReplicationTask(const DatabaseMigrationServiceStartReplicationTaskRequest &request);
-    DatabaseMigrationServiceStopReplicationTaskResponse * stopReplicationTask(const DatabaseMigrationServiceStopReplicationTaskRequest &request);
-    DatabaseMigrationServiceTestConnectionResponse * testConnection(const DatabaseMigrationServiceTestConnectionRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
+    CreateReplicationInstanceResponse * createReplicationInstance(const CreateReplicationInstanceRequest &request);
+    CreateReplicationSubnetGroupResponse * createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request);
+    CreateReplicationTaskResponse * createReplicationTask(const CreateReplicationTaskRequest &request);
+    DeleteCertificateResponse * deleteCertificate(const DeleteCertificateRequest &request);
+    DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
+    DeleteReplicationInstanceResponse * deleteReplicationInstance(const DeleteReplicationInstanceRequest &request);
+    DeleteReplicationSubnetGroupResponse * deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request);
+    DeleteReplicationTaskResponse * deleteReplicationTask(const DeleteReplicationTaskRequest &request);
+    DescribeAccountAttributesResponse * describeAccountAttributes(const DescribeAccountAttributesRequest &request);
+    DescribeCertificatesResponse * describeCertificates(const DescribeCertificatesRequest &request);
+    DescribeConnectionsResponse * describeConnections(const DescribeConnectionsRequest &request);
+    DescribeEndpointTypesResponse * describeEndpointTypes(const DescribeEndpointTypesRequest &request);
+    DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
+    DescribeOrderableReplicationInstancesResponse * describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request);
+    DescribeRefreshSchemasStatusResponse * describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request);
+    DescribeReplicationInstancesResponse * describeReplicationInstances(const DescribeReplicationInstancesRequest &request);
+    DescribeReplicationSubnetGroupsResponse * describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request);
+    DescribeReplicationTasksResponse * describeReplicationTasks(const DescribeReplicationTasksRequest &request);
+    DescribeSchemasResponse * describeSchemas(const DescribeSchemasRequest &request);
+    DescribeTableStatisticsResponse * describeTableStatistics(const DescribeTableStatisticsRequest &request);
+    ImportCertificateResponse * importCertificate(const ImportCertificateRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ModifyEndpointResponse * modifyEndpoint(const ModifyEndpointRequest &request);
+    ModifyReplicationInstanceResponse * modifyReplicationInstance(const ModifyReplicationInstanceRequest &request);
+    ModifyReplicationSubnetGroupResponse * modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request);
+    RefreshSchemasResponse * refreshSchemas(const RefreshSchemasRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    StartReplicationTaskResponse * startReplicationTask(const StartReplicationTaskRequest &request);
+    StopReplicationTaskResponse * stopReplicationTask(const StopReplicationTaskRequest &request);
+    TestConnectionResponse * testConnection(const TestConnectionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DatabaseMigrationServiceClient)
@@ -85,6 +88,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DatabaseMigrationService
+} // namespace AWS
 
 #endif

@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CloudHSM {
 
 /**
  * @class  CloudHSMClient
@@ -110,4 +111,5 @@ CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CloudHSM
+} // namespace AWS

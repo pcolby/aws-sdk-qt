@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CodeCommit {
 
 /**
  * @class  CodeCommitClient
@@ -118,4 +119,5 @@ CodeCommitClientPrivate::CodeCommitClientPrivate(CodeCommitClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CodeCommit
+} // namespace AWS

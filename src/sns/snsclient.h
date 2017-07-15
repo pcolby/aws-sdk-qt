@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SNS {
+
 class SnsClientPrivate;
 
 class QTAWS_EXPORT SnsClient : public AwsAbstractClient {
@@ -46,36 +49,36 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SnsAddPermissionResponse * addPermission(const SnsAddPermissionRequest &request);
-    SnsCheckIfPhoneNumberIsOptedOutResponse * checkIfPhoneNumberIsOptedOut(const SnsCheckIfPhoneNumberIsOptedOutRequest &request);
-    SnsConfirmSubscriptionResponse * confirmSubscription(const SnsConfirmSubscriptionRequest &request);
-    SnsCreatePlatformApplicationResponse * createPlatformApplication(const SnsCreatePlatformApplicationRequest &request);
-    SnsCreatePlatformEndpointResponse * createPlatformEndpoint(const SnsCreatePlatformEndpointRequest &request);
-    SnsCreateTopicResponse * createTopic(const SnsCreateTopicRequest &request);
-    SnsDeleteEndpointResponse * deleteEndpoint(const SnsDeleteEndpointRequest &request);
-    SnsDeletePlatformApplicationResponse * deletePlatformApplication(const SnsDeletePlatformApplicationRequest &request);
-    SnsDeleteTopicResponse * deleteTopic(const SnsDeleteTopicRequest &request);
-    SnsGetEndpointAttributesResponse * getEndpointAttributes(const SnsGetEndpointAttributesRequest &request);
-    SnsGetPlatformApplicationAttributesResponse * getPlatformApplicationAttributes(const SnsGetPlatformApplicationAttributesRequest &request);
-    SnsGetSMSAttributesResponse * getSMSAttributes(const SnsGetSMSAttributesRequest &request);
-    SnsGetSubscriptionAttributesResponse * getSubscriptionAttributes(const SnsGetSubscriptionAttributesRequest &request);
-    SnsGetTopicAttributesResponse * getTopicAttributes(const SnsGetTopicAttributesRequest &request);
-    SnsListEndpointsByPlatformApplicationResponse * listEndpointsByPlatformApplication(const SnsListEndpointsByPlatformApplicationRequest &request);
-    SnsListPhoneNumbersOptedOutResponse * listPhoneNumbersOptedOut(const SnsListPhoneNumbersOptedOutRequest &request);
-    SnsListPlatformApplicationsResponse * listPlatformApplications(const SnsListPlatformApplicationsRequest &request);
-    SnsListSubscriptionsResponse * listSubscriptions(const SnsListSubscriptionsRequest &request);
-    SnsListSubscriptionsByTopicResponse * listSubscriptionsByTopic(const SnsListSubscriptionsByTopicRequest &request);
-    SnsListTopicsResponse * listTopics(const SnsListTopicsRequest &request);
-    SnsOptInPhoneNumberResponse * optInPhoneNumber(const SnsOptInPhoneNumberRequest &request);
-    SnsPublishResponse * publish(const SnsPublishRequest &request);
-    SnsRemovePermissionResponse * removePermission(const SnsRemovePermissionRequest &request);
-    SnsSetEndpointAttributesResponse * setEndpointAttributes(const SnsSetEndpointAttributesRequest &request);
-    SnsSetPlatformApplicationAttributesResponse * setPlatformApplicationAttributes(const SnsSetPlatformApplicationAttributesRequest &request);
-    SnsSetSMSAttributesResponse * setSMSAttributes(const SnsSetSMSAttributesRequest &request);
-    SnsSetSubscriptionAttributesResponse * setSubscriptionAttributes(const SnsSetSubscriptionAttributesRequest &request);
-    SnsSetTopicAttributesResponse * setTopicAttributes(const SnsSetTopicAttributesRequest &request);
-    SnsSubscribeResponse * subscribe(const SnsSubscribeRequest &request);
-    SnsUnsubscribeResponse * unsubscribe(const SnsUnsubscribeRequest &request);
+    AddPermissionResponse * addPermission(const AddPermissionRequest &request);
+    CheckIfPhoneNumberIsOptedOutResponse * checkIfPhoneNumberIsOptedOut(const CheckIfPhoneNumberIsOptedOutRequest &request);
+    ConfirmSubscriptionResponse * confirmSubscription(const ConfirmSubscriptionRequest &request);
+    CreatePlatformApplicationResponse * createPlatformApplication(const CreatePlatformApplicationRequest &request);
+    CreatePlatformEndpointResponse * createPlatformEndpoint(const CreatePlatformEndpointRequest &request);
+    CreateTopicResponse * createTopic(const CreateTopicRequest &request);
+    DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
+    DeletePlatformApplicationResponse * deletePlatformApplication(const DeletePlatformApplicationRequest &request);
+    DeleteTopicResponse * deleteTopic(const DeleteTopicRequest &request);
+    GetEndpointAttributesResponse * getEndpointAttributes(const GetEndpointAttributesRequest &request);
+    GetPlatformApplicationAttributesResponse * getPlatformApplicationAttributes(const GetPlatformApplicationAttributesRequest &request);
+    GetSMSAttributesResponse * getSMSAttributes(const GetSMSAttributesRequest &request);
+    GetSubscriptionAttributesResponse * getSubscriptionAttributes(const GetSubscriptionAttributesRequest &request);
+    GetTopicAttributesResponse * getTopicAttributes(const GetTopicAttributesRequest &request);
+    ListEndpointsByPlatformApplicationResponse * listEndpointsByPlatformApplication(const ListEndpointsByPlatformApplicationRequest &request);
+    ListPhoneNumbersOptedOutResponse * listPhoneNumbersOptedOut(const ListPhoneNumbersOptedOutRequest &request);
+    ListPlatformApplicationsResponse * listPlatformApplications(const ListPlatformApplicationsRequest &request);
+    ListSubscriptionsResponse * listSubscriptions(const ListSubscriptionsRequest &request);
+    ListSubscriptionsByTopicResponse * listSubscriptionsByTopic(const ListSubscriptionsByTopicRequest &request);
+    ListTopicsResponse * listTopics(const ListTopicsRequest &request);
+    OptInPhoneNumberResponse * optInPhoneNumber(const OptInPhoneNumberRequest &request);
+    PublishResponse * publish(const PublishRequest &request);
+    RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
+    SetEndpointAttributesResponse * setEndpointAttributes(const SetEndpointAttributesRequest &request);
+    SetPlatformApplicationAttributesResponse * setPlatformApplicationAttributes(const SetPlatformApplicationAttributesRequest &request);
+    SetSMSAttributesResponse * setSMSAttributes(const SetSMSAttributesRequest &request);
+    SetSubscriptionAttributesResponse * setSubscriptionAttributes(const SetSubscriptionAttributesRequest &request);
+    SetTopicAttributesResponse * setTopicAttributes(const SetTopicAttributesRequest &request);
+    SubscribeResponse * subscribe(const SubscribeRequest &request);
+    UnsubscribeResponse * unsubscribe(const UnsubscribeRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SnsClient)
@@ -83,6 +86,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SNS
+} // namespace AWS
 
 #endif

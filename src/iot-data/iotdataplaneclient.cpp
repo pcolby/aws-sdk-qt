@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace IoTDataPlane {
 
 /**
  * @class  IoTDataPlaneClient
@@ -112,4 +113,5 @@ IoTDataPlaneClientPrivate::IoTDataPlaneClientPrivate(IoTDataPlaneClient * const 
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace IoTDataPlane
+} // namespace AWS

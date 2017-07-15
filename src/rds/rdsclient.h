@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace RDS {
+
 class RdsClientPrivate;
 
 class QTAWS_EXPORT RdsClient : public AwsAbstractClient {
@@ -46,90 +49,90 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    RdsAddSourceIdentifierToSubscriptionResponse * addSourceIdentifierToSubscription(const RdsAddSourceIdentifierToSubscriptionRequest &request);
-    RdsAddTagsToResourceResponse * addTagsToResource(const RdsAddTagsToResourceRequest &request);
-    RdsApplyPendingMaintenanceActionResponse * applyPendingMaintenanceAction(const RdsApplyPendingMaintenanceActionRequest &request);
-    RdsAuthorizeDBSecurityGroupIngressResponse * authorizeDBSecurityGroupIngress(const RdsAuthorizeDBSecurityGroupIngressRequest &request);
-    RdsCopyDBClusterParameterGroupResponse * copyDBClusterParameterGroup(const RdsCopyDBClusterParameterGroupRequest &request);
-    RdsCopyDBClusterSnapshotResponse * copyDBClusterSnapshot(const RdsCopyDBClusterSnapshotRequest &request);
-    RdsCopyDBParameterGroupResponse * copyDBParameterGroup(const RdsCopyDBParameterGroupRequest &request);
-    RdsCopyDBSnapshotResponse * copyDBSnapshot(const RdsCopyDBSnapshotRequest &request);
-    RdsCopyOptionGroupResponse * copyOptionGroup(const RdsCopyOptionGroupRequest &request);
-    RdsCreateDBClusterResponse * createDBCluster(const RdsCreateDBClusterRequest &request);
-    RdsCreateDBClusterParameterGroupResponse * createDBClusterParameterGroup(const RdsCreateDBClusterParameterGroupRequest &request);
-    RdsCreateDBClusterSnapshotResponse * createDBClusterSnapshot(const RdsCreateDBClusterSnapshotRequest &request);
-    RdsCreateDBInstanceResponse * createDBInstance(const RdsCreateDBInstanceRequest &request);
-    RdsCreateDBInstanceReadReplicaResponse * createDBInstanceReadReplica(const RdsCreateDBInstanceReadReplicaRequest &request);
-    RdsCreateDBParameterGroupResponse * createDBParameterGroup(const RdsCreateDBParameterGroupRequest &request);
-    RdsCreateDBSecurityGroupResponse * createDBSecurityGroup(const RdsCreateDBSecurityGroupRequest &request);
-    RdsCreateDBSnapshotResponse * createDBSnapshot(const RdsCreateDBSnapshotRequest &request);
-    RdsCreateDBSubnetGroupResponse * createDBSubnetGroup(const RdsCreateDBSubnetGroupRequest &request);
-    RdsCreateEventSubscriptionResponse * createEventSubscription(const RdsCreateEventSubscriptionRequest &request);
-    RdsCreateOptionGroupResponse * createOptionGroup(const RdsCreateOptionGroupRequest &request);
-    RdsDeleteDBClusterResponse * deleteDBCluster(const RdsDeleteDBClusterRequest &request);
-    RdsDeleteDBClusterParameterGroupResponse * deleteDBClusterParameterGroup(const RdsDeleteDBClusterParameterGroupRequest &request);
-    RdsDeleteDBClusterSnapshotResponse * deleteDBClusterSnapshot(const RdsDeleteDBClusterSnapshotRequest &request);
-    RdsDeleteDBInstanceResponse * deleteDBInstance(const RdsDeleteDBInstanceRequest &request);
-    RdsDeleteDBParameterGroupResponse * deleteDBParameterGroup(const RdsDeleteDBParameterGroupRequest &request);
-    RdsDeleteDBSecurityGroupResponse * deleteDBSecurityGroup(const RdsDeleteDBSecurityGroupRequest &request);
-    RdsDeleteDBSnapshotResponse * deleteDBSnapshot(const RdsDeleteDBSnapshotRequest &request);
-    RdsDeleteDBSubnetGroupResponse * deleteDBSubnetGroup(const RdsDeleteDBSubnetGroupRequest &request);
-    RdsDeleteEventSubscriptionResponse * deleteEventSubscription(const RdsDeleteEventSubscriptionRequest &request);
-    RdsDeleteOptionGroupResponse * deleteOptionGroup(const RdsDeleteOptionGroupRequest &request);
-    RdsDescribeAccountAttributesResponse * describeAccountAttributes(const RdsDescribeAccountAttributesRequest &request);
-    RdsDescribeCertificatesResponse * describeCertificates(const RdsDescribeCertificatesRequest &request);
-    RdsDescribeDBClusterParameterGroupsResponse * describeDBClusterParameterGroups(const RdsDescribeDBClusterParameterGroupsRequest &request);
-    RdsDescribeDBClusterParametersResponse * describeDBClusterParameters(const RdsDescribeDBClusterParametersRequest &request);
-    RdsDescribeDBClusterSnapshotAttributesResponse * describeDBClusterSnapshotAttributes(const RdsDescribeDBClusterSnapshotAttributesRequest &request);
-    RdsDescribeDBClusterSnapshotsResponse * describeDBClusterSnapshots(const RdsDescribeDBClusterSnapshotsRequest &request);
-    RdsDescribeDBClustersResponse * describeDBClusters(const RdsDescribeDBClustersRequest &request);
-    RdsDescribeDBEngineVersionsResponse * describeDBEngineVersions(const RdsDescribeDBEngineVersionsRequest &request);
-    RdsDescribeDBInstancesResponse * describeDBInstances(const RdsDescribeDBInstancesRequest &request);
-    RdsDescribeDBLogFilesResponse * describeDBLogFiles(const RdsDescribeDBLogFilesRequest &request);
-    RdsDescribeDBParameterGroupsResponse * describeDBParameterGroups(const RdsDescribeDBParameterGroupsRequest &request);
-    RdsDescribeDBParametersResponse * describeDBParameters(const RdsDescribeDBParametersRequest &request);
-    RdsDescribeDBSecurityGroupsResponse * describeDBSecurityGroups(const RdsDescribeDBSecurityGroupsRequest &request);
-    RdsDescribeDBSnapshotAttributesResponse * describeDBSnapshotAttributes(const RdsDescribeDBSnapshotAttributesRequest &request);
-    RdsDescribeDBSnapshotsResponse * describeDBSnapshots(const RdsDescribeDBSnapshotsRequest &request);
-    RdsDescribeDBSubnetGroupsResponse * describeDBSubnetGroups(const RdsDescribeDBSubnetGroupsRequest &request);
-    RdsDescribeEngineDefaultClusterParametersResponse * describeEngineDefaultClusterParameters(const RdsDescribeEngineDefaultClusterParametersRequest &request);
-    RdsDescribeEngineDefaultParametersResponse * describeEngineDefaultParameters(const RdsDescribeEngineDefaultParametersRequest &request);
-    RdsDescribeEventCategoriesResponse * describeEventCategories(const RdsDescribeEventCategoriesRequest &request);
-    RdsDescribeEventSubscriptionsResponse * describeEventSubscriptions(const RdsDescribeEventSubscriptionsRequest &request);
-    RdsDescribeEventsResponse * describeEvents(const RdsDescribeEventsRequest &request);
-    RdsDescribeOptionGroupOptionsResponse * describeOptionGroupOptions(const RdsDescribeOptionGroupOptionsRequest &request);
-    RdsDescribeOptionGroupsResponse * describeOptionGroups(const RdsDescribeOptionGroupsRequest &request);
-    RdsDescribeOrderableDBInstanceOptionsResponse * describeOrderableDBInstanceOptions(const RdsDescribeOrderableDBInstanceOptionsRequest &request);
-    RdsDescribePendingMaintenanceActionsResponse * describePendingMaintenanceActions(const RdsDescribePendingMaintenanceActionsRequest &request);
-    RdsDescribeReservedDBInstancesResponse * describeReservedDBInstances(const RdsDescribeReservedDBInstancesRequest &request);
-    RdsDescribeReservedDBInstancesOfferingsResponse * describeReservedDBInstancesOfferings(const RdsDescribeReservedDBInstancesOfferingsRequest &request);
-    RdsDescribeSourceRegionsResponse * describeSourceRegions(const RdsDescribeSourceRegionsRequest &request);
-    RdsDownloadDBLogFilePortionResponse * downloadDBLogFilePortion(const RdsDownloadDBLogFilePortionRequest &request);
-    RdsFailoverDBClusterResponse * failoverDBCluster(const RdsFailoverDBClusterRequest &request);
-    RdsListTagsForResourceResponse * listTagsForResource(const RdsListTagsForResourceRequest &request);
-    RdsModifyDBClusterResponse * modifyDBCluster(const RdsModifyDBClusterRequest &request);
-    RdsModifyDBClusterParameterGroupResponse * modifyDBClusterParameterGroup(const RdsModifyDBClusterParameterGroupRequest &request);
-    RdsModifyDBClusterSnapshotAttributeResponse * modifyDBClusterSnapshotAttribute(const RdsModifyDBClusterSnapshotAttributeRequest &request);
-    RdsModifyDBInstanceResponse * modifyDBInstance(const RdsModifyDBInstanceRequest &request);
-    RdsModifyDBParameterGroupResponse * modifyDBParameterGroup(const RdsModifyDBParameterGroupRequest &request);
-    RdsModifyDBSnapshotAttributeResponse * modifyDBSnapshotAttribute(const RdsModifyDBSnapshotAttributeRequest &request);
-    RdsModifyDBSubnetGroupResponse * modifyDBSubnetGroup(const RdsModifyDBSubnetGroupRequest &request);
-    RdsModifyEventSubscriptionResponse * modifyEventSubscription(const RdsModifyEventSubscriptionRequest &request);
-    RdsModifyOptionGroupResponse * modifyOptionGroup(const RdsModifyOptionGroupRequest &request);
-    RdsPromoteReadReplicaResponse * promoteReadReplica(const RdsPromoteReadReplicaRequest &request);
-    RdsPromoteReadReplicaDBClusterResponse * promoteReadReplicaDBCluster(const RdsPromoteReadReplicaDBClusterRequest &request);
-    RdsPurchaseReservedDBInstancesOfferingResponse * purchaseReservedDBInstancesOffering(const RdsPurchaseReservedDBInstancesOfferingRequest &request);
-    RdsRebootDBInstanceResponse * rebootDBInstance(const RdsRebootDBInstanceRequest &request);
-    RdsRemoveSourceIdentifierFromSubscriptionResponse * removeSourceIdentifierFromSubscription(const RdsRemoveSourceIdentifierFromSubscriptionRequest &request);
-    RdsRemoveTagsFromResourceResponse * removeTagsFromResource(const RdsRemoveTagsFromResourceRequest &request);
-    RdsResetDBClusterParameterGroupResponse * resetDBClusterParameterGroup(const RdsResetDBClusterParameterGroupRequest &request);
-    RdsResetDBParameterGroupResponse * resetDBParameterGroup(const RdsResetDBParameterGroupRequest &request);
-    RdsRestoreDBClusterFromS3Response * restoreDBClusterFromS3(const RdsRestoreDBClusterFromS3Request &request);
-    RdsRestoreDBClusterFromSnapshotResponse * restoreDBClusterFromSnapshot(const RdsRestoreDBClusterFromSnapshotRequest &request);
-    RdsRestoreDBClusterToPointInTimeResponse * restoreDBClusterToPointInTime(const RdsRestoreDBClusterToPointInTimeRequest &request);
-    RdsRestoreDBInstanceFromDBSnapshotResponse * restoreDBInstanceFromDBSnapshot(const RdsRestoreDBInstanceFromDBSnapshotRequest &request);
-    RdsRestoreDBInstanceToPointInTimeResponse * restoreDBInstanceToPointInTime(const RdsRestoreDBInstanceToPointInTimeRequest &request);
-    RdsRevokeDBSecurityGroupIngressResponse * revokeDBSecurityGroupIngress(const RdsRevokeDBSecurityGroupIngressRequest &request);
+    AddSourceIdentifierToSubscriptionResponse * addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    ApplyPendingMaintenanceActionResponse * applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request);
+    AuthorizeDBSecurityGroupIngressResponse * authorizeDBSecurityGroupIngress(const AuthorizeDBSecurityGroupIngressRequest &request);
+    CopyDBClusterParameterGroupResponse * copyDBClusterParameterGroup(const CopyDBClusterParameterGroupRequest &request);
+    CopyDBClusterSnapshotResponse * copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request);
+    CopyDBParameterGroupResponse * copyDBParameterGroup(const CopyDBParameterGroupRequest &request);
+    CopyDBSnapshotResponse * copyDBSnapshot(const CopyDBSnapshotRequest &request);
+    CopyOptionGroupResponse * copyOptionGroup(const CopyOptionGroupRequest &request);
+    CreateDBClusterResponse * createDBCluster(const CreateDBClusterRequest &request);
+    CreateDBClusterParameterGroupResponse * createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request);
+    CreateDBClusterSnapshotResponse * createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request);
+    CreateDBInstanceResponse * createDBInstance(const CreateDBInstanceRequest &request);
+    CreateDBInstanceReadReplicaResponse * createDBInstanceReadReplica(const CreateDBInstanceReadReplicaRequest &request);
+    CreateDBParameterGroupResponse * createDBParameterGroup(const CreateDBParameterGroupRequest &request);
+    CreateDBSecurityGroupResponse * createDBSecurityGroup(const CreateDBSecurityGroupRequest &request);
+    CreateDBSnapshotResponse * createDBSnapshot(const CreateDBSnapshotRequest &request);
+    CreateDBSubnetGroupResponse * createDBSubnetGroup(const CreateDBSubnetGroupRequest &request);
+    CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
+    CreateOptionGroupResponse * createOptionGroup(const CreateOptionGroupRequest &request);
+    DeleteDBClusterResponse * deleteDBCluster(const DeleteDBClusterRequest &request);
+    DeleteDBClusterParameterGroupResponse * deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request);
+    DeleteDBClusterSnapshotResponse * deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request);
+    DeleteDBInstanceResponse * deleteDBInstance(const DeleteDBInstanceRequest &request);
+    DeleteDBParameterGroupResponse * deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request);
+    DeleteDBSecurityGroupResponse * deleteDBSecurityGroup(const DeleteDBSecurityGroupRequest &request);
+    DeleteDBSnapshotResponse * deleteDBSnapshot(const DeleteDBSnapshotRequest &request);
+    DeleteDBSubnetGroupResponse * deleteDBSubnetGroup(const DeleteDBSubnetGroupRequest &request);
+    DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
+    DeleteOptionGroupResponse * deleteOptionGroup(const DeleteOptionGroupRequest &request);
+    DescribeAccountAttributesResponse * describeAccountAttributes(const DescribeAccountAttributesRequest &request);
+    DescribeCertificatesResponse * describeCertificates(const DescribeCertificatesRequest &request);
+    DescribeDBClusterParameterGroupsResponse * describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request);
+    DescribeDBClusterParametersResponse * describeDBClusterParameters(const DescribeDBClusterParametersRequest &request);
+    DescribeDBClusterSnapshotAttributesResponse * describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request);
+    DescribeDBClusterSnapshotsResponse * describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request);
+    DescribeDBClustersResponse * describeDBClusters(const DescribeDBClustersRequest &request);
+    DescribeDBEngineVersionsResponse * describeDBEngineVersions(const DescribeDBEngineVersionsRequest &request);
+    DescribeDBInstancesResponse * describeDBInstances(const DescribeDBInstancesRequest &request);
+    DescribeDBLogFilesResponse * describeDBLogFiles(const DescribeDBLogFilesRequest &request);
+    DescribeDBParameterGroupsResponse * describeDBParameterGroups(const DescribeDBParameterGroupsRequest &request);
+    DescribeDBParametersResponse * describeDBParameters(const DescribeDBParametersRequest &request);
+    DescribeDBSecurityGroupsResponse * describeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request);
+    DescribeDBSnapshotAttributesResponse * describeDBSnapshotAttributes(const DescribeDBSnapshotAttributesRequest &request);
+    DescribeDBSnapshotsResponse * describeDBSnapshots(const DescribeDBSnapshotsRequest &request);
+    DescribeDBSubnetGroupsResponse * describeDBSubnetGroups(const DescribeDBSubnetGroupsRequest &request);
+    DescribeEngineDefaultClusterParametersResponse * describeEngineDefaultClusterParameters(const DescribeEngineDefaultClusterParametersRequest &request);
+    DescribeEngineDefaultParametersResponse * describeEngineDefaultParameters(const DescribeEngineDefaultParametersRequest &request);
+    DescribeEventCategoriesResponse * describeEventCategories(const DescribeEventCategoriesRequest &request);
+    DescribeEventSubscriptionsResponse * describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request);
+    DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
+    DescribeOptionGroupOptionsResponse * describeOptionGroupOptions(const DescribeOptionGroupOptionsRequest &request);
+    DescribeOptionGroupsResponse * describeOptionGroups(const DescribeOptionGroupsRequest &request);
+    DescribeOrderableDBInstanceOptionsResponse * describeOrderableDBInstanceOptions(const DescribeOrderableDBInstanceOptionsRequest &request);
+    DescribePendingMaintenanceActionsResponse * describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request);
+    DescribeReservedDBInstancesResponse * describeReservedDBInstances(const DescribeReservedDBInstancesRequest &request);
+    DescribeReservedDBInstancesOfferingsResponse * describeReservedDBInstancesOfferings(const DescribeReservedDBInstancesOfferingsRequest &request);
+    DescribeSourceRegionsResponse * describeSourceRegions(const DescribeSourceRegionsRequest &request);
+    DownloadDBLogFilePortionResponse * downloadDBLogFilePortion(const DownloadDBLogFilePortionRequest &request);
+    FailoverDBClusterResponse * failoverDBCluster(const FailoverDBClusterRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ModifyDBClusterResponse * modifyDBCluster(const ModifyDBClusterRequest &request);
+    ModifyDBClusterParameterGroupResponse * modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request);
+    ModifyDBClusterSnapshotAttributeResponse * modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request);
+    ModifyDBInstanceResponse * modifyDBInstance(const ModifyDBInstanceRequest &request);
+    ModifyDBParameterGroupResponse * modifyDBParameterGroup(const ModifyDBParameterGroupRequest &request);
+    ModifyDBSnapshotAttributeResponse * modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request);
+    ModifyDBSubnetGroupResponse * modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request);
+    ModifyEventSubscriptionResponse * modifyEventSubscription(const ModifyEventSubscriptionRequest &request);
+    ModifyOptionGroupResponse * modifyOptionGroup(const ModifyOptionGroupRequest &request);
+    PromoteReadReplicaResponse * promoteReadReplica(const PromoteReadReplicaRequest &request);
+    PromoteReadReplicaDBClusterResponse * promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request);
+    PurchaseReservedDBInstancesOfferingResponse * purchaseReservedDBInstancesOffering(const PurchaseReservedDBInstancesOfferingRequest &request);
+    RebootDBInstanceResponse * rebootDBInstance(const RebootDBInstanceRequest &request);
+    RemoveSourceIdentifierFromSubscriptionResponse * removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    ResetDBClusterParameterGroupResponse * resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request);
+    ResetDBParameterGroupResponse * resetDBParameterGroup(const ResetDBParameterGroupRequest &request);
+    RestoreDBClusterFromS3Response * restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request);
+    RestoreDBClusterFromSnapshotResponse * restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request);
+    RestoreDBClusterToPointInTimeResponse * restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request);
+    RestoreDBInstanceFromDBSnapshotResponse * restoreDBInstanceFromDBSnapshot(const RestoreDBInstanceFromDBSnapshotRequest &request);
+    RestoreDBInstanceToPointInTimeResponse * restoreDBInstanceToPointInTime(const RestoreDBInstanceToPointInTimeRequest &request);
+    RevokeDBSecurityGroupIngressResponse * revokeDBSecurityGroupIngress(const RevokeDBSecurityGroupIngressRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RdsClient)
@@ -137,6 +140,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace RDS
+} // namespace AWS
 
 #endif

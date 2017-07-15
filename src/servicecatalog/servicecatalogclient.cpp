@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ServiceCatalog {
 
 /**
  * @class  ServiceCatalogClient
@@ -126,4 +127,5 @@ ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * 
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ServiceCatalog
+} // namespace AWS

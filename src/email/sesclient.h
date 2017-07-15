@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SES {
+
 class SesClientPrivate;
 
 class QTAWS_EXPORT SesClient : public AwsAbstractClient {
@@ -46,48 +49,48 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SesCloneReceiptRuleSetResponse * cloneReceiptRuleSet(const SesCloneReceiptRuleSetRequest &request);
-    SesCreateReceiptFilterResponse * createReceiptFilter(const SesCreateReceiptFilterRequest &request);
-    SesCreateReceiptRuleResponse * createReceiptRule(const SesCreateReceiptRuleRequest &request);
-    SesCreateReceiptRuleSetResponse * createReceiptRuleSet(const SesCreateReceiptRuleSetRequest &request);
-    SesDeleteIdentityResponse * deleteIdentity(const SesDeleteIdentityRequest &request);
-    SesDeleteIdentityPolicyResponse * deleteIdentityPolicy(const SesDeleteIdentityPolicyRequest &request);
-    SesDeleteReceiptFilterResponse * deleteReceiptFilter(const SesDeleteReceiptFilterRequest &request);
-    SesDeleteReceiptRuleResponse * deleteReceiptRule(const SesDeleteReceiptRuleRequest &request);
-    SesDeleteReceiptRuleSetResponse * deleteReceiptRuleSet(const SesDeleteReceiptRuleSetRequest &request);
-    SesDeleteVerifiedEmailAddressResponse * deleteVerifiedEmailAddress(const SesDeleteVerifiedEmailAddressRequest &request);
-    SesDescribeActiveReceiptRuleSetResponse * describeActiveReceiptRuleSet(const SesDescribeActiveReceiptRuleSetRequest &request);
-    SesDescribeReceiptRuleResponse * describeReceiptRule(const SesDescribeReceiptRuleRequest &request);
-    SesDescribeReceiptRuleSetResponse * describeReceiptRuleSet(const SesDescribeReceiptRuleSetRequest &request);
-    SesGetIdentityDkimAttributesResponse * getIdentityDkimAttributes(const SesGetIdentityDkimAttributesRequest &request);
-    SesGetIdentityMailFromDomainAttributesResponse * getIdentityMailFromDomainAttributes(const SesGetIdentityMailFromDomainAttributesRequest &request);
-    SesGetIdentityNotificationAttributesResponse * getIdentityNotificationAttributes(const SesGetIdentityNotificationAttributesRequest &request);
-    SesGetIdentityPoliciesResponse * getIdentityPolicies(const SesGetIdentityPoliciesRequest &request);
-    SesGetIdentityVerificationAttributesResponse * getIdentityVerificationAttributes(const SesGetIdentityVerificationAttributesRequest &request);
-    SesGetSendQuotaResponse * getSendQuota();
-    SesGetSendStatisticsResponse * getSendStatistics();
-    SesListIdentitiesResponse * listIdentities(const SesListIdentitiesRequest &request);
-    SesListIdentityPoliciesResponse * listIdentityPolicies(const SesListIdentityPoliciesRequest &request);
-    SesListReceiptFiltersResponse * listReceiptFilters(const SesListReceiptFiltersRequest &request);
-    SesListReceiptRuleSetsResponse * listReceiptRuleSets(const SesListReceiptRuleSetsRequest &request);
-    SesListVerifiedEmailAddressesResponse * listVerifiedEmailAddresses();
-    SesPutIdentityPolicyResponse * putIdentityPolicy(const SesPutIdentityPolicyRequest &request);
-    SesReorderReceiptRuleSetResponse * reorderReceiptRuleSet(const SesReorderReceiptRuleSetRequest &request);
-    SesSendBounceResponse * sendBounce(const SesSendBounceRequest &request);
-    SesSendEmailResponse * sendEmail(const SesSendEmailRequest &request);
-    SesSendRawEmailResponse * sendRawEmail(const SesSendRawEmailRequest &request);
-    SesSetActiveReceiptRuleSetResponse * setActiveReceiptRuleSet(const SesSetActiveReceiptRuleSetRequest &request);
-    SesSetIdentityDkimEnabledResponse * setIdentityDkimEnabled(const SesSetIdentityDkimEnabledRequest &request);
-    SesSetIdentityFeedbackForwardingEnabledResponse * setIdentityFeedbackForwardingEnabled(const SesSetIdentityFeedbackForwardingEnabledRequest &request);
-    SesSetIdentityHeadersInNotificationsEnabledResponse * setIdentityHeadersInNotificationsEnabled(const SesSetIdentityHeadersInNotificationsEnabledRequest &request);
-    SesSetIdentityMailFromDomainResponse * setIdentityMailFromDomain(const SesSetIdentityMailFromDomainRequest &request);
-    SesSetIdentityNotificationTopicResponse * setIdentityNotificationTopic(const SesSetIdentityNotificationTopicRequest &request);
-    SesSetReceiptRulePositionResponse * setReceiptRulePosition(const SesSetReceiptRulePositionRequest &request);
-    SesUpdateReceiptRuleResponse * updateReceiptRule(const SesUpdateReceiptRuleRequest &request);
-    SesVerifyDomainDkimResponse * verifyDomainDkim(const SesVerifyDomainDkimRequest &request);
-    SesVerifyDomainIdentityResponse * verifyDomainIdentity(const SesVerifyDomainIdentityRequest &request);
-    SesVerifyEmailAddressResponse * verifyEmailAddress(const SesVerifyEmailAddressRequest &request);
-    SesVerifyEmailIdentityResponse * verifyEmailIdentity(const SesVerifyEmailIdentityRequest &request);
+    CloneReceiptRuleSetResponse * cloneReceiptRuleSet(const CloneReceiptRuleSetRequest &request);
+    CreateReceiptFilterResponse * createReceiptFilter(const CreateReceiptFilterRequest &request);
+    CreateReceiptRuleResponse * createReceiptRule(const CreateReceiptRuleRequest &request);
+    CreateReceiptRuleSetResponse * createReceiptRuleSet(const CreateReceiptRuleSetRequest &request);
+    DeleteIdentityResponse * deleteIdentity(const DeleteIdentityRequest &request);
+    DeleteIdentityPolicyResponse * deleteIdentityPolicy(const DeleteIdentityPolicyRequest &request);
+    DeleteReceiptFilterResponse * deleteReceiptFilter(const DeleteReceiptFilterRequest &request);
+    DeleteReceiptRuleResponse * deleteReceiptRule(const DeleteReceiptRuleRequest &request);
+    DeleteReceiptRuleSetResponse * deleteReceiptRuleSet(const DeleteReceiptRuleSetRequest &request);
+    DeleteVerifiedEmailAddressResponse * deleteVerifiedEmailAddress(const DeleteVerifiedEmailAddressRequest &request);
+    DescribeActiveReceiptRuleSetResponse * describeActiveReceiptRuleSet(const DescribeActiveReceiptRuleSetRequest &request);
+    DescribeReceiptRuleResponse * describeReceiptRule(const DescribeReceiptRuleRequest &request);
+    DescribeReceiptRuleSetResponse * describeReceiptRuleSet(const DescribeReceiptRuleSetRequest &request);
+    GetIdentityDkimAttributesResponse * getIdentityDkimAttributes(const GetIdentityDkimAttributesRequest &request);
+    GetIdentityMailFromDomainAttributesResponse * getIdentityMailFromDomainAttributes(const GetIdentityMailFromDomainAttributesRequest &request);
+    GetIdentityNotificationAttributesResponse * getIdentityNotificationAttributes(const GetIdentityNotificationAttributesRequest &request);
+    GetIdentityPoliciesResponse * getIdentityPolicies(const GetIdentityPoliciesRequest &request);
+    GetIdentityVerificationAttributesResponse * getIdentityVerificationAttributes(const GetIdentityVerificationAttributesRequest &request);
+    GetSendQuotaResponse * getSendQuota();
+    GetSendStatisticsResponse * getSendStatistics();
+    ListIdentitiesResponse * listIdentities(const ListIdentitiesRequest &request);
+    ListIdentityPoliciesResponse * listIdentityPolicies(const ListIdentityPoliciesRequest &request);
+    ListReceiptFiltersResponse * listReceiptFilters(const ListReceiptFiltersRequest &request);
+    ListReceiptRuleSetsResponse * listReceiptRuleSets(const ListReceiptRuleSetsRequest &request);
+    ListVerifiedEmailAddressesResponse * listVerifiedEmailAddresses();
+    PutIdentityPolicyResponse * putIdentityPolicy(const PutIdentityPolicyRequest &request);
+    ReorderReceiptRuleSetResponse * reorderReceiptRuleSet(const ReorderReceiptRuleSetRequest &request);
+    SendBounceResponse * sendBounce(const SendBounceRequest &request);
+    SendEmailResponse * sendEmail(const SendEmailRequest &request);
+    SendRawEmailResponse * sendRawEmail(const SendRawEmailRequest &request);
+    SetActiveReceiptRuleSetResponse * setActiveReceiptRuleSet(const SetActiveReceiptRuleSetRequest &request);
+    SetIdentityDkimEnabledResponse * setIdentityDkimEnabled(const SetIdentityDkimEnabledRequest &request);
+    SetIdentityFeedbackForwardingEnabledResponse * setIdentityFeedbackForwardingEnabled(const SetIdentityFeedbackForwardingEnabledRequest &request);
+    SetIdentityHeadersInNotificationsEnabledResponse * setIdentityHeadersInNotificationsEnabled(const SetIdentityHeadersInNotificationsEnabledRequest &request);
+    SetIdentityMailFromDomainResponse * setIdentityMailFromDomain(const SetIdentityMailFromDomainRequest &request);
+    SetIdentityNotificationTopicResponse * setIdentityNotificationTopic(const SetIdentityNotificationTopicRequest &request);
+    SetReceiptRulePositionResponse * setReceiptRulePosition(const SetReceiptRulePositionRequest &request);
+    UpdateReceiptRuleResponse * updateReceiptRule(const UpdateReceiptRuleRequest &request);
+    VerifyDomainDkimResponse * verifyDomainDkim(const VerifyDomainDkimRequest &request);
+    VerifyDomainIdentityResponse * verifyDomainIdentity(const VerifyDomainIdentityRequest &request);
+    VerifyEmailAddressResponse * verifyEmailAddress(const VerifyEmailAddressRequest &request);
+    VerifyEmailIdentityResponse * verifyEmailIdentity(const VerifyEmailIdentityRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SesClient)
@@ -95,6 +98,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SES
+} // namespace AWS
 
 #endif

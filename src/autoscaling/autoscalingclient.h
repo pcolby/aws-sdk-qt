@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace AutoScaling {
+
 class AutoScalingClientPrivate;
 
 class QTAWS_EXPORT AutoScalingClient : public AwsAbstractClient {
@@ -46,58 +49,58 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    AutoScalingAttachInstancesResponse * attachInstances(const AutoScalingAttachInstancesRequest &request);
-    AutoScalingAttachLoadBalancerTargetGroupsResponse * attachLoadBalancerTargetGroups(const AutoScalingAttachLoadBalancerTargetGroupsRequest &request);
-    AutoScalingAttachLoadBalancersResponse * attachLoadBalancers(const AutoScalingAttachLoadBalancersRequest &request);
-    AutoScalingCompleteLifecycleActionResponse * completeLifecycleAction(const AutoScalingCompleteLifecycleActionRequest &request);
-    AutoScalingCreateAutoScalingGroupResponse * createAutoScalingGroup(const AutoScalingCreateAutoScalingGroupRequest &request);
-    AutoScalingCreateLaunchConfigurationResponse * createLaunchConfiguration(const AutoScalingCreateLaunchConfigurationRequest &request);
-    AutoScalingCreateOrUpdateTagsResponse * createOrUpdateTags(const AutoScalingCreateOrUpdateTagsRequest &request);
-    AutoScalingDeleteAutoScalingGroupResponse * deleteAutoScalingGroup(const AutoScalingDeleteAutoScalingGroupRequest &request);
-    AutoScalingDeleteLaunchConfigurationResponse * deleteLaunchConfiguration(const AutoScalingDeleteLaunchConfigurationRequest &request);
-    AutoScalingDeleteLifecycleHookResponse * deleteLifecycleHook(const AutoScalingDeleteLifecycleHookRequest &request);
-    AutoScalingDeleteNotificationConfigurationResponse * deleteNotificationConfiguration(const AutoScalingDeleteNotificationConfigurationRequest &request);
-    AutoScalingDeletePolicyResponse * deletePolicy(const AutoScalingDeletePolicyRequest &request);
-    AutoScalingDeleteScheduledActionResponse * deleteScheduledAction(const AutoScalingDeleteScheduledActionRequest &request);
-    AutoScalingDeleteTagsResponse * deleteTags(const AutoScalingDeleteTagsRequest &request);
-    AutoScalingDescribeAccountLimitsResponse * describeAccountLimits();
-    AutoScalingDescribeAdjustmentTypesResponse * describeAdjustmentTypes();
-    AutoScalingDescribeAutoScalingGroupsResponse * describeAutoScalingGroups(const AutoScalingDescribeAutoScalingGroupsRequest &request);
-    AutoScalingDescribeAutoScalingInstancesResponse * describeAutoScalingInstances(const AutoScalingDescribeAutoScalingInstancesRequest &request);
-    AutoScalingDescribeAutoScalingNotificationTypesResponse * describeAutoScalingNotificationTypes();
-    AutoScalingDescribeLaunchConfigurationsResponse * describeLaunchConfigurations(const AutoScalingDescribeLaunchConfigurationsRequest &request);
-    AutoScalingDescribeLifecycleHookTypesResponse * describeLifecycleHookTypes();
-    AutoScalingDescribeLifecycleHooksResponse * describeLifecycleHooks(const AutoScalingDescribeLifecycleHooksRequest &request);
-    AutoScalingDescribeLoadBalancerTargetGroupsResponse * describeLoadBalancerTargetGroups(const AutoScalingDescribeLoadBalancerTargetGroupsRequest &request);
-    AutoScalingDescribeLoadBalancersResponse * describeLoadBalancers(const AutoScalingDescribeLoadBalancersRequest &request);
-    AutoScalingDescribeMetricCollectionTypesResponse * describeMetricCollectionTypes();
-    AutoScalingDescribeNotificationConfigurationsResponse * describeNotificationConfigurations(const AutoScalingDescribeNotificationConfigurationsRequest &request);
-    AutoScalingDescribePoliciesResponse * describePolicies(const AutoScalingDescribePoliciesRequest &request);
-    AutoScalingDescribeScalingActivitiesResponse * describeScalingActivities(const AutoScalingDescribeScalingActivitiesRequest &request);
-    AutoScalingDescribeScalingProcessTypesResponse * describeScalingProcessTypes();
-    AutoScalingDescribeScheduledActionsResponse * describeScheduledActions(const AutoScalingDescribeScheduledActionsRequest &request);
-    AutoScalingDescribeTagsResponse * describeTags(const AutoScalingDescribeTagsRequest &request);
-    AutoScalingDescribeTerminationPolicyTypesResponse * describeTerminationPolicyTypes();
-    AutoScalingDetachInstancesResponse * detachInstances(const AutoScalingDetachInstancesRequest &request);
-    AutoScalingDetachLoadBalancerTargetGroupsResponse * detachLoadBalancerTargetGroups(const AutoScalingDetachLoadBalancerTargetGroupsRequest &request);
-    AutoScalingDetachLoadBalancersResponse * detachLoadBalancers(const AutoScalingDetachLoadBalancersRequest &request);
-    AutoScalingDisableMetricsCollectionResponse * disableMetricsCollection(const AutoScalingDisableMetricsCollectionRequest &request);
-    AutoScalingEnableMetricsCollectionResponse * enableMetricsCollection(const AutoScalingEnableMetricsCollectionRequest &request);
-    AutoScalingEnterStandbyResponse * enterStandby(const AutoScalingEnterStandbyRequest &request);
-    AutoScalingExecutePolicyResponse * executePolicy(const AutoScalingExecutePolicyRequest &request);
-    AutoScalingExitStandbyResponse * exitStandby(const AutoScalingExitStandbyRequest &request);
-    AutoScalingPutLifecycleHookResponse * putLifecycleHook(const AutoScalingPutLifecycleHookRequest &request);
-    AutoScalingPutNotificationConfigurationResponse * putNotificationConfiguration(const AutoScalingPutNotificationConfigurationRequest &request);
-    AutoScalingPutScalingPolicyResponse * putScalingPolicy(const AutoScalingPutScalingPolicyRequest &request);
-    AutoScalingPutScheduledUpdateGroupActionResponse * putScheduledUpdateGroupAction(const AutoScalingPutScheduledUpdateGroupActionRequest &request);
-    AutoScalingRecordLifecycleActionHeartbeatResponse * recordLifecycleActionHeartbeat(const AutoScalingRecordLifecycleActionHeartbeatRequest &request);
-    AutoScalingResumeProcessesResponse * resumeProcesses(const AutoScalingResumeProcessesRequest &request);
-    AutoScalingSetDesiredCapacityResponse * setDesiredCapacity(const AutoScalingSetDesiredCapacityRequest &request);
-    AutoScalingSetInstanceHealthResponse * setInstanceHealth(const AutoScalingSetInstanceHealthRequest &request);
-    AutoScalingSetInstanceProtectionResponse * setInstanceProtection(const AutoScalingSetInstanceProtectionRequest &request);
-    AutoScalingSuspendProcessesResponse * suspendProcesses(const AutoScalingSuspendProcessesRequest &request);
-    AutoScalingTerminateInstanceInAutoScalingGroupResponse * terminateInstanceInAutoScalingGroup(const AutoScalingTerminateInstanceInAutoScalingGroupRequest &request);
-    AutoScalingUpdateAutoScalingGroupResponse * updateAutoScalingGroup(const AutoScalingUpdateAutoScalingGroupRequest &request);
+    AttachInstancesResponse * attachInstances(const AttachInstancesRequest &request);
+    AttachLoadBalancerTargetGroupsResponse * attachLoadBalancerTargetGroups(const AttachLoadBalancerTargetGroupsRequest &request);
+    AttachLoadBalancersResponse * attachLoadBalancers(const AttachLoadBalancersRequest &request);
+    CompleteLifecycleActionResponse * completeLifecycleAction(const CompleteLifecycleActionRequest &request);
+    CreateAutoScalingGroupResponse * createAutoScalingGroup(const CreateAutoScalingGroupRequest &request);
+    CreateLaunchConfigurationResponse * createLaunchConfiguration(const CreateLaunchConfigurationRequest &request);
+    CreateOrUpdateTagsResponse * createOrUpdateTags(const CreateOrUpdateTagsRequest &request);
+    DeleteAutoScalingGroupResponse * deleteAutoScalingGroup(const DeleteAutoScalingGroupRequest &request);
+    DeleteLaunchConfigurationResponse * deleteLaunchConfiguration(const DeleteLaunchConfigurationRequest &request);
+    DeleteLifecycleHookResponse * deleteLifecycleHook(const DeleteLifecycleHookRequest &request);
+    DeleteNotificationConfigurationResponse * deleteNotificationConfiguration(const DeleteNotificationConfigurationRequest &request);
+    DeletePolicyResponse * deletePolicy(const DeletePolicyRequest &request);
+    DeleteScheduledActionResponse * deleteScheduledAction(const DeleteScheduledActionRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeAccountLimitsResponse * describeAccountLimits();
+    DescribeAdjustmentTypesResponse * describeAdjustmentTypes();
+    DescribeAutoScalingGroupsResponse * describeAutoScalingGroups(const DescribeAutoScalingGroupsRequest &request);
+    DescribeAutoScalingInstancesResponse * describeAutoScalingInstances(const DescribeAutoScalingInstancesRequest &request);
+    DescribeAutoScalingNotificationTypesResponse * describeAutoScalingNotificationTypes();
+    DescribeLaunchConfigurationsResponse * describeLaunchConfigurations(const DescribeLaunchConfigurationsRequest &request);
+    DescribeLifecycleHookTypesResponse * describeLifecycleHookTypes();
+    DescribeLifecycleHooksResponse * describeLifecycleHooks(const DescribeLifecycleHooksRequest &request);
+    DescribeLoadBalancerTargetGroupsResponse * describeLoadBalancerTargetGroups(const DescribeLoadBalancerTargetGroupsRequest &request);
+    DescribeLoadBalancersResponse * describeLoadBalancers(const DescribeLoadBalancersRequest &request);
+    DescribeMetricCollectionTypesResponse * describeMetricCollectionTypes();
+    DescribeNotificationConfigurationsResponse * describeNotificationConfigurations(const DescribeNotificationConfigurationsRequest &request);
+    DescribePoliciesResponse * describePolicies(const DescribePoliciesRequest &request);
+    DescribeScalingActivitiesResponse * describeScalingActivities(const DescribeScalingActivitiesRequest &request);
+    DescribeScalingProcessTypesResponse * describeScalingProcessTypes();
+    DescribeScheduledActionsResponse * describeScheduledActions(const DescribeScheduledActionsRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DescribeTerminationPolicyTypesResponse * describeTerminationPolicyTypes();
+    DetachInstancesResponse * detachInstances(const DetachInstancesRequest &request);
+    DetachLoadBalancerTargetGroupsResponse * detachLoadBalancerTargetGroups(const DetachLoadBalancerTargetGroupsRequest &request);
+    DetachLoadBalancersResponse * detachLoadBalancers(const DetachLoadBalancersRequest &request);
+    DisableMetricsCollectionResponse * disableMetricsCollection(const DisableMetricsCollectionRequest &request);
+    EnableMetricsCollectionResponse * enableMetricsCollection(const EnableMetricsCollectionRequest &request);
+    EnterStandbyResponse * enterStandby(const EnterStandbyRequest &request);
+    ExecutePolicyResponse * executePolicy(const ExecutePolicyRequest &request);
+    ExitStandbyResponse * exitStandby(const ExitStandbyRequest &request);
+    PutLifecycleHookResponse * putLifecycleHook(const PutLifecycleHookRequest &request);
+    PutNotificationConfigurationResponse * putNotificationConfiguration(const PutNotificationConfigurationRequest &request);
+    PutScalingPolicyResponse * putScalingPolicy(const PutScalingPolicyRequest &request);
+    PutScheduledUpdateGroupActionResponse * putScheduledUpdateGroupAction(const PutScheduledUpdateGroupActionRequest &request);
+    RecordLifecycleActionHeartbeatResponse * recordLifecycleActionHeartbeat(const RecordLifecycleActionHeartbeatRequest &request);
+    ResumeProcessesResponse * resumeProcesses(const ResumeProcessesRequest &request);
+    SetDesiredCapacityResponse * setDesiredCapacity(const SetDesiredCapacityRequest &request);
+    SetInstanceHealthResponse * setInstanceHealth(const SetInstanceHealthRequest &request);
+    SetInstanceProtectionResponse * setInstanceProtection(const SetInstanceProtectionRequest &request);
+    SuspendProcessesResponse * suspendProcesses(const SuspendProcessesRequest &request);
+    TerminateInstanceInAutoScalingGroupResponse * terminateInstanceInAutoScalingGroup(const TerminateInstanceInAutoScalingGroupRequest &request);
+    UpdateAutoScalingGroupResponse * updateAutoScalingGroup(const UpdateAutoScalingGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AutoScalingClient)
@@ -105,6 +108,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace AutoScaling
+} // namespace AWS
 
 #endif

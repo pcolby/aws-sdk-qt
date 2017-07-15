@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace GameLift {
 
 /**
  * @class  GameLiftClient
@@ -132,4 +133,5 @@ GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace GameLift
+} // namespace AWS

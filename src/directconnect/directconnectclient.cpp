@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace DirectConnect {
 
 /**
  * @class  DirectConnectClient
@@ -110,4 +111,5 @@ DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * con
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace DirectConnect
+} // namespace AWS

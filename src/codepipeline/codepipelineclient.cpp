@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CodePipeline {
 
 /**
  * @class  CodePipelineClient
@@ -228,4 +229,5 @@ CodePipelineClientPrivate::CodePipelineClientPrivate(CodePipelineClient * const 
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CodePipeline
+} // namespace AWS

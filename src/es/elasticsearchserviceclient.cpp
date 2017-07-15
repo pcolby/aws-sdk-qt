@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace ElasticsearchService {
 
 /**
  * @class  ElasticsearchServiceClient
@@ -114,4 +115,5 @@ ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(Elasticsear
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticsearchService
+} // namespace AWS

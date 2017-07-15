@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ElasticLoadBalancing {
+
 class ElasticLoadBalancingClientPrivate;
 
 class QTAWS_EXPORT ElasticLoadBalancingClient : public AwsAbstractClient {
@@ -46,34 +49,34 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ElasticLoadBalancingAddTagsResponse * addTags(const ElasticLoadBalancingAddTagsRequest &request);
-    ElasticLoadBalancingApplySecurityGroupsToLoadBalancerResponse * applySecurityGroupsToLoadBalancer(const ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest &request);
-    ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse * attachLoadBalancerToSubnets(const ElasticLoadBalancingAttachLoadBalancerToSubnetsRequest &request);
-    ElasticLoadBalancingConfigureHealthCheckResponse * configureHealthCheck(const ElasticLoadBalancingConfigureHealthCheckRequest &request);
-    ElasticLoadBalancingCreateAppCookieStickinessPolicyResponse * createAppCookieStickinessPolicy(const ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest &request);
-    ElasticLoadBalancingCreateLBCookieStickinessPolicyResponse * createLBCookieStickinessPolicy(const ElasticLoadBalancingCreateLBCookieStickinessPolicyRequest &request);
-    ElasticLoadBalancingCreateLoadBalancerResponse * createLoadBalancer(const ElasticLoadBalancingCreateLoadBalancerRequest &request);
-    ElasticLoadBalancingCreateLoadBalancerListenersResponse * createLoadBalancerListeners(const ElasticLoadBalancingCreateLoadBalancerListenersRequest &request);
-    ElasticLoadBalancingCreateLoadBalancerPolicyResponse * createLoadBalancerPolicy(const ElasticLoadBalancingCreateLoadBalancerPolicyRequest &request);
-    ElasticLoadBalancingDeleteLoadBalancerResponse * deleteLoadBalancer(const ElasticLoadBalancingDeleteLoadBalancerRequest &request);
-    ElasticLoadBalancingDeleteLoadBalancerListenersResponse * deleteLoadBalancerListeners(const ElasticLoadBalancingDeleteLoadBalancerListenersRequest &request);
-    ElasticLoadBalancingDeleteLoadBalancerPolicyResponse * deleteLoadBalancerPolicy(const ElasticLoadBalancingDeleteLoadBalancerPolicyRequest &request);
-    ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse * deregisterInstancesFromLoadBalancer(const ElasticLoadBalancingDeregisterInstancesFromLoadBalancerRequest &request);
-    ElasticLoadBalancingDescribeInstanceHealthResponse * describeInstanceHealth(const ElasticLoadBalancingDescribeInstanceHealthRequest &request);
-    ElasticLoadBalancingDescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const ElasticLoadBalancingDescribeLoadBalancerAttributesRequest &request);
-    ElasticLoadBalancingDescribeLoadBalancerPoliciesResponse * describeLoadBalancerPolicies(const ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest &request);
-    ElasticLoadBalancingDescribeLoadBalancerPolicyTypesResponse * describeLoadBalancerPolicyTypes(const ElasticLoadBalancingDescribeLoadBalancerPolicyTypesRequest &request);
-    ElasticLoadBalancingDescribeLoadBalancersResponse * describeLoadBalancers(const ElasticLoadBalancingDescribeLoadBalancersRequest &request);
-    ElasticLoadBalancingDescribeTagsResponse * describeTags(const ElasticLoadBalancingDescribeTagsRequest &request);
-    ElasticLoadBalancingDetachLoadBalancerFromSubnetsResponse * detachLoadBalancerFromSubnets(const ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest &request);
-    ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerResponse * disableAvailabilityZonesForLoadBalancer(const ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest &request);
-    ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerResponse * enableAvailabilityZonesForLoadBalancer(const ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest &request);
-    ElasticLoadBalancingModifyLoadBalancerAttributesResponse * modifyLoadBalancerAttributes(const ElasticLoadBalancingModifyLoadBalancerAttributesRequest &request);
-    ElasticLoadBalancingRegisterInstancesWithLoadBalancerResponse * registerInstancesWithLoadBalancer(const ElasticLoadBalancingRegisterInstancesWithLoadBalancerRequest &request);
-    ElasticLoadBalancingRemoveTagsResponse * removeTags(const ElasticLoadBalancingRemoveTagsRequest &request);
-    ElasticLoadBalancingSetLoadBalancerListenerSSLCertificateResponse * setLoadBalancerListenerSSLCertificate(const ElasticLoadBalancingSetLoadBalancerListenerSSLCertificateRequest &request);
-    ElasticLoadBalancingSetLoadBalancerPoliciesForBackendServerResponse * setLoadBalancerPoliciesForBackendServer(const ElasticLoadBalancingSetLoadBalancerPoliciesForBackendServerRequest &request);
-    ElasticLoadBalancingSetLoadBalancerPoliciesOfListenerResponse * setLoadBalancerPoliciesOfListener(const ElasticLoadBalancingSetLoadBalancerPoliciesOfListenerRequest &request);
+    AddTagsResponse * addTags(const AddTagsRequest &request);
+    ApplySecurityGroupsToLoadBalancerResponse * applySecurityGroupsToLoadBalancer(const ApplySecurityGroupsToLoadBalancerRequest &request);
+    AttachLoadBalancerToSubnetsResponse * attachLoadBalancerToSubnets(const AttachLoadBalancerToSubnetsRequest &request);
+    ConfigureHealthCheckResponse * configureHealthCheck(const ConfigureHealthCheckRequest &request);
+    CreateAppCookieStickinessPolicyResponse * createAppCookieStickinessPolicy(const CreateAppCookieStickinessPolicyRequest &request);
+    CreateLBCookieStickinessPolicyResponse * createLBCookieStickinessPolicy(const CreateLBCookieStickinessPolicyRequest &request);
+    CreateLoadBalancerResponse * createLoadBalancer(const CreateLoadBalancerRequest &request);
+    CreateLoadBalancerListenersResponse * createLoadBalancerListeners(const CreateLoadBalancerListenersRequest &request);
+    CreateLoadBalancerPolicyResponse * createLoadBalancerPolicy(const CreateLoadBalancerPolicyRequest &request);
+    DeleteLoadBalancerResponse * deleteLoadBalancer(const DeleteLoadBalancerRequest &request);
+    DeleteLoadBalancerListenersResponse * deleteLoadBalancerListeners(const DeleteLoadBalancerListenersRequest &request);
+    DeleteLoadBalancerPolicyResponse * deleteLoadBalancerPolicy(const DeleteLoadBalancerPolicyRequest &request);
+    DeregisterInstancesFromLoadBalancerResponse * deregisterInstancesFromLoadBalancer(const DeregisterInstancesFromLoadBalancerRequest &request);
+    DescribeInstanceHealthResponse * describeInstanceHealth(const DescribeInstanceHealthRequest &request);
+    DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request);
+    DescribeLoadBalancerPoliciesResponse * describeLoadBalancerPolicies(const DescribeLoadBalancerPoliciesRequest &request);
+    DescribeLoadBalancerPolicyTypesResponse * describeLoadBalancerPolicyTypes(const DescribeLoadBalancerPolicyTypesRequest &request);
+    DescribeLoadBalancersResponse * describeLoadBalancers(const DescribeLoadBalancersRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DetachLoadBalancerFromSubnetsResponse * detachLoadBalancerFromSubnets(const DetachLoadBalancerFromSubnetsRequest &request);
+    DisableAvailabilityZonesForLoadBalancerResponse * disableAvailabilityZonesForLoadBalancer(const DisableAvailabilityZonesForLoadBalancerRequest &request);
+    EnableAvailabilityZonesForLoadBalancerResponse * enableAvailabilityZonesForLoadBalancer(const EnableAvailabilityZonesForLoadBalancerRequest &request);
+    ModifyLoadBalancerAttributesResponse * modifyLoadBalancerAttributes(const ModifyLoadBalancerAttributesRequest &request);
+    RegisterInstancesWithLoadBalancerResponse * registerInstancesWithLoadBalancer(const RegisterInstancesWithLoadBalancerRequest &request);
+    RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    SetLoadBalancerListenerSSLCertificateResponse * setLoadBalancerListenerSSLCertificate(const SetLoadBalancerListenerSSLCertificateRequest &request);
+    SetLoadBalancerPoliciesForBackendServerResponse * setLoadBalancerPoliciesForBackendServer(const SetLoadBalancerPoliciesForBackendServerRequest &request);
+    SetLoadBalancerPoliciesOfListenerResponse * setLoadBalancerPoliciesOfListener(const SetLoadBalancerPoliciesOfListenerRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingClient)
@@ -81,6 +84,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ElasticLoadBalancing
+} // namespace AWS
 
 #endif

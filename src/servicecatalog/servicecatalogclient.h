@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ServiceCatalog {
+
 class ServiceCatalogClientPrivate;
 
 class QTAWS_EXPORT ServiceCatalogClient : public AwsAbstractClient {
@@ -46,17 +49,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ServiceCatalogDescribeProductResponse * describeProduct(const ServiceCatalogDescribeProductRequest &request);
-    ServiceCatalogDescribeProductViewResponse * describeProductView(const ServiceCatalogDescribeProductViewRequest &request);
-    ServiceCatalogDescribeProvisioningParametersResponse * describeProvisioningParameters(const ServiceCatalogDescribeProvisioningParametersRequest &request);
-    ServiceCatalogDescribeRecordResponse * describeRecord(const ServiceCatalogDescribeRecordRequest &request);
-    ServiceCatalogListLaunchPathsResponse * listLaunchPaths(const ServiceCatalogListLaunchPathsRequest &request);
-    ServiceCatalogListRecordHistoryResponse * listRecordHistory(const ServiceCatalogListRecordHistoryRequest &request);
-    ServiceCatalogProvisionProductResponse * provisionProduct(const ServiceCatalogProvisionProductRequest &request);
-    ServiceCatalogScanProvisionedProductsResponse * scanProvisionedProducts(const ServiceCatalogScanProvisionedProductsRequest &request);
-    ServiceCatalogSearchProductsResponse * searchProducts(const ServiceCatalogSearchProductsRequest &request);
-    ServiceCatalogTerminateProvisionedProductResponse * terminateProvisionedProduct(const ServiceCatalogTerminateProvisionedProductRequest &request);
-    ServiceCatalogUpdateProvisionedProductResponse * updateProvisionedProduct(const ServiceCatalogUpdateProvisionedProductRequest &request);
+    DescribeProductResponse * describeProduct(const DescribeProductRequest &request);
+    DescribeProductViewResponse * describeProductView(const DescribeProductViewRequest &request);
+    DescribeProvisioningParametersResponse * describeProvisioningParameters(const DescribeProvisioningParametersRequest &request);
+    DescribeRecordResponse * describeRecord(const DescribeRecordRequest &request);
+    ListLaunchPathsResponse * listLaunchPaths(const ListLaunchPathsRequest &request);
+    ListRecordHistoryResponse * listRecordHistory(const ListRecordHistoryRequest &request);
+    ProvisionProductResponse * provisionProduct(const ProvisionProductRequest &request);
+    ScanProvisionedProductsResponse * scanProvisionedProducts(const ScanProvisionedProductsRequest &request);
+    SearchProductsResponse * searchProducts(const SearchProductsRequest &request);
+    TerminateProvisionedProductResponse * terminateProvisionedProduct(const TerminateProvisionedProductRequest &request);
+    UpdateProvisionedProductResponse * updateProvisionedProduct(const UpdateProvisionedProductRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ServiceCatalogClient)
@@ -64,6 +67,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ServiceCatalog
+} // namespace AWS
 
 #endif

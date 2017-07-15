@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace SSM {
+
 class SsmClientPrivate;
 
 class QTAWS_EXPORT SsmClient : public AwsAbstractClient {
@@ -46,32 +49,32 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SsmAddTagsToResourceResponse * addTagsToResource(const SsmAddTagsToResourceRequest &request);
-    SsmCancelCommandResponse * cancelCommand(const SsmCancelCommandRequest &request);
-    SsmCreateActivationResponse * createActivation(const SsmCreateActivationRequest &request);
-    SsmCreateAssociationResponse * createAssociation(const SsmCreateAssociationRequest &request);
-    SsmCreateAssociationBatchResponse * createAssociationBatch(const SsmCreateAssociationBatchRequest &request);
-    SsmCreateDocumentResponse * createDocument(const SsmCreateDocumentRequest &request);
-    SsmDeleteActivationResponse * deleteActivation(const SsmDeleteActivationRequest &request);
-    SsmDeleteAssociationResponse * deleteAssociation(const SsmDeleteAssociationRequest &request);
-    SsmDeleteDocumentResponse * deleteDocument(const SsmDeleteDocumentRequest &request);
-    SsmDeregisterManagedInstanceResponse * deregisterManagedInstance(const SsmDeregisterManagedInstanceRequest &request);
-    SsmDescribeActivationsResponse * describeActivations(const SsmDescribeActivationsRequest &request);
-    SsmDescribeAssociationResponse * describeAssociation(const SsmDescribeAssociationRequest &request);
-    SsmDescribeDocumentResponse * describeDocument(const SsmDescribeDocumentRequest &request);
-    SsmDescribeDocumentPermissionResponse * describeDocumentPermission(const SsmDescribeDocumentPermissionRequest &request);
-    SsmDescribeInstanceInformationResponse * describeInstanceInformation(const SsmDescribeInstanceInformationRequest &request);
-    SsmGetDocumentResponse * getDocument(const SsmGetDocumentRequest &request);
-    SsmListAssociationsResponse * listAssociations(const SsmListAssociationsRequest &request);
-    SsmListCommandInvocationsResponse * listCommandInvocations(const SsmListCommandInvocationsRequest &request);
-    SsmListCommandsResponse * listCommands(const SsmListCommandsRequest &request);
-    SsmListDocumentsResponse * listDocuments(const SsmListDocumentsRequest &request);
-    SsmListTagsForResourceResponse * listTagsForResource(const SsmListTagsForResourceRequest &request);
-    SsmModifyDocumentPermissionResponse * modifyDocumentPermission(const SsmModifyDocumentPermissionRequest &request);
-    SsmRemoveTagsFromResourceResponse * removeTagsFromResource(const SsmRemoveTagsFromResourceRequest &request);
-    SsmSendCommandResponse * sendCommand(const SsmSendCommandRequest &request);
-    SsmUpdateAssociationStatusResponse * updateAssociationStatus(const SsmUpdateAssociationStatusRequest &request);
-    SsmUpdateManagedInstanceRoleResponse * updateManagedInstanceRole(const SsmUpdateManagedInstanceRoleRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    CancelCommandResponse * cancelCommand(const CancelCommandRequest &request);
+    CreateActivationResponse * createActivation(const CreateActivationRequest &request);
+    CreateAssociationResponse * createAssociation(const CreateAssociationRequest &request);
+    CreateAssociationBatchResponse * createAssociationBatch(const CreateAssociationBatchRequest &request);
+    CreateDocumentResponse * createDocument(const CreateDocumentRequest &request);
+    DeleteActivationResponse * deleteActivation(const DeleteActivationRequest &request);
+    DeleteAssociationResponse * deleteAssociation(const DeleteAssociationRequest &request);
+    DeleteDocumentResponse * deleteDocument(const DeleteDocumentRequest &request);
+    DeregisterManagedInstanceResponse * deregisterManagedInstance(const DeregisterManagedInstanceRequest &request);
+    DescribeActivationsResponse * describeActivations(const DescribeActivationsRequest &request);
+    DescribeAssociationResponse * describeAssociation(const DescribeAssociationRequest &request);
+    DescribeDocumentResponse * describeDocument(const DescribeDocumentRequest &request);
+    DescribeDocumentPermissionResponse * describeDocumentPermission(const DescribeDocumentPermissionRequest &request);
+    DescribeInstanceInformationResponse * describeInstanceInformation(const DescribeInstanceInformationRequest &request);
+    GetDocumentResponse * getDocument(const GetDocumentRequest &request);
+    ListAssociationsResponse * listAssociations(const ListAssociationsRequest &request);
+    ListCommandInvocationsResponse * listCommandInvocations(const ListCommandInvocationsRequest &request);
+    ListCommandsResponse * listCommands(const ListCommandsRequest &request);
+    ListDocumentsResponse * listDocuments(const ListDocumentsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ModifyDocumentPermissionResponse * modifyDocumentPermission(const ModifyDocumentPermissionRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    SendCommandResponse * sendCommand(const SendCommandRequest &request);
+    UpdateAssociationStatusResponse * updateAssociationStatus(const UpdateAssociationStatusRequest &request);
+    UpdateManagedInstanceRoleResponse * updateManagedInstanceRole(const UpdateManagedInstanceRoleRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SsmClient)
@@ -79,6 +82,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace SSM
+} // namespace AWS
 
 #endif

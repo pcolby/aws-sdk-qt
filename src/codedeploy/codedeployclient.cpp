@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace CodeDeploy {
 
 /**
  * @class  CodeDeployClient
@@ -154,4 +155,5 @@ CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace CodeDeploy
+} // namespace AWS

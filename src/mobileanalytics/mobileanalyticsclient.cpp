@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace MobileAnalytics {
 
 /**
  * @class  MobileAnalyticsClient
@@ -110,4 +111,5 @@ MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace MobileAnalytics
+} // namespace AWS

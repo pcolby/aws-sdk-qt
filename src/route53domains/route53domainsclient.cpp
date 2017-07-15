@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Route53Domains {
 
 /**
  * @class  Route53DomainsClient
@@ -110,4 +111,5 @@ Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * 
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Route53Domains
+} // namespace AWS

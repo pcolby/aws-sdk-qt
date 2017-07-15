@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace DirectoryService {
+
 class DirectoryServiceClientPrivate;
 
 class QTAWS_EXPORT DirectoryServiceClient : public AwsAbstractClient {
@@ -46,41 +49,41 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    DirectoryServiceAddIpRoutesResponse * addIpRoutes(const DirectoryServiceAddIpRoutesRequest &request);
-    DirectoryServiceAddTagsToResourceResponse * addTagsToResource(const DirectoryServiceAddTagsToResourceRequest &request);
-    DirectoryServiceConnectDirectoryResponse * connectDirectory(const DirectoryServiceConnectDirectoryRequest &request);
-    DirectoryServiceCreateAliasResponse * createAlias(const DirectoryServiceCreateAliasRequest &request);
-    DirectoryServiceCreateComputerResponse * createComputer(const DirectoryServiceCreateComputerRequest &request);
-    DirectoryServiceCreateConditionalForwarderResponse * createConditionalForwarder(const DirectoryServiceCreateConditionalForwarderRequest &request);
-    DirectoryServiceCreateDirectoryResponse * createDirectory(const DirectoryServiceCreateDirectoryRequest &request);
-    DirectoryServiceCreateMicrosoftADResponse * createMicrosoftAD(const DirectoryServiceCreateMicrosoftADRequest &request);
-    DirectoryServiceCreateSnapshotResponse * createSnapshot(const DirectoryServiceCreateSnapshotRequest &request);
-    DirectoryServiceCreateTrustResponse * createTrust(const DirectoryServiceCreateTrustRequest &request);
-    DirectoryServiceDeleteConditionalForwarderResponse * deleteConditionalForwarder(const DirectoryServiceDeleteConditionalForwarderRequest &request);
-    DirectoryServiceDeleteDirectoryResponse * deleteDirectory(const DirectoryServiceDeleteDirectoryRequest &request);
-    DirectoryServiceDeleteSnapshotResponse * deleteSnapshot(const DirectoryServiceDeleteSnapshotRequest &request);
-    DirectoryServiceDeleteTrustResponse * deleteTrust(const DirectoryServiceDeleteTrustRequest &request);
-    DirectoryServiceDeregisterEventTopicResponse * deregisterEventTopic(const DirectoryServiceDeregisterEventTopicRequest &request);
-    DirectoryServiceDescribeConditionalForwardersResponse * describeConditionalForwarders(const DirectoryServiceDescribeConditionalForwardersRequest &request);
-    DirectoryServiceDescribeDirectoriesResponse * describeDirectories(const DirectoryServiceDescribeDirectoriesRequest &request);
-    DirectoryServiceDescribeEventTopicsResponse * describeEventTopics(const DirectoryServiceDescribeEventTopicsRequest &request);
-    DirectoryServiceDescribeSnapshotsResponse * describeSnapshots(const DirectoryServiceDescribeSnapshotsRequest &request);
-    DirectoryServiceDescribeTrustsResponse * describeTrusts(const DirectoryServiceDescribeTrustsRequest &request);
-    DirectoryServiceDisableRadiusResponse * disableRadius(const DirectoryServiceDisableRadiusRequest &request);
-    DirectoryServiceDisableSsoResponse * disableSso(const DirectoryServiceDisableSsoRequest &request);
-    DirectoryServiceEnableRadiusResponse * enableRadius(const DirectoryServiceEnableRadiusRequest &request);
-    DirectoryServiceEnableSsoResponse * enableSso(const DirectoryServiceEnableSsoRequest &request);
-    DirectoryServiceGetDirectoryLimitsResponse * getDirectoryLimits(const DirectoryServiceGetDirectoryLimitsRequest &request);
-    DirectoryServiceGetSnapshotLimitsResponse * getSnapshotLimits(const DirectoryServiceGetSnapshotLimitsRequest &request);
-    DirectoryServiceListIpRoutesResponse * listIpRoutes(const DirectoryServiceListIpRoutesRequest &request);
-    DirectoryServiceListTagsForResourceResponse * listTagsForResource(const DirectoryServiceListTagsForResourceRequest &request);
-    DirectoryServiceRegisterEventTopicResponse * registerEventTopic(const DirectoryServiceRegisterEventTopicRequest &request);
-    DirectoryServiceRemoveIpRoutesResponse * removeIpRoutes(const DirectoryServiceRemoveIpRoutesRequest &request);
-    DirectoryServiceRemoveTagsFromResourceResponse * removeTagsFromResource(const DirectoryServiceRemoveTagsFromResourceRequest &request);
-    DirectoryServiceRestoreFromSnapshotResponse * restoreFromSnapshot(const DirectoryServiceRestoreFromSnapshotRequest &request);
-    DirectoryServiceUpdateConditionalForwarderResponse * updateConditionalForwarder(const DirectoryServiceUpdateConditionalForwarderRequest &request);
-    DirectoryServiceUpdateRadiusResponse * updateRadius(const DirectoryServiceUpdateRadiusRequest &request);
-    DirectoryServiceVerifyTrustResponse * verifyTrust(const DirectoryServiceVerifyTrustRequest &request);
+    AddIpRoutesResponse * addIpRoutes(const AddIpRoutesRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    ConnectDirectoryResponse * connectDirectory(const ConnectDirectoryRequest &request);
+    CreateAliasResponse * createAlias(const CreateAliasRequest &request);
+    CreateComputerResponse * createComputer(const CreateComputerRequest &request);
+    CreateConditionalForwarderResponse * createConditionalForwarder(const CreateConditionalForwarderRequest &request);
+    CreateDirectoryResponse * createDirectory(const CreateDirectoryRequest &request);
+    CreateMicrosoftADResponse * createMicrosoftAD(const CreateMicrosoftADRequest &request);
+    CreateSnapshotResponse * createSnapshot(const CreateSnapshotRequest &request);
+    CreateTrustResponse * createTrust(const CreateTrustRequest &request);
+    DeleteConditionalForwarderResponse * deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request);
+    DeleteDirectoryResponse * deleteDirectory(const DeleteDirectoryRequest &request);
+    DeleteSnapshotResponse * deleteSnapshot(const DeleteSnapshotRequest &request);
+    DeleteTrustResponse * deleteTrust(const DeleteTrustRequest &request);
+    DeregisterEventTopicResponse * deregisterEventTopic(const DeregisterEventTopicRequest &request);
+    DescribeConditionalForwardersResponse * describeConditionalForwarders(const DescribeConditionalForwardersRequest &request);
+    DescribeDirectoriesResponse * describeDirectories(const DescribeDirectoriesRequest &request);
+    DescribeEventTopicsResponse * describeEventTopics(const DescribeEventTopicsRequest &request);
+    DescribeSnapshotsResponse * describeSnapshots(const DescribeSnapshotsRequest &request);
+    DescribeTrustsResponse * describeTrusts(const DescribeTrustsRequest &request);
+    DisableRadiusResponse * disableRadius(const DisableRadiusRequest &request);
+    DisableSsoResponse * disableSso(const DisableSsoRequest &request);
+    EnableRadiusResponse * enableRadius(const EnableRadiusRequest &request);
+    EnableSsoResponse * enableSso(const EnableSsoRequest &request);
+    GetDirectoryLimitsResponse * getDirectoryLimits(const GetDirectoryLimitsRequest &request);
+    GetSnapshotLimitsResponse * getSnapshotLimits(const GetSnapshotLimitsRequest &request);
+    ListIpRoutesResponse * listIpRoutes(const ListIpRoutesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    RegisterEventTopicResponse * registerEventTopic(const RegisterEventTopicRequest &request);
+    RemoveIpRoutesResponse * removeIpRoutes(const RemoveIpRoutesRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    RestoreFromSnapshotResponse * restoreFromSnapshot(const RestoreFromSnapshotRequest &request);
+    UpdateConditionalForwarderResponse * updateConditionalForwarder(const UpdateConditionalForwarderRequest &request);
+    UpdateRadiusResponse * updateRadius(const UpdateRadiusRequest &request);
+    VerifyTrustResponse * verifyTrust(const VerifyTrustRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DirectoryServiceClient)
@@ -88,6 +91,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace DirectoryService
+} // namespace AWS
 
 #endif

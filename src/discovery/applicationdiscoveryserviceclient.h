@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace ApplicationDiscoveryService {
+
 class ApplicationDiscoveryServiceClientPrivate;
 
 class QTAWS_EXPORT ApplicationDiscoveryServiceClient : public AwsAbstractClient {
@@ -46,16 +49,16 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    ApplicationDiscoveryServiceCreateTagsResponse * createTags(const ApplicationDiscoveryServiceCreateTagsRequest &request);
-    ApplicationDiscoveryServiceDeleteTagsResponse * deleteTags(const ApplicationDiscoveryServiceDeleteTagsRequest &request);
-    ApplicationDiscoveryServiceDescribeAgentsResponse * describeAgents(const ApplicationDiscoveryServiceDescribeAgentsRequest &request);
-    ApplicationDiscoveryServiceDescribeConfigurationsResponse * describeConfigurations(const ApplicationDiscoveryServiceDescribeConfigurationsRequest &request);
-    ApplicationDiscoveryServiceDescribeExportConfigurationsResponse * describeExportConfigurations(const ApplicationDiscoveryServiceDescribeExportConfigurationsRequest &request);
-    ApplicationDiscoveryServiceDescribeTagsResponse * describeTags(const ApplicationDiscoveryServiceDescribeTagsRequest &request);
-    ApplicationDiscoveryServiceExportConfigurationsResponse * exportConfigurations();
-    ApplicationDiscoveryServiceListConfigurationsResponse * listConfigurations(const ApplicationDiscoveryServiceListConfigurationsRequest &request);
-    ApplicationDiscoveryServiceStartDataCollectionByAgentIdsResponse * startDataCollectionByAgentIds(const ApplicationDiscoveryServiceStartDataCollectionByAgentIdsRequest &request);
-    ApplicationDiscoveryServiceStopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const ApplicationDiscoveryServiceStopDataCollectionByAgentIdsRequest &request);
+    CreateTagsResponse * createTags(const CreateTagsRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeAgentsResponse * describeAgents(const DescribeAgentsRequest &request);
+    DescribeConfigurationsResponse * describeConfigurations(const DescribeConfigurationsRequest &request);
+    DescribeExportConfigurationsResponse * describeExportConfigurations(const DescribeExportConfigurationsRequest &request);
+    DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    ExportConfigurationsResponse * exportConfigurations();
+    ListConfigurationsResponse * listConfigurations(const ListConfigurationsRequest &request);
+    StartDataCollectionByAgentIdsResponse * startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request);
+    StopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceClient)
@@ -63,6 +66,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
 
 #endif

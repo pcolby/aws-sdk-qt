@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace Lambda {
 
 /**
  * @class  LambdaClient
@@ -114,4 +115,5 @@ LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q)
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace Lambda
+} // namespace AWS

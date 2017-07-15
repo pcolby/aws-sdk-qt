@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace StorageGateway {
+
 class StorageGatewayClientPrivate;
 
 class QTAWS_EXPORT StorageGatewayClient : public AwsAbstractClient {
@@ -46,62 +49,62 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    StorageGatewayActivateGatewayResponse * activateGateway(const StorageGatewayActivateGatewayRequest &request);
-    StorageGatewayAddCacheResponse * addCache(const StorageGatewayAddCacheRequest &request);
-    StorageGatewayAddTagsToResourceResponse * addTagsToResource(const StorageGatewayAddTagsToResourceRequest &request);
-    StorageGatewayAddUploadBufferResponse * addUploadBuffer(const StorageGatewayAddUploadBufferRequest &request);
-    StorageGatewayAddWorkingStorageResponse * addWorkingStorage(const StorageGatewayAddWorkingStorageRequest &request);
-    StorageGatewayCancelArchivalResponse * cancelArchival(const StorageGatewayCancelArchivalRequest &request);
-    StorageGatewayCancelRetrievalResponse * cancelRetrieval(const StorageGatewayCancelRetrievalRequest &request);
-    StorageGatewayCreateCachediSCSIVolumeResponse * createCachediSCSIVolume(const StorageGatewayCreateCachediSCSIVolumeRequest &request);
-    StorageGatewayCreateSnapshotResponse * createSnapshot(const StorageGatewayCreateSnapshotRequest &request);
-    StorageGatewayCreateSnapshotFromVolumeRecoveryPointResponse * createSnapshotFromVolumeRecoveryPoint(const StorageGatewayCreateSnapshotFromVolumeRecoveryPointRequest &request);
-    StorageGatewayCreateStorediSCSIVolumeResponse * createStorediSCSIVolume(const StorageGatewayCreateStorediSCSIVolumeRequest &request);
-    StorageGatewayCreateTapeWithBarcodeResponse * createTapeWithBarcode(const StorageGatewayCreateTapeWithBarcodeRequest &request);
-    StorageGatewayCreateTapesResponse * createTapes(const StorageGatewayCreateTapesRequest &request);
-    StorageGatewayDeleteBandwidthRateLimitResponse * deleteBandwidthRateLimit(const StorageGatewayDeleteBandwidthRateLimitRequest &request);
-    StorageGatewayDeleteChapCredentialsResponse * deleteChapCredentials(const StorageGatewayDeleteChapCredentialsRequest &request);
-    StorageGatewayDeleteGatewayResponse * deleteGateway(const StorageGatewayDeleteGatewayRequest &request);
-    StorageGatewayDeleteSnapshotScheduleResponse * deleteSnapshotSchedule(const StorageGatewayDeleteSnapshotScheduleRequest &request);
-    StorageGatewayDeleteTapeResponse * deleteTape(const StorageGatewayDeleteTapeRequest &request);
-    StorageGatewayDeleteTapeArchiveResponse * deleteTapeArchive(const StorageGatewayDeleteTapeArchiveRequest &request);
-    StorageGatewayDeleteVolumeResponse * deleteVolume(const StorageGatewayDeleteVolumeRequest &request);
-    StorageGatewayDescribeBandwidthRateLimitResponse * describeBandwidthRateLimit(const StorageGatewayDescribeBandwidthRateLimitRequest &request);
-    StorageGatewayDescribeCacheResponse * describeCache(const StorageGatewayDescribeCacheRequest &request);
-    StorageGatewayDescribeCachediSCSIVolumesResponse * describeCachediSCSIVolumes(const StorageGatewayDescribeCachediSCSIVolumesRequest &request);
-    StorageGatewayDescribeChapCredentialsResponse * describeChapCredentials(const StorageGatewayDescribeChapCredentialsRequest &request);
-    StorageGatewayDescribeGatewayInformationResponse * describeGatewayInformation(const StorageGatewayDescribeGatewayInformationRequest &request);
-    StorageGatewayDescribeMaintenanceStartTimeResponse * describeMaintenanceStartTime(const StorageGatewayDescribeMaintenanceStartTimeRequest &request);
-    StorageGatewayDescribeSnapshotScheduleResponse * describeSnapshotSchedule(const StorageGatewayDescribeSnapshotScheduleRequest &request);
-    StorageGatewayDescribeStorediSCSIVolumesResponse * describeStorediSCSIVolumes(const StorageGatewayDescribeStorediSCSIVolumesRequest &request);
-    StorageGatewayDescribeTapeArchivesResponse * describeTapeArchives(const StorageGatewayDescribeTapeArchivesRequest &request);
-    StorageGatewayDescribeTapeRecoveryPointsResponse * describeTapeRecoveryPoints(const StorageGatewayDescribeTapeRecoveryPointsRequest &request);
-    StorageGatewayDescribeTapesResponse * describeTapes(const StorageGatewayDescribeTapesRequest &request);
-    StorageGatewayDescribeUploadBufferResponse * describeUploadBuffer(const StorageGatewayDescribeUploadBufferRequest &request);
-    StorageGatewayDescribeVTLDevicesResponse * describeVTLDevices(const StorageGatewayDescribeVTLDevicesRequest &request);
-    StorageGatewayDescribeWorkingStorageResponse * describeWorkingStorage(const StorageGatewayDescribeWorkingStorageRequest &request);
-    StorageGatewayDisableGatewayResponse * disableGateway(const StorageGatewayDisableGatewayRequest &request);
-    StorageGatewayListGatewaysResponse * listGateways(const StorageGatewayListGatewaysRequest &request);
-    StorageGatewayListLocalDisksResponse * listLocalDisks(const StorageGatewayListLocalDisksRequest &request);
-    StorageGatewayListTagsForResourceResponse * listTagsForResource(const StorageGatewayListTagsForResourceRequest &request);
-    StorageGatewayListTapesResponse * listTapes(const StorageGatewayListTapesRequest &request);
-    StorageGatewayListVolumeInitiatorsResponse * listVolumeInitiators(const StorageGatewayListVolumeInitiatorsRequest &request);
-    StorageGatewayListVolumeRecoveryPointsResponse * listVolumeRecoveryPoints(const StorageGatewayListVolumeRecoveryPointsRequest &request);
-    StorageGatewayListVolumesResponse * listVolumes(const StorageGatewayListVolumesRequest &request);
-    StorageGatewayRemoveTagsFromResourceResponse * removeTagsFromResource(const StorageGatewayRemoveTagsFromResourceRequest &request);
-    StorageGatewayResetCacheResponse * resetCache(const StorageGatewayResetCacheRequest &request);
-    StorageGatewayRetrieveTapeArchiveResponse * retrieveTapeArchive(const StorageGatewayRetrieveTapeArchiveRequest &request);
-    StorageGatewayRetrieveTapeRecoveryPointResponse * retrieveTapeRecoveryPoint(const StorageGatewayRetrieveTapeRecoveryPointRequest &request);
-    StorageGatewaySetLocalConsolePasswordResponse * setLocalConsolePassword(const StorageGatewaySetLocalConsolePasswordRequest &request);
-    StorageGatewayShutdownGatewayResponse * shutdownGateway(const StorageGatewayShutdownGatewayRequest &request);
-    StorageGatewayStartGatewayResponse * startGateway(const StorageGatewayStartGatewayRequest &request);
-    StorageGatewayUpdateBandwidthRateLimitResponse * updateBandwidthRateLimit(const StorageGatewayUpdateBandwidthRateLimitRequest &request);
-    StorageGatewayUpdateChapCredentialsResponse * updateChapCredentials(const StorageGatewayUpdateChapCredentialsRequest &request);
-    StorageGatewayUpdateGatewayInformationResponse * updateGatewayInformation(const StorageGatewayUpdateGatewayInformationRequest &request);
-    StorageGatewayUpdateGatewaySoftwareNowResponse * updateGatewaySoftwareNow(const StorageGatewayUpdateGatewaySoftwareNowRequest &request);
-    StorageGatewayUpdateMaintenanceStartTimeResponse * updateMaintenanceStartTime(const StorageGatewayUpdateMaintenanceStartTimeRequest &request);
-    StorageGatewayUpdateSnapshotScheduleResponse * updateSnapshotSchedule(const StorageGatewayUpdateSnapshotScheduleRequest &request);
-    StorageGatewayUpdateVTLDeviceTypeResponse * updateVTLDeviceType(const StorageGatewayUpdateVTLDeviceTypeRequest &request);
+    ActivateGatewayResponse * activateGateway(const ActivateGatewayRequest &request);
+    AddCacheResponse * addCache(const AddCacheRequest &request);
+    AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    AddUploadBufferResponse * addUploadBuffer(const AddUploadBufferRequest &request);
+    AddWorkingStorageResponse * addWorkingStorage(const AddWorkingStorageRequest &request);
+    CancelArchivalResponse * cancelArchival(const CancelArchivalRequest &request);
+    CancelRetrievalResponse * cancelRetrieval(const CancelRetrievalRequest &request);
+    CreateCachediSCSIVolumeResponse * createCachediSCSIVolume(const CreateCachediSCSIVolumeRequest &request);
+    CreateSnapshotResponse * createSnapshot(const CreateSnapshotRequest &request);
+    CreateSnapshotFromVolumeRecoveryPointResponse * createSnapshotFromVolumeRecoveryPoint(const CreateSnapshotFromVolumeRecoveryPointRequest &request);
+    CreateStorediSCSIVolumeResponse * createStorediSCSIVolume(const CreateStorediSCSIVolumeRequest &request);
+    CreateTapeWithBarcodeResponse * createTapeWithBarcode(const CreateTapeWithBarcodeRequest &request);
+    CreateTapesResponse * createTapes(const CreateTapesRequest &request);
+    DeleteBandwidthRateLimitResponse * deleteBandwidthRateLimit(const DeleteBandwidthRateLimitRequest &request);
+    DeleteChapCredentialsResponse * deleteChapCredentials(const DeleteChapCredentialsRequest &request);
+    DeleteGatewayResponse * deleteGateway(const DeleteGatewayRequest &request);
+    DeleteSnapshotScheduleResponse * deleteSnapshotSchedule(const DeleteSnapshotScheduleRequest &request);
+    DeleteTapeResponse * deleteTape(const DeleteTapeRequest &request);
+    DeleteTapeArchiveResponse * deleteTapeArchive(const DeleteTapeArchiveRequest &request);
+    DeleteVolumeResponse * deleteVolume(const DeleteVolumeRequest &request);
+    DescribeBandwidthRateLimitResponse * describeBandwidthRateLimit(const DescribeBandwidthRateLimitRequest &request);
+    DescribeCacheResponse * describeCache(const DescribeCacheRequest &request);
+    DescribeCachediSCSIVolumesResponse * describeCachediSCSIVolumes(const DescribeCachediSCSIVolumesRequest &request);
+    DescribeChapCredentialsResponse * describeChapCredentials(const DescribeChapCredentialsRequest &request);
+    DescribeGatewayInformationResponse * describeGatewayInformation(const DescribeGatewayInformationRequest &request);
+    DescribeMaintenanceStartTimeResponse * describeMaintenanceStartTime(const DescribeMaintenanceStartTimeRequest &request);
+    DescribeSnapshotScheduleResponse * describeSnapshotSchedule(const DescribeSnapshotScheduleRequest &request);
+    DescribeStorediSCSIVolumesResponse * describeStorediSCSIVolumes(const DescribeStorediSCSIVolumesRequest &request);
+    DescribeTapeArchivesResponse * describeTapeArchives(const DescribeTapeArchivesRequest &request);
+    DescribeTapeRecoveryPointsResponse * describeTapeRecoveryPoints(const DescribeTapeRecoveryPointsRequest &request);
+    DescribeTapesResponse * describeTapes(const DescribeTapesRequest &request);
+    DescribeUploadBufferResponse * describeUploadBuffer(const DescribeUploadBufferRequest &request);
+    DescribeVTLDevicesResponse * describeVTLDevices(const DescribeVTLDevicesRequest &request);
+    DescribeWorkingStorageResponse * describeWorkingStorage(const DescribeWorkingStorageRequest &request);
+    DisableGatewayResponse * disableGateway(const DisableGatewayRequest &request);
+    ListGatewaysResponse * listGateways(const ListGatewaysRequest &request);
+    ListLocalDisksResponse * listLocalDisks(const ListLocalDisksRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListTapesResponse * listTapes(const ListTapesRequest &request);
+    ListVolumeInitiatorsResponse * listVolumeInitiators(const ListVolumeInitiatorsRequest &request);
+    ListVolumeRecoveryPointsResponse * listVolumeRecoveryPoints(const ListVolumeRecoveryPointsRequest &request);
+    ListVolumesResponse * listVolumes(const ListVolumesRequest &request);
+    RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    ResetCacheResponse * resetCache(const ResetCacheRequest &request);
+    RetrieveTapeArchiveResponse * retrieveTapeArchive(const RetrieveTapeArchiveRequest &request);
+    RetrieveTapeRecoveryPointResponse * retrieveTapeRecoveryPoint(const RetrieveTapeRecoveryPointRequest &request);
+    SetLocalConsolePasswordResponse * setLocalConsolePassword(const SetLocalConsolePasswordRequest &request);
+    ShutdownGatewayResponse * shutdownGateway(const ShutdownGatewayRequest &request);
+    StartGatewayResponse * startGateway(const StartGatewayRequest &request);
+    UpdateBandwidthRateLimitResponse * updateBandwidthRateLimit(const UpdateBandwidthRateLimitRequest &request);
+    UpdateChapCredentialsResponse * updateChapCredentials(const UpdateChapCredentialsRequest &request);
+    UpdateGatewayInformationResponse * updateGatewayInformation(const UpdateGatewayInformationRequest &request);
+    UpdateGatewaySoftwareNowResponse * updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request);
+    UpdateMaintenanceStartTimeResponse * updateMaintenanceStartTime(const UpdateMaintenanceStartTimeRequest &request);
+    UpdateSnapshotScheduleResponse * updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request);
+    UpdateVTLDeviceTypeResponse * updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(StorageGatewayClient)
@@ -109,6 +112,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace StorageGateway
+} // namespace AWS
 
 #endif

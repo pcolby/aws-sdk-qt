@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace APIGateway {
+
 class APIGatewayClientPrivate;
 
 class QTAWS_EXPORT APIGatewayClient : public AwsAbstractClient {
@@ -46,95 +49,95 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    APIGatewayCreateApiKeyResponse * createApiKey(const APIGatewayCreateApiKeyRequest &request);
-    APIGatewayCreateAuthorizerResponse * createAuthorizer(const APIGatewayCreateAuthorizerRequest &request);
-    APIGatewayCreateBasePathMappingResponse * createBasePathMapping(const APIGatewayCreateBasePathMappingRequest &request);
-    APIGatewayCreateDeploymentResponse * createDeployment(const APIGatewayCreateDeploymentRequest &request);
-    APIGatewayCreateDomainNameResponse * createDomainName(const APIGatewayCreateDomainNameRequest &request);
-    APIGatewayCreateModelResponse * createModel(const APIGatewayCreateModelRequest &request);
-    APIGatewayCreateResourceResponse * createResource(const APIGatewayCreateResourceRequest &request);
-    APIGatewayCreateRestApiResponse * createRestApi(const APIGatewayCreateRestApiRequest &request);
-    APIGatewayCreateStageResponse * createStage(const APIGatewayCreateStageRequest &request);
-    APIGatewayCreateUsagePlanResponse * createUsagePlan(const APIGatewayCreateUsagePlanRequest &request);
-    APIGatewayCreateUsagePlanKeyResponse * createUsagePlanKey(const APIGatewayCreateUsagePlanKeyRequest &request);
-    APIGatewayDeleteApiKeyResponse * deleteApiKey(const APIGatewayDeleteApiKeyRequest &request);
-    APIGatewayDeleteAuthorizerResponse * deleteAuthorizer(const APIGatewayDeleteAuthorizerRequest &request);
-    APIGatewayDeleteBasePathMappingResponse * deleteBasePathMapping(const APIGatewayDeleteBasePathMappingRequest &request);
-    APIGatewayDeleteClientCertificateResponse * deleteClientCertificate(const APIGatewayDeleteClientCertificateRequest &request);
-    APIGatewayDeleteDeploymentResponse * deleteDeployment(const APIGatewayDeleteDeploymentRequest &request);
-    APIGatewayDeleteDomainNameResponse * deleteDomainName(const APIGatewayDeleteDomainNameRequest &request);
-    APIGatewayDeleteIntegrationResponse * deleteIntegration(const APIGatewayDeleteIntegrationRequest &request);
-    APIGatewayDeleteIntegrationResponseResponse * deleteIntegrationResponse(const APIGatewayDeleteIntegrationResponseRequest &request);
-    APIGatewayDeleteMethodResponse * deleteMethod(const APIGatewayDeleteMethodRequest &request);
-    APIGatewayDeleteMethodResponseResponse * deleteMethodResponse(const APIGatewayDeleteMethodResponseRequest &request);
-    APIGatewayDeleteModelResponse * deleteModel(const APIGatewayDeleteModelRequest &request);
-    APIGatewayDeleteResourceResponse * deleteResource(const APIGatewayDeleteResourceRequest &request);
-    APIGatewayDeleteRestApiResponse * deleteRestApi(const APIGatewayDeleteRestApiRequest &request);
-    APIGatewayDeleteStageResponse * deleteStage(const APIGatewayDeleteStageRequest &request);
-    APIGatewayDeleteUsagePlanResponse * deleteUsagePlan(const APIGatewayDeleteUsagePlanRequest &request);
-    APIGatewayDeleteUsagePlanKeyResponse * deleteUsagePlanKey(const APIGatewayDeleteUsagePlanKeyRequest &request);
-    APIGatewayFlushStageAuthorizersCacheResponse * flushStageAuthorizersCache(const APIGatewayFlushStageAuthorizersCacheRequest &request);
-    APIGatewayFlushStageCacheResponse * flushStageCache(const APIGatewayFlushStageCacheRequest &request);
-    APIGatewayGenerateClientCertificateResponse * generateClientCertificate(const APIGatewayGenerateClientCertificateRequest &request);
-    APIGatewayGetAccountResponse * getAccount(const APIGatewayGetAccountRequest &request);
-    APIGatewayGetApiKeyResponse * getApiKey(const APIGatewayGetApiKeyRequest &request);
-    APIGatewayGetApiKeysResponse * getApiKeys(const APIGatewayGetApiKeysRequest &request);
-    APIGatewayGetAuthorizerResponse * getAuthorizer(const APIGatewayGetAuthorizerRequest &request);
-    APIGatewayGetAuthorizersResponse * getAuthorizers(const APIGatewayGetAuthorizersRequest &request);
-    APIGatewayGetBasePathMappingResponse * getBasePathMapping(const APIGatewayGetBasePathMappingRequest &request);
-    APIGatewayGetBasePathMappingsResponse * getBasePathMappings(const APIGatewayGetBasePathMappingsRequest &request);
-    APIGatewayGetClientCertificateResponse * getClientCertificate(const APIGatewayGetClientCertificateRequest &request);
-    APIGatewayGetClientCertificatesResponse * getClientCertificates(const APIGatewayGetClientCertificatesRequest &request);
-    APIGatewayGetDeploymentResponse * getDeployment(const APIGatewayGetDeploymentRequest &request);
-    APIGatewayGetDeploymentsResponse * getDeployments(const APIGatewayGetDeploymentsRequest &request);
-    APIGatewayGetDomainNameResponse * getDomainName(const APIGatewayGetDomainNameRequest &request);
-    APIGatewayGetDomainNamesResponse * getDomainNames(const APIGatewayGetDomainNamesRequest &request);
-    APIGatewayGetExportResponse * getExport(const APIGatewayGetExportRequest &request);
-    APIGatewayGetIntegrationResponse * getIntegration(const APIGatewayGetIntegrationRequest &request);
-    APIGatewayGetIntegrationResponseResponse * getIntegrationResponse(const APIGatewayGetIntegrationResponseRequest &request);
-    APIGatewayGetMethodResponse * getMethod(const APIGatewayGetMethodRequest &request);
-    APIGatewayGetMethodResponseResponse * getMethodResponse(const APIGatewayGetMethodResponseRequest &request);
-    APIGatewayGetModelResponse * getModel(const APIGatewayGetModelRequest &request);
-    APIGatewayGetModelTemplateResponse * getModelTemplate(const APIGatewayGetModelTemplateRequest &request);
-    APIGatewayGetModelsResponse * getModels(const APIGatewayGetModelsRequest &request);
-    APIGatewayGetResourceResponse * getResource(const APIGatewayGetResourceRequest &request);
-    APIGatewayGetResourcesResponse * getResources(const APIGatewayGetResourcesRequest &request);
-    APIGatewayGetRestApiResponse * getRestApi(const APIGatewayGetRestApiRequest &request);
-    APIGatewayGetRestApisResponse * getRestApis(const APIGatewayGetRestApisRequest &request);
-    APIGatewayGetSdkResponse * getSdk(const APIGatewayGetSdkRequest &request);
-    APIGatewayGetStageResponse * getStage(const APIGatewayGetStageRequest &request);
-    APIGatewayGetStagesResponse * getStages(const APIGatewayGetStagesRequest &request);
-    APIGatewayGetUsageResponse * getUsage(const APIGatewayGetUsageRequest &request);
-    APIGatewayGetUsagePlanResponse * getUsagePlan(const APIGatewayGetUsagePlanRequest &request);
-    APIGatewayGetUsagePlanKeyResponse * getUsagePlanKey(const APIGatewayGetUsagePlanKeyRequest &request);
-    APIGatewayGetUsagePlanKeysResponse * getUsagePlanKeys(const APIGatewayGetUsagePlanKeysRequest &request);
-    APIGatewayGetUsagePlansResponse * getUsagePlans(const APIGatewayGetUsagePlansRequest &request);
-    APIGatewayImportApiKeysResponse * importApiKeys(const APIGatewayImportApiKeysRequest &request);
-    APIGatewayImportRestApiResponse * importRestApi(const APIGatewayImportRestApiRequest &request);
-    APIGatewayPutIntegrationResponse * putIntegration(const APIGatewayPutIntegrationRequest &request);
-    APIGatewayPutIntegrationResponseResponse * putIntegrationResponse(const APIGatewayPutIntegrationResponseRequest &request);
-    APIGatewayPutMethodResponse * putMethod(const APIGatewayPutMethodRequest &request);
-    APIGatewayPutMethodResponseResponse * putMethodResponse(const APIGatewayPutMethodResponseRequest &request);
-    APIGatewayPutRestApiResponse * putRestApi(const APIGatewayPutRestApiRequest &request);
-    APIGatewayTestInvokeAuthorizerResponse * testInvokeAuthorizer(const APIGatewayTestInvokeAuthorizerRequest &request);
-    APIGatewayTestInvokeMethodResponse * testInvokeMethod(const APIGatewayTestInvokeMethodRequest &request);
-    APIGatewayUpdateAccountResponse * updateAccount(const APIGatewayUpdateAccountRequest &request);
-    APIGatewayUpdateApiKeyResponse * updateApiKey(const APIGatewayUpdateApiKeyRequest &request);
-    APIGatewayUpdateAuthorizerResponse * updateAuthorizer(const APIGatewayUpdateAuthorizerRequest &request);
-    APIGatewayUpdateBasePathMappingResponse * updateBasePathMapping(const APIGatewayUpdateBasePathMappingRequest &request);
-    APIGatewayUpdateClientCertificateResponse * updateClientCertificate(const APIGatewayUpdateClientCertificateRequest &request);
-    APIGatewayUpdateDeploymentResponse * updateDeployment(const APIGatewayUpdateDeploymentRequest &request);
-    APIGatewayUpdateDomainNameResponse * updateDomainName(const APIGatewayUpdateDomainNameRequest &request);
-    APIGatewayUpdateIntegrationResponse * updateIntegration(const APIGatewayUpdateIntegrationRequest &request);
-    APIGatewayUpdateIntegrationResponseResponse * updateIntegrationResponse(const APIGatewayUpdateIntegrationResponseRequest &request);
-    APIGatewayUpdateMethodResponse * updateMethod(const APIGatewayUpdateMethodRequest &request);
-    APIGatewayUpdateMethodResponseResponse * updateMethodResponse(const APIGatewayUpdateMethodResponseRequest &request);
-    APIGatewayUpdateModelResponse * updateModel(const APIGatewayUpdateModelRequest &request);
-    APIGatewayUpdateResourceResponse * updateResource(const APIGatewayUpdateResourceRequest &request);
-    APIGatewayUpdateRestApiResponse * updateRestApi(const APIGatewayUpdateRestApiRequest &request);
-    APIGatewayUpdateStageResponse * updateStage(const APIGatewayUpdateStageRequest &request);
-    APIGatewayUpdateUsageResponse * updateUsage(const APIGatewayUpdateUsageRequest &request);
-    APIGatewayUpdateUsagePlanResponse * updateUsagePlan(const APIGatewayUpdateUsagePlanRequest &request);
+    CreateApiKeyResponse * createApiKey(const CreateApiKeyRequest &request);
+    CreateAuthorizerResponse * createAuthorizer(const CreateAuthorizerRequest &request);
+    CreateBasePathMappingResponse * createBasePathMapping(const CreateBasePathMappingRequest &request);
+    CreateDeploymentResponse * createDeployment(const CreateDeploymentRequest &request);
+    CreateDomainNameResponse * createDomainName(const CreateDomainNameRequest &request);
+    CreateModelResponse * createModel(const CreateModelRequest &request);
+    CreateResourceResponse * createResource(const CreateResourceRequest &request);
+    CreateRestApiResponse * createRestApi(const CreateRestApiRequest &request);
+    CreateStageResponse * createStage(const CreateStageRequest &request);
+    CreateUsagePlanResponse * createUsagePlan(const CreateUsagePlanRequest &request);
+    CreateUsagePlanKeyResponse * createUsagePlanKey(const CreateUsagePlanKeyRequest &request);
+    DeleteApiKeyResponse * deleteApiKey(const DeleteApiKeyRequest &request);
+    DeleteAuthorizerResponse * deleteAuthorizer(const DeleteAuthorizerRequest &request);
+    DeleteBasePathMappingResponse * deleteBasePathMapping(const DeleteBasePathMappingRequest &request);
+    DeleteClientCertificateResponse * deleteClientCertificate(const DeleteClientCertificateRequest &request);
+    DeleteDeploymentResponse * deleteDeployment(const DeleteDeploymentRequest &request);
+    DeleteDomainNameResponse * deleteDomainName(const DeleteDomainNameRequest &request);
+    DeleteIntegrationResponse * deleteIntegration(const DeleteIntegrationRequest &request);
+    DeleteIntegrationResponseResponse * deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request);
+    DeleteMethodResponse * deleteMethod(const DeleteMethodRequest &request);
+    DeleteMethodResponseResponse * deleteMethodResponse(const DeleteMethodResponseRequest &request);
+    DeleteModelResponse * deleteModel(const DeleteModelRequest &request);
+    DeleteResourceResponse * deleteResource(const DeleteResourceRequest &request);
+    DeleteRestApiResponse * deleteRestApi(const DeleteRestApiRequest &request);
+    DeleteStageResponse * deleteStage(const DeleteStageRequest &request);
+    DeleteUsagePlanResponse * deleteUsagePlan(const DeleteUsagePlanRequest &request);
+    DeleteUsagePlanKeyResponse * deleteUsagePlanKey(const DeleteUsagePlanKeyRequest &request);
+    FlushStageAuthorizersCacheResponse * flushStageAuthorizersCache(const FlushStageAuthorizersCacheRequest &request);
+    FlushStageCacheResponse * flushStageCache(const FlushStageCacheRequest &request);
+    GenerateClientCertificateResponse * generateClientCertificate(const GenerateClientCertificateRequest &request);
+    GetAccountResponse * getAccount(const GetAccountRequest &request);
+    GetApiKeyResponse * getApiKey(const GetApiKeyRequest &request);
+    GetApiKeysResponse * getApiKeys(const GetApiKeysRequest &request);
+    GetAuthorizerResponse * getAuthorizer(const GetAuthorizerRequest &request);
+    GetAuthorizersResponse * getAuthorizers(const GetAuthorizersRequest &request);
+    GetBasePathMappingResponse * getBasePathMapping(const GetBasePathMappingRequest &request);
+    GetBasePathMappingsResponse * getBasePathMappings(const GetBasePathMappingsRequest &request);
+    GetClientCertificateResponse * getClientCertificate(const GetClientCertificateRequest &request);
+    GetClientCertificatesResponse * getClientCertificates(const GetClientCertificatesRequest &request);
+    GetDeploymentResponse * getDeployment(const GetDeploymentRequest &request);
+    GetDeploymentsResponse * getDeployments(const GetDeploymentsRequest &request);
+    GetDomainNameResponse * getDomainName(const GetDomainNameRequest &request);
+    GetDomainNamesResponse * getDomainNames(const GetDomainNamesRequest &request);
+    GetExportResponse * getExport(const GetExportRequest &request);
+    GetIntegrationResponse * getIntegration(const GetIntegrationRequest &request);
+    GetIntegrationResponseResponse * getIntegrationResponse(const GetIntegrationResponseRequest &request);
+    GetMethodResponse * getMethod(const GetMethodRequest &request);
+    GetMethodResponseResponse * getMethodResponse(const GetMethodResponseRequest &request);
+    GetModelResponse * getModel(const GetModelRequest &request);
+    GetModelTemplateResponse * getModelTemplate(const GetModelTemplateRequest &request);
+    GetModelsResponse * getModels(const GetModelsRequest &request);
+    GetResourceResponse * getResource(const GetResourceRequest &request);
+    GetResourcesResponse * getResources(const GetResourcesRequest &request);
+    GetRestApiResponse * getRestApi(const GetRestApiRequest &request);
+    GetRestApisResponse * getRestApis(const GetRestApisRequest &request);
+    GetSdkResponse * getSdk(const GetSdkRequest &request);
+    GetStageResponse * getStage(const GetStageRequest &request);
+    GetStagesResponse * getStages(const GetStagesRequest &request);
+    GetUsageResponse * getUsage(const GetUsageRequest &request);
+    GetUsagePlanResponse * getUsagePlan(const GetUsagePlanRequest &request);
+    GetUsagePlanKeyResponse * getUsagePlanKey(const GetUsagePlanKeyRequest &request);
+    GetUsagePlanKeysResponse * getUsagePlanKeys(const GetUsagePlanKeysRequest &request);
+    GetUsagePlansResponse * getUsagePlans(const GetUsagePlansRequest &request);
+    ImportApiKeysResponse * importApiKeys(const ImportApiKeysRequest &request);
+    ImportRestApiResponse * importRestApi(const ImportRestApiRequest &request);
+    PutIntegrationResponse * putIntegration(const PutIntegrationRequest &request);
+    PutIntegrationResponseResponse * putIntegrationResponse(const PutIntegrationResponseRequest &request);
+    PutMethodResponse * putMethod(const PutMethodRequest &request);
+    PutMethodResponseResponse * putMethodResponse(const PutMethodResponseRequest &request);
+    PutRestApiResponse * putRestApi(const PutRestApiRequest &request);
+    TestInvokeAuthorizerResponse * testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request);
+    TestInvokeMethodResponse * testInvokeMethod(const TestInvokeMethodRequest &request);
+    UpdateAccountResponse * updateAccount(const UpdateAccountRequest &request);
+    UpdateApiKeyResponse * updateApiKey(const UpdateApiKeyRequest &request);
+    UpdateAuthorizerResponse * updateAuthorizer(const UpdateAuthorizerRequest &request);
+    UpdateBasePathMappingResponse * updateBasePathMapping(const UpdateBasePathMappingRequest &request);
+    UpdateClientCertificateResponse * updateClientCertificate(const UpdateClientCertificateRequest &request);
+    UpdateDeploymentResponse * updateDeployment(const UpdateDeploymentRequest &request);
+    UpdateDomainNameResponse * updateDomainName(const UpdateDomainNameRequest &request);
+    UpdateIntegrationResponse * updateIntegration(const UpdateIntegrationRequest &request);
+    UpdateIntegrationResponseResponse * updateIntegrationResponse(const UpdateIntegrationResponseRequest &request);
+    UpdateMethodResponse * updateMethod(const UpdateMethodRequest &request);
+    UpdateMethodResponseResponse * updateMethodResponse(const UpdateMethodResponseRequest &request);
+    UpdateModelResponse * updateModel(const UpdateModelRequest &request);
+    UpdateResourceResponse * updateResource(const UpdateResourceRequest &request);
+    UpdateRestApiResponse * updateRestApi(const UpdateRestApiRequest &request);
+    UpdateStageResponse * updateStage(const UpdateStageRequest &request);
+    UpdateUsageResponse * updateUsage(const UpdateUsageRequest &request);
+    UpdateUsagePlanResponse * updateUsagePlan(const UpdateUsagePlanRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(APIGatewayClient)
@@ -142,6 +145,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace APIGateway
+} // namespace AWS
 
 #endif

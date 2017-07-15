@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace MarketplaceCommerceAnalytics {
 
 /**
  * @class  MarketplaceCommerceAnalyticsClient
@@ -110,4 +111,5 @@ MarketplaceCommerceAnalyticsClientPrivate::MarketplaceCommerceAnalyticsClientPri
     signature = new AwsSignatureV4();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS

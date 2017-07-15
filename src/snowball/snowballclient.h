@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace Snowball {
+
 class SnowballClientPrivate;
 
 class QTAWS_EXPORT SnowballClient : public AwsAbstractClient {
@@ -46,17 +49,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
-    SnowballCancelJobResponse * cancelJob(const SnowballCancelJobRequest &request);
-    SnowballCreateAddressResponse * createAddress(const SnowballCreateAddressRequest &request);
-    SnowballCreateJobResponse * createJob(const SnowballCreateJobRequest &request);
-    SnowballDescribeAddressResponse * describeAddress(const SnowballDescribeAddressRequest &request);
-    SnowballDescribeAddressesResponse * describeAddresses(const SnowballDescribeAddressesRequest &request);
-    SnowballDescribeJobResponse * describeJob(const SnowballDescribeJobRequest &request);
-    SnowballGetJobManifestResponse * getJobManifest(const SnowballGetJobManifestRequest &request);
-    SnowballGetJobUnlockCodeResponse * getJobUnlockCode(const SnowballGetJobUnlockCodeRequest &request);
-    SnowballGetSnowballUsageResponse * getSnowballUsage(const SnowballGetSnowballUsageRequest &request);
-    SnowballListJobsResponse * listJobs(const SnowballListJobsRequest &request);
-    SnowballUpdateJobResponse * updateJob(const SnowballUpdateJobRequest &request);
+    CancelJobResponse * cancelJob(const CancelJobRequest &request);
+    CreateAddressResponse * createAddress(const CreateAddressRequest &request);
+    CreateJobResponse * createJob(const CreateJobRequest &request);
+    DescribeAddressResponse * describeAddress(const DescribeAddressRequest &request);
+    DescribeAddressesResponse * describeAddresses(const DescribeAddressesRequest &request);
+    DescribeJobResponse * describeJob(const DescribeJobRequest &request);
+    GetJobManifestResponse * getJobManifest(const GetJobManifestRequest &request);
+    GetJobUnlockCodeResponse * getJobUnlockCode(const GetJobUnlockCodeRequest &request);
+    GetSnowballUsageResponse * getSnowballUsage(const GetSnowballUsageRequest &request);
+    ListJobsResponse * listJobs(const ListJobsRequest &request);
+    UpdateJobResponse * updateJob(const UpdateJobRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SnowballClient)
@@ -64,6 +67,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace Snowball
+} // namespace AWS
 
 #endif
