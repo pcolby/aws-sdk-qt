@@ -34,8 +34,8 @@ macx-g++:contains(CONFIG, c++11) {
         QMAKE_CXXFLAGS += -stdlib=libc++
     }
     # This is necessary for at least Qt 5.5 and 5.7 on OSX (with GCC). But not Qt 5.9.
-    equals(QT_MAJOR_VERSION,5):greaterThan(QT_MINOR_VERSION,4):lessThan(QT_MINOR_VERSION,8) {
-        message(Adding '-stdlib=libc++' flag for C++11 with $$QMAKE_CXX and $$QT_VERSION)
-        QMAKE_CXXFLAGS += -stdlib=libc++
-    }
+    #equals(QT_MAJOR_VERSION,5):greaterThan(QT_MINOR_VERSION,4):lessThan(QT_MINOR_VERSION,8) {
+    #    message(Adding '-stdlib=libc++' flag for C++11 with $$QMAKE_CXX and $$QT_VERSION)
+    #    QMAKE_CXXFLAGS += -stdlib=libc++
+    #}
 }
