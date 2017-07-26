@@ -16,25 +16,31 @@ env:
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
   matrix:
-    - QT=5  BREW=5
-    - QT=5  BREW=ex PPA=ubuntu-sdk-team/ppa
-    - QT=51 BREW=ex PPA=beineri/opt-qt511-trusty
-    - QT=52 BREW=52 PPA=beineri/opt-qt521-trusty
-    - QT=53 BREW=ex PPA=beineri/opt-qt532-trusty
-    - QT=54 BREW=ex PPA=beineri/opt-qt542-trusty
-    - QT=55 BREW=55 PPA=beineri/opt-qt551-trusty
-    - QT=56 BREW=5  PPA=beineri/opt-qt561-trusty
-    - QT=57 BREW=ex PPA=beineri/opt-qt57-trusty
+    - QT=5  BREW=
+    - QT=5  BREW=ex   PPA=ubuntu-sdk-team/ppa
+    - QT=51 BREW=ex   PPA=beineri/opt-qt511-trusty
+    - QT=52 BREW=ex   PPA=beineri/opt-qt521-trusty
+    - QT=53 BREW=ex   PPA=beineri/opt-qt532-trusty
+    - QT=54 BREW=ex   PPA=beineri/opt-qt542-trusty
+    - QT=55 BREW=@5.5 PPA=beineri/opt-qt551-trusty
+    - QT=56 BREW=ex   PPA=beineri/opt-qt562-trusty
+    - QT=57 BREW=@5.7 PPA=beineri/opt-qt571-trusty
+    - QT=58 BREW=ex   PPA=beineri/opt-qt58-trusty
+    - QT=59 BREW=@5.9 PPA=beineri/opt-qt59-trusty
+    - QT=59 BREW=ex   PPA=beineri/opt-qt591-trusty
 
 matrix:
+  allow_failures:
+    - { os: osx, env: QT=55 BREW=@5.5 PPA=beineri/opt-qt551-trusty } # https://llvm.org/bugs/show_bug.cgi?id=26396
   exclude:
-    - { os: osx, env: QT=5  BREW=ex PPA=ubuntu-sdk-team/ppa      }
-    - { os: osx, env: QT=51 BREW=ex PPA=beineri/opt-qt511-trusty }
-    - { os: osx, env: QT=53 BREW=ex PPA=beineri/opt-qt532-trusty }
-    - { os: osx, env: QT=54 BREW=ex PPA=beineri/opt-qt542-trusty }
-    - { os: osx, env: QT=57 BREW=ex PPA=beineri/opt-qt57-trusty  }
-    - { os: osx, compiler: gcc, env: QT=5  BREW=5 } # Qt 5.6 no longer supports gcc on OS X.
-    - { os: osx, compiler: gcc, env: QT=56 BREW=5  PPA=beineri/opt-qt561-trusty } # Qt 5.6 no longer supports gcc on OS X.
+    - { os: osx, env: QT=5  BREW=ex   PPA=ubuntu-sdk-team/ppa      }
+    - { os: osx, env: QT=51 BREW=ex   PPA=beineri/opt-qt511-trusty }
+    - { os: osx, env: QT=52 BREW=ex   PPA=beineri/opt-qt521-trusty }
+    - { os: osx, env: QT=53 BREW=ex   PPA=beineri/opt-qt532-trusty }
+    - { os: osx, env: QT=54 BREW=ex   PPA=beineri/opt-qt542-trusty }
+    - { os: osx, env: QT=56 BREW=ex   PPA=beineri/opt-qt562-trusty }
+    - { os: osx, env: QT=58 BREW=ex   PPA=beineri/opt-qt58-trusty  }
+    - { os: osx, env: QT=59 BREW=ex   PPA=beineri/opt-qt591-trusty }
 
 addons:
   coverity_scan:
