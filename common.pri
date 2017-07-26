@@ -23,3 +23,19 @@ CONFIG += warn_on
 # Treat warnings as errors.
 win32-msvc*:QMAKE_CXXFLAGS_WARN_ON += /WX
 else:       QMAKE_CXXFLAGS_WARN_ON += -Werror
+
+# Workaround a couple of known bugs with C++11 support for Qt with gcc on OSX.
+macx-g++:contains(CONFIG, c++11) {
+    equals(QT_MAJOR_VERSION,5):equals(QT_MINOR_VERSION,2) {
+        # https://bugreports.qt.io/browse/QTBUG-28097
+        message(Setting OSX deployment target to 10.7 for for C++11 with $$QMAKE_CXX and $$QT_VERSION)
+        QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
+        message(Adding '-stdlib=libc++' flag for C++11 with $$QMAKE_CXX and $$QT_VERSION)
+        QMAKE_CXXFLAGS += -stdlib=libc++
+    }
+    # This is necessary for at least Qt 5.5 and 5.7 on OSX (with GCC). But not Qt 5.9.
+    equals(QT_MAJOR_VERSION,5):greaterThan(QT_MINOR_VERSION,4):lessThan(QT_MINOR_VERSION,8) {
+        message(Adding '-stdlib=libc++' flag for C++11 with $$QMAKE_CXX and $$QT_VERSION)
+        QMAKE_CXXFLAGS += -stdlib=libc++
+    }
+}
