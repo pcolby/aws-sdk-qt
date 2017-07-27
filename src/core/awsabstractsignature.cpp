@@ -136,7 +136,11 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 {
     qDebug() << "canonicalPath" << "url" << url.toString();
     qDebug() << "canonicalPath" << "url.path" << url.path(QUrl::FullyEncoded);
-    QString path = QDir::cleanPath(QLatin1Char('/') + url.path(QUrl::FullyEncoded));
+    QString path = QDir::cleanPath(url.path(QUrl::FullyEncoded));
+    qDebug() << "canonicalPath" << "path" << path;
+    if (path.isEmpty()) {
+        return QString::fromLatin1("/");
+    }
     qDebug() << "canonicalPath" << "path" << path;
 
     // If the path begins with "//", remove one of the redundant slashes.
