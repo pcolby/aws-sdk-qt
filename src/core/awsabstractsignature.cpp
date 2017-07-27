@@ -150,6 +150,18 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
         path.remove(0, 1); // Remove the first of two forward slashes.
         qDebug() << "canonicalPath" << "path.remove" << path;
     }
+
+    // As of at least Qt 5.9.1 (not sure about 5.9.0), QDir::cleanPath
+    // (incorrectly?) allows trailing '.' characters, presumably in some sort of
+    // attempt to support UNC paths. This is probably a bug in Qt, and not the
+    // same as the one mentioned above (which still appears to be in issue in
+    // Qt 5.9.1 also).
+    #if QT_VERSION == QT_VERSION_CHECK(5, 7, 1)
+    if (path.endsWith(QLatin1String("/."))) {
+        path.chop(1); // Remove the trailing '.' character.
+        qDebug() << "canonicalPath" << "path.chop" << path;
+    }
+    #endif
 #endif
 
     // Restore the trailing '/' if QDir::cleanPath (rightly) removed one.
