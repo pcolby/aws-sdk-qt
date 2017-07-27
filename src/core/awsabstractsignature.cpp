@@ -148,7 +148,7 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 #ifdef Q_OS_WIN
     if (path.startsWith(QLatin1String("//"))) {
         path.remove(0, 1); // Remove the first of two forward slashes.
-        qDebug() << "canonicalPath" << "path.remove" << path
+        qDebug() << "canonicalPath" << "path.remove" << path;
     }
 #endif
 
