@@ -156,7 +156,7 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
     // attempt to support UNC paths. This is probably a bug in Qt, and not the
     // same as the one mentioned above (which still appears to be in issue in
     // Qt 5.9.1 also).
-    #if QT_VERSION == QT_VERSION_CHECK(5, 7, 1)
+    #if QT_VERSION == QT_VERSION_CHECK(5, 9, 1)
     if (path.endsWith(QLatin1String("/."))) {
         path.chop(1); // Remove the trailing '.' character.
         qDebug() << "canonicalPath" << "path.chop" << path;
