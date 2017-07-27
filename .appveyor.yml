@@ -66,8 +66,8 @@ after_build:
 
 test_script:
   # @todo output using Qt's -xunitxml option
-  - if not %CONFIGURATION%==debug %make% check TESTARGS='-silent TestAwsSignatureV3'
-  - if not %CONFIGURATION%==debug %make% check TESTARGS='-silent TestAwsSignatureV4'
+  - if not %CONFIGURATION%==debug %make% check TESTARGS=TestAwsSignatureV3
+  - if not %CONFIGURATION%==debug %make% check TESTARGS=TestAwsSignatureV4
   #- if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 
 # @todo after_test upload results
