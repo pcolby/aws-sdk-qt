@@ -2,37 +2,37 @@ version: '{branch}-{build}'
 
 environment:
   matrix:
-    - QTDIR: C:\Qt\5.3\mingw482_32
-    - QTDIR: C:\Qt\5.3\msvc2013_opengl
-    - QTDIR: C:\Qt\5.3\msvc2013_64_opengl
-    - QTDIR: C:\Qt\5.4\mingw491_32
-    - QTDIR: C:\Qt\5.4\msvc2013_opengl
-    - QTDIR: C:\Qt\5.4\msvc2013_64_opengl
-    - QTDIR: C:\Qt\5.5\mingw492_32
-    - QTDIR: C:\Qt\5.5\msvc2013
-    - QTDIR: C:\Qt\5.5\msvc2013_64
-    - QTDIR: C:\Qt\5.6\mingw49_32
-    - QTDIR: C:\Qt\5.6\msvc2013
-    - QTDIR: C:\Qt\5.6\msvc2013_64
-    - QTDIR: C:\Qt\5.6\msvc2015
-    - QTDIR: C:\Qt\5.6\msvc2015_64
-    - QTDIR: C:\Qt\5.7\mingw53_32
-    - QTDIR: C:\Qt\5.7\msvc2013
-    - QTDIR: C:\Qt\5.7\msvc2013_64
-    - QTDIR: C:\Qt\5.7\msvc2015
-    - QTDIR: C:\Qt\5.7\msvc2015_64
-    - QTDIR: C:\Qt\5.8\mingw53_32
-    - QTDIR: C:\Qt\5.8\msvc2013
-    - QTDIR: C:\Qt\5.8\msvc2013_64
-    - QTDIR: C:\Qt\5.8\msvc2015
-    - QTDIR: C:\Qt\5.8\msvc2015_64
+    #- QTDIR: C:\Qt\5.3\mingw482_32
+    #- QTDIR: C:\Qt\5.3\msvc2013_opengl
+    #- QTDIR: C:\Qt\5.3\msvc2013_64_opengl
+    #- QTDIR: C:\Qt\5.4\mingw491_32
+    #- QTDIR: C:\Qt\5.4\msvc2013_opengl
+    #- QTDIR: C:\Qt\5.4\msvc2013_64_opengl
+    #- QTDIR: C:\Qt\5.5\mingw492_32
+    #- QTDIR: C:\Qt\5.5\msvc2013
+    #- QTDIR: C:\Qt\5.5\msvc2013_64
+    #- QTDIR: C:\Qt\5.6\mingw49_32
+    #- QTDIR: C:\Qt\5.6\msvc2013
+    #- QTDIR: C:\Qt\5.6\msvc2013_64
+    #- QTDIR: C:\Qt\5.6\msvc2015
+    #- QTDIR: C:\Qt\5.6\msvc2015_64
+    #- QTDIR: C:\Qt\5.7\mingw53_32
+    #- QTDIR: C:\Qt\5.7\msvc2013
+    #- QTDIR: C:\Qt\5.7\msvc2013_64
+    #- QTDIR: C:\Qt\5.7\msvc2015
+    #- QTDIR: C:\Qt\5.7\msvc2015_64
+    #- QTDIR: C:\Qt\5.8\mingw53_32
+    #- QTDIR: C:\Qt\5.8\msvc2013
+    #- QTDIR: C:\Qt\5.8\msvc2013_64
+    #- QTDIR: C:\Qt\5.8\msvc2015
+    #- QTDIR: C:\Qt\5.8\msvc2015_64
     - QTDIR: C:\Qt\5.9.1\mingw53_32
     - QTDIR: C:\Qt\5.9.1\msvc2013_64
     - QTDIR: C:\Qt\5.9.1\msvc2015
     - QTDIR: C:\Qt\5.9.1\msvc2015_64
 
 configuration:
-  - debug
+  #- debug
   - release
 
 install:
@@ -66,7 +66,9 @@ after_build:
 
 test_script:
   # @todo output using Qt's -xunitxml option
-  - if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
+  - if not %CONFIGURATION%==debug %make% check TESTARGS='-silent TestAwsSignatureV3'
+  - if not %CONFIGURATION%==debug %make% check TESTARGS='-silent TestAwsSignatureV4'
+  #- if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 
 # @todo after_test upload results
 
