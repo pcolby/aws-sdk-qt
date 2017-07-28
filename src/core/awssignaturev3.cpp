@@ -284,7 +284,6 @@ QByteArray AwsSignatureV3Private::canonicalHeaders(const QNetworkRequest &reques
  * @see  http://docs.aws.amazon.com/amazonswf/latest/developerguide/HMACAuth-swf.html (AWS3)
  * @see  http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/RESTAuthentication.html (AWS3-HTTPS)
  */
-#include <QDebug>
 QByteArray AwsSignatureV3Private::canonicalRequest(const QNetworkAccessManager::Operation operation,
                                                    const QNetworkRequest &request, const QByteArray &payload,
                                                    QByteArray * const signedHeaders) const
@@ -298,9 +297,6 @@ QByteArray AwsSignatureV3Private::canonicalRequest(const QNetworkAccessManager::
         }
         return canonicalRequest;
     }
-
-    qDebug() << "canonicalRequest" << "request.url" << request.url().toString();
-    qDebug() << "canonicalRequest" << "canonicalPath" << canonicalPath(request.url()).toUtf8();
 
     // AWS3
     return httpMethod(operation).toUtf8() + '\n' +

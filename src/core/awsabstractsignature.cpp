@@ -134,14 +134,10 @@ AwsAbstractSignaturePrivate::~AwsAbstractSignaturePrivate()
  */
 QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 {
-    qDebug() << "canonicalPath" << "url" << url.toString();
-    qDebug() << "canonicalPath" << "url.path" << url.path(QUrl::FullyEncoded);
     QString path = QDir::cleanPath(url.path(QUrl::FullyEncoded));
-    qDebug() << "canonicalPath" << "path" << path;
     if (path.isEmpty()) {
         return QString::fromLatin1("/");
     }
-    qDebug() << "canonicalPath" << "path" << path;
 
     // If the path begins with "//", remove one of the redundant slashes.
     // Note, this is only needed on Windows, because there QDir::speparator is
@@ -152,17 +148,14 @@ QString AwsAbstractSignaturePrivate::canonicalPath(const QUrl &url) const
 #ifdef Q_OS_WIN
     if (path.startsWith(QLatin1String("//"))) {
         path.remove(0, 1); // Remove the first of two forward slashes.
-        qDebug() << "canonicalPath" << "path.remove" << path;
     }
 #endif
 
     // Restore the trailing '/' if QDir::cleanPath (rightly) removed one.
     if ((url.path().endsWith(QLatin1Char('/'))) && (!path.endsWith(QLatin1Char('/')))) {
         path += QLatin1Char('/');
-        qDebug() << "canonicalPath" << "path with '/'" << path;
     }
 
-    qDebug() << "canonicalPath" << "final path" << path;
     return path;
 }
 
