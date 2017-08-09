@@ -25,7 +25,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
+namespace {{NameSpaceName}} {
 
 /**
  * @class  {{ClassName}}
@@ -110,4 +111,5 @@ QTAWS_BEGIN_NAMESPACE
     signature = new AwsSignature{{SignatureVersion}}();
 }
 
-QTAWS_END_NAMESPACE
+} // namespace {{NameSpaceName}}
+} // namespace AWS

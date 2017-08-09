@@ -38,13 +38,17 @@ bool Generator::generate(const QString &serviceFileName,
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString classNamePrefix = getClassNamePrefix(metaData);
-    const QString className = classNamePrefix + QLatin1String("Client");
+    const QString className =
+        ((classNamePrefix.contains(QRegularExpression(QLatin1String("^[^a-z]+$"))))
+        ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
+        + QLatin1String("Client");
 
     QMap<QString, QString> tags;
     for (auto iter = metaData.constBegin(); iter != metaData.constEnd(); ++iter) {
         tags.insert(QLatin1String("metadata.") + iter.key(), iter.value().toString());
     }
     tags.insert(QLatin1String("TargetLibName"), serviceFileName);
+    tags.insert(QLatin1String("NameSpaceName"), classNamePrefix);
     tags.insert(QLatin1String("ClassName"), className);
     tags.insert(QLatin1String("HeaderName"), className.toLower());
     tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
@@ -60,8 +64,8 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate service client.
     const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
-    tags.insert(QLatin1String("OperationSignatures"), getFunctionSignatures(
-                classNamePrefix,operations).join(QLatin1Char('\n')));
+    tags.insert(QLatin1String("OperationSignatures"),
+                    getFunctionSignatures(operations).join(QLatin1Char('\n')));
     replaceTags(tags, QLatin1String(":/templates/client.cpp"),
                 QString::fromLatin1("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
     replaceTags(tags, QLatin1String(":/templates/client.h"),
@@ -120,19 +124,10 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
     }
 
     // Trim, the same as aws-sdk-cpp too.
-    prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
-
-    // If the entire string is all uppercase, then lowercase all but the first
-    // letter - just for improved readability when using the generated classes.
-    if (prefix.contains(QRegularExpression(QLatin1String("^[^a-z]+$")))) {
-        prefix.replace(1, prefix.size()-1, prefix.mid(1).toLower());
-    }
-    return prefix;
+    return prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
 }
 
-QString Generator::getFunctionSignature(
-        const QString &classNamePrefix, const QString &operationName,
-        const QJsonObject &operation)
+QString Generator::getFunctionSignature(const QString &operationName, const QJsonObject &operation)
 {
     // This is all covered by the JSON Schema validation of the resource files.
     Q_ASSERT(operationName.size() > 1);
@@ -147,25 +142,23 @@ QString Generator::getFunctionSignature(
     // values here, since the return type is a QNetworkResponse-derived class,
     // so its more appropriate to keep to the *Response class naming convention
     // (even, or perhaps especially, when the operation has no output property).
-    const QString returnType = classNamePrefix + operationName
+    const QString returnType = operationName
             + QLatin1String("Response *");
 
     const QString functionArguments = operation.contains(QLatin1String("input"))
-            ? QString::fromLatin1("const %1%2Request &request")
-              .arg(classNamePrefix) .arg(operationName)
+            ? QString::fromLatin1("const %2Request &request")
+              .arg(operationName)
             : QString(); // No input to this request.
 
     return QString::fromLatin1("    %1 %2(%3);")
             .arg(returnType).arg(functionName).arg(functionArguments);
 }
 
-QStringList Generator::getFunctionSignatures(
-        const QString &classNamePrefix, const QJsonObject &operations)
+QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
 {
     QStringList signatures;
     for (auto iter = operations.constBegin(); iter != operations.constEnd(); ++iter) {
-        signatures.append(getFunctionSignature(
-            classNamePrefix, iter.key(), iter.value().toObject()));
+        signatures.append(getFunctionSignature(iter.key(), iter.value().toObject()));
     }
     return signatures;
 }

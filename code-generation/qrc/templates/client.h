@@ -24,10 +24,13 @@
 
 class QNetworkReply;
 
-QTAWS_BEGIN_NAMESPACE
+namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace {{NameSpaceName}} {
+
 class {{ClassName}}Private;
 
 class QTAWS_EXPORT {{ClassName}} : public AwsAbstractClient {
@@ -54,6 +57,7 @@ private:
 
 };
 
-QTAWS_END_NAMESPACE
+} // namespace {{NameSpaceName}}
+} // namespace AWS
 
 #endif
