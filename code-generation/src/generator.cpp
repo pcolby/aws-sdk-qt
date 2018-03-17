@@ -199,6 +199,7 @@ QString Generator::getFunctionSignature(const QString &operationName, const QJso
             .arg(returnType).arg(functionName).arg(functionArguments);
 }
 
+/// @todo Make this return a QVariantList (or QJsonArray)
 QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
 {
     QStringList signatures;
