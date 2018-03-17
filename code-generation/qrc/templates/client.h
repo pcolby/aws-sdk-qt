@@ -49,8 +49,9 @@ public:
         QObject * const parent = 0);
 
 public slots:
-
-{{OperationSignatures}}
+{% for f in OperationSignatures %}
+    {{ f.returnType }} {{ f.name }}({{ f.arguments }});
+{% endfor %}
 
 private:
     Q_DECLARE_PRIVATE({{ClassName}})

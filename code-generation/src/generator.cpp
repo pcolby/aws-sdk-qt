@@ -87,8 +87,7 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate service client.
     const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
-    context.insert(QStringLiteral("OperationSignatures"),
-                   getFunctionSignatures(operations).join(QLatin1Char('\n')));
+    context.insert(QStringLiteral("OperationSignatures"), getFunctionSignatures(operations));
     render(QStringLiteral("client.cpp"), context,
            QStringLiteral("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
     render(QStringLiteral("client.h"), context,
@@ -172,37 +171,40 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
     return prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
 }
 
-QString Generator::getFunctionSignature(const QString &operationName, const QJsonObject &operation)
+QVariantMap Generator::getFunctionSignature(const QString &operationName, const QJsonObject &operation)
 {
     // This is all covered by the JSON Schema validation of the resource files.
     Q_ASSERT(operationName.size() > 1);
     Q_ASSERT(operationName.at(0).isLetter());
     Q_ASSERT(operationName.at(0).isUpper());
 
+    QVariantMap signature;
+
     // The function name is just the operation name with a lower first letter.
-    const QString functionName = operationName.at(0).toLower() + operationName.mid(1);
+    signature.insert(QStringLiteral("name"),
+                     operationName.at(0).toLower() + operationName.mid(1));
 
     // The return type is a pointer to an <OperationName>Response object.
     // Note, we intentionally don't use operation.output.{resultwrapper,shape}
     // values here, since the return type is a QNetworkResponse-derived class,
     // so its more appropriate to keep to the *Response class naming convention
     // (even, or perhaps especially, when the operation has no output property).
-    const QString returnType = operationName
-            + QLatin1String("Response *");
+    signature.insert(QStringLiteral("returnType"),
+                     operationName + QLatin1String("Response *"));
 
-    const QString functionArguments = operation.contains(QLatin1String("input"))
+    signature.insert(QStringLiteral("arguments"),
+        operation.contains(QLatin1String("input"))
             ? QString::fromLatin1("const %2Request &request")
               .arg(operationName)
-            : QString(); // No input to this request.
+            : QString() // No input to this request.
+    );
 
-    return QString::fromLatin1("    %1 %2(%3);")
-            .arg(returnType).arg(functionName).arg(functionArguments);
+    return signature;
 }
 
-/// @todo Make this return a QVariantList (or QJsonArray)
-QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
+QVariantList Generator::getFunctionSignatures(const QJsonObject &operations)
 {
-    QStringList signatures;
+    QVariantList signatures;
     for (auto iter = operations.constBegin(); iter != operations.constEnd(); ++iter) {
         signatures.append(getFunctionSignature(iter.key(), iter.value().toObject()));
     }

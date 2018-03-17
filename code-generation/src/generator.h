@@ -33,8 +33,8 @@ protected:
     static QStringList formatHtmlDocumentation(const QString &html);
     static QString getClassBrief(const QJsonObject &metaData);
     static QString getClassNamePrefix(const QJsonObject &metaData);
-    static QString getFunctionSignature(const QString &operationName, const QJsonObject &operation);
-    static QStringList getFunctionSignatures(const QJsonObject &operations);
+    static QVariantMap getFunctionSignature(const QString &operationName, const QJsonObject &operation);
+    static QVariantList getFunctionSignatures(const QJsonObject &operations);
     bool render(const QString &templateName, Grantlee::Context &context, const QString &outputFileName) const;
 
 private:
