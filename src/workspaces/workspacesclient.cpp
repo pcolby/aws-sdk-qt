@@ -35,7 +35,7 @@ namespace WorkSpaces {
  *
  * <fullname>Amazon WorkSpaces Service</fullname>
  *
- + This reference provides detailed information about the Amazon WorkSpaces operations.
+ * This reference provides detailed information about the Amazon WorkSpaces
  */
 
 /**

@@ -35,53 +35,72 @@ namespace Support {
  *
  * <fullname>AWS Support</fullname>
  *
- + The AWS Support API reference is intended for programmers who need detailed information about the AWS Support operations and data types. This service enables you to manage your AWS Support cases programmatically. It uses HTTP methods that return results in JSON format.
+ * The AWS Support API reference is intended for programmers who need detailed information about the AWS Support operations
+ * and data types. This service enables you to manage your AWS Support cases programmatically. It uses HTTP methods that
+ * return results in JSON
  *
- + The AWS Support service also exposes a set of <a href="http://aws.amazon.com/premiumsupport/trustedadvisor/">Trusted Advisor</a> features. You can retrieve a list of checks and their descriptions, get check results, specify checks to refresh, and get the refresh status of checks.
+ * format>
  *
- + The following list describes the AWS Support case management operations:
+ * The AWS Support service also exposes a set of <a href="http://aws.amazon.com/premiumsupport/trustedadvisor/">Trusted
+ * Advisor</a> features. You can retrieve a list of checks and their descriptions, get check results, specify checks to
+ * refresh, and get the refresh status of checks.
  *
- +  <ul> <li>
+ * </p
  *
- +  <b>Service names, issue categories, and available severity levels. </b>The <a>DescribeServices</a> and <a>DescribeSeverityLevels</a> operations return AWS service names, service codes, service categories, and problem severity levels. You use these values when you call the <a>CreateCase</a> operation.
+ * The following list describes the AWS Support case management
  *
- +  </li> <li>
+ * operations> <ul> <li>
  *
- +  <b>Case creation, case details, and case resolution.</b> The <a>CreateCase</a>, <a>DescribeCases</a>, <a>DescribeAttachment</a>, and <a>ResolveCase</a> operations create AWS Support cases, retrieve information about cases, and resolve cases.
+ * <b>Service names, issue categories, and available severity levels. </b>The <a>DescribeServices</a> and
+ * <a>DescribeSeverityLevels</a> operations return AWS service names, service codes, service categories, and problem
+ * severity levels. You use these values when you call the <a>CreateCase</a> operation.
  *
- +  </li> <li>
+ * </p </li> <li>
  *
- +  <b>Case communication.</b> The <a>DescribeCommunications</a>, <a>AddCommunicationToCase</a>, and <a>AddAttachmentsToSet</a> operations retrieve and add communications and attachments to AWS Support cases.
+ * <b>Case creation, case details, and case resolution.</b> The <a>CreateCase</a>, <a>DescribeCases</a>,
+ * <a>DescribeAttachment</a>, and <a>ResolveCase</a> operations create AWS Support cases, retrieve information about cases,
+ * and resolve
  *
- +  </li> </ul>
+ * cases> </li> <li>
  *
- + The following list describes the operations available from the AWS Support service for Trusted Advisor:
+ * <b>Case communication.</b> The <a>DescribeCommunications</a>, <a>AddCommunicationToCase</a>, and
+ * <a>AddAttachmentsToSet</a> operations retrieve and add communications and attachments to AWS Support cases.
  *
- +  <ul> <li>
+ * </p </li> </ul>
  *
- +  <a>DescribeTrustedAdvisorChecks</a> returns the list of checks that run against your AWS resources.
+ * The following list describes the operations available from the AWS Support service for Trusted
  *
- +  </li> <li>
+ * Advisor> <ul> <li>
  *
- + Using the <code>checkId</code> for a specific check returned by <a>DescribeTrustedAdvisorChecks</a>, you can call <a>DescribeTrustedAdvisorCheckResult</a> to obtain the results for the check you specified.
+ * <a>DescribeTrustedAdvisorChecks</a> returns the list of checks that run against your AWS
  *
- +  </li> <li>
+ * resources> </li> <li>
  *
- +  <a>DescribeTrustedAdvisorCheckSummaries</a> returns summarized results for one or more Trusted Advisor checks.
+ * Using the <code>checkId</code> for a specific check returned by <a>DescribeTrustedAdvisorChecks</a>, you can call
+ * <a>DescribeTrustedAdvisorCheckResult</a> to obtain the results for the check you
  *
- +  </li> <li>
+ * specified> </li> <li>
  *
- +  <a>RefreshTrustedAdvisorCheck</a> requests that Trusted Advisor rerun a specified check.
+ * <a>DescribeTrustedAdvisorCheckSummaries</a> returns summarized results for one or more Trusted Advisor
  *
- +  </li> <li>
+ * checks> </li> <li>
  *
- +  <a>DescribeTrustedAdvisorCheckRefreshStatuses</a> reports the refresh status of one or more checks.
+ * <a>RefreshTrustedAdvisorCheck</a> requests that Trusted Advisor rerun a specified check.
  *
- +  </li> </ul>
+ * </p </li> <li>
  *
- + For authentication of requests, AWS Support uses <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
+ * <a>DescribeTrustedAdvisorCheckRefreshStatuses</a> reports the refresh status of one or more checks.
  *
- + See <a href="http://docs.aws.amazon.com/awssupport/latest/user/Welcome.html">About the AWS Support API</a> in the <i>AWS Support User Guide</i> for information about how to use this service to create and manage your support cases, and how to call Trusted Advisor for results of checks on your resources.
+ * </p </li> </ul>
+ *
+ * For authentication of requests, AWS Support uses <a
+ * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing
+ *
+ * Process</a>>
+ *
+ * See <a href="http://docs.aws.amazon.com/awssupport/latest/user/Welcome.html">About the AWS Support API</a> in the <i>AWS
+ * Support User Guide</i> for information about how to use this service to create and manage your support cases, and how to
+ * call Trusted Advisor for results of checks on your resources.
  */
 
 /**

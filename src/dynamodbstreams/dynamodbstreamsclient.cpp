@@ -35,39 +35,37 @@ namespace DynamoDBStreams {
  *
  * <fullname>Amazon DynamoDB Streams</fullname>
  *
- + This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams and processing stream records. For information about application development with DynamoDB Streams, see the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer Guide</a>.
+ * This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
+ * and processing stream records. For information about application development with DynamoDB Streams, see the <a
+ * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
  *
- + Note that this document is intended for use with the following DynamoDB documentation:
+ * Guide</a>>
  *
- +  <ul> <li>
+ * Note that this document is intended for use with the following DynamoDB
  *
- +  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
+ * documentation> <ul> <li>
  *
- +  </li> <li>
+ * <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
  *
- +  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
+ * </p </li> <li>
  *
- +  </li> </ul>
+ * <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
  *
- + The following are short descriptions of each low-level DynamoDB Streams API action, organized by function.
+ * </p </li> </ul>
  *
- +  <ul> <li>
+ * The following are short descriptions of each low-level DynamoDB Streams API action, organized by
  *
- + <i>DescribeStream</i> - Returns detailed information about a particular stream.
+ * function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
  *
- + </li> <li>
+ * <i>GetRecords</i> - Retrieves the stream records from within a
  *
- + <i>GetRecords</i> - Retrieves the stream records from within a shard.
+ * shard> </li> <li>
  *
- +  </li> <li>
+ * <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
  *
- + <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard ID.
+ * ID> </li> <li>
  *
- +  </li> <li>
- *
- + <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and endpoint.
- *
- +  </li> </ul>
+ * <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
  */
 
 /**

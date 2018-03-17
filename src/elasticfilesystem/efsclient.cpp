@@ -33,7 +33,6 @@ namespace EFS {
  *
  * @brief  Client for Amazon Elastic File System (EFS)
  *
- * <fullname>Amazon Elastic File System</fullname>
  */
 
 /**

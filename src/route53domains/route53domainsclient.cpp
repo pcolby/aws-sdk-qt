@@ -33,7 +33,6 @@ namespace Route53Domains {
  *
  * @brief  Client for Amazon Route 53 Domains
  *
- * 
  */
 
 /**

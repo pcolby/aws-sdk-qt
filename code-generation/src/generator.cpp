@@ -33,7 +33,7 @@ Generator::Generator(const QDir &outputDir)
     auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
     loader->setTemplateDirs(QStringList() << QStringLiteral(":/templates"));
     engine.addTemplateLoader(loader);
-    //engine.setSmartTrimEnabled(true); ///< @todo
+    engine.setSmartTrimEnabled(true);
 
     const QDir dir(QLatin1String(":/templates"));
     foreach (const QString &name, dir.entryList(QDir::Files|QDir::Readable)) {
@@ -103,23 +103,45 @@ bool Generator::generate(const QString &serviceFileName,
     return true;
 }
 
-QString Generator::formatHtmlDocumentation(const QString &html)
+QStringList Generator::formatHtmlDocumentation(const QString &html)
 {
     QString content(html);
 
-    content.replace(QRegularExpression(QLatin1String("<br?/>")), QLatin1String("\n\n"));
-    content.replace(QRegularExpression(QLatin1String("</?p>")), QLatin1String("\n\n"));
+    QStringList lines;
+    QString line;
+    foreach (QString word, content.split(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts)) {
+        if (word.startsWith(QStringLiteral("<p>")) || word.endsWith(QStringLiteral("</p>"))) {
+            lines.append(line);
+            line.clear();
+            if (!lines.last().isEmpty()) {
+                lines.append(QStringLiteral("")); // A blank line.
+            }
+            if (word.startsWith(QStringLiteral("<p>"))) {
+                word.remove(0,3);
+            }
+            if (word.endsWith(QStringLiteral("</p>"))) {
+                word.remove(word.size()-5,4);
+            }
+        }
 
-    /// @todo There's a lot more we could do here...
+        if (line.isEmpty()) {
+            line += word;
+        } else if (line.size() + word.size() < 120) {
+            line += QLatin1Char(' ') + word;
+        } else {
+            lines.append(line);
+            line = word;
+        }
+    }
 
-    content = content.trimmed();
-    content.replace(QRegularExpression(QLatin1String(" *\n")), QLatin1String("\n"));
-    content.replace(QRegularExpression(QLatin1String("\n\n\n"),
-       QRegularExpression::MultilineOption), QLatin1String("\n"));
-
-    content.replace(QRegularExpression(QLatin1String("\n([^\n])")), QLatin1String("\n + \\1"));
-    content.replace(QRegularExpression(QLatin1String("\n\n")), QLatin1String("\n *\n"));
-    return content;
+    // Remove leading and trailing blank lines.
+    while ((!lines.isEmpty()) && (lines.first().isEmpty())) {
+        lines.removeFirst();
+    }
+    while ((!lines.isEmpty()) && (lines.last().isEmpty())) {
+        lines.removeLast();
+    }
+    return lines;
 }
 
 QString Generator::getClassBrief(const QJsonObject &metaData)

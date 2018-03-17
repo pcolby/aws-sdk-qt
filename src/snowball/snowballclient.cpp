@@ -33,7 +33,7 @@ namespace Snowball {
  *
  * @brief  Client for Amazon Import/Export Snowball
  *
- * This is a test of the welcome page front matter.
+ * This is a test of the welcome page front
  */
 
 /**

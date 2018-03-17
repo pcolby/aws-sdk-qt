@@ -33,7 +33,6 @@ namespace MachineLearning {
  *
  * @brief  Client for Amazon Machine Learning
  *
- * Definition of the public APIs exposed by Amazon Machine Learning
  */
 
 /**

@@ -33,7 +33,9 @@ namespace {{NameSpaceName}} {
  *
  * @brief  {{ClassBrief}}
  *
- * {{ClassDocumentation}}
+{% for line in ClassDocumentation %}
+ *{% if line %} {{ line }}{% endif %}
+{% endfor %}
  */
 
 /**

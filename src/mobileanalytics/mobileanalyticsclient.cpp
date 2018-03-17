@@ -33,7 +33,7 @@ namespace MobileAnalytics {
  *
  * @brief  Client for Amazon Mobile Analytics
  *
- * Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at scale.
+ * Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
  */
 
 /**

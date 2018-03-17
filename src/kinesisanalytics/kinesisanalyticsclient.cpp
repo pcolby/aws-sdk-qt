@@ -33,7 +33,6 @@ namespace KinesisAnalytics {
  *
  * @brief  Client for Amazon Kinesis Analytics
  *
- * 
  */
 
 /**

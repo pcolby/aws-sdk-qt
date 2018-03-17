@@ -33,7 +33,6 @@ namespace CloudHSM {
  *
  * @brief  Client for Amazon CloudHSM
  *
- * <fullname>AWS CloudHSM Service</fullname>
  */
 
 /**

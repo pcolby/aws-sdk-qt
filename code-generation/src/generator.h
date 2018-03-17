@@ -30,7 +30,7 @@ public:
     bool generate(const QString &serviceFileName, const QJsonObject &description);
 
 protected:
-    static QString formatHtmlDocumentation(const QString &html);
+    static QStringList formatHtmlDocumentation(const QString &html);
     static QString getClassBrief(const QJsonObject &metaData);
     static QString getClassNamePrefix(const QJsonObject &metaData);
     static QString getFunctionSignature(const QString &operationName, const QJsonObject &operation);

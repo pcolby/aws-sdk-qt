@@ -35,47 +35,71 @@ namespace StorageGateway {
  *
  * <fullname>AWS Storage Gateway Service</fullname>
  *
- + AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure. The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster recovery.
+ * AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
+ * seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
+ * The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
  *
- + Use the following links to get started using the <i>AWS Storage Gateway Service API Reference</i>:
+ * recovery>
  *
- +  <ul> <li>
+ * Use the following links to get started using the <i>AWS Storage Gateway Service API
  *
- +  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayHTTPRequestsHeaders.html">AWS Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request to AWS Storage Gateway.
+ * Reference</i>> <ul> <li>
  *
- +  </li> <li>
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayHTTPRequestsHeaders.html">AWS
+ * Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
+ * to AWS Storage
  *
- +  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewaySigningRequests.html">Signing Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign such a request.
+ * Gateway> </li> <li>
  *
- +  </li> <li>
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewaySigningRequests.html">Signing
+ * Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
+ * such a
  *
- +  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/APIErrorResponses.html">Error Responses</a>: Provides reference information about AWS Storage Gateway errors.
+ * request> </li> <li>
  *
- +  </li> <li>
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/APIErrorResponses.html">Error Responses</a>:
+ * Provides reference information about AWS Storage Gateway
  *
- +  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPIOperations.html">Operations in AWS Storage Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response elements, possible errors, and examples of requests and responses.
+ * errors> </li> <li>
  *
- +  </li> <li>
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPIOperations.html">Operations in
+ * AWS Storage Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters,
+ * response elements, possible errors, and examples of requests and
  *
- +  <a href="http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html">AWS Storage Gateway Regions and Endpoints</a>: Provides a list of each of the s and endpoints available for use with AWS Storage Gateway.
+ * responses> </li> <li>
  *
- +  </li> </ul> <note>
+ * <a href="http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html">AWS Storage Gateway Regions and
+ * Endpoints</a>: Provides a list of each of the s and endpoints available for use with AWS Storage
  *
- + AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in Storage Gateway the ID for a volume might be <code>vol-1122AABB</code>. When you use this ID with the EC2 API, you must change it to <code>vol-1122aabb</code>. Otherwise, the EC2 API might not behave as expected.
+ * Gateway> </li> </ul> <note>
  *
- +  </note> <important>
+ * AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
+ * resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
+ * Storage Gateway the ID for a volume might be <code>vol-1122AABB</code>. When you use this ID with the EC2 API, you must
+ * change it to <code>vol-1122aabb</code>. Otherwise, the EC2 API might not behave as
  *
- + IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format. Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information, see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource IDs</a>.
+ * expected> </note> <important>
  *
- +  For example, a volume ARN with the longer volume ID format will look like this:
+ * IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
+ * Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
+ * 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
+ * see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource
  *
- +  <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>.
+ * IDs</a>>
  *
- + A snapshot ID with the longer ID format will look like this: <code>snap-78e226633445566ee</code>.
+ * For example, a volume ARN with the longer volume ID format will look like
  *
- + For more information, see <a href="https://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer AWS Storage Gateway volume and snapshot IDs coming in 2016</a>.
+ * this>
  *
- +  </important>
+ *
+ * <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>>
+ *
+ * A snapshot ID with the longer ID format will look like this:
+ *
+ * <code>snap-78e226633445566ee</code>>
+ *
+ * For more information, see <a href="https://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer
+ * AWS Storage Gateway volume and snapshot IDs coming in
  */
 
 /**

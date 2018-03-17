@@ -35,7 +35,7 @@ namespace Kinesis {
  *
  * <fullname>Amazon Kinesis Streams Service API Reference</fullname>
  *
- + Amazon Kinesis Streams is a managed service that scales elastically for real time processing of streaming big data.
+ * Amazon Kinesis Streams is a managed service that scales elastically for real time processing of streaming big
  */
 
 /**

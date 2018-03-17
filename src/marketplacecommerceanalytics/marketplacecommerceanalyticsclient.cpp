@@ -33,7 +33,6 @@ namespace MarketplaceCommerceAnalytics {
  *
  * @brief  Client for AWS Marketplace Commerce Analytics
  *
- * Provides AWS Marketplace business intelligence data on-demand.
  */
 
 /**

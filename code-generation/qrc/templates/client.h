@@ -49,6 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+
 {{OperationSignatures}}
 
 private:

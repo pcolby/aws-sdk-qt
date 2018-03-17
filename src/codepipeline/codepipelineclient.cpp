@@ -35,123 +35,162 @@ namespace CodePipeline {
  *
  * <fullname>AWS CodePipeline</fullname>
  *
- +  <b>Overview</b>
+ * <b>Overview</b>
  *
- + This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User Guide</a>.
+ * </p
  *
- + You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described below.
+ * This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
+ * CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
+ * the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
  *
- +  <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions, gates, and stages.
+ * Guide</a>>
  *
- + You can work with pipelines by calling:
+ * You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described
  *
- +  <ul> <li>
+ * below>
  *
- +  <a>CreatePipeline</a>, which creates a uniquely-named pipeline.
+ * <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions,
+ * gates, and stages.
  *
- +  </li> <li>
+ * </p
  *
- +  <a>DeletePipeline</a>, which deletes the specified pipeline.
+ * You can work with pipelines by
  *
- +  </li> <li>
+ * calling> <ul> <li>
  *
- +  <a>GetPipeline</a>, which returns information about a pipeline structure.
+ * <a>CreatePipeline</a>, which creates a uniquely-named
  *
- +  </li> <li>
+ * pipeline> </li> <li>
  *
- +  <a>GetPipelineExecution</a>, which returns information about a specific execution of a pipeline.
+ * <a>DeletePipeline</a>, which deletes the specified
  *
- +  </li> <li>
+ * pipeline> </li> <li>
  *
- +  <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a pipeline.
+ * <a>GetPipeline</a>, which returns information about a pipeline
  *
- +  </li> <li>
+ * structure> </li> <li>
  *
- +  <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your account.
+ * <a>GetPipelineExecution</a>, which returns information about a specific execution of a
  *
- +  </li> <li>
+ * pipeline> </li> <li>
  *
- +  <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the pipeline.
+ * <a>GetPipelineState</a>, which returns information about the current state of the stages and actions of a
  *
- +  </li> <li>
+ * pipeline> </li> <li>
  *
- +  <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the pipeline.
+ * <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your
  *
- +  </li> </ul>
+ * account> </li> <li>
  *
- + Pipelines include <i>stages</i>, which are which are logical groupings of gates and actions. Each stage contains one or more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, also refer to the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline Structure Reference</a>.
+ * <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the
  *
- + Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>.
+ * pipeline> </li> <li>
  *
- + Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage complete.
+ * <a>UpdatePipeline</a>, which updates a pipeline with edits or changes to the structure of the
  *
- + You can work with transitions by calling:
+ * pipeline> </li> </ul>
  *
- +  <ul> <li>
+ * Pipelines include <i>stages</i>, which are which are logical groupings of gates and actions. Each stage contains one or
+ * more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage
+ * fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears
+ * in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
+ * <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or
+ * <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more
+ * information about the structure of stages and actions, also refer to the <a
+ * href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline
+ * Structure
  *
- +  <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a pipeline.
+ * Reference</a>>
  *
- +  </li> <li>
+ * Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed
+ * within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source
+ * such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
+ * actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>.
  *
- +  <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline.
+ * </p
  *
- +  </li> </ul>
+ * Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a
+ * pipeline after the actions in one stage
  *
- +  <b>Using the API to integrate with AWS CodePipeline</b>
+ * complete>
  *
- + For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work with the following items:
+ * You can work with transitions by
  *
- +  <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an artifact from a source.
+ * calling> <ul> <li>
  *
- + You can work with jobs by calling:
+ * <a>DisableStageTransition</a>, which prevents artifacts from transitioning to the next stage in a
  *
- +  <ul> <li>
+ * pipeline> </li> <li>
  *
- +  <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified job,
+ * <a>EnableStageTransition</a>, which enables transition of artifacts between stages in a pipeline.
  *
- +  </li> <li>
+ * </p </li> </ul>
  *
- +  <a>GetJobDetails</a>, which returns the details of a job,
+ * <b>Using the API to integrate with AWS CodePipeline</b>
  *
- +  </li> <li>
+ * </p
  *
- +  <a>PollForJobs</a>, which determines whether there are any jobs to act upon,
+ * For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected
+ * sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work
+ * with the following
  *
- +  </li> <li>
+ * items>
  *
- +  <a>PutJobFailureResult</a>, which provides details of a job failure, and
+ * <b>Jobs</b>, which are instances of an action. For example, a job for a source action might import a revision of an
+ * artifact from a source.
  *
- +  </li> <li>
+ * </p
  *
- +  <a>PutJobSuccessResult</a>, which provides details of a job success.
+ * You can work with jobs by
  *
- +  </li> </ul>
+ * calling> <ul> <li>
  *
- +  <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into AWS CodePipeline. Partner actions are created by members of the AWS Partner Network.
+ * <a>AcknowledgeJob</a>, which confirms whether a job worker has received the specified
  *
- + You can work with third party jobs by calling:
+ * job> </li> <li>
  *
- +  <ul> <li>
+ * <a>GetJobDetails</a>, which returns the details of a
  *
- +  <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified job,
+ * job> </li> <li>
  *
- +  </li> <li>
+ * <a>PollForJobs</a>, which determines whether there are any jobs to act upon,
  *
- +  <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner action,
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <a>PutJobFailureResult</a>, which provides details of a job failure,
  *
- +  <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon,
+ * an> </li> <li>
  *
- +  </li> <li>
+ * <a>PutJobSuccessResult</a>, which provides details of a job
  *
- +  <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure, and
+ * success> </li> </ul>
  *
- +  </li> <li>
+ * <b>Third party jobs</b>, which are instances of an action created by a partner action and integrated into AWS
+ * CodePipeline. Partner actions are created by members of the AWS Partner
  *
- +  <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job success.
+ * Network>
  *
- +  </li> </ul>
+ * You can work with third party jobs by
+ *
+ * calling> <ul> <li>
+ *
+ * <a>AcknowledgeThirdPartyJob</a>, which confirms whether a job worker has received the specified
+ *
+ * job> </li> <li>
+ *
+ * <a>GetThirdPartyJobDetails</a>, which requests the details of a job for a partner
+ *
+ * action> </li> <li>
+ *
+ * <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon,
+ *
+ * </p </li> <li>
+ *
+ * <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure,
+ *
+ * an> </li> <li>
+ *
+ * <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job
  */
 
 /**

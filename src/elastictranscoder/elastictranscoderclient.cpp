@@ -35,7 +35,7 @@ namespace ElasticTranscoder {
  *
  * <fullname>AWS Elastic Transcoder Service</fullname>
  *
- + The AWS Elastic Transcoder Service.
+ * The AWS Elastic Transcoder
  */
 
 /**

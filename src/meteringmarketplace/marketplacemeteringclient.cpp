@@ -35,17 +35,19 @@ namespace MarketplaceMetering {
  *
  * <fullname>AWS Marketplace Metering Service</fullname>
  *
- + This reference provides descriptions of the low-level AWS Marketplace Metering Service API.
+ * This reference provides descriptions of the low-level AWS Marketplace Metering Service API.
  *
- + AWS Marketplace sellers can use this API to submit usage data for custom usage dimensions.
+ * </p
  *
- + <b>Submitting Metering Records</b>
+ * AWS Marketplace sellers can use this API to submit usage data for custom usage
  *
- +  <ul> <li>
+ * dimensions>
  *
- + <i>MeterUsage</i>- Submits the metering record for a Marketplace product.
+ * <b>Submitting Metering
  *
- +  </li> </ul>
+ * Records</b> <ul> <li>
+ *
+ * <i>MeterUsage</i>- Submits the metering record for a Marketplace
  */
 
 /**

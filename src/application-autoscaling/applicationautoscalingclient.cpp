@@ -33,71 +33,72 @@ namespace ApplicationAutoScaling {
  *
  * @brief  Client for Application Auto Scaling
  *
- * Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto Scaling.
+ * Application Auto Scaling is a general purpose Auto Scaling service for supported elastic AWS resources. With Application
+ * Auto Scaling, you can automatically scale your AWS resources, with an experience similar to that of Auto
  *
- + Application Auto Scaling supports scaling the following AWS resources:
+ * Scaling>
  *
- +  <ul> <li>
+ * Application Auto Scaling supports scaling the following AWS
  *
- + Amazon ECS services
+ * resources> <ul> <li>
  *
- +  </li> <li>
+ * Amazon ECS
  *
- + Amazon EC2 Spot fleet instances
+ * service> </li> <li>
  *
- +  </li> </ul>
+ * Amazon EC2 Spot fleet
  *
- + You can use Application Auto Scaling to accomplish the following tasks:
+ * instance> </li> </ul>
  *
- +  <ul> <li>
+ * You can use Application Auto Scaling to accomplish the following
  *
- + Define scaling policies for automatically adjusting your AWS resources
+ * tasks> <ul> <li>
  *
- +  </li> <li>
+ * Define scaling policies for automatically adjusting your AWS
  *
- + Scale your resources in response to CloudWatch alarms
+ * resource> </li> <li>
  *
- +  </li> <li>
+ * Scale your resources in response to CloudWatch
  *
- + View history of your scaling events
+ * alarm> </li> <li>
  *
- +  </li> </ul>
+ * View history of your scaling events
  *
- + Application Auto Scaling is available in the following regions:
+ * </p </li> </ul>
  *
- +  <ul> <li>
+ * Application Auto Scaling is available in the following
  *
- +  <code>us-east-1</code>
+ * regions> <ul> <li>
  *
- +  </li> <li>
+ * <code>us-east-1</code>
  *
- +  <code>us-west-1</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>us-west-1</code>
  *
- +  <code>us-west-2</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>us-west-2</code>
  *
- +  <code>ap-southeast-1</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>ap-southeast-1</code>
  *
- +  <code>ap-southeast-2</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>ap-southeast-2</code>
  *
- +  <code>ap-northeast-1</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>ap-northeast-1</code>
  *
- +  <code>eu-central-1</code>
+ * </p </li> <li>
  *
- +  </li> <li>
+ * <code>eu-central-1</code>
  *
- +  <code>eu-west-1</code>
+ * </p </li> <li>
  *
- +  </li> </ul>
+ * <code>eu-west-1</code>
  */
 
 /**

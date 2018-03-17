@@ -33,7 +33,6 @@ namespace S3 {
  *
  * @brief  Client for Amazon Simple Storage Service ( S3)
  *
- * 
  */
 
 /**

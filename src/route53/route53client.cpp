@@ -33,7 +33,6 @@ namespace Route53 {
  *
  * @brief  Client for Amazon Route 53
  *
- * 
  */
 
 /**

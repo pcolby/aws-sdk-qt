@@ -35,13 +35,15 @@ namespace SES {
  *
  * <fullname>Amazon Simple Email Service</fullname>
  *
- +  This is the API Reference for Amazon Simple Email Service (Amazon SES). This documentation is intended to be used in conjunction with the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ * This is the API Reference for Amazon Simple Email Service (Amazon SES). This documentation is intended to be used in
+ * conjunction with the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ * Guide</a>.
  *
- +  <note>
+ * </p <note>
  *
- +  For a list of Amazon SES endpoints to use in service requests, see <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the Amazon SES Developer Guide.
- *
- +  </note>
+ * For a list of Amazon SES endpoints to use in service requests, see <a
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the Amazon SES
+ * Developer Guide.
  */
 
 /**
