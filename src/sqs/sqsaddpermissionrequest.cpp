@@ -1,5 +1,5 @@
 /*
-    Copyright 2013-2016 Paul Colby
+    Copyright 2013-2018 Paul Colby
 
     This file is part of libqtaws.
 
