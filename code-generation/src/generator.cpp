@@ -69,11 +69,7 @@ bool Generator::generate(const QString &serviceFileName,
     context.insert(QLatin1String("TargetLibName"), serviceFileName);
     context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
     context.insert(QLatin1String("ClassName"), className);
-    context.insert(QLatin1String("HeaderName"), className.toLower());
-    context.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
-    context.insert(QLatin1String("SignatureVersion"), metaData.value(QLatin1String("signatureVersion")).toString().toUpper());
     context.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
-    /// @todo Break this string over multiple lines nicely.
     context.insert(QLatin1String("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 

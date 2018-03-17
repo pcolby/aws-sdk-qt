@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_{{INCLUDE_GUARD_NAME}}_P_H
-#define QTAWS_{{INCLUDE_GUARD_NAME}}_P_H
+#ifndef QTAWS_{{ClassName|upper}}_P_H
+#define QTAWS_{{ClassName|upper}}_P_H
 
 #include "core/awsabstractclient_p.h"
 

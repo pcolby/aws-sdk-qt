@@ -17,8 +17,8 @@
     along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "{{HeaderName}}.h"
-#include "{{HeaderName}}_p.h"
+#include "{{ClassName|lower}}.h"
+#include "{{ClassName|lower}}_p.h"
 
 #include "core/awssignaturev4.h"
 
@@ -110,7 +110,7 @@ namespace {{NameSpaceName}} {
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignature{{SignatureVersion}}();
+    signature = new AwsSignature{{signatureVersion|upper}}();
 }
 
 } // namespace {{NameSpaceName}}
