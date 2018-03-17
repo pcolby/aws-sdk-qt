@@ -23,10 +23,28 @@
 #include <QJsonParseError>
 #include <QRegularExpression>
 
+#include <grantlee/templateloader.h>
+
 Generator::Generator(const QDir &outputDir)
     : outputDir(outputDir)
 {
     Q_ASSERT(outputDir.exists());
+
+    auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
+    loader->setTemplateDirs(QStringList() << QStringLiteral(":/templates"));
+    engine.addTemplateLoader(loader);
+    //engine.setSmartTrimEnabled(true); ///< @todo
+
+    const QDir dir(QLatin1String(":/templates"));
+    foreach (const QString &name, dir.entryList(QDir::Files|QDir::Readable)) {
+        qDebug() << "loading template" << name;
+        const auto tmplate = engine.loadByName(name);
+        if (tmplate->error()) {
+            qWarning() << "error loading template" << name << tmplate->errorString();
+            continue;
+        }
+        templates.insert(name, tmplate);
+    }
 }
 
 bool Generator::generate(const QString &serviceFileName,
@@ -43,20 +61,25 @@ bool Generator::generate(const QString &serviceFileName,
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
         + QLatin1String("Client");
 
-    QMap<QString, QString> tags;
+    Grantlee::Context context;
     for (auto iter = metaData.constBegin(); iter != metaData.constEnd(); ++iter) {
-        tags.insert(QLatin1String("metadata.") + iter.key(), iter.value().toString());
+        qDebug() << "metadata" << iter.key() << iter.value();
+        context.insert(iter.key(), iter.value());
     }
-    tags.insert(QLatin1String("TargetLibName"), serviceFileName);
-    tags.insert(QLatin1String("NameSpaceName"), classNamePrefix);
-    tags.insert(QLatin1String("ClassName"), className);
-    tags.insert(QLatin1String("HeaderName"), className.toLower());
-    tags.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
-    tags.insert(QLatin1String("SignatureVersion"), metaData.value(QLatin1String("signatureVersion")).toString().toUpper());
-    tags.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
+    context.insert(QLatin1String("TargetLibName"), serviceFileName);
+    context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
+    context.insert(QLatin1String("ClassName"), className);
+    context.insert(QLatin1String("HeaderName"), className.toLower());
+    context.insert(QLatin1String("INCLUDE_GUARD_NAME"), className.toUpper());
+    context.insert(QLatin1String("SignatureVersion"), metaData.value(QLatin1String("signatureVersion")).toString().toUpper());
+    context.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
     /// @todo Break this string over multiple lines nicely.
-    tags.insert(QLatin1String("ClassDocumentation"),
+    context.insert(QLatin1String("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
+
+    /// @todo
+    context.insert(QStringLiteral("publicSlots"), QStringLiteral("{{publicSlots}}"));
+    context.insert(QStringLiteral("servicename"), QStringLiteral("{{servicename}}"));
 
     /// @todo Generate model classes.
 
@@ -64,18 +87,18 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate service client.
     const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
-    tags.insert(QLatin1String("OperationSignatures"),
-                    getFunctionSignatures(operations).join(QLatin1Char('\n')));
-    replaceTags(tags, QLatin1String(":/templates/client.cpp"),
-                QString::fromLatin1("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
-    replaceTags(tags, QLatin1String(":/templates/client.h"),
-                QString::fromLatin1("%1/%2.h").arg(projectDir).arg(className.toLower()));
-    replaceTags(tags, QLatin1String(":/templates/client_p.h"),
-                QString::fromLatin1("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
+    context.insert(QStringLiteral("OperationSignatures"),
+                   getFunctionSignatures(operations).join(QLatin1Char('\n')));
+    render(QStringLiteral("client.cpp"), context,
+           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
+    render(QStringLiteral("client.h"), context,
+           QStringLiteral("%1/%2.h").arg(projectDir).arg(className.toLower()));
+    render(QStringLiteral("client_p.h"), context,
+           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
 
     /// @todo Generate ancillary project files.
-    replaceTags(tags, QLatin1String(":/templates/service.pro"),
-                QString::fromLatin1("%1/%2.pro").arg(projectDir).arg(serviceFileName));
+    render(QStringLiteral("service.pro"), context,
+           QStringLiteral("%1/%2.pro").arg(projectDir).arg(serviceFileName));
 
     return true;
 }
@@ -163,49 +186,36 @@ QStringList Generator::getFunctionSignatures(const QJsonObject &operations)
     return signatures;
 }
 
-QString Generator::readAll(const QString &fileName)
-{
-    QFile file(fileName);
-    if (!file.exists()) {
-        qWarning() << "file does not exist" << fileName;
-        return QString();
+// Grantlee output stream that does *no* content escaping.
+class NoEscapeStream : public Grantlee::OutputStream {
+public:
+    NoEscapeStream(QTextStream * stream) : Grantlee::OutputStream(stream) { }
+
+    virtual QString escape(const QString &input) const { return input; }
+
+    virtual QSharedPointer<OutputStream> clone( QTextStream *stream ) const {
+        return QSharedPointer<OutputStream>(new NoEscapeStream(stream));
     }
-    if (!file.open(QFile::ReadOnly)) {
-        qWarning() << "failed to open file for reading" << fileName;
-        return QString();
+};
+
+bool Generator::render(
+    const QString &templateName,
+    Grantlee::Context &context,
+    const QString &outputFileName) const
+{
+    if (!templates.contains(templateName)) {
+        qWarning() << "template does not exist" << templateName;
+        return false;
     }
-    return QString::fromUtf8(file.readAll());
-}
 
-QString Generator::replaceTags(const QMap<QString, QString> &tags,
-                               const QString &input)
-{
-    QString output(input);
-    for (auto iter = tags.constBegin(); iter != tags.constEnd(); ++iter) {
-        output.replace(QRegularExpression(QString::fromLatin1("{{\\s*%1\\s*}}")
-            .arg(QRegularExpression::escape(iter.key()))), iter.value());
-    }
-    return output;
-}
-
-bool Generator::replaceTags(const QMap<QString, QString> &tags,
-                            const QString &inFile, const QString &outFile)
-{
-    const QString input = readAll(inFile);
-    return (input.isNull()) ? false : writeAll(outFile, replaceTags(tags, input));
-}
-
-
-bool Generator::writeAll(const QString &fileName, const QString &content)
-{
-    QFile file(fileName);
+    QFile file(outputFileName);
     if (!file.open(QFile::WriteOnly)) {
-        qWarning() << "failed to open file for writing" << fileName;
+        qWarning() << "failed to open file for writing" << outputFileName;
         return false;
     }
-    if (file.write(content.toUtf8()) < 0) {
-        qWarning() << "failed to write to file" << fileName;
-        return false;
-    }
+
+    QTextStream textStream(&file);
+    NoEscapeStream noEscapeStream(&textStream);
+    templates[templateName]->render(&noEscapeStream, &context);
     return true;
 }

@@ -20,6 +20,8 @@
 #include <QDir>
 #include <QJsonObject>
 
+#include <grantlee/engine.h>
+
 class Generator {
 
 public:
@@ -33,14 +35,10 @@ protected:
     static QString getClassNamePrefix(const QJsonObject &metaData);
     static QString getFunctionSignature(const QString &operationName, const QJsonObject &operation);
     static QStringList getFunctionSignatures(const QJsonObject &operations);
-    static QString readAll(const QString &fileName);
-    static QString replaceTags(const QMap<QString, QString> &tags,
-                               const QString &input);
-    static bool replaceTags(const QMap<QString, QString> &tags,
-                            const QString &inFile, const QString &outFile);
-    static bool writeAll(const QString &fileName, const QString &content);
+    bool render(const QString &templateName, Grantlee::Context &context, const QString &outputFileName) const;
 
 private:
     QDir outputDir;
-
+    Grantlee::Engine engine;
+    QMap<QString, Grantlee::Template> templates;
 };

@@ -21,6 +21,7 @@ RCC_DIR = $$DESTDIR/tmp
 UI_DIR = $$DESTDIR/tmp
 
 # Include resources and source files.
+LIBS += -lGrantlee_Templates
 VPATH += qrc src
 HEADERS += generator.h
 SOURCES += generator.cpp main.cpp
