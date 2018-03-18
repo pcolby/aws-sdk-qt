@@ -1,0 +1,8 @@
+<map id="AWS::Polly::PollyClient" name="AWS::Polly::PollyClient">
+<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="147,81,278,108"/>
+<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="191,171,363,197"/>
+<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="317,81,479,108"/>
+<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="387,171,591,197"/>
+<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="571,81,723,108"/>
+<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="615,171,808,197"/>
+</map>

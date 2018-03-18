@@ -1,8 +1,0 @@
-<map id="ECRClient" name="ECRClient">
-<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="72,81,203,108"/>
-<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="115,171,287,197"/>
-<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="241,81,404,108"/>
-<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="311,171,515,197"/>
-<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="496,81,648,108"/>
-<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="539,171,733,197"/>
-</map>

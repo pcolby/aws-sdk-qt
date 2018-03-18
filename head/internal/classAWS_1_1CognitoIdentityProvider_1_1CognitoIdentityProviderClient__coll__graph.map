@@ -1,0 +1,8 @@
+<map id="AWS::CognitoIdentityProvider::CognitoIdentityProviderClient" name="AWS::CognitoIdentityProvider::CognitoIdentityProviderClient">
+<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="187,81,317,108"/>
+<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="230,178,402,205"/>
+<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="356,81,519,108"/>
+<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="426,178,630,205"/>
+<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="611,81,763,108"/>
+<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="654,178,847,205"/>
+</map>

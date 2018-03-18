@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILDDIR=~/tmp/build/libqtaws-gcc
+BUILDDIR=~/tmp/build/libqtaws-qmake-gcc-qt591
 
 rm -rf head
 mkdir head

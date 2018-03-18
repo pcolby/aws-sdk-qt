@@ -1,0 +1,8 @@
+<map id="AWS::CloudWatchEvents::CloudWatchEventsClient" name="AWS::CloudWatchEvents::CloudWatchEventsClient">
+<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="163,81,294,108"/>
+<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="207,178,379,205"/>
+<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="333,81,495,108"/>
+<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="403,178,607,205"/>
+<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="587,81,739,108"/>
+<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="631,178,824,205"/>
+</map>

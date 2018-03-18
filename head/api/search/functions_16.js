@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['_7eawsabstractclient',['~AwsAbstractClient',['../classAwsAbstractClient.html#a45370989e35585591be5186baf5072c7',1,'AwsAbstractClient']]],
-  ['_7eawsabstractcredentials',['~AwsAbstractCredentials',['../classAwsAbstractCredentials.html#a65457d8b5203dc40022839e3b1d4b0f2',1,'AwsAbstractCredentials']]],
-  ['_7eawsabstractrequest',['~AwsAbstractRequest',['../classAwsAbstractRequest.html#aa4ac7b7e84c998e6fe7a674049344b30',1,'AwsAbstractRequest']]],
-  ['_7eawsabstractresponse',['~AwsAbstractResponse',['../classAwsAbstractResponse.html#a8e25480ed0d6ef4292e71b83947384ef',1,'AwsAbstractResponse']]],
-  ['_7eawsabstractsignature',['~AwsAbstractSignature',['../classAwsAbstractSignature.html#a39c9eacd36bcf13ee629f1dcb7f23d5a',1,'AwsAbstractSignature']]],
-  ['_7eawsendpoint',['~AwsEndpoint',['../classAwsEndpoint.html#ad10ffff1f4b7487d93a34de1d9efb5a8',1,'AwsEndpoint']]],
-  ['_7eawsregion',['~AwsRegion',['../classAwsRegion.html#a86af1617f050770622fc3cc782466472',1,'AwsRegion']]],
-  ['_7esqserror',['~SqsError',['../classSqsError.html#ae6b9523e9649002c77aed81f4d5c90a3',1,'SqsError']]]
+  ['xmlparseerror',['xmlParseError',['../classAwsAbstractResponse.html#ad30d6e2c306e84d7d3a3659717cc20c7',1,'AwsAbstractResponse']]],
+  ['xmlparseerrorstring',['xmlParseErrorString',['../classAwsAbstractResponse.html#a855a9a2843874952d336dfd5dd65eab0',1,'AwsAbstractResponse']]],
+  ['xrayclient',['XRayClient',['../classAWS_1_1XRay_1_1XRayClient.html#a42ceaa6241575f3d7ced7a6448f11a71',1,'AWS::XRay::XRayClient::XRayClient(const AwsRegion::Region region=AwsRegion::InvalidRegion, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)'],['../classAWS_1_1XRay_1_1XRayClient.html#a710d384ea0ae5e8b328c1fa218ec3817',1,'AWS::XRay::XRayClient::XRayClient(const QUrl &amp;endpoint, AwsAbstractCredentials *credentials=NULL, QNetworkAccessManager *const manager=NULL, QObject *const parent=0)']]]
 ];

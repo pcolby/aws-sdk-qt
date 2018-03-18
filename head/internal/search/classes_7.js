@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['iamclient',['IamClient',['../classIamClient.html',1,'']]],
-  ['iamclientprivate',['IamClientPrivate',['../classIamClientPrivate.html',1,'']]],
-  ['importexportclient',['ImportExportClient',['../classImportExportClient.html',1,'']]],
-  ['importexportclientprivate',['ImportExportClientPrivate',['../classImportExportClientPrivate.html',1,'']]],
-  ['inspectorclient',['InspectorClient',['../classInspectorClient.html',1,'']]],
-  ['inspectorclientprivate',['InspectorClientPrivate',['../classInspectorClientPrivate.html',1,'']]],
-  ['iotdataplaneclient',['IoTDataPlaneClient',['../classIoTDataPlaneClient.html',1,'']]],
-  ['iotdataplaneclientprivate',['IoTDataPlaneClientPrivate',['../classIoTDataPlaneClientPrivate.html',1,'']]]
+  ['healthclient',['HealthClient',['../classAWS_1_1Health_1_1HealthClient.html',1,'AWS::Health']]],
+  ['healthclientprivate',['HealthClientPrivate',['../classAWS_1_1Health_1_1HealthClientPrivate.html',1,'AWS::Health']]],
+  ['hostinfo',['HostInfo',['../structAwsEndpointPrivate_1_1HostInfo.html',1,'AwsEndpointPrivate']]]
 ];

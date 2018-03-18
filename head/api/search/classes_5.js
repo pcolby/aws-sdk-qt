@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['gameliftclient',['GameLiftClient',['../classGameLiftClient.html',1,'']]],
-  ['glacierclient',['GlacierClient',['../classGlacierClient.html',1,'']]]
+  ['firehoseclient',['FirehoseClient',['../classAWS_1_1Firehose_1_1FirehoseClient.html',1,'AWS::Firehose']]]
 ];

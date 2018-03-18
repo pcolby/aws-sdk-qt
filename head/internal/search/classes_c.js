@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['rdsclient',['RdsClient',['../classRdsClient.html',1,'']]],
-  ['rdsclientprivate',['RdsClientPrivate',['../classRdsClientPrivate.html',1,'']]],
-  ['redshiftclient',['RedshiftClient',['../classRedshiftClient.html',1,'']]],
-  ['redshiftclientprivate',['RedshiftClientPrivate',['../classRedshiftClientPrivate.html',1,'']]],
-  ['regionendpointinfo',['RegionEndpointInfo',['../structAwsEndpointPrivate_1_1RegionEndpointInfo.html',1,'AwsEndpointPrivate']]],
-  ['regioninfo',['RegionInfo',['../structAwsEndpointPrivate_1_1RegionInfo.html',1,'AwsEndpointPrivate']]],
-  ['route53client',['Route53Client',['../classRoute53Client.html',1,'']]],
-  ['route53clientprivate',['Route53ClientPrivate',['../classRoute53ClientPrivate.html',1,'']]],
-  ['route53domainsclient',['Route53DomainsClient',['../classRoute53DomainsClient.html',1,'']]],
-  ['route53domainsclientprivate',['Route53DomainsClientPrivate',['../classRoute53DomainsClientPrivate.html',1,'']]]
+  ['opsworksclient',['OpsWorksClient',['../classAWS_1_1OpsWorks_1_1OpsWorksClient.html',1,'AWS::OpsWorks']]],
+  ['opsworksclientprivate',['OpsWorksClientPrivate',['../classAWS_1_1OpsWorks_1_1OpsWorksClientPrivate.html',1,'AWS::OpsWorks']]],
+  ['opsworkscmclient',['OpsWorksCMClient',['../classAWS_1_1OpsWorksCM_1_1OpsWorksCMClient.html',1,'AWS::OpsWorksCM']]],
+  ['opsworkscmclientprivate',['OpsWorksCMClientPrivate',['../classAWS_1_1OpsWorksCM_1_1OpsWorksCMClientPrivate.html',1,'AWS::OpsWorksCM']]],
+  ['organizationsclient',['OrganizationsClient',['../classAWS_1_1Organizations_1_1OrganizationsClient.html',1,'AWS::Organizations']]],
+  ['organizationsclientprivate',['OrganizationsClientPrivate',['../classAWS_1_1Organizations_1_1OrganizationsClientPrivate.html',1,'AWS::Organizations']]]
 ];
