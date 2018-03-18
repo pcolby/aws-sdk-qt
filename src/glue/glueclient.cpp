@@ -92,6 +92,12 @@ GlueClient::GlueClient(
 
 /**
  * Creates one or more partitions in a batch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreatePartitionRequest &request)
 {
@@ -100,6 +106,12 @@ BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreat
 
 /**
  * Deletes a list of connection definitions from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDeleteConnectionRequest &request)
 {
@@ -108,6 +120,12 @@ BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDel
 
 /**
  * Deletes one or more partitions in a batch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDeletePartitionRequest &request)
 {
@@ -116,6 +134,12 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
 
 /**
  * Deletes multiple tables at
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRequest &request)
 {
@@ -124,6 +148,12 @@ BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRe
 
 /**
  * Deletes a specified batch of versions of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const BatchDeleteTableVersionRequest &request)
 {
@@ -132,6 +162,12 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 
 /**
  * Retrieves partitions in a batch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitionRequest &request)
 {
@@ -140,6 +176,12 @@ BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitio
 
 /**
  * Stops one or more job runs for a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunRequest &request)
 {
@@ -149,6 +191,12 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
 /**
  * Creates a classifier in the user's account. This may be a <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or
  * abbrev <code>JsonClassifier</code>, depending on which field of the request is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRequest &request)
 {
@@ -157,6 +205,12 @@ CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRe
 
 /**
  * Creates a connection definition in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRequest &request)
 {
@@ -166,6 +220,12 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
 /**
  * Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must
  * be specified, in either the <i>s3Targets</i> or the <i>jdbcTargets</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
@@ -174,6 +234,12 @@ CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &re
 
 /**
  * Creates a new database in a Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest &request)
 {
@@ -182,6 +248,12 @@ CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest 
 
 /**
  * Creates a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpointRequest &request)
 {
@@ -190,6 +262,12 @@ CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpoin
 
 /**
  * Creates a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 {
@@ -198,6 +276,12 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 
 /**
  * Creates a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionRequest &request)
 {
@@ -206,6 +290,12 @@ CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionReque
 
 /**
  * Transforms a directed acyclic graph (DAG) into
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &request)
 {
@@ -214,6 +304,12 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
 
 /**
  * Creates a new table definition in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
 {
@@ -222,6 +318,12 @@ CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
 
 /**
  * Creates a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &request)
 {
@@ -230,6 +332,12 @@ CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &re
 
 /**
  * Creates a new function definition in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const CreateUserDefinedFunctionRequest &request)
 {
@@ -238,6 +346,12 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
 
 /**
  * Removes a classifier from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRequest &request)
 {
@@ -246,6 +360,12 @@ DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRe
 
 /**
  * Deletes a connection from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRequest &request)
 {
@@ -254,6 +374,12 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
 
 /**
  * Removes a specified crawler from the Data Catalog, unless the crawler state is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &request)
 {
@@ -262,6 +388,12 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
 
 /**
  * Removes a specified Database from a Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest &request)
 {
@@ -270,6 +402,12 @@ DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest 
 
 /**
  * Deletes a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpointRequest &request)
 {
@@ -278,6 +416,12 @@ DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpoin
 
 /**
  * Deletes a specified job. If the job is not found, no exception is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 {
@@ -286,6 +430,12 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 
 /**
  * Deletes a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionRequest &request)
 {
@@ -294,6 +444,12 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
 
 /**
  * Removes a table definition from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 {
@@ -302,6 +458,12 @@ DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 
 /**
  * Deletes a specified version of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVersionRequest &request)
 {
@@ -310,6 +472,12 @@ DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVer
 
 /**
  * Deletes a specified trigger. If the trigger is not found, no exception is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &request)
 {
@@ -318,6 +486,12 @@ DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &re
 
 /**
  * Deletes an existing function definition from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const DeleteUserDefinedFunctionRequest &request)
 {
@@ -326,6 +500,12 @@ DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const 
 
 /**
  * Retrieves the status of a migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCatalogImportStatusRequest &request)
 {
@@ -334,6 +514,12 @@ GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCat
 
 /**
  * Retrieve a classifier by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &request)
 {
@@ -342,6 +528,12 @@ GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &re
 
 /**
  * Lists all classifier objects in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest &request)
 {
@@ -350,6 +542,12 @@ GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest 
 
 /**
  * Retrieves a connection definition from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &request)
 {
@@ -358,6 +556,12 @@ GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &re
 
 /**
  * Retrieves a list of connection definitions from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest &request)
 {
@@ -366,6 +570,12 @@ GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest 
 
 /**
  * Retrieves metadata for a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
 {
@@ -374,6 +584,12 @@ GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
 
 /**
  * Retrieves metrics about specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetricsRequest &request)
 {
@@ -382,6 +598,12 @@ GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetric
 
 /**
  * Retrieves metadata for all crawlers defined in the customer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 {
@@ -390,6 +612,12 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 
 /**
  * Retrieves the definition of a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
 {
@@ -398,6 +626,12 @@ GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
 
 /**
  * Retrieves all Databases defined in a given Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &request)
 {
@@ -406,6 +640,12 @@ GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &reque
 
 /**
  * Transforms a Python script into a directed acyclic graph (DAG).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRequest &request)
 {
@@ -414,6 +654,12 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
 
 /**
  * Retrieves information about a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest &request)
 {
@@ -422,6 +668,12 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
 
 /**
  * Retrieves all the DevEndpoints in this AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsRequest &request)
 {
@@ -430,6 +682,12 @@ GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsReque
 
 /**
  * Retrieves an existing job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 {
@@ -438,6 +696,12 @@ GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 
 /**
  * Retrieves the metadata for a given job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 {
@@ -446,6 +710,12 @@ GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 
 /**
  * Retrieves metadata for all runs of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 {
@@ -454,6 +724,12 @@ GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 
 /**
  * Retrieves all current
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 {
@@ -462,6 +738,12 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 
 /**
  * Creates
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 {
@@ -470,6 +752,12 @@ GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 
 /**
  * Retrieves information about a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &request)
 {
@@ -478,6 +766,12 @@ GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &reque
 
 /**
  * Retrieves information about the partitions in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &request)
 {
@@ -486,6 +780,12 @@ GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &re
 
 /**
  * Gets code to perform a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 {
@@ -494,6 +794,12 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 
 /**
  * Retrieves the <code>Table</code> definition in a Data Catalog for a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
 {
@@ -502,6 +808,12 @@ GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
 
 /**
  * Retrieves a specified version of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionRequest &request)
 {
@@ -510,6 +822,12 @@ GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionReque
 
 /**
  * Retrieves a list of strings that identify available versions of a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRequest &request)
 {
@@ -518,6 +836,12 @@ GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRe
 
 /**
  * Retrieves the definitions of some or all of the tables in a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 {
@@ -526,6 +850,12 @@ GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 
 /**
  * Retrieves the definition of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
 {
@@ -534,6 +864,12 @@ GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
 
 /**
  * Gets all the triggers associated with a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 {
@@ -542,6 +878,12 @@ GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 
 /**
  * Retrieves a specified function definition from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUserDefinedFunctionRequest &request)
 {
@@ -550,6 +892,12 @@ GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUse
 
 /**
  * Retrieves a multiple function definitions from the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetUserDefinedFunctionsRequest &request)
 {
@@ -558,6 +906,12 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
 
 /**
  * Imports an existing Athena Data Catalog to AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
@@ -566,6 +920,12 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
 
 /**
  * Resets a bookmark
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRequest &request)
 {
@@ -574,6 +934,12 @@ ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRe
 
 /**
  * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, does
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &request)
 {
@@ -583,6 +949,12 @@ StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &reque
 /**
  * Changes the schedule state of the specified crawler to <code>SCHEDULED</code>, unless the crawler is already running or
  * the schedule state is already
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawlerScheduleRequest &request)
 {
@@ -591,6 +963,12 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
 
 /**
  * Runs a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
 {
@@ -600,6 +978,12 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
 /**
  * Starts an existing trigger. See <a href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering Jobs</a>
  * for information about how different types of trigger are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &request)
 {
@@ -608,6 +992,12 @@ StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &reque
 
 /**
  * If the specified crawler is running, stops the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
 {
@@ -617,6 +1007,12 @@ StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
 /**
  * Sets the schedule state of the specified crawler to <code>NOT_SCHEDULED</code>, but does not stop the crawler if it is
  * already
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerScheduleRequest &request)
 {
@@ -625,6 +1021,12 @@ StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerS
 
 /**
  * Stops a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 {
@@ -634,6 +1036,12 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 /**
  * Modifies an existing classifier (a <code>GrokClassifier</code>, <code>XMLClassifier</code>, or
  * <code>JsonClassifier</code>, depending on which field is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRequest &request)
 {
@@ -642,6 +1050,12 @@ UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRe
 
 /**
  * Updates a connection definition in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRequest &request)
 {
@@ -650,6 +1064,12 @@ UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRe
 
 /**
  * Updates a crawler. If a crawler is running, you must stop it using <code>StopCrawler</code> before updating
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &request)
 {
@@ -658,6 +1078,12 @@ UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &re
 
 /**
  * Updates the schedule of a crawler using a <code>cron</code> expression.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCrawlerScheduleRequest &request)
 {
@@ -666,6 +1092,12 @@ UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCr
 
 /**
  * Updates an existing database definition in a Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest &request)
 {
@@ -674,6 +1106,12 @@ UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest 
 
 /**
  * Updates a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpointRequest &request)
 {
@@ -682,6 +1120,12 @@ UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpoin
 
 /**
  * Updates an existing job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 {
@@ -690,6 +1134,12 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 
 /**
  * Updates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionRequest &request)
 {
@@ -698,6 +1148,12 @@ UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionReque
 
 /**
  * Updates a metadata table in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
 {
@@ -706,6 +1162,12 @@ UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
 
 /**
  * Updates a trigger
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &request)
 {
@@ -714,6 +1176,12 @@ UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &re
 
 /**
  * Updates an existing function definition in the Data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserDefinedFunctionResponse * GlueClient::updateUserDefinedFunction(const UpdateUserDefinedFunctionRequest &request)
 {

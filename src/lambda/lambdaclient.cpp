@@ -119,6 +119,12 @@ LambdaClient::LambdaClient(
  * </p
  *
  * This operation requires permission for the <code>lambda:AddPermission</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &request)
 {
@@ -132,6 +138,12 @@ AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &
  * Aliases</a>>
  *
  * Alias names are unique for a given function. This requires permission for the lambda:CreateAlias
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &request)
 {
@@ -172,6 +184,12 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
  * </p
  *
  * This operation requires permission for the <code>lambda:CreateEventSourceMapping</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const CreateEventSourceMappingRequest &request)
 {
@@ -193,6 +211,12 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  * </p
  *
  * This operation requires permission for the <code>lambda:CreateFunction</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionRequest &request)
 {
@@ -206,6 +230,12 @@ CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionReques
  * Aliases</a>>
  *
  * This requires permission for the lambda:DeleteAlias
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -218,6 +248,12 @@ DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &reques
  * source>
  *
  * This operation requires permission for the <code>lambda:DeleteEventSourceMapping</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request)
 {
@@ -244,6 +280,12 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
  * explicitly>
  *
  * This operation requires permission for the <code>lambda:DeleteFunction</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionRequest &request)
 {
@@ -252,6 +294,12 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
 
 /**
  * Removes concurrent execution limits from this function. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request)
 {
@@ -266,6 +314,12 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
  * You can use this operation to retrieve Lambda limits information, such as code size and concurrency limits. For more
  * information about limits, see <a href="http://docs.aws.amazon.com/lambda/latest/dg/limits.html">AWS Lambda Limits</a>.
  * You can also retrieve resource usage statistics, such as code storage usage and function
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -280,6 +334,12 @@ GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSe
  * Aliases</a>>
  *
  * This requires permission for the <code>lambda:GetAlias</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
 {
@@ -292,6 +352,12 @@ GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
  * <a>CreateEventSourceMapping</a>)>
  *
  * This operation requires permission for the <code>lambda:GetEventSourceMapping</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEventSourceMappingRequest &request)
 {
@@ -313,6 +379,12 @@ GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEve
  * Aliases</a>>
  *
  * This operation requires permission for the <code>lambda:GetFunction</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &request)
 {
@@ -334,6 +406,12 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
  * Aliases</a>>
  *
  * This operation requires permission for the <code>lambda:GetFunctionConfiguration</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const GetFunctionConfigurationRequest &request)
 {
@@ -353,6 +431,12 @@ GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const 
  * </p
  *
  * You need permission for the <code>lambda:GetPolicy action.</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -384,6 +468,12 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  * have exceeded your account concurrent limit or if a function without reserved concurrency exceeds the account's
  * unreserved concurrency limit. <code>ReservedFunctionConcurrentInvocationLimitExceeded</code> will be returned when a
  * function with reserved concurrency exceeds its configured concurrency limit.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 {
@@ -403,6 +493,12 @@ InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
  * console>
  *
  * This operation requires permission for the <code>lambda:InvokeFunction</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &request)
 {
@@ -417,6 +513,12 @@ InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &reques
  * Aliases</a>>
  *
  * This requires permission for the lambda:ListAliases
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &request)
 {
@@ -442,6 +544,12 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
  * </p
  *
  * This operation requires permission for the <code>lambda:ListEventSourceMappings</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const ListEventSourceMappingsRequest &request)
 {
@@ -462,6 +570,12 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
  * information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &request)
 {
@@ -470,6 +584,12 @@ ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &
 
 /**
  * Returns a list of tags assigned to a function when supplied the function ARN (Amazon Resource
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
 {
@@ -480,6 +600,12 @@ ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
  * List all versions of a function. For information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const ListVersionsByFunctionRequest &request)
 {
@@ -492,6 +618,12 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
  * be modified after publication. For information about the versioning feature, see <a
  * href="http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">AWS Lambda Function Versioning and
  * Aliases</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionRequest &request)
 {
@@ -503,6 +635,12 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
  * concurrent execution limit per region. Note that Lambda automatically reserves a buffer of 100 concurrent executions for
  * functions without any reserved concurrency limit. This means if your account limit is 1000, you have a total of 900
  * available to allocate to individual functions. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutFunctionConcurrencyRequest &request)
 {
@@ -527,6 +665,12 @@ PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutF
  * function>
  *
  * You need permission for the <code>lambda:RemovePermission</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemovePermissionResponse * LambdaClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -536,6 +680,12 @@ RemovePermissionResponse * LambdaClient::removePermission(const RemovePermission
 /**
  * Creates a list of tags (key-value pairs) on the Lambda function. Requires the Lambda function ARN (Amazon Resource
  * Name). If a key is specified without a value, Lambda creates a tag with the specified key and a value of null.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &request)
 {
@@ -544,6 +694,12 @@ TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &reques
 
 /**
  * Removes tags from a Lambda function. Requires the function ARN (Amazon Resource Name).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &request)
 {
@@ -557,6 +713,12 @@ UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &
  * Aliases</a>>
  *
  * This requires permission for the lambda:UpdateAlias
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &request)
 {
@@ -584,6 +746,12 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
  * reset>
  *
  * This operation requires permission for the <code>lambda:UpdateEventSourceMapping</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const UpdateEventSourceMappingRequest &request)
 {
@@ -604,6 +772,12 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
  * </p
  *
  * This operation requires permission for the <code>lambda:UpdateFunctionCode</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFunctionCodeRequest &request)
 {
@@ -625,6 +799,12 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
  * </p
  *
  * This operation requires permission for the <code>lambda:UpdateFunctionConfiguration</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
 {

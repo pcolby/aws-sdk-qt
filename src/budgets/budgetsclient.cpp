@@ -127,6 +127,12 @@ BudgetsClient::BudgetsClient(
 
 /**
  * Creates a budget and, if included, notifications and subscribers.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &request)
 {
@@ -135,6 +141,12 @@ CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &re
 
 /**
  * Creates a notification. You must create the budget before you create the associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotificationRequest &request)
 {
@@ -143,6 +155,12 @@ CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotif
 
 /**
  * Creates a subscriber. You must create the associated budget and notification before you create the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscriberRequest &request)
 {
@@ -155,6 +173,12 @@ CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscribe
  * time>
  *
  * <b>Deleting a budget also deletes the notifications and subscribers associated with that budget.</b>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &request)
 {
@@ -167,6 +191,12 @@ DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &re
  * notification>
  *
  * <b>Deleting a notification also deletes the subscribers associated with the notification.</b>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotificationRequest &request)
 {
@@ -179,6 +209,12 @@ DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotif
  * subscriber>
  *
  * <b>Deleting the last subscriber to a notification also deletes the notification.</b>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscriberRequest &request)
 {
@@ -187,6 +223,12 @@ DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscribe
 
 /**
  * Describes a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetRequest &request)
 {
@@ -195,6 +237,12 @@ DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetReque
 
 /**
  * Lists the budgets associated with an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRequest &request)
 {
@@ -203,6 +251,12 @@ DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRe
 
 /**
  * Lists the notifications associated with a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsForBudget(const DescribeNotificationsForBudgetRequest &request)
 {
@@ -211,6 +265,12 @@ DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsFor
 
 /**
  * Lists the subscribers associated with a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersForNotification(const DescribeSubscribersForNotificationRequest &request)
 {
@@ -221,6 +281,12 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
  * Updates a budget. You can change every part of a budget except for the <code>budgetName</code> and the
  * <code>calculatedSpend</code>. When a budget is modified, the <code>calculatedSpend</code> drops to zero until AWS has
  * new usage data to use for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &request)
 {
@@ -229,6 +295,12 @@ UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &re
 
 /**
  * Updates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotificationRequest &request)
 {
@@ -237,6 +309,12 @@ UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotif
 
 /**
  * Updates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSubscriberResponse * BudgetsClient::updateSubscriber(const UpdateSubscriberRequest &request)
 {

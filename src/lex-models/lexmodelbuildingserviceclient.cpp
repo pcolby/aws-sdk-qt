@@ -109,6 +109,12 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  * </p
  *
  * This operation requires permission for the <code>lex:CreateBotVersion</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const CreateBotVersionRequest &request)
 {
@@ -133,6 +139,12 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
  * </p
  *
  * This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion(const CreateIntentVersionRequest &request)
 {
@@ -157,6 +169,12 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
  * </p
  *
  * This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVersion(const CreateSlotTypeVersionRequest &request)
 {
@@ -177,6 +195,12 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  * successful>
  *
  * This operation requires permissions for the <code>lex:DeleteBot</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequest &request)
 {
@@ -193,6 +217,12 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
  * includes a reference to the channel association that refers to the bot. You can remove the reference to the alias by
  * deleting the channel association. If you get the same exception again, delete the referring association until the
  * <code>DeleteBotAlias</code> operation is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const DeleteBotAliasRequest &request)
 {
@@ -205,6 +235,12 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
  * platform>
  *
  * This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotChannelAssociation(const DeleteBotChannelAssociationRequest &request)
 {
@@ -217,6 +253,12 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteBotVersion</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const DeleteBotVersionRequest &request)
 {
@@ -242,6 +284,12 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
  * </p </note>
  *
  * This operation requires permission for the <code>lex:DeleteIntent</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteIntentRequest &request)
 {
@@ -254,6 +302,12 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteIntentVersion</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion(const DeleteIntentVersionRequest &request)
 {
@@ -279,6 +333,12 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
  * </p </note>
  *
  * This operation requires permission for the <code>lex:DeleteSlotType</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const DeleteSlotTypeRequest &request)
 {
@@ -292,6 +352,12 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
  * </p
  *
  * This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVersion(const DeleteSlotTypeVersionRequest &request)
 {
@@ -314,6 +380,12 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  * user>
  *
  * This operation requires permissions for the <code>lex:DeleteUtterances</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const DeleteUtterancesRequest &request)
 {
@@ -326,6 +398,12 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
  * </p
  *
  * This operation requires permissions for the <code>lex:GetBot</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &request)
 {
@@ -338,6 +416,12 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
  * <a>versioning-aliases</a>>
  *
  * This operation requires permissions for the <code>lex:GetBotAlias</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAliasRequest &request)
 {
@@ -350,6 +434,12 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
  * bot>
  *
  * This operation requires permissions for the <code>lex:GetBotAliases</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBotAliasesRequest &request)
 {
@@ -362,6 +452,12 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
  * platform>
  *
  * This operation requires permissions for the <code>lex:GetBotChannelAssociation</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelAssociation(const GetBotChannelAssociationRequest &request)
 {
@@ -375,6 +471,12 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
  *
  * The <code>GetBotChannelAssociations</code> operation requires permissions for the
  * <code>lex:GetBotChannelAssociations</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannelAssociations(const GetBotChannelAssociationsRequest &request)
 {
@@ -398,6 +500,12 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
  * version>
  *
  * This operation requires permissions for the <code>lex:GetBotVersions</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const GetBotVersionsRequest &request)
 {
@@ -420,6 +528,12 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
  * bots> </li> </ul>
  *
  * This operation requires permission for the <code>lex:GetBots</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &request)
 {
@@ -432,6 +546,12 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
  * intent>
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntent</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const GetBuiltinIntentRequest &request)
 {
@@ -444,6 +564,12 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
  * criteria>
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntents</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(const GetBuiltinIntentsRequest &request)
 {
@@ -462,6 +588,12 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
  * Kit</i>>
  *
  * This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes(const GetBuiltinSlotTypesRequest &request)
 {
@@ -470,6 +602,12 @@ GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes
 
 /**
  * Exports the contents of a Amazon Lex resource in a specified format.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequest &request)
 {
@@ -478,6 +616,12 @@ GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequ
 
 /**
  * Gets information about an import job started with the <code>StartImport</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequest &request)
 {
@@ -490,6 +634,12 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
  * </p
  *
  * This operation requires permissions to perform the <code>lex:GetIntent</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequest &request)
 {
@@ -513,6 +663,12 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
  * version>
  *
  * This operation requires permissions for the <code>lex:GetIntentVersions</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(const GetIntentVersionsRequest &request)
 {
@@ -535,6 +691,12 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
  * </p </li> </ul>
  *
  * The operation requires permission for the <code>lex:GetIntents</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsRequest &request)
 {
@@ -548,6 +710,12 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
  * version>
  *
  * This operation requires permissions for the <code>lex:GetSlotType</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTypeRequest &request)
 {
@@ -571,6 +739,12 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
  * version>
  *
  * This operation requires permissions for the <code>lex:GetSlotTypeVersions</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions(const GetSlotTypeVersionsRequest &request)
 {
@@ -593,6 +767,12 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
  * </p </li> </ul>
  *
  * The operation requires permission for the <code>lex:GetSlotTypes</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlotTypesRequest &request)
 {
@@ -623,6 +803,12 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  * version> </note>
  *
  * This operation requires permissions for the <code>lex:GetUtterancesView</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(const GetUtterancesViewRequest &request)
 {
@@ -646,6 +832,12 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
  * exception>
  *
  * This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &request)
 {
@@ -659,6 +851,12 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
  * <a>versioning-aliases</a>>
  *
  * This operation requires permissions for the <code>lex:PutBotAlias</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAliasRequest &request)
 {
@@ -729,6 +927,12 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
  * <a>how-it-works</a>>
  *
  * This operation requires permissions for the <code>lex:PutIntent</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequest &request)
 {
@@ -754,6 +958,12 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
  * <code>NOT_BUILT</code>>
  *
  * This operation requires permissions for the <code>lex:PutSlotType</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTypeRequest &request)
 {
@@ -762,6 +972,12 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
 
 /**
  * Starts a job to import a resource to Amazon
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
 {

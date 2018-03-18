@@ -96,6 +96,12 @@ CloudDirectoryClient::CloudDirectoryClient(
 
 /**
  * Adds a new <a>Facet</a> to an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddFacetToObjectResponse * CloudDirectoryClient::addFacetToObject(const AddFacetToObjectRequest &request)
 {
@@ -105,6 +111,12 @@ AddFacetToObjectResponse * CloudDirectoryClient::addFacetToObject(const AddFacet
 /**
  * Copies the input published schema, at the specified version, into the <a>Directory</a> with the same name and version as
  * that of the published
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ApplySchemaResponse * CloudDirectoryClient::applySchema(const ApplySchemaRequest &request)
 {
@@ -121,6 +133,12 @@ ApplySchemaResponse * CloudDirectoryClient::applySchema(const ApplySchemaRequest
  * pat> </li> <li>
  *
  * Using <code>ObjectIdentifier</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachObjectResponse * CloudDirectoryClient::attachObject(const AttachObjectRequest &request)
 {
@@ -129,6 +147,12 @@ AttachObjectResponse * CloudDirectoryClient::attachObject(const AttachObjectRequ
 
 /**
  * Attaches a policy object to a regular object. An object can have a limited number of attached
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPolicyResponse * CloudDirectoryClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -137,6 +161,12 @@ AttachPolicyResponse * CloudDirectoryClient::attachPolicy(const AttachPolicyRequ
 
 /**
  * Attaches the specified object to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexRequest &request)
 {
@@ -146,6 +176,12 @@ AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexR
 /**
  * Attaches a typed link to a specified source and target object. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachTypedLinkRequest &request)
 {
@@ -154,6 +190,12 @@ AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachType
 
 /**
  * Performs all the read operations in a batch.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchReadResponse * CloudDirectoryClient::batchRead(const BatchReadRequest &request)
 {
@@ -162,6 +204,12 @@ BatchReadResponse * CloudDirectoryClient::batchRead(const BatchReadRequest &requ
 
 /**
  * Performs all the write operations in a batch. Either all the operations succeed or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &request)
 {
@@ -170,6 +218,12 @@ BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &r
 
 /**
  * Creates a <a>Directory</a> by copying the published schema into the directory. A directory cannot be created without a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDirectoryRequest &request)
 {
@@ -178,6 +232,12 @@ CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDire
 
 /**
  * Creates a new <a>Facet</a> in a schema. Facet creation is allowed only in development or applied
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest &request)
 {
@@ -187,6 +247,12 @@ CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest
 /**
  * Creates an index object. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_indexing.html">Indexing</a> for more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest &request)
 {
@@ -197,6 +263,12 @@ CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest
  * Creates an object in a <a>Directory</a>. Additionally attaches the object to a parent, if a parent reference and
  * <code>LinkName</code> is specified. An object is simply a collection of <a>Facet</a> attributes. You can also use this
  * API call to create a policy object, if the facet from which you create the object is a policy facet.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateObjectResponse * CloudDirectoryClient::createObject(const CreateObjectRequest &request)
 {
@@ -219,6 +291,12 @@ CreateObjectResponse * CloudDirectoryClient::createObject(const CreateObjectRequ
  *
  * <i>Applied:</i> Applied schemas are mutable in a way that allows you to add new schema facets. You can also add new,
  * nonrequired attributes to existing schema facets. You can apply only published schemas to directories.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequest &request)
 {
@@ -228,6 +306,12 @@ CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequ
 /**
  * Creates a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const CreateTypedLinkFacetRequest &request)
 {
@@ -237,6 +321,12 @@ CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const 
 /**
  * Deletes a directory. Only disabled directories can be deleted. A deleted directory cannot be undone. Exercise extreme
  * caution when deleting
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectoryResponse * CloudDirectoryClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
@@ -246,6 +336,12 @@ DeleteDirectoryResponse * CloudDirectoryClient::deleteDirectory(const DeleteDire
 /**
  * Deletes a given <a>Facet</a>. All attributes and <a>Rule</a>s that are associated with the facet will be deleted. Only
  * development schema facets are allowed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest &request)
 {
@@ -254,6 +350,12 @@ DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest
 
 /**
  * Deletes an object and its associated attributes. Only objects with no children and no parents can be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequest &request)
 {
@@ -262,6 +364,12 @@ DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequ
 
 /**
  * Deletes a given schema. Schemas in a development and published state can only be deleted.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequest &request)
 {
@@ -271,6 +379,12 @@ DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequ
 /**
  * Deletes a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const DeleteTypedLinkFacetRequest &request)
 {
@@ -279,6 +393,12 @@ DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const 
 
 /**
  * Detaches the specified object from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachFromIndexResponse * CloudDirectoryClient::detachFromIndex(const DetachFromIndexRequest &request)
 {
@@ -288,6 +408,12 @@ DetachFromIndexResponse * CloudDirectoryClient::detachFromIndex(const DetachFrom
 /**
  * Detaches a given object from the parent object. The object that is to be detached from the parent is specified by the
  * link
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachObjectResponse * CloudDirectoryClient::detachObject(const DetachObjectRequest &request)
 {
@@ -296,6 +422,12 @@ DetachObjectResponse * CloudDirectoryClient::detachObject(const DetachObjectRequ
 
 /**
  * Detaches a policy from an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -305,6 +437,12 @@ DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequ
 /**
  * Detaches a typed link from a specified source and target object. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachTypedLinkRequest &request)
 {
@@ -314,6 +452,12 @@ DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachType
 /**
  * Disables the specified directory. Disabled directories cannot be read or written to. Only enabled directories can be
  * disabled. Disabled directories may be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableDirectoryResponse * CloudDirectoryClient::disableDirectory(const DisableDirectoryRequest &request)
 {
@@ -323,6 +467,12 @@ DisableDirectoryResponse * CloudDirectoryClient::disableDirectory(const DisableD
 /**
  * Enables the specified directory. Only disabled directories can be enabled. Once enabled, the directory can then be read
  * and written
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableDirectoryResponse * CloudDirectoryClient::enableDirectory(const EnableDirectoryRequest &request)
 {
@@ -331,6 +481,12 @@ EnableDirectoryResponse * CloudDirectoryClient::enableDirectory(const EnableDire
 
 /**
  * Returns current applied schema version ARN, including the minor version in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAppliedSchemaVersionResponse * CloudDirectoryClient::getAppliedSchemaVersion(const GetAppliedSchemaVersionRequest &request)
 {
@@ -339,6 +495,12 @@ GetAppliedSchemaVersionResponse * CloudDirectoryClient::getAppliedSchemaVersion(
 
 /**
  * Retrieves metadata about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDirectoryResponse * CloudDirectoryClient::getDirectory(const GetDirectoryRequest &request)
 {
@@ -348,6 +510,12 @@ GetDirectoryResponse * CloudDirectoryClient::getDirectory(const GetDirectoryRequ
 /**
  * Gets details of the <a>Facet</a>, such as facet name, attributes, <a>Rule</a>s, or <code>ObjectType</code>. You can call
  * this on all kinds of schema facets -- published, development, or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request)
 {
@@ -356,6 +524,12 @@ GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request
 
 /**
  * Retrieves metadata about an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const GetObjectInformationRequest &request)
 {
@@ -366,6 +540,12 @@ GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const 
  * Retrieves a JSON representation of the schema. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
  * for more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaAsJsonRequest &request)
 {
@@ -375,6 +555,12 @@ GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaA
 /**
  * Returns the identity attribute order for a specific <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetInformation(const GetTypedLinkFacetInformationRequest &request)
 {
@@ -383,6 +569,12 @@ GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetIn
 
 /**
  * Lists schema major versions applied to a directory. If <code>SchemaArn</code> is provided, lists the minor
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAppliedSchemaArnsResponse * CloudDirectoryClient::listAppliedSchemaArns(const ListAppliedSchemaArnsRequest &request)
 {
@@ -391,6 +583,12 @@ ListAppliedSchemaArnsResponse * CloudDirectoryClient::listAppliedSchemaArns(cons
 
 /**
  * Lists indices attached to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedIndicesResponse * CloudDirectoryClient::listAttachedIndices(const ListAttachedIndicesRequest &request)
 {
@@ -399,6 +597,12 @@ ListAttachedIndicesResponse * CloudDirectoryClient::listAttachedIndices(const Li
 
 /**
  * Retrieves each Amazon Resource Name (ARN) of schemas in the development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDevelopmentSchemaArnsResponse * CloudDirectoryClient::listDevelopmentSchemaArns(const ListDevelopmentSchemaArnsRequest &request)
 {
@@ -407,6 +611,12 @@ ListDevelopmentSchemaArnsResponse * CloudDirectoryClient::listDevelopmentSchemaA
 
 /**
  * Lists directories created within an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDirectoriesResponse * CloudDirectoryClient::listDirectories(const ListDirectoriesRequest &request)
 {
@@ -415,6 +625,12 @@ ListDirectoriesResponse * CloudDirectoryClient::listDirectories(const ListDirect
 
 /**
  * Retrieves attributes attached to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFacetAttributesResponse * CloudDirectoryClient::listFacetAttributes(const ListFacetAttributesRequest &request)
 {
@@ -423,6 +639,12 @@ ListFacetAttributesResponse * CloudDirectoryClient::listFacetAttributes(const Li
 
 /**
  * Retrieves the names of facets that exist in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNamesRequest &request)
 {
@@ -433,6 +655,12 @@ ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNam
  * Returns a paginated list of all the incoming <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(const ListIncomingTypedLinksRequest &request)
 {
@@ -441,6 +669,12 @@ ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(co
 
 /**
  * Lists objects and indexed values attached to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &request)
 {
@@ -449,6 +683,12 @@ ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &requ
 
 /**
  * Lists all attributes that are associated with an object.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectAttributesResponse * CloudDirectoryClient::listObjectAttributes(const ListObjectAttributesRequest &request)
 {
@@ -457,6 +697,12 @@ ListObjectAttributesResponse * CloudDirectoryClient::listObjectAttributes(const 
 
 /**
  * Returns a paginated list of child objects that are associated with a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const ListObjectChildrenRequest &request)
 {
@@ -474,6 +720,12 @@ ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const List
  * the requested object. The API returns the number of paths based on user-defined <code>MaxResults</code>, in case there
  * are multiple paths to the parent. The order of the paths and nodes returned is consistent among multiple API calls
  * unless the objects are deleted or moved. Paths not leading to the directory root are ignored from the target
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectParentPathsResponse * CloudDirectoryClient::listObjectParentPaths(const ListObjectParentPathsRequest &request)
 {
@@ -482,6 +734,12 @@ ListObjectParentPathsResponse * CloudDirectoryClient::listObjectParentPaths(cons
 
 /**
  * Lists parent objects that are associated with a given object in pagination
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectParentsResponse * CloudDirectoryClient::listObjectParents(const ListObjectParentsRequest &request)
 {
@@ -490,6 +748,12 @@ ListObjectParentsResponse * CloudDirectoryClient::listObjectParents(const ListOb
 
 /**
  * Returns policies attached to an object in pagination
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const ListObjectPoliciesRequest &request)
 {
@@ -500,6 +764,12 @@ ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const List
  * Returns a paginated list of all the outgoing <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(const ListOutgoingTypedLinksRequest &request)
 {
@@ -508,6 +778,12 @@ ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(co
 
 /**
  * Returns all of the <code>ObjectIdentifiers</code> to which a given policy is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(const ListPolicyAttachmentsRequest &request)
 {
@@ -516,6 +792,12 @@ ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(cons
 
 /**
  * Lists schema major versions for a published schema. If <code>SchemaArn</code> is provided, lists the minor
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPublishedSchemaArnsResponse * CloudDirectoryClient::listPublishedSchemaArns(const ListPublishedSchemaArnsRequest &request)
 {
@@ -525,6 +807,12 @@ ListPublishedSchemaArnsResponse * CloudDirectoryClient::listPublishedSchemaArns(
 /**
  * Returns tags for a resource. Tagging is currently supported only for directories with a limit of 50 tags per directory.
  * All 50 tags are returned for a given directory with this API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -534,6 +822,12 @@ ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const Li
 /**
  * Returns a paginated list of all attribute definitions for a particular <a>TypedLinkFacet</a>. For more information, see
  * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetAttributes(const ListTypedLinkFacetAttributesRequest &request)
 {
@@ -543,6 +837,12 @@ ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetA
 /**
  * Returns a paginated list of <code>TypedLink</code> facet names for a particular schema. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(const ListTypedLinkFacetNamesRequest &request)
 {
@@ -555,6 +855,12 @@ ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(
  * <code>ObjectIdentifier</code> for such objects. If policies are present, it returns <code>ObjectIdentifier</code>,
  * <code>policyId</code>, and <code>policyType</code>. Paths that don't lead to the root from the target object are
  * ignored. For more information, see <a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 LookupPolicyResponse * CloudDirectoryClient::lookupPolicy(const LookupPolicyRequest &request)
 {
@@ -563,6 +869,12 @@ LookupPolicyResponse * CloudDirectoryClient::lookupPolicy(const LookupPolicyRequ
 
 /**
  * Publishes a development schema with a major version and a recommended minor
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaRequest &request)
 {
@@ -573,6 +885,12 @@ PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaR
  * Allows a schema to be updated using JSON upload. Only available for development schemas. See <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
  * for more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSchemaFromJsonRequest &request)
 {
@@ -581,6 +899,12 @@ PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSch
 
 /**
  * Removes the specified facet from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveFacetFromObjectResponse * CloudDirectoryClient::removeFacetFromObject(const RemoveFacetFromObjectRequest &request)
 {
@@ -589,6 +913,12 @@ RemoveFacetFromObjectResponse * CloudDirectoryClient::removeFacetFromObject(cons
 
 /**
  * An API operation for adding tags to a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * CloudDirectoryClient::tagResource(const TagResourceRequest &request)
 {
@@ -597,6 +927,12 @@ TagResourceResponse * CloudDirectoryClient::tagResource(const TagResourceRequest
 
 /**
  * An API operation for removing tags from a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceRequest &request)
 {
@@ -617,6 +953,12 @@ UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceR
  * <code>ObjectTypes</code>> </li> <li>
  *
  * Deletes existing <code>Attributes</code>, <code>Rules</code>, or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest &request)
 {
@@ -625,6 +967,12 @@ UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest
 
 /**
  * Updates a given object's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateObjectAttributesResponse * CloudDirectoryClient::updateObjectAttributes(const UpdateObjectAttributesRequest &request)
 {
@@ -633,6 +981,12 @@ UpdateObjectAttributesResponse * CloudDirectoryClient::updateObjectAttributes(co
 
 /**
  * Updates the schema name with a new name. Only development schema names can be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequest &request)
 {
@@ -642,6 +996,12 @@ UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequ
 /**
  * Updates a <a>TypedLinkFacet</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const UpdateTypedLinkFacetRequest &request)
 {
@@ -653,6 +1013,12 @@ UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const 
  * <code>MinorVersion</code>. Backwards-compatible minor version upgrades are instantaneously available for readers on all
  * objects in the directory. Note: This is a synchronous API call and upgrades only one schema on a given directory per
  * call. To upgrade multiple directories from one schema, you would need to call this API on each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpgradeAppliedSchemaResponse * CloudDirectoryClient::upgradeAppliedSchema(const UpgradeAppliedSchemaRequest &request)
 {
@@ -661,6 +1027,12 @@ UpgradeAppliedSchemaResponse * CloudDirectoryClient::upgradeAppliedSchema(const 
 
 /**
  * Upgrades a published schema under a new minor version revision using the current contents of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(const UpgradePublishedSchemaRequest &request)
 {

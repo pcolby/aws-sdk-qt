@@ -177,6 +177,12 @@ OpsWorksCMClient::OpsWorksCMClient(
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid. The AssociateNode
  * API call can be integrated into Auto Scaling configurations, AWS Cloudformation templates, or the user data of a
  * server's instance.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeRequest &request)
 {
@@ -202,6 +208,12 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  * <code>InvalidStateException</code> is thrown when the server is not in any of the following states: RUNNING, HEALTHY, or
  * UNHEALTHY. A <code>ResourceNotFoundException</code> is thrown when the server is not found. A
  * <code>ValidationException</code> is thrown when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest &request)
 {
@@ -243,6 +255,12 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  * By default, your server is accessible from any IP address. We recommend that you update your security group rules to
  * allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the
  * navigation pane of the EC2 management console.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
 {
@@ -257,6 +275,12 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  * An <code>InvalidStateException</code> is thrown when a backup deletion is already in progress. A
  * <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * thrown when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest &request)
 {
@@ -279,6 +303,12 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  * raised when parameters of the request are not valid.
  *
  * </p
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest &request)
 {
@@ -291,6 +321,12 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
  * </p
  *
  * This operation is synchronous.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -309,6 +345,12 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  *
  * A <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackupsRequest &request)
 {
@@ -326,6 +368,12 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  *
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -340,6 +388,12 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  * A <code>ResourceNotFoundException</code> is thrown when no recent association or disassociation request with the
  * specified token is found, or when the server does not exist. A <code>ValidationException</code> is raised when
  * parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
 {
@@ -358,6 +412,12 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  *
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServersRequest &request)
 {
@@ -374,6 +434,12 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  * A node can can only be disassociated from a server that is in a <code>HEALTHY</code> state. Otherwise, an
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
 {
@@ -395,6 +461,12 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  * An <code>InvalidStateException</code> is thrown when the server is not in a valid state. A
  * <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerRequest &request)
 {
@@ -411,6 +483,12 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  * Maintenance can only be started on servers in <code>HEALTHY</code> and <code>UNHEALTHY</code> states. Otherwise, an
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
 {
@@ -423,6 +501,12 @@ StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMainten
  * </p
  *
  * This operation is synchronous.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest &request)
 {
@@ -444,6 +528,12 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  * This operation can only be called for servers in <code>HEALTHY</code> or <code>UNHEALTHY</code> states. Otherwise, an
  * <code>InvalidStateException</code> is raised. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
 {

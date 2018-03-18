@@ -159,6 +159,12 @@ IamClient::IamClient(
  * resource>
  *
  * This action is idempotent; it does not fail or return an error if you add an existing client ID to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConnectProvider(const AddClientIDToOpenIDConnectProviderRequest &request)
 {
@@ -179,6 +185,12 @@ AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConne
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with Roles</a>. For more
  * information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const AddRoleToInstanceProfileRequest &request)
 {
@@ -187,6 +199,12 @@ AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const Add
 
 /**
  * Adds the specified user to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &request)
 {
@@ -205,6 +223,12 @@ AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicyRequest &request)
 {
@@ -226,6 +250,12 @@ AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicy
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyRequest &request)
 {
@@ -244,6 +274,12 @@ AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyReq
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyRequest &request)
 {
@@ -258,6 +294,12 @@ AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyReq
  * To change the password for a different user, see <a>UpdateLoginProfile</a>. For more information about modifying
  * passwords, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing
  * Passwords</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &request)
 {
@@ -285,6 +327,12 @@ ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &
  * To ensure the security of your AWS account, the secret access key is accessible only during key and user creation. You
  * must save the key (for example, in a text file) if you want to be able to access it again. If a secret key is lost, you
  * can delete the access keys for the associated user and then create new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyRequest &request)
 {
@@ -295,6 +343,12 @@ CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyReques
  * Creates an alias for your AWS account. For information about using an AWS account alias, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAliasRequest &request)
 {
@@ -309,6 +363,12 @@ CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAl
  * For information about the number of groups you can create, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
 {
@@ -324,6 +384,12 @@ CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
  * For information about the number of instance profiles you can create, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateInstanceProfileRequest &request)
 {
@@ -335,6 +401,12 @@ CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateIns
  * Console. For more information about managing passwords, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing Passwords</a> in the <i>IAM
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProfileRequest &request)
 {
@@ -361,6 +433,12 @@ CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProf
  *
  * Because trust for the OIDC provider is ultimately derived from the IAM provider that this action creates, it is a best
  * practice to limit access to the <a>CreateOpenIDConnectProvider</a> action to highly-privileged
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(const CreateOpenIDConnectProviderRequest &request)
 {
@@ -382,6 +460,12 @@ CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(con
  * For more information about managed policies in general, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -403,6 +487,12 @@ CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &reques
  * For more information about managed policy versions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
@@ -415,6 +505,12 @@ CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyV
  * about limitations on role names and the number of roles you can create, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
 {
@@ -449,6 +545,12 @@ CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
  * Federated Users to Access the AWS Management Console</a> and <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html">About SAML 2.0-based Federation</a>
  * in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProviderRequest &request)
 {
@@ -470,6 +572,12 @@ CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProvi
  * fails>
  *
  * To attach a policy to this service-linked role, you must make the request using the AWS service that depends on this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const CreateServiceLinkedRoleRequest &request)
 {
@@ -497,6 +605,12 @@ CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const Creat
  * For more information about service-specific credentials, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html">Using IAM with AWS CodeCommit: Git
  * Credentials, SSH Keys, and AWS Access Keys</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCredential(const CreateServiceSpecificCredentialRequest &request)
 {
@@ -511,6 +625,12 @@ CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCreden
  * For information about limitations on the number of IAM users you can create, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
 {
@@ -534,6 +654,12 @@ CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
  * The seed information contained in the QR code and the Base32 string should be treated like any other secret access
  * information, such as your AWS access keys or your passwords. After you provision your virtual device, you should ensure
  * that the information is destroyed following secure
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateVirtualMFADeviceRequest &request)
 {
@@ -548,6 +674,12 @@ CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateV
  * For more information about creating and working with virtual MFA devices, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_VirtualMFA.html">Using a Virtual MFA Device</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFADeviceRequest &request)
 {
@@ -562,6 +694,12 @@ DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFA
  * If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the
  * request. Because this action works for access keys under the AWS account, you can use this action to manage root
  * credentials even if the AWS account has no associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyRequest &request)
 {
@@ -572,6 +710,12 @@ DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyReques
  * Deletes the specified AWS account alias. For information about using an AWS account alias, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAliasRequest &request)
 {
@@ -580,6 +724,12 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
 
 /**
  * Deletes the password policy for the AWS account. There are no
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 {
@@ -588,6 +738,12 @@ DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 
 /**
  * Deletes the specified IAM group. The group must not contain any users or have any attached
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
 {
@@ -603,6 +759,12 @@ DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
  * <a>DetachGroupPolicy</a>. For more information about policies, refer to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicyRequest &request)
 {
@@ -621,6 +783,12 @@ DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicy
  *
  * For more information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteInstanceProfileRequest &request)
 {
@@ -636,6 +804,12 @@ DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteIns
  * Deleting a user's password does not prevent a user from accessing AWS through the command line interface or the API. To
  * prevent all user access you must also either make any access keys inactive or delete them. For more information about
  * making keys inactive or deleting them, see <a>UpdateAccessKey</a> and <a>DeleteAccessKey</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProfileRequest &request)
 {
@@ -653,6 +827,12 @@ DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProf
  * fails>
  *
  * This action is idempotent; it does not fail or return an error if you call the action for a provider that does not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(const DeleteOpenIDConnectProviderRequest &request)
 {
@@ -689,6 +869,12 @@ DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(con
  * For information about managed policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -708,6 +894,12 @@ DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &reques
  * For information about versions for managed policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
@@ -722,6 +914,12 @@ DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyV
  *
  * Make sure you do not have any Amazon EC2 instances running with the role you are about to delete. Deleting a role or
  * instance profile that is associated with a running instance will break any applications running on the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
 {
@@ -737,6 +935,12 @@ DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
  * <a>DetachRolePolicy</a>. For more information about policies, refer to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyRequest &request)
 {
@@ -755,6 +959,12 @@ DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyReq
  *
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProviderRequest &request)
 {
@@ -770,6 +980,12 @@ DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProvi
  * repository. For more information about using SSH keys to authenticate to an AWS CodeCommit repository, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublicKeyRequest &request)
 {
@@ -795,6 +1011,12 @@ DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublic
  * information, go to <a
  * href="http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_DeleteLoadBalancerListeners.html">DeleteLoadBalancerListeners</a>
  * in the <i>Elastic Load Balancing API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const DeleteServerCertificateRequest &request)
 {
@@ -822,6 +1044,12 @@ DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const Delet
  * For more information about service-linked roles, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">Roles
  * Terms and Concepts: AWS Service-Linked Role</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
 {
@@ -830,6 +1058,12 @@ DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const Delet
 
 /**
  * Deletes the specified service-specific
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCredential(const DeleteServiceSpecificCredentialRequest &request)
 {
@@ -844,6 +1078,12 @@ DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCreden
  * If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the
  * request. Because this action works for access keys under the AWS account, you can use this action to manage root
  * credentials even if the AWS account has no associated IAM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const DeleteSigningCertificateRequest &request)
 {
@@ -853,6 +1093,12 @@ DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const Del
 /**
  * Deletes the specified IAM user. The user must not belong to any groups or have any access keys, signing certificates, or
  * attached
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -868,6 +1114,12 @@ DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
  * <a>DetachUserPolicy</a>. For more information about policies, refer to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyRequest &request)
 {
@@ -881,6 +1133,12 @@ DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyReq
  *
  * You must deactivate a user's virtual MFA device before you can delete it. For information about deactivating MFA
  * devices, see <a>DeactivateMFADevice</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteVirtualMFADeviceRequest &request)
 {
@@ -896,6 +1154,12 @@ DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteV
  * API. For information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicyRequest &request)
 {
@@ -911,6 +1175,12 @@ DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicy
  * For information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyRequest &request)
 {
@@ -926,6 +1196,12 @@ DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyReq
  * For information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyRequest &request)
 {
@@ -935,6 +1211,12 @@ DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyReq
 /**
  * Enables the specified MFA device and associates it with the specified IAM user. When enabled, the MFA device is required
  * for every subsequent login by the IAM user associated with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceRequest &request)
 {
@@ -945,6 +1227,12 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
  * Generates a credential report for the AWS account. For more information about the credential report, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GenerateCredentialReportResponse * IamClient::generateCredentialReport()
 {
@@ -954,6 +1242,12 @@ GenerateCredentialReportResponse * IamClient::generateCredentialReport()
 /**
  * Retrieves information about when the specified access key was last used. The information includes the date and time of
  * last use, along with the AWS service and region that were specified in the last request made with that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKeyLastUsedRequest &request)
 {
@@ -969,6 +1263,12 @@ GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKe
  *
  * You can optionally filter the results using the <code>Filter</code> parameter. You can paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetails(const GetAccountAuthorizationDetailsRequest &request)
 {
@@ -978,6 +1278,12 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
 /**
  * Retrieves the password policy for the AWS account. For more information about using a password policy, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
 {
@@ -992,6 +1298,12 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
  * For information about limitations on IAM entities, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSummaryResponse * IamClient::getAccountSummary()
 {
@@ -1008,6 +1320,12 @@ GetAccountSummaryResponse * IamClient::getAccountSummary()
  * request, and can be evaluated by testing against a value specified in an IAM policy. Use GetContextKeysForCustomPolicy
  * to understand what key names and values you must supply when you call <a>SimulateCustomPolicy</a>. Note that all
  * parameters are shown in unencoded form here for clarity, but must be URL encoded to be included as a part of a real HTML
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy(const GetContextKeysForCustomPolicyRequest &request)
 {
@@ -1034,6 +1352,12 @@ GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy
  * Context keys are variables maintained by AWS and its services that provide details about the context of an API query
  * request, and can be evaluated by testing against a value in an IAM policy. Use <a>GetContextKeysForPrincipalPolicy</a>
  * to understand what key names and values you must supply when you call
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipalPolicy(const GetContextKeysForPrincipalPolicyRequest &request)
 {
@@ -1044,6 +1368,12 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
  * Retrieves a credential report for the AWS account. For more information about the credential report, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCredentialReportResponse * IamClient::getCredentialReport()
 {
@@ -1053,6 +1383,12 @@ GetCredentialReportResponse * IamClient::getCredentialReport()
 /**
  * Returns a list of IAM users that are in the specified IAM group. You can paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
 {
@@ -1080,6 +1416,12 @@ GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &request)
 {
@@ -1091,6 +1433,12 @@ GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &
  * For more information about instance profiles, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance Profiles</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProfileRequest &request)
 {
@@ -1100,6 +1448,12 @@ GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProf
 /**
  * Retrieves the user name and password-creation date for the specified IAM user. If the user has not been assigned a
  * password, the action returns a 404 (<code>NoSuchEntity</code>)
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileRequest &request)
 {
@@ -1108,6 +1462,12 @@ GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileReques
 
 /**
  * Returns information about the specified OpenID Connect (OIDC) provider resource object in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const GetOpenIDConnectProviderRequest &request)
 {
@@ -1130,6 +1490,12 @@ GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const Get
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -1166,6 +1532,12 @@ GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
  * For more information about managed policy versions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
@@ -1183,6 +1555,12 @@ GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionReq
  * You can use a URL decoding method to convert the policy back to plain JSON text. For example, if you use Java, you can
  * use the <code>decode</code> method of the <code>java.net.URLDecoder</code> utility class in the Java SDK. Other
  * languages and SDKs provide similar
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
 {
@@ -1216,6 +1594,12 @@ GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
  * For more information about roles, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using Roles to Delegate Permissions and
  * Federate
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &request)
 {
@@ -1229,6 +1613,12 @@ GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &req
  *
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderRequest &request)
 {
@@ -1244,6 +1634,12 @@ GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderReques
  * repository. For more information about using SSH keys to authenticate to an AWS CodeCommit repository, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyRequest &request)
 {
@@ -1259,6 +1655,12 @@ GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyReques
  * certificates that you manage with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCertificateRequest &request)
 {
@@ -1270,6 +1672,12 @@ GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCe
  * operation to submit a service-linked role for deletion, you can use the <code>DeletionTaskId</code> parameter in
  * <code>GetServiceLinkedRoleDeletionStatus</code> to check the status of the deletion. If the deletion fails, this
  * operation returns the reason that it
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDeletionStatus(const GetServiceLinkedRoleDeletionStatusRequest &request)
 {
@@ -1283,6 +1691,12 @@ GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDele
  *
  * If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID used to sign
  * the request to this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUserResponse * IamClient::getUser(const GetUserRequest &request)
 {
@@ -1310,6 +1724,12 @@ GetUserResponse * IamClient::getUser(const GetUserRequest &request)
  * For more information about policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &request)
 {
@@ -1334,6 +1754,12 @@ GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &req
  * users> <note>
  *
  * To ensure the security of your AWS account, the secret access key is accessible only during key and user
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &request)
 {
@@ -1344,6 +1770,12 @@ ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &
  * Lists the account alias associated with the AWS account (Note: you can have only one). For information about using an
  * AWS account alias, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for
  * Your AWS Account ID</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAliasesRequest &request)
 {
@@ -1366,6 +1798,12 @@ ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAlia
  * <code>PathPrefix</code> parameter to limit the list of policies to only those matching the specified path prefix. If
  * there are no policies attached to the specified group (or none that match the specified path prefix), the action returns
  * an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const ListAttachedGroupPoliciesRequest &request)
 {
@@ -1388,6 +1826,12 @@ ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const L
  * <code>PathPrefix</code> parameter to limit the list of policies to only those matching the specified path prefix. If
  * there are no policies attached to the specified role (or none that match the specified path prefix), the action returns
  * an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const ListAttachedRolePoliciesRequest &request)
 {
@@ -1410,6 +1854,12 @@ ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const Lis
  * <code>PathPrefix</code> parameter to limit the list of policies to only those matching the specified path prefix. If
  * there are no policies attached to the specified group (or none that match the specified path prefix), the action returns
  * an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const ListAttachedUserPoliciesRequest &request)
 {
@@ -1428,6 +1878,12 @@ ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const Lis
  * <code>Role</code>>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntitiesForPolicyRequest &request)
 {
@@ -1448,6 +1904,12 @@ ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntit
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified group, the action returns an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPoliciesRequest &request)
 {
@@ -1460,6 +1922,12 @@ ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPolicies
  * prefix>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
 {
@@ -1472,6 +1940,12 @@ ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
  * to>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUserRequest &request)
 {
@@ -1486,6 +1960,12 @@ ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUser
  * Profiles</a>>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanceProfilesRequest &request)
 {
@@ -1500,6 +1980,12 @@ ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanc
  * Profiles</a>>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(const ListInstanceProfilesForRoleRequest &request)
 {
@@ -1514,6 +2000,12 @@ ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(con
  * API>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &request)
 {
@@ -1522,6 +2014,12 @@ ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &
 
 /**
  * Lists information about the IAM OpenID Connect (OIDC) provider resource objects defined in the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const ListOpenIDConnectProvidersRequest &request)
 {
@@ -1547,6 +2045,12 @@ ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const
  * For more information about managed policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -1562,6 +2066,12 @@ ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &reques
  * For more information about managed policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
@@ -1582,6 +2092,12 @@ ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersi
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified role, the action returns an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesRequest &request)
 {
@@ -1596,6 +2112,12 @@ ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesReq
  * Roles</a>>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
 {
@@ -1609,6 +2131,12 @@ ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
  *
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProvidersRequest &request)
 {
@@ -1630,6 +2158,12 @@ ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProviders
  *
  * Although each user is limited to a small number of keys, you can still paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeysRequest &request)
 {
@@ -1650,6 +2184,12 @@ ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeys
  * certificates that you manage with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServerCertificatesResponse * IamClient::listServerCertificates(const ListServerCertificatesRequest &request)
 {
@@ -1663,6 +2203,12 @@ ListServerCertificatesResponse * IamClient::listServerCertificates(const ListSer
  * authenticate to an AWS service, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html">Set Up service-specific credentials</a>
  * in the AWS CodeCommit User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentials(const ListServiceSpecificCredentialsRequest &request)
 {
@@ -1683,6 +2229,12 @@ ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentia
  * If the <code>UserName</code> field is not specified, the user name is determined implicitly based on the AWS access key
  * ID used to sign the request for this API. Because this action works for access keys under the AWS account, you can use
  * this action to manage root credentials even if the AWS account has no associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListSigningCertificatesRequest &request)
 {
@@ -1703,6 +2255,12 @@ ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListS
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified user, the action returns an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesRequest &request)
 {
@@ -1716,6 +2274,12 @@ ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesReq
  * list>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
 {
@@ -1730,6 +2294,12 @@ ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
  * <code>Any</code>>
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtualMFADevicesRequest &request)
 {
@@ -1758,6 +2328,12 @@ ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtu
  * general information about using the Query API with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &request)
 {
@@ -1794,6 +2370,12 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
  * general information about using the Query API with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &request)
 {
@@ -1822,6 +2404,12 @@ PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &req
  * general information about using the Query API with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &request)
 {
@@ -1835,6 +2423,12 @@ PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &req
  * object>
  *
  * This action is idempotent; it does not fail or return an error if you try to remove a client ID that does not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromOpenIDConnectProvider(const RemoveClientIDFromOpenIDConnectProviderRequest &request)
 {
@@ -1856,6 +2450,12 @@ RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromO
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with Roles</a>. For more
  * information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile(const RemoveRoleFromInstanceProfileRequest &request)
 {
@@ -1864,6 +2464,12 @@ RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile
 
 /**
  * Removes the specified user from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFromGroupRequest &request)
 {
@@ -1874,6 +2480,12 @@ RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFro
  * Resets the password for a service-specific credential. The new password is AWS generated and cryptographically strong.
  * It cannot be configured by the user. Resetting the password immediately invalidates the previous password associated
  * with this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredential(const ResetServiceSpecificCredentialRequest &request)
 {
@@ -1888,6 +2500,12 @@ ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredenti
  * For more information about creating and working with virtual MFA devices, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_VirtualMFA.html">Using a Virtual MFA Device</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceRequest &request)
 {
@@ -1907,6 +2525,12 @@ ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceReques
  * For information about managed policies, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
@@ -1935,6 +2559,12 @@ SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDe
  * <a>GetContextKeysForCustomPolicy</a>>
  *
  * If the output is long, you can use <code>MaxItems</code> and <code>Marker</code> parameters to paginate the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCustomPolicyRequest &request)
 {
@@ -1974,6 +2604,12 @@ SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCus
  * <a>GetContextKeysForPrincipalPolicy</a>>
  *
  * If the output is long, you can use the <code>MaxItems</code> and <code>Marker</code> parameters to paginate the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const SimulatePrincipalPolicyRequest &request)
 {
@@ -1995,6 +2631,12 @@ SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const Simul
  * For information about rotating keys, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html">Managing Keys and Certificates</a> in
  * the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyRequest &request)
 {
@@ -2014,6 +2656,12 @@ UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyReques
  * For more information about using a password policy, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
  * Policy</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(const UpdateAccountPasswordPolicyRequest &request)
 {
@@ -2025,6 +2673,12 @@ UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(con
  * trust policy". For more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using Roles to Delegate Permissions and
  * Federate
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateAssumeRolePolicyRequest &request)
 {
@@ -2046,6 +2700,12 @@ UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateA
  * object. For example, to change "Managers" to "MGRs", the entity making the request must have permission on both
  * "Managers" and "MGRs", or must have permission on all (*). For more information about permissions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html">Permissions and Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
 {
@@ -2060,6 +2720,12 @@ UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
  * IAM users can change their own passwords by calling <a>ChangePassword</a>. For more information about modifying
  * passwords, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing
  * Passwords</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProfileRequest &request)
 {
@@ -2085,6 +2751,12 @@ UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProf
  * Because trust for the OIDC provider is ultimately derived from the provider's certificate and is validated by the
  * thumbprint, it is a best practice to limit access to the <code>UpdateOpenIDConnectProviderThumbprint</code> action to
  * highly-privileged
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectProviderThumbprint(const UpdateOpenIDConnectProviderThumbprintRequest &request)
 {
@@ -2093,6 +2765,12 @@ UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectPr
 
 /**
  * Modifies the description of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRoleDescriptionRequest &request)
 {
@@ -2106,6 +2784,12 @@ UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRol
  *
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProviderRequest &request)
 {
@@ -2122,6 +2806,12 @@ UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProvi
  * repository. For more information about using SSH keys to authenticate to an AWS CodeCommit repository, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublicKeyRequest &request)
 {
@@ -2151,6 +2841,12 @@ UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublic
  * have permission on "ProductionCert" and "ProdCert", or must have permission on all (*). For more information about
  * permissions, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access Management</a> in the
  * <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServerCertificateResponse * IamClient::updateServerCertificate(const UpdateServerCertificateRequest &request)
 {
@@ -2161,6 +2857,12 @@ UpdateServerCertificateResponse * IamClient::updateServerCertificate(const Updat
  * Sets the status of a service-specific credential to <code>Active</code> or <code>Inactive</code>. Service-specific
  * credentials that are inactive cannot be used for authentication to the service. This action can be used to disable a
  * user’s service-specific credential as part of a credential rotation work
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCredential(const UpdateServiceSpecificCredentialRequest &request)
 {
@@ -2176,6 +2878,12 @@ UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCreden
  * If the <code>UserName</code> field is not specified, the UserName is determined implicitly based on the AWS access key
  * ID used to sign the request. Because this action works for access keys under the AWS account, you can use this action to
  * manage root credentials even if the AWS account has no associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const UpdateSigningCertificateRequest &request)
 {
@@ -2198,6 +2906,12 @@ UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const Upd
  * For example, to change Bob to Robert, the entity making the request must have permission on Bob and Robert, or must have
  * permission on all (*). For more information about permissions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html">Permissions and Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
 {
@@ -2213,6 +2927,12 @@ UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
  * CodeCommit repository. For more information about using SSH keys to authenticate to an AWS CodeCommit repository, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublicKeyRequest &request)
 {
@@ -2252,6 +2972,12 @@ UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublic
  * <i>AWS General Reference</i>. For general information about using the Query API with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/programming.html">Calling the API by Making HTTP Query
  * Requests</a> in the <i>IAM User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadServerCertificateResponse * IamClient::uploadServerCertificate(const UploadServerCertificateRequest &request)
 {
@@ -2277,6 +3003,12 @@ UploadServerCertificateResponse * IamClient::uploadServerCertificate(const Uploa
  * the <i>AWS General Reference</i>. For general information about using the Query API with IAM, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const UploadSigningCertificateRequest &request)
 {

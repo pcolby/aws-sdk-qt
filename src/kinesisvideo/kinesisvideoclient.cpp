@@ -107,6 +107,12 @@ KinesisVideoClient::KinesisVideoClient(
  * </p
  *
  * You must have permissions for the <code>KinesisVideo:CreateStream</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamRequest &request)
 {
@@ -132,6 +138,12 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
  * </p
  *
  * This operation requires permission for the <code>KinesisVideo:DeleteStream</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -141,6 +153,12 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
 /**
  * Returns the most current information about the specified stream. You must specify either the <code>StreamName</code> or
  * the <code>StreamARN</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -159,6 +177,12 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
  * endpoint> </note>
  *
  * In the request, specify the stream either by <code>StreamName</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpointRequest &request)
 {
@@ -168,6 +192,12 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
 /**
  * Returns an array of <code>StreamInfo</code> objects. Each object describes a stream. To retrieve only streams that
  * satisfy a specific condition, you can specify a <code>StreamNameCondition</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &request)
 {
@@ -180,6 +210,12 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
  * stream>
  *
  * In the request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
@@ -204,6 +240,12 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  * action>
  *
  * Kinesis video streams support up to 50
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
@@ -217,6 +259,12 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
  * ignored>
  *
  * In the request, you must provide the <code>StreamName</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &request)
 {
@@ -250,6 +298,12 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
  * If the data retention period is decreased, existing data is retained for the new retention period. For example, if the
  * data retention period is decreased from seven hours to one hour, all existing data is retained for one hour, and any
  * data older than one hour is deleted
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
@@ -272,6 +326,12 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
  * </p
  *
  * <code>UpdateStream</code> is an asynchronous operation, and takes time to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamRequest &request)
 {

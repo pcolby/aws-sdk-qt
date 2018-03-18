@@ -134,6 +134,12 @@ SsmClient::SsmClient(
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a> in the
  * <i>Amazon EC2 User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -143,6 +149,12 @@ AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResource
 /**
  * Attempts to cancel the command specified by the Command ID. There is no guarantee that the command will be terminated
  * and the underlying process
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &request)
 {
@@ -155,6 +167,12 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
  * more information about activations, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting Up
  * Systems Manager in Hybrid
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateActivationResponse * SsmClient::createActivation(const CreateActivationRequest &request)
 {
@@ -173,6 +191,12 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
  *
  * If you associate a document with an instance that already has an associated document, the system throws the
  * AssociationAlreadyExists
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociationRequest &request)
 {
@@ -191,6 +215,12 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
  *
  * If you associate a document with an instance that already has an associated document, the system throws the
  * AssociationAlreadyExists
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateAssociationBatchRequest &request)
 {
@@ -203,6 +233,12 @@ CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateA
  * document>
  *
  * After you create a document, you can use CreateAssociation to associate it with one or more running
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &request)
 {
@@ -211,6 +247,12 @@ CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &
 
 /**
  * Creates a new Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const CreateMaintenanceWindowRequest &request)
 {
@@ -224,6 +266,12 @@ CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const Creat
  *
  * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
  * see <a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBaselineRequest &request)
 {
@@ -242,6 +290,12 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  * policy. To view an example of a restrictive Amazon S3 bucket policy for Resource Data Sync, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync">Configuring
  * Resource Data Sync for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateResourceDataSyncRequest &request)
 {
@@ -252,6 +306,12 @@ CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateR
  * Deletes an activation. You are not required to delete an activation. If you delete an activation, you can no longer use
  * it to register additional managed instances. Deleting an activation does not de-register managed instances. You must
  * manually de-register managed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationRequest &request)
 {
@@ -266,6 +326,12 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
  * When you disassociate a document from an instance, it does not change the configuration of the instance. To change the
  * configuration state of an instance after you disassociate a document, you must create a new document with the desired
  * configuration and associate it with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociationRequest &request)
 {
@@ -279,6 +345,12 @@ DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociation
  *
  * Before you delete the document, we recommend that you use <a>DeleteAssociation</a> to disassociate all instances that
  * are associated with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &request)
 {
@@ -287,6 +359,12 @@ DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &
 
 /**
  * Deletes a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const DeleteMaintenanceWindowRequest &request)
 {
@@ -295,6 +373,12 @@ DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const Delet
 
 /**
  * Delete a parameter from the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterRequest &request)
 {
@@ -303,6 +387,12 @@ DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterReques
 
 /**
  * Delete a list of parameters. This API is used to delete parameters by using the Amazon EC2
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersRequest &request)
 {
@@ -311,6 +401,12 @@ DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersReq
 
 /**
  * Deletes a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBaselineRequest &request)
 {
@@ -321,6 +417,12 @@ DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBa
  * Deletes a Resource Data Sync configuration. After the configuration is deleted, changes to inventory data on managed
  * instances are no longer synced with the target Amazon S3 bucket. Deleting a sync configuration does not delete data in
  * the target Amazon S3
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteResourceDataSyncRequest &request)
 {
@@ -330,6 +432,12 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
 /**
  * Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any
  * time. If you don't plan to use Run Command on the server, we suggest uninstalling the SSM Agent
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const DeregisterManagedInstanceRequest &request)
 {
@@ -338,6 +446,12 @@ DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const D
 
 /**
  * Removes a patch group from a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselineForPatchGroup(const DeregisterPatchBaselineForPatchGroupRequest &request)
 {
@@ -346,6 +460,12 @@ DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselin
 
 /**
  * Removes a target from a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromMaintenanceWindow(const DeregisterTargetFromMaintenanceWindowRequest &request)
 {
@@ -354,6 +474,12 @@ DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromM
 
 /**
  * Removes a task from a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaintenanceWindow(const DeregisterTaskFromMaintenanceWindowRequest &request)
 {
@@ -363,6 +489,12 @@ DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaint
 /**
  * Details about the activation, including: the date and time the activation was created, the expiration date, the IAM role
  * assigned to the instances in the activation, and the number of instances activated by this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActivationsRequest &request)
 {
@@ -374,6 +506,12 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
  * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you created the
  * association by specifying an instance ID and a Systems Manager document, then you retrieve the association by specifying
  * the document name and the instance ID.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssociationRequest &request)
 {
@@ -382,6 +520,12 @@ DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssoc
 
 /**
  * Provides details about all active and terminated Automation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(const DescribeAutomationExecutionsRequest &request)
 {
@@ -390,6 +534,12 @@ DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(c
 
 /**
  * Information about all active and terminated step executions in an Automation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExecutions(const DescribeAutomationStepExecutionsRequest &request)
 {
@@ -398,6 +548,12 @@ DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExec
 
 /**
  * Lists all patches that could possibly be included in a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const DescribeAvailablePatchesRequest &request)
 {
@@ -406,6 +562,12 @@ DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const Des
 
 /**
  * Describes the specified Systems Manager
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentRequest &request)
 {
@@ -415,6 +577,12 @@ DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentReq
 /**
  * Describes the permissions for a Systems Manager document. If you created the document, you are the owner. If a document
  * is shared, it can either be shared privately (by specifying a user's AWS account ID) or publicly (<i>All</i>).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const DescribeDocumentPermissionRequest &request)
 {
@@ -423,6 +591,12 @@ DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const
 
 /**
  * All associations for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInstanceAssociations(const DescribeEffectiveInstanceAssociationsRequest &request)
 {
@@ -432,6 +606,12 @@ DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInst
 /**
  * Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Note that
  * this API applies only to Windows patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectivePatchesForPatchBaseline(const DescribeEffectivePatchesForPatchBaselineRequest &request)
 {
@@ -440,6 +620,12 @@ DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectiveP
 
 /**
  * The status of the associations for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociationsStatus(const DescribeInstanceAssociationsStatusRequest &request)
 {
@@ -451,6 +637,12 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
  * platform, the SSM Agent version (Linux), status etc. If you specify one or more instance IDs, it returns information for
  * those instances. If you do not specify instance IDs, it returns information for all your instances. If you specify an
  * instance ID that is not valid or an instance that you do not own, you receive an error.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(const DescribeInstanceInformationRequest &request)
 {
@@ -459,6 +651,12 @@ DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(con
 
 /**
  * Retrieves the high-level patch state of one or more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(const DescribeInstancePatchStatesRequest &request)
 {
@@ -467,6 +665,12 @@ DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(con
 
 /**
  * Retrieves the high-level patch state for the instances in the specified patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePatchStatesForPatchGroup(const DescribeInstancePatchStatesForPatchGroupRequest &request)
 {
@@ -476,6 +680,12 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
 /**
  * Retrieves information about the patches on the specified instance and their state relative to the patch baseline being
  * used for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const DescribeInstancePatchesRequest &request)
 {
@@ -484,6 +694,12 @@ DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const Descr
 
 /**
  * Retrieves the individual task executions (one per target) for a particular task executed as part of a Maintenance Window
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeMaintenanceWindowExecutionTaskInvocations(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &request)
 {
@@ -492,6 +708,12 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeM
 
 /**
  * For a given Maintenance Window execution, lists the tasks that were
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenanceWindowExecutionTasks(const DescribeMaintenanceWindowExecutionTasksRequest &request)
 {
@@ -501,6 +723,12 @@ DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenance
 /**
  * Lists the executions of a Maintenance Window. This includes information about when the Maintenance Window was scheduled
  * to be active, and information about tasks registered and run with the Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWindowExecutions(const DescribeMaintenanceWindowExecutionsRequest &request)
 {
@@ -509,6 +737,12 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
 
 /**
  * Lists the targets registered with the Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowTargets(const DescribeMaintenanceWindowTargetsRequest &request)
 {
@@ -517,6 +751,12 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
 
 /**
  * Lists the tasks in a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTasks(const DescribeMaintenanceWindowTasksRequest &request)
 {
@@ -525,6 +765,12 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
 
 /**
  * Retrieves the Maintenance Windows in an AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
@@ -541,6 +787,12 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
  * of <code>MaxResults</code>. If the service reaches an internal limit while processing the results, it stops the
  * operation and returns the matching values up to that point and a <code>NextToken</code>. You can specify the
  * <code>NextToken</code> in a subsequent call to get the next set of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParametersResponse * SsmClient::describeParameters(const DescribeParametersRequest &request)
 {
@@ -549,6 +801,12 @@ DescribeParametersResponse * SsmClient::describeParameters(const DescribeParamet
 
 /**
  * Lists the patch baselines in your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const DescribePatchBaselinesRequest &request)
 {
@@ -557,6 +815,12 @@ DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const Describ
 
 /**
  * Returns high-level aggregated patch compliance state for a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const DescribePatchGroupStateRequest &request)
 {
@@ -565,6 +829,12 @@ DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const Descr
 
 /**
  * Lists all patch groups that have been registered with patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatchGroupsRequest &request)
 {
@@ -573,6 +843,12 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
 
 /**
  * Get detailed information about a particular Automation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAutomationExecutionRequest &request)
 {
@@ -581,6 +857,12 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
 
 /**
  * Returns detailed information about command execution for an invocation or plugin.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandInvocationRequest &request)
 {
@@ -590,6 +872,12 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
 /**
  * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
  * example, you can create a default patch baseline for each operating
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDefaultPatchBaselineRequest &request)
 {
@@ -599,6 +887,12 @@ GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDe
 /**
  * Retrieves the current snapshot for the patch baseline the instance uses. This API is primarily used by the
  * AWS-RunPatchBaseline Systems Manager document.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSnapshotForInstance(const GetDeployablePatchSnapshotForInstanceRequest &request)
 {
@@ -607,6 +901,12 @@ GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSna
 
 /**
  * Gets the contents of the specified Systems Manager
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 {
@@ -615,6 +915,12 @@ GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 
 /**
  * Query inventory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &request)
 {
@@ -624,6 +930,12 @@ GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &reques
 /**
  * Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item
  * type.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySchemaRequest &request)
 {
@@ -632,6 +944,12 @@ GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySch
 
 /**
  * Retrieves a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintenanceWindowRequest &request)
 {
@@ -640,6 +958,12 @@ GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintena
 
 /**
  * Retrieves details about a specific task executed as part of a Maintenance Window
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution(const GetMaintenanceWindowExecutionRequest &request)
 {
@@ -648,6 +972,12 @@ GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution
 
 /**
  * Retrieves the details about a specific task executed as part of a Maintenance Window
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecutionTask(const GetMaintenanceWindowExecutionTaskRequest &request)
 {
@@ -657,6 +987,12 @@ GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecu
 /**
  * Retrieves a task invocation. A task invocation is a specific task executing on a specific target. Maintenance Windows
  * report status for all invocations.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceWindowExecutionTaskInvocation(const GetMaintenanceWindowExecutionTaskInvocationRequest &request)
 {
@@ -665,6 +1001,12 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
 
 /**
  * Lists the tasks in a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const GetMaintenanceWindowTaskRequest &request)
 {
@@ -673,6 +1015,12 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
 
 /**
  * Get information about a parameter by using the parameter name.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &request)
 {
@@ -681,6 +1029,12 @@ GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &reques
 
 /**
  * Query a list of all parameters used by the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterHistoryRequest &request)
 {
@@ -689,6 +1043,12 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
 
 /**
  * Get details of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &request)
 {
@@ -711,6 +1071,12 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
  * results> <note>
  *
  * This API action doesn't support filtering by tags.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParametersByPathRequest &request)
 {
@@ -719,6 +1085,12 @@ GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParameters
 
 /**
  * Retrieves information about a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineRequest &request)
 {
@@ -727,6 +1099,12 @@ GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineReq
 
 /**
  * Retrieves the patch baseline that should be used for the specified patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup(const GetPatchBaselineForPatchGroupRequest &request)
 {
@@ -735,6 +1113,12 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
 
 /**
  * Retrieves all versions of an association for a specific association
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListAssociationVersionsRequest &request)
 {
@@ -743,6 +1127,12 @@ ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListA
 
 /**
  * Lists the associations for the specified Systems Manager document or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsRequest &request)
 {
@@ -753,6 +1143,12 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
  * An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command
  * invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command
  * invocation is created for each requested instance ID. ListCommandInvocations provide status about command
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCommandInvocationsRequest &request)
 {
@@ -761,6 +1157,12 @@ ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCom
 
 /**
  * Lists the commands requested by users of the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &request)
 {
@@ -770,6 +1172,12 @@ ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &reques
 /**
  * For a specified resource ID, this API action returns a list of compliance statuses for different resource types.
  * Currently, you can only specify one resource ID per call. List results depend on the criteria specified in the filter.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianceItemsRequest &request)
 {
@@ -780,6 +1188,12 @@ ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianc
  * Returns a summary count of compliant and non-compliant resources for a compliance type. For example, this call can
  * return State Manager associations, patches, or custom compliance types according to the filter criteria that you
  * specify.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListComplianceSummariesRequest &request)
 {
@@ -788,6 +1202,12 @@ ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListC
 
 /**
  * List all versions for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumentVersionsRequest &request)
 {
@@ -796,6 +1216,12 @@ ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumen
 
 /**
  * Describes one or more of your Systems Manager
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &request)
 {
@@ -804,6 +1230,12 @@ ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &req
 
 /**
  * A list of inventory items returned by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInventoryEntriesRequest &request)
 {
@@ -813,6 +1245,12 @@ ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInvento
 /**
  * Returns a resource-level summary count. The summary includes information about compliant and non-compliant statuses and
  * detailed compliance-item severity counts, according to the filter criteria you
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSummaries(const ListResourceComplianceSummariesRequest &request)
 {
@@ -830,6 +1268,12 @@ ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSumma
  * whether there are more sync configurations to list, check the value of <code>NextToken</code> in the output. If there
  * are more sync configurations to list, you can request them by specifying the <code>NextToken</code> returned in the call
  * to the parameter of a subsequent call.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourceDataSyncRequest &request)
 {
@@ -838,6 +1282,12 @@ ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourc
 
 /**
  * Returns a list of the tags assigned to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -848,6 +1298,12 @@ ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForRe
  * Shares a Systems Manager document publicly or privately. If you share a document privately, you must specify the AWS
  * user account IDs for those people who can use the document. If you share a document publicly, you must specify
  * <i>All</i> as the account
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const ModifyDocumentPermissionRequest &request)
 {
@@ -923,6 +1379,12 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  *
  * InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify the time
  * by using the following format:
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceItemsRequest &request)
 {
@@ -932,6 +1394,12 @@ PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceIt
 /**
  * Bulk update custom inventory items on one more instance. The request adds an inventory item, if it doesn't already
  * exist, or updates an inventory item, if it does
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &request)
 {
@@ -940,6 +1408,12 @@ PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &reques
 
 /**
  * Add one or more parameters to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &request)
 {
@@ -948,6 +1422,12 @@ PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &reques
 
 /**
  * Defines the default patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(const RegisterDefaultPatchBaselineRequest &request)
 {
@@ -956,6 +1436,12 @@ RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(c
 
 /**
  * Registers a patch baseline for a patch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineForPatchGroup(const RegisterPatchBaselineForPatchGroupRequest &request)
 {
@@ -964,6 +1450,12 @@ RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineFor
 
 /**
  * Registers a target with a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaintenanceWindow(const RegisterTargetWithMaintenanceWindowRequest &request)
 {
@@ -972,6 +1464,12 @@ RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaint
 
 /**
  * Adds a new task to a Maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenanceWindow(const RegisterTaskWithMaintenanceWindowRequest &request)
 {
@@ -980,6 +1478,12 @@ RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenan
 
 /**
  * Removes all tags from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -988,6 +1492,12 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
 
 /**
  * Sends a signal to an Automation execution to change the current behavior or status of the execution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomationSignalRequest &request)
 {
@@ -996,6 +1506,12 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
 
 /**
  * Executes commands on one or more managed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 {
@@ -1004,6 +1520,12 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 
 /**
  * Initiates execution of an Automation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const StartAutomationExecutionRequest &request)
 {
@@ -1012,6 +1534,12 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
 
 /**
  * Stop an Automation that is currently
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopAutomationExecutionRequest &request)
 {
@@ -1021,6 +1549,12 @@ StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopA
 /**
  * Updates an association. You can update the association name and version, the document version, schedule, parameters, and
  * Amazon S3
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociationRequest &request)
 {
@@ -1029,6 +1563,12 @@ UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociation
 
 /**
  * Updates the status of the Systems Manager document associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const UpdateAssociationStatusRequest &request)
 {
@@ -1037,6 +1577,12 @@ UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const Updat
 
 /**
  * The document you want to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &request)
 {
@@ -1045,6 +1591,12 @@ UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &
 
 /**
  * Set the default version of a document.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(const UpdateDocumentDefaultVersionRequest &request)
 {
@@ -1053,6 +1605,12 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
 
 /**
  * Updates an existing Maintenance Window. Only specified parameters are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const UpdateMaintenanceWindowRequest &request)
 {
@@ -1083,6 +1641,12 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
  * Description>
  *
  * If a parameter is null, then the corresponding field is not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget(const UpdateMaintenanceWindowTargetRequest &request)
 {
@@ -1121,6 +1685,12 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  * If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields
  * required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't
  * specified are set to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(const UpdateMaintenanceWindowTaskRequest &request)
 {
@@ -1129,6 +1699,12 @@ UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(con
 
 /**
  * Assigns or changes an Amazon Identity and Access Management (IAM) role to the managed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const UpdateManagedInstanceRoleRequest &request)
 {
@@ -1142,6 +1718,12 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
  *
  * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
  * see <a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBaselineRequest &request)
 {

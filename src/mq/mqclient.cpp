@@ -90,6 +90,12 @@ MqClient::MqClient(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request)
 {
@@ -98,6 +104,12 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
 
 /**
  * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigurationRequest &request)
 {
@@ -105,6 +117,12 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 {
@@ -112,6 +130,12 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
 {
@@ -119,6 +143,12 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -126,6 +156,12 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
 {
@@ -133,6 +169,12 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeConfigurationRequest &request)
 {
@@ -140,6 +182,12 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request)
 {
@@ -147,6 +195,12 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request)
 {
@@ -154,6 +208,12 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 {
@@ -161,6 +221,12 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const ListConfigurationRevisionsRequest &request)
 {
@@ -168,6 +234,12 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -175,6 +247,12 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 {
@@ -182,6 +260,12 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request)
 {
@@ -189,6 +273,12 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request)
 {
@@ -196,6 +286,12 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigurationRequest &request)
 {
@@ -203,6 +299,12 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 {

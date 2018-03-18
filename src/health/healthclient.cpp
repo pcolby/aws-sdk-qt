@@ -158,6 +158,12 @@ HealthClient::HealthClient(
  *
  * At least one event ARN is required. Results are sorted by the <code>lastUpdatedTime</code> of the entity, starting with
  * the most
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const DescribeAffectedEntitiesRequest &request)
 {
@@ -167,6 +173,12 @@ DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const 
 /**
  * Returns the number of entities that are affected by each of the specified events. If no events are specified, the counts
  * of all affected entities are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const DescribeEntityAggregatesRequest &request)
 {
@@ -176,6 +188,12 @@ DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const 
 /**
  * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter is
  * specified, the counts of all events in each category are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const DescribeEventAggregatesRequest &request)
 {
@@ -191,6 +209,12 @@ DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const De
  * operation>
  *
  * If a specified event cannot be retrieved, an error message is returned for that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventDetailsResponse * HealthClient::describeEventDetails(const DescribeEventDetailsRequest &request)
 {
@@ -200,6 +224,12 @@ DescribeEventDetailsResponse * HealthClient::describeEventDetails(const Describe
 /**
  * Returns the event types that meet the specified filter criteria. If no filter criteria are specified, all event types
  * are returned, in no particular
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEventTypesRequest &request)
 {
@@ -215,6 +245,12 @@ DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEven
  *
  * If no filter criteria are specified, all events are returned. Results are sorted by <code>lastModifiedTime</code>,
  * starting with the most
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * HealthClient::describeEvents(const DescribeEventsRequest &request)
 {

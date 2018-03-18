@@ -91,6 +91,12 @@ CloudHSMV2Client::CloudHSMV2Client(
 
 /**
  * Creates a new AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterRequest &request)
 {
@@ -99,6 +105,12 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
 
 /**
  * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 {
@@ -108,6 +120,12 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 /**
  * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
  * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -118,6 +136,12 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
  * Deletes the specified HSM. To specify an HSM, you can use its identifier (ID), the IP address of the HSM's elastic
  * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
  * use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
 {
@@ -133,6 +157,12 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
  * response contains only a subset of backups, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or
  * an empty or null value), that means there are no more backups to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackupsRequest &request)
 {
@@ -148,6 +178,12 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
  * response contains only a subset of clusters, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code>
  * (or an empty or null value), that means there are no more clusters to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClustersRequest &request)
 {
@@ -158,6 +194,12 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
  * Claims an AWS CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA)
  * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
  * (CSR) with your issuing CA. To get the cluster's CSR, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const InitializeClusterRequest &request)
 {
@@ -173,6 +215,12 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
  * response contains only a subset of tags, it includes a <code>NextToken</code> value. Use this value in a subsequent
  * <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty
  * or null value), that means there are no more tags to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 {
@@ -181,6 +229,12 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 
 /**
  * Adds or overwrites one or more tags for the specified AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &request)
 {
@@ -189,6 +243,12 @@ TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &re
 
 /**
  * Removes the specified tag or tags from the specified AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceRequest &request)
 {

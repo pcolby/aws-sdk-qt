@@ -93,6 +93,12 @@ DaxClient::DaxClient(
 
 /**
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &request)
 {
@@ -102,6 +108,12 @@ CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &req
 /**
  * Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a
  * DAX
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParameterGroupRequest &request)
 {
@@ -110,6 +122,12 @@ CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParam
 
 /**
  * Creates a new subnet
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroupRequest &request)
 {
@@ -123,6 +141,12 @@ CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroup
  *
  * You cannot use <code>DecreaseReplicationFactor</code> to remove the last node in a DAX cluster. If you need to do this,
  * use <code>DeleteCluster</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const DecreaseReplicationFactorRequest &request)
 {
@@ -133,6 +157,12 @@ DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const D
  * Deletes a previously provisioned DAX cluster. <i>DeleteCluster</i> deletes all associated nodes, node endpoints and the
  * DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the
  * cluster; you cannot cancel or revert this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -141,6 +171,12 @@ DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &req
 
 /**
  * Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParameterGroupRequest &request)
 {
@@ -153,6 +189,12 @@ DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParam
  * group> <note>
  *
  * You cannot delete a subnet group if it is associated with any DAX
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroupRequest &request)
 {
@@ -181,6 +223,12 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
  * use>
  *
  * If nodes are currently being removed from the DAX cluster, no endpoint information for the removed nodes is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersRequest &request)
 {
@@ -189,6 +237,12 @@ DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersReq
 
 /**
  * Returns the default system parameter information for the DAX caching
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const DescribeDefaultParametersRequest &request)
 {
@@ -203,6 +257,12 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
  *
  * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
  * of events if
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -212,6 +272,12 @@ DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &
 /**
  * Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the
  * descriptions for that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const DescribeParameterGroupsRequest &request)
 {
@@ -220,6 +286,12 @@ DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const Descr
 
 /**
  * Returns the detailed parameter list for a particular parameter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeParametersResponse * DaxClient::describeParameters(const DescribeParametersRequest &request)
 {
@@ -229,6 +301,12 @@ DescribeParametersResponse * DaxClient::describeParameters(const DescribeParamet
 /**
  * Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the
  * description of that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSubnetGroupsRequest &request)
 {
@@ -237,6 +315,12 @@ DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSub
 
 /**
  * Adds one or more nodes to a DAX
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const IncreaseReplicationFactorRequest &request)
 {
@@ -245,6 +329,12 @@ IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const I
 
 /**
  * List all of the tags for a DAX cluster. You can call <code>ListTags</code> up to 10 times per second, per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
 {
@@ -254,6 +344,12 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
 /**
  * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
  * status is set to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 {
@@ -263,6 +359,12 @@ RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 /**
  * Associates a set of tags with a DAX resource. You can call <code>TagResource</code> up to 5 times per second, per
  * account.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
 {
@@ -272,6 +374,12 @@ TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
 /**
  * Removes the association of tags from a DAX resource. You can call <code>UntagResource</code> up to 5 times per second,
  * per account.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &request)
 {
@@ -281,6 +389,12 @@ UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &req
 /**
  * Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters
  * by specifying the parameters and the new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &request)
 {
@@ -290,6 +404,12 @@ UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &req
 /**
  * Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a
  * list parameter name and value
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParameterGroupRequest &request)
 {
@@ -298,6 +418,12 @@ UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParam
 
 /**
  * Modifies an existing subnet
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroupRequest &request)
 {

@@ -177,6 +177,12 @@ CodeStarClient::CodeStarClient(
 
 /**
  * Adds an IAM user to the team for an AWS CodeStar
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const AssociateTeamMemberRequest &request)
 {
@@ -185,6 +191,12 @@ AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const Associat
 
 /**
  * Reserved for future use. To create a project, use the AWS CodeStar
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest &request)
 {
@@ -195,6 +207,12 @@ CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest
  * Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with
  * the user, in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed
  * wherever the user's information appears to other users in AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserProfileRequest &request)
 {
@@ -204,6 +222,12 @@ CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserPr
 /**
  * Deletes a project, including project resources. Does not delete users associated with the project, but does delete the
  * IAM roles that allowed access to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -214,6 +238,12 @@ DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest
  * Deletes a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as
  * display name and email address. It does not delete the history of that user, for example the history of commits made by
  * that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserProfileRequest &request)
 {
@@ -222,6 +252,12 @@ DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserPr
 
 /**
  * Describes a project and its
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectRequest &request)
 {
@@ -230,6 +266,12 @@ DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectR
 
 /**
  * Describes a user in AWS CodeStar and the user attributes across all
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const DescribeUserProfileRequest &request)
 {
@@ -240,6 +282,12 @@ DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const Describe
  * Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed
  * access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS
  * CodeStar. It does not remove the user from
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const DisassociateTeamMemberRequest &request)
 {
@@ -248,6 +296,12 @@ DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const Di
 
 /**
  * Lists all projects in AWS CodeStar associated with your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &request)
 {
@@ -256,6 +310,12 @@ ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &r
 
 /**
  * Lists resources associated with a project in AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest &request)
 {
@@ -264,6 +324,12 @@ ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest
 
 /**
  * Gets the tags for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsForProjectRequest &request)
 {
@@ -272,6 +338,12 @@ ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsFo
 
 /**
  * Lists all team members associated with a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersRequest &request)
 {
@@ -280,6 +352,12 @@ ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersR
 
 /**
  * Lists all the user profiles configured for your AWS account in AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfilesRequest &request)
 {
@@ -288,6 +366,12 @@ ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfil
 
 /**
  * Adds tags to a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request)
 {
@@ -296,6 +380,12 @@ TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request
 
 /**
  * Removes tags from a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &request)
 {
@@ -304,6 +394,12 @@ UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &r
 
 /**
  * Updates a project in AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest &request)
 {
@@ -313,6 +409,12 @@ UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest
 /**
  * Updates a team member's attributes in an AWS CodeStar project. For example, you can change a team member's role in the
  * project, or change whether they have remote access to project
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemberRequest &request)
 {
@@ -322,6 +424,12 @@ UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemb
 /**
  * Updates a user's profile in AWS CodeStar. The user profile is not project-specific. Information in the user profile is
  * displayed wherever the user's information appears to other users in AWS CodeStar.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserProfileRequest &request)
 {

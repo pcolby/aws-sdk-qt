@@ -98,6 +98,12 @@ EcrClient::EcrClient(
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
 {
@@ -116,6 +122,12 @@ BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(con
  * repository>
  *
  * You can completely delete an image (and all of its tags) by specifying the image's digest in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageRequest &request)
 {
@@ -125,6 +137,12 @@ BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageReq
 /**
  * Gets detailed information for specified images within a specified repository. Images are specified with either
  * <code>imageTag</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &request)
 {
@@ -139,6 +157,12 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
 {
@@ -147,6 +171,12 @@ CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayer
 
 /**
  * Creates an image
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryRequest &request)
 {
@@ -155,6 +185,12 @@ CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryReq
 
 /**
  * Deletes the specified lifecycle
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
 {
@@ -164,6 +200,12 @@ DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLif
 /**
  * Deletes an existing image repository. If a repository contains images, you must use the <code>force</code> option to
  * delete
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
@@ -172,6 +214,12 @@ DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryReq
 
 /**
  * Deletes the repository policy from a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
 {
@@ -186,6 +234,12 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
  * Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker
  * registry. The output of the <code>docker images</code> command shows the uncompressed image size, so it may return a
  * larger image size than the image sizes returned by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -194,6 +248,12 @@ DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &
 
 /**
  * Describes image repositories in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRepositoriesRequest &request)
 {
@@ -210,6 +270,12 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
  * The <code>authorizationToken</code> returned for each registry specified is a base64 encoded string that can be decoded
  * and used in a <code>docker login</code> command to authenticate to a registry. The AWS CLI offers an <code>aws ecr
  * get-login</code> command that simplifies the login
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
 {
@@ -224,6 +290,12 @@ GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthor
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request)
 {
@@ -232,6 +304,12 @@ GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDown
 
 /**
  * Retrieves the specified lifecycle
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
 {
@@ -240,6 +318,12 @@ GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePol
 
 /**
  * Retrieves the results of the specified lifecycle policy preview
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request)
 {
@@ -248,6 +332,12 @@ GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const G
 
 /**
  * Retrieves the repository policy for a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
 {
@@ -261,6 +351,12 @@ GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepository
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
 {
@@ -276,6 +372,12 @@ InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayer
  * <code>TAGGED</code> or <code>UNTAGGED</code>. For example, you can filter your results to return only
  * <code>UNTAGGED</code> images and then pipe that result to a <a>BatchDeleteImage</a> operation to delete them. Or, you
  * can filter your results to return only <code>TAGGED</code> images to list all of the tags in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
 {
@@ -289,6 +391,12 @@ ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
 {
@@ -298,6 +406,12 @@ PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
 /**
  * Creates or updates a lifecycle policy. For information about lifecycle policy syntax, see <a
  * href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
 {
@@ -306,6 +420,12 @@ PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePol
 
 /**
  * Applies a repository policy on a specified repository to control access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
 {
@@ -314,6 +434,12 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
 
 /**
  * Starts a preview of the specified lifecycle policy. This allows you to see the results before creating the lifecycle
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request)
 {
@@ -327,6 +453,12 @@ StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(con
  *
  * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
  * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartRequest &request)
 {

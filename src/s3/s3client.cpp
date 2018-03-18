@@ -90,6 +90,12 @@ S3Client::S3Client(
 /**
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
  * storage, you should call the List Parts operation and ensure the parts list is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
@@ -97,6 +103,12 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
@@ -104,6 +116,12 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 {
@@ -111,6 +129,12 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request)
 {
@@ -122,6 +146,12 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
  * one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of
  * the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and
  * stops charging you for the parts
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMultipartUploadRequest &request)
 {
@@ -130,6 +160,12 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
 
 /**
  * Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request)
 {
@@ -137,6 +173,12 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request)
 {
@@ -144,6 +186,12 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequest &request)
 {
@@ -151,6 +199,12 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBucketEncryptionRequest &request)
 {
@@ -158,6 +212,12 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConfiguration(const DeleteBucketInventoryConfigurationRequest &request)
 {
@@ -165,6 +225,12 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBucketLifecycleRequest &request)
 {
@@ -172,6 +238,12 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfiguration(const DeleteBucketMetricsConfigurationRequest &request)
 {
@@ -179,6 +251,12 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPolicyRequest &request)
 {
@@ -186,6 +264,12 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
 {
@@ -193,6 +277,12 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTaggingRequest &request)
 {
@@ -200,6 +290,12 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWebsiteRequest &request)
 {
@@ -208,6 +304,12 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
 
 /**
  * Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request)
 {
@@ -215,6 +317,12 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTaggingRequest &request)
 {
@@ -223,6 +331,12 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
 
 /**
  * This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &request)
 {
@@ -230,6 +344,12 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfiguration(const GetBucketAccelerateConfigurationRequest &request)
 {
@@ -237,6 +357,12 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request)
 {
@@ -244,6 +370,12 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfiguration(const GetBucketAnalyticsConfigurationRequest &request)
 {
@@ -251,6 +383,12 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &request)
 {
@@ -258,6 +396,12 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncryptionRequest &request)
 {
@@ -265,6 +409,12 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfiguration(const GetBucketInventoryConfigurationRequest &request)
 {
@@ -272,6 +422,12 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecycleRequest &request)
 {
@@ -279,6 +435,12 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfiguration(const GetBucketLifecycleConfigurationRequest &request)
 {
@@ -286,6 +448,12 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationRequest &request)
 {
@@ -294,6 +462,12 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
 
 /**
  * Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequest &request)
 {
@@ -301,6 +475,12 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(const GetBucketMetricsConfigurationRequest &request)
 {
@@ -308,6 +488,12 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketNotificationRequest &request)
 {
@@ -315,6 +501,12 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConfiguration(const GetBucketNotificationConfigurationRequest &request)
 {
@@ -322,6 +514,12 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest &request)
 {
@@ -329,6 +527,12 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketReplicationRequest &request)
 {
@@ -336,6 +540,12 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBucketRequestPaymentRequest &request)
 {
@@ -343,6 +553,12 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequest &request)
 {
@@ -350,6 +566,12 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersioningRequest &request)
 {
@@ -357,6 +579,12 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequest &request)
 {
@@ -364,6 +592,12 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 {
@@ -371,6 +605,12 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request)
 {
@@ -378,6 +618,12 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequest &request)
 {
@@ -385,6 +631,12 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequest &request)
 {
@@ -392,6 +644,12 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 {
@@ -400,6 +658,12 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 
 /**
  * The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 {
@@ -407,6 +671,12 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request)
 {
@@ -414,6 +684,12 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request)
 {
@@ -421,6 +697,12 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request)
 {
@@ -428,6 +710,12 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
@@ -435,6 +723,12 @@ ListBucketsResponse * S3Client::listBuckets()
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
@@ -442,6 +736,12 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersionsRequest &request)
 {
@@ -450,6 +750,12 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
 
 /**
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 {
@@ -459,6 +765,12 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 /**
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  * return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &request)
 {
@@ -466,6 +778,12 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 {
@@ -473,6 +791,12 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfiguration(const PutBucketAccelerateConfigurationRequest &request)
 {
@@ -480,6 +804,12 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request)
 {
@@ -487,6 +817,12 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfiguration(const PutBucketAnalyticsConfigurationRequest &request)
 {
@@ -494,6 +830,12 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &request)
 {
@@ -501,6 +843,12 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncryptionRequest &request)
 {
@@ -508,6 +856,12 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfiguration(const PutBucketInventoryConfigurationRequest &request)
 {
@@ -515,6 +869,12 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecycleRequest &request)
 {
@@ -522,6 +882,12 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfiguration(const PutBucketLifecycleConfigurationRequest &request)
 {
@@ -530,6 +896,12 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
 
 /**
  * Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequest &request)
 {
@@ -537,6 +909,12 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(const PutBucketMetricsConfigurationRequest &request)
 {
@@ -544,6 +922,12 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketNotificationRequest &request)
 {
@@ -551,6 +935,12 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConfiguration(const PutBucketNotificationConfigurationRequest &request)
 {
@@ -558,6 +948,12 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest &request)
 {
@@ -565,6 +961,12 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
 {
@@ -575,6 +977,12 @@ PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketRep
  * Sets the request payment configuration for a bucket. By default, the bucket owner pays for downloads from the bucket.
  * This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be
  * charged for the download. Documentation on requester pays buckets can be found at
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBucketRequestPaymentRequest &request)
 {
@@ -582,6 +990,12 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequest &request)
 {
@@ -589,6 +1003,12 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersioningRequest &request)
 {
@@ -596,6 +1016,12 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequest &request)
 {
@@ -603,6 +1029,12 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 {
@@ -610,6 +1042,12 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request)
 {
@@ -617,6 +1055,12 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequest &request)
 {
@@ -624,6 +1068,12 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &request)
 {
@@ -635,6 +1085,12 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
  * parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded
  * parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging
  * you for the parts
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 {
@@ -642,6 +1098,12 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &request)
 {

@@ -115,6 +115,12 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
  *
  * Kinesis Video Streams sends media data at a rate of up to 25 megabytes per second (or 200 megabits per second) during a
  * <code>GetMedia</code> session.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &request)
 {

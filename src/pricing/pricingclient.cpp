@@ -119,6 +119,12 @@ PricingClient::PricingClient(
  * specific to that service, such as the attribute names available for that service. For example, some of the attribute
  * names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>,
  * <code>locationType</code>, and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServicesResponse * PricingClient::describeServices(const DescribeServicesRequest &request)
 {
@@ -131,6 +137,12 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File
  * Definitions</a> in the <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS
  * Billing and Cost Management User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttributeValuesRequest &request)
 {
@@ -139,6 +151,12 @@ GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttribut
 
 /**
  * Returns a list of all products that match the filter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &request)
 {

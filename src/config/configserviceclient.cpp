@@ -130,6 +130,12 @@ ConfigServiceClient::ConfigServiceClient(
  * <code>ResourceInUseException</code>>
  *
  * You can check the state of a rule by using the <code>DescribeConfigRules</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteConfigRuleRequest &request)
 {
@@ -149,6 +155,12 @@ DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteCon
  * This action does not delete the configuration information that was previously recorded. You will be able to access the
  * previously recorded information by using the <code>GetResourceConfigHistory</code> action, but you will not be able to
  * access this information in the AWS Config console until you create a new configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRecorder(const DeleteConfigurationRecorderRequest &request)
 {
@@ -162,6 +174,12 @@ DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRe
  *
  * Before you can delete the delivery channel, you must stop the configuration recorder by using the
  * <a>StopConfigurationRecorder</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const DeleteDeliveryChannelRequest &request)
 {
@@ -172,6 +190,12 @@ DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const
  * Deletes the evaluation results for the specified Config rule. You can specify one Config rule per request. After you
  * delete the evaluation results, you can call the <a>StartConfigRulesEvaluation</a> API to start evaluating your AWS
  * resources against the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(const DeleteEvaluationResultsRequest &request)
 {
@@ -193,6 +217,12 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
  * completed> </li> <li>
  *
  * Notification of delivery failure, if the delivery failed to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const DeliverConfigSnapshotRequest &request)
 {
@@ -228,6 +258,12 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
  *
  * The rule's AWS Lambda function has returned <code>NOT_APPLICABLE</code> for all evaluation results. This can occur if
  * the resources were deleted or removed from the rule's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeComplianceByConfigRuleResponse * ConfigServiceClient::describeComplianceByConfigRule(const DescribeComplianceByConfigRuleRequest &request)
 {
@@ -263,6 +299,12 @@ DescribeComplianceByConfigRuleResponse * ConfigServiceClient::describeCompliance
  *
  * The rule's AWS Lambda function has returned <code>NOT_APPLICABLE</code> for all evaluation results. This can occur if
  * the resources were deleted or removed from the rule's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeComplianceByResourceResponse * ConfigServiceClient::describeComplianceByResource(const DescribeComplianceByResourceRequest &request)
 {
@@ -272,6 +314,12 @@ DescribeComplianceByResourceResponse * ConfigServiceClient::describeComplianceBy
 /**
  * Returns status information for each of your AWS managed Config rules. The status includes information such as the last
  * time AWS Config invoked the rule, the last time AWS Config failed to invoke the rule, and the related error for the last
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigRuleEvaluationStatusResponse * ConfigServiceClient::describeConfigRuleEvaluationStatus(const DescribeConfigRuleEvaluationStatusRequest &request)
 {
@@ -280,6 +328,12 @@ DescribeConfigRuleEvaluationStatusResponse * ConfigServiceClient::describeConfig
 
 /**
  * Returns details about your AWS Config
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const DescribeConfigRulesRequest &request)
 {
@@ -293,6 +347,12 @@ DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const Des
  * account> <note>
  *
  * Currently, you can specify only one configuration recorder per region in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationRecorderStatusResponse * ConfigServiceClient::describeConfigurationRecorderStatus(const DescribeConfigurationRecorderStatusRequest &request)
 {
@@ -306,6 +366,12 @@ DescribeConfigurationRecorderStatusResponse * ConfigServiceClient::describeConfi
  * account> <note>
  *
  * Currently, you can specify only one configuration recorder per region in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurationRecorders(const DescribeConfigurationRecordersRequest &request)
 {
@@ -319,6 +385,12 @@ DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurat
  * account> <note>
  *
  * Currently, you can specify only one delivery channel per region in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryChannelStatus(const DescribeDeliveryChannelStatusRequest &request)
 {
@@ -332,6 +404,12 @@ DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryCha
  * account> <note>
  *
  * Currently, you can specify only one delivery channel per region in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels(const DescribeDeliveryChannelsRequest &request)
 {
@@ -341,6 +419,12 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
 /**
  * Returns the evaluation results for the specified AWS Config rule. The results indicate which AWS resources were
  * evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getComplianceDetailsByConfigRule(const GetComplianceDetailsByConfigRuleRequest &request)
 {
@@ -350,6 +434,12 @@ GetComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getComplianceDet
 /**
  * Returns the evaluation results for the specified AWS resource. The results indicate which AWS Config rules were used to
  * evaluate the resource, when each rule was last used, and whether the resource complies with each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetailsByResource(const GetComplianceDetailsByResourceRequest &request)
 {
@@ -358,6 +448,12 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
 
 /**
  * Returns the number of AWS Config rules that are compliant and noncompliant, up to a maximum of 25 for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSummaryByConfigRule()
 {
@@ -367,6 +463,12 @@ GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSum
 /**
  * Returns the number of resources that are compliant and the number that are noncompliant. You can specify one or more
  * resource types to get these numbers for each resource type. The maximum number returned is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceSummaryByResourceType(const GetComplianceSummaryByResourceTypeRequest &request)
 {
@@ -427,6 +529,12 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
  *
  * It may take a few minutes for AWS Config to record and count your resources. Wait a few minutes and then retry the
  * <a>GetDiscoveredResourceCounts</a> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResourceCounts(const GetDiscoveredResourceCountsRequest &request)
 {
@@ -447,6 +555,12 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
  *
  * Each call to the API is limited to span a duration of seven days. It is likely that the number of records returned is
  * smaller than the specified <code>limit</code>. In such cases, you can make another call, using the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory(const GetResourceConfigHistoryRequest &request)
 {
@@ -468,6 +582,12 @@ GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory
  * The response is paginated. By default, AWS Config lists 100 resource identifiers on each page. You can customize this
  * number with the <code>limit</code> parameter. The response includes a <code>nextToken</code> string. To get the next
  * page of results, run the request again and specify the string for the <code>nextToken</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
@@ -523,6 +643,12 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
  * For more information about developing and using AWS Config rules, see <a
  * href="http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating AWS Resource
  * Configurations with AWS Config</a> in the <i>AWS Config Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRequest &request)
 {
@@ -545,6 +671,12 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
  *
  * If <code>ConfigurationRecorder</code> does not have the <b>recordingGroup</b> parameter specified, the default is to
  * record all supported resource
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder(const PutConfigurationRecorderRequest &request)
 {
@@ -568,6 +700,12 @@ PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder
  * changed> <note>
  *
  * You can have only one delivery channel per region in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDeliveryChannelRequest &request)
 {
@@ -577,6 +715,12 @@ PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDe
 /**
  * Used by an AWS Lambda function to deliver evaluation results to AWS Config. This action is required in every AWS Lambda
  * function that is invoked by an AWS Config
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluationsRequest &request)
 {
@@ -628,6 +772,12 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
  * resources> </li> <li>
  *
  * Your custom rule will still run periodic evaluations every 24
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartConfigRulesEvaluationResponse * ConfigServiceClient::startConfigRulesEvaluation(const StartConfigRulesEvaluationRequest &request)
 {
@@ -640,6 +790,12 @@ StartConfigRulesEvaluationResponse * ConfigServiceClient::startConfigRulesEvalua
  * account>
  *
  * You must have created at least one delivery channel to successfully start the configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationRecorder(const StartConfigurationRecorderRequest &request)
 {
@@ -648,6 +804,12 @@ StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationReco
 
 /**
  * Stops recording configurations of the AWS resources you have selected to record in your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecorder(const StopConfigurationRecorderRequest &request)
 {

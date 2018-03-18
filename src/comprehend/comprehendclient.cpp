@@ -94,6 +94,12 @@ ComprehendClient::ComprehendClient(
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
  * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
  * Comprehend Supported Languages</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLanguage(const BatchDetectDominantLanguageRequest &request)
 {
@@ -103,6 +109,12 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
 /**
  * Inspects the text of a batch of documents and returns information about them. For more information about entities, see
  * <a>how-entities</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchDetectEntitiesRequest &request)
 {
@@ -111,6 +123,12 @@ BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchD
 
 /**
  * Detects the key noun phrases found in a batch of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const BatchDetectKeyPhrasesRequest &request)
 {
@@ -120,6 +138,12 @@ BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const Ba
 /**
  * Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>,
  * <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const BatchDetectSentimentRequest &request)
 {
@@ -128,6 +152,12 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
 
 /**
  * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJob(const DescribeTopicsDetectionJobRequest &request)
 {
@@ -137,6 +167,12 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
 /**
  * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
  * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const DetectDominantLanguageRequest &request)
 {
@@ -146,6 +182,12 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
 /**
  * Inspects text for entities, and returns information about them. For more information, about entities, see
  * <a>how-entities</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRequest &request)
 {
@@ -154,6 +196,12 @@ DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRe
 
 /**
  * Detects the key noun phrases found in the text.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhrasesRequest &request)
 {
@@ -163,6 +211,12 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
 /**
  * Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>,
  * <code>MIXED</code>, or <code>NEGATIVE</code>).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimentRequest &request)
 {
@@ -171,6 +225,12 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
 
 /**
  * Gets a list of the topic detection jobs that you have
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request)
 {
@@ -180,6 +240,12 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
 /**
  * Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status
  * of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(const StartTopicsDetectionJobRequest &request)
 {

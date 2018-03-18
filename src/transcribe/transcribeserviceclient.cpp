@@ -92,6 +92,12 @@ TranscribeServiceClient::TranscribeServiceClient(
  * Returns information about a transcription job. To see the status of the job, check the <code>Status</code> field. If the
  * status is <code>COMPLETE</code>, the job is finished and you can find the results at the location specified in the
  * <code>TranscriptionFileUri</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const GetTranscriptionJobRequest &request)
 {
@@ -100,6 +106,12 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
 
 /**
  * Lists transcription jobs with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(const ListTranscriptionJobsRequest &request)
 {
@@ -108,6 +120,12 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
 
 /**
  * Starts an asynchronous job to transcribe speech to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
 {

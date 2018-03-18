@@ -95,6 +95,12 @@ namespace {{NameSpaceName}} {
 {% for line in f.documentation %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
+ *
+ * @param  request Request to send to {{ servicename }}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 {{ f.returnType }} {{ ClassName }}::{{ f.name }}({{ f.arguments }})
 {

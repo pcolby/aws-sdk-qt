@@ -91,6 +91,12 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
  * Adds a CloudWatch log stream to monitor application configuration errors. For more information about using CloudWatch
  * log streams with Amazon Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption(const AddApplicationCloudWatchLoggingOptionRequest &request)
 {
@@ -114,6 +120,12 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addAppli
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationInput</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const AddApplicationInputRequest &request)
 {
@@ -124,6 +136,12 @@ AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const 
  * Adds an <a>InputProcessingConfiguration</a> to an application. An input processor preprocesses records on the input
  * stream before the application's SQL code executes. Currently, the only input processor available is <a
  * href="https://aws.amazon.com/documentation/lambda/">AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request)
 {
@@ -159,6 +177,12 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::add
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html">Limits</a>>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationOutput</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(const AddApplicationOutputRequest &request)
 {
@@ -185,6 +209,12 @@ AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(cons
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:AddApplicationOutput</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request)
 {
@@ -223,6 +253,12 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicati
  *
  * For introductory exercises to create an Amazon Kinesis Analytics application, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/getting-started.html">Getting Started</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -236,6 +272,12 @@ CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const Crea
  * code)>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DeleteApplication</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -246,6 +288,12 @@ DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const Dele
  * Deletes a CloudWatch log stream from an application. For more information about using CloudWatch log streams with Amazon
  * Kinesis Analytics applications, see <a
  * href="http://docs.aws.amazon.com/kinesisanalytics/latest/dev/cloudwatch-logs.html">Working with Amazon CloudWatch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request)
 {
@@ -254,6 +302,12 @@ DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::delet
 
 /**
  * Deletes an <a>InputProcessingConfiguration</a> from an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration(const DeleteApplicationInputProcessingConfigurationRequest &request)
 {
@@ -267,6 +321,12 @@ DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::
  * destination>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DeleteApplicationOutput</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutput(const DeleteApplicationOutputRequest &request)
 {
@@ -284,6 +344,12 @@ DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutpu
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics.DeleteApplicationReferenceDataSource</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request)
 {
@@ -302,6 +368,12 @@ DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApp
  * This operation requires permissions to perform the <code>kinesisanalytics:DescribeApplication</code> action. You can use
  * <code>DescribeApplication</code> to get the current application versionId, which you need to call other operations such
  * as <code>Update</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const DescribeApplicationRequest &request)
 {
@@ -323,6 +395,12 @@ DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const 
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:DiscoverInputSchema</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const DiscoverInputSchemaRequest &request)
 {
@@ -342,6 +420,12 @@ DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const 
  * <a>DescribeApplication</a>>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:ListApplications</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -369,6 +453,12 @@ ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListAp
  * operation>
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:StartApplication</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartApplicationRequest &request)
 {
@@ -384,6 +474,12 @@ StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartA
  * </p
  *
  * This operation requires permissions to perform the <code>kinesisanalytics:StopApplication</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopApplicationRequest &request)
 {
@@ -402,6 +498,12 @@ StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopAppl
  * </p
  *
  * This operation requires permission for the <code>kinesisanalytics:UpdateApplication</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const UpdateApplicationRequest &request)
 {

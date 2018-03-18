@@ -148,6 +148,12 @@ EfsClient::EfsClient(
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:CreateFileSystem</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemRequest &request)
 {
@@ -287,6 +293,12 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  * </p </li> <li>
  *
  * <code>ec2:CreateNetworkInterface</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTargetRequest &request)
 {
@@ -302,6 +314,12 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
  * </p
  *
  * This operation requires permission for the <code>elasticfilesystem:CreateTags</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 {
@@ -327,6 +345,12 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
  * error> </note>
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteFileSystem</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemRequest &request)
 {
@@ -365,6 +389,12 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
  * interface> <ul> <li>
  *
  * <code>ec2:DeleteNetworkInterface</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTargetRequest &request)
 {
@@ -380,6 +410,12 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  * Guide</i>>
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteTags</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -418,6 +454,12 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeFileSystems</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileSystemsRequest &request)
 {
@@ -439,6 +481,12 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
  * </p </li> <li>
  *
  * <code>ec2:DescribeNetworkInterfaceAttribute</code> action on the mount target's network interface.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request)
 {
@@ -454,6 +502,12 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
  * This operation requires permissions for the <code>elasticfilesystem:DescribeMountTargets</code> action, on either the
  * file system ID that you specify in <code>FileSystemId</code>, or on the file system of the mount target that you specify
  * in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMountTargetsRequest &request)
 {
@@ -468,6 +522,12 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  * </p
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeTags</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -496,6 +556,12 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
  * </p </li> <li>
  *
  * <code>ec2:ModifyNetworkInterfaceAttribute</code> action on the mount target's network interface.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {

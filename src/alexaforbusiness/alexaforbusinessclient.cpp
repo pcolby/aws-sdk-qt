@@ -96,6 +96,12 @@ AlexaForBusinessClient::AlexaForBusinessClient(
  * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
  * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is
  * required.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoom(const AssociateDeviceWithRoomRequest &request)
 {
@@ -104,6 +110,12 @@ AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoo
 
 /**
  * Associates a skill group to a given room. This enables all skills in the associated skill group on all devices in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGroupWithRoom(const AssociateSkillGroupWithRoomRequest &request)
 {
@@ -112,6 +124,12 @@ AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGrou
 
 /**
  * Creates a new room profile with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfileRequest &request)
 {
@@ -120,6 +138,12 @@ CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfil
 
 /**
  * Creates a room with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest &request)
 {
@@ -128,6 +152,12 @@ CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest 
 
 /**
  * Creates a skill group with a specified name and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const CreateSkillGroupRequest &request)
 {
@@ -136,6 +166,12 @@ CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const Create
 
 /**
  * Creates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest &request)
 {
@@ -144,6 +180,12 @@ CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest 
 
 /**
  * Deletes a room profile by the profile
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfileRequest &request)
 {
@@ -152,6 +194,12 @@ DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfil
 
 /**
  * Deletes a room by the room
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest &request)
 {
@@ -160,6 +208,12 @@ DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest 
 
 /**
  * Deletes room skill parameter details by room, skill, and parameter key
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParameter(const DeleteRoomSkillParameterRequest &request)
 {
@@ -168,6 +222,12 @@ DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParame
 
 /**
  * Deletes a skill group by skill group
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const DeleteSkillGroupRequest &request)
 {
@@ -176,6 +236,12 @@ DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const Delete
 
 /**
  * Deletes a specified user by user ARN and enrollment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -185,6 +251,12 @@ DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest 
 /**
  * Disassociates a device from its current room. The device continues to be connected to the Wi-Fi network and is still
  * registered to the account. The device settings and skills are removed from the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceFromRoom(const DisassociateDeviceFromRoomRequest &request)
 {
@@ -193,6 +265,12 @@ DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceF
 
 /**
  * Disassociates a skill group from a specified room. This disables all skills in the skill group on all devices in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSkillGroupFromRoom(const DisassociateSkillGroupFromRoomRequest &request)
 {
@@ -201,6 +279,12 @@ DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSki
 
 /**
  * Gets the details of a device by device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &request)
 {
@@ -209,6 +293,12 @@ GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &re
 
 /**
  * Gets the details of a room profile by profile
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest &request)
 {
@@ -217,6 +307,12 @@ GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest 
 
 /**
  * Gets room details by room
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
 {
@@ -225,6 +321,12 @@ GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
 
 /**
  * Gets room skill parameter details by room, skill, and parameter key
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(const GetRoomSkillParameterRequest &request)
 {
@@ -233,6 +335,12 @@ GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(co
 
 /**
  * Gets skill group details by skill group
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGroupRequest &request)
 {
@@ -241,6 +349,12 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
 
 /**
  * Lists all enabled skills in a specific skill
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest &request)
 {
@@ -249,6 +363,12 @@ ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest 
 
 /**
  * Lists all tags for a specific
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &request)
 {
@@ -257,6 +377,12 @@ ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &reque
 
 /**
  * Updates room skill parameter details by room, skill, and parameter key ID. Not all skills have a room skill
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(const PutRoomSkillParameterRequest &request)
 {
@@ -265,6 +391,12 @@ PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(co
 
 /**
  * Determines the details for the room from which a skill request was invoked. This operation is used by skill
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomRequest &request)
 {
@@ -273,6 +405,12 @@ ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomReque
 
 /**
  * Revokes an invitation and invalidates the enrollment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const RevokeInvitationRequest &request)
 {
@@ -281,6 +419,12 @@ RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const Revoke
 
 /**
  * Searches devices and lists the ones that meet a set of filter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevicesRequest &request)
 {
@@ -289,6 +433,12 @@ SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevice
 
 /**
  * Searches room profiles and lists the ones that meet a set of filter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProfilesRequest &request)
 {
@@ -297,6 +447,12 @@ SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProf
 
 /**
  * Searches rooms and lists the ones that meet a set of filter and sort
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsRequest &request)
 {
@@ -305,6 +461,12 @@ SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsReque
 
 /**
  * Searches skill groups and lists the ones that meet a set of filter and sort
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const SearchSkillGroupsRequest &request)
 {
@@ -313,6 +475,12 @@ SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const Sear
 
 /**
  * Searches users and lists the ones that meet a set of filter and sort
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersRequest &request)
 {
@@ -322,6 +490,12 @@ SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersReque
 /**
  * Sends an enrollment invitation email with a URL to a user. The URL is valid for 72 hours or until you call this
  * operation again, whichever comes first.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvitationRequest &request)
 {
@@ -330,6 +504,12 @@ SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvita
 
 /**
  * Resets a device and its account to the known default settings by clearing all information and settings set by previous
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDeviceSyncRequest &request)
 {
@@ -338,6 +518,12 @@ StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDev
 
 /**
  * Adds metadata tags to a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceRequest &request)
 {
@@ -346,6 +532,12 @@ TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceReque
 
 /**
  * Removes metadata tags from a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourceRequest &request)
 {
@@ -354,6 +546,12 @@ UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourc
 
 /**
  * Updates the device name by device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRequest &request)
 {
@@ -362,6 +560,12 @@ UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRe
 
 /**
  * Updates an existing room profile by room profile
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfileRequest &request)
 {
@@ -370,6 +574,12 @@ UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfil
 
 /**
  * Updates room details by room
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest &request)
 {
@@ -378,6 +588,12 @@ UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest 
 
 /**
  * Updates skill group details by skill group
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const UpdateSkillGroupRequest &request)
 {

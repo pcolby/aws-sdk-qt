@@ -103,6 +103,12 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
 
 /**
  * Gets details of a job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
@@ -111,6 +117,12 @@ DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(cons
 
 /**
  * Gets the list of all jobs for a thing that are not in a terminal
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecutions(const GetPendingJobExecutionsRequest &request)
 {
@@ -119,6 +131,12 @@ GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecution
 
 /**
  * Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJobExecution(const StartNextPendingJobExecutionRequest &request)
 {
@@ -127,6 +145,12 @@ StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJ
 
 /**
  * Updates the status of a job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const UpdateJobExecutionRequest &request)
 {

@@ -118,6 +118,12 @@ CloudHSMClient::CloudHSMClient(
  * resource>
  *
  * Each tag consists of a key and a value. Tag keys must be unique to each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -140,6 +146,12 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
  *
  * Creates a high-availability partition group. A high-availability partition group is a group of partitions that spans
  * multiple physical
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request)
 {
@@ -173,6 +185,12 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  *
  * It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the
  * <a>DescribeHsm</a> operation. The HSM is ready to be initialized when the status changes to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
 {
@@ -194,6 +212,12 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
  * Reference</a>>
  *
  * Creates an HSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClientRequest &request)
 {
@@ -215,6 +239,12 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
  * Reference</a>>
  *
  * Deletes a high-availability partition
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request)
 {
@@ -236,6 +266,12 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
  * Reference</a>>
  *
  * Deletes an HSM. After completion, this operation cannot be undone and your key material cannot be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
 {
@@ -257,6 +293,12 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
  * Reference</a>>
  *
  * Deletes a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClientRequest &request)
 {
@@ -278,6 +320,12 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
  * Reference</a>>
  *
  * Retrieves information about a high-availability partition
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &request)
 {
@@ -299,6 +347,12 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
  * Reference</a>>
  *
  * Retrieves information about an HSM. You can identify the HSM by its ARN or its serial
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &request)
 {
@@ -320,6 +374,12 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
  * Reference</a>>
  *
  * Retrieves information about an HSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLunaClientRequest &request)
 {
@@ -341,6 +401,12 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
  * Reference</a>>
  *
  * Gets the configuration files necessary to connect to all high availability partition groups the client is associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
 {
@@ -362,6 +428,12 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
  * Reference</a>>
  *
  * Lists the Availability Zones that have available AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvailableZonesRequest &request)
 {
@@ -389,6 +461,12 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHapgs</code>
  * to retrieve the next set of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
 {
@@ -416,6 +494,12 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHsms</code>
  * to retrieve the next set of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
 {
@@ -443,6 +527,12 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
  * This operation supports pagination with the use of the <code>NextToken</code> member. If more results are available, the
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to
  * <code>ListLunaClients</code> to retrieve the next set of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsRequest &request)
 {
@@ -464,6 +554,12 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
  * Reference</a>>
  *
  * Returns a list of all tags for the specified AWS CloudHSM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -485,6 +581,12 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
  * Reference</a>>
  *
  * Modifies an existing high-availability partition
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request)
 {
@@ -512,6 +614,12 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  * This operation can result in the HSM being offline for up to 15 minutes while the AWS CloudHSM service is reconfigured.
  * If you are modifying a production HSM, you should ensure that your AWS CloudHSM service is configured for high
  * availability, and consider executing this operation during a maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
 {
@@ -537,6 +645,12 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
  * client>
  *
  * This action can potentially start a workflow to install the new certificate on the client's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClientRequest &request)
 {
@@ -562,6 +676,12 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
  * resource>
  *
  * To remove a tag, specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {

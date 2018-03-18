@@ -92,6 +92,12 @@ MobileClient::MobileClient(
 
 /**
  * Creates an AWS Mobile Hub project.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &request)
 {
@@ -100,6 +106,12 @@ CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &
 
 /**
  * Delets a project in AWS Mobile Hub.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -108,6 +120,12 @@ DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &
 
 /**
  * Get the bundle details for the requested bundle id.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleRequest &request)
 {
@@ -116,6 +134,12 @@ DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleReques
 
 /**
  * Gets details about a project in AWS Mobile Hub.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectRequest &request)
 {
@@ -125,6 +149,12 @@ DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectReq
 /**
  * Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app
  * clients with backend AWS resources.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &request)
 {
@@ -134,6 +164,12 @@ ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &req
 /**
  * Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials
  * are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &request)
 {
@@ -142,6 +178,12 @@ ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &
 
 /**
  * List all available bundles.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &request)
 {
@@ -150,6 +192,12 @@ ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &reques
 
 /**
  * Lists projects in AWS Mobile Hub.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &request)
 {
@@ -158,6 +206,12 @@ ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &req
 
 /**
  * Update an existing project.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &request)
 {

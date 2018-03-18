@@ -121,6 +121,12 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  * search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
 {
@@ -145,6 +151,12 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
  * search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request)
 {
@@ -173,6 +185,12 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
  * <i>Amazon CloudSearch Developer Guide</i>. For more information about uploading data for indexing, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading Data</a> in the
  * <i>Amazon CloudSearch Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadDocumentsRequest &request)
 {

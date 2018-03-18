@@ -252,6 +252,12 @@ CodePipelineClient::CodePipelineClient(
 
 /**
  * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJobRequest &request)
 {
@@ -260,6 +266,12 @@ AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJob
 
 /**
  * Confirms a job worker has received the specified job. Only used for partner
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request)
 {
@@ -268,6 +280,12 @@ AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(
 
 /**
  * Creates a new custom action that can be used in all pipelines associated with the AWS account. Only used for custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(const CreateCustomActionTypeRequest &request)
 {
@@ -276,6 +294,12 @@ CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(cons
 
 /**
  * Creates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipelineRequest &request)
 {
@@ -289,6 +313,12 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  * actions> <important>
  *
  * You cannot recreate a custom action after it has been deleted unless you increase the version number of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(const DeleteCustomActionTypeRequest &request)
 {
@@ -297,6 +327,12 @@ DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(cons
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipelineRequest &request)
 {
@@ -305,6 +341,12 @@ DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipeline
 
 /**
  * Prevents artifacts in a pipeline from transitioning to the next stage in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(const DisableStageTransitionRequest &request)
 {
@@ -313,6 +355,12 @@ DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(cons
 
 /**
  * Enables artifacts in a pipeline to transition to a stage in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const EnableStageTransitionRequest &request)
 {
@@ -327,6 +375,12 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsRequest &request)
 {
@@ -336,6 +390,12 @@ GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsReq
 /**
  * Returns the metadata, structure, stages, and actions of a pipeline. Can be used to return the entire structure of a
  * pipeline in JSON format, which can then be modified and used to update the pipeline structure with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &request)
 {
@@ -345,6 +405,12 @@ GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &
 /**
  * Returns information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and
  * the name, version, and status of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const GetPipelineExecutionRequest &request)
 {
@@ -353,6 +419,12 @@ GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const Ge
 
 /**
  * Returns information about the state of a pipeline, including the stages and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelineStateRequest &request)
 {
@@ -367,6 +439,12 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
 {
@@ -375,6 +453,12 @@ GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(co
 
 /**
  * Gets a summary of all AWS CodePipeline action types associated with your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTypesRequest &request)
 {
@@ -383,6 +467,12 @@ ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTy
 
 /**
  * Gets a summary of the most recent executions for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(const ListPipelineExecutionsRequest &request)
 {
@@ -391,6 +481,12 @@ ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(cons
 
 /**
  * Gets a summary of all of the pipelines associated with your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesRequest &request)
 {
@@ -405,6 +501,12 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
  * this API returns any secret values defined for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &request)
 {
@@ -418,6 +520,12 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request)
 {
@@ -426,6 +534,12 @@ PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const 
 
 /**
  * Provides information to AWS CodePipeline about new revisions to a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActionRevisionRequest &request)
 {
@@ -434,6 +548,12 @@ PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActio
 
 /**
  * Provides the response to a manual approval request to AWS CodePipeline. Valid responses include Approved and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutApprovalResultRequest &request)
 {
@@ -442,6 +562,12 @@ PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutAppro
 
 /**
  * Represents the failure of a job as returned to the pipeline by a job worker. Only used for custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJobFailureResultRequest &request)
 {
@@ -450,6 +576,12 @@ PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJ
 
 /**
  * Represents the success of a job as returned to the pipeline by a job worker. Only used for custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJobSuccessResultRequest &request)
 {
@@ -458,6 +590,12 @@ PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJ
 
 /**
  * Represents the failure of a third party job as returned to the pipeline by a job worker. Only used for partner
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request)
 {
@@ -466,6 +604,12 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
 
 /**
  * Represents the success of a third party job as returned to the pipeline by a job worker. Only used for partner
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
 {
@@ -474,6 +618,12 @@ PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSucc
 
 /**
  * Resumes the pipeline execution by retrying the last failed actions in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const RetryStageExecutionRequest &request)
 {
@@ -483,6 +633,12 @@ RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const Retr
 /**
  * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location specified as
  * part of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(const StartPipelineExecutionRequest &request)
 {
@@ -493,6 +649,12 @@ StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(cons
  * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
  * conjunction with UpdatePipeline to provide the full structure of the pipeline. Updating the pipeline increases the
  * version number of the pipeline by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
 {

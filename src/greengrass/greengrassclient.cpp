@@ -92,6 +92,12 @@ GreengrassClient::GreengrassClient(
 
 /**
  * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const AssociateRoleToGroupRequest &request)
 {
@@ -101,6 +107,12 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
 /**
  * Associates a role which is used by AWS Greengrass. AWS Greengrass uses the role to access your Lambda functions and AWS
  * IoT resources. This is necessary for deployments to succeed. It needs to have minimum permissions in policy
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request)
 {
@@ -109,6 +121,12 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
 
 /**
  * Creates a core definition. You may optionally provide the initial version of the core definition or use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const CreateCoreDefinitionRequest &request)
 {
@@ -117,6 +135,12 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
 
 /**
  * Creates a version of a core definition that has already been defined. AWS Greengrass Groups must each contain exactly 1
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVersion(const CreateCoreDefinitionVersionRequest &request)
 {
@@ -124,6 +148,12 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -132,6 +162,12 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
 
 /**
  * Creates a device definition. You may optinally provide the initial version of the device definition or use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const CreateDeviceDefinitionRequest &request)
 {
@@ -139,6 +175,12 @@ CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinitionVersion(const CreateDeviceDefinitionVersionRequest &request)
 {
@@ -148,6 +190,12 @@ CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinition
 /**
  * Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a
  * group. You can create an initial version of the definition by providing a list of Lambda functions and their
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(const CreateFunctionDefinitionRequest &request)
 {
@@ -155,6 +203,12 @@ CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefinitionVersion(const CreateFunctionDefinitionVersionRequest &request)
 {
@@ -163,6 +217,12 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
 
 /**
  * Creates a group. You may optionally provide the initial version of the group or use ''CreateGroupVersion'' at a later
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &request)
 {
@@ -170,6 +230,12 @@ CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &re
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertificateAuthority(const CreateGroupCertificateAuthorityRequest &request)
 {
@@ -177,6 +243,12 @@ CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertifica
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGroupVersionRequest &request)
 {
@@ -185,6 +257,12 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
 
 /**
  * Creates a logger definition. You may optionally provide the initial version of the logger definition or use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const CreateLoggerDefinitionRequest &request)
 {
@@ -192,6 +270,12 @@ CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinitionVersion(const CreateLoggerDefinitionVersionRequest &request)
 {
@@ -200,6 +284,12 @@ CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinition
 
 /**
  * Creates a resource definition which contains a list of resources to be used in a group. You can create an initial
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(const CreateResourceDefinitionRequest &request)
 {
@@ -207,6 +297,12 @@ CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefinitionVersion(const CreateResourceDefinitionVersionRequest &request)
 {
@@ -214,6 +310,12 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(const CreateSoftwareUpdateJobRequest &request)
 {
@@ -222,6 +324,12 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
 
 /**
  * Creates a subscription definition. You may optionally provide the initial version of the subscription definition or use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefinition(const CreateSubscriptionDefinitionRequest &request)
 {
@@ -229,6 +337,12 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscriptionDefinitionVersion(const CreateSubscriptionDefinitionVersionRequest &request)
 {
@@ -236,6 +350,12 @@ CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscripti
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const DeleteCoreDefinitionRequest &request)
 {
@@ -243,6 +363,12 @@ DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const Dele
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const DeleteDeviceDefinitionRequest &request)
 {
@@ -250,6 +376,12 @@ DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(const DeleteFunctionDefinitionRequest &request)
 {
@@ -257,6 +389,12 @@ DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &request)
 {
@@ -264,6 +402,12 @@ DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &re
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const DeleteLoggerDefinitionRequest &request)
 {
@@ -271,6 +415,12 @@ DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(const DeleteResourceDefinitionRequest &request)
 {
@@ -278,6 +428,12 @@ DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefinition(const DeleteSubscriptionDefinitionRequest &request)
 {
@@ -285,6 +441,12 @@ DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefin
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(const DisassociateRoleFromGroupRequest &request)
 {
@@ -292,6 +454,12 @@ DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServiceRoleFromAccount(const DisassociateServiceRoleFromAccountRequest &request)
 {
@@ -299,6 +467,12 @@ DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssociatedRoleRequest &request)
 {
@@ -306,6 +480,12 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetConnectivityInfoRequest &request)
 {
@@ -313,6 +493,12 @@ GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetCon
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDefinitionRequest &request)
 {
@@ -320,6 +506,12 @@ GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDef
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(const GetCoreDefinitionVersionRequest &request)
 {
@@ -327,6 +519,12 @@ GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDeploymentStatusRequest &request)
 {
@@ -334,6 +532,12 @@ GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDep
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDeviceDefinitionRequest &request)
 {
@@ -341,6 +545,12 @@ GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDev
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersion(const GetDeviceDefinitionVersionRequest &request)
 {
@@ -348,6 +558,12 @@ GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const GetFunctionDefinitionRequest &request)
 {
@@ -356,6 +572,12 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
 
 /**
  * Retrieves information about a Lambda function definition version, such as which Lambda functions are included in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVersion(const GetFunctionDefinitionVersionRequest &request)
 {
@@ -363,6 +585,12 @@ GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVe
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 {
@@ -370,6 +598,12 @@ GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuthority(const GetGroupCertificateAuthorityRequest &request)
 {
@@ -377,6 +611,12 @@ GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuth
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificateConfiguration(const GetGroupCertificateConfigurationRequest &request)
 {
@@ -384,6 +624,12 @@ GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificate
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersionRequest &request)
 {
@@ -391,6 +637,12 @@ GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLoggerDefinitionRequest &request)
 {
@@ -398,6 +650,12 @@ GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLog
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersion(const GetLoggerDefinitionVersionRequest &request)
 {
@@ -405,6 +663,12 @@ GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const GetResourceDefinitionRequest &request)
 {
@@ -412,6 +676,12 @@ GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const Ge
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVersion(const GetResourceDefinitionVersionRequest &request)
 {
@@ -419,6 +689,12 @@ GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVe
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request)
 {
@@ -426,6 +702,12 @@ GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(const GetSubscriptionDefinitionRequest &request)
 {
@@ -433,6 +715,12 @@ GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefinitionVersion(const GetSubscriptionDefinitionVersionRequest &request)
 {
@@ -440,6 +728,12 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersions(const ListCoreDefinitionVersionsRequest &request)
 {
@@ -447,6 +741,12 @@ ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersion
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCoreDefinitionsRequest &request)
 {
@@ -454,6 +754,12 @@ ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCo
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeploymentsRequest &request)
 {
@@ -461,6 +767,12 @@ ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeployment
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVersions(const ListDeviceDefinitionVersionsRequest &request)
 {
@@ -468,6 +780,12 @@ ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVer
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const ListDeviceDefinitionsRequest &request)
 {
@@ -475,6 +793,12 @@ ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const Li
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitionVersions(const ListFunctionDefinitionVersionsRequest &request)
 {
@@ -482,6 +806,12 @@ ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(const ListFunctionDefinitionsRequest &request)
 {
@@ -489,6 +819,12 @@ ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificateAuthorities(const ListGroupCertificateAuthoritiesRequest &request)
 {
@@ -496,6 +832,12 @@ ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificate
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupVersionsRequest &request)
 {
@@ -503,6 +845,12 @@ ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupV
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &request)
 {
@@ -510,6 +858,12 @@ ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &reque
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVersions(const ListLoggerDefinitionVersionsRequest &request)
 {
@@ -517,6 +871,12 @@ ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVer
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const ListLoggerDefinitionsRequest &request)
 {
@@ -524,6 +884,12 @@ ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const Li
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitionVersions(const ListResourceDefinitionVersionsRequest &request)
 {
@@ -531,6 +897,12 @@ ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitio
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(const ListResourceDefinitionsRequest &request)
 {
@@ -538,6 +910,12 @@ ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionDefinitionVersions(const ListSubscriptionDefinitionVersionsRequest &request)
 {
@@ -545,6 +923,12 @@ ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionD
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefinitions(const ListSubscriptionDefinitionsRequest &request)
 {
@@ -552,6 +936,12 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploymentsRequest &request)
 {
@@ -560,6 +950,12 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
 
 /**
  * Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const UpdateConnectivityInfoRequest &request)
 {
@@ -567,6 +963,12 @@ UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const UpdateCoreDefinitionRequest &request)
 {
@@ -574,6 +976,12 @@ UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const Upda
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const UpdateDeviceDefinitionRequest &request)
 {
@@ -581,6 +989,12 @@ UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(const UpdateFunctionDefinitionRequest &request)
 {
@@ -588,6 +1002,12 @@ UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &request)
 {
@@ -595,6 +1015,12 @@ UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &re
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCertificateConfiguration(const UpdateGroupCertificateConfigurationRequest &request)
 {
@@ -602,6 +1028,12 @@ UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCerti
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const UpdateLoggerDefinitionRequest &request)
 {
@@ -609,6 +1041,12 @@ UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const 
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(const UpdateResourceDefinitionRequest &request)
 {
@@ -616,6 +1054,12 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request)
 {

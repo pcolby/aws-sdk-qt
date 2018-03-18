@@ -102,6 +102,12 @@ PollyClient::PollyClient(
  * APIs>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &request)
 {
@@ -131,6 +137,12 @@ DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &r
  * </p
  *
  * This operation requires permissions to perform the <code>polly:DescribeVoices</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest &request)
 {
@@ -140,6 +152,12 @@ DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest
 /**
  * Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 {
@@ -149,6 +167,12 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 /**
  * Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &request)
 {
@@ -163,6 +187,12 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
  * operation>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 {
@@ -174,6 +204,12 @@ PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
  * alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices)
  * unless phoneme mapping is used. For more information, see <a
  * href="http://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html">How it
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechRequest &request)
 {

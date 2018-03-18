@@ -106,6 +106,12 @@ CostExplorerClient::CostExplorerClient(
  * group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. See
  * the <code>GetDimensionValues</code> action for a complete list of the valid dimensions. Master accounts in an
  * organization have access to all member
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUsageRequest &request)
 {
@@ -115,6 +121,12 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
 /**
  * You can use <code>GetDimensionValues</code> to retrieve all available filter values for a specific filter over a period
  * of time. You can search the dimension values for an arbitrary string.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDimensionValuesRequest &request)
 {
@@ -140,6 +152,12 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  * TENANC> </li> </ul>
  *
  * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(const GetReservationCoverageRequest &request)
 {
@@ -151,6 +169,12 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
  * associated member accounts. You can filter data by dimensions in a time period. You can use
  * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
  * <code>SUBSCRIPTION_ID</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilization(const GetReservationUtilizationRequest &request)
 {
@@ -160,6 +184,12 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
 /**
  * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
  * arbitrary string.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 {

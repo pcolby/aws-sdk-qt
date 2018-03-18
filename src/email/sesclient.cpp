@@ -110,6 +110,12 @@ SesClient::SesClient(
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptRuleSetRequest &request)
 {
@@ -127,6 +133,12 @@ CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptR
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateConfigurationSetRequest &request)
 {
@@ -150,6 +162,12 @@ CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateC
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationSetEventDestination(const CreateConfigurationSetEventDestinationRequest &request)
 {
@@ -166,6 +184,12 @@ CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationS
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Configuring Custom
  * Domains to Handle Open and Click Tracking</a> in the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSetTrackingOptions(const CreateConfigurationSetTrackingOptionsRequest &request)
 {
@@ -184,6 +208,12 @@ CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSe
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificationEmailTemplate(const CreateCustomVerificationEmailTemplateRequest &request)
 {
@@ -201,6 +231,12 @@ CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificat
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceiptFilterRequest &request)
 {
@@ -218,6 +254,12 @@ CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceipt
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRuleRequest &request)
 {
@@ -235,6 +277,12 @@ CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRule
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateReceiptRuleSetRequest &request)
 {
@@ -249,6 +297,12 @@ CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateRecei
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &request)
 {
@@ -263,6 +317,12 @@ CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteConfigurationSetRequest &request)
 {
@@ -277,6 +337,12 @@ DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteC
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationSetEventDestination(const DeleteConfigurationSetEventDestinationRequest &request)
 {
@@ -298,6 +364,12 @@ DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationS
  *
  * Deleting this kind of association will result in emails sent using the specified configuration set to capture open and
  * click events using the standard, Amazon SES-operated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSetTrackingOptions(const DeleteConfigurationSetTrackingOptionsRequest &request)
 {
@@ -316,6 +388,12 @@ DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSe
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificationEmailTemplate(const DeleteCustomVerificationEmailTemplateRequest &request)
 {
@@ -328,6 +406,12 @@ DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificat
  * identities>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &request)
 {
@@ -351,6 +435,12 @@ DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdentityPolicyRequest &request)
 {
@@ -369,6 +459,12 @@ DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdent
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceiptFilterRequest &request)
 {
@@ -387,6 +483,12 @@ DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceipt
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRuleRequest &request)
 {
@@ -409,6 +511,12 @@ DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRule
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteReceiptRuleSetRequest &request)
 {
@@ -421,6 +529,12 @@ DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteRecei
  * template>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &request)
 {
@@ -429,6 +543,12 @@ DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &
 
 /**
  * Deprecated. Use the <code>DeleteIdentity</code> operation to delete email addresses and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const DeleteVerifiedEmailAddressRequest &request)
 {
@@ -446,6 +566,12 @@ DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(const DescribeActiveReceiptRuleSetRequest &request)
 {
@@ -459,6 +585,12 @@ DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(c
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const DescribeConfigurationSetRequest &request)
 {
@@ -476,6 +608,12 @@ DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const Des
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeReceiptRuleRequest &request)
 {
@@ -494,6 +632,12 @@ DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeRecei
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const DescribeReceiptRuleSetRequest &request)
 {
@@ -506,6 +650,12 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  * account>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
 {
@@ -524,6 +674,12 @@ GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEmailTemplate(const GetCustomVerificationEmailTemplateRequest &request)
 {
@@ -561,6 +717,12 @@ GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEma
  *
  * For more information about creating DNS records using DKIM tokens, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const GetIdentityDkimAttributesRequest &request)
 {
@@ -574,6 +736,12 @@ GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const G
  *
  * This operation is throttled at one request per second and can only get custom MAIL FROM attributes for up to 100
  * identities at a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDomainAttributes(const GetIdentityMailFromDomainAttributesRequest &request)
 {
@@ -593,6 +761,12 @@ GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDoma
  *
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAttributes(const GetIdentityNotificationAttributesRequest &request)
 {
@@ -616,6 +790,12 @@ GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAt
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPoliciesRequest &request)
 {
@@ -645,6 +825,12 @@ GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPo
  *
  * This operation is throttled at one request per second and can only get verification attributes for up to 100 identities
  * at a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAttributes(const GetIdentityVerificationAttributesRequest &request)
 {
@@ -657,6 +843,12 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
  * </p
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSendQuotaResponse * SesClient::getSendQuota()
 {
@@ -670,6 +862,12 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  * time>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSendStatisticsResponse * SesClient::getSendStatistics()
 {
@@ -682,6 +880,12 @@ GetSendStatisticsResponse * SesClient::getSendStatistics()
  * specify>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
 {
@@ -700,6 +904,12 @@ GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
  * each time it is run. If your Amazon SES account has more than 1,000 configuration sets, this operation will also return
  * a NextToken element. You can then execute the <code>ListConfigurationSets</code> operation again, passing the
  * <code>NextToken</code> parameter and the value of the NextToken element to retrieve additional
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfigurationSetsRequest &request)
 {
@@ -718,6 +928,12 @@ ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfi
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerificationEmailTemplates(const ListCustomVerificationEmailTemplatesRequest &request)
 {
@@ -731,6 +947,12 @@ ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerification
  * status>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &request)
 {
@@ -754,6 +976,12 @@ ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentityPoliciesRequest &request)
 {
@@ -772,6 +1000,12 @@ ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentit
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFiltersRequest &request)
 {
@@ -792,6 +1026,12 @@ ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFilt
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRuleSetsRequest &request)
 {
@@ -804,6 +1044,12 @@ ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRu
  * account>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &request)
 {
@@ -812,6 +1058,12 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
 
 /**
  * Deprecated. Use the <code>ListIdentities</code> operation to list the email addresses and domains associated with your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
 {
@@ -834,6 +1086,12 @@ ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicyRequest &request)
 {
@@ -857,6 +1115,12 @@ PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicy
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderReceiptRuleSetRequest &request)
 {
@@ -879,6 +1143,12 @@ ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderRe
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
 {
@@ -918,6 +1188,12 @@ SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
  * a To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the
  * format <i>UserName@[SubDomain.]Domain.TopLevelDomain</i>), the entire message will be rejected, even if the message
  * contains other recipients that are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBulkTemplatedEmailRequest &request)
 {
@@ -938,6 +1214,12 @@ SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBul
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(const SendCustomVerificationEmailRequest &request)
 {
@@ -984,6 +1266,12 @@ SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(con
  * For more information about sending quotas in Amazon SES, see <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html">Managing Your Amazon SES Sending
  * Limits</a> in the <i>Amazon SES Developer Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
 {
@@ -1077,6 +1365,12 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  * specified in <code>SourceIdentityArn</code>. For more information about sending authorization, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Using Sending Authorization with
  * Amazon SES</a> in the <i>Amazon SES Developer Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &request)
 {
@@ -1121,6 +1415,12 @@ SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &reques
  * To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format
  * <i>UserName@[SubDomain.]Domain.TopLevelDomain</i>), the entire message will be rejected, even if the message contains
  * other recipients that are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEmailRequest &request)
 {
@@ -1143,6 +1443,12 @@ SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEm
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetActiveReceiptRuleSetRequest &request)
 {
@@ -1175,6 +1481,12 @@ SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetAc
  *
  * For more information about Easy DKIM signing, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIdentityDkimEnabledRequest &request)
 {
@@ -1198,6 +1510,12 @@ SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIden
  *
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackForwardingEnabled(const SetIdentityFeedbackForwardingEnabledRequest &request)
 {
@@ -1216,6 +1534,12 @@ SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackFor
  *
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeadersInNotificationsEnabled(const SetIdentityHeadersInNotificationsEnabledRequest &request)
 {
@@ -1235,6 +1559,12 @@ SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeaders
  * Guide</a>> </important>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const SetIdentityMailFromDomainRequest &request)
 {
@@ -1258,6 +1588,12 @@ SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const S
  *
  * For more information about feedback notification, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(const SetIdentityNotificationTopicRequest &request)
 {
@@ -1276,6 +1612,12 @@ SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(c
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetReceiptRulePositionRequest &request)
 {
@@ -1288,6 +1630,12 @@ SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetRece
  * data>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTemplateRequest &request)
 {
@@ -1302,6 +1650,12 @@ TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTempl
  * thresholds>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(const UpdateAccountSendingEnabledRequest &request)
 {
@@ -1323,6 +1677,12 @@ UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(con
  * SNS)> </note>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request)
 {
@@ -1337,6 +1697,12 @@ UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationS
  * threshold>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfigurationSetReputationMetricsEnabled(const UpdateConfigurationSetReputationMetricsEnabledRequest &request)
 {
@@ -1351,6 +1717,12 @@ UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfig
  * thresholds>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSetSendingEnabled(const UpdateConfigurationSetSendingEnabledRequest &request)
 {
@@ -1367,6 +1739,12 @@ UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSet
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Configuring Custom
  * Domains to Handle Open and Click Tracking</a> in the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSetTrackingOptions(const UpdateConfigurationSetTrackingOptionsRequest &request)
 {
@@ -1385,6 +1763,12 @@ UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSe
  * Guide</i>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificationEmailTemplate(const UpdateCustomVerificationEmailTemplateRequest &request)
 {
@@ -1403,6 +1787,12 @@ UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificat
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRuleRequest &request)
 {
@@ -1417,6 +1807,12 @@ UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRule
  * Guide</a>>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &request)
 {
@@ -1441,6 +1837,12 @@ UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &
  *
  * For more information about creating DNS records using DKIM tokens, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html">Amazon SES Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimRequest &request)
 {
@@ -1456,6 +1858,12 @@ VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimReq
  * </p
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomainIdentityRequest &request)
 {
@@ -1464,6 +1872,12 @@ VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomai
 
 /**
  * Deprecated. Use the <code>VerifyEmailIdentity</code> operation to verify a new email
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddressRequest &request)
 {
@@ -1477,6 +1891,12 @@ VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddr
  * address>
  *
  * You can execute this operation no more than once per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailIdentityRequest &request)
 {

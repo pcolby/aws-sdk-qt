@@ -165,6 +165,12 @@ StorageGatewayClient::StorageGatewayClient(
  * <a>UpdateGatewayInformation</a>> <note>
  *
  * You must turn on the gateway VM before you can activate your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGatewayRequest &request)
 {
@@ -180,6 +186,12 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add cache, and one or more disk
  * IDs that you want to configure as
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request)
 {
@@ -207,6 +219,12 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
  *
  * You can create a maximum of 10 tags for each resource. Virtual tapes and storage volumes that are recovered to a new
  * gateway maintain their
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -221,6 +239,12 @@ AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTag
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add upload buffer, and one or
  * more disk IDs that you want to configure as upload
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadBufferRequest &request)
 {
@@ -241,6 +265,12 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
  *
  * In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add working storage, and one or
  * more disk IDs that you want to configure as working
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWorkingStorageRequest &request)
 {
@@ -250,6 +280,12 @@ AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWor
 /**
  * Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated. This
  * operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchivalRequest &request)
 {
@@ -259,6 +295,12 @@ CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchiv
 /**
  * Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is
  * initiated. The virtual tape is returned to the VTS. This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetrievalRequest &request)
 {
@@ -286,6 +328,12 @@ CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetr
  * Optionally, you can provide the ARN for an existing volume as the <code>SourceVolumeARN</code> for this cached volume,
  * which creates an exact copy of the existing volume’s latest recovery point. The <code>VolumeSizeInBytes</code> value
  * must be equal to or larger than the size of the copied volume, in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(const CreateCachediSCSIVolumeRequest &request)
 {
@@ -307,6 +355,12 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  * </p
  *
  * File gateway does not support creating hard or symbolic links on a file
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const CreateNFSFileShareRequest &request)
 {
@@ -342,6 +396,12 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  *
  * Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the
  * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapshotRequest &request)
 {
@@ -369,6 +429,12 @@ CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapsh
  *
  * To list or delete a snapshot, you must use the Amazon EC2 API. For more information, in <i>Amazon Elastic Compute Cloud
  * API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnapshotFromVolumeRecoveryPoint(const CreateSnapshotFromVolumeRecoveryPointRequest &request)
 {
@@ -389,6 +455,12 @@ CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnap
  * In the request you must specify the gateway and the disk information on which you are creating the volume. In response,
  * the gateway creates the volume and returns volume information such as the volume Amazon Resource Name (ARN), its size,
  * and the iSCSI target ARN that initiators can use to connect to the volume
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(const CreateStorediSCSIVolumeRequest &request)
 {
@@ -404,6 +476,12 @@ CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(
  *
  * Cache storage must be allocated to the gateway before you can create a virtual tape. Use the <a>AddCache</a> operation
  * to add cache storage to a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(const CreateTapeWithBarcodeRequest &request)
 {
@@ -418,6 +496,12 @@ CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(cons
  *
  * Cache storage must be allocated to the gateway before you can create virtual tapes. Use the <a>AddCache</a> operation to
  * add cache storage to a gateway.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest &request)
 {
@@ -428,6 +512,12 @@ CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest
  * Deletes the bandwidth rate limits of a gateway. You can delete either the upload and download bandwidth rate limit, or
  * you can delete both. If you delete only one of the limits, the other limit remains unchanged. To specify which gateway
  * to work with, use the Amazon Resource Name (ARN) of the gateway in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimit(const DeleteBandwidthRateLimitRequest &request)
 {
@@ -436,6 +526,12 @@ DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimi
 
 /**
  * Deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(const DeleteChapCredentialsRequest &request)
 {
@@ -444,6 +540,12 @@ DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(cons
 
 /**
  * Deletes a file share from a file gateway. This operation is only supported in the file gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFileShareRequest &request)
 {
@@ -467,6 +569,12 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
  * canceling your Amazon EC2 subscription.  If you prefer not to cancel your Amazon EC2 subscription, you can delete your
  * snapshots using the Amazon EC2 console. For more information, see the <a href="http://aws.amazon.com/storagegateway">
  * AWS Storage Gateway Detail Page</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayRequest &request)
 {
@@ -487,6 +595,12 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
  * types> <note>
  *
  * To list or delete a snapshot, you must use the Amazon EC2 API. in <i>Amazon Elastic Compute Cloud API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(const DeleteSnapshotScheduleRequest &request)
 {
@@ -495,6 +609,12 @@ DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(co
 
 /**
  * Deletes the specified virtual tape. This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &request)
 {
@@ -504,6 +624,12 @@ DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &r
 /**
  * Deletes the specified virtual tape from the virtual tape shelf (VTS). This operation is only supported in the tape
  * gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const DeleteTapeArchiveRequest &request)
 {
@@ -527,6 +653,12 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
  * Reference</i>>
  *
  * In the request, you must provide the Amazon Resource Name (ARN) of the storage volume you want to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequest &request)
 {
@@ -542,6 +674,12 @@ DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequ
  * This operation only returns a value for a bandwidth rate limit only if the limit is set. If no limits are set for the
  * gateway, then this operation returns only the gateway ARN in the response body. To specify which gateway to describe,
  * use the Amazon Resource Name (ARN) of the gateway in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRateLimit(const DescribeBandwidthRateLimitRequest &request)
 {
@@ -555,6 +693,12 @@ DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRate
  * types>
  *
  * The response includes disk IDs that are configured as cache, and it includes the amount of cache allocated and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheRequest &request)
 {
@@ -569,6 +713,12 @@ DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheR
  *
  * The list of gateway volumes in the request must be from one gateway. In the response Amazon Storage Gateway returns
  * volume information sorted by volume Amazon Resource Name
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVolumes(const DescribeCachediSCSIVolumesRequest &request)
 {
@@ -578,6 +728,12 @@ DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVo
 /**
  * Returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI
  * target, one for each target-initiator
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(const DescribeChapCredentialsRequest &request)
 {
@@ -588,6 +744,12 @@ DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(
  * Returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the
  * gateway is running or not). To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
  * your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInformation(const DescribeGatewayInformationRequest &request)
 {
@@ -597,6 +759,12 @@ DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInform
 /**
  * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are in
  * terms of the gateway's time
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenanceStartTime(const DescribeMaintenanceStartTimeRequest &request)
 {
@@ -605,6 +773,12 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
 
 /**
  * Gets a description for one or more file shares from a file gateway. This operation is only supported in the file gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(const DescribeNFSFileSharesRequest &request)
 {
@@ -615,6 +789,12 @@ DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(cons
  * Describes the snapshot schedule for the specified gateway volume. The snapshot schedule information includes intervals
  * at which snapshots are automatically initiated on the volume. This operation is only supported in the cached volume and
  * stored volume
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedule(const DescribeSnapshotScheduleRequest &request)
 {
@@ -625,6 +805,12 @@ DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedul
  * Returns the description of the gateway volumes specified in the request. The list of gateway volumes in the request must
  * be from one gateway. In the response Amazon Storage Gateway returns volume information sorted by volume ARNs. This
  * operation is only supported in stored volume gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVolumes(const DescribeStorediSCSIVolumesRequest &request)
 {
@@ -639,6 +825,12 @@ DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVo
  *
  * If a specific <code>TapeARN</code> is not specified, AWS Storage Gateway returns a description of all virtual tapes
  * found in the VTS associated with your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const DescribeTapeArchivesRequest &request)
 {
@@ -653,6 +845,12 @@ DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const 
  * A recovery point is a point-in-time view of a virtual tape at which all the data on the virtual tape is consistent. If
  * your gateway crashes, virtual tapes that have recovery points can be recovered to a new gateway. This operation is only
  * supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryPoints(const DescribeTapeRecoveryPointsRequest &request)
 {
@@ -663,6 +861,12 @@ DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryP
  * Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a <code>TapeARN</code> is not
  * specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only
  * supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesRequest &request)
 {
@@ -677,6 +881,12 @@ DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesR
  *
  * The response includes disk IDs that are configured as upload buffer space, and it includes the amount of upload buffer
  * space allocated and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const DescribeUploadBufferRequest &request)
 {
@@ -690,6 +900,12 @@ DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const 
  * information>
  *
  * This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const DescribeVTLDevicesRequest &request)
 {
@@ -709,6 +925,12 @@ DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const Desc
  *
  * The response includes disk IDs that are configured as working storage, and it includes the amount of working storage
  * allocated and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(const DescribeWorkingStorageRequest &request)
 {
@@ -727,6 +949,12 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
  * type> <important>
  *
  * Once a gateway is disabled it cannot be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatewayRequest &request)
 {
@@ -736,6 +964,12 @@ DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatew
 /**
  * Gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user
  * account. This operation is only supported in the file gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileSharesRequest &request)
 {
@@ -755,6 +989,12 @@ ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileShar
  *
  * If you have more gateways than are returned in a response (that is, the response returns only a truncated list of your
  * gateways), the response contains a marker that you can specify in your next request to fetch the next page of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequest &request)
 {
@@ -771,6 +1011,12 @@ ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequ
  * volume or not configured at all. The response includes a <code>DiskStatus</code> field. This field can have a value of
  * present (the disk is available to use), missing (the disk is no longer connected to the gateway), or mismatch (the disk
  * node is occupied by a disk that has incorrect metadata or the disk content is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDisksRequest &request)
 {
@@ -780,6 +1026,12 @@ ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDis
 /**
  * Lists the tags that have been added to the specified resource. This operation is only supported in the cached volume,
  * stored volume and tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -797,6 +1049,12 @@ ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const Li
  * specify the <code>Limit</code> parameter in the body to limit the number of tapes in the response. If the number of
  * tapes returned in the response is truncated, the response includes a <code>Marker</code> element that you can use in
  * your subsequent request to retrieve the next set of tapes. This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &request)
 {
@@ -806,6 +1064,12 @@ ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &requ
 /**
  * Lists iSCSI initiators that are connected to a volume. You can use this operation to determine whether a volume is being
  * used or not. This operation is only supported in the cached volume and stored volume gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const ListVolumeInitiatorsRequest &request)
 {
@@ -820,6 +1084,12 @@ ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const 
  * Each cache volume has one recovery point. A volume recovery point is a point in time at which all data of the volume is
  * consistent and from which you can create a snapshot or clone a new cached volume from a source volume. To create a
  * snapshot from a volume recovery point use the <a>CreateSnapshotFromVolumeRecoveryPoint</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoints(const ListVolumeRecoveryPointsRequest &request)
 {
@@ -838,6 +1108,12 @@ ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoint
  * volumes returned in the response is truncated, the response includes a Marker field. You can use this Marker value in
  * your subsequent request to retrieve the next set of volumes. This operation is only supported in the cached volume and
  * stored volume gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest &request)
 {
@@ -860,6 +1136,12 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
  *
  * For more information, see Getting File Upload Notification in the Storage Gateway User Guide
  * (https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const NotifyWhenUploadedRequest &request)
 {
@@ -870,6 +1152,12 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
  * Refreshes the cache for the specified file share. This operation finds objects in the Amazon S3 bucket that were added,
  * removed or replaced since the gateway last listed the bucket's contents and cached the results. This operation is only
  * supported in the file gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequest &request)
 {
@@ -879,6 +1167,12 @@ RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequ
 /**
  * Removes one or more tags from the specified resource. This operation is only supported in the cached volume, stored
  * volume and tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -897,6 +1191,12 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
  * If the cache disk you are resetting contains data that has not been uploaded to Amazon S3 yet, that data can be lost.
  * After you reset cache disks, there will be no configured cache disks left in the gateway, so you must configure at least
  * one new cache disk for your gateway to function
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &request)
 {
@@ -912,6 +1212,12 @@ ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &r
  *
  * Once a tape is successfully retrieved to a gateway, it cannot be retrieved again to another gateway. You must archive
  * the tape again before you can retrieve it to another gateway. This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const RetrieveTapeArchiveRequest &request)
 {
@@ -930,6 +1236,12 @@ RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const Re
  *
  * The virtual tape can be retrieved to only one gateway. The retrieved tape is read-only. The virtual tape can be
  * retrieved to only a tape gateway. There is no charge for retrieving recovery
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPoint(const RetrieveTapeRecoveryPointRequest &request)
 {
@@ -940,6 +1252,12 @@ RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPo
  * Sets the password for your VM local console. When you log in to the local console for the first time, you log in to the
  * VM with the default credentials. We recommend that you set a new password. You don't need to know the default password
  * to set a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(const SetLocalConsolePasswordRequest &request)
 {
@@ -975,6 +1293,12 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
  *
  * If do not intend to use the gateway again, you must delete the gateway (using <a>DeleteGateway</a>) to no longer pay
  * software charges associated with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGatewayRequest &request)
 {
@@ -995,6 +1319,12 @@ ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGa
  * <a>ActivateGateway</a>> </note>
  *
  * To specify which gateway to start, use the Amazon Resource Name (ARN) of the gateway in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequest &request)
 {
@@ -1013,6 +1343,12 @@ StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequ
  * bandwidth>
  *
  * To specify which gateway to update, use the Amazon Resource Name (ARN) of the gateway in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimit(const UpdateBandwidthRateLimitRequest &request)
 {
@@ -1027,6 +1363,12 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
  *
  * When you update CHAP credentials, all existing connections on the target are closed and initiators must reconnect with
  * the new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(const UpdateChapCredentialsRequest &request)
 {
@@ -1041,6 +1383,12 @@ UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(cons
  *
  * For Gateways activated after September 2, 2015, the gateway's ARN contains the gateway ID rather than the gateway name.
  * However, changing the name of the gateway has no effect on the gateway's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformation(const UpdateGatewayInformationRequest &request)
 {
@@ -1065,6 +1413,12 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
  * Your Windows iSCSI Settings</a> and <a
  * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorRedHatClient.html#CustomizeLinuxiSCSISettings">Customizing
  * Your Linux iSCSI Settings</a>,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request)
 {
@@ -1074,6 +1428,12 @@ UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNo
 /**
  * Updates a gateway's weekly maintenance start time information, including day and time of the week. The maintenance time
  * is the time in your gateway's time
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStartTime(const UpdateMaintenanceStartTimeRequest &request)
 {
@@ -1115,6 +1475,12 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
  *
  * To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported in
  * file
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const UpdateNFSFileShareRequest &request)
 {
@@ -1134,6 +1500,12 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
  *
  * In the request you must identify the gateway volume whose snapshot schedule you want to update, and the schedule
  * information, including when you want the snapshot to begin on a day and the frequency (in hours) of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request)
 {
@@ -1144,6 +1516,12 @@ UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(co
  * Updates the type of medium changer in a tape gateway. When you activate a tape gateway, you select a medium changer type
  * for the tape gateway. This operation enables you to select a different type of medium changer after a tape gateway is
  * activated. This operation is only supported in the tape gateway
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request)
 {

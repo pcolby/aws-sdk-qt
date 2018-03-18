@@ -91,6 +91,12 @@ MediaStoreClient::MediaStoreClient(
 
 /**
  * Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateContainerResponse * MediaStoreClient::createContainer(const CreateContainerRequest &request)
 {
@@ -100,6 +106,12 @@ CreateContainerResponse * MediaStoreClient::createContainer(const CreateContaine
 /**
  * Deletes the specified container. Before you make a <code>DeleteContainer</code> request, delete any objects in the
  * container or in any folders in the container. You can delete only empty containers.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContainerRequest &request)
 {
@@ -108,6 +120,12 @@ DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContaine
 
 /**
  * Deletes the access policy that is associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const DeleteContainerPolicyRequest &request)
 {
@@ -121,6 +139,12 @@ DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const De
  *
  * To use this operation, you must have permission to perform the <code>MediaStore:DeleteCorsPolicy</code> action. The
  * container owner has this permission by default and can grant this permission to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPolicyRequest &request)
 {
@@ -133,6 +157,12 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
  * not change after it has been assigned. The <code>DescribeContainer</code> request returns a single
  * <code>Container</code> object based on <code>ContainerName</code>. To return all <code>Container</code> objects that are
  * associated with a specified AWS account, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeContainerRequest &request)
 {
@@ -142,6 +172,12 @@ DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeCo
 /**
  * Retrieves the access policy for the specified container. For information about the data that is included in an access
  * policy, see the <a href="https://aws.amazon.com/documentation/iam/">AWS Identity and Access Management User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetContainerPolicyRequest &request)
 {
@@ -155,6 +191,12 @@ GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetConta
  *
  * To use this operation, you must have permission to perform the <code>MediaStore:GetCorsPolicy</code> action. By default,
  * the container owner has this permission and can grant it to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyRequest &request)
 {
@@ -174,6 +216,12 @@ GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyReque
  * </p
  *
  * See also <a>DescribeContainer</a>, which gets the properties of one container.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRequest &request)
 {
@@ -189,6 +237,12 @@ ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRe
  *
  * For this release of the REST API, you can create only one policy for a container. If you enter
  * <code>PutContainerPolicy</code> twice, the second command modifies the existing policy.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutContainerPolicyRequest &request)
 {
@@ -206,6 +260,12 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
  * identify origins and the HTTP methods that can be executed on your container. The policy can contain up to 398,000
  * characters. You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses the first
  * applicable rule
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyRequest &request)
 {

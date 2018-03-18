@@ -91,6 +91,12 @@ DeviceFarmClient::DeviceFarmClient(
 
 /**
  * Creates a device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevicePoolRequest &request)
 {
@@ -99,6 +105,12 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
 
 /**
  * Creates a network
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const CreateNetworkProfileRequest &request)
 {
@@ -107,6 +119,12 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
 
 /**
  * Creates a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectRequest &request)
 {
@@ -115,6 +133,12 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
 
 /**
  * Specifies and starts a remote access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request)
 {
@@ -123,6 +147,12 @@ CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(
 
 /**
  * Uploads an app or test
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest &request)
 {
@@ -131,6 +161,12 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
 
 /**
  * Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevicePoolRequest &request)
 {
@@ -139,6 +175,12 @@ DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevice
 
 /**
  * Deletes a network
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const DeleteNetworkProfileRequest &request)
 {
@@ -151,6 +193,12 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
  * ARN>
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -159,6 +207,12 @@ DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectReque
 
 /**
  * Deletes a completed remote access session and its
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request)
 {
@@ -171,6 +225,12 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
  * ARN>
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 {
@@ -179,6 +239,12 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 
 /**
  * Deletes an upload given the upload
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest &request)
 {
@@ -187,6 +253,12 @@ DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest 
 
 /**
  * Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -195,6 +267,12 @@ GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccou
 
 /**
  * Gets information about a unique device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 {
@@ -203,6 +281,12 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 
 /**
  * Gets information about a device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolRequest &request)
 {
@@ -211,6 +295,12 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
 
 /**
  * Gets information about compatibility with a device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request)
 {
@@ -219,6 +309,12 @@ GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibilit
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 {
@@ -227,6 +323,12 @@ GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 
 /**
  * Returns information about a network
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetworkProfileRequest &request)
 {
@@ -239,6 +341,12 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferingStatusRequest &request)
 {
@@ -247,6 +355,12 @@ GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferin
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &request)
 {
@@ -255,6 +369,12 @@ GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &reque
 
 /**
  * Returns a link to a currently running remote access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const GetRemoteAccessSessionRequest &request)
 {
@@ -263,6 +383,12 @@ GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const 
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 {
@@ -271,6 +397,12 @@ GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 {
@@ -279,6 +411,12 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 {
@@ -287,6 +425,12 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 
 /**
  * Gets information about an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 {
@@ -296,6 +440,12 @@ GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 /**
  * Installs an application to the device in a remote access session. For Android applications, the file must be in .apk
  * format. For iOS applications, the file must be in .ipa
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSession(const InstallToRemoteAccessSessionRequest &request)
 {
@@ -304,6 +454,12 @@ InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSe
 
 /**
  * Gets information about
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsRequest &request)
 {
@@ -312,6 +468,12 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
 
 /**
  * Gets information about device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePoolsRequest &request)
 {
@@ -320,6 +482,12 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
 
 /**
  * Gets information about unique device
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &request)
 {
@@ -328,6 +496,12 @@ ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &re
 
 /**
  * Gets information about jobs for a given test
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 {
@@ -336,6 +510,12 @@ ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 
 /**
  * Returns the list of available network
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNetworkProfilesRequest &request)
 {
@@ -347,6 +527,12 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
  * The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const ListOfferingPromotionsRequest &request)
 {
@@ -359,6 +545,12 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
  * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(const ListOfferingTransactionsRequest &request)
 {
@@ -371,6 +563,12 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
  * user is not permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsRequest &request)
 {
@@ -379,6 +577,12 @@ ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsReque
 
 /**
  * Gets information about
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest &request)
 {
@@ -387,6 +591,12 @@ ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest 
 
 /**
  * Returns a list of all currently running remote access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(const ListRemoteAccessSessionsRequest &request)
 {
@@ -395,6 +605,12 @@ ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(co
 
 /**
  * Gets information about runs, given an AWS Device Farm project
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 {
@@ -403,6 +619,12 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 
 /**
  * Gets information about samples, given an AWS Device Farm project
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &request)
 {
@@ -411,6 +633,12 @@ ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &re
 
 /**
  * Gets information about test suites for a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &request)
 {
@@ -419,6 +647,12 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
 
 /**
  * Gets information about tests in a given test
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 {
@@ -427,6 +661,12 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 
 /**
  * Gets information about unique
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniqueProblemsRequest &request)
 {
@@ -435,6 +675,12 @@ ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniq
 
 /**
  * Gets information about uploads, given an AWS Device Farm project
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &request)
 {
@@ -447,6 +693,12 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
  * permitted to invoke the operation. Please contact <a
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOfferingRequest &request)
 {
@@ -458,6 +710,12 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
  * next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation.
  * Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe
  * that you should be able to invoke this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingRequest &request)
 {
@@ -466,6 +724,12 @@ RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingReque
 
 /**
  * Schedules a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &request)
 {
@@ -474,6 +738,12 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
 
 /**
  * Ends a specified remote access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request)
 {
@@ -485,6 +755,12 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
  * have not started executing, and you will not be billed for these devices. On devices where tests have started executing,
  * Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be
  * billed for Setup, Teardown, and any tests that were in progress or already
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 {
@@ -494,6 +770,12 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 /**
  * Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are
  * all-or-nothing, meaning they can only be updated as a whole (or not at
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevicePoolRequest &request)
 {
@@ -502,6 +784,12 @@ UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevice
 
 /**
  * Updates the network profile with specific
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const UpdateNetworkProfileRequest &request)
 {
@@ -510,6 +798,12 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
 
 /**
  * Modifies the specified project name, given the project ARN and a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectRequest &request)
 {

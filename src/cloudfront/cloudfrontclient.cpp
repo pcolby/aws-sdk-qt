@@ -98,6 +98,12 @@ CloudFrontClient::CloudFrontClient(
  * how to use origin access identities, see <a
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
  * through CloudFront</a> in the <i>Amazon CloudFront Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -107,6 +113,12 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
 /**
  * Creates a new web distribution. Send a <code>POST</code> request to the <code>/<i>CloudFront API
  * version</i>/distribution</code>/<code>distribution ID</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDistributionRequest &request)
 {
@@ -115,6 +127,12 @@ CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDi
 
 /**
  * Create a new distribution with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTags(const CreateDistributionWithTagsRequest &request)
 {
@@ -123,6 +141,12 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
 
 /**
  * Create a new invalidation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateInvalidationRequest &request)
 {
@@ -160,6 +184,12 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
  * changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a
  * mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of
  * values
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribution(const CreateStreamingDistributionRequest &request)
 {
@@ -168,6 +198,12 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
 
 /**
  * Create a new streaming distribution with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request)
 {
@@ -176,6 +212,12 @@ CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingD
 
 /**
  * Delete an origin access identity.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFrontOriginAccessIdentity(const DeleteCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -184,6 +226,12 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
 
 /**
  * Delete a distribution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDistributionRequest &request)
 {
@@ -191,6 +239,12 @@ DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
 {
@@ -251,6 +305,12 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
  * For information about deleting a distribution using the CloudFront console, see <a
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
  * Distribution</a> in the <i>Amazon CloudFront Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
 {
@@ -259,6 +319,12 @@ DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribut
 
 /**
  * Get the information about an origin access identity.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -267,6 +333,12 @@ GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOrigi
 
 /**
  * Get the configuration information about an origin access identity.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request)
 {
@@ -275,6 +347,12 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
 
 /**
  * Get the information about a distribution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributionRequest &request)
 {
@@ -283,6 +361,12 @@ GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributio
 
 /**
  * Get the configuration information about a distribution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const GetDistributionConfigRequest &request)
 {
@@ -291,6 +375,12 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
 
 /**
  * Get the information about an invalidation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidationRequest &request)
 {
@@ -299,6 +389,12 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
 
 /**
  * Gets information about a specified RTMP distribution, including the distribution
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(const GetStreamingDistributionRequest &request)
 {
@@ -307,6 +403,12 @@ GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(co
 
 /**
  * Get the configuration information about a streaming distribution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistributionConfig(const GetStreamingDistributionConfigRequest &request)
 {
@@ -315,6 +417,12 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
 
 /**
  * Lists origin access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request)
 {
@@ -323,6 +431,12 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
 
 /**
  * List distributions.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
 {
@@ -331,6 +445,12 @@ ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistri
 
 /**
  * List the distributions that are associated with a specified AWS WAF web ACL.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request)
 {
@@ -339,6 +459,12 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
 
 /**
  * Lists invalidation batches.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvalidationsRequest &request)
 {
@@ -347,6 +473,12 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
 
 /**
  * List streaming distributions.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistributions(const ListStreamingDistributionsRequest &request)
 {
@@ -355,6 +487,12 @@ ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistribution
 
 /**
  * List tags for a CloudFront
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -363,6 +501,12 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
 
 /**
  * Add tags to a CloudFront
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &request)
 {
@@ -371,6 +515,12 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
 
 /**
  * Remove tags from a CloudFront
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceRequest &request)
 {
@@ -379,6 +529,12 @@ UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceReque
 
 /**
  * Update an origin access identity.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFrontOriginAccessIdentity(const UpdateCloudFrontOriginAccessIdentityRequest &request)
 {
@@ -451,6 +607,12 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these
  * accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in
  * the <code>Quantity</code> element and the number of values you're actually
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
 {
@@ -459,6 +621,12 @@ UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDi
 
 /**
  * Update a streaming distribution.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribution(const UpdateStreamingDistributionRequest &request)
 {

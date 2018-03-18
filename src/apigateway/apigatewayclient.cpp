@@ -96,6 +96,12 @@ APIGatewayClient::APIGatewayClient(
  * Create an <a>ApiKey</a> resource.
  *
  * </p <div class="seeAlso"><a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -106,6 +112,12 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
  * Adds a new <a>Authorizer</a> resource to an existing <a>RestApi</a>
  *
  * resource> <div class="seeAlso"><a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
@@ -114,6 +126,12 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
 
 /**
  * Creates a new <a>BasePathMapping</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const CreateBasePathMappingRequest &request)
 {
@@ -122,6 +140,12 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
 
 /**
  * Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -129,6 +153,12 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(const CreateDocumentationPartRequest &request)
 {
@@ -136,6 +166,12 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersion(const CreateDocumentationVersionRequest &request)
 {
@@ -144,6 +180,12 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
 
 /**
  * Creates a new domain
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomainNameRequest &request)
 {
@@ -152,6 +194,12 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
 
 /**
  * Adds a new <a>Model</a> resource to an existing <a>RestApi</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &request)
 {
@@ -160,6 +208,12 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
 
 /**
  * Creates a <a>ReqeustValidator</a> of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const CreateRequestValidatorRequest &request)
 {
@@ -168,6 +222,12 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
 
 /**
  * Creates a <a>Resource</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRequest &request)
 {
@@ -176,6 +236,12 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
 
 /**
  * Creates a new <a>RestApi</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiRequest &request)
 {
@@ -184,6 +250,12 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
 
 /**
  * Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &request)
 {
@@ -192,6 +264,12 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
 
 /**
  * Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePlanRequest &request)
 {
@@ -200,6 +278,12 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
 
 /**
  * Creates a usage plan key for adding an existing API key to a usage
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUsagePlanKeyRequest &request)
 {
@@ -209,6 +293,12 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
 /**
  * Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes
  * 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkRequest &request)
 {
@@ -217,6 +307,12 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
 
 /**
  * Deletes the <a>ApiKey</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
@@ -227,6 +323,12 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
  * Deletes an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
@@ -235,6 +337,12 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
 
 /**
  * Deletes the <a>BasePathMapping</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const DeleteBasePathMappingRequest &request)
 {
@@ -243,6 +351,12 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
 
 /**
  * Deletes the <a>ClientCertificate</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(const DeleteClientCertificateRequest &request)
 {
@@ -252,6 +366,12 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
 /**
  * Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources
  * associated with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploymentRequest &request)
 {
@@ -259,6 +379,12 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(const DeleteDocumentationPartRequest &request)
 {
@@ -266,6 +392,12 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersion(const DeleteDocumentationVersionRequest &request)
 {
@@ -274,6 +406,12 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
 
 /**
  * Deletes the <a>DomainName</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomainNameRequest &request)
 {
@@ -283,6 +421,12 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
 /**
  * Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets
  * it with the default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const DeleteGatewayResponseRequest &request)
 {
@@ -291,6 +435,12 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
 
 /**
  * Represents a delete
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteIntegrationRequest &request)
 {
@@ -299,6 +449,12 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
 
 /**
  * Represents a delete integration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request)
 {
@@ -307,6 +463,12 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
 
 /**
  * Deletes an existing <a>Method</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest &request)
 {
@@ -315,6 +477,12 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
 
 /**
  * Deletes an existing <a>MethodResponse</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const DeleteMethodResponseRequest &request)
 {
@@ -323,6 +491,12 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
 
 /**
  * Deletes a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &request)
 {
@@ -331,6 +505,12 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
 
 /**
  * Deletes a <a>RequestValidator</a> of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const DeleteRequestValidatorRequest &request)
 {
@@ -339,6 +519,12 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
 
 /**
  * Deletes a <a>Resource</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRequest &request)
 {
@@ -347,6 +533,12 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiRequest &request)
 {
@@ -355,6 +547,12 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
 
 /**
  * Deletes a <a>Stage</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &request)
 {
@@ -363,6 +561,12 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
 
 /**
  * Deletes a usage plan of a given plan
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePlanRequest &request)
 {
@@ -371,6 +575,12 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
 
 /**
  * Deletes a usage plan key and remove the underlying API key from the associated usage
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUsagePlanKeyRequest &request)
 {
@@ -379,6 +589,12 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
 
 /**
  * Deletes an existing <a>VpcLink</a> of a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkRequest &request)
 {
@@ -387,6 +603,12 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
 
 /**
  * Flushes all authorizer cache entries on a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCache(const FlushStageAuthorizersCacheRequest &request)
 {
@@ -395,6 +617,12 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
 
 /**
  * Flushes a stage's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCacheRequest &request)
 {
@@ -403,6 +631,12 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
 
 /**
  * Generates a <a>ClientCertificate</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(const GenerateClientCertificateRequest &request)
 {
@@ -411,6 +645,12 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
 
 /**
  * Gets information about the current <a>Account</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &request)
 {
@@ -419,6 +659,12 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
 
 /**
  * Gets information about the current <a>ApiKey</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 {
@@ -427,6 +673,12 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 
 /**
  * Gets information about the current <a>ApiKeys</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &request)
 {
@@ -437,6 +689,12 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
  * Describe an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerRequest &request)
 {
@@ -447,6 +705,12 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
  * Describe an existing <a>Authorizers</a>
  *
  * resource> <div class="seeAlso"><a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRequest &request)
 {
@@ -455,6 +719,12 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
 
 /**
  * Describe a <a>BasePathMapping</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBasePathMappingRequest &request)
 {
@@ -463,6 +733,12 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
 
 /**
  * Represents a collection of <a>BasePathMapping</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBasePathMappingsRequest &request)
 {
@@ -471,6 +747,12 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
 
 /**
  * Gets information about the current <a>ClientCertificate</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetClientCertificateRequest &request)
 {
@@ -479,6 +761,12 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
 
 /**
  * Gets a collection of <a>ClientCertificate</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const GetClientCertificatesRequest &request)
 {
@@ -487,6 +775,12 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
 
 /**
  * Gets information about a <a>Deployment</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentRequest &request)
 {
@@ -495,6 +789,12 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
 
 /**
  * Gets information about a <a>Deployments</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRequest &request)
 {
@@ -502,6 +802,12 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetDocumentationPartRequest &request)
 {
@@ -509,6 +815,12 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const GetDocumentationPartsRequest &request)
 {
@@ -516,6 +828,12 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(const GetDocumentationVersionRequest &request)
 {
@@ -523,6 +841,12 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(const GetDocumentationVersionsRequest &request)
 {
@@ -531,6 +855,12 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
 
 /**
  * Represents a domain name that is contained in a simpler, more intuitive URL that can be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameRequest &request)
 {
@@ -539,6 +869,12 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
 
 /**
  * Represents a collection of <a>DomainName</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRequest &request)
 {
@@ -547,6 +883,12 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
 
 /**
  * Exports a deployed version of a <a>RestApi</a> in a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 {
@@ -555,6 +897,12 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 
 /**
  * Gets a <a>GatewayResponse</a> of a specified response type on the given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatewayResponseRequest &request)
 {
@@ -565,6 +913,12 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
  * Gets the <a>GatewayResponses</a> collection on the given <a>RestApi</a>. If an API developer has not added any
  * definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a>
  * collection for the supported response
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGatewayResponsesRequest &request)
 {
@@ -573,6 +927,12 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
 
 /**
  * Get the integration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRequest &request)
 {
@@ -581,6 +941,12 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
 
 /**
  * Represents a get integration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const GetIntegrationResponseRequest &request)
 {
@@ -589,6 +955,12 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
 
 /**
  * Describe an existing <a>Method</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 {
@@ -597,6 +969,12 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 
 /**
  * Describes a <a>MethodResponse</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodResponseRequest &request)
 {
@@ -605,6 +983,12 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
 
 /**
  * Describes an existing model defined for a <a>RestApi</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 {
@@ -613,6 +997,12 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 
 /**
  * Generates a sample mapping template that can be used to transform a payload into the structure of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemplateRequest &request)
 {
@@ -621,6 +1011,12 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
 
 /**
  * Describes existing <a>Models</a> defined for a <a>RestApi</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 {
@@ -629,6 +1025,12 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 
 /**
  * Gets a <a>RequestValidator</a> of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetRequestValidatorRequest &request)
 {
@@ -637,6 +1039,12 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
 
 /**
  * Gets the <a>RequestValidators</a> collection of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetRequestValidatorsRequest &request)
 {
@@ -645,6 +1053,12 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
 
 /**
  * Lists information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &request)
 {
@@ -653,6 +1067,12 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
 
 /**
  * Lists information about a collection of <a>Resource</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest &request)
 {
@@ -661,6 +1081,12 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
 
 /**
  * Lists the <a>RestApi</a> resource in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &request)
 {
@@ -669,6 +1095,12 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
 
 /**
  * Lists the <a>RestApis</a> resources for your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &request)
 {
@@ -677,6 +1109,12 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
 
 /**
  * Generates a client SDK for a <a>RestApi</a> and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 {
@@ -684,6 +1122,12 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &request)
 {
@@ -691,6 +1135,12 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &request)
 {
@@ -699,6 +1149,12 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
 
 /**
  * Gets information about a <a>Stage</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 {
@@ -707,6 +1163,12 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 
 /**
  * Gets information about one or more <a>Stage</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 {
@@ -715,6 +1177,12 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 
 /**
  * Gets the Tags collection for a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 {
@@ -723,6 +1191,12 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 
 /**
  * Gets the usage data of a usage plan in a specified time
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 {
@@ -731,6 +1205,12 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 
 /**
  * Gets a usage plan of a given plan
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest &request)
 {
@@ -739,6 +1219,12 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
 
 /**
  * Gets a usage plan key of a given key
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKeyRequest &request)
 {
@@ -747,6 +1233,12 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
 
 /**
  * Gets all the usage plan keys representing the API keys added to a specified usage
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlanKeysRequest &request)
 {
@@ -755,6 +1247,12 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
 
 /**
  * Gets all the usage plans of the caller's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansRequest &request)
 {
@@ -763,6 +1261,12 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
 
 /**
  * Gets a specified VPC link under the caller's account in a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &request)
 {
@@ -771,6 +1275,12 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
 
 /**
  * Gets the <a>VpcLinks</a> collection under the caller's account in a selected
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &request)
 {
@@ -779,6 +1289,12 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
 
 /**
  * Import API keys from an external source, such as a CSV-formatted
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysRequest &request)
 {
@@ -786,6 +1302,12 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(const ImportDocumentationPartsRequest &request)
 {
@@ -794,6 +1316,12 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
 
 /**
  * A feature of the API Gateway control service for creating a new API from an external API definition
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiRequest &request)
 {
@@ -802,6 +1330,12 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
 
 /**
  * Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatewayResponseRequest &request)
 {
@@ -810,6 +1344,12 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
 
 /**
  * Sets up a method's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRequest &request)
 {
@@ -818,6 +1358,12 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
 
 /**
  * Represents a put
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const PutIntegrationResponseRequest &request)
 {
@@ -826,6 +1372,12 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
 
 /**
  * Add a method to an existing <a>Resource</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 {
@@ -834,6 +1386,12 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 
 /**
  * Adds a <a>MethodResponse</a> to an existing <a>Method</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodResponseRequest &request)
 {
@@ -843,6 +1401,12 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
 /**
  * A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The
  * update can take the form of merging the supplied definition into the existing API or overwriting the existing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &request)
 {
@@ -851,6 +1415,12 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
 
 /**
  * Adds or updates Tags on a gievn
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &request)
 {
@@ -862,6 +1432,12 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  *
  * body> <div class="seeAlso"> <a
  * href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
@@ -870,6 +1446,12 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
 
 /**
  * Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMethodRequest &request)
 {
@@ -878,6 +1460,12 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
 
 /**
  * Removes Tags from a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceRequest &request)
 {
@@ -886,6 +1474,12 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
 
 /**
  * Changes information about the current <a>Account</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountRequest &request)
 {
@@ -894,6 +1488,12 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
 
 /**
  * Changes information about an <a>ApiKey</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
@@ -904,6 +1504,12 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
  * Updates an existing <a>Authorizer</a>
  *
  * resource> <div class="seeAlso"><a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
@@ -912,6 +1518,12 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
 
 /**
  * Changes information about the <a>BasePathMapping</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const UpdateBasePathMappingRequest &request)
 {
@@ -920,6 +1532,12 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
 
 /**
  * Changes information about an <a>ClientCertificate</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(const UpdateClientCertificateRequest &request)
 {
@@ -928,6 +1546,12 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
 
 /**
  * Changes information about a <a>Deployment</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploymentRequest &request)
 {
@@ -935,6 +1559,12 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(const UpdateDocumentationPartRequest &request)
 {
@@ -942,6 +1572,12 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersion(const UpdateDocumentationVersionRequest &request)
 {
@@ -950,6 +1586,12 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
 
 /**
  * Changes information about the <a>DomainName</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomainNameRequest &request)
 {
@@ -958,6 +1600,12 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
 
 /**
  * Updates a <a>GatewayResponse</a> of a specified response type on the given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const UpdateGatewayResponseRequest &request)
 {
@@ -966,6 +1614,12 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
 
 /**
  * Represents an update
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateIntegrationRequest &request)
 {
@@ -974,6 +1628,12 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
 
 /**
  * Represents an update integration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(const UpdateIntegrationResponseRequest &request)
 {
@@ -982,6 +1642,12 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
 
 /**
  * Updates an existing <a>Method</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest &request)
 {
@@ -990,6 +1656,12 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
 
 /**
  * Updates an existing <a>MethodResponse</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const UpdateMethodResponseRequest &request)
 {
@@ -998,6 +1670,12 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
 
 /**
  * Changes information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &request)
 {
@@ -1006,6 +1684,12 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
 
 /**
  * Updates a <a>RequestValidator</a> of a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const UpdateRequestValidatorRequest &request)
 {
@@ -1014,6 +1698,12 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
 
 /**
  * Changes information about a <a>Resource</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRequest &request)
 {
@@ -1022,6 +1712,12 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
 
 /**
  * Changes information about the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiRequest &request)
 {
@@ -1030,6 +1726,12 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
 
 /**
  * Changes information about a <a>Stage</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &request)
 {
@@ -1038,6 +1740,12 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
 
 /**
  * Grants a temporary extension to the remaining quota of a usage plan associated with a specified API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &request)
 {
@@ -1046,6 +1754,12 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
 
 /**
  * Updates a usage plan of a given plan
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePlanRequest &request)
 {
@@ -1054,6 +1768,12 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
 
 /**
  * Updates an existing <a>VpcLink</a> of a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkRequest &request)
 {

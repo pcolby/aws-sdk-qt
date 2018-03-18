@@ -116,6 +116,12 @@ CognitoSyncClient::CognitoSyncClient(
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &request)
 {
@@ -129,6 +135,12 @@ BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &r
  * ResourceNotFoundException>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequest &request)
 {
@@ -143,6 +155,12 @@ DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequ
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You
  * should use Cognito Identity credentials to make this API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatasetRequest &request)
 {
@@ -156,6 +174,12 @@ DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatas
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage(const DescribeIdentityPoolUsageRequest &request)
 {
@@ -168,6 +192,12 @@ DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage
  * usage>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const DescribeIdentityUsageRequest &request)
 {
@@ -181,6 +211,12 @@ DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const D
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const GetBulkPublishDetailsRequest &request)
 {
@@ -194,6 +230,12 @@ GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const G
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoEventsRequest &request)
 {
@@ -207,6 +249,12 @@ GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoE
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfiguration(const GetIdentityPoolConfigurationRequest &request)
 {
@@ -221,6 +269,12 @@ GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfigu
  *
  * ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use the Cognito Identity credentials to make this API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest &request)
 {
@@ -234,6 +288,12 @@ ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest
  *
  * ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary
  * user credentials provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const ListIdentityPoolUsageRequest &request)
 {
@@ -249,6 +309,12 @@ ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const L
  *
  * ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use Cognito Identity credentials to make this API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &request)
 {
@@ -262,6 +328,12 @@ ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &r
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceRequest &request)
 {
@@ -276,6 +348,12 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoEventsRequest &request)
 {
@@ -289,6 +367,12 @@ SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoE
  *
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfiguration(const SetIdentityPoolConfigurationRequest &request)
 {
@@ -302,6 +386,12 @@ SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfigu
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const SubscribeToDatasetRequest &request)
 {
@@ -315,6 +405,12 @@ SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const Subscri
  *
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request)
 {
@@ -339,6 +435,12 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
  * 0>
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequest &request)
 {

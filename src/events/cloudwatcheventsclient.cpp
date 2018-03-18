@@ -121,6 +121,12 @@ CloudWatchEventsClient::CloudWatchEventsClient(
  *
  * When you delete a rule, incoming events might continue to match to the deleted rule. Please allow a short period of time
  * for changes to take
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest &request)
 {
@@ -130,6 +136,12 @@ DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest 
 /**
  * Displays the external AWS accounts that are permitted to write events to your account using your account's event bus,
  * and the associated policy. To enable your account to receive events from other accounts, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const DescribeEventBusRequest &request)
 {
@@ -138,6 +150,12 @@ DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const Descri
 
 /**
  * Describes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRequest &request)
 {
@@ -151,6 +169,12 @@ DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRe
  *
  * When you disable a rule, incoming events might continue to match to the disabled rule. Please allow a short period of
  * time for changes to take
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleRequest &request)
 {
@@ -164,6 +188,12 @@ DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleReque
  *
  * When you enable a rule, incoming events might not immediately start matching to a newly enabled rule. Please allow a
  * short period of time for changes to take
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest &request)
 {
@@ -173,6 +203,12 @@ EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest 
 /**
  * Lists the rules for the specified target. You can see which of the rules in Amazon CloudWatch Events can invoke a
  * specific target in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(const ListRuleNamesByTargetRequest &request)
 {
@@ -182,6 +218,12 @@ ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(co
 /**
  * Lists your Amazon CloudWatch Events rules. You can either list all the rules or you can provide a prefix to match to the
  * rule
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &request)
 {
@@ -190,6 +232,12 @@ ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &re
 
 /**
  * Lists the targets assigned to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const ListTargetsByRuleRequest &request)
 {
@@ -198,6 +246,12 @@ ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const List
 
 /**
  * Sends custom events to Amazon CloudWatch Events so that they can be matched to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &request)
 {
@@ -221,6 +275,12 @@ PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &re
  * accounts>
  *
  * The permission policy on the default event bus cannot exceed 10KB in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissionRequest &request)
 {
@@ -253,6 +313,12 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
  * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, CloudWatch Events uses
  * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
  * that they match the ARN syntax in the event you want to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
 {
@@ -389,6 +455,12 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  * This action can partially fail if too many requests are made at the same time. If that happens,
  * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
  * of the failed target and the error
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest &request)
 {
@@ -399,6 +471,12 @@ PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest 
  * Revokes the permission of another AWS account to be able to put events to your default event bus. Specify the account to
  * revoke by the <code>StatementId</code> value that you associated with the account when you granted it permission with
  * <code>PutPermission</code>. You can find the <code>StatementId</code> by using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemovePermissionResponse * CloudWatchEventsClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -418,6 +496,12 @@ RemovePermissionResponse * CloudWatchEventsClient::removePermission(const Remove
  * This action can partially fail if too many requests are made at the same time. If that happens,
  * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
  * of the failed target and the error
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTargetsRequest &request)
 {
@@ -432,6 +516,12 @@ RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTarget
  * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, CloudWatch Events uses
  * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
  * that they match the ARN syntax in the event you want to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEventPatternRequest &request)
 {

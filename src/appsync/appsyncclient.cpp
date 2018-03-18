@@ -90,6 +90,12 @@ AppSyncClient::AppSyncClient(
 
 /**
  * Creates a unique key that you can distribute to clients who are executing your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -98,6 +104,12 @@ CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &re
 
 /**
  * Creates a <code>DataSource</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourceRequest &request)
 {
@@ -106,6 +118,12 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
 
 /**
  * Creates a <code>GraphqlApi</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlApiRequest &request)
 {
@@ -119,6 +137,12 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
  *
  * A resolver converts incoming requests into a format that a data source can understand and converts the data source's
  * responses into
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverRequest &request)
 {
@@ -127,6 +151,12 @@ CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverReque
 
 /**
  * Creates a <code>Type</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 {
@@ -135,6 +165,12 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 
 /**
  * Deletes an API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
@@ -143,6 +179,12 @@ DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &re
 
 /**
  * Deletes a <code>DataSource</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
@@ -151,6 +193,12 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
 
 /**
  * Deletes a <code>GraphqlApi</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlApiRequest &request)
 {
@@ -159,6 +207,12 @@ DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlAp
 
 /**
  * Deletes a <code>Resolver</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverRequest &request)
 {
@@ -167,6 +221,12 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
 
 /**
  * Deletes a <code>Type</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 {
@@ -175,6 +235,12 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 
 /**
  * Retrieves a <code>DataSource</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
 {
@@ -183,6 +249,12 @@ GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest 
 
 /**
  * Retrieves a <code>GraphqlApi</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest &request)
 {
@@ -191,6 +263,12 @@ GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest 
 
 /**
  * Retrieves the introspection schema for a GraphQL
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const GetIntrospectionSchemaRequest &request)
 {
@@ -199,6 +277,12 @@ GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const Get
 
 /**
  * Retrieves a <code>Resolver</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &request)
 {
@@ -207,6 +291,12 @@ GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &reque
 
 /**
  * Retrieves the current status of a schema creation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const GetSchemaCreationStatusRequest &request)
 {
@@ -215,6 +305,12 @@ GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const G
 
 /**
  * Retrieves a <code>Type</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 {
@@ -223,6 +319,12 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 
 /**
  * Lists the API keys for a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &request)
 {
@@ -231,6 +333,12 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
 
 /**
  * Lists the data sources for a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRequest &request)
 {
@@ -239,6 +347,12 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
 
 /**
  * Lists your GraphQL
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRequest &request)
 {
@@ -247,6 +361,12 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
 
 /**
  * Lists the resolvers for a given API and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest &request)
 {
@@ -255,6 +375,12 @@ ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest 
 
 /**
  * Lists the types for a given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
 {
@@ -267,6 +393,12 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
  * API>
  *
  * This operation is asynchronous. Use to determine when it has
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSchemaCreationRequest &request)
 {
@@ -275,6 +407,12 @@ StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSche
 
 /**
  * Updates an API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
@@ -283,6 +421,12 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
 
 /**
  * Updates a <code>DataSource</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
@@ -291,6 +435,12 @@ UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourc
 
 /**
  * Updates a <code>GraphqlApi</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlApiRequest &request)
 {
@@ -299,6 +449,12 @@ UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlAp
 
 /**
  * Updates a <code>Resolver</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverRequest &request)
 {
@@ -307,6 +463,12 @@ UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverReque
 
 /**
  * Updates a <code>Type</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
 {

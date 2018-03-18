@@ -92,6 +92,12 @@ WorkSpacesClient::WorkSpacesClient(
 
 /**
  * Creates tags for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &request)
 {
@@ -104,6 +110,12 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
  * WorkSpaces>
  *
  * This operation is asynchronous and returns before the WorkSpaces are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorkspacesRequest &request)
 {
@@ -112,6 +124,12 @@ CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorksp
 
 /**
  * Deletes the specified tags from a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -120,6 +138,12 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
 
 /**
  * Describes the tags for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -132,6 +156,12 @@ DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest 
  * bundles>
  *
  * You can filter the results using either bundle ID or owner, but not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(const DescribeWorkspaceBundlesRequest &request)
 {
@@ -140,6 +170,12 @@ DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(co
 
 /**
  * Describes the available AWS Directory Service directories that are registered with Amazon
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirectories(const DescribeWorkspaceDirectoriesRequest &request)
 {
@@ -152,6 +188,12 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
  * WorkSpaces>
  *
  * You can filter the results using bundle ID, directory ID, or owner, but you can specify only one filter at a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const DescribeWorkspacesRequest &request)
 {
@@ -160,6 +202,12 @@ DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const Describe
 
 /**
  * Describes the connection status of the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspacesConnectionStatus(const DescribeWorkspacesConnectionStatusRequest &request)
 {
@@ -168,6 +216,12 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
 
 /**
  * Modifies the specified WorkSpace
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(const ModifyWorkspacePropertiesRequest &request)
 {
@@ -184,6 +238,12 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
  * <code>INOPERABLE</code>>
  *
  * This operation is asynchronous and returns before the WorkSpaces have
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorkspacesRequest &request)
 {
@@ -205,6 +265,12 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
  * WorkSpace</a>>
  *
  * This operation is asynchronous and returns before the WorkSpaces have been completely
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWorkspacesRequest &request)
 {
@@ -217,6 +283,12 @@ RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWor
  * WorkSpaces>
  *
  * You cannot start a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspacesRequest &request)
 {
@@ -230,6 +302,12 @@ StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspace
  *
  * You cannot stop a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of <code>AVAILABLE</code>,
  * <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRequest &request)
 {
@@ -251,6 +329,12 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
  * <code>SUSPENDED</code>>
  *
  * This operation is asynchronous and returns before the WorkSpaces have been completely
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const TerminateWorkspacesRequest &request)
 {

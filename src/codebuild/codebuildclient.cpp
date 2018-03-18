@@ -165,6 +165,12 @@ CodeBuildClient::CodeBuildClient(
 
 /**
  * Deletes one or more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDeleteBuildsRequest &request)
 {
@@ -173,6 +179,12 @@ BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDelete
 
 /**
  * Gets information about
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsRequest &request)
 {
@@ -181,6 +193,12 @@ BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsReq
 
 /**
  * Gets information about build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProjectsRequest &request)
 {
@@ -189,6 +207,12 @@ BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProje
 
 /**
  * Creates a build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectRequest &request)
 {
@@ -208,6 +232,12 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  * box. For more information, see step 9 in <a
  * href="http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console">Change a Build
  * Project's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookRequest &request)
 {
@@ -216,6 +246,12 @@ CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookReques
 
 /**
  * Deletes a build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -225,6 +261,12 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
 /**
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
  * from automatically rebuilding the source code every time a code change is pushed to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookRequest &request)
 {
@@ -233,6 +275,12 @@ DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookReques
 
 /**
  * Resets the cache for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const InvalidateProjectCacheRequest &request)
 {
@@ -241,6 +289,12 @@ InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const I
 
 /**
  * Gets a list of build IDs, with each build ID representing a single
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &request)
 {
@@ -249,6 +303,12 @@ ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &reques
 
 /**
  * Gets a list of build IDs for the specified build project, with each build ID representing a single
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListBuildsForProjectRequest &request)
 {
@@ -257,6 +317,12 @@ ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListB
 
 /**
  * Gets information about Docker images that are managed by AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentImages(const ListCuratedEnvironmentImagesRequest &request)
 {
@@ -265,6 +331,12 @@ ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentIm
 
 /**
  * Gets a list of build project names, with each build project name representing a single build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &request)
 {
@@ -273,6 +345,12 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
 
 /**
  * Starts running a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &request)
 {
@@ -281,6 +359,12 @@ StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &reques
 
 /**
  * Attempts to stop running a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 {
@@ -289,6 +373,12 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 
 /**
  * Changes the settings of a build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectRequest &request)
 {

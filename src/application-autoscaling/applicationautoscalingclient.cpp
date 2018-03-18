@@ -171,6 +171,12 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  * action>
  *
  * To create a scaling policy or update an existing one, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
@@ -179,6 +185,12 @@ DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(
 
 /**
  * Deletes the specified Application Auto Scaling scheduled
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
 {
@@ -195,6 +207,12 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
  * it>
  *
  * To create a scalable target or update an existing one, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScalableTarget(const DeregisterScalableTargetRequest &request)
 {
@@ -212,6 +230,12 @@ DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScala
  *
  * To create a scalable target or update an existing one, see <a>RegisterScalableTarget</a>. If you are no longer using a
  * scalable target, you can deregister it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalableTargets(const DescribeScalableTargetsRequest &request)
 {
@@ -230,6 +254,12 @@ DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalable
  * Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling
  * policies for a service namespace, see <a>DescribeScalingPolicies</a>. To create a scaling policy or update an existing
  * one, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
@@ -248,6 +278,12 @@ DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalin
  *
  * To create a scaling policy or update an existing one, see <a>PutScalingPolicy</a>. If you are no longer using a scaling
  * policy, you can delete it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
@@ -266,6 +302,12 @@ DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingP
  *
  * To create a scheduled action or update an existing one, see <a>PutScheduledAction</a>. If you are no longer using a
  * scheduled action, you can delete it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
@@ -290,6 +332,12 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  *
  * You can view the scaling policies for a service namespace using <a>DescribeScalingPolicies</a>. If you are no longer
  * using a scaling policy, you can delete it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -314,6 +362,12 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  *
  * You can view the scheduled actions using <a>DescribeScheduledActions</a>. If you are no longer using a scheduled action,
  * you can delete it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(const PutScheduledActionRequest &request)
 {
@@ -330,6 +384,12 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
  * After you register a scalable target, you can create and apply scaling policies using <a>PutScalingPolicy</a>. You can
  * view the scaling policies for a service namespace using <a>DescribeScalableTargets</a>. If you no longer need a scalable
  * target, you can deregister it using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableTarget(const RegisterScalableTargetRequest &request)
 {

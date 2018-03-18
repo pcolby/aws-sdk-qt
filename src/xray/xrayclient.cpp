@@ -91,6 +91,12 @@ XRayClient::XRayClient(
 /**
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a
  * single request. Use <code>GetTraceSummaries</code> to get a list of trace
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest &request)
 {
@@ -101,6 +107,12 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
  * Retrieves a document that describes services that process incoming requests, and downstream services that they call as a
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
  * that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphRequest &request)
 {
@@ -109,6 +121,12 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
 
 /**
  * Retrieves a service graph for one or more specific trace
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &request)
 {
@@ -141,6 +159,12 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  * For a full list of indexed fields and keywords that you can use in filter expressions, see <a
  * href="http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
  * <i>AWS X-Ray Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)
 {
@@ -149,6 +173,12 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
 
 /**
  * Used by the AWS X-Ray daemon to upload
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetryRecordsRequest &request)
 {
@@ -215,6 +245,12 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  * hexadecimal> </li> <li>
  *
  * A 96-bit identifier for the trace, globally unique, in 24 hexadecimal
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRequest &request)
 {

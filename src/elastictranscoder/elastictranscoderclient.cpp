@@ -97,6 +97,12 @@ ElasticTranscoderClient::ElasticTranscoderClient(
  *
  * You can only cancel a job that has a status of <code>Submitted</code>. To prevent a pipeline from starting to process a
  * job while you're getting the job identifier, use <a>UpdatePipelineStatus</a> to temporarily pause the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * ElasticTranscoderClient::cancelJob(const CancelJobRequest &request)
 {
@@ -111,6 +117,12 @@ CancelJobResponse * ElasticTranscoderClient::cancelJob(const CancelJobRequest &r
  *
  * If you have specified more than one output for your jobs (for example, one output for the Kindle Fire and another output
  * for the Apple iPhone 4s), you currently must use the Elastic Transcoder API to list the jobs (as opposed to the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * ElasticTranscoderClient::createJob(const CreateJobRequest &request)
 {
@@ -119,6 +131,12 @@ CreateJobResponse * ElasticTranscoderClient::createJob(const CreateJobRequest &r
 
 /**
  * The CreatePipeline operation creates a pipeline with settings that you
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePipelineResponse * ElasticTranscoderClient::createPipeline(const CreatePipelineRequest &request)
 {
@@ -141,6 +159,12 @@ CreatePipelineResponse * ElasticTranscoderClient::createPipeline(const CreatePip
  *
  * Elastic Transcoder uses the H.264 video-compression format. For more information, see the International
  * Telecommunication Union publication <i>Recommendation ITU-T H.264: Advanced video coding for generic audiovisual
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePresetResponse * ElasticTranscoderClient::createPreset(const CreatePresetRequest &request)
 {
@@ -154,6 +178,12 @@ CreatePresetResponse * ElasticTranscoderClient::createPreset(const CreatePresetR
  *
  * You can only delete a pipeline that has never been used or that is not currently in use (doesn't contain any active
  * jobs). If the pipeline is currently in use, <code>DeletePipeline</code> returns an error.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePipelineResponse * ElasticTranscoderClient::deletePipeline(const DeletePipelineRequest &request)
 {
@@ -166,6 +196,12 @@ DeletePipelineResponse * ElasticTranscoderClient::deletePipeline(const DeletePip
  * region> <note>
  *
  * You can't delete the default presets that are included with Elastic
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePresetResponse * ElasticTranscoderClient::deletePreset(const DeletePresetRequest &request)
 {
@@ -179,6 +215,12 @@ DeletePresetResponse * ElasticTranscoderClient::deletePreset(const DeletePresetR
  *
  * Elastic Transcoder returns all of the jobs currently in the specified pipeline. The response body contains one element
  * for each job that satisfies the search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsByPipelineResponse * ElasticTranscoderClient::listJobsByPipeline(const ListJobsByPipelineRequest &request)
 {
@@ -188,6 +230,12 @@ ListJobsByPipelineResponse * ElasticTranscoderClient::listJobsByPipeline(const L
 /**
  * The ListJobsByStatus operation gets a list of jobs that have a specified status. The response body contains one element
  * for each job that satisfies the search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsByStatusResponse * ElasticTranscoderClient::listJobsByStatus(const ListJobsByStatusRequest &request)
 {
@@ -196,6 +244,12 @@ ListJobsByStatusResponse * ElasticTranscoderClient::listJobsByStatus(const ListJ
 
 /**
  * The ListPipelines operation gets a list of the pipelines associated with the current AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPipelinesResponse * ElasticTranscoderClient::listPipelines(const ListPipelinesRequest &request)
 {
@@ -205,6 +259,12 @@ ListPipelinesResponse * ElasticTranscoderClient::listPipelines(const ListPipelin
 /**
  * The ListPresets operation gets a list of the default presets included with Elastic Transcoder and the presets that
  * you've added in an AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPresetsResponse * ElasticTranscoderClient::listPresets(const ListPresetsRequest &request)
 {
@@ -213,6 +273,12 @@ ListPresetsResponse * ElasticTranscoderClient::listPresets(const ListPresetsRequ
 
 /**
  * The ReadJob operation returns detailed information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReadJobResponse * ElasticTranscoderClient::readJob(const ReadJobRequest &request)
 {
@@ -221,6 +287,12 @@ ReadJobResponse * ElasticTranscoderClient::readJob(const ReadJobRequest &request
 
 /**
  * The ReadPipeline operation gets detailed information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReadPipelineResponse * ElasticTranscoderClient::readPipeline(const ReadPipelineRequest &request)
 {
@@ -229,6 +301,12 @@ ReadPipelineResponse * ElasticTranscoderClient::readPipeline(const ReadPipelineR
 
 /**
  * The ReadPreset operation gets detailed information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReadPresetResponse * ElasticTranscoderClient::readPreset(const ReadPresetRequest &request)
 {
@@ -244,6 +322,12 @@ ReadPresetResponse * ElasticTranscoderClient::readPreset(const ReadPresetRequest
  * Elastic Transcoder perform tasks associated with the transcoding process. The action attempts to assume the specified
  * IAM role, checks read access to the input and output buckets, and tries to send a test notification to Amazon SNS topics
  * that you
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestRoleResponse * ElasticTranscoderClient::testRole(const TestRoleRequest &request)
 {
@@ -258,6 +342,12 @@ TestRoleResponse * ElasticTranscoderClient::testRole(const TestRoleRequest &requ
  * When you change pipeline settings, your changes take effect immediately. Jobs that you have already submitted and that
  * Elastic Transcoder has not started to process are affected in addition to jobs that you submit after you change
  * settings.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePipelineResponse * ElasticTranscoderClient::updatePipeline(const UpdatePipelineRequest &request)
 {
@@ -271,6 +361,12 @@ UpdatePipelineResponse * ElasticTranscoderClient::updatePipeline(const UpdatePip
  * pipeline>
  *
  * When you update notifications for a pipeline, Elastic Transcoder returns the values that you specified in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePipelineNotificationsResponse * ElasticTranscoderClient::updatePipelineNotifications(const UpdatePipelineNotificationsRequest &request)
 {
@@ -286,6 +382,12 @@ UpdatePipelineNotificationsResponse * ElasticTranscoderClient::updatePipelineNot
  * Changing the pipeline status is useful if you want to cancel one or more jobs. You can't cancel jobs after Elastic
  * Transcoder has started processing them; if you pause the pipeline to which you submitted the jobs, you have more time to
  * get the job IDs for the jobs that you want to cancel, and to send a <a>CancelJob</a> request.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(const UpdatePipelineStatusRequest &request)
 {

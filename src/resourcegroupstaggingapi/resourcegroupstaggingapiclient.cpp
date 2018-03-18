@@ -147,6 +147,12 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  * region for the AWS account. The tags and the resource types that you specify in the request are known as <i>filters</i>.
  * The response includes all tags that are associated with the requested resources. If no filter is provided, this action
  * returns a paginated resource list with the associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetResourcesRequest &request)
 {
@@ -155,6 +161,12 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
 
 /**
  * Returns all tag keys in the specified region for the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeysRequest &request)
 {
@@ -163,6 +175,12 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
 
 /**
  * Returns all tag values for the specified key in the specified region for the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTagValuesRequest &request)
 {
@@ -194,6 +212,12 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
  * permissions for adding tags. For more information, see <a
  * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
  * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagResourcesRequest &request)
 {
@@ -215,6 +239,12 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
  * Guide</i>> </li> <li>
  *
  * You can only tag resources that are located in the specified region for the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const UntagResourcesRequest &request)
 {

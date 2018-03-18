@@ -105,6 +105,12 @@ AthenaClient::AthenaClient(
  * submitted query ID, information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>. Named
  * queries are different from executed queries. Use <a>BatchGetQueryExecution</a> to get details about each unique query
  * execution, and <a>ListQueryExecutions</a> to get a list of query execution
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetNamedQueryRequest &request)
 {
@@ -115,6 +121,12 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
  * Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of
  * query execution ID strings. To get a list of query execution IDs, use <a>ListQueryExecutions</a>. Query executions are
  * different from named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const BatchGetQueryExecutionRequest &request)
 {
@@ -129,6 +141,12 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQueryRequest &request)
 {
@@ -143,6 +161,12 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQueryRequest &request)
 {
@@ -151,6 +175,12 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
 
 /**
  * Returns information about a single
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &request)
 {
@@ -160,6 +190,12 @@ GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &
 /**
  * Returns information about a single execution of a query. Each time a query executes, information about the query
  * execution is saved with a unique
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecutionRequest &request)
 {
@@ -169,6 +205,12 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
 /**
  * Returns the results of a single query execution specified by <code>QueryExecutionId</code>. This request does not
  * execute the query but returns results. Use <a>StartQueryExecution</a> to run a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsRequest &request)
 {
@@ -183,6 +225,12 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueriesRequest &request)
 {
@@ -197,6 +245,12 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryExecutionsRequest &request)
 {
@@ -211,6 +265,12 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQueryExecutionRequest &request)
 {
@@ -225,6 +285,12 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExecutionRequest &request)
 {

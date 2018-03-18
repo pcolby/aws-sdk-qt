@@ -153,6 +153,12 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 
 /**
  * Associates one or more configuration items with an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
@@ -161,6 +167,12 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
 
 /**
  * Creates an application with the given name and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -170,6 +182,12 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
 /**
  * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
  * a list of multiple configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
 {
@@ -178,6 +196,12 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
 
 /**
  * Deletes a list of applications and their associations with configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
 {
@@ -187,6 +211,12 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
 /**
  * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
  * configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -196,6 +226,12 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
 /**
  * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
  * specify an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
 {
@@ -213,6 +249,12 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  * For a complete list of outputs for each asset type, see <a
  * href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations">Using
  * the DescribeConfigurations
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
@@ -225,6 +267,12 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
  * instead>
  *
  * Retrieves the status of a given export process. You can retrieve status from a maximum of 100
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
@@ -233,6 +281,12 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
 
 /**
  * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
@@ -242,6 +296,12 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
 /**
  * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
  * a specific configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -250,6 +310,12 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
 
 /**
  * Disassociates one or more configuration items from an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
 {
@@ -265,6 +331,12 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  * the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API
  * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
  * two configuration exports in six
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
@@ -273,6 +345,12 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
 
 /**
  * Retrieves a short summary of discovered
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
@@ -282,6 +360,12 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
 /**
  * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
  * identifies the relationship
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -290,6 +374,12 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
 
 /**
  * Retrieves a list of servers that are one network hop away from a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
@@ -298,6 +388,12 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
 
 /**
  * Instructs the specified agents or connectors to start collecting
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
 {
@@ -319,6 +415,12 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both AWS Agentless
  * Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports
  * per day.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
@@ -327,6 +429,12 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
 
 /**
  * Instructs the specified agents or connectors to stop collecting
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
 {
@@ -335,6 +443,12 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
 
 /**
  * Updates metadata about an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
 {

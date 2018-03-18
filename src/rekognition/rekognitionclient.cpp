@@ -142,6 +142,12 @@ RekognitionClient::RekognitionClient(
  * <a>faces-compare-images</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:CompareFaces</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest &request)
 {
@@ -164,6 +170,12 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
  * case-sensitive> </note>
  *
  * This operation requires permissions to perform the <code>rekognition:CreateCollection</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCollectionResponse * RekognitionClient::createCollection(const CreateCollectionRequest &request)
 {
@@ -190,6 +202,12 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
  *
  * After you have finished analyzing a streaming video, use to stop processing. You can delete the stream processor by
  * calling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const CreateStreamProcessorRequest &request)
 {
@@ -202,6 +220,12 @@ CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const C
  * <a>delete-collection-procedure</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:DeleteCollection</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteCollectionRequest &request)
 {
@@ -214,6 +238,12 @@ DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteColle
  * collection>
  *
  * This operation requires permissions to perform the <code>rekognition:DeleteFaces</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &request)
 {
@@ -224,6 +254,12 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
  * Deletes the stream processor identified by <code>Name</code>. You assign the value for <code>Name</code> when you create
  * the stream processor with . You might not be able to use the same name for a stream processor for a few seconds after
  * calling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const DeleteStreamProcessorRequest &request)
 {
@@ -233,6 +269,12 @@ DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const D
 /**
  * Provides information about a stream processor created by . You can get information about the input and output streams,
  * the input parameters for the face recognition being performed, and the current status of the stream
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(const DescribeStreamProcessorRequest &request)
 {
@@ -271,6 +313,12 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  * <a>procedure-detecting-faces-in-images</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:DetectFaces</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &request)
 {
@@ -351,6 +399,12 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  * data>
  *
  * This operation requires permissions to perform the <code>rekognition:DetectLabels</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest &request)
 {
@@ -372,6 +426,12 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
  * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
  * either a PNG or JPEG formatted file.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const DetectModerationLabelsRequest &request)
 {
@@ -418,6 +478,12 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
  * axis>
  *
  * For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &request)
 {
@@ -432,6 +498,12 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
  * <a>get-celebrity-info-procedure</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:GetCelebrityInfo</code> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrityInfoRequest &request)
 {
@@ -477,6 +549,12 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  * <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token for
  * getting the next set of results. To get the next page of results, call <code>GetCelebrityDetection</code> and populate
  * the <code>NextToken</code> request parameter with the token value returned from the previous call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(const GetCelebrityRecognitionRequest &request)
 {
@@ -516,6 +594,12 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  * <code>GetContentModeration</code>>
  *
  * For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetContentModerationResponse * RekognitionClient::getContentModeration(const GetContentModerationRequest &request)
 {
@@ -545,6 +629,12 @@ GetContentModerationResponse * RekognitionClient::getContentModeration(const Get
  * <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token for
  * getting the next set of results. To get the next page of results, call <code>GetFaceDetection</code> and populate the
  * <code>NextToken</code> request parameter with the token value returned from the previous call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDetectionRequest &request)
 {
@@ -574,6 +664,12 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
  *
  * By default, the <code>Persons</code> array is sorted by the time, in milliseconds from the start of the video, persons
  * are matched. You can also sort by persons by specifying <code>INDEX</code> for the <code>SORTBY</code> input
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequest &request)
 {
@@ -607,6 +703,12 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
  * <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token for
  * getting the next set of results. To get the next page of results, call <code>GetlabelDetection</code> and populate the
  * <code>NextToken</code> request parameter with the token value returned from the previous call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelDetectionRequest &request)
 {
@@ -644,6 +746,12 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  * pagination token for getting the next set of results. To get the next page of results, call
  * <code>GetPersonTracking</code> and populate the <code>NextToken</code> request parameter with the token value returned
  * from the previous call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPersonTrackingRequest &request)
 {
@@ -693,6 +801,12 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  * </p
  *
  * This operation requires permissions to perform the <code>rekognition:IndexFaces</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &request)
 {
@@ -710,6 +824,12 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
  * <a>list-collection-procedure</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:ListCollections</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectionsRequest &request)
 {
@@ -724,6 +844,12 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
  * </p
  *
  * This operation requires permissions to perform the <code>rekognition:ListFaces</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request)
 {
@@ -732,6 +858,12 @@ ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request
 
 /**
  * Gets a list of stream processors that you have created with .
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const ListStreamProcessorsRequest &request)
 {
@@ -773,6 +905,12 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  * <a>celebrities-procedure-image</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:RecognizeCelebrities</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const RecognizeCelebritiesRequest &request)
 {
@@ -802,6 +940,12 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
  * <a>search-face-with-id-procedure</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFaces</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &request)
 {
@@ -843,6 +987,12 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  * <a>search-face-with-image-procedure</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFacesByImage</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchFacesByImageRequest &request)
 {
@@ -861,6 +1011,12 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
  * <code>NotificationChannel</code>. To get the results of the celebrity recognition analysis, first check that the status
  * value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier
  * (<code>JobId</code>) from the initial call to <code>StartCelebrityRecognition</code>. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition(const StartCelebrityRecognitionRequest &request)
 {
@@ -882,6 +1038,12 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  * To get the results of the content moderation analysis, first check that the status value published to the Amazon SNS
  * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartContentModeration</code>. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartContentModerationResponse * RekognitionClient::startContentModeration(const StartContentModerationRequest &request)
 {
@@ -900,6 +1062,12 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  * results of the label detection operation, first check that the status value published to the Amazon SNS topic is
  * <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartFaceDetection</code>. For more information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFaceDetectionRequest &request)
 {
@@ -918,6 +1086,12 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
  * results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and
  * pass the job identifier (<code>JobId</code>) from the initial call to <code>StartFaceSearch</code>. For more
  * information, see
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSearchRequest &request)
 {
@@ -944,6 +1118,12 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
  *
  * To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic
  * is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const StartLabelDetectionRequest &request)
 {
@@ -964,6 +1144,12 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
  *
  * To get the results of the person detection operation, first check that the status value published to the Amazon SNS
  * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const StartPersonTrackingRequest &request)
 {
@@ -974,6 +1160,12 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
  * Starts processing a stream processor. You create a stream processor by calling . To tell
  * <code>StartStreamProcessor</code> which stream processor to start, use the value of the <code>Name</code> field
  * specified in the call to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const StartStreamProcessorRequest &request)
 {
@@ -982,6 +1174,12 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
 
 /**
  * Stops a running stream processor that was created by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopStreamProcessorResponse * RekognitionClient::stopStreamProcessor(const StopStreamProcessorRequest &request)
 {

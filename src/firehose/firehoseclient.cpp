@@ -156,6 +156,12 @@ FirehoseClient::FirehoseClient(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3">Amazon S3 Bucket Access</a>
  * in the <i>Amazon Kinesis Firehose Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const CreateDeliveryStreamRequest &request)
 {
@@ -180,6 +186,12 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
  * While the delivery stream is <code>DELETING</code> state, the service may continue to accept the records, but the
  * service doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, you should first
  * stop any applications that are sending records before deleting a delivery
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const DeleteDeliveryStreamRequest &request)
 {
@@ -190,6 +202,12 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
  * Describes the specified delivery stream and gets the status. For example, after your delivery stream is created, call
  * <a>DescribeDeliveryStream</a> to see if the delivery stream is <code>ACTIVE</code> and therefore ready for data to be
  * sent to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const DescribeDeliveryStreamRequest &request)
 {
@@ -206,6 +224,12 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
  * delivery streams to list, check the value of <b>HasMoreDeliveryStreams</b> in the output. If there are more delivery
  * streams to list, you can request them by specifying the name of the last delivery stream returned in the call in the
  * <b>ExclusiveStartDeliveryStreamName</b> parameter of a subsequent
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeliveryStreamsRequest &request)
 {
@@ -251,6 +275,12 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
  * Data records sent to Kinesis Firehose are stored for 24 hours from the time they are added to a delivery stream as it
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
 {
@@ -320,6 +350,12 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
  * Data records sent to Kinesis Firehose are stored for 24 hours from the time they are added to a delivery stream as it
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequest &request)
 {
@@ -360,6 +396,12 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
  * required field, and the service updates the configuration only if the existing configuration has a version ID that
  * matches. After the update is applied successfully, the version ID is updated, and can be retrieved using
  * <a>DescribeDeliveryStream</a>. Use the new version ID to set <b>CurrentDeliveryStreamVersionId</b> in the next
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestinationRequest &request)
 {

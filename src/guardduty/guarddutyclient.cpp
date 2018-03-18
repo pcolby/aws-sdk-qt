@@ -88,6 +88,12 @@ GuardDutyClient::GuardDutyClient(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitationRequest &request)
 {
@@ -95,6 +101,12 @@ AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindingsRequest &request)
 {
@@ -103,6 +115,12 @@ ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindings
 
 /**
  * Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorRequest &request)
 {
@@ -111,6 +129,12 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
 
 /**
  * Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &request)
 {
@@ -119,6 +143,12 @@ CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &req
 
 /**
  * Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersRequest &request)
 {
@@ -127,6 +157,12 @@ CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersReques
 
 /**
  * Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const CreateSampleFindingsRequest &request)
 {
@@ -135,6 +171,12 @@ CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const Creat
 
 /**
  * Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const CreateThreatIntelSetRequest &request)
 {
@@ -142,6 +184,12 @@ CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const Creat
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineInvitationsRequest &request)
 {
@@ -149,6 +197,12 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorRequest &request)
 {
@@ -156,6 +210,12 @@ DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorReq
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &request)
 {
@@ -163,6 +223,12 @@ DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvitationsRequest &request)
 {
@@ -170,6 +236,12 @@ DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvit
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersRequest &request)
 {
@@ -177,6 +249,12 @@ DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const DeleteThreatIntelSetRequest &request)
 {
@@ -184,6 +262,12 @@ DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const Delet
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request)
 {
@@ -191,6 +275,12 @@ DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterA
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const DisassociateMembersRequest &request)
 {
@@ -198,6 +288,12 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &request)
 {
@@ -205,6 +301,12 @@ GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &request)
 {
@@ -212,6 +314,12 @@ GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const GetFindingsStatisticsRequest &request)
 {
@@ -219,6 +327,12 @@ GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const Get
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
 {
@@ -227,6 +341,12 @@ GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
 
 /**
  * Returns the count of all GuardDuty membership invitations that were sent to the current member account except the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvitationsCountRequest &request)
 {
@@ -234,6 +354,12 @@ GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAccountRequest &request)
 {
@@ -241,6 +367,12 @@ GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAcco
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &request)
 {
@@ -248,6 +380,12 @@ GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &reques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIntelSetRequest &request)
 {
@@ -257,6 +395,12 @@ GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIn
 /**
  * Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and
  * allow the current AWS account to view and manage these accounts' GuardDuty findings on their behalf as the master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersRequest &request)
 {
@@ -264,6 +408,12 @@ InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsRequest &request)
 {
@@ -271,6 +421,12 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &request)
 {
@@ -278,6 +434,12 @@ ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &request)
 {
@@ -285,6 +447,12 @@ ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &reques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitationsRequest &request)
 {
@@ -292,6 +460,12 @@ ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitations
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &request)
 {
@@ -299,6 +473,12 @@ ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThreatIntelSetsRequest &request)
 {
@@ -307,6 +487,12 @@ ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThr
 
 /**
  * Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const StartMonitoringMembersRequest &request)
 {
@@ -316,6 +502,12 @@ StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const S
 /**
  * Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this
  * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members'
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const StopMonitoringMembersRequest &request)
 {
@@ -323,6 +515,12 @@ StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const Sto
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFindingsRequest &request)
 {
@@ -330,6 +528,12 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorRequest &request)
 {
@@ -337,6 +541,12 @@ UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorReq
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const UpdateFindingsFeedbackRequest &request)
 {
@@ -344,6 +554,12 @@ UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const U
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &request)
 {
@@ -351,6 +567,12 @@ UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const UpdateThreatIntelSetRequest &request)
 {

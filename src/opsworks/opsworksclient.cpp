@@ -214,6 +214,12 @@ OpsWorksClient::OpsWorksClient(
  * permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user
  * permissions, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing
  * User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequest &request)
 {
@@ -231,6 +237,12 @@ AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &request)
 {
@@ -247,6 +259,12 @@ AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &r
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateElasticIpRequest &request)
 {
@@ -270,6 +288,12 @@ AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateE
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(const AttachElasticLoadBalancerRequest &request)
 {
@@ -286,6 +310,12 @@ AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(co
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request)
 {
@@ -301,6 +331,12 @@ CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
 {
@@ -317,6 +353,12 @@ CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Deploy or Manage permissions level for the
  * stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -332,6 +374,12 @@ CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeployme
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequest &request)
 {
@@ -354,6 +402,12 @@ CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &request)
 {
@@ -369,6 +423,12 @@ CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &request)
 {
@@ -383,6 +443,12 @@ CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserProfileRequest &request)
 {
@@ -397,6 +463,12 @@ CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserPr
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -417,6 +489,12 @@ DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequest &request)
 {
@@ -433,6 +511,12 @@ DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &request)
 {
@@ -449,6 +533,12 @@ DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &request)
 {
@@ -463,6 +553,12 @@ DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserProfileRequest &request)
 {
@@ -478,6 +574,12 @@ DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserPr
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const DeregisterEcsClusterRequest &request)
 {
@@ -493,6 +595,12 @@ DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const Deregi
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const DeregisterElasticIpRequest &request)
 {
@@ -508,6 +616,12 @@ DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const Deregist
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const DeregisterInstanceRequest &request)
 {
@@ -522,6 +636,12 @@ DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const Deregister
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const DeregisterRdsDbInstanceRequest &request)
 {
@@ -537,6 +657,12 @@ DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const 
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolumeRequest &request)
 {
@@ -546,6 +672,12 @@ DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolu
 /**
  * Describes the available AWS OpsWorks Stacks agent versions. You must specify a stack ID or a configuration manager.
  * <code>DescribeAgentVersions</code> returns a list of available agent versions for the specified stack or configuration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const DescribeAgentVersionsRequest &request)
 {
@@ -564,6 +696,12 @@ DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const Desc
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &request)
 {
@@ -582,6 +720,12 @@ DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &r
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeCommandsRequest &request)
 {
@@ -600,6 +744,12 @@ DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeComman
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const DescribeDeploymentsRequest &request)
 {
@@ -620,6 +770,12 @@ DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const Describe
  * Permissions</a>>
  *
  * This call accepts only one resource-identifying
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const DescribeEcsClustersRequest &request)
 {
@@ -638,6 +794,12 @@ DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const Describe
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeElasticIpsRequest &request)
 {
@@ -656,6 +818,12 @@ DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeEl
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalancers(const DescribeElasticLoadBalancersRequest &request)
 {
@@ -674,6 +842,12 @@ DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalanc
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInstancesRequest &request)
 {
@@ -692,6 +866,12 @@ DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInst
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequest &request)
 {
@@ -710,6 +890,12 @@ DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScaling(const DescribeLoadBasedAutoScalingRequest &request)
 {
@@ -724,6 +910,12 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  * <b>Required Permissions</b>: To use this action, an IAM user must have self-management enabled or an attached policy
  * that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 {
@@ -732,6 +924,12 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 
 /**
  * Describes the operating systems that are supported by AWS OpsWorks
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
 {
@@ -746,6 +944,12 @@ DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePermissionsResponse * OpsWorksClient::describePermissions(const DescribePermissionsRequest &request)
 {
@@ -764,6 +968,12 @@ DescribePermissionsResponse * OpsWorksClient::describePermissions(const Describe
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRaidArraysRequest &request)
 {
@@ -782,6 +992,12 @@ DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRa
  * Permissions</a>>
  *
  * This call accepts only one resource-identifying
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const DescribeRdsDbInstancesRequest &request)
 {
@@ -800,6 +1016,12 @@ DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const De
  * Permissions</a>>
  *
  * This call accepts only one resource-identifying
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const DescribeServiceErrorsRequest &request)
 {
@@ -814,6 +1036,12 @@ DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const Desc
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvisioningParameters(const DescribeStackProvisioningParametersRequest &request)
 {
@@ -829,6 +1057,12 @@ DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvi
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const DescribeStackSummaryRequest &request)
 {
@@ -843,6 +1077,12 @@ DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const Descri
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequest &request)
 {
@@ -861,6 +1101,12 @@ DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScaling(const DescribeTimeBasedAutoScalingRequest &request)
 {
@@ -875,6 +1121,12 @@ DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScal
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const DescribeUserProfilesRequest &request)
 {
@@ -893,6 +1145,12 @@ DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const Descri
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesRequest &request)
 {
@@ -907,6 +1165,12 @@ DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesR
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(const DetachElasticLoadBalancerRequest &request)
 {
@@ -922,6 +1186,12 @@ DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(co
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const DisassociateElasticIpRequest &request)
 {
@@ -936,6 +1206,12 @@ DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const Disa
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetHostnameSuggestionRequest &request)
 {
@@ -950,6 +1226,12 @@ GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetH
  * stacks> </note>
  *
  * Grants RDP access to a Windows instance for a specified time
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &request)
 {
@@ -958,6 +1240,12 @@ GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &requ
 
 /**
  * Returns a list of tags that are applied to the specified stack or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
 {
@@ -974,6 +1262,12 @@ ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequest &request)
 {
@@ -990,6 +1284,12 @@ RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html"> Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEcsClusterRequest &request)
 {
@@ -1006,6 +1306,12 @@ RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEc
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElasticIpRequest &request)
 {
@@ -1037,6 +1343,12 @@ RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElas
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstanceRequest &request)
 {
@@ -1051,6 +1363,12 @@ RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstan
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const RegisterRdsDbInstanceRequest &request)
 {
@@ -1067,6 +1385,12 @@ RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const Regi
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequest &request)
 {
@@ -1089,6 +1413,12 @@ RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const SetLoadBasedAutoScalingRequest &request)
 {
@@ -1104,6 +1434,12 @@ SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const 
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest &request)
 {
@@ -1120,6 +1456,12 @@ SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const SetTimeBasedAutoScalingRequest &request)
 {
@@ -1136,6 +1478,12 @@ SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const 
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest &request)
 {
@@ -1150,6 +1498,12 @@ StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request)
 {
@@ -1167,6 +1521,12 @@ StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &request)
 {
@@ -1181,6 +1541,12 @@ StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &r
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
 {
@@ -1190,6 +1556,12 @@ StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
 /**
  * Apply cost-allocation tags to a specified stack or layer in AWS OpsWorks Stacks. For more information about how tagging
  * works, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/tagging.html">Tags</a> in the AWS OpsWorks User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &request)
 {
@@ -1206,6 +1578,12 @@ TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstanceRequest &request)
 {
@@ -1221,6 +1599,12 @@ UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstan
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequest &request)
 {
@@ -1229,6 +1613,12 @@ UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequ
 
 /**
  * Removes tags from a specified stack or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1243,6 +1633,12 @@ UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Deploy or Manage permissions level for the
  * stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
 {
@@ -1258,6 +1654,12 @@ UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpRequest &request)
 {
@@ -1272,6 +1674,12 @@ UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpR
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequest &request)
 {
@@ -1286,6 +1694,12 @@ UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequ
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &request)
 {
@@ -1300,6 +1714,12 @@ UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have self-management enabled or an attached policy
  * that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMyUserProfileRequest &request)
 {
@@ -1314,6 +1734,12 @@ UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMy
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRdsDbInstanceRequest &request)
 {
@@ -1328,6 +1754,12 @@ UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRd
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &request)
 {
@@ -1342,6 +1774,12 @@ UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &requ
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserProfileRequest &request)
 {
@@ -1357,6 +1795,12 @@ UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserPr
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack, or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &request)
 {

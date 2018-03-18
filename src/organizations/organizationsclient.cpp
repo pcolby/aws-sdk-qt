@@ -265,6 +265,12 @@ OrganizationsClient::OrganizationsClient(
  * Guide</i>> </li> </ul>
  *
  * After you accept a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHandshakeRequest &request)
 {
@@ -319,6 +325,12 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  * Guide</i>> </li> </ul>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -337,6 +349,12 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
  * handshake>
  *
  * After you cancel a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHandshakeRequest &request)
 {
@@ -404,6 +422,12 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRequest &request)
 {
@@ -427,6 +451,12 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
  * create the organization supporting only the consolidated billing features by setting the <code>FeatureSet</code>
  * parameter to <code>CONSOLIDATED_BILLING"</code>, then no policy types are enabled by default and you cannot use
  * organization
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOrganizationResponse * OrganizationsClient::createOrganization(const CreateOrganizationRequest &request)
 {
@@ -447,6 +477,12 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit(const CreateOrganizationalUnitRequest &request)
 {
@@ -464,6 +500,12 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
  * Policies</a>>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -482,6 +524,12 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
  * request>
  *
  * After you decline a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHandshakeRequest &request)
 {
@@ -491,6 +539,12 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
 /**
  * Deletes the organization. You can delete an organization only by using credentials from the master account. The
  * organization must be empty of member accounts, OUs, and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 {
@@ -504,6 +558,12 @@ DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
  * delete>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit(const DeleteOrganizationalUnitRequest &request)
 {
@@ -517,6 +577,12 @@ DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit
  * accounts>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -529,6 +595,12 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
  * account>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAccountRequest &request)
 {
@@ -541,6 +613,12 @@ DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAcc
  * account>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccountStatus(const DescribeCreateAccountStatusRequest &request)
 {
@@ -559,6 +637,12 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
  * accessible>
  *
  * This operation can be called from any account in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const DescribeHandshakeRequest &request)
 {
@@ -576,6 +660,12 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  *
  * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
  * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 {
@@ -588,6 +678,12 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
  * (OU)>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizationalUnit(const DescribeOrganizationalUnitRequest &request)
 {
@@ -600,6 +696,12 @@ DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizational
  * policy>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolicyRequest &request)
 {
@@ -624,6 +726,12 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
  * </p
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -661,6 +769,12 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(const DisableAWSServiceAccessRequest &request)
 {
@@ -682,6 +796,12 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
  * If you disable a policy type for a root, it still shows as enabled for the organization if all features are enabled in
  * that organization. Use <a>ListRoots</a> to see the status of policy types for a specified root. Use
  * <a>DescribeOrganization</a> to see the status of policy types in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const DisablePolicyTypeRequest &request)
 {
@@ -712,6 +832,12 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  *
  * This operation can be called only from the organization's master account and only if the organization has <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled all
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(const EnableAWSServiceAccessRequest &request)
 {
@@ -754,6 +880,12 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  * this>
  *
  * This operation can be called only from the organization's master account.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableAllFeaturesRequest &request)
 {
@@ -776,6 +908,12 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
  * organization>
  *
  * To view the status of policy type in a root, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePolicyTypeRequest &request)
 {
@@ -805,6 +943,12 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrganization(const InviteAccountToOrganizationRequest &request)
 {
@@ -844,6 +988,12 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  * see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
@@ -864,6 +1014,12 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
  * Guide</i>>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServiceAccessForOrganization(const ListAWSServiceAccessForOrganizationRequest &request)
 {
@@ -884,6 +1040,12 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsRequest &request)
 {
@@ -906,6 +1068,12 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const ListAccountsForParentRequest &request)
 {
@@ -926,6 +1094,12 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenRequest &request)
 {
@@ -945,6 +1119,12 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(const ListCreateAccountStatusRequest &request)
 {
@@ -969,6 +1149,12 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
  * display> </note>
  *
  * This operation can be called from any account in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount(const ListHandshakesForAccountRequest &request)
 {
@@ -995,6 +1181,12 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOrganization(const ListHandshakesForOrganizationRequest &request)
 {
@@ -1014,6 +1206,12 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganizationalUnitsForParent(const ListOrganizationalUnitsForParentRequest &request)
 {
@@ -1038,6 +1236,12 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
  * account> <note>
  *
  * In the current release, a child can have only a single parent.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest &request)
 {
@@ -1057,6 +1261,12 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -1077,6 +1287,12 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const ListPoliciesForTargetRequest &request)
 {
@@ -1102,6 +1318,12 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
  * Policy types can be enabled and disabled in roots. This is distinct from whether they are available in the organization.
  * When you enable all features, you make policy types available for use in that organization. Individual policy types can
  * then be enabled and disabled in a root. To see the availability of a policy type in an organization, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &request)
 {
@@ -1121,6 +1343,12 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
  * display> </note>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
@@ -1133,6 +1361,12 @@ ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const L
  * OU>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest &request)
 {
@@ -1173,6 +1407,12 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  * information, see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOrganization(const RemoveAccountFromOrganizationRequest &request)
 {
@@ -1186,6 +1426,12 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
  * </p
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit(const UpdateOrganizationalUnitRequest &request)
 {
@@ -1199,6 +1445,12 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
  * type>
  *
  * This operation can be called only from the organization's master
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyRequest &request)
 {

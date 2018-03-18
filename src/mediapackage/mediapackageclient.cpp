@@ -88,6 +88,12 @@ MediaPackageClient::MediaPackageClient(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelRequest &request)
 {
@@ -95,6 +101,12 @@ CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelReq
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const CreateOriginEndpointRequest &request)
 {
@@ -102,6 +114,12 @@ CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const Cr
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelRequest &request)
 {
@@ -109,6 +127,12 @@ DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelReq
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const DeleteOriginEndpointRequest &request)
 {
@@ -116,6 +140,12 @@ DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const De
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChannelRequest &request)
 {
@@ -123,6 +153,12 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(const DescribeOriginEndpointRequest &request)
 {
@@ -130,6 +166,12 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsRequest &request)
 {
@@ -137,6 +179,12 @@ ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const ListOriginEndpointsRequest &request)
 {
@@ -144,6 +192,12 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(const RotateChannelCredentialsRequest &request)
 {
@@ -151,6 +205,12 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelRequest &request)
 {
@@ -158,6 +218,12 @@ UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelReq
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const UpdateOriginEndpointRequest &request)
 {

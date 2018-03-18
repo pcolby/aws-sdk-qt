@@ -91,6 +91,12 @@ MediaStoreDataClient::MediaStoreDataClient(
 
 /**
  * Deletes an object at the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequest &request)
 {
@@ -99,6 +105,12 @@ DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequ
 
 /**
  * Gets the headers for an object at the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObjectRequest &request)
 {
@@ -107,6 +119,12 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
 
 /**
  * Downloads the object at the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &request)
 {
@@ -115,6 +133,12 @@ GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &requ
 
 /**
  * Provides a list of metadata entries about folders and objects in the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &request)
 {
@@ -123,6 +147,12 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
 
 /**
  * Uploads an object to the specified path. Object sizes are limited to 10
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
 {

@@ -176,6 +176,10 @@ QVariantMap Generator::getFunctionSignature(const QString &operationName, const 
 
     QVariantMap signature;
 
+    /// @todo Make operatoins / functions structure much more rich, and let the
+    /// templating engine do more of the presentation work. eg no need to lower
+    /// the first letter here.
+
     // The function name is just the operation name with a lower first letter.
     signature.insert(QStringLiteral("name"),
                      operationName.at(0).toLower() + operationName.mid(1));

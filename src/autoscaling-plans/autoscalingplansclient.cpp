@@ -103,6 +103,12 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  *
  * A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your
  * application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
 {
@@ -111,6 +117,12 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
 
 /**
  * Deletes the specified scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const DeleteScalingPlanRequest &request)
 {
@@ -119,6 +131,12 @@ DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const Dele
 
 /**
  * Describes the scalable resources in the specified scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request)
 {
@@ -127,6 +145,12 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
 
 /**
  * Describes the specified scaling plans or all of your scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
 {

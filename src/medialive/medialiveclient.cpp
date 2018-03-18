@@ -88,6 +88,12 @@ MediaLiveClient::MediaLiveClient(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelRequest &request)
 {
@@ -95,6 +101,12 @@ CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &request)
 {
@@ -102,6 +114,12 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(const CreateInputSecurityGroupRequest &request)
 {
@@ -109,6 +127,12 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelRequest &request)
 {
@@ -116,6 +140,12 @@ DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &request)
 {
@@ -123,6 +153,12 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request)
 {
@@ -130,6 +166,12 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannelRequest &request)
 {
@@ -137,6 +179,12 @@ DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannel
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputRequest &request)
 {
@@ -144,6 +192,12 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request)
 {
@@ -151,6 +205,12 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &request)
 {
@@ -158,6 +218,12 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const ListInputSecurityGroupsRequest &request)
 {
@@ -165,6 +231,12 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
 {
@@ -172,6 +244,12 @@ ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &reques
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &request)
 {
@@ -179,6 +257,12 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &request)
 {
@@ -186,6 +270,12 @@ StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &req
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelRequest &request)
 {

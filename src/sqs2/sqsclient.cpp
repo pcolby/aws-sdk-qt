@@ -183,6 +183,12 @@ SqsClient::SqsClient(
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &request)
 {
@@ -231,6 +237,12 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * immediately but isn't saved in memory for that message. If you don't delete a message after it is received, the
  * visibility timeout for the message reverts to the original timeout value (not to the value you set using the
  * <code>ChangeMessageVisibility</code> action) the next time the message is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const ChangeMessageVisibilityRequest &request)
 {
@@ -260,6 +272,12 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(const ChangeMessageVisibilityBatchRequest &request)
 {
@@ -322,6 +340,12 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
 {
@@ -347,6 +371,12 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
  * if one of the servers storing a copy of the message is unavailable when you send the request to delete the message. The
  * copy remains on the server and might be returned to you on a subsequent receive request. You should ensure that your
  * application is idempotent, so that receiving a message more than once does not cause
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &request)
 {
@@ -374,6 +404,12 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBatchRequest &request)
 {
@@ -398,6 +434,12 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  * exist>
  *
  * When you delete a queue, you must wait at least 60 seconds before creating a queue with the same name.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
 {
@@ -425,6 +467,12 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttributesRequest &request)
 {
@@ -441,6 +489,12 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
  * information about shared queue access, see <code> <a>AddPermission</a> </code> or see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/acp-overview.html">Shared Queues</a> in
  * the <i>Amazon Simple Queue Service Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
 {
@@ -455,6 +509,12 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
  * For more information about using dead-letter queues, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
  * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon Simple Queue Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request)
 {
@@ -496,6 +556,12 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &request)
 {
@@ -505,6 +571,12 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
 /**
  * Returns a list of your queues. The maximum number of queues that can be returned is 1,000. If you specify a value for
  * the optional <code>QueueNamePrefix</code> parameter, only queues with a name that begins with the specified value are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 {
@@ -524,6 +596,12 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
  * calling the <code>PurgeQueue</code> action are deleted. Messages sent to the queue while it is being purged might be
  * deleted. While the queue is being purged, messages sent to the queue before <code>PurgeQueue</code> is called might be
  * received, but are deleted within the next
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
 {
@@ -595,6 +673,12 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  *
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &request)
 {
@@ -604,6 +688,12 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
 /**
  * Revokes any permissions in the queue policy that matches the specified <code>Label</code> parameter. Only the owner of
  * the queue can remove
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -626,6 +716,12 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
  *
  * Any characters not included in this list will be rejected. For more information, see the <a
  * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
 {
@@ -677,6 +773,12 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  * </p
  *
  * <code>&amp;Attribute.2=that</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchRequest &request)
 {
@@ -692,6 +794,12 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
  *
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttributesRequest &request)
 {
@@ -733,6 +841,12 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
 {
@@ -774,6 +888,12 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
  * For a full list of tag restrictions, see <a
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 {

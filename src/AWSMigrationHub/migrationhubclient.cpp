@@ -106,6 +106,12 @@ MigrationHubClient::MigrationHubClient(
  * <code>arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b</code>> </li> <li>
  *
  * Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or DMS endpoint,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(const AssociateCreatedArtifactRequest &request)
 {
@@ -114,6 +120,12 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
 
 /**
  * Associates a discovered resource ID from Application Discovery Service (ADS) with a migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredResource(const AssociateDiscoveredResourceRequest &request)
 {
@@ -125,6 +137,12 @@ AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredRes
  * task names that is implicitly linked to your AWS account. It must uniquely identify the migration tool as it is used for
  * all updates made by the tool; however, it does not need to be unique for each AWS account because it is scoped to the
  * AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStream(const CreateProgressUpdateStreamRequest &request)
 {
@@ -160,6 +178,12 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
  * Once the stream and all of its resources are deleted, <code>CreateProgressUpdateStream</code> for a stream of the same
  * name will succeed, and that stream will be an entirely new logical resource (without any resources associated with the
  * old
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStream(const DeleteProgressUpdateStreamRequest &request)
 {
@@ -168,6 +192,12 @@ DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStr
 
 /**
  * Gets the migration status of an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(const DescribeApplicationStateRequest &request)
 {
@@ -176,6 +206,12 @@ DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(
 
 /**
  * Retrieves a list of all attributes associated with a specific migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const DescribeMigrationTaskRequest &request)
 {
@@ -199,6 +235,12 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
  * <code>arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b</code>> </li> <li>
  *
  * Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or RDS instance,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArtifact(const DisassociateCreatedArtifactRequest &request)
 {
@@ -207,6 +249,12 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
 
 /**
  * Disassociate an Application Discovery Service (ADS) discovered resource from a migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request)
 {
@@ -220,6 +268,12 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
  *
  * This API is a prerequisite to calling the <code>NotifyMigrationTaskState</code> API as the migration tool must first
  * register the migration task with Migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const ImportMigrationTaskRequest &request)
 {
@@ -240,6 +294,12 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
  * </p </li> <li>
  *
  * Lists created artifacts in a paginated interface.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const ListCreatedArtifactsRequest &request)
 {
@@ -248,6 +308,12 @@ ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const Li
 
 /**
  * Lists discovered resources associated with the given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
@@ -269,6 +335,12 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
  * resource> </li> <li>
  *
  * Lists migration tasks in a paginated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMigrationTasksRequest &request)
 {
@@ -277,6 +349,12 @@ ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMi
 
 /**
  * Lists progress update streams associated with the user account making this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStreams(const ListProgressUpdateStreamsRequest &request)
 {
@@ -287,6 +365,12 @@ ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStream
  * Sets the migration state of an application. For a given application identified by the value passed to
  * <code>ApplicationId</code>, its status is set or updated by passing one of three values to <code>Status</code>:
  * <code>NOT_STARTED | IN_PROGRESS |
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(const NotifyApplicationStateRequest &request)
 {
@@ -308,6 +392,12 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
  * target> </li> <li>
  *
  * <code>ProgressUpdateStream</code> is used for access control and to provide a namespace for each migration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(const NotifyMigrationTaskStateRequest &request)
 {
@@ -333,6 +423,12 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  *
  * Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an
  * association was found based on the provided details, call
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const PutResourceAttributesRequest &request)
 {

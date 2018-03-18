@@ -108,6 +108,12 @@ SimpleDBClient::SimpleDBClient(
  *
  * The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per
  * BatchDeleteAttributes operation</li> </ul>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const BatchDeleteAttributesRequest &request)
 {
@@ -155,6 +161,12 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
  * The following limitations are enforced for this operation: <ul> <li>256 attribute name-value pairs per item</li> <li>1
  * MB request size</li> <li>1 billion attributes per domain</li> <li>10 GB of total user data storage per domain</li>
  * <li>25 item limit per <code>BatchPutAttributes</code> operation</li> </ul>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAttributesRequest &request)
 {
@@ -174,6 +186,12 @@ BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAt
  *
  * If the client requires additional domains, go to <a href="http://aws.amazon.com/contact-us/simpledb-limit-request/">
  * http://aws.amazon.com/contact-us/simpledb-limit-request/</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &request)
 {
@@ -193,6 +211,12 @@ CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &r
  * Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a
  * <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or
  * <a>PutAttributes</a> operation (write) might not return updated item data.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttributesRequest &request)
 {
@@ -202,6 +226,12 @@ DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttribut
 /**
  * The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as
  * well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &request)
 {
@@ -211,6 +241,12 @@ DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &r
 /**
  * Returns information about the domain, including when the domain was created, the number of items and attributes in the
  * domain, and the size of the attribute names and values.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequest &request)
 {
@@ -225,6 +261,12 @@ DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequ
  *
  * If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system
  * does not return an error as it cannot guarantee the item does not exist on other replicas.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest &request)
 {
@@ -237,6 +279,12 @@ GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest
  * returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive
  * times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more
  * domain names with each successive operation call.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &request)
 {
@@ -279,6 +327,12 @@ ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &requ
  *
  * The following limitations are enforced for this operation: <ul> <li>256 total attribute name-value pairs per item</li>
  * <li>One billion attributes per domain</li> <li>10 GB of total user data storage per domain</li> </ul>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest &request)
 {
@@ -300,6 +354,12 @@ PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest
  *
  * For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the
  * Developer Guide.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SelectResponse * SimpleDBClient::select(const SelectRequest &request)
 {

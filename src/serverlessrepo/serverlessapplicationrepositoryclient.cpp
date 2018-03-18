@@ -110,6 +110,12 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
 
 /**
  * Creates an application, optionally including an AWS SAM file to create the first application version in the same
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -118,6 +124,12 @@ CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplica
 
 /**
  * Creates an application
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
 {
@@ -126,6 +138,12 @@ CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::create
 
 /**
  * Creates an AWS CloudFormation ChangeSet for the given
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::createCloudFormationChangeSet(const CreateCloudFormationChangeSetRequest &request)
 {
@@ -134,6 +152,12 @@ CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::c
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -142,6 +166,12 @@ DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplica
 
 /**
  * Gets the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(const GetApplicationRequest &request)
 {
@@ -150,6 +180,12 @@ GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(c
 
 /**
  * Gets the policy for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplicationPolicy(const GetApplicationPolicyRequest &request)
 {
@@ -158,6 +194,12 @@ GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplica
 
 /**
  * Lists versions for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApplicationVersions(const ListApplicationVersionsRequest &request)
 {
@@ -166,6 +208,12 @@ ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApp
 
 /**
  * Lists applications owned by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -174,6 +222,12 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
 
 /**
  * Puts the policy for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {
@@ -182,6 +236,12 @@ PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplica
 
 /**
  * Updates the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplication(const UpdateApplicationRequest &request)
 {

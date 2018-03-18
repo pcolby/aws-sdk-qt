@@ -153,6 +153,12 @@ GlacierClient::GlacierClient(
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html">Working with Archives in Amazon
  * Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-abort-upload.html">Abort
  * Multipart Upload</a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortMultipartUploadResponse * GlacierClient::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
@@ -179,6 +185,12 @@ AbortMultipartUploadResponse * GlacierClient::abortMultipartUpload(const AbortMu
  *
  * This operation is idempotent. You can successfully invoke this operation multiple times, if the vault lock is in the
  * <code>InProgress</code> state or if there is no policy associated with the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortVaultLockResponse * GlacierClient::abortVaultLock(const AbortVaultLockRequest &request)
 {
@@ -191,6 +203,12 @@ AbortVaultLockResponse * GlacierClient::abortVaultLock(const AbortVaultLockReque
  * <code>LimitExceededException</code> error. If a tag already exists on the vault under a specified key, the existing key
  * value will be overwritten. For more information about tags, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html">Tagging Amazon Glacier Resources</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToVaultResponse * GlacierClient::addTagsToVault(const AddTagsToVaultRequest &request)
 {
@@ -243,6 +261,12 @@ AddTagsToVaultResponse * GlacierClient::addTagsToVault(const AddTagsToVaultReque
  * (Multipart Upload)</a> and <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-complete-upload.html">Complete Multipart
  * Upload</a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteMultipartUploadResponse * GlacierClient::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
@@ -266,6 +290,12 @@ CompleteMultipartUploadResponse * GlacierClient::completeMultipartUpload(const C
  * If an invalid lock ID is passed in the request when the vault lock is in the <code>Locked</code> state, the operation
  * returns an <code>AccessDeniedException</code> error. If an invalid lock ID is passed in the request when the vault lock
  * is in the <code>InProgress</code> state, the operation throws an <code>InvalidParameter</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteVaultLockResponse * GlacierClient::completeVaultLock(const CompleteVaultLockRequest &request)
 {
@@ -306,6 +336,12 @@ CompleteVaultLockResponse * GlacierClient::completeVaultLock(const CompleteVault
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/creating-vaults.html">Creating a Vault in Amazon Glacier</a>
  * and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-put.html">Create Vault </a> in the <i>Amazon
  * Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVaultResponse * GlacierClient::createVault(const CreateVaultRequest &request)
 {
@@ -344,6 +380,12 @@ CreateVaultResponse * GlacierClient::createVault(const CreateVaultRequest &reque
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/deleting-an-archive.html">Deleting an Archive in Amazon
  * Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-delete.html">Delete Archive</a>
  * in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteArchiveResponse * GlacierClient::deleteArchive(const DeleteArchiveRequest &request)
 {
@@ -377,6 +419,12 @@ DeleteArchiveResponse * GlacierClient::deleteArchive(const DeleteArchiveRequest 
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/deleting-vaults.html">Deleting a Vault in Amazon Glacier</a>
  * and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-delete.html">Delete Vault </a> in the
  * <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVaultResponse * GlacierClient::deleteVault(const DeleteVaultRequest &request)
 {
@@ -394,6 +442,12 @@ DeleteVaultResponse * GlacierClient::deleteVault(const DeleteVaultRequest &reque
  * vault. For more information about vault access policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html">Amazon Glacier Access Control with
  * Vault Access Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVaultAccessPolicyResponse * GlacierClient::deleteVaultAccessPolicy(const DeleteVaultAccessPolicyRequest &request)
 {
@@ -419,6 +473,12 @@ DeleteVaultAccessPolicyResponse * GlacierClient::deleteVaultAccessPolicy(const D
  * Notifications in Amazon Glacier</a> and <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-delete.html">Delete Vault Notification
  * Configuration </a> in the Amazon Glacier Developer Guide.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVaultNotificationsResponse * GlacierClient::deleteVaultNotifications(const DeleteVaultNotificationsRequest &request)
 {
@@ -453,6 +513,12 @@ DeleteVaultNotificationsResponse * GlacierClient::deleteVaultNotifications(const
  * For more information about using this operation, see the documentation for the underlying REST API <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-describe-job-get.html">Describe Job</a> in the <i>Amazon
  * Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobResponse * GlacierClient::describeJob(const DescribeJobRequest &request)
 {
@@ -483,6 +549,12 @@ DescribeJobResponse * GlacierClient::describeJob(const DescribeJobRequest &reque
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/retrieving-vault-info.html">Retrieving Vault Metadata in
  * Amazon Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-get.html">Describe Vault
  * </a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVaultResponse * GlacierClient::describeVault(const DescribeVaultRequest &request)
 {
@@ -493,6 +565,12 @@ DescribeVaultResponse * GlacierClient::describeVault(const DescribeVaultRequest 
  * This operation returns the current data retrieval policy for the account and region specified in the GET request. For
  * more information about data retrieval policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html">Amazon Glacier Data Retrieval
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataRetrievalPolicyResponse * GlacierClient::getDataRetrievalPolicy(const GetDataRetrievalPolicyRequest &request)
 {
@@ -549,6 +627,12 @@ GetDataRetrievalPolicyResponse * GlacierClient::getDataRetrievalPolicy(const Get
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-inventory.html">Downloading a Vault Inventory</a>, <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive.html">Downloading an Archive</a>, and
  * <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-job-output-get.html">Get Job Output </a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobOutputResponse * GlacierClient::getJobOutput(const GetJobOutputRequest &request)
 {
@@ -562,6 +646,12 @@ GetJobOutputResponse * GlacierClient::getJobOutput(const GetJobOutputRequest &re
  * <code>404 Not found</code> error. For more information about vault access policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html">Amazon Glacier Access Control with
  * Vault Access
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVaultAccessPolicyResponse * GlacierClient::getVaultAccessPolicy(const GetVaultAccessPolicyRequest &request)
 {
@@ -601,6 +691,12 @@ GetVaultAccessPolicyResponse * GlacierClient::getVaultAccessPolicy(const GetVaul
  * information about vault lock policies, <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock-policy.html">Amazon Glacier Access Control with
  * Vault Lock Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVaultLockResponse * GlacierClient::getVaultLock(const GetVaultLockRequest &request)
 {
@@ -633,6 +729,12 @@ GetVaultLockResponse * GlacierClient::getVaultLock(const GetVaultLockRequest &re
  * Notifications in Amazon Glacier</a> and <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-get.html">Get Vault Notification
  * Configuration </a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetVaultNotificationsResponse * GlacierClient::getVaultNotifications(const GetVaultNotificationsRequest &request)
 {
@@ -643,6 +745,12 @@ GetVaultNotificationsResponse * GlacierClient::getVaultNotifications(const GetVa
  * This operation initiates a job of the specified type, which can be a select, an archival retrieval, or a vault
  * retrieval. For more information about using this operation, see the documentation for the underlying REST API <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html">Initiate a Job</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateJobResponse * GlacierClient::initiateJob(const InitiateJobRequest &request)
 {
@@ -691,6 +799,12 @@ InitiateJobResponse * GlacierClient::initiateJob(const InitiateJobRequest &reque
  * (Multipart Upload)</a> and <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-initiate-upload.html">Initiate Multipart
  * Upload</a> in the <i>Amazon Glacier Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateMultipartUploadResponse * GlacierClient::initiateMultipartUpload(const InitiateMultipartUploadRequest &request)
 {
@@ -740,6 +854,12 @@ InitiateMultipartUploadResponse * GlacierClient::initiateMultipartUpload(const I
  * If this operation is called when the vault lock is in the <code>InProgress</code> state, the operation returns an
  * <code>AccessDeniedException</code> error. When the vault lock is in the <code>InProgress</code> state you must call
  * <a>AbortVaultLock</a> before you can initiate a new vault lock policy.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVaultLockRequest &request)
 {
@@ -785,6 +905,12 @@ InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVault
  *
  * For more information about using this operation, see the documentation for the underlying REST API <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-jobs-get.html">List Jobs</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
 {
@@ -825,6 +951,12 @@ ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html">Working with Archives in Amazon
  * Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-list-uploads.html">List
  * Multipart Uploads </a> in the <i>Amazon Glacier Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
@@ -859,6 +991,12 @@ ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMul
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html">Working with Archives in Amazon
  * Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-list-parts.html">List
  * Parts</a> in the <i>Amazon Glacier Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPartsResponse * GlacierClient::listParts(const ListPartsRequest &request)
 {
@@ -867,6 +1005,12 @@ ListPartsResponse * GlacierClient::listParts(const ListPartsRequest &request)
 
 /**
  * This operation lists the provisioned capacity units for the specified AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProvisionedCapacityResponse * GlacierClient::listProvisionedCapacity(const ListProvisionedCapacityRequest &request)
 {
@@ -877,6 +1021,12 @@ ListProvisionedCapacityResponse * GlacierClient::listProvisionedCapacity(const L
  * This operation lists all the tags attached to a vault. The operation returns an empty map if there are no tags. For more
  * information about tags, see <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html">Tagging Amazon
  * Glacier
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaultRequest &request)
 {
@@ -910,6 +1060,12 @@ ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaul
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/retrieving-vault-info.html">Retrieving Vault Metadata in
  * Amazon Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vaults-get.html">List Vaults
  * </a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListVaultsResponse * GlacierClient::listVaults(const ListVaultsRequest &request)
 {
@@ -918,6 +1074,12 @@ ListVaultsResponse * GlacierClient::listVaults(const ListVaultsRequest &request)
 
 /**
  * This operation purchases a provisioned capacity unit for an AWS account.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseProvisionedCapacityResponse * GlacierClient::purchaseProvisionedCapacity(const PurchaseProvisionedCapacityRequest &request)
 {
@@ -928,6 +1090,12 @@ PurchaseProvisionedCapacityResponse * GlacierClient::purchaseProvisionedCapacity
  * This operation removes one or more tags from the set of tags attached to a vault. For more information about tags, see
  * <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html">Tagging Amazon Glacier Resources</a>. This
  * operation is idempotent. The operation will be successful, even if there are no tags attached to the vault.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromVaultResponse * GlacierClient::removeTagsFromVault(const RemoveTagsFromVaultRequest &request)
 {
@@ -944,6 +1112,12 @@ RemoveTagsFromVaultResponse * GlacierClient::removeTagsFromVault(const RemoveTag
  * information about data retrieval policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html">Amazon Glacier Data Retrieval
  * Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDataRetrievalPolicyResponse * GlacierClient::setDataRetrievalPolicy(const SetDataRetrievalPolicyRequest &request)
 {
@@ -957,6 +1131,12 @@ SetDataRetrievalPolicyResponse * GlacierClient::setDataRetrievalPolicy(const Set
  * be up to 20 KB in size. For more information about vault access policies, see <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html">Amazon Glacier Access Control with
  * Vault Access Policies</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetVaultAccessPolicyResponse * GlacierClient::setVaultAccessPolicy(const SetVaultAccessPolicyRequest &request)
 {
@@ -1005,6 +1185,12 @@ SetVaultAccessPolicyResponse * GlacierClient::setVaultAccessPolicy(const SetVaul
  * Notifications in Amazon Glacier</a> and <a
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-put.html">Set Vault Notification
  * Configuration </a> in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetVaultNotificationsResponse * GlacierClient::setVaultNotifications(const SetVaultNotificationsRequest &request)
 {
@@ -1054,6 +1240,12 @@ SetVaultNotificationsResponse * GlacierClient::setVaultNotifications(const SetVa
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-an-archive.html">Uploading an Archive in Amazon
  * Glacier</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-post.html">Upload Archive</a>
  * in the <i>Amazon Glacier Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadArchiveResponse * GlacierClient::uploadArchive(const UploadArchiveRequest &request)
 {
@@ -1113,6 +1305,12 @@ UploadArchiveResponse * GlacierClient::uploadArchive(const UploadArchiveRequest 
  * href="http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-archive-mpu.html">Uploading Large Archives in Parts
  * (Multipart Upload)</a> and <a href="http://docs.aws.amazon.com/amazonglacier/latest/dev/api-upload-part.html">Upload
  * Part </a> in the <i>Amazon Glacier Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMultipartPartRequest &request)
 {

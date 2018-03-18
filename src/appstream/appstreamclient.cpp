@@ -92,6 +92,12 @@ AppStreamClient::AppStreamClient(
 
 /**
  * Associates the specified fleet with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetRequest &request)
 {
@@ -101,6 +107,12 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
 /**
  * Copies the image within the same region or to a new region within the same AWS account. Note that any tags you added to
  * the image will not be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 {
@@ -109,6 +121,12 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 
 /**
  * Creates a directory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const CreateDirectoryConfigRequest &request)
 {
@@ -117,6 +135,12 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
 
 /**
  * Creates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &request)
 {
@@ -129,6 +153,12 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
  * builder>
  *
  * The initial state of the builder is <code>PENDING</code>. When it is ready, the state is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateImageBuilderRequest &request)
 {
@@ -137,6 +167,12 @@ CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateIma
 
 /**
  * Creates a URL to start an image builder streaming
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStreamingURL(const CreateImageBuilderStreamingURLRequest &request)
 {
@@ -145,6 +181,12 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
 
 /**
  * Creates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &request)
 {
@@ -153,6 +195,12 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
 
 /**
  * Creates a URL to start a streaming session for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
@@ -161,6 +209,12 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
 
 /**
  * Deletes the specified directory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request)
 {
@@ -169,6 +223,12 @@ DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const Del
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -178,6 +238,12 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
 /**
  * Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot
  * provision new capacity using the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &request)
 {
@@ -186,6 +252,12 @@ DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &req
 
 /**
  * Deletes the specified image builder and releases the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteImageBuilderRequest &request)
 {
@@ -195,6 +267,12 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
 /**
  * Deletes the specified stack. After this operation completes, the environment can no longer be activated and any
  * reservations made for the stack are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &request)
 {
@@ -204,6 +282,12 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
 /**
  * Describes the specified directory configurations. Note that although the response syntax in this topic includes the
  * account password, this password is not returned in the actual response.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request)
 {
@@ -212,6 +296,12 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
 
 /**
  * Describes the specified fleets or all fleets in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsRequest &request)
 {
@@ -220,6 +310,12 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
 
 /**
  * Describes the specified image builders or all image builders in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const DescribeImageBuildersRequest &request)
 {
@@ -228,6 +324,12 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
 
 /**
  * Describes the specified images or all images in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -238,6 +340,12 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
  * Describes the streaming sessions for the specified stack and fleet. If a user ID is provided, only the streaming
  * sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate
  * users using a streaming
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessionsRequest &request)
 {
@@ -246,6 +354,12 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
 
 /**
  * Describes the specified stacks or all stacks in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksRequest &request)
 {
@@ -254,6 +368,12 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
 
 /**
  * Disassociates the specified fleet from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateFleetResponse * AppStreamClient::disassociateFleet(const DisassociateFleetRequest &request)
 {
@@ -262,6 +382,12 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
 
 /**
  * Stops the specified streaming
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionRequest &request)
 {
@@ -270,6 +396,12 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
 
 /**
  * Lists the fleets associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListAssociatedFleetsRequest &request)
 {
@@ -278,6 +410,12 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
 
 /**
  * Lists the stacks associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListAssociatedStacksRequest &request)
 {
@@ -292,6 +430,12 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -300,6 +444,12 @@ ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTag
 
 /**
  * Starts the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &request)
 {
@@ -308,6 +458,12 @@ StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &reques
 
 /**
  * Starts the specified image
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageBuilderRequest &request)
 {
@@ -316,6 +472,12 @@ StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageB
 
 /**
  * Stops the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 {
@@ -324,6 +486,12 @@ StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 
 /**
  * Stops the specified image
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuilderRequest &request)
 {
@@ -349,6 +517,12 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &request)
 {
@@ -367,6 +541,12 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  * For more information about tags, see <a
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceRequest &request)
 {
@@ -375,6 +555,12 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
 
 /**
  * Updates the specified directory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const UpdateDirectoryConfigRequest &request)
 {
@@ -389,6 +575,12 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet name. If the fleet is
  * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code> and <code>ComputeCapacity</code>
  * attributes. If the fleet is in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {
@@ -397,6 +589,12 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
 
 /**
  * Updates the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &request)
 {

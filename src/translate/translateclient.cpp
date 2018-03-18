@@ -115,6 +115,12 @@ TranslateClient::TranslateClient(
  * (pt> </li> <li>
  *
  * Spanish
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TranslateTextResponse * TranslateClient::translateText(const TranslateTextRequest &request)
 {

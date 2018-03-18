@@ -170,6 +170,12 @@ CodeDeployClient::CodeDeployClient(
 
 /**
  * Adds tags to on-premises
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInstances(const AddTagsToOnPremisesInstancesRequest &request)
 {
@@ -178,6 +184,12 @@ AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInst
 
 /**
  * Gets information about one or more application
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevisions(const BatchGetApplicationRevisionsRequest &request)
 {
@@ -186,6 +198,12 @@ BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevi
 
 /**
  * Gets information about one or more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const BatchGetApplicationsRequest &request)
 {
@@ -194,6 +212,12 @@ BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const Batc
 
 /**
  * Gets information about one or more deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(const BatchGetDeploymentGroupsRequest &request)
 {
@@ -202,6 +226,12 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
 
 /**
  * Gets information about one or more instance that are part of a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
 {
@@ -210,6 +240,12 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
 
 /**
  * Gets information about one or more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchGetDeploymentsRequest &request)
 {
@@ -218,6 +254,12 @@ BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchG
 
 /**
  * Gets information about one or more on-premises
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request)
 {
@@ -229,6 +271,12 @@ BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstan
  * instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which
  * is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all
  * instances have a status of Ready.)
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const ContinueDeploymentRequest &request)
 {
@@ -237,6 +285,12 @@ ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const Continue
 
 /**
  * Creates an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * CodeDeployClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -245,6 +299,12 @@ CreateApplicationResponse * CodeDeployClient::createApplication(const CreateAppl
 
 /**
  * Deploys an application revision through the specified deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -253,6 +313,12 @@ CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploy
 
 /**
  * Creates a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const CreateDeploymentConfigRequest &request)
 {
@@ -261,6 +327,12 @@ CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const 
 
 /**
  * Creates a deployment group to which application revisions will be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const CreateDeploymentGroupRequest &request)
 {
@@ -269,6 +341,12 @@ CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const Cr
 
 /**
  * Deletes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -281,6 +359,12 @@ DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteAppl
  * configuration> <note>
  *
  * A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request)
 {
@@ -289,6 +373,12 @@ DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const 
 
 /**
  * Deletes a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request)
 {
@@ -297,6 +387,12 @@ DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const De
 
 /**
  * Deletes a GitHub account
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request)
 {
@@ -305,6 +401,12 @@ DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(co
 
 /**
  * Deregisters an on-premises
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request)
 {
@@ -313,6 +415,12 @@ DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesIns
 
 /**
  * Gets information about an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRequest &request)
 {
@@ -321,6 +429,12 @@ GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRe
 
 /**
  * Gets information about an application
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const GetApplicationRevisionRequest &request)
 {
@@ -329,6 +443,12 @@ GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const 
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentRequest &request)
 {
@@ -337,6 +457,12 @@ GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentReque
 
 /**
  * Gets information about a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDeploymentConfigRequest &request)
 {
@@ -345,6 +471,12 @@ GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDep
 
 /**
  * Gets information about a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeploymentGroupRequest &request)
 {
@@ -353,6 +485,12 @@ GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeplo
 
 /**
  * Gets information about an instance as part of a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const GetDeploymentInstanceRequest &request)
 {
@@ -361,6 +499,12 @@ GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const Ge
 
 /**
  * Gets information about an on-premises
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const GetOnPremisesInstanceRequest &request)
 {
@@ -369,6 +513,12 @@ GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const Ge
 
 /**
  * Lists information about revisions for an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(const ListApplicationRevisionsRequest &request)
 {
@@ -377,6 +527,12 @@ ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(co
 
 /**
  * Lists the applications registered with the applicable IAM user or AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -385,6 +541,12 @@ ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicat
 
 /**
  * Lists the deployment configurations with the applicable IAM user or AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const ListDeploymentConfigsRequest &request)
 {
@@ -393,6 +555,12 @@ ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const Li
 
 /**
  * Lists the deployment groups for an application registered with the applicable IAM user or AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const ListDeploymentGroupsRequest &request)
 {
@@ -401,6 +569,12 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
 
 /**
  * Lists the instance for a deployment associated with the applicable IAM user or AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
 {
@@ -409,6 +583,12 @@ ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(cons
 
 /**
  * Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeploymentsRequest &request)
 {
@@ -417,6 +597,12 @@ ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeployment
 
 /**
  * Lists the names of stored connections to GitHub
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNames(const ListGitHubAccountTokenNamesRequest &request)
 {
@@ -430,6 +616,12 @@ ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNa
  *
  * Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only
  * registered or deregistered on-premises instance names, use the registration status
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(const ListOnPremisesInstancesRequest &request)
 {
@@ -439,6 +631,12 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
 /**
  * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
  * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
 {
@@ -447,6 +645,12 @@ PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEve
 
 /**
  * Registers with AWS CodeDeploy a revision for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevision(const RegisterApplicationRevisionRequest &request)
 {
@@ -459,6 +663,12 @@ RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevis
  * instance> <note>
  *
  * Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstance(const RegisterOnPremisesInstanceRequest &request)
 {
@@ -467,6 +677,12 @@ RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstanc
 
 /**
  * Removes one or more tags from one or more on-premises
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPremisesInstances(const RemoveTagsFromOnPremisesInstancesRequest &request)
 {
@@ -476,6 +692,12 @@ RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPr
 /**
  * In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the
  * traffic routing is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForInstanceTermination(const SkipWaitTimeForInstanceTerminationRequest &request)
 {
@@ -484,6 +706,12 @@ SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForIn
 
 /**
  * Attempts to stop an ongoing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRequest &request)
 {
@@ -492,6 +720,12 @@ StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRe
 
 /**
  * Changes the name of an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -500,6 +734,12 @@ UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateAppl
 
 /**
  * Changes information about a deployment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const UpdateDeploymentGroupRequest &request)
 {

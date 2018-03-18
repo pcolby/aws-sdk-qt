@@ -149,6 +149,12 @@ SwfClient::SwfClient(
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions(const CountClosedWorkflowExecutionsRequest &request)
 {
@@ -201,6 +207,12 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(const CountOpenWorkflowExecutionsRequest &request)
 {
@@ -240,6 +252,12 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const CountPendingActivityTasksRequest &request)
 {
@@ -279,6 +297,12 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const CountPendingDecisionTasksRequest &request)
 {
@@ -328,6 +352,12 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const DeprecateActivityTypeRequest &request)
 {
@@ -371,6 +401,12 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainRequest &request)
 {
@@ -421,6 +457,12 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const DeprecateWorkflowTypeRequest &request)
 {
@@ -466,6 +508,12 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeActivityTypeRequest &request)
 {
@@ -502,6 +550,12 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &request)
 {
@@ -542,6 +596,12 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const DescribeWorkflowExecutionRequest &request)
 {
@@ -587,6 +647,12 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWorkflowTypeRequest &request)
 {
@@ -628,6 +694,12 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(const GetWorkflowExecutionHistoryRequest &request)
 {
@@ -667,6 +739,12 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypesRequest &request)
 {
@@ -721,6 +799,12 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request)
 {
@@ -763,6 +847,12 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
 {
@@ -817,6 +907,12 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request)
 {
@@ -854,6 +950,12 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypesRequest &request)
 {
@@ -900,6 +1002,12 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivityTaskRequest &request)
 {
@@ -959,6 +1067,12 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisionTaskRequest &request)
 {
@@ -1026,6 +1140,12 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(const RecordActivityTaskHeartbeatRequest &request)
 {
@@ -1079,6 +1199,12 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterActivityTypeRequest &request)
 {
@@ -1116,6 +1242,12 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &request)
 {
@@ -1173,6 +1305,12 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWorkflowTypeRequest &request)
 {
@@ -1221,6 +1359,12 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecution(const RequestCancelWorkflowExecutionRequest &request)
 {
@@ -1274,6 +1418,12 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(const RespondActivityTaskCanceledRequest &request)
 {
@@ -1325,6 +1475,12 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(const RespondActivityTaskCompletedRequest &request)
 {
@@ -1370,6 +1526,12 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const RespondActivityTaskFailedRequest &request)
 {
@@ -1397,6 +1559,12 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
  * they were actual API calls, including applying conditions to some parameters. For more information, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request)
 {
@@ -1444,6 +1612,12 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const SignalWorkflowExecutionRequest &request)
 {
@@ -1516,6 +1690,12 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWorkflowExecutionRequest &request)
 {
@@ -1568,6 +1748,12 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request)
 {

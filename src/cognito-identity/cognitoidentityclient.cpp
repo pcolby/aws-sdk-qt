@@ -152,6 +152,12 @@ CognitoIdentityClient::CognitoIdentityClient(
  * </p </li> </ul>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const CreateIdentityPoolRequest &request)
 {
@@ -164,6 +170,12 @@ CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const Cre
  * delete>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteIdentitiesRequest &request)
 {
@@ -176,6 +188,12 @@ DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteI
  * pool>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const DeleteIdentityPoolRequest &request)
 {
@@ -188,6 +206,12 @@ DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const Del
  * logins>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const DescribeIdentityRequest &request)
 {
@@ -201,6 +225,12 @@ DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const Describ
  * users>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const DescribeIdentityPoolRequest &request)
 {
@@ -215,6 +245,12 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
  * token>
  *
  * This is a public API. You do not need any credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIdentity(const GetCredentialsForIdentityRequest &request)
 {
@@ -227,6 +263,12 @@ GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIden
  * account>
  *
  * This is a public API. You do not need any credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
 {
@@ -239,6 +281,12 @@ GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
  * pool>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const GetIdentityPoolRolesRequest &request)
 {
@@ -256,6 +304,12 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
  * minutes>
  *
  * This is a public API. You do not need any credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTokenRequest &request)
 {
@@ -279,6 +333,12 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
  * <code>IdentityPoolId</code>>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTokenForDeveloperIdentity(const GetOpenIdTokenForDeveloperIdentityRequest &request)
 {
@@ -291,6 +351,12 @@ GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTok
  * pool>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentitiesRequest &request)
 {
@@ -303,6 +369,12 @@ ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentit
  * account>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListIdentityPoolsRequest &request)
 {
@@ -321,6 +393,12 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
  * thrown>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity(const LookupDeveloperIdentityRequest &request)
 {
@@ -337,6 +415,12 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
  * thrown>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentities(const MergeDeveloperIdentitiesRequest &request)
 {
@@ -349,6 +433,12 @@ MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentiti
  * action>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const SetIdentityPoolRolesRequest &request)
 {
@@ -363,6 +453,12 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
  * inaccessible>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity(const UnlinkDeveloperIdentityRequest &request)
 {
@@ -376,6 +472,12 @@ UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity
  * inaccessible>
  *
  * This is a public API. You do not need any credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdentityRequest &request)
 {
@@ -388,6 +490,12 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
  * pool>
  *
  * You must use AWS Developer credentials to call this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const UpdateIdentityPoolRequest &request)
 {

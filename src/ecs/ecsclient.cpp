@@ -116,6 +116,12 @@ EcsClient::EcsClient(
  * makes the call does not have permissions to create the service-linked role, it is not created. For more information, see
  * <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
  * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &request)
 {
@@ -187,6 +193,12 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  *
  * Place the new service task on a valid container instance in an optimal Availability Zone (based on the previous steps),
  * favoring container instances with the fewest number of running tasks for this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &request)
 {
@@ -195,6 +207,12 @@ CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &req
 
 /**
  * Deletes one or more custom attributes from an Amazon ECS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesRequest &request)
 {
@@ -204,6 +222,12 @@ DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesReq
 /**
  * Deletes the specified cluster. You must deregister all container instances from this cluster before you may delete it.
  * You can list the container instances in a cluster with <a>ListContainerInstances</a> and deregister them with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -224,6 +248,12 @@ DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &req
  * can still be viewed with <a>DescribeServices</a> API operations. However, in the future, <code>INACTIVE</code> services
  * may be cleaned up and purged from Amazon ECS record keeping, and <a>DescribeServices</a> API operations on those
  * services return a <code>ServiceNotFoundException</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &request)
 {
@@ -247,6 +277,12 @@ DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &req
  *
  * If you terminate a running container instance, Amazon ECS automatically deregisters the instance from your cluster
  * (stopped container instances or instances with disconnected agents are not automatically deregistered when
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(const DeregisterContainerInstanceRequest &request)
 {
@@ -270,6 +306,12 @@ DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(con
  * At this time, <code>INACTIVE</code> task definitions remain discoverable in your account indefinitely; however, this
  * behavior is subject to change in the future, so you should not rely on <code>INACTIVE</code> task definitions persisting
  * beyond the lifecycle of any associated tasks and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const DeregisterTaskDefinitionRequest &request)
 {
@@ -278,6 +320,12 @@ DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const Der
 
 /**
  * Describes one or more of your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersRequest &request)
 {
@@ -287,6 +335,12 @@ DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersReq
 /**
  * Describes Amazon Elastic Container Service container instances. Returns metadata about registered and remaining
  * resources on each container instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const DescribeContainerInstancesRequest &request)
 {
@@ -295,6 +349,12 @@ DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const
 
 /**
  * Describes the specified services running in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServicesResponse * EcsClient::describeServices(const DescribeServicesRequest &request)
 {
@@ -308,6 +368,12 @@ DescribeServicesResponse * EcsClient::describeServices(const DescribeServicesReq
  * family> <note>
  *
  * You can only describe <code>INACTIVE</code> task definitions while an active task or service references
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTaskDefinitionResponse * EcsClient::describeTaskDefinition(const DescribeTaskDefinitionRequest &request)
 {
@@ -316,6 +382,12 @@ DescribeTaskDefinitionResponse * EcsClient::describeTaskDefinition(const Describ
 
 /**
  * Describes a specified task or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTasksResponse * EcsClient::describeTasks(const DescribeTasksRequest &request)
 {
@@ -330,6 +402,12 @@ DescribeTasksResponse * EcsClient::describeTasks(const DescribeTasksRequest &req
  * agent> </note>
  *
  * Returns an endpoint for the Amazon ECS agent to poll for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPollEndpointRequest &request)
 {
@@ -342,6 +420,12 @@ DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPol
  * You can filter the list of results to a single attribute name to only return results that have that name. You can also
  * filter the results by attribute name and value, for example, to see which container instances in a cluster are running a
  * Linux AMI (<code>ecs.os-type=linux</code>).
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttributesResponse * EcsClient::listAttributes(const ListAttributesRequest &request)
 {
@@ -350,6 +434,12 @@ ListAttributesResponse * EcsClient::listAttributes(const ListAttributesRequest &
 
 /**
  * Returns a list of existing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListClustersResponse * EcsClient::listClusters(const ListClustersRequest &request)
 {
@@ -362,6 +452,12 @@ ListClustersResponse * EcsClient::listClusters(const ListClustersRequest &reques
  * parameter. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language</a>
  * in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListContainerInstancesRequest &request)
 {
@@ -370,6 +466,12 @@ ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListCon
 
 /**
  * Lists the services that are running in a specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListServicesResponse * EcsClient::listServices(const ListServicesRequest &request)
 {
@@ -385,6 +487,12 @@ ListServicesResponse * EcsClient::listServices(const ListServicesRequest &reques
  * You can filter out task definition families that do not contain any <code>ACTIVE</code> task definition revisions by
  * setting the <code>status</code> parameter to <code>ACTIVE</code>. You can also filter the results with the
  * <code>familyPrefix</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTaskDefinitionFamiliesResponse * EcsClient::listTaskDefinitionFamilies(const ListTaskDefinitionFamiliesRequest &request)
 {
@@ -394,6 +502,12 @@ ListTaskDefinitionFamiliesResponse * EcsClient::listTaskDefinitionFamilies(const
 /**
  * Returns a list of task definitions that are registered to your account. You can filter the results by family name with
  * the <code>familyPrefix</code> parameter or by status with the <code>status</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefinitionsRequest &request)
 {
@@ -409,6 +523,12 @@ ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefin
  *
  * Recently stopped tasks might appear in the returned results. Currently, stopped tasks appear in the returned results for
  * at least one hour.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
 {
@@ -421,6 +541,12 @@ ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes">Attributes</a>
  * in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &request)
 {
@@ -435,6 +561,12 @@ PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &req
  * agent> </note>
  *
  * Registers an EC2 instance into the specified cluster. This instance becomes available to place containers
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterContainerInstanceResponse * EcsClient::registerContainerInstance(const RegisterContainerInstanceRequest &request)
 {
@@ -465,6 +597,12 @@ RegisterContainerInstanceResponse * EcsClient::registerContainerInstance(const R
  * specify a <a>NetworkConfiguration</a> when you create a service or run a task with the task definition. For more
  * information, see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
  * Networking</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const RegisterTaskDefinitionRequest &request)
 {
@@ -508,6 +646,12 @@ RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const Registe
  * Add wait time between subsequent commands, even if the DescribeTasks command returns an accurate response. Apply an
  * exponential backoff algorithm starting with a couple of seconds of wait time, and increase gradually up to about five
  * minutes of wait
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RunTaskResponse * EcsClient::runTask(const RunTaskRequest &request)
 {
@@ -522,6 +666,12 @@ RunTaskResponse * EcsClient::runTask(const RunTaskRequest &request)
  * Alternatively, you can use <a>RunTask</a> to place tasks for you. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">Scheduling Tasks</a> in the
  * <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
 {
@@ -544,6 +694,12 @@ StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
  * <code>ECS_CONTAINER_STOP_TIMEOUT</code> variable. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html">Amazon ECS Container Agent
  * Configuration</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopTaskResponse * EcsClient::stopTask(const StopTaskRequest &request)
 {
@@ -558,6 +714,12 @@ StopTaskResponse * EcsClient::stopTask(const StopTaskRequest &request)
  * agent> </note>
  *
  * Sent to acknowledge that a container changed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const SubmitContainerStateChangeRequest &request)
 {
@@ -572,6 +734,12 @@ SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const
  * agent> </note>
  *
  * Sent to acknowledge that a task changed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTaskStateChangeRequest &request)
 {
@@ -589,6 +757,12 @@ SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTas
  * service installed and running. For help updating the Amazon ECS container agent on other operating systems, see <a
  * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html#manually_update_agent">Manually
  * Updating the Amazon ECS Container Agent</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateContainerAgentRequest &request)
 {
@@ -647,6 +821,12 @@ UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateConta
  *
  * When you set a container instance to <code>ACTIVE</code>, the Amazon ECS scheduler can begin scheduling tasks on the
  * instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState(const UpdateContainerInstancesStateRequest &request)
 {
@@ -734,6 +914,12 @@ UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState
  *
  * Stop the task on a container instance in an optimal Availability Zone (based on the previous steps), favoring container
  * instances with the largest number of running tasks for this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServiceResponse * EcsClient::updateService(const UpdateServiceRequest &request)
 {

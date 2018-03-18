@@ -155,6 +155,12 @@ RdsClient::RdsClient(
  * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
  * Aurora to Access Other AWS Services On Your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
@@ -163,6 +169,12 @@ AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClus
 
 /**
  * Adds a source identifier to an existing RDS event notification
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request)
 {
@@ -177,6 +189,12 @@ AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubs
  *
  * For an overview on tagging Amazon RDS resources, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -185,6 +203,12 @@ AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResource
 
 /**
  * Applies a pending maintenance action to a resource (for example, to a DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
 {
@@ -207,6 +231,12 @@ ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction
  *
  * For an overview of CIDR ranges, go to the <a
  * href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Wikipedia Tutorial</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIngress(const AuthorizeDBSecurityGroupIngressRequest &request)
 {
@@ -215,6 +245,12 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
 
 /**
  * Copies the specified DB cluster parameter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(const CopyDBClusterParameterGroupRequest &request)
 {
@@ -303,6 +339,12 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -311,6 +353,12 @@ CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClu
 
 /**
  * Copies the specified DB parameter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParameterGroupRequest &request)
 {
@@ -330,6 +378,12 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  * For more information about copying snapshots, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html">Copying a DB Snapshot</a> in the
  * Amazon RDS User Guide.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &request)
 {
@@ -338,6 +392,12 @@ CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &
 
 /**
  * Copies the specified option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupRequest &request)
 {
@@ -358,6 +418,12 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterRequest &request)
 {
@@ -395,6 +461,12 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request)
 {
@@ -405,6 +477,12 @@ CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup
  * Creates a snapshot of a DB cluster. For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
@@ -413,6 +491,12 @@ CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const Creat
 
 /**
  * Creates a new DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceRequest &request)
 {
@@ -438,6 +522,12 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  * </p <important>
  *
  * Your source DB instance must have backup retention enabled.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(const CreateDBInstanceReadReplicaRequest &request)
 {
@@ -464,6 +554,12 @@ CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(con
  * database defined by the <code>character_set_database</code> parameter. You can use the <i>Parameter Groups</i> option of
  * the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the <i>DescribeDBParameters</i> command to
  * verify that your DB parameter group has been created or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateDBParameterGroupRequest &request)
 {
@@ -472,6 +568,12 @@ CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateD
 
 /**
  * Creates a new DB security group. DB security groups control access to a DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBSecurityGroupRequest &request)
 {
@@ -480,6 +582,12 @@ CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBS
 
 /**
  * Creates a DBSnapshot. The source DBInstance must be in "available"
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotRequest &request)
 {
@@ -488,6 +596,12 @@ CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotReq
 
 /**
  * Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubnetGroupRequest &request)
 {
@@ -513,6 +627,12 @@ CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubne
  * a SourceIdentifier, you receive notice of the events for that source type for all your RDS sources. If you do not
  * specify either the SourceType nor the SourceIdentifier, you are notified of events generated from all RDS sources
  * belonging to your customer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -521,6 +641,12 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
 
 /**
  * Creates a new option group. You can create up to 20 option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroupRequest &request)
 {
@@ -537,6 +663,12 @@ CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroup
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
@@ -552,6 +684,12 @@ DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterReques
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request)
 {
@@ -570,6 +708,12 @@ DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request)
 {
@@ -611,6 +755,12 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  * To delete a DB instance in this case, first call the <a>PromoteReadReplicaDBCluster</a> API action to promote the DB
  * cluster so it's no longer a Read Replica. After the promotion completes, then call the <code>DeleteDBInstance</code> API
  * action to delete the final instance in the DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
@@ -619,6 +769,12 @@ DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceReq
 
 /**
  * Deletes a specified DBParameterGroup. The DBParameterGroup to be deleted can't be associated with any DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request)
 {
@@ -631,6 +787,12 @@ DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteD
  * group> <note>
  *
  * The specified DB security group must not be associated with any DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBSecurityGroupRequest &request)
 {
@@ -643,6 +805,12 @@ DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBS
  * terminated> <note>
  *
  * The DBSnapshot must be in the <code>available</code> state to be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotRequest &request)
 {
@@ -655,6 +823,12 @@ DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotReq
  * group> <note>
  *
  * The specified database subnet group must not be associated with any DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubnetGroupRequest &request)
 {
@@ -663,6 +837,12 @@ DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubne
 
 /**
  * Deletes an RDS event notification
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
@@ -671,6 +851,12 @@ DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const Delet
 
 /**
  * Deletes an existing option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroupRequest &request)
 {
@@ -685,6 +871,12 @@ DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroup
  * value>
  *
  * This command doesn't take any
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -693,6 +885,12 @@ DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const D
 
 /**
  * Lists the set of CA certificates provided by Amazon RDS for this AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
@@ -708,6 +906,12 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
@@ -722,6 +926,12 @@ DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameter
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(const DescribeDBClusterParametersRequest &request)
 {
@@ -742,6 +952,12 @@ DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(con
  *
  * To add or remove access for an AWS account to copy or restore a manual DB cluster snapshot, or to make the manual DB
  * cluster snapshot public or private, use the <a>ModifyDBClusterSnapshotAttribute</a> API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request)
 {
@@ -756,6 +972,12 @@ DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapsh
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request)
 {
@@ -770,6 +992,12 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -778,6 +1006,12 @@ DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClust
 
 /**
  * Returns a list of the available DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const DescribeDBEngineVersionsRequest &request)
 {
@@ -786,6 +1020,12 @@ DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const Des
 
 /**
  * Returns information about provisioned RDS instances. This API supports
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBInstancesRequest &request)
 {
@@ -794,6 +1034,12 @@ DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBIns
 
 /**
  * Returns a list of DB log files for the DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBLogFilesResponse * RdsClient::describeDBLogFiles(const DescribeDBLogFilesRequest &request)
 {
@@ -803,6 +1049,12 @@ DescribeDBLogFilesResponse * RdsClient::describeDBLogFiles(const DescribeDBLogFi
 /**
  * Returns a list of <code>DBParameterGroup</code> descriptions. If a <code>DBParameterGroupName</code> is specified, the
  * list will contain only the description of the specified DB parameter group.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const DescribeDBParameterGroupsRequest &request)
 {
@@ -811,6 +1063,12 @@ DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const D
 
 /**
  * Returns the detailed parameter list for a particular DB parameter
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBParametersRequest &request)
 {
@@ -820,6 +1078,12 @@ DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBP
 /**
  * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified, the
  * list will contain only the descriptions of the specified DB security group.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
 {
@@ -840,6 +1104,12 @@ DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const Des
  *
  * To add or remove access for an AWS account to copy or restore a manual DB snapshot, or to make the manual DB snapshot
  * public or private, use the <a>ModifyDBSnapshotAttribute</a> API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(const DescribeDBSnapshotAttributesRequest &request)
 {
@@ -848,6 +1118,12 @@ DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(c
 
 /**
  * Returns information about DB snapshots. This API action supports
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBSnapshotsResponse * RdsClient::describeDBSnapshots(const DescribeDBSnapshotsRequest &request)
 {
@@ -862,6 +1138,12 @@ DescribeDBSnapshotsResponse * RdsClient::describeDBSnapshots(const DescribeDBSna
  *
  * For an overview of CIDR ranges, go to the <a
  * href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Wikipedia Tutorial</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const DescribeDBSubnetGroupsRequest &request)
 {
@@ -876,6 +1158,12 @@ DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const Describ
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaultClusterParameters(const DescribeEngineDefaultClusterParametersRequest &request)
 {
@@ -884,6 +1172,12 @@ DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaul
 
 /**
  * Returns the default engine and system parameter information for the specified database
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParameters(const DescribeEngineDefaultParametersRequest &request)
 {
@@ -895,6 +1189,12 @@ DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParame
  * list of the event categories and source types in the <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> topic in the <i>Amazon RDS
  * User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -908,6 +1208,12 @@ DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const Descr
  * Status>
  *
  * If you specify a SubscriptionName, lists the description for that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
@@ -918,6 +1224,12 @@ DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const
  * Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.
  * Events specific to a particular DB instance, DB security group, database snapshot, or DB parameter group can be obtained
  * by providing the name as a parameter. By default, the past hour of events are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -926,6 +1238,12 @@ DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &
 
 /**
  * Describes all available
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOptionGroupOptionsResponse * RdsClient::describeOptionGroupOptions(const DescribeOptionGroupOptionsRequest &request)
 {
@@ -934,6 +1252,12 @@ DescribeOptionGroupOptionsResponse * RdsClient::describeOptionGroupOptions(const
 
 /**
  * Describes the available option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOptionGroupsResponse * RdsClient::describeOptionGroups(const DescribeOptionGroupsRequest &request)
 {
@@ -942,6 +1266,12 @@ DescribeOptionGroupsResponse * RdsClient::describeOptionGroups(const DescribeOpt
 
 /**
  * Returns a list of orderable DB instance options for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeOrderableDBInstanceOptionsResponse * RdsClient::describeOrderableDBInstanceOptions(const DescribeOrderableDBInstanceOptionsRequest &request)
 {
@@ -950,6 +1280,12 @@ DescribeOrderableDBInstanceOptionsResponse * RdsClient::describeOrderableDBInsta
 
 /**
  * Returns a list of resources (for example, DB instances) that have at least one pending maintenance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePendingMaintenanceActionsResponse * RdsClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
 {
@@ -958,6 +1294,12 @@ DescribePendingMaintenanceActionsResponse * RdsClient::describePendingMaintenanc
 
 /**
  * Returns information about reserved DB instances for this account, or about a specified reserved DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedDBInstancesResponse * RdsClient::describeReservedDBInstances(const DescribeReservedDBInstancesRequest &request)
 {
@@ -966,6 +1308,12 @@ DescribeReservedDBInstancesResponse * RdsClient::describeReservedDBInstances(con
 
 /**
  * Lists available reserved DB instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInstancesOfferings(const DescribeReservedDBInstancesOfferingsRequest &request)
 {
@@ -975,6 +1323,12 @@ DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInst
 /**
  * Returns a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot
  * from. This API action supports
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeSourceRegionsRequest &request)
 {
@@ -984,6 +1338,12 @@ DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeS
 /**
  * You can call <a>DescribeValidDBInstanceModifications</a> to learn what modifications you can make to your DB instance.
  * You can use this information when you call <a>ModifyDBInstance</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanceModifications(const DescribeValidDBInstanceModificationsRequest &request)
 {
@@ -992,6 +1352,12 @@ DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanc
 
 /**
  * Downloads all or a portion of the specified log file, up to 1 MB in
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const DownloadDBLogFilePortionRequest &request)
 {
@@ -1018,6 +1384,12 @@ DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const Dow
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBClusterRequest &request)
 {
@@ -1031,6 +1403,12 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
  *
  * For an overview on tagging an Amazon RDS resource, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1042,6 +1420,12 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
  * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterRequest &request)
 {
@@ -1073,6 +1457,12 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
  * default database defined by the <code>character_set_database</code> parameter. You can use the <i>Parameter Groups</i>
  * option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the
  * <a>DescribeDBClusterParameters</a> command to verify that your DB cluster parameter group has been created or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request)
 {
@@ -1097,6 +1487,12 @@ ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup
  *
  * To view which AWS accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster
  * snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request)
 {
@@ -1107,6 +1503,12 @@ ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAtt
  * Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these
  * parameters and the new values in the request. To learn what modifications you can make to your DB instance, call
  * <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceRequest &request)
 {
@@ -1132,6 +1534,12 @@ ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceReq
  * database defined by the <code>character_set_database</code> parameter. You can use the <i>Parameter Groups</i> option of
  * the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the <i>DescribeDBParameters</i> command to
  * verify that your DB parameter group has been created or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyDBParameterGroupRequest &request)
 {
@@ -1144,6 +1552,12 @@ ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyD
  * </p
  *
  * Amazon RDS supports upgrading DB snapshots for MySQL and Oracle.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotRequest &request)
 {
@@ -1167,6 +1581,12 @@ ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotReq
  *
  * To view which AWS accounts have access to copy or restore a manual DB snapshot, or whether a manual DB snapshot public
  * or private, use the <a>DescribeDBSnapshotAttributes</a> API
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request)
 {
@@ -1175,6 +1595,12 @@ ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const M
 
 /**
  * Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request)
 {
@@ -1191,6 +1617,12 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
  * You can see a list of the event categories for a given SourceType in the <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the Amazon RDS User
  * Guide or by using the <b>DescribeEventCategories</b>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
@@ -1199,6 +1631,12 @@ ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const Modif
 
 /**
  * Modifies an existing option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroupRequest &request)
 {
@@ -1219,6 +1657,12 @@ ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroup
  * promotion> </li> <li>
  *
  * This command doesn't apply to Aurora MySQL and Aurora
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadReplicaRequest &request)
 {
@@ -1227,6 +1671,12 @@ PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadRepl
 
 /**
  * Promotes a Read Replica DB cluster to a standalone DB
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request)
 {
@@ -1235,6 +1685,12 @@ PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(con
 
 /**
  * Purchases a reserved DB instance
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInstancesOffering(const PurchaseReservedDBInstancesOfferingRequest &request)
 {
@@ -1255,6 +1711,12 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
  *
  * For more information about rebooting, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB Instance</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
@@ -1265,6 +1727,12 @@ RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceReq
  * Disassociates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
  * Aurora to Access Other AWS Services On Your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request)
 {
@@ -1273,6 +1741,12 @@ RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const Remov
 
 /**
  * Removes a source identifier from an existing RDS event notification
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request)
 {
@@ -1286,6 +1760,12 @@ RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifi
  *
  * For an overview on tagging an Amazon RDS resource, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -1309,6 +1789,12 @@ RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveT
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request)
 {
@@ -1321,6 +1807,12 @@ ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(c
  * parameter group, specify the <code>DBParameterGroup</code> name and <code>ResetAllParameters</code> parameters. When
  * resetting the entire group, dynamic parameters are updated immediately and static parameters are set to
  * <code>pending-reboot</code> to take effect on the next DB instance restart or <code>RebootDBInstance</code> request.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBParameterGroupRequest &request)
 {
@@ -1332,6 +1824,12 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
  * Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Migrate.MySQL.html#Aurora.Migrate.MySQL.S3">Migrating
  * Data from MySQL by Using an Amazon S3
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request)
 {
@@ -1357,6 +1855,12 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request)
 {
@@ -1381,6 +1885,12 @@ RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(c
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
  * RDS User Guide.</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {
@@ -1410,6 +1920,12 @@ RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime
  * snapshot> <note>
  *
  * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnapshot(const RestoreDBInstanceFromDBSnapshotRequest &request)
 {
@@ -1422,6 +1938,12 @@ RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnap
  * backup file onto a new Amazon RDS DB instance running MySQL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an
  * Amazon RDS MySQL DB Instance</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request)
 {
@@ -1443,6 +1965,12 @@ RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const Resto
  * deployment> <note>
  *
  * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTime(const RestoreDBInstanceToPointInTimeRequest &request)
 {
@@ -1453,6 +1981,12 @@ RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTi
  * Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups. Required
  * parameters for this API are one of CIDRIP, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either
  * EC2SecurityGroupName or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(const RevokeDBSecurityGroupIngressRequest &request)
 {
@@ -1466,6 +2000,12 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
  * </p <note>
  *
  * This command doesn't apply to Aurora MySQL and Aurora
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceRequest &request)
 {
@@ -1481,6 +2021,12 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
  * </p <note>
  *
  * This command doesn't apply to Aurora MySQL and Aurora
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &request)
 {

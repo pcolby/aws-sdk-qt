@@ -88,6 +88,12 @@ PinpointClient::PinpointClient(
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 {
@@ -95,6 +101,12 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequest &request)
 {
@@ -102,6 +114,12 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
 {
@@ -109,6 +127,12 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
@@ -116,6 +140,12 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
 {
@@ -123,6 +153,12 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChannelRequest &request)
 {
@@ -130,6 +166,12 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsChannelRequest &request)
 {
@@ -137,6 +179,12 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(const DeleteApnsSandboxChannelRequest &request)
 {
@@ -144,6 +192,12 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const DeleteApnsVoipChannelRequest &request)
 {
@@ -151,6 +205,12 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChannel(const DeleteApnsVoipSandboxChannelRequest &request)
 {
@@ -158,6 +218,12 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -165,6 +231,12 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaiduChannelRequest &request)
 {
@@ -172,6 +244,12 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequest &request)
 {
@@ -179,6 +257,12 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmailChannelRequest &request)
 {
@@ -186,6 +270,12 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -193,6 +283,12 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventStreamRequest &request)
 {
@@ -200,6 +296,12 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
 {
@@ -207,6 +309,12 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest &request)
 {
@@ -214,6 +322,12 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChannelRequest &request)
 {
@@ -221,6 +335,12 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest &request)
 {
@@ -228,6 +348,12 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequest &request)
 {
@@ -235,6 +361,12 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request)
 {
@@ -242,6 +374,12 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoipChannelRequest &request)
 {
@@ -249,6 +387,12 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(const GetApnsVoipSandboxChannelRequest &request)
 {
@@ -256,6 +400,12 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 {
@@ -263,6 +413,12 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const GetApplicationSettingsRequest &request)
 {
@@ -270,6 +426,12 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 {
@@ -277,6 +439,12 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
 {
@@ -284,6 +452,12 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &request)
 {
@@ -291,6 +465,12 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
 {
@@ -298,6 +478,12 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaignVersionRequest &request)
 {
@@ -305,6 +491,12 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
 {
@@ -312,6 +504,12 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &request)
 {
@@ -319,6 +517,12 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
 {
@@ -326,6 +530,12 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &request)
 {
@@ -333,6 +543,12 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequest &request)
 {
@@ -340,6 +556,12 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &request)
 {
@@ -347,6 +569,12 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest &request)
 {
@@ -354,6 +582,12 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest &request)
 {
@@ -361,6 +595,12 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &request)
 {
@@ -368,6 +608,12 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest &request)
 {
@@ -375,6 +621,12 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request)
 {
@@ -382,6 +634,12 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSegmentExportJobsRequest &request)
 {
@@ -389,6 +647,12 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSegmentImportJobsRequest &request)
 {
@@ -396,6 +660,12 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVersionRequest &request)
 {
@@ -403,6 +673,12 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
 {
@@ -410,6 +686,12 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &request)
 {
@@ -417,6 +699,12 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest &request)
 {
@@ -424,6 +712,12 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequest &request)
 {
@@ -431,6 +725,12 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
 {
@@ -438,6 +738,12 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
 {
@@ -445,6 +751,12 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
 {
@@ -452,6 +764,12 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
 {
@@ -459,6 +777,12 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
 {
@@ -466,6 +790,12 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
 {
@@ -473,6 +803,12 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
 {
@@ -480,6 +816,12 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(const UpdateApplicationSettingsRequest &request)
 {
@@ -487,6 +829,12 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
 {
@@ -494,6 +842,12 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
 {
@@ -501,6 +855,12 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
 {
@@ -508,6 +868,12 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -515,6 +881,12 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
 {
@@ -522,6 +894,12 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
 {
@@ -529,6 +907,12 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest &request)
 {
@@ -536,6 +920,12 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {

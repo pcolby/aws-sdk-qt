@@ -102,6 +102,12 @@ CloudSearchClient::CloudSearchClient(
  * Indexes the search suggestions. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html#configuring-suggesters">Configuring
  * Suggesters</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 BuildSuggestersResponse * CloudSearchClient::buildSuggesters(const BuildSuggestersRequest &request)
 {
@@ -112,6 +118,12 @@ BuildSuggestersResponse * CloudSearchClient::buildSuggesters(const BuildSuggeste
  * Creates a new search domain. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/creating-domains.html" target="_blank">Creating a
  * Search Domain</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDomainResponse * CloudSearchClient::createDomain(const CreateDomainRequest &request)
 {
@@ -123,6 +135,12 @@ CreateDomainResponse * CloudSearchClient::createDomain(const CreateDomainRequest
  * language-specific text processing options. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html"
  * target="_blank">Configuring Analysis Schemes</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DefineAnalysisSchemeResponse * CloudSearchClient::defineAnalysisScheme(const DefineAnalysisSchemeRequest &request)
 {
@@ -134,6 +152,12 @@ DefineAnalysisSchemeResponse * CloudSearchClient::defineAnalysisScheme(const Def
  * ones. If the expression exists, the new configuration replaces the old one. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html"
  * target="_blank">Configuring Expressions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DefineExpressionResponse * CloudSearchClient::defineExpression(const DefineExpressionRequest &request)
 {
@@ -148,6 +172,12 @@ DefineExpressionResponse * CloudSearchClient::defineExpression(const DefineExpre
  * replaces the old one. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-index-fields.html"
  * target="_blank">Configuring Index Fields</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DefineIndexFieldResponse * CloudSearchClient::defineIndexField(const DefineIndexFieldRequest &request)
 {
@@ -160,6 +190,12 @@ DefineIndexFieldResponse * CloudSearchClient::defineIndexField(const DefineIndex
  * possible matches and a unique name for the suggester. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html" target="_blank">Getting
  * Search Suggestions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DefineSuggesterResponse * CloudSearchClient::defineSuggester(const DefineSuggesterRequest &request)
 {
@@ -170,6 +206,12 @@ DefineSuggesterResponse * CloudSearchClient::defineSuggester(const DefineSuggest
  * Deletes an analysis scheme. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html"
  * target="_blank">Configuring Analysis Schemes</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAnalysisSchemeResponse * CloudSearchClient::deleteAnalysisScheme(const DeleteAnalysisSchemeRequest &request)
 {
@@ -180,6 +222,12 @@ DeleteAnalysisSchemeResponse * CloudSearchClient::deleteAnalysisScheme(const Del
  * Permanently deletes a search domain and all of its data. Once a domain has been deleted, it cannot be recovered. For
  * more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/deleting-domains.html"
  * target="_blank">Deleting a Search Domain</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDomainResponse * CloudSearchClient::deleteDomain(const DeleteDomainRequest &request)
 {
@@ -190,6 +238,12 @@ DeleteDomainResponse * CloudSearchClient::deleteDomain(const DeleteDomainRequest
  * Removes an <code><a>Expression</a></code> from the search domain. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html"
  * target="_blank">Configuring Expressions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteExpressionResponse * CloudSearchClient::deleteExpression(const DeleteExpressionRequest &request)
 {
@@ -200,6 +254,12 @@ DeleteExpressionResponse * CloudSearchClient::deleteExpression(const DeleteExpre
  * Removes an <code><a>IndexField</a></code> from the search domain. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-index-fields.html"
  * target="_blank">Configuring Index Fields</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteIndexFieldResponse * CloudSearchClient::deleteIndexField(const DeleteIndexFieldRequest &request)
 {
@@ -210,6 +270,12 @@ DeleteIndexFieldResponse * CloudSearchClient::deleteIndexField(const DeleteIndex
  * Deletes a suggester. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html" target="_blank">Getting
  * Search Suggestions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSuggesterResponse * CloudSearchClient::deleteSuggester(const DeleteSuggesterRequest &request)
 {
@@ -223,6 +289,12 @@ DeleteSuggesterResponse * CloudSearchClient::deleteSuggester(const DeleteSuggest
  * to show the active configuration and exclude pending changes. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html"
  * target="_blank">Configuring Analysis Schemes</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAnalysisSchemesResponse * CloudSearchClient::describeAnalysisSchemes(const DescribeAnalysisSchemesRequest &request)
 {
@@ -235,6 +307,12 @@ DescribeAnalysisSchemesResponse * CloudSearchClient::describeAnalysisSchemes(con
  * more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html"
  * target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAvailabilityOptionsResponse * CloudSearchClient::describeAvailabilityOptions(const DescribeAvailabilityOptionsRequest &request)
 {
@@ -247,6 +325,12 @@ DescribeAvailabilityOptionsResponse * CloudSearchClient::describeAvailabilityOpt
  * request to your domain's search endpoint: <code>q=matchall&amp;amp;q.parser=structured&amp;amp;size=0</code>. For more
  * information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-domain-info.html"
  * target="_blank">Getting Information about a Search Domain</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDomainsResponse * CloudSearchClient::describeDomains(const DescribeDomainsRequest &request)
 {
@@ -259,6 +343,12 @@ DescribeDomainsResponse * CloudSearchClient::describeDomains(const DescribeDomai
  * <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html"
  * target="_blank">Configuring Expressions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExpressionsResponse * CloudSearchClient::describeExpressions(const DescribeExpressionsRequest &request)
 {
@@ -271,6 +361,12 @@ DescribeExpressionsResponse * CloudSearchClient::describeExpressions(const Descr
  * <code>true</code> to show the active configuration and exclude pending changes. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-domain-info.html" target="_blank">Getting
  * Domain Information</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIndexFieldsResponse * CloudSearchClient::describeIndexFields(const DescribeIndexFieldsRequest &request)
 {
@@ -282,6 +378,12 @@ DescribeIndexFieldsResponse * CloudSearchClient::describeIndexFields(const Descr
  * type and replication count. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-scaling-options.html"
  * target="_blank">Configuring Scaling Options</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingParametersResponse * CloudSearchClient::describeScalingParameters(const DescribeScalingParametersRequest &request)
 {
@@ -294,6 +396,12 @@ DescribeScalingParametersResponse * CloudSearchClient::describeScalingParameters
  * show the active configuration and exclude pending changes. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html" target="_blank">Configuring
  * Access for a Search Domain</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeServiceAccessPoliciesResponse * CloudSearchClient::describeServiceAccessPolicies(const DescribeServiceAccessPoliciesRequest &request)
 {
@@ -307,6 +415,12 @@ DescribeServiceAccessPoliciesResponse * CloudSearchClient::describeServiceAccess
  * configuration and exclude pending changes. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html" target="_blank">Getting
  * Search Suggestions</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSuggestersResponse * CloudSearchClient::describeSuggesters(const DescribeSuggestersRequest &request)
 {
@@ -316,6 +430,12 @@ DescribeSuggestersResponse * CloudSearchClient::describeSuggesters(const Describ
 /**
  * Tells the search domain to start indexing its documents using the latest indexing options. This operation must be
  * invoked to activate options whose <a>OptionStatus</a> is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsRequest &request)
 {
@@ -324,6 +444,12 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
 
 /**
  * Lists all search domains owned by an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListDomainNamesResponse * CloudSearchClient::listDomainNames()
 {
@@ -336,6 +462,12 @@ ListDomainNamesResponse * CloudSearchClient::listDomainNames()
  * Changes to the Multi-AZ option can take about half an hour to become active. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html"
  * target="_blank">Configuring Availability Options</a> in the <i>Amazon CloudSearch Developer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAvailabilityOptionsResponse * CloudSearchClient::updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request)
 {
@@ -349,6 +481,12 @@ UpdateAvailabilityOptionsResponse * CloudSearchClient::updateAvailabilityOptions
  * control the resources used per Availability Zone. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-scaling-options.html"
  * target="_blank">Configuring Scaling Options</a> in the <i>Amazon CloudSearch Developer Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateScalingParametersResponse * CloudSearchClient::updateScalingParameters(const UpdateScalingParametersRequest &request)
 {
@@ -359,6 +497,12 @@ UpdateScalingParametersResponse * CloudSearchClient::updateScalingParameters(con
  * Configures the access rules that control access to the domain's document and search endpoints. For more information, see
  * <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html" target="_blank">
  * Configuring Access for an Amazon CloudSearch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateServiceAccessPoliciesResponse * CloudSearchClient::updateServiceAccessPolicies(const UpdateServiceAccessPoliciesRequest &request)
 {

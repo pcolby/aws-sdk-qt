@@ -96,6 +96,12 @@ ShieldClient::ShieldClient(
 /**
  * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic
  * Load Balancing load balancer, Elastic IP Address, or an Amazon Route 53 hosted
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateProtectionResponse * ShieldClient::createProtection(const CreateProtectionRequest &request)
 {
@@ -104,6 +110,12 @@ CreateProtectionResponse * ShieldClient::createProtection(const CreateProtection
 
 /**
  * Activates AWS Shield Advanced for an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscriptionRequest &request)
 {
@@ -112,6 +124,12 @@ CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscr
 
 /**
  * Deletes an AWS Shield Advanced
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtectionRequest &request)
 {
@@ -121,6 +139,12 @@ DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtection
 /**
  * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot
  * delete a subscription prior to the completion of that commitment.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscriptionRequest &request)
 {
@@ -129,6 +153,12 @@ DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscr
 
 /**
  * Describes the details of a DDoS attack.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackRequest &request)
 {
@@ -137,6 +167,12 @@ DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackReques
 
 /**
  * Lists the details of a <a>Protection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProtectionRequest &request)
 {
@@ -145,6 +181,12 @@ DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProt
 
 /**
  * Provides details about the AWS Shield Advanced subscription for an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSubscriptionResponse * ShieldClient::describeSubscription(const DescribeSubscriptionRequest &request)
 {
@@ -153,6 +195,12 @@ DescribeSubscriptionResponse * ShieldClient::describeSubscription(const Describe
 
 /**
  * Returns the <code>SubscriptionState</code>, either <code>Active</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubscriptionStateRequest &request)
 {
@@ -161,6 +209,12 @@ GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubsc
 
 /**
  * Returns all ongoing DDoS attacks or all DDoS attacks during a specified time
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &request)
 {
@@ -169,6 +223,12 @@ ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &reques
 
 /**
  * Lists all <a>Protection</a> objects for the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsRequest &request)
 {

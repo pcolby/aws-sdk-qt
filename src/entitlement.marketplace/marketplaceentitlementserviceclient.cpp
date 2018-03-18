@@ -107,6 +107,12 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 /**
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(const GetEntitlementsRequest &request)
 {

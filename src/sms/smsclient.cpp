@@ -90,6 +90,12 @@ SmsClient::SmsClient(
 /**
  * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first
  * create a ReplicationJob, which will then schedule periodic ReplicationRuns to replicate your server to AWS. Each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateReplicationJobRequest &request)
 {
@@ -99,6 +105,12 @@ CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateRepli
 /**
  * The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further ReplicationRuns. This will
  * delete the contents of the S3 bucket used to store SMS artifacts, but will not delete any AMIs created by the SMS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteReplicationJobRequest &request)
 {
@@ -107,6 +119,12 @@ DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteRepli
 
 /**
  * The DeleteServerCatalog API clears all servers from your server catalog. This means that these servers will no longer be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerCatalogRequest &request)
 {
@@ -115,6 +133,12 @@ DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerC
 
 /**
  * The DisassociateConnector API will disassociate a connector from the Server Migration Service, rendering it unavailable
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateConnectorResponse * SmsClient::disassociateConnector(const DisassociateConnectorRequest &request)
 {
@@ -122,6 +146,12 @@ DisassociateConnectorResponse * SmsClient::disassociateConnector(const Disassoci
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &request)
 {
@@ -130,6 +160,12 @@ GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &req
 
 /**
  * The GetReplicationJobs API will return all of your ReplicationJobs and their details. This API returns a paginated list,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJobsRequest &request)
 {
@@ -138,6 +174,12 @@ GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJ
 
 /**
  * The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob. This API returns a paginated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationRunsRequest &request)
 {
@@ -146,6 +188,12 @@ GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationR
 
 /**
  * The GetServers API returns a list of all servers in your server catalog. For this call to succeed, you must previously
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
 {
@@ -155,6 +203,12 @@ GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
 /**
  * The ImportServerCatalog API is used to gather the complete list of on-premises servers on your premises. This API call
  * requires connectors to be installed and monitoring all servers you would like imported. This API call returns
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerCatalogRequest &request)
 {
@@ -164,6 +218,12 @@ ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerC
 /**
  * The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in addition to those that are scheduled
  * based on your frequency). This ReplicationRun will start immediately. StartOnDemandReplicationRun is subject to limits
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(const StartOnDemandReplicationRunRequest &request)
 {
@@ -172,6 +232,12 @@ StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(con
 
 /**
  * The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob created using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateReplicationJobRequest &request)
 {

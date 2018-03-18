@@ -111,6 +111,12 @@ SfnClient::SfnClient(
  * access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and
  * respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity
  * and returns an identifier for use in a state machine and when polling from the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &request)
 {
@@ -121,6 +127,12 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
  * Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states),
  * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
  * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMachineRequest &request)
 {
@@ -129,6 +141,12 @@ CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMach
 
 /**
  * Deletes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &request)
 {
@@ -142,6 +160,12 @@ DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &
  * transition> <note>
  *
  * The state machine itself is deleted after all executions are completed or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMachineRequest &request)
 {
@@ -150,6 +174,12 @@ DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMach
 
 /**
  * Describes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityRequest &request)
 {
@@ -158,6 +188,12 @@ DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityReq
 
 /**
  * Describes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecutionRequest &request)
 {
@@ -166,6 +202,12 @@ DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecution
 
 /**
  * Describes a state
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeStateMachineRequest &request)
 {
@@ -174,6 +216,12 @@ DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeSta
 
 /**
  * Describes the state machine associated with a specific
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExecution(const DescribeStateMachineForExecutionRequest &request)
 {
@@ -191,6 +239,12 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
  *
  * Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum time the
  * service may hold the poll
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskRequest &request)
 {
@@ -205,6 +259,12 @@ GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskReques
  *
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionHistoryRequest &request)
 {
@@ -218,6 +278,12 @@ GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionH
  *
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &request)
 {
@@ -231,6 +297,12 @@ ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &
  *
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &request)
 {
@@ -244,6 +316,12 @@ ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &
  *
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachinesRequest &request)
 {
@@ -252,6 +330,12 @@ ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachines
 
 /**
  * Used by workers to report that the task identified by the <code>taskToken</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureRequest &request)
 {
@@ -272,6 +356,12 @@ SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureReques
  * received> </note> <note>
  *
  * This operation is only useful for long-lived tasks to report the liveliness of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeatRequest &request)
 {
@@ -280,6 +370,12 @@ SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeat
 
 /**
  * Used by workers to report that the task identified by the <code>taskToken</code> completed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessRequest &request)
 {
@@ -288,6 +384,12 @@ SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessReques
 
 /**
  * Starts a state machine
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &request)
 {
@@ -296,6 +398,12 @@ StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &
 
 /**
  * Stops an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &request)
 {
@@ -312,6 +420,12 @@ StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &req
  * <code>roleArn</code>. Executions started immediately after calling <code>UpdateStateMachine</code> may use the previous
  * state machine <code>definition</code> and <code>roleArn</code>. You must include at least one of <code>definition</code>
  * or <code>roleArn</code> or you will receive a <code>MissingRequiredParameter</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMachineRequest &request)
 {

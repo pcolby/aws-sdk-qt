@@ -247,6 +247,12 @@ StsClient::StsClient(
  * To use MFA with <code>AssumeRole</code>, you pass values for the <code>SerialNumber</code> and <code>TokenCode</code>
  * parameters. The <code>SerialNumber</code> value identifies the user's hardware or virtual MFA device. The
  * <code>TokenCode</code> is the time-based one-time password (TOTP) that the MFA devices produces.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
 {
@@ -335,6 +341,12 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
  *
  * <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html">Creating a Role for SAML 2.0
  * Federation</a> in the <i>IAM User Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithSAMLRequest &request)
 {
@@ -445,6 +457,12 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
  * <a href="http://aws.amazon.com/articles/web-identity-federation-with-mobile-applications">Web Identity Federation with
  * Mobile Applications</a>. This article discusses web identity federation and shows an example of how to use web identity
  * federation to get access to content in Amazon S3.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const AssumeRoleWithWebIdentityRequest &request)
 {
@@ -499,6 +517,12 @@ AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const A
  * resource> </li> <li>
  *
  * The values of condition keys in the context of the user's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const DecodeAuthorizationMessageRequest &request)
 {
@@ -507,6 +531,12 @@ DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const
 
 /**
  * Returns details about the IAM identity whose credentials are used to call the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentityRequest &request)
 {
@@ -611,6 +641,12 @@ GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentity
  * credentials, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken">GetFederationToken—Federation
  * Through a Custom Identity Broker</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTokenRequest &request)
 {
@@ -671,6 +707,12 @@ GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTo
  * For more information about using <code>GetSessionToken</code> to create temporary credentials, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getsessiontoken">Temporary
  * Credentials for Users in Untrusted Environments</a> in the <i>IAM User Guide</i>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenRequest &request)
 {

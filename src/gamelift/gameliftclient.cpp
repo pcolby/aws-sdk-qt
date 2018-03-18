@@ -571,6 +571,12 @@ GameLiftClient::GameLiftClient(
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &request)
 {
@@ -623,6 +629,12 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &request)
 {
@@ -698,6 +710,12 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &request)
 {
@@ -865,6 +883,12 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &request)
 {
@@ -952,6 +976,12 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSessionRequest &request)
 {
@@ -1006,6 +1036,12 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const CreateGameSessionQueueRequest &request)
 {
@@ -1072,6 +1108,12 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfiguration(const CreateMatchmakingConfigurationRequest &request)
 {
@@ -1131,6 +1173,12 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(const CreateMatchmakingRuleSetRequest &request)
 {
@@ -1183,6 +1231,12 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePlayerSessionRequest &request)
 {
@@ -1235,6 +1289,12 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const CreatePlayerSessionsRequest &request)
 {
@@ -1299,6 +1359,12 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthorization(const CreateVpcPeeringAuthorizationRequest &request)
 {
@@ -1355,6 +1421,12 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
@@ -1392,6 +1464,12 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -1429,6 +1507,12 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &request)
 {
@@ -1529,6 +1613,12 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -1558,6 +1648,12 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const DeleteGameSessionQueueRequest &request)
 {
@@ -1599,6 +1695,12 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfiguration(const DeleteMatchmakingConfigurationRequest &request)
 {
@@ -1696,6 +1798,12 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
@@ -1733,6 +1841,12 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthorization(const DeleteVpcPeeringAuthorizationRequest &request)
 {
@@ -1776,6 +1890,12 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
@@ -1817,6 +1937,12 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest &request)
 {
@@ -1850,6 +1976,12 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest &request)
 {
@@ -1959,6 +2091,12 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request)
 {
@@ -2064,6 +2202,12 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const DescribeFleetAttributesRequest &request)
 {
@@ -2169,6 +2313,12 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const DescribeFleetCapacityRequest &request)
 {
@@ -2267,6 +2417,12 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const DescribeFleetEventsRequest &request)
 {
@@ -2366,6 +2522,12 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request)
 {
@@ -2470,6 +2632,12 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(const DescribeFleetUtilizationRequest &request)
 {
@@ -2531,6 +2699,12 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request)
 {
@@ -2584,6 +2758,12 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacement(const DescribeGameSessionPlacementRequest &request)
 {
@@ -2615,6 +2795,12 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(const DescribeGameSessionQueuesRequest &request)
 {
@@ -2679,6 +2865,12 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const DescribeGameSessionsRequest &request)
 {
@@ -2694,6 +2886,12 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
  * To get a specific instance, specify fleet ID and instance ID. To get all instances in a fleet, specify a fleet ID only.
  * Use the pagination parameters to retrieve results as a set of sequential pages. If successful, an <a>Instance</a> object
  * is returned for each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInstancesRequest &request)
 {
@@ -2738,6 +2936,12 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const DescribeMatchmakingRequest &request)
 {
@@ -2782,6 +2986,12 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingConfigurations(const DescribeMatchmakingConfigurationsRequest &request)
 {
@@ -2824,6 +3034,12 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSets(const DescribeMatchmakingRuleSetsRequest &request)
 {
@@ -2877,6 +3093,12 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const DescribePlayerSessionsRequest &request)
 {
@@ -2974,6 +3196,12 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request)
 {
@@ -3076,6 +3304,12 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
@@ -3113,6 +3347,12 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAuthorizations(const DescribeVpcPeeringAuthorizationsRequest &request)
 {
@@ -3157,6 +3397,12 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
  * </p </li> <li>
  *
  * <a>DeleteVpcPeeringConnection</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
@@ -3215,6 +3461,12 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request)
 {
@@ -3239,6 +3491,12 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
  *
  * To request access to a specific instance, specify the IDs of the instance and the fleet it belongs to. If successful, an
  * <a>InstanceAccess</a> object is returned containing the instance's IP address and a set of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceAccessRequest &request)
 {
@@ -3280,6 +3538,12 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &request)
 {
@@ -3318,6 +3582,12 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request)
 {
@@ -3419,6 +3689,12 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request)
 {
@@ -3541,6 +3817,12 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -3555,6 +3837,12 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
  *
  * To request new credentials, specify the build ID as returned with an initial <code>CreateBuild</code> request. If
  * successful, a new set of credentials are returned, along with the S3 storage location associated with the build
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(const RequestUploadCredentialsRequest &request)
 {
@@ -3591,6 +3879,12 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &request)
 {
@@ -3701,6 +3995,12 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGameSessionsRequest &request)
 {
@@ -3803,6 +4103,12 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(const StartGameSessionPlacementRequest &request)
 {
@@ -3858,6 +4164,12 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatchBackfillRequest &request)
 {
@@ -3953,6 +4265,12 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmakingRequest &request)
 {
@@ -4006,6 +4324,12 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(const StopGameSessionPlacementRequest &request)
 {
@@ -4039,6 +4363,12 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
  * </p </li> <li>
  *
  * <a>StartMatchBackfill</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingRequest &request)
 {
@@ -4077,6 +4407,12 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
  * </p </li> <li>
  *
  * <a>ResolveAlias</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &request)
 {
@@ -4110,6 +4446,12 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
  * </p </li> <li>
  *
  * <a>DeleteBuild</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &request)
 {
@@ -4207,6 +4549,12 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const UpdateFleetAttributesRequest &request)
 {
@@ -4318,6 +4666,12 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFleetCapacityRequest &request)
 {
@@ -4417,6 +4771,12 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request)
 {
@@ -4472,6 +4832,12 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
  * </p </li> <li>
  *
  * <a>StopGameSessionPlacement</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSessionRequest &request)
 {
@@ -4502,6 +4868,12 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
  * </p </li> <li>
  *
  * <a>DeleteGameSessionQueue</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const UpdateGameSessionQueueRequest &request)
 {
@@ -4543,6 +4915,12 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfiguration(const UpdateMatchmakingConfigurationRequest &request)
 {
@@ -4654,6 +5032,12 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  * </p </li> </ul> </li> <li>
  *
  * <a>DeleteFleet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request)
 {
@@ -4695,6 +5079,12 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
  * </p </li> <li>
  *
  * <a>ValidateMatchmakingRuleSet</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request)
 {

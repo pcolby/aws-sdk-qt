@@ -90,6 +90,12 @@ MachineLearningClient::MachineLearningClient(
 /**
  * Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a
  * tag using a key that is already associated with the ML object, <code>AddTags</code> updates the tag's
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
 {
@@ -113,6 +119,12 @@ AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
  * You can poll for status updates by using the <a>GetBatchPrediction</a> operation and checking the <code>Status</code>
  * parameter of the result. After the <code>COMPLETED</code> status appears, the results are available in the location
  * specified by the <code>OutputUri</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(const CreateBatchPredictionRequest &request)
 {
@@ -137,6 +149,12 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
  *
  * If Amazon ML cannot accept the input source, it sets the <code>Status</code> parameter to <code>FAILED</code> and
  * includes an error message in the <code>Message</code> attribute of the <code>GetDataSource</code> operation response.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS(const CreateDataSourceFromRDSRequest &request)
 {
@@ -181,6 +199,12 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
  * datasource. To do so, call <code>GetDataSource</code> for an existing datasource and copy the values to a
  * <code>CreateDataSource</code> call. Change the settings that you want to change and make sure that all required fields
  * have the appropriate
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFromRedshift(const CreateDataSourceFromRedshiftRequest &request)
 {
@@ -219,6 +243,12 @@ CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFr
  * recipe describes how each input variable will be used in training an <code>MLModel</code>. Will the variable be included
  * or excluded from training? Will the variable be manipulated; for example, will it be combined with another variable or
  * will it be split apart into word combinations? The recipe provides answers to these
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(const CreateDataSourceFromS3Request &request)
 {
@@ -243,6 +273,12 @@ CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(c
  * </p
  *
  * You can use the <code>GetEvaluation</code> operation to check progress of the evaluation during the creation
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateEvaluationRequest &request)
 {
@@ -272,6 +308,12 @@ CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateE
  * <code>CreateMLModel</code> requires a <code>DataSource</code> with computed statistics, which can be created by setting
  * <code>ComputeStatistics</code> to <code>true</code> in <code>CreateDataSourceFromRDS</code>,
  * <code>CreateDataSourceFromS3</code>, or <code>CreateDataSourceFromRedshift</code> operations.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModelRequest &request)
 {
@@ -281,6 +323,12 @@ CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModel
 /**
  * Creates a real-time endpoint for the <code>MLModel</code>. The endpoint contains the URI of the <code>MLModel</code>;
  * that is, the location to send real-time prediction requests for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(const CreateRealtimeEndpointRequest &request)
 {
@@ -298,6 +346,12 @@ CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(c
  * DELETED>
  *
  * <b>Caution:</b> The result of the <code>DeleteBatchPrediction</code> operation is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(const DeleteBatchPredictionRequest &request)
 {
@@ -315,6 +369,12 @@ DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(con
  * DELETED>
  *
  * <b>Caution:</b> The results of the <code>DeleteDataSource</code> operation are
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
@@ -330,6 +390,12 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
  * verify that the status of the <code>Evaluation</code> changed to
  *
  * <code>DELETED</code>> <caution><title>Caution</title>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteEvaluationRequest &request)
 {
@@ -347,6 +413,12 @@ DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteE
  * DELETED>
  *
  * <b>Caution:</b> The result of the <code>DeleteMLModel</code> operation is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModelRequest &request)
 {
@@ -355,6 +427,12 @@ DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModel
 
 /**
  * Deletes a real time endpoint of an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(const DeleteRealtimeEndpointRequest &request)
 {
@@ -367,6 +445,12 @@ DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(c
  * tags>
  *
  * If you specify a tag that doesn't exist, Amazon ML ignores
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -375,6 +459,12 @@ DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &
 
 /**
  * Returns a list of <code>BatchPrediction</code> operations that match the search criteria in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictions(const DescribeBatchPredictionsRequest &request)
 {
@@ -383,6 +473,12 @@ DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictio
 
 /**
  * Returns a list of <code>DataSource</code> that match the search criteria in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const DescribeDataSourcesRequest &request)
 {
@@ -391,6 +487,12 @@ DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const D
 
 /**
  * Returns a list of <code>DescribeEvaluations</code> that match the search criteria in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const DescribeEvaluationsRequest &request)
 {
@@ -399,6 +501,12 @@ DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const D
 
 /**
  * Returns a list of <code>MLModel</code> that match the search criteria in the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const DescribeMLModelsRequest &request)
 {
@@ -407,6 +515,12 @@ DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const Describ
 
 /**
  * Describes one or more of the tags for your Amazon ML
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -416,6 +530,12 @@ DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsReq
 /**
  * Returns a <code>BatchPrediction</code> that includes detailed metadata, status, and data file information for a
  * <code>Batch Prediction</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const GetBatchPredictionRequest &request)
 {
@@ -429,6 +549,12 @@ GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const Get
  *
  * <code>GetDataSource</code> provides results in normal or verbose format. The verbose format adds the schema description
  * and the list of files pointed to by the DataSource to the normal
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSourceRequest &request)
 {
@@ -437,6 +563,12 @@ GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSource
 
 /**
  * Returns an <code>Evaluation</code> that includes metadata as well as the current status of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluationRequest &request)
 {
@@ -449,6 +581,12 @@ GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluation
  * <code>MLModel</code>>
  *
  * <code>GetMLModel</code> provides results in normal or verbose format.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &request)
 {
@@ -461,6 +599,12 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
  * Model</code>> <note><title>Note</title>
  *
  * Not all response parameters will be populated. Whether a response parameter is populated depends on the type of model
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
 {
@@ -473,6 +617,12 @@ PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
  * <code>BatchPrediction</code>>
  *
  * You can use the <code>GetBatchPrediction</code> operation to view the contents of the updated data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(const UpdateBatchPredictionRequest &request)
 {
@@ -485,6 +635,12 @@ UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(con
  * <code>DataSource</code>>
  *
  * You can use the <code>GetDataSource</code> operation to view the contents of the updated data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
@@ -497,6 +653,12 @@ UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateD
  * <code>Evaluation</code>>
  *
  * You can use the <code>GetEvaluation</code> operation to view the contents of the updated data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateEvaluationRequest &request)
 {
@@ -509,6 +671,12 @@ UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateE
  * <code>MLModel</code>>
  *
  * You can use the <code>GetMLModel</code> operation to view the contents of the updated data
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModelRequest &request)
 {

@@ -94,6 +94,12 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
  * (CSV) format with the file name {data_set_type}_YYYY-MM-DD.csv. If a file with the same name already exists (e.g. if the
  * same data set is requested twice), the original file will be overwritten by the new file. Requires a Role with an
  * attached permissions policy providing Allow permissions for the following actions: s3:PutObject, s3:GetBucketLocation,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(const GenerateDataSetRequest &request)
 {
@@ -107,6 +113,12 @@ GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(co
  * (CSV) format with the file name {data_set_type}_YYYY-MM-DD'T'HH-mm-ss'Z'.csv. If a file with the same name already
  * exists (e.g. if the same data set is requested twice), the original file will be overwritten by the new file. Requires a
  * Role with an attached permissions policy providing Allow permissions for the following actions: s3:PutObject,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSupportDataExport(const StartSupportDataExportRequest &request)
 {

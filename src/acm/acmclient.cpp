@@ -114,6 +114,12 @@ AcmClient::AcmClient(
  *
  * To remove one or more tags, use the <a>RemoveTagsFromCertificate</a> action. To view all of the tags that have been
  * applied to the certificate, use the <a>ListTagsForCertificate</a> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCertificateRequest &request)
 {
@@ -129,6 +135,12 @@ AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCe
  *
  * You cannot delete an ACM Certificate that is being used by another AWS service. To delete a certificate that is in use,
  * the certificate association must first be
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -137,6 +149,12 @@ DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificate
 
 /**
  * Returns detailed metadata about the specified ACM
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCertificateRequest &request)
 {
@@ -148,6 +166,12 @@ DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCerti
  * that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that
  * order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the
  * individual fields, you can use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &request)
 {
@@ -220,6 +244,12 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  *
  * This operation returns the <a href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon
  * Resource Name (ARN)</a> of the imported
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificateRequest &request)
 {
@@ -229,6 +259,12 @@ ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificate
 /**
  * Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific
  * status be listed. You can also filter by specific attributes of the certificate.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesRequest &request)
 {
@@ -239,6 +275,12 @@ ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesReq
  * Lists the tags that have been applied to the ACM Certificate. Use the certificate's Amazon Resource Name (ARN) to
  * specify the certificate. To add a tag to an ACM Certificate, use the <a>AddTagsToCertificate</a> action. To delete a
  * tag, use the <a>RemoveTagsFromCertificate</a> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTagsForCertificateRequest &request)
 {
@@ -254,6 +296,12 @@ ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTag
  *
  * To add tags to a certificate, use the <a>AddTagsToCertificate</a> action. To view all of the tags that have been applied
  * to a specific ACM Certificate, use the <a>ListTagsForCertificate</a> action.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request)
 {
@@ -277,6 +325,12 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
  *
  * After receiving approval from the domain owner, the ACM Certificate is issued. For more information, see the <a
  * href="http://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertificateRequest &request)
 {
@@ -292,6 +346,12 @@ RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertific
  * or since your last attempt to resend validation mail, you must request a new certificate. For more information about
  * setting up your contact email addresses, see <a
  * href="http://docs.aws.amazon.com/acm/latest/userguide/setup-email.html">Configure Email for your Domain</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendValidationEmailRequest &request)
 {

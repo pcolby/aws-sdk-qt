@@ -101,6 +101,12 @@ KinesisClient::KinesisClient(
  * keys>
  *
  * <a>AddTagsToStream</a> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRequest &request)
 {
@@ -159,6 +165,12 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  * <code>StreamStatus</code>>
  *
  * <a>CreateStream</a> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &request)
 {
@@ -173,6 +185,12 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
  *
  * This operation may result in lost data. For example, if the stream's retention period is 48 hours and is decreased to 24
  * hours, any data already in the stream that is older than 24 hours is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPeriod(const DecreaseStreamRetentionPeriodRequest &request)
 {
@@ -205,6 +223,12 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
  * <code>StreamStatus</code>>
  *
  * <a>DeleteStream</a> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -221,6 +245,12 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
  * minutes>
  *
  * This operation has a limit of one transaction per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsRequest &request)
 {
@@ -252,6 +282,12 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
  * shard>
  *
  * This operation has a limit of 10 transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -265,6 +301,12 @@ DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamReque
  *
  * The information returned includes the stream name, Amazon Resource Name (ARN), status, record retention period,
  * approximate creation time, monitoring, encryption details, and open shard count.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const DescribeStreamSummaryRequest &request)
 {
@@ -273,6 +315,12 @@ DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const Descr
 
 /**
  * Disables enhanced
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(const DisableEnhancedMonitoringRequest &request)
 {
@@ -281,6 +329,12 @@ DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(con
 
 /**
  * Enables enhanced Kinesis data stream monitoring for shard-level
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const EnableEnhancedMonitoringRequest &request)
 {
@@ -341,6 +395,12 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
  * source putting data records into a stream, for example with <a>PutRecords</a>). The time stamp has millisecond
  * precision. There are no guarantees about the time stamp accuracy, or that the time stamp is always increasing. For
  * example, records in a shard or across a stream might have time stamps that are out of
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
 {
@@ -390,6 +450,12 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
  * <a>MergeShards</a>>
  *
  * <a>GetShardIterator</a> has a limit of five transactions per second per account per open
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIteratorRequest &request)
 {
@@ -406,6 +472,12 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
  * not yet expired are accessible. However, it does not make previous, expired data (older than the stream's previous
  * retention period) accessible after the operation has been called. For example, if a stream's retention period is set to
  * 24 hours and is increased to 168 hours, any data that is older than 24 hours remains inaccessible to consumer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPeriod(const IncreaseStreamRetentionPeriodRequest &request)
 {
@@ -421,6 +493,12 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
  * policy that only allows specific operations, you must update your policy to allow calls to this API. For more
  * information, see <a href="https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html">Controlling Access to
  * Amazon Kinesis Data Streams Resources Using
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
 {
@@ -447,6 +525,12 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
  * </p
  *
  * <a>ListStreams</a> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &request)
 {
@@ -455,6 +539,12 @@ ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &reque
 
 /**
  * Lists the tags for the specified Kinesis data stream. This operation has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
@@ -507,6 +597,12 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  * </p
  *
  * <code>MergeShards</code> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &request)
 {
@@ -565,6 +661,12 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
  *
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
 {
@@ -642,6 +744,12 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
  *
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
 {
@@ -659,6 +767,12 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
  * ignored>
  *
  * <a>RemoveTagsFromStream</a> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveTagsFromStreamRequest &request)
 {
@@ -724,6 +838,12 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  * </p
  *
  * <code>SplitShard</code> has a limit of five transactions per second per
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
 {
@@ -751,6 +871,12 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  * Note: It can take up to five seconds after the stream is in an <code>ACTIVE</code> status before all records written to
  * the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting the API
  * response from <code>PutRecord</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const StartStreamEncryptionRequest &request)
 {
@@ -778,6 +904,12 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
  * Note: It can take up to five seconds after the stream is in an <code>ACTIVE</code> status before all records written to
  * the stream are no longer subject to encryption. After you disabled encryption, you can verify that encryption is not
  * applied by inspecting the API response from <code>PutRecord</code> or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStreamEncryptionRequest &request)
 {
@@ -835,6 +967,12 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
  * Kinesis Data Streams Developer Guide</i>. To request an increase in the call rate limit, the shard limit for this API,
  * or your overall shard limit, use the <a
  * href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-kinesis">limits
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCountRequest &request)
 {

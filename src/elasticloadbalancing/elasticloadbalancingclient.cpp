@@ -128,6 +128,12 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/add-remove-tags.html">Tag Your Classic Load
  * Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsResponse * ElasticLoadBalancingClient::addTags(const AddTagsRequest &request)
 {
@@ -143,6 +149,12 @@ AddTagsResponse * ElasticLoadBalancingClient::addTags(const AddTagsRequest &requ
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-groups.html#elb-vpc-security-groups">Security
  * Groups for Load Balancers in a VPC</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ApplySecurityGroupsToLoadBalancerResponse * ElasticLoadBalancingClient::applySecurityGroupsToLoadBalancer(const ApplySecurityGroupsToLoadBalancerRequest &request)
 {
@@ -157,6 +169,12 @@ ApplySecurityGroupsToLoadBalancerResponse * ElasticLoadBalancingClient::applySec
  * The load balancer evenly distributes requests across all registered subnets. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-manage-subnets.html">Add or Remove Subnets for
  * Your Load Balancer in a VPC</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachLoadBalancerToSubnetsResponse * ElasticLoadBalancingClient::attachLoadBalancerToSubnets(const AttachLoadBalancerToSubnetsRequest &request)
 {
@@ -171,6 +189,12 @@ AttachLoadBalancerToSubnetsResponse * ElasticLoadBalancingClient::attachLoadBala
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html">Configure Health Checks for
  * Your Load Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConfigureHealthCheckResponse * ElasticLoadBalancingClient::configureHealthCheck(const ConfigureHealthCheckRequest &request)
 {
@@ -198,6 +222,12 @@ ConfigureHealthCheckResponse * ElasticLoadBalancingClient::configureHealthCheck(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-application">Application-Controlled
  * Session Stickiness</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAppCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createAppCookieStickinessPolicy(const CreateAppCookieStickinessPolicyRequest &request)
 {
@@ -225,6 +255,12 @@ CreateAppCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createAppC
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-duration">Duration-Based
  * Session Stickiness</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLBCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createLBCookieStickinessPolicy(const CreateLBCookieStickinessPolicyRequest &request)
 {
@@ -251,6 +287,12 @@ CreateLBCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createLBCoo
  * balancers for your account. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-limits.html">Limits for Your Classic Load
  * Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoadBalancerResponse * ElasticLoadBalancingClient::createLoadBalancer(const CreateLoadBalancerRequest &request)
 {
@@ -266,6 +308,12 @@ CreateLoadBalancerResponse * ElasticLoadBalancingClient::createLoadBalancer(cons
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html">Listeners for Your
  * Classic Load Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoadBalancerListenersResponse * ElasticLoadBalancingClient::createLoadBalancerListeners(const CreateLoadBalancerListenersRequest &request)
 {
@@ -279,6 +327,12 @@ CreateLoadBalancerListenersResponse * ElasticLoadBalancingClient::createLoadBala
  *
  * Policies are settings that are saved for your load balancer and that can be applied to the listener or the application
  * server, depending on the policy
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLoadBalancerPolicyResponse * ElasticLoadBalancingClient::createLoadBalancerPolicy(const CreateLoadBalancerPolicyRequest &request)
 {
@@ -297,6 +351,12 @@ CreateLoadBalancerPolicyResponse * ElasticLoadBalancingClient::createLoadBalance
  * instances>
  *
  * If the load balancer does not exist or has already been deleted, the call to <code>DeleteLoadBalancer</code> still
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoadBalancerResponse * ElasticLoadBalancingClient::deleteLoadBalancer(const DeleteLoadBalancerRequest &request)
 {
@@ -305,6 +365,12 @@ DeleteLoadBalancerResponse * ElasticLoadBalancingClient::deleteLoadBalancer(cons
 
 /**
  * Deletes the specified listeners from the specified load
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoadBalancerListenersResponse * ElasticLoadBalancingClient::deleteLoadBalancerListeners(const DeleteLoadBalancerListenersRequest &request)
 {
@@ -313,6 +379,12 @@ DeleteLoadBalancerListenersResponse * ElasticLoadBalancingClient::deleteLoadBala
 
 /**
  * Deletes the specified policy from the specified load balancer. This policy must not be enabled for any
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLoadBalancerPolicyResponse * ElasticLoadBalancingClient::deleteLoadBalancerPolicy(const DeleteLoadBalancerPolicyRequest &request)
 {
@@ -332,6 +404,12 @@ DeleteLoadBalancerPolicyResponse * ElasticLoadBalancingClient::deleteLoadBalance
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-deregister-register-instances.html">Register or
  * De-Register EC2 Instances</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterInstancesFromLoadBalancerResponse * ElasticLoadBalancingClient::deregisterInstancesFromLoadBalancer(const DeregisterInstancesFromLoadBalancerRequest &request)
 {
@@ -346,6 +424,12 @@ DeregisterInstancesFromLoadBalancerResponse * ElasticLoadBalancingClient::deregi
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-limits.html">Limits for Your Classic Load
  * Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountLimitsResponse * ElasticLoadBalancingClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
@@ -357,6 +441,12 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingClient::describeAccountLimit
  * specified, the call describes the state of all instances that are currently registered with the load balancer. If
  * instances are specified, their state is returned even if they are no longer registered with the load balancer. The state
  * of terminated instances is not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstanceHealthResponse * ElasticLoadBalancingClient::describeInstanceHealth(const DescribeInstanceHealthRequest &request)
 {
@@ -365,6 +455,12 @@ DescribeInstanceHealthResponse * ElasticLoadBalancingClient::describeInstanceHea
 
 /**
  * Describes the attributes for the specified load
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingClient::describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request)
 {
@@ -380,6 +476,12 @@ DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingClient::describeLoa
  * If you specify a policy name associated with your load balancer, the action returns the description of that policy. If
  * you don't specify a load balancer name, the action returns descriptions of the specified sample policies, or
  * descriptions of all sample policies. The names of the sample policies have the <code>ELBSample-</code>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancerPoliciesResponse * ElasticLoadBalancingClient::describeLoadBalancerPolicies(const DescribeLoadBalancerPoliciesRequest &request)
 {
@@ -399,6 +501,12 @@ DescribeLoadBalancerPoliciesResponse * ElasticLoadBalancingClient::describeLoadB
  * You can use <a>CreateLoadBalancerPolicy</a> to create a policy configuration for any of these policy types. Then,
  * depending on the policy type, use either <a>SetLoadBalancerPoliciesOfListener</a> or
  * <a>SetLoadBalancerPoliciesForBackendServer</a> to set the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancerPolicyTypesResponse * ElasticLoadBalancingClient::describeLoadBalancerPolicyTypes(const DescribeLoadBalancerPolicyTypesRequest &request)
 {
@@ -407,6 +515,12 @@ DescribeLoadBalancerPolicyTypesResponse * ElasticLoadBalancingClient::describeLo
 
 /**
  * Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancersResponse * ElasticLoadBalancingClient::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
@@ -415,6 +529,12 @@ DescribeLoadBalancersResponse * ElasticLoadBalancingClient::describeLoadBalancer
 
 /**
  * Describes the tags associated with the specified load
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * ElasticLoadBalancingClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -428,6 +548,12 @@ DescribeTagsResponse * ElasticLoadBalancingClient::describeTags(const DescribeTa
  *
  * After a subnet is removed, all EC2 instances registered with the load balancer in the removed subnet go into the
  * <code>OutOfService</code> state. Then, the load balancer balances the traffic among the remaining routable
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachLoadBalancerFromSubnetsResponse * ElasticLoadBalancingClient::detachLoadBalancerFromSubnets(const DetachLoadBalancerFromSubnetsRequest &request)
 {
@@ -449,6 +575,12 @@ DetachLoadBalancerFromSubnetsResponse * ElasticLoadBalancingClient::detachLoadBa
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-az.html">Add or Remove Availability
  * Zones</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::disableAvailabilityZonesForLoadBalancer(const DisableAvailabilityZonesForLoadBalancerRequest &request)
 {
@@ -467,6 +599,12 @@ DisableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::di
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-az.html">Add or Remove Availability
  * Zones</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::enableAvailabilityZonesForLoadBalancer(const EnableAvailabilityZonesForLoadBalancerRequest &request)
 {
@@ -503,6 +641,12 @@ EnableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::ena
  *
  * <a href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html">Idle Connection
  * Timeout</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingClient::modifyLoadBalancerAttributes(const ModifyLoadBalancerAttributesRequest &request)
 {
@@ -540,6 +684,12 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingClient::modifyLoadBal
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-deregister-register-instances.html">Register or
  * De-Register EC2 Instances</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterInstancesWithLoadBalancerResponse * ElasticLoadBalancingClient::registerInstancesWithLoadBalancer(const RegisterInstancesWithLoadBalancerRequest &request)
 {
@@ -548,6 +698,12 @@ RegisterInstancesWithLoadBalancerResponse * ElasticLoadBalancingClient::register
 
 /**
  * Removes one or more tags from the specified load
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsResponse * ElasticLoadBalancingClient::removeTags(const RemoveTagsRequest &request)
 {
@@ -563,6 +719,12 @@ RemoveTagsResponse * ElasticLoadBalancingClient::removeTags(const RemoveTagsRequ
  * For more information about updating your SSL certificate, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-update-ssl-cert.html">Replace the SSL
  * Certificate for Your Load Balancer</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoadBalancerListenerSSLCertificateResponse * ElasticLoadBalancingClient::setLoadBalancerListenerSSLCertificate(const SetLoadBalancerListenerSSLCertificateRequest &request)
 {
@@ -592,6 +754,12 @@ SetLoadBalancerListenerSSLCertificateResponse * ElasticLoadBalancingClient::setL
  * Protocol, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-proxy-protocol.html">Configure Proxy
  * Protocol Support</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoadBalancerPoliciesForBackendServerResponse * ElasticLoadBalancingClient::setLoadBalancerPoliciesForBackendServer(const SetLoadBalancerPoliciesForBackendServerRequest &request)
 {
@@ -614,6 +782,12 @@ SetLoadBalancerPoliciesForBackendServerResponse * ElasticLoadBalancingClient::se
  * Session Stickiness</a>, and <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-application">Application-Controlled
  * Session Stickiness</a> in the <i>Classic Load Balancer
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoadBalancerPoliciesOfListenerResponse * ElasticLoadBalancingClient::setLoadBalancerPoliciesOfListener(const SetLoadBalancerPoliciesOfListenerRequest &request)
 {

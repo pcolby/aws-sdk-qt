@@ -97,6 +97,12 @@ MTurkClient::MTurkClient(
  * </p
  *
  * A successful request for the <code>AcceptQualificationRequest</code> operation returns with no errors and an empty body.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptQualificationRequestResponse * MTurkClient::acceptQualificationRequest(const AcceptQualificationRequestRequest &request)
 {
@@ -129,6 +135,12 @@ AcceptQualificationRequestResponse * MTurkClient::acceptQualificationRequest(con
  * You can also call this operation for assignments that were previous rejected and approve them by explicitly overriding
  * the previous rejection. This only works on rejected assignments that were submitted within the previous 30 days and only
  * if the assignment's related HIT has not been deleted.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ApproveAssignmentResponse * MTurkClient::approveAssignment(const ApproveAssignmentRequest &request)
 {
@@ -152,6 +164,12 @@ ApproveAssignmentResponse * MTurkClient::approveAssignment(const ApproveAssignme
  * the Worker, the granting of the request may modify the Qualification score. To resolve a pending Qualification request
  * without affecting the Qualification the Worker already has, reject the request with the
  * <code>RejectQualificationRequest</code> operation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateQualificationWithWorkerResponse * MTurkClient::associateQualificationWithWorker(const AssociateQualificationWithWorkerRequest &request)
 {
@@ -176,6 +194,12 @@ AssociateQualificationWithWorkerResponse * MTurkClient::associateQualificationWi
  *
  * HITs that were created before July 22, 2015 cannot be extended. Attempting to extend HITs that were created before July
  * 22, 2015 will result in an <code>AWS.MechanicalTurk.HITTooOldForExtension</code> exception.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAdditionalAssignmentsForHITResponse * MTurkClient::createAdditionalAssignmentsForHIT(const CreateAdditionalAssignmentsForHITRequest &request)
 {
@@ -209,6 +233,12 @@ CreateAdditionalAssignmentsForHITResponse * MTurkClient::createAdditionalAssignm
  *
  * If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see <a
  * href="https://requester.mturk.com/pricing">Amazon Mechanical Turk
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHITResponse * MTurkClient::createHIT(const CreateHITRequest &request)
 {
@@ -219,6 +249,12 @@ CreateHITResponse * MTurkClient::createHIT(const CreateHITRequest &request)
  * The <code>CreateHITType</code> operation creates a new HIT type. This operation allows you to define a standard set of
  * HIT properties to use when creating HITs. If you register a HIT type with values that match an existing HIT type, the
  * HIT type ID of the existing type will be returned.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHITTypeResponse * MTurkClient::createHITType(const CreateHITTypeRequest &request)
 {
@@ -244,6 +280,12 @@ CreateHITTypeResponse * MTurkClient::createHITType(const CreateHITTypeRequest &r
  *
  * If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see <a
  * href="https://requester.mturk.com/pricing">Amazon Mechanical Turk Pricing</a>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateHITWithHITTypeResponse * MTurkClient::createHITWithHITType(const CreateHITWithHITTypeRequest &request)
 {
@@ -253,6 +295,12 @@ CreateHITWithHITTypeResponse * MTurkClient::createHITWithHITType(const CreateHIT
 /**
  * The <code>CreateQualificationType</code> operation creates a new Qualification type, which is represented by a
  * <code>QualificationType</code> data structure.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateQualificationTypeResponse * MTurkClient::createQualificationType(const CreateQualificationTypeRequest &request)
 {
@@ -262,6 +310,12 @@ CreateQualificationTypeResponse * MTurkClient::createQualificationType(const Cre
 /**
  * The <code>CreateWorkerBlock</code> operation allows you to prevent a Worker from working on your HITs. For example, you
  * can block a Worker who is producing poor quality work. You can block up to 100,000
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateWorkerBlockResponse * MTurkClient::createWorkerBlock(const CreateWorkerBlockRequest &request)
 {
@@ -294,6 +348,12 @@ CreateWorkerBlockResponse * MTurkClient::createWorkerBlock(const CreateWorkerBlo
  * </p </li> <li>
  *
  * Disposing HITs can improve the performance of operations such as ListReviewableHITs and ListHITs.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteHITResponse * MTurkClient::deleteHIT(const DeleteHITRequest &request)
 {
@@ -315,6 +375,12 @@ DeleteHITResponse * MTurkClient::deleteHIT(const DeleteHITRequest &request)
  * DeleteQualificationType must wait for all the HITs that use the deleted Qualification type to be deleted before
  * completing. It may take up to 48 hours before DeleteQualificationType completes and the unique name of the Qualification
  * type is available for reuse with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteQualificationTypeResponse * MTurkClient::deleteQualificationType(const DeleteQualificationTypeRequest &request)
 {
@@ -326,6 +392,12 @@ DeleteQualificationTypeResponse * MTurkClient::deleteQualificationType(const Del
  * operation reverses the effects of the CreateWorkerBlock operation. You need the Worker ID to use this operation. If the
  * Worker ID is missing or invalid, this operation fails and returns the message “WorkerId is invalid.” If the specified
  * Worker is not blocked, this operation returns
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteWorkerBlockResponse * MTurkClient::deleteWorkerBlock(const DeleteWorkerBlockRequest &request)
 {
@@ -339,6 +411,12 @@ DeleteWorkerBlockResponse * MTurkClient::deleteWorkerBlock(const DeleteWorkerBlo
  *
  * You can provide a text message explaining why the Qualification was revoked. The user who had the Qualification can see
  * this message.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisassociateQualificationFromWorkerResponse * MTurkClient::disassociateQualificationFromWorker(const DisassociateQualificationFromWorkerRequest &request)
 {
@@ -347,6 +425,12 @@ DisassociateQualificationFromWorkerResponse * MTurkClient::disassociateQualifica
 
 /**
  * The <code>GetAccountBalance</code> operation retrieves the amount of money in your Amazon Mechanical Turk
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAccountBalanceResponse * MTurkClient::getAccountBalance(const GetAccountBalanceRequest &request)
 {
@@ -355,6 +439,12 @@ GetAccountBalanceResponse * MTurkClient::getAccountBalance(const GetAccountBalan
 
 /**
  * The <code>GetAssignment</code> operation retrieves the details of the specified Assignment.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetAssignmentResponse * MTurkClient::getAssignment(const GetAssignmentRequest &request)
 {
@@ -369,6 +459,12 @@ GetAssignmentResponse * MTurkClient::getAssignment(const GetAssignmentRequest &r
  * Pending Deprecation on December 12, 2017. The Answer Specification structure will no longer support the
  * <code>FileUploadAnswer</code> element to be used for the QuestionForm data structure. Instead, we recommend that
  * Requesters who want to create HITs asking Workers to upload files to use Amazon S3.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetFileUploadURLResponse * MTurkClient::getFileUploadURL(const GetFileUploadURLRequest &request)
 {
@@ -377,6 +473,12 @@ GetFileUploadURLResponse * MTurkClient::getFileUploadURL(const GetFileUploadURLR
 
 /**
  * The <code>GetHIT</code> operation retrieves the details of the specified HIT.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetHITResponse * MTurkClient::getHIT(const GetHITRequest &request)
 {
@@ -395,6 +497,12 @@ GetHITResponse * MTurkClient::getHIT(const GetHITRequest &request)
  * </p
  *
  * Only the owner of a Qualification type can query the value of a Worker's Qualification of that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQualificationScoreResponse * MTurkClient::getQualificationScore(const GetQualificationScoreRequest &request)
 {
@@ -403,6 +511,12 @@ GetQualificationScoreResponse * MTurkClient::getQualificationScore(const GetQual
 
 /**
  * The <code>GetQualificationType</code>operation retrieves information about a Qualification type using its ID.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetQualificationTypeResponse * MTurkClient::getQualificationType(const GetQualificationTypeRequest &request)
 {
@@ -434,6 +548,12 @@ GetQualificationTypeResponse * MTurkClient::getQualificationType(const GetQualif
  *
  * Results are sorted and divided into numbered pages and the operation returns a single page of results. You can use the
  * parameters of the operation to control sorting and pagination.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAssignmentsForHITResponse * MTurkClient::listAssignmentsForHIT(const ListAssignmentsForHITRequest &request)
 {
@@ -443,6 +563,12 @@ ListAssignmentsForHITResponse * MTurkClient::listAssignmentsForHIT(const ListAss
 /**
  * The <code>ListBonusPayments</code> operation retrieves the amounts of bonuses you have paid to Workers for a given HIT
  * or assignment.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListBonusPaymentsResponse * MTurkClient::listBonusPayments(const ListBonusPaymentsRequest &request)
 {
@@ -452,6 +578,12 @@ ListBonusPaymentsResponse * MTurkClient::listBonusPayments(const ListBonusPaymen
 /**
  * The <code>ListHITs</code> operation returns all of a Requester's HITs. The operation returns HITs of any status, except
  * for HITs that have been deleted of with the DeleteHIT operation or that have been auto-deleted.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHITsResponse * MTurkClient::listHITs(const ListHITsRequest &request)
 {
@@ -462,6 +594,12 @@ ListHITsResponse * MTurkClient::listHITs(const ListHITsRequest &request)
  * The <code>ListHITsForQualificationType</code> operation returns the HITs that use the given Qualification type for a
  * Qualification requirement. The operation returns HITs of any status, except for HITs that have been deleted with the
  * <code>DeleteHIT</code> operation or that have been auto-deleted.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListHITsForQualificationTypeResponse * MTurkClient::listHITsForQualificationType(const ListHITsForQualificationTypeRequest &request)
 {
@@ -472,6 +610,12 @@ ListHITsForQualificationTypeResponse * MTurkClient::listHITsForQualificationType
  * The <code>ListQualificationRequests</code> operation retrieves requests for Qualifications of a particular Qualification
  * type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the
  * AcceptQualification operation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const ListQualificationRequestsRequest &request)
 {
@@ -482,6 +626,12 @@ ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const
  * The <code>ListQualificationRequests</code> operation retrieves requests for Qualifications of a particular Qualification
  * type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the
  * AcceptQualification operation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListQualificationTypesResponse * MTurkClient::listQualificationTypes(const ListQualificationTypesRequest &request)
 {
@@ -493,6 +643,12 @@ ListQualificationTypesResponse * MTurkClient::listQualificationTypes(const ListQ
  * course of executing your Review Policies for a given HIT. For information about how to specify Review Policies when you
  * call CreateHIT, see Review Policies. The ListReviewPolicyResultsForHIT operation can return results for both
  * Assignment-level and HIT-level review results.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListReviewPolicyResultsForHITResponse * MTurkClient::listReviewPolicyResultsForHIT(const ListReviewPolicyResultsForHITRequest &request)
 {
@@ -502,6 +658,12 @@ ListReviewPolicyResultsForHITResponse * MTurkClient::listReviewPolicyResultsForH
 /**
  * The <code>ListReviewableHITs</code> operation retrieves the HITs with Status equal to Reviewable or Status equal to
  * Reviewing that belong to the Requester calling the operation.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListReviewableHITsResponse * MTurkClient::listReviewableHITs(const ListReviewableHITsRequest &request)
 {
@@ -510,6 +672,12 @@ ListReviewableHITsResponse * MTurkClient::listReviewableHITs(const ListReviewabl
 
 /**
  * The <code>ListWorkersBlocks</code> operation retrieves a list of Workers who are blocked from working on your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListWorkerBlocksResponse * MTurkClient::listWorkerBlocks(const ListWorkerBlocksRequest &request)
 {
@@ -519,6 +687,12 @@ ListWorkerBlocksResponse * MTurkClient::listWorkerBlocks(const ListWorkerBlocksR
 /**
  * The <code>ListWorkersWithQualificationType</code> operation returns all of the Workers that have been associated with a
  * given Qualification type.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListWorkersWithQualificationTypeResponse * MTurkClient::listWorkersWithQualificationType(const ListWorkersWithQualificationTypeRequest &request)
 {
@@ -530,6 +704,12 @@ ListWorkersWithQualificationTypeResponse * MTurkClient::listWorkersWithQualifica
  * can specify up to 100 Worker IDs to send the same message with a single call to the NotifyWorkers operation. The
  * NotifyWorkers operation will send a notification email to a Worker only if you have previously approved or rejected work
  * from the Worker.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 NotifyWorkersResponse * MTurkClient::notifyWorkers(const NotifyWorkersRequest &request)
 {
@@ -548,6 +728,12 @@ NotifyWorkersResponse * MTurkClient::notifyWorkers(const NotifyWorkersRequest &r
  * </p
  *
  * Only the Requester who created the HIT can reject an assignment for the HIT.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectAssignmentResponse * MTurkClient::rejectAssignment(const RejectAssignmentRequest &request)
 {
@@ -560,6 +746,12 @@ RejectAssignmentResponse * MTurkClient::rejectAssignment(const RejectAssignmentR
  * </p
  *
  * You can provide a text message explaining why the request was rejected. The Worker who made the request can see this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectQualificationRequestResponse * MTurkClient::rejectQualificationRequest(const RejectQualificationRequestRequest &request)
 {
@@ -573,6 +765,12 @@ RejectQualificationRequestResponse * MTurkClient::rejectQualificationRequest(con
  * message that explains the reason for the bonus payment, as the Worker may not be expecting the payment. Amazon
  * Mechanical Turk collects a fee for bonus payments, similar to the HIT listing fee. This operation fails if your account
  * does not have enough funds to pay for both the bonus and the fees.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendBonusResponse * MTurkClient::sendBonus(const SendBonusRequest &request)
 {
@@ -584,6 +782,12 @@ SendBonusResponse * MTurkClient::sendBonus(const SendBonusRequest &request)
  * a HIT event occurred, according to the provided notification specification. This allows you to test notifications
  * without setting up notifications for a real HIT type and trying to trigger them using the website. When you call this
  * operation, the service attempts to send the test notification immediately.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SendTestEventNotificationResponse * MTurkClient::sendTestEventNotification(const SendTestEventNotificationRequest &request)
 {
@@ -593,6 +797,12 @@ SendTestEventNotificationResponse * MTurkClient::sendTestEventNotification(const
 /**
  * The <code>UpdateExpirationForHIT</code> operation allows you update the expiration time of a HIT. If you update it to a
  * time in the past, the HIT will be immediately expired.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateExpirationForHITResponse * MTurkClient::updateExpirationForHIT(const UpdateExpirationForHITRequest &request)
 {
@@ -602,6 +812,12 @@ UpdateExpirationForHITResponse * MTurkClient::updateExpirationForHIT(const Updat
 /**
  * The <code>UpdateHITReviewStatus</code> operation updates the status of a HIT. If the status is Reviewable, this
  * operation can update the status to Reviewing, or it can revert a Reviewing HIT back to the Reviewable status.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateHITReviewStatusResponse * MTurkClient::updateHITReviewStatus(const UpdateHITReviewStatusRequest &request)
 {
@@ -612,6 +828,12 @@ UpdateHITReviewStatusResponse * MTurkClient::updateHITReviewStatus(const UpdateH
  * The <code>UpdateHITTypeOfHIT</code> operation allows you to change the HITType properties of a HIT. This operation
  * disassociates the HIT from its old HITType properties and associates it with the new HITType properties. The HIT takes
  * on the properties of the new HITType in place of the old ones.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateHITTypeOfHITResponse * MTurkClient::updateHITTypeOfHIT(const UpdateHITTypeOfHITRequest &request)
 {
@@ -626,6 +848,12 @@ UpdateHITTypeOfHITResponse * MTurkClient::updateHITTypeOfHIT(const UpdateHITType
  * providing updates to the Active status without specifying a new notification specification. To change the Active status
  * of a HIT type's notifications, the HIT type must already have a notification specification, or one must be provided in
  * the same call to <code>UpdateNotificationSettings</code>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNotificationSettingsResponse * MTurkClient::updateNotificationSettings(const UpdateNotificationSettingsRequest &request)
 {
@@ -668,6 +896,12 @@ UpdateNotificationSettingsResponse * MTurkClient::updateNotificationSettings(con
  * </p
  *
  * You can also update the AutoGranted and AutoGrantedValue attributes of the Qualification
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateQualificationTypeResponse * MTurkClient::updateQualificationType(const UpdateQualificationTypeRequest &request)
 {

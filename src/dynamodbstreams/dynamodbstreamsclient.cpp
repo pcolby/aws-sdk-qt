@@ -130,6 +130,12 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  * <code>SequenceNumberRange</code> has a <code>StartingSequenceNumber</code> but no <code>EndingSequenceNumber</code>,
  * then the shard is still open (able to receive more stream records). If both <code>StartingSequenceNumber</code> and
  * <code>EndingSequenceNumber</code> are present, the that shared is closed and can no longer receive more
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -147,6 +153,12 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
  * take multiple calls to get to a portion of the shard that contains stream
  *
  * records> <note><p><function>GetRecords</function> can retrieve a maximum of 1 MB of data or 2000 stream records,
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &request)
 {
@@ -156,6 +168,12 @@ GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &
 /**
  * Returns a shard iterator. A shard iterator provides information about how to retrieve the stream records from within a
  * shard. Use the shard iterator in a subsequent <code>GetRecords</code> request to read the stream records from the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
 {
@@ -165,6 +183,12 @@ GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShar
 /**
  * Returns an array of stream ARNs associated with the current account and endpoint. If the <code>TableName</code>
  * parameter is present, then <i>ListStreams</i> will return only the streams ARNs for that
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsRequest &request)
 {

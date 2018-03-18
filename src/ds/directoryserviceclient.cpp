@@ -113,6 +113,12 @@ DirectoryServiceClient::DirectoryServiceClient(
  * policy. For details about what permissions are required to run the <i>AddIpRoutes</i> operation, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesRequest &request)
 {
@@ -122,6 +128,12 @@ AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesReque
 /**
  * Adds or overwrites one or more tags for the specified directory. Each directory can have a maximum of 50 tags. Each tag
  * consists of a key and optional value. Tag keys must be unique to each
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -132,6 +144,12 @@ AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddT
  * Cancels an in-progress schema extension to a Microsoft AD directory. Once a schema extension has started replicating to
  * all domain controllers, the task can no longer be canceled. A schema extension can be canceled during any of the
  * following states; <code>Initializing</code>, <code>CreatingSnapshot</code>, and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(const CancelSchemaExtensionRequest &request)
 {
@@ -147,6 +165,12 @@ CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(co
  * through a policy. For details about what permissions are required to run the <i>ConnectDirectory</i> operation, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const ConnectDirectoryRequest &request)
 {
@@ -160,6 +184,12 @@ ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const Connec
  * <code>http://&lt;alias&gt;.awsapps.com</code>> <important>
  *
  * After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasRequest &request)
 {
@@ -168,6 +198,12 @@ CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasReque
 
 /**
  * Creates a computer account in the specified directory, and joins the computer to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComputerRequest &request)
 {
@@ -177,6 +213,12 @@ CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComp
 /**
  * Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order to set
  * up a trust relationship with another domain. The conditional forwarder points to the trusted
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalForwarder(const CreateConditionalForwarderRequest &request)
 {
@@ -192,6 +234,12 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
  * a policy. For details about what permissions are required to run the <i>CreateDirectory</i> operation, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDirectoryRequest &request)
 {
@@ -207,6 +255,12 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
  * through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const CreateMicrosoftADRequest &request)
 {
@@ -219,6 +273,12 @@ CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const Crea
  * cloud> <note>
  *
  * You cannot take snapshots of AD Connector
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnapshotRequest &request)
 {
@@ -234,6 +294,12 @@ CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnap
  *
  * This action initiates the creation of the AWS side of a trust relationship between a Microsoft AD in the AWS cloud and
  * an external
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustRequest &request)
 {
@@ -242,6 +308,12 @@ CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustReque
 
 /**
  * Deletes a conditional forwarder that has been set up for your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request)
 {
@@ -257,6 +329,12 @@ DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalFo
  * a policy. For details about what permissions are required to run the <i>DeleteDirectory</i> operation, see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
@@ -265,6 +343,12 @@ DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDi
 
 /**
  * Deletes a directory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
@@ -273,6 +357,12 @@ DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnap
 
 /**
  * Deletes an existing trust relationship between your Microsoft AD in the AWS cloud and an external
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustRequest &request)
 {
@@ -281,6 +371,12 @@ DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustReque
 
 /**
  * Removes the specified directory as a publisher to the specified SNS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(const DeregisterEventTopicRequest &request)
 {
@@ -294,6 +390,12 @@ DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(cons
  *
  * If no input parameters are provided for RemoteDomainNames, this request describes all conditional forwarders for the
  * specified directory
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditionalForwarders(const DescribeConditionalForwardersRequest &request)
 {
@@ -317,6 +419,12 @@ DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditio
  * items>
  *
  * You can also specify a maximum number of return results with the <i>Limit</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const DescribeDirectoriesRequest &request)
 {
@@ -325,6 +433,12 @@ DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const 
 
 /**
  * Provides information about any domain controllers in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainControllers(const DescribeDomainControllersRequest &request)
 {
@@ -338,6 +452,12 @@ DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainContro
  *
  * If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the associations in
  * the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const DescribeEventTopicsRequest &request)
 {
@@ -356,6 +476,12 @@ DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const 
  * items>
  *
  * You can also specify a maximum number of return results with the <i>Limit</i>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
@@ -369,6 +495,12 @@ DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const Desc
  *
  * If no input parameters are provided, such as DirectoryId or TrustIds, this request describes all the trust relationships
  * belonging to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTrustsRequest &request)
 {
@@ -378,6 +510,12 @@ DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTr
 /**
  * Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
  * Connector
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiusRequest &request)
 {
@@ -386,6 +524,12 @@ DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiu
 
 /**
  * Disables single-sign on for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest &request)
 {
@@ -395,6 +539,12 @@ DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest 
 /**
  * Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
  * Connector
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRequest &request)
 {
@@ -403,6 +553,12 @@ EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRe
 
 /**
  * Enables single sign-on for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &request)
 {
@@ -411,6 +567,12 @@ EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &re
 
 /**
  * Obtains directory limit information for the current
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const GetDirectoryLimitsRequest &request)
 {
@@ -419,6 +581,12 @@ GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const Ge
 
 /**
  * Obtains the manual snapshot limits for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetSnapshotLimitsRequest &request)
 {
@@ -427,6 +595,12 @@ GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetS
 
 /**
  * Lists the address blocks that you have added to a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRequest &request)
 {
@@ -435,6 +609,12 @@ ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRe
 
 /**
  * Lists all schema extensions applied to a Microsoft AD
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(const ListSchemaExtensionsRequest &request)
 {
@@ -443,6 +623,12 @@ ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(cons
 
 /**
  * Lists all tags on a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -454,6 +640,12 @@ ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const 
  * can then receive email or text (SMS) messages when the status of your directory changes. You get notified if your
  * directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when the
  * directory returns to an Active
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const RegisterEventTopicRequest &request)
 {
@@ -462,6 +654,12 @@ RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const Re
 
 /**
  * Removes IP address blocks from a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRoutesRequest &request)
 {
@@ -470,6 +668,12 @@ RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRo
 
 /**
  * Removes tags from a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -488,6 +692,12 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
  * This action returns as soon as the restore operation is initiated. You can monitor the progress of the restore operation
  * by calling the <a>DescribeDirectories</a> operation with the directory identifier. When the
  * <b>DirectoryDescription.Stage</b> value changes to <code>Active</code>, the restore operation is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const RestoreFromSnapshotRequest &request)
 {
@@ -496,6 +706,12 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
 
 /**
  * Applies a schema extension to a Microsoft AD
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(const StartSchemaExtensionRequest &request)
 {
@@ -504,6 +720,12 @@ StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(cons
 
 /**
  * Updates a conditional forwarder that has been set up for your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalForwarder(const UpdateConditionalForwarderRequest &request)
 {
@@ -515,6 +737,12 @@ UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalFo
  * (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new
  * domain controllers to become fully active once the requested number of domain controllers is updated. During this time,
  * you cannot make another update
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOfDomainControllers(const UpdateNumberOfDomainControllersRequest &request)
 {
@@ -523,6 +751,12 @@ UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOf
 
 /**
  * Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRequest &request)
 {
@@ -535,6 +769,12 @@ UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRe
  * relationships>
  *
  * This action verifies a trust relationship between your Microsoft AD in the AWS cloud and an external
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustRequest &request)
 {

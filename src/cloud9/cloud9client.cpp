@@ -144,6 +144,12 @@ Cloud9Client::Cloud9Client(
 /**
  * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
  * connects from the instance to the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEnvironmentEC2Request &request)
 {
@@ -152,6 +158,12 @@ CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEn
 
 /**
  * Adds an environment member to an AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(const CreateEnvironmentMembershipRequest &request)
 {
@@ -161,6 +173,12 @@ CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(
 /**
  * Deletes an AWS Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also
  * terminates the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironmentRequest &request)
 {
@@ -169,6 +187,12 @@ DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironm
 
 /**
  * Deletes an environment member from an AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(const DeleteEnvironmentMembershipRequest &request)
 {
@@ -177,6 +201,12 @@ DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(
 
 /**
  * Gets information about environment members for an AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMemberships(const DescribeEnvironmentMembershipsRequest &request)
 {
@@ -185,6 +215,12 @@ DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMember
 
 /**
  * Gets status information for an AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request)
 {
@@ -193,6 +229,12 @@ DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(cons
 
 /**
  * Gets information about AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
@@ -201,6 +243,12 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
 
 /**
  * Gets a list of AWS Cloud9 development environment
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
 {
@@ -209,6 +257,12 @@ ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironments
 
 /**
  * Changes the settings of an existing AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
@@ -217,6 +271,12 @@ UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironm
 
 /**
  * Changes the settings of an existing environment member for an AWS Cloud9 development
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request)
 {

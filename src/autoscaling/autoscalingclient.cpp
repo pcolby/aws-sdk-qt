@@ -112,6 +112,12 @@ AutoScalingClient::AutoScalingClient(
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-instance-asg.html">Attach EC2 Instances to Your
  * Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstancesRequest &request)
 {
@@ -131,6 +137,12 @@ AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstanc
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-load-balancer-asg.html">Attach a Load Balancer to
  * Your Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTargetGroups(const AttachLoadBalancerTargetGroupsRequest &request)
 {
@@ -154,6 +166,12 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-load-balancer-asg.html">Attach a Load Balancer to
  * Your Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const AttachLoadBalancersRequest &request)
 {
@@ -194,6 +212,12 @@ AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const Attac
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a>
  * in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(const CompleteLifecycleActionRequest &request)
 {
@@ -214,6 +238,12 @@ CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(con
  *
  * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html">Auto
  * Scaling Groups</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const CreateAutoScalingGroupRequest &request)
 {
@@ -235,6 +265,12 @@ CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/LaunchConfiguration.html">Launch Configurations</a> in the
  * <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration(const CreateLaunchConfigurationRequest &request)
 {
@@ -254,6 +290,12 @@ CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/autoscaling-tagging.html">Tagging Auto Scaling Groups and
  * Instances</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateOrUpdateTagsRequest &request)
 {
@@ -282,6 +324,12 @@ CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateO
  *
  * To terminate all instances before deleting the Auto Scaling group, call <a>UpdateAutoScalingGroup</a> and set the
  * minimum size and desired capacity of the Auto Scaling group to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const DeleteAutoScalingGroupRequest &request)
 {
@@ -295,6 +343,12 @@ DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const
  *
  * The launch configuration must not be attached to an Auto Scaling group. When this call completes, the launch
  * configuration is no longer available for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLaunchConfigurationResponse * AutoScalingClient::deleteLaunchConfiguration(const DeleteLaunchConfigurationRequest &request)
 {
@@ -308,6 +362,12 @@ DeleteLaunchConfigurationResponse * AutoScalingClient::deleteLaunchConfiguration
  *
  * If there are any outstanding lifecycle actions, they are completed first (<code>ABANDON</code> for launching instances,
  * <code>CONTINUE</code> for terminating
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteLifecycleHookResponse * AutoScalingClient::deleteLifecycleHook(const DeleteLifecycleHookRequest &request)
 {
@@ -316,6 +376,12 @@ DeleteLifecycleHookResponse * AutoScalingClient::deleteLifecycleHook(const Delet
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationConfiguration(const DeleteNotificationConfigurationRequest &request)
 {
@@ -329,6 +395,12 @@ DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationC
  *
  * Deleting a policy deletes the underlying alarm action, but does not delete the alarm, even if it no longer has an
  * associated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -337,6 +409,12 @@ DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest
 
 /**
  * Deletes the specified scheduled
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteScheduledActionResponse * AutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
 {
@@ -345,6 +423,12 @@ DeleteScheduledActionResponse * AutoScalingClient::deleteScheduledAction(const D
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -359,6 +443,12 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
  * For information about requesting an increase in these limits, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
  * <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
@@ -367,6 +457,12 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 
 /**
  * Describes the policy adjustment types for use with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 {
@@ -375,6 +471,12 @@ DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 
 /**
  * Describes one or more Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups(const DescribeAutoScalingGroupsRequest &request)
 {
@@ -383,6 +485,12 @@ DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups
 
 /**
  * Describes one or more Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingInstances(const DescribeAutoScalingInstancesRequest &request)
 {
@@ -391,6 +499,12 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
 
 /**
  * Describes the notification types that are supported by Auto
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoScalingNotificationTypes()
 {
@@ -399,6 +513,12 @@ DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoSc
 
 /**
  * Describes one or more launch
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigurations(const DescribeLaunchConfigurationsRequest &request)
 {
@@ -407,6 +527,12 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
 
 /**
  * Describes the available types of lifecycle
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes()
 {
@@ -415,6 +541,12 @@ DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTyp
 
 /**
  * Describes the lifecycle hooks for the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const DescribeLifecycleHooksRequest &request)
 {
@@ -423,6 +555,12 @@ DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const
 
 /**
  * Describes the target groups for the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalancerTargetGroups(const DescribeLoadBalancerTargetGroupsRequest &request)
 {
@@ -436,6 +574,12 @@ DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalanc
  *
  * Note that this operation describes only Classic Load Balancers. If you have Application Load Balancers, use
  * <a>DescribeLoadBalancerTargetGroups</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
@@ -449,6 +593,12 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
  *
  * Note that the <code>GroupStandbyInstances</code> metric is not returned by default. You must explicitly request this
  * metric when calling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes()
 {
@@ -457,6 +607,12 @@ DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollect
 
 /**
  * Describes the notification actions associated with the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotificationConfigurations(const DescribeNotificationConfigurationsRequest &request)
 {
@@ -465,6 +621,12 @@ DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotifica
 
 /**
  * Describes the policies for the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePoliciesRequest &request)
 {
@@ -473,6 +635,12 @@ DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePol
 
 /**
  * Describes one or more scaling activities for the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
@@ -481,6 +649,12 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
 
 /**
  * Describes the scaling process types for use with <a>ResumeProcesses</a> and
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes()
 {
@@ -490,6 +664,12 @@ DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessT
 /**
  * Describes the actions scheduled for your Auto Scaling group that haven't run. To describe the actions that have already
  * run, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
@@ -509,6 +689,12 @@ DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(c
  *
  * You can also specify multiple filters. The result includes information for a particular tag only if it matches all the
  * filters. If there's no match, no special message is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -517,6 +703,12 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
 
 /**
  * Describes the termination policies supported by Auto
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
 {
@@ -545,6 +737,12 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/detach-instance-asg.html">Detach EC2 Instances from Your
  * Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstancesRequest &request)
 {
@@ -553,6 +751,12 @@ DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstanc
 
 /**
  * Detaches one or more target groups from the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTargetGroups(const DetachLoadBalancerTargetGroupsRequest &request)
 {
@@ -572,6 +776,12 @@ DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTa
  * When you detach a load balancer, it enters the <code>Removing</code> state while deregistering the instances in the
  * group. When all instances are deregistered, then you can no longer describe the load balancer using
  * <a>DescribeLoadBalancers</a>. Note that the instances remain
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const DetachLoadBalancersRequest &request)
 {
@@ -580,6 +790,12 @@ DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const Detac
 
 /**
  * Disables group metrics for the specified Auto Scaling
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(const DisableMetricsCollectionRequest &request)
 {
@@ -590,6 +806,12 @@ DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(c
  * Enables group metrics for the specified Auto Scaling group. For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html">Monitoring Your Auto Scaling
  * Groups and Instances</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(const EnableMetricsCollectionRequest &request)
 {
@@ -604,6 +826,12 @@ EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(con
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
  * from Your Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest &request)
 {
@@ -612,6 +840,12 @@ EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest
 
 /**
  * Executes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequest &request)
 {
@@ -626,6 +860,12 @@ ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequ
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
  * from Your Auto Scaling Group</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &request)
 {
@@ -677,6 +917,12 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  * information about updating this limit, see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS Service Limits</a> in the <i>Amazon Web
  * Services General
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycleHookRequest &request)
 {
@@ -696,6 +942,12 @@ PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycl
  * For more information see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/ASGettingNotifications.html">Getting SNS Notifications
  * When Your Auto Scaling Group Scales</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfiguration(const PutNotificationConfigurationRequest &request)
 {
@@ -712,6 +964,12 @@ PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfigu
  * If you exceed your maximum limit of step adjustments, which by default is 20 per region, the call fails. For information
  * about updating this limit, see <a href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
  * Service Limits</a> in the <i>Amazon Web Services General
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -726,6 +984,12 @@ PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingP
  *
  * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/schedule_time.html">Scheduled
  * Scaling</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGroupAction(const PutScheduledUpdateGroupActionRequest &request)
 {
@@ -767,6 +1031,12 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a>
  * in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActionHeartbeat(const RecordLifecycleActionHeartbeatRequest &request)
 {
@@ -781,6 +1051,12 @@ RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActio
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html">Suspending and Resuming
  * Auto Scaling Processes</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcessesRequest &request)
 {
@@ -795,6 +1071,12 @@ ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcess
  * For more information about desired capacity, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/WhatIsAutoScaling.html">What Is Auto Scaling?</a> in the
  * <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesiredCapacityRequest &request)
 {
@@ -808,6 +1090,12 @@ SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesi
  *
  * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/latest/userguide/healthcheck.html">Health
  * Checks</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstanceHealthRequest &request)
 {
@@ -822,6 +1110,12 @@ SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstan
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-termination.html#instance-protection">Instance
  * Protection</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const SetInstanceProtectionRequest &request)
 {
@@ -845,6 +1139,12 @@ SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const S
  * For more information, see <a
  * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html">Suspending and Resuming
  * Auto Scaling Processes</a> in the <i>Auto Scaling User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProcessesRequest &request)
 {
@@ -857,6 +1157,12 @@ SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProc
  * size>
  *
  * This call simply makes a termination request. The instance is not terminated
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstanceInAutoScalingGroup(const TerminateInstanceInAutoScalingGroupRequest &request)
 {
@@ -896,6 +1202,12 @@ TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstan
  * <code>MaxSize</code>> </li> <li>
  *
  * All other optional parameters are left unchanged if not
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const UpdateAutoScalingGroupRequest &request)
 {

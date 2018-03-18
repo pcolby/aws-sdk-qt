@@ -111,6 +111,12 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
 
 /**
  * Cancels in-progress environment configuration update or application version
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AbortEnvironmentUpdateResponse * ElasticBeanstalkClient::abortEnvironmentUpdate(const AbortEnvironmentUpdateRequest &request)
 {
@@ -120,6 +126,12 @@ AbortEnvironmentUpdateResponse * ElasticBeanstalkClient::abortEnvironmentUpdate(
 /**
  * Applies a scheduled managed action immediately. A managed action can be applied only if its status is
  * <code>Scheduled</code>. Get the status and action ID of a managed action with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ApplyEnvironmentManagedActionResponse * ElasticBeanstalkClient::applyEnvironmentManagedAction(const ApplyEnvironmentManagedActionRequest &request)
 {
@@ -128,6 +140,12 @@ ApplyEnvironmentManagedActionResponse * ElasticBeanstalkClient::applyEnvironment
 
 /**
  * Checks if the specified CNAME is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(const CheckDNSAvailabilityRequest &request)
 {
@@ -140,6 +158,12 @@ CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(cons
  * each environment and other required information must be included in the source bundles in an environment manifest named
  * <code>env.yaml</code>. See <a
  * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-mgmt-compose.html">Compose Environments</a> for
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const ComposeEnvironmentsRequest &request)
 {
@@ -148,6 +172,12 @@ ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const 
 
 /**
  * Creates an application that has one configuration template named <code>default</code> and no application versions.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationResponse * ElasticBeanstalkClient::createApplication(const CreateApplicationRequest &request)
 {
@@ -179,6 +209,12 @@ CreateApplicationResponse * ElasticBeanstalkClient::createApplication(const Crea
  * Once you create an application version with a specified Amazon S3 bucket and key location, you cannot change that Amazon
  * S3 location. If you change the Amazon S3 location, you receive an exception when you attempt to launch an environment
  * from the application
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
 {
@@ -204,6 +240,12 @@ CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVers
  * </p </li> <li>
  *
  * <a>ListAvailableSolutionStacks</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateConfigurationTemplateResponse * ElasticBeanstalkClient::createConfigurationTemplate(const CreateConfigurationTemplateRequest &request)
 {
@@ -212,6 +254,12 @@ CreateConfigurationTemplateResponse * ElasticBeanstalkClient::createConfiguratio
 
 /**
  * Launches an environment for the specified application using the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateEnvironmentResponse * ElasticBeanstalkClient::createEnvironment(const CreateEnvironmentRequest &request)
 {
@@ -220,6 +268,12 @@ CreateEnvironmentResponse * ElasticBeanstalkClient::createEnvironment(const Crea
 
 /**
  * Create a new version of your custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(const CreatePlatformVersionRequest &request)
 {
@@ -231,6 +285,12 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
  * environments. The Elastic Beanstalk console and EB CLI call this API the first time you create an environment in a
  * region. If the storage location already exists, <code>CreateStorageLocation</code> still returns the bucket name but
  * does not create a new
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
 {
@@ -244,6 +304,12 @@ CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
  * bucket> <note>
  *
  * You cannot delete an application that has a running
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationResponse * ElasticBeanstalkClient::deleteApplication(const DeleteApplicationRequest &request)
 {
@@ -256,6 +322,12 @@ DeleteApplicationResponse * ElasticBeanstalkClient::deleteApplication(const Dele
  * application> <note>
  *
  * You cannot delete an application version that is associated with a running
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteApplicationVersionResponse * ElasticBeanstalkClient::deleteApplicationVersion(const DeleteApplicationVersionRequest &request)
 {
@@ -269,6 +341,12 @@ DeleteApplicationVersionResponse * ElasticBeanstalkClient::deleteApplicationVers
  *
  * When you launch an environment using a configuration template, the environment gets a copy of the template. You can
  * delete or modify the environment's copy of the template without affecting the running
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteConfigurationTemplateResponse * ElasticBeanstalkClient::deleteConfigurationTemplate(const DeleteConfigurationTemplateRequest &request)
 {
@@ -284,6 +362,12 @@ DeleteConfigurationTemplateResponse * ElasticBeanstalkClient::deleteConfiguratio
  * configuration using <a>DescribeConfigurationSettings</a> while the update is in progress or if the update fails. The
  * <code>DeploymentStatus</code> for the draft configuration indicates whether the deployment is in process or has failed.
  * The draft configuration remains in existence until it is deleted with this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteEnvironmentConfigurationResponse * ElasticBeanstalkClient::deleteEnvironmentConfiguration(const DeleteEnvironmentConfigurationRequest &request)
 {
@@ -292,6 +376,12 @@ DeleteEnvironmentConfigurationResponse * ElasticBeanstalkClient::deleteEnvironme
 
 /**
  * Deletes the specified version of a custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(const DeletePlatformVersionRequest &request)
 {
@@ -299,6 +389,12 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
 }
 
 /**
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttributes()
 {
@@ -307,6 +403,12 @@ DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttri
 
 /**
  * Retrieve a list of application
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationVersionsResponse * ElasticBeanstalkClient::describeApplicationVersions(const DescribeApplicationVersionsRequest &request)
 {
@@ -315,6 +417,12 @@ DescribeApplicationVersionsResponse * ElasticBeanstalkClient::describeApplicatio
 
 /**
  * Returns the descriptions of existing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeApplicationsResponse * ElasticBeanstalkClient::describeApplications(const DescribeApplicationsRequest &request)
 {
@@ -325,6 +433,12 @@ DescribeApplicationsResponse * ElasticBeanstalkClient::describeApplications(cons
  * Describes the configuration options that are used in a particular configuration template or environment, or that a
  * specified solution stack defines. The description includes the values the options, their default values, and an
  * indication of the required action on a running environment if an option value is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationOptionsResponse * ElasticBeanstalkClient::describeConfigurationOptions(const DescribeConfigurationOptionsRequest &request)
 {
@@ -348,6 +462,12 @@ DescribeConfigurationOptionsResponse * ElasticBeanstalkClient::describeConfigura
  * Topic> <ul> <li>
  *
  * <a>DeleteEnvironmentConfiguration</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeConfigurationSettingsResponse * ElasticBeanstalkClient::describeConfigurationSettings(const DescribeConfigurationSettingsRequest &request)
 {
@@ -357,6 +477,12 @@ DescribeConfigurationSettingsResponse * ElasticBeanstalkClient::describeConfigur
 /**
  * Returns information about the overall health of the specified environment. The <b>DescribeEnvironmentHealth</b>
  * operation is only available with AWS Elastic Beanstalk Enhanced
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentHealthResponse * ElasticBeanstalkClient::describeEnvironmentHealth(const DescribeEnvironmentHealthRequest &request)
 {
@@ -365,6 +491,12 @@ DescribeEnvironmentHealthResponse * ElasticBeanstalkClient::describeEnvironmentH
 
 /**
  * Lists an environment's completed and failed managed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentManagedActionHistoryResponse * ElasticBeanstalkClient::describeEnvironmentManagedActionHistory(const DescribeEnvironmentManagedActionHistoryRequest &request)
 {
@@ -373,6 +505,12 @@ DescribeEnvironmentManagedActionHistoryResponse * ElasticBeanstalkClient::descri
 
 /**
  * Lists an environment's upcoming and in-progress managed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentManagedActionsResponse * ElasticBeanstalkClient::describeEnvironmentManagedActions(const DescribeEnvironmentManagedActionsRequest &request)
 {
@@ -381,6 +519,12 @@ DescribeEnvironmentManagedActionsResponse * ElasticBeanstalkClient::describeEnvi
 
 /**
  * Returns AWS resources for this
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentResourcesResponse * ElasticBeanstalkClient::describeEnvironmentResources(const DescribeEnvironmentResourcesRequest &request)
 {
@@ -389,6 +533,12 @@ DescribeEnvironmentResourcesResponse * ElasticBeanstalkClient::describeEnvironme
 
 /**
  * Returns descriptions for existing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEnvironmentsResponse * ElasticBeanstalkClient::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
@@ -401,6 +551,12 @@ DescribeEnvironmentsResponse * ElasticBeanstalkClient::describeEnvironments(cons
  * weeks> <note>
  *
  * This action returns the most recent 1,000 events from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -410,6 +566,12 @@ DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEv
 /**
  * Retrives detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires <a
  * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html">enhanced health
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealth(const DescribeInstancesHealthRequest &request)
 {
@@ -418,6 +580,12 @@ DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealt
 
 /**
  * Describes the version of the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersion(const DescribePlatformVersionRequest &request)
 {
@@ -426,6 +594,12 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
 
 /**
  * Returns a list of the available solution stack names, with the public version first and then in reverse chronological
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolutionStacks()
 {
@@ -434,6 +608,12 @@ ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolut
 
 /**
  * Lists the available
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(const ListPlatformVersionsRequest &request)
 {
@@ -448,6 +628,12 @@ ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(cons
  * Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment
  * tagging, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging
  * Resources in Your Elastic Beanstalk
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -457,6 +643,12 @@ ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const 
 /**
  * Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a
  * specified environment and forces a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RebuildEnvironmentResponse * ElasticBeanstalkClient::rebuildEnvironment(const RebuildEnvironmentRequest &request)
 {
@@ -487,6 +679,12 @@ RebuildEnvironmentResponse * ElasticBeanstalkClient::rebuildEnvironment(const Re
  * Topic> <ul> <li>
  *
  * <a>RetrieveEnvironmentInfo</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RequestEnvironmentInfoResponse * ElasticBeanstalkClient::requestEnvironmentInfo(const RequestEnvironmentInfoRequest &request)
 {
@@ -495,6 +693,12 @@ RequestEnvironmentInfoResponse * ElasticBeanstalkClient::requestEnvironmentInfo(
 
 /**
  * Causes the environment to restart the application container server running on each Amazon EC2
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RestartAppServerResponse * ElasticBeanstalkClient::restartAppServer(const RestartAppServerRequest &request)
 {
@@ -511,6 +715,12 @@ RestartAppServerResponse * ElasticBeanstalkClient::restartAppServer(const Restar
  * Topic> <ul> <li>
  *
  * <a>RequestEnvironmentInfo</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RetrieveEnvironmentInfoResponse * ElasticBeanstalkClient::retrieveEnvironmentInfo(const RetrieveEnvironmentInfoRequest &request)
 {
@@ -519,6 +729,12 @@ RetrieveEnvironmentInfoResponse * ElasticBeanstalkClient::retrieveEnvironmentInf
 
 /**
  * Swaps the CNAMEs of two
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SwapEnvironmentCNAMEsResponse * ElasticBeanstalkClient::swapEnvironmentCNAMEs(const SwapEnvironmentCNAMEsRequest &request)
 {
@@ -527,6 +743,12 @@ SwapEnvironmentCNAMEsResponse * ElasticBeanstalkClient::swapEnvironmentCNAMEs(co
 
 /**
  * Terminates the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TerminateEnvironmentResponse * ElasticBeanstalkClient::terminateEnvironment(const TerminateEnvironmentRequest &request)
 {
@@ -540,6 +762,12 @@ TerminateEnvironmentResponse * ElasticBeanstalkClient::terminateEnvironment(cons
  *
  * If a property (for example, <code>description</code>) is not provided, the value remains unchanged. To clear these
  * properties, specify an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResponse * ElasticBeanstalkClient::updateApplication(const UpdateApplicationRequest &request)
 {
@@ -548,6 +776,12 @@ UpdateApplicationResponse * ElasticBeanstalkClient::updateApplication(const Upda
 
 /**
  * Modifies lifecycle settings for an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationResourceLifecycleResponse * ElasticBeanstalkClient::updateApplicationResourceLifecycle(const UpdateApplicationResourceLifecycleRequest &request)
 {
@@ -561,6 +795,12 @@ UpdateApplicationResourceLifecycleResponse * ElasticBeanstalkClient::updateAppli
  *
  * If a property (for example, <code>description</code>) is not provided, the value remains unchanged. To clear properties,
  * specify an empty
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateApplicationVersionResponse * ElasticBeanstalkClient::updateApplicationVersion(const UpdateApplicationVersionRequest &request)
 {
@@ -582,6 +822,12 @@ UpdateApplicationVersionResponse * ElasticBeanstalkClient::updateApplicationVers
  * Topic> <ul> <li>
  *
  * <a>DescribeConfigurationOptions</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateConfigurationTemplateResponse * ElasticBeanstalkClient::updateConfigurationTemplate(const UpdateConfigurationTemplateRequest &request)
 {
@@ -602,6 +848,12 @@ UpdateConfigurationTemplateResponse * ElasticBeanstalkClient::updateConfiguratio
  * When updating the configuration settings to a new template or individual settings, a draft configuration is created and
  * <a>DescribeConfigurationSettings</a> for this environment returns two setting descriptions with different
  * <code>DeploymentStatus</code> values.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
@@ -638,6 +890,12 @@ UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const Upda
  * For details about creating a custom user policy, see <a
  * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies">Creating
  * a Custom User
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(const UpdateTagsForResourceRequest &request)
 {
@@ -651,6 +909,12 @@ UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(co
  * valid>
  *
  * This action returns a list of messages indicating any errors or warnings associated with the selection of option
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ValidateConfigurationSettingsResponse * ElasticBeanstalkClient::validateConfigurationSettings(const ValidateConfigurationSettingsRequest &request)
 {

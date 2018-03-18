@@ -104,6 +104,12 @@ IoTClient::IoTClient(
  * INACTIVE>
  *
  * To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const AcceptCertificateTransferRequest &request)
 {
@@ -112,6 +118,12 @@ AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const A
 
 /**
  * Adds a thing to a thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToThingGroupRequest &request)
 {
@@ -132,6 +144,12 @@ AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToT
  * "IN_PROGRESS"> </li> <li>
  *
  * The total number of targets associated with a job must not exceed
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const AssociateTargetsWithJobRequest &request)
 {
@@ -140,6 +158,12 @@ AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const Assoc
 
 /**
  * Attaches a policy to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -152,6 +176,12 @@ AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &reques
  * credential)>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPrincipalPolicyRequest &request)
 {
@@ -160,6 +190,12 @@ AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPri
 
 /**
  * Attaches the specified principal to the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThingPrincipalRequest &request)
 {
@@ -178,6 +214,12 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
  * cancelled>
  *
  * After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const CancelCertificateTransferRequest &request)
 {
@@ -186,6 +228,12 @@ CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const C
 
 /**
  * Cancels a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 {
@@ -194,6 +242,12 @@ CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 
 /**
  * Clears the default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDefaultAuthorizerRequest &request)
 {
@@ -202,6 +256,12 @@ ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDe
 
 /**
  * Creates an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
@@ -267,6 +327,12 @@ CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerReq
  * is>
  *
  * &gt; forfiles /p my-csr-directory /c "cmd /c aws iot create-certificate-from-csr --certificate-signing-request
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const CreateCertificateFromCsrRequest &request)
 {
@@ -275,6 +341,12 @@ CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const Cre
 
 /**
  * Creates a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 {
@@ -288,6 +360,12 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
  *
  * <b>Note</b> This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in
  * a secure
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const CreateKeysAndCertificateRequest &request)
 {
@@ -296,6 +374,12 @@ CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const Cre
 
 /**
  * Creates an AWS IoT OTAUpdate on a target group of things or
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateRequest &request)
 {
@@ -309,6 +393,12 @@ CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateReques
  *
  * The created policy is the default version for the policy. This operation creates a policy version with a version
  * identifier of <b>1</b> and sets <b>1</b> as the policy's default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -324,6 +414,12 @@ CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &reques
  *
  * Optionally, you can set the new version as the policy's default version. The default version is the operative version
  * (that is, the version that is in effect for the certificates to which the policy is
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
@@ -332,6 +428,12 @@ CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyV
 
 /**
  * Creates a role
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasRequest &request)
 {
@@ -344,6 +446,12 @@ CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasReques
  * total size of a file associated with the stream cannot exceed more than 2 MB. The stream will be created with version 0.
  * If a stream is created with the same streamID as a stream that existed and was deleted within last 90 days, we will
  * resurrect that old stream by incrementing the version by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &request)
 {
@@ -352,6 +460,12 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
 
 /**
  * Creates a thing record in the thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 {
@@ -360,6 +474,12 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 
 /**
  * Create a thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
 {
@@ -368,6 +488,12 @@ CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupReq
 
 /**
  * Creates a new thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeRequest &request)
 {
@@ -377,6 +503,12 @@ CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeReques
 /**
  * Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be
  * able to access data processed by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleRequest &request)
 {
@@ -385,6 +517,12 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
 
 /**
  * Deletes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
@@ -393,6 +531,12 @@ DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerReq
 
 /**
  * Deletes a registered CA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACertificateRequest &request)
 {
@@ -407,6 +551,12 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
  * A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a
  * certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the
  * <a>UpdateCertificate</a> API to set the certificate to the INACTIVE
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -415,6 +565,12 @@ DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificate
 
 /**
  * Delete an OTA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateRequest &request)
 {
@@ -436,6 +592,12 @@ DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateReques
  * policy>
  *
  * When a policy is deleted using DeletePolicy, its default version is deleted with
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -446,6 +608,12 @@ DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &reques
  * Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API.
  * To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as
  * the default version, use
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
@@ -454,6 +622,12 @@ DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyV
 
 /**
  * Deletes a CA certificate registration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteRegistrationCodeRequest &request)
 {
@@ -462,6 +636,12 @@ DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteR
 
 /**
  * Deletes a role
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasRequest &request)
 {
@@ -470,6 +650,12 @@ DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasReques
 
 /**
  * Deletes a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -478,6 +664,12 @@ DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &reques
 
 /**
  * Deletes the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 {
@@ -486,6 +678,12 @@ DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 
 /**
  * Deletes a thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupRequest &request)
 {
@@ -497,6 +695,12 @@ DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupReq
  * type, first mark it as deprecated by calling <a>DeprecateThingType</a>, then remove any associated things by calling
  * <a>UpdateThing</a> to change the thing type on any associated thing, and finally use <a>DeleteThingType</a> to delete
  * the thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeRequest &request)
 {
@@ -505,6 +709,12 @@ DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeReques
 
 /**
  * Deletes the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleRequest &request)
 {
@@ -513,6 +723,12 @@ DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleReques
 
 /**
  * Deletes a logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2LoggingLevelRequest &request)
 {
@@ -521,6 +737,12 @@ DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2Log
 
 /**
  * Deprecates a thing type. You can not associate new things with deprecated thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingTypeRequest &request)
 {
@@ -529,6 +751,12 @@ DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingT
 
 /**
  * Describes an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthorizerRequest &request)
 {
@@ -537,6 +765,12 @@ DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthori
 
 /**
  * Describes a registered CA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeCACertificateRequest &request)
 {
@@ -545,6 +779,12 @@ DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeC
 
 /**
  * Gets information about the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCertificateRequest &request)
 {
@@ -553,6 +793,12 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
 
 /**
  * Describes the default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const DescribeDefaultAuthorizerRequest &request)
 {
@@ -561,6 +807,12 @@ DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const D
 
 /**
  * Returns a unique endpoint specific to the AWS account making the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
@@ -569,6 +821,12 @@ DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointReq
 
 /**
  * Describes event
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(const DescribeEventConfigurationsRequest &request)
 {
@@ -577,6 +835,12 @@ DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(con
 
 /**
  * Describes a search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &request)
 {
@@ -585,6 +849,12 @@ DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &req
 
 /**
  * Describes a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 {
@@ -593,6 +863,12 @@ DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 
 /**
  * Describes a job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
@@ -601,6 +877,12 @@ DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJob
 
 /**
  * Describes a role
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAliasRequest &request)
 {
@@ -609,6 +891,12 @@ DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAlias
 
 /**
  * Gets information about a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -617,6 +905,12 @@ DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &
 
 /**
  * Gets information about the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &request)
 {
@@ -625,6 +919,12 @@ DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &req
 
 /**
  * Describe a thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGroupRequest &request)
 {
@@ -633,6 +933,12 @@ DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGr
 
 /**
  * Describes a bulk thing provisioning
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask(const DescribeThingRegistrationTaskRequest &request)
 {
@@ -641,6 +947,12 @@ DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask
 
 /**
  * Gets information about the specified thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingTypeRequest &request)
 {
@@ -649,6 +961,12 @@ DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingType
 
 /**
  * Detaches a policy from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -661,6 +979,12 @@ DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &reques
  * certificate>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPrincipalPolicyRequest &request)
 {
@@ -669,6 +993,12 @@ DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPri
 
 /**
  * Detaches the specified principal from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThingPrincipalRequest &request)
 {
@@ -677,6 +1007,12 @@ DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThing
 
 /**
  * Disables the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleRequest &request)
 {
@@ -685,6 +1021,12 @@ DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleReq
 
 /**
  * Enables the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleRequest &request)
 {
@@ -693,6 +1035,12 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
 
 /**
  * Gets effective
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectivePoliciesRequest &request)
 {
@@ -701,6 +1049,12 @@ GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectiv
 
 /**
  * Gets the search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const GetIndexingConfigurationRequest &request)
 {
@@ -709,6 +1063,12 @@ GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const Get
 
 /**
  * Gets a job
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &request)
 {
@@ -717,6 +1077,12 @@ GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &
 
 /**
  * Gets the logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptionsRequest &request)
 {
@@ -725,6 +1091,12 @@ GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptions
 
 /**
  * Gets an OTA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &request)
 {
@@ -733,6 +1105,12 @@ GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &reques
 
 /**
  * Gets information about the specified policy with the policy document of the default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -741,6 +1119,12 @@ GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 
 /**
  * Gets information about the specified policy
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
@@ -749,6 +1133,12 @@ GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionReq
 
 /**
  * Gets a registration code used to register a CA certificate with AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrationCodeRequest &request)
 {
@@ -757,6 +1147,12 @@ GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrati
 
 /**
  * Gets information about the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &request)
 {
@@ -765,6 +1161,12 @@ GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &reques
 
 /**
  * Gets the fine grained logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingOptionsRequest &request)
 {
@@ -773,6 +1175,12 @@ GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingO
 
 /**
  * Lists the policies attached to the specified thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttachedPoliciesRequest &request)
 {
@@ -781,6 +1189,12 @@ ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttache
 
 /**
  * Lists the authorizers registered in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersRequest &request)
 {
@@ -793,6 +1207,12 @@ ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersReques
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertificatesRequest &request)
 {
@@ -805,6 +1225,12 @@ ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertifica
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesRequest &request)
 {
@@ -813,6 +1239,12 @@ ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesReq
 
 /**
  * List the device certificates signed by the specified CA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertificatesByCARequest &request)
 {
@@ -821,6 +1253,12 @@ ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertifi
 
 /**
  * Lists the search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 {
@@ -829,6 +1267,12 @@ ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 
 /**
  * Lists the job executions for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJobExecutionsForJobRequest &request)
 {
@@ -837,6 +1281,12 @@ ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJ
 
 /**
  * Lists the job executions for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const ListJobExecutionsForThingRequest &request)
 {
@@ -845,6 +1295,12 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
 
 /**
  * Lists
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 {
@@ -853,6 +1309,12 @@ ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 
 /**
  * Lists OTA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &request)
 {
@@ -861,6 +1323,12 @@ ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &
 
 /**
  * Lists certificates that are being transferred but not yet
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const ListOutgoingCertificatesRequest &request)
 {
@@ -869,6 +1337,12 @@ ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const Lis
 
 /**
  * Lists your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -881,6 +1355,12 @@ ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &reques
  * policy>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>ListTargetsForPolicy</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyPrincipalsRequest &request)
 {
@@ -889,6 +1369,12 @@ ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyP
 
 /**
  * Lists the versions of the specified policy and identifies the default
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
@@ -903,6 +1389,12 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
  * format</a>>
  *
  * <b>Note:</b> This API is deprecated. Please use <a>ListAttachedPolicies</a>
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrincipalPoliciesRequest &request)
 {
@@ -911,6 +1403,12 @@ ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrinc
 
 /**
  * Lists the things associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipalThingsRequest &request)
 {
@@ -919,6 +1417,12 @@ ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipal
 
 /**
  * Lists the role aliases registered in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesRequest &request)
 {
@@ -927,6 +1431,12 @@ ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesReques
 
 /**
  * Lists all of the streams in your AWS
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 {
@@ -935,6 +1445,12 @@ ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 
 /**
  * List targets for the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
@@ -943,6 +1459,12 @@ ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargets
 
 /**
  * List the thing groups in your
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsRequest &request)
 {
@@ -951,6 +1473,12 @@ ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsReques
 
 /**
  * List the thing groups to which the specified thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListThingGroupsForThingRequest &request)
 {
@@ -959,6 +1487,12 @@ ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListT
 
 /**
  * Lists the principals associated with the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrincipalsRequest &request)
 {
@@ -967,6 +1501,12 @@ ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrin
 
 /**
  * Information about the thing registration
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskReports(const ListThingRegistrationTaskReportsRequest &request)
 {
@@ -975,6 +1515,12 @@ ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskR
 
 /**
  * List bulk thing provisioning
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const ListThingRegistrationTasksRequest &request)
 {
@@ -983,6 +1529,12 @@ ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const
 
 /**
  * Lists the existing thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &request)
 {
@@ -993,6 +1545,12 @@ ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &
  * Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example,
  * calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry
  * that contain an attribute <b>Color</b> with the value <b>Red</b>.
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 {
@@ -1001,6 +1559,12 @@ ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 
 /**
  * Lists the things in the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThingsInThingGroupRequest &request)
 {
@@ -1009,6 +1573,12 @@ ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThi
 
 /**
  * Lists the rules for the specific
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &request)
 {
@@ -1017,6 +1587,12 @@ ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &
 
 /**
  * Lists logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2LoggingLevelsRequest &request)
 {
@@ -1029,6 +1605,12 @@ ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2Logging
  * field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than
  * one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the
  * RegisterCertificate
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterCACertificateRequest &request)
 {
@@ -1038,6 +1620,12 @@ RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterC
 /**
  * Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field,
  * you must specify the CA certificate that was used to sign the device certificate being
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCertificateRequest &request)
 {
@@ -1046,6 +1634,12 @@ RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCerti
 
 /**
  * Provisions a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &request)
 {
@@ -1064,6 +1658,12 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
  *
  * This operation can only be called by the transfer destination. After it is called, the certificate will be returned to
  * the source's account in the INACTIVE
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const RejectCertificateTransferRequest &request)
 {
@@ -1072,6 +1672,12 @@ RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const R
 
 /**
  * Remove the specified thing from the specified
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const RemoveThingFromThingGroupRequest &request)
 {
@@ -1081,6 +1687,12 @@ RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const R
 /**
  * Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action.
  * Any user who has permission to create rules will be able to access data processed by the
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleRequest &request)
 {
@@ -1089,6 +1701,12 @@ ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleReq
 
 /**
  * The query search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 {
@@ -1097,6 +1715,12 @@ SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 
 /**
  * Sets the default authorizer. This will be used if a websocket connection is made without specifying an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultAuthorizerRequest &request)
 {
@@ -1107,6 +1731,12 @@ SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultA
  * Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all
  * certificates to which the policy is attached. To list the principals the policy is attached to, use the
  * ListPrincipalPolicy
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
@@ -1115,6 +1745,12 @@ SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDe
 
 /**
  * Sets the logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptionsRequest &request)
 {
@@ -1123,6 +1759,12 @@ SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptions
 
 /**
  * Sets the logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevelRequest &request)
 {
@@ -1131,6 +1773,12 @@ SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevel
 
 /**
  * Sets the logging options for the V2 logging
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingOptionsRequest &request)
 {
@@ -1139,6 +1787,12 @@ SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingO
 
 /**
  * Creates a bulk thing provisioning
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const StartThingRegistrationTaskRequest &request)
 {
@@ -1147,6 +1801,12 @@ StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const
 
 /**
  * Cancels a bulk thing provisioning
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const StopThingRegistrationTaskRequest &request)
 {
@@ -1155,6 +1815,12 @@ StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const S
 
 /**
  * Test custom
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorizationRequest &request)
 {
@@ -1163,6 +1829,12 @@ TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorization
 
 /**
  * Invoke the specified custom authorizer for testing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
@@ -1187,6 +1859,12 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
  * it>
  *
  * The certificate must not have any policies attached to it. You can use the DetachPrincipalPolicy API to detach
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 TransferCertificateResponse * IoTClient::transferCertificate(const TransferCertificateRequest &request)
 {
@@ -1195,6 +1873,12 @@ TransferCertificateResponse * IoTClient::transferCertificate(const TransferCerti
 
 /**
  * Updates an
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
@@ -1203,6 +1887,12 @@ UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerReq
 
 /**
  * Updates a registered CA
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACertificateRequest &request)
 {
@@ -1220,6 +1910,12 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
  * reconnect>
  *
  * The ACTIVE state is required to authenticate devices connecting to AWS IoT using a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificateRequest &request)
 {
@@ -1228,6 +1924,12 @@ UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificate
 
 /**
  * Updates the event
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const UpdateEventConfigurationsRequest &request)
 {
@@ -1236,6 +1938,12 @@ UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const U
 
 /**
  * Updates the search
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(const UpdateIndexingConfigurationRequest &request)
 {
@@ -1244,6 +1952,12 @@ UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(con
 
 /**
  * Updates a role
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasRequest &request)
 {
@@ -1252,6 +1966,12 @@ UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasReques
 
 /**
  * Updates an existing stream. The stream version will be incremented by
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &request)
 {
@@ -1260,6 +1980,12 @@ UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &reques
 
 /**
  * Updates the data for a
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 {
@@ -1268,6 +1994,12 @@ UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 
 /**
  * Update a thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupRequest &request)
 {
@@ -1276,6 +2008,12 @@ UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupReq
 
 /**
  * Updates the groups to which the thing
+ *
+ * @param  request Request to send to {{servicename}}.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
  */
 UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const UpdateThingGroupsForThingRequest &request)
 {
