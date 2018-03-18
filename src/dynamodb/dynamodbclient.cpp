@@ -117,12 +117,12 @@ DynamoDBClient::DynamoDBClient(
  * an internal processing failure occurs. If a partial result is returned, the operation returns a value for
  * <code>UnprocessedKeys</code>. You can use this value to retry the operation starting with the next item to
  *
- * get> <important>
+ * get> <b>
  *
  * If you request more than 100 items <code>BatchGetItem</code> will return a <code>ValidationException</code> with the
  * message "Too many items requested for the BatchGetItem
  *
- * call"> </important>
+ * call"> </b>
  *
  * For example, if you ask to retrieve 100 items, but each individual item is 300 KB in size, the system returns 52 items
  * (so as not to exceed the 16 MB limit). It also returns an appropriate <code>UnprocessedKeys</code> value so you can get
@@ -136,7 +136,7 @@ DynamoDBClient::DynamoDBClient(
  * least one</i> of the items is successfully processed, then <code>BatchGetItem</code> completes successfully, while
  * returning the keys of the unread items in
  *
- * <code>UnprocessedKeys</code>> <important>
+ * <code>UnprocessedKeys</code>> <b>
  *
  * If DynamoDB returns any unprocessed items, you should retry the batch operation on those items. However, <i>we strongly
  * recommend that you use an exponential backoff algorithm</i>. If you retry the batch operation immediately, the
@@ -149,7 +149,7 @@ DynamoDBClient::DynamoDBClient(
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
  * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
  *
- * Guide</i>> </important>
+ * Guide</i>> </b>
  *
  * By default, <code>BatchGetItem</code> performs eventually consistent reads on every table in the request. If you want
  * strongly consistent reads instead, you can set <code>ConsistentRead</code> to <code>true</code> for any or all
@@ -205,7 +205,7 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
  * Note that if <i>none</i> of the items can be processed due to insufficient provisioned throughput on all of the tables
  * in the request, then <code>BatchWriteItem</code> will return a
  *
- * <code>ProvisionedThroughputExceededException</code>> <important>
+ * <code>ProvisionedThroughputExceededException</code>> <b>
  *
  * If DynamoDB returns any unprocessed items, you should retry the batch operation on those items. However, <i>we strongly
  * recommend that you use an exponential backoff algorithm</i>. If you retry the batch operation immediately, the
@@ -218,7 +218,7 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
  * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
  * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
  *
- * Guide</i>> </important>
+ * Guide</i>> </b>
  *
  * With <code>BatchWriteItem</code>, you can efficiently write or delete large amounts of data, such as from Amazon Elastic
  * MapReduce (EMR), or copy data from another database into DynamoDB. In order to improve performance with these
@@ -771,7 +771,7 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
  * has certain attribute values. You can return the item's attribute values in the same operation, using the
  * <code>ReturnValues</code>
  *
- * parameter> <important>
+ * parameter> <b>
  *
  * This topic provides general information about the <code>PutItem</code>
  *
@@ -819,7 +819,7 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
  * <a href="http://docs.aws.amazon.com/goto/SdkForRubyV2/dynamodb-2012-08-10/PutItem"> PutItem in the AWS SDK for Ruby V2
  * </a>
  *
- * </p </li> </ul> </important>
+ * </p </li> </ul> </b>
  *
  * When you add an item, the primary key attribute(s) are the only required attributes. Attribute values cannot be null.
  * String and Binary type attributes must have lengths greater than zero. Set type attributes cannot be empty. Requests
@@ -1155,13 +1155,13 @@ UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &requ
  *
  * DynamoDB deletes expired items on a best-effort basis to ensure availability of throughput for other data operations.
  *
- * </p <important>
+ * </p <b>
  *
  * DynamoDB typically deletes expired items within two days of expiration. The exact duration within which an item gets
  * deleted after expiration is specific to the nature of the workload. Items that have expired and not been deleted will
  * still show up in reads, queries, and
  *
- * scans> </important>
+ * scans> </b>
  *
  * As items are deleted, they are removed from any Local Secondary Index and Global Secondary Index immediately in the same
  * eventually consistent way as a standard delete

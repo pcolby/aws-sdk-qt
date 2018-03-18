@@ -223,7 +223,7 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS
  * CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the
  *
- * repository> <important>
+ * repository> <b>
  *
  * If you enable webhooks for an AWS CodeBuild project, and the project is used as a build step in AWS CodePipeline, then
  * two identical builds will be created for each commit. One build is triggered through webhooks, and one through AWS

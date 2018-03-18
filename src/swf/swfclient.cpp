@@ -969,12 +969,12 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  * poll returns an empty result. An empty result, in this context, means that an ActivityTask is returned, but that the
  * value of taskToken is an empty string. If a task is returned, the worker should use its type to identify and process it
  *
- * correctly> <important>
+ * correctly> <b>
  *
  * Workers should set their client side socket timeout to at least 70 seconds (10 seconds higher than the maximum time
  * service may hold the poll
  *
- * request)> </important>
+ * request)> </b>
  *
  * <b>Access Control</b>
  *
@@ -1027,11 +1027,11 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * empty result is returned. An empty result, in this context, means that a DecisionTask is returned, but that the value of
  * taskToken is an empty
  *
- * string> <important>
+ * string> <b>
  *
  * Deciders should set their client side socket timeout to at least 70 seconds (10 seconds higher than the
  *
- * timeout)> </important> <important>
+ * timeout)> </b> <b>
  *
  * Because the number of workflow history events for a single workflow execution might be very large, the result returned
  * might be split up across a number of pages. To retrieve subsequent pages, make additional calls to
@@ -1039,7 +1039,7 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * <i>not</i> call <code>GetWorkflowExecutionHistory</code> with this <code>nextPageToken</code>. Instead, call
  * <code>PollForDecisionTask</code>
  *
- * again> </important>
+ * again> </b>
  *
  * <b>Access Control</b>
  *
@@ -1107,13 +1107,13 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  * This operation is only useful for long-lived activities to report liveliness of the task and to determine if a
  * cancellation is being
  *
- * attempted> </note> <important>
+ * attempted> </note> <b>
  *
  * If the <code>cancelRequested</code> flag returns <code>true</code>, a cancellation is being attempted. If the worker can
  * cancel the activity, it should respond with <a>RespondActivityTaskCanceled</a>. Otherwise, it should ignore the
  * cancellation
  *
- * request> </important>
+ * request> </b>
  *
  * <b>Access Control</b>
  *
@@ -1155,12 +1155,12 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
 /**
  * Registers a new <i>activity type</i> along with its configuration settings in the specified
  *
- * domain> <important>
+ * domain> <b>
  *
  * A <code>TypeAlreadyExists</code> fault is returned if the type already exists in the domain. You cannot change any
  * configuration settings of the type after its registration, and it must be registered as a new
  *
- * version> </important>
+ * version> </b>
  *
  * <b>Access Control</b>
  *
@@ -1261,12 +1261,12 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  *
  * The retention period for the workflow history is set by the <a>RegisterDomain</a>
  *
- * action> <important>
+ * action> <b>
  *
  * If the type already exists, then a <code>TypeAlreadyExists</code> fault is returned. You cannot change the configuration
  * settings of a workflow type once it is registered and it must be registered as a new
  *
- * version> </important>
+ * version> </b>
  *
  * <b>Access Control</b>
  *
@@ -1379,12 +1379,12 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  *
  * These <code>details</code> (if provided) appear in the <code>ActivityTaskCanceled</code> event added to the workflow
  *
- * history> <important>
+ * history> <b>
  *
  * Only use this operation if the <code>canceled</code> flag of a <a>RecordActivityTaskHeartbeat</a> request returns
  * <code>true</code> and if the activity can be safely undone or
  *
- * abandoned> </important>
+ * abandoned> </b>
  *
  * A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open
  * while a worker is processing it. A task is closed after it has been specified in a call to
@@ -1435,13 +1435,13 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * successfully with a <code>result</code> (if provided). The <code>result</code> appears in the
  * <code>ActivityTaskCompleted</code> event in the workflow
  *
- * history> <important>
+ * history> <b>
  *
  * If the requested task doesn't complete successfully, use <a>RespondActivityTaskFailed</a> instead. If the worker finds
  * that the task is canceled through the <code>canceled</code> flag returned by <a>RecordActivityTaskHeartbeat</a>, it
  * should cancel the task, clean up and then call
  *
- * <a>RespondActivityTaskCanceled</a>> </important>
+ * <a>RespondActivityTaskCanceled</a>> </b>
  *
  * A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open
  * while a worker is processing it. A task is closed after it has been specified in a call to RespondActivityTaskCompleted,
@@ -1707,11 +1707,11 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  * given domain, runId, and workflowId. The child policy, registered with the workflow type or specified when starting this
  * execution, is applied to any open child workflow executions of this workflow
  *
- * execution> <important>
+ * execution> <b>
  *
  * If the identified workflow execution was in progress, it is terminated
  *
- * immediately> </important> <note>
+ * immediately> </b> <note>
  *
  * If a runId isn't specified, then the <code>WorkflowExecutionTerminated</code> event is recorded in the history of the
  * current open workflow with the matching workflowId in the

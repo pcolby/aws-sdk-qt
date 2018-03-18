@@ -90,12 +90,12 @@ Route53Client::Route53Client(
 /**
  * Associates an Amazon VPC with a private hosted zone.
  *
- * </p <important>
+ * </p <b>
  *
  * To perform the association, the VPC and the private hosted zone must already exist. You can't convert a public hosted
  * zone into a private hosted
  *
- * zone> </important> <note>
+ * zone> </b> <note>
  *
  * If you want to associate a VPC that was created by using one AWS account with a private hosted zone that was created by
  * using a different account, the AWS account that created the private hosted zone must first submit a
@@ -137,13 +137,13 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  * resource record set in a single operation. If either the <code>DELETE</code> or the <code>CREATE</code> action fails,
  * then both changes (plus any other changes in the batch) fail, and the original <code>CNAME</code> record continues to
  *
- * exist> <important>
+ * exist> <b>
  *
  * Due to the nature of transactional changes, you can't delete the same resource record set more than once in a single
  * change batch. If you attempt to delete the same change batch more than once, Amazon Route 53 returns an
  * <code>InvalidChangeBatch</code>
  *
- * error> </important>
+ * error> </b>
  *
  * <b>Traffic Flow</b>
  *
@@ -308,12 +308,12 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  * Creates a new public hosted zone, which you use to specify how the Domain Name System (DNS) routes traffic on the
  * Internet for a domain, such as example.com, and its subdomains.
  *
- * </p <important>
+ * </p <b>
  *
  * You can't convert a public hosted zones to a private hosted zone or vice versa. Instead, you must create a new hosted
  * zone with the same name and create new resource record
  *
- * sets> </important>
+ * sets> </b>
  *
  * For more information about charges for hosted zones, see <a href="http://aws.amazon.com/route53/pricing/">Amazon Route
  * 53
@@ -652,7 +652,7 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
 /**
  * Deletes a health
  *
- * check> <important>
+ * check> <b>
  *
  * Amazon Route 53 does not prevent you from deleting a health check even if the health check is associated with one or
  * more resource record sets. If you delete a health check and you don't update the associated resource record sets, the
@@ -675,7 +675,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
 /**
  * Deletes a hosted
  *
- * zone> <important>
+ * zone> <b>
  *
  * If the name servers for the hosted zone are associated with a domain and if you want to make the domain unavailable on
  * the Internet, we recommend that you delete the name servers from the domain to prevent future DNS queries from possibly
@@ -688,7 +688,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  * requires one or more name servers, we recommend that you delete the hosted zone only if you transfer DNS service to
  * another service provider, and you replace the name servers for the domain with name servers from the new
  *
- * provider> </important>
+ * provider> </b>
  *
  * You can delete a hosted zone only if it contains only the default SOA record and NS resource record sets. If the hosted
  * zone contains other resource record sets, you must delete them before you can delete the hosted zone. If you try to
@@ -740,11 +740,11 @@ DeleteQueryLoggingConfigResponse * Route53Client::deleteQueryLoggingConfig(const
 /**
  * Deletes a reusable delegation
  *
- * set> <important>
+ * set> <b>
  *
  * You can delete a reusable delegation set only if it isn't associated with any hosted
  *
- * zones> </important>
+ * zones> </b>
  *
  * To verify that the reusable delegation set is not associated with any hosted zones, submit a
  * <a>GetReusableDelegationSet</a> request and specify the ID of the reusable delegation set that you want to
@@ -797,7 +797,7 @@ DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance
  * hosted zone that was created by a different account. You must use the account that created the hosted zone to submit a
  * <code>DeleteVPCAssociationAuthorization</code>
  *
- * request> <important>
+ * request> <b>
  *
  * Sending this request only prevents the AWS account that created the VPC from associating the VPC with the Amazon Route
  * 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
@@ -822,7 +822,7 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
  *
  * You can't disassociate the last VPC from a private hosted
  *
- * zone> </note> <important>
+ * zone> </note> <b>
  *
  * You can't disassociate a VPC from a private hosted zone when only one VPC is associated with the hosted zone. You also
  * can't convert a private hosted zone into a public hosted

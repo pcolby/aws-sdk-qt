@@ -322,7 +322,7 @@ ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * To ensure the security of your AWS account, the secret access key is accessible only during key and user creation. You
  * must save the key (for example, in a text file) if you want to be able to access it again. If a secret key is lost, you
@@ -649,7 +649,7 @@ CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on Entities</a> in the
  * <i>IAM User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * The seed information contained in the QR code and the Base32 string should be treated like any other secret access
  * information, such as your AWS access keys or your passwords. After you provision your virtual device, you should ensure
@@ -774,12 +774,12 @@ DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicy
 /**
  * Deletes the specified instance profile. The instance profile must not have an associated
  *
- * role> <important>
+ * role> <b>
  *
  * Make sure you do not have any Amazon EC2 instances running with the instance profile you are about to delete. Deleting a
  * role or instance profile that is associated with a running instance will break any applications running on the
  *
- * instance> </important>
+ * instance> </b>
  *
  * For more information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
@@ -799,7 +799,7 @@ DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteIns
  * Deletes the password for the specified IAM user, which terminates the user's ability to access AWS services through the
  * AWS Management
  *
- * Console> <important>
+ * Console> <b>
  *
  * Deleting a user's password does not prevent a user from accessing AWS through the command line interface or the API. To
  * prevent all user access you must also either make any access keys inactive or delete them. For more information about
@@ -910,7 +910,7 @@ DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyV
  * Deletes the specified role. The role must not have any policies attached. For more information about roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with
  *
- * Roles</a>> <important>
+ * Roles</a>> <b>
  *
  * Make sure you do not have any Amazon EC2 instances running with the role you are about to delete. Deleting a role or
  * instance profile that is associated with a running instance will break any applications running on the
@@ -1002,7 +1002,7 @@ DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublic
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * If you are using a server certificate with Elastic Load Balancing, deleting the certificate could have implications for
  * your application. If Elastic Load Balancing doesn't detect the deletion of bound certificates, it may continue to use
@@ -2438,13 +2438,13 @@ RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromO
 /**
  * Removes the specified IAM role from the specified EC2 instance
  *
- * profile> <important>
+ * profile> <b>
  *
  * Make sure you do not have any Amazon EC2 instances running with the role you are about to remove from the instance
  * profile. Removing a role from an instance profile that is associated with a running instance might break any
  * applications running on the
  *
- * instance> </important>
+ * instance> </b>
  *
  * For more information about IAM roles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html">Working with Roles</a>. For more
@@ -2688,13 +2688,13 @@ UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateA
 /**
  * Updates the name and/or the path of the specified IAM
  *
- * group> <important>
+ * group> <b>
  *
  * You should understand the implications of changing a group's path or name. For more information, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_WorkingWithGroupsAndUsers.html">Renaming Users and
  * Groups</a> in the <i>IAM User
  *
- * Guide</i>> </important> <note>
+ * Guide</i>> </b> <note>
  *
  * To change an IAM group name the requester must have appropriate permissions on both the source object and the target
  * object. For example, to change "Managers" to "MGRs", the entity making the request must have permission on both
@@ -2828,13 +2828,13 @@ UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublic
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * You should understand the implications of changing a server certificate's path or name. For more information, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs_manage.html#RenamingServerCerts">Renaming
  * a Server Certificate</a> in the <i>IAM User
  *
- * Guide</i>> </important> <note>
+ * Guide</i>> </b> <note>
  *
  * To change a server certificate name the requester must have appropriate permissions on both the source object and the
  * target object. For example, to change the name from "ProductionCert" to "ProdCert", the entity making the request must
@@ -2893,14 +2893,14 @@ UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const Upd
 /**
  * Updates the name and/or the path of the specified IAM
  *
- * user> <important>
+ * user> <b>
  *
  * You should understand the implications of changing an IAM user's path or name. For more information, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_manage.html#id_users_renaming">Renaming an IAM User</a>
  * and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_manage_rename.html">Renaming an IAM Group</a> in
  * the <i>IAM User
  *
- * Guide</i>> </important> <note>
+ * Guide</i>> </b> <note>
  *
  * To change a user name the requester must have appropriate permissions on both the source object and the target object.
  * For example, to change Bob to Robert, the entity making the request must have permission on Bob and Robert, or must have

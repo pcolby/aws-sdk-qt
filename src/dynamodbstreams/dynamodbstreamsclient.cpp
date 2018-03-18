@@ -152,7 +152,7 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
  * the portion of the shard that the iterator points to, <code>GetRecords</code> returns an empty list. Note that it might
  * take multiple calls to get to a portion of the shard that contains stream
  *
- * records> <note><p><function>GetRecords</function> can retrieve a maximum of 1 MB of data or 2000 stream records,
+ * records> <note><p><code>GetRecords</code> can retrieve a maximum of 1 MB of data or 2000 stream records, whichever comes
  *
  * @param  request Request to send to {{servicename}}.
  *

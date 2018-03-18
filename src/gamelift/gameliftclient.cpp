@@ -651,7 +651,7 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  * href="http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-intro.html">Uploading Your Game</a> for
  * more information.
  *
- * </p <important>
+ * </p <b>
  *
  * To create new builds quickly and easily, use the AWS CLI command <b> <a
  * href="http://docs.aws.amazon.com/cli/latest/reference/gamelift/upload-build.html">upload-build</a> </b>. This helper
@@ -659,7 +659,7 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  * permissions. See <a href="http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html">
  * Upload Build Files to Amazon GameLift</a> for more
  *
- * help> </important>
+ * help> </b>
  *
  * The <code>CreateBuild</code> operation should be used only when you need to manually upload your build files, as in the
  * following

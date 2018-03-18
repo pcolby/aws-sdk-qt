@@ -358,12 +358,12 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  *
  * Associates the health check, if any, with each of the
  *
- * record> </li> </ul> <important>
+ * record> </li> </ul> <b>
  *
  * One <code>RegisterInstance</code> request must complete before you can submit another request and specify the same
  * service ID and instance
  *
- * ID> </important>
+ * ID> </b>
  *
  * For more information, see
  *

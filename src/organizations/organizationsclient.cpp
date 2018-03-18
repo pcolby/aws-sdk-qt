@@ -394,7 +394,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an AWS
  * Account in Your Organization</a> in the <i>AWS Organizations User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information
  * required for the account to operate as a standalone account, such as a payment method and signing the End User Licence
@@ -404,7 +404,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations
  * User
  *
- * Guide</i>> </important> <note>
+ * Guide</i>> </b> <note>
  *
  * When you create a member account with this operation, you can choose whether to create the account with the <b>IAM User
  * and Role Access to Billing Information</b> switch enabled. If you enable it, IAM users and roles that have appropriate
@@ -417,7 +417,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  *
  * This operation can be called only from the organization's master
  *
- * account> <important>
+ * account> <b>
  *
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
@@ -746,14 +746,14 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  * accounts in your organization. The service can still perform operations in older accounts until the service completes
  * its clean-up from AWS
  *
- * Organizations> <p/> <important>
+ * Organizations> <p/> <b>
  *
  * We recommend that you disable integration between AWS Organizations and the specified AWS service by using the console
  * or commands that are provided by the specified service. Doing so ensures that the other service is aware that it can
  * clean up any resources that are required only for the integration. How the service cleans up its resources in the
  * organization's accounts depends on that service. For more information, see the documentation for the other AWS
  *
- * service> </important>
+ * service> </b>
  *
  * After you perform the <code>DisableAWSServiceAccess</code> operation, the specified service can no longer perform
  * operations in your organization's accounts unless the operations are explicitly permitted by the IAM policies that are
@@ -815,14 +815,14 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  * the accounts in your organization. This allows the service to perform operations on your behalf in your organization and
  * its
  *
- * accounts> <important>
+ * accounts> <b>
  *
  * We recommend that you enable integration between AWS Organizations and the specified AWS service by using the console or
  * commands that are provided by the specified service. Doing so ensures that the service is aware that it can create the
  * resources that are required for the integration. How the service creates those resources in the organization's accounts
  * depends on that service. For more information, see the documentation for the other AWS
  *
- * service> </important>
+ * service> </b>
  *
  * For more information about enabling services to integrate with AWS Organizations, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
@@ -852,7 +852,7 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All
  * Features in Your Organization</a> in the <i>AWS Organizations User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * This operation is required only for organizations that were created explicitly with only the consolidated billing
  * features enabled, or that were migrated from a Consolidated Billing account family to Organizations. Calling this
@@ -860,7 +860,7 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  * the additional features enabled only after all administrators in the invited accounts approve the change by accepting
  * the
  *
- * handshake> </important>
+ * handshake> </b>
  *
  * After you enable all features, you can separately enable or disable individual policy types in a root using
  * <a>EnablePolicyType</a> and <a>DisablePolicyType</a>. To see the status of policy types in a root, use
@@ -925,7 +925,7 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  * behalf to the email address that is associated with the other account's owner. The invitation is implemented as a
  * <a>Handshake</a> whose details are in the
  *
- * response> <important>
+ * response> <b>
  *
  * You can invite AWS accounts only from the same seller as the master account. For example, if your organization's master
  * account was created by Amazon Internet Services Pvt. Ltd (AISPL), an AWS seller in India, then you can only invite other
@@ -934,11 +934,11 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilliing-India.html">Consolidated
  * Billing in
  *
- * India</a>> </important>
+ * India</a>> </b>
  *
  * This operation can be called only from the organization's master
  *
- * account> <important>
+ * account> <b>
  *
  * If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add
  * an account because your organization is still initializing, please contact <a
@@ -963,7 +963,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  *
  * This operation can be called only from a member account in the
  *
- * organization> <important> <ul> <li>
+ * organization> <b> <ul> <li>
  *
  * The master account in an organization with all features enabled can set service control policies (SCPs) that can
  * restrict what administrators of member accounts can do, including preventing them from successfully calling
@@ -1387,7 +1387,7 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  * This operation can be called only from the organization's master account. Member accounts can remove themselves with
  * <a>LeaveOrganization</a>
  *
- * instead> <important> <ul> <li>
+ * instead> <b> <ul> <li>
  *
  * You can remove an account from your organization only if the account is configured with the information required to
  * operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API,

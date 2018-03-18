@@ -235,7 +235,7 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
  * the request before responding is 60 seconds. If no task is available within 60 seconds, the poll returns a
  * <code>taskToken</code> with a null
  *
- * string> <important>
+ * string> <b>
  *
  * Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum time the
  * service may hold the poll

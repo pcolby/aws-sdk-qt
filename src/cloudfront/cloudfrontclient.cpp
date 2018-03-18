@@ -175,7 +175,7 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP
  * Distributions</a> in the <i>Amazon CloudFront Developer
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML
  * document that you include in the request body when you create or update a web distribution or an RTMP distribution, and
@@ -568,7 +568,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * the desired changes. You can't change the value of <code>CallerReference</code>. If you try to change this value,
  * CloudFront returns an <code>IllegalUpdate</code>
  *
- * error> <important>
+ * error> <b>
  *
  * The new configuration replaces the existing configuration; the values that you specify in an
  * <code>UpdateDistribution</code> request are not merged into the existing configuration. When you add, delete, or replace
@@ -576,7 +576,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * that you want to appear in the updated distribution. In addition, you must update the corresponding
  * <code>Quantity</code>
  *
- * element> </important> </li> <li>
+ * element> </b> </li> <li>
  *
  * Submit an <code>UpdateDistribution</code> request to update the configuration for your
  *
@@ -599,7 +599,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * Optional: Submit a <a>GetDistribution</a> request to confirm that your changes have propagated. When propagation is
  * complete, the value of <code>Status</code> is
  *
- * <code>Deployed</code>> <important>
+ * <code>Deployed</code>> <b>
  *
  * Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML
  * document that you include in the request body when you create or update a distribution. With previous versions of the

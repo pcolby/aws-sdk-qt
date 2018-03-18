@@ -425,12 +425,12 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
  * registration. Some registrars provide free DNS service when you purchase a domain registration. When you transfer the
  * registration, the previous registrar will not renew your domain registration and could end your DNS service at any
  *
- * time> <important>
+ * time> <b>
  *
  * If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to
  * another provider, your website, email, and the web applications associated with the domain might become
  *
- * unavailable> </important>
+ * unavailable> </b>
  *
  * If the transfer is successful, this method returns an operation ID that you can use to track the progress and completion
  * of the action. If the transfer doesn't complete successfully, the domain registrant will be notified by

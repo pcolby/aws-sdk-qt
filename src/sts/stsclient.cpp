@@ -312,13 +312,13 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
  * is validated by using keys in the metadata document that is uploaded for the SAML provider entity for your identity
  * provider.
  *
- * </p <important>
+ * </p <b>
  *
  * Calling <code>AssumeRoleWithSAML</code> can result in an entry in your AWS CloudTrail logs. The entry includes the value
  * in the <code>NameID</code> element of the SAML assertion. We recommend that you use a NameIDType that is not associated
  * with any personally identifiable information (PII). For example, you could instead use the Persistent Identifier
  *
- * (<code>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</code>)> </important>
+ * (<code>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</code>)> </b>
  *
  * For more information, see the following
  *
@@ -420,7 +420,7 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
  * must trust the identity provider that is associated with the identity token. In other words, the identity provider must
  * be specified in the role's trust policy.
  *
- * </p <important>
+ * </p <b>
  *
  * Calling <code>AssumeRoleWithWebIdentity</code> can result in an entry in your AWS CloudTrail logs. The entry includes
  * the <a href="http://openid.net/specs/openid-connect-core-1_0.html#Claims">Subject</a> of the provided Web Identity
@@ -428,7 +428,7 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
  * could instead use a GUID or a pairwise identifier, as <a
  * href="http://openid.net/specs/openid-connect-core-1_0.html#SubjectIDTypes">suggested in the OIDC
  *
- * specification</a>> </important>
+ * specification</a>> </b>
  *
  * For more information about how to use web identity federation and the <code>AssumeRoleWithWebIdentity</code> API, see
  * the following resources:

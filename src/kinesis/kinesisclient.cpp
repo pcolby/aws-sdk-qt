@@ -487,7 +487,7 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
 /**
  * Lists the shards in a stream and provides information about each
  *
- * shard> <important>
+ * shard> <b>
  *
  * This API is a new operation that is used by the Amazon Kinesis Client Library (KCL). If you have a fine-grained IAM
  * policy that only allows specific operations, you must update your policy to allow calls to this API. For more

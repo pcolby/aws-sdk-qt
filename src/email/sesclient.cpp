@@ -1259,7 +1259,7 @@ SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(con
  * message to a larger audience, you can divide your recipient list into groups of 50 or fewer, and then call the
  * <code>SendEmail</code> operation several times to send the message to each
  *
- * group> </li> </ul> <important>
+ * group> </li> </ul> <b>
  *
  * For every message that you send, the total number of recipients (including each recipient in the To:, CC: and BCC:
  * fields) is counted against the maximum number of emails you can send in a 24-hour period (your <i>sending quota</i>).
@@ -1316,7 +1316,7 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  * message to a larger audience, you can divide your recipient list into groups of 50 or fewer, and then call the
  * <code>SendRawEmail</code> operation several times to send the message to each
  *
- * group> </li> </ul> <important>
+ * group> </li> </ul> <b>
  *
  * For every message that you send, the total number of recipients (including each recipient in the To:, CC: and BCC:
  * fields) is counted against the maximum number of emails you can send in a 24-hour period (your <i>sending quota</i>).
@@ -1324,7 +1324,7 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html">Managing Your Amazon SES Sending
  * Limits</a> in the <i>Amazon SES Developer Guide.</i>
  *
- * </p </important>
+ * </p </b>
  *
  * Additionally, keep the following considerations in mind when using the <code>SendRawEmail</code>
  *
@@ -1353,11 +1353,11 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  *
  * <code>X-SES-RETURN-PATH-ARN</code>
  *
- * </p </li> </ul> <important>
+ * </p </li> </ul> <b>
  *
  * Do not include these X-headers in the DKIM signature; Amazon SES will remove them before sending the
  *
- * email> </important>
+ * email> </b>
  *
  * For most common sending authorization scenarios, we recommend that you specify the <code>SourceIdentityArn</code>
  * parameter and not the <code>FromIdentityArn</code> or <code>ReturnPathIdentityArn</code> parameters. If you only specify
@@ -1549,14 +1549,14 @@ SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeaders
 /**
  * Enables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a
  *
- * domain)> <important>
+ * domain)> <b>
  *
  * To send emails using the specified MAIL FROM domain, you must add an MX record to your MAIL FROM domain's DNS settings.
  * If you want your emails to pass Sender Policy Framework (SPF) checks, you must also add or update an SPF record. For
  * more information, see the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html">Amazon SES
  * Developer
  *
- * Guide</a>> </important>
+ * Guide</a>> </b>
  *
  * You can execute this operation no more than once per
  *

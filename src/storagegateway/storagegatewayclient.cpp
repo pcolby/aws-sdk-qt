@@ -80,7 +80,7 @@ namespace StorageGateway {
  * Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API,
  * you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as
  *
- * expected> </note> <important>
+ * expected> </note> <b>
  *
  * IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
  * Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
@@ -345,7 +345,7 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  * by Amazon S3 cloud storage. Storage Gateway exposes file shares using a Network File System (NFS) interface. This
  * operation is only supported in the file gateway
  *
- * type> <important>
+ * type> <b>
  *
  * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
  * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
@@ -392,7 +392,7 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  * To list or delete a snapshot, you must use the Amazon EC2 API. For more information, see DescribeSnapshots or
  * DeleteSnapshot in the <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Operations.html">EC2 API
  *
- * reference</a>> </note> <important>
+ * reference</a>> </note> <b>
  *
  * Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the
  * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a>
@@ -562,7 +562,7 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
  * deleting the gateway, however, pending snapshots will not complete. After you delete a gateway, your next step is to
  * remove it from your
  *
- * environment> <important>
+ * environment> <b>
  *
  * You no longer pay software charges after the gateway is deleted; however, your existing Amazon EBS snapshots persist and
  * you will continue to be billed for these snapshots. You can choose to remove all remaining Amazon EBS snapshots by
@@ -946,7 +946,7 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
  * Use this operation for a tape gateway that is not reachable or not functioning. This operation is only supported in the
  * tape gateway
  *
- * type> <important>
+ * type> <b>
  *
  * Once a gateway is disabled it cannot be
  *
@@ -1186,7 +1186,7 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
  * loses its cache storage. At this point you can reconfigure the disks as cache disks. This operation is only supported in
  * the cached volume and tape
  *
- * types> <important>
+ * types> <b>
  *
  * If the cache disk you are resetting contains data that has not been uploaded to Amazon S3 yet, that data can be lost.
  * After you reset cache disks, there will be no configured cache disks left in the gateway, so you must configure at least
@@ -1359,7 +1359,7 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
  * Updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target. By default, a
  * gateway does not have CHAP enabled; however, for added security, you might use
  *
- * it> <important>
+ * it> <b>
  *
  * When you update CHAP credentials, all existing connections on the target are closed and initiators must reconnect with
  * the new
@@ -1404,7 +1404,7 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
  * for the update to complete. You can call <a>DescribeGatewayInformation</a> to verify the gateway is in the
  * <code>STATE_RUNNING</code>
  *
- * state> </note> <important>
+ * state> </note> <b>
  *
  * A software update forces a system restart of your gateway. You can minimize the chance of any disruption to your
  * applications by increasing your iSCSI Initiators' timeouts. For more information about increasing iSCSI Initiator

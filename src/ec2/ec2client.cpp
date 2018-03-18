@@ -253,7 +253,7 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
  * you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network
  * interface that has an existing Elastic IP
  *
- * address> <important>
+ * address> <b>
  *
  * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and
  * you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the
@@ -711,7 +711,7 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
  * Elastic Compute Cloud User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * Canceling a Spot Instance request does not terminate running Spot Instances associated with the
  *
@@ -836,7 +836,7 @@ CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &reques
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html">AWS Managed VPN Connections</a> in the
  * <i>Amazon Virtual Private Cloud User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * You cannot create more than one customer gateway with the same VPN type, IP address, and BGP ASN parameter values. If
  * you run an identical request more than one time, the first request creates the customer gateway, and subsequent requests
@@ -1401,7 +1401,7 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your VPC</a> in
  * the <i>Amazon Virtual Private Cloud User
  *
- * Guide</i>> <important>
+ * Guide</i>> <b>
  *
  * EC2-Classic: You can have up to 500 security
  *
@@ -1409,7 +1409,7 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  *
  * EC2-VPC: You can create up to 500 security groups per
  *
- * VPC> </important>
+ * VPC> </b>
  *
  * When you create a security group, you specify a friendly name of your choice. You can have a security group for use in
  * EC2-Classic with the same name as a security group for use in a VPC. However, you can't have two security groups for use
@@ -1519,11 +1519,11 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
  * If you've associated an IPv6 CIDR block with your VPC, you can create a subnet with an IPv6 CIDR block that uses a /64
  * prefix length.
  *
- * </p <important>
+ * </p <b>
  *
  * AWS reserves both the first four and the last IPv4 address in each subnet's CIDR block. They're not available for
  *
- * use> </important>
+ * use> </b>
  *
  * If you add more than one subnet to a VPC, they're set up in a star topology with a logical router in the
  *
@@ -1764,12 +1764,12 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
  *
  * The response includes information that you need to give to your network administrator to configure your customer
  *
- * gateway> <important>
+ * gateway> <b>
  *
  * We strongly recommend that you use HTTPS when calling this operation because the response contains sensitive
  * cryptographic information for configuring your customer
  *
- * gateway> </important>
+ * gateway> </b>
  *
  * If you decide to shut down your VPN connection for any reason and later create a new VPN connection, you must
  * reconfigure your customer gateway with the new information returned from this

@@ -984,12 +984,12 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
  *
  * You cannot perform this operation on a CMK in a different AWS
  *
- * account> <important>
+ * account> <b>
  *
  * Deleting a CMK is a destructive and potentially dangerous operation. When a CMK is deleted, all data that was encrypted
  * under the CMK is rendered unrecoverable. To restrict the use of a CMK without deleting it, use
  *
- * <a>DisableKey</a>> </important>
+ * <a>DisableKey</a>> </b>
  *
  * For more information about scheduling a CMK for deletion, see <a
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the

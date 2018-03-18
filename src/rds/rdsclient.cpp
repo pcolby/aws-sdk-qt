@@ -446,7 +446,7 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  * cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster parameter group
  * and associated settings to take effect.
  *
- * </p <important>
+ * </p <b>
  *
  * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
  * that uses that DB cluster parameter group as the default parameter group. This allows Amazon RDS to fully complete the
@@ -456,7 +456,7 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  * Groups</i> option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the
  * <a>DescribeDBClusterParameters</a> command to verify that your DB cluster parameter group has been created or
  *
- * modified> </important>
+ * modified> </b>
  *
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
@@ -519,7 +519,7 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  * All Read Replica DB instances are created with backups disabled. All other DB instance attributes (including DB security
  * groups and DB parameter groups) are inherited from the source DB instance, except as specified following.
  *
- * </p <important>
+ * </p <b>
  *
  * Your source DB instance must have backup retention enabled.
  *
@@ -545,7 +545,7 @@ CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(con
  * using <i>ModifyDBInstance</i>. When you associate a new DB parameter group with a running DB instance, you need to
  * reboot the DB instance without failover for the new DB parameter group and associated settings to take effect.
  *
- * </p <important>
+ * </p <b>
  *
  * After you create a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that
  * uses that DB parameter group as the default parameter group. This allows Amazon RDS to fully complete the create action
@@ -1448,7 +1448,7 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
  * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
  * the DB cluster associated with the parameter group before the change can take
  *
- * effect> </note> <important>
+ * effect> </note> <b>
  *
  * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
  * that uses that DB cluster parameter group as the default parameter group. This allows Amazon RDS to fully complete the
@@ -1525,7 +1525,7 @@ ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceReq
  * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
  * the DB instance associated with the parameter group before the change can take
  *
- * effect> </note> <important>
+ * effect> </note> <b>
  *
  * After you modify a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that
  * uses that DB parameter group as the default parameter group. This allows Amazon RDS to fully complete the modify action

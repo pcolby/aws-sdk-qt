@@ -310,7 +310,7 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  * Marks a custom action as deleted. PollForJobs for the custom action will fail after the action is marked for deletion.
  * Only used for custom
  *
- * actions> <important>
+ * actions> <b>
  *
  * You cannot recreate a custom action after it has been deleted unless you increase the version number of the
  *
@@ -370,7 +370,7 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
 /**
  * Returns information about a job. Only used for custom
  *
- * actions> <important>
+ * actions> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
@@ -434,7 +434,7 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
 /**
  * Requests the details of a job for a third party action. Only used for partner
  *
- * actions> <important>
+ * actions> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
@@ -496,7 +496,7 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
 /**
  * Returns information about any jobs for AWS CodePipeline to act
  *
- * upon> <important>
+ * upon> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
@@ -516,7 +516,7 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
 /**
  * Determines whether there are any third party jobs for a job worker to act on. Only used for partner
  *
- * actions> <important>
+ * actions> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output

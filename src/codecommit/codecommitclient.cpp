@@ -376,7 +376,7 @@ DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const Dele
 /**
  * Deletes a repository. If a specified repository was already deleted, a null repository ID will be
  *
- * returned> <important>
+ * returned> <b>
  *
  * Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push
  * calls to the deleted repository will

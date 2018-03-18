@@ -150,7 +150,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  *
  * This operation is valid for Redis
  *
- * only> </note> <important>
+ * only> </note> <b>
  *
  * Users or groups that have permissions to use the <code>CopySnapshot</code> operation can create their own Amazon S3
  * buckets and copy snapshots to it. To control access to your snapshots, use an IAM policy to control who has the ability
@@ -159,7 +159,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html">Exporting Snapshots</a>
  * and <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/IAM.html">Authentication &amp; Access
  *
- * Control</a>> </important>
+ * Control</a>> </b>
  *
  * You could receive the following error
  *
@@ -256,7 +256,7 @@ CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest
 /**
  * Creates a cluster. All nodes in the cluster run the same protocol-compliant cache engine software, either Memcached or
  *
- * Redis> <important>
+ * Redis> <b>
  *
  * Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis
  * (cluster mode enabled) replication
@@ -407,7 +407,7 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
  * This operation cannot be used to delete a cluster that is the last read replica of a replication group or node group
  * (shard) that has Multi-AZ mode enabled or a cluster from a Redis (cluster mode enabled) replication
  *
- * group> <important>
+ * group> <b>
  *
  * Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis
  * (cluster mode enabled) replication
@@ -821,12 +821,12 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
 /**
  * Modifies the settings for a replication
  *
- * group> <important>
+ * group> <b>
  *
  * Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis
  * (cluster mode enabled) replication
  *
- * groups> </important> <note>
+ * groups> </b> <note>
  *
  * This operation is valid for Redis
  *

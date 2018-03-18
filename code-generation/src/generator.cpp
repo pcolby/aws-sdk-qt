@@ -102,6 +102,17 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
 {
     QString content(html);
 
+    /// @todo There's much more we can do here, indeed the documentation
+    /// conversation still needs a lot of love. But its a start, and no point
+    /// prioritising it yet, since its more important we get the code structure
+    /// right first.
+
+    content.replace(QStringLiteral("<function>"), QStringLiteral("<code>"));
+    content.replace(QStringLiteral("</function>"), QStringLiteral("</code>"));
+
+    content.replace(QStringLiteral("<important>"), QStringLiteral("<b>"));
+    content.replace(QStringLiteral("</important>"), QStringLiteral("</b>"));
+
     QStringList lines;
     QString line;
     foreach (QString word, content.split(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts)) {

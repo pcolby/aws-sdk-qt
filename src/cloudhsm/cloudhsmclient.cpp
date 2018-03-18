@@ -181,7 +181,7 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  * to the <a href="https://console.aws.amazon.com/support/home">AWS Support Center</a>, create a new case, and select
  * <b>Account and Billing
  *
- * Support</b>> <important>
+ * Support</b>> <b>
  *
  * It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the
  * <a>DescribeHsm</a> operation. The HSM is ready to be initialized when the status changes to
@@ -609,7 +609,7 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  *
  * Modifies an
  *
- * HSM> <important>
+ * HSM> <b>
  *
  * This operation can result in the HSM being offline for up to 15 minutes while the AWS CloudHSM service is reconfigured.
  * If you are modifying a production HSM, you should ensure that your AWS CloudHSM service is configured for high

@@ -74,13 +74,13 @@ namespace ApplicationDiscoveryService {
  * Third-party application discovery tools can query Application Discovery Service and write to the Application Discovery
  * Service database using a public API. You can then import the data into either a visualization tool or cloud-migration
  *
- * solution> <important>
+ * solution> <b>
  *
  * Application Discovery Service doesn't gather sensitive information. All data is handled according to the <a
  * href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate Application Discovery Service offline to
  * inspect collected data before it is shared with the
  *
- * service> </important>
+ * service> </b>
  *
  * Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
  * true for AWS partners and customers alike. To request access, <a

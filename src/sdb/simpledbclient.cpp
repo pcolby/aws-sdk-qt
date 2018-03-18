@@ -149,9 +149,9 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
  * of the item will be <code>{ 'a', '1' }</code> and <code>{ 'b', '4' }</code>, replacing the previous values of the 'b'
  * attribute with the new value.
  *
- * </p <important> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP
- * GET method. This operation does not support conditions using <code>Expected.X.Name</code>,
- * <code>Expected.X.Value</code>, or <code>Expected.X.Exists</code>. </important>
+ * </p <b> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET
+ * method. This operation does not support conditions using <code>Expected.X.Name</code>, <code>Expected.X.Value</code>, or
+ * <code>Expected.X.Exists</code>. </b>
  *
  * You can execute multiple <code>BatchPutAttributes</code> operations and other operations in parallel. However, large
  * numbers of concurrent <code>BatchPutAttributes</code> calls can result in Service Unavailable (503) responses.

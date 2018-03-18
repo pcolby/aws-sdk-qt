@@ -226,7 +226,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * For FIFO queues, there can be a maximum of 20,000 inflight messages per queue. If you reach this limit, Amazon SQS
  * returns no error
  *
- * messages> <important>
+ * messages> <b>
  *
  * If you attempt to set the <code>VisibilityTimeout</code> to a value greater than the maximum time left, Amazon SQS
  * returns an error. Amazon SQS doesn't automatically recalculate and increase the timeout to the maximum remaining
@@ -255,12 +255,12 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  * response. You can send up to 10 <code> <a>ChangeMessageVisibility</a> </code> requests with each
  * <code>ChangeMessageVisibilityBatch</code>
  *
- * action> <important>
+ * action> <b>
  *
  * Because the batch request can result in a combination of successful and unsuccessful actions, you should check for batch
  * errors even when the call returns an HTTP status code of
  *
- * <code>200</code>> </important> <note>
+ * <code>200</code>> </b> <note>
  *
  * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values of
  * <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like
@@ -387,12 +387,12 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  * Deletes up to ten messages from the specified queue. This is a batch version of <code> <a>DeleteMessage</a>.</code> The
  * result of the action on each message is reported individually in the
  *
- * response> <important>
+ * response> <b>
  *
  * Because the batch request can result in a combination of successful and unsuccessful actions, you should check for batch
  * errors even when the call returns an HTTP status code of
  *
- * <code>200</code>> </important> <note>
+ * <code>200</code>> </b> <note>
  *
  * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values of
  * <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like
@@ -420,12 +420,12 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  * Deletes the queue specified by the <code>QueueUrl</code>, regardless of the queue's contents. If the specified queue
  * doesn't exist, Amazon SQS returns a successful
  *
- * response> <important>
+ * response> <b>
  *
  * Be careful with the <code>DeleteQueue</code> action: When you delete a queue, any messages in the queue are no longer
  * available.
  *
- * </p </important>
+ * </p </b>
  *
  * When you delete a queue, the deletion process takes up to 60 seconds. Requests you send involving that queue during the
  * 60 seconds might succeed. For example, a <code> <a>SendMessage</a> </code> request might succeed, but after 60 seconds
@@ -586,11 +586,11 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 /**
  * Deletes the messages in a queue specified by the <code>QueueURL</code>
  *
- * parameter> <important>
+ * parameter> <b>
  *
  * When you use the <code>PurgeQueue</code> action, you can't retrieve a message deleted from a
  *
- * queue> </important>
+ * queue> </b>
  *
  * When you purge a queue, the message deletion process takes up to 60 seconds. All messages sent to the queue before
  * calling the <code>PurgeQueue</code> action are deleted. Messages sent to the queue while it is being purged might be
@@ -703,7 +703,7 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
 /**
  * Delivers a message to the specified
  *
- * queue> <important>
+ * queue> <b>
  *
  * A message can include only XML, JSON, and unformatted text. The following Unicode characters are
  *
@@ -743,7 +743,7 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  * The maximum allowed individual message size and the maximum total payload size (the sum of the individual lengths of all
  * of the batched messages) are both 256 KB (262,144
  *
- * bytes)> <important>
+ * bytes)> <b>
  *
  * A message can include only XML, JSON, and unformatted text. The following Unicode characters are
  *
@@ -757,7 +757,7 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  * Any characters not included in this list will be rejected. For more information, see the <a
  * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
  *
- * characters</a>> </important>
+ * characters</a>> </b>
  *
  * If you don't specify the <code>DelaySeconds</code> parameter for an entry, Amazon SQS uses the default value for the
  *

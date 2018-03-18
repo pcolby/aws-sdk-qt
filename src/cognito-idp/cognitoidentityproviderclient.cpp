@@ -385,13 +385,13 @@ AdminInitiateAuthResponse * CognitoIdentityProviderClient::adminInitiateAuth(con
  * For example, if there is an existing user with a username and password, this API links that user to a federated user
  * identity, so that when the federated user identity is used, the user signs in as the existing user account.
  *
- * </p <important>
+ * </p <b>
  *
  * Because this API allows a user with an external federated identity to sign in as an existing user in the user pool, it
  * is critical that it only be used with external identity providers and provider attributes that have been trusted by the
  * application
  *
- * owner> </important>
+ * owner> </b>
  *
  * See also
  *

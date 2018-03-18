@@ -428,7 +428,7 @@ DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &req
  * Deletes an Amazon SageMaker notebook instance. Before you can delete a notebook instance, you must call the
  * <code>StopNotebookInstance</code> API.
  *
- * </p <important>
+ * </p <b>
  *
  * When you delete a notebook instance, you lose all of your data. Amazon SageMaker removes the ML compute instance, and
  * deletes the ML storage volume and the network interface associated with the notebook instance.

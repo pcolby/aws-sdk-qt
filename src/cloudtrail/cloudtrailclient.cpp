@@ -289,11 +289,11 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
  * All attributes are optional. The default number of results returned is 10, with a maximum of 50 possible. The response
  * includes a token that you can use to get the next page of
  *
- * results> <important>
+ * results> <b>
  *
  * The rate of lookup requests is limited to one per second per account. If this limit is exceeded, a throttling error
  *
- * occurs> </important> <important>
+ * occurs> </b> <b>
  *
  * Events that occurred during the selected time range will not be available for lookup if CloudTrail logging was not
  * enabled when the events
