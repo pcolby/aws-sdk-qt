@@ -63,6 +63,7 @@ public slots:
     DescribeFindingsResponse * describeFindings(const DescribeFindingsRequest &request);
     DescribeResourceGroupsResponse * describeResourceGroups(const DescribeResourceGroupsRequest &request);
     DescribeRulesPackagesResponse * describeRulesPackages(const DescribeRulesPackagesRequest &request);
+    GetAssessmentReportResponse * getAssessmentReport(const GetAssessmentReportRequest &request);
     GetTelemetryMetadataResponse * getTelemetryMetadata(const GetTelemetryMetadataRequest &request);
     ListAssessmentRunAgentsResponse * listAssessmentRunAgents(const ListAssessmentRunAgentsRequest &request);
     ListAssessmentRunsResponse * listAssessmentRuns(const ListAssessmentRunsRequest &request);

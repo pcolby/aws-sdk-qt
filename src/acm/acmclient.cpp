@@ -35,12 +35,13 @@ namespace ACM {
  *
  * <fullname>AWS Certificate Manager</fullname>
  *
- * Welcome to the AWS Certificate Manager (ACM) Command Reference. This guide provides descriptions, syntax, and usage
- * examples for each ACM command. You can use AWS Certificate Manager to request ACM Certificates for your AWS-based
- * websites and applications. For general information about using ACM and for more information about using the console, see
- * the <a href="http://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html">AWS Certificate Manager User Guide</a>.
- * For more information about using the ACM API, see the <a
- * href="http://docs.aws.amazon.com/acm/latest/APIReference/Welcome.html">AWS Certificate Manager API
+ * Welcome to the AWS Certificate Manager (ACM) API
+ *
+ * documentation>
+ *
+ * You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
+ * about using ACM, see the <a href="http://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
+ * Guide</i>
  */
 
 /**

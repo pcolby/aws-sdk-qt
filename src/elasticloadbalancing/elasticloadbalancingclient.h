@@ -62,6 +62,7 @@ public slots:
     DeleteLoadBalancerListenersResponse * deleteLoadBalancerListeners(const DeleteLoadBalancerListenersRequest &request);
     DeleteLoadBalancerPolicyResponse * deleteLoadBalancerPolicy(const DeleteLoadBalancerPolicyRequest &request);
     DeregisterInstancesFromLoadBalancerResponse * deregisterInstancesFromLoadBalancer(const DeregisterInstancesFromLoadBalancerRequest &request);
+    DescribeAccountLimitsResponse * describeAccountLimits(const DescribeAccountLimitsRequest &request);
     DescribeInstanceHealthResponse * describeInstanceHealth(const DescribeInstanceHealthRequest &request);
     DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request);
     DescribeLoadBalancerPoliciesResponse * describeLoadBalancerPolicies(const DescribeLoadBalancerPoliciesRequest &request);

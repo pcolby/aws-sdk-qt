@@ -59,6 +59,7 @@ public slots:
     GetQueueAttributesResponse * getQueueAttributes(const GetQueueAttributesRequest &request);
     GetQueueUrlResponse * getQueueUrl(const GetQueueUrlRequest &request);
     ListDeadLetterSourceQueuesResponse * listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request);
+    ListQueueTagsResponse * listQueueTags(const ListQueueTagsRequest &request);
     ListQueuesResponse * listQueues(const ListQueuesRequest &request);
     PurgeQueueResponse * purgeQueue(const PurgeQueueRequest &request);
     ReceiveMessageResponse * receiveMessage(const ReceiveMessageRequest &request);
@@ -66,6 +67,8 @@ public slots:
     SendMessageResponse * sendMessage(const SendMessageRequest &request);
     SendMessageBatchResponse * sendMessageBatch(const SendMessageBatchRequest &request);
     SetQueueAttributesResponse * setQueueAttributes(const SetQueueAttributesRequest &request);
+    TagQueueResponse * tagQueue(const TagQueueRequest &request);
+    UntagQueueResponse * untagQueue(const UntagQueueRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SqsClient)

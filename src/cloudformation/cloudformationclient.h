@@ -53,13 +53,20 @@ public slots:
     ContinueUpdateRollbackResponse * continueUpdateRollback(const ContinueUpdateRollbackRequest &request);
     CreateChangeSetResponse * createChangeSet(const CreateChangeSetRequest &request);
     CreateStackResponse * createStack(const CreateStackRequest &request);
+    CreateStackInstancesResponse * createStackInstances(const CreateStackInstancesRequest &request);
+    CreateStackSetResponse * createStackSet(const CreateStackSetRequest &request);
     DeleteChangeSetResponse * deleteChangeSet(const DeleteChangeSetRequest &request);
     DeleteStackResponse * deleteStack(const DeleteStackRequest &request);
+    DeleteStackInstancesResponse * deleteStackInstances(const DeleteStackInstancesRequest &request);
+    DeleteStackSetResponse * deleteStackSet(const DeleteStackSetRequest &request);
     DescribeAccountLimitsResponse * describeAccountLimits(const DescribeAccountLimitsRequest &request);
     DescribeChangeSetResponse * describeChangeSet(const DescribeChangeSetRequest &request);
     DescribeStackEventsResponse * describeStackEvents(const DescribeStackEventsRequest &request);
+    DescribeStackInstanceResponse * describeStackInstance(const DescribeStackInstanceRequest &request);
     DescribeStackResourceResponse * describeStackResource(const DescribeStackResourceRequest &request);
     DescribeStackResourcesResponse * describeStackResources(const DescribeStackResourcesRequest &request);
+    DescribeStackSetResponse * describeStackSet(const DescribeStackSetRequest &request);
+    DescribeStackSetOperationResponse * describeStackSetOperation(const DescribeStackSetOperationRequest &request);
     DescribeStacksResponse * describeStacks(const DescribeStacksRequest &request);
     EstimateTemplateCostResponse * estimateTemplateCost(const EstimateTemplateCostRequest &request);
     ExecuteChangeSetResponse * executeChangeSet(const ExecuteChangeSetRequest &request);
@@ -67,11 +74,21 @@ public slots:
     GetTemplateResponse * getTemplate(const GetTemplateRequest &request);
     GetTemplateSummaryResponse * getTemplateSummary(const GetTemplateSummaryRequest &request);
     ListChangeSetsResponse * listChangeSets(const ListChangeSetsRequest &request);
+    ListExportsResponse * listExports(const ListExportsRequest &request);
+    ListImportsResponse * listImports(const ListImportsRequest &request);
+    ListStackInstancesResponse * listStackInstances(const ListStackInstancesRequest &request);
     ListStackResourcesResponse * listStackResources(const ListStackResourcesRequest &request);
+    ListStackSetOperationResultsResponse * listStackSetOperationResults(const ListStackSetOperationResultsRequest &request);
+    ListStackSetOperationsResponse * listStackSetOperations(const ListStackSetOperationsRequest &request);
+    ListStackSetsResponse * listStackSets(const ListStackSetsRequest &request);
     ListStacksResponse * listStacks(const ListStacksRequest &request);
     SetStackPolicyResponse * setStackPolicy(const SetStackPolicyRequest &request);
     SignalResourceResponse * signalResource(const SignalResourceRequest &request);
+    StopStackSetOperationResponse * stopStackSetOperation(const StopStackSetOperationRequest &request);
     UpdateStackResponse * updateStack(const UpdateStackRequest &request);
+    UpdateStackInstancesResponse * updateStackInstances(const UpdateStackInstancesRequest &request);
+    UpdateStackSetResponse * updateStackSet(const UpdateStackSetRequest &request);
+    UpdateTerminationProtectionResponse * updateTerminationProtection(const UpdateTerminationProtectionRequest &request);
     ValidateTemplateResponse * validateTemplate(const ValidateTemplateRequest &request);
 
 private:

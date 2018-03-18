@@ -97,6 +97,7 @@ public slots:
     DisableSnapshotCopyResponse * disableSnapshotCopy(const DisableSnapshotCopyRequest &request);
     EnableLoggingResponse * enableLogging(const EnableLoggingRequest &request);
     EnableSnapshotCopyResponse * enableSnapshotCopy(const EnableSnapshotCopyRequest &request);
+    GetClusterCredentialsResponse * getClusterCredentials(const GetClusterCredentialsRequest &request);
     ModifyClusterResponse * modifyCluster(const ModifyClusterRequest &request);
     ModifyClusterIamRolesResponse * modifyClusterIamRoles(const ModifyClusterIamRolesRequest &request);
     ModifyClusterParameterGroupResponse * modifyClusterParameterGroup(const ModifyClusterParameterGroupRequest &request);

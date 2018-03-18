@@ -49,16 +49,25 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateConfigurationItemsToApplicationResponse * associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request);
+    CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
     CreateTagsResponse * createTags(const CreateTagsRequest &request);
+    DeleteApplicationsResponse * deleteApplications(const DeleteApplicationsRequest &request);
     DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
     DescribeAgentsResponse * describeAgents(const DescribeAgentsRequest &request);
     DescribeConfigurationsResponse * describeConfigurations(const DescribeConfigurationsRequest &request);
     DescribeExportConfigurationsResponse * describeExportConfigurations(const DescribeExportConfigurationsRequest &request);
+    DescribeExportTasksResponse * describeExportTasks(const DescribeExportTasksRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
+    DisassociateConfigurationItemsFromApplicationResponse * disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request);
     ExportConfigurationsResponse * exportConfigurations();
+    GetDiscoverySummaryResponse * getDiscoverySummary(const GetDiscoverySummaryRequest &request);
     ListConfigurationsResponse * listConfigurations(const ListConfigurationsRequest &request);
+    ListServerNeighborsResponse * listServerNeighbors(const ListServerNeighborsRequest &request);
     StartDataCollectionByAgentIdsResponse * startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request);
+    StartExportTaskResponse * startExportTask(const StartExportTaskRequest &request);
     StopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request);
+    UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceClient)

@@ -49,11 +49,15 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AddApplicationCloudWatchLoggingOptionResponse * addApplicationCloudWatchLoggingOption(const AddApplicationCloudWatchLoggingOptionRequest &request);
     AddApplicationInputResponse * addApplicationInput(const AddApplicationInputRequest &request);
+    AddApplicationInputProcessingConfigurationResponse * addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request);
     AddApplicationOutputResponse * addApplicationOutput(const AddApplicationOutputRequest &request);
     AddApplicationReferenceDataSourceResponse * addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request);
     CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
     DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
+    DeleteApplicationCloudWatchLoggingOptionResponse * deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request);
+    DeleteApplicationInputProcessingConfigurationResponse * deleteApplicationInputProcessingConfiguration(const DeleteApplicationInputProcessingConfigurationRequest &request);
     DeleteApplicationOutputResponse * deleteApplicationOutput(const DeleteApplicationOutputRequest &request);
     DeleteApplicationReferenceDataSourceResponse * deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request);
     DescribeApplicationResponse * describeApplication(const DescribeApplicationRequest &request);

@@ -33,261 +33,70 @@ namespace ApplicationDiscoveryService {
  *
  * @brief  Client for AWS Application Discovery Service
  *
- * The AWS Application Discovery Service helps Systems Integrators quickly and reliably plan application migration projects
- * by automatically identifying applications running in on-premises data centers, their associated dependencies, and their
- * performance
+ * <fullname>AWS Application Discovery Service</fullname>
  *
- * profile>
+ * AWS Application Discovery Service helps you plan application migration projects by automatically identifying servers,
+ * virtual machines (VMs), software, and software dependencies running in your on-premises data centers. Application
+ * Discovery Service also collects application performance data, which can help you assess the outcome of your migration.
+ * The data collected by Application Discovery Service is securely retained in an AWS-hosted and managed database in the
+ * cloud. You can export the data as a CSV or XML file into your preferred visualization tool or cloud-migration solution
+ * to plan your migration. For more information, see <a href="http://aws.amazon.com/application-discovery/faqs/">AWS
+ * Application Discovery Service
  *
- * Planning data center migrations can involve thousands of workloads that are often deeply interdependent. Application
- * discovery and dependency mapping are important early first steps in the migration process, but difficult to perform at
- * scale due to the lack of automated
+ * FAQ</a>>
  *
- * tools>
+ * Application Discovery Service offers two modes of
  *
- * The AWS Application Discovery Service automatically collects configuration and usage data from servers to develop a list
- * of applications, how they perform, and how they are interdependent. This information is securely retained in an AWS
- * Application Discovery Service database which you can export as a CSV file into your preferred visualization tool or
- * cloud migration solution to help reduce the complexity and time in planning your cloud
+ * operation> <ul> <li>
  *
- * migration>
+ * <b>Agentless discovery</b> mode is recommended for environments that use VMware vCenter Server. This mode doesn't
+ * require you to install an agent on each host. Agentless discovery gathers server information regardless of the operating
+ * systems, which minimizes the time required for initial on-premises infrastructure assessment. Agentless discovery
+ * doesn't collect information about software and software dependencies. It also doesn't work in non-VMware environments.
  *
- * The Application Discovery Service is currently available for preview. Only customers who are engaged with <a
- * href="https://aws.amazon.com/professional-services/">AWS Professional Services</a> or a certified AWS partner can use
- * the service. To see the list of certified partners and request access to the Application Discovery Service, complete the
- * following <a href="http://aws.amazon.com/application-discovery/preview/">preview
+ * </p </li> <li>
  *
- * form</a>>
+ * <b>Agent-based discovery</b> mode collects a richer set of data than agentless discovery by using the AWS Application
+ * Discovery Agent, which you install on one or more hosts in your data center. The agent captures infrastructure and
+ * application information, including an inventory of installed software applications, system and process performance,
+ * resource utilization, and network dependencies between workloads. The information collected by agents is secured at rest
+ * and in transit to the Application Discovery Service database in the cloud.
  *
- * This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for the
- * Discovery Service. The topic for each action shows the API request parameters and the response. Alternatively, you can
- * use one of the AWS SDKs to access an API that is tailored to the programming language or platform that you're using. For
- * more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ * </p </li> </ul>
+ *
+ * We recommend that you use agent-based discovery for non-VMware environments and to collect information about software
+ * and software dependencies. You can also run agent-based and agentless discovery simultaneously. Use agentless discovery
+ * to quickly complete the initial infrastructure assessment and then install agents on select
+ *
+ * hosts>
+ *
+ * Application Discovery Service integrates with application discovery solutions from AWS Partner Network (APN) partners.
+ * Third-party application discovery tools can query Application Discovery Service and write to the Application Discovery
+ * Service database using a public API. You can then import the data into either a visualization tool or cloud-migration
+ *
+ * solution> <important>
+ *
+ * Application Discovery Service doesn't gather sensitive information. All data is handled according to the <a
+ * href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate Application Discovery Service offline to
+ * inspect collected data before it is shared with the
+ *
+ * service> </important>
+ *
+ * Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
+ * true for AWS partners and customers alike. To request access, <a
+ * href="http://aws.amazon.com/application-discovery/">sign up for Application Discovery Service</a>.
+ *
+ * </p
+ *
+ * This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
+ * Application Discovery Service. The topic for each action shows the API request parameters and the response.
+ * Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
+ * that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
  *
  * SDKs</a>>
  *
- * This guide is intended for use with the <a
- * href="http://docs.aws.amazon.com/application-discovery/latest/userguide/what-is-appdiscovery.html"> <i>AWS Discovery
- * Service User Guide</i>
- *
- * </a>>
- *
- * The following are short descriptions of each API action, organized by
- *
- * function>
- *
- * <b>Managing AWS Agents Using the Application Discovery Service</b>
- *
- * </p
- *
- * An AWS agent is software that you install on on-premises servers and virtual machines that are targeted for discovery
- * and migration. Agents run on Linux and Windows Server and collect server configuration and activity information about
- * your applications and infrastructure. Specifically, agents collect the following information and send it to the
- * Application Discovery Service using Secure Sockets Layer (SSL)
- *
- * encryption> <ul> <li>
- *
- * User information (user name, home
- *
- * directory> </li> <li>
- *
- * Group information
- *
- * (name> </li> <li>
- *
- * List of installed
- *
- * package> </li> <li>
- *
- * List of kernel
- *
- * module> </li> <li>
- *
- * All create and stop process
- *
- * event> </li> <li>
- *
- * DNS
- *
- * querie> </li> <li>
- *
- * NIC
- *
- * informatio> </li> <li>
- *
- * TCP/UDP process listening
- *
- * port> </li> <li>
- *
- * TCPV4/V6
- *
- * connection> </li> <li>
- *
- * Operating system
- *
- * informatio> </li> <li>
- *
- * System
- *
- * performanc> </li> <li>
- *
- * Process
- *
- * performanc> </li> </ul>
- *
- * The Application Discovery Service API includes the following actions to manage AWS
- *
- * agents> <ul> <li>
- *
- * <i>StartDataCollectionByAgentIds</i>: Instructs the specified agents to start collecting data. The Application Discovery
- * Service takes several minutes to receive and process data after you initiate data
- *
- * collection> </li> <li>
- *
- * <i>StopDataCollectionByAgentIds</i>: Instructs the specified agents to stop collecting
- *
- * data> </li> <li>
- *
- * <i>DescribeAgents</i>: Lists AWS agents by ID or lists all agents associated with your user account if you did not
- * specify an agent ID. The output includes agent IDs, IP addresses, media access control (MAC) addresses, agent health,
- * host name where the agent resides, and the version number of each
- *
- * agent> </li> </ul>
- *
- * <b>Querying Configuration Items</b>
- *
- * </p
- *
- * A <i>configuration item</i> is an IT asset that was discovered in your data center by an AWS agent. When you use the
- * Application Discovery Service, you can specify filters and query specific configuration items. The service supports
- * Server, Process, and Connection configuration items. This means you can specify a value for the following keys and query
- * your IT
- *
- * assets> <p class="title"> <b>Server</b>
- *
- * </p <ul> <li>
- *
- * server.HostNam> </li> <li>
- *
- * server.osNam> </li> <li>
- *
- * server.osVersio> </li> <li>
- *
- * server.configurationI> </li> <li>
- *
- * server.agentI> </li> </ul> <p class="title"> <b>Process</b>
- *
- * </p <ul> <li>
- *
- * process.nam> </li> <li>
- *
- * process.CommandLin> </li> <li>
- *
- * process.configurationI> </li> <li>
- *
- * server.hostNam> </li> <li>
- *
- * server.osNam> </li> <li>
- *
- * server.osVersio> </li> <li>
- *
- * server.configurationI> </li> <li>
- *
- * server.agentI> </li> </ul> <p class="title"> <b>Connection</b>
- *
- * </p <ul> <li>
- *
- * connection.sourceI> </li> <li>
- *
- * connection.sourcePor> </li> <li>
- *
- * connection.destinationI> </li> <li>
- *
- * connection.destinationPor> </li> <li>
- *
- * sourceProcess.configurationI> </li> <li>
- *
- * sourceProcess.commandLin> </li> <li>
- *
- * sourceProcess.nam> </li> <li>
- *
- * destinationProcessId.configurationI> </li> <li>
- *
- * destinationProcess.commandLin> </li> <li>
- *
- * destinationProcess.nam> </li> <li>
- *
- * sourceServer.configurationI> </li> <li>
- *
- * sourceServer.hostNam> </li> <li>
- *
- * sourceServer.osNam> </li> <li>
- *
- * sourceServer.osVersio> </li> <li>
- *
- * destinationServer.configurationI> </li> <li>
- *
- * destinationServer.hostNam> </li> <li>
- *
- * destinationServer.osNam> </li> <li>
- *
- * destinationServer.osVersio> </li> </ul>
- *
- * The Application Discovery Service includes the following actions for querying configuration items.
- *
- * </p <ul> <li>
- *
- * <i>DescribeConfigurations</i>: Retrieves a list of attributes for a specific configuration ID. For example, the output
- * for a <i>server</i> configuration item includes a list of attributes about the server, including host name, operating
- * system, number of network cards,
- *
- * etc> </li> <li>
- *
- * <i>ListConfigurations</i>: Retrieves a list of configuration items according to the criteria you specify in a filter.
- * The filter criteria identify relationship requirements. For example, you can specify filter criteria of process.name
- * with values of <i>nginx</i> and
- *
- * <i>apache</i>> </li> </ul>
- *
- * <b>Tagging Discovered Configuration Items</b>
- *
- * </p
- *
- * You can tag discovered configuration items. Tags are metadata that help you categorize IT assets in your data center.
- * Tags use a <i>key</i>-<i>value</i> format. For example, <code>{"key": "serverType", "value": "webServer"}</code>.
- *
- * </p <ul> <li>
- *
- * <i>CreateTags</i>: Creates one or more tags for a configuration
- *
- * items> </li> <li>
- *
- * <i>DescribeTags</i>: Retrieves a list of configuration items that are tagged with a specific tag. <i>Or</i>, retrieves a
- * list of all tags assigned to a specific configuration
- *
- * item> </li> <li>
- *
- * <i>DeleteTags</i>: Deletes the association between a configuration item and one or more
- *
- * tags> </li> </ul>
- *
- * <b>Exporting Data</b>
- *
- * </p
- *
- * You can export data as a CSV file to an Amazon S3 bucket or into your preferred visualization tool or cloud migration
- * solution to help reduce the complexity and time in planning your cloud
- *
- * migration> <ul> <li>
- *
- * <i>ExportConfigurations</i>: Exports all discovered configuration data to an Amazon S3 bucket. Data includes tags and
- * tag associations, processes, connections, servers, and system performance. This API returns an export ID which you can
- * query using the GetExportStatus
- *
- * API> </li> <li>
- *
- * <i>DescribeExportConfigurations</i>: Gets the status of the data export. When the export is complete, the service
- * returns an Amazon S3 URL where you can download CSV files that include the
+ * This guide is intended for use with the <a href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">
+ * <i>AWS Application Discovery Service User Guide</i>
  */
 
 /**

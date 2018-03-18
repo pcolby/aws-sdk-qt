@@ -50,11 +50,14 @@ public:
 
 public slots:
     DeleteScalingPolicyResponse * deleteScalingPolicy(const DeleteScalingPolicyRequest &request);
+    DeleteScheduledActionResponse * deleteScheduledAction(const DeleteScheduledActionRequest &request);
     DeregisterScalableTargetResponse * deregisterScalableTarget(const DeregisterScalableTargetRequest &request);
     DescribeScalableTargetsResponse * describeScalableTargets(const DescribeScalableTargetsRequest &request);
     DescribeScalingActivitiesResponse * describeScalingActivities(const DescribeScalingActivitiesRequest &request);
     DescribeScalingPoliciesResponse * describeScalingPolicies(const DescribeScalingPoliciesRequest &request);
+    DescribeScheduledActionsResponse * describeScheduledActions(const DescribeScheduledActionsRequest &request);
     PutScalingPolicyResponse * putScalingPolicy(const PutScalingPolicyRequest &request);
+    PutScheduledActionResponse * putScheduledAction(const PutScheduledActionRequest &request);
     RegisterScalableTargetResponse * registerScalableTarget(const RegisterScalableTargetRequest &request);
 
 private:

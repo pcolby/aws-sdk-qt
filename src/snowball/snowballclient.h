@@ -49,16 +49,22 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CancelClusterResponse * cancelCluster(const CancelClusterRequest &request);
     CancelJobResponse * cancelJob(const CancelJobRequest &request);
     CreateAddressResponse * createAddress(const CreateAddressRequest &request);
+    CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     CreateJobResponse * createJob(const CreateJobRequest &request);
     DescribeAddressResponse * describeAddress(const DescribeAddressRequest &request);
     DescribeAddressesResponse * describeAddresses(const DescribeAddressesRequest &request);
+    DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
     DescribeJobResponse * describeJob(const DescribeJobRequest &request);
     GetJobManifestResponse * getJobManifest(const GetJobManifestRequest &request);
     GetJobUnlockCodeResponse * getJobUnlockCode(const GetJobUnlockCodeRequest &request);
     GetSnowballUsageResponse * getSnowballUsage(const GetSnowballUsageRequest &request);
+    ListClusterJobsResponse * listClusterJobs(const ListClusterJobsRequest &request);
+    ListClustersResponse * listClusters(const ListClustersRequest &request);
     ListJobsResponse * listJobs(const ListJobsRequest &request);
+    UpdateClusterResponse * updateCluster(const UpdateClusterRequest &request);
     UpdateJobResponse * updateJob(const UpdateJobRequest &request);
 
 private:

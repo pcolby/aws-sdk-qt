@@ -50,6 +50,7 @@ public:
 
 public slots:
     DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
+    DescribeEventBusResponse * describeEventBus(const DescribeEventBusRequest &request);
     DescribeRuleResponse * describeRule(const DescribeRuleRequest &request);
     DisableRuleResponse * disableRule(const DisableRuleRequest &request);
     EnableRuleResponse * enableRule(const EnableRuleRequest &request);
@@ -57,8 +58,10 @@ public slots:
     ListRulesResponse * listRules(const ListRulesRequest &request);
     ListTargetsByRuleResponse * listTargetsByRule(const ListTargetsByRuleRequest &request);
     PutEventsResponse * putEvents(const PutEventsRequest &request);
+    PutPermissionResponse * putPermission(const PutPermissionRequest &request);
     PutRuleResponse * putRule(const PutRuleRequest &request);
     PutTargetsResponse * putTargets(const PutTargetsRequest &request);
+    RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
     RemoveTargetsResponse * removeTargets(const RemoveTargetsRequest &request);
     TestEventPatternResponse * testEventPattern(const TestEventPatternRequest &request);
 

@@ -63,6 +63,7 @@ public slots:
     GetPipelineStateResponse * getPipelineState(const GetPipelineStateRequest &request);
     GetThirdPartyJobDetailsResponse * getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request);
     ListActionTypesResponse * listActionTypes(const ListActionTypesRequest &request);
+    ListPipelineExecutionsResponse * listPipelineExecutions(const ListPipelineExecutionsRequest &request);
     ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);
     PollForJobsResponse * pollForJobs(const PollForJobsRequest &request);
     PollForThirdPartyJobsResponse * pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request);

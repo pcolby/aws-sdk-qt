@@ -57,11 +57,14 @@ public slots:
     CreateApplicationVersionResponse * createApplicationVersion(const CreateApplicationVersionRequest &request);
     CreateConfigurationTemplateResponse * createConfigurationTemplate(const CreateConfigurationTemplateRequest &request);
     CreateEnvironmentResponse * createEnvironment(const CreateEnvironmentRequest &request);
+    CreatePlatformVersionResponse * createPlatformVersion(const CreatePlatformVersionRequest &request);
     CreateStorageLocationResponse * createStorageLocation();
     DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
     DeleteApplicationVersionResponse * deleteApplicationVersion(const DeleteApplicationVersionRequest &request);
     DeleteConfigurationTemplateResponse * deleteConfigurationTemplate(const DeleteConfigurationTemplateRequest &request);
     DeleteEnvironmentConfigurationResponse * deleteEnvironmentConfiguration(const DeleteEnvironmentConfigurationRequest &request);
+    DeletePlatformVersionResponse * deletePlatformVersion(const DeletePlatformVersionRequest &request);
+    DescribeAccountAttributesResponse * describeAccountAttributes();
     DescribeApplicationVersionsResponse * describeApplicationVersions(const DescribeApplicationVersionsRequest &request);
     DescribeApplicationsResponse * describeApplications(const DescribeApplicationsRequest &request);
     DescribeConfigurationOptionsResponse * describeConfigurationOptions(const DescribeConfigurationOptionsRequest &request);
@@ -73,7 +76,10 @@ public slots:
     DescribeEnvironmentsResponse * describeEnvironments(const DescribeEnvironmentsRequest &request);
     DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
     DescribeInstancesHealthResponse * describeInstancesHealth(const DescribeInstancesHealthRequest &request);
+    DescribePlatformVersionResponse * describePlatformVersion(const DescribePlatformVersionRequest &request);
     ListAvailableSolutionStacksResponse * listAvailableSolutionStacks();
+    ListPlatformVersionsResponse * listPlatformVersions(const ListPlatformVersionsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RebuildEnvironmentResponse * rebuildEnvironment(const RebuildEnvironmentRequest &request);
     RequestEnvironmentInfoResponse * requestEnvironmentInfo(const RequestEnvironmentInfoRequest &request);
     RestartAppServerResponse * restartAppServer(const RestartAppServerRequest &request);
@@ -81,9 +87,11 @@ public slots:
     SwapEnvironmentCNAMEsResponse * swapEnvironmentCNAMEs(const SwapEnvironmentCNAMEsRequest &request);
     TerminateEnvironmentResponse * terminateEnvironment(const TerminateEnvironmentRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
+    UpdateApplicationResourceLifecycleResponse * updateApplicationResourceLifecycle(const UpdateApplicationResourceLifecycleRequest &request);
     UpdateApplicationVersionResponse * updateApplicationVersion(const UpdateApplicationVersionRequest &request);
     UpdateConfigurationTemplateResponse * updateConfigurationTemplate(const UpdateConfigurationTemplateRequest &request);
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
+    UpdateTagsForResourceResponse * updateTagsForResource(const UpdateTagsForResourceRequest &request);
     ValidateConfigurationSettingsResponse * validateConfigurationSettings(const ValidateConfigurationSettingsRequest &request);
 
 private:

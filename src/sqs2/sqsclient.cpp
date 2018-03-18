@@ -33,36 +33,72 @@ namespace SQS {
  *
  * @brief  Client for Amazon Simple Queue Service ( SQS)
  *
- * Welcome to the <i>Amazon Simple Queue Service API Reference</i>. This section describes who should read this guide, how
- * the guide is organized, and other resources related to the Amazon Simple Queue Service (Amazon
+ * Welcome to the <i>Amazon Simple Queue Service API
  *
- * SQS)>
+ * Reference</i>>
  *
- * Amazon SQS offers reliable and scalable hosted queues for storing messages as they travel between computers. By using
- * Amazon SQS, you can move data between distributed components of your applications that perform different tasks without
- * losing messages or requiring each component to be always
+ * Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
+ * between applications or microservices. Amazon SQS moves data between distributed application components and helps you
+ * decouple these
  *
- * available>
+ * components> <note>
  *
- * Helpful
+ * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html">Standard
+ * queues</a> are available in all regions. <a
+ * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html">FIFO queues</a> are
+ * available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)
  *
- * Links> <ul> <li><p><a href="http://queue.amazonaws.com/doc/2012-11-05/QueueService.wsdl">Current WSDL
- * (2012-11-05)</a></p></li> <li><p><a
- * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making API
- * Requests</a></p></li> <li><p><a href="http://aws.amazon.com/sqs/">Amazon SQS product page</a></p></li> <li><p><a
- * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSMessageAttributes.html">Using Amazon
- * SQS Message Attributes</a></p></li> <li><p><a
- * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">Using Amazon
- * SQS Dead Letter Queues</a></p></li> <li><p><a
- * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a></p></li> </ul>
+ * regions> </note>
  *
- * We also provide SDKs that enable you to access Amazon SQS from your preferred programming language. The SDKs contain
- * functionality that automatically takes care of tasks such
+ * You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
+ * language. The SDKs perform tasks such as the following
  *
- * as> <ul> <li><p>Cryptographically signing your service requests</p></li> <li><p>Retrying requests</p></li>
- * <li><p>Handling error responses</p></li> </ul>
+ * automatically> <ul> <li>
  *
- * For a list of available SDKs, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * Cryptographically sign your service
+ *
+ * request> </li> <li>
+ *
+ * Retry
+ *
+ * request> </li> <li>
+ *
+ * Handle error
+ *
+ * response> </li> </ul>
+ *
+ * <b>Additional Information</b>
+ *
+ * </p <ul> <li>
+ *
+ * <a href="http://aws.amazon.com/sqs/">Amazon SQS Product Page</a>
+ *
+ * </p </li> <li>
+ *
+ * <i>Amazon Simple Queue Service Developer Guide</i>
+ *
+ * </p <ul> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
+ * API Requests</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
+ * Amazon SQS Message Attributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
+ * Amazon SQS Dead-Letter Queues</a>
+ *
+ * </p </li> </ul> </li> <li>
+ *
+ * <i>Amazon Web Services General Reference</i>
+ *
+ * </p <ul> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region">Regions and Endpoints</a>
  */
 
 /**

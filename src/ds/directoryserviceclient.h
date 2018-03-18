@@ -51,6 +51,7 @@ public:
 public slots:
     AddIpRoutesResponse * addIpRoutes(const AddIpRoutesRequest &request);
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    CancelSchemaExtensionResponse * cancelSchemaExtension(const CancelSchemaExtensionRequest &request);
     ConnectDirectoryResponse * connectDirectory(const ConnectDirectoryRequest &request);
     CreateAliasResponse * createAlias(const CreateAliasRequest &request);
     CreateComputerResponse * createComputer(const CreateComputerRequest &request);
@@ -66,6 +67,7 @@ public slots:
     DeregisterEventTopicResponse * deregisterEventTopic(const DeregisterEventTopicRequest &request);
     DescribeConditionalForwardersResponse * describeConditionalForwarders(const DescribeConditionalForwardersRequest &request);
     DescribeDirectoriesResponse * describeDirectories(const DescribeDirectoriesRequest &request);
+    DescribeDomainControllersResponse * describeDomainControllers(const DescribeDomainControllersRequest &request);
     DescribeEventTopicsResponse * describeEventTopics(const DescribeEventTopicsRequest &request);
     DescribeSnapshotsResponse * describeSnapshots(const DescribeSnapshotsRequest &request);
     DescribeTrustsResponse * describeTrusts(const DescribeTrustsRequest &request);
@@ -76,12 +78,15 @@ public slots:
     GetDirectoryLimitsResponse * getDirectoryLimits(const GetDirectoryLimitsRequest &request);
     GetSnapshotLimitsResponse * getSnapshotLimits(const GetSnapshotLimitsRequest &request);
     ListIpRoutesResponse * listIpRoutes(const ListIpRoutesRequest &request);
+    ListSchemaExtensionsResponse * listSchemaExtensions(const ListSchemaExtensionsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RegisterEventTopicResponse * registerEventTopic(const RegisterEventTopicRequest &request);
     RemoveIpRoutesResponse * removeIpRoutes(const RemoveIpRoutesRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     RestoreFromSnapshotResponse * restoreFromSnapshot(const RestoreFromSnapshotRequest &request);
+    StartSchemaExtensionResponse * startSchemaExtension(const StartSchemaExtensionRequest &request);
     UpdateConditionalForwarderResponse * updateConditionalForwarder(const UpdateConditionalForwarderRequest &request);
+    UpdateNumberOfDomainControllersResponse * updateNumberOfDomainControllers(const UpdateNumberOfDomainControllersRequest &request);
     UpdateRadiusResponse * updateRadius(const UpdateRadiusRequest &request);
     VerifyTrustResponse * verifyTrust(const VerifyTrustRequest &request);
 

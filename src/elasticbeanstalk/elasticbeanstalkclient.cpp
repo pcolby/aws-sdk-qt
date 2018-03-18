@@ -44,11 +44,13 @@ namespace ElasticBeanstalk {
  * Beanstalk</a> details page. The location of the latest AWS Elastic Beanstalk WSDL is <a
  * href="http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl">http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl</a>.
  * To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line
- * tools that enable you to access the API, go to <a href="https://aws.amazon.com/tools/">Tools for Amazon Web
+ * tools that enable you to access the API, go to <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
  * Services</a>>
  *
  * <b>Endpoints</b>
+ *
+ * </p
  *
  * For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
  * href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the

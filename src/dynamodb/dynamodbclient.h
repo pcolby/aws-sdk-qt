@@ -51,18 +51,33 @@ public:
 public slots:
     BatchGetItemResponse * batchGetItem(const BatchGetItemRequest &request);
     BatchWriteItemResponse * batchWriteItem(const BatchWriteItemRequest &request);
+    CreateBackupResponse * createBackup(const CreateBackupRequest &request);
+    CreateGlobalTableResponse * createGlobalTable(const CreateGlobalTableRequest &request);
     CreateTableResponse * createTable(const CreateTableRequest &request);
+    DeleteBackupResponse * deleteBackup(const DeleteBackupRequest &request);
     DeleteItemResponse * deleteItem(const DeleteItemRequest &request);
     DeleteTableResponse * deleteTable(const DeleteTableRequest &request);
+    DescribeBackupResponse * describeBackup(const DescribeBackupRequest &request);
+    DescribeContinuousBackupsResponse * describeContinuousBackups(const DescribeContinuousBackupsRequest &request);
+    DescribeGlobalTableResponse * describeGlobalTable(const DescribeGlobalTableRequest &request);
     DescribeLimitsResponse * describeLimits(const DescribeLimitsRequest &request);
     DescribeTableResponse * describeTable(const DescribeTableRequest &request);
+    DescribeTimeToLiveResponse * describeTimeToLive(const DescribeTimeToLiveRequest &request);
     GetItemResponse * getItem(const GetItemRequest &request);
+    ListBackupsResponse * listBackups(const ListBackupsRequest &request);
+    ListGlobalTablesResponse * listGlobalTables(const ListGlobalTablesRequest &request);
     ListTablesResponse * listTables(const ListTablesRequest &request);
+    ListTagsOfResourceResponse * listTagsOfResource(const ListTagsOfResourceRequest &request);
     PutItemResponse * putItem(const PutItemRequest &request);
     QueryResponse * query(const QueryRequest &request);
+    RestoreTableFromBackupResponse * restoreTableFromBackup(const RestoreTableFromBackupRequest &request);
     ScanResponse * scan(const ScanRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateGlobalTableResponse * updateGlobalTable(const UpdateGlobalTableRequest &request);
     UpdateItemResponse * updateItem(const UpdateItemRequest &request);
     UpdateTableResponse * updateTable(const UpdateTableRequest &request);
+    UpdateTimeToLiveResponse * updateTimeToLive(const UpdateTimeToLiveRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DynamoDBClient)

@@ -35,8 +35,8 @@ namespace EC2 {
  *
  * <fullname>Amazon Elastic Compute Cloud</fullname>
  *
- * Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the Amazon Web Services (AWS) cloud.
- * Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications
+ * Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
+ * eliminates the need to invest in hardware up front, so you can develop and deploy applications
  */
 
 /**

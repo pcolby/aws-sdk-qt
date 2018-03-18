@@ -49,6 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AddRoleToDBClusterResponse * addRoleToDBCluster(const AddRoleToDBClusterRequest &request);
     AddSourceIdentifierToSubscriptionResponse * addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request);
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
     ApplyPendingMaintenanceActionResponse * applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request);
@@ -107,6 +108,7 @@ public slots:
     DescribeReservedDBInstancesResponse * describeReservedDBInstances(const DescribeReservedDBInstancesRequest &request);
     DescribeReservedDBInstancesOfferingsResponse * describeReservedDBInstancesOfferings(const DescribeReservedDBInstancesOfferingsRequest &request);
     DescribeSourceRegionsResponse * describeSourceRegions(const DescribeSourceRegionsRequest &request);
+    DescribeValidDBInstanceModificationsResponse * describeValidDBInstanceModifications(const DescribeValidDBInstanceModificationsRequest &request);
     DownloadDBLogFilePortionResponse * downloadDBLogFilePortion(const DownloadDBLogFilePortionRequest &request);
     FailoverDBClusterResponse * failoverDBCluster(const FailoverDBClusterRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
@@ -115,6 +117,7 @@ public slots:
     ModifyDBClusterSnapshotAttributeResponse * modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request);
     ModifyDBInstanceResponse * modifyDBInstance(const ModifyDBInstanceRequest &request);
     ModifyDBParameterGroupResponse * modifyDBParameterGroup(const ModifyDBParameterGroupRequest &request);
+    ModifyDBSnapshotResponse * modifyDBSnapshot(const ModifyDBSnapshotRequest &request);
     ModifyDBSnapshotAttributeResponse * modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request);
     ModifyDBSubnetGroupResponse * modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request);
     ModifyEventSubscriptionResponse * modifyEventSubscription(const ModifyEventSubscriptionRequest &request);
@@ -123,6 +126,7 @@ public slots:
     PromoteReadReplicaDBClusterResponse * promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request);
     PurchaseReservedDBInstancesOfferingResponse * purchaseReservedDBInstancesOffering(const PurchaseReservedDBInstancesOfferingRequest &request);
     RebootDBInstanceResponse * rebootDBInstance(const RebootDBInstanceRequest &request);
+    RemoveRoleFromDBClusterResponse * removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request);
     RemoveSourceIdentifierFromSubscriptionResponse * removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     ResetDBClusterParameterGroupResponse * resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request);
@@ -131,8 +135,11 @@ public slots:
     RestoreDBClusterFromSnapshotResponse * restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request);
     RestoreDBClusterToPointInTimeResponse * restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request);
     RestoreDBInstanceFromDBSnapshotResponse * restoreDBInstanceFromDBSnapshot(const RestoreDBInstanceFromDBSnapshotRequest &request);
+    RestoreDBInstanceFromS3Response * restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request);
     RestoreDBInstanceToPointInTimeResponse * restoreDBInstanceToPointInTime(const RestoreDBInstanceToPointInTimeRequest &request);
     RevokeDBSecurityGroupIngressResponse * revokeDBSecurityGroupIngress(const RevokeDBSecurityGroupIngressRequest &request);
+    StartDBInstanceResponse * startDBInstance(const StartDBInstanceRequest &request);
+    StopDBInstanceResponse * stopDBInstance(const StopDBInstanceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RdsClient)

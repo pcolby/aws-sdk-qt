@@ -57,6 +57,7 @@ public slots:
     CancelArchivalResponse * cancelArchival(const CancelArchivalRequest &request);
     CancelRetrievalResponse * cancelRetrieval(const CancelRetrievalRequest &request);
     CreateCachediSCSIVolumeResponse * createCachediSCSIVolume(const CreateCachediSCSIVolumeRequest &request);
+    CreateNFSFileShareResponse * createNFSFileShare(const CreateNFSFileShareRequest &request);
     CreateSnapshotResponse * createSnapshot(const CreateSnapshotRequest &request);
     CreateSnapshotFromVolumeRecoveryPointResponse * createSnapshotFromVolumeRecoveryPoint(const CreateSnapshotFromVolumeRecoveryPointRequest &request);
     CreateStorediSCSIVolumeResponse * createStorediSCSIVolume(const CreateStorediSCSIVolumeRequest &request);
@@ -64,6 +65,7 @@ public slots:
     CreateTapesResponse * createTapes(const CreateTapesRequest &request);
     DeleteBandwidthRateLimitResponse * deleteBandwidthRateLimit(const DeleteBandwidthRateLimitRequest &request);
     DeleteChapCredentialsResponse * deleteChapCredentials(const DeleteChapCredentialsRequest &request);
+    DeleteFileShareResponse * deleteFileShare(const DeleteFileShareRequest &request);
     DeleteGatewayResponse * deleteGateway(const DeleteGatewayRequest &request);
     DeleteSnapshotScheduleResponse * deleteSnapshotSchedule(const DeleteSnapshotScheduleRequest &request);
     DeleteTapeResponse * deleteTape(const DeleteTapeRequest &request);
@@ -75,6 +77,7 @@ public slots:
     DescribeChapCredentialsResponse * describeChapCredentials(const DescribeChapCredentialsRequest &request);
     DescribeGatewayInformationResponse * describeGatewayInformation(const DescribeGatewayInformationRequest &request);
     DescribeMaintenanceStartTimeResponse * describeMaintenanceStartTime(const DescribeMaintenanceStartTimeRequest &request);
+    DescribeNFSFileSharesResponse * describeNFSFileShares(const DescribeNFSFileSharesRequest &request);
     DescribeSnapshotScheduleResponse * describeSnapshotSchedule(const DescribeSnapshotScheduleRequest &request);
     DescribeStorediSCSIVolumesResponse * describeStorediSCSIVolumes(const DescribeStorediSCSIVolumesRequest &request);
     DescribeTapeArchivesResponse * describeTapeArchives(const DescribeTapeArchivesRequest &request);
@@ -84,6 +87,7 @@ public slots:
     DescribeVTLDevicesResponse * describeVTLDevices(const DescribeVTLDevicesRequest &request);
     DescribeWorkingStorageResponse * describeWorkingStorage(const DescribeWorkingStorageRequest &request);
     DisableGatewayResponse * disableGateway(const DisableGatewayRequest &request);
+    ListFileSharesResponse * listFileShares(const ListFileSharesRequest &request);
     ListGatewaysResponse * listGateways(const ListGatewaysRequest &request);
     ListLocalDisksResponse * listLocalDisks(const ListLocalDisksRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
@@ -91,6 +95,8 @@ public slots:
     ListVolumeInitiatorsResponse * listVolumeInitiators(const ListVolumeInitiatorsRequest &request);
     ListVolumeRecoveryPointsResponse * listVolumeRecoveryPoints(const ListVolumeRecoveryPointsRequest &request);
     ListVolumesResponse * listVolumes(const ListVolumesRequest &request);
+    NotifyWhenUploadedResponse * notifyWhenUploaded(const NotifyWhenUploadedRequest &request);
+    RefreshCacheResponse * refreshCache(const RefreshCacheRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     ResetCacheResponse * resetCache(const ResetCacheRequest &request);
     RetrieveTapeArchiveResponse * retrieveTapeArchive(const RetrieveTapeArchiveRequest &request);
@@ -103,6 +109,7 @@ public slots:
     UpdateGatewayInformationResponse * updateGatewayInformation(const UpdateGatewayInformationRequest &request);
     UpdateGatewaySoftwareNowResponse * updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request);
     UpdateMaintenanceStartTimeResponse * updateMaintenanceStartTime(const UpdateMaintenanceStartTimeRequest &request);
+    UpdateNFSFileShareResponse * updateNFSFileShare(const UpdateNFSFileShareRequest &request);
     UpdateSnapshotScheduleResponse * updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request);
     UpdateVTLDeviceTypeResponse * updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request);
 

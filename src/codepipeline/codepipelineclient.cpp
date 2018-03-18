@@ -66,9 +66,10 @@ namespace CodePipeline {
  *
  * pipeline> </li> <li>
  *
- * <a>GetPipeline</a>, which returns information about a pipeline
+ * <a>GetPipeline</a>, which returns information about the pipeline structure and pipeline metadata, including the pipeline
+ * Amazon Resource Name
  *
- * structure> </li> <li>
+ * (ARN)> </li> <li>
  *
  * <a>GetPipelineExecution</a>, which returns information about a specific execution of a
  *
@@ -82,6 +83,10 @@ namespace CodePipeline {
  *
  * account> </li> <li>
  *
+ * <a>ListPipelineExecutions</a>, which gets a summary of the most recent executions for a
+ *
+ * pipeline> </li> <li>
+ *
  * <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the
  *
  * pipeline> </li> <li>
@@ -90,10 +95,10 @@ namespace CodePipeline {
  *
  * pipeline> </li> </ul>
  *
- * Pipelines include <i>stages</i>, which are which are logical groupings of gates and actions. Each stage contains one or
- * more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage
- * fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears
- * in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
+ * Pipelines include <i>stages</i>, which are logical groupings of gates and actions. Each stage contains one or more
+ * actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails,
+ * then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the
+ * source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
  * <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or
  * <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more
  * information about the structure of stages and actions, also refer to the <a

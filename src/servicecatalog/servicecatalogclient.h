@@ -49,17 +49,66 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptPortfolioShareResponse * acceptPortfolioShare(const AcceptPortfolioShareRequest &request);
+    AssociatePrincipalWithPortfolioResponse * associatePrincipalWithPortfolio(const AssociatePrincipalWithPortfolioRequest &request);
+    AssociateProductWithPortfolioResponse * associateProductWithPortfolio(const AssociateProductWithPortfolioRequest &request);
+    AssociateTagOptionWithResourceResponse * associateTagOptionWithResource(const AssociateTagOptionWithResourceRequest &request);
+    CopyProductResponse * copyProduct(const CopyProductRequest &request);
+    CreateConstraintResponse * createConstraint(const CreateConstraintRequest &request);
+    CreatePortfolioResponse * createPortfolio(const CreatePortfolioRequest &request);
+    CreatePortfolioShareResponse * createPortfolioShare(const CreatePortfolioShareRequest &request);
+    CreateProductResponse * createProduct(const CreateProductRequest &request);
+    CreateProvisionedProductPlanResponse * createProvisionedProductPlan(const CreateProvisionedProductPlanRequest &request);
+    CreateProvisioningArtifactResponse * createProvisioningArtifact(const CreateProvisioningArtifactRequest &request);
+    CreateTagOptionResponse * createTagOption(const CreateTagOptionRequest &request);
+    DeleteConstraintResponse * deleteConstraint(const DeleteConstraintRequest &request);
+    DeletePortfolioResponse * deletePortfolio(const DeletePortfolioRequest &request);
+    DeletePortfolioShareResponse * deletePortfolioShare(const DeletePortfolioShareRequest &request);
+    DeleteProductResponse * deleteProduct(const DeleteProductRequest &request);
+    DeleteProvisionedProductPlanResponse * deleteProvisionedProductPlan(const DeleteProvisionedProductPlanRequest &request);
+    DeleteProvisioningArtifactResponse * deleteProvisioningArtifact(const DeleteProvisioningArtifactRequest &request);
+    DeleteTagOptionResponse * deleteTagOption(const DeleteTagOptionRequest &request);
+    DescribeConstraintResponse * describeConstraint(const DescribeConstraintRequest &request);
+    DescribeCopyProductStatusResponse * describeCopyProductStatus(const DescribeCopyProductStatusRequest &request);
+    DescribePortfolioResponse * describePortfolio(const DescribePortfolioRequest &request);
     DescribeProductResponse * describeProduct(const DescribeProductRequest &request);
+    DescribeProductAsAdminResponse * describeProductAsAdmin(const DescribeProductAsAdminRequest &request);
     DescribeProductViewResponse * describeProductView(const DescribeProductViewRequest &request);
+    DescribeProvisionedProductResponse * describeProvisionedProduct(const DescribeProvisionedProductRequest &request);
+    DescribeProvisionedProductPlanResponse * describeProvisionedProductPlan(const DescribeProvisionedProductPlanRequest &request);
+    DescribeProvisioningArtifactResponse * describeProvisioningArtifact(const DescribeProvisioningArtifactRequest &request);
     DescribeProvisioningParametersResponse * describeProvisioningParameters(const DescribeProvisioningParametersRequest &request);
     DescribeRecordResponse * describeRecord(const DescribeRecordRequest &request);
+    DescribeTagOptionResponse * describeTagOption(const DescribeTagOptionRequest &request);
+    DisassociatePrincipalFromPortfolioResponse * disassociatePrincipalFromPortfolio(const DisassociatePrincipalFromPortfolioRequest &request);
+    DisassociateProductFromPortfolioResponse * disassociateProductFromPortfolio(const DisassociateProductFromPortfolioRequest &request);
+    DisassociateTagOptionFromResourceResponse * disassociateTagOptionFromResource(const DisassociateTagOptionFromResourceRequest &request);
+    ExecuteProvisionedProductPlanResponse * executeProvisionedProductPlan(const ExecuteProvisionedProductPlanRequest &request);
+    ListAcceptedPortfolioSharesResponse * listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request);
+    ListConstraintsForPortfolioResponse * listConstraintsForPortfolio(const ListConstraintsForPortfolioRequest &request);
     ListLaunchPathsResponse * listLaunchPaths(const ListLaunchPathsRequest &request);
+    ListPortfolioAccessResponse * listPortfolioAccess(const ListPortfolioAccessRequest &request);
+    ListPortfoliosResponse * listPortfolios(const ListPortfoliosRequest &request);
+    ListPortfoliosForProductResponse * listPortfoliosForProduct(const ListPortfoliosForProductRequest &request);
+    ListPrincipalsForPortfolioResponse * listPrincipalsForPortfolio(const ListPrincipalsForPortfolioRequest &request);
+    ListProvisionedProductPlansResponse * listProvisionedProductPlans(const ListProvisionedProductPlansRequest &request);
+    ListProvisioningArtifactsResponse * listProvisioningArtifacts(const ListProvisioningArtifactsRequest &request);
     ListRecordHistoryResponse * listRecordHistory(const ListRecordHistoryRequest &request);
+    ListResourcesForTagOptionResponse * listResourcesForTagOption(const ListResourcesForTagOptionRequest &request);
+    ListTagOptionsResponse * listTagOptions(const ListTagOptionsRequest &request);
     ProvisionProductResponse * provisionProduct(const ProvisionProductRequest &request);
+    RejectPortfolioShareResponse * rejectPortfolioShare(const RejectPortfolioShareRequest &request);
     ScanProvisionedProductsResponse * scanProvisionedProducts(const ScanProvisionedProductsRequest &request);
     SearchProductsResponse * searchProducts(const SearchProductsRequest &request);
+    SearchProductsAsAdminResponse * searchProductsAsAdmin(const SearchProductsAsAdminRequest &request);
+    SearchProvisionedProductsResponse * searchProvisionedProducts(const SearchProvisionedProductsRequest &request);
     TerminateProvisionedProductResponse * terminateProvisionedProduct(const TerminateProvisionedProductRequest &request);
+    UpdateConstraintResponse * updateConstraint(const UpdateConstraintRequest &request);
+    UpdatePortfolioResponse * updatePortfolio(const UpdatePortfolioRequest &request);
+    UpdateProductResponse * updateProduct(const UpdateProductRequest &request);
     UpdateProvisionedProductResponse * updateProvisionedProduct(const UpdateProvisionedProductRequest &request);
+    UpdateProvisioningArtifactResponse * updateProvisioningArtifact(const UpdateProvisioningArtifactRequest &request);
+    UpdateTagOptionResponse * updateTagOption(const UpdateTagOptionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ServiceCatalogClient)

@@ -53,12 +53,15 @@ public slots:
     CreateStreamResponse * createStream(const CreateStreamRequest &request);
     DecreaseStreamRetentionPeriodResponse * decreaseStreamRetentionPeriod(const DecreaseStreamRetentionPeriodRequest &request);
     DeleteStreamResponse * deleteStream(const DeleteStreamRequest &request);
+    DescribeLimitsResponse * describeLimits(const DescribeLimitsRequest &request);
     DescribeStreamResponse * describeStream(const DescribeStreamRequest &request);
+    DescribeStreamSummaryResponse * describeStreamSummary(const DescribeStreamSummaryRequest &request);
     DisableEnhancedMonitoringResponse * disableEnhancedMonitoring(const DisableEnhancedMonitoringRequest &request);
     EnableEnhancedMonitoringResponse * enableEnhancedMonitoring(const EnableEnhancedMonitoringRequest &request);
     GetRecordsResponse * getRecords(const GetRecordsRequest &request);
     GetShardIteratorResponse * getShardIterator(const GetShardIteratorRequest &request);
     IncreaseStreamRetentionPeriodResponse * increaseStreamRetentionPeriod(const IncreaseStreamRetentionPeriodRequest &request);
+    ListShardsResponse * listShards(const ListShardsRequest &request);
     ListStreamsResponse * listStreams(const ListStreamsRequest &request);
     ListTagsForStreamResponse * listTagsForStream(const ListTagsForStreamRequest &request);
     MergeShardsResponse * mergeShards(const MergeShardsRequest &request);
@@ -66,6 +69,9 @@ public slots:
     PutRecordsResponse * putRecords(const PutRecordsRequest &request);
     RemoveTagsFromStreamResponse * removeTagsFromStream(const RemoveTagsFromStreamRequest &request);
     SplitShardResponse * splitShard(const SplitShardRequest &request);
+    StartStreamEncryptionResponse * startStreamEncryption(const StartStreamEncryptionRequest &request);
+    StopStreamEncryptionResponse * stopStreamEncryption(const StopStreamEncryptionRequest &request);
+    UpdateShardCountResponse * updateShardCount(const UpdateShardCountRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisClient)

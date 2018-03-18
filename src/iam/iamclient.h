@@ -66,6 +66,8 @@ public slots:
     CreatePolicyVersionResponse * createPolicyVersion(const CreatePolicyVersionRequest &request);
     CreateRoleResponse * createRole(const CreateRoleRequest &request);
     CreateSAMLProviderResponse * createSAMLProvider(const CreateSAMLProviderRequest &request);
+    CreateServiceLinkedRoleResponse * createServiceLinkedRole(const CreateServiceLinkedRoleRequest &request);
+    CreateServiceSpecificCredentialResponse * createServiceSpecificCredential(const CreateServiceSpecificCredentialRequest &request);
     CreateUserResponse * createUser(const CreateUserRequest &request);
     CreateVirtualMFADeviceResponse * createVirtualMFADevice(const CreateVirtualMFADeviceRequest &request);
     DeactivateMFADeviceResponse * deactivateMFADevice(const DeactivateMFADeviceRequest &request);
@@ -84,6 +86,8 @@ public slots:
     DeleteSAMLProviderResponse * deleteSAMLProvider(const DeleteSAMLProviderRequest &request);
     DeleteSSHPublicKeyResponse * deleteSSHPublicKey(const DeleteSSHPublicKeyRequest &request);
     DeleteServerCertificateResponse * deleteServerCertificate(const DeleteServerCertificateRequest &request);
+    DeleteServiceLinkedRoleResponse * deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request);
+    DeleteServiceSpecificCredentialResponse * deleteServiceSpecificCredential(const DeleteServiceSpecificCredentialRequest &request);
     DeleteSigningCertificateResponse * deleteSigningCertificate(const DeleteSigningCertificateRequest &request);
     DeleteUserResponse * deleteUser(const DeleteUserRequest &request);
     DeleteUserPolicyResponse * deleteUserPolicy(const DeleteUserPolicyRequest &request);
@@ -112,6 +116,7 @@ public slots:
     GetSAMLProviderResponse * getSAMLProvider(const GetSAMLProviderRequest &request);
     GetSSHPublicKeyResponse * getSSHPublicKey(const GetSSHPublicKeyRequest &request);
     GetServerCertificateResponse * getServerCertificate(const GetServerCertificateRequest &request);
+    GetServiceLinkedRoleDeletionStatusResponse * getServiceLinkedRoleDeletionStatus(const GetServiceLinkedRoleDeletionStatusRequest &request);
     GetUserResponse * getUser(const GetUserRequest &request);
     GetUserPolicyResponse * getUserPolicy(const GetUserPolicyRequest &request);
     ListAccessKeysResponse * listAccessKeys(const ListAccessKeysRequest &request);
@@ -134,6 +139,7 @@ public slots:
     ListSAMLProvidersResponse * listSAMLProviders(const ListSAMLProvidersRequest &request);
     ListSSHPublicKeysResponse * listSSHPublicKeys(const ListSSHPublicKeysRequest &request);
     ListServerCertificatesResponse * listServerCertificates(const ListServerCertificatesRequest &request);
+    ListServiceSpecificCredentialsResponse * listServiceSpecificCredentials(const ListServiceSpecificCredentialsRequest &request);
     ListSigningCertificatesResponse * listSigningCertificates(const ListSigningCertificatesRequest &request);
     ListUserPoliciesResponse * listUserPolicies(const ListUserPoliciesRequest &request);
     ListUsersResponse * listUsers(const ListUsersRequest &request);
@@ -144,6 +150,7 @@ public slots:
     RemoveClientIDFromOpenIDConnectProviderResponse * removeClientIDFromOpenIDConnectProvider(const RemoveClientIDFromOpenIDConnectProviderRequest &request);
     RemoveRoleFromInstanceProfileResponse * removeRoleFromInstanceProfile(const RemoveRoleFromInstanceProfileRequest &request);
     RemoveUserFromGroupResponse * removeUserFromGroup(const RemoveUserFromGroupRequest &request);
+    ResetServiceSpecificCredentialResponse * resetServiceSpecificCredential(const ResetServiceSpecificCredentialRequest &request);
     ResyncMFADeviceResponse * resyncMFADevice(const ResyncMFADeviceRequest &request);
     SetDefaultPolicyVersionResponse * setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request);
     SimulateCustomPolicyResponse * simulateCustomPolicy(const SimulateCustomPolicyRequest &request);
@@ -154,9 +161,11 @@ public slots:
     UpdateGroupResponse * updateGroup(const UpdateGroupRequest &request);
     UpdateLoginProfileResponse * updateLoginProfile(const UpdateLoginProfileRequest &request);
     UpdateOpenIDConnectProviderThumbprintResponse * updateOpenIDConnectProviderThumbprint(const UpdateOpenIDConnectProviderThumbprintRequest &request);
+    UpdateRoleDescriptionResponse * updateRoleDescription(const UpdateRoleDescriptionRequest &request);
     UpdateSAMLProviderResponse * updateSAMLProvider(const UpdateSAMLProviderRequest &request);
     UpdateSSHPublicKeyResponse * updateSSHPublicKey(const UpdateSSHPublicKeyRequest &request);
     UpdateServerCertificateResponse * updateServerCertificate(const UpdateServerCertificateRequest &request);
+    UpdateServiceSpecificCredentialResponse * updateServiceSpecificCredential(const UpdateServiceSpecificCredentialRequest &request);
     UpdateSigningCertificateResponse * updateSigningCertificate(const UpdateSigningCertificateRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
     UploadSSHPublicKeyResponse * uploadSSHPublicKey(const UploadSSHPublicKeyRequest &request);

@@ -81,6 +81,7 @@ public slots:
     DescribeLayersResponse * describeLayers(const DescribeLayersRequest &request);
     DescribeLoadBasedAutoScalingResponse * describeLoadBasedAutoScaling(const DescribeLoadBasedAutoScalingRequest &request);
     DescribeMyUserProfileResponse * describeMyUserProfile();
+    DescribeOperatingSystemsResponse * describeOperatingSystems();
     DescribePermissionsResponse * describePermissions(const DescribePermissionsRequest &request);
     DescribeRaidArraysResponse * describeRaidArrays(const DescribeRaidArraysRequest &request);
     DescribeRdsDbInstancesResponse * describeRdsDbInstances(const DescribeRdsDbInstancesRequest &request);
@@ -95,6 +96,7 @@ public slots:
     DisassociateElasticIpResponse * disassociateElasticIp(const DisassociateElasticIpRequest &request);
     GetHostnameSuggestionResponse * getHostnameSuggestion(const GetHostnameSuggestionRequest &request);
     GrantAccessResponse * grantAccess(const GrantAccessRequest &request);
+    ListTagsResponse * listTags(const ListTagsRequest &request);
     RebootInstanceResponse * rebootInstance(const RebootInstanceRequest &request);
     RegisterEcsClusterResponse * registerEcsCluster(const RegisterEcsClusterRequest &request);
     RegisterElasticIpResponse * registerElasticIp(const RegisterElasticIpRequest &request);
@@ -108,8 +110,10 @@ public slots:
     StartStackResponse * startStack(const StartStackRequest &request);
     StopInstanceResponse * stopInstance(const StopInstanceRequest &request);
     StopStackResponse * stopStack(const StopStackRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     UnassignInstanceResponse * unassignInstance(const UnassignInstanceRequest &request);
     UnassignVolumeResponse * unassignVolume(const UnassignVolumeRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAppResponse * updateApp(const UpdateAppRequest &request);
     UpdateElasticIpResponse * updateElasticIp(const UpdateElasticIpRequest &request);
     UpdateInstanceResponse * updateInstance(const UpdateInstanceRequest &request);

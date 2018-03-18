@@ -50,6 +50,7 @@ public:
 
 public slots:
     CheckDomainAvailabilityResponse * checkDomainAvailability(const CheckDomainAvailabilityRequest &request);
+    CheckDomainTransferabilityResponse * checkDomainTransferability(const CheckDomainTransferabilityRequest &request);
     DeleteTagsForDomainResponse * deleteTagsForDomain(const DeleteTagsForDomainRequest &request);
     DisableDomainAutoRenewResponse * disableDomainAutoRenew(const DisableDomainAutoRenewRequest &request);
     DisableDomainTransferLockResponse * disableDomainTransferLock(const DisableDomainTransferLockRequest &request);

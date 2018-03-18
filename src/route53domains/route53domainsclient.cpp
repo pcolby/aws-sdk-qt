@@ -33,6 +33,7 @@ namespace Route53Domains {
  *
  * @brief  Client for Amazon Route 53 Domains
  *
+ * Amazon Route 53 API actions let you register domain names and perform related
  */
 
 /**

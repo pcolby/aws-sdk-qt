@@ -50,10 +50,12 @@ public:
 
 public slots:
     CreateDevicePoolResponse * createDevicePool(const CreateDevicePoolRequest &request);
+    CreateNetworkProfileResponse * createNetworkProfile(const CreateNetworkProfileRequest &request);
     CreateProjectResponse * createProject(const CreateProjectRequest &request);
     CreateRemoteAccessSessionResponse * createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request);
     CreateUploadResponse * createUpload(const CreateUploadRequest &request);
     DeleteDevicePoolResponse * deleteDevicePool(const DeleteDevicePoolRequest &request);
+    DeleteNetworkProfileResponse * deleteNetworkProfile(const DeleteNetworkProfileRequest &request);
     DeleteProjectResponse * deleteProject(const DeleteProjectRequest &request);
     DeleteRemoteAccessSessionResponse * deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request);
     DeleteRunResponse * deleteRun(const DeleteRunRequest &request);
@@ -63,6 +65,7 @@ public slots:
     GetDevicePoolResponse * getDevicePool(const GetDevicePoolRequest &request);
     GetDevicePoolCompatibilityResponse * getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request);
     GetJobResponse * getJob(const GetJobRequest &request);
+    GetNetworkProfileResponse * getNetworkProfile(const GetNetworkProfileRequest &request);
     GetOfferingStatusResponse * getOfferingStatus(const GetOfferingStatusRequest &request);
     GetProjectResponse * getProject(const GetProjectRequest &request);
     GetRemoteAccessSessionResponse * getRemoteAccessSession(const GetRemoteAccessSessionRequest &request);
@@ -75,6 +78,8 @@ public slots:
     ListDevicePoolsResponse * listDevicePools(const ListDevicePoolsRequest &request);
     ListDevicesResponse * listDevices(const ListDevicesRequest &request);
     ListJobsResponse * listJobs(const ListJobsRequest &request);
+    ListNetworkProfilesResponse * listNetworkProfiles(const ListNetworkProfilesRequest &request);
+    ListOfferingPromotionsResponse * listOfferingPromotions(const ListOfferingPromotionsRequest &request);
     ListOfferingTransactionsResponse * listOfferingTransactions(const ListOfferingTransactionsRequest &request);
     ListOfferingsResponse * listOfferings(const ListOfferingsRequest &request);
     ListProjectsResponse * listProjects(const ListProjectsRequest &request);
@@ -91,6 +96,7 @@ public slots:
     StopRemoteAccessSessionResponse * stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request);
     StopRunResponse * stopRun(const StopRunRequest &request);
     UpdateDevicePoolResponse * updateDevicePool(const UpdateDevicePoolRequest &request);
+    UpdateNetworkProfileResponse * updateNetworkProfile(const UpdateNetworkProfileRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 
 private:

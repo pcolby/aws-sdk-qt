@@ -33,9 +33,9 @@ namespace ECR {
  *
  * @brief  Client for Amazon EC2 Container Registry ( ECR)
  *
- * Amazon EC2 Container Registry (Amazon ECR) is a managed AWS Docker registry service. Customers can use the familiar
+ * Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  * Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
- * supports private Docker repositories with resource-based permissions using AWS IAM so that specific users or Amazon EC2
+ * supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2
  * instances can access repositories and images. Developers can use the Docker CLI to author and manage
  */
 

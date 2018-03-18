@@ -51,6 +51,7 @@ public:
 public slots:
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     CreateServiceResponse * createService(const CreateServiceRequest &request);
+    DeleteAttributesResponse * deleteAttributes(const DeleteAttributesRequest &request);
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DeleteServiceResponse * deleteService(const DeleteServiceRequest &request);
     DeregisterContainerInstanceResponse * deregisterContainerInstance(const DeregisterContainerInstanceRequest &request);
@@ -61,12 +62,14 @@ public slots:
     DescribeTaskDefinitionResponse * describeTaskDefinition(const DescribeTaskDefinitionRequest &request);
     DescribeTasksResponse * describeTasks(const DescribeTasksRequest &request);
     DiscoverPollEndpointResponse * discoverPollEndpoint(const DiscoverPollEndpointRequest &request);
+    ListAttributesResponse * listAttributes(const ListAttributesRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
     ListContainerInstancesResponse * listContainerInstances(const ListContainerInstancesRequest &request);
     ListServicesResponse * listServices(const ListServicesRequest &request);
     ListTaskDefinitionFamiliesResponse * listTaskDefinitionFamilies(const ListTaskDefinitionFamiliesRequest &request);
     ListTaskDefinitionsResponse * listTaskDefinitions(const ListTaskDefinitionsRequest &request);
     ListTasksResponse * listTasks(const ListTasksRequest &request);
+    PutAttributesResponse * putAttributes(const PutAttributesRequest &request);
     RegisterContainerInstanceResponse * registerContainerInstance(const RegisterContainerInstanceRequest &request);
     RegisterTaskDefinitionResponse * registerTaskDefinition(const RegisterTaskDefinitionRequest &request);
     RunTaskResponse * runTask(const RunTaskRequest &request);
@@ -75,6 +78,7 @@ public slots:
     SubmitContainerStateChangeResponse * submitContainerStateChange(const SubmitContainerStateChangeRequest &request);
     SubmitTaskStateChangeResponse * submitTaskStateChange(const SubmitTaskStateChangeRequest &request);
     UpdateContainerAgentResponse * updateContainerAgent(const UpdateContainerAgentRequest &request);
+    UpdateContainerInstancesStateResponse * updateContainerInstancesState(const UpdateContainerInstancesStateRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 
 private:

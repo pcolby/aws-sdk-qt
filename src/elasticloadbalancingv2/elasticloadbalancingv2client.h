@@ -49,6 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AddListenerCertificatesResponse * addListenerCertificates(const AddListenerCertificatesRequest &request);
     AddTagsResponse * addTags(const AddTagsRequest &request);
     CreateListenerResponse * createListener(const CreateListenerRequest &request);
     CreateLoadBalancerResponse * createLoadBalancer(const CreateLoadBalancerRequest &request);
@@ -59,6 +60,8 @@ public slots:
     DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
     DeleteTargetGroupResponse * deleteTargetGroup(const DeleteTargetGroupRequest &request);
     DeregisterTargetsResponse * deregisterTargets(const DeregisterTargetsRequest &request);
+    DescribeAccountLimitsResponse * describeAccountLimits(const DescribeAccountLimitsRequest &request);
+    DescribeListenerCertificatesResponse * describeListenerCertificates(const DescribeListenerCertificatesRequest &request);
     DescribeListenersResponse * describeListeners(const DescribeListenersRequest &request);
     DescribeLoadBalancerAttributesResponse * describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request);
     DescribeLoadBalancersResponse * describeLoadBalancers(const DescribeLoadBalancersRequest &request);
@@ -74,7 +77,9 @@ public slots:
     ModifyTargetGroupResponse * modifyTargetGroup(const ModifyTargetGroupRequest &request);
     ModifyTargetGroupAttributesResponse * modifyTargetGroupAttributes(const ModifyTargetGroupAttributesRequest &request);
     RegisterTargetsResponse * registerTargets(const RegisterTargetsRequest &request);
+    RemoveListenerCertificatesResponse * removeListenerCertificates(const RemoveListenerCertificatesRequest &request);
     RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    SetIpAddressTypeResponse * setIpAddressType(const SetIpAddressTypeRequest &request);
     SetRulePrioritiesResponse * setRulePriorities(const SetRulePrioritiesRequest &request);
     SetSecurityGroupsResponse * setSecurityGroups(const SetSecurityGroupsRequest &request);
     SetSubnetsResponse * setSubnets(const SetSubnetsRequest &request);

@@ -45,38 +45,40 @@ namespace StorageGateway {
  *
  * Reference</i>> <ul> <li>
  *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayHTTPRequestsHeaders.html">AWS
+ * <a
+ * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
  * Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
  * to AWS Storage
  *
  * Gateway> </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewaySigningRequests.html">Signing
+ * <a
+ * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
  * Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
  * such a
  *
  * request> </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/APIErrorResponses.html">Error Responses</a>:
- * Provides reference information about AWS Storage Gateway
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
+ * Responses</a>: Provides reference information about AWS Storage Gateway
  *
  * errors> </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPIOperations.html">Operations in
- * AWS Storage Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters,
- * response elements, possible errors, and examples of requests and
+ * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
+ * Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
+ * elements, possible errors, and examples of requests and
  *
  * responses> </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html">AWS Storage Gateway Regions and
- * Endpoints</a>: Provides a list of each of the s and endpoints available for use with AWS Storage
+ * <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region">AWS Storage Gateway Regions and
+ * Endpoints:</a> Provides a list of each region and endpoints available for use with AWS Storage Gateway.
  *
- * Gateway> </li> </ul> <note>
+ * </p </li> </ul> <note>
  *
  * AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
  * resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
- * Storage Gateway the ID for a volume might be <code>vol-1122AABB</code>. When you use this ID with the EC2 API, you must
- * change it to <code>vol-1122aabb</code>. Otherwise, the EC2 API might not behave as
+ * Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API,
+ * you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as
  *
  * expected> </note> <important>
  *
@@ -87,14 +89,14 @@ namespace StorageGateway {
  *
  * IDs</a>>
  *
- * For example, a volume ARN with the longer volume ID format will look like
+ * For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
  *
- * this>
+ * following>
  *
  *
  * <code>arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG</code>>
  *
- * A snapshot ID with the longer ID format will look like this:
+ * A snapshot ID with the longer ID format looks like the following:
  *
  * <code>snap-78e226633445566ee</code>>
  *

@@ -49,6 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateKmsKeyResponse * associateKmsKey(const AssociateKmsKeyRequest &request);
     CancelExportTaskResponse * cancelExportTask(const CancelExportTaskRequest &request);
     CreateExportTaskResponse * createExportTask(const CreateExportTaskRequest &request);
     CreateLogGroupResponse * createLogGroup(const CreateLogGroupRequest &request);
@@ -57,6 +58,7 @@ public slots:
     DeleteLogGroupResponse * deleteLogGroup(const DeleteLogGroupRequest &request);
     DeleteLogStreamResponse * deleteLogStream(const DeleteLogStreamRequest &request);
     DeleteMetricFilterResponse * deleteMetricFilter(const DeleteMetricFilterRequest &request);
+    DeleteResourcePolicyResponse * deleteResourcePolicy(const DeleteResourcePolicyRequest &request);
     DeleteRetentionPolicyResponse * deleteRetentionPolicy(const DeleteRetentionPolicyRequest &request);
     DeleteSubscriptionFilterResponse * deleteSubscriptionFilter(const DeleteSubscriptionFilterRequest &request);
     DescribeDestinationsResponse * describeDestinations(const DescribeDestinationsRequest &request);
@@ -64,16 +66,22 @@ public slots:
     DescribeLogGroupsResponse * describeLogGroups(const DescribeLogGroupsRequest &request);
     DescribeLogStreamsResponse * describeLogStreams(const DescribeLogStreamsRequest &request);
     DescribeMetricFiltersResponse * describeMetricFilters(const DescribeMetricFiltersRequest &request);
+    DescribeResourcePoliciesResponse * describeResourcePolicies(const DescribeResourcePoliciesRequest &request);
     DescribeSubscriptionFiltersResponse * describeSubscriptionFilters(const DescribeSubscriptionFiltersRequest &request);
+    DisassociateKmsKeyResponse * disassociateKmsKey(const DisassociateKmsKeyRequest &request);
     FilterLogEventsResponse * filterLogEvents(const FilterLogEventsRequest &request);
     GetLogEventsResponse * getLogEvents(const GetLogEventsRequest &request);
+    ListTagsLogGroupResponse * listTagsLogGroup(const ListTagsLogGroupRequest &request);
     PutDestinationResponse * putDestination(const PutDestinationRequest &request);
     PutDestinationPolicyResponse * putDestinationPolicy(const PutDestinationPolicyRequest &request);
     PutLogEventsResponse * putLogEvents(const PutLogEventsRequest &request);
     PutMetricFilterResponse * putMetricFilter(const PutMetricFilterRequest &request);
+    PutResourcePolicyResponse * putResourcePolicy(const PutResourcePolicyRequest &request);
     PutRetentionPolicyResponse * putRetentionPolicy(const PutRetentionPolicyRequest &request);
     PutSubscriptionFilterResponse * putSubscriptionFilter(const PutSubscriptionFilterRequest &request);
+    TagLogGroupResponse * tagLogGroup(const TagLogGroupRequest &request);
     TestMetricFilterResponse * testMetricFilter(const TestMetricFilterRequest &request);
+    UntagLogGroupResponse * untagLogGroup(const UntagLogGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchLogsClient)

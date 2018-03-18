@@ -49,16 +49,26 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptMatchResponse * acceptMatch(const AcceptMatchRequest &request);
     CreateAliasResponse * createAlias(const CreateAliasRequest &request);
     CreateBuildResponse * createBuild(const CreateBuildRequest &request);
     CreateFleetResponse * createFleet(const CreateFleetRequest &request);
     CreateGameSessionResponse * createGameSession(const CreateGameSessionRequest &request);
+    CreateGameSessionQueueResponse * createGameSessionQueue(const CreateGameSessionQueueRequest &request);
+    CreateMatchmakingConfigurationResponse * createMatchmakingConfiguration(const CreateMatchmakingConfigurationRequest &request);
+    CreateMatchmakingRuleSetResponse * createMatchmakingRuleSet(const CreateMatchmakingRuleSetRequest &request);
     CreatePlayerSessionResponse * createPlayerSession(const CreatePlayerSessionRequest &request);
     CreatePlayerSessionsResponse * createPlayerSessions(const CreatePlayerSessionsRequest &request);
+    CreateVpcPeeringAuthorizationResponse * createVpcPeeringAuthorization(const CreateVpcPeeringAuthorizationRequest &request);
+    CreateVpcPeeringConnectionResponse * createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request);
     DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
     DeleteBuildResponse * deleteBuild(const DeleteBuildRequest &request);
     DeleteFleetResponse * deleteFleet(const DeleteFleetRequest &request);
+    DeleteGameSessionQueueResponse * deleteGameSessionQueue(const DeleteGameSessionQueueRequest &request);
+    DeleteMatchmakingConfigurationResponse * deleteMatchmakingConfiguration(const DeleteMatchmakingConfigurationRequest &request);
     DeleteScalingPolicyResponse * deleteScalingPolicy(const DeleteScalingPolicyRequest &request);
+    DeleteVpcPeeringAuthorizationResponse * deleteVpcPeeringAuthorization(const DeleteVpcPeeringAuthorizationRequest &request);
+    DeleteVpcPeeringConnectionResponse * deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request);
     DescribeAliasResponse * describeAlias(const DescribeAliasRequest &request);
     DescribeBuildResponse * describeBuild(const DescribeBuildRequest &request);
     DescribeEC2InstanceLimitsResponse * describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request);
@@ -68,11 +78,20 @@ public slots:
     DescribeFleetPortSettingsResponse * describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request);
     DescribeFleetUtilizationResponse * describeFleetUtilization(const DescribeFleetUtilizationRequest &request);
     DescribeGameSessionDetailsResponse * describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request);
+    DescribeGameSessionPlacementResponse * describeGameSessionPlacement(const DescribeGameSessionPlacementRequest &request);
+    DescribeGameSessionQueuesResponse * describeGameSessionQueues(const DescribeGameSessionQueuesRequest &request);
     DescribeGameSessionsResponse * describeGameSessions(const DescribeGameSessionsRequest &request);
+    DescribeInstancesResponse * describeInstances(const DescribeInstancesRequest &request);
+    DescribeMatchmakingResponse * describeMatchmaking(const DescribeMatchmakingRequest &request);
+    DescribeMatchmakingConfigurationsResponse * describeMatchmakingConfigurations(const DescribeMatchmakingConfigurationsRequest &request);
+    DescribeMatchmakingRuleSetsResponse * describeMatchmakingRuleSets(const DescribeMatchmakingRuleSetsRequest &request);
     DescribePlayerSessionsResponse * describePlayerSessions(const DescribePlayerSessionsRequest &request);
     DescribeRuntimeConfigurationResponse * describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request);
     DescribeScalingPoliciesResponse * describeScalingPolicies(const DescribeScalingPoliciesRequest &request);
+    DescribeVpcPeeringAuthorizationsResponse * describeVpcPeeringAuthorizations(const DescribeVpcPeeringAuthorizationsRequest &request);
+    DescribeVpcPeeringConnectionsResponse * describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request);
     GetGameSessionLogUrlResponse * getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request);
+    GetInstanceAccessResponse * getInstanceAccess(const GetInstanceAccessRequest &request);
     ListAliasesResponse * listAliases(const ListAliasesRequest &request);
     ListBuildsResponse * listBuilds(const ListBuildsRequest &request);
     ListFleetsResponse * listFleets(const ListFleetsRequest &request);
@@ -80,13 +99,21 @@ public slots:
     RequestUploadCredentialsResponse * requestUploadCredentials(const RequestUploadCredentialsRequest &request);
     ResolveAliasResponse * resolveAlias(const ResolveAliasRequest &request);
     SearchGameSessionsResponse * searchGameSessions(const SearchGameSessionsRequest &request);
+    StartGameSessionPlacementResponse * startGameSessionPlacement(const StartGameSessionPlacementRequest &request);
+    StartMatchBackfillResponse * startMatchBackfill(const StartMatchBackfillRequest &request);
+    StartMatchmakingResponse * startMatchmaking(const StartMatchmakingRequest &request);
+    StopGameSessionPlacementResponse * stopGameSessionPlacement(const StopGameSessionPlacementRequest &request);
+    StopMatchmakingResponse * stopMatchmaking(const StopMatchmakingRequest &request);
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
     UpdateBuildResponse * updateBuild(const UpdateBuildRequest &request);
     UpdateFleetAttributesResponse * updateFleetAttributes(const UpdateFleetAttributesRequest &request);
     UpdateFleetCapacityResponse * updateFleetCapacity(const UpdateFleetCapacityRequest &request);
     UpdateFleetPortSettingsResponse * updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request);
     UpdateGameSessionResponse * updateGameSession(const UpdateGameSessionRequest &request);
+    UpdateGameSessionQueueResponse * updateGameSessionQueue(const UpdateGameSessionQueueRequest &request);
+    UpdateMatchmakingConfigurationResponse * updateMatchmakingConfiguration(const UpdateMatchmakingConfigurationRequest &request);
     UpdateRuntimeConfigurationResponse * updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request);
+    ValidateMatchmakingRuleSetResponse * validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(GameLiftClient)

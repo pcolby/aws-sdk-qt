@@ -56,6 +56,7 @@ public slots:
     BatchGetDeploymentInstancesResponse * batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request);
     BatchGetDeploymentsResponse * batchGetDeployments(const BatchGetDeploymentsRequest &request);
     BatchGetOnPremisesInstancesResponse * batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request);
+    ContinueDeploymentResponse * continueDeployment(const ContinueDeploymentRequest &request);
     CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
     CreateDeploymentResponse * createDeployment(const CreateDeploymentRequest &request);
     CreateDeploymentConfigResponse * createDeploymentConfig(const CreateDeploymentConfigRequest &request);
@@ -63,6 +64,7 @@ public slots:
     DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
     DeleteDeploymentConfigResponse * deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request);
     DeleteDeploymentGroupResponse * deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request);
+    DeleteGitHubAccountTokenResponse * deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request);
     DeregisterOnPremisesInstanceResponse * deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request);
     GetApplicationResponse * getApplication(const GetApplicationRequest &request);
     GetApplicationRevisionResponse * getApplicationRevision(const GetApplicationRevisionRequest &request);
@@ -77,10 +79,13 @@ public slots:
     ListDeploymentGroupsResponse * listDeploymentGroups(const ListDeploymentGroupsRequest &request);
     ListDeploymentInstancesResponse * listDeploymentInstances(const ListDeploymentInstancesRequest &request);
     ListDeploymentsResponse * listDeployments(const ListDeploymentsRequest &request);
+    ListGitHubAccountTokenNamesResponse * listGitHubAccountTokenNames(const ListGitHubAccountTokenNamesRequest &request);
     ListOnPremisesInstancesResponse * listOnPremisesInstances(const ListOnPremisesInstancesRequest &request);
+    PutLifecycleEventHookExecutionStatusResponse * putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request);
     RegisterApplicationRevisionResponse * registerApplicationRevision(const RegisterApplicationRevisionRequest &request);
     RegisterOnPremisesInstanceResponse * registerOnPremisesInstance(const RegisterOnPremisesInstanceRequest &request);
     RemoveTagsFromOnPremisesInstancesResponse * removeTagsFromOnPremisesInstances(const RemoveTagsFromOnPremisesInstancesRequest &request);
+    SkipWaitTimeForInstanceTerminationResponse * skipWaitTimeForInstanceTermination(const SkipWaitTimeForInstanceTerminationRequest &request);
     StopDeploymentResponse * stopDeployment(const StopDeploymentRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
     UpdateDeploymentGroupResponse * updateDeploymentGroup(const UpdateDeploymentGroupRequest &request);

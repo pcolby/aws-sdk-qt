@@ -1,0 +1,143 @@
+/*
+    Copyright 2013-2018 Paul Colby
+
+    This file is part of libqtaws.
+
+    Libqtaws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Libqtaws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with libqtaws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "workdocsclient.h"
+#include "workdocsclient_p.h"
+
+#include "core/awssignaturev4.h"
+
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  WorkDocsClient
+ *
+ * @brief  Client for Amazon WorkDocs
+ *
+ * The WorkDocs API is designed for the following use
+ *
+ * cases> <ul> <li>
+ *
+ * File Migration: File migration applications are supported for users who want to migrate their files from an on-premises
+ * or off-premises file system or service. Users can insert files into a user directory structure, as well as allow for
+ * basic metadata changes, such as modifications to the permissions of
+ *
+ * files> </li> <li>
+ *
+ * Security: Support security applications are supported for users who have additional security needs, such as antivirus or
+ * data loss prevention. The API actions, along with AWS CloudTrail, allow these applications to detect when changes occur
+ * in Amazon WorkDocs. Then, the application can take the necessary actions and replace the target file. If the target file
+ * violates the policy, the application can also choose to email the
+ *
+ * user> </li> <li>
+ *
+ * eDiscovery/Analytics: General administrative applications are supported, such as eDiscovery and analytics. These
+ * applications can choose to mimic or record the actions in an Amazon WorkDocs site, along with AWS CloudTrail, to
+ * replicate data for eDiscovery, backup, or analytical
+ *
+ * applications> </li> </ul>
+ *
+ * All Amazon WorkDocs API actions are Amazon authenticated and certificate-signed. They not only require the use of the
+ * AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission
+ * policies. By creating a role and allowing an IAM user to access the Amazon WorkDocs site, the IAM user gains full
+ * administrative visibility into the entire Amazon WorkDocs site (or as set in the IAM policy). This includes, but is not
+ * limited to, the ability to modify file permissions and upload any file to any user. This allows developers to perform
+ * the three use cases above, as well as give users the ability to grant access on a selective basis using the IAM
+ */
+
+/**
+ * @brief  Constructs a new WorkDocsClient object.
+ *
+ * @param  region       AWS region for this client to service requests for.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
+ */
+WorkDocsClient::WorkDocsClient(
+    const AwsRegion::Region region,
+    AwsAbstractCredentials * credentials,
+    QNetworkAccessManager * const manager,
+    QObject * const parent)
+: AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
+{
+    Q_D(WorkDocsClient);
+    d->region = region;
+    d->credentials = credentials;
+    d->networkAccessManager = manager;
+    d->serviceName = QLatin1String("{{servicename}}");
+}
+
+/**
+ * @brief  Constructs a new WorkDocsClient object.
+ *
+ * This overload allows the caller to specify the specific endpoint to send
+ * requests to.  Typically, it is easier to use the alternative constructor,
+ * which allows the caller to specify an AWS region instead, in which case this
+ * client will determine the correct endpoint for the given region
+ * automatically (via AwsEndpoint::getEndpoint).
+ *
+ * @param  endpoint     Endpoint for building requests URLs.
+ * @param  credentials  AWS credentials to use for signing requests.
+ * @param  manager      Network access manager for sending requests.
+ * @param  parent       This object's parent.
+ *
+ * @see  AwsEndpoint::getEndpoint
+ */
+WorkDocsClient::WorkDocsClient(
+    const QUrl &endpoint,
+    AwsAbstractCredentials * credentials,
+    QNetworkAccessManager * const manager,
+    QObject * const parent)
+: AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
+{
+    Q_D(WorkDocsClient);
+    d->endpoint = endpoint;
+    d->credentials = credentials;
+    d->networkAccessManager = manager;
+    d->serviceName = QLatin1String("{{servicename}}");
+}
+
+/// @todo {{publicSlots}}
+
+/**
+ * @internal
+ *
+ * @class  WorkDocsClientPrivate
+ *
+ * @brief  Private implementation for WorkDocsClient.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new WorkDocsClientPrivate object.
+ *
+ * @param  q  Pointer to this object's public WorkDocsClient instance.
+ */
+WorkDocsClientPrivate::WorkDocsClientPrivate(WorkDocsClient * const q)
+    : AwsAbstractClientPrivate(q)
+{
+    signature = new AwsSignatureV4();
+}
+
+} // namespace WorkDocs
+} // namespace AWS

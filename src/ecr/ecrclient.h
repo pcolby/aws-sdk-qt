@@ -54,16 +54,22 @@ public slots:
     BatchGetImageResponse * batchGetImage(const BatchGetImageRequest &request);
     CompleteLayerUploadResponse * completeLayerUpload(const CompleteLayerUploadRequest &request);
     CreateRepositoryResponse * createRepository(const CreateRepositoryRequest &request);
+    DeleteLifecyclePolicyResponse * deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request);
     DeleteRepositoryResponse * deleteRepository(const DeleteRepositoryRequest &request);
     DeleteRepositoryPolicyResponse * deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request);
+    DescribeImagesResponse * describeImages(const DescribeImagesRequest &request);
     DescribeRepositoriesResponse * describeRepositories(const DescribeRepositoriesRequest &request);
     GetAuthorizationTokenResponse * getAuthorizationToken(const GetAuthorizationTokenRequest &request);
     GetDownloadUrlForLayerResponse * getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request);
+    GetLifecyclePolicyResponse * getLifecyclePolicy(const GetLifecyclePolicyRequest &request);
+    GetLifecyclePolicyPreviewResponse * getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request);
     GetRepositoryPolicyResponse * getRepositoryPolicy(const GetRepositoryPolicyRequest &request);
     InitiateLayerUploadResponse * initiateLayerUpload(const InitiateLayerUploadRequest &request);
     ListImagesResponse * listImages(const ListImagesRequest &request);
     PutImageResponse * putImage(const PutImageRequest &request);
+    PutLifecyclePolicyResponse * putLifecyclePolicy(const PutLifecyclePolicyRequest &request);
     SetRepositoryPolicyResponse * setRepositoryPolicy(const SetRepositoryPolicyRequest &request);
+    StartLifecyclePolicyPreviewResponse * startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request);
     UploadLayerPartResponse * uploadLayerPart(const UploadLayerPartRequest &request);
 
 private:

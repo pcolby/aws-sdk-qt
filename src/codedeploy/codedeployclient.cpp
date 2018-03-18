@@ -33,70 +33,87 @@ namespace CodeDeploy {
  *
  * @brief  Client for AWS CodeDeploy
  *
- * <fullname>AWS CodeDeploy</fullname> <b>Overview</b>
+ * <fullname>AWS CodeDeploy</fullname>
  *
- * This reference guide provides descriptions of the AWS CodeDeploy APIs. For more information about AWS CodeDeploy, see
- * the <a href="docs.aws.amazon.com/codedeploy/latest/userguide">AWS CodeDeploy User
+ * AWS CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises
+ * instances running in your own facility, or serverless AWS Lambda
  *
- * Guide</a>> <b>Using the APIs</b>
+ * functions>
  *
- * You can use the AWS CodeDeploy APIs to work with the
+ * You can deploy a nearly unlimited variety of application content, such as an updated Lambda function, code, web and
+ * configuration files, executables, packages, scripts, multimedia files, and so on. AWS CodeDeploy can deploy application
+ * content stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. You do not need to make changes to
+ * your existing code before you can use AWS
  *
- * following> <ul> <li>
+ * CodeDeploy>
  *
- * Applications are unique identifiers used by AWS CodeDeploy to ensure the correct combinations of revisions, deployment
- * configurations, and deployment groups are being referenced during
- *
- * deployments>
- *
- * You can use the AWS CodeDeploy APIs to create, delete, get, list, and update
- *
- * applications> </li> <li>
- *
- * Deployment configurations are sets of deployment rules and success and failure conditions used by AWS CodeDeploy during
+ * AWS CodeDeploy makes it easier for you to rapidly release new features, helps you avoid downtime during application
+ * deployment, and handles the complexity of updating your applications, without many of the risks associated with
+ * error-prone manual
  *
  * deployments>
  *
- * You can use the AWS CodeDeploy APIs to create, delete, get, and list deployment
+ * <b>AWS CodeDeploy Components</b>
  *
- * configurations> </li> <li>
+ * </p
  *
- * Deployment groups are groups of instances to which application revisions can be
+ * Use the information in this guide to help you work with the following AWS CodeDeploy
  *
- * deployed>
+ * components> <ul> <li>
  *
- * You can use the AWS CodeDeploy APIs to create, delete, get, list, and update deployment
+ * <b>Application</b>: A name that uniquely identifies the application you want to deploy. AWS CodeDeploy uses this name,
+ * which functions as a container, to ensure the correct combination of revision, deployment configuration, and deployment
+ * group are referenced during a
  *
- * groups> </li> <li>
+ * deployment> </li> <li>
  *
- * Instances represent Amazon EC2 instances to which application revisions are deployed. Instances are identified by their
- * Amazon EC2 tags or Auto Scaling group names. Instances belong to deployment
+ * <b>Deployment group</b>: A set of individual instances or CodeDeploy Lambda applications. A Lambda deployment group
+ * contains a group of applications. An EC2/On-premises deployment group contains individually tagged instances, Amazon EC2
+ * instances in Auto Scaling groups, or both.
  *
- * groups>
+ * </p </li> <li>
  *
- * You can use the AWS CodeDeploy APIs to get and list
+ * <b>Deployment configuration</b>: A set of deployment rules and deployment success and failure conditions used by AWS
+ * CodeDeploy during a
  *
- * instance> </li> <li>
+ * deployment> </li> <li>
  *
- * Deployments represent the process of deploying revisions to
+ * <b>Deployment</b>: The process and the components used in the process of updating a Lambda function or of installing
+ * content on one or more instances.
  *
- * instances>
+ * </p </li> <li>
  *
- * You can use the AWS CodeDeploy APIs to create, get, list, and stop
+ * <b>Application revisions</b>: For an AWS Lambda deployment, this is an AppSpec file that specifies the Lambda function
+ * to update and one or more functions to validate deployment lifecycle events. For an EC2/On-premises deployment, this is
+ * an archive file containing source content—source code, web pages, executable files, and deployment scripts—along with an
+ * AppSpec file. Revisions are stored in Amazon S3 buckets or GitHub repositories. For Amazon S3, a revision is uniquely
+ * identified by its Amazon S3 object key and its ETag, version, or both. For GitHub, a revision is uniquely identified by
+ * its commit
  *
- * deployments> </li> <li>
+ * ID> </li> </ul>
  *
- * Application revisions are archive files stored in Amazon S3 buckets or GitHub repositories. These revisions contain
- * source content (such as source code, web pages, executable files, and deployment scripts) along with an application
- * specification (AppSpec) file. (The AppSpec file is unique to AWS CodeDeploy; it defines the deployment actions you want
- * AWS CodeDeploy to execute.) Ffor application revisions stored in Amazon S3 buckets, an application revision is uniquely
- * identified by its Amazon S3 object key and its ETag, version, or both. For application revisions stored in GitHub
- * repositories, an application revision is uniquely identified by its repository name and commit ID. Application revisions
- * are deployed through deployment
+ * This guide also contains information to help you get details about the instances in your deployments, to make
+ * on-premises instances available for AWS CodeDeploy deployments, and to get details about a Lambda function
  *
- * groups>
+ * deployment>
  *
- * You can use the AWS CodeDeploy APIs to get, list, and register application
+ * <b>AWS CodeDeploy Information Resources</b>
+ *
+ * </p <ul> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/codedeploy/latest/userguide">AWS CodeDeploy User Guide</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/codedeploy/latest/APIReference/">AWS CodeDeploy API Reference Guide</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="http://docs.aws.amazon.com/cli/latest/reference/deploy/index.html">AWS CLI Reference for AWS CodeDeploy</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://forums.aws.amazon.com/forum.jspa?forumID=179">AWS CodeDeploy Developer Forum</a>
  */
 
 /**

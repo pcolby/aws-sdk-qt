@@ -73,12 +73,15 @@ public slots:
     ListGrantsResponse * listGrants(const ListGrantsRequest &request);
     ListKeyPoliciesResponse * listKeyPolicies(const ListKeyPoliciesRequest &request);
     ListKeysResponse * listKeys(const ListKeysRequest &request);
+    ListResourceTagsResponse * listResourceTags(const ListResourceTagsRequest &request);
     ListRetirableGrantsResponse * listRetirableGrants(const ListRetirableGrantsRequest &request);
     PutKeyPolicyResponse * putKeyPolicy(const PutKeyPolicyRequest &request);
     ReEncryptResponse * reEncrypt(const ReEncryptRequest &request);
     RetireGrantResponse * retireGrant(const RetireGrantRequest &request);
     RevokeGrantResponse * revokeGrant(const RevokeGrantRequest &request);
     ScheduleKeyDeletionResponse * scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
     UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
 

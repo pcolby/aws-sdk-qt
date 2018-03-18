@@ -49,18 +49,28 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AddInstanceFleetResponse * addInstanceFleet(const AddInstanceFleetRequest &request);
     AddInstanceGroupsResponse * addInstanceGroups(const AddInstanceGroupsRequest &request);
     AddJobFlowStepsResponse * addJobFlowSteps(const AddJobFlowStepsRequest &request);
     AddTagsResponse * addTags(const AddTagsRequest &request);
+    CancelStepsResponse * cancelSteps(const CancelStepsRequest &request);
+    CreateSecurityConfigurationResponse * createSecurityConfiguration(const CreateSecurityConfigurationRequest &request);
+    DeleteSecurityConfigurationResponse * deleteSecurityConfiguration(const DeleteSecurityConfigurationRequest &request);
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
     DescribeJobFlowsResponse * describeJobFlows(const DescribeJobFlowsRequest &request);
+    DescribeSecurityConfigurationResponse * describeSecurityConfiguration(const DescribeSecurityConfigurationRequest &request);
     DescribeStepResponse * describeStep(const DescribeStepRequest &request);
     ListBootstrapActionsResponse * listBootstrapActions(const ListBootstrapActionsRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListInstanceFleetsResponse * listInstanceFleets(const ListInstanceFleetsRequest &request);
     ListInstanceGroupsResponse * listInstanceGroups(const ListInstanceGroupsRequest &request);
     ListInstancesResponse * listInstances(const ListInstancesRequest &request);
+    ListSecurityConfigurationsResponse * listSecurityConfigurations(const ListSecurityConfigurationsRequest &request);
     ListStepsResponse * listSteps(const ListStepsRequest &request);
+    ModifyInstanceFleetResponse * modifyInstanceFleet(const ModifyInstanceFleetRequest &request);
     ModifyInstanceGroupsResponse * modifyInstanceGroups(const ModifyInstanceGroupsRequest &request);
+    PutAutoScalingPolicyResponse * putAutoScalingPolicy(const PutAutoScalingPolicyRequest &request);
+    RemoveAutoScalingPolicyResponse * removeAutoScalingPolicy(const RemoveAutoScalingPolicyRequest &request);
     RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
     RunJobFlowResponse * runJobFlow(const RunJobFlowRequest &request);
     SetTerminationProtectionResponse * setTerminationProtection(const SetTerminationProtectionRequest &request);

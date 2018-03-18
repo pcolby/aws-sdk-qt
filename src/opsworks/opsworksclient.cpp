@@ -35,14 +35,14 @@ namespace OpsWorks {
  *
  * <fullname>AWS OpsWorks</fullname>
  *
- * Welcome to the <i>AWS OpsWorks API Reference</i>. This guide provides descriptions, syntax, and usage examples for AWS
- * OpsWorks actions and data types, including common parameters and error codes.
+ * Welcome to the <i>AWS OpsWorks Stacks API Reference</i>. This guide provides descriptions, syntax, and usage examples
+ * for AWS OpsWorks Stacks actions and data types, including common parameters and error codes.
  *
  * </p
  *
- * AWS OpsWorks is an application management service that provides an integrated experience for overseeing the complete
- * application lifecycle. For information about this product, go to the <a href="http://aws.amazon.com/opsworks/">AWS
- * OpsWorks</a> details page.
+ * AWS OpsWorks Stacks is an application management service that provides an integrated experience for overseeing the
+ * complete application lifecycle. For information about this product, go to the <a
+ * href="http://aws.amazon.com/opsworks/">AWS OpsWorks</a> details page.
  *
  * </p
  *
@@ -50,8 +50,8 @@ namespace OpsWorks {
  *
  * </p
  *
- * The most common way to use the AWS OpsWorks API is by using the AWS Command Line Interface (CLI) or by using one of the
- * AWS SDKs to implement applications in your preferred language. For more information,
+ * The most common way to use the AWS OpsWorks Stacks API is by using the AWS Command Line Interface (CLI) or by using one
+ * of the AWS SDKs to implement applications in your preferred language. For more information,
  *
  * see> <ul> <li>
  *
@@ -89,18 +89,28 @@ namespace OpsWorks {
  *
  * </p
  *
- * AWS OpsWorks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints. Stacks can
- * only be accessed or managed within the endpoint in which they are
+ * AWS OpsWorks Stacks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints.
+ * Stacks can only be accessed or managed within the endpoint in which they are
  *
  * created> <ul> <li>
  *
  * opsworks.us-east-1.amazonaws.co> </li> <li>
  *
+ * opsworks.us-east-2.amazonaws.co> </li> <li>
+ *
  * opsworks.us-west-1.amazonaws.co> </li> <li>
  *
  * opsworks.us-west-2.amazonaws.co> </li> <li>
  *
+ * opsworks.ca-central-1.amazonaws.com (API only; not available in the AWS
+ *
+ * console> </li> <li>
+ *
  * opsworks.eu-west-1.amazonaws.co> </li> <li>
+ *
+ * opsworks.eu-west-2.amazonaws.co> </li> <li>
+ *
+ * opsworks.eu-west-3.amazonaws.co> </li> <li>
  *
  * opsworks.eu-central-1.amazonaws.co> </li> <li>
  *

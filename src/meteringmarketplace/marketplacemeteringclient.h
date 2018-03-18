@@ -49,7 +49,9 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchMeterUsageResponse * batchMeterUsage(const BatchMeterUsageRequest &request);
     MeterUsageResponse * meterUsage(const MeterUsageRequest &request);
+    ResolveCustomerResponse * resolveCustomer(const ResolveCustomerRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MarketplaceMeteringClient)

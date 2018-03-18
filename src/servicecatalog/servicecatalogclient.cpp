@@ -35,29 +35,10 @@ namespace ServiceCatalog {
  *
  * <fullname>AWS Service Catalog</fullname>
  *
- * <b>Overview</b>
- *
- * </p
- *
- * <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> allows organizations to create and manage
- * catalogs of IT services that are approved for use on AWS. This documentation provides reference material for the AWS
- * Service Catalog end user API. To get the most out of this documentation, you need to be familiar with the terminology
- * discussed in <a href="http://docs.aws.amazon.com/servicecatalog/latest/userguide/what-is_concepts.html">AWS Service
- * Catalog
- *
- * Concepts</a>>
- *
- * <i>Additional Resources</i>
- *
- * </p <ul> <li>
- *
- * <a href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">AWS Service Catalog
- * Administrator Guide</a>
- *
- * </p </li> <li>
- *
- * <a href="http://docs.aws.amazon.com/servicecatalog/latest/userguide/introduction.html">AWS Service Catalog User
- * Guide</a>
+ * <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
+ * catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
+ * familiar with the terminology discussed in <a
+ * href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
  */
 
 /**

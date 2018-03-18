@@ -53,6 +53,7 @@ public slots:
     DeleteCertificateResponse * deleteCertificate(const DeleteCertificateRequest &request);
     DescribeCertificateResponse * describeCertificate(const DescribeCertificateRequest &request);
     GetCertificateResponse * getCertificate(const GetCertificateRequest &request);
+    ImportCertificateResponse * importCertificate(const ImportCertificateRequest &request);
     ListCertificatesResponse * listCertificates(const ListCertificatesRequest &request);
     ListTagsForCertificateResponse * listTagsForCertificate(const ListTagsForCertificateRequest &request);
     RemoveTagsFromCertificateResponse * removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request);

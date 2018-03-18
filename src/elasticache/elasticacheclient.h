@@ -82,11 +82,13 @@ public slots:
     ModifyCacheParameterGroupResponse * modifyCacheParameterGroup(const ModifyCacheParameterGroupRequest &request);
     ModifyCacheSubnetGroupResponse * modifyCacheSubnetGroup(const ModifyCacheSubnetGroupRequest &request);
     ModifyReplicationGroupResponse * modifyReplicationGroup(const ModifyReplicationGroupRequest &request);
+    ModifyReplicationGroupShardConfigurationResponse * modifyReplicationGroupShardConfiguration(const ModifyReplicationGroupShardConfigurationRequest &request);
     PurchaseReservedCacheNodesOfferingResponse * purchaseReservedCacheNodesOffering(const PurchaseReservedCacheNodesOfferingRequest &request);
     RebootCacheClusterResponse * rebootCacheCluster(const RebootCacheClusterRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     ResetCacheParameterGroupResponse * resetCacheParameterGroup(const ResetCacheParameterGroupRequest &request);
     RevokeCacheSecurityGroupIngressResponse * revokeCacheSecurityGroupIngress(const RevokeCacheSecurityGroupIngressRequest &request);
+    TestFailoverResponse * testFailover(const TestFailoverRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElastiCacheClient)

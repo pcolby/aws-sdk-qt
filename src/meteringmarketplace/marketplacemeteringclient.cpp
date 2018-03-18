@@ -35,19 +35,34 @@ namespace MarketplaceMetering {
  *
  * <fullname>AWS Marketplace Metering Service</fullname>
  *
- * This reference provides descriptions of the low-level AWS Marketplace Metering Service API.
+ * This reference provides descriptions of the low-level AWS Marketplace Metering Service
  *
- * </p
+ * API>
  *
  * AWS Marketplace sellers can use this API to submit usage data for custom usage
  *
  * dimensions>
  *
- * <b>Submitting Metering
+ * <b>Submitting Metering Records</b>
  *
- * Records</b> <ul> <li>
+ * </p <ul> <li>
  *
- * <i>MeterUsage</i>- Submits the metering record for a Marketplace
+ * <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ *
+ * instance> </li> <li>
+ *
+ * <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
+ * software-as-a-service (SaaS)
+ *
+ * application> </li> </ul>
+ *
+ * <b>Accepting New Customers</b>
+ *
+ * </p <ul> <li>
+ *
+ * <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ * during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
+ * resolved through this API to obtain a CustomerIdentifier and Product
  */
 
 /**

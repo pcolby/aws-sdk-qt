@@ -72,8 +72,10 @@ public slots:
     ListJobsResponse * listJobs(const ListJobsRequest &request);
     ListMultipartUploadsResponse * listMultipartUploads(const ListMultipartUploadsRequest &request);
     ListPartsResponse * listParts(const ListPartsRequest &request);
+    ListProvisionedCapacityResponse * listProvisionedCapacity(const ListProvisionedCapacityRequest &request);
     ListTagsForVaultResponse * listTagsForVault(const ListTagsForVaultRequest &request);
     ListVaultsResponse * listVaults(const ListVaultsRequest &request);
+    PurchaseProvisionedCapacityResponse * purchaseProvisionedCapacity(const PurchaseProvisionedCapacityRequest &request);
     RemoveTagsFromVaultResponse * removeTagsFromVault(const RemoveTagsFromVaultRequest &request);
     SetDataRetrievalPolicyResponse * setDataRetrievalPolicy(const SetDataRetrievalPolicyRequest &request);
     SetVaultAccessPolicyResponse * setVaultAccessPolicy(const SetVaultAccessPolicyRequest &request);

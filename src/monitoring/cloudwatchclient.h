@@ -50,13 +50,17 @@ public:
 
 public slots:
     DeleteAlarmsResponse * deleteAlarms(const DeleteAlarmsRequest &request);
+    DeleteDashboardsResponse * deleteDashboards(const DeleteDashboardsRequest &request);
     DescribeAlarmHistoryResponse * describeAlarmHistory(const DescribeAlarmHistoryRequest &request);
     DescribeAlarmsResponse * describeAlarms(const DescribeAlarmsRequest &request);
     DescribeAlarmsForMetricResponse * describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request);
     DisableAlarmActionsResponse * disableAlarmActions(const DisableAlarmActionsRequest &request);
     EnableAlarmActionsResponse * enableAlarmActions(const EnableAlarmActionsRequest &request);
+    GetDashboardResponse * getDashboard(const GetDashboardRequest &request);
     GetMetricStatisticsResponse * getMetricStatistics(const GetMetricStatisticsRequest &request);
+    ListDashboardsResponse * listDashboards(const ListDashboardsRequest &request);
     ListMetricsResponse * listMetrics(const ListMetricsRequest &request);
+    PutDashboardResponse * putDashboard(const PutDashboardRequest &request);
     PutMetricAlarmResponse * putMetricAlarm(const PutMetricAlarmRequest &request);
     PutMetricDataResponse * putMetricData(const PutMetricDataRequest &request);
     SetAlarmStateResponse * setAlarmState(const SetAlarmStateRequest &request);

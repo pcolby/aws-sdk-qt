@@ -51,11 +51,13 @@ public:
 public slots:
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
     CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
+    CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
     CreateReplicationInstanceResponse * createReplicationInstance(const CreateReplicationInstanceRequest &request);
     CreateReplicationSubnetGroupResponse * createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request);
     CreateReplicationTaskResponse * createReplicationTask(const CreateReplicationTaskRequest &request);
     DeleteCertificateResponse * deleteCertificate(const DeleteCertificateRequest &request);
     DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
+    DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
     DeleteReplicationInstanceResponse * deleteReplicationInstance(const DeleteReplicationInstanceRequest &request);
     DeleteReplicationSubnetGroupResponse * deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request);
     DeleteReplicationTaskResponse * deleteReplicationTask(const DeleteReplicationTaskRequest &request);
@@ -64,21 +66,31 @@ public slots:
     DescribeConnectionsResponse * describeConnections(const DescribeConnectionsRequest &request);
     DescribeEndpointTypesResponse * describeEndpointTypes(const DescribeEndpointTypesRequest &request);
     DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
+    DescribeEventCategoriesResponse * describeEventCategories(const DescribeEventCategoriesRequest &request);
+    DescribeEventSubscriptionsResponse * describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request);
+    DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
     DescribeOrderableReplicationInstancesResponse * describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request);
     DescribeRefreshSchemasStatusResponse * describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request);
+    DescribeReplicationInstanceTaskLogsResponse * describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request);
     DescribeReplicationInstancesResponse * describeReplicationInstances(const DescribeReplicationInstancesRequest &request);
     DescribeReplicationSubnetGroupsResponse * describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request);
+    DescribeReplicationTaskAssessmentResultsResponse * describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request);
     DescribeReplicationTasksResponse * describeReplicationTasks(const DescribeReplicationTasksRequest &request);
     DescribeSchemasResponse * describeSchemas(const DescribeSchemasRequest &request);
     DescribeTableStatisticsResponse * describeTableStatistics(const DescribeTableStatisticsRequest &request);
     ImportCertificateResponse * importCertificate(const ImportCertificateRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ModifyEndpointResponse * modifyEndpoint(const ModifyEndpointRequest &request);
+    ModifyEventSubscriptionResponse * modifyEventSubscription(const ModifyEventSubscriptionRequest &request);
     ModifyReplicationInstanceResponse * modifyReplicationInstance(const ModifyReplicationInstanceRequest &request);
     ModifyReplicationSubnetGroupResponse * modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request);
+    ModifyReplicationTaskResponse * modifyReplicationTask(const ModifyReplicationTaskRequest &request);
+    RebootReplicationInstanceResponse * rebootReplicationInstance(const RebootReplicationInstanceRequest &request);
     RefreshSchemasResponse * refreshSchemas(const RefreshSchemasRequest &request);
+    ReloadTablesResponse * reloadTables(const ReloadTablesRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     StartReplicationTaskResponse * startReplicationTask(const StartReplicationTaskRequest &request);
+    StartReplicationTaskAssessmentResponse * startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request);
     StopReplicationTaskResponse * stopReplicationTask(const StopReplicationTaskRequest &request);
     TestConnectionResponse * testConnection(const TestConnectionRequest &request);
 

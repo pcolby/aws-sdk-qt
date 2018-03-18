@@ -56,6 +56,8 @@ public slots:
     DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
     DeleteEventSourceMappingResponse * deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request);
     DeleteFunctionResponse * deleteFunction(const DeleteFunctionRequest &request);
+    DeleteFunctionConcurrencyResponse * deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request);
+    GetAccountSettingsResponse * getAccountSettings(const GetAccountSettingsRequest &request);
     GetAliasResponse * getAlias(const GetAliasRequest &request);
     GetEventSourceMappingResponse * getEventSourceMapping(const GetEventSourceMappingRequest &request);
     GetFunctionResponse * getFunction(const GetFunctionRequest &request);
@@ -66,9 +68,13 @@ public slots:
     ListAliasesResponse * listAliases(const ListAliasesRequest &request);
     ListEventSourceMappingsResponse * listEventSourceMappings(const ListEventSourceMappingsRequest &request);
     ListFunctionsResponse * listFunctions(const ListFunctionsRequest &request);
+    ListTagsResponse * listTags(const ListTagsRequest &request);
     ListVersionsByFunctionResponse * listVersionsByFunction(const ListVersionsByFunctionRequest &request);
     PublishVersionResponse * publishVersion(const PublishVersionRequest &request);
+    PutFunctionConcurrencyResponse * putFunctionConcurrency(const PutFunctionConcurrencyRequest &request);
     RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
     UpdateEventSourceMappingResponse * updateEventSourceMapping(const UpdateEventSourceMappingRequest &request);
     UpdateFunctionCodeResponse * updateFunctionCode(const UpdateFunctionCodeRequest &request);

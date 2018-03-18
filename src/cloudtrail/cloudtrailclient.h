@@ -53,10 +53,12 @@ public slots:
     CreateTrailResponse * createTrail(const CreateTrailRequest &request);
     DeleteTrailResponse * deleteTrail(const DeleteTrailRequest &request);
     DescribeTrailsResponse * describeTrails(const DescribeTrailsRequest &request);
+    GetEventSelectorsResponse * getEventSelectors(const GetEventSelectorsRequest &request);
     GetTrailStatusResponse * getTrailStatus(const GetTrailStatusRequest &request);
     ListPublicKeysResponse * listPublicKeys(const ListPublicKeysRequest &request);
     ListTagsResponse * listTags(const ListTagsRequest &request);
     LookupEventsResponse * lookupEvents(const LookupEventsRequest &request);
+    PutEventSelectorsResponse * putEventSelectors(const PutEventSelectorsRequest &request);
     RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
     StartLoggingResponse * startLogging(const StartLoggingRequest &request);
     StopLoggingResponse * stopLogging(const StopLoggingRequest &request);
