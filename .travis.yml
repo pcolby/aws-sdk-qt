@@ -78,7 +78,7 @@ install:
 before_script:
   - cppcheck --error-exitcode=1 --quiet
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
-    .
+    code-generation/src src test
   - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != clang++ ]] || export QMAKESPEC=linux-clang'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
   - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
