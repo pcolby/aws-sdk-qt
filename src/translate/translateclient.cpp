@@ -88,7 +88,38 @@ TranslateClient::TranslateClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Translates input text from the source language to the target language. You can translate between English (en) and one of
+ * the following languages, or between one of the following languages and
+ *
+ * English> <ul> <li>
+ *
+ * Arabic
+ *
+ * (ar> </li> <li>
+ *
+ * Chinese (Simplified)
+ *
+ * (zh> </li> <li>
+ *
+ * French
+ *
+ * (fr> </li> <li>
+ *
+ * German
+ *
+ * (de> </li> <li>
+ *
+ * Portuguese
+ *
+ * (pt> </li> <li>
+ *
+ * Spanish
+ */
+TranslateTextResponse * TranslateClient::translateText(const TranslateTextRequest &request)
+{
+
+}
 
 /**
  * @internal

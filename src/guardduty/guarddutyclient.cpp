@@ -87,7 +87,275 @@ GuardDutyClient::GuardDutyClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitationRequest &request)
+{
+
+}
+
+/**
+ */
+ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindingsRequest &request)
+{
+
+}
+
+/**
+ * Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector
+ */
+CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorRequest &request)
+{
+
+}
+
+/**
+ * Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS
+ */
+CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &request)
+{
+
+}
+
+/**
+ * Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can
+ */
+CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersRequest &request)
+{
+
+}
+
+/**
+ * Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the
+ */
+CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const CreateSampleFindingsRequest &request)
+{
+
+}
+
+/**
+ * Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based
+ */
+CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const CreateThreatIntelSetRequest &request)
+{
+
+}
+
+/**
+ */
+DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineInvitationsRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvitationsRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const DeleteThreatIntelSetRequest &request)
+{
+
+}
+
+/**
+ */
+DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request)
+{
+
+}
+
+/**
+ */
+DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const DisassociateMembersRequest &request)
+{
+
+}
+
+/**
+ */
+GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &request)
+{
+
+}
+
+/**
+ */
+GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &request)
+{
+
+}
+
+/**
+ */
+GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const GetFindingsStatisticsRequest &request)
+{
+
+}
+
+/**
+ */
+GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
+{
+
+}
+
+/**
+ * Returns the count of all GuardDuty membership invitations that were sent to the current member account except the
+ */
+GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvitationsCountRequest &request)
+{
+
+}
+
+/**
+ */
+GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAccountRequest &request)
+{
+
+}
+
+/**
+ */
+GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &request)
+{
+
+}
+
+/**
+ */
+GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIntelSetRequest &request)
+{
+
+}
+
+/**
+ * Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and
+ * allow the current AWS account to view and manage these accounts' GuardDuty findings on their behalf as the master
+ */
+InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersRequest &request)
+{
+
+}
+
+/**
+ */
+ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsRequest &request)
+{
+
+}
+
+/**
+ */
+ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &request)
+{
+
+}
+
+/**
+ */
+ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &request)
+{
+
+}
+
+/**
+ */
+ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitationsRequest &request)
+{
+
+}
+
+/**
+ */
+ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &request)
+{
+
+}
+
+/**
+ */
+ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThreatIntelSetsRequest &request)
+{
+
+}
+
+/**
+ * Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account
+ */
+StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const StartMonitoringMembersRequest &request)
+{
+
+}
+
+/**
+ * Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this
+ * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members'
+ */
+StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const StopMonitoringMembersRequest &request)
+{
+
+}
+
+/**
+ */
+UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFindingsRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const UpdateFindingsFeedbackRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const UpdateThreatIntelSetRequest &request)
+{
+
+}
 
 /**
  * @internal

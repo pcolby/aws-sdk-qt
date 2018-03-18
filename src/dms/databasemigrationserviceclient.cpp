@@ -98,7 +98,428 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task.
+ * These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a
+ * Condition statement in an IAM policy for
+ */
+AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
+{
+
+}
+
+/**
+ * Creates an endpoint using the provided
+ */
+CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const CreateEndpointRequest &request)
+{
+
+}
+
+/**
+ * Creates an AWS DMS event notification subscription.
+ *
+ * </p
+ *
+ * You can specify the type of source (<code>SourceType</code>) you want to be notified of, provide a list of AWS DMS
+ * source IDs (<code>SourceIds</code>) that triggers the events, and provide a list of event categories
+ * (<code>EventCategories</code>) for events you want to be notified of. If you specify both the <code>SourceType</code>
+ * and <code>SourceIds</code>, such as <code>SourceType = replication-instance</code> and <code>SourceIdentifier =
+ * my-replinstance</code>, you will be notified of all the replication instance events for the specified source. If you
+ * specify a <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you receive notice of the events
+ * for that source type for all your AWS DMS sources. If you don't specify either <code>SourceType</code> nor
+ * <code>SourceIdentifier</code>, you will be notified of events generated from all AWS DMS sources belonging to your
+ * customer
+ *
+ * account>
+ *
+ * For more information about AWS DMS events, see <a
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working with Events and Notifications </a> in
+ * the AWS Database MIgration Service User
+ */
+CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Creates the replication instance using the specified
+ */
+CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
+{
+
+}
+
+/**
+ * Creates a replication subnet group given a list of the subnet IDs in a
+ */
+CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
+{
+
+}
+
+/**
+ * Creates a replication task using the specified
+ */
+CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicationTask(const CreateReplicationTaskRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified certificate.
+ */
+DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(const DeleteCertificateRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ *
+ * endpoint> <note>
+ *
+ * All tasks associated with the endpoint must be deleted before you can delete the
+ */
+DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const DeleteEndpointRequest &request)
+{
+
+}
+
+/**
+ * Deletes an AWS DMS event subscription.
+ */
+DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified replication
+ *
+ * instance> <note>
+ *
+ * You must delete any migration tasks that are associated with the replication instance before you can delete
+ */
+DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
+{
+
+}
+
+/**
+ * Deletes a subnet
+ */
+DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified replication
+ */
+DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicationTask(const DeleteReplicationTaskRequest &request)
+{
+
+}
+
+/**
+ * Lists all of the AWS DMS attributes for a customer account. The attributes include AWS DMS quotas for the account, such
+ * as the number of replication instances allowed. The description for a quota includes the quota name, current usage
+ * toward that quota, and the quota's maximum
+ *
+ * value>
+ *
+ * This command does not take any
+ */
+DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
+{
+
+}
+
+/**
+ * Provides a description of the
+ */
+DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertificates(const DescribeCertificatesRequest &request)
+{
+
+}
+
+/**
+ * Describes the status of the connections that have been made between the replication instance and an endpoint.
+ * Connections are created when you test an
+ */
+DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnections(const DescribeConnectionsRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the type of endpoints
+ */
+DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpointTypes(const DescribeEndpointTypesRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the endpoints for your account in the current
+ */
+DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(const DescribeEndpointsRequest &request)
+{
+
+}
+
+/**
+ * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
+ * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
+ * with Events and Notifications </a> in the AWS Database Migration Service User Guide.
+ */
+DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
+{
+
+}
+
+/**
+ * Lists all the event subscriptions for a customer account. The description of a subscription includes
+ * <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>,
+ * <code>SourceID</code>, <code>CreationTime</code>, and <code>Status</code>.
+ *
+ * </p
+ *
+ * If you specify <code>SubscriptionName</code>, this action lists the description for that
+ */
+DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
+{
+
+}
+
+/**
+ * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
+ * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
+ * with Events and Notifications </a>.
+ */
+DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the replication instance types that can be created in the specified
+ */
+DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
+{
+
+}
+
+/**
+ * Returns the status of the RefreshSchemas
+ */
+DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the task logs for the specified
+ */
+DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request)
+{
+
+}
+
+/**
+ * Returns information about replication instances for your account in the current
+ */
+DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeReplicationInstances(const DescribeReplicationInstancesRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the replication subnet
+ */
+DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request)
+{
+
+}
+
+/**
+ * Returns the task assessment results from Amazon S3. This action always returns the latest
+ */
+DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
+{
+
+}
+
+/**
+ * Returns information about replication tasks for your account in the current
+ */
+DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeReplicationTasks(const DescribeReplicationTasksRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the schema for the specified
+ */
+DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const DescribeSchemasRequest &request)
+{
+
+}
+
+/**
+ * Returns table statistics on the database migration task, including table name, rows inserted, rows updated, and rows
+ *
+ * deleted>
+ *
+ * Note that the "last updated" column the DMS console only indicates the time that AWS DMS last updated the table
+ * statistics record for a table. It does not indicate the time of the last update to the
+ */
+DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
+{
+
+}
+
+/**
+ * Uploads the specified
+ */
+ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(const ImportCertificateRequest &request)
+{
+
+}
+
+/**
+ * Lists all tags for an AWS DMS
+ */
+ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified
+ */
+ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const ModifyEndpointRequest &request)
+{
+
+}
+
+/**
+ * Modifies an existing AWS DMS event notification subscription.
+ */
+ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Modifies the replication instance to apply new settings. You can change one or more parameters by specifying these
+ * parameters and the new values in the
+ *
+ * request>
+ *
+ * Some settings are applied during the maintenance
+ */
+ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
+{
+
+}
+
+/**
+ * Modifies the settings for the specified replication subnet
+ */
+ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified replication
+ *
+ * task>
+ *
+ * You can't modify the task endpoints. The task must be stopped before you can modify it.
+ *
+ * </p
+ *
+ * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
+ */
+ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
+{
+
+}
+
+/**
+ * Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes
+ * available
+ */
+RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplicationInstance(const RebootReplicationInstanceRequest &request)
+{
+
+}
+
+/**
+ * Populates the schema for the specified endpoint. This is an asynchronous operation and can take several minutes. You can
+ * check the status of this operation by calling the DescribeRefreshSchemasStatus
+ */
+RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const RefreshSchemasRequest &request)
+{
+
+}
+
+/**
+ * Reloads the target database table with the source data.
+ */
+ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const ReloadTablesRequest &request)
+{
+
+}
+
+/**
+ * Removes metadata tags from a DMS
+ */
+RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
+{
+
+}
+
+/**
+ * Starts the replication
+ *
+ * task>
+ *
+ * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
+ */
+StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
+{
+
+}
+
+/**
+ * Starts the replication task assessment for unsupported data types in the source database.
+ */
+StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
+{
+
+}
+
+/**
+ * Stops the replication
+ */
+StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTask(const StopReplicationTaskRequest &request)
+{
+
+}
+
+/**
+ * Tests the connection between the replication instance and the
+ */
+TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const TestConnectionRequest &request)
+{
+
+}
 
 /**
  * @internal

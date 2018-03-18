@@ -89,7 +89,45 @@ MediaStoreDataClient::MediaStoreDataClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Deletes an object at the specified
+ */
+DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequest &request)
+{
+
+}
+
+/**
+ * Gets the headers for an object at the specified
+ */
+DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObjectRequest &request)
+{
+
+}
+
+/**
+ * Downloads the object at the specified
+ */
+GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &request)
+{
+
+}
+
+/**
+ * Provides a list of metadata entries about folders and objects in the specified
+ */
+ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &request)
+{
+
+}
+
+/**
+ * Uploads an object to the specified path. Object sizes are limited to 10
+ */
+PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
+{
+
+}
 
 /**
  * @internal

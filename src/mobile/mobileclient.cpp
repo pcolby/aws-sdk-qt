@@ -90,7 +90,79 @@ MobileClient::MobileClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates an AWS Mobile Hub project.
+ */
+CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &request)
+{
+
+}
+
+/**
+ * Delets a project in AWS Mobile Hub.
+ */
+DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &request)
+{
+
+}
+
+/**
+ * Get the bundle details for the requested bundle id.
+ */
+DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleRequest &request)
+{
+
+}
+
+/**
+ * Gets details about a project in AWS Mobile Hub.
+ */
+DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectRequest &request)
+{
+
+}
+
+/**
+ * Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app
+ * clients with backend AWS resources.
+ */
+ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &request)
+{
+
+}
+
+/**
+ * Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials
+ * are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
+ */
+ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &request)
+{
+
+}
+
+/**
+ * List all available bundles.
+ */
+ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &request)
+{
+
+}
+
+/**
+ * Lists projects in AWS Mobile Hub.
+ */
+ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &request)
+{
+
+}
+
+/**
+ * Update an existing project.
+ */
+UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &request)
+{
+
+}
 
 /**
  * @internal

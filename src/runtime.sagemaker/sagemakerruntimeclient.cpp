@@ -88,7 +88,24 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API
+ * to get inferences from the model hosted at the specified endpoint.
+ *
+ * </p
+ *
+ * For an overview of Amazon SageMaker, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How
+ * It Works</a>
+ *
+ * </p
+ *
+ * Amazon SageMaker strips all POST headers except those supported by the API. Amazon SageMaker might add additional
+ * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
+ */
+InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndpointRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -90,7 +90,172 @@ WorkSpacesClient::WorkSpacesClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates tags for the specified
+ */
+CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &request)
+{
+
+}
+
+/**
+ * Creates one or more
+ *
+ * WorkSpaces>
+ *
+ * This operation is asynchronous and returns before the WorkSpaces are
+ */
+CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified tags from a
+ */
+DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &request)
+{
+
+}
+
+/**
+ * Describes the tags for the specified
+ */
+DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest &request)
+{
+
+}
+
+/**
+ * Describes the available WorkSpace
+ *
+ * bundles>
+ *
+ * You can filter the results using either bundle ID or owner, but not
+ */
+DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(const DescribeWorkspaceBundlesRequest &request)
+{
+
+}
+
+/**
+ * Describes the available AWS Directory Service directories that are registered with Amazon
+ */
+DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirectories(const DescribeWorkspaceDirectoriesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified
+ *
+ * WorkSpaces>
+ *
+ * You can filter the results using bundle ID, directory ID, or owner, but you can specify only one filter at a
+ */
+DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const DescribeWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Describes the connection status of the specified
+ */
+DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspacesConnectionStatus(const DescribeWorkspacesConnectionStatusRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified WorkSpace
+ */
+ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(const ModifyWorkspacePropertiesRequest &request)
+{
+
+}
+
+/**
+ * Reboots the specified
+ *
+ * WorkSpaces>
+ *
+ * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code>, <code>IMPAIRED</code>, or
+ *
+ * <code>INOPERABLE</code>>
+ *
+ * This operation is asynchronous and returns before the WorkSpaces have
+ */
+RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Rebuilds the specified
+ *
+ * WorkSpaces>
+ *
+ * You cannot rebuild a WorkSpace unless its state is <code>AVAILABLE</code> or
+ *
+ * <code>ERROR</code>>
+ *
+ * Rebuilding a WorkSpace is a potentially destructive action that can result in the loss of data. For more information,
+ * see <a href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild a
+ *
+ * WorkSpace</a>>
+ *
+ * This operation is asynchronous and returns before the WorkSpaces have been completely
+ */
+RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Starts the specified
+ *
+ * WorkSpaces>
+ *
+ * You cannot start a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of
+ */
+StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Stops the specified
+ *
+ * WorkSpaces>
+ *
+ * You cannot stop a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of <code>AVAILABLE</code>,
+ * <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or
+ */
+StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRequest &request)
+{
+
+}
+
+/**
+ * Terminates the specified
+ *
+ * WorkSpaces>
+ *
+ * Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive
+ * any user data, contact Amazon Web Services before terminating the
+ *
+ * WorkSpace>
+ *
+ * You can terminate a WorkSpace that is in any state except
+ *
+ * <code>SUSPENDED</code>>
+ *
+ * This operation is asynchronous and returns before the WorkSpaces have been completely
+ */
+TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const TerminateWorkspacesRequest &request)
+{
+
+}
 
 /**
  * @internal

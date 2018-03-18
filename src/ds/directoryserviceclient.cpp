@@ -101,7 +101,445 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block
+ * to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i> adds this address
+ * block. You can also use <i>AddIpRoutes</i> to facilitate routing traffic that uses public IP ranges from your Microsoft
+ * AD on AWS to a peer VPC.
+ *
+ * </p
+ *
+ * Before you call <i>AddIpRoutes</i>, ensure that all of the required permissions have been explicitly granted through a
+ * policy. For details about what permissions are required to run the <i>AddIpRoutes</i> operation, see <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Directory Service API Permissions: Actions, Resources, and Conditions
+ */
+AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesRequest &request)
+{
+
+}
+
+/**
+ * Adds or overwrites one or more tags for the specified directory. Each directory can have a maximum of 50 tags. Each tag
+ * consists of a key and optional value. Tag keys must be unique to each
+ */
+AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
+{
+
+}
+
+/**
+ * Cancels an in-progress schema extension to a Microsoft AD directory. Once a schema extension has started replicating to
+ * all domain controllers, the task can no longer be canceled. A schema extension can be canceled during any of the
+ * following states; <code>Initializing</code>, <code>CreatingSnapshot</code>, and
+ */
+CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(const CancelSchemaExtensionRequest &request)
+{
+
+}
+
+/**
+ * Creates an AD Connector to connect to an on-premises
+ *
+ * directory>
+ *
+ * Before you call <i>ConnectDirectory</i>, ensure that all of the required permissions have been explicitly granted
+ * through a policy. For details about what permissions are required to run the <i>ConnectDirectory</i> operation, see <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Directory Service API Permissions: Actions, Resources, and Conditions
+ */
+ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const ConnectDirectoryRequest &request)
+{
+
+}
+
+/**
+ * Creates an alias for a directory and assigns the alias to the directory. The alias is used to construct the access URL
+ * for the directory, such as
+ *
+ * <code>http://&lt;alias&gt;.awsapps.com</code>> <important>
+ *
+ * After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely
+ */
+CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasRequest &request)
+{
+
+}
+
+/**
+ * Creates a computer account in the specified directory, and joins the computer to the
+ */
+CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComputerRequest &request)
+{
+
+}
+
+/**
+ * Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order to set
+ * up a trust relationship with another domain. The conditional forwarder points to the trusted
+ */
+CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalForwarder(const CreateConditionalForwarderRequest &request)
+{
+
+}
+
+/**
+ * Creates a Simple AD
+ *
+ * directory>
+ *
+ * Before you call <i>CreateDirectory</i>, ensure that all of the required permissions have been explicitly granted through
+ * a policy. For details about what permissions are required to run the <i>CreateDirectory</i> operation, see <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Directory Service API Permissions: Actions, Resources, and Conditions
+ */
+CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDirectoryRequest &request)
+{
+
+}
+
+/**
+ * Creates a Microsoft AD in the AWS
+ *
+ * cloud>
+ *
+ * Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted
+ * through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Directory Service API Permissions: Actions, Resources, and Conditions
+ */
+CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const CreateMicrosoftADRequest &request)
+{
+
+}
+
+/**
+ * Creates a snapshot of a Simple AD or Microsoft AD directory in the AWS
+ *
+ * cloud> <note>
+ *
+ * You cannot take snapshots of AD Connector
+ */
+CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnapshotRequest &request)
+{
+
+}
+
+/**
+ * AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can
+ * establish a trust between your Microsoft AD in the AWS cloud, and your existing on-premises Microsoft Active Directory.
+ * This would allow you to provide users and groups access to resources in either domain, with a single set of
+ *
+ * credentials>
+ *
+ * This action initiates the creation of the AWS side of a trust relationship between a Microsoft AD in the AWS cloud and
+ * an external
+ */
+CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustRequest &request)
+{
+
+}
+
+/**
+ * Deletes a conditional forwarder that has been set up for your AWS
+ */
+DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request)
+{
+
+}
+
+/**
+ * Deletes an AWS Directory Service
+ *
+ * directory>
+ *
+ * Before you call <i>DeleteDirectory</i>, ensure that all of the required permissions have been explicitly granted through
+ * a policy. For details about what permissions are required to run the <i>DeleteDirectory</i> operation, see <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Directory Service API Permissions: Actions, Resources, and Conditions
+ */
+DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDirectoryRequest &request)
+{
+
+}
+
+/**
+ * Deletes a directory
+ */
+DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnapshotRequest &request)
+{
+
+}
+
+/**
+ * Deletes an existing trust relationship between your Microsoft AD in the AWS cloud and an external
+ */
+DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified directory as a publisher to the specified SNS
+ */
+DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(const DeregisterEventTopicRequest &request)
+{
+
+}
+
+/**
+ * Obtains information about the conditional forwarders for this
+ *
+ * account>
+ *
+ * If no input parameters are provided for RemoteDomainNames, this request describes all conditional forwarders for the
+ * specified directory
+ */
+DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditionalForwarders(const DescribeConditionalForwardersRequest &request)
+{
+
+}
+
+/**
+ * Obtains information about the directories that belong to this
+ *
+ * account>
+ *
+ * You can retrieve information about specific directories by passing the directory identifiers in the <i>DirectoryIds</i>
+ * parameter. Otherwise, all directories that belong to the current account are
+ *
+ * returned>
+ *
+ * This operation supports pagination with the use of the <i>NextToken</i> request and response parameters. If more results
+ * are available, the <i>DescribeDirectoriesResult.NextToken</i> member contains a token that you pass in the next call to
+ * <a>DescribeDirectories</a> to retrieve the next set of
+ *
+ * items>
+ *
+ * You can also specify a maximum number of return results with the <i>Limit</i>
+ */
+DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const DescribeDirectoriesRequest &request)
+{
+
+}
+
+/**
+ * Provides information about any domain controllers in your
+ */
+DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainControllers(const DescribeDomainControllersRequest &request)
+{
+
+}
+
+/**
+ * Obtains information about which SNS topics receive status messages from the specified
+ *
+ * directory>
+ *
+ * If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the associations in
+ * the
+ */
+DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const DescribeEventTopicsRequest &request)
+{
+
+}
+
+/**
+ * Obtains information about the directory snapshots that belong to this
+ *
+ * account>
+ *
+ * This operation supports pagination with the use of the <i>NextToken</i> request and response parameters. If more results
+ * are available, the <i>DescribeSnapshots.NextToken</i> member contains a token that you pass in the next call to
+ * <a>DescribeSnapshots</a> to retrieve the next set of
+ *
+ * items>
+ *
+ * You can also specify a maximum number of return results with the <i>Limit</i>
+ */
+DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const DescribeSnapshotsRequest &request)
+{
+
+}
+
+/**
+ * Obtains information about the trust relationships for this
+ *
+ * account>
+ *
+ * If no input parameters are provided, such as DirectoryId or TrustIds, this request describes all the trust relationships
+ * belonging to the
+ */
+DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTrustsRequest &request)
+{
+
+}
+
+/**
+ * Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
+ * Connector
+ */
+DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiusRequest &request)
+{
+
+}
+
+/**
+ * Disables single-sign on for a
+ */
+DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest &request)
+{
+
+}
+
+/**
+ * Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
+ * Connector
+ */
+EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRequest &request)
+{
+
+}
+
+/**
+ * Enables single sign-on for a
+ */
+EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &request)
+{
+
+}
+
+/**
+ * Obtains directory limit information for the current
+ */
+GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const GetDirectoryLimitsRequest &request)
+{
+
+}
+
+/**
+ * Obtains the manual snapshot limits for a
+ */
+GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetSnapshotLimitsRequest &request)
+{
+
+}
+
+/**
+ * Lists the address blocks that you have added to a
+ */
+ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRequest &request)
+{
+
+}
+
+/**
+ * Lists all schema extensions applied to a Microsoft AD
+ */
+ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(const ListSchemaExtensionsRequest &request)
+{
+
+}
+
+/**
+ * Lists all tags on a
+ */
+ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+
+}
+
+/**
+ * Associates a directory with an SNS topic. This establishes the directory as a publisher to the specified SNS topic. You
+ * can then receive email or text (SMS) messages when the status of your directory changes. You get notified if your
+ * directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when the
+ * directory returns to an Active
+ */
+RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const RegisterEventTopicRequest &request)
+{
+
+}
+
+/**
+ * Removes IP address blocks from a
+ */
+RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRoutesRequest &request)
+{
+
+}
+
+/**
+ * Removes tags from a
+ */
+RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
+{
+
+}
+
+/**
+ * Restores a directory using an existing directory
+ *
+ * snapshot>
+ *
+ * When you restore a directory from a snapshot, any changes made to the directory after the snapshot date are
+ *
+ * overwritten>
+ *
+ * This action returns as soon as the restore operation is initiated. You can monitor the progress of the restore operation
+ * by calling the <a>DescribeDirectories</a> operation with the directory identifier. When the
+ * <b>DirectoryDescription.Stage</b> value changes to <code>Active</code>, the restore operation is
+ */
+RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const RestoreFromSnapshotRequest &request)
+{
+
+}
+
+/**
+ * Applies a schema extension to a Microsoft AD
+ */
+StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(const StartSchemaExtensionRequest &request)
+{
+
+}
+
+/**
+ * Updates a conditional forwarder that has been set up for your AWS
+ */
+UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalForwarder(const UpdateConditionalForwarderRequest &request)
+{
+
+}
+
+/**
+ * Adds or removes domain controllers to or from the directory. Based on the difference between current value and new value
+ * (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new
+ * domain controllers to become fully active once the requested number of domain controllers is updated. During this time,
+ * you cannot make another update
+ */
+UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOfDomainControllers(const UpdateNumberOfDomainControllersRequest &request)
+{
+
+}
+
+/**
+ * Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector
+ */
+UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRequest &request)
+{
+
+}
+
+/**
+ * AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust
+ *
+ * relationships>
+ *
+ * This action verifies a trust relationship between your Microsoft AD in the AWS cloud and an external
+ */
+VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustRequest &request)
+{
+
+}
 
 /**
  * @internal

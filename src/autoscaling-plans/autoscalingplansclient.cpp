@@ -96,7 +96,42 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a scaling
+ *
+ * plan>
+ *
+ * A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your
+ * application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling
+ */
+CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified scaling
+ */
+DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const DeleteScalingPlanRequest &request)
+{
+
+}
+
+/**
+ * Describes the scalable resources in the specified scaling
+ */
+DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified scaling plans or all of your scaling
+ */
+DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -131,7 +131,104 @@ ResourceGroupsClient::ResourceGroupsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a group with a specified name, description, and resource
+ */
+CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes a specified resource group. Deleting a resource group does not delete resources that are members of the group;
+ * it only deletes the group
+ */
+DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest &request)
+{
+
+}
+
+/**
+ * Returns information about a specified resource
+ */
+GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request)
+{
+
+}
+
+/**
+ * Returns the resource query associated with the specified resource
+ */
+GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of tags that are associated with a resource, specified by an
+ */
+GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of ARNs of resources that are members of a specified resource
+ */
+ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const ListGroupResourcesRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of existing resource groups in your
+ */
+ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of AWS resource identifiers that matches a specified query. The query uses the same format as a resource
+ * query in a CreateGroup or UpdateGroupQuery
+ */
+SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchResourcesRequest &request)
+{
+
+}
+
+/**
+ * Adds specified tags to a resource with the specified ARN. Existing tags on a resource are not changed if they are not
+ * specified in the request
+ */
+TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
+{
+
+}
+
+/**
+ * Deletes specified tags from a specified
+ */
+UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
+{
+
+}
+
+/**
+ * Updates an existing group with a new or changed description. You cannot update the name of a resource
+ */
+UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest &request)
+{
+
+}
+
+/**
+ * Updates the resource query of a
+ */
+UpdateGroupQueryResponse * ResourceGroupsClient::updateGroupQuery(const UpdateGroupQueryRequest &request)
+{
+
+}
 
 /**
  * @internal

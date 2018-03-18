@@ -277,7 +277,336 @@ CodeCommitClient::CodeCommitClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Returns information about one or more
+ *
+ * repositories> <note>
+ *
+ * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
+ * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
+ * sure that you HTML-encode the description field in any application that uses this API to display the repository
+ * description on a web
+ */
+BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const BatchGetRepositoriesRequest &request)
+{
+
+}
+
+/**
+ * Creates a new branch in a repository and points the branch to a
+ *
+ * commit> <note>
+ *
+ * Calling the create branch operation does not set a repository's default branch. To do this, call the update default
+ * branch
+ */
+CreateBranchResponse * CodeCommitClient::createBranch(const CreateBranchRequest &request)
+{
+
+}
+
+/**
+ * Creates a pull request in the specified
+ */
+CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePullRequestRequest &request)
+{
+
+}
+
+/**
+ * Creates a new, empty
+ */
+CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateRepositoryRequest &request)
+{
+
+}
+
+/**
+ * Deletes a branch from a repository, unless that branch is the default branch for the repository.
+ */
+DeleteBranchResponse * CodeCommitClient::deleteBranch(const DeleteBranchRequest &request)
+{
+
+}
+
+/**
+ * Deletes the content of a comment made on a change, file, or commit in a
+ */
+DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const DeleteCommentContentRequest &request)
+{
+
+}
+
+/**
+ * Deletes a repository. If a specified repository was already deleted, a null repository ID will be
+ *
+ * returned> <important>
+ *
+ * Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push
+ * calls to the deleted repository will
+ */
+DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteRepositoryRequest &request)
+{
+
+}
+
+/**
+ * Returns information about one or more pull request
+ */
+DescribePullRequestEventsResponse * CodeCommitClient::describePullRequestEvents(const DescribePullRequestEventsRequest &request)
+{
+
+}
+
+/**
+ * Returns the base-64 encoded content of an individual blob within a
+ */
+GetBlobResponse * CodeCommitClient::getBlob(const GetBlobRequest &request)
+{
+
+}
+
+/**
+ * Returns information about a repository branch, including its name and the last commit
+ */
+GetBranchResponse * CodeCommitClient::getBranch(const GetBranchRequest &request)
+{
+
+}
+
+/**
+ * Returns the content of a comment made on a change, file, or commit in a
+ */
+GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &request)
+{
+
+}
+
+/**
+ * Returns information about comments made on the comparison between two
+ */
+GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedCommit(const GetCommentsForComparedCommitRequest &request)
+{
+
+}
+
+/**
+ * Returns comments made on a pull
+ */
+GetCommentsForPullRequestResponse * CodeCommitClient::getCommentsForPullRequest(const GetCommentsForPullRequestRequest &request)
+{
+
+}
+
+/**
+ * Returns information about a commit, including commit message and committer
+ */
+GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other
+ * fully qualified reference). Results can be limited to a specified
+ */
+GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRequest &request)
+{
+
+}
+
+/**
+ * Returns information about merge conflicts between the before and after commit IDs for a pull request in a
+ */
+GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeConflictsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about a pull request in a specified
+ */
+GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRequest &request)
+{
+
+}
+
+/**
+ * Returns information about a
+ *
+ * repository> <note>
+ *
+ * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
+ * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
+ * sure that you HTML-encode the description field in any application that uses this API to display the repository
+ * description on a web
+ */
+GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryRequest &request)
+{
+
+}
+
+/**
+ * Gets information about triggers configured for a
+ */
+GetRepositoryTriggersResponse * CodeCommitClient::getRepositoryTriggers(const GetRepositoryTriggersRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more branches in a
+ */
+ListBranchesResponse * CodeCommitClient::listBranches(const ListBranchesRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of pull requests for a specified repository. The return list can be refined by pull request status or
+ * pull request author
+ */
+ListPullRequestsResponse * CodeCommitClient::listPullRequests(const ListPullRequestsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more
+ */
+ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListRepositoriesRequest &request)
+{
+
+}
+
+/**
+ * Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch
+ * for that pull request at the specified commit using the fast-forward merge
+ */
+MergePullRequestByFastForwardResponse * CodeCommitClient::mergePullRequestByFastForward(const MergePullRequestByFastForwardRequest &request)
+{
+
+}
+
+/**
+ * Posts a comment on the comparison between two
+ */
+PostCommentForComparedCommitResponse * CodeCommitClient::postCommentForComparedCommit(const PostCommentForComparedCommitRequest &request)
+{
+
+}
+
+/**
+ * Posts a comment on a pull
+ */
+PostCommentForPullRequestResponse * CodeCommitClient::postCommentForPullRequest(const PostCommentForPullRequestRequest &request)
+{
+
+}
+
+/**
+ * Posts a comment in reply to an existing comment on a comparison between commits or a pull
+ */
+PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentReplyRequest &request)
+{
+
+}
+
+/**
+ * Adds or updates a file in an AWS CodeCommit
+ */
+PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
+{
+
+}
+
+/**
+ * Replaces all triggers for a repository. This can be used to create or delete
+ */
+PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const PutRepositoryTriggersRequest &request)
+{
+
+}
+
+/**
+ * Tests the functionality of repository triggers by sending information to the trigger target. If real data is available
+ * in the repository, the test will send data from the last commit. If no data is available, sample data will be
+ */
+TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const TestRepositoryTriggersRequest &request)
+{
+
+}
+
+/**
+ * Replaces the contents of a
+ */
+UpdateCommentResponse * CodeCommitClient::updateComment(const UpdateCommentRequest &request)
+{
+
+}
+
+/**
+ * Sets or changes the default branch name for the specified
+ *
+ * repository> <note>
+ *
+ * If you use this operation to change the default branch name to the current default branch name, a success message is
+ * returned even though the default branch did not
+ */
+UpdateDefaultBranchResponse * CodeCommitClient::updateDefaultBranch(const UpdateDefaultBranchRequest &request)
+{
+
+}
+
+/**
+ * Replaces the contents of the description of a pull
+ */
+UpdatePullRequestDescriptionResponse * CodeCommitClient::updatePullRequestDescription(const UpdatePullRequestDescriptionRequest &request)
+{
+
+}
+
+/**
+ * Updates the status of a pull request.
+ */
+UpdatePullRequestStatusResponse * CodeCommitClient::updatePullRequestStatus(const UpdatePullRequestStatusRequest &request)
+{
+
+}
+
+/**
+ * Replaces the title of a pull
+ */
+UpdatePullRequestTitleResponse * CodeCommitClient::updatePullRequestTitle(const UpdatePullRequestTitleRequest &request)
+{
+
+}
+
+/**
+ * Sets or changes the comment or description for a
+ *
+ * repository> <note>
+ *
+ * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
+ * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
+ * sure that you HTML-encode the description field in any application that uses this API to display the repository
+ * description on a web
+ */
+UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescription(const UpdateRepositoryDescriptionRequest &request)
+{
+
+}
+
+/**
+ * Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names
+ * are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix
+ * ".git" is prohibited. For a full description of the limits on repository names, see <a
+ * href="http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Limits</a> in the AWS CodeCommit User
+ */
+UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const UpdateRepositoryNameRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -116,7 +116,380 @@ WorkDocsClient::WorkDocsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Aborts the upload of the specified document version that was previously initiated by
+ * <a>InitiateDocumentVersionUpload</a>. The client should make this call only when it no longer intends to upload the
+ * document version, or fails to do
+ */
+AbortDocumentVersionUploadResponse * WorkDocsClient::abortDocumentVersionUpload(const AbortDocumentVersionUploadRequest &request)
+{
+
+}
+
+/**
+ * Activates the specified user. Only active users can access Amazon
+ */
+ActivateUserResponse * WorkDocsClient::activateUser(const ActivateUserRequest &request)
+{
+
+}
+
+/**
+ * Creates a set of permissions for the specified folder or document. The resource permissions are overwritten if the
+ * principals already have different
+ */
+AddResourcePermissionsResponse * WorkDocsClient::addResourcePermissions(const AddResourcePermissionsRequest &request)
+{
+
+}
+
+/**
+ * Adds a new comment to the specified document
+ */
+CreateCommentResponse * WorkDocsClient::createComment(const CreateCommentRequest &request)
+{
+
+}
+
+/**
+ * Adds one or more custom properties to the specified resource (a folder, document, or
+ */
+CreateCustomMetadataResponse * WorkDocsClient::createCustomMetadata(const CreateCustomMetadataRequest &request)
+{
+
+}
+
+/**
+ * Creates a folder with the specified name and parent
+ */
+CreateFolderResponse * WorkDocsClient::createFolder(const CreateFolderRequest &request)
+{
+
+}
+
+/**
+ * Adds the specified list of labels to the given resource (a document or
+ */
+CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &request)
+{
+
+}
+
+/**
+ * Configure WorkDocs to use Amazon SNS
+ *
+ * notifications>
+ *
+ * The endpoint receives a confirmation message, and must confirm the subscription. For more information, see <a
+ * href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.confirm">Confirm the
+ * Subscription</a> in the <i>Amazon Simple Notification Service Developer
+ */
+CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubscription(const CreateNotificationSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Creates a user in a Simple AD or Microsoft AD directory. The status of a newly created user is "ACTIVE". New users can
+ * access Amazon
+ */
+CreateUserResponse * WorkDocsClient::createUser(const CreateUserRequest &request)
+{
+
+}
+
+/**
+ * Deactivates the specified user, which revokes the user's access to Amazon
+ */
+DeactivateUserResponse * WorkDocsClient::deactivateUser(const DeactivateUserRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified comment from the document
+ */
+DeleteCommentResponse * WorkDocsClient::deleteComment(const DeleteCommentRequest &request)
+{
+
+}
+
+/**
+ * Deletes custom metadata from the specified
+ */
+DeleteCustomMetadataResponse * WorkDocsClient::deleteCustomMetadata(const DeleteCustomMetadataRequest &request)
+{
+
+}
+
+/**
+ * Permanently deletes the specified document and its associated
+ */
+DeleteDocumentResponse * WorkDocsClient::deleteDocument(const DeleteDocumentRequest &request)
+{
+
+}
+
+/**
+ * Permanently deletes the specified folder and its
+ */
+DeleteFolderResponse * WorkDocsClient::deleteFolder(const DeleteFolderRequest &request)
+{
+
+}
+
+/**
+ * Deletes the contents of the specified
+ */
+DeleteFolderContentsResponse * WorkDocsClient::deleteFolderContents(const DeleteFolderContentsRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified list of labels from a
+ */
+DeleteLabelsResponse * WorkDocsClient::deleteLabels(const DeleteLabelsRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified subscription from the specified
+ */
+DeleteNotificationSubscriptionResponse * WorkDocsClient::deleteNotificationSubscription(const DeleteNotificationSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified user from a Simple AD or Microsoft AD
+ */
+DeleteUserResponse * WorkDocsClient::deleteUser(const DeleteUserRequest &request)
+{
+
+}
+
+/**
+ * Describes the user activities in a specified time
+ */
+DescribeActivitiesResponse * WorkDocsClient::describeActivities(const DescribeActivitiesRequest &request)
+{
+
+}
+
+/**
+ * List all the comments for the specified document
+ */
+DescribeCommentsResponse * WorkDocsClient::describeComments(const DescribeCommentsRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the document versions for the specified
+ *
+ * document>
+ *
+ * By default, only active versions are
+ */
+DescribeDocumentVersionsResponse * WorkDocsClient::describeDocumentVersions(const DescribeDocumentVersionsRequest &request)
+{
+
+}
+
+/**
+ * Describes the contents of the specified folder, including its documents and
+ *
+ * subfolders>
+ *
+ * By default, Amazon WorkDocs returns the first 100 active document and folder metadata items. If there are more results,
+ * the response includes a marker that you can use to request the next set of results. You can also request initialized
+ */
+DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const DescribeFolderContentsRequest &request)
+{
+
+}
+
+/**
+ * Describes the groups specified by
+ */
+DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequest &request)
+{
+
+}
+
+/**
+ * Lists the specified notification
+ */
+DescribeNotificationSubscriptionsResponse * WorkDocsClient::describeNotificationSubscriptions(const DescribeNotificationSubscriptionsRequest &request)
+{
+
+}
+
+/**
+ * Describes the permissions of a specified
+ */
+DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermissions(const DescribeResourcePermissionsRequest &request)
+{
+
+}
+
+/**
+ * Describes the current user's special folders; the <code>RootFolder</code> and the <code>RecycleBin</code>.
+ * <code>RootFolder</code> is the root of user's files and folders and <code>RecycleBin</code> is the root of recycled
+ * items. This is not a valid action for SigV4 (administrative API)
+ */
+DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const DescribeRootFoldersRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified users. You can describe all users or filter the results (for example, by status or
+ *
+ * organization)>
+ *
+ * By default, Amazon WorkDocs returns the first 24 active or pending users. If there are more results, the response
+ * includes a marker that you can use to request the next set of
+ */
+DescribeUsersResponse * WorkDocsClient::describeUsers(const DescribeUsersRequest &request)
+{
+
+}
+
+/**
+ * Retrieves details of the current user for whom the authentication token was generated. This is not a valid action for
+ * SigV4 (administrative API)
+ */
+GetCurrentUserResponse * WorkDocsClient::getCurrentUser(const GetCurrentUserRequest &request)
+{
+
+}
+
+/**
+ * Retrieves details of a
+ */
+GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the path information (the hierarchy from the root folder) for the requested
+ *
+ * document>
+ *
+ * By default, Amazon WorkDocs returns a maximum of 100 levels upwards from the requested document and only includes the
+ * IDs of the parent folders in the path. You can limit the maximum number of levels. You can also request the names of the
+ * parent
+ */
+GetDocumentPathResponse * WorkDocsClient::getDocumentPath(const GetDocumentPathRequest &request)
+{
+
+}
+
+/**
+ * Retrieves version metadata for the specified
+ */
+GetDocumentVersionResponse * WorkDocsClient::getDocumentVersion(const GetDocumentVersionRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the metadata of the specified
+ */
+GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the path information (the hierarchy from the root folder) for the specified
+ *
+ * folder>
+ *
+ * By default, Amazon WorkDocs returns a maximum of 100 levels upwards from the requested folder and only includes the IDs
+ * of the parent folders in the path. You can limit the maximum number of levels. You can also request the parent folder
+ */
+GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest &request)
+{
+
+}
+
+/**
+ * Creates a new document object and version
+ *
+ * object>
+ *
+ * The client specifies the parent folder ID and name of the document to upload. The ID is optionally specified when
+ * creating a new version of an existing document. This is the first step to upload a document. Next, upload the document
+ * to the URL returned from the call, and then call
+ *
+ * <a>UpdateDocumentVersion</a>>
+ *
+ * To cancel the document upload, call
+ */
+InitiateDocumentVersionUploadResponse * WorkDocsClient::initiateDocumentVersionUpload(const InitiateDocumentVersionUploadRequest &request)
+{
+
+}
+
+/**
+ * Removes all the permissions from the specified
+ */
+RemoveAllResourcePermissionsResponse * WorkDocsClient::removeAllResourcePermissions(const RemoveAllResourcePermissionsRequest &request)
+{
+
+}
+
+/**
+ * Removes the permission for the specified principal from the specified
+ */
+RemoveResourcePermissionResponse * WorkDocsClient::removeResourcePermission(const RemoveResourcePermissionRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified attributes of a document. The user must have access to both the document and its parent folder, if
+ */
+UpdateDocumentResponse * WorkDocsClient::updateDocument(const UpdateDocumentRequest &request)
+{
+
+}
+
+/**
+ * Changes the status of the document version to ACTIVE.
+ *
+ * </p
+ *
+ * Amazon WorkDocs also sets its document container to ACTIVE. This is the last step in a document upload, after the client
+ * uploads the document to an S3-presigned URL returned by <a>InitiateDocumentVersionUpload</a>.
+ */
+UpdateDocumentVersionResponse * WorkDocsClient::updateDocumentVersion(const UpdateDocumentVersionRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified attributes of the specified folder. The user must have access to both the folder and its parent
+ * folder, if
+ */
+UpdateFolderResponse * WorkDocsClient::updateFolder(const UpdateFolderRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon
+ * WorkDocs
+ */
+UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request)
+{
+
+}
 
 /**
  * @internal

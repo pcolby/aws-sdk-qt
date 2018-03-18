@@ -250,7 +250,254 @@ CodePipelineClient::CodePipelineClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
+ */
+AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJobRequest &request)
+{
+
+}
+
+/**
+ * Confirms a job worker has received the specified job. Only used for partner
+ */
+AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request)
+{
+
+}
+
+/**
+ * Creates a new custom action that can be used in all pipelines associated with the AWS account. Only used for custom
+ */
+CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(const CreateCustomActionTypeRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipelineRequest &request)
+{
+
+}
+
+/**
+ * Marks a custom action as deleted. PollForJobs for the custom action will fail after the action is marked for deletion.
+ * Only used for custom
+ *
+ * actions> <important>
+ *
+ * You cannot recreate a custom action after it has been deleted unless you increase the version number of the
+ */
+DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(const DeleteCustomActionTypeRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ */
+DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipelineRequest &request)
+{
+
+}
+
+/**
+ * Prevents artifacts in a pipeline from transitioning to the next stage in the
+ */
+DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(const DisableStageTransitionRequest &request)
+{
+
+}
+
+/**
+ * Enables artifacts in a pipeline to transition to a stage in a
+ */
+EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const EnableStageTransitionRequest &request)
+{
+
+}
+
+/**
+ * Returns information about a job. Only used for custom
+ *
+ * actions> <important>
+ *
+ * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
+ * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
+ * this API returns any secret values defined for the
+ */
+GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsRequest &request)
+{
+
+}
+
+/**
+ * Returns the metadata, structure, stages, and actions of a pipeline. Can be used to return the entire structure of a
+ * pipeline in JSON format, which can then be modified and used to update the pipeline structure with
+ */
+GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &request)
+{
+
+}
+
+/**
+ * Returns information about an execution of a pipeline, including details about artifacts, the pipeline execution ID, and
+ * the name, version, and status of the
+ */
+GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const GetPipelineExecutionRequest &request)
+{
+
+}
+
+/**
+ * Returns information about the state of a pipeline, including the stages and
+ */
+GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelineStateRequest &request)
+{
+
+}
+
+/**
+ * Requests the details of a job for a third party action. Only used for partner
+ *
+ * actions> <important>
+ *
+ * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
+ * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
+ * this API returns any secret values defined for the
+ */
+GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
+{
+
+}
+
+/**
+ * Gets a summary of all AWS CodePipeline action types associated with your
+ */
+ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTypesRequest &request)
+{
+
+}
+
+/**
+ * Gets a summary of the most recent executions for a
+ */
+ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(const ListPipelineExecutionsRequest &request)
+{
+
+}
+
+/**
+ * Gets a summary of all of the pipelines associated with your
+ */
+ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesRequest &request)
+{
+
+}
+
+/**
+ * Returns information about any jobs for AWS CodePipeline to act
+ *
+ * upon> <important>
+ *
+ * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
+ * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
+ * this API returns any secret values defined for the
+ */
+PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &request)
+{
+
+}
+
+/**
+ * Determines whether there are any third party jobs for a job worker to act on. Only used for partner
+ *
+ * actions> <important>
+ *
+ * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
+ * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output
+ */
+PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request)
+{
+
+}
+
+/**
+ * Provides information to AWS CodePipeline about new revisions to a
+ */
+PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActionRevisionRequest &request)
+{
+
+}
+
+/**
+ * Provides the response to a manual approval request to AWS CodePipeline. Valid responses include Approved and
+ */
+PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutApprovalResultRequest &request)
+{
+
+}
+
+/**
+ * Represents the failure of a job as returned to the pipeline by a job worker. Only used for custom
+ */
+PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJobFailureResultRequest &request)
+{
+
+}
+
+/**
+ * Represents the success of a job as returned to the pipeline by a job worker. Only used for custom
+ */
+PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJobSuccessResultRequest &request)
+{
+
+}
+
+/**
+ * Represents the failure of a third party job as returned to the pipeline by a job worker. Only used for partner
+ */
+PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request)
+{
+
+}
+
+/**
+ * Represents the success of a third party job as returned to the pipeline by a job worker. Only used for partner
+ */
+PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
+{
+
+}
+
+/**
+ * Resumes the pipeline execution by retrying the last failed actions in a
+ */
+RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const RetryStageExecutionRequest &request)
+{
+
+}
+
+/**
+ * Starts the specified pipeline. Specifically, it begins processing the latest commit to the source location specified as
+ * part of the
+ */
+StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(const StartPipelineExecutionRequest &request)
+{
+
+}
+
+/**
+ * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
+ * conjunction with UpdatePipeline to provide the full structure of the pipeline. Updating the pipeline increases the
+ * version number of the pipeline by
+ */
+UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
+{
+
+}
 
 /**
  * @internal

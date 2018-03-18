@@ -87,7 +87,110 @@ MediaLiveClient::MediaLiveClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelRequest &request)
+{
+
+}
+
+/**
+ */
+CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &request)
+{
+
+}
+
+/**
+ */
+CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(const CreateInputSecurityGroupRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request)
+{
+
+}
+
+/**
+ */
+ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &request)
+{
+
+}
+
+/**
+ */
+ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const ListInputSecurityGroupsRequest &request)
+{
+
+}
+
+/**
+ */
+ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
+{
+
+}
+
+/**
+ */
+StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &request)
+{
+
+}
+
+/**
+ */
+StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelRequest &request)
+{
+
+}
 
 /**
  * @internal

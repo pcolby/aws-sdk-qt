@@ -87,7 +87,96 @@ SmsClient::SmsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first
+ * create a ReplicationJob, which will then schedule periodic ReplicationRuns to replicate your server to AWS. Each
+ */
+CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateReplicationJobRequest &request)
+{
+
+}
+
+/**
+ * The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further ReplicationRuns. This will
+ * delete the contents of the S3 bucket used to store SMS artifacts, but will not delete any AMIs created by the SMS
+ */
+DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteReplicationJobRequest &request)
+{
+
+}
+
+/**
+ * The DeleteServerCatalog API clears all servers from your server catalog. This means that these servers will no longer be
+ */
+DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerCatalogRequest &request)
+{
+
+}
+
+/**
+ * The DisassociateConnector API will disassociate a connector from the Server Migration Service, rendering it unavailable
+ */
+DisassociateConnectorResponse * SmsClient::disassociateConnector(const DisassociateConnectorRequest &request)
+{
+
+}
+
+/**
+ */
+GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &request)
+{
+
+}
+
+/**
+ * The GetReplicationJobs API will return all of your ReplicationJobs and their details. This API returns a paginated list,
+ */
+GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJobsRequest &request)
+{
+
+}
+
+/**
+ * The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob. This API returns a paginated
+ */
+GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationRunsRequest &request)
+{
+
+}
+
+/**
+ * The GetServers API returns a list of all servers in your server catalog. For this call to succeed, you must previously
+ */
+GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
+{
+
+}
+
+/**
+ * The ImportServerCatalog API is used to gather the complete list of on-premises servers on your premises. This API call
+ * requires connectors to be installed and monitoring all servers you would like imported. This API call returns
+ */
+ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerCatalogRequest &request)
+{
+
+}
+
+/**
+ * The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in addition to those that are scheduled
+ * based on your frequency). This ReplicationRun will start immediately. StartOnDemandReplicationRun is subject to limits
+ */
+StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(const StartOnDemandReplicationRunRequest &request)
+{
+
+}
+
+/**
+ * The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob created using
+ */
+UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateReplicationJobRequest &request)
+{
+
+}
 
 /**
  * @internal

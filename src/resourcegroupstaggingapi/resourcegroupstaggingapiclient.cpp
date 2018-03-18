@@ -142,7 +142,84 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified
+ * region for the AWS account. The tags and the resource types that you specify in the request are known as <i>filters</i>.
+ * The response includes all tags that are associated with the requested resources. If no filter is provided, this action
+ * returns a paginated resource list with the associated
+ */
+GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetResourcesRequest &request)
+{
+
+}
+
+/**
+ * Returns all tag keys in the specified region for the AWS
+ */
+GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeysRequest &request)
+{
+
+}
+
+/**
+ * Returns all tag values for the specified key in the specified region for the AWS
+ */
+GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTagValuesRequest &request)
+{
+
+}
+
+/**
+ * Applies one or more tags to the specified resources. Note the
+ *
+ * following> <ul> <li>
+ *
+ * Not all resources can have tags. For a list of resources that support tagging, see <a
+ * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html">Supported Resources</a> in the
+ * <i>AWS Resource Groups and Tag Editor User
+ *
+ * Guide</i>> </li> <li>
+ *
+ * Each resource can have up to 50 tags. For other limits, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-restrictions">Tag Restrictions</a> in the
+ * <i>Amazon EC2 User Guide for Linux
+ *
+ * Instances</i>> </li> <li>
+ *
+ * You can only tag resources that are located in the specified region for the AWS
+ *
+ * account> </li> <li>
+ *
+ * To add tags to a resource, you need the necessary permissions for the service that the resource belongs to as well as
+ * permissions for adding tags. For more information, see <a
+ * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
+ */
+TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagResourcesRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified tags from the specified resources. When you specify a tag key, the action removes both that key
+ * and its associated value. The operation succeeds even if you attempt to remove tags from a resource that were already
+ * removed. Note the
+ *
+ * following> <ul> <li>
+ *
+ * To remove tags from a resource, you need the necessary permissions for the service that the resource belongs to as well
+ * as permissions for removing tags. For more information, see <a
+ * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
+ * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
+ *
+ * Guide</i>> </li> <li>
+ *
+ * You can only tag resources that are located in the specified region for the AWS
+ */
+UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const UntagResourcesRequest &request)
+{
+
+}
 
 /**
  * @internal

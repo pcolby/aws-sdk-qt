@@ -96,7 +96,130 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Attaches tags to an existing Elasticsearch domain. Tags are a set of case-sensitive key value pairs. An Elasticsearch
+ * domain may have up to 10 tags. See <a
+ * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-awsresorcetagging"
+ * target="_blank"> Tagging Amazon Elasticsearch Service Domains for more
+ */
+AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &request)
+{
+
+}
+
+/**
+ * Creates a new Elasticsearch domain. For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains"
+ * target="_blank">Creating Elasticsearch Domains</a> in the <i>Amazon Elasticsearch Service Developer
+ */
+CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsearchDomain(const CreateElasticsearchDomainRequest &request)
+{
+
+}
+
+/**
+ * Permanently deletes the specified Elasticsearch domain and all of its data. Once a domain is deleted, it cannot be
+ */
+DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request)
+{
+
+}
+
+/**
+ * Deletes the service-linked role that Elasticsearch Service uses to manage and maintain VPC domains. Role deletion will
+ * fail if any existing VPC domains use the role. You must delete any such Elasticsearch domains before deleting the role.
+ * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
+ * target="_blank">Deleting Elasticsearch Service Role</a> in <i>VPC Endpoints for Amazon Elasticsearch Service
+ */
+DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole()
+{
+
+}
+
+/**
+ * Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain
+ * endpoint, and domain
+ */
+DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request)
+{
+
+}
+
+/**
+ * Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date,
+ * update version, and update date for cluster
+ */
+DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request)
+{
+
+}
+
+/**
+ * Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain
+ * endpoint, and domain
+ */
+DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request)
+{
+
+}
+
+/**
+ * Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion. When modifying existing Domain, specify
+ * the <code> <a>DomainName</a> </code> to know what Limits are supported for modifying.
+ */
+DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request)
+{
+
+}
+
+/**
+ * Returns the name of all Elasticsearch domains owned by the current user's account.
+ */
+ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
+{
+
+}
+
+/**
+ * List all Elasticsearch instance types that are supported for given
+ */
+ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request)
+{
+
+}
+
+/**
+ * List all supported Elasticsearch
+ */
+ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearchVersions(const ListElasticsearchVersionsRequest &request)
+{
+
+}
+
+/**
+ * Returns all tags for the given Elasticsearch
+ */
+ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified set of tags from the specified Elasticsearch
+ */
+RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequest &request)
+{
+
+}
+
+/**
+ * Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the
+ * number of instances.
+ */
+UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
+{
+
+}
 
 /**
  * @internal

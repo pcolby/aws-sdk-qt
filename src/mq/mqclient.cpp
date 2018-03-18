@@ -89,7 +89,125 @@ MqClient::MqClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request)
+{
+
+}
+
+/**
+ * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
+ */
+CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigurationRequest &request)
+{
+
+}
+
+/**
+ */
+CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeConfigurationRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request)
+{
+
+}
+
+/**
+ */
+ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
+{
+
+}
+
+/**
+ */
+ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const ListConfigurationRevisionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
+{
+
+}
+
+/**
+ */
+ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
+{
+
+}
+
+/**
+ */
+RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigurationRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
+{
+
+}
 
 /**
  * @internal

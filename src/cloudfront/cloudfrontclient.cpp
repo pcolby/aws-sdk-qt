@@ -92,7 +92,378 @@ CloudFrontClient::CloudFrontClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity
+ * to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about
+ * how to use origin access identities, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
+ * through CloudFront</a> in the <i>Amazon CloudFront Developer
+ */
+CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request)
+{
+
+}
+
+/**
+ * Creates a new web distribution. Send a <code>POST</code> request to the <code>/<i>CloudFront API
+ * version</i>/distribution</code>/<code>distribution ID</code>
+ */
+CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDistributionRequest &request)
+{
+
+}
+
+/**
+ * Create a new distribution with
+ */
+CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTags(const CreateDistributionWithTagsRequest &request)
+{
+
+}
+
+/**
+ * Create a new invalidation.
+ */
+CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateInvalidationRequest &request)
+{
+
+}
+
+/**
+ * Creates a new RMTP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
+ * media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.
+ *
+ * </p
+ *
+ * To create a new web distribution, submit a <code>POST</code> request to the <i>CloudFront API version</i>/distribution
+ * resource. The request body must include a document with a <i>StreamingDistributionConfig</i> element. The response
+ * echoes the <code>StreamingDistributionConfig</code> element and returns other information about the RTMP
+ *
+ * distribution>
+ *
+ * To get the status of your request, use the <i>GET StreamingDistribution</i> API action. When the value of
+ * <code>Enabled</code> is <code>true</code> and the value of <code>Status</code> is <code>Deployed</code>, your
+ * distribution is ready. A distribution usually deploys in less than 15
+ *
+ * minutes>
+ *
+ * For more information about web distributions, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP
+ * Distributions</a> in the <i>Amazon CloudFront Developer
+ *
+ * Guide</i>> <important>
+ *
+ * Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML
+ * document that you include in the request body when you create or update a web distribution or an RTMP distribution, and
+ * when you invalidate objects. With previous versions of the API, we discovered that it was too easy to accidentally
+ * delete one or more values for an element that accepts multiple values, for example, CNAMEs and trusted signers. Our
+ * changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a
+ * mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of
+ * values
+ */
+CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribution(const CreateStreamingDistributionRequest &request)
+{
+
+}
+
+/**
+ * Create a new streaming distribution with
+ */
+CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request)
+{
+
+}
+
+/**
+ * Delete an origin access identity.
+ */
+DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFrontOriginAccessIdentity(const DeleteCloudFrontOriginAccessIdentityRequest &request)
+{
+
+}
+
+/**
+ * Delete a distribution.
+ */
+DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDistributionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
+{
+
+}
+
+/**
+ * Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following
+ *
+ * steps>
+ *
+ * <b>To delete an RTMP distribution using the CloudFront
+ *
+ * API</b>> <ol> <li>
+ *
+ * Disable the RTMP
+ *
+ * distribution> </li> <li>
+ *
+ * Submit a <code>GET Streaming Distribution Config</code> request to get the current configuration and the
+ * <code>Etag</code> header for the distribution.
+ *
+ * </p </li> <li>
+ *
+ * Update the XML document that was returned in the response to your <code>GET Streaming Distribution Config</code> request
+ * to change the value of <code>Enabled</code> to
+ *
+ * <code>false</code>> </li> <li>
+ *
+ * Submit a <code>PUT Streaming Distribution Config</code> request to update the configuration for your distribution. In
+ * the request body, include the XML document that you updated in Step 3. Then set the value of the HTTP
+ * <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted
+ * the <code>GET Streaming Distribution Config</code> request in Step
+ *
+ * 2> </li> <li>
+ *
+ * Review the response to the <code>PUT Streaming Distribution Config</code> request to confirm that the distribution was
+ * successfully
+ *
+ * disabled> </li> <li>
+ *
+ * Submit a <code>GET Streaming Distribution Config</code> request to confirm that your changes have propagated. When
+ * propagation is complete, the value of <code>Status</code> is
+ *
+ * <code>Deployed</code>> </li> <li>
+ *
+ * Submit a <code>DELETE Streaming Distribution</code> request. Set the value of the HTTP <code>If-Match</code> header to
+ * the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming
+ * Distribution Config</code> request in Step
+ *
+ * 2> </li> <li>
+ *
+ * Review the response to your <code>DELETE Streaming Distribution</code> request to confirm that the distribution was
+ * successfully
+ *
+ * deleted> </li> </ol>
+ *
+ * For information about deleting a distribution using the CloudFront console, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
+ * Distribution</a> in the <i>Amazon CloudFront Developer
+ */
+DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
+{
+
+}
+
+/**
+ * Get the information about an origin access identity.
+ */
+GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request)
+{
+
+}
+
+/**
+ * Get the configuration information about an origin access identity.
+ */
+GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request)
+{
+
+}
+
+/**
+ * Get the information about a distribution.
+ */
+GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributionRequest &request)
+{
+
+}
+
+/**
+ * Get the configuration information about a distribution.
+ */
+GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const GetDistributionConfigRequest &request)
+{
+
+}
+
+/**
+ * Get the information about an invalidation.
+ */
+GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidationRequest &request)
+{
+
+}
+
+/**
+ * Gets information about a specified RTMP distribution, including the distribution
+ */
+GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(const GetStreamingDistributionRequest &request)
+{
+
+}
+
+/**
+ * Get the configuration information about a streaming distribution.
+ */
+GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistributionConfig(const GetStreamingDistributionConfigRequest &request)
+{
+
+}
+
+/**
+ * Lists origin access
+ */
+ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request)
+{
+
+}
+
+/**
+ * List distributions.
+ */
+ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
+{
+
+}
+
+/**
+ * List the distributions that are associated with a specified AWS WAF web ACL.
+ */
+ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request)
+{
+
+}
+
+/**
+ * Lists invalidation batches.
+ */
+ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvalidationsRequest &request)
+{
+
+}
+
+/**
+ * List streaming distributions.
+ */
+ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistributions(const ListStreamingDistributionsRequest &request)
+{
+
+}
+
+/**
+ * List tags for a CloudFront
+ */
+ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+
+}
+
+/**
+ * Add tags to a CloudFront
+ */
+TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &request)
+{
+
+}
+
+/**
+ * Remove tags from a CloudFront
+ */
+UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceRequest &request)
+{
+
+}
+
+/**
+ * Update an origin access identity.
+ */
+UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFrontOriginAccessIdentity(const UpdateCloudFrontOriginAccessIdentityRequest &request)
+{
+
+}
+
+/**
+ * Updates the configuration for a web distribution. Perform the following
+ *
+ * steps>
+ *
+ * For information about updating a distribution using the CloudFront console, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html">Creating
+ * or Updating a Web Distribution Using the CloudFront Console </a> in the <i>Amazon CloudFront Developer
+ *
+ * Guide</i>>
+ *
+ * <b>To update a web distribution using the CloudFront API</b>
+ *
+ * </p <ol> <li>
+ *
+ * Submit a <a>GetDistributionConfig</a> request to get the current configuration and an <code>Etag</code> header for the
+ *
+ * distribution> <note>
+ *
+ * If you update the distribution again, you need to get a new <code>Etag</code>
+ *
+ * header> </note> </li> <li>
+ *
+ * Update the XML document that was returned in the response to your <code>GetDistributionConfig</code> request to include
+ * the desired changes. You can't change the value of <code>CallerReference</code>. If you try to change this value,
+ * CloudFront returns an <code>IllegalUpdate</code>
+ *
+ * error> <important>
+ *
+ * The new configuration replaces the existing configuration; the values that you specify in an
+ * <code>UpdateDistribution</code> request are not merged into the existing configuration. When you add, delete, or replace
+ * values in an element that allows multiple values (for example, <code>CNAME</code>), you must specify all of the values
+ * that you want to appear in the updated distribution. In addition, you must update the corresponding
+ * <code>Quantity</code>
+ *
+ * element> </important> </li> <li>
+ *
+ * Submit an <code>UpdateDistribution</code> request to update the configuration for your
+ *
+ * distribution> <ul> <li>
+ *
+ * In the request body, include the XML document that you updated in Step 2. The request body must include an XML document
+ * with a <code>DistributionConfig</code>
+ *
+ * element> </li> <li>
+ *
+ * Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront
+ * returned when you submitted the <code>GetDistributionConfig</code> request in Step
+ *
+ * 1> </li> </ul> </li> <li>
+ *
+ * Review the response to the <code>UpdateDistribution</code> request to confirm that the configuration was successfully
+ *
+ * updated> </li> <li>
+ *
+ * Optional: Submit a <a>GetDistribution</a> request to confirm that your changes have propagated. When propagation is
+ * complete, the value of <code>Status</code> is
+ *
+ * <code>Deployed</code>> <important>
+ *
+ * Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML
+ * document that you include in the request body when you create or update a distribution. With previous versions of the
+ * API, we discovered that it was too easy to accidentally delete one or more values for an element that accepts multiple
+ * values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these
+ * accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in
+ * the <code>Quantity</code> element and the number of values you're actually
+ */
+UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
+{
+
+}
+
+/**
+ * Update a streaming distribution.
+ */
+UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribution(const UpdateStreamingDistributionRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -100,7 +100,71 @@ CostExplorerClient::CostExplorerClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Retrieve cost and usage metrics for your account. You can specify which cost and usage-related metric, such as
+ * <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and
+ * group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. See
+ * the <code>GetDimensionValues</code> action for a complete list of the valid dimensions. Master accounts in an
+ * organization have access to all member
+ */
+GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUsageRequest &request)
+{
+
+}
+
+/**
+ * You can use <code>GetDimensionValues</code> to retrieve all available filter values for a specific filter over a period
+ * of time. You can search the dimension values for an arbitrary string.
+ */
+GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDimensionValuesRequest &request)
+{
+
+}
+
+/**
+ * Retrieve the reservation coverage for your account. An organization's master account has access to the associated member
+ * accounts. For any time period, you can filter data about reservation usage by the following dimensions.
+ *
+ * </p <ul> <li>
+ *
+ * A> </li> <li>
+ *
+ * INSTANCE_TYP> </li> <li>
+ *
+ * LINKED_ACCOUN> </li> <li>
+ *
+ * PLATFOR> </li> <li>
+ *
+ * REGIO> </li> <li>
+ *
+ * TENANC> </li> </ul>
+ *
+ * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
+ */
+GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(const GetReservationCoverageRequest &request)
+{
+
+}
+
+/**
+ * You can retrieve the Reservation utilization for your account. Master accounts in an organization have access to their
+ * associated member accounts. You can filter data by dimensions in a time period. You can use
+ * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
+ * <code>SUBSCRIPTION_ID</code>.
+ */
+GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilization(const GetReservationUtilizationRequest &request)
+{
+
+}
+
+/**
+ * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
+ * arbitrary string.
+ */
+GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
+{
+
+}
 
 /**
  * @internal

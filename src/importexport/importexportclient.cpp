@@ -90,7 +90,56 @@ ImportExportClient::ImportExportClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already
+ */
+CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &request)
+{
+
+}
+
+/**
+ * This operation initiates the process of scheduling an upload or download of your data. You include in the request a
+ * manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in
+ * other operations, a signature that you use to identify your storage device, and the address where you should ship your
+ */
+CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &request)
+{
+
+}
+
+/**
+ */
+GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippingLabelRequest &request)
+{
+
+}
+
+/**
+ * This operation returns information about a job, including where the job is in the processing pipeline, the status of the
+ */
+GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &request)
+{
+
+}
+
+/**
+ * This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological
+ * order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the
+ */
+ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
+{
+
+}
+
+/**
+ * You use this operation to change the parameters specified in the original manifest file by supplying a new manifest
+ * file. The manifest file attached to this request replaces the original manifest file. You can only use the operation
+ */
+UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -110,7 +110,333 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Deletes the specified
+ *
+ * rule>
+ *
+ * You must remove all targets from a rule using <a>RemoveTargets</a> before you can delete the
+ *
+ * rule>
+ *
+ * When you delete a rule, incoming events might continue to match to the deleted rule. Please allow a short period of time
+ * for changes to take
+ */
+DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest &request)
+{
+
+}
+
+/**
+ * Displays the external AWS accounts that are permitted to write events to your account using your account's event bus,
+ * and the associated policy. To enable your account to receive events from other accounts, use
+ */
+DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const DescribeEventBusRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified
+ */
+DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRequest &request)
+{
+
+}
+
+/**
+ * Disables the specified rule. A disabled rule won't match any events, and won't self-trigger if it has a schedule
+ *
+ * expression>
+ *
+ * When you disable a rule, incoming events might continue to match to the disabled rule. Please allow a short period of
+ * time for changes to take
+ */
+DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleRequest &request)
+{
+
+}
+
+/**
+ * Enables the specified rule. If the rule does not exist, the operation
+ *
+ * fails>
+ *
+ * When you enable a rule, incoming events might not immediately start matching to a newly enabled rule. Please allow a
+ * short period of time for changes to take
+ */
+EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest &request)
+{
+
+}
+
+/**
+ * Lists the rules for the specified target. You can see which of the rules in Amazon CloudWatch Events can invoke a
+ * specific target in your
+ */
+ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(const ListRuleNamesByTargetRequest &request)
+{
+
+}
+
+/**
+ * Lists your Amazon CloudWatch Events rules. You can either list all the rules or you can provide a prefix to match to the
+ * rule
+ */
+ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &request)
+{
+
+}
+
+/**
+ * Lists the targets assigned to the specified
+ */
+ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const ListTargetsByRuleRequest &request)
+{
+
+}
+
+/**
+ * Sends custom events to Amazon CloudWatch Events so that they can be matched to
+ */
+PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &request)
+{
+
+}
+
+/**
+ * Running <code>PutPermission</code> permits the specified AWS account to put events to your account's default <i>event
+ * bus</i>. CloudWatch Events rules in your account are triggered by these events arriving to your default event bus.
+ *
+ * </p
+ *
+ * For another account to send events to your account, that external account must have a CloudWatch Events rule with your
+ * account's default event bus as a
+ *
+ * target>
+ *
+ * To enable multiple AWS accounts to put events to your default event bus, run <code>PutPermission</code> once for each of
+ * these
+ *
+ * accounts>
+ *
+ * The permission policy on the default event bus cannot exceed 10KB in
+ */
+PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissionRequest &request)
+{
+
+}
+
+/**
+ * Creates or updates the specified rule. Rules are enabled by default, or based on value of the state. You can disable a
+ * rule using
+ *
+ * <a>DisableRule</a>>
+ *
+ * If you are updating an existing rule, the rule is completely replaced with what you specify in this <code>PutRule</code>
+ * command. If you omit arguments in <code>PutRule</code>, the old values for those arguments are not kept. Instead, they
+ * are replaced with null
+ *
+ * values>
+ *
+ * When you create or update a rule, incoming events might not immediately start matching to new or updated rules. Please
+ * allow a short period of time for changes to take
+ *
+ * effect>
+ *
+ * A rule must contain at least an EventPattern or ScheduleExpression. Rules with EventPatterns are triggered when a
+ * matching event is observed. Rules with ScheduleExpressions self-trigger based on the given schedule. A rule can have
+ * both an EventPattern and a ScheduleExpression, in which case the rule triggers on matching events as well as on a
+ *
+ * schedule>
+ *
+ * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, CloudWatch Events uses
+ * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
+ * that they match the ARN syntax in the event you want to
+ */
+PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
+{
+
+}
+
+/**
+ * Adds the specified targets to the specified rule, or updates the targets if they are already associated with the
+ *
+ * rule>
+ *
+ * Targets are the resources that are invoked when a rule is
+ *
+ * triggered>
+ *
+ * You can configure the following as targets for CloudWatch
+ *
+ * Events> <ul> <li>
+ *
+ * EC2
+ *
+ * instance> </li> <li>
+ *
+ * AWS Lambda
+ *
+ * function> </li> <li>
+ *
+ * Streams in Amazon Kinesis
+ *
+ * Stream> </li> <li>
+ *
+ * Delivery streams in Amazon Kinesis
+ *
+ * Firehos> </li> <li>
+ *
+ * Amazon ECS
+ *
+ * task> </li> <li>
+ *
+ * AWS Step Functions state
+ *
+ * machine> </li> <li>
+ *
+ * AWS Batch
+ *
+ * job> </li> <li>
+ *
+ * Pipelines in Amazon Code
+ *
+ * Pipelin> </li> <li>
+ *
+ * Amazon Inspector assessment
+ *
+ * template> </li> <li>
+ *
+ * Amazon SNS
+ *
+ * topic> </li> <li>
+ *
+ * Amazon SQS
+ *
+ * queue> </li> <li>
+ *
+ * The default event bus of another AWS
+ *
+ * accoun> </li> </ul>
+ *
+ * Note that creating rules with built-in targets is supported only in the AWS Management
+ *
+ * Console>
+ *
+ * For some target types, <code>PutTargets</code> provides target-specific parameters. If the target is an Amazon Kinesis
+ * stream, you can optionally specify which shard the event goes to by using the <code>KinesisParameters</code> argument.
+ * To invoke a command on multiple EC2 instances with one rule, you can use the <code>RunCommandParameters</code>
+ *
+ * field>
+ *
+ * To be able to make API calls against the resources that you own, Amazon CloudWatch Events needs the appropriate
+ * permissions. For AWS Lambda and Amazon SNS resources, CloudWatch Events relies on resource-based policies. For EC2
+ * instances, Amazon Kinesis streams, and AWS Step Functions state machines, CloudWatch Events relies on IAM roles that you
+ * specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/auth-and-access-control-cwe.html">Authentication and
+ * Access Control</a> in the <i>Amazon CloudWatch Events User
+ *
+ * Guide</i>>
+ *
+ * If another AWS account is in the same region and has granted you permission (using <code>PutPermission</code>), you can
+ * send events to that account by setting that account's event bus as a target of the rules in your account. To send the
+ * matched events to the other account, specify that account's event bus as the <code>Arn</code> when you run
+ * <code>PutTargets</code>. If your account sends events to another account, your account is charged for each sent event.
+ * Each event sent to antoher account is charged as a custom event. The account receiving the event is not charged. For
+ * more information on pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ *
+ * Pricing</a>>
+ *
+ * For more information about enabling cross-account events, see
+ *
+ * <a>PutPermission</a>>
+ *
+ * <b>Input</b>, <b>InputPath</b> and <b>InputTransformer</b> are mutually exclusive and optional parameters of a target.
+ * When a rule is triggered due to a matched
+ *
+ * event> <ul> <li>
+ *
+ * If none of the following arguments are specified for a target, then the entire event is passed to the target in JSON
+ * form (unless the target is Amazon EC2 Run Command or Amazon ECS task, in which case nothing from the event is passed to
+ * the
+ *
+ * target)> </li> <li>
+ *
+ * If <b>Input</b> is specified in the form of valid JSON, then the matched event is overridden with this
+ *
+ * constant> </li> <li>
+ *
+ * If <b>InputPath</b> is specified in the form of JSONPath (for example, <code>$.detail</code>), then only the part of the
+ * event specified in the path is passed to the target (for example, only the detail part of the event is
+ *
+ * passed)> </li> <li>
+ *
+ * If <b>InputTransformer</b> is specified, then one or more specified JSONPaths are extracted from the event and used as
+ * values in a template that you specify as the input to the
+ *
+ * target> </li> </ul>
+ *
+ * When you specify <code>InputPath</code> or <code>InputTransformer</code>, you must use JSON dot notation, not bracket
+ *
+ * notation>
+ *
+ * When you add targets to a rule and the associated rule triggers soon after, new or updated targets might not be
+ * immediately invoked. Please allow a short period of time for changes to take
+ *
+ * effect>
+ *
+ * This action can partially fail if too many requests are made at the same time. If that happens,
+ * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
+ * of the failed target and the error
+ */
+PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest &request)
+{
+
+}
+
+/**
+ * Revokes the permission of another AWS account to be able to put events to your default event bus. Specify the account to
+ * revoke by the <code>StatementId</code> value that you associated with the account when you granted it permission with
+ * <code>PutPermission</code>. You can find the <code>StatementId</code> by using
+ */
+RemovePermissionResponse * CloudWatchEventsClient::removePermission(const RemovePermissionRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified targets from the specified rule. When the rule is triggered, those targets are no longer be
+ *
+ * invoked>
+ *
+ * When you remove a target, when the associated rule triggers, removed targets might continue to be invoked. Please allow
+ * a short period of time for changes to take
+ *
+ * effect>
+ *
+ * This action can partially fail if too many requests are made at the same time. If that happens,
+ * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
+ * of the failed target and the error
+ */
+RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTargetsRequest &request)
+{
+
+}
+
+/**
+ * Tests whether the specified event pattern matches the provided
+ *
+ * event>
+ *
+ * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, CloudWatch Events uses
+ * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
+ * that they match the ARN syntax in the event you want to
+ */
+TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEventPatternRequest &request)
+{
+
+}
 
 /**
  * @internal

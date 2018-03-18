@@ -104,7 +104,14 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
+ * identifier or product
+ */
+GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(const GetEntitlementsRequest &request)
+{
+
+}
 
 /**
  * @internal

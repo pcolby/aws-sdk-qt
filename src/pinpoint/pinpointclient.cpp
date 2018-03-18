@@ -87,7 +87,460 @@ PinpointClient::PinpointClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
+{
+
+}
+
+/**
+ */
+CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequest &request)
+{
+
+}
+
+/**
+ */
+CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
+{
+
+}
+
+/**
+ */
+CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
+{
+
+}
+
+/**
+ */
+CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(const DeleteApnsSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const DeleteApnsVoipChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChannel(const DeleteApnsVoipSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaiduChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmailChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventStreamRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoipChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(const GetApnsVoipSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
+{
+
+}
+
+/**
+ */
+GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const GetApplicationSettingsRequest &request)
+{
+
+}
+
+/**
+ */
+GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
+{
+
+}
+
+/**
+ */
+GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &request)
+{
+
+}
+
+/**
+ */
+GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
+{
+
+}
+
+/**
+ */
+GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaignVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &request)
+{
+
+}
+
+/**
+ */
+GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequest &request)
+{
+
+}
+
+/**
+ */
+GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &request)
+{
+
+}
+
+/**
+ */
+GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest &request)
+{
+
+}
+
+/**
+ */
+GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &request)
+{
+
+}
+
+/**
+ */
+GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSegmentExportJobsRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSegmentImportJobsRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &request)
+{
+
+}
+
+/**
+ */
+GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest &request)
+{
+
+}
+
+/**
+ */
+PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequest &request)
+{
+
+}
+
+/**
+ */
+SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
+{
+
+}
+
+/**
+ */
+SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(const UpdateApplicationSettingsRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
+{
+
+}
 
 /**
  * @internal

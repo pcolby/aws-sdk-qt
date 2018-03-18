@@ -101,7 +101,37 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Gets details of a job
+ */
+DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(const DescribeJobExecutionRequest &request)
+{
+
+}
+
+/**
+ * Gets the list of all jobs for a thing that are not in a terminal
+ */
+GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecutions(const GetPendingJobExecutionsRequest &request)
+{
+
+}
+
+/**
+ * Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a
+ */
+StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJobExecution(const StartNextPendingJobExecutionRequest &request)
+{
+
+}
+
+/**
+ * Updates the status of a job
+ */
+UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const UpdateJobExecutionRequest &request)
+{
+
+}
 
 /**
  * @internal

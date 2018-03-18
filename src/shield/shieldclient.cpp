@@ -93,7 +93,87 @@ ShieldClient::ShieldClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic
+ * Load Balancing load balancer, Elastic IP Address, or an Amazon Route 53 hosted
+ */
+CreateProtectionResponse * ShieldClient::createProtection(const CreateProtectionRequest &request)
+{
+
+}
+
+/**
+ * Activates AWS Shield Advanced for an
+ */
+CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Deletes an AWS Shield Advanced
+ */
+DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtectionRequest &request)
+{
+
+}
+
+/**
+ * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot
+ * delete a subscription prior to the completion of that commitment.
+ */
+DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Describes the details of a DDoS attack.
+ */
+DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackRequest &request)
+{
+
+}
+
+/**
+ * Lists the details of a <a>Protection</a>
+ */
+DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProtectionRequest &request)
+{
+
+}
+
+/**
+ * Provides details about the AWS Shield Advanced subscription for an
+ */
+DescribeSubscriptionResponse * ShieldClient::describeSubscription(const DescribeSubscriptionRequest &request)
+{
+
+}
+
+/**
+ * Returns the <code>SubscriptionState</code>, either <code>Active</code> or
+ */
+GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubscriptionStateRequest &request)
+{
+
+}
+
+/**
+ * Returns all ongoing DDoS attacks or all DDoS attacks during a specified time
+ */
+ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &request)
+{
+
+}
+
+/**
+ * Lists all <a>Protection</a> objects for the
+ */
+ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsRequest &request)
+{
+
+}
 
 /**
  * @internal

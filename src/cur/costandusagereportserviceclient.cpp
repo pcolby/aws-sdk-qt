@@ -87,7 +87,26 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefinition(const PutReportDefinitionRequest &request)
+{
+
+}
 
 /**
  * @internal

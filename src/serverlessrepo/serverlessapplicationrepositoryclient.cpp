@@ -108,7 +108,85 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates an application, optionally including an AWS SAM file to create the first application version in the same
+ */
+CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplication(const CreateApplicationRequest &request)
+{
+
+}
+
+/**
+ * Creates an application
+ */
+CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
+{
+
+}
+
+/**
+ * Creates an AWS CloudFormation ChangeSet for the given
+ */
+CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::createCloudFormationChangeSet(const CreateCloudFormationChangeSetRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ */
+DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplication(const DeleteApplicationRequest &request)
+{
+
+}
+
+/**
+ * Gets the specified
+ */
+GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(const GetApplicationRequest &request)
+{
+
+}
+
+/**
+ * Gets the policy for the specified
+ */
+GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplicationPolicy(const GetApplicationPolicyRequest &request)
+{
+
+}
+
+/**
+ * Lists versions for the specified
+ */
+ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApplicationVersions(const ListApplicationVersionsRequest &request)
+{
+
+}
+
+/**
+ * Lists applications owned by the
+ */
+ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplications(const ListApplicationsRequest &request)
+{
+
+}
+
+/**
+ * Puts the policy for the specified
+ */
+PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified
+ */
+UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplication(const UpdateApplicationRequest &request)
+{
+
+}
 
 /**
  * @internal

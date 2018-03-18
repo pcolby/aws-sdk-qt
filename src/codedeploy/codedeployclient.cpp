@@ -168,7 +168,343 @@ CodeDeployClient::CodeDeployClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Adds tags to on-premises
+ */
+AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInstances(const AddTagsToOnPremisesInstancesRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more application
+ */
+BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevisions(const BatchGetApplicationRevisionsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more
+ */
+BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const BatchGetApplicationsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more deployment
+ */
+BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(const BatchGetDeploymentGroupsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more instance that are part of a deployment
+ */
+BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more
+ */
+BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchGetDeploymentsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about one or more on-premises
+ */
+BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request)
+{
+
+}
+
+/**
+ * For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to
+ * instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which
+ * is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all
+ * instances have a status of Ready.)
+ */
+ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const ContinueDeploymentRequest &request)
+{
+
+}
+
+/**
+ * Creates an
+ */
+CreateApplicationResponse * CodeDeployClient::createApplication(const CreateApplicationRequest &request)
+{
+
+}
+
+/**
+ * Deploys an application revision through the specified deployment
+ */
+CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploymentRequest &request)
+{
+
+}
+
+/**
+ * Creates a deployment
+ */
+CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const CreateDeploymentConfigRequest &request)
+{
+
+}
+
+/**
+ * Creates a deployment group to which application revisions will be
+ */
+CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const CreateDeploymentGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes an
+ */
+DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteApplicationRequest &request)
+{
+
+}
+
+/**
+ * Deletes a deployment
+ *
+ * configuration> <note>
+ *
+ * A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be
+ */
+DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request)
+{
+
+}
+
+/**
+ * Deletes a deployment
+ */
+DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes a GitHub account
+ */
+DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request)
+{
+
+}
+
+/**
+ * Deregisters an on-premises
+ */
+DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request)
+{
+
+}
+
+/**
+ * Gets information about an
+ */
+GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRequest &request)
+{
+
+}
+
+/**
+ * Gets information about an application
+ */
+GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const GetApplicationRevisionRequest &request)
+{
+
+}
+
+/**
+ * Gets information about a
+ */
+GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentRequest &request)
+{
+
+}
+
+/**
+ * Gets information about a deployment
+ */
+GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDeploymentConfigRequest &request)
+{
+
+}
+
+/**
+ * Gets information about a deployment
+ */
+GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeploymentGroupRequest &request)
+{
+
+}
+
+/**
+ * Gets information about an instance as part of a
+ */
+GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const GetDeploymentInstanceRequest &request)
+{
+
+}
+
+/**
+ * Gets information about an on-premises
+ */
+GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const GetOnPremisesInstanceRequest &request)
+{
+
+}
+
+/**
+ * Lists information about revisions for an
+ */
+ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(const ListApplicationRevisionsRequest &request)
+{
+
+}
+
+/**
+ * Lists the applications registered with the applicable IAM user or AWS
+ */
+ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicationsRequest &request)
+{
+
+}
+
+/**
+ * Lists the deployment configurations with the applicable IAM user or AWS
+ */
+ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const ListDeploymentConfigsRequest &request)
+{
+
+}
+
+/**
+ * Lists the deployment groups for an application registered with the applicable IAM user or AWS
+ */
+ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const ListDeploymentGroupsRequest &request)
+{
+
+}
+
+/**
+ * Lists the instance for a deployment associated with the applicable IAM user or AWS
+ */
+ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
+{
+
+}
+
+/**
+ * Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS
+ */
+ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeploymentsRequest &request)
+{
+
+}
+
+/**
+ * Lists the names of stored connections to GitHub
+ */
+ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNames(const ListGitHubAccountTokenNamesRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of names for one or more on-premises
+ *
+ * instances>
+ *
+ * Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only
+ * registered or deregistered on-premises instance names, use the registration status
+ */
+ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(const ListOnPremisesInstancesRequest &request)
+{
+
+}
+
+/**
+ * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
+ * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
+ */
+PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
+{
+
+}
+
+/**
+ * Registers with AWS CodeDeploy a revision for the specified
+ */
+RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevision(const RegisterApplicationRevisionRequest &request)
+{
+
+}
+
+/**
+ * Registers an on-premises
+ *
+ * instance> <note>
+ *
+ * Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use
+ */
+RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstance(const RegisterOnPremisesInstanceRequest &request)
+{
+
+}
+
+/**
+ * Removes one or more tags from one or more on-premises
+ */
+RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPremisesInstances(const RemoveTagsFromOnPremisesInstancesRequest &request)
+{
+
+}
+
+/**
+ * In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the
+ * traffic routing is
+ */
+SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForInstanceTermination(const SkipWaitTimeForInstanceTerminationRequest &request)
+{
+
+}
+
+/**
+ * Attempts to stop an ongoing
+ */
+StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRequest &request)
+{
+
+}
+
+/**
+ * Changes the name of an
+ */
+UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateApplicationRequest &request)
+{
+
+}
+
+/**
+ * Changes information about a deployment
+ */
+UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const UpdateDeploymentGroupRequest &request)
+{
+
+}
 
 /**
  * @internal

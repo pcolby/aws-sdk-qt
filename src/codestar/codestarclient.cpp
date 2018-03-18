@@ -175,7 +175,158 @@ CodeStarClient::CodeStarClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Adds an IAM user to the team for an AWS CodeStar
+ */
+AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const AssociateTeamMemberRequest &request)
+{
+
+}
+
+/**
+ * Reserved for future use. To create a project, use the AWS CodeStar
+ */
+CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest &request)
+{
+
+}
+
+/**
+ * Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with
+ * the user, in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed
+ * wherever the user's information appears to other users in AWS
+ */
+CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserProfileRequest &request)
+{
+
+}
+
+/**
+ * Deletes a project, including project resources. Does not delete users associated with the project, but does delete the
+ * IAM roles that allowed access to the
+ */
+DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest &request)
+{
+
+}
+
+/**
+ * Deletes a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as
+ * display name and email address. It does not delete the history of that user, for example the history of commits made by
+ * that
+ */
+DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserProfileRequest &request)
+{
+
+}
+
+/**
+ * Describes a project and its
+ */
+DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectRequest &request)
+{
+
+}
+
+/**
+ * Describes a user in AWS CodeStar and the user attributes across all
+ */
+DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const DescribeUserProfileRequest &request)
+{
+
+}
+
+/**
+ * Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed
+ * access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS
+ * CodeStar. It does not remove the user from
+ */
+DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const DisassociateTeamMemberRequest &request)
+{
+
+}
+
+/**
+ * Lists all projects in AWS CodeStar associated with your AWS
+ */
+ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &request)
+{
+
+}
+
+/**
+ * Lists resources associated with a project in AWS
+ */
+ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest &request)
+{
+
+}
+
+/**
+ * Gets the tags for a
+ */
+ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsForProjectRequest &request)
+{
+
+}
+
+/**
+ * Lists all team members associated with a
+ */
+ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersRequest &request)
+{
+
+}
+
+/**
+ * Lists all the user profiles configured for your AWS account in AWS
+ */
+ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfilesRequest &request)
+{
+
+}
+
+/**
+ * Adds tags to a
+ */
+TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request)
+{
+
+}
+
+/**
+ * Removes tags from a
+ */
+UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &request)
+{
+
+}
+
+/**
+ * Updates a project in AWS
+ */
+UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest &request)
+{
+
+}
+
+/**
+ * Updates a team member's attributes in an AWS CodeStar project. For example, you can change a team member's role in the
+ * project, or change whether they have remote access to project
+ */
+UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemberRequest &request)
+{
+
+}
+
+/**
+ * Updates a user's profile in AWS CodeStar. The user profile is not project-specific. Information in the user profile is
+ * displayed wherever the user's information appears to other users in AWS CodeStar.
+ */
+UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserProfileRequest &request)
+{
+
+}
 
 /**
  * @internal

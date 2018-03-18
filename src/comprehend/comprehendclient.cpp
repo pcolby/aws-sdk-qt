@@ -90,7 +90,101 @@ ComprehendClient::ComprehendClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
+ * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
+ * Comprehend Supported Languages</a>.
+ */
+BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLanguage(const BatchDetectDominantLanguageRequest &request)
+{
+
+}
+
+/**
+ * Inspects the text of a batch of documents and returns information about them. For more information about entities, see
+ * <a>how-entities</a>
+ */
+BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchDetectEntitiesRequest &request)
+{
+
+}
+
+/**
+ * Detects the key noun phrases found in a batch of
+ */
+BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const BatchDetectKeyPhrasesRequest &request)
+{
+
+}
+
+/**
+ * Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>,
+ * <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each
+ */
+BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const BatchDetectSentimentRequest &request)
+{
+
+}
+
+/**
+ * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
+ */
+DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJob(const DescribeTopicsDetectionJobRequest &request)
+{
+
+}
+
+/**
+ * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
+ * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
+ */
+DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const DetectDominantLanguageRequest &request)
+{
+
+}
+
+/**
+ * Inspects text for entities, and returns information about them. For more information, about entities, see
+ * <a>how-entities</a>.
+ */
+DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRequest &request)
+{
+
+}
+
+/**
+ * Detects the key noun phrases found in the text.
+ */
+DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhrasesRequest &request)
+{
+
+}
+
+/**
+ * Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>,
+ * <code>MIXED</code>, or <code>NEGATIVE</code>).
+ */
+DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimentRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of the topic detection jobs that you have
+ */
+ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request)
+{
+
+}
+
+/**
+ * Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status
+ * of a
+ */
+StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(const StartTopicsDetectionJobRequest &request)
+{
+
+}
 
 /**
  * @internal

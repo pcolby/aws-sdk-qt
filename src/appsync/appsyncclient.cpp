@@ -88,7 +88,230 @@ AppSyncClient::AppSyncClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a unique key that you can distribute to clients who are executing your
+ */
+CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &request)
+{
+
+}
+
+/**
+ * Creates a <code>DataSource</code>
+ */
+CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourceRequest &request)
+{
+
+}
+
+/**
+ * Creates a <code>GraphqlApi</code>
+ */
+CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlApiRequest &request)
+{
+
+}
+
+/**
+ * Creates a <code>Resolver</code>
+ *
+ * object>
+ *
+ * A resolver converts incoming requests into a format that a data source can understand and converts the data source's
+ * responses into
+ */
+CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverRequest &request)
+{
+
+}
+
+/**
+ * Creates a <code>Type</code>
+ */
+CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
+{
+
+}
+
+/**
+ * Deletes an API
+ */
+DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &request)
+{
+
+}
+
+/**
+ * Deletes a <code>DataSource</code>
+ */
+DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourceRequest &request)
+{
+
+}
+
+/**
+ * Deletes a <code>GraphqlApi</code>
+ */
+DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlApiRequest &request)
+{
+
+}
+
+/**
+ * Deletes a <code>Resolver</code>
+ */
+DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverRequest &request)
+{
+
+}
+
+/**
+ * Deletes a <code>Type</code>
+ */
+DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a <code>DataSource</code>
+ */
+GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a <code>GraphqlApi</code>
+ */
+GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the introspection schema for a GraphQL
+ */
+GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const GetIntrospectionSchemaRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a <code>Resolver</code>
+ */
+GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the current status of a schema creation
+ */
+GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const GetSchemaCreationStatusRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a <code>Type</code>
+ */
+GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
+{
+
+}
+
+/**
+ * Lists the API keys for a given
+ */
+ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &request)
+{
+
+}
+
+/**
+ * Lists the data sources for a given
+ */
+ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRequest &request)
+{
+
+}
+
+/**
+ * Lists your GraphQL
+ */
+ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRequest &request)
+{
+
+}
+
+/**
+ * Lists the resolvers for a given API and
+ */
+ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest &request)
+{
+
+}
+
+/**
+ * Lists the types for a given
+ */
+ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
+{
+
+}
+
+/**
+ * Adds a new schema to your GraphQL
+ *
+ * API>
+ *
+ * This operation is asynchronous. Use to determine when it has
+ */
+StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSchemaCreationRequest &request)
+{
+
+}
+
+/**
+ * Updates an API
+ */
+UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
+{
+
+}
+
+/**
+ * Updates a <code>DataSource</code>
+ */
+UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
+{
+
+}
+
+/**
+ * Updates a <code>GraphqlApi</code>
+ */
+UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlApiRequest &request)
+{
+
+}
+
+/**
+ * Updates a <code>Resolver</code>
+ */
+UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverRequest &request)
+{
+
+}
+
+/**
+ * Updates a <code>Type</code>
+ */
+UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -92,7 +92,297 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
+ * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is
+ * required.
+ */
+AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoom(const AssociateDeviceWithRoomRequest &request)
+{
+
+}
+
+/**
+ * Associates a skill group to a given room. This enables all skills in the associated skill group on all devices in the
+ */
+AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGroupWithRoom(const AssociateSkillGroupWithRoomRequest &request)
+{
+
+}
+
+/**
+ * Creates a new room profile with the specified
+ */
+CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfileRequest &request)
+{
+
+}
+
+/**
+ * Creates a room with the specified
+ */
+CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest &request)
+{
+
+}
+
+/**
+ * Creates a skill group with a specified name and
+ */
+CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const CreateSkillGroupRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest &request)
+{
+
+}
+
+/**
+ * Deletes a room profile by the profile
+ */
+DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfileRequest &request)
+{
+
+}
+
+/**
+ * Deletes a room by the room
+ */
+DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest &request)
+{
+
+}
+
+/**
+ * Deletes room skill parameter details by room, skill, and parameter key
+ */
+DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParameter(const DeleteRoomSkillParameterRequest &request)
+{
+
+}
+
+/**
+ * Deletes a skill group by skill group
+ */
+DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const DeleteSkillGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes a specified user by user ARN and enrollment
+ */
+DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest &request)
+{
+
+}
+
+/**
+ * Disassociates a device from its current room. The device continues to be connected to the Wi-Fi network and is still
+ * registered to the account. The device settings and skills are removed from the
+ */
+DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceFromRoom(const DisassociateDeviceFromRoomRequest &request)
+{
+
+}
+
+/**
+ * Disassociates a skill group from a specified room. This disables all skills in the skill group on all devices in the
+ */
+DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSkillGroupFromRoom(const DisassociateSkillGroupFromRoomRequest &request)
+{
+
+}
+
+/**
+ * Gets the details of a device by device
+ */
+GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &request)
+{
+
+}
+
+/**
+ * Gets the details of a room profile by profile
+ */
+GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest &request)
+{
+
+}
+
+/**
+ * Gets room details by room
+ */
+GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
+{
+
+}
+
+/**
+ * Gets room skill parameter details by room, skill, and parameter key
+ */
+GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(const GetRoomSkillParameterRequest &request)
+{
+
+}
+
+/**
+ * Gets skill group details by skill group
+ */
+GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGroupRequest &request)
+{
+
+}
+
+/**
+ * Lists all enabled skills in a specific skill
+ */
+ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest &request)
+{
+
+}
+
+/**
+ * Lists all tags for a specific
+ */
+ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &request)
+{
+
+}
+
+/**
+ * Updates room skill parameter details by room, skill, and parameter key ID. Not all skills have a room skill
+ */
+PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(const PutRoomSkillParameterRequest &request)
+{
+
+}
+
+/**
+ * Determines the details for the room from which a skill request was invoked. This operation is used by skill
+ */
+ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomRequest &request)
+{
+
+}
+
+/**
+ * Revokes an invitation and invalidates the enrollment
+ */
+RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const RevokeInvitationRequest &request)
+{
+
+}
+
+/**
+ * Searches devices and lists the ones that meet a set of filter
+ */
+SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevicesRequest &request)
+{
+
+}
+
+/**
+ * Searches room profiles and lists the ones that meet a set of filter
+ */
+SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProfilesRequest &request)
+{
+
+}
+
+/**
+ * Searches rooms and lists the ones that meet a set of filter and sort
+ */
+SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsRequest &request)
+{
+
+}
+
+/**
+ * Searches skill groups and lists the ones that meet a set of filter and sort
+ */
+SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const SearchSkillGroupsRequest &request)
+{
+
+}
+
+/**
+ * Searches users and lists the ones that meet a set of filter and sort
+ */
+SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersRequest &request)
+{
+
+}
+
+/**
+ * Sends an enrollment invitation email with a URL to a user. The URL is valid for 72 hours or until you call this
+ * operation again, whichever comes first.
+ */
+SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvitationRequest &request)
+{
+
+}
+
+/**
+ * Resets a device and its account to the known default settings by clearing all information and settings set by previous
+ */
+StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDeviceSyncRequest &request)
+{
+
+}
+
+/**
+ * Adds metadata tags to a specified
+ */
+TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceRequest &request)
+{
+
+}
+
+/**
+ * Removes metadata tags from a specified
+ */
+UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourceRequest &request)
+{
+
+}
+
+/**
+ * Updates the device name by device
+ */
+UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRequest &request)
+{
+
+}
+
+/**
+ * Updates an existing room profile by room profile
+ */
+UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfileRequest &request)
+{
+
+}
+
+/**
+ * Updates room details by room
+ */
+UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest &request)
+{
+
+}
+
+/**
+ * Updates skill group details by skill group
+ */
+UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const UpdateSkillGroupRequest &request)
+{
+
+}
 
 /**
  * @internal

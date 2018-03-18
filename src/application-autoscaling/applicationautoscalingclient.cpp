@@ -160,7 +160,181 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Deletes the specified Application Auto Scaling scaling
+ *
+ * policy>
+ *
+ * Deleting a policy deletes the underlying alarm action, but does not delete the CloudWatch alarm associated with the
+ * scaling policy, even if it no longer has an associated
+ *
+ * action>
+ *
+ * To create a scaling policy or update an existing one, see
+ */
+DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified Application Auto Scaling scheduled
+ */
+DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
+{
+
+}
+
+/**
+ * Deregisters a scalable
+ *
+ * target>
+ *
+ * Deregistering a scalable target deletes the scaling policies that are associated with
+ *
+ * it>
+ *
+ * To create a scalable target or update an existing one, see
+ */
+DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScalableTarget(const DeregisterScalableTargetRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the scalable targets in the specified
+ *
+ * namespace>
+ *
+ * You can filter the results using the <code>ResourceIds</code> and <code>ScalableDimension</code>
+ *
+ * parameters>
+ *
+ * To create a scalable target or update an existing one, see <a>RegisterScalableTarget</a>. If you are no longer using a
+ * scalable target, you can deregister it using
+ */
+DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalableTargets(const DescribeScalableTargetsRequest &request)
+{
+
+}
+
+/**
+ * Provides descriptive information about the scaling activities in the specified namespace from the previous six
+ *
+ * weeks>
+ *
+ * You can filter the results using the <code>ResourceId</code> and <code>ScalableDimension</code>
+ *
+ * parameters>
+ *
+ * Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling
+ * policies for a service namespace, see <a>DescribeScalingPolicies</a>. To create a scaling policy or update an existing
+ * one, see
+ */
+DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
+{
+
+}
+
+/**
+ * Describes the scaling policies for the specified service
+ *
+ * namespace>
+ *
+ * You can filter the results using the <code>ResourceId</code>, <code>ScalableDimension</code>, and
+ * <code>PolicyNames</code>
+ *
+ * parameters>
+ *
+ * To create a scaling policy or update an existing one, see <a>PutScalingPolicy</a>. If you are no longer using a scaling
+ * policy, you can delete it using
+ */
+DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
+{
+
+}
+
+/**
+ * Describes the scheduled actions for the specified service
+ *
+ * namespace>
+ *
+ * You can filter the results using the <code>ResourceId</code>, <code>ScalableDimension</code>, and
+ * <code>ScheduledActionNames</code>
+ *
+ * parameters>
+ *
+ * To create a scheduled action or update an existing one, see <a>PutScheduledAction</a>. If you are no longer using a
+ * scheduled action, you can delete it using
+ */
+DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
+{
+
+}
+
+/**
+ * Creates or updates a policy for an Application Auto Scaling scalable
+ *
+ * target>
+ *
+ * Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scaling policy applies
+ * to the scalable target identified by those three attributes. You cannot create a scaling policy until you register the
+ * scalable target using
+ *
+ * <a>RegisterScalableTarget</a>>
+ *
+ * To update a policy, specify its policy name and the parameters that you want to change. Any parameters that you don't
+ * specify are not changed by this update
+ *
+ * request>
+ *
+ * You can view the scaling policies for a service namespace using <a>DescribeScalingPolicies</a>. If you are no longer
+ * using a scaling policy, you can delete it using
+ */
+PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
+{
+
+}
+
+/**
+ * Creates or updates a scheduled action for an Application Auto Scaling scalable
+ *
+ * target>
+ *
+ * Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scheduled action
+ * applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you
+ * register the scalable target using
+ *
+ * <a>RegisterScalableTarget</a>>
+ *
+ * To update an action, specify its name and the parameters that you want to change. If you don't specify start and end
+ * times, the old values are deleted. Any other parameters that you don't specify are not changed by this update
+ *
+ * request>
+ *
+ * You can view the scheduled actions using <a>DescribeScheduledActions</a>. If you are no longer using a scheduled action,
+ * you can delete it using
+ */
+PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(const PutScheduledActionRequest &request)
+{
+
+}
+
+/**
+ * Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or
+ * scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum
+ * values for its scalable
+ *
+ * dimension>
+ *
+ * After you register a scalable target, you can create and apply scaling policies using <a>PutScalingPolicy</a>. You can
+ * view the scaling policies for a service namespace using <a>DescribeScalableTargets</a>. If you no longer need a scalable
+ * target, you can deregister it using
+ */
+RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableTarget(const RegisterScalableTargetRequest &request)
+{
+
+}
 
 /**
  * @internal

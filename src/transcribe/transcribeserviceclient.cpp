@@ -88,7 +88,31 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Returns information about a transcription job. To see the status of the job, check the <code>Status</code> field. If the
+ * status is <code>COMPLETE</code>, the job is finished and you can find the results at the location specified in the
+ * <code>TranscriptionFileUri</code>
+ */
+GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const GetTranscriptionJobRequest &request)
+{
+
+}
+
+/**
+ * Lists transcription jobs with the specified
+ */
+ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(const ListTranscriptionJobsRequest &request)
+{
+
+}
+
+/**
+ * Starts an asynchronous job to transcribe speech to
+ */
+StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
+{
+
+}
 
 /**
  * @internal

@@ -91,7 +91,247 @@ EcrClient::EcrClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Check the availability of multiple image layers in a specified registry and
+ *
+ * repository> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
+{
+
+}
+
+/**
+ * Deletes a list of specified images within a specified repository. Images are specified with either <code>imageTag</code>
+ * or
+ *
+ * <code>imageDigest</code>>
+ *
+ * You can remove a tag from an image by specifying the image's tag in your request. When you remove the last tag from an
+ * image, the image is deleted from your
+ *
+ * repository>
+ *
+ * You can completely delete an image (and all of its tags) by specifying the image's digest in your
+ */
+BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageRequest &request)
+{
+
+}
+
+/**
+ * Gets detailed information for specified images within a specified repository. Images are specified with either
+ * <code>imageTag</code> or
+ */
+BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &request)
+{
+
+}
+
+/**
+ * Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID.
+ * You can optionally provide a <code>sha256</code> digest of the image layer for data validation
+ *
+ * purposes> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
+{
+
+}
+
+/**
+ * Creates an image
+ */
+CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified lifecycle
+ */
+DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
+{
+
+}
+
+/**
+ * Deletes an existing image repository. If a repository contains images, you must use the <code>force</code> option to
+ * delete
+ */
+DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryRequest &request)
+{
+
+}
+
+/**
+ * Deletes the repository policy from a specified
+ */
+DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
+{
+
+}
+
+/**
+ * Returns metadata about the images in a repository, including image size, image tags, and creation
+ *
+ * date> <note>
+ *
+ * Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker
+ * registry. The output of the <code>docker images</code> command shows the uncompressed image size, so it may return a
+ * larger image size than the image sizes returned by
+ */
+DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &request)
+{
+
+}
+
+/**
+ * Describes image repositories in a
+ */
+DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRepositoriesRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a token that is valid for a specified registry for 12 hours. This command allows you to use the
+ * <code>docker</code> CLI to push and pull images with Amazon ECR. If you do not specify a registry, the default registry
+ * is
+ *
+ * assumed>
+ *
+ * The <code>authorizationToken</code> returned for each registry specified is a base64 encoded string that can be decoded
+ * and used in a <code>docker login</code> command to authenticate to a registry. The AWS CLI offers an <code>aws ecr
+ * get-login</code> command that simplifies the login
+ */
+GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer. You can only get URLs for image layers
+ * that are referenced in an
+ *
+ * image> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the specified lifecycle
+ */
+GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the results of the specified lifecycle policy preview
+ */
+GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the repository policy for a specified
+ */
+GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
+{
+
+}
+
+/**
+ * Notify Amazon ECR that you intend to upload an image
+ *
+ * layer> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
+{
+
+}
+
+/**
+ * Lists all the image IDs for a given
+ *
+ * repository>
+ *
+ * You can filter images based on whether or not they are tagged by setting the <code>tagStatus</code> parameter to
+ * <code>TAGGED</code> or <code>UNTAGGED</code>. For example, you can filter your results to return only
+ * <code>UNTAGGED</code> images and then pipe that result to a <a>BatchDeleteImage</a> operation to delete them. Or, you
+ * can filter your results to return only <code>TAGGED</code> images to list all of the tags in your
+ */
+ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
+{
+
+}
+
+/**
+ * Creates or updates the image manifest and tags associated with an
+ *
+ * image> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
+{
+
+}
+
+/**
+ * Creates or updates a lifecycle policy. For information about lifecycle policy syntax, see <a
+ * href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
+ */
+PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
+{
+
+}
+
+/**
+ * Applies a repository policy on a specified repository to control access
+ */
+SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
+{
+
+}
+
+/**
+ * Starts a preview of the specified lifecycle policy. This allows you to see the results before creating the lifecycle
+ */
+StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request)
+{
+
+}
+
+/**
+ * Uploads an image layer part to Amazon
+ *
+ * ECR> <note>
+ *
+ * This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and
+ * pushing images. In most cases, you should use the <code>docker</code> CLI to pull, tag, and push
+ */
+UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartRequest &request)
+{
+
+}
 
 /**
  * @internal

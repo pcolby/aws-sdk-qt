@@ -90,7 +90,537 @@ GreengrassClient::GreengrassClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.
+ */
+AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const AssociateRoleToGroupRequest &request)
+{
+
+}
+
+/**
+ * Associates a role which is used by AWS Greengrass. AWS Greengrass uses the role to access your Lambda functions and AWS
+ * IoT resources. This is necessary for deployments to succeed. It needs to have minimum permissions in policy
+ */
+AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request)
+{
+
+}
+
+/**
+ * Creates a core definition. You may optionally provide the initial version of the core definition or use
+ */
+CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const CreateCoreDefinitionRequest &request)
+{
+
+}
+
+/**
+ * Creates a version of a core definition that has already been defined. AWS Greengrass Groups must each contain exactly 1
+ */
+CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVersion(const CreateCoreDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploymentRequest &request)
+{
+
+}
+
+/**
+ * Creates a device definition. You may optinally provide the initial version of the device definition or use
+ */
+CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const CreateDeviceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinitionVersion(const CreateDeviceDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ * Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a
+ * group. You can create an initial version of the definition by providing a list of Lambda functions and their
+ */
+CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(const CreateFunctionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefinitionVersion(const CreateFunctionDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ * Creates a group. You may optionally provide the initial version of the group or use ''CreateGroupVersion'' at a later
+ */
+CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &request)
+{
+
+}
+
+/**
+ */
+CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertificateAuthority(const CreateGroupCertificateAuthorityRequest &request)
+{
+
+}
+
+/**
+ */
+CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGroupVersionRequest &request)
+{
+
+}
+
+/**
+ * Creates a logger definition. You may optionally provide the initial version of the logger definition or use
+ */
+CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const CreateLoggerDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinitionVersion(const CreateLoggerDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ * Creates a resource definition which contains a list of resources to be used in a group. You can create an initial
+ */
+CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(const CreateResourceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefinitionVersion(const CreateResourceDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(const CreateSoftwareUpdateJobRequest &request)
+{
+
+}
+
+/**
+ * Creates a subscription definition. You may optionally provide the initial version of the subscription definition or use
+ */
+CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefinition(const CreateSubscriptionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscriptionDefinitionVersion(const CreateSubscriptionDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const DeleteCoreDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const DeleteDeviceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(const DeleteFunctionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const DeleteLoggerDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(const DeleteResourceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefinition(const DeleteSubscriptionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(const DisassociateRoleFromGroupRequest &request)
+{
+
+}
+
+/**
+ */
+DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServiceRoleFromAccount(const DisassociateServiceRoleFromAccountRequest &request)
+{
+
+}
+
+/**
+ */
+GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssociatedRoleRequest &request)
+{
+
+}
+
+/**
+ */
+GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetConnectivityInfoRequest &request)
+{
+
+}
+
+/**
+ */
+GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(const GetCoreDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDeploymentStatusRequest &request)
+{
+
+}
+
+/**
+ */
+GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDeviceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersion(const GetDeviceDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const GetFunctionDefinitionRequest &request)
+{
+
+}
+
+/**
+ * Retrieves information about a Lambda function definition version, such as which Lambda functions are included in the
+ */
+GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVersion(const GetFunctionDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
+{
+
+}
+
+/**
+ */
+GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuthority(const GetGroupCertificateAuthorityRequest &request)
+{
+
+}
+
+/**
+ */
+GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificateConfiguration(const GetGroupCertificateConfigurationRequest &request)
+{
+
+}
+
+/**
+ */
+GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLoggerDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersion(const GetLoggerDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const GetResourceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVersion(const GetResourceDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request)
+{
+
+}
+
+/**
+ */
+GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(const GetSubscriptionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefinitionVersion(const GetSubscriptionDefinitionVersionRequest &request)
+{
+
+}
+
+/**
+ */
+ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersions(const ListCoreDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCoreDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeploymentsRequest &request)
+{
+
+}
+
+/**
+ */
+ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVersions(const ListDeviceDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const ListDeviceDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitionVersions(const ListFunctionDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(const ListFunctionDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificateAuthorities(const ListGroupCertificateAuthoritiesRequest &request)
+{
+
+}
+
+/**
+ */
+ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &request)
+{
+
+}
+
+/**
+ */
+ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVersions(const ListLoggerDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const ListLoggerDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitionVersions(const ListResourceDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(const ListResourceDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionDefinitionVersions(const ListSubscriptionDefinitionVersionsRequest &request)
+{
+
+}
+
+/**
+ */
+ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefinitions(const ListSubscriptionDefinitionsRequest &request)
+{
+
+}
+
+/**
+ */
+ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploymentsRequest &request)
+{
+
+}
+
+/**
+ * Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive
+ */
+UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const UpdateConnectivityInfoRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const UpdateCoreDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const UpdateDeviceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(const UpdateFunctionDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCertificateConfiguration(const UpdateGroupCertificateConfigurationRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const UpdateLoggerDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(const UpdateResourceDefinitionRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request)
+{
+
+}
 
 /**
  * @internal

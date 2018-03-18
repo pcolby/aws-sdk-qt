@@ -93,7 +93,578 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Accepts an offer to share the specified
+ */
+AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const AcceptPortfolioShareRequest &request)
+{
+
+}
+
+/**
+ * Associates the specified principal ARN with the specified
+ */
+AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincipalWithPortfolio(const AssociatePrincipalWithPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Associates the specified product with the specified
+ */
+AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWithPortfolio(const AssociateProductWithPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Associate the specified TagOption with the specified portfolio or
+ */
+AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptionWithResource(const AssociateTagOptionWithResourceRequest &request)
+{
+
+}
+
+/**
+ * Copies the specified source product to the specified target product or a new
+ *
+ * product>
+ *
+ * You can copy a product to the same account or another account. You can copy a product to the same region or another
+ *
+ * region>
+ *
+ * This operation is performed asynchronously. To track the progress of the operation, use
+ */
+CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateConstraintRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePortfolioRequest &request)
+{
+
+}
+
+/**
+ * Shares the specified portfolio with the specified
+ */
+CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const CreatePortfolioShareRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductRequest &request)
+{
+
+}
+
+/**
+ * Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when
+ * updating a provisioned product) when the plan is
+ *
+ * executed>
+ *
+ * You can create one plan per provisioned product. To create a plan for an existing provisioned product, the product
+ * status must be AVAILBLE or
+ *
+ * TAINTED>
+ *
+ * To view the resource changes in the change set, use <a>DescribeProvisionedProductPlan</a>. To create or modify the
+ * provisioned product, use
+ */
+CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedProductPlan(const CreateProvisionedProductPlanRequest &request)
+{
+
+}
+
+/**
+ * Creates a provisioning artifact (also known as a version) for the specified
+ *
+ * product>
+ *
+ * You cannot create a provisioning artifact for a product that was shared with
+ */
+CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArtifact(const CreateProvisioningArtifactRequest &request)
+{
+
+}
+
+/**
+ * Creates a
+ */
+CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagOptionRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ */
+DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteConstraintRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ *
+ * portfolio>
+ *
+ * You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared
+ */
+DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePortfolioRequest &request)
+{
+
+}
+
+/**
+ * Stops sharing the specified portfolio with the specified
+ */
+DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const DeletePortfolioShareRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ *
+ * product>
+ *
+ * You cannot delete a product if it was shared with you or is associated with a
+ */
+DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ */
+DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedProductPlan(const DeleteProvisionedProductPlanRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified provisioning artifact (also known as a version) for the specified
+ *
+ * product>
+ *
+ * You cannot delete a provisioning artifact associated with a product that was shared with you. You cannot delete the last
+ * provisioning artifact for a product, because a product must have at least one provisioning
+ */
+DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArtifact(const DeleteProvisioningArtifactRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ *
+ * TagOption>
+ *
+ * You cannot delete a TagOption if it is associated with a product or
+ */
+DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagOptionRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified
+ */
+DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const DescribeConstraintRequest &request)
+{
+
+}
+
+/**
+ * Gets the status of the specified copy product
+ */
+DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductStatus(const DescribeCopyProductStatusRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified
+ */
+DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const DescribePortfolioRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified
+ */
+DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribeProductRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified product. This operation is run with administrator
+ */
+DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(const DescribeProductAsAdminRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified
+ */
+DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const DescribeProductViewRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified provisioned
+ */
+DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedProduct(const DescribeProvisionedProductRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the resource changes for the specified
+ */
+DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvisionedProductPlan(const DescribeProvisionedProductPlanRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified provisioning artifact (also known as a version) for the specified
+ */
+DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisioningArtifact(const DescribeProvisioningArtifactRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the configuration required to provision the specified product using the specified provisioning
+ *
+ * artifact>
+ *
+ * If the output contains a TagOption key with an empty list of values, there is a TagOption conflict for that key. The end
+ * user cannot take action to fix the conflict, and launch is not blocked. In subsequent calls to <a>ProvisionProduct</a>,
+ * do not include conflicted TagOption keys as tags, or this causes the error "Parameter validation failed: Missing
+ * required parameter in Tags[<i>N</i>]:<i>Value</i>". Tag the provisioned product with the value
+ */
+DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvisioningParameters(const DescribeProvisioningParametersRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified request
+ *
+ * operation>
+ *
+ * Use this operation after calling a request operation (for example, <a>ProvisionProduct</a>,
+ * <a>TerminateProvisionedProduct</a>, or <a>UpdateProvisionedProduct</a>).
+ */
+DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeRecordRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the specified
+ */
+DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const DescribeTagOptionRequest &request)
+{
+
+}
+
+/**
+ * Disassociates a previously associated principal ARN from a specified
+ */
+DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociatePrincipalFromPortfolio(const DisassociatePrincipalFromPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Disassociates the specified product from the specified portfolio.
+ */
+DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociateProductFromPortfolio(const DisassociateProductFromPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Disassociates the specified TagOption from the specified
+ */
+DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTagOptionFromResource(const DisassociateTagOptionFromResourceRequest &request)
+{
+
+}
+
+/**
+ * Provisions or modifies a product based on the resource changes for the specified
+ */
+ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisionedProductPlan(const ExecuteProvisionedProductPlanRequest &request)
+{
+
+}
+
+/**
+ * Lists all portfolios for which sharing was accepted by this
+ */
+ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request)
+{
+
+}
+
+/**
+ * Lists the constraints for the specified portfolio and
+ */
+ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPortfolio(const ListConstraintsForPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary
+ * when provisioning a product. A path also determines the constraints put on the
+ */
+ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunchPathsRequest &request)
+{
+
+}
+
+/**
+ * Lists the account IDs that have access to the specified
+ */
+ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const ListPortfolioAccessRequest &request)
+{
+
+}
+
+/**
+ * Lists all portfolios in the
+ */
+ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoliosRequest &request)
+{
+
+}
+
+/**
+ * Lists all portfolios that the specified product is associated
+ */
+ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduct(const ListPortfoliosForProductRequest &request)
+{
+
+}
+
+/**
+ * Lists all principal ARNs associated with the specified
+ */
+ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPortfolio(const ListPrincipalsForPortfolioRequest &request)
+{
+
+}
+
+/**
+ * Lists the plans for the specified provisioned product or all plans to which the user has
+ */
+ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProductPlans(const ListProvisionedProductPlansRequest &request)
+{
+
+}
+
+/**
+ * Lists all provisioning artifacts (also known as versions) for the specified
+ */
+ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifacts(const ListProvisioningArtifactsRequest &request)
+{
+
+}
+
+/**
+ * Lists the specified requests or all performed
+ */
+ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRecordHistoryRequest &request)
+{
+
+}
+
+/**
+ * Lists the resources associated with the specified
+ */
+ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOption(const ListResourcesForTagOptionRequest &request)
+{
+
+}
+
+/**
+ * Lists the specified TagOptions or all
+ */
+ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptionsRequest &request)
+{
+
+}
+
+/**
+ * Provisions the specified
+ *
+ * product>
+ *
+ * A provisioned product is a resourced instance of a product. For example, provisioning a product based on a
+ * CloudFormation template launches a CloudFormation stack and its underlying resources. You can check the status of this
+ * request using
+ *
+ * <a>DescribeRecord</a>>
+ *
+ * If the request contains a tag key with an empty list of values, there is a tag conflict for that key. Do not include
+ * conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in
+ */
+ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const ProvisionProductRequest &request)
+{
+
+}
+
+/**
+ * Rejects an offer to share the specified
+ */
+RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const RejectPortfolioShareRequest &request)
+{
+
+}
+
+/**
+ * Lists the provisioned products that are available (not
+ *
+ * terminated)>
+ *
+ * To use additional filtering, see
+ */
+ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(const ScanProvisionedProductsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the products to which the caller has
+ */
+SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProductsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the products for the specified portfolio or all
+ */
+SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(const SearchProductsAsAdminRequest &request)
+{
+
+}
+
+/**
+ * Gets information about the provisioned products that meet the specified
+ */
+SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProducts(const SearchProvisionedProductsRequest &request)
+{
+
+}
+
+/**
+ * Terminates the specified provisioned
+ *
+ * product>
+ *
+ * This operation does not delete any records associated with the provisioned
+ *
+ * product>
+ *
+ * You can check the status of this request using
+ */
+TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisionedProduct(const TerminateProvisionedProductRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified
+ */
+UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateConstraintRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified
+ *
+ * portfolio>
+ *
+ * You cannot update a product that was shared with
+ */
+UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePortfolioRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified
+ */
+UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductRequest &request)
+{
+
+}
+
+/**
+ * Requests updates to the configuration of the specified provisioned
+ *
+ * product>
+ *
+ * If there are tags associated with the object, they cannot be updated or added. Depending on the specific updates
+ * requested, this operation can update with no interruption, with some interruption, or replace the provisioned product
+ *
+ * entirely>
+ *
+ * You can check the status of this request using
+ */
+UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduct(const UpdateProvisionedProductRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified provisioning artifact (also known as a version) for the specified
+ *
+ * product>
+ *
+ * You cannot update a provisioning artifact for a product that was shared with
+ */
+UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArtifact(const UpdateProvisioningArtifactRequest &request)
+{
+
+}
+
+/**
+ * Updates the specified
+ */
+UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagOptionRequest &request)
+{
+
+}
 
 /**
  * @internal

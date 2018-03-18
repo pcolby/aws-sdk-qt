@@ -151,7 +151,195 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Associates one or more configuration items with an
+ */
+AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
+{
+
+}
+
+/**
+ * Creates an application with the given name and
+ */
+CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
+{
+
+}
+
+/**
+ * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
+ * a list of multiple configuration
+ */
+CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
+{
+
+}
+
+/**
+ * Deletes a list of applications and their associations with configuration
+ */
+DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
+{
+
+}
+
+/**
+ * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
+ * configuration
+ */
+DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
+{
+
+}
+
+/**
+ * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
+ * specify an
+ */
+DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
+{
+
+}
+
+/**
+ * Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type
+ * (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the
+ * output for a <i>server</i> configuration item includes a list of attributes about the server, such as host name,
+ * operating system, and number of network
+ *
+ * cards>
+ *
+ * For a complete list of outputs for each asset type, see <a
+ * href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations">Using
+ * the DescribeConfigurations
+ */
+DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
+{
+
+}
+
+/**
+ * Deprecated. Use <code>DescribeExportTasks</code>
+ *
+ * instead>
+ *
+ * Retrieves the status of a given export process. You can retrieve status from a maximum of 100
+ */
+DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
+{
+
+}
+
+/**
+ * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
+ */
+DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
+ * a specific configuration
+ */
+DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
+{
+
+}
+
+/**
+ * Disassociates one or more configuration items from an
+ */
+DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
+{
+
+}
+
+/**
+ * Deprecated. Use <code>StartExportTask</code>
+ *
+ * instead>
+ *
+ * Exports all discovered configuration data to an Amazon S3 bucket or an application that enables you to view and evaluate
+ * the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API
+ * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
+ * two configuration exports in six
+ */
+ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
+{
+
+}
+
+/**
+ * Retrieves a short summary of discovered
+ */
+GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
+ * identifies the relationship
+ */
+ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
+{
+
+}
+
+/**
+ * Retrieves a list of servers that are one network hop away from a specified
+ */
+ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
+{
+
+}
+
+/**
+ * Instructs the specified agents or connectors to start collecting
+ */
+StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
+{
+
+}
+
+/**
+ * Begins the export of discovered data to an S3
+ *
+ * bucket>
+ *
+ * If you specify <code>agentIds</code> in a filter, the task exports up to 72 hours of detailed data collected by the
+ * identified Application Discovery Agent, including network, process, and performance details. A time range for exported
+ * agent data may be set by using <code>startTime</code> and <code>endTime</code>. Export of detailed agent data is limited
+ * to five concurrently running exports.
+ *
+ * </p
+ *
+ * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both AWS Agentless
+ * Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports
+ * per day.
+ */
+StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
+{
+
+}
+
+/**
+ * Instructs the specified agents or connectors to stop collecting
+ */
+StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
+{
+
+}
+
+/**
+ * Updates metadata about an
+ */
+UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
+{
+
+}
 
 /**
  * @internal

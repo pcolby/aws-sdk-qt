@@ -125,7 +125,123 @@ BudgetsClient::BudgetsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a budget and, if included, notifications and subscribers.
+ */
+CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &request)
+{
+
+}
+
+/**
+ * Creates a notification. You must create the budget before you create the associated
+ */
+CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotificationRequest &request)
+{
+
+}
+
+/**
+ * Creates a subscriber. You must create the associated budget and notification before you create the
+ */
+CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscriberRequest &request)
+{
+
+}
+
+/**
+ * Deletes a budget. You can delete your budget at any
+ *
+ * time>
+ *
+ * <b>Deleting a budget also deletes the notifications and subscribers associated with that budget.</b>
+ */
+DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &request)
+{
+
+}
+
+/**
+ * Deletes a
+ *
+ * notification>
+ *
+ * <b>Deleting a notification also deletes the subscribers associated with the notification.</b>
+ */
+DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotificationRequest &request)
+{
+
+}
+
+/**
+ * Deletes a
+ *
+ * subscriber>
+ *
+ * <b>Deleting the last subscriber to a notification also deletes the notification.</b>
+ */
+DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscriberRequest &request)
+{
+
+}
+
+/**
+ * Describes a
+ */
+DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetRequest &request)
+{
+
+}
+
+/**
+ * Lists the budgets associated with an
+ */
+DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRequest &request)
+{
+
+}
+
+/**
+ * Lists the notifications associated with a
+ */
+DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsForBudget(const DescribeNotificationsForBudgetRequest &request)
+{
+
+}
+
+/**
+ * Lists the subscribers associated with a
+ */
+DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersForNotification(const DescribeSubscribersForNotificationRequest &request)
+{
+
+}
+
+/**
+ * Updates a budget. You can change every part of a budget except for the <code>budgetName</code> and the
+ * <code>calculatedSpend</code>. When a budget is modified, the <code>calculatedSpend</code> drops to zero until AWS has
+ * new usage data to use for
+ */
+UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &request)
+{
+
+}
+
+/**
+ * Updates a
+ */
+UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotificationRequest &request)
+{
+
+}
+
+/**
+ * Updates a
+ */
+UpdateSubscriberResponse * BudgetsClient::updateSubscriber(const UpdateSubscriberRequest &request)
+{
+
+}
 
 /**
  * @internal

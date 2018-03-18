@@ -89,7 +89,111 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a new AWS CloudHSM
+ */
+CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterRequest &request)
+{
+
+}
+
+/**
+ * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
+ */
+CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
+ * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
+ */
+DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified HSM. To specify an HSM, you can use its identifier (ID), the IP address of the HSM's elastic
+ * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
+ * use
+ */
+DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
+{
+
+}
+
+/**
+ * Gets information about backups of AWS CloudHSM
+ *
+ * clusters>
+ *
+ * This is a paginated operation, which means that each response might contain only a subset of all the backups. When the
+ * response contains only a subset of backups, it includes a <code>NextToken</code> value. Use this value in a subsequent
+ * <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or
+ * an empty or null value), that means there are no more backups to
+ */
+DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackupsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about AWS CloudHSM
+ *
+ * clusters>
+ *
+ * This is a paginated operation, which means that each response might contain only a subset of all the clusters. When the
+ * response contains only a subset of clusters, it includes a <code>NextToken</code> value. Use this value in a subsequent
+ * <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code>
+ * (or an empty or null value), that means there are no more clusters to
+ */
+DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClustersRequest &request)
+{
+
+}
+
+/**
+ * Claims an AWS CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA)
+ * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
+ * (CSR) with your issuing CA. To get the cluster's CSR, use
+ */
+InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const InitializeClusterRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of tags for the specified AWS CloudHSM
+ *
+ * cluster>
+ *
+ * This is a paginated operation, which means that each response might contain only a subset of all the tags. When the
+ * response contains only a subset of tags, it includes a <code>NextToken</code> value. Use this value in a subsequent
+ * <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty
+ * or null value), that means there are no more tags to
+ */
+ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
+{
+
+}
+
+/**
+ * Adds or overwrites one or more tags for the specified AWS CloudHSM
+ */
+TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified tag or tags from the specified AWS CloudHSM
+ */
+UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceRequest &request)
+{
+
+}
 
 /**
  * @internal

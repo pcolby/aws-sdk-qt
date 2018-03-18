@@ -155,7 +155,506 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Adds the specified certificate to the specified secure
+ *
+ * listener>
+ *
+ * If the certificate was already added, the call is successful but the certificate is not added
+ *
+ * again>
+ *
+ * To list the certificates for your listener, use <a>DescribeListenerCertificates</a>. To remove certificates from your
+ * listener, use
+ */
+AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCertificates(const AddListenerCertificatesRequest &request)
+{
+
+}
+
+/**
+ * Adds the specified tags to the specified Elastic Load Balancing resource. You can tag your Application Load Balancers,
+ * Network Load Balancers, and your target
+ *
+ * groups>
+ *
+ * Each tag consists of a key and an optional value. If a resource already has a tag with the same key,
+ * <code>AddTags</code> updates its
+ *
+ * value>
+ *
+ * To list the current tags for your resources, use <a>DescribeTags</a>. To remove tags from your resources, use
+ */
+AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &request)
+{
+
+}
+
+/**
+ * Creates a listener for the specified Application Load Balancer or Network Load
+ *
+ * Balancer>
+ *
+ * To update a listener, use <a>ModifyListener</a>. When you are finished with a listener, you can delete it using
+ * <a>DeleteListener</a>. If you are finished with both the listener and the load balancer, you can delete them both using
+ *
+ * <a>DeleteLoadBalancer</a>>
+ *
+ * This operation is idempotent, which means that it completes at most one time. If you attempt to create multiple
+ * listeners with the same settings, each call
+ *
+ * succeeds>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html">Listeners for
+ * Your Application Load Balancers</a> in the <i>Application Load Balancers Guide</i> and <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html">Listeners for Your
+ * Network Load Balancers</a> in the <i>Network Load Balancers
+ */
+CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const CreateListenerRequest &request)
+{
+
+}
+
+/**
+ * Creates an Application Load Balancer or a Network Load
+ *
+ * Balancer>
+ *
+ * When you create a load balancer, you can specify security groups, public subnets, IP address type, and tags. Otherwise,
+ * you could do so later using <a>SetSecurityGroups</a>, <a>SetSubnets</a>, <a>SetIpAddressType</a>, and
+ *
+ * <a>AddTags</a>>
+ *
+ * To create listeners for your load balancer, use <a>CreateListener</a>. To describe your current load balancers, see
+ * <a>DescribeLoadBalancers</a>. When you are finished with a load balancer, you can delete it using
+ *
+ * <a>DeleteLoadBalancer</a>>
+ *
+ * For limit information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
+ * Application Load Balancer</a> in the <i>Application Load Balancers Guide</i> and <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
+ * Load Balancer</a> in the <i>Network Load Balancers
+ *
+ * Guide</i>>
+ *
+ * This operation is idempotent, which means that it completes at most one time. If you attempt to create multiple load
+ * balancers with the same settings, each call
+ *
+ * succeeds>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html">Application
+ * Load Balancers</a> in the <i>Application Load Balancers Guide</i> and <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html">Network Load
+ * Balancers</a> in the <i>Network Load Balancers
+ */
+CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(const CreateLoadBalancerRequest &request)
+{
+
+}
+
+/**
+ * Creates a rule for the specified listener. The listener must be associated with an Application Load
+ *
+ * Balancer>
+ *
+ * Rules are evaluated in priority order, from the lowest value to the highest value. When the condition for a rule is met,
+ * the specified action is taken. If no conditions are met, the action for the default rule is taken. For more information,
+ * see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules">Listener
+ * Rules</a> in the <i>Application Load Balancers
+ *
+ * Guide</i>>
+ *
+ * To view your current rules, use <a>DescribeRules</a>. To update a rule, use <a>ModifyRule</a>. To set the priorities of
+ * your rules, use <a>SetRulePriorities</a>. To delete a rule, use
+ */
+CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRequest &request)
+{
+
+}
+
+/**
+ * Creates a target
+ *
+ * group>
+ *
+ * To register targets with the target group, use <a>RegisterTargets</a>. To update the health check settings for the
+ * target group, use <a>ModifyTargetGroup</a>. To monitor the health of targets in the target group, use
+ *
+ * <a>DescribeTargetHealth</a>>
+ *
+ * To route traffic to the targets in a target group, specify the target group in an action using <a>CreateListener</a> or
+ *
+ * <a>CreateRule</a>>
+ *
+ * To delete a target group, use
+ *
+ * <a>DeleteTargetGroup</a>>
+ *
+ * This operation is idempotent, which means that it completes at most one time. If you attempt to create multiple target
+ * groups with the same settings, each call
+ *
+ * succeeds>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html">Target Groups
+ * for Your Application Load Balancers</a> in the <i>Application Load Balancers Guide</i> or <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html">Target Groups for
+ * Your Network Load Balancers</a> in the <i>Network Load Balancers
+ */
+CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(const CreateTargetGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ *
+ * listener>
+ *
+ * Alternatively, your listener is deleted when you delete the load balancer it is attached to using
+ */
+DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const DeleteListenerRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified Application Load Balancer or Network Load Balancer and its attached
+ *
+ * listeners>
+ *
+ * You can't delete a load balancer if deletion protection is enabled. If the load balancer does not exist or has already
+ * been deleted, the call
+ *
+ * succeeds>
+ *
+ * Deleting a load balancer does not affect its registered targets. For example, your EC2 instances continue to run and are
+ * still registered to their target groups. If you no longer need these EC2 instances, you can stop or terminate
+ */
+DeleteLoadBalancerResponse * ElasticLoadBalancingv2Client::deleteLoadBalancer(const DeleteLoadBalancerRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified
+ */
+DeleteRuleResponse * ElasticLoadBalancingv2Client::deleteRule(const DeleteRuleRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified target
+ *
+ * group>
+ *
+ * You can delete a target group if it is not referenced by any actions. Deleting a target group also deletes any
+ * associated health
+ */
+DeleteTargetGroupResponse * ElasticLoadBalancingv2Client::deleteTargetGroup(const DeleteTargetGroupRequest &request)
+{
+
+}
+
+/**
+ * Deregisters the specified targets from the specified target group. After the targets are deregistered, they no longer
+ * receive traffic from the load
+ */
+DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(const DeregisterTargetsRequest &request)
+{
+
+}
+
+/**
+ * Describes the current Elastic Load Balancing resource limits for your AWS
+ *
+ * account>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
+ * Application Load Balancers</a> in the <i>Application Load Balancer Guide</i> or <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
+ * Load Balancers</a> in the <i>Network Load Balancers
+ */
+DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLimits(const DescribeAccountLimitsRequest &request)
+{
+
+}
+
+/**
+ * Describes the certificates for the specified secure
+ */
+DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeListenerCertificates(const DescribeListenerCertificatesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified listeners or the listeners for the specified Application Load Balancer or Network Load Balancer.
+ * You must specify either a load balancer or one or more
+ */
+DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(const DescribeListenersRequest &request)
+{
+
+}
+
+/**
+ * Describes the attributes for the specified Application Load Balancer or Network Load
+ */
+DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified load balancers or all of your load
+ *
+ * balancers>
+ *
+ * To describe the listeners for a load balancer, use <a>DescribeListeners</a>. To describe the attributes for a load
+ * balancer, use
+ */
+DescribeLoadBalancersResponse * ElasticLoadBalancingv2Client::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified rules or the rules for the specified listener. You must specify either a listener or one or more
+ */
+DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const DescribeRulesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified policies or all policies used for SSL
+ *
+ * negotiation>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">Security
+ * Policies</a> in the <i>Application Load Balancers
+ */
+DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(const DescribeSSLPoliciesRequest &request)
+{
+
+}
+
+/**
+ * Describes the tags for the specified resources. You can describe the tags for one or more Application Load Balancers,
+ * Network Load Balancers, and target
+ */
+DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const DescribeTagsRequest &request)
+{
+
+}
+
+/**
+ * Describes the attributes for the specified target
+ */
+DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTargetGroupAttributes(const DescribeTargetGroupAttributesRequest &request)
+{
+
+}
+
+/**
+ * Describes the specified target groups or all of your target groups. By default, all target groups are described.
+ * Alternatively, you can specify one of the following to filter the results: the ARN of the load balancer, the names of
+ * one or more target groups, or the ARNs of one or more target
+ *
+ * groups>
+ *
+ * To describe the targets for a target group, use <a>DescribeTargetHealth</a>. To describe the attributes of a target
+ * group, use
+ */
+DescribeTargetGroupsResponse * ElasticLoadBalancingv2Client::describeTargetGroups(const DescribeTargetGroupsRequest &request)
+{
+
+}
+
+/**
+ * Describes the health of the specified targets or all of your
+ */
+DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealth(const DescribeTargetHealthRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified properties of the specified
+ *
+ * listener>
+ *
+ * Any properties that you do not specify retain their current values. However, changing the protocol from HTTPS to HTTP
+ * removes the security policy and SSL certificate properties. If you change the protocol from HTTP to HTTPS, you must add
+ * the security policy and server
+ */
+ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const ModifyListenerRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified attributes of the specified Application Load Balancer or Network Load
+ *
+ * Balancer>
+ *
+ * If any of the specified attributes can't be modified as requested, the call fails. Any existing attributes that you do
+ * not modify retain their current
+ */
+ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadBalancerAttributes(const ModifyLoadBalancerAttributesRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified
+ *
+ * rule>
+ *
+ * Any existing properties that you do not modify retain their current
+ *
+ * values>
+ *
+ * To modify the default action, use
+ */
+ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRequest &request)
+{
+
+}
+
+/**
+ * Modifies the health checks used when evaluating the health state of the targets in the specified target
+ *
+ * group>
+ *
+ * To monitor the health of the targets, use
+ */
+ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(const ModifyTargetGroupRequest &request)
+{
+
+}
+
+/**
+ * Modifies the specified attributes of the specified target
+ */
+ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTargetGroupAttributes(const ModifyTargetGroupAttributesRequest &request)
+{
+
+}
+
+/**
+ * Registers the specified targets with the specified target
+ *
+ * group>
+ *
+ * You can register targets by instance ID or by IP address. If the target is an EC2 instance, it must be in the
+ * <code>running</code> state when you register
+ *
+ * it>
+ *
+ * By default, the load balancer routes requests to registered targets using the protocol and port for the target group.
+ * Alternatively, you can override the port for a target when you register it. You can register each EC2 instance or IP
+ * address with the same target group multiple times using different
+ *
+ * ports>
+ *
+ * With a Network Load Balancer, you cannot register instances by instance ID if they have the following instance types:
+ * C1, CC1, CC2, CG1, CG2, CR1, CS1, G1, G2, HI1, HS1, M1, M2, M3, and T1. You can register instances of these types by IP
+ *
+ * address>
+ *
+ * To remove a target from a target group, use
+ */
+RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const RegisterTargetsRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified certificate from the specified secure
+ *
+ * listener>
+ *
+ * You can't remove the default certificate for a listener. To replace the default certificate, call
+ *
+ * <a>ModifyListener</a>>
+ *
+ * To list the certificates for your listener, use
+ */
+RemoveListenerCertificatesResponse * ElasticLoadBalancingv2Client::removeListenerCertificates(const RemoveListenerCertificatesRequest &request)
+{
+
+}
+
+/**
+ * Removes the specified tags from the specified Elastic Load Balancing
+ *
+ * resource>
+ *
+ * To list the current tags for your resources, use
+ */
+RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRequest &request)
+{
+
+}
+
+/**
+ * Sets the type of IP addresses used by the subnets of the specified Application Load Balancer or Network Load
+ *
+ * Balancer>
+ *
+ * Note that Network Load Balancers must use
+ */
+SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const SetIpAddressTypeRequest &request)
+{
+
+}
+
+/**
+ * Sets the priorities of the specified
+ *
+ * rules>
+ *
+ * You can reorder the rules as long as there are no priority conflicts in the new order. Any existing rules that you do
+ * not specify retain their current
+ */
+SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(const SetRulePrioritiesRequest &request)
+{
+
+}
+
+/**
+ * Associates the specified security groups with the specified Application Load Balancer. The specified security groups
+ * override the previously associated security
+ *
+ * groups>
+ *
+ * Note that you can't specify a security group for a Network Load
+ */
+SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(const SetSecurityGroupsRequest &request)
+{
+
+}
+
+/**
+ * Enables the Availability Zone for the specified public subnets for the specified Application Load Balancer. The
+ * specified subnets replace the previously enabled
+ *
+ * subnets>
+ *
+ * Note that you can't change the subnets for a Network Load
+ */
+SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRequest &request)
+{
+
+}
 
 /**
  * @internal

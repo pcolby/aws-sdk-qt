@@ -106,7 +106,217 @@ SfnClient::SfnClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates an activity. An activity is a task which you write in any programming language and host on any machine which has
+ * access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and
+ * respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity
+ * and returns an identifier for use in a state machine and when polling from the
+ */
+CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &request)
+{
+
+}
+
+/**
+ * Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states),
+ * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
+ * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
+ */
+CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMachineRequest &request)
+{
+
+}
+
+/**
+ * Deletes an
+ */
+DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &request)
+{
+
+}
+
+/**
+ * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to <code>DELETING</code>
+ * and begins the deletion process. Each state machine execution is deleted the next time it makes a state
+ *
+ * transition> <note>
+ *
+ * The state machine itself is deleted after all executions are completed or
+ */
+DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMachineRequest &request)
+{
+
+}
+
+/**
+ * Describes an
+ */
+DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityRequest &request)
+{
+
+}
+
+/**
+ * Describes an
+ */
+DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecutionRequest &request)
+{
+
+}
+
+/**
+ * Describes a state
+ */
+DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeStateMachineRequest &request)
+{
+
+}
+
+/**
+ * Describes the state machine associated with a specific
+ */
+DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExecution(const DescribeStateMachineForExecutionRequest &request)
+{
+
+}
+
+/**
+ * Used by workers to retrieve a task (with the specified activity ARN) which has been scheduled for execution by a running
+ * state machine. This initiates a long poll, where the service holds the HTTP connection open and responds as soon as a
+ * task becomes available (i.e. an execution of a task of this type is needed.) The maximum time the service holds on to
+ * the request before responding is 60 seconds. If no task is available within 60 seconds, the poll returns a
+ * <code>taskToken</code> with a null
+ *
+ * string> <important>
+ *
+ * Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum time the
+ * service may hold the poll
+ */
+GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskRequest &request)
+{
+
+}
+
+/**
+ * Returns the history of the specified execution as a list of events. By default, the results are returned in ascending
+ * order of the <code>timeStamp</code> of the events. Use the <code>reverseOrder</code> parameter to get the latest events
+ *
+ * first>
+ *
+ * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
+ * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ */
+GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionHistoryRequest &request)
+{
+
+}
+
+/**
+ * Lists the existing
+ *
+ * activities>
+ *
+ * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
+ * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ */
+ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &request)
+{
+
+}
+
+/**
+ * Lists the executions of a state machine that meet the filtering
+ *
+ * criteria>
+ *
+ * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
+ * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ */
+ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &request)
+{
+
+}
+
+/**
+ * Lists the existing state
+ *
+ * machines>
+ *
+ * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
+ * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
+ */
+ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachinesRequest &request)
+{
+
+}
+
+/**
+ * Used by workers to report that the task identified by the <code>taskToken</code>
+ */
+SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureRequest &request)
+{
+
+}
+
+/**
+ * Used by workers to report to the service that the task represented by the specified <code>taskToken</code> is still
+ * making progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is specified
+ * in the state machine's Amazon States Language definition. This action does not in itself create an event in the
+ * execution history. However, if the task times out, the execution history contains an <code>ActivityTimedOut</code>
+ *
+ * event> <note>
+ *
+ * The <code>Timeout</code> of a task, defined in the state machine's Amazon States Language definition, is its maximum
+ * allowed duration, regardless of the number of <a>SendTaskHeartbeat</a> requests
+ *
+ * received> </note> <note>
+ *
+ * This operation is only useful for long-lived tasks to report the liveliness of the
+ */
+SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeatRequest &request)
+{
+
+}
+
+/**
+ * Used by workers to report that the task identified by the <code>taskToken</code> completed
+ */
+SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessRequest &request)
+{
+
+}
+
+/**
+ * Starts a state machine
+ */
+StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &request)
+{
+
+}
+
+/**
+ * Stops an
+ */
+StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &request)
+{
+
+}
+
+/**
+ * Updates an existing state machine by modifying its <code>definition</code> and/or <code>roleArn</code>. Running
+ * executions will continue to use the previous <code>definition</code> and
+ *
+ * <code>roleArn</code>> <note>
+ *
+ * All <code>StartExecution</code> calls within a few seconds will use the updated <code>definition</code> and
+ * <code>roleArn</code>. Executions started immediately after calling <code>UpdateStateMachine</code> may use the previous
+ * state machine <code>definition</code> and <code>roleArn</code>. You must include at least one of <code>definition</code>
+ * or <code>roleArn</code> or you will receive a <code>MissingRequiredParameter</code>
+ */
+UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMachineRequest &request)
+{
+
+}
 
 /**
  * @internal

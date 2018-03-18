@@ -87,7 +87,155 @@ MediaConvertClient::MediaConvertClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a
+ */
+CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &request)
+{
+
+}
+
+/**
+ * Create a new transcoding job. For information about jobs and job settings, see the User Guide at
+ */
+CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &request)
+{
+
+}
+
+/**
+ * Create a new job template. For information about job templates see the User Guide at
+ */
+CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJobTemplateRequest &request)
+{
+
+}
+
+/**
+ * Create a new preset. For information about job templates see the User Guide at
+ */
+CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetRequest &request)
+{
+
+}
+
+/**
+ * Create a new transcoding queue. For information about job templates see the User Guide at
+ */
+CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJobTemplateRequest &request)
+{
+
+}
+
+/**
+ */
+DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const DescribeEndpointsRequest &request)
+{
+
+}
+
+/**
+ */
+GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
+{
+
+}
+
+/**
+ */
+GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplateRequest &request)
+{
+
+}
+
+/**
+ */
+GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &request)
+{
+
+}
+
+/**
+ */
+GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
+{
+
+}
+
+/**
+ * Retrieve a JSON array of up to twenty of your job templates. This will return the templates themselves, not just a list
+ */
+ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTemplatesRequest &request)
+{
+
+}
+
+/**
+ * Retrieve a JSON array of up to twenty of your most recently created jobs. This array includes in-process, completed, and
+ * errored jobs. This will return the jobs themselves, not just a list of the jobs. To retrieve the twenty next most recent
+ */
+ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
+{
+
+}
+
+/**
+ * Retrieve a JSON array of up to twenty of your presets. This will return the presets themselves, not just a list of them.
+ */
+ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &request)
+{
+
+}
+
+/**
+ * Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them.
+ */
+ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJobTemplateRequest &request)
+{
+
+}
+
+/**
+ */
+UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &request)
+{
+
+}
 
 /**
  * @internal

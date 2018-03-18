@@ -141,7 +141,87 @@ Cloud9Client::Cloud9Client(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
+ * connects from the instance to the
+ */
+CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEnvironmentEC2Request &request)
+{
+
+}
+
+/**
+ * Adds an environment member to an AWS Cloud9 development
+ */
+CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(const CreateEnvironmentMembershipRequest &request)
+{
+
+}
+
+/**
+ * Deletes an AWS Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also
+ * terminates the
+ */
+DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironmentRequest &request)
+{
+
+}
+
+/**
+ * Deletes an environment member from an AWS Cloud9 development
+ */
+DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(const DeleteEnvironmentMembershipRequest &request)
+{
+
+}
+
+/**
+ * Gets information about environment members for an AWS Cloud9 development
+ */
+DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMemberships(const DescribeEnvironmentMembershipsRequest &request)
+{
+
+}
+
+/**
+ * Gets status information for an AWS Cloud9 development
+ */
+DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request)
+{
+
+}
+
+/**
+ * Gets information about AWS Cloud9 development
+ */
+DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const DescribeEnvironmentsRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of AWS Cloud9 development environment
+ */
+ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
+{
+
+}
+
+/**
+ * Changes the settings of an existing AWS Cloud9 development
+ */
+UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironmentRequest &request)
+{
+
+}
+
+/**
+ * Changes the settings of an existing environment member for an AWS Cloud9 development
+ */
+UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request)
+{
+
+}
 
 /**
  * @internal

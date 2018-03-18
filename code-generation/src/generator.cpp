@@ -195,6 +195,10 @@ QVariantMap Generator::getFunctionSignature(const QString &operationName, const 
             : QString() // No input to this request.
     );
 
+    signature.insert(QStringLiteral("documentation"),
+                     formatHtmlDocumentation(operation.value(
+                        QStringLiteral("documentation")).toString()));
+
     return signature;
 }
 

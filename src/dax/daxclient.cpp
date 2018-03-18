@@ -91,7 +91,218 @@ DaxClient::DaxClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
+ */
+CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &request)
+{
+
+}
+
+/**
+ * Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a
+ * DAX
+ */
+CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParameterGroupRequest &request)
+{
+
+}
+
+/**
+ * Creates a new subnet
+ */
+CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroupRequest &request)
+{
+
+}
+
+/**
+ * Removes one or more nodes from a DAX
+ *
+ * cluster> <note>
+ *
+ * You cannot use <code>DecreaseReplicationFactor</code> to remove the last node in a DAX cluster. If you need to do this,
+ * use <code>DeleteCluster</code>
+ */
+DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const DecreaseReplicationFactorRequest &request)
+{
+
+}
+
+/**
+ * Deletes a previously provisioned DAX cluster. <i>DeleteCluster</i> deletes all associated nodes, node endpoints and the
+ * DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the
+ * cluster; you cannot cancel or revert this
+ */
+DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &request)
+{
+
+}
+
+/**
+ * Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX
+ */
+DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParameterGroupRequest &request)
+{
+
+}
+
+/**
+ * Deletes a subnet
+ *
+ * group> <note>
+ *
+ * You cannot delete a subnet group if it is associated with any DAX
+ */
+DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroupRequest &request)
+{
+
+}
+
+/**
+ * Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX
+ * cluster if a cluster identifier is
+ *
+ * supplied>
+ *
+ * If the cluster is in the CREATING state, only cluster level information will be displayed until all of the nodes are
+ * successfully
+ *
+ * provisioned>
+ *
+ * If the cluster is in the DELETING state, only cluster level information will be
+ *
+ * displayed>
+ *
+ * If nodes are currently being added to the DAX cluster, node endpoint information and creation time for the additional
+ * nodes will not be displayed until they are completely provisioned. When the DAX cluster state is <i>available</i>, the
+ * cluster is ready for
+ *
+ * use>
+ *
+ * If nodes are currently being removed from the DAX cluster, no endpoint information for the removed nodes is
+ */
+DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersRequest &request)
+{
+
+}
+
+/**
+ * Returns the default system parameter information for the DAX caching
+ */
+DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const DescribeDefaultParametersRequest &request)
+{
+
+}
+
+/**
+ * Returns events related to DAX clusters and parameter groups. You can obtain events specific to a particular DAX cluster
+ * or parameter group by providing the name as a
+ *
+ * parameter>
+ *
+ * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
+ * of events if
+ */
+DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the
+ * descriptions for that
+ */
+DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const DescribeParameterGroupsRequest &request)
+{
+
+}
+
+/**
+ * Returns the detailed parameter list for a particular parameter
+ */
+DescribeParametersResponse * DaxClient::describeParameters(const DescribeParametersRequest &request)
+{
+
+}
+
+/**
+ * Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the
+ * description of that
+ */
+DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSubnetGroupsRequest &request)
+{
+
+}
+
+/**
+ * Adds one or more nodes to a DAX
+ */
+IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const IncreaseReplicationFactorRequest &request)
+{
+
+}
+
+/**
+ * List all of the tags for a DAX cluster. You can call <code>ListTags</code> up to 10 times per second, per
+ */
+ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
+{
+
+}
+
+/**
+ * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
+ * status is set to
+ */
+RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
+{
+
+}
+
+/**
+ * Associates a set of tags with a DAX resource. You can call <code>TagResource</code> up to 5 times per second, per
+ * account.
+ */
+TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
+{
+
+}
+
+/**
+ * Removes the association of tags from a DAX resource. You can call <code>UntagResource</code> up to 5 times per second,
+ * per account.
+ */
+UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &request)
+{
+
+}
+
+/**
+ * Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters
+ * by specifying the parameters and the new
+ */
+UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &request)
+{
+
+}
+
+/**
+ * Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a
+ * list parameter name and value
+ */
+UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParameterGroupRequest &request)
+{
+
+}
+
+/**
+ * Modifies an existing subnet
+ */
+UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroupRequest &request)
+{
+
+}
 
 /**
  * @internal

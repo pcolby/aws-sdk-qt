@@ -93,7 +93,60 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Deletes the thing shadow for the specified
+ *
+ * thing>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the
+ * <i>AWS IoT Developer
+ */
+DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteThingShadowRequest &request)
+{
+
+}
+
+/**
+ * Gets the thing shadow for the specified
+ *
+ * thing>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the <i>AWS IoT
+ * Developer
+ */
+GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadowRequest &request)
+{
+
+}
+
+/**
+ * Publishes state
+ *
+ * information>
+ *
+ * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
+ * Protocol</a> in the <i>AWS IoT Developer
+ */
+PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
+{
+
+}
+
+/**
+ * Updates the thing shadow for the specified
+ *
+ * thing>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the
+ * <i>AWS IoT Developer
+ */
+UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateThingShadowRequest &request)
+{
+
+}
 
 /**
  * @internal

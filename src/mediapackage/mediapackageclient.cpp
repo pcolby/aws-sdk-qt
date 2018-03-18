@@ -87,7 +87,82 @@ MediaPackageClient::MediaPackageClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ */
+CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelRequest &request)
+{
+
+}
+
+/**
+ */
+CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const CreateOriginEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const DeleteOriginEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChannelRequest &request)
+{
+
+}
+
+/**
+ */
+DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(const DescribeOriginEndpointRequest &request)
+{
+
+}
+
+/**
+ */
+ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsRequest &request)
+{
+
+}
+
+/**
+ */
+ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const ListOriginEndpointsRequest &request)
+{
+
+}
+
+/**
+ */
+RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(const RotateChannelCredentialsRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelRequest &request)
+{
+
+}
+
+/**
+ */
+UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const UpdateOriginEndpointRequest &request)
+{
+
+}
 
 /**
  * @internal

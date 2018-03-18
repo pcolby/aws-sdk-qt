@@ -163,7 +163,137 @@ CodeBuildClient::CodeBuildClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Deletes one or more
+ */
+BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDeleteBuildsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about
+ */
+BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsRequest &request)
+{
+
+}
+
+/**
+ * Gets information about build
+ */
+BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProjectsRequest &request)
+{
+
+}
+
+/**
+ * Creates a build
+ */
+CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectRequest &request)
+{
+
+}
+
+/**
+ * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS
+ * CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the
+ *
+ * repository> <important>
+ *
+ * If you enable webhooks for an AWS CodeBuild project, and the project is used as a build step in AWS CodePipeline, then
+ * two identical builds will be created for each commit. One build is triggered through webhooks, and one through AWS
+ * CodePipeline. Because billing is on a per-build basis, you will be billed for both builds. Therefore, if you are using
+ * AWS CodePipeline, we recommend that you disable webhooks in CodeBuild. In the AWS CodeBuild console, clear the Webhook
+ * box. For more information, see step 9 in <a
+ * href="http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console">Change a Build
+ * Project's
+ */
+CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookRequest &request)
+{
+
+}
+
+/**
+ * Deletes a build
+ */
+DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectRequest &request)
+{
+
+}
+
+/**
+ * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
+ * from automatically rebuilding the source code every time a code change is pushed to the
+ */
+DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookRequest &request)
+{
+
+}
+
+/**
+ * Resets the cache for a
+ */
+InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const InvalidateProjectCacheRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of build IDs, with each build ID representing a single
+ */
+ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of build IDs for the specified build project, with each build ID representing a single
+ */
+ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListBuildsForProjectRequest &request)
+{
+
+}
+
+/**
+ * Gets information about Docker images that are managed by AWS
+ */
+ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentImages(const ListCuratedEnvironmentImagesRequest &request)
+{
+
+}
+
+/**
+ * Gets a list of build project names, with each build project name representing a single build
+ */
+ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &request)
+{
+
+}
+
+/**
+ * Starts running a
+ */
+StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &request)
+{
+
+}
+
+/**
+ * Attempts to stop running a
+ */
+StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
+{
+
+}
+
+/**
+ * Changes the settings of a build
+ */
+UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectRequest &request)
+{
+
+}
 
 /**
  * @internal

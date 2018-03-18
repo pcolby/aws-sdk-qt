@@ -120,7 +120,56 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+/**
+ * Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the
+ * composition of its shards, and its corresponding DynamoDB
+ *
+ * table> <note><p>You can call <i>DescribeStream</i> at a maximum rate of 10 times per second.</p></note>
+ *
+ * Each shard in the stream has a <code>SequenceNumberRange</code> associated with it. If the
+ * <code>SequenceNumberRange</code> has a <code>StartingSequenceNumber</code> but no <code>EndingSequenceNumber</code>,
+ * then the shard is still open (able to receive more stream records). If both <code>StartingSequenceNumber</code> and
+ * <code>EndingSequenceNumber</code> are present, the that shared is closed and can no longer receive more
+ */
+DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStreamRequest &request)
+{
+
+}
+
+/**
+ * Retrieves the stream records from a given
+ *
+ * shard>
+ *
+ * Specify a shard iterator using the <code>ShardIterator</code> parameter. The shard iterator specifies the position in
+ * the shard from which you want to start reading stream records sequentially. If there are no stream records available in
+ * the portion of the shard that the iterator points to, <code>GetRecords</code> returns an empty list. Note that it might
+ * take multiple calls to get to a portion of the shard that contains stream
+ *
+ * records> <note><p><function>GetRecords</function> can retrieve a maximum of 1 MB of data or 2000 stream records,
+ */
+GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &request)
+{
+
+}
+
+/**
+ * Returns a shard iterator. A shard iterator provides information about how to retrieve the stream records from within a
+ * shard. Use the shard iterator in a subsequent <code>GetRecords</code> request to read the stream records from the
+ */
+GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
+{
+
+}
+
+/**
+ * Returns an array of stream ARNs associated with the current account and endpoint. If the <code>TableName</code>
+ * parameter is present, then <i>ListStreams</i> will return only the streams ARNs for that
+ */
+ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsRequest &request)
+{
+
+}
 
 /**
  * @internal

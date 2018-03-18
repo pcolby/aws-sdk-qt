@@ -90,8 +90,18 @@ namespace {{NameSpaceName}} {
     d->serviceName = QLatin1String("{{servicename}}");
 }
 
-/// @todo {{publicSlots}}
+{% for f in OperationSignatures %}
+/**
+{% for line in f.documentation %}
+ *{% if line %} {{ line }}{% endif %}
+{% endfor %}
+ */
+{{ f.returnType }} {{ ClassName }}::{{ f.name }}({{ f.arguments }})
+{
 
+}
+
+{% endfor %}
 /**
  * @internal
  *
