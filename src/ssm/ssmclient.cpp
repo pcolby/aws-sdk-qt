@@ -78,7 +78,7 @@ SsmClient::SsmClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ssm");
 }
 
 /**
@@ -108,8 +108,10 @@ SsmClient::SsmClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ssm");
 }
+
+/// @todo override getEndpoint() to use ssm.
 
 /**
  * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,

@@ -56,7 +56,7 @@ MigrationHubClient::MigrationHubClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mgh");
 }
 
 /**
@@ -86,8 +86,10 @@ MigrationHubClient::MigrationHubClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mgh");
 }
+
+/// @todo override getEndpoint() to use mgh.
 
 /**
  * Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task

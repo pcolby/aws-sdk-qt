@@ -217,7 +217,7 @@ CodePipelineClient::CodePipelineClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codepipeline");
 }
 
 /**
@@ -247,8 +247,10 @@ CodePipelineClient::CodePipelineClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codepipeline");
 }
+
+/// @todo override getEndpoint() to use codepipeline.
 
 /**
  * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom

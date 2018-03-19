@@ -67,7 +67,7 @@ CostExplorerClient::CostExplorerClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ce");
 }
 
 /**
@@ -97,8 +97,10 @@ CostExplorerClient::CostExplorerClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ce");
 }
+
+/// @todo override getEndpoint() to use ce.
 
 /**
  * Retrieve cost and usage metrics for your account. You can specify which cost and usage-related metric, such as

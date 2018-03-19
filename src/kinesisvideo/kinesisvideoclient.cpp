@@ -54,7 +54,7 @@ KinesisVideoClient::KinesisVideoClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /**
@@ -84,8 +84,10 @@ KinesisVideoClient::KinesisVideoClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
+
+/// @todo override getEndpoint() to use kinesisvideo.
 
 /**
  * Creates a new Kinesis video stream.

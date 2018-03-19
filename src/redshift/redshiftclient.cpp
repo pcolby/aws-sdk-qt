@@ -84,7 +84,7 @@ RedshiftClient::RedshiftClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("redshift");
 }
 
 /**
@@ -114,8 +114,10 @@ RedshiftClient::RedshiftClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("redshift");
 }
+
+/// @todo override getEndpoint() to use redshift.
 
 /**
  * Adds an inbound (ingress) rule to an Amazon Redshift security group. Depending on whether the application accessing your

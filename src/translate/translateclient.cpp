@@ -55,7 +55,7 @@ TranslateClient::TranslateClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("translate");
 }
 
 /**
@@ -85,8 +85,10 @@ TranslateClient::TranslateClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("translate");
 }
+
+/// @todo override getEndpoint() to use translate.
 
 /**
  * Translates input text from the source language to the target language. You can translate between English (en) and one of

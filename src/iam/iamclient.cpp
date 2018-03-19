@@ -119,7 +119,7 @@ IamClient::IamClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iam");
 }
 
 /**
@@ -149,8 +149,10 @@ IamClient::IamClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iam");
 }
+
+/// @todo override getEndpoint() to use iam.
 
 /**
  * Adds a new client ID (also known as audience) to the list of client IDs already registered for the specified IAM OpenID

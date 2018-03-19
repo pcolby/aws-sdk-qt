@@ -244,7 +244,7 @@ CodeCommitClient::CodeCommitClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codecommit");
 }
 
 /**
@@ -274,8 +274,10 @@ CodeCommitClient::CodeCommitClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codecommit");
 }
+
+/// @todo override getEndpoint() to use codecommit.
 
 /**
  * Returns information about one or more

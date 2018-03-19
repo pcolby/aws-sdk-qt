@@ -73,7 +73,7 @@ DynamoDBClient::DynamoDBClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dynamodb");
 }
 
 /**
@@ -103,8 +103,10 @@ DynamoDBClient::DynamoDBClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dynamodb");
 }
+
+/// @todo override getEndpoint() to use dynamodb.
 
 /**
  * The <code>BatchGetItem</code> operation returns the attributes of one or more items from one or more tables. You

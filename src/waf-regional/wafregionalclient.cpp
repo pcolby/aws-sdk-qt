@@ -61,7 +61,7 @@ WAFRegionalClient::WAFRegionalClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("waf-regional");
 }
 
 /**
@@ -91,8 +91,10 @@ WAFRegionalClient::WAFRegionalClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("waf-regional");
 }
+
+/// @todo override getEndpoint() to use waf-regional.
 
 /**
  * Associates a web ACL with a

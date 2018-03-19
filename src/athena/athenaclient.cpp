@@ -66,7 +66,7 @@ AthenaClient::AthenaClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("athena");
 }
 
 /**
@@ -96,8 +96,10 @@ AthenaClient::AthenaClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("athena");
 }
+
+/// @todo override getEndpoint() to use athena.
 
 /**
  * Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID

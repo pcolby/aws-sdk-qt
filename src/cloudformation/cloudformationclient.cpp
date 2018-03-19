@@ -76,7 +76,7 @@ CloudFormationClient::CloudFormationClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudformation");
 }
 
 /**
@@ -106,8 +106,10 @@ CloudFormationClient::CloudFormationClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudformation");
 }
+
+/// @todo override getEndpoint() to use cloudformation.
 
 /**
  * Cancels an update on the specified stack. If the call completes successfully, the stack rolls back the update and

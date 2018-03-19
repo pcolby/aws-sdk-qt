@@ -127,7 +127,7 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("application-autoscaling");
 }
 
 /**
@@ -157,8 +157,10 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("application-autoscaling");
 }
+
+/// @todo override getEndpoint() to use autoscaling.
 
 /**
  * Deletes the specified Application Auto Scaling scaling

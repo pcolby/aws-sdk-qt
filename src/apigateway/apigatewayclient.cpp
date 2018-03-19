@@ -59,7 +59,7 @@ APIGatewayClient::APIGatewayClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("apigateway");
 }
 
 /**
@@ -89,8 +89,10 @@ APIGatewayClient::APIGatewayClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("apigateway");
 }
+
+/// @todo override getEndpoint() to use apigateway.
 
 /**
  * Create an <a>ApiKey</a> resource.

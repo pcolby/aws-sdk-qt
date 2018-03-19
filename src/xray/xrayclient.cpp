@@ -55,7 +55,7 @@ XRayClient::XRayClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("xray");
 }
 
 /**
@@ -85,8 +85,10 @@ XRayClient::XRayClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("xray");
 }
+
+/// @todo override getEndpoint() to use xray.
 
 /**
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a

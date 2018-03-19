@@ -55,7 +55,7 @@ RekognitionClient::RekognitionClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("rekognition");
 }
 
 /**
@@ -85,8 +85,10 @@ RekognitionClient::RekognitionClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("rekognition");
 }
+
+/// @todo override getEndpoint() to use rekognition.
 
 /**
  * Compares a face in the <i>source</i> input image with each of the 100 largest faces detected in the <i>target</i> input

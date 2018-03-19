@@ -54,7 +54,7 @@ Route53Client::Route53Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("route53");
 }
 
 /**
@@ -84,8 +84,10 @@ Route53Client::Route53Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("route53");
 }
+
+/// @todo override getEndpoint() to use route53.
 
 /**
  * Associates an Amazon VPC with a private hosted zone.

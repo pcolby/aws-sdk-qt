@@ -92,7 +92,7 @@ CognitoIdentityClient::CognitoIdentityClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-identity");
 }
 
 /**
@@ -122,8 +122,10 @@ CognitoIdentityClient::CognitoIdentityClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-identity");
 }
+
+/// @todo override getEndpoint() to use cognito-identity.
 
 /**
  * Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS

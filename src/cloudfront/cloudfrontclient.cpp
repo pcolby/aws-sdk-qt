@@ -59,7 +59,7 @@ CloudFrontClient::CloudFrontClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudfront");
 }
 
 /**
@@ -89,8 +89,10 @@ CloudFrontClient::CloudFrontClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudfront");
 }
+
+/// @todo override getEndpoint() to use cloudfront.
 
 /**
  * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity

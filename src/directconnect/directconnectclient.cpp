@@ -62,7 +62,7 @@ DirectConnectClient::DirectConnectClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("directconnect");
 }
 
 /**
@@ -92,8 +92,10 @@ DirectConnectClient::DirectConnectClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("directconnect");
 }
+
+/// @todo override getEndpoint() to use directconnect.
 
 /**
  * Deprecated in favor of

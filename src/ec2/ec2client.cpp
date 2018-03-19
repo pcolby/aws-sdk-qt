@@ -58,7 +58,7 @@ Ec2Client::Ec2Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ec2");
 }
 
 /**
@@ -88,8 +88,10 @@ Ec2Client::Ec2Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ec2");
 }
+
+/// @todo override getEndpoint() to use ec2.
 
 /**
  * Accepts the Convertible Reserved Instance exchange quote described in the <a>GetReservedInstancesExchangeQuote</a>

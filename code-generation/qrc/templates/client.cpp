@@ -57,7 +57,9 @@ namespace {{NameSpaceName}} {
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
+    {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
+    d->serviceName = QStringLiteral("{% if signingName %}{{ signingName }}{% else %}{{ endpointPrefix }}{% endif %}");
 }
 
 /**
@@ -87,8 +89,12 @@ namespace {{NameSpaceName}} {
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
+    {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
+    d->serviceName = QStringLiteral("{% if signingName %}{{ signingName }}{% else %}{{ endpointPrefix }}{% endif %}");
 }
+
+/// @todo override getEndpoint() to use {{endpointPrefix}}.
 
 {% for f in OperationSignatures %}
 /**

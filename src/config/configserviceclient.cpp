@@ -85,7 +85,7 @@ ConfigServiceClient::ConfigServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("config");
 }
 
 /**
@@ -115,8 +115,10 @@ ConfigServiceClient::ConfigServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("config");
 }
+
+/// @todo override getEndpoint() to use config.
 
 /**
  * Deletes the specified AWS Config rule and all of its evaluation

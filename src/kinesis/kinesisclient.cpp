@@ -57,7 +57,7 @@ KinesisClient::KinesisClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesis");
 }
 
 /**
@@ -87,8 +87,10 @@ KinesisClient::KinesisClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesis");
 }
+
+/// @todo override getEndpoint() to use kinesis.
 
 /**
  * Adds or updates tags for the specified Kinesis data stream. Each stream can have up to 10

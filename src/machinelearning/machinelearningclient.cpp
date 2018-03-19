@@ -54,7 +54,7 @@ MachineLearningClient::MachineLearningClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("machinelearning");
 }
 
 /**
@@ -84,8 +84,10 @@ MachineLearningClient::MachineLearningClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("machinelearning");
 }
+
+/// @todo override getEndpoint() to use machinelearning.
 
 /**
  * Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a

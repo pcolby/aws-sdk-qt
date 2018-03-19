@@ -60,7 +60,7 @@ EfsClient::EfsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
 /**
@@ -90,8 +90,10 @@ EfsClient::EfsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticfilesystem");
 }
+
+/// @todo override getEndpoint() to use elasticfilesystem.
 
 /**
  * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure

@@ -77,7 +77,7 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("events");
 }
 
 /**
@@ -107,8 +107,10 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("events");
 }
+
+/// @todo override getEndpoint() to use events.
 
 /**
  * Deletes the specified

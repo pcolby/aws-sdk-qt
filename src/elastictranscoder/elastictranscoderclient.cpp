@@ -57,7 +57,7 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elastictranscoder");
 }
 
 /**
@@ -87,8 +87,10 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elastictranscoder");
 }
+
+/// @todo override getEndpoint() to use elastictranscoder.
 
 /**
  * The CancelJob operation cancels an unfinished

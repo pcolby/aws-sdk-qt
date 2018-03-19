@@ -54,7 +54,7 @@ GuardDutyClient::GuardDutyClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("guardduty");
 }
 
 /**
@@ -84,8 +84,10 @@ GuardDutyClient::GuardDutyClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("guardduty");
 }
+
+/// @todo override getEndpoint() to use guardduty.
 
 /**
  *

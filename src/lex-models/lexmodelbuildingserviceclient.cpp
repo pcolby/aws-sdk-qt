@@ -58,7 +58,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /**
@@ -88,8 +88,10 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lex");
 }
+
+/// @todo override getEndpoint() to use models.lex.
 
 /**
  * Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this

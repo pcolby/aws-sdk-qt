@@ -54,7 +54,7 @@ MTurkClient::MTurkClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mturk-requester");
 }
 
 /**
@@ -84,8 +84,10 @@ MTurkClient::MTurkClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mturk-requester");
 }
+
+/// @todo override getEndpoint() to use mturk-requester.
 
 /**
  * The <code>AcceptQualificationRequest</code> operation approves a Worker's request for a Qualification.

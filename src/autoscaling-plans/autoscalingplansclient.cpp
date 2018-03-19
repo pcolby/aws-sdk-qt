@@ -63,7 +63,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("autoscaling-plans");
 }
 
 /**
@@ -93,8 +93,10 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("autoscaling-plans");
 }
+
+/// @todo override getEndpoint() to use autoscaling.
 
 /**
  * Creates a scaling

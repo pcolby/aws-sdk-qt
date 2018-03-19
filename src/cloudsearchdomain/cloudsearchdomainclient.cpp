@@ -67,7 +67,7 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
 
 /**
@@ -97,8 +97,10 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
+
+/// @todo override getEndpoint() to use cloudsearchdomain.
 
 /**
  * Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on

@@ -135,7 +135,7 @@ CodeDeployClient::CodeDeployClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codedeploy");
 }
 
 /**
@@ -165,8 +165,10 @@ CodeDeployClient::CodeDeployClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codedeploy");
 }
+
+/// @todo override getEndpoint() to use codedeploy.
 
 /**
  * Adds tags to on-premises

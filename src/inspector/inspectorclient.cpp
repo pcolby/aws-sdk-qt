@@ -59,7 +59,7 @@ InspectorClient::InspectorClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("inspector");
 }
 
 /**
@@ -89,8 +89,10 @@ InspectorClient::InspectorClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("inspector");
 }
+
+/// @todo override getEndpoint() to use inspector.
 
 /**
  * Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the

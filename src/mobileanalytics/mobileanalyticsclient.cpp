@@ -55,7 +55,7 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mobileanalytics");
 }
 
 /**
@@ -85,8 +85,10 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mobileanalytics");
 }
+
+/// @todo override getEndpoint() to use mobileanalytics.
 
 /**
  * The PutEvents operation records one or more events. You can have up to 1,500 unique custom events per app, any

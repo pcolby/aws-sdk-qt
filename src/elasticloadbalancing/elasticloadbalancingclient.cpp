@@ -82,7 +82,7 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
 /**
@@ -112,8 +112,10 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
+
+/// @todo override getEndpoint() to use elasticloadbalancing.
 
 /**
  * Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10

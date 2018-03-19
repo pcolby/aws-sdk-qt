@@ -118,7 +118,7 @@ RdsClient::RdsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("rds");
 }
 
 /**
@@ -148,8 +148,10 @@ RdsClient::RdsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("rds");
 }
+
+/// @todo override getEndpoint() to use rds.
 
 /**
  * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a

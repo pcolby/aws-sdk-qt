@@ -54,7 +54,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cur");
 }
 
 /**
@@ -84,8 +84,10 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cur");
 }
+
+/// @todo override getEndpoint() to use cur.
 
 /**
  *

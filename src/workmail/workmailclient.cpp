@@ -87,7 +87,7 @@ WorkMailClient::WorkMailClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workmail");
 }
 
 /**
@@ -117,8 +117,10 @@ WorkMailClient::WorkMailClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workmail");
 }
+
+/// @todo override getEndpoint() to use workmail.
 
 /**
  * Adds a member to the resource's set of

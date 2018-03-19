@@ -84,7 +84,7 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /**
@@ -114,8 +114,10 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
+
+/// @todo override getEndpoint() to use metering.marketplace.
 
 /**
  * BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of

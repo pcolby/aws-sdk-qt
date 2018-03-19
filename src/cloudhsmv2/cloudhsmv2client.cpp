@@ -56,7 +56,7 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /**
@@ -86,8 +86,10 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
+
+/// @todo override getEndpoint() to use cloudhsmv2.
 
 /**
  * Creates a new AWS CloudHSM

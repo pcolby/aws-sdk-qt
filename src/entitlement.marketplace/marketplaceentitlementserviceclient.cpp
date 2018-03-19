@@ -71,7 +71,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /**
@@ -101,8 +101,10 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
+
+/// @todo override getEndpoint() to use entitlement.marketplace.
 
 /**
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer

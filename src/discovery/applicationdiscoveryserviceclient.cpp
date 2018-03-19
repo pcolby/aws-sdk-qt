@@ -118,7 +118,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("discovery");
 }
 
 /**
@@ -148,8 +148,10 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("discovery");
 }
+
+/// @todo override getEndpoint() to use discovery.
 
 /**
  * Associates one or more configuration items with an

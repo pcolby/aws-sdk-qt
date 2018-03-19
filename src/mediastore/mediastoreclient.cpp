@@ -56,7 +56,7 @@ MediaStoreClient::MediaStoreClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediastore");
 }
 
 /**
@@ -86,8 +86,10 @@ MediaStoreClient::MediaStoreClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediastore");
 }
+
+/// @todo override getEndpoint() to use mediastore.
 
 /**
  * Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3

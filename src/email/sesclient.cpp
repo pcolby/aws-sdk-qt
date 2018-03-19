@@ -65,7 +65,7 @@ SesClient::SesClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ses");
 }
 
 /**
@@ -95,8 +95,10 @@ SesClient::SesClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ses");
 }
+
+/// @todo override getEndpoint() to use email.
 
 /**
  * Creates a receipt rule set by cloning an existing one. All receipt rules and configurations are copied to the new

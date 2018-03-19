@@ -58,7 +58,7 @@ FirehoseClient::FirehoseClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("firehose");
 }
 
 /**
@@ -88,8 +88,10 @@ FirehoseClient::FirehoseClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("firehose");
 }
+
+/// @todo override getEndpoint() to use firehose.
 
 /**
  * Creates a delivery

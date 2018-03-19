@@ -60,7 +60,7 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("servicecatalog");
 }
 
 /**
@@ -90,8 +90,10 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("servicecatalog");
 }
+
+/// @todo override getEndpoint() to use servicecatalog.
 
 /**
  * Accepts an offer to share the specified

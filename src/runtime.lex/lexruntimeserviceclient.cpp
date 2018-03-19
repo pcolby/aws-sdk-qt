@@ -61,7 +61,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /**
@@ -91,8 +91,10 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lex");
 }
+
+/// @todo override getEndpoint() to use runtime.lex.
 
 /**
  * Sends user input (text or speech) to Amazon Lex. Clients use this API to send text and audio requests to Amazon Lex at

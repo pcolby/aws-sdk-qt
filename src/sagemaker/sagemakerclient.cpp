@@ -54,7 +54,7 @@ SageMakerClient::SageMakerClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /**
@@ -84,8 +84,10 @@ SageMakerClient::SageMakerClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sagemaker");
 }
+
+/// @todo override getEndpoint() to use sagemaker.
 
 /**
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,

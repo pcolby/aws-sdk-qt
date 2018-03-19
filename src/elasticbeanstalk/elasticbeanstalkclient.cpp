@@ -76,7 +76,7 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 
 /**
@@ -106,8 +106,10 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticbeanstalk");
 }
+
+/// @todo override getEndpoint() to use elasticbeanstalk.
 
 /**
  * Cancels in-progress environment configuration update or application version

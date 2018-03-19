@@ -68,7 +68,7 @@ SnsClient::SnsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sns");
 }
 
 /**
@@ -98,8 +98,10 @@ SnsClient::SnsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sns");
 }
+
+/// @todo override getEndpoint() to use sns.
 
 /**
  * Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified

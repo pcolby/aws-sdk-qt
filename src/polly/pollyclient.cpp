@@ -61,7 +61,7 @@ PollyClient::PollyClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("polly");
 }
 
 /**
@@ -91,8 +91,10 @@ PollyClient::PollyClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("polly");
 }
+
+/// @todo override getEndpoint() to use polly.
 
 /**
  * Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available

@@ -65,7 +65,7 @@ LambdaClient::LambdaClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lambda");
 }
 
 /**
@@ -95,8 +95,10 @@ LambdaClient::LambdaClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lambda");
 }
+
+/// @todo override getEndpoint() to use lambda.
 
 /**
  * Adds a permission to the resource policy associated with the specified AWS Lambda function. You use resource policies to

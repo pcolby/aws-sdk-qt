@@ -63,7 +63,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("es");
 }
 
 /**
@@ -93,8 +93,10 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("es");
 }
+
+/// @todo override getEndpoint() to use es.
 
 /**
  * Attaches tags to an existing Elasticsearch domain. Tags are a set of case-sensitive key value pairs. An Elasticsearch

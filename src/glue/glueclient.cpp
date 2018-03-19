@@ -57,7 +57,7 @@ GlueClient::GlueClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("glue");
 }
 
 /**
@@ -87,8 +87,10 @@ GlueClient::GlueClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("glue");
 }
+
+/// @todo override getEndpoint() to use glue.
 
 /**
  * Creates one or more partitions in a batch

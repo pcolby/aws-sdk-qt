@@ -54,7 +54,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /**
@@ -84,8 +84,10 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
+
+/// @todo override getEndpoint() to use kinesisvideo.
 
 /**
  * Gets media for a list of fragments (specified by fragment number) from the archived data in a Kinesis video

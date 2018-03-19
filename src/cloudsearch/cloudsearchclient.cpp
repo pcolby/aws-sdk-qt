@@ -65,7 +65,7 @@ CloudSearchClient::CloudSearchClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
 
 /**
@@ -95,8 +95,10 @@ CloudSearchClient::CloudSearchClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
+
+/// @todo override getEndpoint() to use cloudsearch.
 
 /**
  * Indexes the search suggestions. For more information, see <a

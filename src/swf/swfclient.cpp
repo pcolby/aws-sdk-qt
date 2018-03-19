@@ -70,7 +70,7 @@ SwfClient::SwfClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("swf");
 }
 
 /**
@@ -100,8 +100,10 @@ SwfClient::SwfClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("swf");
 }
+
+/// @todo override getEndpoint() to use swf.
 
 /**
  * Returns the number of closed workflow executions within the given domain that meet the specified filtering

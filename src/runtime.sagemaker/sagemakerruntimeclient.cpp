@@ -55,7 +55,7 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /**
@@ -85,8 +85,10 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sagemaker");
 }
+
+/// @todo override getEndpoint() to use runtime.sagemaker.
 
 /**
  * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API

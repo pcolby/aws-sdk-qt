@@ -58,7 +58,7 @@ EcrClient::EcrClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ecr");
 }
 
 /**
@@ -88,8 +88,10 @@ EcrClient::EcrClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ecr");
 }
+
+/// @todo override getEndpoint() to use ecr.
 
 /**
  * Check the availability of multiple image layers in a specified registry and

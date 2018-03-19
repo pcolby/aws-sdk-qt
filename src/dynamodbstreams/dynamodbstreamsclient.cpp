@@ -87,7 +87,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dynamodb");
 }
 
 /**
@@ -117,8 +117,10 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dynamodb");
 }
+
+/// @todo override getEndpoint() to use streams.dynamodb.
 
 /**
  * Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the

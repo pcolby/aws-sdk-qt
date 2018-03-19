@@ -57,7 +57,7 @@ EmrClient::EmrClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
 /**
@@ -87,8 +87,10 @@ EmrClient::EmrClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticmapreduce");
 }
+
+/// @todo override getEndpoint() to use elasticmapreduce.
 
 /**
  * Adds an instance fleet to a running

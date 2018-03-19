@@ -55,7 +55,7 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("transcribe");
 }
 
 /**
@@ -85,8 +85,10 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("transcribe");
 }
+
+/// @todo override getEndpoint() to use transcribe.
 
 /**
  * Returns information about a transcription job. To see the status of the job, check the <code>Status</code> field. If the

@@ -54,7 +54,7 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisanalytics");
 }
 
 /**
@@ -84,8 +84,10 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisanalytics");
 }
+
+/// @todo override getEndpoint() to use kinesisanalytics.
 
 /**
  * Adds a CloudWatch log stream to monitor application configuration errors. For more information about using CloudWatch

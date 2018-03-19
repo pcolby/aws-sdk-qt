@@ -55,7 +55,7 @@ AppSyncClient::AppSyncClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("appsync");
 }
 
 /**
@@ -85,8 +85,10 @@ AppSyncClient::AppSyncClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("appsync");
 }
+
+/// @todo override getEndpoint() to use appsync.
 
 /**
  * Creates a unique key that you can distribute to clients who are executing your

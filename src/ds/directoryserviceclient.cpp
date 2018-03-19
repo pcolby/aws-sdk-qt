@@ -68,7 +68,7 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ds");
 }
 
 /**
@@ -98,8 +98,10 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ds");
 }
+
+/// @todo override getEndpoint() to use ds.
 
 /**
  * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block

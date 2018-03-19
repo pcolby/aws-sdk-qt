@@ -57,7 +57,7 @@ ImportExportClient::ImportExportClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("importexport");
 }
 
 /**
@@ -87,8 +87,10 @@ ImportExportClient::ImportExportClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("importexport");
 }
+
+/// @todo override getEndpoint() to use importexport.
 
 /**
  * This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already

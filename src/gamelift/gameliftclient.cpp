@@ -490,7 +490,7 @@ GameLiftClient::GameLiftClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("gamelift");
 }
 
 /**
@@ -520,8 +520,10 @@ GameLiftClient::GameLiftClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("gamelift");
 }
+
+/// @todo override getEndpoint() to use gamelift.
 
 /**
  * Registers a player's acceptance or rejection of a proposed FlexMatch match. A matchmaking configuration may require

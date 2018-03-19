@@ -74,7 +74,7 @@ CognitoSyncClient::CognitoSyncClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-sync");
 }
 
 /**
@@ -104,8 +104,10 @@ CognitoSyncClient::CognitoSyncClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-sync");
 }
+
+/// @todo override getEndpoint() to use cognito-sync.
 
 /**
  * Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited

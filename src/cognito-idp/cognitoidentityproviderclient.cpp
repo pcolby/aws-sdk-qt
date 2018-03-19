@@ -64,7 +64,7 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-idp");
 }
 
 /**
@@ -94,8 +94,10 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cognito-idp");
 }
+
+/// @todo override getEndpoint() to use cognito-idp.
 
 /**
  * Adds additional user attributes to the user pool

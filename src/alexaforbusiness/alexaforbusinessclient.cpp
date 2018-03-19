@@ -59,7 +59,7 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("a4b");
 }
 
 /**
@@ -89,8 +89,10 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("a4b");
 }
+
+/// @todo override getEndpoint() to use a4b.
 
 /**
  * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the

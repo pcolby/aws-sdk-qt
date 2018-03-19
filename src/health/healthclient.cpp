@@ -115,7 +115,7 @@ HealthClient::HealthClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("health");
 }
 
 /**
@@ -145,8 +145,10 @@ HealthClient::HealthClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("health");
 }
+
+/// @todo override getEndpoint() to use health.
 
 /**
  * Returns a list of entities that have been affected by the specified events, based on the specified filter criteria.

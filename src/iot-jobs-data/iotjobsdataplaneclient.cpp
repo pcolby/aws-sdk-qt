@@ -68,7 +68,7 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iot-jobs-data");
 }
 
 /**
@@ -98,8 +98,10 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iot-jobs-data");
 }
+
+/// @todo override getEndpoint() to use data.jobs.iot.
 
 /**
  * Gets details of a job

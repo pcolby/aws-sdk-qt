@@ -60,7 +60,7 @@ ShieldClient::ShieldClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("shield");
 }
 
 /**
@@ -90,8 +90,10 @@ ShieldClient::ShieldClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("shield");
 }
+
+/// @todo override getEndpoint() to use shield.
 
 /**
  * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic

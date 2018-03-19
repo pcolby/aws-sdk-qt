@@ -63,7 +63,7 @@ AcmClient::AcmClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("acm");
 }
 
 /**
@@ -93,8 +93,10 @@ AcmClient::AcmClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("acm");
 }
+
+/// @todo override getEndpoint() to use acm.
 
 /**
  * Adds one or more tags to an ACM Certificate. Tags are labels that you can use to identify and organize your AWS

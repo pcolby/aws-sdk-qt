@@ -56,7 +56,7 @@ MqClient::MqClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mq");
 }
 
 /**
@@ -86,8 +86,10 @@ MqClient::MqClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mq");
 }
+
+/// @todo override getEndpoint() to use mq.
 
 /**
  *

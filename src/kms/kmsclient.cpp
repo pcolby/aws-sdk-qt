@@ -153,7 +153,7 @@ KmsClient::KmsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kms");
 }
 
 /**
@@ -183,8 +183,10 @@ KmsClient::KmsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kms");
 }
+
+/// @todo override getEndpoint() to use kms.
 
 /**
  * Cancels the deletion of a customer master key (CMK). When this operation is successful, the CMK is set to the

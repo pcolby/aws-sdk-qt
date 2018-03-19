@@ -120,7 +120,7 @@ SqsClient::SqsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sqs");
 }
 
 /**
@@ -150,8 +150,10 @@ SqsClient::SqsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sqs");
 }
+
+/// @todo override getEndpoint() to use sqs.
 
 /**
  * Adds a permission to a queue for a specific <a

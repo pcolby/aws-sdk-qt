@@ -123,7 +123,7 @@ StorageGatewayClient::StorageGatewayClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("storagegateway");
 }
 
 /**
@@ -153,8 +153,10 @@ StorageGatewayClient::StorageGatewayClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("storagegateway");
 }
+
+/// @todo override getEndpoint() to use storagegateway.
 
 /**
  * Activates the gateway you previously deployed on your host. In the activation process, you specify information such as

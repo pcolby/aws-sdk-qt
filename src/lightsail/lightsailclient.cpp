@@ -70,7 +70,7 @@ LightsailClient::LightsailClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lightsail");
 }
 
 /**
@@ -100,8 +100,10 @@ LightsailClient::LightsailClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("lightsail");
 }
+
+/// @todo override getEndpoint() to use lightsail.
 
 /**
  * Allocates a static IP

@@ -57,7 +57,7 @@ MobileClient::MobileClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
 /**
@@ -87,8 +87,10 @@ MobileClient::MobileClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("AWSMobileHubService");
 }
+
+/// @todo override getEndpoint() to use mobile.
 
 /**
  * Creates an AWS Mobile Hub project.

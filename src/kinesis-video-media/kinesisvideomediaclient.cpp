@@ -54,7 +54,7 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /**
@@ -84,8 +84,10 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
+
+/// @todo override getEndpoint() to use kinesisvideo.
 
 /**
  * Use this API to retrieve media content from a Kinesis video stream. In the request, you identify stream name or stream

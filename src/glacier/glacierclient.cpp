@@ -92,7 +92,7 @@ GlacierClient::GlacierClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("glacier");
 }
 
 /**
@@ -122,8 +122,10 @@ GlacierClient::GlacierClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("glacier");
 }
+
+/// @todo override getEndpoint() to use glacier.
 
 /**
  * This operation aborts a multipart upload identified by the upload

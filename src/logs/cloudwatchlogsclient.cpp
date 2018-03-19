@@ -83,7 +83,7 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("logs");
 }
 
 /**
@@ -113,8 +113,10 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("logs");
 }
+
+/// @todo override getEndpoint() to use logs.
 
 /**
  * Associates the specified AWS Key Management Service (AWS KMS) customer master key (CMK) with the specified log

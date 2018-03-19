@@ -59,7 +59,7 @@ AutoScalingClient::AutoScalingClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("autoscaling");
 }
 
 /**
@@ -89,8 +89,10 @@ AutoScalingClient::AutoScalingClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("autoscaling");
 }
+
+/// @todo override getEndpoint() to use autoscaling.
 
 /**
  * Attaches one or more EC2 instances to the specified Auto Scaling

@@ -80,7 +80,7 @@ PricingClient::PricingClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("pricing");
 }
 
 /**
@@ -110,8 +110,10 @@ PricingClient::PricingClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("pricing");
 }
+
+/// @todo override getEndpoint() to use api.pricing.
 
 /**
  * Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get

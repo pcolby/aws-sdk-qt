@@ -108,7 +108,7 @@ Cloud9Client::Cloud9Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloud9");
 }
 
 /**
@@ -138,8 +138,10 @@ Cloud9Client::Cloud9Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloud9");
 }
+
+/// @todo override getEndpoint() to use cloud9.
 
 /**
  * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then

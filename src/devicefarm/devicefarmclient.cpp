@@ -56,7 +56,7 @@ DeviceFarmClient::DeviceFarmClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("devicefarm");
 }
 
 /**
@@ -86,8 +86,10 @@ DeviceFarmClient::DeviceFarmClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("devicefarm");
 }
+
+/// @todo override getEndpoint() to use devicefarm.
 
 /**
  * Creates a device

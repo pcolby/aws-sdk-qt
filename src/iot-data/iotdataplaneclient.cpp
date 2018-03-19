@@ -60,7 +60,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iotdata");
 }
 
 /**
@@ -90,8 +90,10 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("iotdata");
 }
+
+/// @todo override getEndpoint() to use data.iot.
 
 /**
  * Deletes the thing shadow for the specified

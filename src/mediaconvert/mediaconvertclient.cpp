@@ -54,7 +54,7 @@ MediaConvertClient::MediaConvertClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediaconvert");
 }
 
 /**
@@ -84,8 +84,10 @@ MediaConvertClient::MediaConvertClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediaconvert");
 }
+
+/// @todo override getEndpoint() to use mediaconvert.
 
 /**
  * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a

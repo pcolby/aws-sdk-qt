@@ -130,7 +130,7 @@ CodeBuildClient::CodeBuildClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codebuild");
 }
 
 /**
@@ -160,8 +160,10 @@ CodeBuildClient::CodeBuildClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codebuild");
 }
+
+/// @todo override getEndpoint() to use codebuild.
 
 /**
  * Deletes one or more

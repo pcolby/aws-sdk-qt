@@ -160,7 +160,7 @@ OpsWorksClient::OpsWorksClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("opsworks");
 }
 
 /**
@@ -190,8 +190,10 @@ OpsWorksClient::OpsWorksClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("opsworks");
 }
+
+/// @todo override getEndpoint() to use opsworks.
 
 /**
  * Assign a registered instance to a

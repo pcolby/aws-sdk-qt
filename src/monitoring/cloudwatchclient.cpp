@@ -68,7 +68,7 @@ CloudWatchClient::CloudWatchClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("monitoring");
 }
 
 /**
@@ -98,8 +98,10 @@ CloudWatchClient::CloudWatchClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("monitoring");
 }
+
+/// @todo override getEndpoint() to use monitoring.
 
 /**
  * Deletes the specified alarms. In the event of an error, no alarms are

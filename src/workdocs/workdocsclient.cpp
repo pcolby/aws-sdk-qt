@@ -83,7 +83,7 @@ WorkDocsClient::WorkDocsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workdocs");
 }
 
 /**
@@ -113,8 +113,10 @@ WorkDocsClient::WorkDocsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workdocs");
 }
+
+/// @todo override getEndpoint() to use workdocs.
 
 /**
  * Aborts the upload of the specified document version that was previously initiated by

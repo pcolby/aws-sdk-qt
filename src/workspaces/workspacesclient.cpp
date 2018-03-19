@@ -57,7 +57,7 @@ WorkSpacesClient::WorkSpacesClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workspaces");
 }
 
 /**
@@ -87,8 +87,10 @@ WorkSpacesClient::WorkSpacesClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("workspaces");
 }
+
+/// @todo override getEndpoint() to use workspaces.
 
 /**
  * Creates tags for the specified

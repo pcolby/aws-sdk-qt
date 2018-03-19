@@ -68,7 +68,7 @@ BatchClient::BatchClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("batch");
 }
 
 /**
@@ -98,8 +98,10 @@ BatchClient::BatchClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("batch");
 }
+
+/// @todo override getEndpoint() to use batch.
 
 /**
  * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or

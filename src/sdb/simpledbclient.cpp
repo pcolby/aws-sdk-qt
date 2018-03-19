@@ -67,7 +67,7 @@ SimpleDBClient::SimpleDBClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sdb");
 }
 
 /**
@@ -97,8 +97,10 @@ SimpleDBClient::SimpleDBClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sdb");
 }
+
+/// @todo override getEndpoint() to use sdb.
 
 /**
  * Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables

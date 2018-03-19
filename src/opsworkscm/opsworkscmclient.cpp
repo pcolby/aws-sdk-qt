@@ -114,7 +114,7 @@ OpsWorksCMClient::OpsWorksCMClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("opsworks-cm");
 }
 
 /**
@@ -144,8 +144,10 @@ OpsWorksCMClient::OpsWorksCMClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("opsworks-cm");
 }
+
+/// @todo override getEndpoint() to use opsworks-cm.
 
 /**
  * Associates a new node with the server. For more information about how to disassociate a node, see

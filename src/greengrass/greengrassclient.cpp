@@ -57,7 +57,7 @@ GreengrassClient::GreengrassClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("greengrass");
 }
 
 /**
@@ -87,8 +87,10 @@ GreengrassClient::GreengrassClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("greengrass");
 }
+
+/// @todo override getEndpoint() to use greengrass.
 
 /**
  * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.

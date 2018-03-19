@@ -73,7 +73,7 @@ SfnClient::SfnClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("states");
 }
 
 /**
@@ -103,8 +103,10 @@ SfnClient::SfnClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("states");
 }
+
+/// @todo override getEndpoint() to use states.
 
 /**
  * Creates an activity. An activity is a task which you write in any programming language and host on any machine which has

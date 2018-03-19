@@ -58,7 +58,7 @@ DaxClient::DaxClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dax");
 }
 
 /**
@@ -88,8 +88,10 @@ DaxClient::DaxClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dax");
 }
+
+/// @todo override getEndpoint() to use dax.
 
 /**
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching

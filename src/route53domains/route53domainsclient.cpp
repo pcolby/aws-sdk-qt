@@ -55,7 +55,7 @@ Route53DomainsClient::Route53DomainsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("route53domains");
 }
 
 /**
@@ -85,8 +85,10 @@ Route53DomainsClient::Route53DomainsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("route53domains");
 }
+
+/// @todo override getEndpoint() to use route53domains.
 
 /**
  * This operation checks the availability of one domain name. Note that if the availability status of a domain is pending,

@@ -57,7 +57,7 @@ AppStreamClient::AppStreamClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("appstream");
 }
 
 /**
@@ -87,8 +87,10 @@ AppStreamClient::AppStreamClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("appstream");
 }
+
+/// @todo override getEndpoint() to use appstream2.
 
 /**
  * Associates the specified fleet with the specified

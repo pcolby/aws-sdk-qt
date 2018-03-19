@@ -54,7 +54,7 @@ MediaLiveClient::MediaLiveClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("medialive");
 }
 
 /**
@@ -84,8 +84,10 @@ MediaLiveClient::MediaLiveClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("medialive");
 }
+
+/// @todo override getEndpoint() to use medialive.
 
 /**
  *

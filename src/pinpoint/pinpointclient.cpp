@@ -54,7 +54,7 @@ PinpointClient::PinpointClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mobiletargeting");
 }
 
 /**
@@ -84,8 +84,10 @@ PinpointClient::PinpointClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mobiletargeting");
 }
+
+/// @todo override getEndpoint() to use pinpoint.
 
 /**
  *

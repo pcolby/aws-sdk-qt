@@ -112,7 +112,7 @@ StsClient::StsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sts");
 }
 
 /**
@@ -142,8 +142,10 @@ StsClient::StsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sts");
 }
+
+/// @todo override getEndpoint() to use sts.
 
 /**
  * Returns a set of temporary security credentials (consisting of an access key ID, a secret access key, and a security

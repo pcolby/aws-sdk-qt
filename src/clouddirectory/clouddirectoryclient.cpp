@@ -61,7 +61,7 @@ CloudDirectoryClient::CloudDirectoryClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("clouddirectory");
 }
 
 /**
@@ -91,8 +91,10 @@ CloudDirectoryClient::CloudDirectoryClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("clouddirectory");
 }
+
+/// @todo override getEndpoint() to use clouddirectory.
 
 /**
  * Adds a new <a>Facet</a> to an

@@ -54,7 +54,7 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 
 /**
@@ -84,8 +84,10 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
+
+/// @todo override getEndpoint() to use marketplacecommerceanalytics.
 
 /**
  * Given a data set type and data set publication date, asynchronously publishes the requested data set to the specified S3

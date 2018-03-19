@@ -60,7 +60,7 @@ SnowballClient::SnowballClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("snowball");
 }
 
 /**
@@ -90,8 +90,10 @@ SnowballClient::SnowballClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("snowball");
 }
+
+/// @todo override getEndpoint() to use snowball.
 
 /**
  * Cancels a cluster job. You can only cancel a cluster job while it's in the <code>AwaitingQuorum</code> status. You'll

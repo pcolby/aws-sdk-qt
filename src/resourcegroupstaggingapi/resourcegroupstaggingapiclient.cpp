@@ -109,7 +109,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("tagging");
 }
 
 /**
@@ -139,8 +139,10 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("tagging");
 }
+
+/// @todo override getEndpoint() to use tagging.
 
 /**
  * Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified

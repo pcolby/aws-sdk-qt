@@ -75,7 +75,7 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("serverlessrepo");
 }
 
 /**
@@ -105,8 +105,10 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("serverlessrepo");
 }
+
+/// @todo override getEndpoint() to use serverlessrepo.
 
 /**
  * Creates an application, optionally including an AWS SAM file to create the first application version in the same

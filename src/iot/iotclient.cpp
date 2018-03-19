@@ -65,7 +65,7 @@ IoTClient::IoTClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("execute-api");
 }
 
 /**
@@ -95,8 +95,10 @@ IoTClient::IoTClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("execute-api");
 }
+
+/// @todo override getEndpoint() to use iot.
 
 /**
  * Accepts a pending certificate transfer. The default state of the certificate is

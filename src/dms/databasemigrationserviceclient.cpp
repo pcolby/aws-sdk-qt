@@ -65,7 +65,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dms");
 }
 
 /**
@@ -95,8 +95,10 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("dms");
 }
+
+/// @todo override getEndpoint() to use dms.
 
 /**
  * Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task.

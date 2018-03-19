@@ -77,7 +77,7 @@ CloudTrailClient::CloudTrailClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudtrail");
 }
 
 /**
@@ -107,8 +107,10 @@ CloudTrailClient::CloudTrailClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudtrail");
 }
+
+/// @todo override getEndpoint() to use cloudtrail.
 
 /**
  * Adds one or more tags to a trail, up to a limit of 50. Tags must be unique per trail. Overwrites an existing tag's value

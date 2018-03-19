@@ -122,7 +122,7 @@ SupportClient::SupportClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("support");
 }
 
 /**
@@ -152,8 +152,10 @@ SupportClient::SupportClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("support");
 }
+
+/// @todo override getEndpoint() to use support.
 
 /**
  * Adds one or more attachments to an attachment set. If an <code>attachmentSetId</code> is not specified, a new attachment

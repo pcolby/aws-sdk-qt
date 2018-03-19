@@ -54,7 +54,7 @@ SmsClient::SmsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sms");
 }
 
 /**
@@ -84,8 +84,10 @@ SmsClient::SmsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("sms");
 }
+
+/// @todo override getEndpoint() to use sms.
 
 /**
  * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first

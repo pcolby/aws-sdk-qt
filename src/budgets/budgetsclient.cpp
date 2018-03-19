@@ -92,7 +92,7 @@ BudgetsClient::BudgetsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("budgets");
 }
 
 /**
@@ -122,8 +122,10 @@ BudgetsClient::BudgetsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("budgets");
 }
+
+/// @todo override getEndpoint() to use budgets.
 
 /**
  * Creates a budget and, if included, notifications and subscribers.

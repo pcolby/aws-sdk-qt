@@ -98,7 +98,7 @@ ResourceGroupsClient::ResourceGroupsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("resource-groups");
 }
 
 /**
@@ -128,8 +128,10 @@ ResourceGroupsClient::ResourceGroupsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("resource-groups");
 }
+
+/// @todo override getEndpoint() to use resource-groups.
 
 /**
  * Creates a group with a specified name, description, and resource

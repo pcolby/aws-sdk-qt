@@ -122,7 +122,7 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
 /**
@@ -152,8 +152,10 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
+
+/// @todo override getEndpoint() to use elasticloadbalancing.
 
 /**
  * Adds the specified certificate to the specified secure

@@ -196,7 +196,7 @@ OrganizationsClient::OrganizationsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("organizations");
 }
 
 /**
@@ -226,8 +226,10 @@ OrganizationsClient::OrganizationsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("organizations");
 }
+
+/// @todo override getEndpoint() to use organizations.
 
 /**
  * Sends a response to the originator of a handshake agreeing to the action proposed by the handshake request.

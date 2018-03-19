@@ -142,7 +142,7 @@ CodeStarClient::CodeStarClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codestar");
 }
 
 /**
@@ -172,8 +172,10 @@ CodeStarClient::CodeStarClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("codestar");
 }
+
+/// @todo override getEndpoint() to use codestar.
 
 /**
  * Adds an IAM user to the team for an AWS CodeStar

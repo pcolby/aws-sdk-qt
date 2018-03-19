@@ -72,7 +72,7 @@ DataPipelineClient::DataPipelineClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("datapipeline");
 }
 
 /**
@@ -102,8 +102,10 @@ DataPipelineClient::DataPipelineClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("datapipeline");
 }
+
+/// @todo override getEndpoint() to use datapipeline.
 
 /**
  * Validates the specified pipeline and starts processing pipeline tasks. If the pipeline does not pass validation,

@@ -54,7 +54,7 @@ MediaPackageClient::MediaPackageClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediapackage");
 }
 
 /**
@@ -84,8 +84,10 @@ MediaPackageClient::MediaPackageClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("mediapackage");
 }
+
+/// @todo override getEndpoint() to use mediapackage.
 
 /**
  *

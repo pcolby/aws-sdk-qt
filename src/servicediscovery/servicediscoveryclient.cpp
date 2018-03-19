@@ -58,7 +58,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("servicediscovery");
 }
 
 /**
@@ -88,8 +88,10 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("servicediscovery");
 }
+
+/// @todo override getEndpoint() to use servicediscovery.
 
 /**
  * Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC. The namespace

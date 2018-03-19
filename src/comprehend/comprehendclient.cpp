@@ -57,7 +57,7 @@ ComprehendClient::ComprehendClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("comprehend");
 }
 
 /**
@@ -87,8 +87,10 @@ ComprehendClient::ComprehendClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("comprehend");
 }
+
+/// @todo override getEndpoint() to use comprehend.
 
 /**
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon

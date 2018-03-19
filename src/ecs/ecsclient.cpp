@@ -71,7 +71,7 @@ EcsClient::EcsClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ecs");
 }
 
 /**
@@ -101,8 +101,10 @@ EcsClient::EcsClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("ecs");
 }
+
+/// @todo override getEndpoint() to use ecs.
 
 /**
  * Creates a new Amazon ECS cluster. By default, your account receives a <code>default</code> cluster when you launch your

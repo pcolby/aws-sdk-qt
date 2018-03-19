@@ -66,7 +66,7 @@ CloudHSMClient::CloudHSMClient(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /**
@@ -96,8 +96,10 @@ CloudHSMClient::CloudHSMClient(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
+
+/// @todo override getEndpoint() to use cloudhsm.
 
 /**
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a

@@ -54,7 +54,7 @@ S3Client::S3Client(
     d->region = region;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("s3");
 }
 
 /**
@@ -84,8 +84,10 @@ S3Client::S3Client(
     d->endpoint = endpoint;
     d->credentials = credentials;
     d->networkAccessManager = manager;
-    d->serviceName = QLatin1String("{{servicename}}");
+    d->serviceName = QStringLiteral("s3");
 }
+
+/// @todo override getEndpoint() to use s3.
 
 /**
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
