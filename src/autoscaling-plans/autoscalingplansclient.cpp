@@ -106,7 +106,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  * A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your
  * application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Auto Scaling Plans.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
 /**
  * Deletes the specified scaling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Auto Scaling Plans.
  *
  * @return A pointer to a related response object.
  *
@@ -134,7 +134,7 @@ DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const Dele
 /**
  * Describes the scalable resources in the specified scaling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Auto Scaling Plans.
  *
  * @return A pointer to a related response object.
  *
@@ -148,7 +148,7 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
 /**
  * Describes the specified scaling plans or all of your scaling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Auto Scaling Plans.
  *
  * @return A pointer to a related response object.
  *

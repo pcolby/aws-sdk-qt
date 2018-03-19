@@ -119,7 +119,7 @@ DataPipelineClient::DataPipelineClient(
  *
  * To activate a finished pipeline, modify the end date for the pipeline and then activate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -133,7 +133,7 @@ ActivatePipelineResponse * DataPipelineClient::activatePipeline(const ActivatePi
 /**
  * Adds or modifies tags for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -147,7 +147,7 @@ AddTagsResponse * DataPipelineClient::addTags(const AddTagsRequest &request)
 /**
  * Creates a new, empty pipeline. Use <a>PutPipelineDefinition</a> to populate the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -167,7 +167,7 @@ CreatePipelineResponse * DataPipelineClient::createPipeline(const CreatePipeline
  * To resume a deactivated pipeline, use <a>ActivatePipeline</a>. By default, the pipeline resumes from the last completed
  * execution. Optionally, you can specify the date and time to resume the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ DeactivatePipelineResponse * DataPipelineClient::deactivatePipeline(const Deacti
  * instead of deleting it, call <a>SetStatus</a> with the status set to <code>PAUSE</code> on individual components.
  * Components that are paused by <a>SetStatus</a> can be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -203,7 +203,7 @@ DeletePipelineResponse * DataPipelineClient::deletePipeline(const DeletePipeline
  * Gets the object definitions for a set of objects associated with the pipeline. Object definitions are composed of a set
  * of fields that define the properties of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -224,7 +224,7 @@ DescribeObjectsResponse * DataPipelineClient::describeObjects(const DescribeObje
  *
  * To retrieve the full pipeline definition instead of metadata about the pipeline, call
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ DescribePipelinesResponse * DataPipelineClient::describePipelines(const Describe
  * Task runners call <code>EvaluateExpression</code> to evaluate a string in the context of the specified object. For
  * example, a task runner can evaluate SQL queries stored in Amazon
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -254,7 +254,7 @@ EvaluateExpressionResponse * DataPipelineClient::evaluateExpression(const Evalua
  * Gets the definition of the specified pipeline. You can call <code>GetPipelineDefinition</code> to retrieve the pipeline
  * definition that you provided using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ GetPipelineDefinitionResponse * DataPipelineClient::getPipelineDefinition(const 
 /**
  * Lists the pipeline identifiers for all active pipelines that you have permission to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ ListPipelinesResponse * DataPipelineClient::listPipelines(const ListPipelinesReq
  * timeout in your task runner to 90 seconds. The task runner should not call <code>PollForTask</code> again on the same
  * <code>workerGroup</code> until it receives a response, and this can take up to 90 seconds.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -320,7 +320,7 @@ PollForTaskResponse * DataPipelineClient::pollForTask(const PollForTaskRequest &
  * Pipeline object definitions are passed to the <code>PutPipelineDefinition</code> action and returned by the
  * <a>GetPipelineDefinition</a> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -334,7 +334,7 @@ PutPipelineDefinitionResponse * DataPipelineClient::putPipelineDefinition(const 
 /**
  * Queries the specified pipeline for the names of objects that match the specified set of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ QueryObjectsResponse * DataPipelineClient::queryObjects(const QueryObjectsReques
 /**
  * Removes existing tags from the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ RemoveTagsResponse * DataPipelineClient::removeTags(const RemoveTagsRequest &req
  * process the task and reassigns the task in a subsequent response to <a>PollForTask</a>. Task runners should call
  * <code>ReportTaskProgress</code> every 60
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -388,7 +388,7 @@ ReportTaskProgressResponse * DataPipelineClient::reportTaskProgress(const Report
  * AWS Data Pipeline Task Runner is launched on a resource managed by AWS Data Pipeline, the web service can use this call
  * to detect when the task runner application has failed and restart a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -405,7 +405,7 @@ ReportTaskRunnerHeartbeatResponse * DataPipelineClient::reportTaskRunnerHeartbea
  * object (for example, DataNode or Activity). You cannot perform this operation on <code>FINISHED</code> pipelines and
  * attempting to do so returns
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -421,7 +421,7 @@ SetStatusResponse * DataPipelineClient::setStatus(const SetStatusRequest &reques
  * information about the final status. A task runner makes this call regardless of whether the task was sucessful. A task
  * runner does not need to call <code>SetTaskStatus</code> for tasks that are canceled by the web service during a call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *
@@ -435,7 +435,7 @@ SetTaskStatusResponse * DataPipelineClient::setTaskStatus(const SetTaskStatusReq
 /**
  * Validates the specified pipeline definition to ensure that it is well formed and can be run without
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Data Pipeline.
  *
  * @return A pointer to a related response object.
  *

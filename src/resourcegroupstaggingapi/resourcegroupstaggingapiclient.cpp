@@ -150,7 +150,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  * The response includes all tags that are associated with the requested resources. If no filter is provided, this action
  * returns a paginated resource list with the associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups Tagging API.
  *
  * @return A pointer to a related response object.
  *
@@ -164,7 +164,7 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
 /**
  * Returns all tag keys in the specified region for the AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups Tagging API.
  *
  * @return A pointer to a related response object.
  *
@@ -178,7 +178,7 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
 /**
  * Returns all tag values for the specified key in the specified region for the AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups Tagging API.
  *
  * @return A pointer to a related response object.
  *
@@ -215,7 +215,7 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
  * href="http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html">Obtaining
  * Permissions for Tagging</a> in the <i>AWS Resource Groups and Tag Editor User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups Tagging API.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
  *
  * You can only tag resources that are located in the specified region for the AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups Tagging API.
  *
  * @return A pointer to a related response object.
  *

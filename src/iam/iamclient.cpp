@@ -162,7 +162,7 @@ IamClient::IamClient(
  *
  * This action is idempotent; it does not fail or return an error if you add an existing client ID to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConne
  * information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -202,7 +202,7 @@ AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const Add
 /**
  * Adds the specified user to the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -253,7 +253,7 @@ AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicy
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -277,7 +277,7 @@ AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyReq
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -297,7 +297,7 @@ AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyReq
  * passwords, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing
  * Passwords</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -330,7 +330,7 @@ ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &
  * must save the key (for example, in a text file) if you want to be able to access it again. If a secret key is lost, you
  * can delete the access keys for the associated user and then create new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -346,7 +346,7 @@ CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -366,7 +366,7 @@ CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAl
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -387,7 +387,7 @@ CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateIns
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing Passwords</a> in the <i>IAM
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -436,7 +436,7 @@ CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProf
  * Because trust for the OIDC provider is ultimately derived from the IAM provider that this action creates, it is a best
  * practice to limit access to the <a>CreateOpenIDConnectProvider</a> action to highly-privileged
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -463,7 +463,7 @@ CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(con
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -490,7 +490,7 @@ CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &reques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -508,7 +508,7 @@ CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyV
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -548,7 +548,7 @@ CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html">About SAML 2.0-based Federation</a>
  * in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -575,7 +575,7 @@ CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProvi
  *
  * To attach a policy to this service-linked role, you must make the request using the AWS service that depends on this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -608,7 +608,7 @@ CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const Creat
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_ssh-keys.html">Using IAM with AWS CodeCommit: Git
  * Credentials, SSH Keys, and AWS Access Keys</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -628,7 +628,7 @@ CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCreden
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -657,7 +657,7 @@ CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
  * information, such as your AWS access keys or your passwords. After you provision your virtual device, you should ensure
  * that the information is destroyed following secure
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -677,7 +677,7 @@ CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateV
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_VirtualMFA.html">Using a Virtual MFA Device</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -697,7 +697,7 @@ DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFA
  * request. Because this action works for access keys under the AWS account, you can use this action to manage root
  * credentials even if the AWS account has no associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for Your AWS Account ID</a> in
  * the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -727,7 +727,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
 /**
  * Deletes the password policy for the AWS account. There are no
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 /**
  * Deletes the specified IAM group. The group must not contain any users or have any attached
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -762,7 +762,7 @@ DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -786,7 +786,7 @@ DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicy
  * For more information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -807,7 +807,7 @@ DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteIns
  * prevent all user access you must also either make any access keys inactive or delete them. For more information about
  * making keys inactive or deleting them, see <a>UpdateAccessKey</a> and <a>DeleteAccessKey</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -830,7 +830,7 @@ DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProf
  *
  * This action is idempotent; it does not fail or return an error if you call the action for a provider that does not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -872,7 +872,7 @@ DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(con
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -897,7 +897,7 @@ DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &reques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -917,7 +917,7 @@ DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyV
  * Make sure you do not have any Amazon EC2 instances running with the role you are about to delete. Deleting a role or
  * instance profile that is associated with a running instance will break any applications running on the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -938,7 +938,7 @@ DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -962,7 +962,7 @@ DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyReq
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -983,7 +983,7 @@ DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProvi
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1014,7 +1014,7 @@ DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublic
  * href="http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_DeleteLoadBalancerListeners.html">DeleteLoadBalancerListeners</a>
  * in the <i>Elastic Load Balancing API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1047,7 +1047,7 @@ DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const Delet
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">Roles
  * Terms and Concepts: AWS Service-Linked Role</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1061,7 +1061,7 @@ DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const Delet
 /**
  * Deletes the specified service-specific
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1081,7 +1081,7 @@ DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCreden
  * request. Because this action works for access keys under the AWS account, you can use this action to manage root
  * credentials even if the AWS account has no associated IAM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1096,7 +1096,7 @@ DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const Del
  * Deletes the specified IAM user. The user must not belong to any groups or have any access keys, signing certificates, or
  * attached
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1117,7 +1117,7 @@ DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1136,7 +1136,7 @@ DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyReq
  * You must deactivate a user's virtual MFA device before you can delete it. For information about deactivating MFA
  * devices, see <a>DeactivateMFADevice</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1157,7 +1157,7 @@ DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteV
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1178,7 +1178,7 @@ DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicy
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1199,7 +1199,7 @@ DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyReq
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1214,7 +1214,7 @@ DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyReq
  * Enables the specified MFA device and associates it with the specified IAM user. When enabled, the MFA device is required
  * for every subsequent login by the IAM user associated with the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1230,7 +1230,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1245,7 +1245,7 @@ GenerateCredentialReportResponse * IamClient::generateCredentialReport()
  * Retrieves information about when the specified access key was last used. The information includes the date and time of
  * last use, along with the AWS service and region that were specified in the last request made with that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1266,7 +1266,7 @@ GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKe
  * You can optionally filter the results using the <code>Filter</code> parameter. You can paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1281,7 +1281,7 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
  * Retrieves the password policy for the AWS account. For more information about using a password policy, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1301,7 +1301,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1323,7 +1323,7 @@ GetAccountSummaryResponse * IamClient::getAccountSummary()
  * to understand what key names and values you must supply when you call <a>SimulateCustomPolicy</a>. Note that all
  * parameters are shown in unencoded form here for clarity, but must be URL encoded to be included as a part of a real HTML
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1355,7 +1355,7 @@ GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy
  * request, and can be evaluated by testing against a value in an IAM policy. Use <a>GetContextKeysForPrincipalPolicy</a>
  * to understand what key names and values you must supply when you call
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1371,7 +1371,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1386,7 +1386,7 @@ GetCredentialReportResponse * IamClient::getCredentialReport()
  * Returns a list of IAM users that are in the specified IAM group. You can paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1419,7 +1419,7 @@ GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1436,7 +1436,7 @@ GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance Profiles</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1451,7 +1451,7 @@ GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProf
  * Retrieves the user name and password-creation date for the specified IAM user. If the user has not been assigned a
  * password, the action returns a 404 (<code>NoSuchEntity</code>)
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1465,7 +1465,7 @@ GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileReques
 /**
  * Returns information about the specified OpenID Connect (OIDC) provider resource object in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1493,7 +1493,7 @@ GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const Get
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1535,7 +1535,7 @@ GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html">Versioning for Managed
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1558,7 +1558,7 @@ GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionReq
  * use the <code>decode</code> method of the <code>java.net.URLDecoder</code> utility class in the Java SDK. Other
  * languages and SDKs provide similar
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1597,7 +1597,7 @@ GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using Roles to Delegate Permissions and
  * Federate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1616,7 +1616,7 @@ GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &req
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1637,7 +1637,7 @@ GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderReques
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1658,7 +1658,7 @@ GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1675,7 +1675,7 @@ GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCe
  * <code>GetServiceLinkedRoleDeletionStatus</code> to check the status of the deletion. If the deletion fails, this
  * operation returns the reason that it
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1694,7 +1694,7 @@ GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDele
  * If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID used to sign
  * the request to this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1727,7 +1727,7 @@ GetUserResponse * IamClient::getUser(const GetUserRequest &request)
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1757,7 +1757,7 @@ GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &req
  *
  * To ensure the security of your AWS account, the secret access key is accessible only during key and user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1773,7 +1773,7 @@ ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &
  * AWS account alias, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AccountAlias.html">Using an Alias for
  * Your AWS Account ID</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1801,7 +1801,7 @@ ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAlia
  * there are no policies attached to the specified group (or none that match the specified path prefix), the action returns
  * an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1829,7 +1829,7 @@ ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const L
  * there are no policies attached to the specified role (or none that match the specified path prefix), the action returns
  * an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1857,7 +1857,7 @@ ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const Lis
  * there are no policies attached to the specified group (or none that match the specified path prefix), the action returns
  * an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1881,7 +1881,7 @@ ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const Lis
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1907,7 +1907,7 @@ ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntit
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified group, the action returns an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1925,7 +1925,7 @@ ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPolicies
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1943,7 +1943,7 @@ ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1963,7 +1963,7 @@ ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUser
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -1983,7 +1983,7 @@ ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanc
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2003,7 +2003,7 @@ ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(con
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2017,7 +2017,7 @@ ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &
 /**
  * Lists information about the IAM OpenID Connect (OIDC) provider resource objects defined in the AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2048,7 +2048,7 @@ ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2069,7 +2069,7 @@ ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &reques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2095,7 +2095,7 @@ ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersi
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified role, the action returns an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2115,7 +2115,7 @@ ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesReq
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2134,7 +2134,7 @@ ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2161,7 +2161,7 @@ ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProviders
  * Although each user is limited to a small number of keys, you can still paginate the results using the
  * <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2187,7 +2187,7 @@ ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeys
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html">Working with Server
  * Certificates</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2206,7 +2206,7 @@ ListServerCertificatesResponse * IamClient::listServerCertificates(const ListSer
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html">Set Up service-specific credentials</a>
  * in the AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2232,7 +2232,7 @@ ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentia
  * ID used to sign the request for this API. Because this action works for access keys under the AWS account, you can use
  * this action to manage root credentials even if the AWS account has no associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2258,7 +2258,7 @@ ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListS
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code> parameters. If there are no inline
  * policies embedded with the specified user, the action returns an empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2277,7 +2277,7 @@ ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesReq
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2297,7 +2297,7 @@ ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
  *
  * You can paginate the results using the <code>MaxItems</code> and <code>Marker</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2331,7 +2331,7 @@ ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtu
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2373,7 +2373,7 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2407,7 +2407,7 @@ PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &req
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2426,7 +2426,7 @@ PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &req
  *
  * This action is idempotent; it does not fail or return an error if you try to remove a client ID that does not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2453,7 +2453,7 @@ RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromO
  * information about instance profiles, go to <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html">About Instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2467,7 +2467,7 @@ RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile
 /**
  * Removes the specified user from the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2483,7 +2483,7 @@ RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFro
  * It cannot be configured by the user. Resetting the password immediately invalidates the previous password associated
  * with this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2503,7 +2503,7 @@ ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredenti
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_VirtualMFA.html">Using a Virtual MFA Device</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2528,7 +2528,7 @@ ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html">Managed Policies and Inline
  * Policies</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2562,7 +2562,7 @@ SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDe
  *
  * If the output is long, you can use <code>MaxItems</code> and <code>Marker</code> parameters to paginate the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2607,7 +2607,7 @@ SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCus
  *
  * If the output is long, you can use the <code>MaxItems</code> and <code>Marker</code> parameters to paginate the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2634,7 +2634,7 @@ SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const Simul
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html">Managing Keys and Certificates</a> in
  * the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2659,7 +2659,7 @@ UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyReques
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
  * Policy</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2676,7 +2676,7 @@ UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(con
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/roles-toplevel.html">Using Roles to Delegate Permissions and
  * Federate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2703,7 +2703,7 @@ UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateA
  * "Managers" and "MGRs", or must have permission on all (*). For more information about permissions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html">Permissions and Policies</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2723,7 +2723,7 @@ UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
  * passwords, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html">Managing
  * Passwords</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2754,7 +2754,7 @@ UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProf
  * thumbprint, it is a best practice to limit access to the <code>UpdateOpenIDConnectProviderThumbprint</code> action to
  * highly-privileged
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2768,7 +2768,7 @@ UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectPr
 /**
  * Modifies the description of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2787,7 +2787,7 @@ UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRol
  * This operation requires <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
  * Version
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2809,7 +2809,7 @@ UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProvi
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2844,7 +2844,7 @@ UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublic
  * permissions, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access Management</a> in the
  * <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2860,7 +2860,7 @@ UpdateServerCertificateResponse * IamClient::updateServerCertificate(const Updat
  * credentials that are inactive cannot be used for authentication to the service. This action can be used to disable a
  * user’s service-specific credential as part of a credential rotation work
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2881,7 +2881,7 @@ UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCreden
  * ID used to sign the request. Because this action works for access keys under the AWS account, you can use this action to
  * manage root credentials even if the AWS account has no associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2909,7 +2909,7 @@ UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const Upd
  * permission on all (*). For more information about permissions, see <a
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html">Permissions and Policies</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2930,7 +2930,7 @@ UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-credentials-ssh.html">Set up AWS CodeCommit for
  * SSH Connections</a> in the <i>AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -2975,7 +2975,7 @@ UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublic
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/programming.html">Calling the API by Making HTTP Query
  * Requests</a> in the <i>IAM User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *
@@ -3006,7 +3006,7 @@ UploadServerCertificateResponse * IamClient::uploadServerCertificate(const Uploa
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making Query Requests</a> in the <i>IAM
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Identity and Access Management.
  *
  * @return A pointer to a related response object.
  *

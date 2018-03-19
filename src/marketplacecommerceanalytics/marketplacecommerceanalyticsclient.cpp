@@ -97,7 +97,7 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
  * same data set is requested twice), the original file will be overwritten by the new file. Requires a Role with an
  * attached permissions policy providing Allow permissions for the following actions: s3:PutObject, s3:GetBucketLocation,
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Marketplace Commerce Analytics.
  *
  * @return A pointer to a related response object.
  *
@@ -116,7 +116,7 @@ GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(co
  * exists (e.g. if the same data set is requested twice), the original file will be overwritten by the new file. Requires a
  * Role with an attached permissions policy providing Allow permissions for the following actions: s3:PutObject,
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Marketplace Commerce Analytics.
  *
  * @return A pointer to a related response object.
  *

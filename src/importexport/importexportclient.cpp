@@ -95,7 +95,7 @@ ImportExportClient::ImportExportClient(
 /**
  * This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *
@@ -111,7 +111,7 @@ CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &reques
  * manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in
  * other operations, a signature that you use to identify your storage device, and the address where you should ship your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &reques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippin
 /**
  * This operation returns information about a job, including where the job is in the processing pipeline, the status of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *
@@ -153,7 +153,7 @@ GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &reques
  * This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological
  * order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *
@@ -168,7 +168,7 @@ ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
  * You use this operation to change the parameters specified in the original manifest file by supplying a new manifest
  * file. The manifest file attached to this request replaces the original manifest file. You can only use the operation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Import/Export.
  *
  * @return A pointer to a related response object.
  *

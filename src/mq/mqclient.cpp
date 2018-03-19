@@ -93,7 +93,7 @@ MqClient::MqClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -107,7 +107,7 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
 /**
  * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -133,7 +133,7 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -146,7 +146,7 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -159,7 +159,7 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -172,7 +172,7 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -185,7 +185,7 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -198,7 +198,7 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -224,7 +224,7 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -237,7 +237,7 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -250,7 +250,7 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -263,7 +263,7 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -276,7 +276,7 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -289,7 +289,7 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *
@@ -302,7 +302,7 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AmazonMQ.
  *
  * @return A pointer to a related response object.
  *

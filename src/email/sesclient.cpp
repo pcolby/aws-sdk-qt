@@ -113,7 +113,7 @@ SesClient::SesClient(
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -136,7 +136,7 @@ CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptR
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -165,7 +165,7 @@ CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateC
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationS
  * Domains to Handle Open and Click Tracking</a> in the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSe
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -234,7 +234,7 @@ CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificat
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -257,7 +257,7 @@ CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceipt
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -280,7 +280,7 @@ CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRule
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateRecei
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -320,7 +320,7 @@ CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -340,7 +340,7 @@ DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteC
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -367,7 +367,7 @@ DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationS
  * Deleting this kind of association will result in emails sent using the specified configuration set to capture open and
  * click events using the standard, Amazon SES-operated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -391,7 +391,7 @@ DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSe
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -409,7 +409,7 @@ DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificat
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -462,7 +462,7 @@ DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdent
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -486,7 +486,7 @@ DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceipt
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -514,7 +514,7 @@ DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRule
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -532,7 +532,7 @@ DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteRecei
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -546,7 +546,7 @@ DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &
 /**
  * Deprecated. Use the <code>DeleteIdentity</code> operation to delete email addresses and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -569,7 +569,7 @@ DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -588,7 +588,7 @@ DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(c
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -611,7 +611,7 @@ DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const Des
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -635,7 +635,7 @@ DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeRecei
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -653,7 +653,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -677,7 +677,7 @@ GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -720,7 +720,7 @@ GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEma
  * For more information about creating DNS records using DKIM tokens, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -739,7 +739,7 @@ GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const G
  * This operation is throttled at one request per second and can only get custom MAIL FROM attributes for up to 100
  * identities at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -764,7 +764,7 @@ GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDoma
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -793,7 +793,7 @@ GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAt
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -828,7 +828,7 @@ GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPo
  * This operation is throttled at one request per second and can only get verification attributes for up to 100 identities
  * at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -846,7 +846,7 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -865,7 +865,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -883,7 +883,7 @@ GetSendStatisticsResponse * SesClient::getSendStatistics()
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -907,7 +907,7 @@ GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
  * a NextToken element. You can then execute the <code>ListConfigurationSets</code> operation again, passing the
  * <code>NextToken</code> parameter and the value of the NextToken element to retrieve additional
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -931,7 +931,7 @@ ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfi
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -950,7 +950,7 @@ ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerification
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -979,7 +979,7 @@ ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1003,7 +1003,7 @@ ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentit
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1029,7 +1029,7 @@ ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFilt
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1047,7 +1047,7 @@ ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRu
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1061,7 +1061,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
 /**
  * Deprecated. Use the <code>ListIdentities</code> operation to list the email addresses and domains associated with your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1089,7 +1089,7 @@ ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1118,7 +1118,7 @@ PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicy
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1146,7 +1146,7 @@ ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderRe
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1191,7 +1191,7 @@ SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
  * format <i>UserName@[SubDomain.]Domain.TopLevelDomain</i>), the entire message will be rejected, even if the message
  * contains other recipients that are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1217,7 +1217,7 @@ SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBul
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1269,7 +1269,7 @@ SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(con
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html">Managing Your Amazon SES Sending
  * Limits</a> in the <i>Amazon SES Developer Guide.</i>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1368,7 +1368,7 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Using Sending Authorization with
  * Amazon SES</a> in the <i>Amazon SES Developer Guide.</i>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1418,7 +1418,7 @@ SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &reques
  * <i>UserName@[SubDomain.]Domain.TopLevelDomain</i>), the entire message will be rejected, even if the message contains
  * other recipients that are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1446,7 +1446,7 @@ SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEm
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1484,7 +1484,7 @@ SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetAc
  * For more information about Easy DKIM signing, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1513,7 +1513,7 @@ SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIden
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1537,7 +1537,7 @@ SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackFor
  * For more information about using notifications with Amazon SES, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1562,7 +1562,7 @@ SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeaders
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1591,7 +1591,7 @@ SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const S
  * For more information about feedback notification, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1615,7 +1615,7 @@ SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(c
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1633,7 +1633,7 @@ SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetRece
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1653,7 +1653,7 @@ TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTempl
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1680,7 +1680,7 @@ UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(con
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1700,7 +1700,7 @@ UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationS
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1720,7 +1720,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfig
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1742,7 +1742,7 @@ UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSet
  * Domains to Handle Open and Click Tracking</a> in the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1766,7 +1766,7 @@ UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSe
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1790,7 +1790,7 @@ UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificat
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1810,7 +1810,7 @@ UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRule
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1840,7 +1840,7 @@ UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &
  * For more information about creating DNS records using DKIM tokens, go to the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html">Amazon SES Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1861,7 +1861,7 @@ VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimReq
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1875,7 +1875,7 @@ VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomai
 /**
  * Deprecated. Use the <code>VerifyEmailIdentity</code> operation to verify a new email
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1894,7 +1894,7 @@ VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddr
  *
  * You can execute this operation no more than once per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Email Service.
  *
  * @return A pointer to a related response object.
  *

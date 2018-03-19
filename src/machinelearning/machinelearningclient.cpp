@@ -93,7 +93,7 @@ MachineLearningClient::MachineLearningClient(
  * Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a
  * tag using a key that is already associated with the ML object, <code>AddTags</code> updates the tag's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -122,7 +122,7 @@ AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
  * parameter of the result. After the <code>COMPLETED</code> status appears, the results are available in the location
  * specified by the <code>OutputUri</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -152,7 +152,7 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
  * If Amazon ML cannot accept the input source, it sets the <code>Status</code> parameter to <code>FAILED</code> and
  * includes an error message in the <code>Message</code> attribute of the <code>GetDataSource</code> operation response.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -202,7 +202,7 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
  * <code>CreateDataSource</code> call. Change the settings that you want to change and make sure that all required fields
  * have the appropriate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFr
  * or excluded from training? Will the variable be manipulated; for example, will it be combined with another variable or
  * will it be split apart into word combinations? The recipe provides answers to these
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -276,7 +276,7 @@ CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(c
  *
  * You can use the <code>GetEvaluation</code> operation to check progress of the evaluation during the creation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -311,7 +311,7 @@ CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateE
  * <code>ComputeStatistics</code> to <code>true</code> in <code>CreateDataSourceFromRDS</code>,
  * <code>CreateDataSourceFromS3</code>, or <code>CreateDataSourceFromRedshift</code> operations.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -326,7 +326,7 @@ CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModel
  * Creates a real-time endpoint for the <code>MLModel</code>. The endpoint contains the URI of the <code>MLModel</code>;
  * that is, the location to send real-time prediction requests for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -349,7 +349,7 @@ CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(c
  *
  * <b>Caution:</b> The result of the <code>DeleteBatchPrediction</code> operation is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(con
  *
  * <b>Caution:</b> The results of the <code>DeleteDataSource</code> operation are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -393,7 +393,7 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
  *
  * <code>DELETED</code>> <caution><title>Caution</title>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -416,7 +416,7 @@ DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteE
  *
  * <b>Caution:</b> The result of the <code>DeleteMLModel</code> operation is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -430,7 +430,7 @@ DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModel
 /**
  * Deletes a real time endpoint of an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -448,7 +448,7 @@ DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(c
  *
  * If you specify a tag that doesn't exist, Amazon ML ignores
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -462,7 +462,7 @@ DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &
 /**
  * Returns a list of <code>BatchPrediction</code> operations that match the search criteria in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -476,7 +476,7 @@ DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictio
 /**
  * Returns a list of <code>DataSource</code> that match the search criteria in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -490,7 +490,7 @@ DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const D
 /**
  * Returns a list of <code>DescribeEvaluations</code> that match the search criteria in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -504,7 +504,7 @@ DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const D
 /**
  * Returns a list of <code>MLModel</code> that match the search criteria in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -518,7 +518,7 @@ DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const Describ
 /**
  * Describes one or more of the tags for your Amazon ML
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -533,7 +533,7 @@ DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsReq
  * Returns a <code>BatchPrediction</code> that includes detailed metadata, status, and data file information for a
  * <code>Batch Prediction</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -552,7 +552,7 @@ GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const Get
  * <code>GetDataSource</code> provides results in normal or verbose format. The verbose format adds the schema description
  * and the list of files pointed to by the DataSource to the normal
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -566,7 +566,7 @@ GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSource
 /**
  * Returns an <code>Evaluation</code> that includes metadata as well as the current status of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -584,7 +584,7 @@ GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluation
  *
  * <code>GetMLModel</code> provides results in normal or verbose format.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -602,7 +602,7 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
  *
  * Not all response parameters will be populated. Whether a response parameter is populated depends on the type of model
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -620,7 +620,7 @@ PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
  *
  * You can use the <code>GetBatchPrediction</code> operation to view the contents of the updated data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -638,7 +638,7 @@ UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(con
  *
  * You can use the <code>GetDataSource</code> operation to view the contents of the updated data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -656,7 +656,7 @@ UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateD
  *
  * You can use the <code>GetEvaluation</code> operation to view the contents of the updated data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *
@@ -674,7 +674,7 @@ UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateE
  *
  * You can use the <code>GetMLModel</code> operation to view the contents of the updated data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Machine Learning.
  *
  * @return A pointer to a related response object.
  *

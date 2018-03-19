@@ -73,10 +73,6 @@ bool Generator::generate(const QString &serviceFileName,
     context.insert(QLatin1String("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
-    /// @todo
-    context.insert(QStringLiteral("publicSlots"), QStringLiteral("{{publicSlots}}"));
-    context.insert(QStringLiteral("servicename"), QStringLiteral("{{servicename}}"));
-
     /// @todo Generate model classes.
 
     /// @todo Generate request / response classes.

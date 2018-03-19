@@ -99,7 +99,7 @@ EmrClient::EmrClient(
  *
  * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -113,7 +113,7 @@ AddInstanceFleetResponse * EmrClient::addInstanceFleet(const AddInstanceFleetReq
 /**
  * Adds one or more instance groups to a running
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -151,7 +151,7 @@ AddInstanceGroupsResponse * EmrClient::addInstanceGroups(const AddInstanceGroups
  *
  * You can only add steps to a cluster that is in one of the following states: STARTING, BOOTSTRAPPING, RUNNING, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -167,7 +167,7 @@ AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsReques
  * clusters to track your Amazon EMR resource allocation costs. For more information, see <a
  * href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -184,7 +184,7 @@ AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
  * asynchronous; it does not guarantee a step will be canceled, even if the request is successfully submitted. You can only
  * cancel steps that are in a <code>PENDING</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -198,7 +198,7 @@ CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
 /**
  * Creates a security configuration, which is stored in the service and can be specified when a cluster is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -212,7 +212,7 @@ CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(con
 /**
  * Deletes a security
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -227,7 +227,7 @@ DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(con
  * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on. For
  * information about the cluster steps, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterReques
  *
  * Amazon EMR can return a maximum of 512 job flow
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -282,7 +282,7 @@ DescribeJobFlowsResponse * EmrClient::describeJobFlows(const DescribeJobFlowsReq
 /**
  * Provides the details of a security configuration by returning the configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ DescribeSecurityConfigurationResponse * EmrClient::describeSecurityConfiguration
 /**
  * Provides more detail about the cluster
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -310,7 +310,7 @@ DescribeStepResponse * EmrClient::describeStep(const DescribeStepRequest &reques
 /**
  * Provides information about the bootstrap actions associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -326,7 +326,7 @@ ListBootstrapActionsResponse * EmrClient::listBootstrapActions(const ListBootstr
  * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a maximum of
  * 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListClusters
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -344,7 +344,7 @@ ListClustersResponse * EmrClient::listClusters(const ListClustersRequest &reques
  *
  * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -358,7 +358,7 @@ ListInstanceFleetsResponse * EmrClient::listInstanceFleets(const ListInstanceFle
 /**
  * Provides all available details about the instance groups in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -374,7 +374,7 @@ ListInstanceGroupsResponse * EmrClient::listInstanceGroups(const ListInstanceGro
  * 2,000. EC2 instances in any of the following states are considered active: AWAITING_FULFILLMENT, PROVISIONING,
  * BOOTSTRAPPING,
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -390,7 +390,7 @@ ListInstancesResponse * EmrClient::listInstances(const ListInstancesRequest &req
  * names. This call returns a maximum of 50 clusters per call, but returns a marker to track the paging of the cluster list
  * across multiple ListSecurityConfigurations
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const
 /**
  * Provides a list of steps for the cluster in reverse order unless you specify stepIds with the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -423,7 +423,7 @@ ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
  *
  * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ ModifyInstanceFleetResponse * EmrClient::modifyInstanceFleet(const ModifyInstanc
  * ModifyInstanceGroups modifies the number of nodes and configuration settings of an instance group. The input parameters
  * include the new target instance count for the group and the instance group ID. The call will either succeed or fail
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -454,7 +454,7 @@ ModifyInstanceGroupsResponse * EmrClient::modifyInstanceGroups(const ModifyInsta
  * cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in
  * response to the value of a CloudWatch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -468,7 +468,7 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
 /**
  * Removes an automatic scaling policy from a specified instance group within an EMR
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -488,7 +488,7 @@ RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const Remov
  *
  * The following example removes the stack tag with value Prod from a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -534,7 +534,7 @@ RemoveTagsResponse * EmrClient::removeTags(const RemoveTagsRequest &request)
  * The instance fleets configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.
  * The RunJobFlow request can contain InstanceFleets parameters or InstanceGroups parameters, but not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -568,7 +568,7 @@ RunJobFlowResponse * EmrClient::runJobFlow(const RunJobFlowRequest &request)
  * href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html">Managing Cluster
  * Termination</a> in the <i>Amazon EMR Management Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -585,7 +585,7 @@ SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const Set
  * using the <code>VisibleToAllUsers</code> parameter of <a>RunJobFlow</a>. The SetVisibleToAllUsers action can be called
  * only by an IAM user who created the cluster or the AWS account that owns the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *
@@ -607,7 +607,7 @@ SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleT
  * the configuration of the cluster, it may take up to 1-5 minutes for the cluster to completely terminate and release
  * allocated resources, such as Amazon EC2
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic MapReduce.
  *
  * @return A pointer to a related response object.
  *

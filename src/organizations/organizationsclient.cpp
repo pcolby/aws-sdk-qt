@@ -268,7 +268,7 @@ OrganizationsClient::OrganizationsClient(
  *
  * After you accept a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -328,7 +328,7 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -352,7 +352,7 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
  *
  * After you cancel a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -425,7 +425,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -454,7 +454,7 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
  * parameter to <code>CONSOLIDATED_BILLING"</code>, then no policy types are enabled by default and you cannot use
  * organization
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -480,7 +480,7 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -503,7 +503,7 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -527,7 +527,7 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
  *
  * After you decline a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -542,7 +542,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
  * Deletes the organization. You can delete an organization only by using credentials from the master account. The
  * organization must be empty of member accounts, OUs, and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -561,7 +561,7 @@ DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -580,7 +580,7 @@ DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -598,7 +598,7 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -616,7 +616,7 @@ DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAcc
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -640,7 +640,7 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
  *
  * This operation can be called from any account in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -663,7 +663,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
  * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -681,7 +681,7 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -699,7 +699,7 @@ DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizational
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -729,7 +729,7 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -772,7 +772,7 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -799,7 +799,7 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
  * that organization. Use <a>ListRoots</a> to see the status of policy types for a specified root. Use
  * <a>DescribeOrganization</a> to see the status of policy types in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -835,7 +835,7 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  * This operation can be called only from the organization's master account and only if the organization has <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -883,7 +883,7 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  *
  * This operation can be called only from the organization's master account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -911,7 +911,7 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
  *
  * To view the status of policy type in a root, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -946,7 +946,7 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  * an account because your organization is still initializing, please contact <a
  * href="https://console.aws.amazon.com/support/home#/"> AWS Customer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -991,7 +991,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1017,7 +1017,7 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1043,7 +1043,7 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1071,7 +1071,7 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1097,7 +1097,7 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1122,7 +1122,7 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1152,7 +1152,7 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
  *
  * This operation can be called from any account in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1184,7 +1184,7 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1209,7 +1209,7 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1239,7 +1239,7 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
  *
  * In the current release, a child can have only a single parent.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1264,7 +1264,7 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1290,7 +1290,7 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1321,7 +1321,7 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
  * When you enable all features, you make policy types available for use in that organization. Individual policy types can
  * then be enabled and disabled in a root. To see the availability of a policy type in an organization, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1346,7 +1346,7 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1364,7 +1364,7 @@ ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const L
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1410,7 +1410,7 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
  * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1429,7 +1429,7 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *
@@ -1448,7 +1448,7 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
  *
  * This operation can be called only from the organization's master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Organizations.
  *
  * @return A pointer to a related response object.
  *

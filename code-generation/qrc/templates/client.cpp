@@ -102,7 +102,7 @@ namespace {{NameSpaceName}} {
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
- * @param  request Request to send to {{ servicename }}.
+ * @param  request Request to send to {{serviceFullName}}.
  *
  * @return A pointer to a related response object.
  *

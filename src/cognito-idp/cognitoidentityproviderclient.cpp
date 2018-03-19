@@ -102,7 +102,7 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
 /**
  * Adds additional user attributes to the user pool
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ AddCustomAttributesResponse * CognitoIdentityProviderClient::addCustomAttributes
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ AdminAddUserToGroupResponse * CognitoIdentityProviderClient::adminAddUserToGroup
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -174,7 +174,7 @@ AdminConfirmSignUpResponse * CognitoIdentityProviderClient::adminConfirmSignUp(c
  *
  * AdminCreateUser requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -192,7 +192,7 @@ AdminCreateUserResponse * CognitoIdentityProviderClient::adminCreateUser(const A
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ AdminDeleteUserResponse * CognitoIdentityProviderClient::adminDeleteUser(const A
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -257,7 +257,7 @@ AdminDeleteUserAttributesResponse * CognitoIdentityProviderClient::adminDeleteUs
  * already signed in, the <code>ProviderAttributeName</code> must be <code>Cognito_Subject</code> and
  * <code>ProviderAttributeValue</code> must be the subject of the SAML
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ AdminDisableProviderForUserResponse * CognitoIdentityProviderClient::adminDisabl
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ AdminDisableUserResponse * CognitoIdentityProviderClient::adminDisableUser(const
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -311,7 +311,7 @@ AdminEnableUserResponse * CognitoIdentityProviderClient::adminEnableUser(const A
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -329,7 +329,7 @@ AdminForgetDeviceResponse * CognitoIdentityProviderClient::adminForgetDevice(con
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -347,7 +347,7 @@ AdminGetDeviceResponse * CognitoIdentityProviderClient::adminGetDevice(const Adm
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -365,7 +365,7 @@ AdminGetUserResponse * CognitoIdentityProviderClient::adminGetUser(const AdminGe
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -401,7 +401,7 @@ AdminInitiateAuthResponse * CognitoIdentityProviderClient::adminInitiateAuth(con
  *
  * This action is enabled only for admin access and requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -419,7 +419,7 @@ AdminLinkProviderForUserResponse * CognitoIdentityProviderClient::adminLinkProvi
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ AdminListDevicesResponse * CognitoIdentityProviderClient::adminListDevices(const
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -451,7 +451,7 @@ AdminListGroupsForUserResponse * CognitoIdentityProviderClient::adminListGroupsF
 /**
  * Lists a history of user activity and any risks detected as part of Amazon Cognito advanced
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -469,7 +469,7 @@ AdminListUserAuthEventsResponse * CognitoIdentityProviderClient::adminListUserAu
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -496,7 +496,7 @@ AdminRemoveUserFromGroupResponse * CognitoIdentityProviderClient::adminRemoveUse
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -514,7 +514,7 @@ AdminResetUserPasswordResponse * CognitoIdentityProviderClient::adminResetUserPa
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -528,7 +528,7 @@ AdminRespondToAuthChallengeResponse * CognitoIdentityProviderClient::adminRespon
 /**
  * Sets the user's multi-factor authentication (MFA)
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -546,7 +546,7 @@ AdminSetUserMFAPreferenceResponse * CognitoIdentityProviderClient::adminSetUserM
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -561,7 +561,7 @@ AdminSetUserSettingsResponse * CognitoIdentityProviderClient::adminSetUserSettin
  * Provides feedback for an authentication event as to whether it was from a valid user. This feedback is used for
  * improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -579,7 +579,7 @@ AdminUpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::adminUpdat
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -605,7 +605,7 @@ AdminUpdateDeviceStatusResponse * CognitoIdentityProviderClient::adminUpdateDevi
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -623,7 +623,7 @@ AdminUpdateUserAttributesResponse * CognitoIdentityProviderClient::adminUpdateUs
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -638,7 +638,7 @@ AdminUserGlobalSignOutResponse * CognitoIdentityProviderClient::adminUserGlobalS
  * Returns a unique generated shared secret key code for the user account. The request takes an access token or a session
  * string, but not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -652,7 +652,7 @@ AssociateSoftwareTokenResponse * CognitoIdentityProviderClient::associateSoftwar
 /**
  * Changes the password for a specified user in a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ ChangePasswordResponse * CognitoIdentityProviderClient::changePassword(const Cha
 /**
  * Confirms tracking of the device. This API call is the call that begins device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -680,7 +680,7 @@ ConfirmDeviceResponse * CognitoIdentityProviderClient::confirmDevice(const Confi
 /**
  * Allows a user to enter a confirmation code to reset a forgotten
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -694,7 +694,7 @@ ConfirmForgotPasswordResponse * CognitoIdentityProviderClient::confirmForgotPass
 /**
  * Confirms registration of a user and handles the existing alias from a previous
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -712,7 +712,7 @@ ConfirmSignUpResponse * CognitoIdentityProviderClient::confirmSignUp(const Confi
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -726,7 +726,7 @@ CreateGroupResponse * CognitoIdentityProviderClient::createGroup(const CreateGro
 /**
  * Creates an identity provider for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -740,7 +740,7 @@ CreateIdentityProviderResponse * CognitoIdentityProviderClient::createIdentityPr
 /**
  * Creates a new OAuth2.0 resource server and defines custom scopes in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -754,7 +754,7 @@ CreateResourceServerResponse * CognitoIdentityProviderClient::createResourceServ
 /**
  * Creates the user import
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -768,7 +768,7 @@ CreateUserImportJobResponse * CognitoIdentityProviderClient::createUserImportJob
 /**
  * Creates a new Amazon Cognito user pool and sets the password policy for the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -782,7 +782,7 @@ CreateUserPoolResponse * CognitoIdentityProviderClient::createUserPool(const Cre
 /**
  * Creates the user pool
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -796,7 +796,7 @@ CreateUserPoolClientResponse * CognitoIdentityProviderClient::createUserPoolClie
 /**
  * Creates a new domain for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -814,7 +814,7 @@ CreateUserPoolDomainResponse * CognitoIdentityProviderClient::createUserPoolDoma
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -828,7 +828,7 @@ DeleteGroupResponse * CognitoIdentityProviderClient::deleteGroup(const DeleteGro
 /**
  * Deletes an identity provider for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -842,7 +842,7 @@ DeleteIdentityProviderResponse * CognitoIdentityProviderClient::deleteIdentityPr
 /**
  * Deletes a resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -856,7 +856,7 @@ DeleteResourceServerResponse * CognitoIdentityProviderClient::deleteResourceServ
 /**
  * Allows a user to delete himself or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -870,7 +870,7 @@ DeleteUserResponse * CognitoIdentityProviderClient::deleteUser(const DeleteUserR
 /**
  * Deletes the attributes for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -884,7 +884,7 @@ DeleteUserAttributesResponse * CognitoIdentityProviderClient::deleteUserAttribut
 /**
  * Deletes the specified Amazon Cognito user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -898,7 +898,7 @@ DeleteUserPoolResponse * CognitoIdentityProviderClient::deleteUserPool(const Del
 /**
  * Allows the developer to delete the user pool
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -912,7 +912,7 @@ DeleteUserPoolClientResponse * CognitoIdentityProviderClient::deleteUserPoolClie
 /**
  * Deletes a domain for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -926,7 +926,7 @@ DeleteUserPoolDomainResponse * CognitoIdentityProviderClient::deleteUserPoolDoma
 /**
  * Gets information about a specific identity
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -940,7 +940,7 @@ DescribeIdentityProviderResponse * CognitoIdentityProviderClient::describeIdenti
 /**
  * Describes a resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -954,7 +954,7 @@ DescribeResourceServerResponse * CognitoIdentityProviderClient::describeResource
 /**
  * Describes the risk
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -968,7 +968,7 @@ DescribeRiskConfigurationResponse * CognitoIdentityProviderClient::describeRiskC
 /**
  * Describes the user import
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -982,7 +982,7 @@ DescribeUserImportJobResponse * CognitoIdentityProviderClient::describeUserImpor
 /**
  * Returns the configuration information and metadata of the specified user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -996,7 +996,7 @@ DescribeUserPoolResponse * CognitoIdentityProviderClient::describeUserPool(const
 /**
  * Client method for returning the configuration information and metadata of the specified user pool
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1010,7 +1010,7 @@ DescribeUserPoolClientResponse * CognitoIdentityProviderClient::describeUserPool
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1024,7 +1024,7 @@ DescribeUserPoolDomainResponse * CognitoIdentityProviderClient::describeUserPool
 /**
  * Forgets the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1042,7 +1042,7 @@ ForgetDeviceResponse * CognitoIdentityProviderClient::forgetDevice(const ForgetD
  * the confirmation code is sent to the email. If neither a verified phone number nor a verified email exists,
  * <code>InvalidParameterException</code> is thrown. To use the confirmation code for resetting the password, call
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1056,7 +1056,7 @@ ForgotPasswordResponse * CognitoIdentityProviderClient::forgotPassword(const For
 /**
  * Gets the header information for the .csv file to be used as input for the user import
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1070,7 +1070,7 @@ GetCSVHeaderResponse * CognitoIdentityProviderClient::getCSVHeader(const GetCSVH
 /**
  * Gets the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1088,7 +1088,7 @@ GetDeviceResponse * CognitoIdentityProviderClient::getDevice(const GetDeviceRequ
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1102,7 +1102,7 @@ GetGroupResponse * CognitoIdentityProviderClient::getGroup(const GetGroupRequest
 /**
  * Gets the specified identity
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1116,7 +1116,7 @@ GetIdentityProviderByIdentifierResponse * CognitoIdentityProviderClient::getIden
 /**
  * This method takes a user pool ID, and returns the signing
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1132,7 +1132,7 @@ GetSigningCertificateResponse * CognitoIdentityProviderClient::getSigningCertifi
  * for the particular client, but there is an existing pool level customization (app <code>clientId</code> will be
  * <code>ALL</code>), then that is returned. If nothing is present, then an empty shape is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1146,7 +1146,7 @@ GetUICustomizationResponse * CognitoIdentityProviderClient::getUICustomization(c
 /**
  * Gets the user attributes and metadata for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1160,7 +1160,7 @@ GetUserResponse * CognitoIdentityProviderClient::getUser(const GetUserRequest &r
 /**
  * Gets the user attribute verification code for the specified attribute
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1174,7 +1174,7 @@ GetUserAttributeVerificationCodeResponse * CognitoIdentityProviderClient::getUse
 /**
  * Gets the user pool multi-factor authentication (MFA)
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1188,7 +1188,7 @@ GetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::getUserPoolMfaConf
 /**
  * Signs out users from all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1202,7 +1202,7 @@ GlobalSignOutResponse * CognitoIdentityProviderClient::globalSignOut(const Globa
 /**
  * Initiates the authentication
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1216,7 +1216,7 @@ InitiateAuthResponse * CognitoIdentityProviderClient::initiateAuth(const Initiat
 /**
  * Lists the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1234,7 +1234,7 @@ ListDevicesResponse * CognitoIdentityProviderClient::listDevices(const ListDevic
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1248,7 +1248,7 @@ ListGroupsResponse * CognitoIdentityProviderClient::listGroups(const ListGroupsR
 /**
  * Lists information about all identity providers for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1262,7 +1262,7 @@ ListIdentityProvidersResponse * CognitoIdentityProviderClient::listIdentityProvi
 /**
  * Lists the resource servers for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1276,7 +1276,7 @@ ListResourceServersResponse * CognitoIdentityProviderClient::listResourceServers
 /**
  * Lists the user import
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1290,7 +1290,7 @@ ListUserImportJobsResponse * CognitoIdentityProviderClient::listUserImportJobs(c
 /**
  * Lists the clients that have been created for the specified user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1304,7 +1304,7 @@ ListUserPoolClientsResponse * CognitoIdentityProviderClient::listUserPoolClients
 /**
  * Lists the user pools associated with an AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1318,7 +1318,7 @@ ListUserPoolsResponse * CognitoIdentityProviderClient::listUserPools(const ListU
 /**
  * Lists the users in the Amazon Cognito user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1336,7 +1336,7 @@ ListUsersResponse * CognitoIdentityProviderClient::listUsers(const ListUsersRequ
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1350,7 +1350,7 @@ ListUsersInGroupResponse * CognitoIdentityProviderClient::listUsersInGroup(const
 /**
  * Resends the confirmation (for confirmation of registration) to a specific user in the user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1364,7 +1364,7 @@ ResendConfirmationCodeResponse * CognitoIdentityProviderClient::resendConfirmati
 /**
  * Responds to the authentication
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1387,7 +1387,7 @@ RespondToAuthChallengeResponse * CognitoIdentityProviderClient::respondToAuthCha
  *
  * See
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1413,7 +1413,7 @@ SetRiskConfigurationResponse * CognitoIdentityProviderClient::setRiskConfigurati
  * To use this API, your user pool must have a domain associated with it. Otherwise, there is no place to host the app's
  * pages, and the service will throw an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1427,7 +1427,7 @@ SetUICustomizationResponse * CognitoIdentityProviderClient::setUICustomization(c
 /**
  * Set the user's multi-factor authentication (MFA) method
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1441,7 +1441,7 @@ SetUserMFAPreferenceResponse * CognitoIdentityProviderClient::setUserMFAPreferen
 /**
  * Set the user pool MFA
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1456,7 +1456,7 @@ SetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::setUserPoolMfaConf
  * Sets the user settings like multi-factor authentication (MFA). If MFA is to be removed for a particular attribute pass
  * the attribute with code delivery as null. If null list is passed, all MFA options are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1470,7 +1470,7 @@ SetUserSettingsResponse * CognitoIdentityProviderClient::setUserSettings(const S
 /**
  * Registers the user in the specified user pool and creates a user name, password, and user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1484,7 +1484,7 @@ SignUpResponse * CognitoIdentityProviderClient::signUp(const SignUpRequest &requ
 /**
  * Starts the user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1498,7 +1498,7 @@ StartUserImportJobResponse * CognitoIdentityProviderClient::startUserImportJob(c
 /**
  * Stops the user import
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1513,7 +1513,7 @@ StopUserImportJobResponse * CognitoIdentityProviderClient::stopUserImportJob(con
  * Provides the feedback for an authentication event whether it was from a valid user or not. This feedback is used for
  * improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1527,7 +1527,7 @@ UpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::updateAuthEvent
 /**
  * Updates the device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1545,7 +1545,7 @@ UpdateDeviceStatusResponse * CognitoIdentityProviderClient::updateDeviceStatus(c
  *
  * Requires developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1559,7 +1559,7 @@ UpdateGroupResponse * CognitoIdentityProviderClient::updateGroup(const UpdateGro
 /**
  * Updates identity provider information for a user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1573,7 +1573,7 @@ UpdateIdentityProviderResponse * CognitoIdentityProviderClient::updateIdentityPr
 /**
  * Updates the name and scopes of resource server. All other fields are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1587,7 +1587,7 @@ UpdateResourceServerResponse * CognitoIdentityProviderClient::updateResourceServ
 /**
  * Allows a user to update a specific attribute (one at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1601,7 +1601,7 @@ UpdateUserAttributesResponse * CognitoIdentityProviderClient::updateUserAttribut
 /**
  * Updates the specified user pool with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1615,7 +1615,7 @@ UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const Upd
 /**
  * Allows the developer to update the specified user pool client and password
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1629,7 +1629,7 @@ UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClie
 /**
  * Use this API to register a user's entered TOTP code and mark the user's software token MFA status as "verified" if
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *
@@ -1643,7 +1643,7 @@ VerifySoftwareTokenResponse * CognitoIdentityProviderClient::verifySoftwareToken
 /**
  * Verifies the specified user attributes in the user
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity Provider.
  *
  * @return A pointer to a related response object.
  *

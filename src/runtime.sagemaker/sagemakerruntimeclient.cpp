@@ -104,7 +104,7 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  * Amazon SageMaker strips all POST headers except those supported by the API. Amazon SageMaker might add additional
  * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon SageMaker Runtime.
  *
  * @return A pointer to a related response object.
  *

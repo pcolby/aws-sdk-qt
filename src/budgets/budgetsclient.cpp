@@ -130,7 +130,7 @@ BudgetsClient::BudgetsClient(
 /**
  * Creates a budget and, if included, notifications and subscribers.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &re
 /**
  * Creates a notification. You must create the budget before you create the associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -158,7 +158,7 @@ CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotif
 /**
  * Creates a subscriber. You must create the associated budget and notification before you create the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscribe
  *
  * <b>Deleting a budget also deletes the notifications and subscribers associated with that budget.</b>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -194,7 +194,7 @@ DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &re
  *
  * <b>Deleting a notification also deletes the subscribers associated with the notification.</b>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -212,7 +212,7 @@ DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotif
  *
  * <b>Deleting the last subscriber to a notification also deletes the notification.</b>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscribe
 /**
  * Describes a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -240,7 +240,7 @@ DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetReque
 /**
  * Lists the budgets associated with an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -254,7 +254,7 @@ DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRe
 /**
  * Lists the notifications associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsFor
 /**
  * Lists the subscribers associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -284,7 +284,7 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
  * <code>calculatedSpend</code>. When a budget is modified, the <code>calculatedSpend</code> drops to zero until AWS has
  * new usage data to use for
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -298,7 +298,7 @@ UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &re
 /**
  * Updates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *
@@ -312,7 +312,7 @@ UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotif
 /**
  * Updates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Budgets.
  *
  * @return A pointer to a related response object.
  *

@@ -119,7 +119,7 @@ CognitoSyncClient::CognitoSyncClient(
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &r
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -158,7 +158,7 @@ DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequ
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You
  * should use Cognito Identity credentials to make this API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -177,7 +177,7 @@ DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatas
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -214,7 +214,7 @@ DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const D
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -233,7 +233,7 @@ GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const G
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoE
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -272,7 +272,7 @@ GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfigu
  * ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use the Cognito Identity credentials to make this API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -291,7 +291,7 @@ ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest
  * ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary
  * user credentials provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -312,7 +312,7 @@ ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const L
  * ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials.
  * You should use Cognito Identity credentials to make this API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -331,7 +331,7 @@ ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &r
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -351,7 +351,7 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -370,7 +370,7 @@ SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoE
  * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
  * provided by Cognito
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -389,7 +389,7 @@ SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfigu
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -408,7 +408,7 @@ SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const Subscri
  * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
  * developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
  *
  * This API can be called with temporary user credentials provided by Cognito Identity or with developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Sync.
  *
  * @return A pointer to a related response object.
  *

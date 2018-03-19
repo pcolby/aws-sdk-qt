@@ -104,7 +104,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-awsresorcetagging"
  * target="_blank"> Tagging Amazon Elasticsearch Service Domains for more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &requ
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains"
  * target="_blank">Creating Elasticsearch Domains</a> in the <i>Amazon Elasticsearch Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -134,7 +134,7 @@ CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsea
 /**
  * Permanently deletes the specified Elasticsearch domain and all of its data. Once a domain is deleted, it cannot be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -151,7 +151,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
  * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
  * target="_blank">Deleting Elasticsearch Service Role</a> in <i>VPC Endpoints for Amazon Elasticsearch Service
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -166,7 +166,7 @@ DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElast
  * Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain
  * endpoint, and domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -181,7 +181,7 @@ DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasti
  * Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date,
  * update version, and update date for cluster
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -196,7 +196,7 @@ DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describe
  * Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain
  * endpoint, and domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElast
  * Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion. When modifying existing Domain, specify
  * the <code> <a>DomainName</a> </code> to know what Limits are supported for modifying.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -225,7 +225,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
 /**
  * Returns the name of all Elasticsearch domains owned by the current user's account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 /**
  * List all Elasticsearch instance types that are supported for given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -253,7 +253,7 @@ ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElastic
 /**
  * List all supported Elasticsearch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -267,7 +267,7 @@ ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearc
 /**
  * Returns all tags for the given Elasticsearch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -281,7 +281,7 @@ ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &r
 /**
  * Removes the specified set of tags from the specified Elasticsearch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
  * Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the
  * number of instances.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elasticsearch Service.
  *
  * @return A pointer to a related response object.
  *

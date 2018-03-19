@@ -118,7 +118,7 @@ TranslateClient::TranslateClient(
  *
  * Spanish
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Translate.
  *
  * @return A pointer to a related response object.
  *

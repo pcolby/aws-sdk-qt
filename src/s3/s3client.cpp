@@ -93,7 +93,7 @@ S3Client::S3Client(
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
  * storage, you should call the List Parts operation and ensure the parts list is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -106,7 +106,7 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -119,7 +119,7 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -132,7 +132,7 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -149,7 +149,7 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
  * the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and
  * stops charging you for the parts
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -163,7 +163,7 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
 /**
  * Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -189,7 +189,7 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -202,7 +202,7 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -215,7 +215,7 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -228,7 +228,7 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -241,7 +241,7 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -254,7 +254,7 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -267,7 +267,7 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -280,7 +280,7 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -307,7 +307,7 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
 /**
  * Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -320,7 +320,7 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -334,7 +334,7 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
 /**
  * This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -347,7 +347,7 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -360,7 +360,7 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -373,7 +373,7 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -386,7 +386,7 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -412,7 +412,7 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -425,7 +425,7 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -451,7 +451,7 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -465,7 +465,7 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
 /**
  * Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -478,7 +478,7 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -491,7 +491,7 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -504,7 +504,7 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -517,7 +517,7 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -530,7 +530,7 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -543,7 +543,7 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -556,7 +556,7 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -569,7 +569,7 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -582,7 +582,7 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -595,7 +595,7 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -608,7 +608,7 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -621,7 +621,7 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -634,7 +634,7 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -647,7 +647,7 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -661,7 +661,7 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 /**
  * The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -674,7 +674,7 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -687,7 +687,7 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -700,7 +700,7 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -726,7 +726,7 @@ ListBucketsResponse * S3Client::listBuckets()
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -739,7 +739,7 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -753,7 +753,7 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
 /**
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -768,7 +768,7 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  * return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -781,7 +781,7 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -794,7 +794,7 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -807,7 +807,7 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -820,7 +820,7 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -833,7 +833,7 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -846,7 +846,7 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -859,7 +859,7 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -872,7 +872,7 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -885,7 +885,7 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -899,7 +899,7 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
 /**
  * Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -912,7 +912,7 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -925,7 +925,7 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -938,7 +938,7 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -951,7 +951,7 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -964,7 +964,7 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -980,7 +980,7 @@ PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketRep
  * This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be
  * charged for the download. Documentation on requester pays buckets can be found at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -993,7 +993,7 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1006,7 +1006,7 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1019,7 +1019,7 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1032,7 +1032,7 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1045,7 +1045,7 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1058,7 +1058,7 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1071,7 +1071,7 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1088,7 +1088,7 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
  * parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging
  * you for the parts
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1101,7 +1101,7 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Storage Service.
  *
  * @return A pointer to a related response object.
  *

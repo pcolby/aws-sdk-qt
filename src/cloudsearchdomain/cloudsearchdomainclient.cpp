@@ -124,7 +124,7 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudSearch Domain.
  *
  * @return A pointer to a related response object.
  *
@@ -154,7 +154,7 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
  * <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon
  * CloudSearch console.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudSearch Domain.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading Data</a> in the
  * <i>Amazon CloudSearch Developer Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudSearch Domain.
  *
  * @return A pointer to a related response object.
  *

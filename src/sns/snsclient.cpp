@@ -106,7 +106,7 @@ SnsClient::SnsClient(
 /**
  * Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -125,7 +125,7 @@ AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &req
  *
  * To resume sending messages, you can opt in the number by using the <code>OptInPhoneNumber</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -142,7 +142,7 @@ CheckIfPhoneNumberIsOptedOutResponse * SnsClient::checkIfPhoneNumberIsOptedOut(c
  * Resource Name (ARN). This call requires an AWS signature only when the <code>AuthenticateOnUnsubscribe</code> flag is
  * set to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -179,7 +179,7 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  * Started with MPNS</a>, or <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-wns.html">Getting Started with
  * WNS</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -207,7 +207,7 @@ CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const C
  * href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePushBaiduEndpoint.html">Creating an Amazon SNS Endpoint for
  * Baidu</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -223,7 +223,7 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
  * see <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. This action is idempotent, so if the requester
  * already owns a topic with the specified name, that topic's ARN is returned without creating a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
  *
  * When you delete an endpoint that is also subscribed to a topic, then you must also unsubscribe the endpoint from the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -258,7 +258,7 @@ DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &
  * more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
  * Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -274,7 +274,7 @@ DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const D
  * from being delivered to subscribers. This action is idempotent, so deleting a topic that does not exist does not result
  * in an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -290,7 +290,7 @@ DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
  * For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
  * Push Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -306,7 +306,7 @@ GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpoi
  * and GCM. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon
  * SNS Mobile Push Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -324,7 +324,7 @@ GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttr
  *
  * These settings are set with the <code>SetSMSAttributes</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -338,7 +338,7 @@ GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesReq
 /**
  * Returns all of the properties of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -352,7 +352,7 @@ GetSubscriptionAttributesResponse * SnsClient::getSubscriptionAttributes(const G
 /**
  * Returns all of the properties of a topic. Topic properties returned might differ based on the authorization of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
  * see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
  * Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -394,7 +394,7 @@ ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformA
  * <code>NextToken</code> string received from the previous call. When there are no more records to return,
  * <code>NextToken</code> will be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -413,7 +413,7 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
  * When there are no more records to return, NextToken will be null. For more information, see <a
  * href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -429,7 +429,7 @@ ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const Lis
  * are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListSubscriptions</code> call to get further
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -445,7 +445,7 @@ ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptions
  * If there are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in
  * a new <code>ListSubscriptionsByTopic</code> call to get further
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -461,7 +461,7 @@ ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const Lis
  * topics, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListTopics</code> call to get further
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -479,7 +479,7 @@ ListTopicsResponse * SnsClient::listTopics(const ListTopicsRequest &request)
  *
  * You can opt in a phone number only once every 30
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -507,7 +507,7 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  * href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send Custom Platform-Specific
  * Payloads in Messages to Mobile Devices</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -521,7 +521,7 @@ PublishResponse * SnsClient::publish(const PublishRequest &request)
 /**
  * Removes a statement from a topic's access control
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -537,7 +537,7 @@ RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionReq
  * APNS. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
  * Mobile Push Notifications</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -555,7 +555,7 @@ SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpoi
  * href="http://docs.aws.amazon.com/sns/latest/dg/sns-msg-status.html">Using Amazon SNS Application Attributes for Message
  * Delivery Status</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -576,7 +576,7 @@ SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttr
  * href="http://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Sending an SMS Message</a> in the <i>Amazon
  * SNS Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -590,7 +590,7 @@ SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesReq
 /**
  * Allows a subscription owner to set an attribute of the topic to a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -604,7 +604,7 @@ SetSubscriptionAttributesResponse * SnsClient::setSubscriptionAttributes(const S
 /**
  * Allows a topic owner to set an attribute of the topic to a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -620,7 +620,7 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
  * endpoint owner must call the <code>ConfirmSubscription</code> action with the token from the confirmation message.
  * Confirmation tokens are valid for three
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *
@@ -637,7 +637,7 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
  * require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the
  * endpoint, so that the endpoint owner can easily resubscribe to the topic if the <code>Unsubscribe</code> request was
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Notification Service.
  *
  * @return A pointer to a related response object.
  *

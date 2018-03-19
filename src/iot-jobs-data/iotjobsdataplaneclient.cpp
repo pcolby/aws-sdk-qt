@@ -106,7 +106,7 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
 /**
  * Gets details of a job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Jobs Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(cons
 /**
  * Gets the list of all jobs for a thing that are not in a terminal
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Jobs Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -134,7 +134,7 @@ GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecution
 /**
  * Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Jobs Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -148,7 +148,7 @@ StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJ
 /**
  * Updates the status of a job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Jobs Data Plane.
  *
  * @return A pointer to a related response object.
  *

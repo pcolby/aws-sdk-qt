@@ -574,7 +574,7 @@ GameLiftClient::GameLiftClient(
  *
  * <a>StartMatchBackfill</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -632,7 +632,7 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  *
  * <a>DeleteBuild</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -886,7 +886,7 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -979,7 +979,7 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1039,7 +1039,7 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
  *
  * <a>DeleteGameSessionQueue</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1111,7 +1111,7 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1176,7 +1176,7 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1234,7 +1234,7 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1292,7 +1292,7 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1362,7 +1362,7 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1424,7 +1424,7 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1467,7 +1467,7 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1510,7 +1510,7 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
  *
  * <a>DeleteBuild</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1616,7 +1616,7 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1651,7 +1651,7 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
  *
  * <a>DeleteGameSessionQueue</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1698,7 +1698,7 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1801,7 +1801,7 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1844,7 +1844,7 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1893,7 +1893,7 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1940,7 +1940,7 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -1979,7 +1979,7 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
  *
  * <a>DeleteBuild</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2094,7 +2094,7 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2205,7 +2205,7 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2316,7 +2316,7 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2420,7 +2420,7 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2525,7 +2525,7 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2635,7 +2635,7 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2702,7 +2702,7 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2761,7 +2761,7 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2798,7 +2798,7 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
  *
  * <a>DeleteGameSessionQueue</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2868,7 +2868,7 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2889,7 +2889,7 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
  * Use the pagination parameters to retrieve results as a set of sequential pages. If successful, an <a>Instance</a> object
  * is returned for each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2939,7 +2939,7 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
  *
  * <a>StartMatchBackfill</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -2989,7 +2989,7 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3037,7 +3037,7 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3096,7 +3096,7 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3199,7 +3199,7 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3307,7 +3307,7 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3350,7 +3350,7 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3400,7 +3400,7 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
  *
  * <a>DeleteVpcPeeringConnection</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3464,7 +3464,7 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3494,7 +3494,7 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
  * To request access to a specific instance, specify the IDs of the instance and the fleet it belongs to. If successful, an
  * <a>InstanceAccess</a> object is returned containing the instance's IP address and a set of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3541,7 +3541,7 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3585,7 +3585,7 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
  *
  * <a>DeleteBuild</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3692,7 +3692,7 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3820,7 +3820,7 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3840,7 +3840,7 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
  * To request new credentials, specify the build ID as returned with an initial <code>CreateBuild</code> request. If
  * successful, a new set of credentials are returned, along with the S3 storage location associated with the build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3882,7 +3882,7 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -3998,7 +3998,7 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4106,7 +4106,7 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4167,7 +4167,7 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
  *
  * <a>StartMatchBackfill</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4268,7 +4268,7 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
  *
  * <a>StartMatchBackfill</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4327,7 +4327,7 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4366,7 +4366,7 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
  *
  * <a>StartMatchBackfill</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4410,7 +4410,7 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
  *
  * <a>ResolveAlias</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4449,7 +4449,7 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
  *
  * <a>DeleteBuild</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4552,7 +4552,7 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4669,7 +4669,7 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4774,7 +4774,7 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4835,7 +4835,7 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
  *
  * <a>StopGameSessionPlacement</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4871,7 +4871,7 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
  *
  * <a>DeleteGameSessionQueue</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -4918,7 +4918,7 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -5035,7 +5035,7 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  *
  * <a>DeleteFleet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *
@@ -5082,7 +5082,7 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
  *
  * <a>ValidateMatchmakingRuleSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GameLift.
  *
  * @return A pointer to a related response object.
  *

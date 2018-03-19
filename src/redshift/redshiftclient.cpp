@@ -144,7 +144,7 @@ RedshiftClient::RedshiftClient(
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Working with Security
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -164,7 +164,7 @@ AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterS
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ AuthorizeSnapshotAccessResponse * RedshiftClient::authorizeSnapshotAccess(const 
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -212,7 +212,7 @@ CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClus
  * managing clusters, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon
  * Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ CreateClusterResponse * RedshiftClient::createCluster(const CreateClusterRequest
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -259,7 +259,7 @@ CreateClusterParameterGroupResponse * RedshiftClient::createClusterParameterGrou
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
  * Security Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ CreateClusterSecurityGroupResponse * RedshiftClient::createClusterSecurityGroup(
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ CreateClusterSnapshotResponse * RedshiftClient::createClusterSnapshot(const Crea
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html">Amazon Redshift Cluster
  * Subnet Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -333,7 +333,7 @@ CreateClusterSubnetGroupResponse * RedshiftClient::createClusterSubnetGroup(cons
  * not specify either the SourceType nor the SourceIdentifier, you will be notified of events generated from all Amazon
  * Redshift sources belonging to your AWS account. You must specify a source type if you specify a source
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -356,7 +356,7 @@ CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const 
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the Amazon
  * Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -378,7 +378,7 @@ CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(
  * to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the
  * Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const Cr
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
  * Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -422,7 +422,7 @@ CreateSnapshotCopyGrantResponse * RedshiftClient::createSnapshotCopyGrant(const 
  *
  * If you specify a key that already exists for the resource, the value for that key will be updated with the new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -453,7 +453,7 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -471,7 +471,7 @@ DeleteClusterResponse * RedshiftClient::deleteCluster(const DeleteClusterRequest
  *
  * You cannot delete a parameter group if it is associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -495,7 +495,7 @@ DeleteClusterParameterGroupResponse * RedshiftClient::deleteClusterParameterGrou
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
  * Security Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -516,7 +516,7 @@ DeleteClusterSecurityGroupResponse * RedshiftClient::deleteClusterSecurityGroup(
  * delete your manual snapshots. You must delete manual snapshot explicitly to avoid getting charged. If other accounts are
  * authorized to access the snapshot, you must revoke all of the authorizations before you can delete the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -530,7 +530,7 @@ DeleteClusterSnapshotResponse * RedshiftClient::deleteClusterSnapshot(const Dele
 /**
  * Deletes the specified cluster subnet
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -544,7 +544,7 @@ DeleteClusterSubnetGroupResponse * RedshiftClient::deleteClusterSubnetGroup(cons
 /**
  * Deletes an Amazon Redshift event notification
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -558,7 +558,7 @@ DeleteEventSubscriptionResponse * RedshiftClient::deleteEventSubscription(const 
 /**
  * Deletes the specified HSM client
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -572,7 +572,7 @@ DeleteHsmClientCertificateResponse * RedshiftClient::deleteHsmClientCertificate(
 /**
  * Deletes the specified Amazon Redshift HSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -586,7 +586,7 @@ DeleteHsmConfigurationResponse * RedshiftClient::deleteHsmConfiguration(const De
 /**
  * Deletes the specified snapshot copy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -600,7 +600,7 @@ DeleteSnapshotCopyGrantResponse * RedshiftClient::deleteSnapshotCopyGrant(const 
 /**
  * Deletes a tag or tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -634,7 +634,7 @@ DeleteTagsResponse * RedshiftClient::deleteTags(const DeleteTagsRequest &request
  * If both tag keys and values are omitted from the request, parameter groups are returned regardless of whether they have
  * tag keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -662,7 +662,7 @@ DescribeClusterParameterGroupsResponse * RedshiftClient::describeClusterParamete
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -695,7 +695,7 @@ DescribeClusterParametersResponse * RedshiftClient::describeClusterParameters(co
  * If both tag keys and values are omitted from the request, security groups are returned regardless of whether they have
  * tag keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -724,7 +724,7 @@ DescribeClusterSecurityGroupsResponse * RedshiftClient::describeClusterSecurityG
  * If both tag keys and values are omitted from the request, snapshots are returned regardless of whether they have tag
  * keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -751,7 +751,7 @@ DescribeClusterSnapshotsResponse * RedshiftClient::describeClusterSnapshots(cons
  * If both tag keys and values are omitted from the request, subnet groups are returned regardless of whether they have tag
  * keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -768,7 +768,7 @@ DescribeClusterSubnetGroupsResponse * RedshiftClient::describeClusterSubnetGroup
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -798,7 +798,7 @@ DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const 
  * If both tag keys and values are omitted from the request, clusters are returned regardless of whether they have tag keys
  * or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -818,7 +818,7 @@ DescribeClustersResponse * RedshiftClient::describeClusters(const DescribeCluste
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -834,7 +834,7 @@ DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultCluste
  * categories and source types, go to <a
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">Amazon Redshift Event
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -861,7 +861,7 @@ DescribeEventCategoriesResponse * RedshiftClient::describeEventCategories(const 
  * If both tag keys and values are omitted from the request, subscriptions are returned regardless of whether they have tag
  * keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -877,7 +877,7 @@ DescribeEventSubscriptionsResponse * RedshiftClient::describeEventSubscriptions(
  * specific to a particular cluster, security group, snapshot or parameter group can be obtained by providing the name as a
  * parameter. By default, the past hour of events are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -904,7 +904,7 @@ DescribeEventsResponse * RedshiftClient::describeEvents(const DescribeEventsRequ
  * If both tag keys and values are omitted from the request, HSM client certificates are returned regardless of whether
  * they have tag keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -931,7 +931,7 @@ DescribeHsmClientCertificatesResponse * RedshiftClient::describeHsmClientCertifi
  * If both tag keys and values are omitted from the request, HSM connections are returned regardless of whether they have
  * tag keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -946,7 +946,7 @@ DescribeHsmConfigurationsResponse * RedshiftClient::describeHsmConfigurations(co
  * Describes whether information, such as queries and connection attempts, is being logged for the specified Amazon
  * Redshift
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -966,7 +966,7 @@ DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const Desc
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -989,7 +989,7 @@ DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClust
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
  * Nodes</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1003,7 +1003,7 @@ DescribeReservedNodeOfferingsResponse * RedshiftClient::describeReservedNodeOffe
 /**
  * Returns the descriptions of the reserved
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1024,7 +1024,7 @@ DescribeReservedNodesResponse * RedshiftClient::describeReservedNodes(const Desc
  * A resize operation can be requested using <a>ModifyCluster</a> and specifying a different number or type of nodes for
  * the cluster.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1044,7 +1044,7 @@ DescribeResizeResponse * RedshiftClient::describeResize(const DescribeResizeRequ
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
  * Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1062,7 +1062,7 @@ DescribeSnapshotCopyGrantsResponse * RedshiftClient::describeSnapshotCopyGrants(
  * the request in ascending order. Otherwise <code>DescribeTableRestoreStatus</code> returns the status of the table
  * specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1105,7 +1105,7 @@ DescribeTableRestoreStatusResponse * RedshiftClient::describeTableRestoreStatus(
  * If both tag keys and values are omitted from the request, resources are returned regardless of whether they have tag
  * keys or values associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1119,7 +1119,7 @@ DescribeTagsResponse * RedshiftClient::describeTags(const DescribeTagsRequest &r
 /**
  * Stops logging information, such as queries and connection attempts, for the specified Amazon Redshift
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1139,7 +1139,7 @@ DisableLoggingResponse * RedshiftClient::disableLogging(const DisableLoggingRequ
  * <a>DeleteSnapshotCopyGrant</a> to delete the grant that grants Amazon Redshift permission to the CMK in the destination
  * region.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1153,7 +1153,7 @@ DisableSnapshotCopyResponse * RedshiftClient::disableSnapshotCopy(const DisableS
 /**
  * Starts logging information, such as queries and connection attempts, for the specified Amazon Redshift
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1167,7 +1167,7 @@ EnableLoggingResponse * RedshiftClient::enableLogging(const EnableLoggingRequest
 /**
  * Enables the automatic copy of snapshots from one region to another region for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1209,7 +1209,7 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
  * If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource <code>dbname</code>
  * for the specified database name.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1233,7 +1233,7 @@ GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetC
  * You can also change node type and the number of nodes to scale up or down the cluster. When resizing a cluster, you must
  * specify both the number of nodes and the node type even if one of the parameters does not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1251,7 +1251,7 @@ ModifyClusterResponse * RedshiftClient::modifyCluster(const ModifyClusterRequest
  *
  * A cluster can have up to 10 IAM roles associated at any
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1271,7 +1271,7 @@ ModifyClusterIamRolesResponse * RedshiftClient::modifyClusterIamRoles(const Modi
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1286,7 +1286,7 @@ ModifyClusterParameterGroupResponse * RedshiftClient::modifyClusterParameterGrou
  * Modifies a cluster subnet group to include the specified list of VPC subnets. The operation replaces the existing list
  * of subnets with the new list of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1300,7 +1300,7 @@ ModifyClusterSubnetGroupResponse * RedshiftClient::modifyClusterSubnetGroup(cons
 /**
  * Modifies an existing Amazon Redshift event notification
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1315,7 +1315,7 @@ ModifyEventSubscriptionResponse * RedshiftClient::modifyEventSubscription(const 
  * Modifies the number of days to retain automated snapshots in the destination region after they are copied from the
  * source
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1338,7 +1338,7 @@ ModifySnapshotCopyRetentionPeriodResponse * RedshiftClient::modifySnapshotCopyRe
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
  * Nodes</a> in the <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1356,7 +1356,7 @@ PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffer
  * clusters, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift
  * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1372,7 +1372,7 @@ RebootClusterResponse * RedshiftClient::rebootCluster(const RebootClusterRequest
  * parameters to "engine-default". To reset the entire parameter group specify the <i>ResetAllParameters</i> parameter. For
  * parameter changes to take effect you must reboot any associated clusters.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1400,7 +1400,7 @@ ResetClusterParameterGroupResponse * RedshiftClient::resetClusterParameterGroup(
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1425,7 +1425,7 @@ RestoreFromClusterSnapshotResponse * RedshiftClient::restoreFromClusterSnapshot(
  * <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created from
  * the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1442,7 +1442,7 @@ RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromCluste
  * groups, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon
  * Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1463,7 +1463,7 @@ RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurit
  * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *
@@ -1477,7 +1477,7 @@ RevokeSnapshotAccessResponse * RedshiftClient::revokeSnapshotAccess(const Revoke
 /**
  * Rotates the encryption keys for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Redshift.
  *
  * @return A pointer to a related response object.
  *

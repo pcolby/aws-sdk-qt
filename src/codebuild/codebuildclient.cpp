@@ -168,7 +168,7 @@ CodeBuildClient::CodeBuildClient(
 /**
  * Deletes one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDelete
 /**
  * Gets information about
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -196,7 +196,7 @@ BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsReq
 /**
  * Gets information about build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProje
 /**
  * Creates a build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -235,7 +235,7 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  * href="http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console">Change a Build
  * Project's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -249,7 +249,7 @@ CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookReques
 /**
  * Deletes a build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -264,7 +264,7 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
  * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
  * from automatically rebuilding the source code every time a code change is pushed to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookReques
 /**
  * Resets the cache for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -292,7 +292,7 @@ InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const I
 /**
  * Gets a list of build IDs, with each build ID representing a single
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -306,7 +306,7 @@ ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &reques
 /**
  * Gets a list of build IDs for the specified build project, with each build ID representing a single
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -320,7 +320,7 @@ ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListB
 /**
  * Gets information about Docker images that are managed by AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -334,7 +334,7 @@ ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentIm
 /**
  * Gets a list of build project names, with each build project name representing a single build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
 /**
  * Starts running a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -362,7 +362,7 @@ StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &reques
 /**
  * Attempts to stop running a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *
@@ -376,7 +376,7 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 /**
  * Changes the settings of a build
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeBuild.
  *
  * @return A pointer to a related response object.
  *

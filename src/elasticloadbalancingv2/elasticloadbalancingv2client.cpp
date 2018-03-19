@@ -169,7 +169,7 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
  * To list the certificates for your listener, use <a>DescribeListenerCertificates</a>. To remove certificates from your
  * listener, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -193,7 +193,7 @@ AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCerti
  *
  * To list the current tags for your resources, use <a>DescribeTags</a>. To remove tags from your resources, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -225,7 +225,7 @@ AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &re
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html">Listeners for Your
  * Network Load Balancers</a> in the <i>Network Load Balancers
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -270,7 +270,7 @@ CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const Crea
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html">Network Load
  * Balancers</a> in the <i>Network Load Balancers
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -297,7 +297,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(co
  * To view your current rules, use <a>DescribeRules</a>. To update a rule, use <a>ModifyRule</a>. To set the priorities of
  * your rules, use <a>SetRulePriorities</a>. To delete a rule, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -337,7 +337,7 @@ CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRe
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html">Target Groups for
  * Your Network Load Balancers</a> in the <i>Network Load Balancers
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -355,7 +355,7 @@ CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(cons
  *
  * Alternatively, your listener is deleted when you delete the load balancer it is attached to using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -379,7 +379,7 @@ DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const Dele
  * Deleting a load balancer does not affect its registered targets. For example, your EC2 instances continue to run and are
  * still registered to their target groups. If you no longer need these EC2 instances, you can stop or terminate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -393,7 +393,7 @@ DeleteLoadBalancerResponse * ElasticLoadBalancingv2Client::deleteLoadBalancer(co
 /**
  * Deletes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -412,7 +412,7 @@ DeleteRuleResponse * ElasticLoadBalancingv2Client::deleteRule(const DeleteRuleRe
  * You can delete a target group if it is not referenced by any actions. Deleting a target group also deletes any
  * associated health
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -427,7 +427,7 @@ DeleteTargetGroupResponse * ElasticLoadBalancingv2Client::deleteTargetGroup(cons
  * Deregisters the specified targets from the specified target group. After the targets are deregistered, they no longer
  * receive traffic from the load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -449,7 +449,7 @@ DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(cons
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
  * Load Balancers</a> in the <i>Network Load Balancers
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -463,7 +463,7 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLim
 /**
  * Describes the certificates for the specified secure
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -478,7 +478,7 @@ DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeLis
  * Describes the specified listeners or the listeners for the specified Application Load Balancer or Network Load Balancer.
  * You must specify either a load balancer or one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -492,7 +492,7 @@ DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(cons
 /**
  * Describes the attributes for the specified Application Load Balancer or Network Load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -511,7 +511,7 @@ DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeL
  * To describe the listeners for a load balancer, use <a>DescribeListeners</a>. To describe the attributes for a load
  * balancer, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -525,7 +525,7 @@ DescribeLoadBalancersResponse * ElasticLoadBalancingv2Client::describeLoadBalanc
 /**
  * Describes the specified rules or the rules for the specified listener. You must specify either a listener or one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -545,7 +545,7 @@ DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const Descri
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">Security
  * Policies</a> in the <i>Application Load Balancers
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -560,7 +560,7 @@ DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(
  * Describes the tags for the specified resources. You can describe the tags for one or more Application Load Balancers,
  * Network Load Balancers, and target
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -574,7 +574,7 @@ DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const Describe
 /**
  * Describes the attributes for the specified target
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -595,7 +595,7 @@ DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTa
  * To describe the targets for a target group, use <a>DescribeTargetHealth</a>. To describe the attributes of a target
  * group, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -609,7 +609,7 @@ DescribeTargetGroupsResponse * ElasticLoadBalancingv2Client::describeTargetGroup
 /**
  * Describes the health of the specified targets or all of your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -629,7 +629,7 @@ DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealt
  * removes the security policy and SSL certificate properties. If you change the protocol from HTTP to HTTPS, you must add
  * the security policy and server
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -648,7 +648,7 @@ ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const Modi
  * If any of the specified attributes can't be modified as requested, the call fails. Any existing attributes that you do
  * not modify retain their current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -670,7 +670,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadB
  *
  * To modify the default action, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -688,7 +688,7 @@ ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRe
  *
  * To monitor the health of the targets, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -702,7 +702,7 @@ ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(cons
 /**
  * Modifies the specified attributes of the specified target
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -736,7 +736,7 @@ ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTarget
  *
  * To remove a target from a target group, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -758,7 +758,7 @@ RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const Re
  *
  * To list the certificates for your listener, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -776,7 +776,7 @@ RemoveListenerCertificatesResponse * ElasticLoadBalancingv2Client::removeListene
  *
  * To list the current tags for your resources, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -794,7 +794,7 @@ RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRe
  *
  * Note that Network Load Balancers must use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -813,7 +813,7 @@ SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const 
  * You can reorder the rules as long as there are no priority conflicts in the new order. Any existing rules that you do
  * not specify retain their current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -832,7 +832,7 @@ SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(cons
  *
  * Note that you can't specify a security group for a Network Load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *
@@ -851,7 +851,7 @@ SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(cons
  *
  * Note that you can't change the subnets for a Network Load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Elastic Load Balancing.
  *
  * @return A pointer to a related response object.
  *

@@ -91,7 +91,7 @@ MediaPackageClient::MediaPackageClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -104,7 +104,7 @@ CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelReq
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -117,7 +117,7 @@ CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const Cr
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -130,7 +130,7 @@ DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelReq
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const De
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelReq
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaPackage.
  *
  * @return A pointer to a related response object.
  *

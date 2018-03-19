@@ -108,7 +108,7 @@ AthenaClient::AthenaClient(
  * queries are different from executed queries. Use <a>BatchGetQueryExecution</a> to get details about each unique query
  * execution, and <a>ListQueryExecutions</a> to get a list of query execution
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
  * query execution ID strings. To get a list of query execution IDs, use <a>ListQueryExecutions</a>. Query executions are
  * different from named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -164,7 +164,7 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -178,7 +178,7 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
 /**
  * Returns information about a single
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -193,7 +193,7 @@ GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &
  * Returns information about a single execution of a query. Each time a query executes, information about the query
  * execution is saved with a unique
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
  * Returns the results of a single query execution specified by <code>QueryExecutionId</code>. This request does not
  * execute the query but returns results. Use <a>StartQueryExecution</a> to run a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -228,7 +228,7 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -248,7 +248,7 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *
@@ -288,7 +288,7 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Athena.
  *
  * @return A pointer to a related response object.
  *

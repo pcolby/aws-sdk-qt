@@ -104,7 +104,7 @@ Route53Client::Route53Client(
  * <code>CreateVPCAssociationAuthorization</code> request. Then the account that created the VPC must submit an
  * <code>AssociateVPCWithHostedZone</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -219,7 +219,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a> in the <i>Amazon Route 53
  * Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ ChangeResourceRecordSetsResponse * Route53Client::changeResourceRecordSets(const
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
  * in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -295,7 +295,7 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
  * the <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html">Amazon CloudWatch
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -352,7 +352,7 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  * This means that the NS and SOA records are not yet available on all Amazon Route 53 DNS servers. When the NS and SOA
  * records are available, the status of the zone changes to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -494,7 +494,7 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  * If you want Amazon Route 53 to stop sending query logs to CloudWatch Logs, delete the query logging configuration. For
  * more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -568,7 +568,7 @@ CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const
  * For larger numbers of hosted zones, you can also migrate hosted zones that have overlapping name servers to hosted zones
  * that don't have overlapping name servers, then migrate the hosted zones again to use the reusable delegation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -583,7 +583,7 @@ CreateReusableDelegationSetResponse * Route53Client::createReusableDelegationSet
  * Creates a traffic policy, which you use to create multiple DNS resource record sets for one domain name (such as
  * example.com) or one subdomain name (such as
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -600,7 +600,7 @@ CreateTrafficPolicyResponse * Route53Client::createTrafficPolicy(const CreateTra
  * (such as example.com) or subdomain name (such as www.example.com). Amazon Route 53 responds to DNS queries for the
  * domain or subdomain name by using the resource record sets that <code>CreateTrafficPolicyInstance</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -618,7 +618,7 @@ CreateTrafficPolicyInstanceResponse * Route53Client::createTrafficPolicyInstance
  * name (such as www.example.com). You can create a maximum of 1000 versions of a traffic policy. If you reach the limit
  * and need to create another version, you'll need to start a new traffic
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -640,7 +640,7 @@ CreateTrafficPolicyVersionResponse * Route53Client::createTrafficPolicyVersion(c
  * If you want to associate multiple VPCs that you created by using one account with a hosted zone that you created by
  * using a different account, you must submit one authorization request for each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -663,7 +663,7 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
  * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -709,7 +709,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -728,7 +728,7 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
  *
  * For more information about DNS query logs, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -751,7 +751,7 @@ DeleteQueryLoggingConfigResponse * Route53Client::deleteQueryLoggingConfig(const
  * To verify that the reusable delegation set is not associated with any hosted zones, submit a
  * <a>GetReusableDelegationSet</a> request and specify the ID of the reusable delegation set that you want to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -765,7 +765,7 @@ DeleteReusableDelegationSetResponse * Route53Client::deleteReusableDelegationSet
 /**
  * Deletes a traffic
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -783,7 +783,7 @@ DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTra
  *
  * In the Amazon Route 53 console, traffic policy instances are known as policy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -806,7 +806,7 @@ DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance
  * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from the hosted zone. If you want to delete an
  * existing association, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -829,7 +829,7 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
  * You can't disassociate a VPC from a private hosted zone when only one VPC is associated with the hosted zone. You also
  * can't convert a private hosted zone into a public hosted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -852,7 +852,7 @@ DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHosted
  * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
  * a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -875,7 +875,7 @@ GetAccountLimitResponse * Route53Client::getAccountLimit(const GetAccountLimitRe
  *
  * <code>INSYNC</code> indicates that the changes have propagated to all Amazon Route 53 DNS servers.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -892,7 +892,7 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP Address Ranges of Amazon
  * Route 53 Servers</a> in the <i>Amazon Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -932,7 +932,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  * <code>GET /2013-04-01/geolocation?CountryCode=<i>two-character country code</i>&amp;SubdivisionCode=<i>subdivision
  * code</i> </code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -946,7 +946,7 @@ GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationReque
 /**
  * Gets information about a specified health
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -960,7 +960,7 @@ GetHealthCheckResponse * Route53Client::getHealthCheck(const GetHealthCheckReque
 /**
  * Retrieves the number of health checks that are associated with the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -974,7 +974,7 @@ GetHealthCheckCountResponse * Route53Client::getHealthCheckCount(const GetHealth
 /**
  * Gets the reason that a specified health check failed most
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -988,7 +988,7 @@ GetHealthCheckLastFailureReasonResponse * Route53Client::getHealthCheckLastFailu
 /**
  * Gets status of a specified health check.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1002,7 +1002,7 @@ GetHealthCheckStatusResponse * Route53Client::getHealthCheckStatus(const GetHeal
 /**
  * Gets information about a specified hosted zone including the four name servers assigned to the hosted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1016,7 +1016,7 @@ GetHostedZoneResponse * Route53Client::getHostedZone(const GetHostedZoneRequest 
 /**
  * Retrieves the number of hosted zones that are associated with the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1039,7 +1039,7 @@ GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZo
  * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
  * a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1058,7 +1058,7 @@ GetHostedZoneLimitResponse * Route53Client::getHostedZoneLimit(const GetHostedZo
  * For more information about DNS query logs, see <a>CreateQueryLoggingConfig</a> and <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html">Logging DNS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1073,7 +1073,7 @@ GetQueryLoggingConfigResponse * Route53Client::getQueryLoggingConfig(const GetQu
  * Retrieves information about a specified reusable delegation set, including the four name servers that are assigned to
  * the delegation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1095,7 +1095,7 @@ GetReusableDelegationSetResponse * Route53Client::getReusableDelegationSet(const
  * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
  * a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1109,7 +1109,7 @@ GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetL
 /**
  * Gets information about a specific traffic policy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1133,7 +1133,7 @@ GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolic
  *
  * In the Amazon Route 53 console, traffic policy instances are known as policy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1147,7 +1147,7 @@ GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const
 /**
  * Gets the number of traffic policy instances that are associated with the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1167,7 +1167,7 @@ GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceC
  * example, states or provinces), the subdivisions for that country are listed in alphabetical order immediately after the
  * corresponding
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1181,7 +1181,7 @@ ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocation
 /**
  * Retrieve a list of the health checks that are associated with the current AWS account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1201,7 +1201,7 @@ ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthCheck
  * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of hosted zones, you can use the
  * <code>maxitems</code> parameter to list them in groups of up to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1279,7 +1279,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  * zones, make another call to <code>ListHostedZonesByName</code>, and specify the value of <code>NextDNSName</code> and
  * <code>NextHostedZoneId</code> in the <code>dnsname</code> and <code>hostedzoneid</code> parameters,
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1301,7 +1301,7 @@ ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListH
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html">Logging DNS Queries</a> in the <i>Amazon
  * Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1366,7 +1366,7 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  * <code>ListResourceRecordSets</code> request. If you do, some pages may display results without the latest changes while
  * other pages display results with the latest
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1380,7 +1380,7 @@ ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const Lis
 /**
  * Retrieves a list of the reusable delegation sets that are associated with the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1400,7 +1400,7 @@ ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(c
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
  * in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1420,7 +1420,7 @@ ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsF
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
  * in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1435,7 +1435,7 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
  * Gets information about the latest version for every traffic policy that is associated with the current AWS account.
  * Policies are listed in the order in which they were created.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1460,7 +1460,7 @@ ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTraff
  * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
  * use the <code>MaxItems</code> parameter to list them in groups of up to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1485,7 +1485,7 @@ ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(c
  * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
  * use the <code>MaxItems</code> parameter to list them in groups of up to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1510,7 +1510,7 @@ ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolic
  * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
  * use the <code>MaxItems</code> parameter to list them in groups of up to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1528,7 +1528,7 @@ ListTrafficPolicyInstancesByPolicyResponse * Route53Client::listTrafficPolicyIns
  *
  * Traffic policy versions are listed in numerical order by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1548,7 +1548,7 @@ ListTrafficPolicyVersionsResponse * Route53Client::listTrafficPolicyVersions(con
  * The response includes a <code>VPCs</code> element with a <code>VPC</code> child element for each VPC that can be
  * associated with the hosted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1563,7 +1563,7 @@ ListVPCAssociationAuthorizationsResponse * Route53Client::listVPCAssociationAuth
  * Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type. You can
  * optionally specify the IP address of a DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1583,7 +1583,7 @@ TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest 
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html">Creating, Updating,
  * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1597,7 +1597,7 @@ UpdateHealthCheckResponse * Route53Client::updateHealthCheck(const UpdateHealthC
 /**
  * Updates the comment for a specified hosted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1611,7 +1611,7 @@ UpdateHostedZoneCommentResponse * Route53Client::updateHostedZoneComment(const U
 /**
  * Updates the comment for a specified traffic policy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *
@@ -1647,7 +1647,7 @@ UpdateTrafficPolicyCommentResponse * Route53Client::updateTrafficPolicyComment(c
  *
  * Amazon Route 53 deletes the old group of resource record sets that are associated with the root resource record set
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53.
  *
  * @return A pointer to a related response object.
  *

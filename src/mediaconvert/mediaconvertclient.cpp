@@ -92,7 +92,7 @@ MediaConvertClient::MediaConvertClient(
 /**
  * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -106,7 +106,7 @@ CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &reques
 /**
  * Create a new transcoding job. For information about jobs and job settings, see the User Guide at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &reques
 /**
  * Create a new job template. For information about job templates see the User Guide at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -134,7 +134,7 @@ CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJo
 /**
  * Create a new preset. For information about job templates see the User Guide at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -148,7 +148,7 @@ CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetReques
 /**
  * Create a new transcoding queue. For information about job templates see the User Guide at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -161,7 +161,7 @@ CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -174,7 +174,7 @@ DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJo
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -200,7 +200,7 @@ DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -213,7 +213,7 @@ DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const Describe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplate
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &reques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -266,7 +266,7 @@ GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
 /**
  * Retrieve a JSON array of up to twenty of your job templates. This will return the templates themselves, not just a list
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -281,7 +281,7 @@ ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTem
  * Retrieve a JSON array of up to twenty of your most recently created jobs. This array includes in-process, completed, and
  * errored jobs. This will return the jobs themselves, not just a list of the jobs. To retrieve the twenty next most recent
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -295,7 +295,7 @@ ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
 /**
  * Retrieve a JSON array of up to twenty of your presets. This will return the presets themselves, not just a list of them.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -309,7 +309,7 @@ ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &
 /**
  * Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -322,7 +322,7 @@ ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -335,7 +335,7 @@ UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJo
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaConvert.
  *
  * @return A pointer to a related response object.
  *

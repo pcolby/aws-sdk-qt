@@ -124,7 +124,7 @@ CloudWatchEventsClient::CloudWatchEventsClient(
  * When you delete a rule, incoming events might continue to match to the deleted rule. Please allow a short period of time
  * for changes to take
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -139,7 +139,7 @@ DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest 
  * Displays the external AWS accounts that are permitted to write events to your account using your account's event bus,
  * and the associated policy. To enable your account to receive events from other accounts, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -153,7 +153,7 @@ DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const Descri
 /**
  * Describes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -172,7 +172,7 @@ DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRe
  * When you disable a rule, incoming events might continue to match to the disabled rule. Please allow a short period of
  * time for changes to take
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleReque
  * When you enable a rule, incoming events might not immediately start matching to a newly enabled rule. Please allow a
  * short period of time for changes to take
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -206,7 +206,7 @@ EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest 
  * Lists the rules for the specified target. You can see which of the rules in Amazon CloudWatch Events can invoke a
  * specific target in your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(co
  * Lists your Amazon CloudWatch Events rules. You can either list all the rules or you can provide a prefix to match to the
  * rule
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -235,7 +235,7 @@ ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &re
 /**
  * Lists the targets assigned to the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -249,7 +249,7 @@ ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const List
 /**
  * Sends custom events to Amazon CloudWatch Events so that they can be matched to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &re
  *
  * The permission policy on the default event bus cannot exceed 10KB in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -316,7 +316,7 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
  * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
  * that they match the ARN syntax in the event you want to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -458,7 +458,7 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
  * of the failed target and the error
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -474,7 +474,7 @@ PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest 
  * revoke by the <code>StatementId</code> value that you associated with the account when you granted it permission with
  * <code>PutPermission</code>. You can find the <code>StatementId</code> by using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -499,7 +499,7 @@ RemovePermissionResponse * CloudWatchEventsClient::removePermission(const Remove
  * <code>FailedEntryCount</code> is non-zero in the response and each entry in <code>FailedEntries</code> provides the ID
  * of the failed target and the error
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *
@@ -519,7 +519,7 @@ RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTarget
  * an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so
  * that they match the ARN syntax in the event you want to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Events.
  *
  * @return A pointer to a related response object.
  *

@@ -95,7 +95,7 @@ TranscribeServiceClient::TranscribeServiceClient(
  * status is <code>COMPLETE</code>, the job is finished and you can find the results at the location specified in the
  * <code>TranscriptionFileUri</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Transcribe Service.
  *
  * @return A pointer to a related response object.
  *
@@ -109,7 +109,7 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
 /**
  * Lists transcription jobs with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Transcribe Service.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
 /**
  * Starts an asynchronous job to transcribe speech to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Transcribe Service.
  *
  * @return A pointer to a related response object.
  *

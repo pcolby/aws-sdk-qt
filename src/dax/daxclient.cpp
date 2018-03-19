@@ -96,7 +96,7 @@ DaxClient::DaxClient(
 /**
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -111,7 +111,7 @@ CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &req
  * Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a
  * DAX
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -125,7 +125,7 @@ CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParam
 /**
  * Creates a new subnet
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroup
  * You cannot use <code>DecreaseReplicationFactor</code> to remove the last node in a DAX cluster. If you need to do this,
  * use <code>DeleteCluster</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -160,7 +160,7 @@ DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const D
  * DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the
  * cluster; you cannot cancel or revert this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -174,7 +174,7 @@ DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &req
 /**
  * Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -192,7 +192,7 @@ DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParam
  *
  * You cannot delete a subnet group if it is associated with any DAX
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
  *
  * If nodes are currently being removed from the DAX cluster, no endpoint information for the removed nodes is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -240,7 +240,7 @@ DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersReq
 /**
  * Returns the default system parameter information for the DAX caching
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -260,7 +260,7 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
  * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
  * of events if
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &
  * Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the
  * descriptions for that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -289,7 +289,7 @@ DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const Descr
 /**
  * Returns the detailed parameter list for a particular parameter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -304,7 +304,7 @@ DescribeParametersResponse * DaxClient::describeParameters(const DescribeParamet
  * Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the
  * description of that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -318,7 +318,7 @@ DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSub
 /**
  * Adds one or more nodes to a DAX
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -332,7 +332,7 @@ IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const I
 /**
  * List all of the tags for a DAX cluster. You can call <code>ListTags</code> up to 10 times per second, per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -347,7 +347,7 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
  * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
  * status is set to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -362,7 +362,7 @@ RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
  * Associates a set of tags with a DAX resource. You can call <code>TagResource</code> up to 5 times per second, per
  * account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
  * Removes the association of tags from a DAX resource. You can call <code>UntagResource</code> up to 5 times per second,
  * per account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -392,7 +392,7 @@ UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &req
  * Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters
  * by specifying the parameters and the new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -407,7 +407,7 @@ UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &req
  * Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a
  * list parameter name and value
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *
@@ -421,7 +421,7 @@ UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParam
 /**
  * Modifies an existing subnet
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon DynamoDB Accelerator (DAX).
  *
  * @return A pointer to a related response object.
  *

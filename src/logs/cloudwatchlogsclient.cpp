@@ -137,7 +137,7 @@ CloudWatchLogsClient::CloudWatchLogsClient(
  * If you attempt to associate a CMK with a log group but the CMK does not exist or the CMK is disabled, you will receive
  * an <code>InvalidParameterException</code> error.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -155,7 +155,7 @@ AssociateKmsKeyResponse * CloudWatchLogsClient::associateKmsKey(const AssociateK
  *
  * The task must be in the <code>PENDING</code> or <code>RUNNING</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -181,7 +181,7 @@ CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelEx
  * You can export logs from multiple log groups or multiple time ranges to the same S3 bucket. To separate out log data for
  * each export task, you can specify a prefix to be used as the Amazon S3 key prefix for all exported
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -227,7 +227,7 @@ CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateEx
  * If you attempt to associate a CMK with the log group but the CMK does not exist or the CMK is disabled, you will receive
  * an <code>InvalidParameterException</code> error.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -261,7 +261,7 @@ CreateLogGroupResponse * CloudWatchLogsClient::createLogGroup(const CreateLogGro
  *
  * The ':' (colon) and '*' (asterisk) characters are not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -276,7 +276,7 @@ CreateLogStreamResponse * CloudWatchLogsClient::createLogStream(const CreateLogS
  * Deletes the specified destination, and eventually disables all the subscription filters that publish to it. This
  * operation does not delete the physical resource encapsulated by the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -290,7 +290,7 @@ DeleteDestinationResponse * CloudWatchLogsClient::deleteDestination(const Delete
 /**
  * Deletes the specified log group and permanently deletes all the archived log events associated with the log
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -304,7 +304,7 @@ DeleteLogGroupResponse * CloudWatchLogsClient::deleteLogGroup(const DeleteLogGro
 /**
  * Deletes the specified log stream and permanently deletes all the archived log events associated with the log
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -318,7 +318,7 @@ DeleteLogStreamResponse * CloudWatchLogsClient::deleteLogStream(const DeleteLogS
 /**
  * Deletes the specified metric
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -333,7 +333,7 @@ DeleteMetricFilterResponse * CloudWatchLogsClient::deleteMetricFilter(const Dele
  * Deletes a resource policy from this account. This revokes the access of the identities in that policy to put log events
  * to this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -351,7 +351,7 @@ DeleteResourcePolicyResponse * CloudWatchLogsClient::deleteResourcePolicy(const 
  *
  * Log events do not expire if they belong to log groups without a retention
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -365,7 +365,7 @@ DeleteRetentionPolicyResponse * CloudWatchLogsClient::deleteRetentionPolicy(cons
 /**
  * Deletes the specified subscription
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -379,7 +379,7 @@ DeleteSubscriptionFilterResponse * CloudWatchLogsClient::deleteSubscriptionFilte
 /**
  * Lists all your destinations. The results are ASCII-sorted by destination
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -393,7 +393,7 @@ DescribeDestinationsResponse * CloudWatchLogsClient::describeDestinations(const 
 /**
  * Lists the specified export tasks. You can list all your export tasks or filter the results based on task ID or task
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -408,7 +408,7 @@ DescribeExportTasksResponse * CloudWatchLogsClient::describeExportTasks(const De
  * Lists the specified log groups. You can list all your log groups or filter the results by prefix. The results are
  * ASCII-sorted by log group
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -427,7 +427,7 @@ DescribeLogGroupsResponse * CloudWatchLogsClient::describeLogGroups(const Descri
  *
  * This operation has a limit of five transactions per second, after which transactions are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -442,7 +442,7 @@ DescribeLogStreamsResponse * CloudWatchLogsClient::describeLogStreams(const Desc
  * Lists the specified metric filters. You can list all the metric filters or filter the results by log name, prefix,
  * metric name, or metric namespace. The results are ASCII-sorted by filter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -456,7 +456,7 @@ DescribeMetricFiltersResponse * CloudWatchLogsClient::describeMetricFilters(cons
 /**
  * Lists the resource policies in this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -471,7 +471,7 @@ DescribeResourcePoliciesResponse * CloudWatchLogsClient::describeResourcePolicie
  * Lists the subscription filters for the specified log group. You can list all the subscription filters or filter the
  * results by prefix. The results are ASCII-sorted by filter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -495,7 +495,7 @@ DescribeSubscriptionFiltersResponse * CloudWatchLogsClient::describeSubscription
  *
  * Note that it can take up to 5 minutes for this operation to take
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -516,7 +516,7 @@ DisassociateKmsKeyResponse * CloudWatchLogsClient::disassociateKmsKey(const Disa
  * found within the time range that you specify. If the results include a token, then there are more log events available,
  * and you can get additional results by specifying the token in a subsequent
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -535,7 +535,7 @@ FilterLogEventsResponse * CloudWatchLogsClient::filterLogEvents(const FilterLogE
  * By default, this operation returns as many log events as can fit in a response size of 1MB (up to 10,000 log events).
  * You can get additional log events by specifying one of the tokens in a subsequent
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -549,7 +549,7 @@ GetLogEventsResponse * CloudWatchLogsClient::getLogEvents(const GetLogEventsRequ
 /**
  * Lists the tags for the specified log
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -573,7 +573,7 @@ ListTagsLogGroupResponse * CloudWatchLogsClient::listTagsLogGroup(const ListTags
  * call <a>PutSubscriptionFilter</a> against this destination. To enable this, the destination owner must call
  * <a>PutDestinationPolicy</a> after
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -589,7 +589,7 @@ PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinati
  * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies_overview.html">IAM policy document</a> that is used to
  * authorize claims to register a subscription filter against a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -640,7 +640,7 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
  *
  * A batch of log events in a single request cannot span more than 24 hours. Otherwise, the operation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -659,7 +659,7 @@ PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequ
  *
  * The maximum number of metric filters that can be associated with a log group is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -674,7 +674,7 @@ PutMetricFilterResponse * CloudWatchLogsClient::putMetricFilter(const PutMetricF
  * Creates or updates a resource policy allowing other AWS services to put log events to this account, such as Amazon Route
  * 53. An account can have up to 50 resource policies per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -689,7 +689,7 @@ PutResourcePolicyResponse * CloudWatchLogsClient::putResourcePolicy(const PutRes
  * Sets the retention of the specified log group. A retention policy allows you to configure the number of days for which
  * to retain log events in the specified log
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -727,7 +727,7 @@ PutRetentionPolicyResponse * CloudWatchLogsClient::putRetentionPolicy(const PutR
  * specify the correct name in <code>filterName</code>. Otherwise, the call fails because you cannot associate a second
  * filter with a log
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -751,7 +751,7 @@ PutSubscriptionFilterResponse * CloudWatchLogsClient::putSubscriptionFilter(cons
  * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/log-group-tagging.html">Tag Log Groups in Amazon
  * CloudWatch Logs</a> in the <i>Amazon CloudWatch Logs User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -766,7 +766,7 @@ TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest
  * Tests the filter pattern of a metric filter against a sample of log event messages. You can use this operation to
  * validate the correctness of a metric filter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *
@@ -784,7 +784,7 @@ TestMetricFilterResponse * CloudWatchLogsClient::testMetricFilter(const TestMetr
  *
  * To list the tags for a log group, use <a>ListTagsLogGroup</a>. To add tags, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch Logs.
  *
  * @return A pointer to a related response object.
  *

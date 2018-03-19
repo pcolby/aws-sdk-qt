@@ -110,7 +110,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Marketplace Entitlement Service.
  *
  * @return A pointer to a related response object.
  *

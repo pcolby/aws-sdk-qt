@@ -151,7 +151,7 @@ EfsClient::EfsClient(
  *
  * This operation requires permissions for the <code>elasticfilesystem:CreateFileSystem</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  *
  * <code>ec2:CreateNetworkInterface</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -317,7 +317,7 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
  *
  * This operation requires permission for the <code>elasticfilesystem:CreateTags</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteFileSystem</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -392,7 +392,7 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
  *
  * <code>ec2:DeleteNetworkInterface</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -413,7 +413,7 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  *
  * This operation requires permissions for the <code>elasticfilesystem:DeleteTags</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -457,7 +457,7 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeFileSystems</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -484,7 +484,7 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
  *
  * <code>ec2:DescribeNetworkInterfaceAttribute</code> action on the mount target's network interface.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -505,7 +505,7 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
  * file system ID that you specify in <code>FileSystemId</code>, or on the file system of the mount target that you specify
  * in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -525,7 +525,7 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeTags</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *
@@ -559,7 +559,7 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
  *
  * <code>ec2:ModifyNetworkInterfaceAttribute</code> action on the mount target's network interface.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Elastic File System.
  *
  * @return A pointer to a related response object.
  *

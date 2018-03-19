@@ -168,7 +168,7 @@ SupportClient::SupportClient(
  * is available for one hour after it is created; the <code>expiryTime</code> returned in the response indicates when the
  * set expires. The maximum number of attachments in a set is 3, and the maximum size of any attachment in the set is 5
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -192,7 +192,7 @@ AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttach
  *
  * This operation implements a subset of the features of the AWS Support
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -263,7 +263,7 @@ AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const Add
  * A successful <a>CreateCase</a> request returns an AWS Support case number. Case numbers are used by the
  * <a>DescribeCases</a> operation to retrieve existing AWS Support cases.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
  * add an attachment to a case or case communication. Attachment IDs are returned in the <a>AttachmentDetails</a> objects
  * that are returned by the <a>DescribeCommunications</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -314,7 +314,7 @@ DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAtt
  * One or more <code>nextToken</code> values, which specify where to paginate the returned records represented by the
  * <code>CaseDetails</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -341,7 +341,7 @@ DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest 
  * set. Set <code>maxResults</code> to the number of cases you want displayed on each page, and use <code>nextToken</code>
  * to specify the resumption of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -365,7 +365,7 @@ DescribeCommunicationsResponse * SupportClient::describeCommunications(const Des
  * request. Always use the service codes and categories obtained programmatically. This practice ensures that you always
  * have the most recent set of service and category
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -380,7 +380,7 @@ DescribeServicesResponse * SupportClient::describeServices(const DescribeService
  * Returns the list of severity levels that you can assign to an AWS Support case. The severity level for a case is also a
  * field in the <a>CaseDetails</a> data type included in any <a>CreateCase</a> request.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -401,7 +401,7 @@ DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const Des
  * the <code>DescribeTrustedAdvisorCheckRefreshStatuses</code> operation for these checks causes an
  * <code>InvalidParameterValue</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -447,7 +447,7 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrus
  *
  * <b>checkId.</b> The unique identifier for the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -466,7 +466,7 @@ DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdviso
  *
  * The response contains an array of <a>TrustedAdvisorCheckSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -482,7 +482,7 @@ DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdv
  * You must specify a language code; English ("en") and Japanese ("ja") are currently supported. The response contains a
  * <a>TrustedAdvisorCheckDescription</a> for each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -517,7 +517,7 @@ DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChec
  *
  * <b>checkId.</b> The unique identifier for the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *
@@ -532,7 +532,7 @@ RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(c
  * Takes a <code>caseId</code> and returns the initial state of the case along with the state of the case after the call to
  * <a>ResolveCase</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Support.
  *
  * @return A pointer to a related response object.
  *

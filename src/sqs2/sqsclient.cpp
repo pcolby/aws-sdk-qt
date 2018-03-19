@@ -186,7 +186,7 @@ SqsClient::SqsClient(
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -240,7 +240,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * visibility timeout for the message reverts to the original timeout value (not to the value you set using the
  * <code>ChangeMessageVisibility</code> action) the next time the message is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -343,7 +343,7 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -374,7 +374,7 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
  * copy remains on the server and might be returned to you on a subsequent receive request. You should ensure that your
  * application is idempotent, so that receiving a message more than once does not cause
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -407,7 +407,7 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  *
  * When you delete a queue, you must wait at least 60 seconds before creating a queue with the same name.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -470,7 +470,7 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -492,7 +492,7 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/acp-overview.html">Shared Queues</a> in
  * the <i>Amazon Simple Queue Service Developer Guide</i>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -512,7 +512,7 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
  * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon Simple Queue Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -559,7 +559,7 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -574,7 +574,7 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
  * Returns a list of your queues. The maximum number of queues that can be returned is 1,000. If you specify a value for
  * the optional <code>QueueNamePrefix</code> parameter, only queues with a name that begins with the specified value are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -599,7 +599,7 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
  * deleted. While the queue is being purged, messages sent to the queue before <code>PurgeQueue</code> is called might be
  * received, but are deleted within the next
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -676,7 +676,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -691,7 +691,7 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
  * Revokes any permissions in the queue policy that matches the specified <code>Label</code> parameter. Only the owner of
  * the queue can remove
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -719,7 +719,7 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
  * Any characters not included in this list will be rejected. For more information, see the <a
  * href="http://www.w3.org/TR/REC-xml/#charsets">W3C specification for
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -776,7 +776,7 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  *
  * <code>&amp;Attribute.2=that</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -797,7 +797,7 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
  * In the future, new attributes might be added. If you write code that calls this action, we recommend that you structure
  * your code so that it can handle new attributes
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -844,7 +844,7 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *
@@ -891,7 +891,7 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
  * href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html">Limits Related to
  * Queues</a> in the <i>Amazon Simple Queue Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Queue Service.
  *
  * @return A pointer to a related response object.
  *

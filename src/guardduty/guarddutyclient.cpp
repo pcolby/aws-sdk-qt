@@ -91,7 +91,7 @@ GuardDutyClient::GuardDutyClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -104,7 +104,7 @@ AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -118,7 +118,7 @@ ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindings
 /**
  * Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -132,7 +132,7 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
 /**
  * Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -146,7 +146,7 @@ CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &req
 /**
  * Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -160,7 +160,7 @@ CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersReques
 /**
  * Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -174,7 +174,7 @@ CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const Creat
 /**
  * Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const Creat
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -200,7 +200,7 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -213,7 +213,7 @@ DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorReq
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvit
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -265,7 +265,7 @@ DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const Delet
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterA
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -291,7 +291,7 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -304,7 +304,7 @@ GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -317,7 +317,7 @@ GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -330,7 +330,7 @@ GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const Get
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -344,7 +344,7 @@ GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
 /**
  * Returns the count of all GuardDuty membership invitations that were sent to the current member account except the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -357,7 +357,7 @@ GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -370,7 +370,7 @@ GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAcco
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -383,7 +383,7 @@ GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &reques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -398,7 +398,7 @@ GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIn
  * Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable GuardDuty and
  * allow the current AWS account to view and manage these accounts' GuardDuty findings on their behalf as the master
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -411,7 +411,7 @@ InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -424,7 +424,7 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -450,7 +450,7 @@ ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &reques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -463,7 +463,7 @@ ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitations
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -476,7 +476,7 @@ ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -490,7 +490,7 @@ ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThr
 /**
  * Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -505,7 +505,7 @@ StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const S
  * Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this
  * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members'
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -518,7 +518,7 @@ StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const Sto
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -531,7 +531,7 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -544,7 +544,7 @@ UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorReq
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -557,7 +557,7 @@ UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const U
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *
@@ -570,7 +570,7 @@ UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon GuardDuty.
  *
  * @return A pointer to a related response object.
  *

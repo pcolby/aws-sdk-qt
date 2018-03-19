@@ -156,7 +156,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 /**
  * Associates one or more configuration items with an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -170,7 +170,7 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
 /**
  * Creates an application with the given name and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -185,7 +185,7 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
  * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
  * a list of multiple configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -199,7 +199,7 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
 /**
  * Deletes a list of applications and their associations with configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -214,7 +214,7 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
  * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
  * configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -229,7 +229,7 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
  * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
  * specify an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  * href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations">Using
  * the DescribeConfigurations
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -270,7 +270,7 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
  *
  * Retrieves the status of a given export process. You can retrieve status from a maximum of 100
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -284,7 +284,7 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
 /**
  * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -299,7 +299,7 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
  * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
  * a specific configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -313,7 +313,7 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
 /**
  * Disassociates one or more configuration items from an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -334,7 +334,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
  * two configuration exports in six
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
 /**
  * Retrieves a short summary of discovered
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -363,7 +363,7 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
  * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
  * identifies the relationship
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
 /**
  * Retrieves a list of servers that are one network hop away from a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -391,7 +391,7 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
 /**
  * Instructs the specified agents or connectors to start collecting
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  * Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports
  * per day.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -432,7 +432,7 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
 /**
  * Instructs the specified agents or connectors to stop collecting
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *
@@ -446,7 +446,7 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
 /**
  * Updates metadata about an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Application Discovery Service.
  *
  * @return A pointer to a related response object.
  *

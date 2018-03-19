@@ -94,7 +94,7 @@ CloudHSMV2Client::CloudHSMV2Client(
 /**
  * Creates a new AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -108,7 +108,7 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
 /**
  * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
  * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
  * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -139,7 +139,7 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
  * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
  * use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -160,7 +160,7 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
  * <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or
  * an empty or null value), that means there are no more backups to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -181,7 +181,7 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
  * <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code>
  * (or an empty or null value), that means there are no more clusters to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -197,7 +197,7 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
  * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
  * (CSR) with your issuing CA. To get the cluster's CSR, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -218,7 +218,7 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
  * <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty
  * or null value), that means there are no more tags to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -232,7 +232,7 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 /**
  * Adds or overwrites one or more tags for the specified AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &re
 /**
  * Removes the specified tag or tags from the specified AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudHSM V2.
  *
  * @return A pointer to a related response object.
  *

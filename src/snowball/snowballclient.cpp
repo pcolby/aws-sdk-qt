@@ -99,7 +99,7 @@ SnowballClient::SnowballClient(
  * Cancels a cluster job. You can only cancel a cluster job while it's in the <code>AwaitingQuorum</code> status. You'll
  * have at least an hour after creating a cluster job to cancel
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -115,7 +115,7 @@ CancelClusterResponse * SnowballClient::cancelCluster(const CancelClusterRequest
  * <code>PreparingAppliance</code>. Requesting the <code>ListJobs</code> or <code>DescribeJob</code> action will return a
  * job's <code>JobState</code> as part of the response element data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -131,7 +131,7 @@ CancelJobResponse * SnowballClient::cancelJob(const CancelJobRequest &request)
  * The address you provide must be located within the serviceable area of your region. If the address is invalid or
  * unsupported, then an exception is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -146,7 +146,7 @@ CreateAddressResponse * SnowballClient::createAddress(const CreateAddressRequest
  * Creates an empty cluster. Each cluster supports five nodes. You use the <a>CreateJob</a> action separately to create the
  * jobs for each of these nodes. The cluster does not ship until these five node jobs have been
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -163,7 +163,7 @@ CreateClusterResponse * SnowballClient::createCluster(const CreateClusterRequest
  * cluster, you only need to provide the <code>clusterId</code> value; the other job attributes are inherited from the
  * cluster.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -177,7 +177,7 @@ CreateJobResponse * SnowballClient::createJob(const CreateJobRequest &request)
 /**
  * Takes an <code>AddressId</code> and returns specific details about that address in the form of an <code>Address</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -192,7 +192,7 @@ DescribeAddressResponse * SnowballClient::describeAddress(const DescribeAddressR
  * Returns a specified number of <code>ADDRESS</code> objects. Calling this API in one of the US regions will return
  * addresses from the list of all addresses associated with this account in all US
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -206,7 +206,7 @@ DescribeAddressesResponse * SnowballClient::describeAddresses(const DescribeAddr
 /**
  * Returns information about a specific cluster including shipping information, cluster status, and other important
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -220,7 +220,7 @@ DescribeClusterResponse * SnowballClient::describeCluster(const DescribeClusterR
 /**
  * Returns information about a specific job including shipping information, job status, and other important metadata.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &requ
  *
  * The credentials of a given job, including its manifest file and unlock code, expire 90 days after the job is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequ
  * manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the
  * Snowball associated with that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -299,7 +299,7 @@ GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCo
  * The default service limit for the number of Snowballs that you can have at one time is 1. If you want to increase your
  * service limit, contact AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -314,7 +314,7 @@ GetSnowballUsageResponse * SnowballClient::getSnowballUsage(const GetSnowballUsa
  * Returns an array of <code>JobListEntry</code> objects of the specified length. Each <code>JobListEntry</code> object is
  * for a job in the specified cluster and contains a job's state, a job's ID, and other
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -329,7 +329,7 @@ ListClusterJobsResponse * SnowballClient::listClusterJobs(const ListClusterJobsR
  * Returns an array of <code>ClusterListEntry</code> objects of the specified length. Each <code>ClusterListEntry</code>
  * object contains a cluster's state, a cluster's ID, and other important status
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -346,7 +346,7 @@ ListClustersResponse * SnowballClient::listClusters(const ListClustersRequest &r
  * jobs. Calling this API action in one of the US regions will return jobs from the list of all jobs associated with this
  * account in all US
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -362,7 +362,7 @@ ListJobsResponse * SnowballClient::listJobs(const ListJobsRequest &request)
  * the information associated with a cluster. Once the cluster changes to a different job state, usually 60 minutes after
  * the cluster being created, this action is no longer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *
@@ -378,7 +378,7 @@ UpdateClusterResponse * SnowballClient::updateCluster(const UpdateClusterRequest
  * job. Once the job changes to a different job state, usually within 60 minutes of the job being created, this action is
  * no longer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Import/Export Snowball.
  *
  * @return A pointer to a related response object.
  *

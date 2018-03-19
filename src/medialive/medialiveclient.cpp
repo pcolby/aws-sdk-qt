@@ -91,7 +91,7 @@ MediaLiveClient::MediaLiveClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -104,7 +104,7 @@ CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -117,7 +117,7 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -130,7 +130,7 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannel
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -234,7 +234,7 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -247,7 +247,7 @@ ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &reques
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -260,7 +260,7 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *
@@ -273,7 +273,7 @@ StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &req
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaLive.
  *
  * @return A pointer to a related response object.
  *

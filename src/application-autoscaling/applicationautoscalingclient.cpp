@@ -174,7 +174,7 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  *
  * To create a scaling policy or update an existing one, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(
 /**
  * Deletes the specified Application Auto Scaling scheduled
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
  *
  * To create a scalable target or update an existing one, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -233,7 +233,7 @@ DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScala
  * To create a scalable target or update an existing one, see <a>RegisterScalableTarget</a>. If you are no longer using a
  * scalable target, you can deregister it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -257,7 +257,7 @@ DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalable
  * policies for a service namespace, see <a>DescribeScalingPolicies</a>. To create a scaling policy or update an existing
  * one, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -281,7 +281,7 @@ DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalin
  * To create a scaling policy or update an existing one, see <a>PutScalingPolicy</a>. If you are no longer using a scaling
  * policy, you can delete it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -305,7 +305,7 @@ DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingP
  * To create a scheduled action or update an existing one, see <a>PutScheduledAction</a>. If you are no longer using a
  * scheduled action, you can delete it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -335,7 +335,7 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  * You can view the scaling policies for a service namespace using <a>DescribeScalingPolicies</a>. If you are no longer
  * using a scaling policy, you can delete it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -365,7 +365,7 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  * You can view the scheduled actions using <a>DescribeScheduledActions</a>. If you are no longer using a scheduled action,
  * you can delete it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *
@@ -387,7 +387,7 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
  * view the scaling policies for a service namespace using <a>DescribeScalableTargets</a>. If you no longer need a scalable
  * target, you can deregister it using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Application Auto Scaling.
  *
  * @return A pointer to a related response object.
  *

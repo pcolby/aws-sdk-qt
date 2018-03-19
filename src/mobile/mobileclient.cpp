@@ -95,7 +95,7 @@ MobileClient::MobileClient(
 /**
  * Creates an AWS Mobile Hub project.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -109,7 +109,7 @@ CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &
 /**
  * Delets a project in AWS Mobile Hub.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &
 /**
  * Get the bundle details for the requested bundle id.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -137,7 +137,7 @@ DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleReques
 /**
  * Gets details about a project in AWS Mobile Hub.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -152,7 +152,7 @@ DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectReq
  * Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app
  * clients with backend AWS resources.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -167,7 +167,7 @@ ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &req
  * Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials
  * are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -181,7 +181,7 @@ ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &
 /**
  * List all available bundles.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &reques
 /**
  * Lists projects in AWS Mobile Hub.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *
@@ -209,7 +209,7 @@ ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &req
 /**
  * Update an existing project.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Mobile.
  *
  * @return A pointer to a related response object.
  *

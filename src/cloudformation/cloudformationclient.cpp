@@ -119,7 +119,7 @@ CloudFormationClient::CloudFormationClient(
  *
  * You can cancel only stacks that are in the UPDATE_IN_PROGRESS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ CancelUpdateStackResponse * CloudFormationClient::cancelUpdateStack(const Cancel
  * was deleted outside of AWS CloudFormation. Because AWS CloudFormation doesn't know the database was deleted, it assumes
  * that the database instance still exists and attempts to roll back to it, causing the update rollback to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(co
  * When you are satisfied with the changes the change set will make, execute the change set by using the
  * <a>ExecuteChangeSet</a> action. AWS CloudFormation doesn't make changes until you execute the change
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ CreateChangeSetResponse * CloudFormationClient::createChangeSet(const CreateChan
  * Creates a stack as specified in the template. After the call completes successfully, the stack creation starts. You can
  * check the status of the stack via the <a>DescribeStacks</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -207,7 +207,7 @@ CreateStackResponse * CloudFormationClient::createStack(const CreateStackRequest
  * a specific account and region. <code>Accounts</code> and <code>Regions</code> are required parameters—you must specify
  * at least one account and one region.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ CreateStackInstancesResponse * CloudFormationClient::createStackInstances(const 
 /**
  * Creates a stack
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ CreateStackSetResponse * CloudFormationClient::createStackSet(const CreateStackS
  *
  * If the call successfully completes, AWS CloudFormation successfully deleted the change
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -254,7 +254,7 @@ DeleteChangeSetResponse * CloudFormationClient::deleteChangeSet(const DeleteChan
  * Deletes a specified stack. Once the call completes successfully, stack deletion starts. Deleted stacks do not show up in
  * the <a>DescribeStacks</a> API if the deletion has been completed
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ DeleteStackResponse * CloudFormationClient::deleteStack(const DeleteStackRequest
 /**
  * Deletes stack instances for the specified accounts, in the specified regions.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -283,7 +283,7 @@ DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const 
  * Deletes a stack set. Before you can delete a stack set, all of its member stack instances must be deleted. For more
  * information about how to do this, see <a>DeleteStackInstances</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -297,7 +297,7 @@ DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackS
 /**
  * Retrieves your account's AWS CloudFormation limits, such as the maximum number of stacks that you can create in your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -314,7 +314,7 @@ DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(cons
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html">Updating
  * Stacks Using Change Sets</a> in the AWS CloudFormation User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const Descri
  * You can list events for stacks that have failed to create or have been deleted by specifying the unique stack identifier
  * (stack
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -354,7 +354,7 @@ DescribeStackEventsResponse * CloudFormationClient::describeStackEvents(const De
  *
  * For a list of stack instances that are associated with a specific stack set, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ DescribeStackInstanceResponse * CloudFormationClient::describeStackInstance(cons
  *
  * For deleted stacks, DescribeStackResource returns resource information for up to 90 days after the stack has been
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -410,7 +410,7 @@ DescribeStackResourceResponse * CloudFormationClient::describeStackResource(cons
  * A <code>ValidationError</code> is returned if you specify both <code>StackName</code> and
  * <code>PhysicalResourceId</code> in the same
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -424,7 +424,7 @@ DescribeStackResourcesResponse * CloudFormationClient::describeStackResources(co
 /**
  * Returns the description of the specified stack set.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ DescribeStackSetResponse * CloudFormationClient::describeStackSet(const Describe
 /**
  * Returns the description of the specified stack set operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -457,7 +457,7 @@ DescribeStackSetOperationResponse * CloudFormationClient::describeStackSetOperat
  *
  * If the stack does not exist, an <code>AmazonCloudFormationException</code> is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -472,7 +472,7 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
  * Returns the estimated monthly cost of a template. The return value is an AWS Simple Monthly Calculator URL with a query
  * string that describes the resources required to run the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -498,7 +498,7 @@ EstimateTemplateCostResponse * CloudFormationClient::estimateTemplateCost(const 
  * If a stack policy is associated with the stack, AWS CloudFormation enforces the policy during the update. You can't
  * specify a temporary stack policy that overrides the current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -512,7 +512,7 @@ ExecuteChangeSetResponse * CloudFormationClient::executeChangeSet(const ExecuteC
 /**
  * Returns the stack policy for a specified stack. If a stack doesn't have a policy, a null value is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -534,7 +534,7 @@ GetStackPolicyResponse * CloudFormationClient::getStackPolicy(const GetStackPoli
  *
  * If the template does not exist, a <code>ValidationError</code> is returned.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -560,7 +560,7 @@ GetTemplateResponse * CloudFormationClient::getTemplate(const GetTemplateRequest
  * For deleted stacks, <code>GetTemplateSummary</code> returns the template information for up to 90 days after the stack
  * has been deleted. If the template does not exist, a <code>ValidationError</code> is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -575,7 +575,7 @@ GetTemplateSummaryResponse * CloudFormationClient::getTemplateSummary(const GetT
  * Returns the ID and status of each active change set for a stack. For example, AWS CloudFormation lists change sets that
  * are in the <code>CREATE_IN_PROGRESS</code> or <code>CREATE_PENDING</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -598,7 +598,7 @@ ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSe
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html"> AWS CloudFormation
  * Export Stack Output
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -619,7 +619,7 @@ ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
  * <code>Fn::ImportValue</code> </a> function.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -634,7 +634,7 @@ ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest
  * Returns summary information about stack instances that are associated with the specified stack set. You can filter for
  * stack instances that are associated with a specific AWS account name or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -652,7 +652,7 @@ ListStackInstancesResponse * CloudFormationClient::listStackInstances(const List
  *
  * For deleted stacks, ListStackResources returns resource information for up to 90 days after the stack has been
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ ListStackResourcesResponse * CloudFormationClient::listStackResources(const List
 /**
  * Returns summary information about the results of a stack set operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -680,7 +680,7 @@ ListStackSetOperationResultsResponse * CloudFormationClient::listStackSetOperati
 /**
  * Returns summary information about operations performed on a stack set.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -694,7 +694,7 @@ ListStackSetOperationsResponse * CloudFormationClient::listStackSetOperations(co
 /**
  * Returns summary information about stack sets that are associated with the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -710,7 +710,7 @@ ListStackSetsResponse * CloudFormationClient::listStackSets(const ListStackSetsR
  * stacks that have been deleted is kept for 90 days after the stack is deleted. If no StackStatusFilter is specified,
  * summary information for all stacks is returned (including existing stacks and stacks that have been
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -724,7 +724,7 @@ ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &r
 /**
  * Sets a stack policy for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ SetStackPolicyResponse * CloudFormationClient::setStackPolicy(const SetStackPoli
  * until resources receive the required number of signals or the timeout period is exceeded. The SignalResource API is
  * useful in cases where you want to send signals from anywhere other than an Amazon EC2
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -755,7 +755,7 @@ SignalResourceResponse * CloudFormationClient::signalResource(const SignalResour
 /**
  * Stops an in-progress operation on a stack set and its associated stack instances.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -779,7 +779,7 @@ StopStackSetOperationResponse * CloudFormationClient::stopStackSetOperation(cons
  * For more information about creating an update template, updating a stack, and monitoring the progress of the update, see
  * <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html">Updating a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -815,7 +815,7 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
  * update all stack instances with the updated template and parameter value specified in the stack set. Once a stack
  * instance has been updated with the new parameter, you can then override the parameter value using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -835,7 +835,7 @@ UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const 
  * specified failure tolerance), the stack set is updated with your changes. Subsequent <a>CreateStackInstances</a> calls
  * on the specified stack set use the updated stack
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -857,7 +857,7 @@ UpdateStackSetResponse * CloudFormationClient::updateStackSet(const UpdateStackS
  * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
  * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *
@@ -873,7 +873,7 @@ UpdateTerminationProtectionResponse * CloudFormationClient::updateTerminationPro
  * CloudFormation checks if the template is valid YAML. If both these checks fail, AWS CloudFormation returns a template
  * validation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudFormation.
  *
  * @return A pointer to a related response object.
  *

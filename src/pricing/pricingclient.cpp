@@ -122,7 +122,7 @@ PricingClient::PricingClient(
  * names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>,
  * <code>locationType</code>, and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Price List Service.
  *
  * @return A pointer to a related response object.
  *
@@ -140,7 +140,7 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
  * Definitions</a> in the <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS
  * Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Price List Service.
  *
  * @return A pointer to a related response object.
  *
@@ -154,7 +154,7 @@ GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttribut
 /**
  * Returns a list of all products that match the filter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Price List Service.
  *
  * @return A pointer to a related response object.
  *

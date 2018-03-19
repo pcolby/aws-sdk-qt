@@ -106,7 +106,7 @@ CloudWatchClient::CloudWatchClient(
 /**
  * Deletes the specified alarms. In the event of an error, no alarms are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -121,7 +121,7 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
  * Deletes all dashboards that you specify. You may specify up to 100 dashboards to delete. If there is an error during
  * this call, no dashboards are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -140,7 +140,7 @@ DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashbo
  *
  * CloudWatch retains the history of an alarm even if you delete the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -155,7 +155,7 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
  * Retrieves the specified alarms. If no alarms are specified, all alarms are returned. Alarms can be retrieved by using
  * only a prefix for the alarm name, the alarm state, or a prefix for any
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRe
 /**
  * Retrieves the alarms for the specified metric. To filter the results, specify a statistic, period, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -184,7 +184,7 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
  * Disables the actions for the specified alarms. When an alarm's actions are disabled, the alarm actions do not execute
  * when the alarm state
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -198,7 +198,7 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
 /**
  * Enables the actions for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -217,7 +217,7 @@ EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAl
  * To copy an existing dashboard, use <code>GetDashboard</code>, and then use the data returned within
  * <code>DashboardBody</code> as the template for the new dashboard when you call <code>PutDashboard</code> to create the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -295,7 +295,7 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">Amazon CloudWatch Metrics
  * and Dimensions Reference</a> in the <i>Amazon CloudWatch User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -310,7 +310,7 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
  * Returns a list of the dashboards for your account. If you include <code>DashboardNamePrefix</code>, only those
  * dashboards with names starting with the prefix are listed. Otherwise, all dashboards in your account are listed.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -333,7 +333,7 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  * After you create a metric, allow up to fifteen minutes before the metric appears. Statistics about the metric, however,
  * are available sooner using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -366,7 +366,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  * could also point console users to the location of the <code>DashboardBody</code> script or the CloudFormation template
  * used to create the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  * create the <b>EC2ActionsAccess</b> IAM role. After this IAM role is created, you can create stop, terminate, or reboot
  * alarms using a command-line interface or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -489,7 +489,7 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * The Min and the Max values of the statistic set are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *
@@ -507,7 +507,7 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
  * alarm returns to its actual state (often within seconds). Because the alarm state change happens quickly, it is
  * typically only visible in the alarm's <b>History</b> tab in the Amazon CloudWatch console or through
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudWatch.
  *
  * @return A pointer to a related response object.
  *

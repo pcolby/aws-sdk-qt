@@ -93,7 +93,7 @@ AppSyncClient::AppSyncClient(
 /**
  * Creates a unique key that you can distribute to clients who are executing your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -107,7 +107,7 @@ CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &re
 /**
  * Creates a <code>DataSource</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -121,7 +121,7 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
 /**
  * Creates a <code>GraphqlApi</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -140,7 +140,7 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
  * A resolver converts incoming requests into a format that a data source can understand and converts the data source's
  * responses into
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -154,7 +154,7 @@ CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverReque
 /**
  * Creates a <code>Type</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -168,7 +168,7 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 /**
  * Deletes an API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &re
 /**
  * Deletes a <code>DataSource</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -196,7 +196,7 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
 /**
  * Deletes a <code>GraphqlApi</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlAp
 /**
  * Deletes a <code>Resolver</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -224,7 +224,7 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
 /**
  * Deletes a <code>Type</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -238,7 +238,7 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 /**
  * Retrieves a <code>DataSource</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest 
 /**
  * Retrieves a <code>GraphqlApi</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -266,7 +266,7 @@ GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest 
 /**
  * Retrieves the introspection schema for a GraphQL
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -280,7 +280,7 @@ GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const Get
 /**
  * Retrieves a <code>Resolver</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -294,7 +294,7 @@ GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &reque
 /**
  * Retrieves the current status of a schema creation
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -308,7 +308,7 @@ GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const G
 /**
  * Retrieves a <code>Type</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -322,7 +322,7 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 /**
  * Lists the API keys for a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
 /**
  * Lists the data sources for a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -350,7 +350,7 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
 /**
  * Lists your GraphQL
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -364,7 +364,7 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
 /**
  * Lists the resolvers for a given API and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -378,7 +378,7 @@ ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest 
 /**
  * Lists the types for a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -396,7 +396,7 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
  *
  * This operation is asynchronous. Use to determine when it has
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -410,7 +410,7 @@ StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSche
 /**
  * Updates an API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -424,7 +424,7 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
 /**
  * Updates a <code>DataSource</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourc
 /**
  * Updates a <code>GraphqlApi</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -452,7 +452,7 @@ UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlAp
 /**
  * Updates a <code>Resolver</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *
@@ -466,7 +466,7 @@ UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverReque
 /**
  * Updates a <code>Type</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS AppSync.
  *
  * @return A pointer to a related response object.
  *

@@ -97,7 +97,7 @@ ComprehendClient::ComprehendClient(
  * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
  * Comprehend Supported Languages</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -112,7 +112,7 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
  * Inspects the text of a batch of documents and returns information about them. For more information about entities, see
  * <a>how-entities</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -126,7 +126,7 @@ BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchD
 /**
  * Detects the key noun phrases found in a batch of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -141,7 +141,7 @@ BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const Ba
  * Inspects a batch of documents and returns an inference of the prevailing sentiment, <code>POSITIVE</code>,
  * <code>NEUTRAL</code>, <code>MIXED</code>, or <code>NEGATIVE</code>, in each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -155,7 +155,7 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
 /**
  * Gets the properties associated with a topic detection job. Use this operation to get the status of a detection
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -170,7 +170,7 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
  * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
  * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -185,7 +185,7 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
  * Inspects text for entities, and returns information about them. For more information, about entities, see
  * <a>how-entities</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -199,7 +199,7 @@ DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRe
 /**
  * Detects the key noun phrases found in the text.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -214,7 +214,7 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
  * Inspects text and returns an inference of the prevailing sentiment (<code>POSITIVE</code>, <code>NEUTRAL</code>,
  * <code>MIXED</code>, or <code>NEGATIVE</code>).
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -228,7 +228,7 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
 /**
  * Gets a list of the topic detection jobs that you have
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *
@@ -243,7 +243,7 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
  * Starts an asynchronous topic detection job. Use the <code>DescribeTopicDetectionJob</code> operation to track the status
  * of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Comprehend.
  *
  * @return A pointer to a related response object.
  *

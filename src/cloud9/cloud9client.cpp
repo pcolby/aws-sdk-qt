@@ -147,7 +147,7 @@ Cloud9Client::Cloud9Client(
  * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
  * connects from the instance to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -161,7 +161,7 @@ CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEn
 /**
  * Adds an environment member to an AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(
  * Deletes an AWS Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also
  * terminates the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -190,7 +190,7 @@ DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironm
 /**
  * Deletes an environment member from an AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -204,7 +204,7 @@ DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(
 /**
  * Gets information about environment members for an AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -218,7 +218,7 @@ DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMember
 /**
  * Gets status information for an AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -232,7 +232,7 @@ DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(cons
 /**
  * Gets information about AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
 /**
  * Gets a list of AWS Cloud9 development environment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -260,7 +260,7 @@ ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironments
 /**
  * Changes the settings of an existing AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *
@@ -274,7 +274,7 @@ UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironm
 /**
  * Changes the settings of an existing environment member for an AWS Cloud9 development
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cloud9.
  *
  * @return A pointer to a related response object.
  *

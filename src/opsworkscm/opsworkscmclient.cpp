@@ -180,7 +180,7 @@ OpsWorksCMClient::OpsWorksCMClient(
  * API call can be integrated into Auto Scaling configurations, AWS Cloudformation templates, or the user data of a
  * server's instance.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  * UNHEALTHY. A <code>ResourceNotFoundException</code> is thrown when the server is not found. A
  * <code>ValidationException</code> is thrown when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -258,7 +258,7 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  * allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the
  * navigation pane of the EC2 management console.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  * <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * thrown when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -306,7 +306,7 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  *
  * </p
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -324,7 +324,7 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
  *
  * This operation is synchronous.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  * A <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -371,7 +371,7 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -391,7 +391,7 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  * specified token is found, or when the server does not exist. A <code>ValidationException</code> is raised when
  * parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -415,7 +415,7 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -464,7 +464,7 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  * <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -486,7 +486,7 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -504,7 +504,7 @@ StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMainten
  *
  * This operation is synchronous.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *
@@ -531,7 +531,7 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  * <code>InvalidStateException</code> is raised. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks for Chef Automate.
  *
  * @return A pointer to a related response object.
  *

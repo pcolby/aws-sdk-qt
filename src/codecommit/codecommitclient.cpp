@@ -289,7 +289,7 @@ CodeCommitClient::CodeCommitClient(
  * sure that you HTML-encode the description field in any application that uses this API to display the repository
  * description on a web
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -308,7 +308,7 @@ BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const Batc
  * Calling the create branch operation does not set a repository's default branch. To do this, call the update default
  * branch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -322,7 +322,7 @@ CreateBranchResponse * CodeCommitClient::createBranch(const CreateBranchRequest 
 /**
  * Creates a pull request in the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePull
 /**
  * Creates a new, empty
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -350,7 +350,7 @@ CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateReposi
 /**
  * Deletes a branch from a repository, unless that branch is the default branch for the repository.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -364,7 +364,7 @@ DeleteBranchResponse * CodeCommitClient::deleteBranch(const DeleteBranchRequest 
 /**
  * Deletes the content of a comment made on a change, file, or commit in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -383,7 +383,7 @@ DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const Dele
  * Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push
  * calls to the deleted repository will
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -397,7 +397,7 @@ DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteReposi
 /**
  * Returns information about one or more pull request
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -411,7 +411,7 @@ DescribePullRequestEventsResponse * CodeCommitClient::describePullRequestEvents(
 /**
  * Returns the base-64 encoded content of an individual blob within a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -425,7 +425,7 @@ GetBlobResponse * CodeCommitClient::getBlob(const GetBlobRequest &request)
 /**
  * Returns information about a repository branch, including its name and the last commit
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -439,7 +439,7 @@ GetBranchResponse * CodeCommitClient::getBranch(const GetBranchRequest &request)
 /**
  * Returns the content of a comment made on a change, file, or commit in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -453,7 +453,7 @@ GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &reque
 /**
  * Returns information about comments made on the comparison between two
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -467,7 +467,7 @@ GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedC
 /**
  * Returns comments made on a pull
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -481,7 +481,7 @@ GetCommentsForPullRequestResponse * CodeCommitClient::getCommentsForPullRequest(
 /**
  * Returns information about a commit, including commit message and committer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -496,7 +496,7 @@ GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
  * Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other
  * fully qualified reference). Results can be limited to a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -510,7 +510,7 @@ GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRe
 /**
  * Returns information about merge conflicts between the before and after commit IDs for a pull request in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -524,7 +524,7 @@ GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeCo
 /**
  * Gets information about a pull request in a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -545,7 +545,7 @@ GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRe
  * sure that you HTML-encode the description field in any application that uses this API to display the repository
  * description on a web
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -559,7 +559,7 @@ GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryReque
 /**
  * Gets information about triggers configured for a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -573,7 +573,7 @@ GetRepositoryTriggersResponse * CodeCommitClient::getRepositoryTriggers(const Ge
 /**
  * Gets information about one or more branches in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -588,7 +588,7 @@ ListBranchesResponse * CodeCommitClient::listBranches(const ListBranchesRequest 
  * Returns a list of pull requests for a specified repository. The return list can be refined by pull request status or
  * pull request author
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -602,7 +602,7 @@ ListPullRequestsResponse * CodeCommitClient::listPullRequests(const ListPullRequ
 /**
  * Gets information about one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -617,7 +617,7 @@ ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListReposito
  * Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch
  * for that pull request at the specified commit using the fast-forward merge
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -631,7 +631,7 @@ MergePullRequestByFastForwardResponse * CodeCommitClient::mergePullRequestByFast
 /**
  * Posts a comment on the comparison between two
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -645,7 +645,7 @@ PostCommentForComparedCommitResponse * CodeCommitClient::postCommentForComparedC
 /**
  * Posts a comment on a pull
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -659,7 +659,7 @@ PostCommentForPullRequestResponse * CodeCommitClient::postCommentForPullRequest(
 /**
  * Posts a comment in reply to an existing comment on a comparison between commits or a pull
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -673,7 +673,7 @@ PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentR
 /**
  * Adds or updates a file in an AWS CodeCommit
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -687,7 +687,7 @@ PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
 /**
  * Replaces all triggers for a repository. This can be used to create or delete
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -702,7 +702,7 @@ PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const Pu
  * Tests the functionality of repository triggers by sending information to the trigger target. If real data is available
  * in the repository, the test will send data from the last commit. If no data is available, sample data will be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -716,7 +716,7 @@ TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const 
 /**
  * Replaces the contents of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -735,7 +735,7 @@ UpdateCommentResponse * CodeCommitClient::updateComment(const UpdateCommentReque
  * If you use this operation to change the default branch name to the current default branch name, a success message is
  * returned even though the default branch did not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -749,7 +749,7 @@ UpdateDefaultBranchResponse * CodeCommitClient::updateDefaultBranch(const Update
 /**
  * Replaces the contents of the description of a pull
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -763,7 +763,7 @@ UpdatePullRequestDescriptionResponse * CodeCommitClient::updatePullRequestDescri
 /**
  * Updates the status of a pull request.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -777,7 +777,7 @@ UpdatePullRequestStatusResponse * CodeCommitClient::updatePullRequestStatus(cons
 /**
  * Replaces the title of a pull
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -798,7 +798,7 @@ UpdatePullRequestTitleResponse * CodeCommitClient::updatePullRequestTitle(const 
  * sure that you HTML-encode the description field in any application that uses this API to display the repository
  * description on a web
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *
@@ -815,7 +815,7 @@ UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescript
  * ".git" is prohibited. For a full description of the limits on repository names, see <a
  * href="http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Limits</a> in the AWS CodeCommit User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeCommit.
  *
  * @return A pointer to a related response object.
  *

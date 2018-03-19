@@ -100,7 +100,7 @@ MTurkClient::MTurkClient(
  *
  * A successful request for the <code>AcceptQualificationRequest</code> operation returns with no errors and an empty body.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ AcceptQualificationRequestResponse * MTurkClient::acceptQualificationRequest(con
  * the previous rejection. This only works on rejected assignments that were submitted within the previous 30 days and only
  * if the assignment's related HIT has not been deleted.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -167,7 +167,7 @@ ApproveAssignmentResponse * MTurkClient::approveAssignment(const ApproveAssignme
  * without affecting the Qualification the Worker already has, reject the request with the
  * <code>RejectQualificationRequest</code> operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -197,7 +197,7 @@ AssociateQualificationWithWorkerResponse * MTurkClient::associateQualificationWi
  * HITs that were created before July 22, 2015 cannot be extended. Attempting to extend HITs that were created before July
  * 22, 2015 will result in an <code>AWS.MechanicalTurk.HITTooOldForExtension</code> exception.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -236,7 +236,7 @@ CreateAdditionalAssignmentsForHITResponse * MTurkClient::createAdditionalAssignm
  * If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see <a
  * href="https://requester.mturk.com/pricing">Amazon Mechanical Turk
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -252,7 +252,7 @@ CreateHITResponse * MTurkClient::createHIT(const CreateHITRequest &request)
  * HIT properties to use when creating HITs. If you register a HIT type with values that match an existing HIT type, the
  * HIT type ID of the existing type will be returned.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -283,7 +283,7 @@ CreateHITTypeResponse * MTurkClient::createHITType(const CreateHITTypeRequest &r
  * If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see <a
  * href="https://requester.mturk.com/pricing">Amazon Mechanical Turk Pricing</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -298,7 +298,7 @@ CreateHITWithHITTypeResponse * MTurkClient::createHITWithHITType(const CreateHIT
  * The <code>CreateQualificationType</code> operation creates a new Qualification type, which is represented by a
  * <code>QualificationType</code> data structure.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -313,7 +313,7 @@ CreateQualificationTypeResponse * MTurkClient::createQualificationType(const Cre
  * The <code>CreateWorkerBlock</code> operation allows you to prevent a Worker from working on your HITs. For example, you
  * can block a Worker who is producing poor quality work. You can block up to 100,000
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -351,7 +351,7 @@ CreateWorkerBlockResponse * MTurkClient::createWorkerBlock(const CreateWorkerBlo
  *
  * Disposing HITs can improve the performance of operations such as ListReviewableHITs and ListHITs.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -378,7 +378,7 @@ DeleteHITResponse * MTurkClient::deleteHIT(const DeleteHITRequest &request)
  * completing. It may take up to 48 hours before DeleteQualificationType completes and the unique name of the Qualification
  * type is available for reuse with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -395,7 +395,7 @@ DeleteQualificationTypeResponse * MTurkClient::deleteQualificationType(const Del
  * Worker ID is missing or invalid, this operation fails and returns the message “WorkerId is invalid.” If the specified
  * Worker is not blocked, this operation returns
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -414,7 +414,7 @@ DeleteWorkerBlockResponse * MTurkClient::deleteWorkerBlock(const DeleteWorkerBlo
  * You can provide a text message explaining why the Qualification was revoked. The user who had the Qualification can see
  * this message.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -428,7 +428,7 @@ DisassociateQualificationFromWorkerResponse * MTurkClient::disassociateQualifica
 /**
  * The <code>GetAccountBalance</code> operation retrieves the amount of money in your Amazon Mechanical Turk
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -442,7 +442,7 @@ GetAccountBalanceResponse * MTurkClient::getAccountBalance(const GetAccountBalan
 /**
  * The <code>GetAssignment</code> operation retrieves the details of the specified Assignment.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -462,7 +462,7 @@ GetAssignmentResponse * MTurkClient::getAssignment(const GetAssignmentRequest &r
  * <code>FileUploadAnswer</code> element to be used for the QuestionForm data structure. Instead, we recommend that
  * Requesters who want to create HITs asking Workers to upload files to use Amazon S3.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -476,7 +476,7 @@ GetFileUploadURLResponse * MTurkClient::getFileUploadURL(const GetFileUploadURLR
 /**
  * The <code>GetHIT</code> operation retrieves the details of the specified HIT.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -500,7 +500,7 @@ GetHITResponse * MTurkClient::getHIT(const GetHITRequest &request)
  *
  * Only the owner of a Qualification type can query the value of a Worker's Qualification of that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -514,7 +514,7 @@ GetQualificationScoreResponse * MTurkClient::getQualificationScore(const GetQual
 /**
  * The <code>GetQualificationType</code>operation retrieves information about a Qualification type using its ID.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -551,7 +551,7 @@ GetQualificationTypeResponse * MTurkClient::getQualificationType(const GetQualif
  * Results are sorted and divided into numbered pages and the operation returns a single page of results. You can use the
  * parameters of the operation to control sorting and pagination.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -566,7 +566,7 @@ ListAssignmentsForHITResponse * MTurkClient::listAssignmentsForHIT(const ListAss
  * The <code>ListBonusPayments</code> operation retrieves the amounts of bonuses you have paid to Workers for a given HIT
  * or assignment.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -581,7 +581,7 @@ ListBonusPaymentsResponse * MTurkClient::listBonusPayments(const ListBonusPaymen
  * The <code>ListHITs</code> operation returns all of a Requester's HITs. The operation returns HITs of any status, except
  * for HITs that have been deleted of with the DeleteHIT operation or that have been auto-deleted.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -597,7 +597,7 @@ ListHITsResponse * MTurkClient::listHITs(const ListHITsRequest &request)
  * Qualification requirement. The operation returns HITs of any status, except for HITs that have been deleted with the
  * <code>DeleteHIT</code> operation or that have been auto-deleted.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -613,7 +613,7 @@ ListHITsForQualificationTypeResponse * MTurkClient::listHITsForQualificationType
  * type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the
  * AcceptQualification operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -629,7 +629,7 @@ ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const
  * type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the
  * AcceptQualification operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -646,7 +646,7 @@ ListQualificationTypesResponse * MTurkClient::listQualificationTypes(const ListQ
  * call CreateHIT, see Review Policies. The ListReviewPolicyResultsForHIT operation can return results for both
  * Assignment-level and HIT-level review results.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -661,7 +661,7 @@ ListReviewPolicyResultsForHITResponse * MTurkClient::listReviewPolicyResultsForH
  * The <code>ListReviewableHITs</code> operation retrieves the HITs with Status equal to Reviewable or Status equal to
  * Reviewing that belong to the Requester calling the operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -675,7 +675,7 @@ ListReviewableHITsResponse * MTurkClient::listReviewableHITs(const ListReviewabl
 /**
  * The <code>ListWorkersBlocks</code> operation retrieves a list of Workers who are blocked from working on your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -690,7 +690,7 @@ ListWorkerBlocksResponse * MTurkClient::listWorkerBlocks(const ListWorkerBlocksR
  * The <code>ListWorkersWithQualificationType</code> operation returns all of the Workers that have been associated with a
  * given Qualification type.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -707,7 +707,7 @@ ListWorkersWithQualificationTypeResponse * MTurkClient::listWorkersWithQualifica
  * NotifyWorkers operation will send a notification email to a Worker only if you have previously approved or rejected work
  * from the Worker.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -731,7 +731,7 @@ NotifyWorkersResponse * MTurkClient::notifyWorkers(const NotifyWorkersRequest &r
  *
  * Only the Requester who created the HIT can reject an assignment for the HIT.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -749,7 +749,7 @@ RejectAssignmentResponse * MTurkClient::rejectAssignment(const RejectAssignmentR
  *
  * You can provide a text message explaining why the request was rejected. The Worker who made the request can see this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -768,7 +768,7 @@ RejectQualificationRequestResponse * MTurkClient::rejectQualificationRequest(con
  * Mechanical Turk collects a fee for bonus payments, similar to the HIT listing fee. This operation fails if your account
  * does not have enough funds to pay for both the bonus and the fees.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -785,7 +785,7 @@ SendBonusResponse * MTurkClient::sendBonus(const SendBonusRequest &request)
  * without setting up notifications for a real HIT type and trying to trigger them using the website. When you call this
  * operation, the service attempts to send the test notification immediately.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -800,7 +800,7 @@ SendTestEventNotificationResponse * MTurkClient::sendTestEventNotification(const
  * The <code>UpdateExpirationForHIT</code> operation allows you update the expiration time of a HIT. If you update it to a
  * time in the past, the HIT will be immediately expired.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -815,7 +815,7 @@ UpdateExpirationForHITResponse * MTurkClient::updateExpirationForHIT(const Updat
  * The <code>UpdateHITReviewStatus</code> operation updates the status of a HIT. If the status is Reviewable, this
  * operation can update the status to Reviewing, or it can revert a Reviewing HIT back to the Reviewable status.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -831,7 +831,7 @@ UpdateHITReviewStatusResponse * MTurkClient::updateHITReviewStatus(const UpdateH
  * disassociates the HIT from its old HITType properties and associates it with the new HITType properties. The HIT takes
  * on the properties of the new HITType in place of the old ones.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -851,7 +851,7 @@ UpdateHITTypeOfHITResponse * MTurkClient::updateHITTypeOfHIT(const UpdateHITType
  * of a HIT type's notifications, the HIT type must already have a notification specification, or one must be provided in
  * the same call to <code>UpdateNotificationSettings</code>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *
@@ -899,7 +899,7 @@ UpdateNotificationSettingsResponse * MTurkClient::updateNotificationSettings(con
  *
  * You can also update the AutoGranted and AutoGrantedValue attributes of the Qualification
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Mechanical Turk.
  *
  * @return A pointer to a related response object.
  *

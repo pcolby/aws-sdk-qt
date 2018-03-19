@@ -104,7 +104,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the
  * <i>AWS IoT Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the <i>AWS IoT
  * Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
  * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
  * Protocol</a> in the <i>AWS IoT Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -163,7 +163,7 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
  * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the
  * <i>AWS IoT Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS IoT Data Plane.
  *
  * @return A pointer to a related response object.
  *

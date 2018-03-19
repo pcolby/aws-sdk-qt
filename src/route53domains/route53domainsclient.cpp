@@ -94,7 +94,7 @@ Route53DomainsClient::Route53DomainsClient(
  * This operation checks the availability of one domain name. Note that if the availability status of a domain is pending,
  * you must submit another request to determine the availability of the domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -108,7 +108,7 @@ CheckDomainAvailabilityResponse * Route53DomainsClient::checkDomainAvailability(
 /**
  * Checks whether a domain name can be transferred to Amazon Route 53.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -126,7 +126,7 @@ CheckDomainTransferabilityResponse * Route53DomainsClient::checkDomainTransferab
  *
  * All tag operations are eventually consistent; subsequent operations might not immediately represent all issued
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -140,7 +140,7 @@ DeleteTagsForDomainResponse * Route53DomainsClient::deleteTagsForDomain(const De
 /**
  * This operation disables automatic renewal of domain registration for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -157,7 +157,7 @@ DisableDomainAutoRenewResponse * Route53DomainsClient::disableDomainAutoRenew(co
  * to a different registrar. Successful submission returns an operation ID that you can use to track the progress and
  * completion of the action. If the request is not completed successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -179,7 +179,7 @@ DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferL
  * times"</a> on the website for our registrar partner, Gandi. Route 53 requires that you renew before the end of the
  * renewal period that is listed on the Gandi website so we can complete processing before the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ EnableDomainAutoRenewResponse * Route53DomainsClient::enableDomainAutoRenew(cons
  * prevent domain transfers. Successful submission returns an operation ID that you can use to track the progress and
  * completion of the action. If the request is not completed successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -214,7 +214,7 @@ EnableDomainTransferLockResponse * Route53DomainsClient::enableDomainTransferLoc
  *
  * If you want us to resend the email, use the <code>ResendContactReachabilityEmail</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -229,7 +229,7 @@ GetContactReachabilityStatusResponse * Route53DomainsClient::getContactReachabil
  * This operation returns detailed information about a specified domain that is associated with the current AWS account.
  * Contact information for the domain is also returned as part of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -244,7 +244,7 @@ GetDomainDetailResponse * Route53DomainsClient::getDomainDetail(const GetDomainD
  * The GetDomainSuggestions operation returns a list of suggested domain names given a string, which can either be a domain
  * name or simply a word or phrase (without
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -258,7 +258,7 @@ GetDomainSuggestionsResponse * Route53DomainsClient::getDomainSuggestions(const 
 /**
  * This operation returns the current status of an operation that is not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -272,7 +272,7 @@ GetOperationDetailResponse * Route53DomainsClient::getOperationDetail(const GetO
 /**
  * This operation returns all the domain names registered with Amazon Route 53 for the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -286,7 +286,7 @@ ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest
 /**
  * This operation returns the operation IDs of operations that are not yet
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -304,7 +304,7 @@ ListOperationsResponse * Route53DomainsClient::listOperations(const ListOperatio
  *
  * All tag operations are eventually consistent; subsequent operations might not immediately represent all issued
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -348,7 +348,7 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
  * Charges your AWS account an amount based on the top-level domain. For more information, see <a
  * href="http://aws.amazon.com/route53/pricing/">Amazon Route 53
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -369,7 +369,7 @@ RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDoma
  * registration, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-renew.html">Renewing
  * Registration for a Domain</a> in the Amazon Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -384,7 +384,7 @@ RenewDomainResponse * Route53DomainsClient::renewDomain(const RenewDomainRequest
  * For operations that require confirmation that the email address for the registrant contact is valid, such as registering
  * a new domain, this operation resends the confirmation email to the current email address for the registrant
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ ResendContactReachabilityEmailResponse * Route53DomainsClient::resendContactReac
  * This operation returns the AuthCode for the domain. To transfer a domain to another registrar, you provide this value to
  * the new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
  * If the transfer is successful, this method returns an operation ID that you can use to track the progress and completion
  * of the action. If the transfer doesn't complete successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -457,7 +457,7 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
  * If the update is successful, this method returns an operation ID that you can use to track the progress and completion
  * of the action. If the request is not completed successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -480,7 +480,7 @@ UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const Up
  * acceptance returns an operation ID that you can use with <a>GetOperationDetail</a> to track the progress and completion
  * of the action. If the request is not completed successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -500,7 +500,7 @@ UpdateDomainContactPrivacyResponse * Route53DomainsClient::updateDomainContactPr
  * If successful, this operation returns an operation ID that you can use to track the progress and completion of the
  * action. If the request is not completed successfully, the domain registrant will be notified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -518,7 +518,7 @@ UpdateDomainNameserversResponse * Route53DomainsClient::updateDomainNameservers(
  *
  * All tag operations are eventually consistent; subsequent operations might not immediately represent all issued
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *
@@ -532,7 +532,7 @@ UpdateTagsForDomainResponse * Route53DomainsClient::updateTagsForDomain(const Up
 /**
  * Returns all the domain-related billing records for the current AWS account for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Domains.
  *
  * @return A pointer to a related response object.
  *

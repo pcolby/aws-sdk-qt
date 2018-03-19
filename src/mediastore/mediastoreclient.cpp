@@ -94,7 +94,7 @@ MediaStoreClient::MediaStoreClient(
 /**
  * Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -109,7 +109,7 @@ CreateContainerResponse * MediaStoreClient::createContainer(const CreateContaine
  * Deletes the specified container. Before you make a <code>DeleteContainer</code> request, delete any objects in the
  * container or in any folders in the container. You can delete only empty containers.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContaine
 /**
  * Deletes the access policy that is associated with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -142,7 +142,7 @@ DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const De
  * To use this operation, you must have permission to perform the <code>MediaStore:DeleteCorsPolicy</code> action. The
  * container owner has this permission by default and can grant this permission to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -160,7 +160,7 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
  * <code>Container</code> object based on <code>ContainerName</code>. To return all <code>Container</code> objects that are
  * associated with a specified AWS account, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -175,7 +175,7 @@ DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeCo
  * Retrieves the access policy for the specified container. For information about the data that is included in an access
  * policy, see the <a href="https://aws.amazon.com/documentation/iam/">AWS Identity and Access Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -194,7 +194,7 @@ GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetConta
  * To use this operation, you must have permission to perform the <code>MediaStore:GetCorsPolicy</code> action. By default,
  * the container owner has this permission and can grant it to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -219,7 +219,7 @@ GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyReque
  *
  * See also <a>DescribeContainer</a>, which gets the properties of one container.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -240,7 +240,7 @@ ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRe
  * For this release of the REST API, you can create only one policy for a container. If you enter
  * <code>PutContainerPolicy</code> twice, the second command modifies the existing policy.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *
@@ -263,7 +263,7 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
  * characters. You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses the first
  * applicable rule
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore.
  *
  * @return A pointer to a related response object.
  *

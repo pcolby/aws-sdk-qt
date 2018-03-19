@@ -115,7 +115,7 @@ ElastiCacheClient::ElastiCacheClient(
  * information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Tagging.html">Using Cost
  * Allocation Tags in Amazon ElastiCache</a> in the <i>ElastiCache User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -134,7 +134,7 @@ AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsTo
  *
  * You cannot authorize ingress from an Amazon EC2 security group in one region to an ElastiCache cluster in another
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -244,7 +244,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -263,7 +263,7 @@ CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest
  * Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis
  * (cluster mode enabled) replication
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -295,7 +295,7 @@ CreateCacheClusterResponse * ElastiCacheClient::createCacheCluster(const CreateC
  * <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/ParameterGroups.html">Parameters and Parameter
  * Groups</a> in the ElastiCache User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -314,7 +314,7 @@ CreateCacheParameterGroupResponse * ElastiCacheClient::createCacheParameterGroup
  * Cache security groups are only used when you are creating a cluster outside of an Amazon Virtual Private Cloud (Amazon
  * VPC). If you are creating a cluster inside of a VPC, use a cache subnet group instead. For more information, see <a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -332,7 +332,7 @@ CreateCacheSecurityGroupResponse * ElastiCacheClient::createCacheSecurityGroup(c
  *
  * Use this parameter only when you are creating a cluster in an Amazon Virtual Private Cloud (Amazon
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -370,7 +370,7 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -388,7 +388,7 @@ CreateReplicationGroupResponse * ElastiCacheClient::createReplicationGroup(const
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -414,7 +414,7 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
  * Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis
  * (cluster mode enabled) replication
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -429,7 +429,7 @@ DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteC
  * Deletes the specified cache parameter group. You cannot delete a cache parameter group if it is associated with any
  * cache
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -447,7 +447,7 @@ DeleteCacheParameterGroupResponse * ElastiCacheClient::deleteCacheParameterGroup
  *
  * You cannot delete a cache security group if it is associated with any
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -465,7 +465,7 @@ DeleteCacheSecurityGroupResponse * ElastiCacheClient::deleteCacheSecurityGroup(c
  *
  * You cannot delete a cache subnet group if it is associated with any
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -490,7 +490,7 @@ DeleteCacheSubnetGroupResponse * ElastiCacheClient::deleteCacheSubnetGroup(const
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -509,7 +509,7 @@ DeleteReplicationGroupResponse * ElastiCacheClient::deleteReplicationGroup(const
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -549,7 +549,7 @@ DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotR
  *
  * If cache nodes are currently being removed from the cluster, no endpoint information for the removed nodes is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -563,7 +563,7 @@ DescribeCacheClustersResponse * ElastiCacheClient::describeCacheClusters(const D
 /**
  * Returns a list of the available cache engines and their
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -578,7 +578,7 @@ DescribeCacheEngineVersionsResponse * ElastiCacheClient::describeCacheEngineVers
  * Returns a list of cache parameter group descriptions. If a cache parameter group name is specified, the list contains
  * only the descriptions for that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -592,7 +592,7 @@ DescribeCacheParameterGroupsResponse * ElastiCacheClient::describeCacheParameter
 /**
  * Returns the detailed parameter list for a particular cache parameter
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -607,7 +607,7 @@ DescribeCacheParametersResponse * ElastiCacheClient::describeCacheParameters(con
  * Returns a list of cache security group descriptions. If a cache security group name is specified, the list contains only
  * the description of that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -622,7 +622,7 @@ DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGr
  * Returns a list of cache subnet group descriptions. If a subnet group name is specified, the list contains only the
  * description of that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -636,7 +636,7 @@ DescribeCacheSubnetGroupsResponse * ElastiCacheClient::describeCacheSubnetGroups
 /**
  * Returns the default engine and system parameter information for the specified cache
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -656,7 +656,7 @@ DescribeEngineDefaultParametersResponse * ElastiCacheClient::describeEngineDefau
  * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
  * of events if
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -675,7 +675,7 @@ DescribeEventsResponse * ElastiCacheClient::describeEvents(const DescribeEventsR
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -689,7 +689,7 @@ DescribeReplicationGroupsResponse * ElastiCacheClient::describeReplicationGroups
 /**
  * Returns information about reserved cache nodes for this account, or about a specified reserved cache
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -703,7 +703,7 @@ DescribeReservedCacheNodesResponse * ElastiCacheClient::describeReservedCacheNod
 /**
  * Lists available reserved cache node
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -723,7 +723,7 @@ DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReserve
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -743,7 +743,7 @@ DescribeSnapshotsResponse * ElastiCacheClient::describeSnapshots(const DescribeS
  * cluster or replication group, the value of the <code>CacheNodeType</code> parameter must be one of the node types
  * returned by this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -765,7 +765,7 @@ ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTyp
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/BestPractices.html">Using Cost Allocation Tags in
  * Amazon
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -780,7 +780,7 @@ ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListT
  * Modifies the settings for a cluster. You can use this operation to change one or more cluster configuration parameters
  * by specifying the parameters and the new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -795,7 +795,7 @@ ModifyCacheClusterResponse * ElastiCacheClient::modifyCacheCluster(const ModifyC
  * Modifies the parameters of a cache parameter group. You can modify up to 20 parameters in a single request by submitting
  * a list parameter name and value
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -809,7 +809,7 @@ ModifyCacheParameterGroupResponse * ElastiCacheClient::modifyCacheParameterGroup
 /**
  * Modifies an existing cache subnet
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -832,7 +832,7 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
  *
  * This operation is valid for Redis
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -855,7 +855,7 @@ ModifyReplicationGroupResponse * ElastiCacheClient::modifyReplicationGroup(const
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/redis-cluster-resharding-online.html">ElastiCache
  * for Redis Horizontal Scaling</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -869,7 +869,7 @@ ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyRepl
 /**
  * Allows you to purchase a reserved cache node
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -904,7 +904,7 @@ PurchaseReservedCacheNodesOfferingResponse * ElastiCacheClient::purchaseReserved
  * applied, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Rebooting.htm">Rebooting a
  * Cluster</a> for an alternate
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -918,7 +918,7 @@ RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootC
 /**
  * Removes the tags identified by the <code>TagKeys</code> list from the named
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -934,7 +934,7 @@ RemoveTagsFromResourceResponse * ElastiCacheClient::removeTagsFromResource(const
  * parameters by submitting a list of parameter names. To reset the entire cache parameter group, specify the
  * <code>ResetAllParameters</code> and <code>CacheParameterGroupName</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -949,7 +949,7 @@ ResetCacheParameterGroupResponse * ElastiCacheClient::resetCacheParameterGroup(c
  * Revokes ingress from a cache security group. Use this operation to disallow access from an Amazon EC2 security group
  * that had been previously
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *
@@ -1031,7 +1031,7 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoFailover.html#auto-failover-test">Testing
  * Multi-AZ with Automatic Failover</a> in the <i>ElastiCache User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon ElastiCache.
  *
  * @return A pointer to a related response object.
  *

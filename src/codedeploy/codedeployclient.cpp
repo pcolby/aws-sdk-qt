@@ -173,7 +173,7 @@ CodeDeployClient::CodeDeployClient(
 /**
  * Adds tags to on-premises
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInst
 /**
  * Gets information about one or more application
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -201,7 +201,7 @@ BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevi
 /**
  * Gets information about one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -215,7 +215,7 @@ BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const Batc
 /**
  * Gets information about one or more deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -229,7 +229,7 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
 /**
  * Gets information about one or more instance that are part of a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -243,7 +243,7 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
 /**
  * Gets information about one or more
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -257,7 +257,7 @@ BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchG
 /**
  * Gets information about one or more on-premises
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -274,7 +274,7 @@ BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstan
  * is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all
  * instances have a status of Ready.)
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -288,7 +288,7 @@ ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const Continue
 /**
  * Creates an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -302,7 +302,7 @@ CreateApplicationResponse * CodeDeployClient::createApplication(const CreateAppl
 /**
  * Deploys an application revision through the specified deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -316,7 +316,7 @@ CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploy
 /**
  * Creates a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -330,7 +330,7 @@ CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const 
 /**
  * Creates a deployment group to which application revisions will be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -344,7 +344,7 @@ CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const Cr
 /**
  * Deletes an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -362,7 +362,7 @@ DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteAppl
  *
  * A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -376,7 +376,7 @@ DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const 
 /**
  * Deletes a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -390,7 +390,7 @@ DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const De
 /**
  * Deletes a GitHub account
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(co
 /**
  * Deregisters an on-premises
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesIns
 /**
  * Gets information about an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -432,7 +432,7 @@ GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRe
 /**
  * Gets information about an application
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -446,7 +446,7 @@ GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const 
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -460,7 +460,7 @@ GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentReque
 /**
  * Gets information about a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -474,7 +474,7 @@ GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDep
 /**
  * Gets information about a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -488,7 +488,7 @@ GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeplo
 /**
  * Gets information about an instance as part of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -502,7 +502,7 @@ GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const Ge
 /**
  * Gets information about an on-premises
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -516,7 +516,7 @@ GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const Ge
 /**
  * Lists information about revisions for an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -530,7 +530,7 @@ ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(co
 /**
  * Lists the applications registered with the applicable IAM user or AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -544,7 +544,7 @@ ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicat
 /**
  * Lists the deployment configurations with the applicable IAM user or AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -558,7 +558,7 @@ ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const Li
 /**
  * Lists the deployment groups for an application registered with the applicable IAM user or AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -572,7 +572,7 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
 /**
  * Lists the instance for a deployment associated with the applicable IAM user or AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -586,7 +586,7 @@ ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(cons
 /**
  * Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -600,7 +600,7 @@ ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeployment
 /**
  * Lists the names of stored connections to GitHub
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -619,7 +619,7 @@ ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNa
  * Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only
  * registered or deregistered on-premises instance names, use the registration status
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -634,7 +634,7 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
  * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
  * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -648,7 +648,7 @@ PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEve
 /**
  * Registers with AWS CodeDeploy a revision for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevis
  *
  * Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -680,7 +680,7 @@ RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstanc
 /**
  * Removes one or more tags from one or more on-premises
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -695,7 +695,7 @@ RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPr
  * In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the
  * traffic routing is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -709,7 +709,7 @@ SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForIn
 /**
  * Attempts to stop an ongoing
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -723,7 +723,7 @@ StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRe
 /**
  * Changes the name of an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *
@@ -737,7 +737,7 @@ UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateAppl
 /**
  * Changes information about a deployment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CodeDeploy.
  *
  * @return A pointer to a related response object.
  *

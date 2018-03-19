@@ -94,7 +94,7 @@ XRayClient::XRayClient(
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a
  * single request. Use <code>GetTraceSummaries</code> to get a list of trace
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *
@@ -110,7 +110,7 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
  * that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
 /**
  * Retrieves a service graph for one or more specific trace
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *
@@ -162,7 +162,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  * href="http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
  * <i>AWS X-Ray Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
 /**
  * Used by the AWS X-Ray daemon to upload
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *
@@ -248,7 +248,7 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  *
  * A 96-bit identifier for the trace, globally unique, in 24 hexadecimal
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS X-Ray.
  *
  * @return A pointer to a related response object.
  *

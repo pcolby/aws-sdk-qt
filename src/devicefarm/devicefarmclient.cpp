@@ -94,7 +94,7 @@ DeviceFarmClient::DeviceFarmClient(
 /**
  * Creates a device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -108,7 +108,7 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
 /**
  * Creates a network
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -122,7 +122,7 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
 /**
  * Creates a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -136,7 +136,7 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
 /**
  * Specifies and starts a remote access
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -150,7 +150,7 @@ CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(
 /**
  * Uploads an app or test
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -164,7 +164,7 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
 /**
  * Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -178,7 +178,7 @@ DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevice
 /**
  * Deletes a network
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -196,7 +196,7 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectReque
 /**
  * Deletes a completed remote access session and its
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -228,7 +228,7 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
  *
  * <b>Note</b> Deleting this resource does not stop an in-progress
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 /**
  * Deletes an upload given the upload
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -256,7 +256,7 @@ DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest 
 /**
  * Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -270,7 +270,7 @@ GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccou
 /**
  * Gets information about a unique device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -284,7 +284,7 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 /**
  * Gets information about a device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -298,7 +298,7 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
 /**
  * Gets information about compatibility with a device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -312,7 +312,7 @@ GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibilit
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -326,7 +326,7 @@ GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 /**
  * Returns information about a network
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -344,7 +344,7 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -358,7 +358,7 @@ GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferin
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &reque
 /**
  * Returns a link to a currently running remote access
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -386,7 +386,7 @@ GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const 
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -400,7 +400,7 @@ GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -414,7 +414,7 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -428,7 +428,7 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 /**
  * Gets information about an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -443,7 +443,7 @@ GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
  * Installs an application to the device in a remote access session. For Android applications, the file must be in .apk
  * format. For iOS applications, the file must be in .ipa
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -457,7 +457,7 @@ InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSe
 /**
  * Gets information about
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -471,7 +471,7 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
 /**
  * Gets information about device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -485,7 +485,7 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
 /**
  * Gets information about unique device
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -499,7 +499,7 @@ ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &re
 /**
  * Gets information about jobs for a given test
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -513,7 +513,7 @@ ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 /**
  * Returns the list of available network
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -530,7 +530,7 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -548,7 +548,7 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -566,7 +566,7 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -580,7 +580,7 @@ ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsReque
 /**
  * Gets information about
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -594,7 +594,7 @@ ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest 
 /**
  * Returns a list of all currently running remote access
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -608,7 +608,7 @@ ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(co
 /**
  * Gets information about runs, given an AWS Device Farm project
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -622,7 +622,7 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 /**
  * Gets information about samples, given an AWS Device Farm project
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -636,7 +636,7 @@ ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &re
 /**
  * Gets information about test suites for a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -650,7 +650,7 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
 /**
  * Gets information about tests in a given test
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -664,7 +664,7 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 /**
  * Gets information about unique
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -678,7 +678,7 @@ ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniq
 /**
  * Gets information about uploads, given an AWS Device Farm project
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -696,7 +696,7 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
  * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
  * able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
  * Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe
  * that you should be able to invoke this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -727,7 +727,7 @@ RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingReque
 /**
  * Schedules a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
 /**
  * Ends a specified remote access
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -758,7 +758,7 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
  * Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be
  * billed for Setup, Teardown, and any tests that were in progress or already
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -773,7 +773,7 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
  * Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are
  * all-or-nothing, meaning they can only be updated as a whole (or not at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -787,7 +787,7 @@ UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevice
 /**
  * Updates the network profile with specific
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *
@@ -801,7 +801,7 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
 /**
  * Modifies the specified project name, given the project ARN and a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Device Farm.
  *
  * @return A pointer to a related response object.
  *

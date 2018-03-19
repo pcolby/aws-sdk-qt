@@ -217,7 +217,7 @@ OpsWorksClient::OpsWorksClient(
  * permissions, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing
  * User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -240,7 +240,7 @@ AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -262,7 +262,7 @@ AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &r
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -291,7 +291,7 @@ AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateE
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -313,7 +313,7 @@ AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(co
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -334,7 +334,7 @@ CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -356,7 +356,7 @@ CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
  * stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeployme
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -405,7 +405,7 @@ CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -426,7 +426,7 @@ CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &requ
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -446,7 +446,7 @@ CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &requ
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -466,7 +466,7 @@ CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserPr
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -492,7 +492,7 @@ DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -514,7 +514,7 @@ DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -536,7 +536,7 @@ DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &requ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -556,7 +556,7 @@ DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &requ
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -577,7 +577,7 @@ DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserPr
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -598,7 +598,7 @@ DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const Deregi
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -619,7 +619,7 @@ DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const Deregist
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -639,7 +639,7 @@ DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const Deregister
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -660,7 +660,7 @@ DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const 
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -675,7 +675,7 @@ DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolu
  * Describes the available AWS OpsWorks Stacks agent versions. You must specify a stack ID or a configuration manager.
  * <code>DescribeAgentVersions</code> returns a list of available agent versions for the specified stack or configuration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -699,7 +699,7 @@ DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const Desc
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -723,7 +723,7 @@ DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &r
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -747,7 +747,7 @@ DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeComman
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -773,7 +773,7 @@ DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const Describe
  *
  * This call accepts only one resource-identifying
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -797,7 +797,7 @@ DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const Describe
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -821,7 +821,7 @@ DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeEl
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -845,7 +845,7 @@ DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalanc
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -869,7 +869,7 @@ DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInst
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -893,7 +893,7 @@ DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequ
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -913,7 +913,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  * that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -927,7 +927,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 /**
  * Describes the operating systems that are supported by AWS OpsWorks
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -947,7 +947,7 @@ DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -971,7 +971,7 @@ DescribePermissionsResponse * OpsWorksClient::describePermissions(const Describe
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -995,7 +995,7 @@ DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRa
  *
  * This call accepts only one resource-identifying
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1019,7 +1019,7 @@ DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const De
  *
  * This call accepts only one resource-identifying
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1039,7 +1039,7 @@ DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const Desc
  * the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1060,7 +1060,7 @@ DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvi
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1080,7 +1080,7 @@ DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const Descri
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1104,7 +1104,7 @@ DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequ
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1124,7 +1124,7 @@ DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScal
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1148,7 +1148,7 @@ DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const Descri
  * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1168,7 +1168,7 @@ DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesR
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1189,7 +1189,7 @@ DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(co
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1209,7 +1209,7 @@ DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const Disa
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1229,7 +1229,7 @@ GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetH
  *
  * Grants RDP access to a Windows instance for a specified time
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1243,7 +1243,7 @@ GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &requ
 /**
  * Returns a list of tags that are applied to the specified stack or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1265,7 +1265,7 @@ ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1287,7 +1287,7 @@ RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html"> Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1309,7 +1309,7 @@ RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEc
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1346,7 +1346,7 @@ RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElas
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1366,7 +1366,7 @@ RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstan
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1388,7 +1388,7 @@ RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const Regi
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1416,7 +1416,7 @@ RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1437,7 +1437,7 @@ SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const 
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1459,7 +1459,7 @@ SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1481,7 +1481,7 @@ SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const 
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1501,7 +1501,7 @@ StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1524,7 +1524,7 @@ StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1544,7 +1544,7 @@ StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &r
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1559,7 +1559,7 @@ StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
  * Apply cost-allocation tags to a specified stack or layer in AWS OpsWorks Stacks. For more information about how tagging
  * works, see <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/tagging.html">Tags</a> in the AWS OpsWorks User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1581,7 +1581,7 @@ TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &requ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1602,7 +1602,7 @@ UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstan
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1616,7 +1616,7 @@ UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequ
 /**
  * Removes tags from a specified stack or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1636,7 +1636,7 @@ UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest
  * stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1657,7 +1657,7 @@ UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1677,7 +1677,7 @@ UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpR
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1697,7 +1697,7 @@ UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequ
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1717,7 +1717,7 @@ UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &requ
  * that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1737,7 +1737,7 @@ UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMy
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1757,7 +1757,7 @@ UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRd
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1777,7 +1777,7 @@ UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &requ
  * permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *
@@ -1798,7 +1798,7 @@ UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserPr
  * attached policy that explicitly grants permissions. For more information on user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS OpsWorks.
  *
  * @return A pointer to a related response object.
  *

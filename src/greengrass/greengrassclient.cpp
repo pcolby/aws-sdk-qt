@@ -95,7 +95,7 @@ GreengrassClient::GreengrassClient(
 /**
  * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -110,7 +110,7 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
  * Associates a role which is used by AWS Greengrass. AWS Greengrass uses the role to access your Lambda functions and AWS
  * IoT resources. This is necessary for deployments to succeed. It needs to have minimum permissions in policy
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
 /**
  * Creates a core definition. You may optionally provide the initial version of the core definition or use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
 /**
  * Creates a version of a core definition that has already been defined. AWS Greengrass Groups must each contain exactly 1
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -151,7 +151,7 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -165,7 +165,7 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
 /**
  * Creates a device definition. You may optinally provide the initial version of the device definition or use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -178,7 +178,7 @@ CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -193,7 +193,7 @@ CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinition
  * Creates a Lambda function definition which contains a list of Lambda functions and their configurations to be used in a
  * group. You can create an initial version of the definition by providing a list of Lambda functions and their
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -206,7 +206,7 @@ CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -220,7 +220,7 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
 /**
  * Creates a group. You may optionally provide the initial version of the group or use ''CreateGroupVersion'' at a later
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -233,7 +233,7 @@ CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &re
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertifica
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -260,7 +260,7 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
 /**
  * Creates a logger definition. You may optionally provide the initial version of the logger definition or use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -273,7 +273,7 @@ CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -287,7 +287,7 @@ CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinition
 /**
  * Creates a resource definition which contains a list of resources to be used in a group. You can create an initial
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -313,7 +313,7 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -327,7 +327,7 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
 /**
  * Creates a subscription definition. You may optionally provide the initial version of the subscription definition or use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -340,7 +340,7 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -353,7 +353,7 @@ CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscripti
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -366,7 +366,7 @@ DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const Dele
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -379,7 +379,7 @@ DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -392,7 +392,7 @@ DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -405,7 +405,7 @@ DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &re
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -431,7 +431,7 @@ DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -444,7 +444,7 @@ DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefin
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -457,7 +457,7 @@ DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -470,7 +470,7 @@ DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -483,7 +483,7 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -496,7 +496,7 @@ GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetCon
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -509,7 +509,7 @@ GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDef
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -522,7 +522,7 @@ GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -535,7 +535,7 @@ GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDep
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -548,7 +548,7 @@ GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDev
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -561,7 +561,7 @@ GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -575,7 +575,7 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
 /**
  * Retrieves information about a Lambda function definition version, such as which Lambda functions are included in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -588,7 +588,7 @@ GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -601,7 +601,7 @@ GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -614,7 +614,7 @@ GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuth
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -627,7 +627,7 @@ GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificate
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -640,7 +640,7 @@ GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -653,7 +653,7 @@ GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLog
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -679,7 +679,7 @@ GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const Ge
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -692,7 +692,7 @@ GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -705,7 +705,7 @@ GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -718,7 +718,7 @@ GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -731,7 +731,7 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -744,7 +744,7 @@ ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersion
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -757,7 +757,7 @@ ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCo
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -770,7 +770,7 @@ ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeployment
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -783,7 +783,7 @@ ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVer
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -796,7 +796,7 @@ ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const Li
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -809,7 +809,7 @@ ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -822,7 +822,7 @@ ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -835,7 +835,7 @@ ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificate
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -848,7 +848,7 @@ ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupV
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -861,7 +861,7 @@ ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &reque
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -874,7 +874,7 @@ ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVer
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -887,7 +887,7 @@ ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const Li
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -900,7 +900,7 @@ ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitio
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -913,7 +913,7 @@ ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -926,7 +926,7 @@ ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionD
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -939,7 +939,7 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -953,7 +953,7 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
 /**
  * Updates the connectivity information for the core. Any devices that belong to the group which has this core will receive
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -966,7 +966,7 @@ UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -979,7 +979,7 @@ UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const Upda
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -992,7 +992,7 @@ UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -1005,7 +1005,7 @@ UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -1018,7 +1018,7 @@ UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &re
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -1031,7 +1031,7 @@ UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCerti
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -1044,7 +1044,7 @@ UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const 
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *
@@ -1057,7 +1057,7 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Greengrass.
  *
  * @return A pointer to a related response object.
  *

@@ -161,7 +161,7 @@ HealthClient::HealthClient(
  * At least one event ARN is required. Results are sorted by the <code>lastUpdatedTime</code> of the entity, starting with
  * the most
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const 
  * Returns the number of entities that are affected by each of the specified events. If no events are specified, the counts
  * of all affected entities are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const 
  * Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter is
  * specified, the counts of all events in each category are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *
@@ -212,7 +212,7 @@ DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const De
  *
  * If a specified event cannot be retrieved, an error message is returned for that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *
@@ -227,7 +227,7 @@ DescribeEventDetailsResponse * HealthClient::describeEventDetails(const Describe
  * Returns the event types that meet the specified filter criteria. If no filter criteria are specified, all event types
  * are returned, in no particular
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *
@@ -248,7 +248,7 @@ DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEven
  * If no filter criteria are specified, all events are returned. Results are sorted by <code>lastModifiedTime</code>,
  * starting with the most
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Health APIs and Notifications.
  *
  * @return A pointer to a related response object.
  *

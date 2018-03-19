@@ -109,7 +109,7 @@ BatchClient::BatchClient(
  * are not cancelled (but the API operation still succeeds, even if no job is cancelled); these jobs must be terminated
  * with the <a>TerminateJob</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  * see <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html">Launching an
  * Amazon ECS Container Instance</a> in the <i>Amazon Elastic Container Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -164,7 +164,7 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
  * associated compute environments. For example, if a compute environment is associated with more than one job queue, the
  * job queue with a higher priority is given preference for scheduling jobs to that compute
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -183,7 +183,7 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
  * Before you can delete a compute environment, you must set its state to <code>DISABLED</code> with the
  * <a>UpdateComputeEnvironment</a> API operation and disassociate it from any job queues with the <a>UpdateJobQueue</a> API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -203,7 +203,7 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
  * It is not necessary to disassociate compute environments from a queue before submitting a <code>DeleteJobQueue</code>
  * request.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -217,7 +217,7 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
 /**
  * Deregisters an AWS Batch job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -236,7 +236,7 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
  * If you are using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code> operation to
  * determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -251,7 +251,7 @@ DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(c
  * Describes a list of job definitions. You can specify a <code>status</code> (such as <code>ACTIVE</code>) to only return
  * job definitions that match that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -265,7 +265,7 @@ DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const Descr
 /**
  * Describes one or more of your job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueu
 /**
  * Describes a list of AWS Batch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -294,7 +294,7 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
  * Returns a list of task jobs for a specified job queue. You can filter the results by job status with the
  * <code>jobStatus</code> parameter. If you do not specify a status, only <code>RUNNING</code> jobs are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -308,7 +308,7 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 /**
  * Registers an AWS Batch job definition.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -323,7 +323,7 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
  * Submits an AWS Batch job from a job definition. Parameters specified during <a>SubmitJob</a> override parameters defined
  * in the job definition.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -339,7 +339,7 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
  * terminated, which causes them to transition to <code>FAILED</code>. Jobs that have not progressed to the
  * <code>STARTING</code> state are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -353,7 +353,7 @@ TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &requ
 /**
  * Updates an AWS Batch compute
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *
@@ -367,7 +367,7 @@ UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const U
 /**
  * Updates a job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Batch.
  *
  * @return A pointer to a related response object.
  *

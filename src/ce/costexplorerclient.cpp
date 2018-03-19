@@ -109,7 +109,7 @@ CostExplorerClient::CostExplorerClient(
  * the <code>GetDimensionValues</code> action for a complete list of the valid dimensions. Master accounts in an
  * organization have access to all member
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost Explorer Service.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
  * You can use <code>GetDimensionValues</code> to retrieve all available filter values for a specific filter over a period
  * of time. You can search the dimension values for an arbitrary string.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost Explorer Service.
  *
  * @return A pointer to a related response object.
  *
@@ -155,7 +155,7 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  *
  * To determine valid values for a dimension, use the <code>GetDimensionValues</code> operation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost Explorer Service.
  *
  * @return A pointer to a related response object.
  *
@@ -172,7 +172,7 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
  * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
  * <code>SUBSCRIPTION_ID</code>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost Explorer Service.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
  * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
  * arbitrary string.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost Explorer Service.
  *
  * @return A pointer to a related response object.
  *

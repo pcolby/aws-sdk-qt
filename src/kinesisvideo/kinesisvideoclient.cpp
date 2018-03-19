@@ -110,7 +110,7 @@ KinesisVideoClient::KinesisVideoClient(
  *
  * You must have permissions for the <code>KinesisVideo:CreateStream</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -141,7 +141,7 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
  *
  * This operation requires permission for the <code>KinesisVideo:DeleteStream</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
  * Returns the most current information about the specified stream. You must specify either the <code>StreamName</code> or
  * the <code>StreamARN</code>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -180,7 +180,7 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
  *
  * In the request, specify the stream either by <code>StreamName</code> or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
  * Returns an array of <code>StreamInfo</code> objects. Each object describes a stream. To retrieve only streams that
  * satisfy a specific condition, you can specify a <code>StreamNameCondition</code>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -213,7 +213,7 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
  *
  * In the request, you must specify either the <code>StreamName</code> or the <code>StreamARN</code>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -243,7 +243,7 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  *
  * Kinesis video streams support up to 50
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -262,7 +262,7 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
  *
  * In the request, you must provide the <code>StreamName</code> or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -301,7 +301,7 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
  * data retention period is decreased from seven hours to one hour, all existing data is retained for one hour, and any
  * data older than one hour is deleted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *
@@ -329,7 +329,7 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
  *
  * <code>UpdateStream</code> is an asynchronous operation, and takes time to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams.
  *
  * @return A pointer to a related response object.
  *

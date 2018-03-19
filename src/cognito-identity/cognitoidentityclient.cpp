@@ -155,7 +155,7 @@ CognitoIdentityClient::CognitoIdentityClient(
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -173,7 +173,7 @@ CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const Cre
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteI
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -209,7 +209,7 @@ DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const Del
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -228,7 +228,7 @@ DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const Describ
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -248,7 +248,7 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
  *
  * This is a public API. You do not need any credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -266,7 +266,7 @@ GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIden
  *
  * This is a public API. You do not need any credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -284,7 +284,7 @@ GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -307,7 +307,7 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
  *
  * This is a public API. You do not need any credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -354,7 +354,7 @@ GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTok
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentit
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -396,7 +396,7 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -436,7 +436,7 @@ MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentiti
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -456,7 +456,7 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -475,7 +475,7 @@ UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity
  *
  * This is a public API. You do not need any credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *
@@ -493,7 +493,7 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
  *
  * You must use AWS Developer credentials to call this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Cognito Identity.
  *
  * @return A pointer to a related response object.
  *

@@ -159,7 +159,7 @@ FirehoseClient::FirehoseClient(
  * href="http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3">Amazon S3 Bucket Access</a>
  * in the <i>Amazon Kinesis Firehose Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -189,7 +189,7 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
  * service doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, you should first
  * stop any applications that are sending records before deleting a delivery
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -205,7 +205,7 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
  * <a>DescribeDeliveryStream</a> to see if the delivery stream is <code>ACTIVE</code> and therefore ready for data to be
  * sent to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -227,7 +227,7 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
  * streams to list, you can request them by specifying the name of the last delivery stream returned in the call in the
  * <b>ExclusiveStartDeliveryStreamName</b> parameter of a subsequent
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -353,7 +353,7 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
  * attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is
  * no longer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
  * matches. After the update is applied successfully, the version ID is updated, and can be retrieved using
  * <a>DescribeDeliveryStream</a>. Use the new version ID to set <b>CurrentDeliveryStreamVersionId</b> in the next
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Firehose.
  *
  * @return A pointer to a related response object.
  *

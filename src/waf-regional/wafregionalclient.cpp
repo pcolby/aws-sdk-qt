@@ -99,7 +99,7 @@ WAFRegionalClient::WAFRegionalClient(
 /**
  * Associates a web ACL with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebA
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ CreateByteMatchSetResponse * WAFRegionalClient::createByteMatchSet(const CreateB
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -232,7 +232,7 @@ CreateGeoMatchSetResponse * WAFRegionalClient::createGeoMatchSet(const CreateGeo
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -338,7 +338,7 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -384,7 +384,7 @@ CreateRateBasedRuleResponse * WAFRegionalClient::createRateBasedRule(const Creat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -427,7 +427,7 @@ CreateRegexMatchSetResponse * WAFRegionalClient::createRegexMatchSet(const Creat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -493,7 +493,7 @@ CreateRegexPatternSetResponse * WAFRegionalClient::createRegexPatternSet(const C
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -529,7 +529,7 @@ CreateRuleResponse * WAFRegionalClient::createRule(const CreateRuleRequest &requ
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -574,7 +574,7 @@ CreateRuleGroupResponse * WAFRegionalClient::createRuleGroup(const CreateRuleGro
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -617,7 +617,7 @@ CreateSizeConstraintSetResponse * WAFRegionalClient::createSizeConstraintSet(con
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -677,7 +677,7 @@ CreateSqlInjectionMatchSetResponse * WAFRegionalClient::createSqlInjectionMatchS
  * For more information about how to use the AWS WAF API, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -720,7 +720,7 @@ CreateWebACLResponse * WAFRegionalClient::createWebACL(const CreateWebACLRequest
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -756,7 +756,7 @@ CreateXssMatchSetResponse * WAFRegionalClient::createXssMatchSet(const CreateXss
  *
  * Submit a <code>DeleteByteMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -792,7 +792,7 @@ DeleteByteMatchSetResponse * WAFRegionalClient::deleteByteMatchSet(const DeleteB
  *
  * Submit a <code>DeleteGeoMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -828,7 +828,7 @@ DeleteGeoMatchSetResponse * WAFRegionalClient::deleteGeoMatchSet(const DeleteGeo
  *
  * Submit a <code>DeleteIPSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -846,7 +846,7 @@ DeleteIPSetResponse * WAFRegionalClient::deleteIPSet(const DeleteIPSetRequest &r
  *
  * The user making the request must be the owner of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -882,7 +882,7 @@ DeletePermissionPolicyResponse * WAFRegionalClient::deletePermissionPolicy(const
  *
  * Submit a <code>DeleteRateBasedRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -918,7 +918,7 @@ DeleteRateBasedRuleResponse * WAFRegionalClient::deleteRateBasedRule(const Delet
  *
  * Submit a <code>DeleteRegexMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -933,7 +933,7 @@ DeleteRegexMatchSetResponse * WAFRegionalClient::deleteRegexMatchSet(const Delet
  * Permanently deletes a <a>RegexPatternSet</a>. You can't delete a <code>RegexPatternSet</code> if it's still used in any
  * <code>RegexMatchSet</code> or if the <code>RegexPatternSet</code> is not empty.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -969,7 +969,7 @@ DeleteRegexPatternSetResponse * WAFRegionalClient::deleteRegexPatternSet(const D
  *
  * Submit a <code>DeleteRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1005,7 +1005,7 @@ DeleteRuleResponse * WAFRegionalClient::deleteRule(const DeleteRuleRequest &requ
  *
  * Submit a <code>DeleteRuleGroup</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1041,7 +1041,7 @@ DeleteRuleGroupResponse * WAFRegionalClient::deleteRuleGroup(const DeleteRuleGro
  *
  * Submit a <code>DeleteSizeConstraintSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1077,7 +1077,7 @@ DeleteSizeConstraintSetResponse * WAFRegionalClient::deleteSizeConstraintSet(con
  *
  * Submit a <code>DeleteSqlInjectionMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1108,7 +1108,7 @@ DeleteSqlInjectionMatchSetResponse * WAFRegionalClient::deleteSqlInjectionMatchS
  *
  * Submit a <code>DeleteWebACL</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1144,7 +1144,7 @@ DeleteWebACLResponse * WAFRegionalClient::deleteWebACL(const DeleteWebACLRequest
  *
  * Submit a <code>DeleteXssMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1158,7 +1158,7 @@ DeleteXssMatchSetResponse * WAFRegionalClient::deleteXssMatchSet(const DeleteXss
 /**
  * Removes a web ACL from the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1172,7 +1172,7 @@ DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const Disasso
 /**
  * Returns the <a>ByteMatchSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1200,7 +1200,7 @@ GetByteMatchSetResponse * WAFRegionalClient::getByteMatchSet(const GetByteMatchS
  * <code>PENDING</code>, which indicates that AWS WAF is propagating the change to all AWS WAF servers. Use
  * <code>GetChangeTokenStatus</code> to determine the status of your change
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1228,7 +1228,7 @@ GetChangeTokenResponse * WAFRegionalClient::getChangeToken(const GetChangeTokenR
  *
  * <code>IN_SYNC</code>: Propagation is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1242,7 +1242,7 @@ GetChangeTokenStatusResponse * WAFRegionalClient::getChangeTokenStatus(const Get
 /**
  * Returns the <a>GeoMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1256,7 +1256,7 @@ GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetR
 /**
  * Returns the <a>IPSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1270,7 +1270,7 @@ GetIPSetResponse * WAFRegionalClient::getIPSet(const GetIPSetRequest &request)
 /**
  * Returns the IAM policy attached to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1285,7 +1285,7 @@ GetPermissionPolicyResponse * WAFRegionalClient::getPermissionPolicy(const GetPe
  * Returns the <a>RateBasedRule</a> that is specified by the <code>RuleId</code> that you included in the
  * <code>GetRateBasedRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1301,7 +1301,7 @@ GetRateBasedRuleResponse * WAFRegionalClient::getRateBasedRule(const GetRateBase
  * <code>RuleId</code>. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses
  * exceed the rate limit, the 10,000 addresses with the highest rates will be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1315,7 +1315,7 @@ GetRateBasedRuleManagedKeysResponse * WAFRegionalClient::getRateBasedRuleManaged
 /**
  * Returns the <a>RegexMatchSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1329,7 +1329,7 @@ GetRegexMatchSetResponse * WAFRegionalClient::getRegexMatchSet(const GetRegexMat
 /**
  * Returns the <a>RegexPatternSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1343,7 +1343,7 @@ GetRegexPatternSetResponse * WAFRegionalClient::getRegexPatternSet(const GetRege
 /**
  * Returns the <a>Rule</a> that is specified by the <code>RuleId</code> that you included in the <code>GetRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1362,7 +1362,7 @@ GetRuleResponse * WAFRegionalClient::getRule(const GetRuleRequest &request)
  *
  * To view the rules in a rule group, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1385,7 +1385,7 @@ GetRuleGroupResponse * WAFRegionalClient::getRuleGroup(const GetRuleGroupRequest
  * <code>GetSampledRequests</code> returns an updated time range. This new time range indicates the actual period during
  * which AWS WAF selected the requests in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1399,7 +1399,7 @@ GetSampledRequestsResponse * WAFRegionalClient::getSampledRequests(const GetSamp
 /**
  * Returns the <a>SizeConstraintSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1413,7 +1413,7 @@ GetSizeConstraintSetResponse * WAFRegionalClient::getSizeConstraintSet(const Get
 /**
  * Returns the <a>SqlInjectionMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1427,7 +1427,7 @@ GetSqlInjectionMatchSetResponse * WAFRegionalClient::getSqlInjectionMatchSet(con
 /**
  * Returns the <a>WebACL</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1441,7 +1441,7 @@ GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request
 /**
  * Returns the web ACL for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1455,7 +1455,7 @@ GetWebACLForResourceResponse * WAFRegionalClient::getWebACLForResource(const Get
 /**
  * Returns the <a>XssMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1469,7 +1469,7 @@ GetXssMatchSetResponse * WAFRegionalClient::getXssMatchSet(const GetXssMatchSetR
 /**
  * Returns an array of <a>ActivatedRule</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1483,7 +1483,7 @@ ListActivatedRulesInRuleGroupResponse * WAFRegionalClient::listActivatedRulesInR
 /**
  * Returns an array of <a>ByteMatchSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1497,7 +1497,7 @@ ListByteMatchSetsResponse * WAFRegionalClient::listByteMatchSets(const ListByteM
 /**
  * Returns an array of <a>GeoMatchSetSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1511,7 +1511,7 @@ ListGeoMatchSetsResponse * WAFRegionalClient::listGeoMatchSets(const ListGeoMatc
 /**
  * Returns an array of <a>IPSetSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1525,7 +1525,7 @@ ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &requ
 /**
  * Returns an array of <a>RuleSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1539,7 +1539,7 @@ ListRateBasedRulesResponse * WAFRegionalClient::listRateBasedRules(const ListRat
 /**
  * Returns an array of <a>RegexMatchSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1553,7 +1553,7 @@ ListRegexMatchSetsResponse * WAFRegionalClient::listRegexMatchSets(const ListReg
 /**
  * Returns an array of <a>RegexPatternSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1567,7 +1567,7 @@ ListRegexPatternSetsResponse * WAFRegionalClient::listRegexPatternSets(const Lis
 /**
  * Returns an array of resources associated with the specified web
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1581,7 +1581,7 @@ ListResourcesForWebACLResponse * WAFRegionalClient::listResourcesForWebACL(const
 /**
  * Returns an array of <a>RuleGroup</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1595,7 +1595,7 @@ ListRuleGroupsResponse * WAFRegionalClient::listRuleGroups(const ListRuleGroupsR
 /**
  * Returns an array of <a>RuleSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1609,7 +1609,7 @@ ListRulesResponse * WAFRegionalClient::listRules(const ListRulesRequest &request
 /**
  * Returns an array of <a>SizeConstraintSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1623,7 +1623,7 @@ ListSizeConstraintSetsResponse * WAFRegionalClient::listSizeConstraintSets(const
 /**
  * Returns an array of <a>SqlInjectionMatchSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1637,7 +1637,7 @@ ListSqlInjectionMatchSetsResponse * WAFRegionalClient::listSqlInjectionMatchSets
 /**
  * Returns an array of <a>RuleGroup</a> objects that you are subscribed
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1651,7 +1651,7 @@ ListSubscribedRuleGroupsResponse * WAFRegionalClient::listSubscribedRuleGroups(c
 /**
  * Returns an array of <a>WebACLSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1665,7 +1665,7 @@ ListWebACLsResponse * WAFRegionalClient::listWebACLs(const ListWebACLsRequest &r
 /**
  * Returns an array of <a>XssMatchSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1725,7 +1725,7 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
  *
  * An example of a valid policy parameter is shown in the Examples section
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1793,7 +1793,7 @@ PutPermissionPolicyResponse * WAFRegionalClient::putPermissionPolicy(const PutPe
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1849,7 +1849,7 @@ UpdateByteMatchSetResponse * WAFRegionalClient::updateByteMatchSet(const UpdateB
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -1931,7 +1931,7 @@ UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeo
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2002,7 +2002,7 @@ UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &r
  * By adding this <code>RateBasedRule</code> to a <code>WebACL</code>, you could limit requests to your login page without
  * affecting the rest of your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2066,7 +2066,7 @@ UpdateRateBasedRuleResponse * WAFRegionalClient::updateRateBasedRule(const Updat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2125,7 +2125,7 @@ UpdateRegexMatchSetResponse * WAFRegionalClient::updateRegexMatchSet(const Updat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2191,7 +2191,7 @@ UpdateRegexPatternSetResponse * WAFRegionalClient::updateRegexPatternSet(const U
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2243,7 +2243,7 @@ UpdateRuleResponse * WAFRegionalClient::updateRule(const UpdateRuleRequest &requ
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2312,7 +2312,7 @@ UpdateRuleGroupResponse * WAFRegionalClient::updateRuleGroup(const UpdateRuleGro
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2372,7 +2372,7 @@ UpdateSizeConstraintSetResponse * WAFRegionalClient::updateSizeConstraintSet(con
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2452,7 +2452,7 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *
@@ -2512,7 +2512,7 @@ UpdateWebACLResponse * WAFRegionalClient::updateWebACL(const UpdateWebACLRequest
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF Regional.
  *
  * @return A pointer to a related response object.
  *

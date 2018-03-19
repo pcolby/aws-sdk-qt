@@ -108,7 +108,7 @@ LightsailClient::LightsailClient(
 /**
  * Allocates a static IP
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ AllocateStaticIpResponse * LightsailClient::allocateStaticIp(const AllocateStati
  * Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the
  * specified disk
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -141,7 +141,7 @@ AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &reques
  *
  * After some time, the instances are attached to the load balancer and the health check status is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -162,7 +162,7 @@ AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBa
  * rotate the certificates on your account. Use the <code>AttachLoadBalancerTlsCertificate</code> operation with the
  * non-attached certificate, and it will replace the existing one and become the attached
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ AttachLoadBalancerTlsCertificateResponse * LightsailClient::attachLoadBalancerTl
 /**
  * Attaches a static IP address to a specific Amazon Lightsail
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -190,7 +190,7 @@ AttachStaticIpResponse * LightsailClient::attachStaticIp(const AttachStaticIpReq
 /**
  * Closes the public ports on a specific Amazon Lightsail
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(con
  * href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions
  * and Availability Zones in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &reques
  * href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions
  * and Availability Zones in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -250,7 +250,7 @@ CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const C
  * from within the Lightsail instance, issue the create disk snapshot command, and then remount the disk to ensure a
  * consistent and complete snapshot. You may remount and use your disk while the snapshot status is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -264,7 +264,7 @@ CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDis
 /**
  * Creates a domain resource for the specified domain (e.g.,
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -278,7 +278,7 @@ CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &
 /**
  * Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomai
  * Creates a snapshot of a specific virtual private server, or <i>instance</i>. You can use a snapshot to create a new
  * instance that is based on that
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -307,7 +307,7 @@ CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const C
 /**
  * Creates one or more Amazon Lightsail virtual private servers, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -321,7 +321,7 @@ CreateInstancesResponse * LightsailClient::createInstances(const CreateInstances
 /**
  * Uses a specific snapshot as a blueprint for creating one or more new instances that are based on that identical
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -335,7 +335,7 @@ CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapsh
 /**
  * Creates sn SSH key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -356,7 +356,7 @@ CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairReques
  * When you create a load balancer, you can specify a unique name and port settings. To change additional load balancer
  * settings, use the <code>UpdateLoadBalancerAttribute</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -374,7 +374,7 @@ CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoa
  *
  * TLS is just an updated, more secure version of Secure Socket Layer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -393,7 +393,7 @@ CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTl
  *
  * The disk may remain in the <code>deleting</code> state for several
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -414,7 +414,7 @@ DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &reques
  * any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have
  * access to all the information needed to restore the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -428,7 +428,7 @@ DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDis
 /**
  * Deletes the specified domain recordset and all of its domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -442,7 +442,7 @@ DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &
 /**
  * Deletes a specific domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -456,7 +456,7 @@ DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomai
 /**
  * Deletes a specific Amazon Lightsail virtual private server, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -470,7 +470,7 @@ DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceReq
 /**
  * Deletes a specific snapshot of a virtual private server (or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -484,7 +484,7 @@ DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const D
 /**
  * Deletes a specific SSH key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -499,7 +499,7 @@ DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairReques
  * Deletes a Lightsail load balancer and all its associated SSL/TLS certificates. Once the load balancer is deleted, you
  * will need to create a new load balancer, create a new certificate, and verify domain ownership
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -513,7 +513,7 @@ DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoa
 /**
  * Deletes an SSL/TLS certificate associated with a Lightsail load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -528,7 +528,7 @@ DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTl
  * Detaches a stopped block storage disk from a Lightsail instance. Make sure to unmount any file systems on the device
  * within your operating system before stopping the instance and detaching the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -546,7 +546,7 @@ DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &reques
  *
  * This operation waits until the instances are no longer needed before they are detached from the load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -560,7 +560,7 @@ DetachInstancesFromLoadBalancerResponse * LightsailClient::detachInstancesFromLo
 /**
  * Detaches a static IP from the Amazon Lightsail instance to which it is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -574,7 +574,7 @@ DetachStaticIpResponse * LightsailClient::detachStaticIp(const DetachStaticIpReq
 /**
  * Downloads the default SSH key pair from the user's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -588,7 +588,7 @@ DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const D
 /**
  * Returns the names of all active (not deleted)
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -604,7 +604,7 @@ GetActiveNamesResponse * LightsailClient::getActiveNames(const GetActiveNamesReq
  * private server already running a specific operating system, as well as a preinstalled app or development stack. The
  * software each instance is running depends on the blueprint image you
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -619,7 +619,7 @@ GetBlueprintsResponse * LightsailClient::getBlueprints(const GetBlueprintsReques
  * Returns the list of bundles that are available for purchase. A bundle describes the specs for your virtual private
  * server (or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -633,7 +633,7 @@ GetBundlesResponse * LightsailClient::getBundles(const GetBundlesRequest &reques
 /**
  * Returns information about a specific block storage
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -647,7 +647,7 @@ GetDiskResponse * LightsailClient::getDisk(const GetDiskRequest &request)
 /**
  * Returns information about a specific block storage disk
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ GetDiskSnapshotResponse * LightsailClient::getDiskSnapshot(const GetDiskSnapshot
  * If you are describing a long list of disk snapshots, you can paginate the output to make the list more manageable. You
  * can use the pageToken and nextPageToken values to retrieve the next items in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -685,7 +685,7 @@ GetDiskSnapshotsResponse * LightsailClient::getDiskSnapshots(const GetDiskSnapsh
  * If you are describing a long list of disks, you can paginate the output to make the list more manageable. You can use
  * the pageToken and nextPageToken values to retrieve the next items in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -699,7 +699,7 @@ GetDisksResponse * LightsailClient::getDisks(const GetDisksRequest &request)
 /**
  * Returns information about a specific domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ GetDomainResponse * LightsailClient::getDomain(const GetDomainRequest &request)
 /**
  * Returns a list of all domains in the user's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -727,7 +727,7 @@ GetDomainsResponse * LightsailClient::getDomains(const GetDomainsRequest &reques
 /**
  * Returns information about a specific Amazon Lightsail instance, which is a virtual private
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ GetInstanceResponse * LightsailClient::getInstance(const GetInstanceRequest &req
 /**
  * Returns temporary SSH keys you can use to connect to a specific virtual private server, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -755,7 +755,7 @@ GetInstanceAccessDetailsResponse * LightsailClient::getInstanceAccessDetails(con
 /**
  * Returns the data points for the specified Amazon Lightsail instance metric, given an instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -769,7 +769,7 @@ GetInstanceMetricDataResponse * LightsailClient::getInstanceMetricData(const Get
 /**
  * Returns the port states for a specific virtual private server, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -783,7 +783,7 @@ GetInstancePortStatesResponse * LightsailClient::getInstancePortStates(const Get
 /**
  * Returns information about a specific instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -797,7 +797,7 @@ GetInstanceSnapshotResponse * LightsailClient::getInstanceSnapshot(const GetInst
 /**
  * Returns all instance snapshots for the user's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -811,7 +811,7 @@ GetInstanceSnapshotsResponse * LightsailClient::getInstanceSnapshots(const GetIn
 /**
  * Returns the state of a specific instance. Works on one instance at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -825,7 +825,7 @@ GetInstanceStateResponse * LightsailClient::getInstanceState(const GetInstanceSt
 /**
  * Returns information about all Amazon Lightsail virtual private servers, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -839,7 +839,7 @@ GetInstancesResponse * LightsailClient::getInstances(const GetInstancesRequest &
 /**
  * Returns information about a specific key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -853,7 +853,7 @@ GetKeyPairResponse * LightsailClient::getKeyPair(const GetKeyPairRequest &reques
 /**
  * Returns information about all key pairs in the user's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -867,7 +867,7 @@ GetKeyPairsResponse * LightsailClient::getKeyPairs(const GetKeyPairsRequest &req
 /**
  * Returns information about the specified Lightsail load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -881,7 +881,7 @@ GetLoadBalancerResponse * LightsailClient::getLoadBalancer(const GetLoadBalancer
 /**
  * Returns information about health metrics for your Lightsail load
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -903,7 +903,7 @@ GetLoadBalancerMetricDataResponse * LightsailClient::getLoadBalancerMetricData(c
  *
  * You can have a maximum of 2 certificates associated with a Lightsail load balancer. One is active and the other is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -922,7 +922,7 @@ GetLoadBalancerTlsCertificatesResponse * LightsailClient::getLoadBalancerTlsCert
  * If you are describing a long list of load balancers, you can paginate the output to make the list more manageable. You
  * can use the pageToken and nextPageToken values to retrieve the next items in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -937,7 +937,7 @@ GetLoadBalancersResponse * LightsailClient::getLoadBalancers(const GetLoadBalanc
  * Returns information about a specific operation. Operations include events such as when you create an instance, allocate
  * a static IP, attach a static IP, and so
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -956,7 +956,7 @@ GetOperationResponse * LightsailClient::getOperation(const GetOperationRequest &
  * Results are returned from oldest to newest, up to a maximum of 200. Results can be paged by making each subsequent call
  * to <code>GetOperations</code> use the maximum (last) <code>statusChangedAt</code> value from the previous
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -970,7 +970,7 @@ GetOperationsResponse * LightsailClient::getOperations(const GetOperationsReques
 /**
  * Gets operations for a specific resource (e.g., an instance or a static
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -985,7 +985,7 @@ GetOperationsForResourceResponse * LightsailClient::getOperationsForResource(con
  * Returns a list of all valid regions for Amazon Lightsail. Use the <code>include availability zones</code> parameter to
  * also return the availability zones in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -999,7 +999,7 @@ GetRegionsResponse * LightsailClient::getRegions(const GetRegionsRequest &reques
 /**
  * Returns information about a specific static
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1013,7 +1013,7 @@ GetStaticIpResponse * LightsailClient::getStaticIp(const GetStaticIpRequest &req
 /**
  * Returns information about all static IPs in the user's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1027,7 +1027,7 @@ GetStaticIpsResponse * LightsailClient::getStaticIps(const GetStaticIpsRequest &
 /**
  * Imports a public SSH key from a specific key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1041,7 +1041,7 @@ ImportKeyPairResponse * LightsailClient::importKeyPair(const ImportKeyPairReques
 /**
  * Returns a Boolean value indicating whether your Lightsail VPC is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1055,7 +1055,7 @@ IsVpcPeeredResponse * LightsailClient::isVpcPeered(const IsVpcPeeredRequest &req
 /**
  * Adds public ports to an Amazon Lightsail
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1069,7 +1069,7 @@ OpenInstancePublicPortsResponse * LightsailClient::openInstancePublicPorts(const
 /**
  * Tries to peer the Lightsail VPC with the user's default
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1084,7 +1084,7 @@ PeerVpcResponse * LightsailClient::peerVpc(const PeerVpcRequest &request)
  * Sets the specified open ports for an Amazon Lightsail instance, and closes all ports for every protocol not included in
  * the current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1099,7 +1099,7 @@ PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const P
  * Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public
  * IP address. To use the same IP address after restarting, create a static IP address and attach it to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1113,7 +1113,7 @@ RebootInstanceResponse * LightsailClient::rebootInstance(const RebootInstanceReq
 /**
  * Deletes a specific static IP from your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1127,7 +1127,7 @@ ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIp
 /**
  * Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1141,7 +1141,7 @@ StartInstanceResponse * LightsailClient::startInstance(const StartInstanceReques
 /**
  * Stops a specific Amazon Lightsail instance that is currently
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1155,7 +1155,7 @@ StopInstanceResponse * LightsailClient::stopInstance(const StopInstanceRequest &
 /**
  * Attempts to unpeer the Lightsail VPC from the user's default
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1169,7 +1169,7 @@ UnpeerVpcResponse * LightsailClient::unpeerVpc(const UnpeerVpcRequest &request)
 /**
  * Updates a domain recordset after it is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *
@@ -1183,7 +1183,7 @@ UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomai
 /**
  * Updates the specified attribute for a load balancer. You can only update one attribute at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lightsail.
  *
  * @return A pointer to a related response object.
  *

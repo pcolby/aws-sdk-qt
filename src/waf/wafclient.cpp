@@ -128,7 +128,7 @@ WafClient::WafClient(
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -172,7 +172,7 @@ CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatch
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -216,7 +216,7 @@ CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSet
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -322,7 +322,7 @@ CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -368,7 +368,7 @@ CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBas
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -411,7 +411,7 @@ CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMa
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -477,7 +477,7 @@ CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateReg
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -513,7 +513,7 @@ CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -558,7 +558,7 @@ CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupReques
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -601,7 +601,7 @@ CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const Creat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -661,7 +661,7 @@ CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const
  * For more information about how to use the AWS WAF API, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -704,7 +704,7 @@ CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &reques
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -740,7 +740,7 @@ CreateXssMatchSetResponse * WafClient::createXssMatchSet(const CreateXssMatchSet
  *
  * Submit a <code>DeleteByteMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -776,7 +776,7 @@ DeleteByteMatchSetResponse * WafClient::deleteByteMatchSet(const DeleteByteMatch
  *
  * Submit a <code>DeleteGeoMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -812,7 +812,7 @@ DeleteGeoMatchSetResponse * WafClient::deleteGeoMatchSet(const DeleteGeoMatchSet
  *
  * Submit a <code>DeleteIPSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -830,7 +830,7 @@ DeleteIPSetResponse * WafClient::deleteIPSet(const DeleteIPSetRequest &request)
  *
  * The user making the request must be the owner of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -866,7 +866,7 @@ DeletePermissionPolicyResponse * WafClient::deletePermissionPolicy(const DeleteP
  *
  * Submit a <code>DeleteRateBasedRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -902,7 +902,7 @@ DeleteRateBasedRuleResponse * WafClient::deleteRateBasedRule(const DeleteRateBas
  *
  * Submit a <code>DeleteRegexMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -917,7 +917,7 @@ DeleteRegexMatchSetResponse * WafClient::deleteRegexMatchSet(const DeleteRegexMa
  * Permanently deletes a <a>RegexPatternSet</a>. You can't delete a <code>RegexPatternSet</code> if it's still used in any
  * <code>RegexMatchSet</code> or if the <code>RegexPatternSet</code> is not empty.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -953,7 +953,7 @@ DeleteRegexPatternSetResponse * WafClient::deleteRegexPatternSet(const DeleteReg
  *
  * Submit a <code>DeleteRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -989,7 +989,7 @@ DeleteRuleResponse * WafClient::deleteRule(const DeleteRuleRequest &request)
  *
  * Submit a <code>DeleteRuleGroup</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1025,7 +1025,7 @@ DeleteRuleGroupResponse * WafClient::deleteRuleGroup(const DeleteRuleGroupReques
  *
  * Submit a <code>DeleteSizeConstraintSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1061,7 +1061,7 @@ DeleteSizeConstraintSetResponse * WafClient::deleteSizeConstraintSet(const Delet
  *
  * Submit a <code>DeleteSqlInjectionMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1092,7 +1092,7 @@ DeleteSqlInjectionMatchSetResponse * WafClient::deleteSqlInjectionMatchSet(const
  *
  * Submit a <code>DeleteWebACL</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1128,7 +1128,7 @@ DeleteWebACLResponse * WafClient::deleteWebACL(const DeleteWebACLRequest &reques
  *
  * Submit a <code>DeleteXssMatchSet</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1142,7 +1142,7 @@ DeleteXssMatchSetResponse * WafClient::deleteXssMatchSet(const DeleteXssMatchSet
 /**
  * Returns the <a>ByteMatchSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1170,7 +1170,7 @@ GetByteMatchSetResponse * WafClient::getByteMatchSet(const GetByteMatchSetReques
  * <code>PENDING</code>, which indicates that AWS WAF is propagating the change to all AWS WAF servers. Use
  * <code>GetChangeTokenStatus</code> to determine the status of your change
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1198,7 +1198,7 @@ GetChangeTokenResponse * WafClient::getChangeToken(const GetChangeTokenRequest &
  *
  * <code>IN_SYNC</code>: Propagation is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1212,7 +1212,7 @@ GetChangeTokenStatusResponse * WafClient::getChangeTokenStatus(const GetChangeTo
 /**
  * Returns the <a>GeoMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1226,7 +1226,7 @@ GetGeoMatchSetResponse * WafClient::getGeoMatchSet(const GetGeoMatchSetRequest &
 /**
  * Returns the <a>IPSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1240,7 +1240,7 @@ GetIPSetResponse * WafClient::getIPSet(const GetIPSetRequest &request)
 /**
  * Returns the IAM policy attached to the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1255,7 +1255,7 @@ GetPermissionPolicyResponse * WafClient::getPermissionPolicy(const GetPermission
  * Returns the <a>RateBasedRule</a> that is specified by the <code>RuleId</code> that you included in the
  * <code>GetRateBasedRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1271,7 +1271,7 @@ GetRateBasedRuleResponse * WafClient::getRateBasedRule(const GetRateBasedRuleReq
  * <code>RuleId</code>. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses
  * exceed the rate limit, the 10,000 addresses with the highest rates will be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1285,7 +1285,7 @@ GetRateBasedRuleManagedKeysResponse * WafClient::getRateBasedRuleManagedKeys(con
 /**
  * Returns the <a>RegexMatchSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1299,7 +1299,7 @@ GetRegexMatchSetResponse * WafClient::getRegexMatchSet(const GetRegexMatchSetReq
 /**
  * Returns the <a>RegexPatternSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1313,7 +1313,7 @@ GetRegexPatternSetResponse * WafClient::getRegexPatternSet(const GetRegexPattern
 /**
  * Returns the <a>Rule</a> that is specified by the <code>RuleId</code> that you included in the <code>GetRule</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1332,7 +1332,7 @@ GetRuleResponse * WafClient::getRule(const GetRuleRequest &request)
  *
  * To view the rules in a rule group, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1355,7 +1355,7 @@ GetRuleGroupResponse * WafClient::getRuleGroup(const GetRuleGroupRequest &reques
  * <code>GetSampledRequests</code> returns an updated time range. This new time range indicates the actual period during
  * which AWS WAF selected the requests in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1369,7 +1369,7 @@ GetSampledRequestsResponse * WafClient::getSampledRequests(const GetSampledReque
 /**
  * Returns the <a>SizeConstraintSet</a> specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1383,7 +1383,7 @@ GetSizeConstraintSetResponse * WafClient::getSizeConstraintSet(const GetSizeCons
 /**
  * Returns the <a>SqlInjectionMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1397,7 +1397,7 @@ GetSqlInjectionMatchSetResponse * WafClient::getSqlInjectionMatchSet(const GetSq
 /**
  * Returns the <a>WebACL</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1411,7 +1411,7 @@ GetWebACLResponse * WafClient::getWebACL(const GetWebACLRequest &request)
 /**
  * Returns the <a>XssMatchSet</a> that is specified by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1425,7 +1425,7 @@ GetXssMatchSetResponse * WafClient::getXssMatchSet(const GetXssMatchSetRequest &
 /**
  * Returns an array of <a>ActivatedRule</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1439,7 +1439,7 @@ ListActivatedRulesInRuleGroupResponse * WafClient::listActivatedRulesInRuleGroup
 /**
  * Returns an array of <a>ByteMatchSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1453,7 +1453,7 @@ ListByteMatchSetsResponse * WafClient::listByteMatchSets(const ListByteMatchSets
 /**
  * Returns an array of <a>GeoMatchSetSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1467,7 +1467,7 @@ ListGeoMatchSetsResponse * WafClient::listGeoMatchSets(const ListGeoMatchSetsReq
 /**
  * Returns an array of <a>IPSetSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1481,7 +1481,7 @@ ListIPSetsResponse * WafClient::listIPSets(const ListIPSetsRequest &request)
 /**
  * Returns an array of <a>RuleSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1495,7 +1495,7 @@ ListRateBasedRulesResponse * WafClient::listRateBasedRules(const ListRateBasedRu
 /**
  * Returns an array of <a>RegexMatchSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1509,7 +1509,7 @@ ListRegexMatchSetsResponse * WafClient::listRegexMatchSets(const ListRegexMatchS
 /**
  * Returns an array of <a>RegexPatternSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1523,7 +1523,7 @@ ListRegexPatternSetsResponse * WafClient::listRegexPatternSets(const ListRegexPa
 /**
  * Returns an array of <a>RuleGroup</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1537,7 +1537,7 @@ ListRuleGroupsResponse * WafClient::listRuleGroups(const ListRuleGroupsRequest &
 /**
  * Returns an array of <a>RuleSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1551,7 +1551,7 @@ ListRulesResponse * WafClient::listRules(const ListRulesRequest &request)
 /**
  * Returns an array of <a>SizeConstraintSetSummary</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1565,7 +1565,7 @@ ListSizeConstraintSetsResponse * WafClient::listSizeConstraintSets(const ListSiz
 /**
  * Returns an array of <a>SqlInjectionMatchSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1579,7 +1579,7 @@ ListSqlInjectionMatchSetsResponse * WafClient::listSqlInjectionMatchSets(const L
 /**
  * Returns an array of <a>RuleGroup</a> objects that you are subscribed
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1593,7 +1593,7 @@ ListSubscribedRuleGroupsResponse * WafClient::listSubscribedRuleGroups(const Lis
 /**
  * Returns an array of <a>WebACLSummary</a> objects in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1607,7 +1607,7 @@ ListWebACLsResponse * WafClient::listWebACLs(const ListWebACLsRequest &request)
 /**
  * Returns an array of <a>XssMatchSet</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1667,7 +1667,7 @@ ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsReq
  *
  * An example of a valid policy parameter is shown in the Examples section
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1735,7 +1735,7 @@ PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermission
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1791,7 +1791,7 @@ UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatch
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1873,7 +1873,7 @@ UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSet
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -1944,7 +1944,7 @@ UpdateIPSetResponse * WafClient::updateIPSet(const UpdateIPSetRequest &request)
  * By adding this <code>RateBasedRule</code> to a <code>WebACL</code>, you could limit requests to your login page without
  * affecting the rest of your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2008,7 +2008,7 @@ UpdateRateBasedRuleResponse * WafClient::updateRateBasedRule(const UpdateRateBas
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2067,7 +2067,7 @@ UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMa
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2133,7 +2133,7 @@ UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateReg
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2185,7 +2185,7 @@ UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2254,7 +2254,7 @@ UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupReques
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2314,7 +2314,7 @@ UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const Updat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2394,7 +2394,7 @@ UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *
@@ -2454,7 +2454,7 @@ UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &reques
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS WAF.
  *
  * @return A pointer to a related response object.
  *

@@ -114,7 +114,7 @@ SfnClient::SfnClient(
  * respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity
  * and returns an identifier for use in a state machine and when polling from the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -130,7 +130,7 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
  * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
  * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMach
 /**
  * Deletes an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -163,7 +163,7 @@ DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &
  *
  * The state machine itself is deleted after all executions are completed or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -177,7 +177,7 @@ DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMach
 /**
  * Describes an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityReq
 /**
  * Describes an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -205,7 +205,7 @@ DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecution
 /**
  * Describes a state
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -219,7 +219,7 @@ DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeSta
 /**
  * Describes the state machine associated with a specific
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
  * Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum time the
  * service may hold the poll
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -262,7 +262,7 @@ GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskReques
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -281,7 +281,7 @@ GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionH
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -319,7 +319,7 @@ ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &
  * If a <code>nextToken</code> is returned by a previous call, there are more results available. To retrieve the next page
  * of results, make the call again using the returned token in <code>nextToken</code>. Keep all other arguments
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -333,7 +333,7 @@ ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachines
 /**
  * Used by workers to report that the task identified by the <code>taskToken</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -359,7 +359,7 @@ SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureReques
  *
  * This operation is only useful for long-lived tasks to report the liveliness of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -373,7 +373,7 @@ SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeat
 /**
  * Used by workers to report that the task identified by the <code>taskToken</code> completed
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -387,7 +387,7 @@ SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessReques
 /**
  * Starts a state machine
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -401,7 +401,7 @@ StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &
 /**
  * Stops an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *
@@ -423,7 +423,7 @@ StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &req
  * state machine <code>definition</code> and <code>roleArn</code>. You must include at least one of <code>definition</code>
  * or <code>roleArn</code> or you will receive a <code>MissingRequiredParameter</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Step Functions.
  *
  * @return A pointer to a related response object.
  *

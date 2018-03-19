@@ -95,7 +95,7 @@ WorkSpacesClient::WorkSpacesClient(
 /**
  * Creates tags for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -113,7 +113,7 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
  *
  * This operation is asynchronous and returns before the WorkSpaces are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -127,7 +127,7 @@ CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorksp
 /**
  * Deletes the specified tags from a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -141,7 +141,7 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
 /**
  * Describes the tags for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -159,7 +159,7 @@ DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest 
  *
  * You can filter the results using either bundle ID or owner, but not
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -173,7 +173,7 @@ DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(co
 /**
  * Describes the available AWS Directory Service directories that are registered with Amazon
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
  *
  * You can filter the results using bundle ID, directory ID, or owner, but you can specify only one filter at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -205,7 +205,7 @@ DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const Describe
 /**
  * Describes the connection status of the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -219,7 +219,7 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
 /**
  * Modifies the specified WorkSpace
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -241,7 +241,7 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
  *
  * This operation is asynchronous and returns before the WorkSpaces have
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -268,7 +268,7 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
  *
  * This operation is asynchronous and returns before the WorkSpaces have been completely
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -286,7 +286,7 @@ RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWor
  *
  * You cannot start a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -305,7 +305,7 @@ StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspace
  * You cannot stop a WorkSpace unless it has a running mode of <code>AutoStop</code> and a state of <code>AVAILABLE</code>,
  * <code>IMPAIRED</code>, <code>UNHEALTHY</code>, or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *
@@ -332,7 +332,7 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
  *
  * This operation is asynchronous and returns before the WorkSpaces have been completely
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon WorkSpaces.
  *
  * @return A pointer to a related response object.
  *

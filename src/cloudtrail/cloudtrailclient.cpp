@@ -118,7 +118,7 @@ CloudTrailClient::CloudTrailClient(
  * with the specified key and a value of null. You can tag a trail that applies to all regions only from the region in
  * which the trail was created (that is, from its home
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -133,7 +133,7 @@ AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
  * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails
  * can exist in a region, irrespective of the region in which they were
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -148,7 +148,7 @@ CreateTrailResponse * CloudTrailClient::createTrail(const CreateTrailRequest &re
  * Deletes a trail. This operation must be called from the region in which the trail was created. <code>DeleteTrail</code>
  * cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled in all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -162,7 +162,7 @@ DeleteTrailResponse * CloudTrailClient::deleteTrail(const DeleteTrailRequest &re
 /**
  * Retrieves settings for the trail associated with the current region for your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRe
  * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
  * Data and Management Events for Trails </a> in the <i>AWS CloudTrail User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ GetEventSelectorsResponse * CloudTrailClient::getEventSelectors(const GetEventSe
  * Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns trail status
  * from a single region. To return trail status from all regions, you must call the operation on each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -232,7 +232,7 @@ GetTrailStatusResponse * CloudTrailClient::getTrailStatus(const GetTrailStatusRe
  * its region. Therefore, when you validate a digest file from a particular region, you must look in the same region for
  * its corresponding public
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ ListPublicKeysResponse * CloudTrailClient::listPublicKeys(const ListPublicKeysRe
 /**
  * Lists the tags for the trail in the current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
  * Events that occurred during the selected time range will not be available for lookup if CloudTrail logging was not
  * enabled when the events
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -351,7 +351,7 @@ LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest 
  * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
  * Data and Management Events for Trails </a> in the <i>AWS CloudTrail User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -365,7 +365,7 @@ PutEventSelectorsResponse * CloudTrailClient::putEventSelectors(const PutEventSe
 /**
  * Removes the specified tags from a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -381,7 +381,7 @@ RemoveTagsResponse * CloudTrailClient::removeTags(const RemoveTagsRequest &reque
  * this operation must be called from the region in which the trail was created. This operation cannot be called on the
  * shadow trails (replicated trails in other regions) of a trail that is enabled in all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ StartLoggingResponse * CloudTrailClient::startLogging(const StartLoggingRequest 
  * created, or an <code>InvalidHomeRegionException</code> will occur. This operation cannot be called on the shadow trails
  * (replicated trails in other regions) of a trail enabled in all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *
@@ -416,7 +416,7 @@ StopLoggingResponse * CloudTrailClient::stopLogging(const StopLoggingRequest &re
  * target for CloudTrail log files, an IAM policy exists for the bucket. <code>UpdateTrail</code> must be called from the
  * region in which the trail was created; otherwise, an <code>InvalidHomeRegionException</code> is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS CloudTrail.
  *
  * @return A pointer to a related response object.
  *

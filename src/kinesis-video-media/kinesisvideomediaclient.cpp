@@ -118,7 +118,7 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
  * Kinesis Video Streams sends media data at a rate of up to 25 megabytes per second (or 200 megabits per second) during a
  * <code>GetMedia</code> session.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis Video Streams Media.
  *
  * @return A pointer to a related response object.
  *

@@ -168,7 +168,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Runtime Service.
  *
  * @return A pointer to a related response object.
  *
@@ -246,7 +246,7 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Runtime Service.
  *
  * @return A pointer to a related response object.
  *

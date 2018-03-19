@@ -95,7 +95,7 @@ AppStreamClient::AppStreamClient(
 /**
  * Associates the specified fleet with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -110,7 +110,7 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
  * Copies the image within the same region or to a new region within the same AWS account. Note that any tags you added to
  * the image will not be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -124,7 +124,7 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 /**
  * Creates a directory
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -138,7 +138,7 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
  *
  * The initial state of the builder is <code>PENDING</code>. When it is ready, the state is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -170,7 +170,7 @@ CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateIma
 /**
  * Creates a URL to start an image builder streaming
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -184,7 +184,7 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -198,7 +198,7 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
 /**
  * Creates a URL to start a streaming session for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -212,7 +212,7 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
 /**
  * Deletes the specified directory
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const Del
 /**
  * Deletes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -241,7 +241,7 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
  * Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot
  * provision new capacity using the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -255,7 +255,7 @@ DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &req
 /**
  * Deletes the specified image builder and releases the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -270,7 +270,7 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
  * Deletes the specified stack. After this operation completes, the environment can no longer be activated and any
  * reservations made for the stack are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -285,7 +285,7 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
  * Describes the specified directory configurations. Note that although the response syntax in this topic includes the
  * account password, this password is not returned in the actual response.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -299,7 +299,7 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
 /**
  * Describes the specified fleets or all fleets in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -313,7 +313,7 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
 /**
  * Describes the specified image builders or all image builders in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -327,7 +327,7 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
 /**
  * Describes the specified images or all images in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -343,7 +343,7 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
  * sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate
  * users using a streaming
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -357,7 +357,7 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
 /**
  * Describes the specified stacks or all stacks in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -371,7 +371,7 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
 /**
  * Disassociates the specified fleet from the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -385,7 +385,7 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
 /**
  * Stops the specified streaming
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -399,7 +399,7 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
 /**
  * Lists the fleets associated with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -413,7 +413,7 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
 /**
  * Lists the stacks associated with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -433,7 +433,7 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -447,7 +447,7 @@ ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTag
 /**
  * Starts the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -461,7 +461,7 @@ StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &reques
 /**
  * Starts the specified image
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -475,7 +475,7 @@ StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageB
 /**
  * Stops the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -489,7 +489,7 @@ StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 /**
  * Stops the specified image
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -520,7 +520,7 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -544,7 +544,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -558,7 +558,7 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
 /**
  * Updates the specified directory
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -578,7 +578,7 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code> and <code>ComputeCapacity</code>
  * attributes. If the fleet is in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *
@@ -592,7 +592,7 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
 /**
  * Updates the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon AppStream.
  *
  * @return A pointer to a related response object.
  *

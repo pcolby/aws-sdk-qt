@@ -101,7 +101,7 @@ CloudFrontClient::CloudFrontClient(
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
  * through CloudFront</a> in the <i>Amazon CloudFront Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -116,7 +116,7 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
  * Creates a new web distribution. Send a <code>POST</code> request to the <code>/<i>CloudFront API
  * version</i>/distribution</code>/<code>distribution ID</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -130,7 +130,7 @@ CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDi
 /**
  * Create a new distribution with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -144,7 +144,7 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
 /**
  * Create a new invalidation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -187,7 +187,7 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
  * mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of
  * values
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -201,7 +201,7 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
 /**
  * Create a new streaming distribution with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -215,7 +215,7 @@ CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingD
 /**
  * Delete an origin access identity.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -229,7 +229,7 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
 /**
  * Delete a distribution.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -308,7 +308,7 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
  * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
  * Distribution</a> in the <i>Amazon CloudFront Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -322,7 +322,7 @@ DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribut
 /**
  * Get the information about an origin access identity.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOrigi
 /**
  * Get the configuration information about an origin access identity.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -350,7 +350,7 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
 /**
  * Get the information about a distribution.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -364,7 +364,7 @@ GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributio
 /**
  * Get the configuration information about a distribution.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -378,7 +378,7 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
 /**
  * Get the information about an invalidation.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -392,7 +392,7 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
 /**
  * Gets information about a specified RTMP distribution, including the distribution
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -406,7 +406,7 @@ GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(co
 /**
  * Get the configuration information about a streaming distribution.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -420,7 +420,7 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
 /**
  * Lists origin access
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -434,7 +434,7 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
 /**
  * List distributions.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -448,7 +448,7 @@ ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistri
 /**
  * List the distributions that are associated with a specified AWS WAF web ACL.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -462,7 +462,7 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
 /**
  * Lists invalidation batches.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -476,7 +476,7 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
 /**
  * List streaming distributions.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -490,7 +490,7 @@ ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistribution
 /**
  * List tags for a CloudFront
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -504,7 +504,7 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
 /**
  * Add tags to a CloudFront
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -518,7 +518,7 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
 /**
  * Remove tags from a CloudFront
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -532,7 +532,7 @@ UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceReque
 /**
  * Update an origin access identity.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -610,7 +610,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in
  * the <code>Quantity</code> element and the number of values you're actually
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *
@@ -624,7 +624,7 @@ UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDi
 /**
  * Update a streaming distribution.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudFront.
  *
  * @return A pointer to a related response object.
  *

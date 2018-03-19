@@ -97,7 +97,7 @@ InspectorClient::InspectorClient(
 /**
  * Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -116,7 +116,7 @@ AddAttributesToFindingsResponse * InspectorClient::addAttributesToFindings(const
  * 500 concurrent agents per AWS account. For more information, see <a
  * href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html"> Amazon Inspector Assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -133,7 +133,7 @@ CreateAssessmentTargetResponse * InspectorClient::createAssessmentTarget(const C
  * already registered, also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services
  * needed to perform security
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -149,7 +149,7 @@ CreateAssessmentTemplateResponse * InspectorClient::createAssessmentTemplate(con
  * to be included in an Amazon Inspector assessment target. The created resource group is then used to create an Amazon
  * Inspector assessment target. For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -163,7 +163,7 @@ CreateResourceGroupResponse * InspectorClient::createResourceGroup(const CreateR
 /**
  * Deletes the assessment run that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -177,7 +177,7 @@ DeleteAssessmentRunResponse * InspectorClient::deleteAssessmentRun(const DeleteA
 /**
  * Deletes the assessment target that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -191,7 +191,7 @@ DeleteAssessmentTargetResponse * InspectorClient::deleteAssessmentTarget(const D
 /**
  * Deletes the assessment template that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -205,7 +205,7 @@ DeleteAssessmentTemplateResponse * InspectorClient::deleteAssessmentTemplate(con
 /**
  * Describes the assessment runs that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -219,7 +219,7 @@ DescribeAssessmentRunsResponse * InspectorClient::describeAssessmentRuns(const D
 /**
  * Describes the assessment targets that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -233,7 +233,7 @@ DescribeAssessmentTargetsResponse * InspectorClient::describeAssessmentTargets(c
 /**
  * Describes the assessment templates that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -247,7 +247,7 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
 /**
  * Describes the IAM role that enables Amazon Inspector to access your AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -261,7 +261,7 @@ DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAc
 /**
  * Describes the findings that are specified by the ARNs of the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ DescribeFindingsResponse * InspectorClient::describeFindings(const DescribeFindi
 /**
  * Describes the resource groups that are specified by the ARNs of the resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -289,7 +289,7 @@ DescribeResourceGroupsResponse * InspectorClient::describeResourceGroups(const D
 /**
  * Describes the rules packages that are specified by the ARNs of the rules
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -303,7 +303,7 @@ DescribeRulesPackagesResponse * InspectorClient::describeRulesPackages(const Des
 /**
  * Produces an assessment report that includes detailed and comprehensive results of a specified assessment run.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -317,7 +317,7 @@ GetAssessmentReportResponse * InspectorClient::getAssessmentReport(const GetAsse
 /**
  * Information about the data that is collected for the specified assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -331,7 +331,7 @@ GetTelemetryMetadataResponse * InspectorClient::getTelemetryMetadata(const GetTe
 /**
  * Lists the agents of the assessment runs that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -345,7 +345,7 @@ ListAssessmentRunAgentsResponse * InspectorClient::listAssessmentRunAgents(const
 /**
  * Lists the assessment runs that correspond to the assessment templates that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -360,7 +360,7 @@ ListAssessmentRunsResponse * InspectorClient::listAssessmentRuns(const ListAsses
  * Lists the ARNs of the assessment targets within this AWS account. For more information about assessment targets, see <a
  * href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html">Amazon Inspector Assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -375,7 +375,7 @@ ListAssessmentTargetsResponse * InspectorClient::listAssessmentTargets(const Lis
  * Lists the assessment templates that correspond to the assessment targets that are specified by the ARNs of the
  * assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -390,7 +390,7 @@ ListAssessmentTemplatesResponse * InspectorClient::listAssessmentTemplates(const
  * Lists all the event subscriptions for the assessment template that is specified by the ARN of the assessment template.
  * For more information, see <a>SubscribeToEvent</a> and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ ListEventSubscriptionsResponse * InspectorClient::listEventSubscriptions(const L
 /**
  * Lists findings that are generated by the assessment runs that are specified by the ARNs of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ ListFindingsResponse * InspectorClient::listFindings(const ListFindingsRequest &
 /**
  * Lists all available Amazon Inspector rules
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -432,7 +432,7 @@ ListRulesPackagesResponse * InspectorClient::listRulesPackages(const ListRulesPa
 /**
  * Lists all tags associated with an assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -446,7 +446,7 @@ ListTagsForResourceResponse * InspectorClient::listTagsForResource(const ListTag
 /**
  * Previews the agents installed on the EC2 instances that are part of the specified assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -460,7 +460,7 @@ PreviewAgentsResponse * InspectorClient::previewAgents(const PreviewAgentsReques
 /**
  * Registers the IAM role that grants Amazon Inspector access to AWS Services needed to perform security
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -475,7 +475,7 @@ RegisterCrossAccountAccessRoleResponse * InspectorClient::registerCrossAccountAc
  * Removes entire attributes (key and value pairs) from the findings that are specified by the ARNs of the findings where
  * an attribute with the specified key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -489,7 +489,7 @@ RemoveAttributesFromFindingsResponse * InspectorClient::removeAttributesFromFind
 /**
  * Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -504,7 +504,7 @@ SetTagsForResourceResponse * InspectorClient::setTagsForResource(const SetTagsFo
  * Starts the assessment run specified by the ARN of the assessment template. For this API to function properly, you must
  * not exceed the limit of running up to 500 concurrent agents per AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -518,7 +518,7 @@ StartAssessmentRunResponse * InspectorClient::startAssessmentRun(const StartAsse
 /**
  * Stops the assessment run that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -533,7 +533,7 @@ StopAssessmentRunResponse * InspectorClient::stopAssessmentRun(const StopAssessm
  * Enables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a
  * specified SNS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -548,7 +548,7 @@ SubscribeToEventResponse * InspectorClient::subscribeToEvent(const SubscribeToEv
  * Disables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a
  * specified SNS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *
@@ -562,7 +562,7 @@ UnsubscribeFromEventResponse * InspectorClient::unsubscribeFromEvent(const Unsub
 /**
  * Updates the assessment target that is specified by the ARN of the assessment
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Inspector.
  *
  * @return A pointer to a related response object.
  *

@@ -98,7 +98,7 @@ ServiceCatalogClient::ServiceCatalogClient(
 /**
  * Accepts an offer to share the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -112,7 +112,7 @@ AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const 
 /**
  * Associates the specified principal ARN with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -126,7 +126,7 @@ AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincip
 /**
  * Associates the specified product with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -140,7 +140,7 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
 /**
  * Associate the specified TagOption with the specified portfolio or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -162,7 +162,7 @@ AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptio
  *
  * This operation is performed asynchronously. To track the progress of the operation, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -176,7 +176,7 @@ CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -190,7 +190,7 @@ CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateCo
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -204,7 +204,7 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
 /**
  * Shares the specified portfolio with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -218,7 +218,7 @@ CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const 
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -243,7 +243,7 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
  * To view the resource changes in the change set, use <a>DescribeProvisionedProductPlan</a>. To create or modify the
  * provisioned product, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -261,7 +261,7 @@ CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedPr
  *
  * You cannot create a provisioning artifact for a product that was shared with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArt
 /**
  * Creates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -289,7 +289,7 @@ CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagO
 /**
  * Deletes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -307,7 +307,7 @@ DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteCo
  *
  * You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -321,7 +321,7 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
 /**
  * Stops sharing the specified portfolio with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -339,7 +339,7 @@ DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const 
  *
  * You cannot delete a product if it was shared with you or is associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -353,7 +353,7 @@ DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductR
 /**
  * Deletes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -372,7 +372,7 @@ DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedPr
  * You cannot delete a provisioning artifact associated with a product that was shared with you. You cannot delete the last
  * provisioning artifact for a product, because a product must have at least one provisioning
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -390,7 +390,7 @@ DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArt
  *
  * You cannot delete a TagOption if it is associated with a product or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagO
 /**
  * Gets information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -418,7 +418,7 @@ DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const Desc
 /**
  * Gets the status of the specified copy product
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -432,7 +432,7 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
 /**
  * Gets information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -446,7 +446,7 @@ DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const Descri
 /**
  * Gets information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -460,7 +460,7 @@ DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribePr
 /**
  * Gets information about the specified product. This operation is run with administrator
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -474,7 +474,7 @@ DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(co
 /**
  * Gets information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -488,7 +488,7 @@ DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const De
 /**
  * Gets information about the specified provisioned
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -502,7 +502,7 @@ DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedPr
 /**
  * Gets information about the resource changes for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -516,7 +516,7 @@ DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvision
 /**
  * Gets information about the specified provisioning artifact (also known as a version) for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -537,7 +537,7 @@ DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisionin
  * do not include conflicted TagOption keys as tags, or this causes the error "Parameter validation failed: Missing
  * required parameter in Tags[<i>N</i>]:<i>Value</i>". Tag the provisioned product with the value
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -556,7 +556,7 @@ DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvision
  * Use this operation after calling a request operation (for example, <a>ProvisionProduct</a>,
  * <a>TerminateProvisionedProduct</a>, or <a>UpdateProvisionedProduct</a>).
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -570,7 +570,7 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
 /**
  * Gets information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -584,7 +584,7 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
 /**
  * Disassociates a previously associated principal ARN from a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -598,7 +598,7 @@ DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociateP
 /**
  * Disassociates the specified product from the specified portfolio.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -612,7 +612,7 @@ DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociatePro
 /**
  * Disassociates the specified TagOption from the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -626,7 +626,7 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
 /**
  * Provisions or modifies a product based on the resource changes for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -640,7 +640,7 @@ ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisioned
 /**
  * Lists all portfolios for which sharing was accepted by this
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -654,7 +654,7 @@ ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfoli
 /**
  * Lists the constraints for the specified portfolio and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -669,7 +669,7 @@ ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPo
  * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary
  * when provisioning a product. A path also determines the constraints put on the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -683,7 +683,7 @@ ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunch
 /**
  * Lists the account IDs that have access to the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -697,7 +697,7 @@ ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const Li
 /**
  * Lists all portfolios in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -711,7 +711,7 @@ ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoli
 /**
  * Lists all portfolios that the specified product is associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -725,7 +725,7 @@ ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduc
 /**
  * Lists all principal ARNs associated with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -739,7 +739,7 @@ ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPort
 /**
  * Lists the plans for the specified provisioned product or all plans to which the user has
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -753,7 +753,7 @@ ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProdu
 /**
  * Lists all provisioning artifacts (also known as versions) for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -767,7 +767,7 @@ ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifa
 /**
  * Lists the specified requests or all performed
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -781,7 +781,7 @@ ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRe
 /**
  * Lists the resources associated with the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -795,7 +795,7 @@ ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOpt
 /**
  * Lists the specified TagOptions or all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -820,7 +820,7 @@ ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptio
  * If the request contains a tag key with an empty list of values, there is a tag conflict for that key. Do not include
  * conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -834,7 +834,7 @@ ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const Provisio
 /**
  * Rejects an offer to share the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -852,7 +852,7 @@ RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const 
  *
  * To use additional filtering, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -866,7 +866,7 @@ ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(
 /**
  * Gets information about the products to which the caller has
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -880,7 +880,7 @@ SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProduc
 /**
  * Gets information about the products for the specified portfolio or all
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -894,7 +894,7 @@ SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(cons
 /**
  * Gets information about the provisioned products that meet the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -916,7 +916,7 @@ SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProdu
  *
  * You can check the status of this request using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -930,7 +930,7 @@ TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisioned
 /**
  * Updates the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -948,7 +948,7 @@ UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateCo
  *
  * You cannot update a product that was shared with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -962,7 +962,7 @@ UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePort
 /**
  * Updates the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -985,7 +985,7 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
  *
  * You can check the status of this request using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -1003,7 +1003,7 @@ UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduc
  *
  * You cannot update a provisioning artifact for a product that was shared with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *
@@ -1017,7 +1017,7 @@ UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArt
 /**
  * Updates the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Service Catalog.
  *
  * @return A pointer to a related response object.
  *

@@ -94,7 +94,7 @@ MediaStoreDataClient::MediaStoreDataClient(
 /**
  * Deletes an object at the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -108,7 +108,7 @@ DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequ
 /**
  * Gets the headers for an object at the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -122,7 +122,7 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
 /**
  * Downloads the object at the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -136,7 +136,7 @@ GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &requ
 /**
  * Provides a list of metadata entries about folders and objects in the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore Data Plane.
  *
  * @return A pointer to a related response object.
  *
@@ -150,7 +150,7 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
 /**
  * Uploads an object to the specified path. Object sizes are limited to 10
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Elemental MediaStore Data Plane.
  *
  * @return A pointer to a related response object.
  *

@@ -135,7 +135,7 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
  *
  * BatchMeterUsage can process up to 25 UsageRecords at a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWSMarketplace Metering.
  *
  * @return A pointer to a related response object.
  *
@@ -153,7 +153,7 @@ BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const Batch
  *
  * MeterUsage is authenticated on the buyer's AWS account, generally when running from an EC2 instance on the AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWSMarketplace Metering.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageReque
  * the registration process, the buyer submits a registration token through their browser. The registration token is
  * resolved through this API to obtain a CustomerIdentifier and product
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWSMarketplace Metering.
  *
  * @return A pointer to a related response object.
  *

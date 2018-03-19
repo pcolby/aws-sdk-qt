@@ -91,7 +91,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost and Usage Report Service.
  *
  * @return A pointer to a related response object.
  *
@@ -104,7 +104,7 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost and Usage Report Service.
  *
  * @return A pointer to a related response object.
  *
@@ -117,7 +117,7 @@ DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeRep
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Cost and Usage Report Service.
  *
  * @return A pointer to a related response object.
  *

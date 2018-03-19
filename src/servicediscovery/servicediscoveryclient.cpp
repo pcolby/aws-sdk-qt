@@ -101,7 +101,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -120,7 +120,7 @@ CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsName
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -154,7 +154,7 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -168,7 +168,7 @@ CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServic
 /**
  * Deletes a namespace from the current account. If the namespace still contains one or more services, the request
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNa
 /**
  * Deletes a specified service. If the service still contains one or more registered instances, the request
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -196,7 +196,7 @@ DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServic
 /**
  * Deletes the records and the health check, if any, that Amazon Route 53 created for the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const De
 /**
  * Gets information about a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -229,7 +229,7 @@ GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceReque
  *
  * There is a brief delay between when you register an instance and when the health status for the instance is available.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -243,7 +243,7 @@ GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthSta
 /**
  * Gets information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -261,7 +261,7 @@ GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRe
  *
  * To get a list of operations that match specified criteria, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -275,7 +275,7 @@ GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRe
 /**
  * Gets the settings for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -289,7 +289,7 @@ GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest 
 /**
  * Lists summary information about the instances that you registered by using a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -303,7 +303,7 @@ ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstance
 /**
  * Lists summary information about the namespaces that were created by the current AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -317,7 +317,7 @@ ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamesp
 /**
  * Lists operations that match the criteria that you
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -331,7 +331,7 @@ ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperat
 /**
  * Lists summary information for all the services that are associated with one or more specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -392,7 +392,7 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
  * on Auto Naming</a> in the <i>Route 53 Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -405,7 +405,7 @@ RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const Regist
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *
@@ -442,7 +442,7 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
  * When you update the TTL setting for a service, Amazon Route 53 also updates the corresponding settings in all the
  * records and health checks that were created by using the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Route 53 Auto Naming.
  *
  * @return A pointer to a related response object.
  *

@@ -152,7 +152,7 @@ SwfClient::SwfClient(
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -210,7 +210,7 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -255,7 +255,7 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -300,7 +300,7 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -355,7 +355,7 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -460,7 +460,7 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -511,7 +511,7 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -553,7 +553,7 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -599,7 +599,7 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -650,7 +650,7 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -697,7 +697,7 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -742,7 +742,7 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -802,7 +802,7 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -850,7 +850,7 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -910,7 +910,7 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -953,7 +953,7 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1005,7 +1005,7 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1070,7 +1070,7 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1143,7 +1143,7 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1202,7 +1202,7 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1245,7 +1245,7 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1308,7 +1308,7 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1362,7 +1362,7 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1421,7 +1421,7 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1478,7 +1478,7 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1529,7 +1529,7 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1562,7 +1562,7 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1615,7 +1615,7 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1693,7 +1693,7 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1751,7 +1751,7 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Simple Workflow Service.
  *
  * @return A pointer to a related response object.
  *

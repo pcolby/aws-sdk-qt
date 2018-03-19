@@ -112,7 +112,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  *
  * This operation requires permission for the <code>lex:CreateBotVersion</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -142,7 +142,7 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
  *
  * This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -172,7 +172,7 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
  *
  * This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -198,7 +198,7 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  *
  * This operation requires permissions for the <code>lex:DeleteBot</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -220,7 +220,7 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
  * deleting the channel association. If you get the same exception again, delete the referring association until the
  * <code>DeleteBotAlias</code> operation is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -238,7 +238,7 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
  *
  * This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -256,7 +256,7 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
  *
  * This operation requires permissions for the <code>lex:DeleteBotVersion</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -287,7 +287,7 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
  *
  * This operation requires permission for the <code>lex:DeleteIntent</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -305,7 +305,7 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
  *
  * This operation requires permissions for the <code>lex:DeleteIntentVersion</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -336,7 +336,7 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
  *
  * This operation requires permission for the <code>lex:DeleteSlotType</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -355,7 +355,7 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
  *
  * This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -383,7 +383,7 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  *
  * This operation requires permissions for the <code>lex:DeleteUtterances</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -401,7 +401,7 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
  *
  * This operation requires permissions for the <code>lex:GetBot</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -419,7 +419,7 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
  *
  * This operation requires permissions for the <code>lex:GetBotAlias</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -437,7 +437,7 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
  *
  * This operation requires permissions for the <code>lex:GetBotAliases</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -455,7 +455,7 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
  *
  * This operation requires permissions for the <code>lex:GetBotChannelAssociation</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -474,7 +474,7 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
  * The <code>GetBotChannelAssociations</code> operation requires permissions for the
  * <code>lex:GetBotChannelAssociations</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -503,7 +503,7 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
  *
  * This operation requires permissions for the <code>lex:GetBotVersions</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -531,7 +531,7 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
  *
  * This operation requires permission for the <code>lex:GetBots</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -549,7 +549,7 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntent</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -567,7 +567,7 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntents</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -591,7 +591,7 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
  *
  * This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -605,7 +605,7 @@ GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes
 /**
  * Exports the contents of a Amazon Lex resource in a specified format.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -619,7 +619,7 @@ GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequ
 /**
  * Gets information about an import job started with the <code>StartImport</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -637,7 +637,7 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
  *
  * This operation requires permissions to perform the <code>lex:GetIntent</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
  *
  * This operation requires permissions for the <code>lex:GetIntentVersions</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -694,7 +694,7 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
  *
  * The operation requires permission for the <code>lex:GetIntents</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
  *
  * This operation requires permissions for the <code>lex:GetSlotType</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -742,7 +742,7 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
  *
  * This operation requires permissions for the <code>lex:GetSlotTypeVersions</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -770,7 +770,7 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
  *
  * The operation requires permission for the <code>lex:GetSlotTypes</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -806,7 +806,7 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  *
  * This operation requires permissions for the <code>lex:GetUtterancesView</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -835,7 +835,7 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
  *
  * This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -854,7 +854,7 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
  *
  * This operation requires permissions for the <code>lex:PutBotAlias</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -930,7 +930,7 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
  *
  * This operation requires permissions for the <code>lex:PutIntent</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -961,7 +961,7 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
  *
  * This operation requires permissions for the <code>lex:PutSlotType</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *
@@ -975,7 +975,7 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
 /**
  * Starts a job to import a resource to Amazon
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Lex Model Building Service.
  *
  * @return A pointer to a related response object.
  *

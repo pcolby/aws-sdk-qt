@@ -95,7 +95,7 @@ GlueClient::GlueClient(
 /**
  * Creates one or more partitions in a batch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -109,7 +109,7 @@ BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreat
 /**
  * Deletes a list of connection definitions from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -123,7 +123,7 @@ BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDel
 /**
  * Deletes one or more partitions in a batch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -137,7 +137,7 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
 /**
  * Deletes multiple tables at
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -151,7 +151,7 @@ BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRe
 /**
  * Deletes a specified batch of versions of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -165,7 +165,7 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 /**
  * Retrieves partitions in a batch
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -179,7 +179,7 @@ BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitio
 /**
  * Stops one or more job runs for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -194,7 +194,7 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
  * Creates a classifier in the user's account. This may be a <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or
  * abbrev <code>JsonClassifier</code>, depending on which field of the request is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRe
 /**
  * Creates a connection definition in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -223,7 +223,7 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
  * Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must
  * be specified, in either the <i>s3Targets</i> or the <i>jdbcTargets</i>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -237,7 +237,7 @@ CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &re
 /**
  * Creates a new database in a Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -251,7 +251,7 @@ CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest 
 /**
  * Creates a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -265,7 +265,7 @@ CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpoin
 /**
  * Creates a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 /**
  * Creates a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionReque
 /**
  * Transforms a directed acyclic graph (DAG) into
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -307,7 +307,7 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
 /**
  * Creates a new table definition in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -321,7 +321,7 @@ CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
 /**
  * Creates a new
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -335,7 +335,7 @@ CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &re
 /**
  * Creates a new function definition in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -349,7 +349,7 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
 /**
  * Removes a classifier from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -363,7 +363,7 @@ DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRe
 /**
  * Deletes a connection from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
 /**
  * Removes a specified crawler from the Data Catalog, unless the crawler state is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -391,7 +391,7 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
 /**
  * Removes a specified Database from a Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -405,7 +405,7 @@ DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest 
 /**
  * Deletes a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -419,7 +419,7 @@ DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpoin
 /**
  * Deletes a specified job. If the job is not found, no exception is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -433,7 +433,7 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 /**
  * Deletes a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -447,7 +447,7 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
 /**
  * Removes a table definition from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -461,7 +461,7 @@ DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 /**
  * Deletes a specified version of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -475,7 +475,7 @@ DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVer
 /**
  * Deletes a specified trigger. If the trigger is not found, no exception is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -489,7 +489,7 @@ DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &re
 /**
  * Deletes an existing function definition from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -503,7 +503,7 @@ DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const 
 /**
  * Retrieves the status of a migration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -517,7 +517,7 @@ GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCat
 /**
  * Retrieve a classifier by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -531,7 +531,7 @@ GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &re
 /**
  * Lists all classifier objects in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -545,7 +545,7 @@ GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest 
 /**
  * Retrieves a connection definition from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -559,7 +559,7 @@ GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &re
 /**
  * Retrieves a list of connection definitions from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -573,7 +573,7 @@ GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest 
 /**
  * Retrieves metadata for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -587,7 +587,7 @@ GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
 /**
  * Retrieves metrics about specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -601,7 +601,7 @@ GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetric
 /**
  * Retrieves metadata for all crawlers defined in the customer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -615,7 +615,7 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 /**
  * Retrieves the definition of a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -629,7 +629,7 @@ GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
 /**
  * Retrieves all Databases defined in a given Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -643,7 +643,7 @@ GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &reque
 /**
  * Transforms a Python script into a directed acyclic graph (DAG).
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -657,7 +657,7 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
 /**
  * Retrieves information about a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -671,7 +671,7 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
 /**
  * Retrieves all the DevEndpoints in this AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -685,7 +685,7 @@ GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsReque
 /**
  * Retrieves an existing job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -699,7 +699,7 @@ GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 /**
  * Retrieves the metadata for a given job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -713,7 +713,7 @@ GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 /**
  * Retrieves metadata for all runs of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -727,7 +727,7 @@ GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 /**
  * Retrieves all current
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 /**
  * Creates
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -755,7 +755,7 @@ GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 /**
  * Retrieves information about a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -769,7 +769,7 @@ GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &reque
 /**
  * Retrieves information about the partitions in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -783,7 +783,7 @@ GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &re
 /**
  * Gets code to perform a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -797,7 +797,7 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 /**
  * Retrieves the <code>Table</code> definition in a Data Catalog for a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -811,7 +811,7 @@ GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
 /**
  * Retrieves a specified version of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -825,7 +825,7 @@ GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionReque
 /**
  * Retrieves a list of strings that identify available versions of a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -839,7 +839,7 @@ GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRe
 /**
  * Retrieves the definitions of some or all of the tables in a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -853,7 +853,7 @@ GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 /**
  * Retrieves the definition of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -867,7 +867,7 @@ GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
 /**
  * Gets all the triggers associated with a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -881,7 +881,7 @@ GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 /**
  * Retrieves a specified function definition from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -895,7 +895,7 @@ GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUse
 /**
  * Retrieves a multiple function definitions from the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -909,7 +909,7 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
 /**
  * Imports an existing Athena Data Catalog to AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -923,7 +923,7 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
 /**
  * Resets a bookmark
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -937,7 +937,7 @@ ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRe
 /**
  * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, does
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -952,7 +952,7 @@ StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &reque
  * Changes the schedule state of the specified crawler to <code>SCHEDULED</code>, unless the crawler is already running or
  * the schedule state is already
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -966,7 +966,7 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
 /**
  * Runs a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -981,7 +981,7 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
  * Starts an existing trigger. See <a href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering Jobs</a>
  * for information about how different types of trigger are
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -995,7 +995,7 @@ StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &reque
 /**
  * If the specified crawler is running, stops the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1010,7 +1010,7 @@ StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
  * Sets the schedule state of the specified crawler to <code>NOT_SCHEDULED</code>, but does not stop the crawler if it is
  * already
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1024,7 +1024,7 @@ StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerS
 /**
  * Stops a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1039,7 +1039,7 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
  * Modifies an existing classifier (a <code>GrokClassifier</code>, <code>XMLClassifier</code>, or
  * <code>JsonClassifier</code>, depending on which field is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1053,7 +1053,7 @@ UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRe
 /**
  * Updates a connection definition in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1067,7 +1067,7 @@ UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRe
 /**
  * Updates a crawler. If a crawler is running, you must stop it using <code>StopCrawler</code> before updating
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1081,7 +1081,7 @@ UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &re
 /**
  * Updates the schedule of a crawler using a <code>cron</code> expression.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1095,7 +1095,7 @@ UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCr
 /**
  * Updates an existing database definition in a Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1109,7 +1109,7 @@ UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest 
 /**
  * Updates a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1123,7 +1123,7 @@ UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpoin
 /**
  * Updates an existing job
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1137,7 +1137,7 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 /**
  * Updates a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1151,7 +1151,7 @@ UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionReque
 /**
  * Updates a metadata table in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1165,7 +1165,7 @@ UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
 /**
  * Updates a trigger
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *
@@ -1179,7 +1179,7 @@ UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &re
 /**
  * Updates an existing function definition in the Data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Glue.
  *
  * @return A pointer to a related response object.
  *

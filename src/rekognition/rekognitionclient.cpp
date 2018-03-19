@@ -145,7 +145,7 @@ RekognitionClient::RekognitionClient(
  *
  * This operation requires permissions to perform the <code>rekognition:CompareFaces</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -173,7 +173,7 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
  *
  * This operation requires permissions to perform the <code>rekognition:CreateCollection</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -205,7 +205,7 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
  * After you have finished analyzing a streaming video, use to stop processing. You can delete the stream processor by
  * calling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -223,7 +223,7 @@ CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const C
  *
  * This operation requires permissions to perform the <code>rekognition:DeleteCollection</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -241,7 +241,7 @@ DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteColle
  *
  * This operation requires permissions to perform the <code>rekognition:DeleteFaces</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -257,7 +257,7 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
  * the stream processor with . You might not be able to use the same name for a stream processor for a few seconds after
  * calling
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -272,7 +272,7 @@ DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const D
  * Provides information about a stream processor created by . You can get information about the input and output streams,
  * the input parameters for the face recognition being performed, and the current status of the stream
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -316,7 +316,7 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  *
  * This operation requires permissions to perform the <code>rekognition:DetectFaces</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -402,7 +402,7 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  *
  * This operation requires permissions to perform the <code>rekognition:DetectLabels</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -429,7 +429,7 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
  * either a PNG or JPEG formatted file.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -481,7 +481,7 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
  *
  * For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -501,7 +501,7 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
  *
  * This operation requires permissions to perform the <code>rekognition:GetCelebrityInfo</code> action.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -552,7 +552,7 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  * getting the next set of results. To get the next page of results, call <code>GetCelebrityDetection</code> and populate
  * the <code>NextToken</code> request parameter with the token value returned from the previous call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -597,7 +597,7 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -632,7 +632,7 @@ GetContentModerationResponse * RekognitionClient::getContentModeration(const Get
  * getting the next set of results. To get the next page of results, call <code>GetFaceDetection</code> and populate the
  * <code>NextToken</code> request parameter with the token value returned from the previous call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -667,7 +667,7 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
  * By default, the <code>Persons</code> array is sorted by the time, in milliseconds from the start of the video, persons
  * are matched. You can also sort by persons by specifying <code>INDEX</code> for the <code>SORTBY</code> input
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -706,7 +706,7 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
  * getting the next set of results. To get the next page of results, call <code>GetlabelDetection</code> and populate the
  * <code>NextToken</code> request parameter with the token value returned from the previous call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -749,7 +749,7 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  * <code>GetPersonTracking</code> and populate the <code>NextToken</code> request parameter with the token value returned
  * from the previous call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -804,7 +804,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * This operation requires permissions to perform the <code>rekognition:IndexFaces</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -827,7 +827,7 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
  *
  * This operation requires permissions to perform the <code>rekognition:ListCollections</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -847,7 +847,7 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
  *
  * This operation requires permissions to perform the <code>rekognition:ListFaces</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -861,7 +861,7 @@ ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request
 /**
  * Gets a list of stream processors that you have created with .
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -908,7 +908,7 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  *
  * This operation requires permissions to perform the <code>rekognition:RecognizeCelebrities</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -943,7 +943,7 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFaces</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -990,7 +990,7 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFacesByImage</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1014,7 +1014,7 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
  * value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier
  * (<code>JobId</code>) from the initial call to <code>StartCelebrityRecognition</code>. For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1041,7 +1041,7 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartContentModeration</code>. For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1065,7 +1065,7 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  * <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartFaceDetection</code>. For more information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1089,7 +1089,7 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
  * pass the job identifier (<code>JobId</code>) from the initial call to <code>StartFaceSearch</code>. For more
  * information, see
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1121,7 +1121,7 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
  * To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic
  * is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1147,7 +1147,7 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
  * To get the results of the person detection operation, first check that the status value published to the Amazon SNS
  * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1163,7 +1163,7 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
  * <code>StartStreamProcessor</code> which stream processor to start, use the value of the <code>Name</code> field
  * specified in the call to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *
@@ -1177,7 +1177,7 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
 /**
  * Stops a running stream processor that was created by
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Rekognition.
  *
  * @return A pointer to a related response object.
  *

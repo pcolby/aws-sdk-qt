@@ -121,7 +121,7 @@ CloudHSMClient::CloudHSMClient(
  *
  * Each tag consists of a key and a value. Tag keys must be unique to each
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -149,7 +149,7 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
  * Creates a high-availability partition group. A high-availability partition group is a group of partitions that spans
  * multiple physical
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  * It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the
  * <a>DescribeHsm</a> operation. The HSM is ready to be initialized when the status changes to
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -215,7 +215,7 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
  *
  * Creates an HSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -242,7 +242,7 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
  *
  * Deletes a high-availability partition
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -269,7 +269,7 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
  *
  * Deletes an HSM. After completion, this operation cannot be undone and your key material cannot be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
  *
  * Deletes a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -323,7 +323,7 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
  *
  * Retrieves information about a high-availability partition
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -350,7 +350,7 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
  *
  * Retrieves information about an HSM. You can identify the HSM by its ARN or its serial
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
  *
  * Retrieves information about an HSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -404,7 +404,7 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
  *
  * Gets the configuration files necessary to connect to all high availability partition groups the client is associated
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -431,7 +431,7 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
  *
  * Lists the Availability Zones that have available AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -464,7 +464,7 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHapgs</code>
  * to retrieve the next set of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -497,7 +497,7 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHsms</code>
  * to retrieve the next set of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -530,7 +530,7 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to
  * <code>ListLunaClients</code> to retrieve the next set of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -557,7 +557,7 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
  *
  * Returns a list of all tags for the specified AWS CloudHSM
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -584,7 +584,7 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
  *
  * Modifies an existing high-availability partition
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -617,7 +617,7 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  * If you are modifying a production HSM, you should ensure that your AWS CloudHSM service is configured for high
  * availability, and consider executing this operation during a maintenance
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -648,7 +648,7 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
  *
  * This action can potentially start a workflow to install the new certificate on the client's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *
@@ -679,7 +679,7 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
  *
  * To remove a tag, specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon CloudHSM.
  *
  * @return A pointer to a related response object.
  *

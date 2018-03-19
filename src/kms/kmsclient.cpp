@@ -199,7 +199,7 @@ KmsClient::KmsClient(
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
  * <i>AWS Key Management Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -241,7 +241,7 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  *
  * To map an existing alias to a different CMK, call
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -263,7 +263,7 @@ CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants</a> in the <i>AWS Key Management Service
  * Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
  *
  * You cannot use this operation to create a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -331,7 +331,7 @@ CreateKeyResponse * KmsClient::createKey(const CreateKeyRequest &request)
  * you must grant <code>Decrypt</code> access in an IAM user policy, you should scope the resource to specific keys or to
  * specific trusted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -357,7 +357,7 @@ DecryptResponse * KmsClient::decrypt(const DecryptRequest &request)
  * <a>CreateAlias</a> to create a new alias. To associate an existing alias with a different customer master key (CMK),
  * call
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -383,7 +383,7 @@ DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
  *
  * After you delete key material, you can use <a>ImportKeyMaterial</a> to reimport the same key material into the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -402,7 +402,7 @@ DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const D
  * To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the
  * KeyId
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -423,7 +423,7 @@ DescribeKeyResponse * KmsClient::describeKey(const DescribeKeyRequest &request)
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects the Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
  * Disables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this
  * operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -453,7 +453,7 @@ DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotat
  * Sets the state of a customer master key (CMK) to enabled, thereby permitting its use for cryptographic operations. You
  * cannot perform this operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -468,7 +468,7 @@ EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
  * Enables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this
  * operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -510,7 +510,7 @@ EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotation
  * To encrypt data locally in your application, use the <a>GenerateDataKey</a> operation to return a plaintext data
  * encryption key and a copy of the key encrypted under the CMK of your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -581,7 +581,7 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
  * information, see <a href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption
  * Context</a> in the <i>AWS Key Management Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -612,7 +612,7 @@ GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyReques
  * returned plaintext data key to encrypt data, and finally stores the encrypted data in the container. In this system, the
  * control plane never sees the plaintext data
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -632,7 +632,7 @@ GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlain
  * href="https://d0.awsstatic.com/whitepapers/KMS-Cryptographic-Details.pdf">AWS Key Management Service Cryptographic
  * Details</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -647,7 +647,7 @@ GenerateRandomResponse * KmsClient::generateRandom(const GenerateRandomRequest &
  * Gets a key policy attached to the specified customer master key (CMK). You cannot perform this operation on a CMK in a
  * different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -666,7 +666,7 @@ GetKeyPolicyResponse * KmsClient::getKeyPolicy(const GetKeyPolicyRequest &reques
  *
  * To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -697,7 +697,7 @@ GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotat
  * response must be used together. These items are valid for 24 hours. When they expire, they cannot be used for a
  * subsequent <a>ImportKeyMaterial</a> request. To get new ones, send another <code>GetParametersForImport</code>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -755,7 +755,7 @@ GetParametersForImportResponse * KmsClient::getParametersForImport(const GetPara
  * and you can use the CMK. After you successfully import key material into a CMK, you can reimport the same key material
  * into that CMK, but you cannot import different key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -777,7 +777,7 @@ ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterial
  * not associated with a CMK, the alias does not count against the <a
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html#aliases-limit">alias limit</a> for your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -795,7 +795,7 @@ ListAliasesResponse * KmsClient::listAliases(const ListAliasesRequest &request)
  *
  * To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -811,7 +811,7 @@ ListGrantsResponse * KmsClient::listGrants(const ListGrantsRequest &request)
  * policy names that you can use in a <a>GetKeyPolicy</a> operation. However, the only valid policy name is
  * <code>default</code>. You cannot perform this operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -825,7 +825,7 @@ ListKeyPoliciesResponse * KmsClient::listKeyPolicies(const ListKeyPoliciesReques
 /**
  * Gets a list of all customer master keys (CMKs) in the caller's AWS account and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -843,7 +843,7 @@ ListKeysResponse * KmsClient::listKeys(const ListKeysRequest &request)
  *
  * You cannot perform this operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -861,7 +861,7 @@ ListResourceTagsResponse * KmsClient::listResourceTags(const ListResourceTagsReq
  *
  * A typical use is to list all grants that you are able to retire. To retire a grant, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -882,7 +882,7 @@ ListRetirableGrantsResponse * KmsClient::listRetirableGrants(const ListRetirable
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key Policies</a> in the <i>AWS Key
  * Management Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -912,7 +912,7 @@ PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &reques
  * console, but you must include it manually when you create a CMK programmatically or when you set a key policy with the
  * <a>PutKeyPolicy</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -945,7 +945,7 @@ ReEncryptResponse * KmsClient::reEncrypt(const ReEncryptRequest &request)
  * Name (ARN) of the customer master key (CMK). A grant token is a unique variable-length base64-encoded string. A grant ID
  * is a 64 character unique identifier of a grant. The <a>CreateGrant</a> operation returns
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -964,7 +964,7 @@ RetireGrantResponse * KmsClient::retireGrant(const RetireGrantRequest &request)
  *
  * To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -997,7 +997,7 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
  * href="http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
  * <i>AWS Key Management Service Developer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1030,7 +1030,7 @@ ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDe
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag
  * Restrictions</a> in the <i>AWS Billing and Cost Management User
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1050,7 +1050,7 @@ TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
  * To remove a tag, you specify the tag key for each tag to remove. You do not specify the tag value. To overwrite the tag
  * value for an existing tag, use
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1083,7 +1083,7 @@ UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &req
  * contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). Alias names cannot begin
  * with <code>aws</code>; that alias name prefix is reserved by Amazon Web Services
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *
@@ -1101,7 +1101,7 @@ UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
  *
  * You cannot perform this operation on a CMK in a different AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Key Management Service.
  *
  * @return A pointer to a related response object.
  *

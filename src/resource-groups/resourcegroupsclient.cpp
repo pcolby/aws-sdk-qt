@@ -136,7 +136,7 @@ ResourceGroupsClient::ResourceGroupsClient(
 /**
  * Creates a group with a specified name, description, and resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -151,7 +151,7 @@ CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest
  * Deletes a specified resource group. Deleting a resource group does not delete resources that are members of the group;
  * it only deletes the group
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -165,7 +165,7 @@ DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest
 /**
  * Returns information about a specified resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -179,7 +179,7 @@ GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request
 /**
  * Returns the resource query associated with the specified resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -193,7 +193,7 @@ GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryR
 /**
  * Returns a list of tags that are associated with a resource, specified by an
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -207,7 +207,7 @@ GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
 /**
  * Returns a list of ARNs of resources that are members of a specified resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const List
 /**
  * Returns a list of existing resource groups in your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -236,7 +236,7 @@ ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &r
  * Returns a list of AWS resource identifiers that matches a specified query. The query uses the same format as a resource
  * query in a CreateGroup or UpdateGroupQuery
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -251,7 +251,7 @@ SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchReso
  * Adds specified tags to a resource with the specified ARN. Existing tags on a resource are not changed if they are not
  * specified in the request
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -265,7 +265,7 @@ TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
 /**
  * Deletes specified tags from a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -279,7 +279,7 @@ UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
 /**
  * Updates an existing group with a new or changed description. You cannot update the name of a resource
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *
@@ -293,7 +293,7 @@ UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest
 /**
  * Updates the resource query of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to AWS Resource Groups.
  *
  * @return A pointer to a related response object.
  *

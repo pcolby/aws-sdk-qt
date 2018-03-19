@@ -91,7 +91,7 @@ PinpointClient::PinpointClient(
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -104,7 +104,7 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -117,7 +117,7 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -130,7 +130,7 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -182,7 +182,7 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -195,7 +195,7 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -208,7 +208,7 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -221,7 +221,7 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -234,7 +234,7 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -247,7 +247,7 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -260,7 +260,7 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -273,7 +273,7 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -286,7 +286,7 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -299,7 +299,7 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -312,7 +312,7 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -325,7 +325,7 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -338,7 +338,7 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -351,7 +351,7 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -364,7 +364,7 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -377,7 +377,7 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -390,7 +390,7 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -403,7 +403,7 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -416,7 +416,7 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -429,7 +429,7 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -442,7 +442,7 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -455,7 +455,7 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -468,7 +468,7 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -481,7 +481,7 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -494,7 +494,7 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -507,7 +507,7 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -520,7 +520,7 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -533,7 +533,7 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -546,7 +546,7 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -559,7 +559,7 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -572,7 +572,7 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -585,7 +585,7 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -598,7 +598,7 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -611,7 +611,7 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -624,7 +624,7 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -637,7 +637,7 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -650,7 +650,7 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -663,7 +663,7 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -676,7 +676,7 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -689,7 +689,7 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -702,7 +702,7 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -715,7 +715,7 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -728,7 +728,7 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -741,7 +741,7 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -754,7 +754,7 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -767,7 +767,7 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -780,7 +780,7 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -793,7 +793,7 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -806,7 +806,7 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -819,7 +819,7 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -832,7 +832,7 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -845,7 +845,7 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -858,7 +858,7 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -871,7 +871,7 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -884,7 +884,7 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -897,7 +897,7 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -910,7 +910,7 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *
@@ -923,7 +923,7 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Pinpoint.
  *
  * @return A pointer to a related response object.
  *

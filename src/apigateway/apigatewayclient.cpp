@@ -99,7 +99,7 @@ APIGatewayClient::APIGatewayClient(
  *
  * </p <div class="seeAlso"><a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -115,7 +115,7 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
  *
  * resource> <div class="seeAlso"><a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -129,7 +129,7 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
 /**
  * Creates a new <a>BasePathMapping</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -143,7 +143,7 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
 /**
  * Creates a <a>Deployment</a> resource, which makes a specified <a>RestApi</a> callable over the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -156,7 +156,7 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -169,7 +169,7 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -183,7 +183,7 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
 /**
  * Creates a new domain
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -197,7 +197,7 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
 /**
  * Adds a new <a>Model</a> resource to an existing <a>RestApi</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -211,7 +211,7 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
 /**
  * Creates a <a>ReqeustValidator</a> of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -225,7 +225,7 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
 /**
  * Creates a <a>Resource</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -239,7 +239,7 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
 /**
  * Creates a new <a>RestApi</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -253,7 +253,7 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
 /**
  * Creates a new <a>Stage</a> resource that references a pre-existing <a>Deployment</a> for the API.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -267,7 +267,7 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
 /**
  * Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -281,7 +281,7 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
 /**
  * Creates a usage plan key for adding an existing API key to a usage
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -296,7 +296,7 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
  * Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes
  * 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -310,7 +310,7 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
 /**
  * Deletes the <a>ApiKey</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -326,7 +326,7 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
  *
  * resource> <div class="seeAlso"><a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -340,7 +340,7 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
 /**
  * Deletes the <a>BasePathMapping</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -354,7 +354,7 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
 /**
  * Deletes the <a>ClientCertificate</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -369,7 +369,7 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
  * Deletes a <a>Deployment</a> resource. Deleting a deployment will only succeed if there are no <a>Stage</a> resources
  * associated with
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -382,7 +382,7 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -395,7 +395,7 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -409,7 +409,7 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
 /**
  * Deletes the <a>DomainName</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -424,7 +424,7 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
  * Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a> and resets
  * it with the default
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -438,7 +438,7 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
 /**
  * Represents a delete
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -452,7 +452,7 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
 /**
  * Represents a delete integration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -466,7 +466,7 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
 /**
  * Deletes an existing <a>Method</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -480,7 +480,7 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
 /**
  * Deletes an existing <a>MethodResponse</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -494,7 +494,7 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
 /**
  * Deletes a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -508,7 +508,7 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
 /**
  * Deletes a <a>RequestValidator</a> of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -522,7 +522,7 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
 /**
  * Deletes a <a>Resource</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -536,7 +536,7 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
 /**
  * Deletes the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -550,7 +550,7 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
 /**
  * Deletes a <a>Stage</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -564,7 +564,7 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
 /**
  * Deletes a usage plan of a given plan
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -578,7 +578,7 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
 /**
  * Deletes a usage plan key and remove the underlying API key from the associated usage
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -592,7 +592,7 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
 /**
  * Deletes an existing <a>VpcLink</a> of a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -606,7 +606,7 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
 /**
  * Flushes all authorizer cache entries on a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -620,7 +620,7 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
 /**
  * Flushes a stage's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -634,7 +634,7 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
 /**
  * Generates a <a>ClientCertificate</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -648,7 +648,7 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
 /**
  * Gets information about the current <a>Account</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -662,7 +662,7 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
 /**
  * Gets information about the current <a>ApiKey</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -676,7 +676,7 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 /**
  * Gets information about the current <a>ApiKeys</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -692,7 +692,7 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
  *
  * resource> <div class="seeAlso"><a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -708,7 +708,7 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
  *
  * resource> <div class="seeAlso"><a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -722,7 +722,7 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
 /**
  * Describe a <a>BasePathMapping</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -736,7 +736,7 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
 /**
  * Represents a collection of <a>BasePathMapping</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -750,7 +750,7 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
 /**
  * Gets information about the current <a>ClientCertificate</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -764,7 +764,7 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
 /**
  * Gets a collection of <a>ClientCertificate</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -778,7 +778,7 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
 /**
  * Gets information about a <a>Deployment</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -792,7 +792,7 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
 /**
  * Gets information about a <a>Deployments</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -805,7 +805,7 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -818,7 +818,7 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -831,7 +831,7 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -844,7 +844,7 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -858,7 +858,7 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
 /**
  * Represents a domain name that is contained in a simpler, more intuitive URL that can be
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -872,7 +872,7 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
 /**
  * Represents a collection of <a>DomainName</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -886,7 +886,7 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
 /**
  * Exports a deployed version of a <a>RestApi</a> in a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -900,7 +900,7 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 /**
  * Gets a <a>GatewayResponse</a> of a specified response type on the given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -916,7 +916,7 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
  * definitions for gateway responses, the result will be the API Gateway-generated default <a>GatewayResponses</a>
  * collection for the supported response
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -930,7 +930,7 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
 /**
  * Get the integration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -944,7 +944,7 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
 /**
  * Represents a get integration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -958,7 +958,7 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
 /**
  * Describe an existing <a>Method</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -972,7 +972,7 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 /**
  * Describes a <a>MethodResponse</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -986,7 +986,7 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
 /**
  * Describes an existing model defined for a <a>RestApi</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1000,7 +1000,7 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 /**
  * Generates a sample mapping template that can be used to transform a payload into the structure of a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1014,7 +1014,7 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
 /**
  * Describes existing <a>Models</a> defined for a <a>RestApi</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1028,7 +1028,7 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 /**
  * Gets a <a>RequestValidator</a> of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1042,7 +1042,7 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
 /**
  * Gets the <a>RequestValidators</a> collection of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1056,7 +1056,7 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
 /**
  * Lists information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1070,7 +1070,7 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
 /**
  * Lists information about a collection of <a>Resource</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1084,7 +1084,7 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
 /**
  * Lists the <a>RestApi</a> resource in the
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1098,7 +1098,7 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
 /**
  * Lists the <a>RestApis</a> resources for your
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1112,7 +1112,7 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
 /**
  * Generates a client SDK for a <a>RestApi</a> and
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1125,7 +1125,7 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1138,7 +1138,7 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1152,7 +1152,7 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
 /**
  * Gets information about a <a>Stage</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1166,7 +1166,7 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 /**
  * Gets information about one or more <a>Stage</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1180,7 +1180,7 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 /**
  * Gets the Tags collection for a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1194,7 +1194,7 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 /**
  * Gets the usage data of a usage plan in a specified time
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1208,7 +1208,7 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 /**
  * Gets a usage plan of a given plan
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1222,7 +1222,7 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
 /**
  * Gets a usage plan key of a given key
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1236,7 +1236,7 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
 /**
  * Gets all the usage plan keys representing the API keys added to a specified usage
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1250,7 +1250,7 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
 /**
  * Gets all the usage plans of the caller's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1264,7 +1264,7 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
 /**
  * Gets a specified VPC link under the caller's account in a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1278,7 +1278,7 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
 /**
  * Gets the <a>VpcLinks</a> collection under the caller's account in a selected
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1292,7 +1292,7 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
 /**
  * Import API keys from an external source, such as a CSV-formatted
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1305,7 +1305,7 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1319,7 +1319,7 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
 /**
  * A feature of the API Gateway control service for creating a new API from an external API definition
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1333,7 +1333,7 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
 /**
  * Creates a customization of a <a>GatewayResponse</a> of a specified response type and status code on the given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1347,7 +1347,7 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
 /**
  * Sets up a method's
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1361,7 +1361,7 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
 /**
  * Represents a put
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1375,7 +1375,7 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
 /**
  * Add a method to an existing <a>Resource</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1389,7 +1389,7 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 /**
  * Adds a <a>MethodResponse</a> to an existing <a>Method</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1404,7 +1404,7 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
  * A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The
  * update can take the form of merging the supplied definition into the existing API or overwriting the existing
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1418,7 +1418,7 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
 /**
  * Adds or updates Tags on a gievn
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1435,7 +1435,7 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  * body> <div class="seeAlso"> <a
  * href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1449,7 +1449,7 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
 /**
  * Simulate the execution of a <a>Method</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1463,7 +1463,7 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
 /**
  * Removes Tags from a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1477,7 +1477,7 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
 /**
  * Changes information about the current <a>Account</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1491,7 +1491,7 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
 /**
  * Changes information about an <a>ApiKey</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1507,7 +1507,7 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
  *
  * resource> <div class="seeAlso"><a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1521,7 +1521,7 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
 /**
  * Changes information about the <a>BasePathMapping</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1535,7 +1535,7 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
 /**
  * Changes information about an <a>ClientCertificate</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1549,7 +1549,7 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
 /**
  * Changes information about a <a>Deployment</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1562,7 +1562,7 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1575,7 +1575,7 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
 
 /**
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1589,7 +1589,7 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
 /**
  * Changes information about the <a>DomainName</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1603,7 +1603,7 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
 /**
  * Updates a <a>GatewayResponse</a> of a specified response type on the given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1617,7 +1617,7 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
 /**
  * Represents an update
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1631,7 +1631,7 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
 /**
  * Represents an update integration
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1645,7 +1645,7 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
 /**
  * Updates an existing <a>Method</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1659,7 +1659,7 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
 /**
  * Updates an existing <a>MethodResponse</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1673,7 +1673,7 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
 /**
  * Changes information about a
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1687,7 +1687,7 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
 /**
  * Updates a <a>RequestValidator</a> of a given
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1701,7 +1701,7 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
 /**
  * Changes information about a <a>Resource</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1715,7 +1715,7 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
 /**
  * Changes information about the specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1729,7 +1729,7 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
 /**
  * Changes information about a <a>Stage</a>
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1743,7 +1743,7 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
 /**
  * Grants a temporary extension to the remaining quota of a usage plan associated with a specified API
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1757,7 +1757,7 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
 /**
  * Updates a usage plan of a given plan
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *
@@ -1771,7 +1771,7 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
 /**
  * Updates an existing <a>VpcLink</a> of a specified
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon API Gateway.
  *
  * @return A pointer to a related response object.
  *

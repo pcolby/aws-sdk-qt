@@ -104,7 +104,7 @@ KinesisClient::KinesisClient(
  *
  * <a>AddTagsToStream</a> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -168,7 +168,7 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  *
  * <a>CreateStream</a> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -188,7 +188,7 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
  * This operation may result in lost data. For example, if the stream's retention period is 48 hours and is decreased to 24
  * hours, any data already in the stream that is older than 24 hours is
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -226,7 +226,7 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
  *
  * <a>DeleteStream</a> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -248,7 +248,7 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
  *
  * This operation has a limit of one transaction per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -285,7 +285,7 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
  *
  * This operation has a limit of 10 transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -304,7 +304,7 @@ DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamReque
  * The information returned includes the stream name, Amazon Resource Name (ARN), status, record retention period,
  * approximate creation time, monitoring, encryption details, and open shard count.
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -318,7 +318,7 @@ DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const Descr
 /**
  * Disables enhanced
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -332,7 +332,7 @@ DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(con
 /**
  * Enables enhanced Kinesis data stream monitoring for shard-level
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -398,7 +398,7 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
  * precision. There are no guarantees about the time stamp accuracy, or that the time stamp is always increasing. For
  * example, records in a shard or across a stream might have time stamps that are out of
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -453,7 +453,7 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
  *
  * <a>GetShardIterator</a> has a limit of five transactions per second per account per open
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -475,7 +475,7 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
  * retention period) accessible after the operation has been called. For example, if a stream's retention period is set to
  * 24 hours and is increased to 168 hours, any data that is older than 24 hours remains inaccessible to consumer
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -496,7 +496,7 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
  * information, see <a href="https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html">Controlling Access to
  * Amazon Kinesis Data Streams Resources Using
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -528,7 +528,7 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
  *
  * <a>ListStreams</a> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -542,7 +542,7 @@ ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &reque
 /**
  * Lists the tags for the specified Kinesis data stream. This operation has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -600,7 +600,7 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  *
  * <code>MergeShards</code> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -664,7 +664,7 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -747,7 +747,7 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
  * By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use
  * <a>IncreaseStreamRetentionPeriod</a> or <a>DecreaseStreamRetentionPeriod</a> to modify this retention
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -770,7 +770,7 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
  *
  * <a>RemoveTagsFromStream</a> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -841,7 +841,7 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  *
  * <code>SplitShard</code> has a limit of five transactions per second per
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -874,7 +874,7 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  * the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting the API
  * response from <code>PutRecord</code> or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -907,7 +907,7 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
  * the stream are no longer subject to encryption. After you disabled encryption, you can verify that encryption is not
  * applied by inspecting the API response from <code>PutRecord</code> or
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
@@ -970,7 +970,7 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
  * or your overall shard limit, use the <a
  * href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-kinesis">limits
  *
- * @param  request Request to send to {{servicename}}.
+ * @param  request Request to send to Amazon Kinesis.
  *
  * @return A pointer to a related response object.
  *
