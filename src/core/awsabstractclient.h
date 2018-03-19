@@ -43,10 +43,13 @@ public:
 
     virtual ~AwsAbstractClient();
 
+    QString apiVersion() const;
     QUrl endpoint() const;
+    QString endpointPrefix() const;
     QNetworkAccessManager * networkAccessManager() const;
     AwsRegion::Region region() const;
     virtual AwsAbstractResponse * send(const AwsAbstractRequest &request);
+    QString serviceFullName() const;
     QString serviceName() const;
 
     void setCredentials(AwsAbstractCredentials * const credentials);

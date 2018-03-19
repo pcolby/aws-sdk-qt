@@ -76,6 +76,21 @@ AwsAbstractClient::~AwsAbstractClient()
 }
 
 /**
+ * @brief  Get the serivce API version this client implementts.
+ *
+ * @return An Amazon service API version, such as "2012-11-05".
+ *
+ * @see  endpoint
+ * @see  serviceName
+ */
+QString AwsAbstractClient::apiVersion() const
+{
+    Q_D(const AwsAbstractClient);
+    Q_ASSERT(!d->endpointPrefix.isEmpty());
+    return d->endpointPrefix;
+}
+
+/**
  * @brief  Get the endpoint associated with this AWS client.
  *
  * If a valid QUrl has been set (usually via setEndpoint), then this base
@@ -93,9 +108,28 @@ AwsAbstractClient::~AwsAbstractClient()
  */
 QUrl AwsAbstractClient::endpoint() const
 {
+    /// @todo Use endpointPrefix here.
     Q_D(const AwsAbstractClient);
     return (d->endpoint.isValid()) ? d->endpoint :
         AwsEndpoint::getEndpoint(AwsRegion::name(region()), serviceName());
+}
+
+/**
+ * @brief  Get the endpoint prefix associated with this AWS client.
+ *
+ * This is the standard endpoint prefix associated with this AWS service, is not
+ * affected by any explicit endpoint URL that may have beem set via setEndpoint.
+ *
+ * @return An Amazon service endpoint prefix, such as "sqs" or "sns".
+ *
+ * @see  endpoint
+ * @see  serviceName
+ */
+QString AwsAbstractClient::endpointPrefix() const
+{
+    Q_D(const AwsAbstractClient);
+    Q_ASSERT(!d->endpointPrefix.isEmpty());
+    return d->endpointPrefix;
 }
 
 /**
@@ -164,13 +198,23 @@ AwsAbstractResponse * AwsAbstractClient::send(const AwsAbstractRequest &request)
 }
 
 /**
+ * @brief  Get the full name of the Amazon service this client accesses.
+ *
+ * @return An Amazon full service name, such as "Amazon Simple Queue Service".
+ */
+QString AwsAbstractClient::serviceFullName() const
+{
+    Q_D(const AwsAbstractClient);
+    Q_ASSERT(!d->serviceFullName.isEmpty());
+    return d->serviceFullName;
+}
+
+/**
  * @brief  Get the name of the Amazon service this client accesses.
  *
- * This base implementation simply returns the name set via setServiceName.
+ * This is name is suitable for generating V4 signatures.
  *
  * @return An Amazon service name, such as "sqs" or "sns".
- *
- * @see  setServiceName
  */
 QString AwsAbstractClient::serviceName() const
 {
