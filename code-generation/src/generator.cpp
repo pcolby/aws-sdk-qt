@@ -62,10 +62,7 @@ bool Generator::generate(const QString &serviceFileName,
         + QLatin1String("Client");
 
     Grantlee::Context context;
-    for (auto iter = metaData.constBegin(); iter != metaData.constEnd(); ++iter) {
-        qDebug() << "metadata" << iter.key() << iter.value();
-        context.insert(iter.key(), iter.value());
-    }
+    context.insert(QLatin1String("metadata"), metaData.toVariantMap());
     context.insert(QLatin1String("TargetLibName"), serviceFileName);
     context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
     context.insert(QLatin1String("ClassName"), className);

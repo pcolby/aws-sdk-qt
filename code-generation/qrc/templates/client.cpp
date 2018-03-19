@@ -59,7 +59,7 @@ namespace {{NameSpaceName}} {
     d->networkAccessManager = manager;
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
-    d->serviceName = QStringLiteral("{% if signingName %}{{ signingName }}{% else %}{{ endpointPrefix }}{% endif %}");
+    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
 }
 
 /**
@@ -91,10 +91,10 @@ namespace {{NameSpaceName}} {
     d->networkAccessManager = manager;
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
-    d->serviceName = QStringLiteral("{% if signingName %}{{ signingName }}{% else %}{{ endpointPrefix }}{% endif %}");
+    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
 }
 
-/// @todo override getEndpoint() to use {{endpointPrefix}}.
+/// @todo override getEndpoint() to use {{metadata.endpointPrefix}}.
 
 {% for f in OperationSignatures %}
 /**
@@ -102,7 +102,7 @@ namespace {{NameSpaceName}} {
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
- * @param  request Request to send to {{serviceFullName}}.
+ * @param  request Request to send to {{metadata.serviceFullName}}.
  *
  * @return A pointer to a related response object.
  *
@@ -132,7 +132,7 @@ namespace {{NameSpaceName}} {
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : AwsAbstractClientPrivate(q)
 {
-    signature = new AwsSignature{{signatureVersion|upper}}();
+    signature = new AwsSignature{{metadata.signatureVersion|upper}}();
 }
 
 } // namespace {{NameSpaceName}}
