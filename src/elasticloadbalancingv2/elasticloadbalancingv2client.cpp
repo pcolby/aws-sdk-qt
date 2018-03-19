@@ -161,8 +161,6 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
-/// @todo override getEndpoint() to use elasticloadbalancing.
-
 /**
  * Adds the specified certificate to the specified secure
  *

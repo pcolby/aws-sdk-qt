@@ -95,8 +95,6 @@ MqClient::MqClient(
     d->serviceName = QStringLiteral("mq");
 }
 
-/// @todo override getEndpoint() to use mq.
-
 /**
  *
  * @param  request Request to send to AmazonMQ.

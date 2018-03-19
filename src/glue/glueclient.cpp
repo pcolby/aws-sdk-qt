@@ -96,8 +96,6 @@ GlueClient::GlueClient(
     d->serviceName = QStringLiteral("glue");
 }
 
-/// @todo override getEndpoint() to use glue.
-
 /**
  * Creates one or more partitions in a batch
  *

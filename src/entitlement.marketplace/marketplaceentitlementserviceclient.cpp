@@ -110,8 +110,6 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/// @todo override getEndpoint() to use entitlement.marketplace.
-
 /**
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product

@@ -123,8 +123,6 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
-/// @todo override getEndpoint() to use metering.marketplace.
-
 /**
  * BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of
  *

@@ -94,8 +94,6 @@ TranscribeServiceClient::TranscribeServiceClient(
     d->serviceName = QStringLiteral("transcribe");
 }
 
-/// @todo override getEndpoint() to use transcribe.
-
 /**
  * Returns information about a transcription job. To see the status of the job, check the <code>Status</code> field. If the
  * status is <code>COMPLETE</code>, the job is finished and you can find the results at the location specified in the

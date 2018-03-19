@@ -99,8 +99,6 @@ ServiceCatalogClient::ServiceCatalogClient(
     d->serviceName = QStringLiteral("servicecatalog");
 }
 
-/// @todo override getEndpoint() to use servicecatalog.
-
 /**
  * Accepts an offer to share the specified
  *

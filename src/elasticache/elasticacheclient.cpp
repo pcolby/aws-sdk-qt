@@ -107,8 +107,6 @@ ElastiCacheClient::ElastiCacheClient(
     d->serviceName = QStringLiteral("elasticache");
 }
 
-/// @todo override getEndpoint() to use elasticache.
-
 /**
  * Adds up to 50 cost allocation tags to the named resource. A cost allocation tag is a key-value pair where the key and
  * value are case-sensitive. You can use cost allocation tags to categorize and track your AWS

@@ -154,8 +154,6 @@ HealthClient::HealthClient(
     d->serviceName = QStringLiteral("health");
 }
 
-/// @todo override getEndpoint() to use health.
-
 /**
  * Returns a list of entities that have been affected by the specified events, based on the specified filter criteria.
  * Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on

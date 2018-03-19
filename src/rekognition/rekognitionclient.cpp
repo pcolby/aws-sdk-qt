@@ -94,8 +94,6 @@ RekognitionClient::RekognitionClient(
     d->serviceName = QStringLiteral("rekognition");
 }
 
-/// @todo override getEndpoint() to use rekognition.
-
 /**
  * Compares a face in the <i>source</i> input image with each of the 100 largest faces detected in the <i>target</i> input
  * image.

@@ -162,8 +162,6 @@ StorageGatewayClient::StorageGatewayClient(
     d->serviceName = QStringLiteral("storagegateway");
 }
 
-/// @todo override getEndpoint() to use storagegateway.
-
 /**
  * Activates the gateway you previously deployed on your host. In the activation process, you specify information such as
  * the region you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the gateway snapshot

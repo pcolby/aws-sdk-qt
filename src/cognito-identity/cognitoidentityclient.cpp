@@ -131,8 +131,6 @@ CognitoIdentityClient::CognitoIdentityClient(
     d->serviceName = QStringLiteral("cognito-identity");
 }
 
-/// @todo override getEndpoint() to use cognito-identity.
-
 /**
  * Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS
  * account. The limit on identity pools is 60 per account. The keys for <code>SupportedLoginProviders</code> are as

@@ -157,8 +157,6 @@ RdsClient::RdsClient(
     d->serviceName = QStringLiteral("rds");
 }
 
-/// @todo override getEndpoint() to use rds.
-
 /**
  * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon

@@ -235,8 +235,6 @@ OrganizationsClient::OrganizationsClient(
     d->serviceName = QStringLiteral("organizations");
 }
 
-/// @todo override getEndpoint() to use organizations.
-
 /**
  * Sends a response to the originator of a handshake agreeing to the action proposed by the handshake request.
  *

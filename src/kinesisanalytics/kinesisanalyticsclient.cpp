@@ -93,8 +93,6 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
     d->serviceName = QStringLiteral("kinesisanalytics");
 }
 
-/// @todo override getEndpoint() to use kinesisanalytics.
-
 /**
  * Adds a CloudWatch log stream to monitor application configuration errors. For more information about using CloudWatch
  * log streams with Amazon Kinesis Analytics applications, see <a

@@ -95,8 +95,6 @@ MigrationHubClient::MigrationHubClient(
     d->serviceName = QStringLiteral("mgh");
 }
 
-/// @todo override getEndpoint() to use mgh.
-
 /**
  * Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task
  * performed by a migration tool. This API has the following

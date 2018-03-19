@@ -94,8 +94,6 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/// @todo override getEndpoint() to use runtime.sagemaker.
-
 /**
  * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API
  * to get inferences from the model hosted at the specified endpoint.

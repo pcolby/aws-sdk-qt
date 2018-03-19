@@ -94,8 +94,6 @@ Route53DomainsClient::Route53DomainsClient(
     d->serviceName = QStringLiteral("route53domains");
 }
 
-/// @todo override getEndpoint() to use route53domains.
-
 /**
  * This operation checks the availability of one domain name. Note that if the availability status of a domain is pending,
  * you must submit another request to determine the availability of the domain

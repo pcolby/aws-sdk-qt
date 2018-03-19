@@ -102,8 +102,6 @@ AcmClient::AcmClient(
     d->serviceName = QStringLiteral("acm");
 }
 
-/// @todo override getEndpoint() to use acm.
-
 /**
  * Adds one or more tags to an ACM Certificate. Tags are labels that you can use to identify and organize your AWS
  * resources. Each tag consists of a <code>key</code> and an optional <code>value</code>. You specify the certificate on

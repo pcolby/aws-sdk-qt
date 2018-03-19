@@ -192,8 +192,6 @@ KmsClient::KmsClient(
     d->serviceName = QStringLiteral("kms");
 }
 
-/// @todo override getEndpoint() to use kms.
-
 /**
  * Cancels the deletion of a customer master key (CMK). When this operation is successful, the CMK is set to the
  * <code>Disabled</code> state. To enable a CMK, use <a>EnableKey</a>. You cannot perform this operation on a CMK in a

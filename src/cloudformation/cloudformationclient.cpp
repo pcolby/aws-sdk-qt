@@ -115,8 +115,6 @@ CloudFormationClient::CloudFormationClient(
     d->serviceName = QStringLiteral("cloudformation");
 }
 
-/// @todo override getEndpoint() to use cloudformation.
-
 /**
  * Cancels an update on the specified stack. If the call completes successfully, the stack rolls back the update and
  * reverts to the previous stack

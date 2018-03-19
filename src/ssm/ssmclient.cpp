@@ -117,8 +117,6 @@ SsmClient::SsmClient(
     d->serviceName = QStringLiteral("ssm");
 }
 
-/// @todo override getEndpoint() to use ssm.
-
 /**
  * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,
  * managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize

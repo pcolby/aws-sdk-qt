@@ -96,8 +96,6 @@ KinesisClient::KinesisClient(
     d->serviceName = QStringLiteral("kinesis");
 }
 
-/// @todo override getEndpoint() to use kinesis.
-
 /**
  * Adds or updates tags for the specified Kinesis data stream. Each stream can have up to 10
  *

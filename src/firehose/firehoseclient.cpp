@@ -97,8 +97,6 @@ FirehoseClient::FirehoseClient(
     d->serviceName = QStringLiteral("firehose");
 }
 
-/// @todo override getEndpoint() to use firehose.
-
 /**
  * Creates a delivery
  *

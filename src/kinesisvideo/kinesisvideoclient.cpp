@@ -93,8 +93,6 @@ KinesisVideoClient::KinesisVideoClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/// @todo override getEndpoint() to use kinesisvideo.
-
 /**
  * Creates a new Kinesis video stream.
  *

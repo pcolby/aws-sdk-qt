@@ -104,8 +104,6 @@ IoTClient::IoTClient(
     d->serviceName = QStringLiteral("execute-api");
 }
 
-/// @todo override getEndpoint() to use iot.
-
 /**
  * Accepts a pending certificate transfer. The default state of the certificate is
  *

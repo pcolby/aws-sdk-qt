@@ -100,8 +100,6 @@ PollyClient::PollyClient(
     d->serviceName = QStringLiteral("polly");
 }
 
-/// @todo override getEndpoint() to use polly.
-
 /**
  * Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available
  * for speech synthesis, nor is it possible to retrieve it using either the <code>GetLexicon</code> or

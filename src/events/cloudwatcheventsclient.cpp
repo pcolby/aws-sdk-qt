@@ -116,8 +116,6 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     d->serviceName = QStringLiteral("events");
 }
 
-/// @todo override getEndpoint() to use events.
-
 /**
  * Deletes the specified
  *

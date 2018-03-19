@@ -102,8 +102,6 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->serviceName = QStringLiteral("autoscaling-plans");
 }
 
-/// @todo override getEndpoint() to use autoscaling.
-
 /**
  * Creates a scaling
  *

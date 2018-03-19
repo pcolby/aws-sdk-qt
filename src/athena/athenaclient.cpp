@@ -105,8 +105,6 @@ AthenaClient::AthenaClient(
     d->serviceName = QStringLiteral("athena");
 }
 
-/// @todo override getEndpoint() to use athena.
-
 /**
  * Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID
  * strings. Use <a>ListNamedQueries</a> to get the list of named query IDs. If information could not be retrieved for a

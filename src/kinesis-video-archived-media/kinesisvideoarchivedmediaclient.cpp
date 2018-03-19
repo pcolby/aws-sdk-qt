@@ -93,8 +93,6 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/// @todo override getEndpoint() to use kinesisvideo.
-
 /**
  * Gets media for a list of fragments (specified by fragment number) from the archived data in a Kinesis video
  *

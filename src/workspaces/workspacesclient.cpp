@@ -96,8 +96,6 @@ WorkSpacesClient::WorkSpacesClient(
     d->serviceName = QStringLiteral("workspaces");
 }
 
-/// @todo override getEndpoint() to use workspaces.
-
 /**
  * Creates tags for the specified
  *

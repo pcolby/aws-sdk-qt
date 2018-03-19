@@ -137,8 +137,6 @@ ResourceGroupsClient::ResourceGroupsClient(
     d->serviceName = QStringLiteral("resource-groups");
 }
 
-/// @todo override getEndpoint() to use resource-groups.
-
 /**
  * Creates a group with a specified name, description, and resource
  *

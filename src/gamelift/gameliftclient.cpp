@@ -529,8 +529,6 @@ GameLiftClient::GameLiftClient(
     d->serviceName = QStringLiteral("gamelift");
 }
 
-/// @todo override getEndpoint() to use gamelift.
-
 /**
  * Registers a player's acceptance or rejection of a proposed FlexMatch match. A matchmaking configuration may require
  * player acceptance; if so, then matches built with that configuration cannot be completed unless all players accept the

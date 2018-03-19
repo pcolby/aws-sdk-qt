@@ -122,8 +122,6 @@ WorkDocsClient::WorkDocsClient(
     d->serviceName = QStringLiteral("workdocs");
 }
 
-/// @todo override getEndpoint() to use workdocs.
-
 /**
  * Aborts the upload of the specified document version that was previously initiated by
  * <a>InitiateDocumentVersionUpload</a>. The client should make this call only when it no longer intends to upload the

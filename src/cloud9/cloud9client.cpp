@@ -147,8 +147,6 @@ Cloud9Client::Cloud9Client(
     d->serviceName = QStringLiteral("cloud9");
 }
 
-/// @todo override getEndpoint() to use cloud9.
-
 /**
  * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
  * connects from the instance to the

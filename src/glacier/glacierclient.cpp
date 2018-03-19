@@ -131,8 +131,6 @@ GlacierClient::GlacierClient(
     d->serviceName = QStringLiteral("glacier");
 }
 
-/// @todo override getEndpoint() to use glacier.
-
 /**
  * This operation aborts a multipart upload identified by the upload
  *

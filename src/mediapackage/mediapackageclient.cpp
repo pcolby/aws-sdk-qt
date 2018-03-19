@@ -93,8 +93,6 @@ MediaPackageClient::MediaPackageClient(
     d->serviceName = QStringLiteral("mediapackage");
 }
 
-/// @todo override getEndpoint() to use mediapackage.
-
 /**
  *
  * @param  request Request to send to AWS Elemental MediaPackage.

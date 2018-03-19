@@ -256,8 +256,6 @@ CodePipelineClient::CodePipelineClient(
     d->serviceName = QStringLiteral("codepipeline");
 }
 
-/// @todo override getEndpoint() to use codepipeline.
-
 /**
  * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
  *

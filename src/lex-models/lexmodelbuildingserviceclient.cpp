@@ -97,8 +97,6 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     d->serviceName = QStringLiteral("lex");
 }
 
-/// @todo override getEndpoint() to use models.lex.
-
 /**
  * Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this
  * resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last

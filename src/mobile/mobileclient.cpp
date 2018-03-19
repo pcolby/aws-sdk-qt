@@ -96,8 +96,6 @@ MobileClient::MobileClient(
     d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
-/// @todo override getEndpoint() to use mobile.
-
 /**
  * Creates an AWS Mobile Hub project.
  *

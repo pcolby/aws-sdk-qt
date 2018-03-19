@@ -97,8 +97,6 @@ Ec2Client::Ec2Client(
     d->serviceName = QStringLiteral("ec2");
 }
 
-/// @todo override getEndpoint() to use ec2.
-
 /**
  * Accepts the Convertible Reserved Instance exchange quote described in the <a>GetReservedInstancesExchangeQuote</a>
  *

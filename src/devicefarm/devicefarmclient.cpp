@@ -95,8 +95,6 @@ DeviceFarmClient::DeviceFarmClient(
     d->serviceName = QStringLiteral("devicefarm");
 }
 
-/// @todo override getEndpoint() to use devicefarm.
-
 /**
  * Creates a device
  *

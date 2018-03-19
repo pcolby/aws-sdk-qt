@@ -158,8 +158,6 @@ IamClient::IamClient(
     d->serviceName = QStringLiteral("iam");
 }
 
-/// @todo override getEndpoint() to use iam.
-
 /**
  * Adds a new client ID (also known as audience) to the list of client IDs already registered for the specified IAM OpenID
  * Connect (OIDC) provider

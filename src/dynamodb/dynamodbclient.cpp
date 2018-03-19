@@ -112,8 +112,6 @@ DynamoDBClient::DynamoDBClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/// @todo override getEndpoint() to use dynamodb.
-
 /**
  * The <code>BatchGetItem</code> operation returns the attributes of one or more items from one or more tables. You
  * identify requested items by primary

@@ -157,8 +157,6 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     d->serviceName = QStringLiteral("discovery");
 }
 
-/// @todo override getEndpoint() to use discovery.
-
 /**
  * Associates one or more configuration items with an
  *

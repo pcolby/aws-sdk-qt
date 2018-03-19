@@ -101,8 +101,6 @@ DirectConnectClient::DirectConnectClient(
     d->serviceName = QStringLiteral("directconnect");
 }
 
-/// @todo override getEndpoint() to use directconnect.
-
 /**
  * Deprecated in favor of
  *

@@ -97,8 +97,6 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->serviceName = QStringLiteral("servicediscovery");
 }
 
-/// @todo override getEndpoint() to use servicediscovery.
-
 /**
  * Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC. The namespace
  * defines your service naming scheme. For example, if you name your namespace <code>example.com</code> and name your

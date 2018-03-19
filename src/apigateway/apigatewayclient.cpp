@@ -98,8 +98,6 @@ APIGatewayClient::APIGatewayClient(
     d->serviceName = QStringLiteral("apigateway");
 }
 
-/// @todo override getEndpoint() to use apigateway.
-
 /**
  * Create an <a>ApiKey</a> resource.
  *

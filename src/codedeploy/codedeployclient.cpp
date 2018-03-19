@@ -174,8 +174,6 @@ CodeDeployClient::CodeDeployClient(
     d->serviceName = QStringLiteral("codedeploy");
 }
 
-/// @todo override getEndpoint() to use codedeploy.
-
 /**
  * Adds tags to on-premises
  *

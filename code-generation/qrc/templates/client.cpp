@@ -100,8 +100,6 @@ namespace {{NameSpaceName}} {
     d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
 }
 
-/// @todo override getEndpoint() to use {{metadata.endpointPrefix}}.
-
 {% for f in OperationSignatures %}
 /**
 {% for line in f.documentation %}

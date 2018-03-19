@@ -93,8 +93,6 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 
-/// @todo override getEndpoint() to use marketplacecommerceanalytics.
-
 /**
  * Given a data set type and data set publication date, asynchronously publishes the requested data set to the specified S3
  * bucket and notifies the specified SNS topic once the data is available. Returns a unique request identifier that can be

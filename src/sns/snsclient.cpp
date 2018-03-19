@@ -107,8 +107,6 @@ SnsClient::SnsClient(
     d->serviceName = QStringLiteral("sns");
 }
 
-/// @todo override getEndpoint() to use sns.
-
 /**
  * Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified
  *

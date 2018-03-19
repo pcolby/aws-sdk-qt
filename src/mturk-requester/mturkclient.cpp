@@ -93,8 +93,6 @@ MTurkClient::MTurkClient(
     d->serviceName = QStringLiteral("mturk-requester");
 }
 
-/// @todo override getEndpoint() to use mturk-requester.
-
 /**
  * The <code>AcceptQualificationRequest</code> operation approves a Worker's request for a Qualification.
  *

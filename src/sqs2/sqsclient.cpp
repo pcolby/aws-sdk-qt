@@ -159,8 +159,6 @@ SqsClient::SqsClient(
     d->serviceName = QStringLiteral("sqs");
 }
 
-/// @todo override getEndpoint() to use sqs.
-
 /**
  * Adds a permission to a queue for a specific <a
  * href="http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principal</a>. This allows sharing access to the

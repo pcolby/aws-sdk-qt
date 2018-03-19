@@ -169,8 +169,6 @@ CodeBuildClient::CodeBuildClient(
     d->serviceName = QStringLiteral("codebuild");
 }
 
-/// @todo override getEndpoint() to use codebuild.
-
 /**
  * Deletes one or more
  *

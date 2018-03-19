@@ -99,8 +99,6 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->serviceName = QStringLiteral("iotdata");
 }
 
-/// @todo override getEndpoint() to use data.iot.
-
 /**
  * Deletes the thing shadow for the specified
  *

@@ -107,8 +107,6 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     d->serviceName = QStringLiteral("iot-jobs-data");
 }
 
-/// @todo override getEndpoint() to use data.jobs.iot.
-
 /**
  * Gets details of a job
  *

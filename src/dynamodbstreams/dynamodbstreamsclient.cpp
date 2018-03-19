@@ -126,8 +126,6 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     d->serviceName = QStringLiteral("dynamodb");
 }
 
-/// @todo override getEndpoint() to use streams.dynamodb.
-
 /**
  * Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the
  * composition of its shards, and its corresponding DynamoDB

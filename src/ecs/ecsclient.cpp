@@ -110,8 +110,6 @@ EcsClient::EcsClient(
     d->serviceName = QStringLiteral("ecs");
 }
 
-/// @todo override getEndpoint() to use ecs.
-
 /**
  * Creates a new Amazon ECS cluster. By default, your account receives a <code>default</code> cluster when you launch your
  * first container instance. However, you can create your own cluster with a unique name with the

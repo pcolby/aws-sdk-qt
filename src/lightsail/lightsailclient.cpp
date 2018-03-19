@@ -109,8 +109,6 @@ LightsailClient::LightsailClient(
     d->serviceName = QStringLiteral("lightsail");
 }
 
-/// @todo override getEndpoint() to use lightsail.
-
 /**
  * Allocates a static IP
  *

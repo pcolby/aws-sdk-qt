@@ -98,8 +98,6 @@ AutoScalingClient::AutoScalingClient(
     d->serviceName = QStringLiteral("autoscaling");
 }
 
-/// @todo override getEndpoint() to use autoscaling.
-
 /**
  * Attaches one or more EC2 instances to the specified Auto Scaling
  *

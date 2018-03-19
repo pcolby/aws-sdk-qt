@@ -93,8 +93,6 @@ GuardDutyClient::GuardDutyClient(
     d->serviceName = QStringLiteral("guardduty");
 }
 
-/// @todo override getEndpoint() to use guardduty.
-
 /**
  *
  * @param  request Request to send to Amazon GuardDuty.

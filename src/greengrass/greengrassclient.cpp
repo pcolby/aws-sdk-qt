@@ -96,8 +96,6 @@ GreengrassClient::GreengrassClient(
     d->serviceName = QStringLiteral("greengrass");
 }
 
-/// @todo override getEndpoint() to use greengrass.
-
 /**
  * Associates a role with a group. The role will be used by the AWS Greengrass core in order to access AWS cloud services.
  *

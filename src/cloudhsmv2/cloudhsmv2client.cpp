@@ -95,8 +95,6 @@ CloudHSMV2Client::CloudHSMV2Client(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/// @todo override getEndpoint() to use cloudhsmv2.
-
 /**
  * Creates a new AWS CloudHSM
  *

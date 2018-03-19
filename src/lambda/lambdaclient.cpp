@@ -104,8 +104,6 @@ LambdaClient::LambdaClient(
     d->serviceName = QStringLiteral("lambda");
 }
 
-/// @todo override getEndpoint() to use lambda.
-
 /**
  * Adds a permission to the resource policy associated with the specified AWS Lambda function. You use resource policies to
  * grant permissions to event sources that use <i>push</i> model. In a <i>push</i> model, event sources (such as Amazon S3

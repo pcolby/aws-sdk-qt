@@ -113,8 +113,6 @@ CognitoSyncClient::CognitoSyncClient(
     d->serviceName = QStringLiteral("cognito-sync");
 }
 
-/// @todo override getEndpoint() to use cognito-sync.
-
 /**
  * Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited
  * to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of

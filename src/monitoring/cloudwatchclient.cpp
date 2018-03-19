@@ -107,8 +107,6 @@ CloudWatchClient::CloudWatchClient(
     d->serviceName = QStringLiteral("monitoring");
 }
 
-/// @todo override getEndpoint() to use monitoring.
-
 /**
  * Deletes the specified alarms. In the event of an error, no alarms are
  *

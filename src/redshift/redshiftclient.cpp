@@ -123,8 +123,6 @@ RedshiftClient::RedshiftClient(
     d->serviceName = QStringLiteral("redshift");
 }
 
-/// @todo override getEndpoint() to use redshift.
-
 /**
  * Adds an inbound (ingress) rule to an Amazon Redshift security group. Depending on whether the application accessing your
  * cluster is running on the Internet or an Amazon EC2 instance, you can authorize inbound access to either a Classless

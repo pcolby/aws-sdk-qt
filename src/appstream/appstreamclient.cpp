@@ -96,8 +96,6 @@ AppStreamClient::AppStreamClient(
     d->serviceName = QStringLiteral("appstream");
 }
 
-/// @todo override getEndpoint() to use appstream2.
-
 /**
  * Associates the specified fleet with the specified
  *

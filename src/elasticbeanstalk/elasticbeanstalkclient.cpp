@@ -115,8 +115,6 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
     d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 
-/// @todo override getEndpoint() to use elasticbeanstalk.
-
 /**
  * Cancels in-progress environment configuration update or application version
  *

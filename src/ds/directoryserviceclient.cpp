@@ -107,8 +107,6 @@ DirectoryServiceClient::DirectoryServiceClient(
     d->serviceName = QStringLiteral("ds");
 }
 
-/// @todo override getEndpoint() to use ds.
-
 /**
  * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block
  * to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i> adds this address

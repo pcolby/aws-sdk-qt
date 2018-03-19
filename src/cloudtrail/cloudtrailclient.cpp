@@ -116,8 +116,6 @@ CloudTrailClient::CloudTrailClient(
     d->serviceName = QStringLiteral("cloudtrail");
 }
 
-/// @todo override getEndpoint() to use cloudtrail.
-
 /**
  * Adds one or more tags to a trail, up to a limit of 50. Tags must be unique per trail. Overwrites an existing tag's value
  * when a new value is specified for an existing tag key. If you specify a key without a value, the tag will be created

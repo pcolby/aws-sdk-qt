@@ -96,8 +96,6 @@ ImportExportClient::ImportExportClient(
     d->serviceName = QStringLiteral("importexport");
 }
 
-/// @todo override getEndpoint() to use importexport.
-
 /**
  * This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already
  *

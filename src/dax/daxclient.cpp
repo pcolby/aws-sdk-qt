@@ -97,8 +97,6 @@ DaxClient::DaxClient(
     d->serviceName = QStringLiteral("dax");
 }
 
-/// @todo override getEndpoint() to use dax.
-
 /**
  * Creates a DAX cluster. All nodes in the cluster run the same DAX caching
  *

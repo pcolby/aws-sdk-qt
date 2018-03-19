@@ -99,8 +99,6 @@ EfsClient::EfsClient(
     d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
-/// @todo override getEndpoint() to use elasticfilesystem.
-
 /**
  * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure
  * idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently

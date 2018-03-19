@@ -104,8 +104,6 @@ SesClient::SesClient(
     d->serviceName = QStringLiteral("ses");
 }
 
-/// @todo override getEndpoint() to use email.
-
 /**
  * Creates a receipt rule set by cloning an existing one. All receipt rules and configurations are copied to the new
  * receipt rule set and are completely independent of the source rule

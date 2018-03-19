@@ -93,8 +93,6 @@ Route53Client::Route53Client(
     d->serviceName = QStringLiteral("route53");
 }
 
-/// @todo override getEndpoint() to use route53.
-
 /**
  * Associates an Amazon VPC with a private hosted zone.
  *

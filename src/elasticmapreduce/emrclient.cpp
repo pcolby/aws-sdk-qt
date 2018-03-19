@@ -96,8 +96,6 @@ EmrClient::EmrClient(
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
-/// @todo override getEndpoint() to use elasticmapreduce.
-
 /**
  * Adds an instance fleet to a running
  *

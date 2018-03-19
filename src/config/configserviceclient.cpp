@@ -124,8 +124,6 @@ ConfigServiceClient::ConfigServiceClient(
     d->serviceName = QStringLiteral("config");
 }
 
-/// @todo override getEndpoint() to use config.
-
 /**
  * Deletes the specified AWS Config rule and all of its evaluation
  *

@@ -95,8 +95,6 @@ MediaStoreDataClient::MediaStoreDataClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/// @todo override getEndpoint() to use data.mediastore.
-
 /**
  * Deletes an object at the specified
  *

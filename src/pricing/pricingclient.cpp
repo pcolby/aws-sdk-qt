@@ -119,8 +119,6 @@ PricingClient::PricingClient(
     d->serviceName = QStringLiteral("pricing");
 }
 
-/// @todo override getEndpoint() to use api.pricing.
-
 /**
  * Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get
  * the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information

@@ -111,8 +111,6 @@ DataPipelineClient::DataPipelineClient(
     d->serviceName = QStringLiteral("datapipeline");
 }
 
-/// @todo override getEndpoint() to use datapipeline.
-
 /**
  * Validates the specified pipeline and starts processing pipeline tasks. If the pipeline does not pass validation,
  * activation

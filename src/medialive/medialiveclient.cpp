@@ -93,8 +93,6 @@ MediaLiveClient::MediaLiveClient(
     d->serviceName = QStringLiteral("medialive");
 }
 
-/// @todo override getEndpoint() to use medialive.
-
 /**
  *
  * @param  request Request to send to AWS Elemental MediaLive.

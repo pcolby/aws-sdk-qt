@@ -161,8 +161,6 @@ SupportClient::SupportClient(
     d->serviceName = QStringLiteral("support");
 }
 
-/// @todo override getEndpoint() to use support.
-
 /**
  * Adds one or more attachments to an attachment set. If an <code>attachmentSetId</code> is not specified, a new attachment
  * set is created, and the ID of the set is returned in the response. If an <code>attachmentSetId</code> is specified, the

@@ -93,8 +93,6 @@ MachineLearningClient::MachineLearningClient(
     d->serviceName = QStringLiteral("machinelearning");
 }
 
-/// @todo override getEndpoint() to use machinelearning.
-
 /**
  * Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a
  * tag using a key that is already associated with the ML object, <code>AddTags</code> updates the tag's

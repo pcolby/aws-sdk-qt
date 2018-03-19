@@ -98,8 +98,6 @@ WafClient::WafClient(
     d->serviceName = QStringLiteral("waf");
 }
 
-/// @todo override getEndpoint() to use waf.
-
 /**
  * Creates a <code>ByteMatchSet</code>. You then use <a>UpdateByteMatchSet</a> to identify the part of a web request that
  * you want AWS WAF to inspect, such as the values of the <code>User-Agent</code> header or the query string. For example,

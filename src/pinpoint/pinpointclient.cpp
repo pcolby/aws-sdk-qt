@@ -93,8 +93,6 @@ PinpointClient::PinpointClient(
     d->serviceName = QStringLiteral("mobiletargeting");
 }
 
-/// @todo override getEndpoint() to use pinpoint.
-
 /**
  *
  * @param  request Request to send to Amazon Pinpoint.

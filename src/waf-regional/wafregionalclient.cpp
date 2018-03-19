@@ -100,8 +100,6 @@ WAFRegionalClient::WAFRegionalClient(
     d->serviceName = QStringLiteral("waf-regional");
 }
 
-/// @todo override getEndpoint() to use waf-regional.
-
 /**
  * Associates a web ACL with a
  *

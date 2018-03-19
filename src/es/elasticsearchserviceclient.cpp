@@ -102,8 +102,6 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     d->serviceName = QStringLiteral("es");
 }
 
-/// @todo override getEndpoint() to use es.
-
 /**
  * Attaches tags to an existing Elasticsearch domain. Tags are a set of case-sensitive key value pairs. An Elasticsearch
  * domain may have up to 10 tags. See <a

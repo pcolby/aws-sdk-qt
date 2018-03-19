@@ -122,8 +122,6 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     d->serviceName = QStringLiteral("logs");
 }
 
-/// @todo override getEndpoint() to use logs.
-
 /**
  * Associates the specified AWS Key Management Service (AWS KMS) customer master key (CMK) with the specified log
  *

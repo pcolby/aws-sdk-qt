@@ -93,8 +93,6 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     d->serviceName = QStringLiteral("cur");
 }
 
-/// @todo override getEndpoint() to use cur.
-
 /**
  *
  * @param  request Request to send to AWS Cost and Usage Report Service.

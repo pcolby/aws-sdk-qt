@@ -93,8 +93,6 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
-/// @todo override getEndpoint() to use kinesisvideo.
-
 /**
  * Use this API to retrieve media content from a Kinesis video stream. In the request, you identify stream name or stream
  * Amazon Resource Name (ARN), and the starting chunk. Kinesis Video Streams then returns a stream of chunks in order by

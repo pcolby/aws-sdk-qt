@@ -95,8 +95,6 @@ MediaStoreClient::MediaStoreClient(
     d->serviceName = QStringLiteral("mediastore");
 }
 
-/// @todo override getEndpoint() to use mediastore.
-
 /**
  * Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3
  *

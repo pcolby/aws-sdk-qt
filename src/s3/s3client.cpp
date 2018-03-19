@@ -93,8 +93,6 @@ S3Client::S3Client(
     d->serviceName = QStringLiteral("s3");
 }
 
-/// @todo override getEndpoint() to use s3.
-
 /**
  * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
  * storage, you should call the List Parts operation and ensure the parts list is

@@ -148,8 +148,6 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     d->serviceName = QStringLiteral("tagging");
 }
 
-/// @todo override getEndpoint() to use tagging.
-
 /**
  * Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified
  * region for the AWS account. The tags and the resource types that you specify in the request are known as <i>filters</i>.

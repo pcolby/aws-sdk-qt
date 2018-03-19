@@ -112,8 +112,6 @@ SfnClient::SfnClient(
     d->serviceName = QStringLiteral("states");
 }
 
-/// @todo override getEndpoint() to use states.
-
 /**
  * Creates an activity. An activity is a task which you write in any programming language and host on any machine which has
  * access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and

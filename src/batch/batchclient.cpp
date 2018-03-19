@@ -107,8 +107,6 @@ BatchClient::BatchClient(
     d->serviceName = QStringLiteral("batch");
 }
 
-/// @todo override getEndpoint() to use batch.
-
 /**
  * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
  * <code>RUNNABLE</code> state are cancelled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>

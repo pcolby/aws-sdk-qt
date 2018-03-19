@@ -131,8 +131,6 @@ BudgetsClient::BudgetsClient(
     d->serviceName = QStringLiteral("budgets");
 }
 
-/// @todo override getEndpoint() to use budgets.
-
 /**
  * Creates a budget and, if included, notifications and subscribers.
  *

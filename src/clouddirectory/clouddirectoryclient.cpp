@@ -100,8 +100,6 @@ CloudDirectoryClient::CloudDirectoryClient(
     d->serviceName = QStringLiteral("clouddirectory");
 }
 
-/// @todo override getEndpoint() to use clouddirectory.
-
 /**
  * Adds a new <a>Facet</a> to an
  *

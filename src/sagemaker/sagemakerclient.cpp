@@ -93,8 +93,6 @@ SageMakerClient::SageMakerClient(
     d->serviceName = QStringLiteral("sagemaker");
 }
 
-/// @todo override getEndpoint() to use sagemaker.
-
 /**
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
  * training jobs, models, endpoint configurations, and endpoints.

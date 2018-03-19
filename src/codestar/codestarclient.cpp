@@ -181,8 +181,6 @@ CodeStarClient::CodeStarClient(
     d->serviceName = QStringLiteral("codestar");
 }
 
-/// @todo override getEndpoint() to use codestar.
-
 /**
  * Adds an IAM user to the team for an AWS CodeStar
  *

@@ -105,8 +105,6 @@ CloudHSMClient::CloudHSMClient(
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
-/// @todo override getEndpoint() to use cloudhsm.
-
 /**
  * This is documentation for <b>AWS CloudHSM Classic</b>. For more information, see <a
  * href="http://aws.amazon.com/cloudhsm/faqs-classic/">AWS CloudHSM Classic FAQs</a>, the <a

@@ -283,8 +283,6 @@ CodeCommitClient::CodeCommitClient(
     d->serviceName = QStringLiteral("codecommit");
 }
 
-/// @todo override getEndpoint() to use codecommit.
-
 /**
  * Returns information about one or more
  *

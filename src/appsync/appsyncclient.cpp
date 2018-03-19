@@ -94,8 +94,6 @@ AppSyncClient::AppSyncClient(
     d->serviceName = QStringLiteral("appsync");
 }
 
-/// @todo override getEndpoint() to use appsync.
-
 /**
  * Creates a unique key that you can distribute to clients who are executing your
  *

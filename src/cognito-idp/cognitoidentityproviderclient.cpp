@@ -103,8 +103,6 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     d->serviceName = QStringLiteral("cognito-idp");
 }
 
-/// @todo override getEndpoint() to use cognito-idp.
-
 /**
  * Adds additional user attributes to the user pool
  *

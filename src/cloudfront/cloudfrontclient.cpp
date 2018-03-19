@@ -98,8 +98,6 @@ CloudFrontClient::CloudFrontClient(
     d->serviceName = QStringLiteral("cloudfront");
 }
 
-/// @todo override getEndpoint() to use cloudfront.
-
 /**
  * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity
  * to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about

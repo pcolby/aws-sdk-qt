@@ -199,8 +199,6 @@ OpsWorksClient::OpsWorksClient(
     d->serviceName = QStringLiteral("opsworks");
 }
 
-/// @todo override getEndpoint() to use opsworks.
-
 /**
  * Assign a registered instance to a
  *

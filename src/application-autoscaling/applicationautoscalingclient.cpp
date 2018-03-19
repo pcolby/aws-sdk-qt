@@ -166,8 +166,6 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     d->serviceName = QStringLiteral("application-autoscaling");
 }
 
-/// @todo override getEndpoint() to use autoscaling.
-
 /**
  * Deletes the specified Application Auto Scaling scaling
  *

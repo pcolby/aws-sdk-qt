@@ -96,8 +96,6 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     d->serviceName = QStringLiteral("elastictranscoder");
 }
 
-/// @todo override getEndpoint() to use elastictranscoder.
-
 /**
  * The CancelJob operation cancels an unfinished
  *

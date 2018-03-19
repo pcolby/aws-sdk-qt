@@ -94,8 +94,6 @@ XRayClient::XRayClient(
     d->serviceName = QStringLiteral("xray");
 }
 
-/// @todo override getEndpoint() to use xray.
-
 /**
  * Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a
  * single request. Use <code>GetTraceSummaries</code> to get a list of trace

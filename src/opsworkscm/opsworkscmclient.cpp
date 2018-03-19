@@ -153,8 +153,6 @@ OpsWorksCMClient::OpsWorksCMClient(
     d->serviceName = QStringLiteral("opsworks-cm");
 }
 
-/// @todo override getEndpoint() to use opsworks-cm.
-
 /**
  * Associates a new node with the server. For more information about how to disassociate a node, see
  *

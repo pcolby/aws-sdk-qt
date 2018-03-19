@@ -97,8 +97,6 @@ EcrClient::EcrClient(
     d->serviceName = QStringLiteral("ecr");
 }
 
-/// @todo override getEndpoint() to use ecr.
-
 /**
  * Check the availability of multiple image layers in a specified registry and
  *

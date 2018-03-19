@@ -96,8 +96,6 @@ ComprehendClient::ComprehendClient(
     d->serviceName = QStringLiteral("comprehend");
 }
 
-/// @todo override getEndpoint() to use comprehend.
-
 /**
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
  * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon

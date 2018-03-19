@@ -104,8 +104,6 @@ CloudSearchClient::CloudSearchClient(
     d->serviceName = QStringLiteral("cloudsearch");
 }
 
-/// @todo override getEndpoint() to use cloudsearch.
-
 /**
  * Indexes the search suggestions. For more information, see <a
  * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html#configuring-suggesters">Configuring

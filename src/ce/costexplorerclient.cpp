@@ -106,8 +106,6 @@ CostExplorerClient::CostExplorerClient(
     d->serviceName = QStringLiteral("ce");
 }
 
-/// @todo override getEndpoint() to use ce.
-
 /**
  * Retrieve cost and usage metrics for your account. You can specify which cost and usage-related metric, such as
  * <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and

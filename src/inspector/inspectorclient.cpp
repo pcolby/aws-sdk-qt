@@ -98,8 +98,6 @@ InspectorClient::InspectorClient(
     d->serviceName = QStringLiteral("inspector");
 }
 
-/// @todo override getEndpoint() to use inspector.
-
 /**
  * Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the
  *

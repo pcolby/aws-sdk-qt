@@ -106,8 +106,6 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     d->serviceName = QStringLiteral("cloudsearch");
 }
 
-/// @todo override getEndpoint() to use cloudsearchdomain.
-
 /**
  * Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on
  * which query parser you use. Amazon CloudSearch supports four query

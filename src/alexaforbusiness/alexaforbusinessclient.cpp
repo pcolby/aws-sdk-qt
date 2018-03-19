@@ -98,8 +98,6 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     d->serviceName = QStringLiteral("a4b");
 }
 
-/// @todo override getEndpoint() to use a4b.
-
 /**
  * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
  * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is

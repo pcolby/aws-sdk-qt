@@ -93,8 +93,6 @@ SmsClient::SmsClient(
     d->serviceName = QStringLiteral("sms");
 }
 
-/// @todo override getEndpoint() to use sms.
-
 /**
  * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first
  * create a ReplicationJob, which will then schedule periodic ReplicationRuns to replicate your server to AWS. Each
