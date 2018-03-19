@@ -64,9 +64,12 @@ CloudSearchDomainClient::CloudSearchDomainClient(
 : AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
     Q_D(CloudSearchDomainClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-01-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudsearchdomain");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudSearch Domain");
     d->serviceName = QStringLiteral("cloudsearch");
 }
 
@@ -94,9 +97,12 @@ CloudSearchDomainClient::CloudSearchDomainClient(
 : AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
     Q_D(CloudSearchDomainClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-01-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudsearchdomain");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudSearch Domain");
     d->serviceName = QStringLiteral("cloudsearch");
 }
 

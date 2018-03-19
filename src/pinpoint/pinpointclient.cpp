@@ -51,9 +51,12 @@ PinpointClient::PinpointClient(
 : AwsAbstractClient(new PinpointClientPrivate(this), parent)
 {
     Q_D(PinpointClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-12-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("pinpoint");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Pinpoint");
     d->serviceName = QStringLiteral("mobiletargeting");
 }
 
@@ -81,9 +84,12 @@ PinpointClient::PinpointClient(
 : AwsAbstractClient(new PinpointClientPrivate(this), parent)
 {
     Q_D(PinpointClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-12-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("pinpoint");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Pinpoint");
     d->serviceName = QStringLiteral("mobiletargeting");
 }
 

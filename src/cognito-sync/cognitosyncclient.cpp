@@ -71,9 +71,12 @@ CognitoSyncClient::CognitoSyncClient(
 : AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
 {
     Q_D(CognitoSyncClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-06-30");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cognito-sync");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Sync");
     d->serviceName = QStringLiteral("cognito-sync");
 }
 
@@ -101,9 +104,12 @@ CognitoSyncClient::CognitoSyncClient(
 : AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
 {
     Q_D(CognitoSyncClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-06-30");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cognito-sync");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Sync");
     d->serviceName = QStringLiteral("cognito-sync");
 }
 

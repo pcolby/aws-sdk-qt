@@ -56,9 +56,12 @@ AutoScalingClient::AutoScalingClient(
 : AwsAbstractClient(new AutoScalingClientPrivate(this), parent)
 {
     Q_D(AutoScalingClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2011-01-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("autoscaling");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Auto Scaling");
     d->serviceName = QStringLiteral("autoscaling");
 }
 
@@ -86,9 +89,12 @@ AutoScalingClient::AutoScalingClient(
 : AwsAbstractClient(new AutoScalingClientPrivate(this), parent)
 {
     Q_D(AutoScalingClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2011-01-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("autoscaling");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Auto Scaling");
     d->serviceName = QStringLiteral("autoscaling");
 }
 

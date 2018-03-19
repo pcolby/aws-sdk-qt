@@ -241,9 +241,12 @@ CodeCommitClient::CodeCommitClient(
 : AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
     Q_D(CodeCommitClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-04-13");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codecommit");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeCommit");
     d->serviceName = QStringLiteral("codecommit");
 }
 
@@ -271,9 +274,12 @@ CodeCommitClient::CodeCommitClient(
 : AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
     Q_D(CodeCommitClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-04-13");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codecommit");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeCommit");
     d->serviceName = QStringLiteral("codecommit");
 }
 

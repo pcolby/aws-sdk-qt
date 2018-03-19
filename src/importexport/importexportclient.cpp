@@ -54,9 +54,12 @@ ImportExportClient::ImportExportClient(
 : AwsAbstractClient(new ImportExportClientPrivate(this), parent)
 {
     Q_D(ImportExportClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-06-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("importexport");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Import/Export");
     d->serviceName = QStringLiteral("importexport");
 }
 
@@ -84,9 +87,12 @@ ImportExportClient::ImportExportClient(
 : AwsAbstractClient(new ImportExportClientPrivate(this), parent)
 {
     Q_D(ImportExportClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-06-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("importexport");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Import/Export");
     d->serviceName = QStringLiteral("importexport");
 }
 

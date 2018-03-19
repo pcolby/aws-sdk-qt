@@ -109,9 +109,12 @@ StsClient::StsClient(
 : AwsAbstractClient(new StsClientPrivate(this), parent)
 {
     Q_D(StsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2011-06-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sts");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Security Token Service");
     d->serviceName = QStringLiteral("sts");
 }
 
@@ -139,9 +142,12 @@ StsClient::StsClient(
 : AwsAbstractClient(new StsClientPrivate(this), parent)
 {
     Q_D(StsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2011-06-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sts");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Security Token Service");
     d->serviceName = QStringLiteral("sts");
 }
 

@@ -60,9 +60,12 @@ AcmClient::AcmClient(
 : AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
     Q_D(AcmClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-12-08");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("acm");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Certificate Manager");
     d->serviceName = QStringLiteral("acm");
 }
 
@@ -90,9 +93,12 @@ AcmClient::AcmClient(
 : AwsAbstractClient(new AcmClientPrivate(this), parent)
 {
     Q_D(AcmClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-12-08");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("acm");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Certificate Manager");
     d->serviceName = QStringLiteral("acm");
 }
 

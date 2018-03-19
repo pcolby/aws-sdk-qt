@@ -60,9 +60,12 @@ AutoScalingPlansClient::AutoScalingPlansClient(
 : AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
 {
     Q_D(AutoScalingPlansClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2018-01-06");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("autoscaling");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
     d->serviceName = QStringLiteral("autoscaling-plans");
 }
 
@@ -90,9 +93,12 @@ AutoScalingPlansClient::AutoScalingPlansClient(
 : AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
 {
     Q_D(AutoScalingPlansClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2018-01-06");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("autoscaling");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
     d->serviceName = QStringLiteral("autoscaling-plans");
 }
 

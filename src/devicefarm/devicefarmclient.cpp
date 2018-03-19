@@ -53,9 +53,12 @@ DeviceFarmClient::DeviceFarmClient(
 : AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
 {
     Q_D(DeviceFarmClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-06-23");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("devicefarm");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Device Farm");
     d->serviceName = QStringLiteral("devicefarm");
 }
 
@@ -83,9 +86,12 @@ DeviceFarmClient::DeviceFarmClient(
 : AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
 {
     Q_D(DeviceFarmClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-06-23");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("devicefarm");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Device Farm");
     d->serviceName = QStringLiteral("devicefarm");
 }
 

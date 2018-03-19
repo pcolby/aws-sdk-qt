@@ -56,9 +56,12 @@ WafClient::WafClient(
 : AwsAbstractClient(new WafClientPrivate(this), parent)
 {
     Q_D(WafClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-08-24");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("waf");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS WAF");
     d->serviceName = QStringLiteral("waf");
 }
 
@@ -86,9 +89,12 @@ WafClient::WafClient(
 : AwsAbstractClient(new WafClientPrivate(this), parent)
 {
     Q_D(WafClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-08-24");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("waf");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS WAF");
     d->serviceName = QStringLiteral("waf");
 }
 

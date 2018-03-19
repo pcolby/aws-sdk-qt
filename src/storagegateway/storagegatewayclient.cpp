@@ -120,9 +120,12 @@ StorageGatewayClient::StorageGatewayClient(
 : AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
 {
     Q_D(StorageGatewayClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-06-30");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("storagegateway");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Storage Gateway");
     d->serviceName = QStringLiteral("storagegateway");
 }
 
@@ -150,9 +153,12 @@ StorageGatewayClient::StorageGatewayClient(
 : AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
 {
     Q_D(StorageGatewayClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-06-30");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("storagegateway");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Storage Gateway");
     d->serviceName = QStringLiteral("storagegateway");
 }
 

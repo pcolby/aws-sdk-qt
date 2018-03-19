@@ -57,9 +57,12 @@ SnowballClient::SnowballClient(
 : AwsAbstractClient(new SnowballClientPrivate(this), parent)
 {
     Q_D(SnowballClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-06-30");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("snowball");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Import/Export Snowball");
     d->serviceName = QStringLiteral("snowball");
 }
 
@@ -87,9 +90,12 @@ SnowballClient::SnowballClient(
 : AwsAbstractClient(new SnowballClientPrivate(this), parent)
 {
     Q_D(SnowballClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-06-30");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("snowball");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Import/Export Snowball");
     d->serviceName = QStringLiteral("snowball");
 }
 

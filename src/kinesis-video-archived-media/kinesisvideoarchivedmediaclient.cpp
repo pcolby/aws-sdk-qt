@@ -51,9 +51,12 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
 : AwsAbstractClient(new KinesisVideoArchivedMediaClientPrivate(this), parent)
 {
     Q_D(KinesisVideoArchivedMediaClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-09-30");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams Archived Media");
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 
@@ -81,9 +84,12 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
 : AwsAbstractClient(new KinesisVideoArchivedMediaClientPrivate(this), parent)
 {
     Q_D(KinesisVideoArchivedMediaClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-09-30");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams Archived Media");
     d->serviceName = QStringLiteral("kinesisvideo");
 }
 

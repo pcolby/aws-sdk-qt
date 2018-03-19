@@ -51,9 +51,12 @@ MachineLearningClient::MachineLearningClient(
 : AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
 {
     Q_D(MachineLearningClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-12-12");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("machinelearning");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Machine Learning");
     d->serviceName = QStringLiteral("machinelearning");
 }
 
@@ -81,9 +84,12 @@ MachineLearningClient::MachineLearningClient(
 : AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
 {
     Q_D(MachineLearningClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-12-12");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("machinelearning");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Machine Learning");
     d->serviceName = QStringLiteral("machinelearning");
 }
 

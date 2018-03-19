@@ -57,9 +57,12 @@ EfsClient::EfsClient(
 : AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
     Q_D(EfsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-02-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticfilesystem");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic File System");
     d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
@@ -87,9 +90,12 @@ EfsClient::EfsClient(
 : AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
     Q_D(EfsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-02-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticfilesystem");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic File System");
     d->serviceName = QStringLiteral("elasticfilesystem");
 }
 

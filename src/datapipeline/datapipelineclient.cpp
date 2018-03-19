@@ -69,9 +69,12 @@ DataPipelineClient::DataPipelineClient(
 : AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
 {
     Q_D(DataPipelineClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-10-29");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("datapipeline");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Data Pipeline");
     d->serviceName = QStringLiteral("datapipeline");
 }
 
@@ -99,9 +102,12 @@ DataPipelineClient::DataPipelineClient(
 : AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
 {
     Q_D(DataPipelineClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-10-29");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("datapipeline");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Data Pipeline");
     d->serviceName = QStringLiteral("datapipeline");
 }
 

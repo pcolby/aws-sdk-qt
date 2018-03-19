@@ -54,9 +54,12 @@ GlueClient::GlueClient(
 : AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
     Q_D(GlueClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-03-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("glue");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Glue");
     d->serviceName = QStringLiteral("glue");
 }
 
@@ -84,9 +87,12 @@ GlueClient::GlueClient(
 : AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
     Q_D(GlueClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-03-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("glue");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Glue");
     d->serviceName = QStringLiteral("glue");
 }
 

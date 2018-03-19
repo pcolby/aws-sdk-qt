@@ -52,9 +52,12 @@ TranslateClient::TranslateClient(
 : AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
     Q_D(TranslateClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-07-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("translate");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Translate");
     d->serviceName = QStringLiteral("translate");
 }
 
@@ -82,9 +85,12 @@ TranslateClient::TranslateClient(
 : AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
     Q_D(TranslateClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-07-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("translate");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Translate");
     d->serviceName = QStringLiteral("translate");
 }
 

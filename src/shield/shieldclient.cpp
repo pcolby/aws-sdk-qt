@@ -57,9 +57,12 @@ ShieldClient::ShieldClient(
 : AwsAbstractClient(new ShieldClientPrivate(this), parent)
 {
     Q_D(ShieldClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-06-02");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("shield");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Shield");
     d->serviceName = QStringLiteral("shield");
 }
 
@@ -87,9 +90,12 @@ ShieldClient::ShieldClient(
 : AwsAbstractClient(new ShieldClientPrivate(this), parent)
 {
     Q_D(ShieldClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-06-02");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("shield");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Shield");
     d->serviceName = QStringLiteral("shield");
 }
 

@@ -150,9 +150,12 @@ KmsClient::KmsClient(
 : AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
     Q_D(KmsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-11-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kms");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Key Management Service");
     d->serviceName = QStringLiteral("kms");
 }
 
@@ -180,9 +183,12 @@ KmsClient::KmsClient(
 : AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
     Q_D(KmsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-11-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kms");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Key Management Service");
     d->serviceName = QStringLiteral("kms");
 }
 

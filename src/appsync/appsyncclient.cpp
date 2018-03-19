@@ -52,9 +52,12 @@ AppSyncClient::AppSyncClient(
 : AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
     Q_D(AppSyncClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-07-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appsync");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS AppSync");
     d->serviceName = QStringLiteral("appsync");
 }
 
@@ -82,9 +85,12 @@ AppSyncClient::AppSyncClient(
 : AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
     Q_D(AppSyncClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-07-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appsync");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS AppSync");
     d->serviceName = QStringLiteral("appsync");
 }
 

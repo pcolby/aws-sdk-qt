@@ -73,9 +73,12 @@ CloudFormationClient::CloudFormationClient(
 : AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
 {
     Q_D(CloudFormationClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-05-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudformation");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CloudFormation");
     d->serviceName = QStringLiteral("cloudformation");
 }
 
@@ -103,9 +106,12 @@ CloudFormationClient::CloudFormationClient(
 : AwsAbstractClient(new CloudFormationClientPrivate(this), parent)
 {
     Q_D(CloudFormationClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-05-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudformation");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CloudFormation");
     d->serviceName = QStringLiteral("cloudformation");
 }
 

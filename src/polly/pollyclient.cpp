@@ -58,9 +58,12 @@ PollyClient::PollyClient(
 : AwsAbstractClient(new PollyClientPrivate(this), parent)
 {
     Q_D(PollyClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-06-10");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("polly");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Polly");
     d->serviceName = QStringLiteral("polly");
 }
 
@@ -88,9 +91,12 @@ PollyClient::PollyClient(
 : AwsAbstractClient(new PollyClientPrivate(this), parent)
 {
     Q_D(PollyClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-06-10");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("polly");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Polly");
     d->serviceName = QStringLiteral("polly");
 }
 

@@ -157,9 +157,12 @@ OpsWorksClient::OpsWorksClient(
 : AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
 {
     Q_D(OpsWorksClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-02-18");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("opsworks");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS OpsWorks");
     d->serviceName = QStringLiteral("opsworks");
 }
 
@@ -187,9 +190,12 @@ OpsWorksClient::OpsWorksClient(
 : AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
 {
     Q_D(OpsWorksClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-02-18");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("opsworks");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS OpsWorks");
     d->serviceName = QStringLiteral("opsworks");
 }
 

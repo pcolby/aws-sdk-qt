@@ -52,9 +52,12 @@ RekognitionClient::RekognitionClient(
 : AwsAbstractClient(new RekognitionClientPrivate(this), parent)
 {
     Q_D(RekognitionClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-06-27");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("rekognition");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Rekognition");
     d->serviceName = QStringLiteral("rekognition");
 }
 
@@ -82,9 +85,12 @@ RekognitionClient::RekognitionClient(
 : AwsAbstractClient(new RekognitionClientPrivate(this), parent)
 {
     Q_D(RekognitionClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-06-27");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("rekognition");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Rekognition");
     d->serviceName = QStringLiteral("rekognition");
 }
 

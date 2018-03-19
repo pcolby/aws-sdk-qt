@@ -59,9 +59,12 @@ DirectConnectClient::DirectConnectClient(
 : AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
     Q_D(DirectConnectClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-10-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("directconnect");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Direct Connect");
     d->serviceName = QStringLiteral("directconnect");
 }
 
@@ -89,9 +92,12 @@ DirectConnectClient::DirectConnectClient(
 : AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
     Q_D(DirectConnectClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-10-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("directconnect");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Direct Connect");
     d->serviceName = QStringLiteral("directconnect");
 }
 

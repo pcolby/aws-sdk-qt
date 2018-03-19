@@ -84,9 +84,12 @@ WorkMailClient::WorkMailClient(
 : AwsAbstractClient(new WorkMailClientPrivate(this), parent)
 {
     Q_D(WorkMailClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("workmail");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon WorkMail");
     d->serviceName = QStringLiteral("workmail");
 }
 
@@ -114,9 +117,12 @@ WorkMailClient::WorkMailClient(
 : AwsAbstractClient(new WorkMailClientPrivate(this), parent)
 {
     Q_D(WorkMailClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("workmail");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon WorkMail");
     d->serviceName = QStringLiteral("workmail");
 }
 

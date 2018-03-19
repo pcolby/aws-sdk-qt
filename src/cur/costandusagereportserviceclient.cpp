@@ -51,9 +51,12 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 : AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
 {
     Q_D(CostandUsageReportServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-01-06");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cur");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Cost and Usage Report Service");
     d->serviceName = QStringLiteral("cur");
 }
 
@@ -81,9 +84,12 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 : AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
 {
     Q_D(CostandUsageReportServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-01-06");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cur");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Cost and Usage Report Service");
     d->serviceName = QStringLiteral("cur");
 }
 

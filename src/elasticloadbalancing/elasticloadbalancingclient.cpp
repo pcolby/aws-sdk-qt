@@ -79,9 +79,12 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
 : AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-06-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticloadbalancing");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Elastic Load Balancing");
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
@@ -109,9 +112,12 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
 : AwsAbstractClient(new ElasticLoadBalancingClientPrivate(this), parent)
 {
     Q_D(ElasticLoadBalancingClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-06-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticloadbalancing");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Elastic Load Balancing");
     d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 

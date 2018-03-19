@@ -54,9 +54,12 @@ AppStreamClient::AppStreamClient(
 : AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
     Q_D(AppStreamClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-12-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appstream2");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon AppStream");
     d->serviceName = QStringLiteral("appstream");
 }
 
@@ -84,9 +87,12 @@ AppStreamClient::AppStreamClient(
 : AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
     Q_D(AppStreamClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-12-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appstream2");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon AppStream");
     d->serviceName = QStringLiteral("appstream");
 }
 

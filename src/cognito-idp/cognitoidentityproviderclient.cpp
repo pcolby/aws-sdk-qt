@@ -61,9 +61,12 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
 : AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityProviderClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-04-18");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cognito-idp");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Identity Provider");
     d->serviceName = QStringLiteral("cognito-idp");
 }
 
@@ -91,9 +94,12 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
 : AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
 {
     Q_D(CognitoIdentityProviderClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-04-18");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cognito-idp");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Identity Provider");
     d->serviceName = QStringLiteral("cognito-idp");
 }
 

@@ -57,9 +57,12 @@ IoTDataPlaneClient::IoTDataPlaneClient(
 : AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTDataPlaneClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("data.iot");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
     d->serviceName = QStringLiteral("iotdata");
 }
 
@@ -87,9 +90,12 @@ IoTDataPlaneClient::IoTDataPlaneClient(
 : AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTDataPlaneClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("data.iot");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
     d->serviceName = QStringLiteral("iotdata");
 }
 

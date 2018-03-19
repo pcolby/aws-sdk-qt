@@ -64,9 +64,12 @@ SimpleDBClient::SimpleDBClient(
 : AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
 {
     Q_D(SimpleDBClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2009-04-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sdb");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon SimpleDB");
     d->serviceName = QStringLiteral("sdb");
 }
 
@@ -94,9 +97,12 @@ SimpleDBClient::SimpleDBClient(
 : AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
 {
     Q_D(SimpleDBClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2009-04-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sdb");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon SimpleDB");
     d->serviceName = QStringLiteral("sdb");
 }
 

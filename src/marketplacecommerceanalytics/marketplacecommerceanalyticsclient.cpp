@@ -51,9 +51,12 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
 : AwsAbstractClient(new MarketplaceCommerceAnalyticsClientPrivate(this), parent)
 {
     Q_D(MarketplaceCommerceAnalyticsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-07-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("marketplacecommerceanalytics");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Commerce Analytics");
     d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 
@@ -81,9 +84,12 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
 : AwsAbstractClient(new MarketplaceCommerceAnalyticsClientPrivate(this), parent)
 {
     Q_D(MarketplaceCommerceAnalyticsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-07-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("marketplacecommerceanalytics");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Commerce Analytics");
     d->serviceName = QStringLiteral("marketplacecommerceanalytics");
 }
 

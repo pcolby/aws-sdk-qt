@@ -65,9 +65,12 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
 : AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTJobsDataPlaneClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-09-29");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("data.jobs.iot");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Jobs Data Plane");
     d->serviceName = QStringLiteral("iot-jobs-data");
 }
 
@@ -95,9 +98,12 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
 : AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
 {
     Q_D(IoTJobsDataPlaneClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-09-29");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("data.jobs.iot");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Jobs Data Plane");
     d->serviceName = QStringLiteral("iot-jobs-data");
 }
 

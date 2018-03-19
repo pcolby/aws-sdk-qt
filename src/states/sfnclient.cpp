@@ -70,9 +70,12 @@ SfnClient::SfnClient(
 : AwsAbstractClient(new SfnClientPrivate(this), parent)
 {
     Q_D(SfnClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-23");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("states");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Step Functions");
     d->serviceName = QStringLiteral("states");
 }
 
@@ -100,9 +103,12 @@ SfnClient::SfnClient(
 : AwsAbstractClient(new SfnClientPrivate(this), parent)
 {
     Q_D(SfnClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-23");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("states");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Step Functions");
     d->serviceName = QStringLiteral("states");
 }
 

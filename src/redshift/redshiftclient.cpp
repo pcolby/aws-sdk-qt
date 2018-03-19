@@ -81,9 +81,12 @@ RedshiftClient::RedshiftClient(
 : AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
     Q_D(RedshiftClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-12-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("redshift");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Redshift");
     d->serviceName = QStringLiteral("redshift");
 }
 
@@ -111,9 +114,12 @@ RedshiftClient::RedshiftClient(
 : AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
     Q_D(RedshiftClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-12-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("redshift");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Redshift");
     d->serviceName = QStringLiteral("redshift");
 }
 

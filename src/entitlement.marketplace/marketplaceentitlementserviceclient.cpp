@@ -68,9 +68,12 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 : AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
 {
     Q_D(MarketplaceEntitlementServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("entitlement.marketplace");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Entitlement Service");
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
@@ -98,9 +101,12 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 : AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
 {
     Q_D(MarketplaceEntitlementServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("entitlement.marketplace");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Entitlement Service");
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 

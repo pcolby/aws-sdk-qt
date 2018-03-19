@@ -89,9 +89,12 @@ BudgetsClient::BudgetsClient(
 : AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
     Q_D(BudgetsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-10-20");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("budgets");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Budgets");
     d->serviceName = QStringLiteral("budgets");
 }
 
@@ -119,9 +122,12 @@ BudgetsClient::BudgetsClient(
 : AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
     Q_D(BudgetsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-10-20");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("budgets");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Budgets");
     d->serviceName = QStringLiteral("budgets");
 }
 

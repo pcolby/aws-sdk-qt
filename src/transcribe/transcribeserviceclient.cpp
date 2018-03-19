@@ -52,9 +52,12 @@ TranscribeServiceClient::TranscribeServiceClient(
 : AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
     Q_D(TranscribeServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-26");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("transcribe");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Service");
     d->serviceName = QStringLiteral("transcribe");
 }
 
@@ -82,9 +85,12 @@ TranscribeServiceClient::TranscribeServiceClient(
 : AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
     Q_D(TranscribeServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-26");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("transcribe");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Service");
     d->serviceName = QStringLiteral("transcribe");
 }
 

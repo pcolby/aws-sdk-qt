@@ -54,9 +54,12 @@ GreengrassClient::GreengrassClient(
 : AwsAbstractClient(new GreengrassClientPrivate(this), parent)
 {
     Q_D(GreengrassClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-06-07");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("greengrass");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Greengrass");
     d->serviceName = QStringLiteral("greengrass");
 }
 
@@ -84,9 +87,12 @@ GreengrassClient::GreengrassClient(
 : AwsAbstractClient(new GreengrassClientPrivate(this), parent)
 {
     Q_D(GreengrassClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-06-07");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("greengrass");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Greengrass");
     d->serviceName = QStringLiteral("greengrass");
 }
 

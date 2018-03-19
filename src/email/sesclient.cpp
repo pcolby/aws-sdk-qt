@@ -62,9 +62,12 @@ SesClient::SesClient(
 : AwsAbstractClient(new SesClientPrivate(this), parent)
 {
     Q_D(SesClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-12-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("email");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
     d->serviceName = QStringLiteral("ses");
 }
 
@@ -92,9 +95,12 @@ SesClient::SesClient(
 : AwsAbstractClient(new SesClientPrivate(this), parent)
 {
     Q_D(SesClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-12-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("email");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
     d->serviceName = QStringLiteral("ses");
 }
 

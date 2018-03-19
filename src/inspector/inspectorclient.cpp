@@ -56,9 +56,12 @@ InspectorClient::InspectorClient(
 : AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
     Q_D(InspectorClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-02-16");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("inspector");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Inspector");
     d->serviceName = QStringLiteral("inspector");
 }
 
@@ -86,9 +89,12 @@ InspectorClient::InspectorClient(
 : AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
     Q_D(InspectorClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-02-16");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("inspector");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Inspector");
     d->serviceName = QStringLiteral("inspector");
 }
 

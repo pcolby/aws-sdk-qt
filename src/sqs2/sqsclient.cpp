@@ -117,9 +117,12 @@ SqsClient::SqsClient(
 : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-11-05");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sqs");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Queue Service");
     d->serviceName = QStringLiteral("sqs");
 }
 
@@ -147,9 +150,12 @@ SqsClient::SqsClient(
 : AwsAbstractClient(new SqsClientPrivate(this), parent)
 {
     Q_D(SqsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-11-05");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sqs");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Queue Service");
     d->serviceName = QStringLiteral("sqs");
 }
 

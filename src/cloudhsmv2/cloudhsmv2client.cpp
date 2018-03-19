@@ -53,9 +53,12 @@ CloudHSMV2Client::CloudHSMV2Client(
 : AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
     Q_D(CloudHSMV2Client);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-04-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudhsmv2");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CloudHSM V2");
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
@@ -83,9 +86,12 @@ CloudHSMV2Client::CloudHSMV2Client(
 : AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
     Q_D(CloudHSMV2Client);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-04-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudhsmv2");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CloudHSM V2");
     d->serviceName = QStringLiteral("cloudhsm");
 }
 

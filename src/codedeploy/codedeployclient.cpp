@@ -132,9 +132,12 @@ CodeDeployClient::CodeDeployClient(
 : AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
     Q_D(CodeDeployClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-10-06");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codedeploy");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeDeploy");
     d->serviceName = QStringLiteral("codedeploy");
 }
 
@@ -162,9 +165,12 @@ CodeDeployClient::CodeDeployClient(
 : AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
     Q_D(CodeDeployClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-10-06");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codedeploy");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeDeploy");
     d->serviceName = QStringLiteral("codedeploy");
 }
 

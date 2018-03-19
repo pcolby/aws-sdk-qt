@@ -51,9 +51,12 @@ MTurkClient::MTurkClient(
 : AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
     Q_D(MTurkClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-01-17");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mturk-requester");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Mechanical Turk");
     d->serviceName = QStringLiteral("mturk-requester");
 }
 
@@ -81,9 +84,12 @@ MTurkClient::MTurkClient(
 : AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
     Q_D(MTurkClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-01-17");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mturk-requester");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Mechanical Turk");
     d->serviceName = QStringLiteral("mturk-requester");
 }
 

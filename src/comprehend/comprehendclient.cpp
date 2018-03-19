@@ -54,9 +54,12 @@ ComprehendClient::ComprehendClient(
 : AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
     Q_D(ComprehendClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("comprehend");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Comprehend");
     d->serviceName = QStringLiteral("comprehend");
 }
 
@@ -84,9 +87,12 @@ ComprehendClient::ComprehendClient(
 : AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
     Q_D(ComprehendClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("comprehend");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Comprehend");
     d->serviceName = QStringLiteral("comprehend");
 }
 

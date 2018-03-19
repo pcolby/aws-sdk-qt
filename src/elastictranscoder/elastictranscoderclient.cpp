@@ -54,9 +54,12 @@ ElasticTranscoderClient::ElasticTranscoderClient(
 : AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
 {
     Q_D(ElasticTranscoderClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-09-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elastictranscoder");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Transcoder");
     d->serviceName = QStringLiteral("elastictranscoder");
 }
 
@@ -84,9 +87,12 @@ ElasticTranscoderClient::ElasticTranscoderClient(
 : AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
 {
     Q_D(ElasticTranscoderClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-09-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elastictranscoder");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Transcoder");
     d->serviceName = QStringLiteral("elastictranscoder");
 }
 

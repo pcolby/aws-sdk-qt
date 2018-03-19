@@ -115,9 +115,12 @@ RdsClient::RdsClient(
 : AwsAbstractClient(new RdsClientPrivate(this), parent)
 {
     Q_D(RdsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-10-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("rds");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Relational Database Service");
     d->serviceName = QStringLiteral("rds");
 }
 
@@ -145,9 +148,12 @@ RdsClient::RdsClient(
 : AwsAbstractClient(new RdsClientPrivate(this), parent)
 {
     Q_D(RdsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-10-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("rds");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Relational Database Service");
     d->serviceName = QStringLiteral("rds");
 }
 

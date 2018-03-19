@@ -51,9 +51,12 @@ MediaConvertClient::MediaConvertClient(
 : AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
 {
     Q_D(MediaConvertClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-08-29");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mediaconvert");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaConvert");
     d->serviceName = QStringLiteral("mediaconvert");
 }
 
@@ -81,9 +84,12 @@ MediaConvertClient::MediaConvertClient(
 : AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
 {
     Q_D(MediaConvertClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-08-29");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mediaconvert");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaConvert");
     d->serviceName = QStringLiteral("mediaconvert");
 }
 

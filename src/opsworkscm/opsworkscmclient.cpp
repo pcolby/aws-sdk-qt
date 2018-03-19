@@ -111,9 +111,12 @@ OpsWorksCMClient::OpsWorksCMClient(
 : AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
 {
     Q_D(OpsWorksCMClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("opsworks-cm");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS OpsWorks for Chef Automate");
     d->serviceName = QStringLiteral("opsworks-cm");
 }
 
@@ -141,9 +144,12 @@ OpsWorksCMClient::OpsWorksCMClient(
 : AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
 {
     Q_D(OpsWorksCMClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("opsworks-cm");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS OpsWorks for Chef Automate");
     d->serviceName = QStringLiteral("opsworks-cm");
 }
 

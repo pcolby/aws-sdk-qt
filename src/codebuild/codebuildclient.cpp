@@ -127,9 +127,12 @@ CodeBuildClient::CodeBuildClient(
 : AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
 {
     Q_D(CodeBuildClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-10-06");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codebuild");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeBuild");
     d->serviceName = QStringLiteral("codebuild");
 }
 
@@ -157,9 +160,12 @@ CodeBuildClient::CodeBuildClient(
 : AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
 {
     Q_D(CodeBuildClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-10-06");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codebuild");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeBuild");
     d->serviceName = QStringLiteral("codebuild");
 }
 

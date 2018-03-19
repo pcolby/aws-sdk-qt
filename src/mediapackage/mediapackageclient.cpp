@@ -51,9 +51,12 @@ MediaPackageClient::MediaPackageClient(
 : AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
 {
     Q_D(MediaPackageClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-12");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mediapackage");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage");
     d->serviceName = QStringLiteral("mediapackage");
 }
 
@@ -81,9 +84,12 @@ MediaPackageClient::MediaPackageClient(
 : AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
 {
     Q_D(MediaPackageClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-12");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mediapackage");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage");
     d->serviceName = QStringLiteral("mediapackage");
 }
 

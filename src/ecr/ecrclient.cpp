@@ -55,9 +55,12 @@ EcrClient::EcrClient(
 : AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
     Q_D(EcrClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-09-21");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ecr");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
     d->serviceName = QStringLiteral("ecr");
 }
 
@@ -85,9 +88,12 @@ EcrClient::EcrClient(
 : AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
     Q_D(EcrClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-09-21");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ecr");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
     d->serviceName = QStringLiteral("ecr");
 }
 

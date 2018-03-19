@@ -52,9 +52,12 @@ MobileAnalyticsClient::MobileAnalyticsClient(
 : AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
 {
     Q_D(MobileAnalyticsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-06-05");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mobileanalytics");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Mobile Analytics");
     d->serviceName = QStringLiteral("mobileanalytics");
 }
 
@@ -82,9 +85,12 @@ MobileAnalyticsClient::MobileAnalyticsClient(
 : AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
 {
     Q_D(MobileAnalyticsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-06-05");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mobileanalytics");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Mobile Analytics");
     d->serviceName = QStringLiteral("mobileanalytics");
 }
 

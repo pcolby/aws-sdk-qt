@@ -62,9 +62,12 @@ IoTClient::IoTClient(
 : AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
     Q_D(IoTClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("iot");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT");
     d->serviceName = QStringLiteral("execute-api");
 }
 
@@ -92,9 +95,12 @@ IoTClient::IoTClient(
 : AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
     Q_D(IoTClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("iot");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT");
     d->serviceName = QStringLiteral("execute-api");
 }
 

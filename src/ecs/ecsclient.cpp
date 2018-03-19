@@ -68,9 +68,12 @@ EcsClient::EcsClient(
 : AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
     Q_D(EcsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-11-13");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ecs");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Service");
     d->serviceName = QStringLiteral("ecs");
 }
 
@@ -98,9 +101,12 @@ EcsClient::EcsClient(
 : AwsAbstractClient(new EcsClientPrivate(this), parent)
 {
     Q_D(EcsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-11-13");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ecs");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Service");
     d->serviceName = QStringLiteral("ecs");
 }
 

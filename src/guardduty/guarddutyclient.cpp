@@ -51,9 +51,12 @@ GuardDutyClient::GuardDutyClient(
 : AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
     Q_D(GuardDutyClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-11-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("guardduty");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon GuardDuty");
     d->serviceName = QStringLiteral("guardduty");
 }
 
@@ -81,9 +84,12 @@ GuardDutyClient::GuardDutyClient(
 : AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
     Q_D(GuardDutyClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-11-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("guardduty");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon GuardDuty");
     d->serviceName = QStringLiteral("guardduty");
 }
 

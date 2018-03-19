@@ -53,9 +53,12 @@ MediaStoreDataClient::MediaStoreDataClient(
 : AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
     Q_D(MediaStoreDataClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-09-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("data.mediastore");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaStore Data Plane");
     d->serviceName = QStringLiteral("mediastore");
 }
 
@@ -83,9 +86,12 @@ MediaStoreDataClient::MediaStoreDataClient(
 : AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
     Q_D(MediaStoreDataClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-09-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("data.mediastore");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaStore Data Plane");
     d->serviceName = QStringLiteral("mediastore");
 }
 

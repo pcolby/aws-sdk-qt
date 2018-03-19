@@ -112,9 +112,12 @@ HealthClient::HealthClient(
 : AwsAbstractClient(new HealthClientPrivate(this), parent)
 {
     Q_D(HealthClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-08-04");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("health");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Health APIs and Notifications");
     d->serviceName = QStringLiteral("health");
 }
 
@@ -142,9 +145,12 @@ HealthClient::HealthClient(
 : AwsAbstractClient(new HealthClientPrivate(this), parent)
 {
     Q_D(HealthClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-08-04");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("health");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Health APIs and Notifications");
     d->serviceName = QStringLiteral("health");
 }
 

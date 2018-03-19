@@ -77,9 +77,12 @@ PricingClient::PricingClient(
 : AwsAbstractClient(new PricingClientPrivate(this), parent)
 {
     Q_D(PricingClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.pricing");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Price List Service");
     d->serviceName = QStringLiteral("pricing");
 }
 
@@ -107,9 +110,12 @@ PricingClient::PricingClient(
 : AwsAbstractClient(new PricingClientPrivate(this), parent)
 {
     Q_D(PricingClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.pricing");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Price List Service");
     d->serviceName = QStringLiteral("pricing");
 }
 

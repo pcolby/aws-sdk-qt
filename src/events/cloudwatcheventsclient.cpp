@@ -74,9 +74,12 @@ CloudWatchEventsClient::CloudWatchEventsClient(
 : AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
 {
     Q_D(CloudWatchEventsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-10-07");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("events");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Events");
     d->serviceName = QStringLiteral("events");
 }
 
@@ -104,9 +107,12 @@ CloudWatchEventsClient::CloudWatchEventsClient(
 : AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
 {
     Q_D(CloudWatchEventsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-10-07");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("events");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Events");
     d->serviceName = QStringLiteral("events");
 }
 

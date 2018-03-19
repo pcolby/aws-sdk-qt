@@ -53,9 +53,12 @@ MigrationHubClient::MigrationHubClient(
 : AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
 {
     Q_D(MigrationHubClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-05-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mgh");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Migration Hub");
     d->serviceName = QStringLiteral("mgh");
 }
 
@@ -83,9 +86,12 @@ MigrationHubClient::MigrationHubClient(
 : AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
 {
     Q_D(MigrationHubClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-05-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mgh");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Migration Hub");
     d->serviceName = QStringLiteral("mgh");
 }
 

@@ -54,9 +54,12 @@ EmrClient::EmrClient(
 : AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
     Q_D(EmrClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2009-03-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticmapreduce");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
@@ -84,9 +87,12 @@ EmrClient::EmrClient(
 : AwsAbstractClient(new EmrClientPrivate(this), parent)
 {
     Q_D(EmrClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2009-03-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticmapreduce");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 

@@ -80,9 +80,12 @@ WorkDocsClient::WorkDocsClient(
 : AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
     Q_D(WorkDocsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-05-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("workdocs");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon WorkDocs");
     d->serviceName = QStringLiteral("workdocs");
 }
 
@@ -110,9 +113,12 @@ WorkDocsClient::WorkDocsClient(
 : AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
     Q_D(WorkDocsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-05-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("workdocs");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon WorkDocs");
     d->serviceName = QStringLiteral("workdocs");
 }
 

@@ -119,9 +119,12 @@ SupportClient::SupportClient(
 : AwsAbstractClient(new SupportClientPrivate(this), parent)
 {
     Q_D(SupportClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-04-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("support");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Support");
     d->serviceName = QStringLiteral("support");
 }
 
@@ -149,9 +152,12 @@ SupportClient::SupportClient(
 : AwsAbstractClient(new SupportClientPrivate(this), parent)
 {
     Q_D(SupportClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-04-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("support");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Support");
     d->serviceName = QStringLiteral("support");
 }
 

@@ -65,9 +65,12 @@ SnsClient::SnsClient(
 : AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
     Q_D(SnsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-03-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sns");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Notification Service");
     d->serviceName = QStringLiteral("sns");
 }
 
@@ -95,9 +98,12 @@ SnsClient::SnsClient(
 : AwsAbstractClient(new SnsClientPrivate(this), parent)
 {
     Q_D(SnsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-03-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sns");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Notification Service");
     d->serviceName = QStringLiteral("sns");
 }
 

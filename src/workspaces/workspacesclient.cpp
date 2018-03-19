@@ -54,9 +54,12 @@ WorkSpacesClient::WorkSpacesClient(
 : AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
 {
     Q_D(WorkSpacesClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-04-08");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("workspaces");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon WorkSpaces");
     d->serviceName = QStringLiteral("workspaces");
 }
 
@@ -84,9 +87,12 @@ WorkSpacesClient::WorkSpacesClient(
 : AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
 {
     Q_D(WorkSpacesClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-04-08");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("workspaces");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon WorkSpaces");
     d->serviceName = QStringLiteral("workspaces");
 }
 

@@ -105,9 +105,12 @@ Cloud9Client::Cloud9Client(
 : AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
 {
     Q_D(Cloud9Client);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-09-23");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloud9");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Cloud9");
     d->serviceName = QStringLiteral("cloud9");
 }
 
@@ -135,9 +138,12 @@ Cloud9Client::Cloud9Client(
 : AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
 {
     Q_D(Cloud9Client);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-09-23");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloud9");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Cloud9");
     d->serviceName = QStringLiteral("cloud9");
 }
 

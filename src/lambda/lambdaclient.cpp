@@ -62,9 +62,12 @@ LambdaClient::LambdaClient(
 : AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
     Q_D(LambdaClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-03-31");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("lambda");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Lambda");
     d->serviceName = QStringLiteral("lambda");
 }
 
@@ -92,9 +95,12 @@ LambdaClient::LambdaClient(
 : AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
     Q_D(LambdaClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-03-31");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("lambda");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Lambda");
     d->serviceName = QStringLiteral("lambda");
 }
 

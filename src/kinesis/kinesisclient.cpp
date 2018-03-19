@@ -54,9 +54,12 @@ KinesisClient::KinesisClient(
 : AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
     Q_D(KinesisClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-12-02");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesis");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis");
     d->serviceName = QStringLiteral("kinesis");
 }
 
@@ -84,9 +87,12 @@ KinesisClient::KinesisClient(
 : AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
     Q_D(KinesisClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-12-02");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesis");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis");
     d->serviceName = QStringLiteral("kinesis");
 }
 

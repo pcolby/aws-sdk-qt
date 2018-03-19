@@ -52,9 +52,12 @@ XRayClient::XRayClient(
 : AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
     Q_D(XRayClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-04-12");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("xray");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS X-Ray");
     d->serviceName = QStringLiteral("xray");
 }
 
@@ -82,9 +85,12 @@ XRayClient::XRayClient(
 : AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
     Q_D(XRayClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-04-12");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("xray");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS X-Ray");
     d->serviceName = QStringLiteral("xray");
 }
 

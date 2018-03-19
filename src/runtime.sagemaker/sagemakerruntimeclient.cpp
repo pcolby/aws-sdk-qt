@@ -52,9 +52,12 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
 : AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
     Q_D(SageMakerRuntimeClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-05-13");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("runtime.sagemaker");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Runtime");
     d->serviceName = QStringLiteral("sagemaker");
 }
 
@@ -82,9 +85,12 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
 : AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
     Q_D(SageMakerRuntimeClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-05-13");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("runtime.sagemaker");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Runtime");
     d->serviceName = QStringLiteral("sagemaker");
 }
 

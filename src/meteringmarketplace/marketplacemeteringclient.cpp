@@ -81,9 +81,12 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
 : AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
     Q_D(MarketplaceMeteringClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-01-14");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("metering.marketplace");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWSMarketplace Metering");
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 
@@ -111,9 +114,12 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
 : AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
     Q_D(MarketplaceMeteringClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-01-14");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("metering.marketplace");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWSMarketplace Metering");
     d->serviceName = QStringLiteral("aws-marketplace");
 }
 

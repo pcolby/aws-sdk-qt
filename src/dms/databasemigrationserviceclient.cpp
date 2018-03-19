@@ -62,9 +62,12 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
 : AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
 {
     Q_D(DatabaseMigrationServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-01-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("dms");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Database Migration Service");
     d->serviceName = QStringLiteral("dms");
 }
 
@@ -92,9 +95,12 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
 : AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
 {
     Q_D(DatabaseMigrationServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-01-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("dms");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Database Migration Service");
     d->serviceName = QStringLiteral("dms");
 }
 

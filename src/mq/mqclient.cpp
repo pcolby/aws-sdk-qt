@@ -53,9 +53,12 @@ MqClient::MqClient(
 : AwsAbstractClient(new MqClientPrivate(this), parent)
 {
     Q_D(MqClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mq");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AmazonMQ");
     d->serviceName = QStringLiteral("mq");
 }
 
@@ -83,9 +86,12 @@ MqClient::MqClient(
 : AwsAbstractClient(new MqClientPrivate(this), parent)
 {
     Q_D(MqClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mq");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AmazonMQ");
     d->serviceName = QStringLiteral("mq");
 }
 

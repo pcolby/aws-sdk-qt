@@ -51,9 +51,12 @@ Route53Client::Route53Client(
 : AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
     Q_D(Route53Client);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-04-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("route53");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Route 53");
     d->serviceName = QStringLiteral("route53");
 }
 
@@ -81,9 +84,12 @@ Route53Client::Route53Client(
 : AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
     Q_D(Route53Client);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-04-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("route53");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Route 53");
     d->serviceName = QStringLiteral("route53");
 }
 

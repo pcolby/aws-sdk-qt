@@ -82,9 +82,12 @@ ConfigServiceClient::ConfigServiceClient(
 : AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
     Q_D(ConfigServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-11-12");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("config");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Config");
     d->serviceName = QStringLiteral("config");
 }
 
@@ -112,9 +115,12 @@ ConfigServiceClient::ConfigServiceClient(
 : AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
     Q_D(ConfigServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-11-12");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("config");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Config");
     d->serviceName = QStringLiteral("config");
 }
 

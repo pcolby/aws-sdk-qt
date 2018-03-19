@@ -60,9 +60,12 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 : AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
     Q_D(ElasticsearchServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-01-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("es");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elasticsearch Service");
     d->serviceName = QStringLiteral("es");
 }
 
@@ -90,9 +93,12 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 : AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
     Q_D(ElasticsearchServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-01-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("es");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elasticsearch Service");
     d->serviceName = QStringLiteral("es");
 }
 

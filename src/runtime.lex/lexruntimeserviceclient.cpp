@@ -58,9 +58,12 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 : AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
     Q_D(LexRuntimeServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("runtime.lex");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime Service");
     d->serviceName = QStringLiteral("lex");
 }
 
@@ -88,9 +91,12 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 : AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
     Q_D(LexRuntimeServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("runtime.lex");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime Service");
     d->serviceName = QStringLiteral("lex");
 }
 

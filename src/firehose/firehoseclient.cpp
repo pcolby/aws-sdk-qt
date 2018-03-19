@@ -55,9 +55,12 @@ FirehoseClient::FirehoseClient(
 : AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
     Q_D(FirehoseClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-08-04");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("firehose");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Firehose");
     d->serviceName = QStringLiteral("firehose");
 }
 
@@ -85,9 +88,12 @@ FirehoseClient::FirehoseClient(
 : AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
     Q_D(FirehoseClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-08-04");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("firehose");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Firehose");
     d->serviceName = QStringLiteral("firehose");
 }
 

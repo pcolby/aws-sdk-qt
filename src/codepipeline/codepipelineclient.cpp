@@ -214,9 +214,12 @@ CodePipelineClient::CodePipelineClient(
 : AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
 {
     Q_D(CodePipelineClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-07-09");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codepipeline");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodePipeline");
     d->serviceName = QStringLiteral("codepipeline");
 }
 
@@ -244,9 +247,12 @@ CodePipelineClient::CodePipelineClient(
 : AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
 {
     Q_D(CodePipelineClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-07-09");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codepipeline");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodePipeline");
     d->serviceName = QStringLiteral("codepipeline");
 }
 

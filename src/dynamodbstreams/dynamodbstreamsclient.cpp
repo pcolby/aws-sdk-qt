@@ -84,9 +84,12 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
 : AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
     Q_D(DynamoDBStreamsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("streams.dynamodb");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Streams");
     d->serviceName = QStringLiteral("dynamodb");
 }
 
@@ -114,9 +117,12 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
 : AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
     Q_D(DynamoDBStreamsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("streams.dynamodb");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Streams");
     d->serviceName = QStringLiteral("dynamodb");
 }
 

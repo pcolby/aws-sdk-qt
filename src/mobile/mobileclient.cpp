@@ -54,9 +54,12 @@ MobileClient::MobileClient(
 : AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
     Q_D(MobileClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-07-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mobile");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Mobile");
     d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
@@ -84,9 +87,12 @@ MobileClient::MobileClient(
 : AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
     Q_D(MobileClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-07-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mobile");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Mobile");
     d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 

@@ -55,9 +55,12 @@ Ec2Client::Ec2Client(
 : AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
     Q_D(Ec2Client);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-15");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ec2");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Compute Cloud");
     d->serviceName = QStringLiteral("ec2");
 }
 
@@ -85,9 +88,12 @@ Ec2Client::Ec2Client(
 : AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
     Q_D(Ec2Client);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-15");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ec2");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Compute Cloud");
     d->serviceName = QStringLiteral("ec2");
 }
 

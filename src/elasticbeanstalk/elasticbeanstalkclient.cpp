@@ -73,9 +73,12 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
 : AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
 {
     Q_D(ElasticBeanstalkClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-12-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticbeanstalk");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elastic Beanstalk");
     d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 
@@ -103,9 +106,12 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
 : AwsAbstractClient(new ElasticBeanstalkClientPrivate(this), parent)
 {
     Q_D(ElasticBeanstalkClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-12-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticbeanstalk");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elastic Beanstalk");
     d->serviceName = QStringLiteral("elasticbeanstalk");
 }
 

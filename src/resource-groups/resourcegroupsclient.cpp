@@ -95,9 +95,12 @@ ResourceGroupsClient::ResourceGroupsClient(
 : AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("resource-groups");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups");
     d->serviceName = QStringLiteral("resource-groups");
 }
 
@@ -125,9 +128,12 @@ ResourceGroupsClient::ResourceGroupsClient(
 : AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-11-27");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("resource-groups");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups");
     d->serviceName = QStringLiteral("resource-groups");
 }
 

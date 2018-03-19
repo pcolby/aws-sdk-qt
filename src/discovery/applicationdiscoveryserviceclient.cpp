@@ -115,9 +115,12 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 : AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
     Q_D(ApplicationDiscoveryServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-11-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("discovery");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Application Discovery Service");
     d->serviceName = QStringLiteral("discovery");
 }
 
@@ -145,9 +148,12 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 : AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
     Q_D(ApplicationDiscoveryServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-11-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("discovery");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Application Discovery Service");
     d->serviceName = QStringLiteral("discovery");
 }
 

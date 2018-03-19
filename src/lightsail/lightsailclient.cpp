@@ -67,9 +67,12 @@ LightsailClient::LightsailClient(
 : AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
     Q_D(LightsailClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("lightsail");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lightsail");
     d->serviceName = QStringLiteral("lightsail");
 }
 
@@ -97,9 +100,12 @@ LightsailClient::LightsailClient(
 : AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
     Q_D(LightsailClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("lightsail");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lightsail");
     d->serviceName = QStringLiteral("lightsail");
 }
 

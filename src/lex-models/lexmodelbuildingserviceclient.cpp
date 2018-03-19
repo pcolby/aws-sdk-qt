@@ -55,9 +55,12 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
 : AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
     Q_D(LexModelBuildingServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("models.lex");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lex Model Building Service");
     d->serviceName = QStringLiteral("lex");
 }
 
@@ -85,9 +88,12 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
 : AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
     Q_D(LexModelBuildingServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("models.lex");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lex Model Building Service");
     d->serviceName = QStringLiteral("lex");
 }
 

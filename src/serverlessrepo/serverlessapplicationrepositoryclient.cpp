@@ -72,9 +72,12 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
 : AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
     Q_D(ServerlessApplicationRepositoryClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-09-08");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("serverlessrepo");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWSServerlessApplicationRepository");
     d->serviceName = QStringLiteral("serverlessrepo");
 }
 
@@ -102,9 +105,12 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
 : AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
     Q_D(ServerlessApplicationRepositoryClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-09-08");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("serverlessrepo");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWSServerlessApplicationRepository");
     d->serviceName = QStringLiteral("serverlessrepo");
 }
 

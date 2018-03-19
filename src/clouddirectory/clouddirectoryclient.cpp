@@ -58,9 +58,12 @@ CloudDirectoryClient::CloudDirectoryClient(
 : AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-05-10");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("clouddirectory");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudDirectory");
     d->serviceName = QStringLiteral("clouddirectory");
 }
 
@@ -88,9 +91,12 @@ CloudDirectoryClient::CloudDirectoryClient(
 : AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-05-10");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("clouddirectory");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudDirectory");
     d->serviceName = QStringLiteral("clouddirectory");
 }
 

@@ -55,9 +55,12 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
 : AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
 {
     Q_D(ServiceDiscoveryClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-03-14");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("servicediscovery");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Route 53 Auto Naming");
     d->serviceName = QStringLiteral("servicediscovery");
 }
 
@@ -85,9 +88,12 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
 : AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
 {
     Q_D(ServiceDiscoveryClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-03-14");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("servicediscovery");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Route 53 Auto Naming");
     d->serviceName = QStringLiteral("servicediscovery");
 }
 

@@ -70,9 +70,12 @@ DynamoDBClient::DynamoDBClient(
 : AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
 {
     Q_D(DynamoDBClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("dynamodb");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB");
     d->serviceName = QStringLiteral("dynamodb");
 }
 
@@ -100,9 +103,12 @@ DynamoDBClient::DynamoDBClient(
 : AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
 {
     Q_D(DynamoDBClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("dynamodb");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB");
     d->serviceName = QStringLiteral("dynamodb");
 }
 

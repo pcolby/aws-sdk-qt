@@ -51,9 +51,12 @@ S3Client::S3Client(
 : AwsAbstractClient(new S3ClientPrivate(this), parent)
 {
     Q_D(S3Client);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2006-03-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("s3");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Storage Service");
     d->serviceName = QStringLiteral("s3");
 }
 
@@ -81,9 +84,12 @@ S3Client::S3Client(
 : AwsAbstractClient(new S3ClientPrivate(this), parent)
 {
     Q_D(S3Client);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2006-03-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("s3");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Storage Service");
     d->serviceName = QStringLiteral("s3");
 }
 

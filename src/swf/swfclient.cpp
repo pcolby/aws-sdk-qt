@@ -67,9 +67,12 @@ SwfClient::SwfClient(
 : AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
     Q_D(SwfClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-01-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("swf");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Workflow Service");
     d->serviceName = QStringLiteral("swf");
 }
 
@@ -97,9 +100,12 @@ SwfClient::SwfClient(
 : AwsAbstractClient(new SwfClientPrivate(this), parent)
 {
     Q_D(SwfClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-01-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("swf");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Workflow Service");
     d->serviceName = QStringLiteral("swf");
 }
 

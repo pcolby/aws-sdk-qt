@@ -56,9 +56,12 @@ AlexaForBusinessClient::AlexaForBusinessClient(
 : AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
 {
     Q_D(AlexaForBusinessClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-11-09");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("a4b");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Alexa For Business");
     d->serviceName = QStringLiteral("a4b");
 }
 
@@ -86,9 +89,12 @@ AlexaForBusinessClient::AlexaForBusinessClient(
 : AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
 {
     Q_D(AlexaForBusinessClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-11-09");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("a4b");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Alexa For Business");
     d->serviceName = QStringLiteral("a4b");
 }
 

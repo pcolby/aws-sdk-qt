@@ -54,9 +54,12 @@ namespace {{NameSpaceName}} {
 : AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
-    d->region = region;
+    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
     d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
@@ -86,9 +89,12 @@ namespace {{NameSpaceName}} {
 : AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
     d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");

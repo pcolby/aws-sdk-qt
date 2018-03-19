@@ -65,9 +65,12 @@ BatchClient::BatchClient(
 : AwsAbstractClient(new BatchClientPrivate(this), parent)
 {
     Q_D(BatchClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-08-10");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("batch");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Batch");
     d->serviceName = QStringLiteral("batch");
 }
 
@@ -95,9 +98,12 @@ BatchClient::BatchClient(
 : AwsAbstractClient(new BatchClientPrivate(this), parent)
 {
     Q_D(BatchClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-08-10");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("batch");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Batch");
     d->serviceName = QStringLiteral("batch");
 }
 

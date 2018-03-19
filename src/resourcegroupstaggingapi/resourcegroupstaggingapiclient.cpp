@@ -106,9 +106,12 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
 : AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsTaggingAPIClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("tagging");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups Tagging API");
     d->serviceName = QStringLiteral("tagging");
 }
 
@@ -136,9 +139,12 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
 : AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
     Q_D(ResourceGroupsTaggingAPIClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("tagging");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups Tagging API");
     d->serviceName = QStringLiteral("tagging");
 }
 

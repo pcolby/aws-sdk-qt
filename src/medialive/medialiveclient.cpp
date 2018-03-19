@@ -51,9 +51,12 @@ MediaLiveClient::MediaLiveClient(
 : AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
     Q_D(MediaLiveClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-14");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("medialive");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaLive");
     d->serviceName = QStringLiteral("medialive");
 }
 
@@ -81,9 +84,12 @@ MediaLiveClient::MediaLiveClient(
 : AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
     Q_D(MediaLiveClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-14");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("medialive");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaLive");
     d->serviceName = QStringLiteral("medialive");
 }
 

@@ -51,9 +51,12 @@ SmsClient::SmsClient(
 : AwsAbstractClient(new SmsClientPrivate(this), parent)
 {
     Q_D(SmsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-10-24");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sms");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Server Migration Service");
     d->serviceName = QStringLiteral("sms");
 }
 
@@ -81,9 +84,12 @@ SmsClient::SmsClient(
 : AwsAbstractClient(new SmsClientPrivate(this), parent)
 {
     Q_D(SmsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-10-24");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sms");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Server Migration Service");
     d->serviceName = QStringLiteral("sms");
 }
 

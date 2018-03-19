@@ -193,9 +193,12 @@ OrganizationsClient::OrganizationsClient(
 : AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
 {
     Q_D(OrganizationsClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("organizations");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Organizations");
     d->serviceName = QStringLiteral("organizations");
 }
 
@@ -223,9 +226,12 @@ OrganizationsClient::OrganizationsClient(
 : AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
 {
     Q_D(OrganizationsClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("organizations");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Organizations");
     d->serviceName = QStringLiteral("organizations");
 }
 

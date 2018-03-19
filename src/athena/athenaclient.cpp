@@ -63,9 +63,12 @@ AthenaClient::AthenaClient(
 : AwsAbstractClient(new AthenaClientPrivate(this), parent)
 {
     Q_D(AthenaClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-05-18");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("athena");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Athena");
     d->serviceName = QStringLiteral("athena");
 }
 
@@ -93,9 +96,12 @@ AthenaClient::AthenaClient(
 : AwsAbstractClient(new AthenaClientPrivate(this), parent)
 {
     Q_D(AthenaClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-05-18");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("athena");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Athena");
     d->serviceName = QStringLiteral("athena");
 }
 

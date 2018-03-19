@@ -55,9 +55,12 @@ DaxClient::DaxClient(
 : AwsAbstractClient(new DaxClientPrivate(this), parent)
 {
     Q_D(DaxClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("dax");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Accelerator (DAX)");
     d->serviceName = QStringLiteral("dax");
 }
 
@@ -85,9 +88,12 @@ DaxClient::DaxClient(
 : AwsAbstractClient(new DaxClientPrivate(this), parent)
 {
     Q_D(DaxClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("dax");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Accelerator (DAX)");
     d->serviceName = QStringLiteral("dax");
 }
 

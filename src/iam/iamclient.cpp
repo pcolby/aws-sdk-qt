@@ -116,9 +116,12 @@ IamClient::IamClient(
 : AwsAbstractClient(new IamClientPrivate(this), parent)
 {
     Q_D(IamClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2010-05-08");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("iam");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Identity and Access Management");
     d->serviceName = QStringLiteral("iam");
 }
 
@@ -146,9 +149,12 @@ IamClient::IamClient(
 : AwsAbstractClient(new IamClientPrivate(this), parent)
 {
     Q_D(IamClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2010-05-08");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("iam");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Identity and Access Management");
     d->serviceName = QStringLiteral("iam");
 }
 

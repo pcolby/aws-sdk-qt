@@ -64,9 +64,12 @@ CostExplorerClient::CostExplorerClient(
 : AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
     Q_D(CostExplorerClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-10-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ce");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Cost Explorer Service");
     d->serviceName = QStringLiteral("ce");
 }
 
@@ -94,9 +97,12 @@ CostExplorerClient::CostExplorerClient(
 : AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
     Q_D(CostExplorerClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-10-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ce");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Cost Explorer Service");
     d->serviceName = QStringLiteral("ce");
 }
 

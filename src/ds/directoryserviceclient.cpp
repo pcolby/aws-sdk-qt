@@ -65,9 +65,12 @@ DirectoryServiceClient::DirectoryServiceClient(
 : AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
 {
     Q_D(DirectoryServiceClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2015-04-16");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ds");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Directory Service");
     d->serviceName = QStringLiteral("ds");
 }
 
@@ -95,9 +98,12 @@ DirectoryServiceClient::DirectoryServiceClient(
 : AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
 {
     Q_D(DirectoryServiceClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2015-04-16");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ds");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Directory Service");
     d->serviceName = QStringLiteral("ds");
 }
 

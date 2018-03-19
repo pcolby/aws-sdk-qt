@@ -74,9 +74,12 @@ CloudTrailClient::CloudTrailClient(
 : AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
     Q_D(CloudTrailClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2013-11-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudtrail");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CloudTrail");
     d->serviceName = QStringLiteral("cloudtrail");
 }
 
@@ -104,9 +107,12 @@ CloudTrailClient::CloudTrailClient(
 : AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
     Q_D(CloudTrailClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2013-11-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudtrail");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CloudTrail");
     d->serviceName = QStringLiteral("cloudtrail");
 }
 

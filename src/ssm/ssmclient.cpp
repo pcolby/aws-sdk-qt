@@ -75,9 +75,12 @@ SsmClient::SsmClient(
 : AwsAbstractClient(new SsmClientPrivate(this), parent)
 {
     Q_D(SsmClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-11-06");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ssm");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Systems Manager (SSM)");
     d->serviceName = QStringLiteral("ssm");
 }
 
@@ -105,9 +108,12 @@ SsmClient::SsmClient(
 : AwsAbstractClient(new SsmClientPrivate(this), parent)
 {
     Q_D(SsmClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-11-06");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ssm");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Systems Manager (SSM)");
     d->serviceName = QStringLiteral("ssm");
 }
 

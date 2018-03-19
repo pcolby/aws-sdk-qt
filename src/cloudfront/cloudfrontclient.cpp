@@ -56,9 +56,12 @@ CloudFrontClient::CloudFrontClient(
 : AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-03-25");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudFront");
     d->serviceName = QStringLiteral("cloudfront");
 }
 
@@ -86,9 +89,12 @@ CloudFrontClient::CloudFrontClient(
 : AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-03-25");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudFront");
     d->serviceName = QStringLiteral("cloudfront");
 }
 

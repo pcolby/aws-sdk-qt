@@ -63,9 +63,12 @@ CloudHSMClient::CloudHSMClient(
 : AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
     Q_D(CloudHSMClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2014-05-30");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudhsm");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudHSM");
     d->serviceName = QStringLiteral("cloudhsm");
 }
 
@@ -93,9 +96,12 @@ CloudHSMClient::CloudHSMClient(
 : AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
     Q_D(CloudHSMClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2014-05-30");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudhsm");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudHSM");
     d->serviceName = QStringLiteral("cloudhsm");
 }
 

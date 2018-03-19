@@ -51,9 +51,12 @@ SageMakerClient::SageMakerClient(
 : AwsAbstractClient(new SageMakerClientPrivate(this), parent)
 {
     Q_D(SageMakerClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-07-24");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sagemaker");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
     d->serviceName = QStringLiteral("sagemaker");
 }
 
@@ -81,9 +84,12 @@ SageMakerClient::SageMakerClient(
 : AwsAbstractClient(new SageMakerClientPrivate(this), parent)
 {
     Q_D(SageMakerClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-07-24");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sagemaker");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
     d->serviceName = QStringLiteral("sagemaker");
 }
 

@@ -139,9 +139,12 @@ CodeStarClient::CodeStarClient(
 : AwsAbstractClient(new CodeStarClientPrivate(this), parent)
 {
     Q_D(CodeStarClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codestar");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeStar");
     d->serviceName = QStringLiteral("codestar");
 }
 
@@ -169,9 +172,12 @@ CodeStarClient::CodeStarClient(
 : AwsAbstractClient(new CodeStarClientPrivate(this), parent)
 {
     Q_D(CodeStarClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codestar");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeStar");
     d->serviceName = QStringLiteral("codestar");
 }
 

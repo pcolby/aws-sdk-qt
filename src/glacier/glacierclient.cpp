@@ -89,9 +89,12 @@ GlacierClient::GlacierClient(
 : AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
     Q_D(GlacierClient);
-    d->region = region;
+    d->apiVersion = QStringLiteral("2012-06-01");
     d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("glacier");
     d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Glacier");
     d->serviceName = QStringLiteral("glacier");
 }
 
@@ -119,9 +122,12 @@ GlacierClient::GlacierClient(
 : AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
     Q_D(GlacierClient);
-    d->endpoint = endpoint;
+    d->apiVersion = QStringLiteral("2012-06-01");
     d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("glacier");
     d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Glacier");
     d->serviceName = QStringLiteral("glacier");
 }
 
