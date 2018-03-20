@@ -20,18 +20,19 @@
 #ifndef QTAWS_SAGEMAKERRUNTIMECLIENT_H
 #define QTAWS_SAGEMAKERRUNTIMECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SageMakerRuntime {
 
 class SageMakerRuntimeClientPrivate;
+class InvokeEndpointResponse;
 
 class QTAWS_EXPORT SageMakerRuntimeClient : public AwsAbstractClient {
     Q_OBJECT

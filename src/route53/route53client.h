@@ -20,18 +20,74 @@
 #ifndef QTAWS_ROUTE53CLIENT_H
 #define QTAWS_ROUTE53CLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Route53 {
 
 class Route53ClientPrivate;
+class AssociateVPCWithHostedZoneResponse;
+class ChangeResourceRecordSetsResponse;
+class ChangeTagsForResourceResponse;
+class CreateHealthCheckResponse;
+class CreateHostedZoneResponse;
+class CreateQueryLoggingConfigResponse;
+class CreateReusableDelegationSetResponse;
+class CreateTrafficPolicyResponse;
+class CreateTrafficPolicyInstanceResponse;
+class CreateTrafficPolicyVersionResponse;
+class CreateVPCAssociationAuthorizationResponse;
+class DeleteHealthCheckResponse;
+class DeleteHostedZoneResponse;
+class DeleteQueryLoggingConfigResponse;
+class DeleteReusableDelegationSetResponse;
+class DeleteTrafficPolicyResponse;
+class DeleteTrafficPolicyInstanceResponse;
+class DeleteVPCAssociationAuthorizationResponse;
+class DisassociateVPCFromHostedZoneResponse;
+class GetAccountLimitResponse;
+class GetChangeResponse;
+class GetCheckerIpRangesResponse;
+class GetGeoLocationResponse;
+class GetHealthCheckResponse;
+class GetHealthCheckCountResponse;
+class GetHealthCheckLastFailureReasonResponse;
+class GetHealthCheckStatusResponse;
+class GetHostedZoneResponse;
+class GetHostedZoneCountResponse;
+class GetHostedZoneLimitResponse;
+class GetQueryLoggingConfigResponse;
+class GetReusableDelegationSetResponse;
+class GetReusableDelegationSetLimitResponse;
+class GetTrafficPolicyResponse;
+class GetTrafficPolicyInstanceResponse;
+class GetTrafficPolicyInstanceCountResponse;
+class ListGeoLocationsResponse;
+class ListHealthChecksResponse;
+class ListHostedZonesResponse;
+class ListHostedZonesByNameResponse;
+class ListQueryLoggingConfigsResponse;
+class ListResourceRecordSetsResponse;
+class ListReusableDelegationSetsResponse;
+class ListTagsForResourceResponse;
+class ListTagsForResourcesResponse;
+class ListTrafficPoliciesResponse;
+class ListTrafficPolicyInstancesResponse;
+class ListTrafficPolicyInstancesByHostedZoneResponse;
+class ListTrafficPolicyInstancesByPolicyResponse;
+class ListTrafficPolicyVersionsResponse;
+class ListVPCAssociationAuthorizationsResponse;
+class TestDNSAnswerResponse;
+class UpdateHealthCheckResponse;
+class UpdateHostedZoneCommentResponse;
+class UpdateTrafficPolicyCommentResponse;
+class UpdateTrafficPolicyInstanceResponse;
 
 class QTAWS_EXPORT Route53Client : public AwsAbstractClient {
     Q_OBJECT

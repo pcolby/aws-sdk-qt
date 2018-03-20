@@ -20,18 +20,37 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClientPrivate;
+class AssociateConfigurationItemsToApplicationResponse;
+class CreateApplicationResponse;
+class CreateTagsResponse;
+class DeleteApplicationsResponse;
+class DeleteTagsResponse;
+class DescribeAgentsResponse;
+class DescribeConfigurationsResponse;
+class DescribeExportConfigurationsResponse;
+class DescribeExportTasksResponse;
+class DescribeTagsResponse;
+class DisassociateConfigurationItemsFromApplicationResponse;
+class ExportConfigurationsResponse;
+class GetDiscoverySummaryResponse;
+class ListConfigurationsResponse;
+class ListServerNeighborsResponse;
+class StartDataCollectionByAgentIdsResponse;
+class StartExportTaskResponse;
+class StopDataCollectionByAgentIdsResponse;
+class UpdateApplicationResponse;
 
 class QTAWS_EXPORT ApplicationDiscoveryServiceClient : public AwsAbstractClient {
     Q_OBJECT

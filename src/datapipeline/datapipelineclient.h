@@ -20,18 +20,37 @@
 #ifndef QTAWS_DATAPIPELINECLIENT_H
 #define QTAWS_DATAPIPELINECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DataPipeline {
 
 class DataPipelineClientPrivate;
+class ActivatePipelineResponse;
+class AddTagsResponse;
+class CreatePipelineResponse;
+class DeactivatePipelineResponse;
+class DeletePipelineResponse;
+class DescribeObjectsResponse;
+class DescribePipelinesResponse;
+class EvaluateExpressionResponse;
+class GetPipelineDefinitionResponse;
+class ListPipelinesResponse;
+class PollForTaskResponse;
+class PutPipelineDefinitionResponse;
+class QueryObjectsResponse;
+class RemoveTagsResponse;
+class ReportTaskProgressResponse;
+class ReportTaskRunnerHeartbeatResponse;
+class SetStatusResponse;
+class SetTaskStatusResponse;
+class ValidatePipelineDefinitionResponse;
 
 class QTAWS_EXPORT DataPipelineClient : public AwsAbstractClient {
     Q_OBJECT

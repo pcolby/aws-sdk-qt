@@ -20,18 +20,37 @@
 #ifndef QTAWS_SFNCLIENT_H
 #define QTAWS_SFNCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SFN {
 
 class SfnClientPrivate;
+class CreateActivityResponse;
+class CreateStateMachineResponse;
+class DeleteActivityResponse;
+class DeleteStateMachineResponse;
+class DescribeActivityResponse;
+class DescribeExecutionResponse;
+class DescribeStateMachineResponse;
+class DescribeStateMachineForExecutionResponse;
+class GetActivityTaskResponse;
+class GetExecutionHistoryResponse;
+class ListActivitiesResponse;
+class ListExecutionsResponse;
+class ListStateMachinesResponse;
+class SendTaskFailureResponse;
+class SendTaskHeartbeatResponse;
+class SendTaskSuccessResponse;
+class StartExecutionResponse;
+class StopExecutionResponse;
+class UpdateStateMachineResponse;
 
 class QTAWS_EXPORT SfnClient : public AwsAbstractClient {
     Q_OBJECT

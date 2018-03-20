@@ -20,18 +20,58 @@
 #ifndef QTAWS_CODEDEPLOYCLIENT_H
 #define QTAWS_CODEDEPLOYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CodeDeploy {
 
 class CodeDeployClientPrivate;
+class AddTagsToOnPremisesInstancesResponse;
+class BatchGetApplicationRevisionsResponse;
+class BatchGetApplicationsResponse;
+class BatchGetDeploymentGroupsResponse;
+class BatchGetDeploymentInstancesResponse;
+class BatchGetDeploymentsResponse;
+class BatchGetOnPremisesInstancesResponse;
+class ContinueDeploymentResponse;
+class CreateApplicationResponse;
+class CreateDeploymentResponse;
+class CreateDeploymentConfigResponse;
+class CreateDeploymentGroupResponse;
+class DeleteApplicationResponse;
+class DeleteDeploymentConfigResponse;
+class DeleteDeploymentGroupResponse;
+class DeleteGitHubAccountTokenResponse;
+class DeregisterOnPremisesInstanceResponse;
+class GetApplicationResponse;
+class GetApplicationRevisionResponse;
+class GetDeploymentResponse;
+class GetDeploymentConfigResponse;
+class GetDeploymentGroupResponse;
+class GetDeploymentInstanceResponse;
+class GetOnPremisesInstanceResponse;
+class ListApplicationRevisionsResponse;
+class ListApplicationsResponse;
+class ListDeploymentConfigsResponse;
+class ListDeploymentGroupsResponse;
+class ListDeploymentInstancesResponse;
+class ListDeploymentsResponse;
+class ListGitHubAccountTokenNamesResponse;
+class ListOnPremisesInstancesResponse;
+class PutLifecycleEventHookExecutionStatusResponse;
+class RegisterApplicationRevisionResponse;
+class RegisterOnPremisesInstanceResponse;
+class RemoveTagsFromOnPremisesInstancesResponse;
+class SkipWaitTimeForInstanceTerminationResponse;
+class StopDeploymentResponse;
+class UpdateApplicationResponse;
+class UpdateDeploymentGroupResponse;
 
 class QTAWS_EXPORT CodeDeployClient : public AwsAbstractClient {
     Q_OBJECT

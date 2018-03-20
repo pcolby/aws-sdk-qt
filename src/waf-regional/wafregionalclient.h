@@ -20,18 +20,91 @@
 #ifndef QTAWS_WAFREGIONALCLIENT_H
 #define QTAWS_WAFREGIONALCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace WAFRegional {
 
 class WAFRegionalClientPrivate;
+class AssociateWebACLResponse;
+class CreateByteMatchSetResponse;
+class CreateGeoMatchSetResponse;
+class CreateIPSetResponse;
+class CreateRateBasedRuleResponse;
+class CreateRegexMatchSetResponse;
+class CreateRegexPatternSetResponse;
+class CreateRuleResponse;
+class CreateRuleGroupResponse;
+class CreateSizeConstraintSetResponse;
+class CreateSqlInjectionMatchSetResponse;
+class CreateWebACLResponse;
+class CreateXssMatchSetResponse;
+class DeleteByteMatchSetResponse;
+class DeleteGeoMatchSetResponse;
+class DeleteIPSetResponse;
+class DeletePermissionPolicyResponse;
+class DeleteRateBasedRuleResponse;
+class DeleteRegexMatchSetResponse;
+class DeleteRegexPatternSetResponse;
+class DeleteRuleResponse;
+class DeleteRuleGroupResponse;
+class DeleteSizeConstraintSetResponse;
+class DeleteSqlInjectionMatchSetResponse;
+class DeleteWebACLResponse;
+class DeleteXssMatchSetResponse;
+class DisassociateWebACLResponse;
+class GetByteMatchSetResponse;
+class GetChangeTokenResponse;
+class GetChangeTokenStatusResponse;
+class GetGeoMatchSetResponse;
+class GetIPSetResponse;
+class GetPermissionPolicyResponse;
+class GetRateBasedRuleResponse;
+class GetRateBasedRuleManagedKeysResponse;
+class GetRegexMatchSetResponse;
+class GetRegexPatternSetResponse;
+class GetRuleResponse;
+class GetRuleGroupResponse;
+class GetSampledRequestsResponse;
+class GetSizeConstraintSetResponse;
+class GetSqlInjectionMatchSetResponse;
+class GetWebACLResponse;
+class GetWebACLForResourceResponse;
+class GetXssMatchSetResponse;
+class ListActivatedRulesInRuleGroupResponse;
+class ListByteMatchSetsResponse;
+class ListGeoMatchSetsResponse;
+class ListIPSetsResponse;
+class ListRateBasedRulesResponse;
+class ListRegexMatchSetsResponse;
+class ListRegexPatternSetsResponse;
+class ListResourcesForWebACLResponse;
+class ListRuleGroupsResponse;
+class ListRulesResponse;
+class ListSizeConstraintSetsResponse;
+class ListSqlInjectionMatchSetsResponse;
+class ListSubscribedRuleGroupsResponse;
+class ListWebACLsResponse;
+class ListXssMatchSetsResponse;
+class PutPermissionPolicyResponse;
+class UpdateByteMatchSetResponse;
+class UpdateGeoMatchSetResponse;
+class UpdateIPSetResponse;
+class UpdateRateBasedRuleResponse;
+class UpdateRegexMatchSetResponse;
+class UpdateRegexPatternSetResponse;
+class UpdateRuleResponse;
+class UpdateRuleGroupResponse;
+class UpdateSizeConstraintSetResponse;
+class UpdateSqlInjectionMatchSetResponse;
+class UpdateWebACLResponse;
+class UpdateXssMatchSetResponse;
 
 class QTAWS_EXPORT WAFRegionalClient : public AwsAbstractClient {
     Q_OBJECT

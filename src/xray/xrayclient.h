@@ -20,18 +20,24 @@
 #ifndef QTAWS_XRAYCLIENT_H
 #define QTAWS_XRAYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace XRay {
 
 class XRayClientPrivate;
+class BatchGetTracesResponse;
+class GetServiceGraphResponse;
+class GetTraceGraphResponse;
+class GetTraceSummariesResponse;
+class PutTelemetryRecordsResponse;
+class PutTraceSegmentsResponse;
 
 class QTAWS_EXPORT XRayClient : public AwsAbstractClient {
     Q_OBJECT

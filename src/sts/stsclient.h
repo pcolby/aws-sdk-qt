@@ -20,18 +20,25 @@
 #ifndef QTAWS_STSCLIENT_H
 #define QTAWS_STSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace STS {
 
 class StsClientPrivate;
+class AssumeRoleResponse;
+class AssumeRoleWithSAMLResponse;
+class AssumeRoleWithWebIdentityResponse;
+class DecodeAuthorizationMessageResponse;
+class GetCallerIdentityResponse;
+class GetFederationTokenResponse;
+class GetSessionTokenResponse;
 
 class QTAWS_EXPORT StsClient : public AwsAbstractClient {
     Q_OBJECT

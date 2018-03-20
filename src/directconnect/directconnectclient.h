@@ -20,18 +20,62 @@
 #ifndef QTAWS_DIRECTCONNECTCLIENT_H
 #define QTAWS_DIRECTCONNECTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DirectConnect {
 
 class DirectConnectClientPrivate;
+class AllocateConnectionOnInterconnectResponse;
+class AllocateHostedConnectionResponse;
+class AllocatePrivateVirtualInterfaceResponse;
+class AllocatePublicVirtualInterfaceResponse;
+class AssociateConnectionWithLagResponse;
+class AssociateHostedConnectionResponse;
+class AssociateVirtualInterfaceResponse;
+class ConfirmConnectionResponse;
+class ConfirmPrivateVirtualInterfaceResponse;
+class ConfirmPublicVirtualInterfaceResponse;
+class CreateBGPPeerResponse;
+class CreateConnectionResponse;
+class CreateDirectConnectGatewayResponse;
+class CreateDirectConnectGatewayAssociationResponse;
+class CreateInterconnectResponse;
+class CreateLagResponse;
+class CreatePrivateVirtualInterfaceResponse;
+class CreatePublicVirtualInterfaceResponse;
+class DeleteBGPPeerResponse;
+class DeleteConnectionResponse;
+class DeleteDirectConnectGatewayResponse;
+class DeleteDirectConnectGatewayAssociationResponse;
+class DeleteInterconnectResponse;
+class DeleteLagResponse;
+class DeleteVirtualInterfaceResponse;
+class DescribeConnectionLoaResponse;
+class DescribeConnectionsResponse;
+class DescribeConnectionsOnInterconnectResponse;
+class DescribeDirectConnectGatewayAssociationsResponse;
+class DescribeDirectConnectGatewayAttachmentsResponse;
+class DescribeDirectConnectGatewaysResponse;
+class DescribeHostedConnectionsResponse;
+class DescribeInterconnectLoaResponse;
+class DescribeInterconnectsResponse;
+class DescribeLagsResponse;
+class DescribeLoaResponse;
+class DescribeLocationsResponse;
+class DescribeTagsResponse;
+class DescribeVirtualGatewaysResponse;
+class DescribeVirtualInterfacesResponse;
+class DisassociateConnectionFromLagResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateLagResponse;
 
 class QTAWS_EXPORT DirectConnectClient : public AwsAbstractClient {
     Q_OBJECT

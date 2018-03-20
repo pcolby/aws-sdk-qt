@@ -20,18 +20,33 @@
 #ifndef QTAWS_OPSWORKSCMCLIENT_H
 #define QTAWS_OPSWORKSCMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace OpsWorksCM {
 
 class OpsWorksCMClientPrivate;
+class AssociateNodeResponse;
+class CreateBackupResponse;
+class CreateServerResponse;
+class DeleteBackupResponse;
+class DeleteServerResponse;
+class DescribeAccountAttributesResponse;
+class DescribeBackupsResponse;
+class DescribeEventsResponse;
+class DescribeNodeAssociationStatusResponse;
+class DescribeServersResponse;
+class DisassociateNodeResponse;
+class RestoreServerResponse;
+class StartMaintenanceResponse;
+class UpdateServerResponse;
+class UpdateServerEngineAttributesResponse;
 
 class QTAWS_EXPORT OpsWorksCMClient : public AwsAbstractClient {
     Q_OBJECT

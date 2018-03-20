@@ -20,18 +20,46 @@
 #ifndef QTAWS_MACHINELEARNINGCLIENT_H
 #define QTAWS_MACHINELEARNINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MachineLearning {
 
 class MachineLearningClientPrivate;
+class AddTagsResponse;
+class CreateBatchPredictionResponse;
+class CreateDataSourceFromRDSResponse;
+class CreateDataSourceFromRedshiftResponse;
+class CreateDataSourceFromS3Response;
+class CreateEvaluationResponse;
+class CreateMLModelResponse;
+class CreateRealtimeEndpointResponse;
+class DeleteBatchPredictionResponse;
+class DeleteDataSourceResponse;
+class DeleteEvaluationResponse;
+class DeleteMLModelResponse;
+class DeleteRealtimeEndpointResponse;
+class DeleteTagsResponse;
+class DescribeBatchPredictionsResponse;
+class DescribeDataSourcesResponse;
+class DescribeEvaluationsResponse;
+class DescribeMLModelsResponse;
+class DescribeTagsResponse;
+class GetBatchPredictionResponse;
+class GetDataSourceResponse;
+class GetEvaluationResponse;
+class GetMLModelResponse;
+class PredictResponse;
+class UpdateBatchPredictionResponse;
+class UpdateDataSourceResponse;
+class UpdateEvaluationResponse;
+class UpdateMLModelResponse;
 
 class QTAWS_EXPORT MachineLearningClient : public AwsAbstractClient {
     Q_OBJECT

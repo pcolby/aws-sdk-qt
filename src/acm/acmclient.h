@@ -20,18 +20,28 @@
 #ifndef QTAWS_ACMCLIENT_H
 #define QTAWS_ACMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ACM {
 
 class AcmClientPrivate;
+class AddTagsToCertificateResponse;
+class DeleteCertificateResponse;
+class DescribeCertificateResponse;
+class GetCertificateResponse;
+class ImportCertificateResponse;
+class ListCertificatesResponse;
+class ListTagsForCertificateResponse;
+class RemoveTagsFromCertificateResponse;
+class RequestCertificateResponse;
+class ResendValidationEmailResponse;
 
 class QTAWS_EXPORT AcmClient : public AwsAbstractClient {
     Q_OBJECT

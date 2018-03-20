@@ -20,18 +20,20 @@
 #ifndef QTAWS_LEXRUNTIMESERVICECLIENT_H
 #define QTAWS_LEXRUNTIMESERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClientPrivate;
+class PostContentResponse;
+class PostTextResponse;
 
 class QTAWS_EXPORT LexRuntimeServiceClient : public AwsAbstractClient {
     Q_OBJECT

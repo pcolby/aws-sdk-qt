@@ -20,18 +20,28 @@
 #ifndef QTAWS_APPLICATIONAUTOSCALINGCLIENT_H
 #define QTAWS_APPLICATIONAUTOSCALINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingClientPrivate;
+class DeleteScalingPolicyResponse;
+class DeleteScheduledActionResponse;
+class DeregisterScalableTargetResponse;
+class DescribeScalableTargetsResponse;
+class DescribeScalingActivitiesResponse;
+class DescribeScalingPoliciesResponse;
+class DescribeScheduledActionsResponse;
+class PutScalingPolicyResponse;
+class PutScheduledActionResponse;
+class RegisterScalableTargetResponse;
 
 class QTAWS_EXPORT ApplicationAutoScalingClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,35 @@
 #ifndef QTAWS_MQCLIENT_H
 #define QTAWS_MQCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MQ {
 
 class MqClientPrivate;
+class CreateBrokerResponse;
+class CreateConfigurationResponse;
+class CreateUserResponse;
+class DeleteBrokerResponse;
+class DeleteUserResponse;
+class DescribeBrokerResponse;
+class DescribeConfigurationResponse;
+class DescribeConfigurationRevisionResponse;
+class DescribeUserResponse;
+class ListBrokersResponse;
+class ListConfigurationRevisionsResponse;
+class ListConfigurationsResponse;
+class ListUsersResponse;
+class RebootBrokerResponse;
+class UpdateBrokerResponse;
+class UpdateConfigurationResponse;
+class UpdateUserResponse;
 
 class QTAWS_EXPORT MqClient : public AwsAbstractClient {
     Q_OBJECT

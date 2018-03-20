@@ -20,18 +20,80 @@
 #ifndef QTAWS_CLOUDDIRECTORYCLIENT_H
 #define QTAWS_CLOUDDIRECTORYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudDirectory {
 
 class CloudDirectoryClientPrivate;
+class AddFacetToObjectResponse;
+class ApplySchemaResponse;
+class AttachObjectResponse;
+class AttachPolicyResponse;
+class AttachToIndexResponse;
+class AttachTypedLinkResponse;
+class BatchReadResponse;
+class BatchWriteResponse;
+class CreateDirectoryResponse;
+class CreateFacetResponse;
+class CreateIndexResponse;
+class CreateObjectResponse;
+class CreateSchemaResponse;
+class CreateTypedLinkFacetResponse;
+class DeleteDirectoryResponse;
+class DeleteFacetResponse;
+class DeleteObjectResponse;
+class DeleteSchemaResponse;
+class DeleteTypedLinkFacetResponse;
+class DetachFromIndexResponse;
+class DetachObjectResponse;
+class DetachPolicyResponse;
+class DetachTypedLinkResponse;
+class DisableDirectoryResponse;
+class EnableDirectoryResponse;
+class GetAppliedSchemaVersionResponse;
+class GetDirectoryResponse;
+class GetFacetResponse;
+class GetObjectInformationResponse;
+class GetSchemaAsJsonResponse;
+class GetTypedLinkFacetInformationResponse;
+class ListAppliedSchemaArnsResponse;
+class ListAttachedIndicesResponse;
+class ListDevelopmentSchemaArnsResponse;
+class ListDirectoriesResponse;
+class ListFacetAttributesResponse;
+class ListFacetNamesResponse;
+class ListIncomingTypedLinksResponse;
+class ListIndexResponse;
+class ListObjectAttributesResponse;
+class ListObjectChildrenResponse;
+class ListObjectParentPathsResponse;
+class ListObjectParentsResponse;
+class ListObjectPoliciesResponse;
+class ListOutgoingTypedLinksResponse;
+class ListPolicyAttachmentsResponse;
+class ListPublishedSchemaArnsResponse;
+class ListTagsForResourceResponse;
+class ListTypedLinkFacetAttributesResponse;
+class ListTypedLinkFacetNamesResponse;
+class LookupPolicyResponse;
+class PublishSchemaResponse;
+class PutSchemaFromJsonResponse;
+class RemoveFacetFromObjectResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateFacetResponse;
+class UpdateObjectAttributesResponse;
+class UpdateSchemaResponse;
+class UpdateTypedLinkFacetResponse;
+class UpgradeAppliedSchemaResponse;
+class UpgradePublishedSchemaResponse;
 
 class QTAWS_EXPORT CloudDirectoryClient : public AwsAbstractClient {
     Q_OBJECT

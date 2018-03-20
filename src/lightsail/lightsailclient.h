@@ -20,18 +20,89 @@
 #ifndef QTAWS_LIGHTSAILCLIENT_H
 #define QTAWS_LIGHTSAILCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Lightsail {
 
 class LightsailClientPrivate;
+class AllocateStaticIpResponse;
+class AttachDiskResponse;
+class AttachInstancesToLoadBalancerResponse;
+class AttachLoadBalancerTlsCertificateResponse;
+class AttachStaticIpResponse;
+class CloseInstancePublicPortsResponse;
+class CreateDiskResponse;
+class CreateDiskFromSnapshotResponse;
+class CreateDiskSnapshotResponse;
+class CreateDomainResponse;
+class CreateDomainEntryResponse;
+class CreateInstanceSnapshotResponse;
+class CreateInstancesResponse;
+class CreateInstancesFromSnapshotResponse;
+class CreateKeyPairResponse;
+class CreateLoadBalancerResponse;
+class CreateLoadBalancerTlsCertificateResponse;
+class DeleteDiskResponse;
+class DeleteDiskSnapshotResponse;
+class DeleteDomainResponse;
+class DeleteDomainEntryResponse;
+class DeleteInstanceResponse;
+class DeleteInstanceSnapshotResponse;
+class DeleteKeyPairResponse;
+class DeleteLoadBalancerResponse;
+class DeleteLoadBalancerTlsCertificateResponse;
+class DetachDiskResponse;
+class DetachInstancesFromLoadBalancerResponse;
+class DetachStaticIpResponse;
+class DownloadDefaultKeyPairResponse;
+class GetActiveNamesResponse;
+class GetBlueprintsResponse;
+class GetBundlesResponse;
+class GetDiskResponse;
+class GetDiskSnapshotResponse;
+class GetDiskSnapshotsResponse;
+class GetDisksResponse;
+class GetDomainResponse;
+class GetDomainsResponse;
+class GetInstanceResponse;
+class GetInstanceAccessDetailsResponse;
+class GetInstanceMetricDataResponse;
+class GetInstancePortStatesResponse;
+class GetInstanceSnapshotResponse;
+class GetInstanceSnapshotsResponse;
+class GetInstanceStateResponse;
+class GetInstancesResponse;
+class GetKeyPairResponse;
+class GetKeyPairsResponse;
+class GetLoadBalancerResponse;
+class GetLoadBalancerMetricDataResponse;
+class GetLoadBalancerTlsCertificatesResponse;
+class GetLoadBalancersResponse;
+class GetOperationResponse;
+class GetOperationsResponse;
+class GetOperationsForResourceResponse;
+class GetRegionsResponse;
+class GetStaticIpResponse;
+class GetStaticIpsResponse;
+class ImportKeyPairResponse;
+class IsVpcPeeredResponse;
+class OpenInstancePublicPortsResponse;
+class PeerVpcResponse;
+class PutInstancePublicPortsResponse;
+class RebootInstanceResponse;
+class ReleaseStaticIpResponse;
+class StartInstanceResponse;
+class StopInstanceResponse;
+class UnpeerVpcResponse;
+class UpdateDomainEntryResponse;
+class UpdateLoadBalancerAttributeResponse;
 
 class QTAWS_EXPORT LightsailClient : public AwsAbstractClient {
     Q_OBJECT

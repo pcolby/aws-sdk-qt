@@ -20,18 +20,33 @@
 #ifndef QTAWS_CLOUDWATCHCLIENT_H
 #define QTAWS_CLOUDWATCHCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudWatch {
 
 class CloudWatchClientPrivate;
+class DeleteAlarmsResponse;
+class DeleteDashboardsResponse;
+class DescribeAlarmHistoryResponse;
+class DescribeAlarmsResponse;
+class DescribeAlarmsForMetricResponse;
+class DisableAlarmActionsResponse;
+class EnableAlarmActionsResponse;
+class GetDashboardResponse;
+class GetMetricStatisticsResponse;
+class ListDashboardsResponse;
+class ListMetricsResponse;
+class PutDashboardResponse;
+class PutMetricAlarmResponse;
+class PutMetricDataResponse;
+class SetAlarmStateResponse;
 
 class QTAWS_EXPORT CloudWatchClient : public AwsAbstractClient {
     Q_OBJECT

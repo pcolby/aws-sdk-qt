@@ -20,18 +20,39 @@
 #ifndef QTAWS_DAXCLIENT_H
 #define QTAWS_DAXCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DAX {
 
 class DaxClientPrivate;
+class CreateClusterResponse;
+class CreateParameterGroupResponse;
+class CreateSubnetGroupResponse;
+class DecreaseReplicationFactorResponse;
+class DeleteClusterResponse;
+class DeleteParameterGroupResponse;
+class DeleteSubnetGroupResponse;
+class DescribeClustersResponse;
+class DescribeDefaultParametersResponse;
+class DescribeEventsResponse;
+class DescribeParameterGroupsResponse;
+class DescribeParametersResponse;
+class DescribeSubnetGroupsResponse;
+class IncreaseReplicationFactorResponse;
+class ListTagsResponse;
+class RebootNodeResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateClusterResponse;
+class UpdateParameterGroupResponse;
+class UpdateSubnetGroupResponse;
 
 class QTAWS_EXPORT DaxClient : public AwsAbstractClient {
     Q_OBJECT

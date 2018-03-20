@@ -20,18 +20,88 @@
 #ifndef QTAWS_SESCLIENT_H
 #define QTAWS_SESCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SES {
 
 class SesClientPrivate;
+class CloneReceiptRuleSetResponse;
+class CreateConfigurationSetResponse;
+class CreateConfigurationSetEventDestinationResponse;
+class CreateConfigurationSetTrackingOptionsResponse;
+class CreateCustomVerificationEmailTemplateResponse;
+class CreateReceiptFilterResponse;
+class CreateReceiptRuleResponse;
+class CreateReceiptRuleSetResponse;
+class CreateTemplateResponse;
+class DeleteConfigurationSetResponse;
+class DeleteConfigurationSetEventDestinationResponse;
+class DeleteConfigurationSetTrackingOptionsResponse;
+class DeleteCustomVerificationEmailTemplateResponse;
+class DeleteIdentityResponse;
+class DeleteIdentityPolicyResponse;
+class DeleteReceiptFilterResponse;
+class DeleteReceiptRuleResponse;
+class DeleteReceiptRuleSetResponse;
+class DeleteTemplateResponse;
+class DeleteVerifiedEmailAddressResponse;
+class DescribeActiveReceiptRuleSetResponse;
+class DescribeConfigurationSetResponse;
+class DescribeReceiptRuleResponse;
+class DescribeReceiptRuleSetResponse;
+class GetAccountSendingEnabledResponse;
+class GetCustomVerificationEmailTemplateResponse;
+class GetIdentityDkimAttributesResponse;
+class GetIdentityMailFromDomainAttributesResponse;
+class GetIdentityNotificationAttributesResponse;
+class GetIdentityPoliciesResponse;
+class GetIdentityVerificationAttributesResponse;
+class GetSendQuotaResponse;
+class GetSendStatisticsResponse;
+class GetTemplateResponse;
+class ListConfigurationSetsResponse;
+class ListCustomVerificationEmailTemplatesResponse;
+class ListIdentitiesResponse;
+class ListIdentityPoliciesResponse;
+class ListReceiptFiltersResponse;
+class ListReceiptRuleSetsResponse;
+class ListTemplatesResponse;
+class ListVerifiedEmailAddressesResponse;
+class PutIdentityPolicyResponse;
+class ReorderReceiptRuleSetResponse;
+class SendBounceResponse;
+class SendBulkTemplatedEmailResponse;
+class SendCustomVerificationEmailResponse;
+class SendEmailResponse;
+class SendRawEmailResponse;
+class SendTemplatedEmailResponse;
+class SetActiveReceiptRuleSetResponse;
+class SetIdentityDkimEnabledResponse;
+class SetIdentityFeedbackForwardingEnabledResponse;
+class SetIdentityHeadersInNotificationsEnabledResponse;
+class SetIdentityMailFromDomainResponse;
+class SetIdentityNotificationTopicResponse;
+class SetReceiptRulePositionResponse;
+class TestRenderTemplateResponse;
+class UpdateAccountSendingEnabledResponse;
+class UpdateConfigurationSetEventDestinationResponse;
+class UpdateConfigurationSetReputationMetricsEnabledResponse;
+class UpdateConfigurationSetSendingEnabledResponse;
+class UpdateConfigurationSetTrackingOptionsResponse;
+class UpdateCustomVerificationEmailTemplateResponse;
+class UpdateReceiptRuleResponse;
+class UpdateTemplateResponse;
+class VerifyDomainDkimResponse;
+class VerifyDomainIdentityResponse;
+class VerifyEmailAddressResponse;
+class VerifyEmailIdentityResponse;
 
 class QTAWS_EXPORT SesClient : public AwsAbstractClient {
     Q_OBJECT

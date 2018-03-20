@@ -20,18 +20,24 @@
 #ifndef QTAWS_POLLYCLIENT_H
 #define QTAWS_POLLYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Polly {
 
 class PollyClientPrivate;
+class DeleteLexiconResponse;
+class DescribeVoicesResponse;
+class GetLexiconResponse;
+class ListLexiconsResponse;
+class PutLexiconResponse;
+class SynthesizeSpeechResponse;
 
 class QTAWS_EXPORT PollyClient : public AwsAbstractClient {
     Q_OBJECT

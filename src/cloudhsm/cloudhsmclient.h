@@ -20,18 +20,38 @@
 #ifndef QTAWS_CLOUDHSMCLIENT_H
 #define QTAWS_CLOUDHSMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudHSM {
 
 class CloudHSMClientPrivate;
+class AddTagsToResourceResponse;
+class CreateHapgResponse;
+class CreateHsmResponse;
+class CreateLunaClientResponse;
+class DeleteHapgResponse;
+class DeleteHsmResponse;
+class DeleteLunaClientResponse;
+class DescribeHapgResponse;
+class DescribeHsmResponse;
+class DescribeLunaClientResponse;
+class GetConfigResponse;
+class ListAvailableZonesResponse;
+class ListHapgsResponse;
+class ListHsmsResponse;
+class ListLunaClientsResponse;
+class ListTagsForResourceResponse;
+class ModifyHapgResponse;
+class ModifyHsmResponse;
+class ModifyLunaClientResponse;
+class RemoveTagsFromResourceResponse;
 
 class QTAWS_EXPORT CloudHSMClient : public AwsAbstractClient {
     Q_OBJECT

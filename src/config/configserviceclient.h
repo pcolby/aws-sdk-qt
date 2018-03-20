@@ -20,18 +20,45 @@
 #ifndef QTAWS_CONFIGSERVICECLIENT_H
 #define QTAWS_CONFIGSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ConfigService {
 
 class ConfigServiceClientPrivate;
+class DeleteConfigRuleResponse;
+class DeleteConfigurationRecorderResponse;
+class DeleteDeliveryChannelResponse;
+class DeleteEvaluationResultsResponse;
+class DeliverConfigSnapshotResponse;
+class DescribeComplianceByConfigRuleResponse;
+class DescribeComplianceByResourceResponse;
+class DescribeConfigRuleEvaluationStatusResponse;
+class DescribeConfigRulesResponse;
+class DescribeConfigurationRecorderStatusResponse;
+class DescribeConfigurationRecordersResponse;
+class DescribeDeliveryChannelStatusResponse;
+class DescribeDeliveryChannelsResponse;
+class GetComplianceDetailsByConfigRuleResponse;
+class GetComplianceDetailsByResourceResponse;
+class GetComplianceSummaryByConfigRuleResponse;
+class GetComplianceSummaryByResourceTypeResponse;
+class GetDiscoveredResourceCountsResponse;
+class GetResourceConfigHistoryResponse;
+class ListDiscoveredResourcesResponse;
+class PutConfigRuleResponse;
+class PutConfigurationRecorderResponse;
+class PutDeliveryChannelResponse;
+class PutEvaluationsResponse;
+class StartConfigRulesEvaluationResponse;
+class StartConfigurationRecorderResponse;
+class StopConfigurationRecorderResponse;
 
 class QTAWS_EXPORT ConfigServiceClient : public AwsAbstractClient {
     Q_OBJECT

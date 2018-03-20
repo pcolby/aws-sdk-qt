@@ -20,18 +20,51 @@
 #ifndef QTAWS_INSPECTORCLIENT_H
 #define QTAWS_INSPECTORCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Inspector {
 
 class InspectorClientPrivate;
+class AddAttributesToFindingsResponse;
+class CreateAssessmentTargetResponse;
+class CreateAssessmentTemplateResponse;
+class CreateResourceGroupResponse;
+class DeleteAssessmentRunResponse;
+class DeleteAssessmentTargetResponse;
+class DeleteAssessmentTemplateResponse;
+class DescribeAssessmentRunsResponse;
+class DescribeAssessmentTargetsResponse;
+class DescribeAssessmentTemplatesResponse;
+class DescribeCrossAccountAccessRoleResponse;
+class DescribeFindingsResponse;
+class DescribeResourceGroupsResponse;
+class DescribeRulesPackagesResponse;
+class GetAssessmentReportResponse;
+class GetTelemetryMetadataResponse;
+class ListAssessmentRunAgentsResponse;
+class ListAssessmentRunsResponse;
+class ListAssessmentTargetsResponse;
+class ListAssessmentTemplatesResponse;
+class ListEventSubscriptionsResponse;
+class ListFindingsResponse;
+class ListRulesPackagesResponse;
+class ListTagsForResourceResponse;
+class PreviewAgentsResponse;
+class RegisterCrossAccountAccessRoleResponse;
+class RemoveAttributesFromFindingsResponse;
+class SetTagsForResourceResponse;
+class StartAssessmentRunResponse;
+class StopAssessmentRunResponse;
+class SubscribeToEventResponse;
+class UnsubscribeFromEventResponse;
+class UpdateAssessmentTargetResponse;
 
 class QTAWS_EXPORT InspectorClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,28 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENT_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClientPrivate;
+class CreateApplicationResponse;
+class CreateApplicationVersionResponse;
+class CreateCloudFormationChangeSetResponse;
+class DeleteApplicationResponse;
+class GetApplicationResponse;
+class GetApplicationPolicyResponse;
+class ListApplicationVersionsResponse;
+class ListApplicationsResponse;
+class PutApplicationPolicyResponse;
+class UpdateApplicationResponse;
 
 class QTAWS_EXPORT ServerlessApplicationRepositoryClient : public AwsAbstractClient {
     Q_OBJECT

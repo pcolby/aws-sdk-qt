@@ -20,18 +20,35 @@
 #ifndef QTAWS_KINESISANALYTICSCLIENT_H
 #define QTAWS_KINESISANALYTICSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace KinesisAnalytics {
 
 class KinesisAnalyticsClientPrivate;
+class AddApplicationCloudWatchLoggingOptionResponse;
+class AddApplicationInputResponse;
+class AddApplicationInputProcessingConfigurationResponse;
+class AddApplicationOutputResponse;
+class AddApplicationReferenceDataSourceResponse;
+class CreateApplicationResponse;
+class DeleteApplicationResponse;
+class DeleteApplicationCloudWatchLoggingOptionResponse;
+class DeleteApplicationInputProcessingConfigurationResponse;
+class DeleteApplicationOutputResponse;
+class DeleteApplicationReferenceDataSourceResponse;
+class DescribeApplicationResponse;
+class DiscoverInputSchemaResponse;
+class ListApplicationsResponse;
+class StartApplicationResponse;
+class StopApplicationResponse;
+class UpdateApplicationResponse;
 
 class QTAWS_EXPORT KinesisAnalyticsClient : public AwsAbstractClient {
     Q_OBJECT

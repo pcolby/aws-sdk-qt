@@ -20,18 +20,58 @@
 #ifndef QTAWS_ELASTICACHECLIENT_H
 #define QTAWS_ELASTICACHECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElastiCache {
 
 class ElastiCacheClientPrivate;
+class AddTagsToResourceResponse;
+class AuthorizeCacheSecurityGroupIngressResponse;
+class CopySnapshotResponse;
+class CreateCacheClusterResponse;
+class CreateCacheParameterGroupResponse;
+class CreateCacheSecurityGroupResponse;
+class CreateCacheSubnetGroupResponse;
+class CreateReplicationGroupResponse;
+class CreateSnapshotResponse;
+class DeleteCacheClusterResponse;
+class DeleteCacheParameterGroupResponse;
+class DeleteCacheSecurityGroupResponse;
+class DeleteCacheSubnetGroupResponse;
+class DeleteReplicationGroupResponse;
+class DeleteSnapshotResponse;
+class DescribeCacheClustersResponse;
+class DescribeCacheEngineVersionsResponse;
+class DescribeCacheParameterGroupsResponse;
+class DescribeCacheParametersResponse;
+class DescribeCacheSecurityGroupsResponse;
+class DescribeCacheSubnetGroupsResponse;
+class DescribeEngineDefaultParametersResponse;
+class DescribeEventsResponse;
+class DescribeReplicationGroupsResponse;
+class DescribeReservedCacheNodesResponse;
+class DescribeReservedCacheNodesOfferingsResponse;
+class DescribeSnapshotsResponse;
+class ListAllowedNodeTypeModificationsResponse;
+class ListTagsForResourceResponse;
+class ModifyCacheClusterResponse;
+class ModifyCacheParameterGroupResponse;
+class ModifyCacheSubnetGroupResponse;
+class ModifyReplicationGroupResponse;
+class ModifyReplicationGroupShardConfigurationResponse;
+class PurchaseReservedCacheNodesOfferingResponse;
+class RebootCacheClusterResponse;
+class RemoveTagsFromResourceResponse;
+class ResetCacheParameterGroupResponse;
+class RevokeCacheSecurityGroupIngressResponse;
+class TestFailoverResponse;
 
 class QTAWS_EXPORT ElastiCacheClient : public AwsAbstractClient {
     Q_OBJECT

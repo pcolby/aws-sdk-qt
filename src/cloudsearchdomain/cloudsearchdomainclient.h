@@ -20,18 +20,21 @@
 #ifndef QTAWS_CLOUDSEARCHDOMAINCLIENT_H
 #define QTAWS_CLOUDSEARCHDOMAINCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudSearchDomain {
 
 class CloudSearchDomainClientPrivate;
+class SearchResponse;
+class SuggestResponse;
+class UploadDocumentsResponse;
 
 class QTAWS_EXPORT CloudSearchDomainClient : public AwsAbstractClient {
     Q_OBJECT

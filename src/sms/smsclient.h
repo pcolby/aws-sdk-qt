@@ -20,18 +20,29 @@
 #ifndef QTAWS_SMSCLIENT_H
 #define QTAWS_SMSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SMS {
 
 class SmsClientPrivate;
+class CreateReplicationJobResponse;
+class DeleteReplicationJobResponse;
+class DeleteServerCatalogResponse;
+class DisassociateConnectorResponse;
+class GetConnectorsResponse;
+class GetReplicationJobsResponse;
+class GetReplicationRunsResponse;
+class GetServersResponse;
+class ImportServerCatalogResponse;
+class StartOnDemandReplicationRunResponse;
+class UpdateReplicationJobResponse;
 
 class QTAWS_EXPORT SmsClient : public AwsAbstractClient {
     Q_OBJECT

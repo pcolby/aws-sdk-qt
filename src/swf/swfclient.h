@@ -20,18 +20,49 @@
 #ifndef QTAWS_SWFCLIENT_H
 #define QTAWS_SWFCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SWF {
 
 class SwfClientPrivate;
+class CountClosedWorkflowExecutionsResponse;
+class CountOpenWorkflowExecutionsResponse;
+class CountPendingActivityTasksResponse;
+class CountPendingDecisionTasksResponse;
+class DeprecateActivityTypeResponse;
+class DeprecateDomainResponse;
+class DeprecateWorkflowTypeResponse;
+class DescribeActivityTypeResponse;
+class DescribeDomainResponse;
+class DescribeWorkflowExecutionResponse;
+class DescribeWorkflowTypeResponse;
+class GetWorkflowExecutionHistoryResponse;
+class ListActivityTypesResponse;
+class ListClosedWorkflowExecutionsResponse;
+class ListDomainsResponse;
+class ListOpenWorkflowExecutionsResponse;
+class ListWorkflowTypesResponse;
+class PollForActivityTaskResponse;
+class PollForDecisionTaskResponse;
+class RecordActivityTaskHeartbeatResponse;
+class RegisterActivityTypeResponse;
+class RegisterDomainResponse;
+class RegisterWorkflowTypeResponse;
+class RequestCancelWorkflowExecutionResponse;
+class RespondActivityTaskCanceledResponse;
+class RespondActivityTaskCompletedResponse;
+class RespondActivityTaskFailedResponse;
+class RespondDecisionTaskCompletedResponse;
+class SignalWorkflowExecutionResponse;
+class StartWorkflowExecutionResponse;
+class TerminateWorkflowExecutionResponse;
 
 class QTAWS_EXPORT SwfClient : public AwsAbstractClient {
     Q_OBJECT

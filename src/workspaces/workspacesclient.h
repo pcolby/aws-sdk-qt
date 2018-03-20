@@ -20,18 +20,32 @@
 #ifndef QTAWS_WORKSPACESCLIENT_H
 #define QTAWS_WORKSPACESCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace WorkSpaces {
 
 class WorkSpacesClientPrivate;
+class CreateTagsResponse;
+class CreateWorkspacesResponse;
+class DeleteTagsResponse;
+class DescribeTagsResponse;
+class DescribeWorkspaceBundlesResponse;
+class DescribeWorkspaceDirectoriesResponse;
+class DescribeWorkspacesResponse;
+class DescribeWorkspacesConnectionStatusResponse;
+class ModifyWorkspacePropertiesResponse;
+class RebootWorkspacesResponse;
+class RebuildWorkspacesResponse;
+class StartWorkspacesResponse;
+class StopWorkspacesResponse;
+class TerminateWorkspacesResponse;
 
 class QTAWS_EXPORT WorkSpacesClient : public AwsAbstractClient {
     Q_OBJECT

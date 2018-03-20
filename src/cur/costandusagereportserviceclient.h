@@ -20,18 +20,21 @@
 #ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_H
 #define QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientPrivate;
+class DeleteReportDefinitionResponse;
+class DescribeReportDefinitionsResponse;
+class PutReportDefinitionResponse;
 
 class QTAWS_EXPORT CostandUsageReportServiceClient : public AwsAbstractClient {
     Q_OBJECT

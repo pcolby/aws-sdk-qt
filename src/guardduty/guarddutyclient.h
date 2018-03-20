@@ -20,18 +20,55 @@
 #ifndef QTAWS_GUARDDUTYCLIENT_H
 #define QTAWS_GUARDDUTYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace GuardDuty {
 
 class GuardDutyClientPrivate;
+class AcceptInvitationResponse;
+class ArchiveFindingsResponse;
+class CreateDetectorResponse;
+class CreateIPSetResponse;
+class CreateMembersResponse;
+class CreateSampleFindingsResponse;
+class CreateThreatIntelSetResponse;
+class DeclineInvitationsResponse;
+class DeleteDetectorResponse;
+class DeleteIPSetResponse;
+class DeleteInvitationsResponse;
+class DeleteMembersResponse;
+class DeleteThreatIntelSetResponse;
+class DisassociateFromMasterAccountResponse;
+class DisassociateMembersResponse;
+class GetDetectorResponse;
+class GetFindingsResponse;
+class GetFindingsStatisticsResponse;
+class GetIPSetResponse;
+class GetInvitationsCountResponse;
+class GetMasterAccountResponse;
+class GetMembersResponse;
+class GetThreatIntelSetResponse;
+class InviteMembersResponse;
+class ListDetectorsResponse;
+class ListFindingsResponse;
+class ListIPSetsResponse;
+class ListInvitationsResponse;
+class ListMembersResponse;
+class ListThreatIntelSetsResponse;
+class StartMonitoringMembersResponse;
+class StopMonitoringMembersResponse;
+class UnarchiveFindingsResponse;
+class UpdateDetectorResponse;
+class UpdateFindingsFeedbackResponse;
+class UpdateIPSetResponse;
+class UpdateThreatIntelSetResponse;
 
 class QTAWS_EXPORT GuardDutyClient : public AwsAbstractClient {
     Q_OBJECT

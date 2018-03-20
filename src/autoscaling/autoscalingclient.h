@@ -20,18 +20,70 @@
 #ifndef QTAWS_AUTOSCALINGCLIENT_H
 #define QTAWS_AUTOSCALINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace AutoScaling {
 
 class AutoScalingClientPrivate;
+class AttachInstancesResponse;
+class AttachLoadBalancerTargetGroupsResponse;
+class AttachLoadBalancersResponse;
+class CompleteLifecycleActionResponse;
+class CreateAutoScalingGroupResponse;
+class CreateLaunchConfigurationResponse;
+class CreateOrUpdateTagsResponse;
+class DeleteAutoScalingGroupResponse;
+class DeleteLaunchConfigurationResponse;
+class DeleteLifecycleHookResponse;
+class DeleteNotificationConfigurationResponse;
+class DeletePolicyResponse;
+class DeleteScheduledActionResponse;
+class DeleteTagsResponse;
+class DescribeAccountLimitsResponse;
+class DescribeAdjustmentTypesResponse;
+class DescribeAutoScalingGroupsResponse;
+class DescribeAutoScalingInstancesResponse;
+class DescribeAutoScalingNotificationTypesResponse;
+class DescribeLaunchConfigurationsResponse;
+class DescribeLifecycleHookTypesResponse;
+class DescribeLifecycleHooksResponse;
+class DescribeLoadBalancerTargetGroupsResponse;
+class DescribeLoadBalancersResponse;
+class DescribeMetricCollectionTypesResponse;
+class DescribeNotificationConfigurationsResponse;
+class DescribePoliciesResponse;
+class DescribeScalingActivitiesResponse;
+class DescribeScalingProcessTypesResponse;
+class DescribeScheduledActionsResponse;
+class DescribeTagsResponse;
+class DescribeTerminationPolicyTypesResponse;
+class DetachInstancesResponse;
+class DetachLoadBalancerTargetGroupsResponse;
+class DetachLoadBalancersResponse;
+class DisableMetricsCollectionResponse;
+class EnableMetricsCollectionResponse;
+class EnterStandbyResponse;
+class ExecutePolicyResponse;
+class ExitStandbyResponse;
+class PutLifecycleHookResponse;
+class PutNotificationConfigurationResponse;
+class PutScalingPolicyResponse;
+class PutScheduledUpdateGroupActionResponse;
+class RecordLifecycleActionHeartbeatResponse;
+class ResumeProcessesResponse;
+class SetDesiredCapacityResponse;
+class SetInstanceHealthResponse;
+class SetInstanceProtectionResponse;
+class SuspendProcessesResponse;
+class TerminateInstanceInAutoScalingGroupResponse;
+class UpdateAutoScalingGroupResponse;
 
 class QTAWS_EXPORT AutoScalingClient : public AwsAbstractClient {
     Q_OBJECT

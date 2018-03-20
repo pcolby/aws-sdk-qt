@@ -20,18 +20,62 @@
 #ifndef QTAWS_ELASTICBEANSTALKCLIENT_H
 #define QTAWS_ELASTICBEANSTALKCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClientPrivate;
+class AbortEnvironmentUpdateResponse;
+class ApplyEnvironmentManagedActionResponse;
+class CheckDNSAvailabilityResponse;
+class ComposeEnvironmentsResponse;
+class CreateApplicationResponse;
+class CreateApplicationVersionResponse;
+class CreateConfigurationTemplateResponse;
+class CreateEnvironmentResponse;
+class CreatePlatformVersionResponse;
+class CreateStorageLocationResponse;
+class DeleteApplicationResponse;
+class DeleteApplicationVersionResponse;
+class DeleteConfigurationTemplateResponse;
+class DeleteEnvironmentConfigurationResponse;
+class DeletePlatformVersionResponse;
+class DescribeAccountAttributesResponse;
+class DescribeApplicationVersionsResponse;
+class DescribeApplicationsResponse;
+class DescribeConfigurationOptionsResponse;
+class DescribeConfigurationSettingsResponse;
+class DescribeEnvironmentHealthResponse;
+class DescribeEnvironmentManagedActionHistoryResponse;
+class DescribeEnvironmentManagedActionsResponse;
+class DescribeEnvironmentResourcesResponse;
+class DescribeEnvironmentsResponse;
+class DescribeEventsResponse;
+class DescribeInstancesHealthResponse;
+class DescribePlatformVersionResponse;
+class ListAvailableSolutionStacksResponse;
+class ListPlatformVersionsResponse;
+class ListTagsForResourceResponse;
+class RebuildEnvironmentResponse;
+class RequestEnvironmentInfoResponse;
+class RestartAppServerResponse;
+class RetrieveEnvironmentInfoResponse;
+class SwapEnvironmentCNAMEsResponse;
+class TerminateEnvironmentResponse;
+class UpdateApplicationResponse;
+class UpdateApplicationResourceLifecycleResponse;
+class UpdateApplicationVersionResponse;
+class UpdateConfigurationTemplateResponse;
+class UpdateEnvironmentResponse;
+class UpdateTagsForResourceResponse;
+class ValidateConfigurationSettingsResponse;
 
 class QTAWS_EXPORT ElasticBeanstalkClient : public AwsAbstractClient {
     Q_OBJECT

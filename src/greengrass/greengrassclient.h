@@ -20,18 +20,92 @@
 #ifndef QTAWS_GREENGRASSCLIENT_H
 #define QTAWS_GREENGRASSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Greengrass {
 
 class GreengrassClientPrivate;
+class AssociateRoleToGroupResponse;
+class AssociateServiceRoleToAccountResponse;
+class CreateCoreDefinitionResponse;
+class CreateCoreDefinitionVersionResponse;
+class CreateDeploymentResponse;
+class CreateDeviceDefinitionResponse;
+class CreateDeviceDefinitionVersionResponse;
+class CreateFunctionDefinitionResponse;
+class CreateFunctionDefinitionVersionResponse;
+class CreateGroupResponse;
+class CreateGroupCertificateAuthorityResponse;
+class CreateGroupVersionResponse;
+class CreateLoggerDefinitionResponse;
+class CreateLoggerDefinitionVersionResponse;
+class CreateResourceDefinitionResponse;
+class CreateResourceDefinitionVersionResponse;
+class CreateSoftwareUpdateJobResponse;
+class CreateSubscriptionDefinitionResponse;
+class CreateSubscriptionDefinitionVersionResponse;
+class DeleteCoreDefinitionResponse;
+class DeleteDeviceDefinitionResponse;
+class DeleteFunctionDefinitionResponse;
+class DeleteGroupResponse;
+class DeleteLoggerDefinitionResponse;
+class DeleteResourceDefinitionResponse;
+class DeleteSubscriptionDefinitionResponse;
+class DisassociateRoleFromGroupResponse;
+class DisassociateServiceRoleFromAccountResponse;
+class GetAssociatedRoleResponse;
+class GetConnectivityInfoResponse;
+class GetCoreDefinitionResponse;
+class GetCoreDefinitionVersionResponse;
+class GetDeploymentStatusResponse;
+class GetDeviceDefinitionResponse;
+class GetDeviceDefinitionVersionResponse;
+class GetFunctionDefinitionResponse;
+class GetFunctionDefinitionVersionResponse;
+class GetGroupResponse;
+class GetGroupCertificateAuthorityResponse;
+class GetGroupCertificateConfigurationResponse;
+class GetGroupVersionResponse;
+class GetLoggerDefinitionResponse;
+class GetLoggerDefinitionVersionResponse;
+class GetResourceDefinitionResponse;
+class GetResourceDefinitionVersionResponse;
+class GetServiceRoleForAccountResponse;
+class GetSubscriptionDefinitionResponse;
+class GetSubscriptionDefinitionVersionResponse;
+class ListCoreDefinitionVersionsResponse;
+class ListCoreDefinitionsResponse;
+class ListDeploymentsResponse;
+class ListDeviceDefinitionVersionsResponse;
+class ListDeviceDefinitionsResponse;
+class ListFunctionDefinitionVersionsResponse;
+class ListFunctionDefinitionsResponse;
+class ListGroupCertificateAuthoritiesResponse;
+class ListGroupVersionsResponse;
+class ListGroupsResponse;
+class ListLoggerDefinitionVersionsResponse;
+class ListLoggerDefinitionsResponse;
+class ListResourceDefinitionVersionsResponse;
+class ListResourceDefinitionsResponse;
+class ListSubscriptionDefinitionVersionsResponse;
+class ListSubscriptionDefinitionsResponse;
+class ResetDeploymentsResponse;
+class UpdateConnectivityInfoResponse;
+class UpdateCoreDefinitionResponse;
+class UpdateDeviceDefinitionResponse;
+class UpdateFunctionDefinitionResponse;
+class UpdateGroupResponse;
+class UpdateGroupCertificateConfigurationResponse;
+class UpdateLoggerDefinitionResponse;
+class UpdateResourceDefinitionResponse;
+class UpdateSubscriptionDefinitionResponse;
 
 class QTAWS_EXPORT GreengrassClient : public AwsAbstractClient {
     Q_OBJECT

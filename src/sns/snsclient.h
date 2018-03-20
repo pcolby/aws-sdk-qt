@@ -20,18 +20,48 @@
 #ifndef QTAWS_SNSCLIENT_H
 #define QTAWS_SNSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SNS {
 
 class SnsClientPrivate;
+class AddPermissionResponse;
+class CheckIfPhoneNumberIsOptedOutResponse;
+class ConfirmSubscriptionResponse;
+class CreatePlatformApplicationResponse;
+class CreatePlatformEndpointResponse;
+class CreateTopicResponse;
+class DeleteEndpointResponse;
+class DeletePlatformApplicationResponse;
+class DeleteTopicResponse;
+class GetEndpointAttributesResponse;
+class GetPlatformApplicationAttributesResponse;
+class GetSMSAttributesResponse;
+class GetSubscriptionAttributesResponse;
+class GetTopicAttributesResponse;
+class ListEndpointsByPlatformApplicationResponse;
+class ListPhoneNumbersOptedOutResponse;
+class ListPlatformApplicationsResponse;
+class ListSubscriptionsResponse;
+class ListSubscriptionsByTopicResponse;
+class ListTopicsResponse;
+class OptInPhoneNumberResponse;
+class PublishResponse;
+class RemovePermissionResponse;
+class SetEndpointAttributesResponse;
+class SetPlatformApplicationAttributesResponse;
+class SetSMSAttributesResponse;
+class SetSubscriptionAttributesResponse;
+class SetTopicAttributesResponse;
+class SubscribeResponse;
+class UnsubscribeResponse;
 
 class QTAWS_EXPORT SnsClient : public AwsAbstractClient {
     Q_OBJECT

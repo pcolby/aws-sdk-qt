@@ -20,18 +20,42 @@
 #ifndef QTAWS_CLOUDSEARCHCLIENT_H
 #define QTAWS_CLOUDSEARCHCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudSearch {
 
 class CloudSearchClientPrivate;
+class BuildSuggestersResponse;
+class CreateDomainResponse;
+class DefineAnalysisSchemeResponse;
+class DefineExpressionResponse;
+class DefineIndexFieldResponse;
+class DefineSuggesterResponse;
+class DeleteAnalysisSchemeResponse;
+class DeleteDomainResponse;
+class DeleteExpressionResponse;
+class DeleteIndexFieldResponse;
+class DeleteSuggesterResponse;
+class DescribeAnalysisSchemesResponse;
+class DescribeAvailabilityOptionsResponse;
+class DescribeDomainsResponse;
+class DescribeExpressionsResponse;
+class DescribeIndexFieldsResponse;
+class DescribeScalingParametersResponse;
+class DescribeServiceAccessPoliciesResponse;
+class DescribeSuggestersResponse;
+class IndexDocumentsResponse;
+class ListDomainNamesResponse;
+class UpdateAvailabilityOptionsResponse;
+class UpdateScalingParametersResponse;
+class UpdateServiceAccessPoliciesResponse;
 
 class QTAWS_EXPORT CloudSearchClient : public AwsAbstractClient {
     Q_OBJECT

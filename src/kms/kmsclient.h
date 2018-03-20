@@ -20,18 +20,53 @@
 #ifndef QTAWS_KMSCLIENT_H
 #define QTAWS_KMSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace KMS {
 
 class KmsClientPrivate;
+class CancelKeyDeletionResponse;
+class CreateAliasResponse;
+class CreateGrantResponse;
+class CreateKeyResponse;
+class DecryptResponse;
+class DeleteAliasResponse;
+class DeleteImportedKeyMaterialResponse;
+class DescribeKeyResponse;
+class DisableKeyResponse;
+class DisableKeyRotationResponse;
+class EnableKeyResponse;
+class EnableKeyRotationResponse;
+class EncryptResponse;
+class GenerateDataKeyResponse;
+class GenerateDataKeyWithoutPlaintextResponse;
+class GenerateRandomResponse;
+class GetKeyPolicyResponse;
+class GetKeyRotationStatusResponse;
+class GetParametersForImportResponse;
+class ImportKeyMaterialResponse;
+class ListAliasesResponse;
+class ListGrantsResponse;
+class ListKeyPoliciesResponse;
+class ListKeysResponse;
+class ListResourceTagsResponse;
+class ListRetirableGrantsResponse;
+class PutKeyPolicyResponse;
+class ReEncryptResponse;
+class RetireGrantResponse;
+class RevokeGrantResponse;
+class ScheduleKeyDeletionResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateAliasResponse;
+class UpdateKeyDescriptionResponse;
 
 class QTAWS_EXPORT KmsClient : public AwsAbstractClient {
     Q_OBJECT

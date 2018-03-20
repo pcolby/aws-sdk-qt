@@ -20,18 +20,67 @@
 #ifndef QTAWS_DEVICEFARMCLIENT_H
 #define QTAWS_DEVICEFARMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DeviceFarm {
 
 class DeviceFarmClientPrivate;
+class CreateDevicePoolResponse;
+class CreateNetworkProfileResponse;
+class CreateProjectResponse;
+class CreateRemoteAccessSessionResponse;
+class CreateUploadResponse;
+class DeleteDevicePoolResponse;
+class DeleteNetworkProfileResponse;
+class DeleteProjectResponse;
+class DeleteRemoteAccessSessionResponse;
+class DeleteRunResponse;
+class DeleteUploadResponse;
+class GetAccountSettingsResponse;
+class GetDeviceResponse;
+class GetDevicePoolResponse;
+class GetDevicePoolCompatibilityResponse;
+class GetJobResponse;
+class GetNetworkProfileResponse;
+class GetOfferingStatusResponse;
+class GetProjectResponse;
+class GetRemoteAccessSessionResponse;
+class GetRunResponse;
+class GetSuiteResponse;
+class GetTestResponse;
+class GetUploadResponse;
+class InstallToRemoteAccessSessionResponse;
+class ListArtifactsResponse;
+class ListDevicePoolsResponse;
+class ListDevicesResponse;
+class ListJobsResponse;
+class ListNetworkProfilesResponse;
+class ListOfferingPromotionsResponse;
+class ListOfferingTransactionsResponse;
+class ListOfferingsResponse;
+class ListProjectsResponse;
+class ListRemoteAccessSessionsResponse;
+class ListRunsResponse;
+class ListSamplesResponse;
+class ListSuitesResponse;
+class ListTestsResponse;
+class ListUniqueProblemsResponse;
+class ListUploadsResponse;
+class PurchaseOfferingResponse;
+class RenewOfferingResponse;
+class ScheduleRunResponse;
+class StopRemoteAccessSessionResponse;
+class StopRunResponse;
+class UpdateDevicePoolResponse;
+class UpdateNetworkProfileResponse;
+class UpdateProjectResponse;
 
 class QTAWS_EXPORT DeviceFarmClient : public AwsAbstractClient {
     Q_OBJECT

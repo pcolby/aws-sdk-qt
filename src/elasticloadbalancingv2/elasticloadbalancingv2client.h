@@ -20,18 +20,52 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGV2CLIENT_H
 #define QTAWS_ELASTICLOADBALANCINGV2CLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2ClientPrivate;
+class AddListenerCertificatesResponse;
+class AddTagsResponse;
+class CreateListenerResponse;
+class CreateLoadBalancerResponse;
+class CreateRuleResponse;
+class CreateTargetGroupResponse;
+class DeleteListenerResponse;
+class DeleteLoadBalancerResponse;
+class DeleteRuleResponse;
+class DeleteTargetGroupResponse;
+class DeregisterTargetsResponse;
+class DescribeAccountLimitsResponse;
+class DescribeListenerCertificatesResponse;
+class DescribeListenersResponse;
+class DescribeLoadBalancerAttributesResponse;
+class DescribeLoadBalancersResponse;
+class DescribeRulesResponse;
+class DescribeSSLPoliciesResponse;
+class DescribeTagsResponse;
+class DescribeTargetGroupAttributesResponse;
+class DescribeTargetGroupsResponse;
+class DescribeTargetHealthResponse;
+class ModifyListenerResponse;
+class ModifyLoadBalancerAttributesResponse;
+class ModifyRuleResponse;
+class ModifyTargetGroupResponse;
+class ModifyTargetGroupAttributesResponse;
+class RegisterTargetsResponse;
+class RemoveListenerCertificatesResponse;
+class RemoveTagsResponse;
+class SetIpAddressTypeResponse;
+class SetRulePrioritiesResponse;
+class SetSecurityGroupsResponse;
+class SetSubnetsResponse;
 
 class QTAWS_EXPORT ElasticLoadBalancingv2Client : public AwsAbstractClient {
     Q_OBJECT

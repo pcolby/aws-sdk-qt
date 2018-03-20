@@ -20,18 +20,46 @@
 #ifndef QTAWS_CLOUDFRONTCLIENT_H
 #define QTAWS_CLOUDFRONTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudFront {
 
 class CloudFrontClientPrivate;
+class CreateCloudFrontOriginAccessIdentityResponse;
+class CreateDistributionResponse;
+class CreateDistributionWithTagsResponse;
+class CreateInvalidationResponse;
+class CreateStreamingDistributionResponse;
+class CreateStreamingDistributionWithTagsResponse;
+class DeleteCloudFrontOriginAccessIdentityResponse;
+class DeleteDistributionResponse;
+class DeleteServiceLinkedRoleResponse;
+class DeleteStreamingDistributionResponse;
+class GetCloudFrontOriginAccessIdentityResponse;
+class GetCloudFrontOriginAccessIdentityConfigResponse;
+class GetDistributionResponse;
+class GetDistributionConfigResponse;
+class GetInvalidationResponse;
+class GetStreamingDistributionResponse;
+class GetStreamingDistributionConfigResponse;
+class ListCloudFrontOriginAccessIdentitiesResponse;
+class ListDistributionsResponse;
+class ListDistributionsByWebACLIdResponse;
+class ListInvalidationsResponse;
+class ListStreamingDistributionsResponse;
+class ListTagsForResourceResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateCloudFrontOriginAccessIdentityResponse;
+class UpdateDistributionResponse;
+class UpdateStreamingDistributionResponse;
 
 class QTAWS_EXPORT CloudFrontClient : public AwsAbstractClient {
     Q_OBJECT

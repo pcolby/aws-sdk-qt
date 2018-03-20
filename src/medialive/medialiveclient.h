@@ -20,18 +20,33 @@
 #ifndef QTAWS_MEDIALIVECLIENT_H
 #define QTAWS_MEDIALIVECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MediaLive {
 
 class MediaLiveClientPrivate;
+class CreateChannelResponse;
+class CreateInputResponse;
+class CreateInputSecurityGroupResponse;
+class DeleteChannelResponse;
+class DeleteInputResponse;
+class DeleteInputSecurityGroupResponse;
+class DescribeChannelResponse;
+class DescribeInputResponse;
+class DescribeInputSecurityGroupResponse;
+class ListChannelsResponse;
+class ListInputSecurityGroupsResponse;
+class ListInputsResponse;
+class StartChannelResponse;
+class StopChannelResponse;
+class UpdateChannelResponse;
 
 class QTAWS_EXPORT MediaLiveClient : public AwsAbstractClient {
     Q_OBJECT

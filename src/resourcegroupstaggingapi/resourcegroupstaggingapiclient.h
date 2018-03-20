@@ -20,18 +20,23 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClientPrivate;
+class GetResourcesResponse;
+class GetTagKeysResponse;
+class GetTagValuesResponse;
+class TagResourcesResponse;
+class UntagResourcesResponse;
 
 class QTAWS_EXPORT ResourceGroupsTaggingAPIClient : public AwsAbstractClient {
     Q_OBJECT

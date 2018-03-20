@@ -20,18 +20,92 @@
 #ifndef QTAWS_OPSWORKSCLIENT_H
 #define QTAWS_OPSWORKSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace OpsWorks {
 
 class OpsWorksClientPrivate;
+class AssignInstanceResponse;
+class AssignVolumeResponse;
+class AssociateElasticIpResponse;
+class AttachElasticLoadBalancerResponse;
+class CloneStackResponse;
+class CreateAppResponse;
+class CreateDeploymentResponse;
+class CreateInstanceResponse;
+class CreateLayerResponse;
+class CreateStackResponse;
+class CreateUserProfileResponse;
+class DeleteAppResponse;
+class DeleteInstanceResponse;
+class DeleteLayerResponse;
+class DeleteStackResponse;
+class DeleteUserProfileResponse;
+class DeregisterEcsClusterResponse;
+class DeregisterElasticIpResponse;
+class DeregisterInstanceResponse;
+class DeregisterRdsDbInstanceResponse;
+class DeregisterVolumeResponse;
+class DescribeAgentVersionsResponse;
+class DescribeAppsResponse;
+class DescribeCommandsResponse;
+class DescribeDeploymentsResponse;
+class DescribeEcsClustersResponse;
+class DescribeElasticIpsResponse;
+class DescribeElasticLoadBalancersResponse;
+class DescribeInstancesResponse;
+class DescribeLayersResponse;
+class DescribeLoadBasedAutoScalingResponse;
+class DescribeMyUserProfileResponse;
+class DescribeOperatingSystemsResponse;
+class DescribePermissionsResponse;
+class DescribeRaidArraysResponse;
+class DescribeRdsDbInstancesResponse;
+class DescribeServiceErrorsResponse;
+class DescribeStackProvisioningParametersResponse;
+class DescribeStackSummaryResponse;
+class DescribeStacksResponse;
+class DescribeTimeBasedAutoScalingResponse;
+class DescribeUserProfilesResponse;
+class DescribeVolumesResponse;
+class DetachElasticLoadBalancerResponse;
+class DisassociateElasticIpResponse;
+class GetHostnameSuggestionResponse;
+class GrantAccessResponse;
+class ListTagsResponse;
+class RebootInstanceResponse;
+class RegisterEcsClusterResponse;
+class RegisterElasticIpResponse;
+class RegisterInstanceResponse;
+class RegisterRdsDbInstanceResponse;
+class RegisterVolumeResponse;
+class SetLoadBasedAutoScalingResponse;
+class SetPermissionResponse;
+class SetTimeBasedAutoScalingResponse;
+class StartInstanceResponse;
+class StartStackResponse;
+class StopInstanceResponse;
+class StopStackResponse;
+class TagResourceResponse;
+class UnassignInstanceResponse;
+class UnassignVolumeResponse;
+class UntagResourceResponse;
+class UpdateAppResponse;
+class UpdateElasticIpResponse;
+class UpdateInstanceResponse;
+class UpdateLayerResponse;
+class UpdateMyUserProfileResponse;
+class UpdateRdsDbInstanceResponse;
+class UpdateStackResponse;
+class UpdateUserProfileResponse;
+class UpdateVolumeResponse;
 
 class QTAWS_EXPORT OpsWorksClient : public AwsAbstractClient {
     Q_OBJECT

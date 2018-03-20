@@ -20,18 +20,45 @@
 #ifndef QTAWS_CODEPIPELINECLIENT_H
 #define QTAWS_CODEPIPELINECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CodePipeline {
 
 class CodePipelineClientPrivate;
+class AcknowledgeJobResponse;
+class AcknowledgeThirdPartyJobResponse;
+class CreateCustomActionTypeResponse;
+class CreatePipelineResponse;
+class DeleteCustomActionTypeResponse;
+class DeletePipelineResponse;
+class DisableStageTransitionResponse;
+class EnableStageTransitionResponse;
+class GetJobDetailsResponse;
+class GetPipelineResponse;
+class GetPipelineExecutionResponse;
+class GetPipelineStateResponse;
+class GetThirdPartyJobDetailsResponse;
+class ListActionTypesResponse;
+class ListPipelineExecutionsResponse;
+class ListPipelinesResponse;
+class PollForJobsResponse;
+class PollForThirdPartyJobsResponse;
+class PutActionRevisionResponse;
+class PutApprovalResultResponse;
+class PutJobFailureResultResponse;
+class PutJobSuccessResultResponse;
+class PutThirdPartyJobFailureResultResponse;
+class PutThirdPartyJobSuccessResultResponse;
+class RetryStageExecutionResponse;
+class StartPipelineExecutionResponse;
+class UpdatePipelineResponse;
 
 class QTAWS_EXPORT CodePipelineClient : public AwsAbstractClient {
     Q_OBJECT

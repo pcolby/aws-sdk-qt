@@ -20,18 +20,31 @@
 #ifndef QTAWS_BUDGETSCLIENT_H
 #define QTAWS_BUDGETSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Budgets {
 
 class BudgetsClientPrivate;
+class CreateBudgetResponse;
+class CreateNotificationResponse;
+class CreateSubscriberResponse;
+class DeleteBudgetResponse;
+class DeleteNotificationResponse;
+class DeleteSubscriberResponse;
+class DescribeBudgetResponse;
+class DescribeBudgetsResponse;
+class DescribeNotificationsForBudgetResponse;
+class DescribeSubscribersForNotificationResponse;
+class UpdateBudgetResponse;
+class UpdateNotificationResponse;
+class UpdateSubscriberResponse;
 
 class QTAWS_EXPORT BudgetsClient : public AwsAbstractClient {
     Q_OBJECT

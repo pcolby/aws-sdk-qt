@@ -20,18 +20,29 @@
 #ifndef QTAWS_COMPREHENDCLIENT_H
 #define QTAWS_COMPREHENDCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Comprehend {
 
 class ComprehendClientPrivate;
+class BatchDetectDominantLanguageResponse;
+class BatchDetectEntitiesResponse;
+class BatchDetectKeyPhrasesResponse;
+class BatchDetectSentimentResponse;
+class DescribeTopicsDetectionJobResponse;
+class DetectDominantLanguageResponse;
+class DetectEntitiesResponse;
+class DetectKeyPhrasesResponse;
+class DetectSentimentResponse;
+class ListTopicsDetectionJobsResponse;
+class StartTopicsDetectionJobResponse;
 
 class QTAWS_EXPORT ComprehendClient : public AwsAbstractClient {
     Q_OBJECT

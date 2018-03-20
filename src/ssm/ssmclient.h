@@ -20,18 +20,115 @@
 #ifndef QTAWS_SSMCLIENT_H
 #define QTAWS_SSMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SSM {
 
 class SsmClientPrivate;
+class AddTagsToResourceResponse;
+class CancelCommandResponse;
+class CreateActivationResponse;
+class CreateAssociationResponse;
+class CreateAssociationBatchResponse;
+class CreateDocumentResponse;
+class CreateMaintenanceWindowResponse;
+class CreatePatchBaselineResponse;
+class CreateResourceDataSyncResponse;
+class DeleteActivationResponse;
+class DeleteAssociationResponse;
+class DeleteDocumentResponse;
+class DeleteMaintenanceWindowResponse;
+class DeleteParameterResponse;
+class DeleteParametersResponse;
+class DeletePatchBaselineResponse;
+class DeleteResourceDataSyncResponse;
+class DeregisterManagedInstanceResponse;
+class DeregisterPatchBaselineForPatchGroupResponse;
+class DeregisterTargetFromMaintenanceWindowResponse;
+class DeregisterTaskFromMaintenanceWindowResponse;
+class DescribeActivationsResponse;
+class DescribeAssociationResponse;
+class DescribeAutomationExecutionsResponse;
+class DescribeAutomationStepExecutionsResponse;
+class DescribeAvailablePatchesResponse;
+class DescribeDocumentResponse;
+class DescribeDocumentPermissionResponse;
+class DescribeEffectiveInstanceAssociationsResponse;
+class DescribeEffectivePatchesForPatchBaselineResponse;
+class DescribeInstanceAssociationsStatusResponse;
+class DescribeInstanceInformationResponse;
+class DescribeInstancePatchStatesResponse;
+class DescribeInstancePatchStatesForPatchGroupResponse;
+class DescribeInstancePatchesResponse;
+class DescribeMaintenanceWindowExecutionTaskInvocationsResponse;
+class DescribeMaintenanceWindowExecutionTasksResponse;
+class DescribeMaintenanceWindowExecutionsResponse;
+class DescribeMaintenanceWindowTargetsResponse;
+class DescribeMaintenanceWindowTasksResponse;
+class DescribeMaintenanceWindowsResponse;
+class DescribeParametersResponse;
+class DescribePatchBaselinesResponse;
+class DescribePatchGroupStateResponse;
+class DescribePatchGroupsResponse;
+class GetAutomationExecutionResponse;
+class GetCommandInvocationResponse;
+class GetDefaultPatchBaselineResponse;
+class GetDeployablePatchSnapshotForInstanceResponse;
+class GetDocumentResponse;
+class GetInventoryResponse;
+class GetInventorySchemaResponse;
+class GetMaintenanceWindowResponse;
+class GetMaintenanceWindowExecutionResponse;
+class GetMaintenanceWindowExecutionTaskResponse;
+class GetMaintenanceWindowExecutionTaskInvocationResponse;
+class GetMaintenanceWindowTaskResponse;
+class GetParameterResponse;
+class GetParameterHistoryResponse;
+class GetParametersResponse;
+class GetParametersByPathResponse;
+class GetPatchBaselineResponse;
+class GetPatchBaselineForPatchGroupResponse;
+class ListAssociationVersionsResponse;
+class ListAssociationsResponse;
+class ListCommandInvocationsResponse;
+class ListCommandsResponse;
+class ListComplianceItemsResponse;
+class ListComplianceSummariesResponse;
+class ListDocumentVersionsResponse;
+class ListDocumentsResponse;
+class ListInventoryEntriesResponse;
+class ListResourceComplianceSummariesResponse;
+class ListResourceDataSyncResponse;
+class ListTagsForResourceResponse;
+class ModifyDocumentPermissionResponse;
+class PutComplianceItemsResponse;
+class PutInventoryResponse;
+class PutParameterResponse;
+class RegisterDefaultPatchBaselineResponse;
+class RegisterPatchBaselineForPatchGroupResponse;
+class RegisterTargetWithMaintenanceWindowResponse;
+class RegisterTaskWithMaintenanceWindowResponse;
+class RemoveTagsFromResourceResponse;
+class SendAutomationSignalResponse;
+class SendCommandResponse;
+class StartAutomationExecutionResponse;
+class StopAutomationExecutionResponse;
+class UpdateAssociationResponse;
+class UpdateAssociationStatusResponse;
+class UpdateDocumentResponse;
+class UpdateDocumentDefaultVersionResponse;
+class UpdateMaintenanceWindowResponse;
+class UpdateMaintenanceWindowTargetResponse;
+class UpdateMaintenanceWindowTaskResponse;
+class UpdateManagedInstanceRoleResponse;
+class UpdatePatchBaselineResponse;
 
 class QTAWS_EXPORT SsmClient : public AwsAbstractClient {
     Q_OBJECT

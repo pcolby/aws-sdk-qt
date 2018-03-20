@@ -20,18 +20,22 @@
 #ifndef QTAWS_IOTDATAPLANECLIENT_H
 #define QTAWS_IOTDATAPLANECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace IoTDataPlane {
 
 class IoTDataPlaneClientPrivate;
+class DeleteThingShadowResponse;
+class GetThingShadowResponse;
+class PublishResponse;
+class UpdateThingShadowResponse;
 
 class QTAWS_EXPORT IoTDataPlaneClient : public AwsAbstractClient {
     Q_OBJECT

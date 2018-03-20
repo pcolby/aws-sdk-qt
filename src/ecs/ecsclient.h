@@ -20,18 +20,49 @@
 #ifndef QTAWS_ECSCLIENT_H
 #define QTAWS_ECSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ECS {
 
 class EcsClientPrivate;
+class CreateClusterResponse;
+class CreateServiceResponse;
+class DeleteAttributesResponse;
+class DeleteClusterResponse;
+class DeleteServiceResponse;
+class DeregisterContainerInstanceResponse;
+class DeregisterTaskDefinitionResponse;
+class DescribeClustersResponse;
+class DescribeContainerInstancesResponse;
+class DescribeServicesResponse;
+class DescribeTaskDefinitionResponse;
+class DescribeTasksResponse;
+class DiscoverPollEndpointResponse;
+class ListAttributesResponse;
+class ListClustersResponse;
+class ListContainerInstancesResponse;
+class ListServicesResponse;
+class ListTaskDefinitionFamiliesResponse;
+class ListTaskDefinitionsResponse;
+class ListTasksResponse;
+class PutAttributesResponse;
+class RegisterContainerInstanceResponse;
+class RegisterTaskDefinitionResponse;
+class RunTaskResponse;
+class StartTaskResponse;
+class StopTaskResponse;
+class SubmitContainerStateChangeResponse;
+class SubmitTaskStateChangeResponse;
+class UpdateContainerAgentResponse;
+class UpdateContainerInstancesStateResponse;
+class UpdateServiceResponse;
 
 class QTAWS_EXPORT EcsClient : public AwsAbstractClient {
     Q_OBJECT

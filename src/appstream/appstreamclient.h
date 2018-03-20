@@ -20,18 +20,51 @@
 #ifndef QTAWS_APPSTREAMCLIENT_H
 #define QTAWS_APPSTREAMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace AppStream {
 
 class AppStreamClientPrivate;
+class AssociateFleetResponse;
+class CopyImageResponse;
+class CreateDirectoryConfigResponse;
+class CreateFleetResponse;
+class CreateImageBuilderResponse;
+class CreateImageBuilderStreamingURLResponse;
+class CreateStackResponse;
+class CreateStreamingURLResponse;
+class DeleteDirectoryConfigResponse;
+class DeleteFleetResponse;
+class DeleteImageResponse;
+class DeleteImageBuilderResponse;
+class DeleteStackResponse;
+class DescribeDirectoryConfigsResponse;
+class DescribeFleetsResponse;
+class DescribeImageBuildersResponse;
+class DescribeImagesResponse;
+class DescribeSessionsResponse;
+class DescribeStacksResponse;
+class DisassociateFleetResponse;
+class ExpireSessionResponse;
+class ListAssociatedFleetsResponse;
+class ListAssociatedStacksResponse;
+class ListTagsForResourceResponse;
+class StartFleetResponse;
+class StartImageBuilderResponse;
+class StopFleetResponse;
+class StopImageBuilderResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateDirectoryConfigResponse;
+class UpdateFleetResponse;
+class UpdateStackResponse;
 
 class QTAWS_EXPORT AppStreamClient : public AwsAbstractClient {
     Q_OBJECT

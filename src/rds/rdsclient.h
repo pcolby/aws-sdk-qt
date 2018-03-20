@@ -20,18 +20,109 @@
 #ifndef QTAWS_RDSCLIENT_H
 #define QTAWS_RDSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace RDS {
 
 class RdsClientPrivate;
+class AddRoleToDBClusterResponse;
+class AddSourceIdentifierToSubscriptionResponse;
+class AddTagsToResourceResponse;
+class ApplyPendingMaintenanceActionResponse;
+class AuthorizeDBSecurityGroupIngressResponse;
+class CopyDBClusterParameterGroupResponse;
+class CopyDBClusterSnapshotResponse;
+class CopyDBParameterGroupResponse;
+class CopyDBSnapshotResponse;
+class CopyOptionGroupResponse;
+class CreateDBClusterResponse;
+class CreateDBClusterParameterGroupResponse;
+class CreateDBClusterSnapshotResponse;
+class CreateDBInstanceResponse;
+class CreateDBInstanceReadReplicaResponse;
+class CreateDBParameterGroupResponse;
+class CreateDBSecurityGroupResponse;
+class CreateDBSnapshotResponse;
+class CreateDBSubnetGroupResponse;
+class CreateEventSubscriptionResponse;
+class CreateOptionGroupResponse;
+class DeleteDBClusterResponse;
+class DeleteDBClusterParameterGroupResponse;
+class DeleteDBClusterSnapshotResponse;
+class DeleteDBInstanceResponse;
+class DeleteDBParameterGroupResponse;
+class DeleteDBSecurityGroupResponse;
+class DeleteDBSnapshotResponse;
+class DeleteDBSubnetGroupResponse;
+class DeleteEventSubscriptionResponse;
+class DeleteOptionGroupResponse;
+class DescribeAccountAttributesResponse;
+class DescribeCertificatesResponse;
+class DescribeDBClusterParameterGroupsResponse;
+class DescribeDBClusterParametersResponse;
+class DescribeDBClusterSnapshotAttributesResponse;
+class DescribeDBClusterSnapshotsResponse;
+class DescribeDBClustersResponse;
+class DescribeDBEngineVersionsResponse;
+class DescribeDBInstancesResponse;
+class DescribeDBLogFilesResponse;
+class DescribeDBParameterGroupsResponse;
+class DescribeDBParametersResponse;
+class DescribeDBSecurityGroupsResponse;
+class DescribeDBSnapshotAttributesResponse;
+class DescribeDBSnapshotsResponse;
+class DescribeDBSubnetGroupsResponse;
+class DescribeEngineDefaultClusterParametersResponse;
+class DescribeEngineDefaultParametersResponse;
+class DescribeEventCategoriesResponse;
+class DescribeEventSubscriptionsResponse;
+class DescribeEventsResponse;
+class DescribeOptionGroupOptionsResponse;
+class DescribeOptionGroupsResponse;
+class DescribeOrderableDBInstanceOptionsResponse;
+class DescribePendingMaintenanceActionsResponse;
+class DescribeReservedDBInstancesResponse;
+class DescribeReservedDBInstancesOfferingsResponse;
+class DescribeSourceRegionsResponse;
+class DescribeValidDBInstanceModificationsResponse;
+class DownloadDBLogFilePortionResponse;
+class FailoverDBClusterResponse;
+class ListTagsForResourceResponse;
+class ModifyDBClusterResponse;
+class ModifyDBClusterParameterGroupResponse;
+class ModifyDBClusterSnapshotAttributeResponse;
+class ModifyDBInstanceResponse;
+class ModifyDBParameterGroupResponse;
+class ModifyDBSnapshotResponse;
+class ModifyDBSnapshotAttributeResponse;
+class ModifyDBSubnetGroupResponse;
+class ModifyEventSubscriptionResponse;
+class ModifyOptionGroupResponse;
+class PromoteReadReplicaResponse;
+class PromoteReadReplicaDBClusterResponse;
+class PurchaseReservedDBInstancesOfferingResponse;
+class RebootDBInstanceResponse;
+class RemoveRoleFromDBClusterResponse;
+class RemoveSourceIdentifierFromSubscriptionResponse;
+class RemoveTagsFromResourceResponse;
+class ResetDBClusterParameterGroupResponse;
+class ResetDBParameterGroupResponse;
+class RestoreDBClusterFromS3Response;
+class RestoreDBClusterFromSnapshotResponse;
+class RestoreDBClusterToPointInTimeResponse;
+class RestoreDBInstanceFromDBSnapshotResponse;
+class RestoreDBInstanceFromS3Response;
+class RestoreDBInstanceToPointInTimeResponse;
+class RevokeDBSecurityGroupIngressResponse;
+class StartDBInstanceResponse;
+class StopDBInstanceResponse;
 
 class QTAWS_EXPORT RdsClient : public AwsAbstractClient {
     Q_OBJECT

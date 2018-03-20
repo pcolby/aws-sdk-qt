@@ -20,18 +20,140 @@
 #ifndef QTAWS_IAMCLIENT_H
 #define QTAWS_IAMCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace IAM {
 
 class IamClientPrivate;
+class AddClientIDToOpenIDConnectProviderResponse;
+class AddRoleToInstanceProfileResponse;
+class AddUserToGroupResponse;
+class AttachGroupPolicyResponse;
+class AttachRolePolicyResponse;
+class AttachUserPolicyResponse;
+class ChangePasswordResponse;
+class CreateAccessKeyResponse;
+class CreateAccountAliasResponse;
+class CreateGroupResponse;
+class CreateInstanceProfileResponse;
+class CreateLoginProfileResponse;
+class CreateOpenIDConnectProviderResponse;
+class CreatePolicyResponse;
+class CreatePolicyVersionResponse;
+class CreateRoleResponse;
+class CreateSAMLProviderResponse;
+class CreateServiceLinkedRoleResponse;
+class CreateServiceSpecificCredentialResponse;
+class CreateUserResponse;
+class CreateVirtualMFADeviceResponse;
+class DeactivateMFADeviceResponse;
+class DeleteAccessKeyResponse;
+class DeleteAccountAliasResponse;
+class DeleteAccountPasswordPolicyResponse;
+class DeleteGroupResponse;
+class DeleteGroupPolicyResponse;
+class DeleteInstanceProfileResponse;
+class DeleteLoginProfileResponse;
+class DeleteOpenIDConnectProviderResponse;
+class DeletePolicyResponse;
+class DeletePolicyVersionResponse;
+class DeleteRoleResponse;
+class DeleteRolePolicyResponse;
+class DeleteSAMLProviderResponse;
+class DeleteSSHPublicKeyResponse;
+class DeleteServerCertificateResponse;
+class DeleteServiceLinkedRoleResponse;
+class DeleteServiceSpecificCredentialResponse;
+class DeleteSigningCertificateResponse;
+class DeleteUserResponse;
+class DeleteUserPolicyResponse;
+class DeleteVirtualMFADeviceResponse;
+class DetachGroupPolicyResponse;
+class DetachRolePolicyResponse;
+class DetachUserPolicyResponse;
+class EnableMFADeviceResponse;
+class GenerateCredentialReportResponse;
+class GetAccessKeyLastUsedResponse;
+class GetAccountAuthorizationDetailsResponse;
+class GetAccountPasswordPolicyResponse;
+class GetAccountSummaryResponse;
+class GetContextKeysForCustomPolicyResponse;
+class GetContextKeysForPrincipalPolicyResponse;
+class GetCredentialReportResponse;
+class GetGroupResponse;
+class GetGroupPolicyResponse;
+class GetInstanceProfileResponse;
+class GetLoginProfileResponse;
+class GetOpenIDConnectProviderResponse;
+class GetPolicyResponse;
+class GetPolicyVersionResponse;
+class GetRoleResponse;
+class GetRolePolicyResponse;
+class GetSAMLProviderResponse;
+class GetSSHPublicKeyResponse;
+class GetServerCertificateResponse;
+class GetServiceLinkedRoleDeletionStatusResponse;
+class GetUserResponse;
+class GetUserPolicyResponse;
+class ListAccessKeysResponse;
+class ListAccountAliasesResponse;
+class ListAttachedGroupPoliciesResponse;
+class ListAttachedRolePoliciesResponse;
+class ListAttachedUserPoliciesResponse;
+class ListEntitiesForPolicyResponse;
+class ListGroupPoliciesResponse;
+class ListGroupsResponse;
+class ListGroupsForUserResponse;
+class ListInstanceProfilesResponse;
+class ListInstanceProfilesForRoleResponse;
+class ListMFADevicesResponse;
+class ListOpenIDConnectProvidersResponse;
+class ListPoliciesResponse;
+class ListPolicyVersionsResponse;
+class ListRolePoliciesResponse;
+class ListRolesResponse;
+class ListSAMLProvidersResponse;
+class ListSSHPublicKeysResponse;
+class ListServerCertificatesResponse;
+class ListServiceSpecificCredentialsResponse;
+class ListSigningCertificatesResponse;
+class ListUserPoliciesResponse;
+class ListUsersResponse;
+class ListVirtualMFADevicesResponse;
+class PutGroupPolicyResponse;
+class PutRolePolicyResponse;
+class PutUserPolicyResponse;
+class RemoveClientIDFromOpenIDConnectProviderResponse;
+class RemoveRoleFromInstanceProfileResponse;
+class RemoveUserFromGroupResponse;
+class ResetServiceSpecificCredentialResponse;
+class ResyncMFADeviceResponse;
+class SetDefaultPolicyVersionResponse;
+class SimulateCustomPolicyResponse;
+class SimulatePrincipalPolicyResponse;
+class UpdateAccessKeyResponse;
+class UpdateAccountPasswordPolicyResponse;
+class UpdateAssumeRolePolicyResponse;
+class UpdateGroupResponse;
+class UpdateLoginProfileResponse;
+class UpdateOpenIDConnectProviderThumbprintResponse;
+class UpdateRoleDescriptionResponse;
+class UpdateSAMLProviderResponse;
+class UpdateSSHPublicKeyResponse;
+class UpdateServerCertificateResponse;
+class UpdateServiceSpecificCredentialResponse;
+class UpdateSigningCertificateResponse;
+class UpdateUserResponse;
+class UploadSSHPublicKeyResponse;
+class UploadServerCertificateResponse;
+class UploadSigningCertificateResponse;
 
 class QTAWS_EXPORT IamClient : public AwsAbstractClient {
     Q_OBJECT

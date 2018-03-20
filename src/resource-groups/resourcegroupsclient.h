@@ -20,18 +20,30 @@
 #ifndef QTAWS_RESOURCEGROUPSCLIENT_H
 #define QTAWS_RESOURCEGROUPSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ResourceGroups {
 
 class ResourceGroupsClientPrivate;
+class CreateGroupResponse;
+class DeleteGroupResponse;
+class GetGroupResponse;
+class GetGroupQueryResponse;
+class GetTagsResponse;
+class ListGroupResourcesResponse;
+class ListGroupsResponse;
+class SearchResourcesResponse;
+class TagResponse;
+class UntagResponse;
+class UpdateGroupResponse;
+class UpdateGroupQueryResponse;
 
 class QTAWS_EXPORT ResourceGroupsClient : public AwsAbstractClient {
     Q_OBJECT

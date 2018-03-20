@@ -20,18 +20,28 @@
 #ifndef QTAWS_SHIELDCLIENT_H
 #define QTAWS_SHIELDCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Shield {
 
 class ShieldClientPrivate;
+class CreateProtectionResponse;
+class CreateSubscriptionResponse;
+class DeleteProtectionResponse;
+class DeleteSubscriptionResponse;
+class DescribeAttackResponse;
+class DescribeProtectionResponse;
+class DescribeSubscriptionResponse;
+class GetSubscriptionStateResponse;
+class ListAttacksResponse;
+class ListProtectionsResponse;
 
 class QTAWS_EXPORT ShieldClient : public AwsAbstractClient {
     Q_OBJECT

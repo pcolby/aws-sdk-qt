@@ -20,18 +20,35 @@
 #ifndef QTAWS_SNOWBALLCLIENT_H
 #define QTAWS_SNOWBALLCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Snowball {
 
 class SnowballClientPrivate;
+class CancelClusterResponse;
+class CancelJobResponse;
+class CreateAddressResponse;
+class CreateClusterResponse;
+class CreateJobResponse;
+class DescribeAddressResponse;
+class DescribeAddressesResponse;
+class DescribeClusterResponse;
+class DescribeJobResponse;
+class GetJobManifestResponse;
+class GetJobUnlockCodeResponse;
+class GetSnowballUsageResponse;
+class ListClusterJobsResponse;
+class ListClustersResponse;
+class ListJobsResponse;
+class UpdateClusterResponse;
+class UpdateJobResponse;
 
 class QTAWS_EXPORT SnowballClient : public AwsAbstractClient {
     Q_OBJECT

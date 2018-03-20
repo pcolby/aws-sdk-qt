@@ -20,18 +20,28 @@
 #ifndef QTAWS_CLOUDHSMV2CLIENT_H
 #define QTAWS_CLOUDHSMV2CLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudHSMV2 {
 
 class CloudHSMV2ClientPrivate;
+class CreateClusterResponse;
+class CreateHsmResponse;
+class DeleteClusterResponse;
+class DeleteHsmResponse;
+class DescribeBackupsResponse;
+class DescribeClustersResponse;
+class InitializeClusterResponse;
+class ListTagsResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT CloudHSMV2Client : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,83 @@
 #ifndef QTAWS_PINPOINTCLIENT_H
 #define QTAWS_PINPOINTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Pinpoint {
 
 class PinpointClientPrivate;
+class CreateAppResponse;
+class CreateCampaignResponse;
+class CreateExportJobResponse;
+class CreateImportJobResponse;
+class CreateSegmentResponse;
+class DeleteAdmChannelResponse;
+class DeleteApnsChannelResponse;
+class DeleteApnsSandboxChannelResponse;
+class DeleteApnsVoipChannelResponse;
+class DeleteApnsVoipSandboxChannelResponse;
+class DeleteAppResponse;
+class DeleteBaiduChannelResponse;
+class DeleteCampaignResponse;
+class DeleteEmailChannelResponse;
+class DeleteEndpointResponse;
+class DeleteEventStreamResponse;
+class DeleteGcmChannelResponse;
+class DeleteSegmentResponse;
+class DeleteSmsChannelResponse;
+class GetAdmChannelResponse;
+class GetApnsChannelResponse;
+class GetApnsSandboxChannelResponse;
+class GetApnsVoipChannelResponse;
+class GetApnsVoipSandboxChannelResponse;
+class GetAppResponse;
+class GetApplicationSettingsResponse;
+class GetAppsResponse;
+class GetBaiduChannelResponse;
+class GetCampaignResponse;
+class GetCampaignActivitiesResponse;
+class GetCampaignVersionResponse;
+class GetCampaignVersionsResponse;
+class GetCampaignsResponse;
+class GetEmailChannelResponse;
+class GetEndpointResponse;
+class GetEventStreamResponse;
+class GetExportJobResponse;
+class GetExportJobsResponse;
+class GetGcmChannelResponse;
+class GetImportJobResponse;
+class GetImportJobsResponse;
+class GetSegmentResponse;
+class GetSegmentExportJobsResponse;
+class GetSegmentImportJobsResponse;
+class GetSegmentVersionResponse;
+class GetSegmentVersionsResponse;
+class GetSegmentsResponse;
+class GetSmsChannelResponse;
+class PutEventStreamResponse;
+class SendMessagesResponse;
+class SendUsersMessagesResponse;
+class UpdateAdmChannelResponse;
+class UpdateApnsChannelResponse;
+class UpdateApnsSandboxChannelResponse;
+class UpdateApnsVoipChannelResponse;
+class UpdateApnsVoipSandboxChannelResponse;
+class UpdateApplicationSettingsResponse;
+class UpdateBaiduChannelResponse;
+class UpdateCampaignResponse;
+class UpdateEmailChannelResponse;
+class UpdateEndpointResponse;
+class UpdateEndpointsBatchResponse;
+class UpdateGcmChannelResponse;
+class UpdateSegmentResponse;
+class UpdateSmsChannelResponse;
 
 class QTAWS_EXPORT PinpointClient : public AwsAbstractClient {
     Q_OBJECT

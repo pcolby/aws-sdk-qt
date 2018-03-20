@@ -20,18 +20,58 @@
 #ifndef QTAWS_DIRECTORYSERVICECLIENT_H
 #define QTAWS_DIRECTORYSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DirectoryService {
 
 class DirectoryServiceClientPrivate;
+class AddIpRoutesResponse;
+class AddTagsToResourceResponse;
+class CancelSchemaExtensionResponse;
+class ConnectDirectoryResponse;
+class CreateAliasResponse;
+class CreateComputerResponse;
+class CreateConditionalForwarderResponse;
+class CreateDirectoryResponse;
+class CreateMicrosoftADResponse;
+class CreateSnapshotResponse;
+class CreateTrustResponse;
+class DeleteConditionalForwarderResponse;
+class DeleteDirectoryResponse;
+class DeleteSnapshotResponse;
+class DeleteTrustResponse;
+class DeregisterEventTopicResponse;
+class DescribeConditionalForwardersResponse;
+class DescribeDirectoriesResponse;
+class DescribeDomainControllersResponse;
+class DescribeEventTopicsResponse;
+class DescribeSnapshotsResponse;
+class DescribeTrustsResponse;
+class DisableRadiusResponse;
+class DisableSsoResponse;
+class EnableRadiusResponse;
+class EnableSsoResponse;
+class GetDirectoryLimitsResponse;
+class GetSnapshotLimitsResponse;
+class ListIpRoutesResponse;
+class ListSchemaExtensionsResponse;
+class ListTagsForResourceResponse;
+class RegisterEventTopicResponse;
+class RemoveIpRoutesResponse;
+class RemoveTagsFromResourceResponse;
+class RestoreFromSnapshotResponse;
+class StartSchemaExtensionResponse;
+class UpdateConditionalForwarderResponse;
+class UpdateNumberOfDomainControllersResponse;
+class UpdateRadiusResponse;
+class VerifyTrustResponse;
 
 class QTAWS_EXPORT DirectoryServiceClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,21 @@
 #ifndef QTAWS_MARKETPLACEMETERINGCLIENT_H
 #define QTAWS_MARKETPLACEMETERINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientPrivate;
+class BatchMeterUsageResponse;
+class MeterUsageResponse;
+class ResolveCustomerResponse;
 
 class QTAWS_EXPORT MarketplaceMeteringClient : public AwsAbstractClient {
     Q_OBJECT

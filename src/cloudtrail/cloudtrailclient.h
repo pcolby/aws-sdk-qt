@@ -20,18 +20,32 @@
 #ifndef QTAWS_CLOUDTRAILCLIENT_H
 #define QTAWS_CLOUDTRAILCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudTrail {
 
 class CloudTrailClientPrivate;
+class AddTagsResponse;
+class CreateTrailResponse;
+class DeleteTrailResponse;
+class DescribeTrailsResponse;
+class GetEventSelectorsResponse;
+class GetTrailStatusResponse;
+class ListPublicKeysResponse;
+class ListTagsResponse;
+class LookupEventsResponse;
+class PutEventSelectorsResponse;
+class RemoveTagsResponse;
+class StartLoggingResponse;
+class StopLoggingResponse;
+class UpdateTrailResponse;
 
 class QTAWS_EXPORT CloudTrailClient : public AwsAbstractClient {
     Q_OBJECT

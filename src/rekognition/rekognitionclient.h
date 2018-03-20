@@ -20,18 +20,51 @@
 #ifndef QTAWS_REKOGNITIONCLIENT_H
 #define QTAWS_REKOGNITIONCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Rekognition {
 
 class RekognitionClientPrivate;
+class CompareFacesResponse;
+class CreateCollectionResponse;
+class CreateStreamProcessorResponse;
+class DeleteCollectionResponse;
+class DeleteFacesResponse;
+class DeleteStreamProcessorResponse;
+class DescribeStreamProcessorResponse;
+class DetectFacesResponse;
+class DetectLabelsResponse;
+class DetectModerationLabelsResponse;
+class DetectTextResponse;
+class GetCelebrityInfoResponse;
+class GetCelebrityRecognitionResponse;
+class GetContentModerationResponse;
+class GetFaceDetectionResponse;
+class GetFaceSearchResponse;
+class GetLabelDetectionResponse;
+class GetPersonTrackingResponse;
+class IndexFacesResponse;
+class ListCollectionsResponse;
+class ListFacesResponse;
+class ListStreamProcessorsResponse;
+class RecognizeCelebritiesResponse;
+class SearchFacesResponse;
+class SearchFacesByImageResponse;
+class StartCelebrityRecognitionResponse;
+class StartContentModerationResponse;
+class StartFaceDetectionResponse;
+class StartFaceSearchResponse;
+class StartLabelDetectionResponse;
+class StartPersonTrackingResponse;
+class StartStreamProcessorResponse;
+class StopStreamProcessorResponse;
 
 class QTAWS_EXPORT RekognitionClient : public AwsAbstractClient {
     Q_OBJECT

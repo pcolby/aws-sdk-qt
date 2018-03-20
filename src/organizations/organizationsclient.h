@@ -20,18 +20,60 @@
 #ifndef QTAWS_ORGANIZATIONSCLIENT_H
 #define QTAWS_ORGANIZATIONSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Organizations {
 
 class OrganizationsClientPrivate;
+class AcceptHandshakeResponse;
+class AttachPolicyResponse;
+class CancelHandshakeResponse;
+class CreateAccountResponse;
+class CreateOrganizationResponse;
+class CreateOrganizationalUnitResponse;
+class CreatePolicyResponse;
+class DeclineHandshakeResponse;
+class DeleteOrganizationResponse;
+class DeleteOrganizationalUnitResponse;
+class DeletePolicyResponse;
+class DescribeAccountResponse;
+class DescribeCreateAccountStatusResponse;
+class DescribeHandshakeResponse;
+class DescribeOrganizationResponse;
+class DescribeOrganizationalUnitResponse;
+class DescribePolicyResponse;
+class DetachPolicyResponse;
+class DisableAWSServiceAccessResponse;
+class DisablePolicyTypeResponse;
+class EnableAWSServiceAccessResponse;
+class EnableAllFeaturesResponse;
+class EnablePolicyTypeResponse;
+class InviteAccountToOrganizationResponse;
+class LeaveOrganizationResponse;
+class ListAWSServiceAccessForOrganizationResponse;
+class ListAccountsResponse;
+class ListAccountsForParentResponse;
+class ListChildrenResponse;
+class ListCreateAccountStatusResponse;
+class ListHandshakesForAccountResponse;
+class ListHandshakesForOrganizationResponse;
+class ListOrganizationalUnitsForParentResponse;
+class ListParentsResponse;
+class ListPoliciesResponse;
+class ListPoliciesForTargetResponse;
+class ListRootsResponse;
+class ListTargetsForPolicyResponse;
+class MoveAccountResponse;
+class RemoveAccountFromOrganizationResponse;
+class UpdateOrganizationalUnitResponse;
+class UpdatePolicyResponse;
 
 class QTAWS_EXPORT OrganizationsClient : public AwsAbstractClient {
     Q_OBJECT

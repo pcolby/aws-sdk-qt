@@ -20,18 +20,28 @@
 #ifndef QTAWS_SIMPLEDBCLIENT_H
 #define QTAWS_SIMPLEDBCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SimpleDB {
 
 class SimpleDBClientPrivate;
+class BatchDeleteAttributesResponse;
+class BatchPutAttributesResponse;
+class CreateDomainResponse;
+class DeleteAttributesResponse;
+class DeleteDomainResponse;
+class DomainMetadataResponse;
+class GetAttributesResponse;
+class ListDomainsResponse;
+class PutAttributesResponse;
+class SelectResponse;
 
 class QTAWS_EXPORT SimpleDBClient : public AwsAbstractClient {
     Q_OBJECT

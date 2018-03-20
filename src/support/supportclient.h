@@ -20,18 +20,32 @@
 #ifndef QTAWS_SUPPORTCLIENT_H
 #define QTAWS_SUPPORTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Support {
 
 class SupportClientPrivate;
+class AddAttachmentsToSetResponse;
+class AddCommunicationToCaseResponse;
+class CreateCaseResponse;
+class DescribeAttachmentResponse;
+class DescribeCasesResponse;
+class DescribeCommunicationsResponse;
+class DescribeServicesResponse;
+class DescribeSeverityLevelsResponse;
+class DescribeTrustedAdvisorCheckRefreshStatusesResponse;
+class DescribeTrustedAdvisorCheckResultResponse;
+class DescribeTrustedAdvisorCheckSummariesResponse;
+class DescribeTrustedAdvisorChecksResponse;
+class RefreshTrustedAdvisorCheckResponse;
+class ResolveCaseResponse;
 
 class QTAWS_EXPORT SupportClient : public AwsAbstractClient {
     Q_OBJECT

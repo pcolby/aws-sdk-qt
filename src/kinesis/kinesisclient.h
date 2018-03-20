@@ -20,18 +20,41 @@
 #ifndef QTAWS_KINESISCLIENT_H
 #define QTAWS_KINESISCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Kinesis {
 
 class KinesisClientPrivate;
+class AddTagsToStreamResponse;
+class CreateStreamResponse;
+class DecreaseStreamRetentionPeriodResponse;
+class DeleteStreamResponse;
+class DescribeLimitsResponse;
+class DescribeStreamResponse;
+class DescribeStreamSummaryResponse;
+class DisableEnhancedMonitoringResponse;
+class EnableEnhancedMonitoringResponse;
+class GetRecordsResponse;
+class GetShardIteratorResponse;
+class IncreaseStreamRetentionPeriodResponse;
+class ListShardsResponse;
+class ListStreamsResponse;
+class ListTagsForStreamResponse;
+class MergeShardsResponse;
+class PutRecordResponse;
+class PutRecordsResponse;
+class RemoveTagsFromStreamResponse;
+class SplitShardResponse;
+class StartStreamEncryptionResponse;
+class StopStreamEncryptionResponse;
+class UpdateShardCountResponse;
 
 class QTAWS_EXPORT KinesisClient : public AwsAbstractClient {
     Q_OBJECT

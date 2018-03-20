@@ -20,18 +20,19 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClientPrivate;
+class GetEntitlementsResponse;
 
 class QTAWS_EXPORT MarketplaceEntitlementServiceClient : public AwsAbstractClient {
     Q_OBJECT

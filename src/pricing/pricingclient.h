@@ -20,18 +20,21 @@
 #ifndef QTAWS_PRICINGCLIENT_H
 #define QTAWS_PRICINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Pricing {
 
 class PricingClientPrivate;
+class DescribeServicesResponse;
+class GetAttributeValuesResponse;
+class GetProductsResponse;
 
 class QTAWS_EXPORT PricingClient : public AwsAbstractClient {
     Q_OBJECT

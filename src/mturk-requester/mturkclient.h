@@ -20,18 +20,57 @@
 #ifndef QTAWS_MTURKCLIENT_H
 #define QTAWS_MTURKCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MTurk {
 
 class MTurkClientPrivate;
+class AcceptQualificationRequestResponse;
+class ApproveAssignmentResponse;
+class AssociateQualificationWithWorkerResponse;
+class CreateAdditionalAssignmentsForHITResponse;
+class CreateHITResponse;
+class CreateHITTypeResponse;
+class CreateHITWithHITTypeResponse;
+class CreateQualificationTypeResponse;
+class CreateWorkerBlockResponse;
+class DeleteHITResponse;
+class DeleteQualificationTypeResponse;
+class DeleteWorkerBlockResponse;
+class DisassociateQualificationFromWorkerResponse;
+class GetAccountBalanceResponse;
+class GetAssignmentResponse;
+class GetFileUploadURLResponse;
+class GetHITResponse;
+class GetQualificationScoreResponse;
+class GetQualificationTypeResponse;
+class ListAssignmentsForHITResponse;
+class ListBonusPaymentsResponse;
+class ListHITsResponse;
+class ListHITsForQualificationTypeResponse;
+class ListQualificationRequestsResponse;
+class ListQualificationTypesResponse;
+class ListReviewPolicyResultsForHITResponse;
+class ListReviewableHITsResponse;
+class ListWorkerBlocksResponse;
+class ListWorkersWithQualificationTypeResponse;
+class NotifyWorkersResponse;
+class RejectAssignmentResponse;
+class RejectQualificationRequestResponse;
+class SendBonusResponse;
+class SendTestEventNotificationResponse;
+class UpdateExpirationForHITResponse;
+class UpdateHITReviewStatusResponse;
+class UpdateHITTypeOfHITResponse;
+class UpdateNotificationSettingsResponse;
+class UpdateQualificationTypeResponse;
 
 class QTAWS_EXPORT MTurkClient : public AwsAbstractClient {
     Q_OBJECT

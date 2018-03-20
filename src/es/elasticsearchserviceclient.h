@@ -20,18 +20,32 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICECLIENT_H
 #define QTAWS_ELASTICSEARCHSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElasticsearchService {
 
 class ElasticsearchServiceClientPrivate;
+class AddTagsResponse;
+class CreateElasticsearchDomainResponse;
+class DeleteElasticsearchDomainResponse;
+class DeleteElasticsearchServiceRoleResponse;
+class DescribeElasticsearchDomainResponse;
+class DescribeElasticsearchDomainConfigResponse;
+class DescribeElasticsearchDomainsResponse;
+class DescribeElasticsearchInstanceTypeLimitsResponse;
+class ListDomainNamesResponse;
+class ListElasticsearchInstanceTypesResponse;
+class ListElasticsearchVersionsResponse;
+class ListTagsResponse;
+class RemoveTagsResponse;
+class UpdateElasticsearchDomainConfigResponse;
 
 class QTAWS_EXPORT ElasticsearchServiceClient : public AwsAbstractClient {
     Q_OBJECT

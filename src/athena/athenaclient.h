@@ -20,18 +20,29 @@
 #ifndef QTAWS_ATHENACLIENT_H
 #define QTAWS_ATHENACLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Athena {
 
 class AthenaClientPrivate;
+class BatchGetNamedQueryResponse;
+class BatchGetQueryExecutionResponse;
+class CreateNamedQueryResponse;
+class DeleteNamedQueryResponse;
+class GetNamedQueryResponse;
+class GetQueryExecutionResponse;
+class GetQueryResultsResponse;
+class ListNamedQueriesResponse;
+class ListQueryExecutionsResponse;
+class StartQueryExecutionResponse;
+class StopQueryExecutionResponse;
 
 class QTAWS_EXPORT AthenaClient : public AwsAbstractClient {
     Q_OBJECT

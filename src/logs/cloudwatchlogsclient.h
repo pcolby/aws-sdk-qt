@@ -20,18 +20,51 @@
 #ifndef QTAWS_CLOUDWATCHLOGSCLIENT_H
 #define QTAWS_CLOUDWATCHLOGSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudWatchLogs {
 
 class CloudWatchLogsClientPrivate;
+class AssociateKmsKeyResponse;
+class CancelExportTaskResponse;
+class CreateExportTaskResponse;
+class CreateLogGroupResponse;
+class CreateLogStreamResponse;
+class DeleteDestinationResponse;
+class DeleteLogGroupResponse;
+class DeleteLogStreamResponse;
+class DeleteMetricFilterResponse;
+class DeleteResourcePolicyResponse;
+class DeleteRetentionPolicyResponse;
+class DeleteSubscriptionFilterResponse;
+class DescribeDestinationsResponse;
+class DescribeExportTasksResponse;
+class DescribeLogGroupsResponse;
+class DescribeLogStreamsResponse;
+class DescribeMetricFiltersResponse;
+class DescribeResourcePoliciesResponse;
+class DescribeSubscriptionFiltersResponse;
+class DisassociateKmsKeyResponse;
+class FilterLogEventsResponse;
+class GetLogEventsResponse;
+class ListTagsLogGroupResponse;
+class PutDestinationResponse;
+class PutDestinationPolicyResponse;
+class PutLogEventsResponse;
+class PutMetricFilterResponse;
+class PutResourcePolicyResponse;
+class PutRetentionPolicyResponse;
+class PutSubscriptionFilterResponse;
+class TagLogGroupResponse;
+class TestMetricFilterResponse;
+class UntagLogGroupResponse;
 
 class QTAWS_EXPORT CloudWatchLogsClient : public AwsAbstractClient {
     Q_OBJECT

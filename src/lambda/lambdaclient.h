@@ -20,18 +20,48 @@
 #ifndef QTAWS_LAMBDACLIENT_H
 #define QTAWS_LAMBDACLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Lambda {
 
 class LambdaClientPrivate;
+class AddPermissionResponse;
+class CreateAliasResponse;
+class CreateEventSourceMappingResponse;
+class CreateFunctionResponse;
+class DeleteAliasResponse;
+class DeleteEventSourceMappingResponse;
+class DeleteFunctionResponse;
+class DeleteFunctionConcurrencyResponse;
+class GetAccountSettingsResponse;
+class GetAliasResponse;
+class GetEventSourceMappingResponse;
+class GetFunctionResponse;
+class GetFunctionConfigurationResponse;
+class GetPolicyResponse;
+class InvokeResponse;
+class InvokeAsyncResponse;
+class ListAliasesResponse;
+class ListEventSourceMappingsResponse;
+class ListFunctionsResponse;
+class ListTagsResponse;
+class ListVersionsByFunctionResponse;
+class PublishVersionResponse;
+class PutFunctionConcurrencyResponse;
+class RemovePermissionResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateAliasResponse;
+class UpdateEventSourceMappingResponse;
+class UpdateFunctionCodeResponse;
+class UpdateFunctionConfigurationResponse;
 
 class QTAWS_EXPORT LambdaClient : public AwsAbstractClient {
     Q_OBJECT

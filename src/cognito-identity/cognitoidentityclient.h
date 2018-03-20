@@ -20,18 +20,36 @@
 #ifndef QTAWS_COGNITOIDENTITYCLIENT_H
 #define QTAWS_COGNITOIDENTITYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CognitoIdentity {
 
 class CognitoIdentityClientPrivate;
+class CreateIdentityPoolResponse;
+class DeleteIdentitiesResponse;
+class DeleteIdentityPoolResponse;
+class DescribeIdentityResponse;
+class DescribeIdentityPoolResponse;
+class GetCredentialsForIdentityResponse;
+class GetIdResponse;
+class GetIdentityPoolRolesResponse;
+class GetOpenIdTokenResponse;
+class GetOpenIdTokenForDeveloperIdentityResponse;
+class ListIdentitiesResponse;
+class ListIdentityPoolsResponse;
+class LookupDeveloperIdentityResponse;
+class MergeDeveloperIdentitiesResponse;
+class SetIdentityPoolRolesResponse;
+class UnlinkDeveloperIdentityResponse;
+class UnlinkIdentityResponse;
+class UpdateIdentityPoolResponse;
 
 class QTAWS_EXPORT CognitoIdentityClient : public AwsAbstractClient {
     Q_OBJECT

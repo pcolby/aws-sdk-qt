@@ -20,18 +20,138 @@
 #ifndef QTAWS_APIGATEWAYCLIENT_H
 #define QTAWS_APIGATEWAYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace APIGateway {
 
 class APIGatewayClientPrivate;
+class CreateApiKeyResponse;
+class CreateAuthorizerResponse;
+class CreateBasePathMappingResponse;
+class CreateDeploymentResponse;
+class CreateDocumentationPartResponse;
+class CreateDocumentationVersionResponse;
+class CreateDomainNameResponse;
+class CreateModelResponse;
+class CreateRequestValidatorResponse;
+class CreateResourceResponse;
+class CreateRestApiResponse;
+class CreateStageResponse;
+class CreateUsagePlanResponse;
+class CreateUsagePlanKeyResponse;
+class CreateVpcLinkResponse;
+class DeleteApiKeyResponse;
+class DeleteAuthorizerResponse;
+class DeleteBasePathMappingResponse;
+class DeleteClientCertificateResponse;
+class DeleteDeploymentResponse;
+class DeleteDocumentationPartResponse;
+class DeleteDocumentationVersionResponse;
+class DeleteDomainNameResponse;
+class DeleteGatewayResponseResponse;
+class DeleteIntegrationResponse;
+class DeleteIntegrationResponseResponse;
+class DeleteMethodResponse;
+class DeleteMethodResponseResponse;
+class DeleteModelResponse;
+class DeleteRequestValidatorResponse;
+class DeleteResourceResponse;
+class DeleteRestApiResponse;
+class DeleteStageResponse;
+class DeleteUsagePlanResponse;
+class DeleteUsagePlanKeyResponse;
+class DeleteVpcLinkResponse;
+class FlushStageAuthorizersCacheResponse;
+class FlushStageCacheResponse;
+class GenerateClientCertificateResponse;
+class GetAccountResponse;
+class GetApiKeyResponse;
+class GetApiKeysResponse;
+class GetAuthorizerResponse;
+class GetAuthorizersResponse;
+class GetBasePathMappingResponse;
+class GetBasePathMappingsResponse;
+class GetClientCertificateResponse;
+class GetClientCertificatesResponse;
+class GetDeploymentResponse;
+class GetDeploymentsResponse;
+class GetDocumentationPartResponse;
+class GetDocumentationPartsResponse;
+class GetDocumentationVersionResponse;
+class GetDocumentationVersionsResponse;
+class GetDomainNameResponse;
+class GetDomainNamesResponse;
+class GetExportResponse;
+class GetGatewayResponseResponse;
+class GetGatewayResponsesResponse;
+class GetIntegrationResponse;
+class GetIntegrationResponseResponse;
+class GetMethodResponse;
+class GetMethodResponseResponse;
+class GetModelResponse;
+class GetModelTemplateResponse;
+class GetModelsResponse;
+class GetRequestValidatorResponse;
+class GetRequestValidatorsResponse;
+class GetResourceResponse;
+class GetResourcesResponse;
+class GetRestApiResponse;
+class GetRestApisResponse;
+class GetSdkResponse;
+class GetSdkTypeResponse;
+class GetSdkTypesResponse;
+class GetStageResponse;
+class GetStagesResponse;
+class GetTagsResponse;
+class GetUsageResponse;
+class GetUsagePlanResponse;
+class GetUsagePlanKeyResponse;
+class GetUsagePlanKeysResponse;
+class GetUsagePlansResponse;
+class GetVpcLinkResponse;
+class GetVpcLinksResponse;
+class ImportApiKeysResponse;
+class ImportDocumentationPartsResponse;
+class ImportRestApiResponse;
+class PutGatewayResponseResponse;
+class PutIntegrationResponse;
+class PutIntegrationResponseResponse;
+class PutMethodResponse;
+class PutMethodResponseResponse;
+class PutRestApiResponse;
+class TagResourceResponse;
+class TestInvokeAuthorizerResponse;
+class TestInvokeMethodResponse;
+class UntagResourceResponse;
+class UpdateAccountResponse;
+class UpdateApiKeyResponse;
+class UpdateAuthorizerResponse;
+class UpdateBasePathMappingResponse;
+class UpdateClientCertificateResponse;
+class UpdateDeploymentResponse;
+class UpdateDocumentationPartResponse;
+class UpdateDocumentationVersionResponse;
+class UpdateDomainNameResponse;
+class UpdateGatewayResponseResponse;
+class UpdateIntegrationResponse;
+class UpdateIntegrationResponseResponse;
+class UpdateMethodResponse;
+class UpdateMethodResponseResponse;
+class UpdateModelResponse;
+class UpdateRequestValidatorResponse;
+class UpdateResourceResponse;
+class UpdateRestApiResponse;
+class UpdateStageResponse;
+class UpdateUsageResponse;
+class UpdateUsagePlanResponse;
+class UpdateVpcLinkResponse;
 
 class QTAWS_EXPORT APIGatewayClient : public AwsAbstractClient {
     Q_OBJECT

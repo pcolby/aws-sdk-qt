@@ -20,18 +20,23 @@
 #ifndef QTAWS_COSTEXPLORERCLIENT_H
 #define QTAWS_COSTEXPLORERCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CostExplorer {
 
 class CostExplorerClientPrivate;
+class GetCostAndUsageResponse;
+class GetDimensionValuesResponse;
+class GetReservationCoverageResponse;
+class GetReservationUtilizationResponse;
+class GetTagsResponse;
 
 class QTAWS_EXPORT CostExplorerClient : public AwsAbstractClient {
     Q_OBJECT

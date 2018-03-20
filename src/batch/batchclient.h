@@ -20,18 +20,34 @@
 #ifndef QTAWS_BATCHCLIENT_H
 #define QTAWS_BATCHCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Batch {
 
 class BatchClientPrivate;
+class CancelJobResponse;
+class CreateComputeEnvironmentResponse;
+class CreateJobQueueResponse;
+class DeleteComputeEnvironmentResponse;
+class DeleteJobQueueResponse;
+class DeregisterJobDefinitionResponse;
+class DescribeComputeEnvironmentsResponse;
+class DescribeJobDefinitionsResponse;
+class DescribeJobQueuesResponse;
+class DescribeJobsResponse;
+class ListJobsResponse;
+class RegisterJobDefinitionResponse;
+class SubmitJobResponse;
+class TerminateJobResponse;
+class UpdateComputeEnvironmentResponse;
+class UpdateJobQueueResponse;
 
 class QTAWS_EXPORT BatchClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,45 @@
 #ifndef QTAWS_APPSYNCCLIENT_H
 #define QTAWS_APPSYNCCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace AppSync {
 
 class AppSyncClientPrivate;
+class CreateApiKeyResponse;
+class CreateDataSourceResponse;
+class CreateGraphqlApiResponse;
+class CreateResolverResponse;
+class CreateTypeResponse;
+class DeleteApiKeyResponse;
+class DeleteDataSourceResponse;
+class DeleteGraphqlApiResponse;
+class DeleteResolverResponse;
+class DeleteTypeResponse;
+class GetDataSourceResponse;
+class GetGraphqlApiResponse;
+class GetIntrospectionSchemaResponse;
+class GetResolverResponse;
+class GetSchemaCreationStatusResponse;
+class GetTypeResponse;
+class ListApiKeysResponse;
+class ListDataSourcesResponse;
+class ListGraphqlApisResponse;
+class ListResolversResponse;
+class ListTypesResponse;
+class StartSchemaCreationResponse;
+class UpdateApiKeyResponse;
+class UpdateDataSourceResponse;
+class UpdateGraphqlApiResponse;
+class UpdateResolverResponse;
+class UpdateTypeResponse;
 
 class QTAWS_EXPORT AppSyncClient : public AwsAbstractClient {
     Q_OBJECT

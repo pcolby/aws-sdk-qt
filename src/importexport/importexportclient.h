@@ -20,18 +20,24 @@
 #ifndef QTAWS_IMPORTEXPORTCLIENT_H
 #define QTAWS_IMPORTEXPORTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ImportExport {
 
 class ImportExportClientPrivate;
+class CancelJobResponse;
+class CreateJobResponse;
+class GetShippingLabelResponse;
+class GetStatusResponse;
+class ListJobsResponse;
+class UpdateJobResponse;
 
 class QTAWS_EXPORT ImportExportClient : public AwsAbstractClient {
     Q_OBJECT

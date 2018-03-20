@@ -20,18 +20,23 @@
 #ifndef QTAWS_{{ClassName|upper}}_H
 #define QTAWS_{{ClassName|upper}}_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
 
-namespace AWS {
-
+{# @todo Consistent namespacing #}
 class AwsAbstractClient;
 class AwsAbstractCredentials;
+
+namespace AWS {
 
 namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
+{% for f in OperationSignatures %}
+{# @todo Probably a better way to do this. #}
+class {{ f.returnType|cut:" *" }};
+{% endfor %}
 
 class QTAWS_EXPORT {{ClassName}} : public AwsAbstractClient {
     Q_OBJECT

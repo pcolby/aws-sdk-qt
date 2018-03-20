@@ -20,18 +20,28 @@
 #ifndef QTAWS_CLOUD9CLIENT_H
 #define QTAWS_CLOUD9CLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Cloud9 {
 
 class Cloud9ClientPrivate;
+class CreateEnvironmentEC2Response;
+class CreateEnvironmentMembershipResponse;
+class DeleteEnvironmentResponse;
+class DeleteEnvironmentMembershipResponse;
+class DescribeEnvironmentMembershipsResponse;
+class DescribeEnvironmentStatusResponse;
+class DescribeEnvironmentsResponse;
+class ListEnvironmentsResponse;
+class UpdateEnvironmentResponse;
+class UpdateEnvironmentMembershipResponse;
 
 class QTAWS_EXPORT Cloud9Client : public AwsAbstractClient {
     Q_OBJECT

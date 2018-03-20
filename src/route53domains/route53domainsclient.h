@@ -20,18 +20,42 @@
 #ifndef QTAWS_ROUTE53DOMAINSCLIENT_H
 #define QTAWS_ROUTE53DOMAINSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Route53Domains {
 
 class Route53DomainsClientPrivate;
+class CheckDomainAvailabilityResponse;
+class CheckDomainTransferabilityResponse;
+class DeleteTagsForDomainResponse;
+class DisableDomainAutoRenewResponse;
+class DisableDomainTransferLockResponse;
+class EnableDomainAutoRenewResponse;
+class EnableDomainTransferLockResponse;
+class GetContactReachabilityStatusResponse;
+class GetDomainDetailResponse;
+class GetDomainSuggestionsResponse;
+class GetOperationDetailResponse;
+class ListDomainsResponse;
+class ListOperationsResponse;
+class ListTagsForDomainResponse;
+class RegisterDomainResponse;
+class RenewDomainResponse;
+class ResendContactReachabilityEmailResponse;
+class RetrieveDomainAuthCodeResponse;
+class TransferDomainResponse;
+class UpdateDomainContactResponse;
+class UpdateDomainContactPrivacyResponse;
+class UpdateDomainNameserversResponse;
+class UpdateTagsForDomainResponse;
+class ViewBillingResponse;
 
 class QTAWS_EXPORT Route53DomainsClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,35 @@
 #ifndef QTAWS_ELASTICTRANSCODERCLIENT_H
 #define QTAWS_ELASTICTRANSCODERCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElasticTranscoder {
 
 class ElasticTranscoderClientPrivate;
+class CancelJobResponse;
+class CreateJobResponse;
+class CreatePipelineResponse;
+class CreatePresetResponse;
+class DeletePipelineResponse;
+class DeletePresetResponse;
+class ListJobsByPipelineResponse;
+class ListJobsByStatusResponse;
+class ListPipelinesResponse;
+class ListPresetsResponse;
+class ReadJobResponse;
+class ReadPipelineResponse;
+class ReadPresetResponse;
+class TestRoleResponse;
+class UpdatePipelineResponse;
+class UpdatePipelineNotificationsResponse;
+class UpdatePipelineStatusResponse;
 
 class QTAWS_EXPORT ElasticTranscoderClient : public AwsAbstractClient {
     Q_OBJECT

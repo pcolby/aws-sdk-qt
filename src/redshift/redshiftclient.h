@@ -20,18 +20,81 @@
 #ifndef QTAWS_REDSHIFTCLIENT_H
 #define QTAWS_REDSHIFTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Redshift {
 
 class RedshiftClientPrivate;
+class AuthorizeClusterSecurityGroupIngressResponse;
+class AuthorizeSnapshotAccessResponse;
+class CopyClusterSnapshotResponse;
+class CreateClusterResponse;
+class CreateClusterParameterGroupResponse;
+class CreateClusterSecurityGroupResponse;
+class CreateClusterSnapshotResponse;
+class CreateClusterSubnetGroupResponse;
+class CreateEventSubscriptionResponse;
+class CreateHsmClientCertificateResponse;
+class CreateHsmConfigurationResponse;
+class CreateSnapshotCopyGrantResponse;
+class CreateTagsResponse;
+class DeleteClusterResponse;
+class DeleteClusterParameterGroupResponse;
+class DeleteClusterSecurityGroupResponse;
+class DeleteClusterSnapshotResponse;
+class DeleteClusterSubnetGroupResponse;
+class DeleteEventSubscriptionResponse;
+class DeleteHsmClientCertificateResponse;
+class DeleteHsmConfigurationResponse;
+class DeleteSnapshotCopyGrantResponse;
+class DeleteTagsResponse;
+class DescribeClusterParameterGroupsResponse;
+class DescribeClusterParametersResponse;
+class DescribeClusterSecurityGroupsResponse;
+class DescribeClusterSnapshotsResponse;
+class DescribeClusterSubnetGroupsResponse;
+class DescribeClusterVersionsResponse;
+class DescribeClustersResponse;
+class DescribeDefaultClusterParametersResponse;
+class DescribeEventCategoriesResponse;
+class DescribeEventSubscriptionsResponse;
+class DescribeEventsResponse;
+class DescribeHsmClientCertificatesResponse;
+class DescribeHsmConfigurationsResponse;
+class DescribeLoggingStatusResponse;
+class DescribeOrderableClusterOptionsResponse;
+class DescribeReservedNodeOfferingsResponse;
+class DescribeReservedNodesResponse;
+class DescribeResizeResponse;
+class DescribeSnapshotCopyGrantsResponse;
+class DescribeTableRestoreStatusResponse;
+class DescribeTagsResponse;
+class DisableLoggingResponse;
+class DisableSnapshotCopyResponse;
+class EnableLoggingResponse;
+class EnableSnapshotCopyResponse;
+class GetClusterCredentialsResponse;
+class ModifyClusterResponse;
+class ModifyClusterIamRolesResponse;
+class ModifyClusterParameterGroupResponse;
+class ModifyClusterSubnetGroupResponse;
+class ModifyEventSubscriptionResponse;
+class ModifySnapshotCopyRetentionPeriodResponse;
+class PurchaseReservedNodeOfferingResponse;
+class RebootClusterResponse;
+class ResetClusterParameterGroupResponse;
+class RestoreFromClusterSnapshotResponse;
+class RestoreTableFromClusterSnapshotResponse;
+class RevokeClusterSecurityGroupIngressResponse;
+class RevokeSnapshotAccessResponse;
+class RotateEncryptionKeyResponse;
 
 class QTAWS_EXPORT RedshiftClient : public AwsAbstractClient {
     Q_OBJECT

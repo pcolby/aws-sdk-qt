@@ -20,18 +20,95 @@
 #ifndef QTAWS_S3CLIENT_H
 #define QTAWS_S3CLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace S3 {
 
 class S3ClientPrivate;
+class AbortMultipartUploadResponse;
+class CompleteMultipartUploadResponse;
+class CopyObjectResponse;
+class CreateBucketResponse;
+class CreateMultipartUploadResponse;
+class DeleteBucketResponse;
+class DeleteBucketAnalyticsConfigurationResponse;
+class DeleteBucketCorsResponse;
+class DeleteBucketEncryptionResponse;
+class DeleteBucketInventoryConfigurationResponse;
+class DeleteBucketLifecycleResponse;
+class DeleteBucketMetricsConfigurationResponse;
+class DeleteBucketPolicyResponse;
+class DeleteBucketReplicationResponse;
+class DeleteBucketTaggingResponse;
+class DeleteBucketWebsiteResponse;
+class DeleteObjectResponse;
+class DeleteObjectTaggingResponse;
+class DeleteObjectsResponse;
+class GetBucketAccelerateConfigurationResponse;
+class GetBucketAclResponse;
+class GetBucketAnalyticsConfigurationResponse;
+class GetBucketCorsResponse;
+class GetBucketEncryptionResponse;
+class GetBucketInventoryConfigurationResponse;
+class GetBucketLifecycleResponse;
+class GetBucketLifecycleConfigurationResponse;
+class GetBucketLocationResponse;
+class GetBucketLoggingResponse;
+class GetBucketMetricsConfigurationResponse;
+class GetBucketNotificationResponse;
+class GetBucketNotificationConfigurationResponse;
+class GetBucketPolicyResponse;
+class GetBucketReplicationResponse;
+class GetBucketRequestPaymentResponse;
+class GetBucketTaggingResponse;
+class GetBucketVersioningResponse;
+class GetBucketWebsiteResponse;
+class GetObjectResponse;
+class GetObjectAclResponse;
+class GetObjectTaggingResponse;
+class GetObjectTorrentResponse;
+class HeadBucketResponse;
+class HeadObjectResponse;
+class ListBucketAnalyticsConfigurationsResponse;
+class ListBucketInventoryConfigurationsResponse;
+class ListBucketMetricsConfigurationsResponse;
+class ListBucketsResponse;
+class ListMultipartUploadsResponse;
+class ListObjectVersionsResponse;
+class ListObjectsResponse;
+class ListObjectsV2Response;
+class ListPartsResponse;
+class PutBucketAccelerateConfigurationResponse;
+class PutBucketAclResponse;
+class PutBucketAnalyticsConfigurationResponse;
+class PutBucketCorsResponse;
+class PutBucketEncryptionResponse;
+class PutBucketInventoryConfigurationResponse;
+class PutBucketLifecycleResponse;
+class PutBucketLifecycleConfigurationResponse;
+class PutBucketLoggingResponse;
+class PutBucketMetricsConfigurationResponse;
+class PutBucketNotificationResponse;
+class PutBucketNotificationConfigurationResponse;
+class PutBucketPolicyResponse;
+class PutBucketReplicationResponse;
+class PutBucketRequestPaymentResponse;
+class PutBucketTaggingResponse;
+class PutBucketVersioningResponse;
+class PutBucketWebsiteResponse;
+class PutObjectResponse;
+class PutObjectAclResponse;
+class PutObjectTaggingResponse;
+class RestoreObjectResponse;
+class UploadPartResponse;
+class UploadPartCopyResponse;
 
 class QTAWS_EXPORT S3Client : public AwsAbstractClient {
     Q_OBJECT

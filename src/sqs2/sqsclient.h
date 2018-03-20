@@ -20,18 +20,38 @@
 #ifndef QTAWS_SQSCLIENT_H
 #define QTAWS_SQSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SQS {
 
 class SqsClientPrivate;
+class AddPermissionResponse;
+class ChangeMessageVisibilityResponse;
+class ChangeMessageVisibilityBatchResponse;
+class CreateQueueResponse;
+class DeleteMessageResponse;
+class DeleteMessageBatchResponse;
+class DeleteQueueResponse;
+class GetQueueAttributesResponse;
+class GetQueueUrlResponse;
+class ListDeadLetterSourceQueuesResponse;
+class ListQueueTagsResponse;
+class ListQueuesResponse;
+class PurgeQueueResponse;
+class ReceiveMessageResponse;
+class RemovePermissionResponse;
+class SendMessageResponse;
+class SendMessageBatchResponse;
+class SetQueueAttributesResponse;
+class TagQueueResponse;
+class UntagQueueResponse;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
     Q_OBJECT

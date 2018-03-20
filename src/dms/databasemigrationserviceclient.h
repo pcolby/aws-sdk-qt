@@ -20,18 +20,62 @@
 #ifndef QTAWS_DATABASEMIGRATIONSERVICECLIENT_H
 #define QTAWS_DATABASEMIGRATIONSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientPrivate;
+class AddTagsToResourceResponse;
+class CreateEndpointResponse;
+class CreateEventSubscriptionResponse;
+class CreateReplicationInstanceResponse;
+class CreateReplicationSubnetGroupResponse;
+class CreateReplicationTaskResponse;
+class DeleteCertificateResponse;
+class DeleteEndpointResponse;
+class DeleteEventSubscriptionResponse;
+class DeleteReplicationInstanceResponse;
+class DeleteReplicationSubnetGroupResponse;
+class DeleteReplicationTaskResponse;
+class DescribeAccountAttributesResponse;
+class DescribeCertificatesResponse;
+class DescribeConnectionsResponse;
+class DescribeEndpointTypesResponse;
+class DescribeEndpointsResponse;
+class DescribeEventCategoriesResponse;
+class DescribeEventSubscriptionsResponse;
+class DescribeEventsResponse;
+class DescribeOrderableReplicationInstancesResponse;
+class DescribeRefreshSchemasStatusResponse;
+class DescribeReplicationInstanceTaskLogsResponse;
+class DescribeReplicationInstancesResponse;
+class DescribeReplicationSubnetGroupsResponse;
+class DescribeReplicationTaskAssessmentResultsResponse;
+class DescribeReplicationTasksResponse;
+class DescribeSchemasResponse;
+class DescribeTableStatisticsResponse;
+class ImportCertificateResponse;
+class ListTagsForResourceResponse;
+class ModifyEndpointResponse;
+class ModifyEventSubscriptionResponse;
+class ModifyReplicationInstanceResponse;
+class ModifyReplicationSubnetGroupResponse;
+class ModifyReplicationTaskResponse;
+class RebootReplicationInstanceResponse;
+class RefreshSchemasResponse;
+class ReloadTablesResponse;
+class RemoveTagsFromResourceResponse;
+class StartReplicationTaskResponse;
+class StartReplicationTaskAssessmentResponse;
+class StopReplicationTaskResponse;
+class TestConnectionResponse;
 
 class QTAWS_EXPORT DatabaseMigrationServiceClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,35 @@
 #ifndef QTAWS_COGNITOSYNCCLIENT_H
 #define QTAWS_COGNITOSYNCCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CognitoSync {
 
 class CognitoSyncClientPrivate;
+class BulkPublishResponse;
+class DeleteDatasetResponse;
+class DescribeDatasetResponse;
+class DescribeIdentityPoolUsageResponse;
+class DescribeIdentityUsageResponse;
+class GetBulkPublishDetailsResponse;
+class GetCognitoEventsResponse;
+class GetIdentityPoolConfigurationResponse;
+class ListDatasetsResponse;
+class ListIdentityPoolUsageResponse;
+class ListRecordsResponse;
+class RegisterDeviceResponse;
+class SetCognitoEventsResponse;
+class SetIdentityPoolConfigurationResponse;
+class SubscribeToDatasetResponse;
+class UnsubscribeFromDatasetResponse;
+class UpdateRecordsResponse;
 
 class QTAWS_EXPORT CognitoSyncClient : public AwsAbstractClient {
     Q_OBJECT

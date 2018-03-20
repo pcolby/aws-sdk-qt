@@ -20,18 +20,29 @@
 #ifndef QTAWS_EFSCLIENT_H
 #define QTAWS_EFSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace EFS {
 
 class EfsClientPrivate;
+class CreateFileSystemResponse;
+class CreateMountTargetResponse;
+class CreateTagsResponse;
+class DeleteFileSystemResponse;
+class DeleteMountTargetResponse;
+class DeleteTagsResponse;
+class DescribeFileSystemsResponse;
+class DescribeMountTargetSecurityGroupsResponse;
+class DescribeMountTargetsResponse;
+class DescribeTagsResponse;
+class ModifyMountTargetSecurityGroupsResponse;
 
 class QTAWS_EXPORT EfsClient : public AwsAbstractClient {
     Q_OBJECT

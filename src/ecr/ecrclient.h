@@ -20,18 +20,40 @@
 #ifndef QTAWS_ECRCLIENT_H
 #define QTAWS_ECRCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ECR {
 
 class EcrClientPrivate;
+class BatchCheckLayerAvailabilityResponse;
+class BatchDeleteImageResponse;
+class BatchGetImageResponse;
+class CompleteLayerUploadResponse;
+class CreateRepositoryResponse;
+class DeleteLifecyclePolicyResponse;
+class DeleteRepositoryResponse;
+class DeleteRepositoryPolicyResponse;
+class DescribeImagesResponse;
+class DescribeRepositoriesResponse;
+class GetAuthorizationTokenResponse;
+class GetDownloadUrlForLayerResponse;
+class GetLifecyclePolicyResponse;
+class GetLifecyclePolicyPreviewResponse;
+class GetRepositoryPolicyResponse;
+class InitiateLayerUploadResponse;
+class ListImagesResponse;
+class PutImageResponse;
+class PutLifecyclePolicyResponse;
+class SetRepositoryPolicyResponse;
+class StartLifecyclePolicyPreviewResponse;
+class UploadLayerPartResponse;
 
 class QTAWS_EXPORT EcrClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,21 @@
 #ifndef QTAWS_TRANSCRIBESERVICECLIENT_H
 #define QTAWS_TRANSCRIBESERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace TranscribeService {
 
 class TranscribeServiceClientPrivate;
+class GetTranscriptionJobResponse;
+class ListTranscriptionJobsResponse;
+class StartTranscriptionJobResponse;
 
 class QTAWS_EXPORT TranscribeServiceClient : public AwsAbstractClient {
     Q_OBJECT

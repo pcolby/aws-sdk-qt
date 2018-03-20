@@ -20,18 +20,33 @@
 #ifndef QTAWS_CLOUDWATCHEVENTSCLIENT_H
 #define QTAWS_CLOUDWATCHEVENTSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudWatchEvents {
 
 class CloudWatchEventsClientPrivate;
+class DeleteRuleResponse;
+class DescribeEventBusResponse;
+class DescribeRuleResponse;
+class DisableRuleResponse;
+class EnableRuleResponse;
+class ListRuleNamesByTargetResponse;
+class ListRulesResponse;
+class ListTargetsByRuleResponse;
+class PutEventsResponse;
+class PutPermissionResponse;
+class PutRuleResponse;
+class PutTargetsResponse;
+class RemovePermissionResponse;
+class RemoveTargetsResponse;
+class TestEventPatternResponse;
 
 class QTAWS_EXPORT CloudWatchEventsClient : public AwsAbstractClient {
     Q_OBJECT

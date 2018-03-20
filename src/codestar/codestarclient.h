@@ -20,18 +20,36 @@
 #ifndef QTAWS_CODESTARCLIENT_H
 #define QTAWS_CODESTARCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CodeStar {
 
 class CodeStarClientPrivate;
+class AssociateTeamMemberResponse;
+class CreateProjectResponse;
+class CreateUserProfileResponse;
+class DeleteProjectResponse;
+class DeleteUserProfileResponse;
+class DescribeProjectResponse;
+class DescribeUserProfileResponse;
+class DisassociateTeamMemberResponse;
+class ListProjectsResponse;
+class ListResourcesResponse;
+class ListTagsForProjectResponse;
+class ListTeamMembersResponse;
+class ListUserProfilesResponse;
+class TagProjectResponse;
+class UntagProjectResponse;
+class UpdateProjectResponse;
+class UpdateTeamMemberResponse;
+class UpdateUserProfileResponse;
 
 class QTAWS_EXPORT CodeStarClient : public AwsAbstractClient {
     Q_OBJECT

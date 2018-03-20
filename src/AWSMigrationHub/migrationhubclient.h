@@ -20,18 +20,34 @@
 #ifndef QTAWS_MIGRATIONHUBCLIENT_H
 #define QTAWS_MIGRATIONHUBCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MigrationHub {
 
 class MigrationHubClientPrivate;
+class AssociateCreatedArtifactResponse;
+class AssociateDiscoveredResourceResponse;
+class CreateProgressUpdateStreamResponse;
+class DeleteProgressUpdateStreamResponse;
+class DescribeApplicationStateResponse;
+class DescribeMigrationTaskResponse;
+class DisassociateCreatedArtifactResponse;
+class DisassociateDiscoveredResourceResponse;
+class ImportMigrationTaskResponse;
+class ListCreatedArtifactsResponse;
+class ListDiscoveredResourcesResponse;
+class ListMigrationTasksResponse;
+class ListProgressUpdateStreamsResponse;
+class NotifyApplicationStateResponse;
+class NotifyMigrationTaskStateResponse;
+class PutResourceAttributesResponse;
 
 class QTAWS_EXPORT MigrationHubClient : public AwsAbstractClient {
     Q_OBJECT

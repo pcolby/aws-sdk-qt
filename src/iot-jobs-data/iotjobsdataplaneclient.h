@@ -20,18 +20,22 @@
 #ifndef QTAWS_IOTJOBSDATAPLANECLIENT_H
 #define QTAWS_IOTJOBSDATAPLANECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneClientPrivate;
+class DescribeJobExecutionResponse;
+class GetPendingJobExecutionsResponse;
+class StartNextPendingJobExecutionResponse;
+class UpdateJobExecutionResponse;
 
 class QTAWS_EXPORT IoTJobsDataPlaneClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,51 @@
 #ifndef QTAWS_GLACIERCLIENT_H
 #define QTAWS_GLACIERCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Glacier {
 
 class GlacierClientPrivate;
+class AbortMultipartUploadResponse;
+class AbortVaultLockResponse;
+class AddTagsToVaultResponse;
+class CompleteMultipartUploadResponse;
+class CompleteVaultLockResponse;
+class CreateVaultResponse;
+class DeleteArchiveResponse;
+class DeleteVaultResponse;
+class DeleteVaultAccessPolicyResponse;
+class DeleteVaultNotificationsResponse;
+class DescribeJobResponse;
+class DescribeVaultResponse;
+class GetDataRetrievalPolicyResponse;
+class GetJobOutputResponse;
+class GetVaultAccessPolicyResponse;
+class GetVaultLockResponse;
+class GetVaultNotificationsResponse;
+class InitiateJobResponse;
+class InitiateMultipartUploadResponse;
+class InitiateVaultLockResponse;
+class ListJobsResponse;
+class ListMultipartUploadsResponse;
+class ListPartsResponse;
+class ListProvisionedCapacityResponse;
+class ListTagsForVaultResponse;
+class ListVaultsResponse;
+class PurchaseProvisionedCapacityResponse;
+class RemoveTagsFromVaultResponse;
+class SetDataRetrievalPolicyResponse;
+class SetVaultAccessPolicyResponse;
+class SetVaultNotificationsResponse;
+class UploadArchiveResponse;
+class UploadMultipartPartResponse;
 
 class QTAWS_EXPORT GlacierClient : public AwsAbstractClient {
     Q_OBJECT

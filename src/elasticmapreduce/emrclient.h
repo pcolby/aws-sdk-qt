@@ -20,18 +20,45 @@
 #ifndef QTAWS_EMRCLIENT_H
 #define QTAWS_EMRCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace EMR {
 
 class EmrClientPrivate;
+class AddInstanceFleetResponse;
+class AddInstanceGroupsResponse;
+class AddJobFlowStepsResponse;
+class AddTagsResponse;
+class CancelStepsResponse;
+class CreateSecurityConfigurationResponse;
+class DeleteSecurityConfigurationResponse;
+class DescribeClusterResponse;
+class DescribeJobFlowsResponse;
+class DescribeSecurityConfigurationResponse;
+class DescribeStepResponse;
+class ListBootstrapActionsResponse;
+class ListClustersResponse;
+class ListInstanceFleetsResponse;
+class ListInstanceGroupsResponse;
+class ListInstancesResponse;
+class ListSecurityConfigurationsResponse;
+class ListStepsResponse;
+class ModifyInstanceFleetResponse;
+class ModifyInstanceGroupsResponse;
+class PutAutoScalingPolicyResponse;
+class RemoveAutoScalingPolicyResponse;
+class RemoveTagsResponse;
+class RunJobFlowResponse;
+class SetTerminationProtectionResponse;
+class SetVisibleToAllUsersResponse;
+class TerminateJobFlowsResponse;
 
 class QTAWS_EXPORT EmrClient : public AwsAbstractClient {
     Q_OBJECT

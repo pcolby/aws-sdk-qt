@@ -20,18 +20,19 @@
 #ifndef QTAWS_TRANSLATECLIENT_H
 #define QTAWS_TRANSLATECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Translate {
 
 class TranslateClientPrivate;
+class TranslateTextResponse;
 
 class QTAWS_EXPORT TranslateClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,24 @@
 #ifndef QTAWS_HEALTHCLIENT_H
 #define QTAWS_HEALTHCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Health {
 
 class HealthClientPrivate;
+class DescribeAffectedEntitiesResponse;
+class DescribeEntityAggregatesResponse;
+class DescribeEventAggregatesResponse;
+class DescribeEventDetailsResponse;
+class DescribeEventTypesResponse;
+class DescribeEventsResponse;
 
 class QTAWS_EXPORT HealthClient : public AwsAbstractClient {
     Q_OBJECT

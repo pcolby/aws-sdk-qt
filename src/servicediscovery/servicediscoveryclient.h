@@ -20,18 +20,36 @@
 #ifndef QTAWS_SERVICEDISCOVERYCLIENT_H
 #define QTAWS_SERVICEDISCOVERYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientPrivate;
+class CreatePrivateDnsNamespaceResponse;
+class CreatePublicDnsNamespaceResponse;
+class CreateServiceResponse;
+class DeleteNamespaceResponse;
+class DeleteServiceResponse;
+class DeregisterInstanceResponse;
+class GetInstanceResponse;
+class GetInstancesHealthStatusResponse;
+class GetNamespaceResponse;
+class GetOperationResponse;
+class GetServiceResponse;
+class ListInstancesResponse;
+class ListNamespacesResponse;
+class ListOperationsResponse;
+class ListServicesResponse;
+class RegisterInstanceResponse;
+class UpdateInstanceCustomHealthStatusResponse;
+class UpdateServiceResponse;
 
 class QTAWS_EXPORT ServiceDiscoveryClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,58 @@
 #ifndef QTAWS_WORKDOCSCLIENT_H
 #define QTAWS_WORKDOCSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace WorkDocs {
 
 class WorkDocsClientPrivate;
+class AbortDocumentVersionUploadResponse;
+class ActivateUserResponse;
+class AddResourcePermissionsResponse;
+class CreateCommentResponse;
+class CreateCustomMetadataResponse;
+class CreateFolderResponse;
+class CreateLabelsResponse;
+class CreateNotificationSubscriptionResponse;
+class CreateUserResponse;
+class DeactivateUserResponse;
+class DeleteCommentResponse;
+class DeleteCustomMetadataResponse;
+class DeleteDocumentResponse;
+class DeleteFolderResponse;
+class DeleteFolderContentsResponse;
+class DeleteLabelsResponse;
+class DeleteNotificationSubscriptionResponse;
+class DeleteUserResponse;
+class DescribeActivitiesResponse;
+class DescribeCommentsResponse;
+class DescribeDocumentVersionsResponse;
+class DescribeFolderContentsResponse;
+class DescribeGroupsResponse;
+class DescribeNotificationSubscriptionsResponse;
+class DescribeResourcePermissionsResponse;
+class DescribeRootFoldersResponse;
+class DescribeUsersResponse;
+class GetCurrentUserResponse;
+class GetDocumentResponse;
+class GetDocumentPathResponse;
+class GetDocumentVersionResponse;
+class GetFolderResponse;
+class GetFolderPathResponse;
+class InitiateDocumentVersionUploadResponse;
+class RemoveAllResourcePermissionsResponse;
+class RemoveResourcePermissionResponse;
+class UpdateDocumentResponse;
+class UpdateDocumentVersionResponse;
+class UpdateFolderResponse;
+class UpdateUserResponse;
 
 class QTAWS_EXPORT WorkDocsClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,83 @@
 #ifndef QTAWS_GAMELIFTCLIENT_H
 #define QTAWS_GAMELIFTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace GameLift {
 
 class GameLiftClientPrivate;
+class AcceptMatchResponse;
+class CreateAliasResponse;
+class CreateBuildResponse;
+class CreateFleetResponse;
+class CreateGameSessionResponse;
+class CreateGameSessionQueueResponse;
+class CreateMatchmakingConfigurationResponse;
+class CreateMatchmakingRuleSetResponse;
+class CreatePlayerSessionResponse;
+class CreatePlayerSessionsResponse;
+class CreateVpcPeeringAuthorizationResponse;
+class CreateVpcPeeringConnectionResponse;
+class DeleteAliasResponse;
+class DeleteBuildResponse;
+class DeleteFleetResponse;
+class DeleteGameSessionQueueResponse;
+class DeleteMatchmakingConfigurationResponse;
+class DeleteScalingPolicyResponse;
+class DeleteVpcPeeringAuthorizationResponse;
+class DeleteVpcPeeringConnectionResponse;
+class DescribeAliasResponse;
+class DescribeBuildResponse;
+class DescribeEC2InstanceLimitsResponse;
+class DescribeFleetAttributesResponse;
+class DescribeFleetCapacityResponse;
+class DescribeFleetEventsResponse;
+class DescribeFleetPortSettingsResponse;
+class DescribeFleetUtilizationResponse;
+class DescribeGameSessionDetailsResponse;
+class DescribeGameSessionPlacementResponse;
+class DescribeGameSessionQueuesResponse;
+class DescribeGameSessionsResponse;
+class DescribeInstancesResponse;
+class DescribeMatchmakingResponse;
+class DescribeMatchmakingConfigurationsResponse;
+class DescribeMatchmakingRuleSetsResponse;
+class DescribePlayerSessionsResponse;
+class DescribeRuntimeConfigurationResponse;
+class DescribeScalingPoliciesResponse;
+class DescribeVpcPeeringAuthorizationsResponse;
+class DescribeVpcPeeringConnectionsResponse;
+class GetGameSessionLogUrlResponse;
+class GetInstanceAccessResponse;
+class ListAliasesResponse;
+class ListBuildsResponse;
+class ListFleetsResponse;
+class PutScalingPolicyResponse;
+class RequestUploadCredentialsResponse;
+class ResolveAliasResponse;
+class SearchGameSessionsResponse;
+class StartGameSessionPlacementResponse;
+class StartMatchBackfillResponse;
+class StartMatchmakingResponse;
+class StopGameSessionPlacementResponse;
+class StopMatchmakingResponse;
+class UpdateAliasResponse;
+class UpdateBuildResponse;
+class UpdateFleetAttributesResponse;
+class UpdateFleetCapacityResponse;
+class UpdateFleetPortSettingsResponse;
+class UpdateGameSessionResponse;
+class UpdateGameSessionQueueResponse;
+class UpdateMatchmakingConfigurationResponse;
+class UpdateRuntimeConfigurationResponse;
+class ValidateMatchmakingRuleSetResponse;
 
 class QTAWS_EXPORT GameLiftClient : public AwsAbstractClient {
     Q_OBJECT

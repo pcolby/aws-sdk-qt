@@ -20,18 +20,141 @@
 #ifndef QTAWS_IOTCLIENT_H
 #define QTAWS_IOTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace IoT {
 
 class IoTClientPrivate;
+class AcceptCertificateTransferResponse;
+class AddThingToThingGroupResponse;
+class AssociateTargetsWithJobResponse;
+class AttachPolicyResponse;
+class AttachPrincipalPolicyResponse;
+class AttachThingPrincipalResponse;
+class CancelCertificateTransferResponse;
+class CancelJobResponse;
+class ClearDefaultAuthorizerResponse;
+class CreateAuthorizerResponse;
+class CreateCertificateFromCsrResponse;
+class CreateJobResponse;
+class CreateKeysAndCertificateResponse;
+class CreateOTAUpdateResponse;
+class CreatePolicyResponse;
+class CreatePolicyVersionResponse;
+class CreateRoleAliasResponse;
+class CreateStreamResponse;
+class CreateThingResponse;
+class CreateThingGroupResponse;
+class CreateThingTypeResponse;
+class CreateTopicRuleResponse;
+class DeleteAuthorizerResponse;
+class DeleteCACertificateResponse;
+class DeleteCertificateResponse;
+class DeleteOTAUpdateResponse;
+class DeletePolicyResponse;
+class DeletePolicyVersionResponse;
+class DeleteRegistrationCodeResponse;
+class DeleteRoleAliasResponse;
+class DeleteStreamResponse;
+class DeleteThingResponse;
+class DeleteThingGroupResponse;
+class DeleteThingTypeResponse;
+class DeleteTopicRuleResponse;
+class DeleteV2LoggingLevelResponse;
+class DeprecateThingTypeResponse;
+class DescribeAuthorizerResponse;
+class DescribeCACertificateResponse;
+class DescribeCertificateResponse;
+class DescribeDefaultAuthorizerResponse;
+class DescribeEndpointResponse;
+class DescribeEventConfigurationsResponse;
+class DescribeIndexResponse;
+class DescribeJobResponse;
+class DescribeJobExecutionResponse;
+class DescribeRoleAliasResponse;
+class DescribeStreamResponse;
+class DescribeThingResponse;
+class DescribeThingGroupResponse;
+class DescribeThingRegistrationTaskResponse;
+class DescribeThingTypeResponse;
+class DetachPolicyResponse;
+class DetachPrincipalPolicyResponse;
+class DetachThingPrincipalResponse;
+class DisableTopicRuleResponse;
+class EnableTopicRuleResponse;
+class GetEffectivePoliciesResponse;
+class GetIndexingConfigurationResponse;
+class GetJobDocumentResponse;
+class GetLoggingOptionsResponse;
+class GetOTAUpdateResponse;
+class GetPolicyResponse;
+class GetPolicyVersionResponse;
+class GetRegistrationCodeResponse;
+class GetTopicRuleResponse;
+class GetV2LoggingOptionsResponse;
+class ListAttachedPoliciesResponse;
+class ListAuthorizersResponse;
+class ListCACertificatesResponse;
+class ListCertificatesResponse;
+class ListCertificatesByCAResponse;
+class ListIndicesResponse;
+class ListJobExecutionsForJobResponse;
+class ListJobExecutionsForThingResponse;
+class ListJobsResponse;
+class ListOTAUpdatesResponse;
+class ListOutgoingCertificatesResponse;
+class ListPoliciesResponse;
+class ListPolicyPrincipalsResponse;
+class ListPolicyVersionsResponse;
+class ListPrincipalPoliciesResponse;
+class ListPrincipalThingsResponse;
+class ListRoleAliasesResponse;
+class ListStreamsResponse;
+class ListTargetsForPolicyResponse;
+class ListThingGroupsResponse;
+class ListThingGroupsForThingResponse;
+class ListThingPrincipalsResponse;
+class ListThingRegistrationTaskReportsResponse;
+class ListThingRegistrationTasksResponse;
+class ListThingTypesResponse;
+class ListThingsResponse;
+class ListThingsInThingGroupResponse;
+class ListTopicRulesResponse;
+class ListV2LoggingLevelsResponse;
+class RegisterCACertificateResponse;
+class RegisterCertificateResponse;
+class RegisterThingResponse;
+class RejectCertificateTransferResponse;
+class RemoveThingFromThingGroupResponse;
+class ReplaceTopicRuleResponse;
+class SearchIndexResponse;
+class SetDefaultAuthorizerResponse;
+class SetDefaultPolicyVersionResponse;
+class SetLoggingOptionsResponse;
+class SetV2LoggingLevelResponse;
+class SetV2LoggingOptionsResponse;
+class StartThingRegistrationTaskResponse;
+class StopThingRegistrationTaskResponse;
+class TestAuthorizationResponse;
+class TestInvokeAuthorizerResponse;
+class TransferCertificateResponse;
+class UpdateAuthorizerResponse;
+class UpdateCACertificateResponse;
+class UpdateCertificateResponse;
+class UpdateEventConfigurationsResponse;
+class UpdateIndexingConfigurationResponse;
+class UpdateRoleAliasResponse;
+class UpdateStreamResponse;
+class UpdateThingResponse;
+class UpdateThingGroupResponse;
+class UpdateThingGroupsForThingResponse;
 
 class QTAWS_EXPORT IoTClient : public AwsAbstractClient {
     Q_OBJECT

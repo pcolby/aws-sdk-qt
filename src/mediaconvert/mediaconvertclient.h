@@ -20,18 +20,38 @@
 #ifndef QTAWS_MEDIACONVERTCLIENT_H
 #define QTAWS_MEDIACONVERTCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MediaConvert {
 
 class MediaConvertClientPrivate;
+class CancelJobResponse;
+class CreateJobResponse;
+class CreateJobTemplateResponse;
+class CreatePresetResponse;
+class CreateQueueResponse;
+class DeleteJobTemplateResponse;
+class DeletePresetResponse;
+class DeleteQueueResponse;
+class DescribeEndpointsResponse;
+class GetJobResponse;
+class GetJobTemplateResponse;
+class GetPresetResponse;
+class GetQueueResponse;
+class ListJobTemplatesResponse;
+class ListJobsResponse;
+class ListPresetsResponse;
+class ListQueuesResponse;
+class UpdateJobTemplateResponse;
+class UpdatePresetResponse;
+class UpdateQueueResponse;
 
 class QTAWS_EXPORT MediaConvertClient : public AwsAbstractClient {
     Q_OBJECT

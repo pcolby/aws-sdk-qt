@@ -20,18 +20,29 @@
 #ifndef QTAWS_MEDIAPACKAGECLIENT_H
 #define QTAWS_MEDIAPACKAGECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MediaPackage {
 
 class MediaPackageClientPrivate;
+class CreateChannelResponse;
+class CreateOriginEndpointResponse;
+class DeleteChannelResponse;
+class DeleteOriginEndpointResponse;
+class DescribeChannelResponse;
+class DescribeOriginEndpointResponse;
+class ListChannelsResponse;
+class ListOriginEndpointsResponse;
+class RotateChannelCredentialsResponse;
+class UpdateChannelResponse;
+class UpdateOriginEndpointResponse;
 
 class QTAWS_EXPORT MediaPackageClient : public AwsAbstractClient {
     Q_OBJECT

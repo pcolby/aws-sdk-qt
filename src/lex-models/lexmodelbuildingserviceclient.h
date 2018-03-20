@@ -20,18 +20,54 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENT_H
 #define QTAWS_LEXMODELBUILDINGSERVICECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace LexModelBuildingService {
 
 class LexModelBuildingServiceClientPrivate;
+class CreateBotVersionResponse;
+class CreateIntentVersionResponse;
+class CreateSlotTypeVersionResponse;
+class DeleteBotResponse;
+class DeleteBotAliasResponse;
+class DeleteBotChannelAssociationResponse;
+class DeleteBotVersionResponse;
+class DeleteIntentResponse;
+class DeleteIntentVersionResponse;
+class DeleteSlotTypeResponse;
+class DeleteSlotTypeVersionResponse;
+class DeleteUtterancesResponse;
+class GetBotResponse;
+class GetBotAliasResponse;
+class GetBotAliasesResponse;
+class GetBotChannelAssociationResponse;
+class GetBotChannelAssociationsResponse;
+class GetBotVersionsResponse;
+class GetBotsResponse;
+class GetBuiltinIntentResponse;
+class GetBuiltinIntentsResponse;
+class GetBuiltinSlotTypesResponse;
+class GetExportResponse;
+class GetImportResponse;
+class GetIntentResponse;
+class GetIntentVersionsResponse;
+class GetIntentsResponse;
+class GetSlotTypeResponse;
+class GetSlotTypeVersionsResponse;
+class GetSlotTypesResponse;
+class GetUtterancesViewResponse;
+class PutBotResponse;
+class PutBotAliasResponse;
+class PutIntentResponse;
+class PutSlotTypeResponse;
+class StartImportResponse;
 
 class QTAWS_EXPORT LexModelBuildingServiceClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,54 @@
 #ifndef QTAWS_ALEXAFORBUSINESSCLIENT_H
 #define QTAWS_ALEXAFORBUSINESSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace AlexaForBusiness {
 
 class AlexaForBusinessClientPrivate;
+class AssociateDeviceWithRoomResponse;
+class AssociateSkillGroupWithRoomResponse;
+class CreateProfileResponse;
+class CreateRoomResponse;
+class CreateSkillGroupResponse;
+class CreateUserResponse;
+class DeleteProfileResponse;
+class DeleteRoomResponse;
+class DeleteRoomSkillParameterResponse;
+class DeleteSkillGroupResponse;
+class DeleteUserResponse;
+class DisassociateDeviceFromRoomResponse;
+class DisassociateSkillGroupFromRoomResponse;
+class GetDeviceResponse;
+class GetProfileResponse;
+class GetRoomResponse;
+class GetRoomSkillParameterResponse;
+class GetSkillGroupResponse;
+class ListSkillsResponse;
+class ListTagsResponse;
+class PutRoomSkillParameterResponse;
+class ResolveRoomResponse;
+class RevokeInvitationResponse;
+class SearchDevicesResponse;
+class SearchProfilesResponse;
+class SearchRoomsResponse;
+class SearchSkillGroupsResponse;
+class SearchUsersResponse;
+class SendInvitationResponse;
+class StartDeviceSyncResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateDeviceResponse;
+class UpdateProfileResponse;
+class UpdateRoomResponse;
+class UpdateSkillGroupResponse;
 
 class QTAWS_EXPORT AlexaForBusinessClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,22 @@
 #ifndef QTAWS_DYNAMODBSTREAMSCLIENT_H
 #define QTAWS_DYNAMODBSTREAMSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientPrivate;
+class DescribeStreamResponse;
+class GetRecordsResponse;
+class GetShardIteratorResponse;
+class ListStreamsResponse;
 
 class QTAWS_EXPORT DynamoDBStreamsClient : public AwsAbstractClient {
     Q_OBJECT

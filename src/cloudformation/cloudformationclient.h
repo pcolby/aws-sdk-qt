@@ -20,18 +20,59 @@
 #ifndef QTAWS_CLOUDFORMATIONCLIENT_H
 #define QTAWS_CLOUDFORMATIONCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CloudFormation {
 
 class CloudFormationClientPrivate;
+class CancelUpdateStackResponse;
+class ContinueUpdateRollbackResponse;
+class CreateChangeSetResponse;
+class CreateStackResponse;
+class CreateStackInstancesResponse;
+class CreateStackSetResponse;
+class DeleteChangeSetResponse;
+class DeleteStackResponse;
+class DeleteStackInstancesResponse;
+class DeleteStackSetResponse;
+class DescribeAccountLimitsResponse;
+class DescribeChangeSetResponse;
+class DescribeStackEventsResponse;
+class DescribeStackInstanceResponse;
+class DescribeStackResourceResponse;
+class DescribeStackResourcesResponse;
+class DescribeStackSetResponse;
+class DescribeStackSetOperationResponse;
+class DescribeStacksResponse;
+class EstimateTemplateCostResponse;
+class ExecuteChangeSetResponse;
+class GetStackPolicyResponse;
+class GetTemplateResponse;
+class GetTemplateSummaryResponse;
+class ListChangeSetsResponse;
+class ListExportsResponse;
+class ListImportsResponse;
+class ListStackInstancesResponse;
+class ListStackResourcesResponse;
+class ListStackSetOperationResultsResponse;
+class ListStackSetOperationsResponse;
+class ListStackSetsResponse;
+class ListStacksResponse;
+class SetStackPolicyResponse;
+class SignalResourceResponse;
+class StopStackSetOperationResponse;
+class UpdateStackResponse;
+class UpdateStackInstancesResponse;
+class UpdateStackSetResponse;
+class UpdateTerminationProtectionResponse;
+class ValidateTemplateResponse;
 
 class QTAWS_EXPORT CloudFormationClient : public AwsAbstractClient {
     Q_OBJECT

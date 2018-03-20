@@ -20,18 +20,28 @@
 #ifndef QTAWS_KINESISVIDEOCLIENT_H
 #define QTAWS_KINESISVIDEOCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace KinesisVideo {
 
 class KinesisVideoClientPrivate;
+class CreateStreamResponse;
+class DeleteStreamResponse;
+class DescribeStreamResponse;
+class GetDataEndpointResponse;
+class ListStreamsResponse;
+class ListTagsForStreamResponse;
+class TagStreamResponse;
+class UntagStreamResponse;
+class UpdateDataRetentionResponse;
+class UpdateStreamResponse;
 
 class QTAWS_EXPORT KinesisVideoClient : public AwsAbstractClient {
     Q_OBJECT

@@ -20,18 +20,78 @@
 #ifndef QTAWS_SERVICECATALOGCLIENT_H
 #define QTAWS_SERVICECATALOGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ServiceCatalog {
 
 class ServiceCatalogClientPrivate;
+class AcceptPortfolioShareResponse;
+class AssociatePrincipalWithPortfolioResponse;
+class AssociateProductWithPortfolioResponse;
+class AssociateTagOptionWithResourceResponse;
+class CopyProductResponse;
+class CreateConstraintResponse;
+class CreatePortfolioResponse;
+class CreatePortfolioShareResponse;
+class CreateProductResponse;
+class CreateProvisionedProductPlanResponse;
+class CreateProvisioningArtifactResponse;
+class CreateTagOptionResponse;
+class DeleteConstraintResponse;
+class DeletePortfolioResponse;
+class DeletePortfolioShareResponse;
+class DeleteProductResponse;
+class DeleteProvisionedProductPlanResponse;
+class DeleteProvisioningArtifactResponse;
+class DeleteTagOptionResponse;
+class DescribeConstraintResponse;
+class DescribeCopyProductStatusResponse;
+class DescribePortfolioResponse;
+class DescribeProductResponse;
+class DescribeProductAsAdminResponse;
+class DescribeProductViewResponse;
+class DescribeProvisionedProductResponse;
+class DescribeProvisionedProductPlanResponse;
+class DescribeProvisioningArtifactResponse;
+class DescribeProvisioningParametersResponse;
+class DescribeRecordResponse;
+class DescribeTagOptionResponse;
+class DisassociatePrincipalFromPortfolioResponse;
+class DisassociateProductFromPortfolioResponse;
+class DisassociateTagOptionFromResourceResponse;
+class ExecuteProvisionedProductPlanResponse;
+class ListAcceptedPortfolioSharesResponse;
+class ListConstraintsForPortfolioResponse;
+class ListLaunchPathsResponse;
+class ListPortfolioAccessResponse;
+class ListPortfoliosResponse;
+class ListPortfoliosForProductResponse;
+class ListPrincipalsForPortfolioResponse;
+class ListProvisionedProductPlansResponse;
+class ListProvisioningArtifactsResponse;
+class ListRecordHistoryResponse;
+class ListResourcesForTagOptionResponse;
+class ListTagOptionsResponse;
+class ProvisionProductResponse;
+class RejectPortfolioShareResponse;
+class ScanProvisionedProductsResponse;
+class SearchProductsResponse;
+class SearchProductsAsAdminResponse;
+class SearchProvisionedProductsResponse;
+class TerminateProvisionedProductResponse;
+class UpdateConstraintResponse;
+class UpdatePortfolioResponse;
+class UpdateProductResponse;
+class UpdateProvisionedProductResponse;
+class UpdateProvisioningArtifactResponse;
+class UpdateTagOptionResponse;
 
 class QTAWS_EXPORT ServiceCatalogClient : public AwsAbstractClient {
     Q_OBJECT

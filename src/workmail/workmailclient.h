@@ -20,18 +20,46 @@
 #ifndef QTAWS_WORKMAILCLIENT_H
 #define QTAWS_WORKMAILCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace WorkMail {
 
 class WorkMailClientPrivate;
+class AssociateDelegateToResourceResponse;
+class AssociateMemberToGroupResponse;
+class CreateAliasResponse;
+class CreateGroupResponse;
+class CreateResourceResponse;
+class CreateUserResponse;
+class DeleteAliasResponse;
+class DeleteGroupResponse;
+class DeleteResourceResponse;
+class DeleteUserResponse;
+class DeregisterFromWorkMailResponse;
+class DescribeGroupResponse;
+class DescribeOrganizationResponse;
+class DescribeResourceResponse;
+class DescribeUserResponse;
+class DisassociateDelegateFromResourceResponse;
+class DisassociateMemberFromGroupResponse;
+class ListAliasesResponse;
+class ListGroupMembersResponse;
+class ListGroupsResponse;
+class ListOrganizationsResponse;
+class ListResourceDelegatesResponse;
+class ListResourcesResponse;
+class ListUsersResponse;
+class RegisterToWorkMailResponse;
+class ResetPasswordResponse;
+class UpdatePrimaryEmailAddressResponse;
+class UpdateResourceResponse;
 
 class QTAWS_EXPORT WorkMailClient : public AwsAbstractClient {
     Q_OBJECT

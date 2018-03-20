@@ -20,18 +20,47 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGCLIENT_H
 #define QTAWS_ELASTICLOADBALANCINGCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingClientPrivate;
+class AddTagsResponse;
+class ApplySecurityGroupsToLoadBalancerResponse;
+class AttachLoadBalancerToSubnetsResponse;
+class ConfigureHealthCheckResponse;
+class CreateAppCookieStickinessPolicyResponse;
+class CreateLBCookieStickinessPolicyResponse;
+class CreateLoadBalancerResponse;
+class CreateLoadBalancerListenersResponse;
+class CreateLoadBalancerPolicyResponse;
+class DeleteLoadBalancerResponse;
+class DeleteLoadBalancerListenersResponse;
+class DeleteLoadBalancerPolicyResponse;
+class DeregisterInstancesFromLoadBalancerResponse;
+class DescribeAccountLimitsResponse;
+class DescribeInstanceHealthResponse;
+class DescribeLoadBalancerAttributesResponse;
+class DescribeLoadBalancerPoliciesResponse;
+class DescribeLoadBalancerPolicyTypesResponse;
+class DescribeLoadBalancersResponse;
+class DescribeTagsResponse;
+class DetachLoadBalancerFromSubnetsResponse;
+class DisableAvailabilityZonesForLoadBalancerResponse;
+class EnableAvailabilityZonesForLoadBalancerResponse;
+class ModifyLoadBalancerAttributesResponse;
+class RegisterInstancesWithLoadBalancerResponse;
+class RemoveTagsResponse;
+class SetLoadBalancerListenerSSLCertificateResponse;
+class SetLoadBalancerPoliciesForBackendServerResponse;
+class SetLoadBalancerPoliciesOfListenerResponse;
 
 class QTAWS_EXPORT ElasticLoadBalancingClient : public AwsAbstractClient {
     Q_OBJECT

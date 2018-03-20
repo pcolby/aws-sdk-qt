@@ -20,18 +20,54 @@
 #ifndef QTAWS_CODECOMMITCLIENT_H
 #define QTAWS_CODECOMMITCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CodeCommit {
 
 class CodeCommitClientPrivate;
+class BatchGetRepositoriesResponse;
+class CreateBranchResponse;
+class CreatePullRequestResponse;
+class CreateRepositoryResponse;
+class DeleteBranchResponse;
+class DeleteCommentContentResponse;
+class DeleteRepositoryResponse;
+class DescribePullRequestEventsResponse;
+class GetBlobResponse;
+class GetBranchResponse;
+class GetCommentResponse;
+class GetCommentsForComparedCommitResponse;
+class GetCommentsForPullRequestResponse;
+class GetCommitResponse;
+class GetDifferencesResponse;
+class GetMergeConflictsResponse;
+class GetPullRequestResponse;
+class GetRepositoryResponse;
+class GetRepositoryTriggersResponse;
+class ListBranchesResponse;
+class ListPullRequestsResponse;
+class ListRepositoriesResponse;
+class MergePullRequestByFastForwardResponse;
+class PostCommentForComparedCommitResponse;
+class PostCommentForPullRequestResponse;
+class PostCommentReplyResponse;
+class PutFileResponse;
+class PutRepositoryTriggersResponse;
+class TestRepositoryTriggersResponse;
+class UpdateCommentResponse;
+class UpdateDefaultBranchResponse;
+class UpdatePullRequestDescriptionResponse;
+class UpdatePullRequestStatusResponse;
+class UpdatePullRequestTitleResponse;
+class UpdateRepositoryDescriptionResponse;
+class UpdateRepositoryNameResponse;
 
 class QTAWS_EXPORT CodeCommitClient : public AwsAbstractClient {
     Q_OBJECT

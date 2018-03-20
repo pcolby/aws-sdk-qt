@@ -20,18 +20,96 @@
 #ifndef QTAWS_GLUECLIENT_H
 #define QTAWS_GLUECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Glue {
 
 class GlueClientPrivate;
+class BatchCreatePartitionResponse;
+class BatchDeleteConnectionResponse;
+class BatchDeletePartitionResponse;
+class BatchDeleteTableResponse;
+class BatchDeleteTableVersionResponse;
+class BatchGetPartitionResponse;
+class BatchStopJobRunResponse;
+class CreateClassifierResponse;
+class CreateConnectionResponse;
+class CreateCrawlerResponse;
+class CreateDatabaseResponse;
+class CreateDevEndpointResponse;
+class CreateJobResponse;
+class CreatePartitionResponse;
+class CreateScriptResponse;
+class CreateTableResponse;
+class CreateTriggerResponse;
+class CreateUserDefinedFunctionResponse;
+class DeleteClassifierResponse;
+class DeleteConnectionResponse;
+class DeleteCrawlerResponse;
+class DeleteDatabaseResponse;
+class DeleteDevEndpointResponse;
+class DeleteJobResponse;
+class DeletePartitionResponse;
+class DeleteTableResponse;
+class DeleteTableVersionResponse;
+class DeleteTriggerResponse;
+class DeleteUserDefinedFunctionResponse;
+class GetCatalogImportStatusResponse;
+class GetClassifierResponse;
+class GetClassifiersResponse;
+class GetConnectionResponse;
+class GetConnectionsResponse;
+class GetCrawlerResponse;
+class GetCrawlerMetricsResponse;
+class GetCrawlersResponse;
+class GetDatabaseResponse;
+class GetDatabasesResponse;
+class GetDataflowGraphResponse;
+class GetDevEndpointResponse;
+class GetDevEndpointsResponse;
+class GetJobResponse;
+class GetJobRunResponse;
+class GetJobRunsResponse;
+class GetJobsResponse;
+class GetMappingResponse;
+class GetPartitionResponse;
+class GetPartitionsResponse;
+class GetPlanResponse;
+class GetTableResponse;
+class GetTableVersionResponse;
+class GetTableVersionsResponse;
+class GetTablesResponse;
+class GetTriggerResponse;
+class GetTriggersResponse;
+class GetUserDefinedFunctionResponse;
+class GetUserDefinedFunctionsResponse;
+class ImportCatalogToGlueResponse;
+class ResetJobBookmarkResponse;
+class StartCrawlerResponse;
+class StartCrawlerScheduleResponse;
+class StartJobRunResponse;
+class StartTriggerResponse;
+class StopCrawlerResponse;
+class StopCrawlerScheduleResponse;
+class StopTriggerResponse;
+class UpdateClassifierResponse;
+class UpdateConnectionResponse;
+class UpdateCrawlerResponse;
+class UpdateCrawlerScheduleResponse;
+class UpdateDatabaseResponse;
+class UpdateDevEndpointResponse;
+class UpdateJobResponse;
+class UpdatePartitionResponse;
+class UpdateTableResponse;
+class UpdateTriggerResponse;
+class UpdateUserDefinedFunctionResponse;
 
 class QTAWS_EXPORT GlueClient : public AwsAbstractClient {
     Q_OBJECT

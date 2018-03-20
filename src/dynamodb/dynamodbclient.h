@@ -20,18 +20,47 @@
 #ifndef QTAWS_DYNAMODBCLIENT_H
 #define QTAWS_DYNAMODBCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace DynamoDB {
 
 class DynamoDBClientPrivate;
+class BatchGetItemResponse;
+class BatchWriteItemResponse;
+class CreateBackupResponse;
+class CreateGlobalTableResponse;
+class CreateTableResponse;
+class DeleteBackupResponse;
+class DeleteItemResponse;
+class DeleteTableResponse;
+class DescribeBackupResponse;
+class DescribeContinuousBackupsResponse;
+class DescribeGlobalTableResponse;
+class DescribeLimitsResponse;
+class DescribeTableResponse;
+class DescribeTimeToLiveResponse;
+class GetItemResponse;
+class ListBackupsResponse;
+class ListGlobalTablesResponse;
+class ListTablesResponse;
+class ListTagsOfResourceResponse;
+class PutItemResponse;
+class QueryResponse;
+class RestoreTableFromBackupResponse;
+class ScanResponse;
+class TagResourceResponse;
+class UntagResourceResponse;
+class UpdateGlobalTableResponse;
+class UpdateItemResponse;
+class UpdateTableResponse;
+class UpdateTimeToLiveResponse;
 
 class QTAWS_EXPORT DynamoDBClient : public AwsAbstractClient {
     Q_OBJECT

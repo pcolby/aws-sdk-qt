@@ -20,18 +20,33 @@
 #ifndef QTAWS_CODEBUILDCLIENT_H
 #define QTAWS_CODEBUILDCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CodeBuild {
 
 class CodeBuildClientPrivate;
+class BatchDeleteBuildsResponse;
+class BatchGetBuildsResponse;
+class BatchGetProjectsResponse;
+class CreateProjectResponse;
+class CreateWebhookResponse;
+class DeleteProjectResponse;
+class DeleteWebhookResponse;
+class InvalidateProjectCacheResponse;
+class ListBuildsResponse;
+class ListBuildsForProjectResponse;
+class ListCuratedEnvironmentImagesResponse;
+class ListProjectsResponse;
+class StartBuildResponse;
+class StopBuildResponse;
+class UpdateProjectResponse;
 
 class QTAWS_EXPORT CodeBuildClient : public AwsAbstractClient {
     Q_OBJECT

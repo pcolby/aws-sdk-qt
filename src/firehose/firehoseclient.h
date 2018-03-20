@@ -20,18 +20,25 @@
 #ifndef QTAWS_FIREHOSECLIENT_H
 #define QTAWS_FIREHOSECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Firehose {
 
 class FirehoseClientPrivate;
+class CreateDeliveryStreamResponse;
+class DeleteDeliveryStreamResponse;
+class DescribeDeliveryStreamResponse;
+class ListDeliveryStreamsResponse;
+class PutRecordResponse;
+class PutRecordBatchResponse;
+class UpdateDestinationResponse;
 
 class QTAWS_EXPORT FirehoseClient : public AwsAbstractClient {
     Q_OBJECT

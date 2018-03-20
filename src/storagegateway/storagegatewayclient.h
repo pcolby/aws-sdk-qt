@@ -20,18 +20,81 @@
 #ifndef QTAWS_STORAGEGATEWAYCLIENT_H
 #define QTAWS_STORAGEGATEWAYCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace StorageGateway {
 
 class StorageGatewayClientPrivate;
+class ActivateGatewayResponse;
+class AddCacheResponse;
+class AddTagsToResourceResponse;
+class AddUploadBufferResponse;
+class AddWorkingStorageResponse;
+class CancelArchivalResponse;
+class CancelRetrievalResponse;
+class CreateCachediSCSIVolumeResponse;
+class CreateNFSFileShareResponse;
+class CreateSnapshotResponse;
+class CreateSnapshotFromVolumeRecoveryPointResponse;
+class CreateStorediSCSIVolumeResponse;
+class CreateTapeWithBarcodeResponse;
+class CreateTapesResponse;
+class DeleteBandwidthRateLimitResponse;
+class DeleteChapCredentialsResponse;
+class DeleteFileShareResponse;
+class DeleteGatewayResponse;
+class DeleteSnapshotScheduleResponse;
+class DeleteTapeResponse;
+class DeleteTapeArchiveResponse;
+class DeleteVolumeResponse;
+class DescribeBandwidthRateLimitResponse;
+class DescribeCacheResponse;
+class DescribeCachediSCSIVolumesResponse;
+class DescribeChapCredentialsResponse;
+class DescribeGatewayInformationResponse;
+class DescribeMaintenanceStartTimeResponse;
+class DescribeNFSFileSharesResponse;
+class DescribeSnapshotScheduleResponse;
+class DescribeStorediSCSIVolumesResponse;
+class DescribeTapeArchivesResponse;
+class DescribeTapeRecoveryPointsResponse;
+class DescribeTapesResponse;
+class DescribeUploadBufferResponse;
+class DescribeVTLDevicesResponse;
+class DescribeWorkingStorageResponse;
+class DisableGatewayResponse;
+class ListFileSharesResponse;
+class ListGatewaysResponse;
+class ListLocalDisksResponse;
+class ListTagsForResourceResponse;
+class ListTapesResponse;
+class ListVolumeInitiatorsResponse;
+class ListVolumeRecoveryPointsResponse;
+class ListVolumesResponse;
+class NotifyWhenUploadedResponse;
+class RefreshCacheResponse;
+class RemoveTagsFromResourceResponse;
+class ResetCacheResponse;
+class RetrieveTapeArchiveResponse;
+class RetrieveTapeRecoveryPointResponse;
+class SetLocalConsolePasswordResponse;
+class ShutdownGatewayResponse;
+class StartGatewayResponse;
+class UpdateBandwidthRateLimitResponse;
+class UpdateChapCredentialsResponse;
+class UpdateGatewayInformationResponse;
+class UpdateGatewaySoftwareNowResponse;
+class UpdateMaintenanceStartTimeResponse;
+class UpdateNFSFileShareResponse;
+class UpdateSnapshotScheduleResponse;
+class UpdateVTLDeviceTypeResponse;
 
 class QTAWS_EXPORT StorageGatewayClient : public AwsAbstractClient {
     Q_OBJECT

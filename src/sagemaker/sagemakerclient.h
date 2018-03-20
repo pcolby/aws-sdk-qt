@@ -20,18 +20,52 @@
 #ifndef QTAWS_SAGEMAKERCLIENT_H
 #define QTAWS_SAGEMAKERCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace SageMaker {
 
 class SageMakerClientPrivate;
+class AddTagsResponse;
+class CreateEndpointResponse;
+class CreateEndpointConfigResponse;
+class CreateModelResponse;
+class CreateNotebookInstanceResponse;
+class CreateNotebookInstanceLifecycleConfigResponse;
+class CreatePresignedNotebookInstanceUrlResponse;
+class CreateTrainingJobResponse;
+class DeleteEndpointResponse;
+class DeleteEndpointConfigResponse;
+class DeleteModelResponse;
+class DeleteNotebookInstanceResponse;
+class DeleteNotebookInstanceLifecycleConfigResponse;
+class DeleteTagsResponse;
+class DescribeEndpointResponse;
+class DescribeEndpointConfigResponse;
+class DescribeModelResponse;
+class DescribeNotebookInstanceResponse;
+class DescribeNotebookInstanceLifecycleConfigResponse;
+class DescribeTrainingJobResponse;
+class ListEndpointConfigsResponse;
+class ListEndpointsResponse;
+class ListModelsResponse;
+class ListNotebookInstanceLifecycleConfigsResponse;
+class ListNotebookInstancesResponse;
+class ListTagsResponse;
+class ListTrainingJobsResponse;
+class StartNotebookInstanceResponse;
+class StopNotebookInstanceResponse;
+class StopTrainingJobResponse;
+class UpdateEndpointResponse;
+class UpdateEndpointWeightsAndCapacitiesResponse;
+class UpdateNotebookInstanceResponse;
+class UpdateNotebookInstanceLifecycleConfigResponse;
 
 class QTAWS_EXPORT SageMakerClient : public AwsAbstractClient {
     Q_OBJECT

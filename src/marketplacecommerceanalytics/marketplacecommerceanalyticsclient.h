@@ -20,18 +20,20 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENT_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientPrivate;
+class GenerateDataSetResponse;
+class StartSupportDataExportResponse;
 
 class QTAWS_EXPORT MarketplaceCommerceAnalyticsClient : public AwsAbstractClient {
     Q_OBJECT

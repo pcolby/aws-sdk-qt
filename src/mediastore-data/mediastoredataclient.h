@@ -20,18 +20,23 @@
 #ifndef QTAWS_MEDIASTOREDATACLIENT_H
 #define QTAWS_MEDIASTOREDATACLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MediaStoreData {
 
 class MediaStoreDataClientPrivate;
+class DeleteObjectResponse;
+class DescribeObjectResponse;
+class GetObjectResponse;
+class ListItemsResponse;
+class PutObjectResponse;
 
 class QTAWS_EXPORT MediaStoreDataClient : public AwsAbstractClient {
     Q_OBJECT

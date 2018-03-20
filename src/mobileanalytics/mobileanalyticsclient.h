@@ -20,18 +20,19 @@
 #ifndef QTAWS_MOBILEANALYTICSCLIENT_H
 #define QTAWS_MOBILEANALYTICSCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace MobileAnalytics {
 
 class MobileAnalyticsClientPrivate;
+class PutEventsResponse;
 
 class QTAWS_EXPORT MobileAnalyticsClient : public AwsAbstractClient {
     Q_OBJECT

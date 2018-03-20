@@ -20,18 +20,19 @@
 #ifndef QTAWS_KINESISVIDEOMEDIACLIENT_H
 #define QTAWS_KINESISVIDEOMEDIACLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace KinesisVideoMedia {
 
 class KinesisVideoMediaClientPrivate;
+class GetMediaResponse;
 
 class QTAWS_EXPORT KinesisVideoMediaClient : public AwsAbstractClient {
     Q_OBJECT

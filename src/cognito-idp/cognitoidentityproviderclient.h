@@ -20,18 +20,113 @@
 #ifndef QTAWS_COGNITOIDENTITYPROVIDERCLIENT_H
 #define QTAWS_COGNITOIDENTITYPROVIDERCLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace CognitoIdentityProvider {
 
 class CognitoIdentityProviderClientPrivate;
+class AddCustomAttributesResponse;
+class AdminAddUserToGroupResponse;
+class AdminConfirmSignUpResponse;
+class AdminCreateUserResponse;
+class AdminDeleteUserResponse;
+class AdminDeleteUserAttributesResponse;
+class AdminDisableProviderForUserResponse;
+class AdminDisableUserResponse;
+class AdminEnableUserResponse;
+class AdminForgetDeviceResponse;
+class AdminGetDeviceResponse;
+class AdminGetUserResponse;
+class AdminInitiateAuthResponse;
+class AdminLinkProviderForUserResponse;
+class AdminListDevicesResponse;
+class AdminListGroupsForUserResponse;
+class AdminListUserAuthEventsResponse;
+class AdminRemoveUserFromGroupResponse;
+class AdminResetUserPasswordResponse;
+class AdminRespondToAuthChallengeResponse;
+class AdminSetUserMFAPreferenceResponse;
+class AdminSetUserSettingsResponse;
+class AdminUpdateAuthEventFeedbackResponse;
+class AdminUpdateDeviceStatusResponse;
+class AdminUpdateUserAttributesResponse;
+class AdminUserGlobalSignOutResponse;
+class AssociateSoftwareTokenResponse;
+class ChangePasswordResponse;
+class ConfirmDeviceResponse;
+class ConfirmForgotPasswordResponse;
+class ConfirmSignUpResponse;
+class CreateGroupResponse;
+class CreateIdentityProviderResponse;
+class CreateResourceServerResponse;
+class CreateUserImportJobResponse;
+class CreateUserPoolResponse;
+class CreateUserPoolClientResponse;
+class CreateUserPoolDomainResponse;
+class DeleteGroupResponse;
+class DeleteIdentityProviderResponse;
+class DeleteResourceServerResponse;
+class DeleteUserResponse;
+class DeleteUserAttributesResponse;
+class DeleteUserPoolResponse;
+class DeleteUserPoolClientResponse;
+class DeleteUserPoolDomainResponse;
+class DescribeIdentityProviderResponse;
+class DescribeResourceServerResponse;
+class DescribeRiskConfigurationResponse;
+class DescribeUserImportJobResponse;
+class DescribeUserPoolResponse;
+class DescribeUserPoolClientResponse;
+class DescribeUserPoolDomainResponse;
+class ForgetDeviceResponse;
+class ForgotPasswordResponse;
+class GetCSVHeaderResponse;
+class GetDeviceResponse;
+class GetGroupResponse;
+class GetIdentityProviderByIdentifierResponse;
+class GetSigningCertificateResponse;
+class GetUICustomizationResponse;
+class GetUserResponse;
+class GetUserAttributeVerificationCodeResponse;
+class GetUserPoolMfaConfigResponse;
+class GlobalSignOutResponse;
+class InitiateAuthResponse;
+class ListDevicesResponse;
+class ListGroupsResponse;
+class ListIdentityProvidersResponse;
+class ListResourceServersResponse;
+class ListUserImportJobsResponse;
+class ListUserPoolClientsResponse;
+class ListUserPoolsResponse;
+class ListUsersResponse;
+class ListUsersInGroupResponse;
+class ResendConfirmationCodeResponse;
+class RespondToAuthChallengeResponse;
+class SetRiskConfigurationResponse;
+class SetUICustomizationResponse;
+class SetUserMFAPreferenceResponse;
+class SetUserPoolMfaConfigResponse;
+class SetUserSettingsResponse;
+class SignUpResponse;
+class StartUserImportJobResponse;
+class StopUserImportJobResponse;
+class UpdateAuthEventFeedbackResponse;
+class UpdateDeviceStatusResponse;
+class UpdateGroupResponse;
+class UpdateIdentityProviderResponse;
+class UpdateResourceServerResponse;
+class UpdateUserAttributesResponse;
+class UpdateUserPoolResponse;
+class UpdateUserPoolClientResponse;
+class VerifySoftwareTokenResponse;
+class VerifyUserAttributeResponse;
 
 class QTAWS_EXPORT CognitoIdentityProviderClient : public AwsAbstractClient {
     Q_OBJECT

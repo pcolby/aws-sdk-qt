@@ -20,18 +20,27 @@
 #ifndef QTAWS_MOBILECLIENT_H
 #define QTAWS_MOBILECLIENT_H
 
-#include <QObject>
+#include "core/awsabstractclient.h"
 
 class QNetworkReply;
-
-namespace AWS {
 
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
+namespace AWS {
+
 namespace Mobile {
 
 class MobileClientPrivate;
+class CreateProjectResponse;
+class DeleteProjectResponse;
+class DescribeBundleResponse;
+class DescribeProjectResponse;
+class ExportBundleResponse;
+class ExportProjectResponse;
+class ListBundlesResponse;
+class ListProjectsResponse;
+class UpdateProjectResponse;
 
 class QTAWS_EXPORT MobileClient : public AwsAbstractClient {
     Q_OBJECT
