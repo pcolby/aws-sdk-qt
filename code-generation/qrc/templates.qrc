@@ -4,6 +4,12 @@
     <file>templates/client.cpp</file>
     <file>templates/client.h</file>
     <file>templates/client_p.h</file>
+    <file>templates/request.cpp</file>
+    <file>templates/request.h</file>
+    <file>templates/request_p.h</file>
+    <file>templates/response.cpp</file>
+    <file>templates/response.h</file>
+    <file>templates/response_p.h</file>
     <file>templates/service.pro</file>
   </qresource>
 </RCC>

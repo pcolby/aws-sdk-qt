@@ -50,7 +50,7 @@ Generator::Generator(const QDir &outputDir)
 bool Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {
-    qDebug() << "generating" << serviceFileName;
+    qDebug() << "generating service" << serviceFileName;
     outputDir.mkdir(serviceFileName);
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
@@ -69,6 +69,9 @@ bool Generator::generate(const QString &serviceFileName,
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     /// @todo Generate model classes.
+    foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
+        generateModelClasses(projectDir, operationName, description);
+    }
 
     /// @todo Generate request / response classes.
 
@@ -155,6 +158,37 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
         lines.removeLast();
     }
     return lines;
+}
+
+bool Generator::generateModelClasses(const QString &projectDir, const QString &operationName, const QJsonObject &description)
+{
+    qDebug() << "generating model for operation" << operationName;
+    Grantlee::Context context(description.value(QStringLiteral("operation")).toObject().toVariantHash());
+
+    /// @todo Generate request class.
+    context.push();
+    const QString requestClassName = operationName + QStringLiteral("Request");
+    context.insert(QStringLiteral("ClassName"), requestClassName);
+    render(QStringLiteral("request.cpp"), context,
+           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(requestClassName.toLower()));
+    render(QStringLiteral("request.h"), context,
+           QStringLiteral("%1/%2.h").arg(projectDir).arg(requestClassName.toLower()));
+    render(QStringLiteral("request_p.h"), context,
+           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(requestClassName.toLower()));
+    context.pop();
+
+    /// @todo Generate response class.
+    context.push();
+    const QString responseClassName = operationName + QStringLiteral("Response");
+    context.insert(QStringLiteral("ClassName"), responseClassName);
+    render(QStringLiteral("response.cpp"), context,
+           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(responseClassName.toLower()));
+    render(QStringLiteral("response.h"), context,
+           QStringLiteral("%1/%2.h").arg(projectDir).arg(responseClassName.toLower()));
+    render(QStringLiteral("response_p.h"), context,
+           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(responseClassName.toLower()));
+    context.pop();
+    return true;
 }
 
 QString Generator::getClassNamePrefix(const QJsonObject &metaData)
