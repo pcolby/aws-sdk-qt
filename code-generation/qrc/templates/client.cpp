@@ -100,9 +100,9 @@ namespace {{NameSpaceName}} {
     d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
 }
 
-{% for f in OperationSignatures %}
+{% for name,op in operations.items %}
 /**
-{% for line in f.documentation %}
+{% for line in op.documentationFormatted %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
@@ -112,7 +112,7 @@ namespace {{NameSpaceName}} {
  *
  * @note   The caller is to take responsbility for the resulting pointer.
  */
-{{ f.returnType }} {{ ClassName }}::{{ f.name }}({{ f.arguments }})
+{{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %})
 {
 
 }

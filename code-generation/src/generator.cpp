@@ -73,14 +73,24 @@ bool Generator::generate(const QString &serviceFileName,
     /// @todo Generate request / response classes.
 
     /// @todo Generate service client.
-    const QJsonObject operations = description.value(QLatin1String("operations")).toObject();
-    context.insert(QStringLiteral("OperationSignatures"), getFunctionSignatures(operations));
+    context.push();
+    QVariantMap operations = context.lookup(QLatin1String("operations")).toMap();
+    for (auto iter = operations.begin(); iter != operations.end(); ++iter) {
+        QVariantMap operation = iter.value().toMap();
+        if (operation.contains(QLatin1String("documentation"))) {
+            operation.insert(QLatin1String("documentationFormatted"),
+                      formatHtmlDocumentation(operation.value(QLatin1String("documentation")).toString()));
+            iter.value() = operation;
+        }
+    }
+    context.insert(QLatin1String("operations"), operations);
     render(QStringLiteral("client.cpp"), context,
            QStringLiteral("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
     render(QStringLiteral("client.h"), context,
            QStringLiteral("%1/%2.h").arg(projectDir).arg(className.toLower()));
     render(QStringLiteral("client_p.h"), context,
            QStringLiteral("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
+    context.pop();
 
     /// @todo Generate ancillary project files.
     context.push();
@@ -158,57 +168,6 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
 
     // Trim, the same as aws-sdk-cpp too.
     return prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
-}
-
-QVariantMap Generator::getFunctionSignature(const QString &operationName, const QJsonObject &operation)
-{
-    // This is all covered by the JSON Schema validation of the resource files.
-    Q_ASSERT(operationName.size() > 1);
-    Q_ASSERT(operationName.at(0).isLetter());
-    Q_ASSERT(operationName.at(0).isUpper());
-
-    QVariantMap signature;
-
-    /// @todo Make operatoins / functions structure much more rich, and let the
-    /// templating engine do more of the presentation work. eg no need to lower
-    /// the first letter here.
-
-    // The function name is just the operation name with a lower first letter.
-    signature.insert(QStringLiteral("name"),
-                     operationName.at(0).toLower() + operationName.mid(1));
-
-    // The return type is a pointer to an <OperationName>Response object.
-    // Note, we intentionally don't use operation.output.{resultwrapper,shape}
-    // values here, since the return type is a QNetworkResponse-derived class,
-    // so its more appropriate to keep to the *Response class naming convention
-    // (even, or perhaps especially, when the operation has no output property).
-    signature.insert(QStringLiteral("returnType"),
-                     operationName + QLatin1String("Response *"));
-
-    signature.insert(QStringLiteral("arguments"),
-        operation.contains(QLatin1String("input"))
-            ? QString::fromLatin1("const %2Request &request")
-              .arg(operationName)
-            : QString() // No input to this request.
-    );
-    if (!operation.contains(QLatin1String("input"))) {
-        qWarning() << "input" << operationName;
-    }
-
-    signature.insert(QStringLiteral("documentation"),
-                     formatHtmlDocumentation(operation.value(
-                        QStringLiteral("documentation")).toString()));
-
-    return signature;
-}
-
-QVariantList Generator::getFunctionSignatures(const QJsonObject &operations)
-{
-    QVariantList signatures;
-    for (auto iter = operations.constBegin(); iter != operations.constEnd(); ++iter) {
-        signatures.append(getFunctionSignature(iter.key(), iter.value().toObject()));
-    }
-    return signatures;
 }
 
 // Grantlee output stream that does *no* content escaping.

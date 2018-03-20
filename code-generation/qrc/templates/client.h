@@ -33,9 +33,8 @@ namespace AWS {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
-{% for f in OperationSignatures %}
-{# @todo Probably a better way to do this. #}
-class {{ f.returnType|cut:" *" }};
+{% for name in operations.keys %}
+class {{name}}Response;
 {% endfor %}
 
 class QTAWS_EXPORT {{ClassName}} : public AwsAbstractClient {
