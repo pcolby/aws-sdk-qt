@@ -85,9 +85,15 @@ bool Generator::generate(const QString &serviceFileName,
            QStringLiteral("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
 
     /// @todo Generate ancillary project files.
+    context.push();
+    context.insert(QStringLiteral("HeaderFiles"), QStringList()
+                   << QStringLiteral("%1.h").arg(className.toLower())
+                   << QStringLiteral("%1_p.h").arg(className.toLower()));
+    context.insert(QStringLiteral("SourceFiles"), QStringList()
+                   << QStringLiteral("%1.cpp").arg(className.toLower()));
     render(QStringLiteral("service.pro"), context,
            QStringLiteral("%1/%2.pro").arg(projectDir).arg(serviceFileName));
-
+    context.pop();
     return true;
 }
 

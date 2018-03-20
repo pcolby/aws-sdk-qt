@@ -1,27 +1,138 @@
-include(../common.pri)
-INCLUDEPATH = $$TOPDIR/src
+TEMPLATE = subdirs
 
-# Create a library.
-TARGET = qtaws
-TEMPLATE = lib
-DEFINES += QTAWS_LIBRARY
-QT += network
-QT -= gui
-win32:CONFIG += skip_target_version_ext
+# @todo Code-gen this file too.
+# Tip: find . -mindepth 2 -maxdepth 2 -name '*.pro' | sort | sed -re 's|\./(.*)|    \1 \\|' |
+SUBDIRS += \
+    acm/acm.pro \
+    alexaforbusiness/alexaforbusiness.pro \
+    apigateway/apigateway.pro \
+    application-autoscaling/application-autoscaling.pro \
+    appstream/appstream.pro \
+    appsync/appsync.pro \
+    athena/athena.pro \
+    autoscaling/autoscaling.pro \
+    autoscaling-plans/autoscaling-plans.pro \
+    AWSMigrationHub/AWSMigrationHub.pro \
+    batch/batch.pro \
+    budgets/budgets.pro \
+    ce/ce.pro \
+    cloud9/cloud9.pro \
+    clouddirectory/clouddirectory.pro \
+    cloudformation/cloudformation.pro \
+    cloudfront/cloudfront.pro \
+    cloudhsm/cloudhsm.pro \
+    cloudhsmv2/cloudhsmv2.pro \
+    cloudsearch/cloudsearch.pro \
+    cloudsearchdomain/cloudsearchdomain.pro \
+    cloudtrail/cloudtrail.pro \
+    codebuild/codebuild.pro \
+    codecommit/codecommit.pro \
+    codedeploy/codedeploy.pro \
+    codepipeline/codepipeline.pro \
+    codestar/codestar.pro \
+    cognito-identity/cognito-identity.pro \
+    cognito-idp/cognito-idp.pro \
+    cognito-sync/cognito-sync.pro \
+    comprehend/comprehend.pro \
+    config/config.pro \
+    cur/cur.pro \
+    datapipeline/datapipeline.pro \
+    dax/dax.pro \
+    devicefarm/devicefarm.pro \
+    directconnect/directconnect.pro \
+    discovery/discovery.pro \
+    dms/dms.pro \
+    ds/ds.pro \
+    dynamodb/dynamodb.pro \
+    dynamodbstreams/dynamodbstreams.pro \
+    ec2/ec2.pro \
+    ecr/ecr.pro \
+    ecs/ecs.pro \
+    elasticache/elasticache.pro \
+    elasticbeanstalk/elasticbeanstalk.pro \
+    elasticfilesystem/elasticfilesystem.pro \
+    elasticloadbalancing/elasticloadbalancing.pro \
+    elasticloadbalancingv2/elasticloadbalancingv2.pro \
+    elasticmapreduce/elasticmapreduce.pro \
+    elastictranscoder/elastictranscoder.pro \
+    email/email.pro \
+    entitlement.marketplace/entitlement.marketplace.pro \
+    es/es.pro \
+    events/events.pro \
+    firehose/firehose.pro \
+    gamelift/gamelift.pro \
+    glacier/glacier.pro \
+    glue/glue.pro \
+    greengrass/greengrass.pro \
+    guardduty/guardduty.pro \
+    health/health.pro \
+    iam/iam.pro \
+    importexport/importexport.pro \
+    inspector/inspector.pro \
+    iot-data/iot-data.pro \
+    iot/iot.pro \
+    iot-jobs-data/iot-jobs-data.pro \
+    kinesisanalytics/kinesisanalytics.pro \
+    kinesis/kinesis.pro \
+    kinesis-video-archived-media/kinesis-video-archived-media.pro \
+    kinesisvideo/kinesisvideo.pro \
+    kinesis-video-media/kinesis-video-media.pro \
+    kms/kms.pro \
+    lambda/lambda.pro \
+    lex-models/lex-models.pro \
+    lightsail/lightsail.pro \
+    logs/logs.pro \
+    machinelearning/machinelearning.pro \
+    marketplacecommerceanalytics/marketplacecommerceanalytics.pro \
+    mediaconvert/mediaconvert.pro \
+    medialive/medialive.pro \
+    mediapackage/mediapackage.pro \
+    mediastore-data/mediastore-data.pro \
+    mediastore/mediastore.pro \
+    meteringmarketplace/meteringmarketplace.pro \
+    mobileanalytics/mobileanalytics.pro \
+    mobile/mobile.pro \
+    monitoring/monitoring.pro \
+    mq/mq.pro \
+    mturk-requester/mturk-requester.pro \
+    opsworkscm/opsworkscm.pro \
+    opsworks/opsworks.pro \
+    organizations/organizations.pro \
+    pinpoint/pinpoint.pro \
+    polly/polly.pro \
+    pricing/pricing.pro \
+    rds/rds.pro \
+    redshift/redshift.pro \
+    rekognition/rekognition.pro \
+    resource-groups/resource-groups.pro \
+    resourcegroupstaggingapi/resourcegroupstaggingapi.pro \
+    route53domains/route53domains.pro \
+    route53/route53.pro \
+    runtime.lex/runtime.lex.pro \
+    runtime.sagemaker/runtime.sagemaker.pro \
+    s3/s3.pro \
+    sagemaker/sagemaker.pro \
+    sdb/sdb.pro \
+    serverlessrepo/serverlessrepo.pro \
+    servicecatalog/servicecatalog.pro \
+    servicediscovery/servicediscovery.pro \
+    shield/shield.pro \
+    sms/sms.pro \
+    snowball/snowball.pro \
+    sns/sns.pro \
+    sqs2/sqs2.pro \
+    ssm/ssm.pro \
+    states/states.pro \
+    storagegateway/storagegateway.pro \
+    sts/sts.pro \
+    support/support.pro \
+    swf/swf.pro \
+    transcribe/transcribe.pro \
+    translate/translate.pro \
+    waf-regional/waf-regional.pro \
+    waf/waf.pro \
+    workdocs/workdocs.pro \
+    workmail/workmail.pro \
+    workspaces/workspaces.pro \
+    xray/xray.pro \
 
-# Disable automatic ASCII conversions (best practice, especially for i18n support).
-DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
-
-# Add the embedded resources.
-RESOURCES = ../qrc/aws.qrc
-
-# Neaten the output directories.
-CONFIG(debug,debug|release):  DESTDIR = ../debug
-CONFIG(release,debug|release):DESTDIR = ../release
-MOC_DIR = $$DESTDIR/$$TARGET-tmp
-OBJECTS_DIR = $$DESTDIR/$$TARGET-tmp
-RCC_DIR = $$DESTDIR/$$TARGET-tmp
-
-include(core/core.pri)
-include(sns/sns.pri)
-include(sqs/sqs.pri)
