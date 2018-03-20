@@ -61,8 +61,7 @@ bool Generator::generate(const QString &serviceFileName,
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
         + QLatin1String("Client");
 
-    Grantlee::Context context;
-    context.insert(QLatin1String("metadata"), metaData.toVariantMap());
+    Grantlee::Context context(description.toVariantHash());
     context.insert(QLatin1String("TargetLibName"), serviceFileName);
     context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
     context.insert(QLatin1String("ClassName"), className);
@@ -208,6 +207,9 @@ QVariantMap Generator::getFunctionSignature(const QString &operationName, const 
               .arg(operationName)
             : QString() // No input to this request.
     );
+    if (!operation.contains(QLatin1String("input"))) {
+        qWarning() << "input" << operationName;
+    }
 
     signature.insert(QStringLiteral("documentation"),
                      formatHtmlDocumentation(operation.value(
