@@ -25,17 +25,19 @@
 
 #include <grantlee/templateloader.h>
 
+#define QSL(str) QStringLiteral(str) // Shorten the QStringLiteral macro for readability.
+
 Generator::Generator(const QDir &outputDir)
     : outputDir(outputDir)
 {
     Q_ASSERT(outputDir.exists());
 
     auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
-    loader->setTemplateDirs(QStringList() << QStringLiteral(":/templates"));
+    loader->setTemplateDirs(QStringList() << QSL(":/templates"));
     engine.addTemplateLoader(loader);
     engine.setSmartTrimEnabled(true);
 
-    const QDir dir(QLatin1String(":/templates"));
+    const QDir dir(QSL(":/templates"));
     foreach (const QString &name, dir.entryList(QDir::Files|QDir::Readable)) {
         qDebug() << "loading template" << name;
         const auto tmplate = engine.loadByName(name);
@@ -57,15 +59,15 @@ bool Generator::generate(const QString &serviceFileName,
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString classNamePrefix = getClassNamePrefix(metaData);
     const QString className =
-        ((classNamePrefix.contains(QRegularExpression(QLatin1String("^[^a-z]+$"))))
+        ((classNamePrefix.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
-        + QLatin1String("Client");
+        + QSL("Client");
 
     Grantlee::Context context(description.toVariantHash());
-    context.insert(QLatin1String("TargetLibName"), serviceFileName);
-    context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
-    context.insert(QLatin1String("ClassName"), className);
-    context.insert(QLatin1String("ClassDocumentation"),
+    context.insert(QSL("TargetLibName"), serviceFileName);
+    context.insert(QSL("NameSpaceName"), classNamePrefix);
+    context.insert(QSL("ClassName"), className);
+    context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     /// @todo Generate model classes.
@@ -77,29 +79,29 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate service client.
     context.push();
-    QVariantMap operations = context.lookup(QLatin1String("operations")).toMap();
+    QVariantMap operations = context.lookup(QSL("operations")).toMap();
     for (auto iter = operations.begin(); iter != operations.end(); ++iter) {
         QVariantMap operation = iter.value().toMap();
-        if (operation.contains(QLatin1String("documentation"))) {
-            operation.insert(QLatin1String("documentationFormatted"),
-                      formatHtmlDocumentation(operation.value(QLatin1String("documentation")).toString()));
+        if (operation.contains(QSL("documentation"))) {
+            operation.insert(QSL("documentationFormatted"),
+                      formatHtmlDocumentation(operation.value(QSL("documentation")).toString()));
             iter.value() = operation;
         }
     }
-    context.insert(QLatin1String("operations"), operations);
-    render(QStringLiteral("client.cpp"), context, projectDir, className.toLower() + QLatin1String(".cpp"));
-    render(QStringLiteral("client.h"),   context, projectDir, className.toLower() + QLatin1String(".h"));
-    render(QStringLiteral("client_p.h"), context, projectDir, className.toLower() + QLatin1String("_p.h"));
+    context.insert(QSL("operations"), operations);
+    render(QSL("client.cpp"), context, projectDir, className.toLower() + QSL(".cpp"));
+    render(QSL("client.h"),   context, projectDir, className.toLower() + QSL(".h"));
+    render(QSL("client_p.h"), context, projectDir, className.toLower() + QSL("_p.h"));
     context.pop();
 
     /// @todo Generate ancillary project files.
     context.push();
-    context.insert(QStringLiteral("HeaderFiles"), QStringList()
-                   << QStringLiteral("%1.h").arg(className.toLower())
-                   << QStringLiteral("%1_p.h").arg(className.toLower()));
-    context.insert(QStringLiteral("SourceFiles"), QStringList()
-                   << QStringLiteral("%1.cpp").arg(className.toLower()));
-    render(QStringLiteral("service.pro"), context, projectDir, serviceFileName + QLatin1String(".pro"));
+    context.insert(QSL("HeaderFiles"), QStringList()
+                   << QSL("%1.h").arg(className.toLower())
+                   << QSL("%1_p.h").arg(className.toLower()));
+    context.insert(QSL("SourceFiles"), QStringList()
+                   << QSL("%1.cpp").arg(className.toLower()));
+    render(QSL("service.pro"), context, projectDir, serviceFileName + QSL(".pro"));
     context.pop();
     return true;
 }
@@ -113,25 +115,25 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
     /// prioritising it yet, since its more important we get the code structure
     /// right first.
 
-    content.replace(QStringLiteral("<function>"), QStringLiteral("<code>"));
-    content.replace(QStringLiteral("</function>"), QStringLiteral("</code>"));
+    content.replace(QSL("<function>"), QSL("<code>"));
+    content.replace(QSL("</function>"), QSL("</code>"));
 
-    content.replace(QStringLiteral("<important>"), QStringLiteral("<b>"));
-    content.replace(QStringLiteral("</important>"), QStringLiteral("</b>"));
+    content.replace(QSL("<important>"), QSL("<b>"));
+    content.replace(QSL("</important>"), QSL("</b>"));
 
     QStringList lines;
     QString line;
-    foreach (QString word, content.split(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts)) {
-        if (word.startsWith(QStringLiteral("<p>")) || word.endsWith(QStringLiteral("</p>"))) {
+    foreach (QString word, content.split(QRegularExpression(QSL("\\s+")), QString::SkipEmptyParts)) {
+        if (word.startsWith(QSL("<p>")) || word.endsWith(QSL("</p>"))) {
             lines.append(line);
             line.clear();
             if (!lines.last().isEmpty()) {
-                lines.append(QStringLiteral("")); // A blank line.
+                lines.append(QSL("")); // A blank line.
             }
-            if (word.startsWith(QStringLiteral("<p>"))) {
+            if (word.startsWith(QSL("<p>"))) {
                 word.remove(0,3);
             }
-            if (word.endsWith(QStringLiteral("</p>"))) {
+            if (word.endsWith(QSL("</p>"))) {
                 word.remove(word.size()-5,4);
             }
         }
@@ -159,24 +161,24 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
 bool Generator::generateModelClasses(const QString &projectDir, const QString &operationName, const QJsonObject &description)
 {
     qDebug() << "generating model for operation" << operationName;
-    Grantlee::Context context(description.value(QStringLiteral("operation")).toObject().toVariantHash());
+    Grantlee::Context context(description.value(QLatin1String("operation")).toObject().toVariantHash());
 
     /// @todo Generate request class.
     context.push();
-    const QString requestClassName = operationName + QStringLiteral("Request");
-    context.insert(QStringLiteral("ClassName"), requestClassName);
-    render(QStringLiteral("request.cpp"), context, projectDir, requestClassName.toLower() + QStringLiteral(".cpp"));
-    render(QStringLiteral("request.h"),   context, projectDir, requestClassName.toLower() + QStringLiteral(".h"));
-    render(QStringLiteral("request_p.h"), context, projectDir, requestClassName.toLower() + QStringLiteral("_p.h"));
+    const QString requestClassName = operationName + QSL("Request");
+    context.insert(QSL("ClassName"), requestClassName);
+    render(QSL("request.cpp"), context, projectDir, requestClassName.toLower() + QSL(".cpp"));
+    render(QSL("request.h"),   context, projectDir, requestClassName.toLower() + QSL(".h"));
+    render(QSL("request_p.h"), context, projectDir, requestClassName.toLower() + QSL("_p.h"));
     context.pop();
 
     /// @todo Generate response class.
     context.push();
-    const QString responseClassName = operationName + QStringLiteral("Response");
-    context.insert(QStringLiteral("ClassName"), responseClassName);
-    render(QStringLiteral("response.cpp"), context, projectDir, responseClassName.toLower() + QStringLiteral(".cpp"));
-    render(QStringLiteral("response.h"),   context, projectDir, responseClassName.toLower() + QStringLiteral(".h"));
-    render(QStringLiteral("response_p.h"), context, projectDir, responseClassName.toLower() + QStringLiteral("_p.h"));
+    const QString responseClassName = operationName + QSL("Response");
+    context.insert(QSL("ClassName"), responseClassName);
+    render(QSL("response.cpp"), context, projectDir, responseClassName.toLower() + QSL(".cpp"));
+    render(QSL("response.h"),   context, projectDir, responseClassName.toLower() + QSL(".h"));
+    render(QSL("response_p.h"), context, projectDir, responseClassName.toLower() + QSL("_p.h"));
     context.pop();
     return true;
 }
@@ -191,7 +193,7 @@ QString Generator::getClassNamePrefix(const QJsonObject &metaData)
     }
 
     // Trim, the same as aws-sdk-cpp too.
-    return prefix.replace(QRegularExpression(QLatin1String("[- _/]|Amazon|AWS")), QString());
+    return prefix.replace(QRegularExpression(QSL("[- _/]|Amazon|AWS")), QString());
 }
 
 // Grantlee output stream that does *no* content escaping.
