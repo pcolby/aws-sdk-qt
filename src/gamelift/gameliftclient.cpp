@@ -586,7 +586,7 @@ GameLiftClient::GameLiftClient(
  */
 AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AcceptMatchResponse *>(send(request));
 }
 
 /**
@@ -644,7 +644,7 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
  */
 CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateAliasResponse *>(send(request));
 }
 
 /**
@@ -725,7 +725,7 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  */
 CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBuildResponse *>(send(request));
 }
 
 /**
@@ -898,7 +898,7 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  */
 CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateFleetResponse *>(send(request));
 }
 
 /**
@@ -991,7 +991,7 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
  */
 CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGameSessionResponse *>(send(request));
 }
 
 /**
@@ -1051,7 +1051,7 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
  */
 CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const CreateGameSessionQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGameSessionQueueResponse *>(send(request));
 }
 
 /**
@@ -1123,7 +1123,7 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
  */
 CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfiguration(const CreateMatchmakingConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateMatchmakingConfigurationResponse *>(send(request));
 }
 
 /**
@@ -1188,7 +1188,7 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
  */
 CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(const CreateMatchmakingRuleSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateMatchmakingRuleSetResponse *>(send(request));
 }
 
 /**
@@ -1246,7 +1246,7 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
  */
 CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePlayerSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePlayerSessionResponse *>(send(request));
 }
 
 /**
@@ -1304,7 +1304,7 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
  */
 CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const CreatePlayerSessionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePlayerSessionsResponse *>(send(request));
 }
 
 /**
@@ -1374,7 +1374,7 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
  */
 CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthorization(const CreateVpcPeeringAuthorizationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateVpcPeeringAuthorizationResponse *>(send(request));
 }
 
 /**
@@ -1436,7 +1436,7 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
  */
 CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateVpcPeeringConnectionResponse *>(send(request));
 }
 
 /**
@@ -1479,7 +1479,7 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
  */
 DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAliasResponse *>(send(request));
 }
 
 /**
@@ -1522,7 +1522,7 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
  */
 DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBuildResponse *>(send(request));
 }
 
 /**
@@ -1628,7 +1628,7 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  */
 DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFleetResponse *>(send(request));
 }
 
 /**
@@ -1663,7 +1663,7 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
  */
 DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const DeleteGameSessionQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGameSessionQueueResponse *>(send(request));
 }
 
 /**
@@ -1710,7 +1710,7 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
  */
 DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfiguration(const DeleteMatchmakingConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMatchmakingConfigurationResponse *>(send(request));
 }
 
 /**
@@ -1813,7 +1813,7 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  */
 DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteScalingPolicyResponse *>(send(request));
 }
 
 /**
@@ -1856,7 +1856,7 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
  */
 DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthorization(const DeleteVpcPeeringAuthorizationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteVpcPeeringAuthorizationResponse *>(send(request));
 }
 
 /**
@@ -1905,7 +1905,7 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
  */
 DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteVpcPeeringConnectionResponse *>(send(request));
 }
 
 /**
@@ -1952,7 +1952,7 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
  */
 DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAliasResponse *>(send(request));
 }
 
 /**
@@ -1991,7 +1991,7 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
  */
 DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBuildResponse *>(send(request));
 }
 
 /**
@@ -2106,7 +2106,7 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  */
 DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEC2InstanceLimitsResponse *>(send(request));
 }
 
 /**
@@ -2217,7 +2217,7 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  */
 DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const DescribeFleetAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFleetAttributesResponse *>(send(request));
 }
 
 /**
@@ -2328,7 +2328,7 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  */
 DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const DescribeFleetCapacityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFleetCapacityResponse *>(send(request));
 }
 
 /**
@@ -2432,7 +2432,7 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  */
 DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const DescribeFleetEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFleetEventsResponse *>(send(request));
 }
 
 /**
@@ -2537,7 +2537,7 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  */
 DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFleetPortSettingsResponse *>(send(request));
 }
 
 /**
@@ -2647,7 +2647,7 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  */
 DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(const DescribeFleetUtilizationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFleetUtilizationResponse *>(send(request));
 }
 
 /**
@@ -2714,7 +2714,7 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
  */
 DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGameSessionDetailsResponse *>(send(request));
 }
 
 /**
@@ -2773,7 +2773,7 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
  */
 DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacement(const DescribeGameSessionPlacementRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGameSessionPlacementResponse *>(send(request));
 }
 
 /**
@@ -2810,7 +2810,7 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
  */
 DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(const DescribeGameSessionQueuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGameSessionQueuesResponse *>(send(request));
 }
 
 /**
@@ -2880,7 +2880,7 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
  */
 DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const DescribeGameSessionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGameSessionsResponse *>(send(request));
 }
 
 /**
@@ -2901,7 +2901,7 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
  */
 DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeInstancesResponse *>(send(request));
 }
 
 /**
@@ -2951,7 +2951,7 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
  */
 DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const DescribeMatchmakingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMatchmakingResponse *>(send(request));
 }
 
 /**
@@ -3001,7 +3001,7 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
  */
 DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingConfigurations(const DescribeMatchmakingConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMatchmakingConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -3049,7 +3049,7 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
  */
 DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSets(const DescribeMatchmakingRuleSetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMatchmakingRuleSetsResponse *>(send(request));
 }
 
 /**
@@ -3108,7 +3108,7 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
  */
 DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const DescribePlayerSessionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribePlayerSessionsResponse *>(send(request));
 }
 
 /**
@@ -3211,7 +3211,7 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  */
 DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRuntimeConfigurationResponse *>(send(request));
 }
 
 /**
@@ -3319,7 +3319,7 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  */
 DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeScalingPoliciesResponse *>(send(request));
 }
 
 /**
@@ -3362,7 +3362,7 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
  */
 DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAuthorizations(const DescribeVpcPeeringAuthorizationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeVpcPeeringAuthorizationsResponse *>(send(request));
 }
 
 /**
@@ -3412,7 +3412,7 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
  */
 DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeVpcPeeringConnectionsResponse *>(send(request));
 }
 
 /**
@@ -3476,7 +3476,7 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
  */
 GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGameSessionLogUrlResponse *>(send(request));
 }
 
 /**
@@ -3506,7 +3506,7 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
  */
 GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceAccessRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetInstanceAccessResponse *>(send(request));
 }
 
 /**
@@ -3553,7 +3553,7 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
  */
 ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListAliasesResponse *>(send(request));
 }
 
 /**
@@ -3597,7 +3597,7 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
  */
 ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBuildsResponse *>(send(request));
 }
 
 /**
@@ -3704,7 +3704,7 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  */
 ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFleetsResponse *>(send(request));
 }
 
 /**
@@ -3832,7 +3832,7 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  */
 PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutScalingPolicyResponse *>(send(request));
 }
 
 /**
@@ -3852,7 +3852,7 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
  */
 RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(const RequestUploadCredentialsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RequestUploadCredentialsResponse *>(send(request));
 }
 
 /**
@@ -3894,7 +3894,7 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
  */
 ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResolveAliasResponse *>(send(request));
 }
 
 /**
@@ -4010,7 +4010,7 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  */
 SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGameSessionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchGameSessionsResponse *>(send(request));
 }
 
 /**
@@ -4118,7 +4118,7 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
  */
 StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(const StartGameSessionPlacementRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartGameSessionPlacementResponse *>(send(request));
 }
 
 /**
@@ -4179,7 +4179,7 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
  */
 StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatchBackfillRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartMatchBackfillResponse *>(send(request));
 }
 
 /**
@@ -4280,7 +4280,7 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
  */
 StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmakingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartMatchmakingResponse *>(send(request));
 }
 
 /**
@@ -4339,7 +4339,7 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
  */
 StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(const StopGameSessionPlacementRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopGameSessionPlacementResponse *>(send(request));
 }
 
 /**
@@ -4378,7 +4378,7 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
  */
 StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopMatchmakingResponse *>(send(request));
 }
 
 /**
@@ -4422,7 +4422,7 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
  */
 UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateAliasResponse *>(send(request));
 }
 
 /**
@@ -4461,7 +4461,7 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
  */
 UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBuildResponse *>(send(request));
 }
 
 /**
@@ -4564,7 +4564,7 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  */
 UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const UpdateFleetAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFleetAttributesResponse *>(send(request));
 }
 
 /**
@@ -4681,7 +4681,7 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  */
 UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFleetCapacityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFleetCapacityResponse *>(send(request));
 }
 
 /**
@@ -4786,7 +4786,7 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  */
 UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFleetPortSettingsResponse *>(send(request));
 }
 
 /**
@@ -4847,7 +4847,7 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
  */
 UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGameSessionResponse *>(send(request));
 }
 
 /**
@@ -4883,7 +4883,7 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
  */
 UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const UpdateGameSessionQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGameSessionQueueResponse *>(send(request));
 }
 
 /**
@@ -4930,7 +4930,7 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
  */
 UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfiguration(const UpdateMatchmakingConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMatchmakingConfigurationResponse *>(send(request));
 }
 
 /**
@@ -5047,7 +5047,7 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  */
 UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateRuntimeConfigurationResponse *>(send(request));
 }
 
 /**
@@ -5094,7 +5094,7 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
  */
 ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ValidateMatchmakingRuleSetResponse *>(send(request));
 }
 
 /**

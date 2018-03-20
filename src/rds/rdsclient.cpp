@@ -170,7 +170,7 @@ RdsClient::RdsClient(
  */
 AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddRoleToDBClusterResponse *>(send(request));
 }
 
 /**
@@ -184,7 +184,7 @@ AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClus
  */
 AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddSourceIdentifierToSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -204,7 +204,7 @@ AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubs
  */
 AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /**
@@ -218,7 +218,7 @@ AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResource
  */
 ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ApplyPendingMaintenanceActionResponse *>(send(request));
 }
 
 /**
@@ -246,7 +246,7 @@ ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction
  */
 AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIngress(const AuthorizeDBSecurityGroupIngressRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AuthorizeDBSecurityGroupIngressResponse *>(send(request));
 }
 
 /**
@@ -260,7 +260,7 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
  */
 CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(const CopyDBClusterParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyDBClusterParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -354,7 +354,7 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  */
 CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyDBClusterSnapshotResponse *>(send(request));
 }
 
 /**
@@ -368,7 +368,7 @@ CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClu
  */
 CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyDBParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -393,7 +393,7 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  */
 CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyDBSnapshotResponse *>(send(request));
 }
 
 /**
@@ -407,7 +407,7 @@ CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &
  */
 CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyOptionGroupResponse *>(send(request));
 }
 
 /**
@@ -433,7 +433,7 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
  */
 CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBClusterResponse *>(send(request));
 }
 
 /**
@@ -476,7 +476,7 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  */
 CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBClusterParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -492,7 +492,7 @@ CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup
  */
 CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBClusterSnapshotResponse *>(send(request));
 }
 
 /**
@@ -506,7 +506,7 @@ CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const Creat
  */
 CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBInstanceResponse *>(send(request));
 }
 
 /**
@@ -537,7 +537,7 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  */
 CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(const CreateDBInstanceReadReplicaRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBInstanceReadReplicaResponse *>(send(request));
 }
 
 /**
@@ -569,7 +569,7 @@ CreateDBInstanceReadReplicaResponse * RdsClient::createDBInstanceReadReplica(con
  */
 CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateDBParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -583,7 +583,7 @@ CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateD
  */
 CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -597,7 +597,7 @@ CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBS
  */
 CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBSnapshotResponse *>(send(request));
 }
 
 /**
@@ -611,7 +611,7 @@ CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotReq
  */
 CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDBSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -642,7 +642,7 @@ CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubne
  */
 CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -656,7 +656,7 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
  */
 CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateOptionGroupResponse *>(send(request));
 }
 
 /**
@@ -678,7 +678,7 @@ CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroup
  */
 DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBClusterResponse *>(send(request));
 }
 
 /**
@@ -699,7 +699,7 @@ DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterReques
  */
 DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBClusterParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -723,7 +723,7 @@ DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup
  */
 DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBClusterSnapshotResponse *>(send(request));
 }
 
 /**
@@ -770,7 +770,7 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  */
 DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBInstanceResponse *>(send(request));
 }
 
 /**
@@ -784,7 +784,7 @@ DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceReq
  */
 DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -802,7 +802,7 @@ DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteD
  */
 DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -820,7 +820,7 @@ DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBS
  */
 DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBSnapshotResponse *>(send(request));
 }
 
 /**
@@ -838,7 +838,7 @@ DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotReq
  */
 DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDBSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -852,7 +852,7 @@ DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubne
  */
 DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -866,7 +866,7 @@ DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const Delet
  */
 DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteOptionGroupResponse *>(send(request));
 }
 
 /**
@@ -886,7 +886,7 @@ DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroup
  */
 DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
 /**
@@ -900,7 +900,7 @@ DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const D
  */
 DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCertificatesResponse *>(send(request));
 }
 
 /**
@@ -921,7 +921,7 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
  */
 DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBClusterParameterGroupsResponse *>(send(request));
 }
 
 /**
@@ -941,7 +941,7 @@ DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameter
  */
 DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(const DescribeDBClusterParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBClusterParametersResponse *>(send(request));
 }
 
 /**
@@ -967,7 +967,7 @@ DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(con
  */
 DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBClusterSnapshotAttributesResponse *>(send(request));
 }
 
 /**
@@ -987,7 +987,7 @@ DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapsh
  */
 DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBClusterSnapshotsResponse *>(send(request));
 }
 
 /**
@@ -1007,7 +1007,7 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
  */
 DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBClustersResponse *>(send(request));
 }
 
 /**
@@ -1021,7 +1021,7 @@ DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClust
  */
 DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const DescribeDBEngineVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBEngineVersionsResponse *>(send(request));
 }
 
 /**
@@ -1035,7 +1035,7 @@ DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const Des
  */
 DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBInstancesResponse *>(send(request));
 }
 
 /**
@@ -1049,7 +1049,7 @@ DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBIns
  */
 DescribeDBLogFilesResponse * RdsClient::describeDBLogFiles(const DescribeDBLogFilesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBLogFilesResponse *>(send(request));
 }
 
 /**
@@ -1064,7 +1064,7 @@ DescribeDBLogFilesResponse * RdsClient::describeDBLogFiles(const DescribeDBLogFi
  */
 DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const DescribeDBParameterGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBParameterGroupsResponse *>(send(request));
 }
 
 /**
@@ -1078,7 +1078,7 @@ DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const D
  */
 DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBParametersResponse *>(send(request));
 }
 
 /**
@@ -1093,7 +1093,7 @@ DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBP
  */
 DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBSecurityGroupsResponse *>(send(request));
 }
 
 /**
@@ -1119,7 +1119,7 @@ DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const Des
  */
 DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(const DescribeDBSnapshotAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBSnapshotAttributesResponse *>(send(request));
 }
 
 /**
@@ -1133,7 +1133,7 @@ DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(c
  */
 DescribeDBSnapshotsResponse * RdsClient::describeDBSnapshots(const DescribeDBSnapshotsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBSnapshotsResponse *>(send(request));
 }
 
 /**
@@ -1153,7 +1153,7 @@ DescribeDBSnapshotsResponse * RdsClient::describeDBSnapshots(const DescribeDBSna
  */
 DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const DescribeDBSubnetGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDBSubnetGroupsResponse *>(send(request));
 }
 
 /**
@@ -1173,7 +1173,7 @@ DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const Describ
  */
 DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaultClusterParameters(const DescribeEngineDefaultClusterParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEngineDefaultClusterParametersResponse *>(send(request));
 }
 
 /**
@@ -1187,7 +1187,7 @@ DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaul
  */
 DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParameters(const DescribeEngineDefaultParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEngineDefaultParametersResponse *>(send(request));
 }
 
 /**
@@ -1204,7 +1204,7 @@ DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParame
  */
 DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventCategoriesResponse *>(send(request));
 }
 
 /**
@@ -1223,7 +1223,7 @@ DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const Descr
  */
 DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
 }
 
 /**
@@ -1239,7 +1239,7 @@ DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const
  */
 DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /**
@@ -1253,7 +1253,7 @@ DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &
  */
 DescribeOptionGroupOptionsResponse * RdsClient::describeOptionGroupOptions(const DescribeOptionGroupOptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOptionGroupOptionsResponse *>(send(request));
 }
 
 /**
@@ -1267,7 +1267,7 @@ DescribeOptionGroupOptionsResponse * RdsClient::describeOptionGroupOptions(const
  */
 DescribeOptionGroupsResponse * RdsClient::describeOptionGroups(const DescribeOptionGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOptionGroupsResponse *>(send(request));
 }
 
 /**
@@ -1281,7 +1281,7 @@ DescribeOptionGroupsResponse * RdsClient::describeOptionGroups(const DescribeOpt
  */
 DescribeOrderableDBInstanceOptionsResponse * RdsClient::describeOrderableDBInstanceOptions(const DescribeOrderableDBInstanceOptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOrderableDBInstanceOptionsResponse *>(send(request));
 }
 
 /**
@@ -1295,7 +1295,7 @@ DescribeOrderableDBInstanceOptionsResponse * RdsClient::describeOrderableDBInsta
  */
 DescribePendingMaintenanceActionsResponse * RdsClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribePendingMaintenanceActionsResponse *>(send(request));
 }
 
 /**
@@ -1309,7 +1309,7 @@ DescribePendingMaintenanceActionsResponse * RdsClient::describePendingMaintenanc
  */
 DescribeReservedDBInstancesResponse * RdsClient::describeReservedDBInstances(const DescribeReservedDBInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReservedDBInstancesResponse *>(send(request));
 }
 
 /**
@@ -1323,7 +1323,7 @@ DescribeReservedDBInstancesResponse * RdsClient::describeReservedDBInstances(con
  */
 DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInstancesOfferings(const DescribeReservedDBInstancesOfferingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReservedDBInstancesOfferingsResponse *>(send(request));
 }
 
 /**
@@ -1338,7 +1338,7 @@ DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInst
  */
 DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeSourceRegionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSourceRegionsResponse *>(send(request));
 }
 
 /**
@@ -1353,7 +1353,7 @@ DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeS
  */
 DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanceModifications(const DescribeValidDBInstanceModificationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeValidDBInstanceModificationsResponse *>(send(request));
 }
 
 /**
@@ -1367,7 +1367,7 @@ DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanc
  */
 DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const DownloadDBLogFilePortionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DownloadDBLogFilePortionResponse *>(send(request));
 }
 
 /**
@@ -1399,7 +1399,7 @@ DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const Dow
  */
 FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<FailoverDBClusterResponse *>(send(request));
 }
 
 /**
@@ -1418,7 +1418,7 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
  */
 ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /**
@@ -1435,7 +1435,7 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
  */
 ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBClusterResponse *>(send(request));
 }
 
 /**
@@ -1472,7 +1472,7 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
  */
 ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBClusterParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -1502,7 +1502,7 @@ ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup
  */
 ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBClusterSnapshotAttributeResponse *>(send(request));
 }
 
 /**
@@ -1518,7 +1518,7 @@ ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAtt
  */
 ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBInstanceResponse *>(send(request));
 }
 
 /**
@@ -1549,7 +1549,7 @@ ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceReq
  */
 ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyDBParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -1567,7 +1567,7 @@ ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyD
  */
 ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBSnapshotResponse *>(send(request));
 }
 
 /**
@@ -1596,7 +1596,7 @@ ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotReq
  */
 ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBSnapshotAttributeResponse *>(send(request));
 }
 
 /**
@@ -1610,7 +1610,7 @@ ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const M
  */
 ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyDBSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -1632,7 +1632,7 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
  */
 ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -1646,7 +1646,7 @@ ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const Modif
  */
 ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyOptionGroupResponse *>(send(request));
 }
 
 /**
@@ -1672,7 +1672,7 @@ ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroup
  */
 PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadReplicaRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PromoteReadReplicaResponse *>(send(request));
 }
 
 /**
@@ -1686,7 +1686,7 @@ PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadRepl
  */
 PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PromoteReadReplicaDBClusterResponse *>(send(request));
 }
 
 /**
@@ -1700,7 +1700,7 @@ PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(con
  */
 PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInstancesOffering(const PurchaseReservedDBInstancesOfferingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PurchaseReservedDBInstancesOfferingResponse *>(send(request));
 }
 
 /**
@@ -1726,7 +1726,7 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
  */
 RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootDBInstanceResponse *>(send(request));
 }
 
 /**
@@ -1742,7 +1742,7 @@ RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceReq
  */
 RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveRoleFromDBClusterResponse *>(send(request));
 }
 
 /**
@@ -1756,7 +1756,7 @@ RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const Remov
  */
 RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveSourceIdentifierFromSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -1775,7 +1775,7 @@ RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifi
  */
 RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /**
@@ -1804,7 +1804,7 @@ RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveT
  */
 ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetDBClusterParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -1822,7 +1822,7 @@ ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(c
  */
 ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetDBParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -1839,7 +1839,7 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
  */
 RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBClusterFromS3Response *>(send(request));
 }
 
 /**
@@ -1870,7 +1870,7 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
  */
 RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBClusterFromSnapshotResponse *>(send(request));
 }
 
 /**
@@ -1900,7 +1900,7 @@ RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(c
  */
 RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBClusterToPointInTimeResponse *>(send(request));
 }
 
 /**
@@ -1935,7 +1935,7 @@ RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime
  */
 RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnapshot(const RestoreDBInstanceFromDBSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBInstanceFromDBSnapshotResponse *>(send(request));
 }
 
 /**
@@ -1953,7 +1953,7 @@ RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnap
  */
 RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBInstanceFromS3Response *>(send(request));
 }
 
 /**
@@ -1980,7 +1980,7 @@ RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const Resto
  */
 RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTime(const RestoreDBInstanceToPointInTimeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreDBInstanceToPointInTimeResponse *>(send(request));
 }
 
 /**
@@ -1996,7 +1996,7 @@ RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTi
  */
 RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(const RevokeDBSecurityGroupIngressRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RevokeDBSecurityGroupIngressResponse *>(send(request));
 }
 
 /**
@@ -2015,7 +2015,7 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
  */
 StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartDBInstanceResponse *>(send(request));
 }
 
 /**
@@ -2036,7 +2036,7 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
  */
 StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopDBInstanceResponse *>(send(request));
 }
 
 /**

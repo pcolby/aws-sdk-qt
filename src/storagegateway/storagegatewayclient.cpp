@@ -180,7 +180,7 @@ StorageGatewayClient::StorageGatewayClient(
  */
 ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGatewayRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ActivateGatewayResponse *>(send(request));
 }
 
 /**
@@ -201,7 +201,7 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
  */
 AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddCacheResponse *>(send(request));
 }
 
 /**
@@ -234,7 +234,7 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
  */
 AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /**
@@ -254,7 +254,7 @@ AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTag
  */
 AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadBufferRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddUploadBufferResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
  */
 AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWorkingStorageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddWorkingStorageResponse *>(send(request));
 }
 
 /**
@@ -295,7 +295,7 @@ AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWor
  */
 CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchivalRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CancelArchivalResponse *>(send(request));
 }
 
 /**
@@ -310,7 +310,7 @@ CancelArchivalResponse * StorageGatewayClient::cancelArchival(const CancelArchiv
  */
 CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetrievalRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CancelRetrievalResponse *>(send(request));
 }
 
 /**
@@ -343,7 +343,7 @@ CancelRetrievalResponse * StorageGatewayClient::cancelRetrieval(const CancelRetr
  */
 CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(const CreateCachediSCSIVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCachediSCSIVolumeResponse *>(send(request));
 }
 
 /**
@@ -370,7 +370,7 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  */
 CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const CreateNFSFileShareRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNFSFileShareResponse *>(send(request));
 }
 
 /**
@@ -411,7 +411,7 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  */
 CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
 /**
@@ -444,7 +444,7 @@ CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapsh
  */
 CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnapshotFromVolumeRecoveryPoint(const CreateSnapshotFromVolumeRecoveryPointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSnapshotFromVolumeRecoveryPointResponse *>(send(request));
 }
 
 /**
@@ -470,7 +470,7 @@ CreateSnapshotFromVolumeRecoveryPointResponse * StorageGatewayClient::createSnap
  */
 CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(const CreateStorediSCSIVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStorediSCSIVolumeResponse *>(send(request));
 }
 
 /**
@@ -491,7 +491,7 @@ CreateStorediSCSIVolumeResponse * StorageGatewayClient::createStorediSCSIVolume(
  */
 CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(const CreateTapeWithBarcodeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTapeWithBarcodeResponse *>(send(request));
 }
 
 /**
@@ -511,7 +511,7 @@ CreateTapeWithBarcodeResponse * StorageGatewayClient::createTapeWithBarcode(cons
  */
 CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTapesResponse *>(send(request));
 }
 
 /**
@@ -527,7 +527,7 @@ CreateTapesResponse * StorageGatewayClient::createTapes(const CreateTapesRequest
  */
 DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimit(const DeleteBandwidthRateLimitRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBandwidthRateLimitResponse *>(send(request));
 }
 
 /**
@@ -541,7 +541,7 @@ DeleteBandwidthRateLimitResponse * StorageGatewayClient::deleteBandwidthRateLimi
  */
 DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(const DeleteChapCredentialsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteChapCredentialsResponse *>(send(request));
 }
 
 /**
@@ -555,7 +555,7 @@ DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(cons
  */
 DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFileShareRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFileShareResponse *>(send(request));
 }
 
 /**
@@ -584,7 +584,7 @@ DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFile
  */
 DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGatewayResponse *>(send(request));
 }
 
 /**
@@ -610,7 +610,7 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
  */
 DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(const DeleteSnapshotScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSnapshotScheduleResponse *>(send(request));
 }
 
 /**
@@ -624,7 +624,7 @@ DeleteSnapshotScheduleResponse * StorageGatewayClient::deleteSnapshotSchedule(co
  */
 DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTapeResponse *>(send(request));
 }
 
 /**
@@ -639,7 +639,7 @@ DeleteTapeResponse * StorageGatewayClient::deleteTape(const DeleteTapeRequest &r
  */
 DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const DeleteTapeArchiveRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTapeArchiveResponse *>(send(request));
 }
 
 /**
@@ -668,7 +668,7 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
  */
 DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteVolumeResponse *>(send(request));
 }
 
 /**
@@ -689,7 +689,7 @@ DeleteVolumeResponse * StorageGatewayClient::deleteVolume(const DeleteVolumeRequ
  */
 DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRateLimit(const DescribeBandwidthRateLimitRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBandwidthRateLimitResponse *>(send(request));
 }
 
 /**
@@ -708,7 +708,7 @@ DescribeBandwidthRateLimitResponse * StorageGatewayClient::describeBandwidthRate
  */
 DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheResponse *>(send(request));
 }
 
 /**
@@ -728,7 +728,7 @@ DescribeCacheResponse * StorageGatewayClient::describeCache(const DescribeCacheR
  */
 DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVolumes(const DescribeCachediSCSIVolumesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCachediSCSIVolumesResponse *>(send(request));
 }
 
 /**
@@ -743,7 +743,7 @@ DescribeCachediSCSIVolumesResponse * StorageGatewayClient::describeCachediSCSIVo
  */
 DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(const DescribeChapCredentialsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeChapCredentialsResponse *>(send(request));
 }
 
 /**
@@ -759,7 +759,7 @@ DescribeChapCredentialsResponse * StorageGatewayClient::describeChapCredentials(
  */
 DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInformation(const DescribeGatewayInformationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGatewayInformationResponse *>(send(request));
 }
 
 /**
@@ -774,7 +774,7 @@ DescribeGatewayInformationResponse * StorageGatewayClient::describeGatewayInform
  */
 DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenanceStartTime(const DescribeMaintenanceStartTimeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMaintenanceStartTimeResponse *>(send(request));
 }
 
 /**
@@ -788,7 +788,7 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
  */
 DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(const DescribeNFSFileSharesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNFSFileSharesResponse *>(send(request));
 }
 
 /**
@@ -804,7 +804,7 @@ DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(cons
  */
 DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedule(const DescribeSnapshotScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSnapshotScheduleResponse *>(send(request));
 }
 
 /**
@@ -820,7 +820,7 @@ DescribeSnapshotScheduleResponse * StorageGatewayClient::describeSnapshotSchedul
  */
 DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVolumes(const DescribeStorediSCSIVolumesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStorediSCSIVolumesResponse *>(send(request));
 }
 
 /**
@@ -840,7 +840,7 @@ DescribeStorediSCSIVolumesResponse * StorageGatewayClient::describeStorediSCSIVo
  */
 DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const DescribeTapeArchivesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTapeArchivesResponse *>(send(request));
 }
 
 /**
@@ -860,7 +860,7 @@ DescribeTapeArchivesResponse * StorageGatewayClient::describeTapeArchives(const 
  */
 DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryPoints(const DescribeTapeRecoveryPointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTapeRecoveryPointsResponse *>(send(request));
 }
 
 /**
@@ -876,7 +876,7 @@ DescribeTapeRecoveryPointsResponse * StorageGatewayClient::describeTapeRecoveryP
  */
 DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTapesResponse *>(send(request));
 }
 
 /**
@@ -896,7 +896,7 @@ DescribeTapesResponse * StorageGatewayClient::describeTapes(const DescribeTapesR
  */
 DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const DescribeUploadBufferRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeUploadBufferResponse *>(send(request));
 }
 
 /**
@@ -915,7 +915,7 @@ DescribeUploadBufferResponse * StorageGatewayClient::describeUploadBuffer(const 
  */
 DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const DescribeVTLDevicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeVTLDevicesResponse *>(send(request));
 }
 
 /**
@@ -940,7 +940,7 @@ DescribeVTLDevicesResponse * StorageGatewayClient::describeVTLDevices(const Desc
  */
 DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(const DescribeWorkingStorageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeWorkingStorageResponse *>(send(request));
 }
 
 /**
@@ -964,7 +964,7 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
  */
 DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatewayRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisableGatewayResponse *>(send(request));
 }
 
 /**
@@ -979,7 +979,7 @@ DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatew
  */
 ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileSharesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFileSharesResponse *>(send(request));
 }
 
 /**
@@ -1004,7 +1004,7 @@ ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileShar
  */
 ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGatewaysResponse *>(send(request));
 }
 
 /**
@@ -1026,7 +1026,7 @@ ListGatewaysResponse * StorageGatewayClient::listGateways(const ListGatewaysRequ
  */
 ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDisksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListLocalDisksResponse *>(send(request));
 }
 
 /**
@@ -1041,7 +1041,7 @@ ListLocalDisksResponse * StorageGatewayClient::listLocalDisks(const ListLocalDis
  */
 ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /**
@@ -1064,7 +1064,7 @@ ListTagsForResourceResponse * StorageGatewayClient::listTagsForResource(const Li
  */
 ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTapesResponse *>(send(request));
 }
 
 /**
@@ -1079,7 +1079,7 @@ ListTapesResponse * StorageGatewayClient::listTapes(const ListTapesRequest &requ
  */
 ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const ListVolumeInitiatorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListVolumeInitiatorsResponse *>(send(request));
 }
 
 /**
@@ -1099,7 +1099,7 @@ ListVolumeInitiatorsResponse * StorageGatewayClient::listVolumeInitiators(const 
  */
 ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoints(const ListVolumeRecoveryPointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListVolumeRecoveryPointsResponse *>(send(request));
 }
 
 /**
@@ -1123,7 +1123,7 @@ ListVolumeRecoveryPointsResponse * StorageGatewayClient::listVolumeRecoveryPoint
  */
 ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListVolumesResponse *>(send(request));
 }
 
 /**
@@ -1151,7 +1151,7 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
  */
 NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const NotifyWhenUploadedRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<NotifyWhenUploadedResponse *>(send(request));
 }
 
 /**
@@ -1167,7 +1167,7 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
  */
 RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RefreshCacheResponse *>(send(request));
 }
 
 /**
@@ -1182,7 +1182,7 @@ RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequ
  */
 RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /**
@@ -1206,7 +1206,7 @@ RemoveTagsFromResourceResponse * StorageGatewayClient::removeTagsFromResource(co
  */
 ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetCacheResponse *>(send(request));
 }
 
 /**
@@ -1227,7 +1227,7 @@ ResetCacheResponse * StorageGatewayClient::resetCache(const ResetCacheRequest &r
  */
 RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const RetrieveTapeArchiveRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RetrieveTapeArchiveResponse *>(send(request));
 }
 
 /**
@@ -1251,7 +1251,7 @@ RetrieveTapeArchiveResponse * StorageGatewayClient::retrieveTapeArchive(const Re
  */
 RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPoint(const RetrieveTapeRecoveryPointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RetrieveTapeRecoveryPointResponse *>(send(request));
 }
 
 /**
@@ -1267,7 +1267,7 @@ RetrieveTapeRecoveryPointResponse * StorageGatewayClient::retrieveTapeRecoveryPo
  */
 SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(const SetLocalConsolePasswordRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetLocalConsolePasswordResponse *>(send(request));
 }
 
 /**
@@ -1308,7 +1308,7 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
  */
 ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGatewayRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ShutdownGatewayResponse *>(send(request));
 }
 
 /**
@@ -1334,7 +1334,7 @@ ShutdownGatewayResponse * StorageGatewayClient::shutdownGateway(const ShutdownGa
  */
 StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartGatewayResponse *>(send(request));
 }
 
 /**
@@ -1358,7 +1358,7 @@ StartGatewayResponse * StorageGatewayClient::startGateway(const StartGatewayRequ
  */
 UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimit(const UpdateBandwidthRateLimitRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBandwidthRateLimitResponse *>(send(request));
 }
 
 /**
@@ -1378,7 +1378,7 @@ UpdateBandwidthRateLimitResponse * StorageGatewayClient::updateBandwidthRateLimi
  */
 UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(const UpdateChapCredentialsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateChapCredentialsResponse *>(send(request));
 }
 
 /**
@@ -1398,7 +1398,7 @@ UpdateChapCredentialsResponse * StorageGatewayClient::updateChapCredentials(cons
  */
 UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformation(const UpdateGatewayInformationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGatewayInformationResponse *>(send(request));
 }
 
 /**
@@ -1428,7 +1428,7 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
  */
 UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGatewaySoftwareNowResponse *>(send(request));
 }
 
 /**
@@ -1443,7 +1443,7 @@ UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNo
  */
 UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStartTime(const UpdateMaintenanceStartTimeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMaintenanceStartTimeResponse *>(send(request));
 }
 
 /**
@@ -1490,7 +1490,7 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
  */
 UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const UpdateNFSFileShareRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateNFSFileShareResponse *>(send(request));
 }
 
 /**
@@ -1515,7 +1515,7 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
  */
 UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSnapshotScheduleResponse *>(send(request));
 }
 
 /**
@@ -1531,7 +1531,7 @@ UpdateSnapshotScheduleResponse * StorageGatewayClient::updateSnapshotSchedule(co
  */
 UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateVTLDeviceTypeResponse *>(send(request));
 }
 
 /**

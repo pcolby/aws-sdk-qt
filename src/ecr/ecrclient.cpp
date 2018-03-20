@@ -113,7 +113,7 @@ EcrClient::EcrClient(
  */
 BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchCheckLayerAvailabilityResponse *>(send(request));
 }
 
 /**
@@ -137,7 +137,7 @@ BatchCheckLayerAvailabilityResponse * EcrClient::batchCheckLayerAvailability(con
  */
 BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDeleteImageResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ BatchDeleteImageResponse * EcrClient::batchDeleteImage(const BatchDeleteImageReq
  */
 BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetImageResponse *>(send(request));
 }
 
 /**
@@ -172,7 +172,7 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
  */
 CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CompleteLayerUploadResponse *>(send(request));
 }
 
 /**
@@ -186,7 +186,7 @@ CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayer
  */
 CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRepositoryResponse *>(send(request));
 }
 
 /**
@@ -200,7 +200,7 @@ CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryReq
  */
 DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLifecyclePolicyResponse *>(send(request));
 }
 
 /**
@@ -215,7 +215,7 @@ DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLif
  */
 DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRepositoryResponse *>(send(request));
 }
 
 /**
@@ -229,7 +229,7 @@ DeleteRepositoryResponse * EcrClient::deleteRepository(const DeleteRepositoryReq
  */
 DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRepositoryPolicyResponse *>(send(request));
 }
 
 /**
@@ -249,7 +249,7 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
  */
 DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeImagesResponse *>(send(request));
 }
 
 /**
@@ -263,7 +263,7 @@ DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &
  */
 DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRepositoriesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRepositoriesResponse *>(send(request));
 }
 
 /**
@@ -285,7 +285,7 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
  */
 GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAuthorizationTokenResponse *>(send(request));
 }
 
 /**
@@ -305,7 +305,7 @@ GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthor
  */
 GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDownloadUrlForLayerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDownloadUrlForLayerResponse *>(send(request));
 }
 
 /**
@@ -319,7 +319,7 @@ GetDownloadUrlForLayerResponse * EcrClient::getDownloadUrlForLayer(const GetDown
  */
 GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLifecyclePolicyResponse *>(send(request));
 }
 
 /**
@@ -333,7 +333,7 @@ GetLifecyclePolicyResponse * EcrClient::getLifecyclePolicy(const GetLifecyclePol
  */
 GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLifecyclePolicyPreviewResponse *>(send(request));
 }
 
 /**
@@ -347,7 +347,7 @@ GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const G
  */
 GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRepositoryPolicyResponse *>(send(request));
 }
 
 /**
@@ -366,7 +366,7 @@ GetRepositoryPolicyResponse * EcrClient::getRepositoryPolicy(const GetRepository
  */
 InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<InitiateLayerUploadResponse *>(send(request));
 }
 
 /**
@@ -387,7 +387,7 @@ InitiateLayerUploadResponse * EcrClient::initiateLayerUpload(const InitiateLayer
  */
 ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListImagesResponse *>(send(request));
 }
 
 /**
@@ -406,7 +406,7 @@ ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
  */
 PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutImageResponse *>(send(request));
 }
 
 /**
@@ -421,7 +421,7 @@ PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
  */
 PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutLifecyclePolicyResponse *>(send(request));
 }
 
 /**
@@ -435,7 +435,7 @@ PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePol
  */
 SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetRepositoryPolicyResponse *>(send(request));
 }
 
 /**
@@ -449,7 +449,7 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
  */
 StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartLifecyclePolicyPreviewResponse *>(send(request));
 }
 
 /**
@@ -468,7 +468,7 @@ StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(con
  */
 UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UploadLayerPartResponse *>(send(request));
 }
 
 /**

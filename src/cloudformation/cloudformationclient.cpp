@@ -131,7 +131,7 @@ CloudFormationClient::CloudFormationClient(
  */
 CancelUpdateStackResponse * CloudFormationClient::cancelUpdateStack(const CancelUpdateStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CancelUpdateStackResponse *>(send(request));
 }
 
 /**
@@ -156,7 +156,7 @@ CancelUpdateStackResponse * CloudFormationClient::cancelUpdateStack(const Cancel
  */
 ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(const ContinueUpdateRollbackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ContinueUpdateRollbackResponse *>(send(request));
 }
 
 /**
@@ -188,7 +188,7 @@ ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(co
  */
 CreateChangeSetResponse * CloudFormationClient::createChangeSet(const CreateChangeSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateChangeSetResponse *>(send(request));
 }
 
 /**
@@ -203,7 +203,7 @@ CreateChangeSetResponse * CloudFormationClient::createChangeSet(const CreateChan
  */
 CreateStackResponse * CloudFormationClient::createStack(const CreateStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStackResponse *>(send(request));
 }
 
 /**
@@ -219,7 +219,7 @@ CreateStackResponse * CloudFormationClient::createStack(const CreateStackRequest
  */
 CreateStackInstancesResponse * CloudFormationClient::createStackInstances(const CreateStackInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStackInstancesResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ CreateStackInstancesResponse * CloudFormationClient::createStackInstances(const 
  */
 CreateStackSetResponse * CloudFormationClient::createStackSet(const CreateStackSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStackSetResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ CreateStackSetResponse * CloudFormationClient::createStackSet(const CreateStackS
  */
 DeleteChangeSetResponse * CloudFormationClient::deleteChangeSet(const DeleteChangeSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteChangeSetResponse *>(send(request));
 }
 
 /**
@@ -266,7 +266,7 @@ DeleteChangeSetResponse * CloudFormationClient::deleteChangeSet(const DeleteChan
  */
 DeleteStackResponse * CloudFormationClient::deleteStack(const DeleteStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStackResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ DeleteStackResponse * CloudFormationClient::deleteStack(const DeleteStackRequest
  */
 DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const DeleteStackInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStackInstancesResponse *>(send(request));
 }
 
 /**
@@ -295,7 +295,7 @@ DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const 
  */
 DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStackSetResponse *>(send(request));
 }
 
 /**
@@ -309,7 +309,7 @@ DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackS
  */
 DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
 /**
@@ -326,7 +326,7 @@ DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(cons
  */
 DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const DescribeChangeSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeChangeSetResponse *>(send(request));
 }
 
 /**
@@ -348,7 +348,7 @@ DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const Descri
  */
 DescribeStackEventsResponse * CloudFormationClient::describeStackEvents(const DescribeStackEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackEventsResponse *>(send(request));
 }
 
 /**
@@ -366,7 +366,7 @@ DescribeStackEventsResponse * CloudFormationClient::describeStackEvents(const De
  */
 DescribeStackInstanceResponse * CloudFormationClient::describeStackInstance(const DescribeStackInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackInstanceResponse *>(send(request));
 }
 
 /**
@@ -384,7 +384,7 @@ DescribeStackInstanceResponse * CloudFormationClient::describeStackInstance(cons
  */
 DescribeStackResourceResponse * CloudFormationClient::describeStackResource(const DescribeStackResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackResourceResponse *>(send(request));
 }
 
 /**
@@ -422,7 +422,7 @@ DescribeStackResourceResponse * CloudFormationClient::describeStackResource(cons
  */
 DescribeStackResourcesResponse * CloudFormationClient::describeStackResources(const DescribeStackResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackResourcesResponse *>(send(request));
 }
 
 /**
@@ -436,7 +436,7 @@ DescribeStackResourcesResponse * CloudFormationClient::describeStackResources(co
  */
 DescribeStackSetResponse * CloudFormationClient::describeStackSet(const DescribeStackSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackSetResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ DescribeStackSetResponse * CloudFormationClient::describeStackSet(const Describe
  */
 DescribeStackSetOperationResponse * CloudFormationClient::describeStackSetOperation(const DescribeStackSetOperationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackSetOperationResponse *>(send(request));
 }
 
 /**
@@ -469,7 +469,7 @@ DescribeStackSetOperationResponse * CloudFormationClient::describeStackSetOperat
  */
 DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStacksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStacksResponse *>(send(request));
 }
 
 /**
@@ -484,7 +484,7 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
  */
 EstimateTemplateCostResponse * CloudFormationClient::estimateTemplateCost(const EstimateTemplateCostRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<EstimateTemplateCostResponse *>(send(request));
 }
 
 /**
@@ -510,7 +510,7 @@ EstimateTemplateCostResponse * CloudFormationClient::estimateTemplateCost(const 
  */
 ExecuteChangeSetResponse * CloudFormationClient::executeChangeSet(const ExecuteChangeSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ExecuteChangeSetResponse *>(send(request));
 }
 
 /**
@@ -524,7 +524,7 @@ ExecuteChangeSetResponse * CloudFormationClient::executeChangeSet(const ExecuteC
  */
 GetStackPolicyResponse * CloudFormationClient::getStackPolicy(const GetStackPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetStackPolicyResponse *>(send(request));
 }
 
 /**
@@ -546,7 +546,7 @@ GetStackPolicyResponse * CloudFormationClient::getStackPolicy(const GetStackPoli
  */
 GetTemplateResponse * CloudFormationClient::getTemplate(const GetTemplateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTemplateResponse *>(send(request));
 }
 
 /**
@@ -572,7 +572,7 @@ GetTemplateResponse * CloudFormationClient::getTemplate(const GetTemplateRequest
  */
 GetTemplateSummaryResponse * CloudFormationClient::getTemplateSummary(const GetTemplateSummaryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTemplateSummaryResponse *>(send(request));
 }
 
 /**
@@ -587,7 +587,7 @@ GetTemplateSummaryResponse * CloudFormationClient::getTemplateSummary(const GetT
  */
 ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListChangeSetsResponse *>(send(request));
 }
 
 /**
@@ -610,7 +610,7 @@ ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSe
  */
 ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListExportsResponse *>(send(request));
 }
 
 /**
@@ -631,7 +631,7 @@ ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest
  */
 ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListImportsResponse *>(send(request));
 }
 
 /**
@@ -646,7 +646,7 @@ ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest
  */
 ListStackInstancesResponse * CloudFormationClient::listStackInstances(const ListStackInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStackInstancesResponse *>(send(request));
 }
 
 /**
@@ -664,7 +664,7 @@ ListStackInstancesResponse * CloudFormationClient::listStackInstances(const List
  */
 ListStackResourcesResponse * CloudFormationClient::listStackResources(const ListStackResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStackResourcesResponse *>(send(request));
 }
 
 /**
@@ -678,7 +678,7 @@ ListStackResourcesResponse * CloudFormationClient::listStackResources(const List
  */
 ListStackSetOperationResultsResponse * CloudFormationClient::listStackSetOperationResults(const ListStackSetOperationResultsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStackSetOperationResultsResponse *>(send(request));
 }
 
 /**
@@ -692,7 +692,7 @@ ListStackSetOperationResultsResponse * CloudFormationClient::listStackSetOperati
  */
 ListStackSetOperationsResponse * CloudFormationClient::listStackSetOperations(const ListStackSetOperationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStackSetOperationsResponse *>(send(request));
 }
 
 /**
@@ -706,7 +706,7 @@ ListStackSetOperationsResponse * CloudFormationClient::listStackSetOperations(co
  */
 ListStackSetsResponse * CloudFormationClient::listStackSets(const ListStackSetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStackSetsResponse *>(send(request));
 }
 
 /**
@@ -722,7 +722,7 @@ ListStackSetsResponse * CloudFormationClient::listStackSets(const ListStackSetsR
  */
 ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStacksResponse *>(send(request));
 }
 
 /**
@@ -736,7 +736,7 @@ ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &r
  */
 SetStackPolicyResponse * CloudFormationClient::setStackPolicy(const SetStackPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetStackPolicyResponse *>(send(request));
 }
 
 /**
@@ -753,7 +753,7 @@ SetStackPolicyResponse * CloudFormationClient::setStackPolicy(const SetStackPoli
  */
 SignalResourceResponse * CloudFormationClient::signalResource(const SignalResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SignalResourceResponse *>(send(request));
 }
 
 /**
@@ -767,7 +767,7 @@ SignalResourceResponse * CloudFormationClient::signalResource(const SignalResour
  */
 StopStackSetOperationResponse * CloudFormationClient::stopStackSetOperation(const StopStackSetOperationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopStackSetOperationResponse *>(send(request));
 }
 
 /**
@@ -791,7 +791,7 @@ StopStackSetOperationResponse * CloudFormationClient::stopStackSetOperation(cons
  */
 UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStackResponse *>(send(request));
 }
 
 /**
@@ -827,7 +827,7 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
  */
 UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const UpdateStackInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStackInstancesResponse *>(send(request));
 }
 
 /**
@@ -847,7 +847,7 @@ UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const 
  */
 UpdateStackSetResponse * CloudFormationClient::updateStackSet(const UpdateStackSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStackSetResponse *>(send(request));
 }
 
 /**
@@ -869,7 +869,7 @@ UpdateStackSetResponse * CloudFormationClient::updateStackSet(const UpdateStackS
  */
 UpdateTerminationProtectionResponse * CloudFormationClient::updateTerminationProtection(const UpdateTerminationProtectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTerminationProtectionResponse *>(send(request));
 }
 
 /**
@@ -885,7 +885,7 @@ UpdateTerminationProtectionResponse * CloudFormationClient::updateTerminationPro
  */
 ValidateTemplateResponse * CloudFormationClient::validateTemplate(const ValidateTemplateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ValidateTemplateResponse *>(send(request));
 }
 
 /**

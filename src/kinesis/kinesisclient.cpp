@@ -116,7 +116,7 @@ KinesisClient::KinesisClient(
  */
 AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToStreamResponse *>(send(request));
 }
 
 /**
@@ -180,7 +180,7 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  */
 CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStreamResponse *>(send(request));
 }
 
 /**
@@ -200,7 +200,7 @@ CreateStreamResponse * KinesisClient::createStream(const CreateStreamRequest &re
  */
 DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPeriod(const DecreaseStreamRetentionPeriodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DecreaseStreamRetentionPeriodResponse *>(send(request));
 }
 
 /**
@@ -238,7 +238,7 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
  */
 DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStreamResponse *>(send(request));
 }
 
 /**
@@ -260,7 +260,7 @@ DeleteStreamResponse * KinesisClient::deleteStream(const DeleteStreamRequest &re
  */
 DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLimitsResponse *>(send(request));
 }
 
 /**
@@ -297,7 +297,7 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
  */
 DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
 /**
@@ -316,7 +316,7 @@ DescribeStreamResponse * KinesisClient::describeStream(const DescribeStreamReque
  */
 DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const DescribeStreamSummaryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStreamSummaryResponse *>(send(request));
 }
 
 /**
@@ -330,7 +330,7 @@ DescribeStreamSummaryResponse * KinesisClient::describeStreamSummary(const Descr
  */
 DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(const DisableEnhancedMonitoringRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisableEnhancedMonitoringResponse *>(send(request));
 }
 
 /**
@@ -344,7 +344,7 @@ DisableEnhancedMonitoringResponse * KinesisClient::disableEnhancedMonitoring(con
  */
 EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const EnableEnhancedMonitoringRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<EnableEnhancedMonitoringResponse *>(send(request));
 }
 
 /**
@@ -410,7 +410,7 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
  */
 GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRecordsResponse *>(send(request));
 }
 
 /**
@@ -465,7 +465,7 @@ GetRecordsResponse * KinesisClient::getRecords(const GetRecordsRequest &request)
  */
 GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIteratorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetShardIteratorResponse *>(send(request));
 }
 
 /**
@@ -487,7 +487,7 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
  */
 IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPeriod(const IncreaseStreamRetentionPeriodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<IncreaseStreamRetentionPeriodResponse *>(send(request));
 }
 
 /**
@@ -508,7 +508,7 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
  */
 ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListShardsResponse *>(send(request));
 }
 
 /**
@@ -540,7 +540,7 @@ ListShardsResponse * KinesisClient::listShards(const ListShardsRequest &request)
  */
 ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
 /**
@@ -554,7 +554,7 @@ ListStreamsResponse * KinesisClient::listStreams(const ListStreamsRequest &reque
  */
 ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForStreamResponse *>(send(request));
 }
 
 /**
@@ -612,7 +612,7 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  */
 MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<MergeShardsResponse *>(send(request));
 }
 
 /**
@@ -676,7 +676,7 @@ MergeShardsResponse * KinesisClient::mergeShards(const MergeShardsRequest &reque
  */
 PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRecordResponse *>(send(request));
 }
 
 /**
@@ -759,7 +759,7 @@ PutRecordResponse * KinesisClient::putRecord(const PutRecordRequest &request)
  */
 PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRecordsResponse *>(send(request));
 }
 
 /**
@@ -782,7 +782,7 @@ PutRecordsResponse * KinesisClient::putRecords(const PutRecordsRequest &request)
  */
 RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveTagsFromStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromStreamResponse *>(send(request));
 }
 
 /**
@@ -853,7 +853,7 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  */
 SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SplitShardResponse *>(send(request));
 }
 
 /**
@@ -886,7 +886,7 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  */
 StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const StartStreamEncryptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartStreamEncryptionResponse *>(send(request));
 }
 
 /**
@@ -919,7 +919,7 @@ StartStreamEncryptionResponse * KinesisClient::startStreamEncryption(const Start
  */
 StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStreamEncryptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopStreamEncryptionResponse *>(send(request));
 }
 
 /**
@@ -982,7 +982,7 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
  */
 UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateShardCountResponse *>(send(request));
 }
 
 /**

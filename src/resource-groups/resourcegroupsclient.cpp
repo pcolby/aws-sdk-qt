@@ -148,7 +148,7 @@ ResourceGroupsClient::ResourceGroupsClient(
  */
 CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGroupResponse *>(send(request));
 }
 
 /**
@@ -163,7 +163,7 @@ CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest
  */
 DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGroupResponse *>(send(request));
 }
 
 /**
@@ -177,7 +177,7 @@ DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest
  */
 GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupResponse *>(send(request));
 }
 
 /**
@@ -191,7 +191,7 @@ GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request
  */
 GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupQueryResponse *>(send(request));
 }
 
 /**
@@ -205,7 +205,7 @@ GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryR
  */
 GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTagsResponse *>(send(request));
 }
 
 /**
@@ -219,7 +219,7 @@ GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
  */
 ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const ListGroupResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGroupResourcesResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const List
  */
 ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGroupsResponse *>(send(request));
 }
 
 /**
@@ -248,7 +248,7 @@ ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &r
  */
 SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchResourcesResponse *>(send(request));
 }
 
 /**
@@ -263,7 +263,7 @@ SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchReso
  */
 TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResponse *>(send(request));
 }
 
 /**
@@ -277,7 +277,7 @@ TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
  */
 UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResponse *>(send(request));
 }
 
 /**
@@ -291,7 +291,7 @@ UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
  */
 UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGroupResponse *>(send(request));
 }
 
 /**
@@ -305,7 +305,7 @@ UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest
  */
 UpdateGroupQueryResponse * ResourceGroupsClient::updateGroupQuery(const UpdateGroupQueryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGroupQueryResponse *>(send(request));
 }
 
 /**

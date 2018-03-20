@@ -121,7 +121,7 @@ MigrationHubClient::MigrationHubClient(
  */
 AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(const AssociateCreatedArtifactRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateCreatedArtifactResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
  */
 AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredResource(const AssociateDiscoveredResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateDiscoveredResourceResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredRes
  */
 CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStream(const CreateProgressUpdateStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateProgressUpdateStreamResponse *>(send(request));
 }
 
 /**
@@ -193,7 +193,7 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
  */
 DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStream(const DeleteProgressUpdateStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteProgressUpdateStreamResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStr
  */
 DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(const DescribeApplicationStateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeApplicationStateResponse *>(send(request));
 }
 
 /**
@@ -221,7 +221,7 @@ DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(
  */
 DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const DescribeMigrationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMigrationTaskResponse *>(send(request));
 }
 
 /**
@@ -250,7 +250,7 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
  */
 DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArtifact(const DisassociateCreatedArtifactRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateCreatedArtifactResponse *>(send(request));
 }
 
 /**
@@ -264,7 +264,7 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
  */
 DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateDiscoveredResourceResponse *>(send(request));
 }
 
 /**
@@ -283,7 +283,7 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
  */
 ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const ImportMigrationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportMigrationTaskResponse *>(send(request));
 }
 
 /**
@@ -309,7 +309,7 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
  */
 ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const ListCreatedArtifactsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListCreatedArtifactsResponse *>(send(request));
 }
 
 /**
@@ -323,7 +323,7 @@ ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const Li
  */
 ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDiscoveredResourcesResponse *>(send(request));
 }
 
 /**
@@ -350,7 +350,7 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
  */
 ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMigrationTasksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListMigrationTasksResponse *>(send(request));
 }
 
 /**
@@ -364,7 +364,7 @@ ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMi
  */
 ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStreams(const ListProgressUpdateStreamsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListProgressUpdateStreamsResponse *>(send(request));
 }
 
 /**
@@ -380,7 +380,7 @@ ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStream
  */
 NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(const NotifyApplicationStateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<NotifyApplicationStateResponse *>(send(request));
 }
 
 /**
@@ -407,7 +407,7 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
  */
 NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(const NotifyMigrationTaskStateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<NotifyMigrationTaskStateResponse *>(send(request));
 }
 
 /**
@@ -438,7 +438,7 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  */
 PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const PutResourceAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutResourceAttributesResponse *>(send(request));
 }
 
 /**

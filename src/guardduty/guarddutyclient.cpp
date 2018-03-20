@@ -103,7 +103,7 @@ GuardDutyClient::GuardDutyClient(
  */
 AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AcceptInvitationResponse *>(send(request));
 }
 
 /**
@@ -116,7 +116,7 @@ AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitat
  */
 ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ArchiveFindingsResponse *>(send(request));
 }
 
 /**
@@ -130,7 +130,7 @@ ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindings
  */
 CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDetectorResponse *>(send(request));
 }
 
 /**
@@ -144,7 +144,7 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
  */
 CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateIPSetResponse *>(send(request));
 }
 
 /**
@@ -158,7 +158,7 @@ CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &req
  */
 CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateMembersResponse *>(send(request));
 }
 
 /**
@@ -172,7 +172,7 @@ CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersReques
  */
 CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const CreateSampleFindingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSampleFindingsResponse *>(send(request));
 }
 
 /**
@@ -186,7 +186,7 @@ CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const Creat
  */
 CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const CreateThreatIntelSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateThreatIntelSetResponse *>(send(request));
 }
 
 /**
@@ -199,7 +199,7 @@ CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const Creat
  */
 DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineInvitationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeclineInvitationsResponse *>(send(request));
 }
 
 /**
@@ -212,7 +212,7 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
  */
 DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDetectorResponse *>(send(request));
 }
 
 /**
@@ -225,7 +225,7 @@ DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorReq
  */
 DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteIPSetResponse *>(send(request));
 }
 
 /**
@@ -238,7 +238,7 @@ DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &req
  */
 DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvitationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteInvitationsResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvit
  */
 DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMembersResponse *>(send(request));
 }
 
 /**
@@ -264,7 +264,7 @@ DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersReques
  */
 DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const DeleteThreatIntelSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteThreatIntelSetResponse *>(send(request));
 }
 
 /**
@@ -277,7 +277,7 @@ DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const Delet
  */
 DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateFromMasterAccountResponse *>(send(request));
 }
 
 /**
@@ -290,7 +290,7 @@ DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterA
  */
 DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const DisassociateMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateMembersResponse *>(send(request));
 }
 
 /**
@@ -303,7 +303,7 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
  */
 GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDetectorResponse *>(send(request));
 }
 
 /**
@@ -316,7 +316,7 @@ GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &req
  */
 GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFindingsResponse *>(send(request));
 }
 
 /**
@@ -329,7 +329,7 @@ GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &req
  */
 GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const GetFindingsStatisticsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFindingsStatisticsResponse *>(send(request));
 }
 
 /**
@@ -342,7 +342,7 @@ GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const Get
  */
 GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetIPSetResponse *>(send(request));
 }
 
 /**
@@ -356,7 +356,7 @@ GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
  */
 GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvitationsCountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetInvitationsCountResponse *>(send(request));
 }
 
 /**
@@ -369,7 +369,7 @@ GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvi
  */
 GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMasterAccountResponse *>(send(request));
 }
 
 /**
@@ -382,7 +382,7 @@ GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAcco
  */
 GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMembersResponse *>(send(request));
 }
 
 /**
@@ -395,7 +395,7 @@ GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &reques
  */
 GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIntelSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetThreatIntelSetResponse *>(send(request));
 }
 
 /**
@@ -410,7 +410,7 @@ GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIn
  */
 InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<InviteMembersResponse *>(send(request));
 }
 
 /**
@@ -423,7 +423,7 @@ InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersReques
  */
 ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDetectorsResponse *>(send(request));
 }
 
 /**
@@ -436,7 +436,7 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
  */
 ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFindingsResponse *>(send(request));
 }
 
 /**
@@ -449,7 +449,7 @@ ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &
  */
 ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListIPSetsResponse *>(send(request));
 }
 
 /**
@@ -462,7 +462,7 @@ ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &reques
  */
 ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInvitationsResponse *>(send(request));
 }
 
 /**
@@ -475,7 +475,7 @@ ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitations
  */
 ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListMembersResponse *>(send(request));
 }
 
 /**
@@ -488,7 +488,7 @@ ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &req
  */
 ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThreatIntelSetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListThreatIntelSetsResponse *>(send(request));
 }
 
 /**
@@ -502,7 +502,7 @@ ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThr
  */
 StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const StartMonitoringMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartMonitoringMembersResponse *>(send(request));
 }
 
 /**
@@ -517,7 +517,7 @@ StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const S
  */
 StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const StopMonitoringMembersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopMonitoringMembersResponse *>(send(request));
 }
 
 /**
@@ -530,7 +530,7 @@ StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const Sto
  */
 UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFindingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UnarchiveFindingsResponse *>(send(request));
 }
 
 /**
@@ -543,7 +543,7 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
  */
 UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDetectorResponse *>(send(request));
 }
 
 /**
@@ -556,7 +556,7 @@ UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorReq
  */
 UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const UpdateFindingsFeedbackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFindingsFeedbackResponse *>(send(request));
 }
 
 /**
@@ -569,7 +569,7 @@ UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const U
  */
 UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateIPSetResponse *>(send(request));
 }
 
 /**
@@ -582,7 +582,7 @@ UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &req
  */
 UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const UpdateThreatIntelSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateThreatIntelSetResponse *>(send(request));
 }
 
 /**

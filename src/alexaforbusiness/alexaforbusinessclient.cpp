@@ -111,7 +111,7 @@ AlexaForBusinessClient::AlexaForBusinessClient(
  */
 AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoom(const AssociateDeviceWithRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateDeviceWithRoomResponse *>(send(request));
 }
 
 /**
@@ -125,7 +125,7 @@ AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoo
  */
 AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGroupWithRoom(const AssociateSkillGroupWithRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateSkillGroupWithRoomResponse *>(send(request));
 }
 
 /**
@@ -139,7 +139,7 @@ AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGrou
  */
 CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateProfileResponse *>(send(request));
 }
 
 /**
@@ -153,7 +153,7 @@ CreateProfileResponse * AlexaForBusinessClient::createProfile(const CreateProfil
  */
 CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRoomResponse *>(send(request));
 }
 
 /**
@@ -167,7 +167,7 @@ CreateRoomResponse * AlexaForBusinessClient::createRoom(const CreateRoomRequest 
  */
 CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const CreateSkillGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSkillGroupResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ CreateSkillGroupResponse * AlexaForBusinessClient::createSkillGroup(const Create
  */
 CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUserResponse *>(send(request));
 }
 
 /**
@@ -195,7 +195,7 @@ CreateUserResponse * AlexaForBusinessClient::createUser(const CreateUserRequest 
  */
 DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteProfileResponse *>(send(request));
 }
 
 /**
@@ -209,7 +209,7 @@ DeleteProfileResponse * AlexaForBusinessClient::deleteProfile(const DeleteProfil
  */
 DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRoomResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest 
  */
 DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParameter(const DeleteRoomSkillParameterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRoomSkillParameterResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParame
  */
 DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const DeleteSkillGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSkillGroupResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ DeleteSkillGroupResponse * AlexaForBusinessClient::deleteSkillGroup(const Delete
  */
 DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
 /**
@@ -266,7 +266,7 @@ DeleteUserResponse * AlexaForBusinessClient::deleteUser(const DeleteUserRequest 
  */
 DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceFromRoom(const DisassociateDeviceFromRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateDeviceFromRoomResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceF
  */
 DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSkillGroupFromRoom(const DisassociateSkillGroupFromRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateSkillGroupFromRoomResponse *>(send(request));
 }
 
 /**
@@ -294,7 +294,7 @@ DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSki
  */
 GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeviceResponse *>(send(request));
 }
 
 /**
@@ -308,7 +308,7 @@ GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &re
  */
 GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetProfileResponse *>(send(request));
 }
 
 /**
@@ -322,7 +322,7 @@ GetProfileResponse * AlexaForBusinessClient::getProfile(const GetProfileRequest 
  */
 GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRoomResponse *>(send(request));
 }
 
 /**
@@ -336,7 +336,7 @@ GetRoomResponse * AlexaForBusinessClient::getRoom(const GetRoomRequest &request)
  */
 GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(const GetRoomSkillParameterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRoomSkillParameterResponse *>(send(request));
 }
 
 /**
@@ -350,7 +350,7 @@ GetRoomSkillParameterResponse * AlexaForBusinessClient::getRoomSkillParameter(co
  */
 GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSkillGroupResponse *>(send(request));
 }
 
 /**
@@ -364,7 +364,7 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
  */
 ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSkillsResponse *>(send(request));
 }
 
 /**
@@ -378,7 +378,7 @@ ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest 
  */
 ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /**
@@ -392,7 +392,7 @@ ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &reque
  */
 PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(const PutRoomSkillParameterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRoomSkillParameterResponse *>(send(request));
 }
 
 /**
@@ -406,7 +406,7 @@ PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(co
  */
 ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResolveRoomResponse *>(send(request));
 }
 
 /**
@@ -420,7 +420,7 @@ ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomReque
  */
 RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const RevokeInvitationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RevokeInvitationResponse *>(send(request));
 }
 
 /**
@@ -434,7 +434,7 @@ RevokeInvitationResponse * AlexaForBusinessClient::revokeInvitation(const Revoke
  */
 SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchDevicesResponse *>(send(request));
 }
 
 /**
@@ -448,7 +448,7 @@ SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevice
  */
 SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProfilesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchProfilesResponse *>(send(request));
 }
 
 /**
@@ -462,7 +462,7 @@ SearchProfilesResponse * AlexaForBusinessClient::searchProfiles(const SearchProf
  */
 SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchRoomsResponse *>(send(request));
 }
 
 /**
@@ -476,7 +476,7 @@ SearchRoomsResponse * AlexaForBusinessClient::searchRooms(const SearchRoomsReque
  */
 SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const SearchSkillGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchSkillGroupsResponse *>(send(request));
 }
 
 /**
@@ -490,7 +490,7 @@ SearchSkillGroupsResponse * AlexaForBusinessClient::searchSkillGroups(const Sear
  */
 SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchUsersResponse *>(send(request));
 }
 
 /**
@@ -505,7 +505,7 @@ SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersReque
  */
 SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvitationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SendInvitationResponse *>(send(request));
 }
 
 /**
@@ -519,7 +519,7 @@ SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvita
  */
 StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDeviceSyncRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartDeviceSyncResponse *>(send(request));
 }
 
 /**
@@ -533,7 +533,7 @@ StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDev
  */
 TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -547,7 +547,7 @@ TagResourceResponse * AlexaForBusinessClient::tagResource(const TagResourceReque
  */
 UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**
@@ -561,7 +561,7 @@ UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourc
  */
 UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDeviceResponse *>(send(request));
 }
 
 /**
@@ -575,7 +575,7 @@ UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRe
  */
 UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateProfileResponse *>(send(request));
 }
 
 /**
@@ -589,7 +589,7 @@ UpdateProfileResponse * AlexaForBusinessClient::updateProfile(const UpdateProfil
  */
 UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateRoomResponse *>(send(request));
 }
 
 /**
@@ -603,7 +603,7 @@ UpdateRoomResponse * AlexaForBusinessClient::updateRoom(const UpdateRoomRequest 
  */
 UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const UpdateSkillGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSkillGroupResponse *>(send(request));
 }
 
 /**

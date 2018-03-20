@@ -142,7 +142,7 @@ BudgetsClient::BudgetsClient(
  */
 CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBudgetResponse *>(send(request));
 }
 
 /**
@@ -156,7 +156,7 @@ CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &re
  */
 CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNotificationResponse *>(send(request));
 }
 
 /**
@@ -170,7 +170,7 @@ CreateNotificationResponse * BudgetsClient::createNotification(const CreateNotif
  */
 CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscriberRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSubscriberResponse *>(send(request));
 }
 
 /**
@@ -188,7 +188,7 @@ CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscribe
  */
 DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBudgetResponse *>(send(request));
 }
 
 /**
@@ -206,7 +206,7 @@ DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &re
  */
 DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNotificationResponse *>(send(request));
 }
 
 /**
@@ -224,7 +224,7 @@ DeleteNotificationResponse * BudgetsClient::deleteNotification(const DeleteNotif
  */
 DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscriberRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSubscriberResponse *>(send(request));
 }
 
 /**
@@ -238,7 +238,7 @@ DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscribe
  */
 DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBudgetResponse *>(send(request));
 }
 
 /**
@@ -252,7 +252,7 @@ DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetReque
  */
 DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBudgetsResponse *>(send(request));
 }
 
 /**
@@ -266,7 +266,7 @@ DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRe
  */
 DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsForBudget(const DescribeNotificationsForBudgetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNotificationsForBudgetResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ DescribeNotificationsForBudgetResponse * BudgetsClient::describeNotificationsFor
  */
 DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersForNotification(const DescribeSubscribersForNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSubscribersForNotificationResponse *>(send(request));
 }
 
 /**
@@ -296,7 +296,7 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
  */
 UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBudgetResponse *>(send(request));
 }
 
 /**
@@ -310,7 +310,7 @@ UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &re
  */
 UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateNotificationResponse *>(send(request));
 }
 
 /**
@@ -324,7 +324,7 @@ UpdateNotificationResponse * BudgetsClient::updateNotification(const UpdateNotif
  */
 UpdateSubscriberResponse * BudgetsClient::updateSubscriber(const UpdateSubscriberRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSubscriberResponse *>(send(request));
 }
 
 /**

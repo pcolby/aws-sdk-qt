@@ -185,7 +185,7 @@ DynamoDBClient::DynamoDBClient(
  */
 BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetItemResponse *>(send(request));
 }
 
 /**
@@ -283,7 +283,7 @@ BatchGetItemResponse * DynamoDBClient::batchGetItem(const BatchGetItemRequest &r
  */
 BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchWriteItemResponse *>(send(request));
 }
 
 /**
@@ -340,7 +340,7 @@ BatchWriteItemResponse * DynamoDBClient::batchWriteItem(const BatchWriteItemRequ
  */
 CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBackupResponse *>(send(request));
 }
 
 /**
@@ -375,7 +375,7 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
  */
 CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobalTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGlobalTableResponse *>(send(request));
 }
 
 /**
@@ -407,7 +407,7 @@ CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobal
  */
 CreateTableResponse * DynamoDBClient::createTable(const CreateTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTableResponse *>(send(request));
 }
 
 /**
@@ -425,7 +425,7 @@ CreateTableResponse * DynamoDBClient::createTable(const CreateTableRequest &requ
  */
 DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
 /**
@@ -455,7 +455,7 @@ DeleteBackupResponse * DynamoDBClient::deleteBackup(const DeleteBackupRequest &r
  */
 DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteItemResponse *>(send(request));
 }
 
 /**
@@ -491,7 +491,7 @@ DeleteItemResponse * DynamoDBClient::deleteItem(const DeleteItemRequest &request
  */
 DeleteTableResponse * DynamoDBClient::deleteTable(const DeleteTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTableResponse *>(send(request));
 }
 
 /**
@@ -509,7 +509,7 @@ DeleteTableResponse * DynamoDBClient::deleteTable(const DeleteTableRequest &requ
  */
 DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBackupResponse *>(send(request));
 }
 
 /**
@@ -528,7 +528,7 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
  */
 DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(const DescribeContinuousBackupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeContinuousBackupsResponse *>(send(request));
 }
 
 /**
@@ -542,7 +542,7 @@ DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(co
  */
 DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const DescribeGlobalTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGlobalTableResponse *>(send(request));
 }
 
 /**
@@ -636,7 +636,7 @@ DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const Describe
  */
 DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLimitsResponse *>(send(request));
 }
 
 /**
@@ -658,7 +658,7 @@ DescribeLimitsResponse * DynamoDBClient::describeLimits(const DescribeLimitsRequ
  */
 DescribeTableResponse * DynamoDBClient::describeTable(const DescribeTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTableResponse *>(send(request));
 }
 
 /**
@@ -672,7 +672,7 @@ DescribeTableResponse * DynamoDBClient::describeTable(const DescribeTableRequest
  */
 DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTimeToLiveRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTimeToLiveResponse *>(send(request));
 }
 
 /**
@@ -693,7 +693,7 @@ DescribeTimeToLiveResponse * DynamoDBClient::describeTimeToLive(const DescribeTi
  */
 GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetItemResponse *>(send(request));
 }
 
 /**
@@ -718,7 +718,7 @@ GetItemResponse * DynamoDBClient::getItem(const GetItemRequest &request)
  */
 ListBackupsResponse * DynamoDBClient::listBackups(const ListBackupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBackupsResponse *>(send(request));
 }
 
 /**
@@ -732,7 +732,7 @@ ListBackupsResponse * DynamoDBClient::listBackups(const ListBackupsRequest &requ
  */
 ListGlobalTablesResponse * DynamoDBClient::listGlobalTables(const ListGlobalTablesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGlobalTablesResponse *>(send(request));
 }
 
 /**
@@ -747,7 +747,7 @@ ListGlobalTablesResponse * DynamoDBClient::listGlobalTables(const ListGlobalTabl
  */
 ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTablesResponse *>(send(request));
 }
 
 /**
@@ -767,7 +767,7 @@ ListTablesResponse * DynamoDBClient::listTables(const ListTablesRequest &request
  */
 ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOfResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsOfResourceResponse *>(send(request));
 }
 
 /**
@@ -852,7 +852,7 @@ ListTagsOfResourceResponse * DynamoDBClient::listTagsOfResource(const ListTagsOf
  */
 PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutItemResponse *>(send(request));
 }
 
 /**
@@ -922,7 +922,7 @@ PutItemResponse * DynamoDBClient::putItem(const PutItemRequest &request)
  */
 QueryResponse * DynamoDBClient::query(const QueryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<QueryResponse *>(send(request));
 }
 
 /**
@@ -967,7 +967,7 @@ QueryResponse * DynamoDBClient::query(const QueryRequest &request)
  */
 RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const RestoreTableFromBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreTableFromBackupResponse *>(send(request));
 }
 
 /**
@@ -1012,7 +1012,7 @@ RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const Re
  */
 ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ScanResponse *>(send(request));
 }
 
 /**
@@ -1034,7 +1034,7 @@ ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
  */
 TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -1055,7 +1055,7 @@ TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &requ
  */
 UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**
@@ -1076,7 +1076,7 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
  */
 UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobalTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGlobalTableResponse *>(send(request));
 }
 
 /**
@@ -1097,7 +1097,7 @@ UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobal
  */
 UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateItemResponse *>(send(request));
 }
 
 /**
@@ -1139,7 +1139,7 @@ UpdateItemResponse * DynamoDBClient::updateItem(const UpdateItemRequest &request
  */
 UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTableResponse *>(send(request));
 }
 
 /**
@@ -1185,7 +1185,7 @@ UpdateTableResponse * DynamoDBClient::updateTable(const UpdateTableRequest &requ
  */
 UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLiveRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTimeToLiveResponse *>(send(request));
 }
 
 /**

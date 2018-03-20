@@ -229,7 +229,7 @@ OpsWorksClient::OpsWorksClient(
  */
 AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssignInstanceResponse *>(send(request));
 }
 
 /**
@@ -252,7 +252,7 @@ AssignInstanceResponse * OpsWorksClient::assignInstance(const AssignInstanceRequ
  */
 AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssignVolumeResponse *>(send(request));
 }
 
 /**
@@ -274,7 +274,7 @@ AssignVolumeResponse * OpsWorksClient::assignVolume(const AssignVolumeRequest &r
  */
 AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateElasticIpRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateElasticIpResponse *>(send(request));
 }
 
 /**
@@ -303,7 +303,7 @@ AssociateElasticIpResponse * OpsWorksClient::associateElasticIp(const AssociateE
  */
 AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(const AttachElasticLoadBalancerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AttachElasticLoadBalancerResponse *>(send(request));
 }
 
 /**
@@ -325,7 +325,7 @@ AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(co
  */
 CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CloneStackResponse *>(send(request));
 }
 
 /**
@@ -346,7 +346,7 @@ CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request
  */
 CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateAppResponse *>(send(request));
 }
 
 /**
@@ -368,7 +368,7 @@ CreateAppResponse * OpsWorksClient::createApp(const CreateAppRequest &request)
  */
 CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
 /**
@@ -389,7 +389,7 @@ CreateDeploymentResponse * OpsWorksClient::createDeployment(const CreateDeployme
  */
 CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateInstanceResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ CreateInstanceResponse * OpsWorksClient::createInstance(const CreateInstanceRequ
  */
 CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateLayerResponse *>(send(request));
 }
 
 /**
@@ -438,7 +438,7 @@ CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &requ
  */
 CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStackResponse *>(send(request));
 }
 
 /**
@@ -458,7 +458,7 @@ CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &requ
  */
 CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUserProfileResponse *>(send(request));
 }
 
 /**
@@ -478,7 +478,7 @@ CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserPr
  */
 DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAppResponse *>(send(request));
 }
 
 /**
@@ -504,7 +504,7 @@ DeleteAppResponse * OpsWorksClient::deleteApp(const DeleteAppRequest &request)
  */
 DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteInstanceResponse *>(send(request));
 }
 
 /**
@@ -526,7 +526,7 @@ DeleteInstanceResponse * OpsWorksClient::deleteInstance(const DeleteInstanceRequ
  */
 DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLayerResponse *>(send(request));
 }
 
 /**
@@ -548,7 +548,7 @@ DeleteLayerResponse * OpsWorksClient::deleteLayer(const DeleteLayerRequest &requ
  */
 DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStackResponse *>(send(request));
 }
 
 /**
@@ -568,7 +568,7 @@ DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &requ
  */
 DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUserProfileResponse *>(send(request));
 }
 
 /**
@@ -589,7 +589,7 @@ DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserPr
  */
 DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const DeregisterEcsClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterEcsClusterResponse *>(send(request));
 }
 
 /**
@@ -610,7 +610,7 @@ DeregisterEcsClusterResponse * OpsWorksClient::deregisterEcsCluster(const Deregi
  */
 DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const DeregisterElasticIpRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterElasticIpResponse *>(send(request));
 }
 
 /**
@@ -631,7 +631,7 @@ DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const Deregist
  */
 DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const DeregisterInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterInstanceResponse *>(send(request));
 }
 
 /**
@@ -651,7 +651,7 @@ DeregisterInstanceResponse * OpsWorksClient::deregisterInstance(const Deregister
  */
 DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const DeregisterRdsDbInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterRdsDbInstanceResponse *>(send(request));
 }
 
 /**
@@ -672,7 +672,7 @@ DeregisterRdsDbInstanceResponse * OpsWorksClient::deregisterRdsDbInstance(const 
  */
 DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterVolumeResponse *>(send(request));
 }
 
 /**
@@ -687,7 +687,7 @@ DeregisterVolumeResponse * OpsWorksClient::deregisterVolume(const DeregisterVolu
  */
 DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const DescribeAgentVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAgentVersionsResponse *>(send(request));
 }
 
 /**
@@ -711,7 +711,7 @@ DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const Desc
  */
 DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAppsResponse *>(send(request));
 }
 
 /**
@@ -735,7 +735,7 @@ DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &r
  */
 DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeCommandsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCommandsResponse *>(send(request));
 }
 
 /**
@@ -759,7 +759,7 @@ DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeComman
  */
 DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const DescribeDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -785,7 +785,7 @@ DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const Describe
  */
 DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const DescribeEcsClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEcsClustersResponse *>(send(request));
 }
 
 /**
@@ -809,7 +809,7 @@ DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const Describe
  */
 DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeElasticIpsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeElasticIpsResponse *>(send(request));
 }
 
 /**
@@ -833,7 +833,7 @@ DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeEl
  */
 DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalancers(const DescribeElasticLoadBalancersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeElasticLoadBalancersResponse *>(send(request));
 }
 
 /**
@@ -857,7 +857,7 @@ DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalanc
  */
 DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeInstancesResponse *>(send(request));
 }
 
 /**
@@ -881,7 +881,7 @@ DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInst
  */
 DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLayersResponse *>(send(request));
 }
 
 /**
@@ -905,7 +905,7 @@ DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequ
  */
 DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScaling(const DescribeLoadBasedAutoScalingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLoadBasedAutoScalingResponse *>(send(request));
 }
 
 /**
@@ -925,7 +925,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  */
 DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMyUserProfileResponse *>(send(request));
 }
 
 /**
@@ -939,7 +939,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
  */
 DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOperatingSystemsResponse *>(send(request));
 }
 
 /**
@@ -959,7 +959,7 @@ DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
  */
 DescribePermissionsResponse * OpsWorksClient::describePermissions(const DescribePermissionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribePermissionsResponse *>(send(request));
 }
 
 /**
@@ -983,7 +983,7 @@ DescribePermissionsResponse * OpsWorksClient::describePermissions(const Describe
  */
 DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRaidArraysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRaidArraysResponse *>(send(request));
 }
 
 /**
@@ -1007,7 +1007,7 @@ DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRa
  */
 DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const DescribeRdsDbInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRdsDbInstancesResponse *>(send(request));
 }
 
 /**
@@ -1031,7 +1031,7 @@ DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const De
  */
 DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const DescribeServiceErrorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeServiceErrorsResponse *>(send(request));
 }
 
 /**
@@ -1051,7 +1051,7 @@ DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const Desc
  */
 DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvisioningParameters(const DescribeStackProvisioningParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackProvisioningParametersResponse *>(send(request));
 }
 
 /**
@@ -1072,7 +1072,7 @@ DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvi
  */
 DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const DescribeStackSummaryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStackSummaryResponse *>(send(request));
 }
 
 /**
@@ -1092,7 +1092,7 @@ DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const Descri
  */
 DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStacksResponse *>(send(request));
 }
 
 /**
@@ -1116,7 +1116,7 @@ DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequ
  */
 DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScaling(const DescribeTimeBasedAutoScalingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTimeBasedAutoScalingResponse *>(send(request));
 }
 
 /**
@@ -1136,7 +1136,7 @@ DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScal
  */
 DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const DescribeUserProfilesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeUserProfilesResponse *>(send(request));
 }
 
 /**
@@ -1160,7 +1160,7 @@ DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const Descri
  */
 DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeVolumesResponse *>(send(request));
 }
 
 /**
@@ -1180,7 +1180,7 @@ DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesR
  */
 DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(const DetachElasticLoadBalancerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetachElasticLoadBalancerResponse *>(send(request));
 }
 
 /**
@@ -1201,7 +1201,7 @@ DetachElasticLoadBalancerResponse * OpsWorksClient::detachElasticLoadBalancer(co
  */
 DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const DisassociateElasticIpRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateElasticIpResponse *>(send(request));
 }
 
 /**
@@ -1221,7 +1221,7 @@ DisassociateElasticIpResponse * OpsWorksClient::disassociateElasticIp(const Disa
  */
 GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetHostnameSuggestionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetHostnameSuggestionResponse *>(send(request));
 }
 
 /**
@@ -1241,7 +1241,7 @@ GetHostnameSuggestionResponse * OpsWorksClient::getHostnameSuggestion(const GetH
  */
 GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GrantAccessResponse *>(send(request));
 }
 
 /**
@@ -1255,7 +1255,7 @@ GrantAccessResponse * OpsWorksClient::grantAccess(const GrantAccessRequest &requ
  */
 ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /**
@@ -1277,7 +1277,7 @@ ListTagsResponse * OpsWorksClient::listTags(const ListTagsRequest &request)
  */
 RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootInstanceResponse *>(send(request));
 }
 
 /**
@@ -1299,7 +1299,7 @@ RebootInstanceResponse * OpsWorksClient::rebootInstance(const RebootInstanceRequ
  */
 RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEcsClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterEcsClusterResponse *>(send(request));
 }
 
 /**
@@ -1321,7 +1321,7 @@ RegisterEcsClusterResponse * OpsWorksClient::registerEcsCluster(const RegisterEc
  */
 RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElasticIpRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterElasticIpResponse *>(send(request));
 }
 
 /**
@@ -1358,7 +1358,7 @@ RegisterElasticIpResponse * OpsWorksClient::registerElasticIp(const RegisterElas
  */
 RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterInstanceResponse *>(send(request));
 }
 
 /**
@@ -1378,7 +1378,7 @@ RegisterInstanceResponse * OpsWorksClient::registerInstance(const RegisterInstan
  */
 RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const RegisterRdsDbInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterRdsDbInstanceResponse *>(send(request));
 }
 
 /**
@@ -1400,7 +1400,7 @@ RegisterRdsDbInstanceResponse * OpsWorksClient::registerRdsDbInstance(const Regi
  */
 RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterVolumeResponse *>(send(request));
 }
 
 /**
@@ -1428,7 +1428,7 @@ RegisterVolumeResponse * OpsWorksClient::registerVolume(const RegisterVolumeRequ
  */
 SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const SetLoadBasedAutoScalingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetLoadBasedAutoScalingResponse *>(send(request));
 }
 
 /**
@@ -1449,7 +1449,7 @@ SetLoadBasedAutoScalingResponse * OpsWorksClient::setLoadBasedAutoScaling(const 
  */
 SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetPermissionResponse *>(send(request));
 }
 
 /**
@@ -1471,7 +1471,7 @@ SetPermissionResponse * OpsWorksClient::setPermission(const SetPermissionRequest
  */
 SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const SetTimeBasedAutoScalingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetTimeBasedAutoScalingResponse *>(send(request));
 }
 
 /**
@@ -1493,7 +1493,7 @@ SetTimeBasedAutoScalingResponse * OpsWorksClient::setTimeBasedAutoScaling(const 
  */
 StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartInstanceResponse *>(send(request));
 }
 
 /**
@@ -1513,7 +1513,7 @@ StartInstanceResponse * OpsWorksClient::startInstance(const StartInstanceRequest
  */
 StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartStackResponse *>(send(request));
 }
 
 /**
@@ -1536,7 +1536,7 @@ StartStackResponse * OpsWorksClient::startStack(const StartStackRequest &request
  */
 StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopInstanceResponse *>(send(request));
 }
 
 /**
@@ -1556,7 +1556,7 @@ StopInstanceResponse * OpsWorksClient::stopInstance(const StopInstanceRequest &r
  */
 StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopStackResponse *>(send(request));
 }
 
 /**
@@ -1571,7 +1571,7 @@ StopStackResponse * OpsWorksClient::stopStack(const StopStackRequest &request)
  */
 TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -1593,7 +1593,7 @@ TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &requ
  */
 UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UnassignInstanceResponse *>(send(request));
 }
 
 /**
@@ -1614,7 +1614,7 @@ UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstan
  */
 UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UnassignVolumeResponse *>(send(request));
 }
 
 /**
@@ -1628,7 +1628,7 @@ UnassignVolumeResponse * OpsWorksClient::unassignVolume(const UnassignVolumeRequ
  */
 UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**
@@ -1648,7 +1648,7 @@ UntagResourceResponse * OpsWorksClient::untagResource(const UntagResourceRequest
  */
 UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateAppResponse *>(send(request));
 }
 
 /**
@@ -1669,7 +1669,7 @@ UpdateAppResponse * OpsWorksClient::updateApp(const UpdateAppRequest &request)
  */
 UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateElasticIpResponse *>(send(request));
 }
 
 /**
@@ -1689,7 +1689,7 @@ UpdateElasticIpResponse * OpsWorksClient::updateElasticIp(const UpdateElasticIpR
  */
 UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateInstanceResponse *>(send(request));
 }
 
 /**
@@ -1709,7 +1709,7 @@ UpdateInstanceResponse * OpsWorksClient::updateInstance(const UpdateInstanceRequ
  */
 UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateLayerResponse *>(send(request));
 }
 
 /**
@@ -1729,7 +1729,7 @@ UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &requ
  */
 UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMyUserProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMyUserProfileResponse *>(send(request));
 }
 
 /**
@@ -1749,7 +1749,7 @@ UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMy
  */
 UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRdsDbInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateRdsDbInstanceResponse *>(send(request));
 }
 
 /**
@@ -1769,7 +1769,7 @@ UpdateRdsDbInstanceResponse * OpsWorksClient::updateRdsDbInstance(const UpdateRd
  */
 UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStackResponse *>(send(request));
 }
 
 /**
@@ -1789,7 +1789,7 @@ UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &requ
  */
 UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUserProfileResponse *>(send(request));
 }
 
 /**
@@ -1810,7 +1810,7 @@ UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserPr
  */
 UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateVolumeResponse *>(send(request));
 }
 
 /**

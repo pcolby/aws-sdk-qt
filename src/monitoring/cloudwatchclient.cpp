@@ -118,7 +118,7 @@ CloudWatchClient::CloudWatchClient(
  */
 DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAlarmsResponse *>(send(request));
 }
 
 /**
@@ -133,7 +133,7 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
  */
 DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashboardsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDashboardsResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashbo
  */
 DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const DescribeAlarmHistoryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAlarmHistoryResponse *>(send(request));
 }
 
 /**
@@ -167,7 +167,7 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
  */
 DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAlarmsResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRe
  */
 DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAlarmsForMetricResponse *>(send(request));
 }
 
 /**
@@ -196,7 +196,7 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
  */
 DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const DisableAlarmActionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisableAlarmActionsResponse *>(send(request));
 }
 
 /**
@@ -210,7 +210,7 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
  */
 EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAlarmActionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<EnableAlarmActionsResponse *>(send(request));
 }
 
 /**
@@ -229,7 +229,7 @@ EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAl
  */
 GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDashboardResponse *>(send(request));
 }
 
 /**
@@ -307,7 +307,7 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  */
 GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMetricStatisticsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMetricStatisticsResponse *>(send(request));
 }
 
 /**
@@ -322,7 +322,7 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
  */
 ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDashboardsResponse *>(send(request));
 }
 
 /**
@@ -345,7 +345,7 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  */
 ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListMetricsResponse *>(send(request));
 }
 
 /**
@@ -378,7 +378,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  */
 PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutDashboardResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  */
 PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutMetricAlarmResponse *>(send(request));
 }
 
 /**
@@ -501,7 +501,7 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  */
 PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutMetricDataResponse *>(send(request));
 }
 
 /**
@@ -519,7 +519,7 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
  */
 SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetAlarmStateResponse *>(send(request));
 }
 
 /**

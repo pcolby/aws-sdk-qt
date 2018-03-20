@@ -117,7 +117,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  */
 AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /**
@@ -131,7 +131,7 @@ AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(co
  */
 CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const CreateEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
 /**
@@ -163,7 +163,7 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  */
 CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -177,7 +177,7 @@ CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSub
  */
 CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateReplicationInstanceResponse *>(send(request));
 }
 
 /**
@@ -191,7 +191,7 @@ CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplic
  */
 CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateReplicationSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -205,7 +205,7 @@ CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createRep
  */
 CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicationTask(const CreateReplicationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateReplicationTaskResponse *>(send(request));
 }
 
 /**
@@ -219,7 +219,7 @@ CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicatio
  */
 DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCertificateResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(co
  */
 DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const De
  */
 DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -269,7 +269,7 @@ DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSub
  */
 DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReplicationInstanceResponse *>(send(request));
 }
 
 /**
@@ -283,7 +283,7 @@ DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplic
  */
 DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReplicationSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -297,7 +297,7 @@ DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteRep
  */
 DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicationTask(const DeleteReplicationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReplicationTaskResponse *>(send(request));
 }
 
 /**
@@ -317,7 +317,7 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
  */
 DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
 /**
@@ -331,7 +331,7 @@ DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAcco
  */
 DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCertificatesResponse *>(send(request));
 }
 
 /**
@@ -346,7 +346,7 @@ DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertifica
  */
 DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnections(const DescribeConnectionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeConnectionsResponse *>(send(request));
 }
 
 /**
@@ -360,7 +360,7 @@ DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnection
  */
 DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpointTypes(const DescribeEndpointTypesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEndpointTypesResponse *>(send(request));
 }
 
 /**
@@ -374,7 +374,7 @@ DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpoint
  */
 DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEndpointsResponse *>(send(request));
 }
 
 /**
@@ -390,7 +390,7 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
  */
 DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventCategoriesResponse *>(send(request));
 }
 
 /**
@@ -410,7 +410,7 @@ DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventC
  */
 DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
 }
 
 /**
@@ -426,7 +426,7 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
  */
 DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /**
@@ -440,7 +440,7 @@ DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const De
  */
 DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOrderableReplicationInstancesResponse *>(send(request));
 }
 
 /**
@@ -454,7 +454,7 @@ DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::
  */
 DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRefreshSchemasStatusResponse *>(send(request));
 }
 
 /**
@@ -468,7 +468,7 @@ DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeR
  */
 DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationInstanceTaskLogsResponse *>(send(request));
 }
 
 /**
@@ -482,7 +482,7 @@ DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::de
  */
 DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeReplicationInstances(const DescribeReplicationInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationInstancesResponse *>(send(request));
 }
 
 /**
@@ -496,7 +496,7 @@ DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeR
  */
 DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationSubnetGroupsResponse *>(send(request));
 }
 
 /**
@@ -510,7 +510,7 @@ DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::descri
  */
 DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationTaskAssessmentResultsResponse *>(send(request));
 }
 
 /**
@@ -524,7 +524,7 @@ DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClien
  */
 DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeReplicationTasks(const DescribeReplicationTasksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationTasksResponse *>(send(request));
 }
 
 /**
@@ -538,7 +538,7 @@ DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeRepli
  */
 DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const DescribeSchemasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSchemasResponse *>(send(request));
 }
 
 /**
@@ -557,7 +557,7 @@ DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const 
  */
 DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTableStatisticsResponse *>(send(request));
 }
 
 /**
@@ -571,7 +571,7 @@ DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableS
  */
 ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(const ImportCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportCertificateResponse *>(send(request));
 }
 
 /**
@@ -585,7 +585,7 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
  */
 ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /**
@@ -599,7 +599,7 @@ ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResourc
  */
 ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const ModifyEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyEndpointResponse *>(send(request));
 }
 
 /**
@@ -613,7 +613,7 @@ ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const Mo
  */
 ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -632,7 +632,7 @@ ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSub
  */
 ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyReplicationInstanceResponse *>(send(request));
 }
 
 /**
@@ -646,7 +646,7 @@ ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplic
  */
 ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyReplicationSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -669,7 +669,7 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  */
 ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyReplicationTaskResponse *>(send(request));
 }
 
 /**
@@ -684,7 +684,7 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
  */
 RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplicationInstance(const RebootReplicationInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootReplicationInstanceResponse *>(send(request));
 }
 
 /**
@@ -699,7 +699,7 @@ RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplic
  */
 RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const RefreshSchemasRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RefreshSchemasResponse *>(send(request));
 }
 
 /**
@@ -713,7 +713,7 @@ RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const Re
  */
 ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const ReloadTablesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ReloadTablesResponse *>(send(request));
 }
 
 /**
@@ -727,7 +727,7 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
  */
 RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /**
@@ -746,7 +746,7 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
  */
 StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartReplicationTaskResponse *>(send(request));
 }
 
 /**
@@ -760,7 +760,7 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
  */
 StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartReplicationTaskAssessmentResponse *>(send(request));
 }
 
 /**
@@ -774,7 +774,7 @@ StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startRe
  */
 StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTask(const StopReplicationTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopReplicationTaskResponse *>(send(request));
 }
 
 /**
@@ -788,7 +788,7 @@ StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTas
  */
 TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const TestConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TestConnectionResponse *>(send(request));
 }
 
 /**

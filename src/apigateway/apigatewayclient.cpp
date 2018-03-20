@@ -111,7 +111,7 @@ APIGatewayClient::APIGatewayClient(
  */
 CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApiKeyResponse *>(send(request));
 }
 
 /**
@@ -127,7 +127,7 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
  */
 CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateAuthorizerResponse *>(send(request));
 }
 
 /**
@@ -141,7 +141,7 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
  */
 CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const CreateBasePathMappingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBasePathMappingResponse *>(send(request));
 }
 
 /**
@@ -155,7 +155,7 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
  */
 CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
 /**
@@ -168,7 +168,7 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
  */
 CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(const CreateDocumentationPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDocumentationPartResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
  */
 CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersion(const CreateDocumentationVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDocumentationVersionResponse *>(send(request));
 }
 
 /**
@@ -195,7 +195,7 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
  */
 CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomainNameRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDomainNameResponse *>(send(request));
 }
 
 /**
@@ -209,7 +209,7 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
  */
 CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateModelResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
  */
 CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const CreateRequestValidatorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRequestValidatorResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
  */
 CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateResourceResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
  */
 CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRestApiResponse *>(send(request));
 }
 
 /**
@@ -265,7 +265,7 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
  */
 CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStageResponse *>(send(request));
 }
 
 /**
@@ -279,7 +279,7 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
  */
 CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePlanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUsagePlanResponse *>(send(request));
 }
 
 /**
@@ -293,7 +293,7 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
  */
 CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUsagePlanKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUsagePlanKeyResponse *>(send(request));
 }
 
 /**
@@ -308,7 +308,7 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
  */
 CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateVpcLinkResponse *>(send(request));
 }
 
 /**
@@ -322,7 +322,7 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
  */
 DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApiKeyResponse *>(send(request));
 }
 
 /**
@@ -338,7 +338,7 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
  */
 DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAuthorizerResponse *>(send(request));
 }
 
 /**
@@ -352,7 +352,7 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
  */
 DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const DeleteBasePathMappingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBasePathMappingResponse *>(send(request));
 }
 
 /**
@@ -366,7 +366,7 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
  */
 DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(const DeleteClientCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteClientCertificateResponse *>(send(request));
 }
 
 /**
@@ -381,7 +381,7 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
  */
 DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDeploymentResponse *>(send(request));
 }
 
 /**
@@ -394,7 +394,7 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
  */
 DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(const DeleteDocumentationPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDocumentationPartResponse *>(send(request));
 }
 
 /**
@@ -407,7 +407,7 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
  */
 DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersion(const DeleteDocumentationVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDocumentationVersionResponse *>(send(request));
 }
 
 /**
@@ -421,7 +421,7 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
  */
 DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomainNameRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDomainNameResponse *>(send(request));
 }
 
 /**
@@ -436,7 +436,7 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
  */
 DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const DeleteGatewayResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGatewayResponseResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
  */
 DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteIntegrationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteIntegrationResponse *>(send(request));
 }
 
 /**
@@ -464,7 +464,7 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
  */
 DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteIntegrationResponseResponse *>(send(request));
 }
 
 /**
@@ -478,7 +478,7 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
  */
 DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMethodResponse *>(send(request));
 }
 
 /**
@@ -492,7 +492,7 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
  */
 DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const DeleteMethodResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMethodResponseResponse *>(send(request));
 }
 
 /**
@@ -506,7 +506,7 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
  */
 DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteModelResponse *>(send(request));
 }
 
 /**
@@ -520,7 +520,7 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
  */
 DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const DeleteRequestValidatorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRequestValidatorResponse *>(send(request));
 }
 
 /**
@@ -534,7 +534,7 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
  */
 DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteResourceResponse *>(send(request));
 }
 
 /**
@@ -548,7 +548,7 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
  */
 DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRestApiResponse *>(send(request));
 }
 
 /**
@@ -562,7 +562,7 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
  */
 DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStageResponse *>(send(request));
 }
 
 /**
@@ -576,7 +576,7 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
  */
 DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePlanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUsagePlanResponse *>(send(request));
 }
 
 /**
@@ -590,7 +590,7 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
  */
 DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUsagePlanKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUsagePlanKeyResponse *>(send(request));
 }
 
 /**
@@ -604,7 +604,7 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
  */
 DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteVpcLinkResponse *>(send(request));
 }
 
 /**
@@ -618,7 +618,7 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
  */
 FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCache(const FlushStageAuthorizersCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<FlushStageAuthorizersCacheResponse *>(send(request));
 }
 
 /**
@@ -632,7 +632,7 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
  */
 FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCacheRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<FlushStageCacheResponse *>(send(request));
 }
 
 /**
@@ -646,7 +646,7 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
  */
 GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(const GenerateClientCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GenerateClientCertificateResponse *>(send(request));
 }
 
 /**
@@ -660,7 +660,7 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
  */
 GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAccountResponse *>(send(request));
 }
 
 /**
@@ -674,7 +674,7 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
  */
 GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApiKeyResponse *>(send(request));
 }
 
 /**
@@ -688,7 +688,7 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
  */
 GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApiKeysResponse *>(send(request));
 }
 
 /**
@@ -704,7 +704,7 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
  */
 GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAuthorizerResponse *>(send(request));
 }
 
 /**
@@ -720,7 +720,7 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
  */
 GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAuthorizersResponse *>(send(request));
 }
 
 /**
@@ -734,7 +734,7 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
  */
 GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBasePathMappingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBasePathMappingResponse *>(send(request));
 }
 
 /**
@@ -748,7 +748,7 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
  */
 GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBasePathMappingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBasePathMappingsResponse *>(send(request));
 }
 
 /**
@@ -762,7 +762,7 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
  */
 GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetClientCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetClientCertificateResponse *>(send(request));
 }
 
 /**
@@ -776,7 +776,7 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
  */
 GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const GetClientCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetClientCertificatesResponse *>(send(request));
 }
 
 /**
@@ -790,7 +790,7 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
  */
 GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentResponse *>(send(request));
 }
 
 /**
@@ -804,7 +804,7 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
  */
 GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -817,7 +817,7 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
  */
 GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetDocumentationPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentationPartResponse *>(send(request));
 }
 
 /**
@@ -830,7 +830,7 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
  */
 GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const GetDocumentationPartsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentationPartsResponse *>(send(request));
 }
 
 /**
@@ -843,7 +843,7 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
  */
 GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(const GetDocumentationVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentationVersionResponse *>(send(request));
 }
 
 /**
@@ -856,7 +856,7 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
  */
 GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(const GetDocumentationVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentationVersionsResponse *>(send(request));
 }
 
 /**
@@ -870,7 +870,7 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
  */
 GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDomainNameResponse *>(send(request));
 }
 
 /**
@@ -884,7 +884,7 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
  */
 GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDomainNamesResponse *>(send(request));
 }
 
 /**
@@ -898,7 +898,7 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
  */
 GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetExportResponse *>(send(request));
 }
 
 /**
@@ -912,7 +912,7 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
  */
 GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatewayResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGatewayResponseResponse *>(send(request));
 }
 
 /**
@@ -928,7 +928,7 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
  */
 GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGatewayResponsesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGatewayResponsesResponse *>(send(request));
 }
 
 /**
@@ -942,7 +942,7 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
  */
 GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetIntegrationResponse *>(send(request));
 }
 
 /**
@@ -956,7 +956,7 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
  */
 GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const GetIntegrationResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetIntegrationResponseResponse *>(send(request));
 }
 
 /**
@@ -970,7 +970,7 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
  */
 GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMethodResponse *>(send(request));
 }
 
 /**
@@ -984,7 +984,7 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
  */
 GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMethodResponseResponse *>(send(request));
 }
 
 /**
@@ -998,7 +998,7 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
  */
 GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetModelResponse *>(send(request));
 }
 
 /**
@@ -1012,7 +1012,7 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
  */
 GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemplateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetModelTemplateResponse *>(send(request));
 }
 
 /**
@@ -1026,7 +1026,7 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
  */
 GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetModelsResponse *>(send(request));
 }
 
 /**
@@ -1040,7 +1040,7 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
  */
 GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetRequestValidatorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRequestValidatorResponse *>(send(request));
 }
 
 /**
@@ -1054,7 +1054,7 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
  */
 GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetRequestValidatorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRequestValidatorsResponse *>(send(request));
 }
 
 /**
@@ -1068,7 +1068,7 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
  */
 GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResourceResponse *>(send(request));
 }
 
 /**
@@ -1082,7 +1082,7 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
  */
 GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
 /**
@@ -1096,7 +1096,7 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
  */
 GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRestApiResponse *>(send(request));
 }
 
 /**
@@ -1110,7 +1110,7 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
  */
 GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRestApisResponse *>(send(request));
 }
 
 /**
@@ -1124,7 +1124,7 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
  */
 GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSdkResponse *>(send(request));
 }
 
 /**
@@ -1137,7 +1137,7 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
  */
 GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSdkTypeResponse *>(send(request));
 }
 
 /**
@@ -1150,7 +1150,7 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
  */
 GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSdkTypesResponse *>(send(request));
 }
 
 /**
@@ -1164,7 +1164,7 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
  */
 GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetStageResponse *>(send(request));
 }
 
 /**
@@ -1178,7 +1178,7 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
  */
 GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetStagesResponse *>(send(request));
 }
 
 /**
@@ -1192,7 +1192,7 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
  */
 GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTagsResponse *>(send(request));
 }
 
 /**
@@ -1206,7 +1206,7 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
  */
 GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUsageResponse *>(send(request));
 }
 
 /**
@@ -1220,7 +1220,7 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
  */
 GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUsagePlanResponse *>(send(request));
 }
 
 /**
@@ -1234,7 +1234,7 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
  */
 GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUsagePlanKeyResponse *>(send(request));
 }
 
 /**
@@ -1248,7 +1248,7 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
  */
 GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlanKeysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUsagePlanKeysResponse *>(send(request));
 }
 
 /**
@@ -1262,7 +1262,7 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
  */
 GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUsagePlansResponse *>(send(request));
 }
 
 /**
@@ -1276,7 +1276,7 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
  */
 GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetVpcLinkResponse *>(send(request));
 }
 
 /**
@@ -1290,7 +1290,7 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
  */
 GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetVpcLinksResponse *>(send(request));
 }
 
 /**
@@ -1304,7 +1304,7 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
  */
 ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportApiKeysResponse *>(send(request));
 }
 
 /**
@@ -1317,7 +1317,7 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
  */
 ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(const ImportDocumentationPartsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportDocumentationPartsResponse *>(send(request));
 }
 
 /**
@@ -1331,7 +1331,7 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
  */
 ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportRestApiResponse *>(send(request));
 }
 
 /**
@@ -1345,7 +1345,7 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
  */
 PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatewayResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutGatewayResponseResponse *>(send(request));
 }
 
 /**
@@ -1359,7 +1359,7 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
  */
 PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutIntegrationResponse *>(send(request));
 }
 
 /**
@@ -1373,7 +1373,7 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
  */
 PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const PutIntegrationResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutIntegrationResponseResponse *>(send(request));
 }
 
 /**
@@ -1387,7 +1387,7 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
  */
 PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutMethodResponse *>(send(request));
 }
 
 /**
@@ -1401,7 +1401,7 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
  */
 PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutMethodResponseResponse *>(send(request));
 }
 
 /**
@@ -1416,7 +1416,7 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
  */
 PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRestApiResponse *>(send(request));
 }
 
 /**
@@ -1430,7 +1430,7 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
  */
 TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -1447,7 +1447,7 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TestInvokeAuthorizerResponse *>(send(request));
 }
 
 /**
@@ -1461,7 +1461,7 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
  */
 TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMethodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TestInvokeMethodResponse *>(send(request));
 }
 
 /**
@@ -1475,7 +1475,7 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
  */
 UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**
@@ -1489,7 +1489,7 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
  */
 UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateAccountResponse *>(send(request));
 }
 
 /**
@@ -1503,7 +1503,7 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
  */
 UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApiKeyResponse *>(send(request));
 }
 
 /**
@@ -1519,7 +1519,7 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
  */
 UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateAuthorizerResponse *>(send(request));
 }
 
 /**
@@ -1533,7 +1533,7 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
  */
 UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const UpdateBasePathMappingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBasePathMappingResponse *>(send(request));
 }
 
 /**
@@ -1547,7 +1547,7 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
  */
 UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(const UpdateClientCertificateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateClientCertificateResponse *>(send(request));
 }
 
 /**
@@ -1561,7 +1561,7 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
  */
 UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDeploymentResponse *>(send(request));
 }
 
 /**
@@ -1574,7 +1574,7 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
  */
 UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(const UpdateDocumentationPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDocumentationPartResponse *>(send(request));
 }
 
 /**
@@ -1587,7 +1587,7 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
  */
 UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersion(const UpdateDocumentationVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDocumentationVersionResponse *>(send(request));
 }
 
 /**
@@ -1601,7 +1601,7 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
  */
 UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomainNameRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDomainNameResponse *>(send(request));
 }
 
 /**
@@ -1615,7 +1615,7 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
  */
 UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const UpdateGatewayResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGatewayResponseResponse *>(send(request));
 }
 
 /**
@@ -1629,7 +1629,7 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
  */
 UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateIntegrationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateIntegrationResponse *>(send(request));
 }
 
 /**
@@ -1643,7 +1643,7 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
  */
 UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(const UpdateIntegrationResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateIntegrationResponseResponse *>(send(request));
 }
 
 /**
@@ -1657,7 +1657,7 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
  */
 UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMethodResponse *>(send(request));
 }
 
 /**
@@ -1671,7 +1671,7 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
  */
 UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const UpdateMethodResponseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMethodResponseResponse *>(send(request));
 }
 
 /**
@@ -1685,7 +1685,7 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
  */
 UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateModelResponse *>(send(request));
 }
 
 /**
@@ -1699,7 +1699,7 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
  */
 UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const UpdateRequestValidatorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateRequestValidatorResponse *>(send(request));
 }
 
 /**
@@ -1713,7 +1713,7 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
  */
 UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateResourceResponse *>(send(request));
 }
 
 /**
@@ -1727,7 +1727,7 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
  */
 UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateRestApiResponse *>(send(request));
 }
 
 /**
@@ -1741,7 +1741,7 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
  */
 UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStageResponse *>(send(request));
 }
 
 /**
@@ -1755,7 +1755,7 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
  */
 UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUsageResponse *>(send(request));
 }
 
 /**
@@ -1769,7 +1769,7 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
  */
 UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePlanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUsagePlanResponse *>(send(request));
 }
 
 /**
@@ -1783,7 +1783,7 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
  */
 UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateVpcLinkResponse *>(send(request));
 }
 
 /**

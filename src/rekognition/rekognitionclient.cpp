@@ -157,7 +157,7 @@ RekognitionClient::RekognitionClient(
  */
 CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CompareFacesResponse *>(send(request));
 }
 
 /**
@@ -185,7 +185,7 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
  */
 CreateCollectionResponse * RekognitionClient::createCollection(const CreateCollectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCollectionResponse *>(send(request));
 }
 
 /**
@@ -217,7 +217,7 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
  */
 CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const CreateStreamProcessorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStreamProcessorResponse *>(send(request));
 }
 
 /**
@@ -235,7 +235,7 @@ CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const C
  */
 DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteCollectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCollectionResponse *>(send(request));
 }
 
 /**
@@ -253,7 +253,7 @@ DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteColle
  */
 DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFacesResponse *>(send(request));
 }
 
 /**
@@ -269,7 +269,7 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
  */
 DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const DeleteStreamProcessorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStreamProcessorResponse *>(send(request));
 }
 
 /**
@@ -284,7 +284,7 @@ DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const D
  */
 DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(const DescribeStreamProcessorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStreamProcessorResponse *>(send(request));
 }
 
 /**
@@ -328,7 +328,7 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  */
 DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectFacesResponse *>(send(request));
 }
 
 /**
@@ -414,7 +414,7 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  */
 DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectLabelsResponse *>(send(request));
 }
 
 /**
@@ -441,7 +441,7 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  */
 DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const DetectModerationLabelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectModerationLabelsResponse *>(send(request));
 }
 
 /**
@@ -493,7 +493,7 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
  */
 DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectTextResponse *>(send(request));
 }
 
 /**
@@ -513,7 +513,7 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
  */
 GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrityInfoRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCelebrityInfoResponse *>(send(request));
 }
 
 /**
@@ -564,7 +564,7 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  */
 GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(const GetCelebrityRecognitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCelebrityRecognitionResponse *>(send(request));
 }
 
 /**
@@ -609,7 +609,7 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  */
 GetContentModerationResponse * RekognitionClient::getContentModeration(const GetContentModerationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetContentModerationResponse *>(send(request));
 }
 
 /**
@@ -644,7 +644,7 @@ GetContentModerationResponse * RekognitionClient::getContentModeration(const Get
  */
 GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDetectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFaceDetectionResponse *>(send(request));
 }
 
 /**
@@ -679,7 +679,7 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
  */
 GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFaceSearchResponse *>(send(request));
 }
 
 /**
@@ -718,7 +718,7 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
  */
 GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelDetectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLabelDetectionResponse *>(send(request));
 }
 
 /**
@@ -761,7 +761,7 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  */
 GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPersonTrackingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPersonTrackingResponse *>(send(request));
 }
 
 /**
@@ -816,7 +816,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  */
 IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<IndexFacesResponse *>(send(request));
 }
 
 /**
@@ -839,7 +839,7 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
  */
 ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListCollectionsResponse *>(send(request));
 }
 
 /**
@@ -859,7 +859,7 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
  */
 ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFacesResponse *>(send(request));
 }
 
 /**
@@ -873,7 +873,7 @@ ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request
  */
 ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const ListStreamProcessorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStreamProcessorsResponse *>(send(request));
 }
 
 /**
@@ -920,7 +920,7 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  */
 RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const RecognizeCelebritiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RecognizeCelebritiesResponse *>(send(request));
 }
 
 /**
@@ -955,7 +955,7 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
  */
 SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchFacesResponse *>(send(request));
 }
 
 /**
@@ -1002,7 +1002,7 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  */
 SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchFacesByImageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchFacesByImageResponse *>(send(request));
 }
 
 /**
@@ -1026,7 +1026,7 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
  */
 StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition(const StartCelebrityRecognitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartCelebrityRecognitionResponse *>(send(request));
 }
 
 /**
@@ -1053,7 +1053,7 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  */
 StartContentModerationResponse * RekognitionClient::startContentModeration(const StartContentModerationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartContentModerationResponse *>(send(request));
 }
 
 /**
@@ -1077,7 +1077,7 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  */
 StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFaceDetectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartFaceDetectionResponse *>(send(request));
 }
 
 /**
@@ -1101,7 +1101,7 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
  */
 StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSearchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartFaceSearchResponse *>(send(request));
 }
 
 /**
@@ -1133,7 +1133,7 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
  */
 StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const StartLabelDetectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartLabelDetectionResponse *>(send(request));
 }
 
 /**
@@ -1159,7 +1159,7 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
  */
 StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const StartPersonTrackingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartPersonTrackingResponse *>(send(request));
 }
 
 /**
@@ -1175,7 +1175,7 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
  */
 StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const StartStreamProcessorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartStreamProcessorResponse *>(send(request));
 }
 
 /**
@@ -1189,7 +1189,7 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
  */
 StopStreamProcessorResponse * RekognitionClient::stopStreamProcessor(const StopStreamProcessorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopStreamProcessorResponse *>(send(request));
 }
 
 /**

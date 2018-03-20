@@ -117,7 +117,7 @@ PollyClient::PollyClient(
  */
 DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLexiconResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &r
  */
 DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeVoicesResponse *>(send(request));
 }
 
 /**
@@ -167,7 +167,7 @@ DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest
  */
 GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLexiconResponse *>(send(request));
 }
 
 /**
@@ -182,7 +182,7 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
  */
 ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListLexiconsResponse *>(send(request));
 }
 
 /**
@@ -202,7 +202,7 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
  */
 PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutLexiconResponse *>(send(request));
 }
 
 /**
@@ -219,7 +219,7 @@ PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
  */
 SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SynthesizeSpeechResponse *>(send(request));
 }
 
 /**

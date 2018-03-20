@@ -103,7 +103,7 @@ MediaPackageClient::MediaPackageClient(
  */
 CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateChannelResponse *>(send(request));
 }
 
 /**
@@ -116,7 +116,7 @@ CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelReq
  */
 CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const CreateOriginEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateOriginEndpointResponse *>(send(request));
 }
 
 /**
@@ -129,7 +129,7 @@ CreateOriginEndpointResponse * MediaPackageClient::createOriginEndpoint(const Cr
  */
 DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteChannelResponse *>(send(request));
 }
 
 /**
@@ -142,7 +142,7 @@ DeleteChannelResponse * MediaPackageClient::deleteChannel(const DeleteChannelReq
  */
 DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const DeleteOriginEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteOriginEndpointResponse *>(send(request));
 }
 
 /**
@@ -155,7 +155,7 @@ DeleteOriginEndpointResponse * MediaPackageClient::deleteOriginEndpoint(const De
  */
 DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeChannelResponse *>(send(request));
 }
 
 /**
@@ -168,7 +168,7 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
  */
 DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(const DescribeOriginEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeOriginEndpointResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
  */
 ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListChannelsResponse *>(send(request));
 }
 
 /**
@@ -194,7 +194,7 @@ ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsReques
  */
 ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const ListOriginEndpointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOriginEndpointsResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
  */
 RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(const RotateChannelCredentialsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RotateChannelCredentialsResponse *>(send(request));
 }
 
 /**
@@ -220,7 +220,7 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
  */
 UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateChannelResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ UpdateChannelResponse * MediaPackageClient::updateChannel(const UpdateChannelReq
  */
 UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const UpdateOriginEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateOriginEndpointResponse *>(send(request));
 }
 
 /**

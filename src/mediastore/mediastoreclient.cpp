@@ -106,7 +106,7 @@ MediaStoreClient::MediaStoreClient(
  */
 CreateContainerResponse * MediaStoreClient::createContainer(const CreateContainerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateContainerResponse *>(send(request));
 }
 
 /**
@@ -121,7 +121,7 @@ CreateContainerResponse * MediaStoreClient::createContainer(const CreateContaine
  */
 DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContainerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteContainerResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ DeleteContainerResponse * MediaStoreClient::deleteContainer(const DeleteContaine
  */
 DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const DeleteContainerPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteContainerPolicyResponse *>(send(request));
 }
 
 /**
@@ -154,7 +154,7 @@ DeleteContainerPolicyResponse * MediaStoreClient::deleteContainerPolicy(const De
  */
 DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCorsPolicyResponse *>(send(request));
 }
 
 /**
@@ -172,7 +172,7 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
  */
 DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeContainerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeContainerResponse *>(send(request));
 }
 
 /**
@@ -187,7 +187,7 @@ DescribeContainerResponse * MediaStoreClient::describeContainer(const DescribeCo
  */
 GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetContainerPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetContainerPolicyResponse *>(send(request));
 }
 
 /**
@@ -206,7 +206,7 @@ GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetConta
  */
 GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCorsPolicyResponse *>(send(request));
 }
 
 /**
@@ -231,7 +231,7 @@ GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyReque
  */
 ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListContainersResponse *>(send(request));
 }
 
 /**
@@ -252,7 +252,7 @@ ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRe
  */
 PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutContainerPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutContainerPolicyResponse *>(send(request));
 }
 
 /**
@@ -275,7 +275,7 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
  */
 PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutCorsPolicyResponse *>(send(request));
 }
 
 /**

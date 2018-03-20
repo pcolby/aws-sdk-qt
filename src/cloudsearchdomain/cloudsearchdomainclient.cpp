@@ -136,7 +136,7 @@ CloudSearchDomainClient::CloudSearchDomainClient(
  */
 SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SearchResponse *>(send(request));
 }
 
 /**
@@ -166,7 +166,7 @@ SearchResponse * CloudSearchDomainClient::search(const SearchRequest &request)
  */
 SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SuggestResponse *>(send(request));
 }
 
 /**
@@ -200,7 +200,7 @@ SuggestResponse * CloudSearchDomainClient::suggest(const SuggestRequest &request
  */
 UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadDocumentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UploadDocumentsResponse *>(send(request));
 }
 
 /**

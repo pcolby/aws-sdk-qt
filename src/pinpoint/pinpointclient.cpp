@@ -103,7 +103,7 @@ PinpointClient::PinpointClient(
  */
 CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateAppResponse *>(send(request));
 }
 
 /**
@@ -116,7 +116,7 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
  */
 CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCampaignResponse *>(send(request));
 }
 
 /**
@@ -129,7 +129,7 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
  */
 CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateExportJobResponse *>(send(request));
 }
 
 /**
@@ -142,7 +142,7 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
  */
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateImportJobResponse *>(send(request));
 }
 
 /**
@@ -155,7 +155,7 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
  */
 CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSegmentResponse *>(send(request));
 }
 
 /**
@@ -168,7 +168,7 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
  */
 DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAdmChannelResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
  */
 DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApnsChannelResponse *>(send(request));
 }
 
 /**
@@ -194,7 +194,7 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
  */
 DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(const DeleteApnsSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApnsSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
  */
 DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const DeleteApnsVoipChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApnsVoipChannelResponse *>(send(request));
 }
 
 /**
@@ -220,7 +220,7 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
  */
 DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChannel(const DeleteApnsVoipSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApnsVoipSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
  */
 DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAppResponse *>(send(request));
 }
 
 /**
@@ -246,7 +246,7 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
  */
 DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaiduChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBaiduChannelResponse *>(send(request));
 }
 
 /**
@@ -259,7 +259,7 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
  */
 DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCampaignResponse *>(send(request));
 }
 
 /**
@@ -272,7 +272,7 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
  */
 DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmailChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEmailChannelResponse *>(send(request));
 }
 
 /**
@@ -285,7 +285,7 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
  */
 DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /**
@@ -298,7 +298,7 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
  */
 DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEventStreamResponse *>(send(request));
 }
 
 /**
@@ -311,7 +311,7 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
  */
 DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGcmChannelResponse *>(send(request));
 }
 
 /**
@@ -324,7 +324,7 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
  */
 DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSegmentResponse *>(send(request));
 }
 
 /**
@@ -337,7 +337,7 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
  */
 DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSmsChannelResponse *>(send(request));
 }
 
 /**
@@ -350,7 +350,7 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
  */
 GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAdmChannelResponse *>(send(request));
 }
 
 /**
@@ -363,7 +363,7 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
  */
 GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApnsChannelResponse *>(send(request));
 }
 
 /**
@@ -376,7 +376,7 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
  */
 GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApnsSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -389,7 +389,7 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
  */
 GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoipChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApnsVoipChannelResponse *>(send(request));
 }
 
 /**
@@ -402,7 +402,7 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
  */
 GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(const GetApnsVoipSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApnsVoipSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -415,7 +415,7 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
  */
 GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAppResponse *>(send(request));
 }
 
 /**
@@ -428,7 +428,7 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
  */
 GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const GetApplicationSettingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApplicationSettingsResponse *>(send(request));
 }
 
 /**
@@ -441,7 +441,7 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
  */
 GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAppsResponse *>(send(request));
 }
 
 /**
@@ -454,7 +454,7 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
  */
 GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBaiduChannelResponse *>(send(request));
 }
 
 /**
@@ -467,7 +467,7 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
  */
 GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCampaignResponse *>(send(request));
 }
 
 /**
@@ -480,7 +480,7 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
  */
 GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCampaignActivitiesResponse *>(send(request));
 }
 
 /**
@@ -493,7 +493,7 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
  */
 GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaignVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCampaignVersionResponse *>(send(request));
 }
 
 /**
@@ -506,7 +506,7 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
  */
 GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCampaignVersionsResponse *>(send(request));
 }
 
 /**
@@ -519,7 +519,7 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
  */
 GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCampaignsResponse *>(send(request));
 }
 
 /**
@@ -532,7 +532,7 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
  */
 GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEmailChannelResponse *>(send(request));
 }
 
 /**
@@ -545,7 +545,7 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
  */
 GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEndpointResponse *>(send(request));
 }
 
 /**
@@ -558,7 +558,7 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
  */
 GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEventStreamResponse *>(send(request));
 }
 
 /**
@@ -571,7 +571,7 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
  */
 GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetExportJobResponse *>(send(request));
 }
 
 /**
@@ -584,7 +584,7 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
  */
 GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetExportJobsResponse *>(send(request));
 }
 
 /**
@@ -597,7 +597,7 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
  */
 GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGcmChannelResponse *>(send(request));
 }
 
 /**
@@ -610,7 +610,7 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
  */
 GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetImportJobResponse *>(send(request));
 }
 
 /**
@@ -623,7 +623,7 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
  */
 GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetImportJobsResponse *>(send(request));
 }
 
 /**
@@ -636,7 +636,7 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
  */
 GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentResponse *>(send(request));
 }
 
 /**
@@ -649,7 +649,7 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
  */
 GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSegmentExportJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentExportJobsResponse *>(send(request));
 }
 
 /**
@@ -662,7 +662,7 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
  */
 GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSegmentImportJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentImportJobsResponse *>(send(request));
 }
 
 /**
@@ -675,7 +675,7 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
  */
 GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentVersionResponse *>(send(request));
 }
 
 /**
@@ -688,7 +688,7 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
  */
 GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentVersionsResponse *>(send(request));
 }
 
 /**
@@ -701,7 +701,7 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
  */
 GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSegmentsResponse *>(send(request));
 }
 
 /**
@@ -714,7 +714,7 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
  */
 GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSmsChannelResponse *>(send(request));
 }
 
 /**
@@ -727,7 +727,7 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
  */
 PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutEventStreamResponse *>(send(request));
 }
 
 /**
@@ -740,7 +740,7 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
  */
 SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SendMessagesResponse *>(send(request));
 }
 
 /**
@@ -753,7 +753,7 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
  */
 SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SendUsersMessagesResponse *>(send(request));
 }
 
 /**
@@ -766,7 +766,7 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
  */
 UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateAdmChannelResponse *>(send(request));
 }
 
 /**
@@ -779,7 +779,7 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
  */
 UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApnsChannelResponse *>(send(request));
 }
 
 /**
@@ -792,7 +792,7 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
  */
 UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApnsSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -805,7 +805,7 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
  */
 UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApnsVoipChannelResponse *>(send(request));
 }
 
 /**
@@ -818,7 +818,7 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
  */
 UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApnsVoipSandboxChannelResponse *>(send(request));
 }
 
 /**
@@ -831,7 +831,7 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
  */
 UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(const UpdateApplicationSettingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApplicationSettingsResponse *>(send(request));
 }
 
 /**
@@ -844,7 +844,7 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
  */
 UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBaiduChannelResponse *>(send(request));
 }
 
 /**
@@ -857,7 +857,7 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
  */
 UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateCampaignResponse *>(send(request));
 }
 
 /**
@@ -870,7 +870,7 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
  */
 UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEmailChannelResponse *>(send(request));
 }
 
 /**
@@ -883,7 +883,7 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
  */
 UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEndpointResponse *>(send(request));
 }
 
 /**
@@ -896,7 +896,7 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
  */
 UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEndpointsBatchResponse *>(send(request));
 }
 
 /**
@@ -909,7 +909,7 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
  */
 UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGcmChannelResponse *>(send(request));
 }
 
 /**
@@ -922,7 +922,7 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
  */
 UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSegmentResponse *>(send(request));
 }
 
 /**
@@ -935,7 +935,7 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
  */
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSmsChannelResponse *>(send(request));
 }
 
 /**

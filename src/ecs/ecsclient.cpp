@@ -131,7 +131,7 @@ EcsClient::EcsClient(
  */
 CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
 /**
@@ -208,7 +208,7 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  */
 CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateServiceResponse *>(send(request));
 }
 
 /**
@@ -222,7 +222,7 @@ CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &req
  */
 DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteAttributesResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesReq
  */
 DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
 /**
@@ -263,7 +263,7 @@ DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &req
  */
 DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteServiceResponse *>(send(request));
 }
 
 /**
@@ -292,7 +292,7 @@ DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &req
  */
 DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(const DeregisterContainerInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterContainerInstanceResponse *>(send(request));
 }
 
 /**
@@ -321,7 +321,7 @@ DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(con
  */
 DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const DeregisterTaskDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterTaskDefinitionResponse *>(send(request));
 }
 
 /**
@@ -335,7 +335,7 @@ DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const Der
  */
 DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
 /**
@@ -350,7 +350,7 @@ DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersReq
  */
 DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const DescribeContainerInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeContainerInstancesResponse *>(send(request));
 }
 
 /**
@@ -364,7 +364,7 @@ DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const
  */
 DescribeServicesResponse * EcsClient::describeServices(const DescribeServicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeServicesResponse *>(send(request));
 }
 
 /**
@@ -383,7 +383,7 @@ DescribeServicesResponse * EcsClient::describeServices(const DescribeServicesReq
  */
 DescribeTaskDefinitionResponse * EcsClient::describeTaskDefinition(const DescribeTaskDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTaskDefinitionResponse *>(send(request));
 }
 
 /**
@@ -397,7 +397,7 @@ DescribeTaskDefinitionResponse * EcsClient::describeTaskDefinition(const Describ
  */
 DescribeTasksResponse * EcsClient::describeTasks(const DescribeTasksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTasksResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ DescribeTasksResponse * EcsClient::describeTasks(const DescribeTasksRequest &req
  */
 DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPollEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DiscoverPollEndpointResponse *>(send(request));
 }
 
 /**
@@ -435,7 +435,7 @@ DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPol
  */
 ListAttributesResponse * EcsClient::listAttributes(const ListAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListAttributesResponse *>(send(request));
 }
 
 /**
@@ -449,7 +449,7 @@ ListAttributesResponse * EcsClient::listAttributes(const ListAttributesRequest &
  */
 ListClustersResponse * EcsClient::listClusters(const ListClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListClustersResponse *>(send(request));
 }
 
 /**
@@ -467,7 +467,7 @@ ListClustersResponse * EcsClient::listClusters(const ListClustersRequest &reques
  */
 ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListContainerInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListContainerInstancesResponse *>(send(request));
 }
 
 /**
@@ -481,7 +481,7 @@ ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListCon
  */
 ListServicesResponse * EcsClient::listServices(const ListServicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListServicesResponse *>(send(request));
 }
 
 /**
@@ -502,7 +502,7 @@ ListServicesResponse * EcsClient::listServices(const ListServicesRequest &reques
  */
 ListTaskDefinitionFamiliesResponse * EcsClient::listTaskDefinitionFamilies(const ListTaskDefinitionFamiliesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTaskDefinitionFamiliesResponse *>(send(request));
 }
 
 /**
@@ -517,7 +517,7 @@ ListTaskDefinitionFamiliesResponse * EcsClient::listTaskDefinitionFamilies(const
  */
 ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTaskDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -538,7 +538,7 @@ ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefin
  */
 ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTasksResponse *>(send(request));
 }
 
 /**
@@ -556,7 +556,7 @@ ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
  */
 PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutAttributesResponse *>(send(request));
 }
 
 /**
@@ -576,7 +576,7 @@ PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &req
  */
 RegisterContainerInstanceResponse * EcsClient::registerContainerInstance(const RegisterContainerInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterContainerInstanceResponse *>(send(request));
 }
 
 /**
@@ -612,7 +612,7 @@ RegisterContainerInstanceResponse * EcsClient::registerContainerInstance(const R
  */
 RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const RegisterTaskDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterTaskDefinitionResponse *>(send(request));
 }
 
 /**
@@ -661,7 +661,7 @@ RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const Registe
  */
 RunTaskResponse * EcsClient::runTask(const RunTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RunTaskResponse *>(send(request));
 }
 
 /**
@@ -681,7 +681,7 @@ RunTaskResponse * EcsClient::runTask(const RunTaskRequest &request)
  */
 StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartTaskResponse *>(send(request));
 }
 
 /**
@@ -709,7 +709,7 @@ StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
  */
 StopTaskResponse * EcsClient::stopTask(const StopTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopTaskResponse *>(send(request));
 }
 
 /**
@@ -729,7 +729,7 @@ StopTaskResponse * EcsClient::stopTask(const StopTaskRequest &request)
  */
 SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const SubmitContainerStateChangeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SubmitContainerStateChangeResponse *>(send(request));
 }
 
 /**
@@ -749,7 +749,7 @@ SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const
  */
 SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTaskStateChangeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SubmitTaskStateChangeResponse *>(send(request));
 }
 
 /**
@@ -772,7 +772,7 @@ SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTas
  */
 UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateContainerAgentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateContainerAgentResponse *>(send(request));
 }
 
 /**
@@ -836,7 +836,7 @@ UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateConta
  */
 UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState(const UpdateContainerInstancesStateRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateContainerInstancesStateResponse *>(send(request));
 }
 
 /**
@@ -929,7 +929,7 @@ UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState
  */
 UpdateServiceResponse * EcsClient::updateService(const UpdateServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateServiceResponse *>(send(request));
 }
 
 /**

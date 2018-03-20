@@ -103,7 +103,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
  */
 DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReportDefinitionResponse *>(send(request));
 }
 
 /**
@@ -116,7 +116,7 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
  */
 DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReportDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -129,7 +129,7 @@ DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeRep
  */
 PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefinition(const PutReportDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutReportDefinitionResponse *>(send(request));
 }
 
 /**

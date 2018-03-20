@@ -103,7 +103,7 @@ MediaLiveClient::MediaLiveClient(
  */
 CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateChannelResponse *>(send(request));
 }
 
 /**
@@ -116,7 +116,7 @@ CreateChannelResponse * MediaLiveClient::createChannel(const CreateChannelReques
  */
 CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateInputResponse *>(send(request));
 }
 
 /**
@@ -129,7 +129,7 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
  */
 CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(const CreateInputSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateInputSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -142,7 +142,7 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
  */
 DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteChannelResponse *>(send(request));
 }
 
 /**
@@ -155,7 +155,7 @@ DeleteChannelResponse * MediaLiveClient::deleteChannel(const DeleteChannelReques
  */
 DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteInputResponse *>(send(request));
 }
 
 /**
@@ -168,7 +168,7 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
  */
 DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteInputSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
  */
 DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeChannelResponse *>(send(request));
 }
 
 /**
@@ -194,7 +194,7 @@ DescribeChannelResponse * MediaLiveClient::describeChannel(const DescribeChannel
  */
 DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeInputResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
  */
 DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeInputSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -220,7 +220,7 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
  */
 ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListChannelsResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
  */
 ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const ListInputSecurityGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInputSecurityGroupsResponse *>(send(request));
 }
 
 /**
@@ -246,7 +246,7 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
  */
 ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInputsResponse *>(send(request));
 }
 
 /**
@@ -259,7 +259,7 @@ ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &reques
  */
 StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartChannelResponse *>(send(request));
 }
 
 /**
@@ -272,7 +272,7 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
  */
 StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopChannelResponse *>(send(request));
 }
 
 /**
@@ -285,7 +285,7 @@ StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &req
  */
 UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateChannelResponse *>(send(request));
 }
 
 /**

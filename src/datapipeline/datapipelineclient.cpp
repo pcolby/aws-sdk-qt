@@ -131,7 +131,7 @@ DataPipelineClient::DataPipelineClient(
  */
 ActivatePipelineResponse * DataPipelineClient::activatePipeline(const ActivatePipelineRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ActivatePipelineResponse *>(send(request));
 }
 
 /**
@@ -145,7 +145,7 @@ ActivatePipelineResponse * DataPipelineClient::activatePipeline(const ActivatePi
  */
 AddTagsResponse * DataPipelineClient::addTags(const AddTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /**
@@ -159,7 +159,7 @@ AddTagsResponse * DataPipelineClient::addTags(const AddTagsRequest &request)
  */
 CreatePipelineResponse * DataPipelineClient::createPipeline(const CreatePipelineRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePipelineResponse *>(send(request));
 }
 
 /**
@@ -179,7 +179,7 @@ CreatePipelineResponse * DataPipelineClient::createPipeline(const CreatePipeline
  */
 DeactivatePipelineResponse * DataPipelineClient::deactivatePipeline(const DeactivatePipelineRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeactivatePipelineResponse *>(send(request));
 }
 
 /**
@@ -200,7 +200,7 @@ DeactivatePipelineResponse * DataPipelineClient::deactivatePipeline(const Deacti
  */
 DeletePipelineResponse * DataPipelineClient::deletePipeline(const DeletePipelineRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeletePipelineResponse *>(send(request));
 }
 
 /**
@@ -215,7 +215,7 @@ DeletePipelineResponse * DataPipelineClient::deletePipeline(const DeletePipeline
  */
 DescribeObjectsResponse * DataPipelineClient::describeObjects(const DescribeObjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeObjectsResponse *>(send(request));
 }
 
 /**
@@ -236,7 +236,7 @@ DescribeObjectsResponse * DataPipelineClient::describeObjects(const DescribeObje
  */
 DescribePipelinesResponse * DataPipelineClient::describePipelines(const DescribePipelinesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribePipelinesResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ DescribePipelinesResponse * DataPipelineClient::describePipelines(const Describe
  */
 EvaluateExpressionResponse * DataPipelineClient::evaluateExpression(const EvaluateExpressionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<EvaluateExpressionResponse *>(send(request));
 }
 
 /**
@@ -266,7 +266,7 @@ EvaluateExpressionResponse * DataPipelineClient::evaluateExpression(const Evalua
  */
 GetPipelineDefinitionResponse * DataPipelineClient::getPipelineDefinition(const GetPipelineDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPipelineDefinitionResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ GetPipelineDefinitionResponse * DataPipelineClient::getPipelineDefinition(const 
  */
 ListPipelinesResponse * DataPipelineClient::listPipelines(const ListPipelinesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListPipelinesResponse *>(send(request));
 }
 
 /**
@@ -305,7 +305,7 @@ ListPipelinesResponse * DataPipelineClient::listPipelines(const ListPipelinesReq
  */
 PollForTaskResponse * DataPipelineClient::pollForTask(const PollForTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PollForTaskResponse *>(send(request));
 }
 
 /**
@@ -332,7 +332,7 @@ PollForTaskResponse * DataPipelineClient::pollForTask(const PollForTaskRequest &
  */
 PutPipelineDefinitionResponse * DataPipelineClient::putPipelineDefinition(const PutPipelineDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutPipelineDefinitionResponse *>(send(request));
 }
 
 /**
@@ -346,7 +346,7 @@ PutPipelineDefinitionResponse * DataPipelineClient::putPipelineDefinition(const 
  */
 QueryObjectsResponse * DataPipelineClient::queryObjects(const QueryObjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<QueryObjectsResponse *>(send(request));
 }
 
 /**
@@ -360,7 +360,7 @@ QueryObjectsResponse * DataPipelineClient::queryObjects(const QueryObjectsReques
  */
 RemoveTagsResponse * DataPipelineClient::removeTags(const RemoveTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
 /**
@@ -384,7 +384,7 @@ RemoveTagsResponse * DataPipelineClient::removeTags(const RemoveTagsRequest &req
  */
 ReportTaskProgressResponse * DataPipelineClient::reportTaskProgress(const ReportTaskProgressRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ReportTaskProgressResponse *>(send(request));
 }
 
 /**
@@ -400,7 +400,7 @@ ReportTaskProgressResponse * DataPipelineClient::reportTaskProgress(const Report
  */
 ReportTaskRunnerHeartbeatResponse * DataPipelineClient::reportTaskRunnerHeartbeat(const ReportTaskRunnerHeartbeatRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ReportTaskRunnerHeartbeatResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ ReportTaskRunnerHeartbeatResponse * DataPipelineClient::reportTaskRunnerHeartbea
  */
 SetStatusResponse * DataPipelineClient::setStatus(const SetStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetStatusResponse *>(send(request));
 }
 
 /**
@@ -433,7 +433,7 @@ SetStatusResponse * DataPipelineClient::setStatus(const SetStatusRequest &reques
  */
 SetTaskStatusResponse * DataPipelineClient::setTaskStatus(const SetTaskStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetTaskStatusResponse *>(send(request));
 }
 
 /**
@@ -447,7 +447,7 @@ SetTaskStatusResponse * DataPipelineClient::setTaskStatus(const SetTaskStatusReq
  */
 ValidatePipelineDefinitionResponse * DataPipelineClient::validatePipelineDefinition(const ValidatePipelineDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ValidatePipelineDefinitionResponse *>(send(request));
 }
 
 /**

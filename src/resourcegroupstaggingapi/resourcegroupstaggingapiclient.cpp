@@ -162,7 +162,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  */
 GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
 /**
@@ -176,7 +176,7 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
  */
 GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTagKeysResponse *>(send(request));
 }
 
 /**
@@ -190,7 +190,7 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
  */
 GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTagValuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTagValuesResponse *>(send(request));
 }
 
 /**
@@ -227,7 +227,7 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
  */
 TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourcesResponse *>(send(request));
 }
 
 /**
@@ -254,7 +254,7 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
  */
 UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const UntagResourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourcesResponse *>(send(request));
 }
 
 /**

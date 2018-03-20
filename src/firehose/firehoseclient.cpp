@@ -171,7 +171,7 @@ FirehoseClient::FirehoseClient(
  */
 CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const CreateDeliveryStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeliveryStreamResponse *>(send(request));
 }
 
 /**
@@ -201,7 +201,7 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
  */
 DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const DeleteDeliveryStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDeliveryStreamResponse *>(send(request));
 }
 
 /**
@@ -217,7 +217,7 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
  */
 DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const DescribeDeliveryStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDeliveryStreamResponse *>(send(request));
 }
 
 /**
@@ -239,7 +239,7 @@ DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const De
  */
 ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeliveryStreamsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeliveryStreamsResponse *>(send(request));
 }
 
 /**
@@ -290,7 +290,7 @@ ListDeliveryStreamsResponse * FirehoseClient::listDeliveryStreams(const ListDeli
  */
 PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRecordResponse *>(send(request));
 }
 
 /**
@@ -365,7 +365,7 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
  */
 PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutRecordBatchResponse *>(send(request));
 }
 
 /**
@@ -411,7 +411,7 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
  */
 UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestinationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDestinationResponse *>(send(request));
 }
 
 /**

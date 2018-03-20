@@ -105,7 +105,7 @@ SmsClient::SmsClient(
  */
 CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateReplicationJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateReplicationJobResponse *>(send(request));
 }
 
 /**
@@ -120,7 +120,7 @@ CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateRepli
  */
 DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteReplicationJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReplicationJobResponse *>(send(request));
 }
 
 /**
@@ -134,7 +134,7 @@ DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteRepli
  */
 DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerCatalogRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteServerCatalogResponse *>(send(request));
 }
 
 /**
@@ -148,7 +148,7 @@ DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerC
  */
 DisassociateConnectorResponse * SmsClient::disassociateConnector(const DisassociateConnectorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateConnectorResponse *>(send(request));
 }
 
 /**
@@ -161,7 +161,7 @@ DisassociateConnectorResponse * SmsClient::disassociateConnector(const Disassoci
  */
 GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetConnectorsResponse *>(send(request));
 }
 
 /**
@@ -175,7 +175,7 @@ GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &req
  */
 GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetReplicationJobsResponse *>(send(request));
 }
 
 /**
@@ -189,7 +189,7 @@ GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJ
  */
 GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationRunsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetReplicationRunsResponse *>(send(request));
 }
 
 /**
@@ -203,7 +203,7 @@ GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationR
  */
 GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetServersResponse *>(send(request));
 }
 
 /**
@@ -218,7 +218,7 @@ GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
  */
 ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerCatalogRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportServerCatalogResponse *>(send(request));
 }
 
 /**
@@ -233,7 +233,7 @@ ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerC
  */
 StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(const StartOnDemandReplicationRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartOnDemandReplicationRunResponse *>(send(request));
 }
 
 /**
@@ -247,7 +247,7 @@ StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(con
  */
 UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateReplicationJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateReplicationJobResponse *>(send(request));
 }
 
 /**

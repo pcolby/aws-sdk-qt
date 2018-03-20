@@ -168,7 +168,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
  */
 AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateConfigurationItemsToApplicationResponse *>(send(request));
 }
 
 /**
@@ -182,7 +182,7 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
  */
 CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
 /**
@@ -197,7 +197,7 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
  */
 CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
 /**
@@ -211,7 +211,7 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
  */
 DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApplicationsResponse *>(send(request));
 }
 
 /**
@@ -226,7 +226,7 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
  */
 DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /**
@@ -241,7 +241,7 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
  */
 DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAgentsResponse *>(send(request));
 }
 
 /**
@@ -264,7 +264,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  */
 DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -282,7 +282,7 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeExportConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -296,7 +296,7 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
  */
 DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
 /**
@@ -311,7 +311,7 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
  */
 DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
 /**
@@ -325,7 +325,7 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
  */
 DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateConfigurationItemsFromApplicationResponse *>(send(request));
 }
 
 /**
@@ -346,7 +346,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ExportConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -360,7 +360,7 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
  */
 GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDiscoverySummaryResponse *>(send(request));
 }
 
 /**
@@ -375,7 +375,7 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
  */
 ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -389,7 +389,7 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
  */
 ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListServerNeighborsResponse *>(send(request));
 }
 
 /**
@@ -403,7 +403,7 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
  */
 StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartDataCollectionByAgentIdsResponse *>(send(request));
 }
 
 /**
@@ -430,7 +430,7 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  */
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartExportTaskResponse *>(send(request));
 }
 
 /**
@@ -444,7 +444,7 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  */
 StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopDataCollectionByAgentIdsResponse *>(send(request));
 }
 
 /**
@@ -458,7 +458,7 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
  */
 UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
 /**

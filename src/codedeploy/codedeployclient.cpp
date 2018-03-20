@@ -185,7 +185,7 @@ CodeDeployClient::CodeDeployClient(
  */
 AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInstances(const AddTagsToOnPremisesInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToOnPremisesInstancesResponse *>(send(request));
 }
 
 /**
@@ -199,7 +199,7 @@ AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInst
  */
 BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevisions(const BatchGetApplicationRevisionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetApplicationRevisionsResponse *>(send(request));
 }
 
 /**
@@ -213,7 +213,7 @@ BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevi
  */
 BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const BatchGetApplicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetApplicationsResponse *>(send(request));
 }
 
 /**
@@ -227,7 +227,7 @@ BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const Batc
  */
 BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(const BatchGetDeploymentGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetDeploymentGroupsResponse *>(send(request));
 }
 
 /**
@@ -241,7 +241,7 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
  */
 BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetDeploymentInstancesResponse *>(send(request));
 }
 
 /**
@@ -255,7 +255,7 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
  */
 BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchGetDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -269,7 +269,7 @@ BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchG
  */
 BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetOnPremisesInstancesResponse *>(send(request));
 }
 
 /**
@@ -286,7 +286,7 @@ BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstan
  */
 ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const ContinueDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ContinueDeploymentResponse *>(send(request));
 }
 
 /**
@@ -300,7 +300,7 @@ ContinueDeploymentResponse * CodeDeployClient::continueDeployment(const Continue
  */
 CreateApplicationResponse * CodeDeployClient::createApplication(const CreateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
 /**
@@ -314,7 +314,7 @@ CreateApplicationResponse * CodeDeployClient::createApplication(const CreateAppl
  */
 CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
 /**
@@ -328,7 +328,7 @@ CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploy
  */
 CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const CreateDeploymentConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentConfigResponse *>(send(request));
 }
 
 /**
@@ -342,7 +342,7 @@ CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const 
  */
 CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const CreateDeploymentGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentGroupResponse *>(send(request));
 }
 
 /**
@@ -356,7 +356,7 @@ CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const Cr
  */
 DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApplicationResponse *>(send(request));
 }
 
 /**
@@ -374,7 +374,7 @@ DeleteApplicationResponse * CodeDeployClient::deleteApplication(const DeleteAppl
  */
 DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDeploymentConfigResponse *>(send(request));
 }
 
 /**
@@ -388,7 +388,7 @@ DeleteDeploymentConfigResponse * CodeDeployClient::deleteDeploymentConfig(const 
  */
 DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDeploymentGroupResponse *>(send(request));
 }
 
 /**
@@ -402,7 +402,7 @@ DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const De
  */
 DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGitHubAccountTokenResponse *>(send(request));
 }
 
 /**
@@ -416,7 +416,7 @@ DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(co
  */
 DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterOnPremisesInstanceResponse *>(send(request));
 }
 
 /**
@@ -430,7 +430,7 @@ DeregisterOnPremisesInstanceResponse * CodeDeployClient::deregisterOnPremisesIns
  */
 GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApplicationResponse *>(send(request));
 }
 
 /**
@@ -444,7 +444,7 @@ GetApplicationResponse * CodeDeployClient::getApplication(const GetApplicationRe
  */
 GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const GetApplicationRevisionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApplicationRevisionResponse *>(send(request));
 }
 
 /**
@@ -458,7 +458,7 @@ GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const 
  */
 GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentResponse *>(send(request));
 }
 
 /**
@@ -472,7 +472,7 @@ GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentReque
  */
 GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDeploymentConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentConfigResponse *>(send(request));
 }
 
 /**
@@ -486,7 +486,7 @@ GetDeploymentConfigResponse * CodeDeployClient::getDeploymentConfig(const GetDep
  */
 GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeploymentGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentGroupResponse *>(send(request));
 }
 
 /**
@@ -500,7 +500,7 @@ GetDeploymentGroupResponse * CodeDeployClient::getDeploymentGroup(const GetDeplo
  */
 GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const GetDeploymentInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentInstanceResponse *>(send(request));
 }
 
 /**
@@ -514,7 +514,7 @@ GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const Ge
  */
 GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const GetOnPremisesInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetOnPremisesInstanceResponse *>(send(request));
 }
 
 /**
@@ -528,7 +528,7 @@ GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const Ge
  */
 ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(const ListApplicationRevisionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListApplicationRevisionsResponse *>(send(request));
 }
 
 /**
@@ -542,7 +542,7 @@ ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(co
  */
 ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListApplicationsResponse *>(send(request));
 }
 
 /**
@@ -556,7 +556,7 @@ ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicat
  */
 ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const ListDeploymentConfigsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeploymentConfigsResponse *>(send(request));
 }
 
 /**
@@ -570,7 +570,7 @@ ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const Li
  */
 ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const ListDeploymentGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeploymentGroupsResponse *>(send(request));
 }
 
 /**
@@ -584,7 +584,7 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
  */
 ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeploymentInstancesResponse *>(send(request));
 }
 
 /**
@@ -598,7 +598,7 @@ ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(cons
  */
 ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -612,7 +612,7 @@ ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeployment
  */
 ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNames(const ListGitHubAccountTokenNamesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGitHubAccountTokenNamesResponse *>(send(request));
 }
 
 /**
@@ -631,7 +631,7 @@ ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNa
  */
 ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(const ListOnPremisesInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOnPremisesInstancesResponse *>(send(request));
 }
 
 /**
@@ -646,7 +646,7 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
  */
 PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutLifecycleEventHookExecutionStatusResponse *>(send(request));
 }
 
 /**
@@ -660,7 +660,7 @@ PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEve
  */
 RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevision(const RegisterApplicationRevisionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterApplicationRevisionResponse *>(send(request));
 }
 
 /**
@@ -678,7 +678,7 @@ RegisterApplicationRevisionResponse * CodeDeployClient::registerApplicationRevis
  */
 RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstance(const RegisterOnPremisesInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterOnPremisesInstanceResponse *>(send(request));
 }
 
 /**
@@ -692,7 +692,7 @@ RegisterOnPremisesInstanceResponse * CodeDeployClient::registerOnPremisesInstanc
  */
 RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPremisesInstances(const RemoveTagsFromOnPremisesInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromOnPremisesInstancesResponse *>(send(request));
 }
 
 /**
@@ -707,7 +707,7 @@ RemoveTagsFromOnPremisesInstancesResponse * CodeDeployClient::removeTagsFromOnPr
  */
 SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForInstanceTermination(const SkipWaitTimeForInstanceTerminationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SkipWaitTimeForInstanceTerminationResponse *>(send(request));
 }
 
 /**
@@ -721,7 +721,7 @@ SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForIn
  */
 StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopDeploymentResponse *>(send(request));
 }
 
 /**
@@ -735,7 +735,7 @@ StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRe
  */
 UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
 /**
@@ -749,7 +749,7 @@ UpdateApplicationResponse * CodeDeployClient::updateApplication(const UpdateAppl
  */
 UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const UpdateDeploymentGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDeploymentGroupResponse *>(send(request));
 }
 
 /**

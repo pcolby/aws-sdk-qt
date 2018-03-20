@@ -127,7 +127,7 @@ ElastiCacheClient::ElastiCacheClient(
  */
 AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /**
@@ -146,7 +146,7 @@ AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsTo
  */
 AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSecurityGroupIngress(const AuthorizeCacheSecurityGroupIngressRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AuthorizeCacheSecurityGroupIngressResponse *>(send(request));
 }
 
 /**
@@ -256,7 +256,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  */
 CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopySnapshotResponse *>(send(request));
 }
 
 /**
@@ -275,7 +275,7 @@ CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest
  */
 CreateCacheClusterResponse * ElastiCacheClient::createCacheCluster(const CreateCacheClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCacheClusterResponse *>(send(request));
 }
 
 /**
@@ -307,7 +307,7 @@ CreateCacheClusterResponse * ElastiCacheClient::createCacheCluster(const CreateC
  */
 CreateCacheParameterGroupResponse * ElastiCacheClient::createCacheParameterGroup(const CreateCacheParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCacheParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -326,7 +326,7 @@ CreateCacheParameterGroupResponse * ElastiCacheClient::createCacheParameterGroup
  */
 CreateCacheSecurityGroupResponse * ElastiCacheClient::createCacheSecurityGroup(const CreateCacheSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCacheSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -344,7 +344,7 @@ CreateCacheSecurityGroupResponse * ElastiCacheClient::createCacheSecurityGroup(c
  */
 CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const CreateCacheSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCacheSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -382,7 +382,7 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
  */
 CreateReplicationGroupResponse * ElastiCacheClient::createReplicationGroup(const CreateReplicationGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateReplicationGroupResponse *>(send(request));
 }
 
 /**
@@ -400,7 +400,7 @@ CreateReplicationGroupResponse * ElastiCacheClient::createReplicationGroup(const
  */
 CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSnapshotResponse *>(send(request));
 }
 
 /**
@@ -426,7 +426,7 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
  */
 DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteCacheClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCacheClusterResponse *>(send(request));
 }
 
 /**
@@ -441,7 +441,7 @@ DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteC
  */
 DeleteCacheParameterGroupResponse * ElastiCacheClient::deleteCacheParameterGroup(const DeleteCacheParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCacheParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -459,7 +459,7 @@ DeleteCacheParameterGroupResponse * ElastiCacheClient::deleteCacheParameterGroup
  */
 DeleteCacheSecurityGroupResponse * ElastiCacheClient::deleteCacheSecurityGroup(const DeleteCacheSecurityGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCacheSecurityGroupResponse *>(send(request));
 }
 
 /**
@@ -477,7 +477,7 @@ DeleteCacheSecurityGroupResponse * ElastiCacheClient::deleteCacheSecurityGroup(c
  */
 DeleteCacheSubnetGroupResponse * ElastiCacheClient::deleteCacheSubnetGroup(const DeleteCacheSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCacheSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -502,7 +502,7 @@ DeleteCacheSubnetGroupResponse * ElastiCacheClient::deleteCacheSubnetGroup(const
  */
 DeleteReplicationGroupResponse * ElastiCacheClient::deleteReplicationGroup(const DeleteReplicationGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteReplicationGroupResponse *>(send(request));
 }
 
 /**
@@ -521,7 +521,7 @@ DeleteReplicationGroupResponse * ElastiCacheClient::deleteReplicationGroup(const
  */
 DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSnapshotResponse *>(send(request));
 }
 
 /**
@@ -561,7 +561,7 @@ DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotR
  */
 DescribeCacheClustersResponse * ElastiCacheClient::describeCacheClusters(const DescribeCacheClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheClustersResponse *>(send(request));
 }
 
 /**
@@ -575,7 +575,7 @@ DescribeCacheClustersResponse * ElastiCacheClient::describeCacheClusters(const D
  */
 DescribeCacheEngineVersionsResponse * ElastiCacheClient::describeCacheEngineVersions(const DescribeCacheEngineVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheEngineVersionsResponse *>(send(request));
 }
 
 /**
@@ -590,7 +590,7 @@ DescribeCacheEngineVersionsResponse * ElastiCacheClient::describeCacheEngineVers
  */
 DescribeCacheParameterGroupsResponse * ElastiCacheClient::describeCacheParameterGroups(const DescribeCacheParameterGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheParameterGroupsResponse *>(send(request));
 }
 
 /**
@@ -604,7 +604,7 @@ DescribeCacheParameterGroupsResponse * ElastiCacheClient::describeCacheParameter
  */
 DescribeCacheParametersResponse * ElastiCacheClient::describeCacheParameters(const DescribeCacheParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheParametersResponse *>(send(request));
 }
 
 /**
@@ -619,7 +619,7 @@ DescribeCacheParametersResponse * ElastiCacheClient::describeCacheParameters(con
  */
 DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGroups(const DescribeCacheSecurityGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheSecurityGroupsResponse *>(send(request));
 }
 
 /**
@@ -634,7 +634,7 @@ DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGr
  */
 DescribeCacheSubnetGroupsResponse * ElastiCacheClient::describeCacheSubnetGroups(const DescribeCacheSubnetGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCacheSubnetGroupsResponse *>(send(request));
 }
 
 /**
@@ -648,7 +648,7 @@ DescribeCacheSubnetGroupsResponse * ElastiCacheClient::describeCacheSubnetGroups
  */
 DescribeEngineDefaultParametersResponse * ElastiCacheClient::describeEngineDefaultParameters(const DescribeEngineDefaultParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEngineDefaultParametersResponse *>(send(request));
 }
 
 /**
@@ -668,7 +668,7 @@ DescribeEngineDefaultParametersResponse * ElastiCacheClient::describeEngineDefau
  */
 DescribeEventsResponse * ElastiCacheClient::describeEvents(const DescribeEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /**
@@ -687,7 +687,7 @@ DescribeEventsResponse * ElastiCacheClient::describeEvents(const DescribeEventsR
  */
 DescribeReplicationGroupsResponse * ElastiCacheClient::describeReplicationGroups(const DescribeReplicationGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReplicationGroupsResponse *>(send(request));
 }
 
 /**
@@ -701,7 +701,7 @@ DescribeReplicationGroupsResponse * ElastiCacheClient::describeReplicationGroups
  */
 DescribeReservedCacheNodesResponse * ElastiCacheClient::describeReservedCacheNodes(const DescribeReservedCacheNodesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReservedCacheNodesResponse *>(send(request));
 }
 
 /**
@@ -715,7 +715,7 @@ DescribeReservedCacheNodesResponse * ElastiCacheClient::describeReservedCacheNod
  */
 DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReservedCacheNodesOfferings(const DescribeReservedCacheNodesOfferingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeReservedCacheNodesOfferingsResponse *>(send(request));
 }
 
 /**
@@ -735,7 +735,7 @@ DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReserve
  */
 DescribeSnapshotsResponse * ElastiCacheClient::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSnapshotsResponse *>(send(request));
 }
 
 /**
@@ -755,7 +755,7 @@ DescribeSnapshotsResponse * ElastiCacheClient::describeSnapshots(const DescribeS
  */
 ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTypeModifications(const ListAllowedNodeTypeModificationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListAllowedNodeTypeModificationsResponse *>(send(request));
 }
 
 /**
@@ -777,7 +777,7 @@ ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTyp
  */
 ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /**
@@ -792,7 +792,7 @@ ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListT
  */
 ModifyCacheClusterResponse * ElastiCacheClient::modifyCacheCluster(const ModifyCacheClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyCacheClusterResponse *>(send(request));
 }
 
 /**
@@ -807,7 +807,7 @@ ModifyCacheClusterResponse * ElastiCacheClient::modifyCacheCluster(const ModifyC
  */
 ModifyCacheParameterGroupResponse * ElastiCacheClient::modifyCacheParameterGroup(const ModifyCacheParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyCacheParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -821,7 +821,7 @@ ModifyCacheParameterGroupResponse * ElastiCacheClient::modifyCacheParameterGroup
  */
 ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const ModifyCacheSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyCacheSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -844,7 +844,7 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
  */
 ModifyReplicationGroupResponse * ElastiCacheClient::modifyReplicationGroup(const ModifyReplicationGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyReplicationGroupResponse *>(send(request));
 }
 
 /**
@@ -867,7 +867,7 @@ ModifyReplicationGroupResponse * ElastiCacheClient::modifyReplicationGroup(const
  */
 ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyReplicationGroupShardConfiguration(const ModifyReplicationGroupShardConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyReplicationGroupShardConfigurationResponse *>(send(request));
 }
 
 /**
@@ -881,7 +881,7 @@ ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyRepl
  */
 PurchaseReservedCacheNodesOfferingResponse * ElastiCacheClient::purchaseReservedCacheNodesOffering(const PurchaseReservedCacheNodesOfferingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PurchaseReservedCacheNodesOfferingResponse *>(send(request));
 }
 
 /**
@@ -916,7 +916,7 @@ PurchaseReservedCacheNodesOfferingResponse * ElastiCacheClient::purchaseReserved
  */
 RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootCacheClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootCacheClusterResponse *>(send(request));
 }
 
 /**
@@ -930,7 +930,7 @@ RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootC
  */
 RemoveTagsFromResourceResponse * ElastiCacheClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /**
@@ -946,7 +946,7 @@ RemoveTagsFromResourceResponse * ElastiCacheClient::removeTagsFromResource(const
  */
 ResetCacheParameterGroupResponse * ElastiCacheClient::resetCacheParameterGroup(const ResetCacheParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetCacheParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -961,7 +961,7 @@ ResetCacheParameterGroupResponse * ElastiCacheClient::resetCacheParameterGroup(c
  */
 RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurityGroupIngress(const RevokeCacheSecurityGroupIngressRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RevokeCacheSecurityGroupIngressResponse *>(send(request));
 }
 
 /**
@@ -1043,7 +1043,7 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
  */
 TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TestFailoverResponse *>(send(request));
 }
 
 /**

@@ -125,7 +125,7 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
  */
 CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplication(const CreateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
 /**
@@ -139,7 +139,7 @@ CreateApplicationResponse * ServerlessApplicationRepositoryClient::createApplica
  */
 CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApplicationVersionResponse *>(send(request));
 }
 
 /**
@@ -153,7 +153,7 @@ CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::create
  */
 CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::createCloudFormationChangeSet(const CreateCloudFormationChangeSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCloudFormationChangeSetResponse *>(send(request));
 }
 
 /**
@@ -167,7 +167,7 @@ CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::c
  */
 DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplication(const DeleteApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApplicationResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ DeleteApplicationResponse * ServerlessApplicationRepositoryClient::deleteApplica
  */
 GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(const GetApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApplicationResponse *>(send(request));
 }
 
 /**
@@ -195,7 +195,7 @@ GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(c
  */
 GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplicationPolicy(const GetApplicationPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetApplicationPolicyResponse *>(send(request));
 }
 
 /**
@@ -209,7 +209,7 @@ GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplica
  */
 ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApplicationVersions(const ListApplicationVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListApplicationVersionsResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ ListApplicationVersionsResponse * ServerlessApplicationRepositoryClient::listApp
  */
 ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplications(const ListApplicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListApplicationsResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
  */
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutApplicationPolicyResponse *>(send(request));
 }
 
 /**
@@ -251,7 +251,7 @@ PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplica
  */
 UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplication(const UpdateApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
 /**

@@ -181,7 +181,7 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
  */
 AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCertificates(const AddListenerCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddListenerCertificatesResponse *>(send(request));
 }
 
 /**
@@ -205,7 +205,7 @@ AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCerti
  */
 AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /**
@@ -237,7 +237,7 @@ AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &re
  */
 CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const CreateListenerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateListenerResponse *>(send(request));
 }
 
 /**
@@ -282,7 +282,7 @@ CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const Crea
  */
 CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(const CreateLoadBalancerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateLoadBalancerResponse *>(send(request));
 }
 
 /**
@@ -309,7 +309,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(co
  */
 CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRuleResponse *>(send(request));
 }
 
 /**
@@ -349,7 +349,7 @@ CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRe
  */
 CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(const CreateTargetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTargetGroupResponse *>(send(request));
 }
 
 /**
@@ -367,7 +367,7 @@ CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(cons
  */
 DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const DeleteListenerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteListenerResponse *>(send(request));
 }
 
 /**
@@ -391,7 +391,7 @@ DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const Dele
  */
 DeleteLoadBalancerResponse * ElasticLoadBalancingv2Client::deleteLoadBalancer(const DeleteLoadBalancerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLoadBalancerResponse *>(send(request));
 }
 
 /**
@@ -405,7 +405,7 @@ DeleteLoadBalancerResponse * ElasticLoadBalancingv2Client::deleteLoadBalancer(co
  */
 DeleteRuleResponse * ElasticLoadBalancingv2Client::deleteRule(const DeleteRuleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRuleResponse *>(send(request));
 }
 
 /**
@@ -424,7 +424,7 @@ DeleteRuleResponse * ElasticLoadBalancingv2Client::deleteRule(const DeleteRuleRe
  */
 DeleteTargetGroupResponse * ElasticLoadBalancingv2Client::deleteTargetGroup(const DeleteTargetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTargetGroupResponse *>(send(request));
 }
 
 /**
@@ -439,7 +439,7 @@ DeleteTargetGroupResponse * ElasticLoadBalancingv2Client::deleteTargetGroup(cons
  */
 DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(const DeregisterTargetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterTargetsResponse *>(send(request));
 }
 
 /**
@@ -461,7 +461,7 @@ DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(cons
  */
 DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
 }
 
 /**
@@ -475,7 +475,7 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLim
  */
 DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeListenerCertificates(const DescribeListenerCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeListenerCertificatesResponse *>(send(request));
 }
 
 /**
@@ -490,7 +490,7 @@ DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeLis
  */
 DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(const DescribeListenersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeListenersResponse *>(send(request));
 }
 
 /**
@@ -504,7 +504,7 @@ DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(cons
  */
 DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLoadBalancerAttributesResponse *>(send(request));
 }
 
 /**
@@ -523,7 +523,7 @@ DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeL
  */
 DescribeLoadBalancersResponse * ElasticLoadBalancingv2Client::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeLoadBalancersResponse *>(send(request));
 }
 
 /**
@@ -537,7 +537,7 @@ DescribeLoadBalancersResponse * ElasticLoadBalancingv2Client::describeLoadBalanc
  */
 DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const DescribeRulesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRulesResponse *>(send(request));
 }
 
 /**
@@ -557,7 +557,7 @@ DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const Descri
  */
 DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(const DescribeSSLPoliciesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSSLPoliciesResponse *>(send(request));
 }
 
 /**
@@ -572,7 +572,7 @@ DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(
  */
 DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const DescribeTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
 /**
@@ -586,7 +586,7 @@ DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const Describe
  */
 DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTargetGroupAttributes(const DescribeTargetGroupAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTargetGroupAttributesResponse *>(send(request));
 }
 
 /**
@@ -607,7 +607,7 @@ DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTa
  */
 DescribeTargetGroupsResponse * ElasticLoadBalancingv2Client::describeTargetGroups(const DescribeTargetGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTargetGroupsResponse *>(send(request));
 }
 
 /**
@@ -621,7 +621,7 @@ DescribeTargetGroupsResponse * ElasticLoadBalancingv2Client::describeTargetGroup
  */
 DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealth(const DescribeTargetHealthRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTargetHealthResponse *>(send(request));
 }
 
 /**
@@ -641,7 +641,7 @@ DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealt
  */
 ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const ModifyListenerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyListenerResponse *>(send(request));
 }
 
 /**
@@ -660,7 +660,7 @@ ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const Modi
  */
 ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadBalancerAttributes(const ModifyLoadBalancerAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyLoadBalancerAttributesResponse *>(send(request));
 }
 
 /**
@@ -682,7 +682,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadB
  */
 ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyRuleResponse *>(send(request));
 }
 
 /**
@@ -700,7 +700,7 @@ ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRe
  */
 ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(const ModifyTargetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyTargetGroupResponse *>(send(request));
 }
 
 /**
@@ -714,7 +714,7 @@ ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(cons
  */
 ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTargetGroupAttributes(const ModifyTargetGroupAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyTargetGroupAttributesResponse *>(send(request));
 }
 
 /**
@@ -748,7 +748,7 @@ ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTarget
  */
 RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const RegisterTargetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterTargetsResponse *>(send(request));
 }
 
 /**
@@ -770,7 +770,7 @@ RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const Re
  */
 RemoveListenerCertificatesResponse * ElasticLoadBalancingv2Client::removeListenerCertificates(const RemoveListenerCertificatesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveListenerCertificatesResponse *>(send(request));
 }
 
 /**
@@ -788,7 +788,7 @@ RemoveListenerCertificatesResponse * ElasticLoadBalancingv2Client::removeListene
  */
 RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
 /**
@@ -806,7 +806,7 @@ RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRe
  */
 SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const SetIpAddressTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetIpAddressTypeResponse *>(send(request));
 }
 
 /**
@@ -825,7 +825,7 @@ SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const 
  */
 SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(const SetRulePrioritiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetRulePrioritiesResponse *>(send(request));
 }
 
 /**
@@ -844,7 +844,7 @@ SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(cons
  */
 SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(const SetSecurityGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetSecurityGroupsResponse *>(send(request));
 }
 
 /**
@@ -863,7 +863,7 @@ SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(cons
  */
 SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetSubnetsResponse *>(send(request));
 }
 
 /**

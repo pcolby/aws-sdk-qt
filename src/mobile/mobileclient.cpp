@@ -107,7 +107,7 @@ MobileClient::MobileClient(
  */
 CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
 /**
@@ -121,7 +121,7 @@ CreateProjectResponse * MobileClient::createProject(const CreateProjectRequest &
  */
 DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ DeleteProjectResponse * MobileClient::deleteProject(const DeleteProjectRequest &
  */
 DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBundleResponse *>(send(request));
 }
 
 /**
@@ -149,7 +149,7 @@ DescribeBundleResponse * MobileClient::describeBundle(const DescribeBundleReques
  */
 DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeProjectResponse *>(send(request));
 }
 
 /**
@@ -164,7 +164,7 @@ DescribeProjectResponse * MobileClient::describeProject(const DescribeProjectReq
  */
 ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ExportBundleResponse *>(send(request));
 }
 
 /**
@@ -179,7 +179,7 @@ ExportBundleResponse * MobileClient::exportBundle(const ExportBundleRequest &req
  */
 ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ExportProjectResponse *>(send(request));
 }
 
 /**
@@ -193,7 +193,7 @@ ExportProjectResponse * MobileClient::exportProject(const ExportProjectRequest &
  */
 ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBundlesResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ ListBundlesResponse * MobileClient::listBundles(const ListBundlesRequest &reques
  */
 ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
 /**
@@ -221,7 +221,7 @@ ListProjectsResponse * MobileClient::listProjects(const ListProjectsRequest &req
  */
 UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
 /**

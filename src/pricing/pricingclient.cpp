@@ -134,7 +134,7 @@ PricingClient::PricingClient(
  */
 DescribeServicesResponse * PricingClient::describeServices(const DescribeServicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeServicesResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
  */
 GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttributeValuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAttributeValuesResponse *>(send(request));
 }
 
 /**
@@ -166,7 +166,7 @@ GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttribut
  */
 GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetProductsResponse *>(send(request));
 }
 
 /**

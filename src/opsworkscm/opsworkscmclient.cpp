@@ -192,7 +192,7 @@ OpsWorksCMClient::OpsWorksCMClient(
  */
 AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateNodeResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  */
 CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBackupResponse *>(send(request));
 }
 
 /**
@@ -270,7 +270,7 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  */
 CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateServerResponse *>(send(request));
 }
 
 /**
@@ -290,7 +290,7 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  */
 DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
 /**
@@ -318,7 +318,7 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  */
 DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteServerResponse *>(send(request));
 }
 
 /**
@@ -336,7 +336,7 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
  */
 DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
 /**
@@ -360,7 +360,7 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  */
 DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBackupsResponse *>(send(request));
 }
 
 /**
@@ -383,7 +383,7 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  */
 DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /**
@@ -403,7 +403,7 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  */
 DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNodeAssociationStatusResponse *>(send(request));
 }
 
 /**
@@ -427,7 +427,7 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  */
 DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeServersResponse *>(send(request));
 }
 
 /**
@@ -449,7 +449,7 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  */
 DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateNodeResponse *>(send(request));
 }
 
 /**
@@ -476,7 +476,7 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  */
 RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreServerResponse *>(send(request));
 }
 
 /**
@@ -498,7 +498,7 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  */
 StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartMaintenanceResponse *>(send(request));
 }
 
 /**
@@ -516,7 +516,7 @@ StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMainten
  */
 UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateServerResponse *>(send(request));
 }
 
 /**
@@ -543,7 +543,7 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  */
 UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateServerEngineAttributesResponse *>(send(request));
 }
 
 /**

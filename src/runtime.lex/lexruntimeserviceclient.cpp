@@ -180,7 +180,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  */
 PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PostContentResponse *>(send(request));
 }
 
 /**
@@ -258,7 +258,7 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  */
 PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PostTextResponse *>(send(request));
 }
 
 /**

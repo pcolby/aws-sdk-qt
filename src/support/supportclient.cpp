@@ -180,7 +180,7 @@ SupportClient::SupportClient(
  */
 AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttachmentsToSetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddAttachmentsToSetResponse *>(send(request));
 }
 
 /**
@@ -204,7 +204,7 @@ AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttach
  */
 AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const AddCommunicationToCaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddCommunicationToCaseResponse *>(send(request));
 }
 
 /**
@@ -275,7 +275,7 @@ AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const Add
  */
 CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCaseResponse *>(send(request));
 }
 
 /**
@@ -291,7 +291,7 @@ CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
  */
 DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAttachmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeAttachmentResponse *>(send(request));
 }
 
 /**
@@ -326,7 +326,7 @@ DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAtt
  */
 DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCasesResponse *>(send(request));
 }
 
 /**
@@ -353,7 +353,7 @@ DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest 
  */
 DescribeCommunicationsResponse * SupportClient::describeCommunications(const DescribeCommunicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCommunicationsResponse *>(send(request));
 }
 
 /**
@@ -377,7 +377,7 @@ DescribeCommunicationsResponse * SupportClient::describeCommunications(const Des
  */
 DescribeServicesResponse * SupportClient::describeServices(const DescribeServicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeServicesResponse *>(send(request));
 }
 
 /**
@@ -392,7 +392,7 @@ DescribeServicesResponse * SupportClient::describeServices(const DescribeService
  */
 DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const DescribeSeverityLevelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSeverityLevelsResponse *>(send(request));
 }
 
 /**
@@ -413,7 +413,7 @@ DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const Des
  */
 DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrustedAdvisorCheckRefreshStatuses(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTrustedAdvisorCheckRefreshStatusesResponse *>(send(request));
 }
 
 /**
@@ -459,7 +459,7 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrus
  */
 DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdvisorCheckResult(const DescribeTrustedAdvisorCheckResultRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTrustedAdvisorCheckResultResponse *>(send(request));
 }
 
 /**
@@ -478,7 +478,7 @@ DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdviso
  */
 DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdvisorCheckSummaries(const DescribeTrustedAdvisorCheckSummariesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTrustedAdvisorCheckSummariesResponse *>(send(request));
 }
 
 /**
@@ -494,7 +494,7 @@ DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdv
  */
 DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChecks(const DescribeTrustedAdvisorChecksRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTrustedAdvisorChecksResponse *>(send(request));
 }
 
 /**
@@ -529,7 +529,7 @@ DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChec
  */
 RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(const RefreshTrustedAdvisorCheckRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RefreshTrustedAdvisorCheckResponse *>(send(request));
 }
 
 /**
@@ -544,7 +544,7 @@ RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(c
  */
 ResolveCaseResponse * SupportClient::resolveCase(const ResolveCaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResolveCaseResponse *>(send(request));
 }
 
 /**

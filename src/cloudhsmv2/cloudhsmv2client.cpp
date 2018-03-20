@@ -106,7 +106,7 @@ CloudHSMV2Client::CloudHSMV2Client(
  */
 CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
 /**
@@ -120,7 +120,7 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
  */
 CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateHsmResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
  */
 DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
 /**
@@ -151,7 +151,7 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
  */
 DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteHsmResponse *>(send(request));
 }
 
 /**
@@ -172,7 +172,7 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
  */
 DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBackupsResponse *>(send(request));
 }
 
 /**
@@ -193,7 +193,7 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
  */
 DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
 /**
@@ -209,7 +209,7 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
  */
 InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const InitializeClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<InitializeClusterResponse *>(send(request));
 }
 
 /**
@@ -230,7 +230,7 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
  */
 ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /**
@@ -244,7 +244,7 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
  */
 TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -258,7 +258,7 @@ TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &re
  */
 UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**

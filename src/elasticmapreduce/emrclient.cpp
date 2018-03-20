@@ -111,7 +111,7 @@ EmrClient::EmrClient(
  */
 AddInstanceFleetResponse * EmrClient::addInstanceFleet(const AddInstanceFleetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddInstanceFleetResponse *>(send(request));
 }
 
 /**
@@ -125,7 +125,7 @@ AddInstanceFleetResponse * EmrClient::addInstanceFleet(const AddInstanceFleetReq
  */
 AddInstanceGroupsResponse * EmrClient::addInstanceGroups(const AddInstanceGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddInstanceGroupsResponse *>(send(request));
 }
 
 /**
@@ -163,7 +163,7 @@ AddInstanceGroupsResponse * EmrClient::addInstanceGroups(const AddInstanceGroups
  */
 AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddJobFlowStepsResponse *>(send(request));
 }
 
 /**
@@ -179,7 +179,7 @@ AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsReques
  */
 AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /**
@@ -196,7 +196,7 @@ AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
  */
 CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CancelStepsResponse *>(send(request));
 }
 
 /**
@@ -210,7 +210,7 @@ CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
  */
 CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(const CreateSecurityConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSecurityConfigurationResponse *>(send(request));
 }
 
 /**
@@ -224,7 +224,7 @@ CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(con
  */
 DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(const DeleteSecurityConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSecurityConfigurationResponse *>(send(request));
 }
 
 /**
@@ -239,7 +239,7 @@ DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(con
  */
 DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeClusterResponse *>(send(request));
 }
 
 /**
@@ -280,7 +280,7 @@ DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterReques
  */
 DescribeJobFlowsResponse * EmrClient::describeJobFlows(const DescribeJobFlowsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeJobFlowsResponse *>(send(request));
 }
 
 /**
@@ -294,7 +294,7 @@ DescribeJobFlowsResponse * EmrClient::describeJobFlows(const DescribeJobFlowsReq
  */
 DescribeSecurityConfigurationResponse * EmrClient::describeSecurityConfiguration(const DescribeSecurityConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSecurityConfigurationResponse *>(send(request));
 }
 
 /**
@@ -308,7 +308,7 @@ DescribeSecurityConfigurationResponse * EmrClient::describeSecurityConfiguration
  */
 DescribeStepResponse * EmrClient::describeStep(const DescribeStepRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStepResponse *>(send(request));
 }
 
 /**
@@ -322,7 +322,7 @@ DescribeStepResponse * EmrClient::describeStep(const DescribeStepRequest &reques
  */
 ListBootstrapActionsResponse * EmrClient::listBootstrapActions(const ListBootstrapActionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBootstrapActionsResponse *>(send(request));
 }
 
 /**
@@ -338,7 +338,7 @@ ListBootstrapActionsResponse * EmrClient::listBootstrapActions(const ListBootstr
  */
 ListClustersResponse * EmrClient::listClusters(const ListClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListClustersResponse *>(send(request));
 }
 
 /**
@@ -356,7 +356,7 @@ ListClustersResponse * EmrClient::listClusters(const ListClustersRequest &reques
  */
 ListInstanceFleetsResponse * EmrClient::listInstanceFleets(const ListInstanceFleetsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInstanceFleetsResponse *>(send(request));
 }
 
 /**
@@ -370,7 +370,7 @@ ListInstanceFleetsResponse * EmrClient::listInstanceFleets(const ListInstanceFle
  */
 ListInstanceGroupsResponse * EmrClient::listInstanceGroups(const ListInstanceGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInstanceGroupsResponse *>(send(request));
 }
 
 /**
@@ -386,7 +386,7 @@ ListInstanceGroupsResponse * EmrClient::listInstanceGroups(const ListInstanceGro
  */
 ListInstancesResponse * EmrClient::listInstances(const ListInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInstancesResponse *>(send(request));
 }
 
 /**
@@ -402,7 +402,7 @@ ListInstancesResponse * EmrClient::listInstances(const ListInstancesRequest &req
  */
 ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const ListSecurityConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSecurityConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -416,7 +416,7 @@ ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const
  */
 ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStepsResponse *>(send(request));
 }
 
 /**
@@ -435,7 +435,7 @@ ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
  */
 ModifyInstanceFleetResponse * EmrClient::modifyInstanceFleet(const ModifyInstanceFleetRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyInstanceFleetResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ ModifyInstanceFleetResponse * EmrClient::modifyInstanceFleet(const ModifyInstanc
  */
 ModifyInstanceGroupsResponse * EmrClient::modifyInstanceGroups(const ModifyInstanceGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ModifyInstanceGroupsResponse *>(send(request));
 }
 
 /**
@@ -466,7 +466,7 @@ ModifyInstanceGroupsResponse * EmrClient::modifyInstanceGroups(const ModifyInsta
  */
 PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScalingPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutAutoScalingPolicyResponse *>(send(request));
 }
 
 /**
@@ -480,7 +480,7 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
  */
 RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const RemoveAutoScalingPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveAutoScalingPolicyResponse *>(send(request));
 }
 
 /**
@@ -500,7 +500,7 @@ RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const Remov
  */
 RemoveTagsResponse * EmrClient::removeTags(const RemoveTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
 /**
@@ -546,7 +546,7 @@ RemoveTagsResponse * EmrClient::removeTags(const RemoveTagsRequest &request)
  */
 RunJobFlowResponse * EmrClient::runJobFlow(const RunJobFlowRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RunJobFlowResponse *>(send(request));
 }
 
 /**
@@ -580,7 +580,7 @@ RunJobFlowResponse * EmrClient::runJobFlow(const RunJobFlowRequest &request)
  */
 SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const SetTerminationProtectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetTerminationProtectionResponse *>(send(request));
 }
 
 /**
@@ -597,7 +597,7 @@ SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const Set
  */
 SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleToAllUsersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetVisibleToAllUsersResponse *>(send(request));
 }
 
 /**
@@ -619,7 +619,7 @@ SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleT
  */
 TerminateJobFlowsResponse * EmrClient::terminateJobFlows(const TerminateJobFlowsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TerminateJobFlowsResponse *>(send(request));
 }
 
 /**

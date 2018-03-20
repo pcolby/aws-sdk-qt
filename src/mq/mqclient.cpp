@@ -105,7 +105,7 @@ MqClient::MqClient(
  */
 CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBrokerResponse *>(send(request));
 }
 
 /**
@@ -119,7 +119,7 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
  */
 CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -132,7 +132,7 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
  */
 CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUserResponse *>(send(request));
 }
 
 /**
@@ -145,7 +145,7 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
  */
 DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBrokerResponse *>(send(request));
 }
 
 /**
@@ -158,7 +158,7 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
  */
 DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
 /**
@@ -171,7 +171,7 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
  */
 DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBrokerResponse *>(send(request));
 }
 
 /**
@@ -184,7 +184,7 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
  */
 DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeConfigurationResponse *>(send(request));
 }
 
 /**
@@ -197,7 +197,7 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
  */
 DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeConfigurationRevisionResponse *>(send(request));
 }
 
 /**
@@ -210,7 +210,7 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
  */
 DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeUserResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
  */
 ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBrokersResponse *>(send(request));
 }
 
 /**
@@ -236,7 +236,7 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
  */
 ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const ListConfigurationRevisionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListConfigurationRevisionsResponse *>(send(request));
 }
 
 /**
@@ -249,7 +249,7 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
  */
 ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -262,7 +262,7 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
  */
 ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListUsersResponse *>(send(request));
 }
 
 /**
@@ -275,7 +275,7 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
  */
 RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootBrokerResponse *>(send(request));
 }
 
 /**
@@ -288,7 +288,7 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
  */
 UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBrokerResponse *>(send(request));
 }
 
 /**
@@ -301,7 +301,7 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
  */
 UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -314,7 +314,7 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
  */
 UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUserResponse *>(send(request));
 }
 
 /**

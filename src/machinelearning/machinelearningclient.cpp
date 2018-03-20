@@ -105,7 +105,7 @@ MachineLearningClient::MachineLearningClient(
  */
 AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /**
@@ -134,7 +134,7 @@ AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
  */
 CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(const CreateBatchPredictionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBatchPredictionResponse *>(send(request));
 }
 
 /**
@@ -164,7 +164,7 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
  */
 CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS(const CreateDataSourceFromRDSRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDataSourceFromRDSResponse *>(send(request));
 }
 
 /**
@@ -214,7 +214,7 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
  */
 CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFromRedshift(const CreateDataSourceFromRedshiftRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDataSourceFromRedshiftResponse *>(send(request));
 }
 
 /**
@@ -258,7 +258,7 @@ CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFr
  */
 CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(const CreateDataSourceFromS3Request &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDataSourceFromS3Response *>(send(request));
 }
 
 /**
@@ -288,7 +288,7 @@ CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(c
  */
 CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateEvaluationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEvaluationResponse *>(send(request));
 }
 
 /**
@@ -323,7 +323,7 @@ CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateE
  */
 CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateMLModelResponse *>(send(request));
 }
 
 /**
@@ -338,7 +338,7 @@ CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModel
  */
 CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(const CreateRealtimeEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRealtimeEndpointResponse *>(send(request));
 }
 
 /**
@@ -361,7 +361,7 @@ CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(c
  */
 DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(const DeleteBatchPredictionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBatchPredictionResponse *>(send(request));
 }
 
 /**
@@ -384,7 +384,7 @@ DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(con
  */
 DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDataSourceResponse *>(send(request));
 }
 
 /**
@@ -405,7 +405,7 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
  */
 DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteEvaluationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEvaluationResponse *>(send(request));
 }
 
 /**
@@ -428,7 +428,7 @@ DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteE
  */
 DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMLModelResponse *>(send(request));
 }
 
 /**
@@ -442,7 +442,7 @@ DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModel
  */
 DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(const DeleteRealtimeEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRealtimeEndpointResponse *>(send(request));
 }
 
 /**
@@ -460,7 +460,7 @@ DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(c
  */
 DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /**
@@ -474,7 +474,7 @@ DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &
  */
 DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictions(const DescribeBatchPredictionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeBatchPredictionsResponse *>(send(request));
 }
 
 /**
@@ -488,7 +488,7 @@ DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictio
  */
 DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const DescribeDataSourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDataSourcesResponse *>(send(request));
 }
 
 /**
@@ -502,7 +502,7 @@ DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const D
  */
 DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const DescribeEvaluationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEvaluationsResponse *>(send(request));
 }
 
 /**
@@ -516,7 +516,7 @@ DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const D
  */
 DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const DescribeMLModelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeMLModelsResponse *>(send(request));
 }
 
 /**
@@ -530,7 +530,7 @@ DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const Describ
  */
 DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
 /**
@@ -545,7 +545,7 @@ DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsReq
  */
 GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const GetBatchPredictionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBatchPredictionResponse *>(send(request));
 }
 
 /**
@@ -564,7 +564,7 @@ GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const Get
  */
 GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDataSourceResponse *>(send(request));
 }
 
 /**
@@ -578,7 +578,7 @@ GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSource
  */
 GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEvaluationResponse *>(send(request));
 }
 
 /**
@@ -596,7 +596,7 @@ GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluation
  */
 GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMLModelResponse *>(send(request));
 }
 
 /**
@@ -614,7 +614,7 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
  */
 PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PredictResponse *>(send(request));
 }
 
 /**
@@ -632,7 +632,7 @@ PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
  */
 UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(const UpdateBatchPredictionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateBatchPredictionResponse *>(send(request));
 }
 
 /**
@@ -650,7 +650,7 @@ UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(con
  */
 UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDataSourceResponse *>(send(request));
 }
 
 /**
@@ -668,7 +668,7 @@ UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateD
  */
 UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateEvaluationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEvaluationResponse *>(send(request));
 }
 
 /**
@@ -686,7 +686,7 @@ UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateE
  */
 UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateMLModelResponse *>(send(request));
 }
 
 /**

@@ -107,7 +107,7 @@ GreengrassClient::GreengrassClient(
  */
 AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const AssociateRoleToGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateRoleToGroupResponse *>(send(request));
 }
 
 /**
@@ -122,7 +122,7 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
  */
 AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AssociateServiceRoleToAccountResponse *>(send(request));
 }
 
 /**
@@ -136,7 +136,7 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
  */
 CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const CreateCoreDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCoreDefinitionResponse *>(send(request));
 }
 
 /**
@@ -150,7 +150,7 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
  */
 CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVersion(const CreateCoreDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCoreDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -163,7 +163,7 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
  */
 CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeploymentResponse *>(send(request));
 }
 
 /**
@@ -177,7 +177,7 @@ CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploy
  */
 CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const CreateDeviceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeviceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -190,7 +190,7 @@ CreateDeviceDefinitionResponse * GreengrassClient::createDeviceDefinition(const 
  */
 CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinitionVersion(const CreateDeviceDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDeviceDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -205,7 +205,7 @@ CreateDeviceDefinitionVersionResponse * GreengrassClient::createDeviceDefinition
  */
 CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(const CreateFunctionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateFunctionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -218,7 +218,7 @@ CreateFunctionDefinitionResponse * GreengrassClient::createFunctionDefinition(co
  */
 CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefinitionVersion(const CreateFunctionDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateFunctionDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -232,7 +232,7 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
  */
 CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGroupResponse *>(send(request));
 }
 
 /**
@@ -245,7 +245,7 @@ CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &re
  */
 CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertificateAuthority(const CreateGroupCertificateAuthorityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGroupCertificateAuthorityResponse *>(send(request));
 }
 
 /**
@@ -258,7 +258,7 @@ CreateGroupCertificateAuthorityResponse * GreengrassClient::createGroupCertifica
  */
 CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGroupVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGroupVersionResponse *>(send(request));
 }
 
 /**
@@ -272,7 +272,7 @@ CreateGroupVersionResponse * GreengrassClient::createGroupVersion(const CreateGr
  */
 CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const CreateLoggerDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateLoggerDefinitionResponse *>(send(request));
 }
 
 /**
@@ -285,7 +285,7 @@ CreateLoggerDefinitionResponse * GreengrassClient::createLoggerDefinition(const 
  */
 CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinitionVersion(const CreateLoggerDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateLoggerDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -299,7 +299,7 @@ CreateLoggerDefinitionVersionResponse * GreengrassClient::createLoggerDefinition
  */
 CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(const CreateResourceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateResourceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -312,7 +312,7 @@ CreateResourceDefinitionResponse * GreengrassClient::createResourceDefinition(co
  */
 CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefinitionVersion(const CreateResourceDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateResourceDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -325,7 +325,7 @@ CreateResourceDefinitionVersionResponse * GreengrassClient::createResourceDefini
  */
 CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(const CreateSoftwareUpdateJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSoftwareUpdateJobResponse *>(send(request));
 }
 
 /**
@@ -339,7 +339,7 @@ CreateSoftwareUpdateJobResponse * GreengrassClient::createSoftwareUpdateJob(cons
  */
 CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefinition(const CreateSubscriptionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSubscriptionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -352,7 +352,7 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
  */
 CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscriptionDefinitionVersion(const CreateSubscriptionDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSubscriptionDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -365,7 +365,7 @@ CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscripti
  */
 DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const DeleteCoreDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCoreDefinitionResponse *>(send(request));
 }
 
 /**
@@ -378,7 +378,7 @@ DeleteCoreDefinitionResponse * GreengrassClient::deleteCoreDefinition(const Dele
  */
 DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const DeleteDeviceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDeviceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -391,7 +391,7 @@ DeleteDeviceDefinitionResponse * GreengrassClient::deleteDeviceDefinition(const 
  */
 DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(const DeleteFunctionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFunctionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -404,7 +404,7 @@ DeleteFunctionDefinitionResponse * GreengrassClient::deleteFunctionDefinition(co
  */
 DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGroupResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ DeleteGroupResponse * GreengrassClient::deleteGroup(const DeleteGroupRequest &re
  */
 DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const DeleteLoggerDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLoggerDefinitionResponse *>(send(request));
 }
 
 /**
@@ -430,7 +430,7 @@ DeleteLoggerDefinitionResponse * GreengrassClient::deleteLoggerDefinition(const 
  */
 DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(const DeleteResourceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteResourceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -443,7 +443,7 @@ DeleteResourceDefinitionResponse * GreengrassClient::deleteResourceDefinition(co
  */
 DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefinition(const DeleteSubscriptionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSubscriptionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -456,7 +456,7 @@ DeleteSubscriptionDefinitionResponse * GreengrassClient::deleteSubscriptionDefin
  */
 DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(const DisassociateRoleFromGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateRoleFromGroupResponse *>(send(request));
 }
 
 /**
@@ -469,7 +469,7 @@ DisassociateRoleFromGroupResponse * GreengrassClient::disassociateRoleFromGroup(
  */
 DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServiceRoleFromAccount(const DisassociateServiceRoleFromAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DisassociateServiceRoleFromAccountResponse *>(send(request));
 }
 
 /**
@@ -482,7 +482,7 @@ DisassociateServiceRoleFromAccountResponse * GreengrassClient::disassociateServi
  */
 GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssociatedRoleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAssociatedRoleResponse *>(send(request));
 }
 
 /**
@@ -495,7 +495,7 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
  */
 GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetConnectivityInfoRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetConnectivityInfoResponse *>(send(request));
 }
 
 /**
@@ -508,7 +508,7 @@ GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetCon
  */
 GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCoreDefinitionResponse *>(send(request));
 }
 
 /**
@@ -521,7 +521,7 @@ GetCoreDefinitionResponse * GreengrassClient::getCoreDefinition(const GetCoreDef
  */
 GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(const GetCoreDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCoreDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -534,7 +534,7 @@ GetCoreDefinitionVersionResponse * GreengrassClient::getCoreDefinitionVersion(co
  */
 GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDeploymentStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeploymentStatusResponse *>(send(request));
 }
 
 /**
@@ -547,7 +547,7 @@ GetDeploymentStatusResponse * GreengrassClient::getDeploymentStatus(const GetDep
  */
 GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDeviceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeviceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -560,7 +560,7 @@ GetDeviceDefinitionResponse * GreengrassClient::getDeviceDefinition(const GetDev
  */
 GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersion(const GetDeviceDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeviceDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -573,7 +573,7 @@ GetDeviceDefinitionVersionResponse * GreengrassClient::getDeviceDefinitionVersio
  */
 GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const GetFunctionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFunctionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -587,7 +587,7 @@ GetFunctionDefinitionResponse * GreengrassClient::getFunctionDefinition(const Ge
  */
 GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVersion(const GetFunctionDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFunctionDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -600,7 +600,7 @@ GetFunctionDefinitionVersionResponse * GreengrassClient::getFunctionDefinitionVe
  */
 GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupResponse *>(send(request));
 }
 
 /**
@@ -613,7 +613,7 @@ GetGroupResponse * GreengrassClient::getGroup(const GetGroupRequest &request)
  */
 GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuthority(const GetGroupCertificateAuthorityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupCertificateAuthorityResponse *>(send(request));
 }
 
 /**
@@ -626,7 +626,7 @@ GetGroupCertificateAuthorityResponse * GreengrassClient::getGroupCertificateAuth
  */
 GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificateConfiguration(const GetGroupCertificateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupCertificateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -639,7 +639,7 @@ GetGroupCertificateConfigurationResponse * GreengrassClient::getGroupCertificate
  */
 GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGroupVersionResponse *>(send(request));
 }
 
 /**
@@ -652,7 +652,7 @@ GetGroupVersionResponse * GreengrassClient::getGroupVersion(const GetGroupVersio
  */
 GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLoggerDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLoggerDefinitionResponse *>(send(request));
 }
 
 /**
@@ -665,7 +665,7 @@ GetLoggerDefinitionResponse * GreengrassClient::getLoggerDefinition(const GetLog
  */
 GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersion(const GetLoggerDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetLoggerDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -678,7 +678,7 @@ GetLoggerDefinitionVersionResponse * GreengrassClient::getLoggerDefinitionVersio
  */
 GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const GetResourceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResourceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -691,7 +691,7 @@ GetResourceDefinitionResponse * GreengrassClient::getResourceDefinition(const Ge
  */
 GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVersion(const GetResourceDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResourceDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -704,7 +704,7 @@ GetResourceDefinitionVersionResponse * GreengrassClient::getResourceDefinitionVe
  */
 GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetServiceRoleForAccountResponse *>(send(request));
 }
 
 /**
@@ -717,7 +717,7 @@ GetServiceRoleForAccountResponse * GreengrassClient::getServiceRoleForAccount(co
  */
 GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(const GetSubscriptionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSubscriptionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -730,7 +730,7 @@ GetSubscriptionDefinitionResponse * GreengrassClient::getSubscriptionDefinition(
  */
 GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefinitionVersion(const GetSubscriptionDefinitionVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSubscriptionDefinitionVersionResponse *>(send(request));
 }
 
 /**
@@ -743,7 +743,7 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
  */
 ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersions(const ListCoreDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListCoreDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -756,7 +756,7 @@ ListCoreDefinitionVersionsResponse * GreengrassClient::listCoreDefinitionVersion
  */
 ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCoreDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListCoreDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -769,7 +769,7 @@ ListCoreDefinitionsResponse * GreengrassClient::listCoreDefinitions(const ListCo
  */
 ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -782,7 +782,7 @@ ListDeploymentsResponse * GreengrassClient::listDeployments(const ListDeployment
  */
 ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVersions(const ListDeviceDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeviceDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -795,7 +795,7 @@ ListDeviceDefinitionVersionsResponse * GreengrassClient::listDeviceDefinitionVer
  */
 ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const ListDeviceDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeviceDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -808,7 +808,7 @@ ListDeviceDefinitionsResponse * GreengrassClient::listDeviceDefinitions(const Li
  */
 ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitionVersions(const ListFunctionDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFunctionDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -821,7 +821,7 @@ ListFunctionDefinitionVersionsResponse * GreengrassClient::listFunctionDefinitio
  */
 ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(const ListFunctionDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFunctionDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -834,7 +834,7 @@ ListFunctionDefinitionsResponse * GreengrassClient::listFunctionDefinitions(cons
  */
 ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificateAuthorities(const ListGroupCertificateAuthoritiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGroupCertificateAuthoritiesResponse *>(send(request));
 }
 
 /**
@@ -847,7 +847,7 @@ ListGroupCertificateAuthoritiesResponse * GreengrassClient::listGroupCertificate
  */
 ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGroupVersionsResponse *>(send(request));
 }
 
 /**
@@ -860,7 +860,7 @@ ListGroupVersionsResponse * GreengrassClient::listGroupVersions(const ListGroupV
  */
 ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGroupsResponse *>(send(request));
 }
 
 /**
@@ -873,7 +873,7 @@ ListGroupsResponse * GreengrassClient::listGroups(const ListGroupsRequest &reque
  */
 ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVersions(const ListLoggerDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListLoggerDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -886,7 +886,7 @@ ListLoggerDefinitionVersionsResponse * GreengrassClient::listLoggerDefinitionVer
  */
 ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const ListLoggerDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListLoggerDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -899,7 +899,7 @@ ListLoggerDefinitionsResponse * GreengrassClient::listLoggerDefinitions(const Li
  */
 ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitionVersions(const ListResourceDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListResourceDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -912,7 +912,7 @@ ListResourceDefinitionVersionsResponse * GreengrassClient::listResourceDefinitio
  */
 ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(const ListResourceDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListResourceDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -925,7 +925,7 @@ ListResourceDefinitionsResponse * GreengrassClient::listResourceDefinitions(cons
  */
 ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionDefinitionVersions(const ListSubscriptionDefinitionVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSubscriptionDefinitionVersionsResponse *>(send(request));
 }
 
 /**
@@ -938,7 +938,7 @@ ListSubscriptionDefinitionVersionsResponse * GreengrassClient::listSubscriptionD
  */
 ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefinitions(const ListSubscriptionDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSubscriptionDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -951,7 +951,7 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
  */
 ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploymentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetDeploymentsResponse *>(send(request));
 }
 
 /**
@@ -965,7 +965,7 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
  */
 UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const UpdateConnectivityInfoRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateConnectivityInfoResponse *>(send(request));
 }
 
 /**
@@ -978,7 +978,7 @@ UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const 
  */
 UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const UpdateCoreDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateCoreDefinitionResponse *>(send(request));
 }
 
 /**
@@ -991,7 +991,7 @@ UpdateCoreDefinitionResponse * GreengrassClient::updateCoreDefinition(const Upda
  */
 UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const UpdateDeviceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDeviceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -1004,7 +1004,7 @@ UpdateDeviceDefinitionResponse * GreengrassClient::updateDeviceDefinition(const 
  */
 UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(const UpdateFunctionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFunctionDefinitionResponse *>(send(request));
 }
 
 /**
@@ -1017,7 +1017,7 @@ UpdateFunctionDefinitionResponse * GreengrassClient::updateFunctionDefinition(co
  */
 UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGroupResponse *>(send(request));
 }
 
 /**
@@ -1030,7 +1030,7 @@ UpdateGroupResponse * GreengrassClient::updateGroup(const UpdateGroupRequest &re
  */
 UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCertificateConfiguration(const UpdateGroupCertificateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGroupCertificateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -1043,7 +1043,7 @@ UpdateGroupCertificateConfigurationResponse * GreengrassClient::updateGroupCerti
  */
 UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const UpdateLoggerDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateLoggerDefinitionResponse *>(send(request));
 }
 
 /**
@@ -1056,7 +1056,7 @@ UpdateLoggerDefinitionResponse * GreengrassClient::updateLoggerDefinition(const 
  */
 UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(const UpdateResourceDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateResourceDefinitionResponse *>(send(request));
 }
 
 /**
@@ -1069,7 +1069,7 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
  */
 UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSubscriptionDefinitionResponse *>(send(request));
 }
 
 /**

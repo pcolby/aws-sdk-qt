@@ -113,7 +113,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
  */
 CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsNamespace(const CreatePrivateDnsNamespaceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePrivateDnsNamespaceResponse *>(send(request));
 }
 
 /**
@@ -132,7 +132,7 @@ CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsName
  */
 CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamespace(const CreatePublicDnsNamespaceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePublicDnsNamespaceResponse *>(send(request));
 }
 
 /**
@@ -166,7 +166,7 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
  */
 CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateServiceResponse *>(send(request));
 }
 
 /**
@@ -180,7 +180,7 @@ CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServic
  */
 DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNamespaceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNamespaceResponse *>(send(request));
 }
 
 /**
@@ -194,7 +194,7 @@ DeleteNamespaceResponse * ServiceDiscoveryClient::deleteNamespace(const DeleteNa
  */
 DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteServiceResponse *>(send(request));
 }
 
 /**
@@ -208,7 +208,7 @@ DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServic
  */
 DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const DeregisterInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterInstanceResponse *>(send(request));
 }
 
 /**
@@ -222,7 +222,7 @@ DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const De
  */
 GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetInstanceResponse *>(send(request));
 }
 
 /**
@@ -241,7 +241,7 @@ GetInstanceResponse * ServiceDiscoveryClient::getInstance(const GetInstanceReque
  */
 GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthStatus(const GetInstancesHealthStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetInstancesHealthStatusResponse *>(send(request));
 }
 
 /**
@@ -255,7 +255,7 @@ GetInstancesHealthStatusResponse * ServiceDiscoveryClient::getInstancesHealthSta
  */
 GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetNamespaceResponse *>(send(request));
 }
 
 /**
@@ -273,7 +273,7 @@ GetNamespaceResponse * ServiceDiscoveryClient::getNamespace(const GetNamespaceRe
  */
 GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetOperationResponse *>(send(request));
 }
 
 /**
@@ -287,7 +287,7 @@ GetOperationResponse * ServiceDiscoveryClient::getOperation(const GetOperationRe
  */
 GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetServiceResponse *>(send(request));
 }
 
 /**
@@ -301,7 +301,7 @@ GetServiceResponse * ServiceDiscoveryClient::getService(const GetServiceRequest 
  */
 ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListInstancesResponse *>(send(request));
 }
 
 /**
@@ -315,7 +315,7 @@ ListInstancesResponse * ServiceDiscoveryClient::listInstances(const ListInstance
  */
 ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamespacesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListNamespacesResponse *>(send(request));
 }
 
 /**
@@ -329,7 +329,7 @@ ListNamespacesResponse * ServiceDiscoveryClient::listNamespaces(const ListNamesp
  */
 ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOperationsResponse *>(send(request));
 }
 
 /**
@@ -343,7 +343,7 @@ ListOperationsResponse * ServiceDiscoveryClient::listOperations(const ListOperat
  */
 ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListServicesResponse *>(send(request));
 }
 
 /**
@@ -404,7 +404,7 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  */
 RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const RegisterInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterInstanceResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const Regist
  */
 UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateInstanceCustomHealthStatusResponse *>(send(request));
 }
 
 /**
@@ -454,7 +454,7 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
  */
 UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServiceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateServiceResponse *>(send(request));
 }
 
 /**

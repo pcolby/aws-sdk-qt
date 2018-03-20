@@ -106,7 +106,7 @@ MobileAnalyticsClient::MobileAnalyticsClient(
  */
 PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutEventsResponse *>(send(request));
 }
 
 /**

@@ -107,7 +107,7 @@ GlueClient::GlueClient(
  */
 BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreatePartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchCreatePartitionResponse *>(send(request));
 }
 
 /**
@@ -121,7 +121,7 @@ BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreat
  */
 BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDeleteConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDeleteConnectionResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDel
  */
 BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDeletePartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDeletePartitionResponse *>(send(request));
 }
 
 /**
@@ -149,7 +149,7 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
  */
 BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDeleteTableResponse *>(send(request));
 }
 
 /**
@@ -163,7 +163,7 @@ BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRe
  */
 BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const BatchDeleteTableVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDeleteTableVersionResponse *>(send(request));
 }
 
 /**
@@ -177,7 +177,7 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
  */
 BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchGetPartitionResponse *>(send(request));
 }
 
 /**
@@ -191,7 +191,7 @@ BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitio
  */
 BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchStopJobRunResponse *>(send(request));
 }
 
 /**
@@ -206,7 +206,7 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
  */
 CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateClassifierResponse *>(send(request));
 }
 
 /**
@@ -220,7 +220,7 @@ CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRe
  */
 CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateConnectionResponse *>(send(request));
 }
 
 /**
@@ -235,7 +235,7 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
  */
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCrawlerResponse *>(send(request));
 }
 
 /**
@@ -249,7 +249,7 @@ CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &re
  */
 CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDatabaseResponse *>(send(request));
 }
 
 /**
@@ -263,7 +263,7 @@ CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest 
  */
 CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDevEndpointResponse *>(send(request));
 }
 
 /**
@@ -277,7 +277,7 @@ CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpoin
  */
 CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateJobResponse *>(send(request));
 }
 
 /**
@@ -291,7 +291,7 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
  */
 CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePartitionResponse *>(send(request));
 }
 
 /**
@@ -305,7 +305,7 @@ CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionReque
  */
 CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateScriptResponse *>(send(request));
 }
 
 /**
@@ -319,7 +319,7 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
  */
 CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTableResponse *>(send(request));
 }
 
 /**
@@ -333,7 +333,7 @@ CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
  */
 CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTriggerResponse *>(send(request));
 }
 
 /**
@@ -347,7 +347,7 @@ CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &re
  */
 CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const CreateUserDefinedFunctionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUserDefinedFunctionResponse *>(send(request));
 }
 
 /**
@@ -361,7 +361,7 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
  */
 DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteClassifierResponse *>(send(request));
 }
 
 /**
@@ -375,7 +375,7 @@ DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRe
  */
 DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteConnectionResponse *>(send(request));
 }
 
 /**
@@ -389,7 +389,7 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
  */
 DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCrawlerResponse *>(send(request));
 }
 
 /**
@@ -403,7 +403,7 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
  */
 DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDatabaseResponse *>(send(request));
 }
 
 /**
@@ -417,7 +417,7 @@ DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest 
  */
 DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDevEndpointResponse *>(send(request));
 }
 
 /**
@@ -431,7 +431,7 @@ DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpoin
  */
 DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteJobResponse *>(send(request));
 }
 
 /**
@@ -445,7 +445,7 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
  */
 DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeletePartitionResponse *>(send(request));
 }
 
 /**
@@ -459,7 +459,7 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
  */
 DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTableResponse *>(send(request));
 }
 
 /**
@@ -473,7 +473,7 @@ DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
  */
 DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTableVersionResponse *>(send(request));
 }
 
 /**
@@ -487,7 +487,7 @@ DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVer
  */
 DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTriggerResponse *>(send(request));
 }
 
 /**
@@ -501,7 +501,7 @@ DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &re
  */
 DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const DeleteUserDefinedFunctionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUserDefinedFunctionResponse *>(send(request));
 }
 
 /**
@@ -515,7 +515,7 @@ DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const 
  */
 GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCatalogImportStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCatalogImportStatusResponse *>(send(request));
 }
 
 /**
@@ -529,7 +529,7 @@ GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCat
  */
 GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetClassifierResponse *>(send(request));
 }
 
 /**
@@ -543,7 +543,7 @@ GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &re
  */
 GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetClassifiersResponse *>(send(request));
 }
 
 /**
@@ -557,7 +557,7 @@ GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest 
  */
 GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetConnectionResponse *>(send(request));
 }
 
 /**
@@ -571,7 +571,7 @@ GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &re
  */
 GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetConnectionsResponse *>(send(request));
 }
 
 /**
@@ -585,7 +585,7 @@ GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest 
  */
 GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCrawlerResponse *>(send(request));
 }
 
 /**
@@ -599,7 +599,7 @@ GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
  */
 GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetricsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCrawlerMetricsResponse *>(send(request));
 }
 
 /**
@@ -613,7 +613,7 @@ GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetric
  */
 GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCrawlersResponse *>(send(request));
 }
 
 /**
@@ -627,7 +627,7 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
  */
 GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDatabaseResponse *>(send(request));
 }
 
 /**
@@ -641,7 +641,7 @@ GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
  */
 GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDatabasesResponse *>(send(request));
 }
 
 /**
@@ -655,7 +655,7 @@ GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &reque
  */
 GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDataflowGraphResponse *>(send(request));
 }
 
 /**
@@ -669,7 +669,7 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
  */
 GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDevEndpointResponse *>(send(request));
 }
 
 /**
@@ -683,7 +683,7 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
  */
 GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDevEndpointsResponse *>(send(request));
 }
 
 /**
@@ -697,7 +697,7 @@ GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsReque
  */
 GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetJobResponse *>(send(request));
 }
 
 /**
@@ -711,7 +711,7 @@ GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
  */
 GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetJobRunResponse *>(send(request));
 }
 
 /**
@@ -725,7 +725,7 @@ GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
  */
 GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetJobRunsResponse *>(send(request));
 }
 
 /**
@@ -739,7 +739,7 @@ GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
  */
 GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetJobsResponse *>(send(request));
 }
 
 /**
@@ -753,7 +753,7 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
  */
 GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMappingResponse *>(send(request));
 }
 
 /**
@@ -767,7 +767,7 @@ GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
  */
 GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPartitionResponse *>(send(request));
 }
 
 /**
@@ -781,7 +781,7 @@ GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &reque
  */
 GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPartitionsResponse *>(send(request));
 }
 
 /**
@@ -795,7 +795,7 @@ GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &re
  */
 GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPlanResponse *>(send(request));
 }
 
 /**
@@ -809,7 +809,7 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
  */
 GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTableResponse *>(send(request));
 }
 
 /**
@@ -823,7 +823,7 @@ GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
  */
 GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTableVersionResponse *>(send(request));
 }
 
 /**
@@ -837,7 +837,7 @@ GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionReque
  */
 GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTableVersionsResponse *>(send(request));
 }
 
 /**
@@ -851,7 +851,7 @@ GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRe
  */
 GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTablesResponse *>(send(request));
 }
 
 /**
@@ -865,7 +865,7 @@ GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
  */
 GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTriggerResponse *>(send(request));
 }
 
 /**
@@ -879,7 +879,7 @@ GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
  */
 GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTriggersResponse *>(send(request));
 }
 
 /**
@@ -893,7 +893,7 @@ GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
  */
 GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUserDefinedFunctionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUserDefinedFunctionResponse *>(send(request));
 }
 
 /**
@@ -907,7 +907,7 @@ GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUse
  */
 GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetUserDefinedFunctionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUserDefinedFunctionsResponse *>(send(request));
 }
 
 /**
@@ -921,7 +921,7 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
  */
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ImportCatalogToGlueResponse *>(send(request));
 }
 
 /**
@@ -935,7 +935,7 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
  */
 ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResetJobBookmarkResponse *>(send(request));
 }
 
 /**
@@ -949,7 +949,7 @@ ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRe
  */
 StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartCrawlerResponse *>(send(request));
 }
 
 /**
@@ -964,7 +964,7 @@ StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &reque
  */
 StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawlerScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartCrawlerScheduleResponse *>(send(request));
 }
 
 /**
@@ -978,7 +978,7 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
  */
 StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartJobRunResponse *>(send(request));
 }
 
 /**
@@ -993,7 +993,7 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
  */
 StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartTriggerResponse *>(send(request));
 }
 
 /**
@@ -1007,7 +1007,7 @@ StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &reque
  */
 StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopCrawlerResponse *>(send(request));
 }
 
 /**
@@ -1022,7 +1022,7 @@ StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
  */
 StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopCrawlerScheduleResponse *>(send(request));
 }
 
 /**
@@ -1036,7 +1036,7 @@ StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerS
  */
 StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopTriggerResponse *>(send(request));
 }
 
 /**
@@ -1051,7 +1051,7 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
  */
 UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateClassifierResponse *>(send(request));
 }
 
 /**
@@ -1065,7 +1065,7 @@ UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRe
  */
 UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateConnectionResponse *>(send(request));
 }
 
 /**
@@ -1079,7 +1079,7 @@ UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRe
  */
 UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateCrawlerResponse *>(send(request));
 }
 
 /**
@@ -1093,7 +1093,7 @@ UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &re
  */
 UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCrawlerScheduleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateCrawlerScheduleResponse *>(send(request));
 }
 
 /**
@@ -1107,7 +1107,7 @@ UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCr
  */
 UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDatabaseResponse *>(send(request));
 }
 
 /**
@@ -1121,7 +1121,7 @@ UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest 
  */
 UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDevEndpointResponse *>(send(request));
 }
 
 /**
@@ -1135,7 +1135,7 @@ UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpoin
  */
 UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateJobResponse *>(send(request));
 }
 
 /**
@@ -1149,7 +1149,7 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
  */
 UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdatePartitionResponse *>(send(request));
 }
 
 /**
@@ -1163,7 +1163,7 @@ UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionReque
  */
 UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTableResponse *>(send(request));
 }
 
 /**
@@ -1177,7 +1177,7 @@ UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
  */
 UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTriggerResponse *>(send(request));
 }
 
 /**
@@ -1191,7 +1191,7 @@ UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &re
  */
 UpdateUserDefinedFunctionResponse * GlueClient::updateUserDefinedFunction(const UpdateUserDefinedFunctionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUserDefinedFunctionResponse *>(send(request));
 }
 
 /**

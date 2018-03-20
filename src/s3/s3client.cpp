@@ -105,7 +105,7 @@ S3Client::S3Client(
  */
 AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AbortMultipartUploadResponse *>(send(request));
 }
 
 /**
@@ -118,7 +118,7 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
  */
 CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CompleteMultipartUploadResponse *>(send(request));
 }
 
 /**
@@ -131,7 +131,7 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
  */
 CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CopyObjectResponse *>(send(request));
 }
 
 /**
@@ -144,7 +144,7 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
  */
 CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateBucketResponse *>(send(request));
 }
 
 /**
@@ -161,7 +161,7 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
  */
 CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMultipartUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateMultipartUploadResponse *>(send(request));
 }
 
 /**
@@ -175,7 +175,7 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
  */
 DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketResponse *>(send(request));
 }
 
 /**
@@ -188,7 +188,7 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
  */
 DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -201,7 +201,7 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
  */
 DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketCorsResponse *>(send(request));
 }
 
 /**
@@ -214,7 +214,7 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
  */
 DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBucketEncryptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketEncryptionResponse *>(send(request));
 }
 
 /**
@@ -227,7 +227,7 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
  */
 DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConfiguration(const DeleteBucketInventoryConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketInventoryConfigurationResponse *>(send(request));
 }
 
 /**
@@ -240,7 +240,7 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
  */
 DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBucketLifecycleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketLifecycleResponse *>(send(request));
 }
 
 /**
@@ -253,7 +253,7 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
  */
 DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfiguration(const DeleteBucketMetricsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketMetricsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -266,7 +266,7 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
  */
 DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketPolicyResponse *>(send(request));
 }
 
 /**
@@ -279,7 +279,7 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketReplicationResponse *>(send(request));
 }
 
 /**
@@ -292,7 +292,7 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
  */
 DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketTaggingResponse *>(send(request));
 }
 
 /**
@@ -305,7 +305,7 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
  */
 DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWebsiteRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteBucketWebsiteResponse *>(send(request));
 }
 
 /**
@@ -319,7 +319,7 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
  */
 DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteObjectResponse *>(send(request));
 }
 
 /**
@@ -332,7 +332,7 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
  */
 DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteObjectTaggingResponse *>(send(request));
 }
 
 /**
@@ -346,7 +346,7 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
  */
 DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteObjectsResponse *>(send(request));
 }
 
 /**
@@ -359,7 +359,7 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
  */
 GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfiguration(const GetBucketAccelerateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketAccelerateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -372,7 +372,7 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
  */
 GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketAclResponse *>(send(request));
 }
 
 /**
@@ -385,7 +385,7 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
  */
 GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfiguration(const GetBucketAnalyticsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -398,7 +398,7 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
  */
 GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketCorsResponse *>(send(request));
 }
 
 /**
@@ -411,7 +411,7 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
  */
 GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncryptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketEncryptionResponse *>(send(request));
 }
 
 /**
@@ -424,7 +424,7 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
  */
 GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfiguration(const GetBucketInventoryConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketInventoryConfigurationResponse *>(send(request));
 }
 
 /**
@@ -437,7 +437,7 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
  */
 GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecycleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketLifecycleResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
  */
 GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfiguration(const GetBucketLifecycleConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketLifecycleConfigurationResponse *>(send(request));
 }
 
 /**
@@ -463,7 +463,7 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
  */
 GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketLocationResponse *>(send(request));
 }
 
 /**
@@ -477,7 +477,7 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
  */
 GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketLoggingResponse *>(send(request));
 }
 
 /**
@@ -490,7 +490,7 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
  */
 GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(const GetBucketMetricsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketMetricsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -503,7 +503,7 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
  */
 GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketNotificationResponse *>(send(request));
 }
 
 /**
@@ -516,7 +516,7 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
  */
 GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConfiguration(const GetBucketNotificationConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketNotificationConfigurationResponse *>(send(request));
 }
 
 /**
@@ -529,7 +529,7 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
  */
 GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketPolicyResponse *>(send(request));
 }
 
 /**
@@ -542,7 +542,7 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
  */
 GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketReplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketReplicationResponse *>(send(request));
 }
 
 /**
@@ -555,7 +555,7 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
  */
 GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBucketRequestPaymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketRequestPaymentResponse *>(send(request));
 }
 
 /**
@@ -568,7 +568,7 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
  */
 GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketTaggingResponse *>(send(request));
 }
 
 /**
@@ -581,7 +581,7 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
  */
 GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersioningRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketVersioningResponse *>(send(request));
 }
 
 /**
@@ -594,7 +594,7 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
  */
 GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetBucketWebsiteResponse *>(send(request));
 }
 
 /**
@@ -607,7 +607,7 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
  */
 GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetObjectResponse *>(send(request));
 }
 
 /**
@@ -620,7 +620,7 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
  */
 GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetObjectAclResponse *>(send(request));
 }
 
 /**
@@ -633,7 +633,7 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
  */
 GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetObjectTaggingResponse *>(send(request));
 }
 
 /**
@@ -646,7 +646,7 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
  */
 GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetObjectTorrentResponse *>(send(request));
 }
 
 /**
@@ -659,7 +659,7 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
  */
 HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<HeadBucketResponse *>(send(request));
 }
 
 /**
@@ -673,7 +673,7 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
  */
 HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<HeadObjectResponse *>(send(request));
 }
 
 /**
@@ -686,7 +686,7 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
  */
 ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBucketAnalyticsConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -699,7 +699,7 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
  */
 ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBucketInventoryConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -712,7 +712,7 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
  */
 ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBucketMetricsConfigurationsResponse *>(send(request));
 }
 
 /**
@@ -725,7 +725,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListBucketsResponse *>(send(request));
 }
 
 /**
@@ -738,7 +738,7 @@ ListBucketsResponse * S3Client::listBuckets()
  */
 ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListMultipartUploadsResponse *>(send(request));
 }
 
 /**
@@ -751,7 +751,7 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
  */
 ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListObjectVersionsResponse *>(send(request));
 }
 
 /**
@@ -765,7 +765,7 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
  */
 ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListObjectsResponse *>(send(request));
 }
 
 /**
@@ -780,7 +780,7 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
  */
 ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListObjectsV2Response *>(send(request));
 }
 
 /**
@@ -793,7 +793,7 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
  */
 ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListPartsResponse *>(send(request));
 }
 
 /**
@@ -806,7 +806,7 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
  */
 PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfiguration(const PutBucketAccelerateConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketAccelerateConfigurationResponse *>(send(request));
 }
 
 /**
@@ -819,7 +819,7 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
  */
 PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketAclResponse *>(send(request));
 }
 
 /**
@@ -832,7 +832,7 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
  */
 PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfiguration(const PutBucketAnalyticsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketAnalyticsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -845,7 +845,7 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
  */
 PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketCorsResponse *>(send(request));
 }
 
 /**
@@ -858,7 +858,7 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
  */
 PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncryptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketEncryptionResponse *>(send(request));
 }
 
 /**
@@ -871,7 +871,7 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
  */
 PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfiguration(const PutBucketInventoryConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketInventoryConfigurationResponse *>(send(request));
 }
 
 /**
@@ -884,7 +884,7 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
  */
 PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecycleRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketLifecycleResponse *>(send(request));
 }
 
 /**
@@ -897,7 +897,7 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
  */
 PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfiguration(const PutBucketLifecycleConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketLifecycleConfigurationResponse *>(send(request));
 }
 
 /**
@@ -911,7 +911,7 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
  */
 PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketLoggingResponse *>(send(request));
 }
 
 /**
@@ -924,7 +924,7 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
  */
 PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(const PutBucketMetricsConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketMetricsConfigurationResponse *>(send(request));
 }
 
 /**
@@ -937,7 +937,7 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
  */
 PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketNotificationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketNotificationResponse *>(send(request));
 }
 
 /**
@@ -950,7 +950,7 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
  */
 PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConfiguration(const PutBucketNotificationConfigurationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketNotificationConfigurationResponse *>(send(request));
 }
 
 /**
@@ -963,7 +963,7 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
  */
 PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketPolicyResponse *>(send(request));
 }
 
 /**
@@ -976,7 +976,7 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketReplicationResponse *>(send(request));
 }
 
 /**
@@ -992,7 +992,7 @@ PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketRep
  */
 PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBucketRequestPaymentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketRequestPaymentResponse *>(send(request));
 }
 
 /**
@@ -1005,7 +1005,7 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
  */
 PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketTaggingResponse *>(send(request));
 }
 
 /**
@@ -1018,7 +1018,7 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
  */
 PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersioningRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketVersioningResponse *>(send(request));
 }
 
 /**
@@ -1031,7 +1031,7 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
  */
 PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutBucketWebsiteResponse *>(send(request));
 }
 
 /**
@@ -1044,7 +1044,7 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
  */
 PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutObjectResponse *>(send(request));
 }
 
 /**
@@ -1057,7 +1057,7 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
  */
 PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutObjectAclResponse *>(send(request));
 }
 
 /**
@@ -1070,7 +1070,7 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
  */
 PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutObjectTaggingResponse *>(send(request));
 }
 
 /**
@@ -1083,7 +1083,7 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
  */
 RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RestoreObjectResponse *>(send(request));
 }
 
 /**
@@ -1100,7 +1100,7 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
  */
 UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UploadPartResponse *>(send(request));
 }
 
 /**
@@ -1113,7 +1113,7 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
  */
 UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UploadPartCopyResponse *>(send(request));
 }
 
 /**

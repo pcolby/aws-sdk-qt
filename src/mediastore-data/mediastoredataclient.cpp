@@ -106,7 +106,7 @@ MediaStoreDataClient::MediaStoreDataClient(
  */
 DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteObjectResponse *>(send(request));
 }
 
 /**
@@ -120,7 +120,7 @@ DeleteObjectResponse * MediaStoreDataClient::deleteObject(const DeleteObjectRequ
  */
 DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeObjectResponse *>(send(request));
 }
 
 /**
@@ -134,7 +134,7 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
  */
 GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetObjectResponse *>(send(request));
 }
 
 /**
@@ -148,7 +148,7 @@ GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &requ
  */
 ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListItemsResponse *>(send(request));
 }
 
 /**
@@ -162,7 +162,7 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
  */
 PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PutObjectResponse *>(send(request));
 }
 
 /**

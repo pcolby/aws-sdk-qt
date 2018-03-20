@@ -135,7 +135,7 @@ WorkDocsClient::WorkDocsClient(
  */
 AbortDocumentVersionUploadResponse * WorkDocsClient::abortDocumentVersionUpload(const AbortDocumentVersionUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AbortDocumentVersionUploadResponse *>(send(request));
 }
 
 /**
@@ -149,7 +149,7 @@ AbortDocumentVersionUploadResponse * WorkDocsClient::abortDocumentVersionUpload(
  */
 ActivateUserResponse * WorkDocsClient::activateUser(const ActivateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ActivateUserResponse *>(send(request));
 }
 
 /**
@@ -164,7 +164,7 @@ ActivateUserResponse * WorkDocsClient::activateUser(const ActivateUserRequest &r
  */
 AddResourcePermissionsResponse * WorkDocsClient::addResourcePermissions(const AddResourcePermissionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddResourcePermissionsResponse *>(send(request));
 }
 
 /**
@@ -178,7 +178,7 @@ AddResourcePermissionsResponse * WorkDocsClient::addResourcePermissions(const Ad
  */
 CreateCommentResponse * WorkDocsClient::createComment(const CreateCommentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCommentResponse *>(send(request));
 }
 
 /**
@@ -192,7 +192,7 @@ CreateCommentResponse * WorkDocsClient::createComment(const CreateCommentRequest
  */
 CreateCustomMetadataResponse * WorkDocsClient::createCustomMetadata(const CreateCustomMetadataRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateCustomMetadataResponse *>(send(request));
 }
 
 /**
@@ -206,7 +206,7 @@ CreateCustomMetadataResponse * WorkDocsClient::createCustomMetadata(const Create
  */
 CreateFolderResponse * WorkDocsClient::createFolder(const CreateFolderRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateFolderResponse *>(send(request));
 }
 
 /**
@@ -220,7 +220,7 @@ CreateFolderResponse * WorkDocsClient::createFolder(const CreateFolderRequest &r
  */
 CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateLabelsResponse *>(send(request));
 }
 
 /**
@@ -240,7 +240,7 @@ CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &r
  */
 CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubscription(const CreateNotificationSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNotificationSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -255,7 +255,7 @@ CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubsc
  */
 CreateUserResponse * WorkDocsClient::createUser(const CreateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUserResponse *>(send(request));
 }
 
 /**
@@ -269,7 +269,7 @@ CreateUserResponse * WorkDocsClient::createUser(const CreateUserRequest &request
  */
 DeactivateUserResponse * WorkDocsClient::deactivateUser(const DeactivateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeactivateUserResponse *>(send(request));
 }
 
 /**
@@ -283,7 +283,7 @@ DeactivateUserResponse * WorkDocsClient::deactivateUser(const DeactivateUserRequ
  */
 DeleteCommentResponse * WorkDocsClient::deleteComment(const DeleteCommentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCommentResponse *>(send(request));
 }
 
 /**
@@ -297,7 +297,7 @@ DeleteCommentResponse * WorkDocsClient::deleteComment(const DeleteCommentRequest
  */
 DeleteCustomMetadataResponse * WorkDocsClient::deleteCustomMetadata(const DeleteCustomMetadataRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteCustomMetadataResponse *>(send(request));
 }
 
 /**
@@ -311,7 +311,7 @@ DeleteCustomMetadataResponse * WorkDocsClient::deleteCustomMetadata(const Delete
  */
 DeleteDocumentResponse * WorkDocsClient::deleteDocument(const DeleteDocumentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDocumentResponse *>(send(request));
 }
 
 /**
@@ -325,7 +325,7 @@ DeleteDocumentResponse * WorkDocsClient::deleteDocument(const DeleteDocumentRequ
  */
 DeleteFolderResponse * WorkDocsClient::deleteFolder(const DeleteFolderRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFolderResponse *>(send(request));
 }
 
 /**
@@ -339,7 +339,7 @@ DeleteFolderResponse * WorkDocsClient::deleteFolder(const DeleteFolderRequest &r
  */
 DeleteFolderContentsResponse * WorkDocsClient::deleteFolderContents(const DeleteFolderContentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteFolderContentsResponse *>(send(request));
 }
 
 /**
@@ -353,7 +353,7 @@ DeleteFolderContentsResponse * WorkDocsClient::deleteFolderContents(const Delete
  */
 DeleteLabelsResponse * WorkDocsClient::deleteLabels(const DeleteLabelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteLabelsResponse *>(send(request));
 }
 
 /**
@@ -367,7 +367,7 @@ DeleteLabelsResponse * WorkDocsClient::deleteLabels(const DeleteLabelsRequest &r
  */
 DeleteNotificationSubscriptionResponse * WorkDocsClient::deleteNotificationSubscription(const DeleteNotificationSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNotificationSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -381,7 +381,7 @@ DeleteNotificationSubscriptionResponse * WorkDocsClient::deleteNotificationSubsc
  */
 DeleteUserResponse * WorkDocsClient::deleteUser(const DeleteUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUserResponse *>(send(request));
 }
 
 /**
@@ -395,7 +395,7 @@ DeleteUserResponse * WorkDocsClient::deleteUser(const DeleteUserRequest &request
  */
 DescribeActivitiesResponse * WorkDocsClient::describeActivities(const DescribeActivitiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeActivitiesResponse *>(send(request));
 }
 
 /**
@@ -409,7 +409,7 @@ DescribeActivitiesResponse * WorkDocsClient::describeActivities(const DescribeAc
  */
 DescribeCommentsResponse * WorkDocsClient::describeComments(const DescribeCommentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeCommentsResponse *>(send(request));
 }
 
 /**
@@ -427,7 +427,7 @@ DescribeCommentsResponse * WorkDocsClient::describeComments(const DescribeCommen
  */
 DescribeDocumentVersionsResponse * WorkDocsClient::describeDocumentVersions(const DescribeDocumentVersionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDocumentVersionsResponse *>(send(request));
 }
 
 /**
@@ -446,7 +446,7 @@ DescribeDocumentVersionsResponse * WorkDocsClient::describeDocumentVersions(cons
  */
 DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const DescribeFolderContentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeFolderContentsResponse *>(send(request));
 }
 
 /**
@@ -460,7 +460,7 @@ DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const De
  */
 DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeGroupsResponse *>(send(request));
 }
 
 /**
@@ -474,7 +474,7 @@ DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequ
  */
 DescribeNotificationSubscriptionsResponse * WorkDocsClient::describeNotificationSubscriptions(const DescribeNotificationSubscriptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNotificationSubscriptionsResponse *>(send(request));
 }
 
 /**
@@ -488,7 +488,7 @@ DescribeNotificationSubscriptionsResponse * WorkDocsClient::describeNotification
  */
 DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermissions(const DescribeResourcePermissionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeResourcePermissionsResponse *>(send(request));
 }
 
 /**
@@ -504,7 +504,7 @@ DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermission
  */
 DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const DescribeRootFoldersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeRootFoldersResponse *>(send(request));
 }
 
 /**
@@ -523,7 +523,7 @@ DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const Describe
  */
 DescribeUsersResponse * WorkDocsClient::describeUsers(const DescribeUsersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeUsersResponse *>(send(request));
 }
 
 /**
@@ -538,7 +538,7 @@ DescribeUsersResponse * WorkDocsClient::describeUsers(const DescribeUsersRequest
  */
 GetCurrentUserResponse * WorkDocsClient::getCurrentUser(const GetCurrentUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetCurrentUserResponse *>(send(request));
 }
 
 /**
@@ -552,7 +552,7 @@ GetCurrentUserResponse * WorkDocsClient::getCurrentUser(const GetCurrentUserRequ
  */
 GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentResponse *>(send(request));
 }
 
 /**
@@ -572,7 +572,7 @@ GetDocumentResponse * WorkDocsClient::getDocument(const GetDocumentRequest &requ
  */
 GetDocumentPathResponse * WorkDocsClient::getDocumentPath(const GetDocumentPathRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentPathResponse *>(send(request));
 }
 
 /**
@@ -586,7 +586,7 @@ GetDocumentPathResponse * WorkDocsClient::getDocumentPath(const GetDocumentPathR
  */
 GetDocumentVersionResponse * WorkDocsClient::getDocumentVersion(const GetDocumentVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDocumentVersionResponse *>(send(request));
 }
 
 /**
@@ -600,7 +600,7 @@ GetDocumentVersionResponse * WorkDocsClient::getDocumentVersion(const GetDocumen
  */
 GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFolderResponse *>(send(request));
 }
 
 /**
@@ -619,7 +619,7 @@ GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
  */
 GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetFolderPathResponse *>(send(request));
 }
 
 /**
@@ -643,7 +643,7 @@ GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest
  */
 InitiateDocumentVersionUploadResponse * WorkDocsClient::initiateDocumentVersionUpload(const InitiateDocumentVersionUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<InitiateDocumentVersionUploadResponse *>(send(request));
 }
 
 /**
@@ -657,7 +657,7 @@ InitiateDocumentVersionUploadResponse * WorkDocsClient::initiateDocumentVersionU
  */
 RemoveAllResourcePermissionsResponse * WorkDocsClient::removeAllResourcePermissions(const RemoveAllResourcePermissionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveAllResourcePermissionsResponse *>(send(request));
 }
 
 /**
@@ -671,7 +671,7 @@ RemoveAllResourcePermissionsResponse * WorkDocsClient::removeAllResourcePermissi
  */
 RemoveResourcePermissionResponse * WorkDocsClient::removeResourcePermission(const RemoveResourcePermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemoveResourcePermissionResponse *>(send(request));
 }
 
 /**
@@ -685,7 +685,7 @@ RemoveResourcePermissionResponse * WorkDocsClient::removeResourcePermission(cons
  */
 UpdateDocumentResponse * WorkDocsClient::updateDocument(const UpdateDocumentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDocumentResponse *>(send(request));
 }
 
 /**
@@ -704,7 +704,7 @@ UpdateDocumentResponse * WorkDocsClient::updateDocument(const UpdateDocumentRequ
  */
 UpdateDocumentVersionResponse * WorkDocsClient::updateDocumentVersion(const UpdateDocumentVersionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDocumentVersionResponse *>(send(request));
 }
 
 /**
@@ -719,7 +719,7 @@ UpdateDocumentVersionResponse * WorkDocsClient::updateDocumentVersion(const Upda
  */
 UpdateFolderResponse * WorkDocsClient::updateFolder(const UpdateFolderRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateFolderResponse *>(send(request));
 }
 
 /**
@@ -734,7 +734,7 @@ UpdateFolderResponse * WorkDocsClient::updateFolder(const UpdateFolderRequest &r
  */
 UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateUserResponse *>(send(request));
 }
 
 /**

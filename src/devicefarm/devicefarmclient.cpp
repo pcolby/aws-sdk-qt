@@ -106,7 +106,7 @@ DeviceFarmClient::DeviceFarmClient(
  */
 CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevicePoolRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDevicePoolResponse *>(send(request));
 }
 
 /**
@@ -120,7 +120,7 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
  */
 CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const CreateNetworkProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNetworkProfileResponse *>(send(request));
 }
 
 /**
@@ -134,7 +134,7 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
  */
 CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateProjectResponse *>(send(request));
 }
 
 /**
@@ -148,7 +148,7 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
  */
 CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateRemoteAccessSessionResponse *>(send(request));
 }
 
 /**
@@ -162,7 +162,7 @@ CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(
  */
 CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateUploadResponse *>(send(request));
 }
 
 /**
@@ -176,7 +176,7 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
  */
 DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevicePoolRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDevicePoolResponse *>(send(request));
 }
 
 /**
@@ -190,7 +190,7 @@ DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevice
  */
 DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const DeleteNetworkProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNetworkProfileResponse *>(send(request));
 }
 
 /**
@@ -208,7 +208,7 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
  */
 DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteProjectResponse *>(send(request));
 }
 
 /**
@@ -222,7 +222,7 @@ DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectReque
  */
 DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRemoteAccessSessionResponse *>(send(request));
 }
 
 /**
@@ -240,7 +240,7 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
  */
 DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteRunResponse *>(send(request));
 }
 
 /**
@@ -254,7 +254,7 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
  */
 DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteUploadResponse *>(send(request));
 }
 
 /**
@@ -268,7 +268,7 @@ DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest 
  */
 GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetAccountSettingsResponse *>(send(request));
 }
 
 /**
@@ -282,7 +282,7 @@ GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccou
  */
 GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDeviceResponse *>(send(request));
 }
 
 /**
@@ -296,7 +296,7 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
  */
 GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDevicePoolResponse *>(send(request));
 }
 
 /**
@@ -310,7 +310,7 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
  */
 GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDevicePoolCompatibilityResponse *>(send(request));
 }
 
 /**
@@ -324,7 +324,7 @@ GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibilit
  */
 GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetJobResponse *>(send(request));
 }
 
 /**
@@ -338,7 +338,7 @@ GetJobResponse * DeviceFarmClient::getJob(const GetJobRequest &request)
  */
 GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetworkProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetNetworkProfileResponse *>(send(request));
 }
 
 /**
@@ -356,7 +356,7 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
  */
 GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferingStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetOfferingStatusResponse *>(send(request));
 }
 
 /**
@@ -370,7 +370,7 @@ GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferin
  */
 GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetProjectResponse *>(send(request));
 }
 
 /**
@@ -384,7 +384,7 @@ GetProjectResponse * DeviceFarmClient::getProject(const GetProjectRequest &reque
  */
 GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const GetRemoteAccessSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRemoteAccessSessionResponse *>(send(request));
 }
 
 /**
@@ -398,7 +398,7 @@ GetRemoteAccessSessionResponse * DeviceFarmClient::getRemoteAccessSession(const 
  */
 GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetRunResponse *>(send(request));
 }
 
 /**
@@ -412,7 +412,7 @@ GetRunResponse * DeviceFarmClient::getRun(const GetRunRequest &request)
  */
 GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSuiteResponse *>(send(request));
 }
 
 /**
@@ -426,7 +426,7 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
  */
 GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTestResponse *>(send(request));
 }
 
 /**
@@ -440,7 +440,7 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
  */
 GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetUploadResponse *>(send(request));
 }
 
 /**
@@ -455,7 +455,7 @@ GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
  */
 InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSession(const InstallToRemoteAccessSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<InstallToRemoteAccessSessionResponse *>(send(request));
 }
 
 /**
@@ -469,7 +469,7 @@ InstallToRemoteAccessSessionResponse * DeviceFarmClient::installToRemoteAccessSe
  */
 ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListArtifactsResponse *>(send(request));
 }
 
 /**
@@ -483,7 +483,7 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
  */
 ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePoolsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDevicePoolsResponse *>(send(request));
 }
 
 /**
@@ -497,7 +497,7 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
  */
 ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDevicesResponse *>(send(request));
 }
 
 /**
@@ -511,7 +511,7 @@ ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &re
  */
 ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListJobsResponse *>(send(request));
 }
 
 /**
@@ -525,7 +525,7 @@ ListJobsResponse * DeviceFarmClient::listJobs(const ListJobsRequest &request)
  */
 ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNetworkProfilesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListNetworkProfilesResponse *>(send(request));
 }
 
 /**
@@ -542,7 +542,7 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
  */
 ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const ListOfferingPromotionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOfferingPromotionsResponse *>(send(request));
 }
 
 /**
@@ -560,7 +560,7 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
  */
 ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(const ListOfferingTransactionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOfferingTransactionsResponse *>(send(request));
 }
 
 /**
@@ -578,7 +578,7 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
  */
 ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListOfferingsResponse *>(send(request));
 }
 
 /**
@@ -592,7 +592,7 @@ ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsReque
  */
 ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListProjectsResponse *>(send(request));
 }
 
 /**
@@ -606,7 +606,7 @@ ListProjectsResponse * DeviceFarmClient::listProjects(const ListProjectsRequest 
  */
 ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(const ListRemoteAccessSessionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListRemoteAccessSessionsResponse *>(send(request));
 }
 
 /**
@@ -620,7 +620,7 @@ ListRemoteAccessSessionsResponse * DeviceFarmClient::listRemoteAccessSessions(co
  */
 ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListRunsResponse *>(send(request));
 }
 
 /**
@@ -634,7 +634,7 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
  */
 ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSamplesResponse *>(send(request));
 }
 
 /**
@@ -648,7 +648,7 @@ ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &re
  */
 ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSuitesResponse *>(send(request));
 }
 
 /**
@@ -662,7 +662,7 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
  */
 ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTestsResponse *>(send(request));
 }
 
 /**
@@ -676,7 +676,7 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
  */
 ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniqueProblemsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListUniqueProblemsResponse *>(send(request));
 }
 
 /**
@@ -690,7 +690,7 @@ ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniq
  */
 ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListUploadsResponse *>(send(request));
 }
 
 /**
@@ -708,7 +708,7 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
  */
 PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOfferingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PurchaseOfferingResponse *>(send(request));
 }
 
 /**
@@ -725,7 +725,7 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
  */
 RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RenewOfferingResponse *>(send(request));
 }
 
 /**
@@ -739,7 +739,7 @@ RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingReque
  */
 ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ScheduleRunResponse *>(send(request));
 }
 
 /**
@@ -753,7 +753,7 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
  */
 StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopRemoteAccessSessionResponse *>(send(request));
 }
 
 /**
@@ -770,7 +770,7 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
  */
 StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopRunResponse *>(send(request));
 }
 
 /**
@@ -785,7 +785,7 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
  */
 UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevicePoolRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDevicePoolResponse *>(send(request));
 }
 
 /**
@@ -799,7 +799,7 @@ UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevice
  */
 UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const UpdateNetworkProfileRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateNetworkProfileResponse *>(send(request));
 }
 
 /**
@@ -813,7 +813,7 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
  */
 UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateProjectResponse *>(send(request));
 }
 
 /**

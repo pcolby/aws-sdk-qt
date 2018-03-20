@@ -121,7 +121,7 @@ BatchClient::BatchClient(
  */
 CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CancelJobResponse *>(send(request));
 }
 
 /**
@@ -155,7 +155,7 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  */
 CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const CreateComputeEnvironmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateComputeEnvironmentResponse *>(send(request));
 }
 
 /**
@@ -176,7 +176,7 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
  */
 CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateJobQueueResponse *>(send(request));
 }
 
 /**
@@ -195,7 +195,7 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
  */
 DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const DeleteComputeEnvironmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteComputeEnvironmentResponse *>(send(request));
 }
 
 /**
@@ -215,7 +215,7 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
  */
 DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteJobQueueResponse *>(send(request));
 }
 
 /**
@@ -229,7 +229,7 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
  */
 DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const DeregisterJobDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeregisterJobDefinitionResponse *>(send(request));
 }
 
 /**
@@ -248,7 +248,7 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
  */
 DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(const DescribeComputeEnvironmentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeComputeEnvironmentsResponse *>(send(request));
 }
 
 /**
@@ -263,7 +263,7 @@ DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(c
  */
 DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const DescribeJobDefinitionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeJobDefinitionsResponse *>(send(request));
 }
 
 /**
@@ -277,7 +277,7 @@ DescribeJobDefinitionsResponse * BatchClient::describeJobDefinitions(const Descr
  */
 DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeJobQueuesResponse *>(send(request));
 }
 
 /**
@@ -291,7 +291,7 @@ DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueu
  */
 DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeJobsResponse *>(send(request));
 }
 
 /**
@@ -306,7 +306,7 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
  */
 ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListJobsResponse *>(send(request));
 }
 
 /**
@@ -320,7 +320,7 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
  */
 RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const RegisterJobDefinitionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RegisterJobDefinitionResponse *>(send(request));
 }
 
 /**
@@ -335,7 +335,7 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
  */
 SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SubmitJobResponse *>(send(request));
 }
 
 /**
@@ -351,7 +351,7 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
  */
 TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TerminateJobResponse *>(send(request));
 }
 
 /**
@@ -365,7 +365,7 @@ TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &requ
  */
 UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const UpdateComputeEnvironmentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateComputeEnvironmentResponse *>(send(request));
 }
 
 /**
@@ -379,7 +379,7 @@ UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const U
  */
 UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateJobQueueResponse *>(send(request));
 }
 
 /**

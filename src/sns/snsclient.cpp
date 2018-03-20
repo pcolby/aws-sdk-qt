@@ -118,7 +118,7 @@ SnsClient::SnsClient(
  */
 AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddPermissionResponse *>(send(request));
 }
 
 /**
@@ -137,7 +137,7 @@ AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &req
  */
 CheckIfPhoneNumberIsOptedOutResponse * SnsClient::checkIfPhoneNumberIsOptedOut(const CheckIfPhoneNumberIsOptedOutRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CheckIfPhoneNumberIsOptedOutResponse *>(send(request));
 }
 
 /**
@@ -154,7 +154,7 @@ CheckIfPhoneNumberIsOptedOutResponse * SnsClient::checkIfPhoneNumberIsOptedOut(c
  */
 ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscriptionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ConfirmSubscriptionResponse *>(send(request));
 }
 
 /**
@@ -191,7 +191,7 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  */
 CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const CreatePlatformApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePlatformApplicationResponse *>(send(request));
 }
 
 /**
@@ -219,7 +219,7 @@ CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const C
  */
 CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreatePlatformEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePlatformEndpointResponse *>(send(request));
 }
 
 /**
@@ -235,7 +235,7 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
  */
 CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTopicResponse *>(send(request));
 }
 
 /**
@@ -254,7 +254,7 @@ CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
  */
 DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /**
@@ -270,7 +270,7 @@ DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &
  */
 DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const DeletePlatformApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeletePlatformApplicationResponse *>(send(request));
 }
 
 /**
@@ -286,7 +286,7 @@ DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const D
  */
 DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTopicResponse *>(send(request));
 }
 
 /**
@@ -302,7 +302,7 @@ DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
  */
 GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpointAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEndpointAttributesResponse *>(send(request));
 }
 
 /**
@@ -318,7 +318,7 @@ GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpoi
  */
 GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttributes(const GetPlatformApplicationAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetPlatformApplicationAttributesResponse *>(send(request));
 }
 
 /**
@@ -336,7 +336,7 @@ GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttr
  */
 GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSMSAttributesResponse *>(send(request));
 }
 
 /**
@@ -350,7 +350,7 @@ GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesReq
  */
 GetSubscriptionAttributesResponse * SnsClient::getSubscriptionAttributes(const GetSubscriptionAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSubscriptionAttributesResponse *>(send(request));
 }
 
 /**
@@ -364,7 +364,7 @@ GetSubscriptionAttributesResponse * SnsClient::getSubscriptionAttributes(const G
  */
 GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTopicAttributesResponse *>(send(request));
 }
 
 /**
@@ -384,7 +384,7 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
  */
 ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformApplication(const ListEndpointsByPlatformApplicationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListEndpointsByPlatformApplicationResponse *>(send(request));
 }
 
 /**
@@ -406,7 +406,7 @@ ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformA
  */
 ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const ListPhoneNumbersOptedOutRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListPhoneNumbersOptedOutResponse *>(send(request));
 }
 
 /**
@@ -425,7 +425,7 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
  */
 ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const ListPlatformApplicationsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListPlatformApplicationsResponse *>(send(request));
 }
 
 /**
@@ -441,7 +441,7 @@ ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const Lis
  */
 ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptionsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSubscriptionsResponse *>(send(request));
 }
 
 /**
@@ -457,7 +457,7 @@ ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptions
  */
 ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const ListSubscriptionsByTopicRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListSubscriptionsByTopicResponse *>(send(request));
 }
 
 /**
@@ -473,7 +473,7 @@ ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const Lis
  */
 ListTopicsResponse * SnsClient::listTopics(const ListTopicsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTopicsResponse *>(send(request));
 }
 
 /**
@@ -491,7 +491,7 @@ ListTopicsResponse * SnsClient::listTopics(const ListTopicsRequest &request)
  */
 OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<OptInPhoneNumberResponse *>(send(request));
 }
 
 /**
@@ -519,7 +519,7 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  */
 PublishResponse * SnsClient::publish(const PublishRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PublishResponse *>(send(request));
 }
 
 /**
@@ -533,7 +533,7 @@ PublishResponse * SnsClient::publish(const PublishRequest &request)
  */
 RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
 /**
@@ -549,7 +549,7 @@ RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionReq
  */
 SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpointAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetEndpointAttributesResponse *>(send(request));
 }
 
 /**
@@ -567,7 +567,7 @@ SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpoi
  */
 SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttributes(const SetPlatformApplicationAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetPlatformApplicationAttributesResponse *>(send(request));
 }
 
 /**
@@ -588,7 +588,7 @@ SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttr
  */
 SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetSMSAttributesResponse *>(send(request));
 }
 
 /**
@@ -602,7 +602,7 @@ SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesReq
  */
 SetSubscriptionAttributesResponse * SnsClient::setSubscriptionAttributes(const SetSubscriptionAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetSubscriptionAttributesResponse *>(send(request));
 }
 
 /**
@@ -616,7 +616,7 @@ SetSubscriptionAttributesResponse * SnsClient::setSubscriptionAttributes(const S
  */
 SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetTopicAttributesResponse *>(send(request));
 }
 
 /**
@@ -632,7 +632,7 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
  */
 SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SubscribeResponse *>(send(request));
 }
 
 /**
@@ -649,7 +649,7 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
  */
 UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UnsubscribeResponse *>(send(request));
 }
 
 /**

@@ -122,7 +122,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
  */
 GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(const GetEntitlementsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetEntitlementsResponse *>(send(request));
 }
 
 /**

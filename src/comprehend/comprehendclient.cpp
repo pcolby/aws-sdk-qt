@@ -109,7 +109,7 @@ ComprehendClient::ComprehendClient(
  */
 BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLanguage(const BatchDetectDominantLanguageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDetectDominantLanguageResponse *>(send(request));
 }
 
 /**
@@ -124,7 +124,7 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
  */
 BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchDetectEntitiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDetectEntitiesResponse *>(send(request));
 }
 
 /**
@@ -138,7 +138,7 @@ BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchD
  */
 BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const BatchDetectKeyPhrasesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDetectKeyPhrasesResponse *>(send(request));
 }
 
 /**
@@ -153,7 +153,7 @@ BatchDetectKeyPhrasesResponse * ComprehendClient::batchDetectKeyPhrases(const Ba
  */
 BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const BatchDetectSentimentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchDetectSentimentResponse *>(send(request));
 }
 
 /**
@@ -167,7 +167,7 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
  */
 DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJob(const DescribeTopicsDetectionJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTopicsDetectionJobResponse *>(send(request));
 }
 
 /**
@@ -182,7 +182,7 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
  */
 DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const DetectDominantLanguageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectDominantLanguageResponse *>(send(request));
 }
 
 /**
@@ -197,7 +197,7 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
  */
 DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectEntitiesResponse *>(send(request));
 }
 
 /**
@@ -211,7 +211,7 @@ DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRe
  */
 DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhrasesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectKeyPhrasesResponse *>(send(request));
 }
 
 /**
@@ -226,7 +226,7 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
  */
 DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimentRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DetectSentimentResponse *>(send(request));
 }
 
 /**
@@ -240,7 +240,7 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
  */
 ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTopicsDetectionJobsResponse *>(send(request));
 }
 
 /**
@@ -255,7 +255,7 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
  */
 StartTopicsDetectionJobResponse * ComprehendClient::startTopicsDetectionJob(const StartTopicsDetectionJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartTopicsDetectionJobResponse *>(send(request));
 }
 
 /**

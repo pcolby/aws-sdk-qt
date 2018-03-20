@@ -122,7 +122,7 @@ KinesisVideoClient::KinesisVideoClient(
  */
 CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateStreamResponse *>(send(request));
 }
 
 /**
@@ -153,7 +153,7 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
  */
 DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteStreamResponse *>(send(request));
 }
 
 /**
@@ -168,7 +168,7 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
  */
 DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
 /**
@@ -192,7 +192,7 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
  */
 GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDataEndpointResponse *>(send(request));
 }
 
 /**
@@ -207,7 +207,7 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
  */
 ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
 /**
@@ -225,7 +225,7 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
  */
 ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsForStreamResponse *>(send(request));
 }
 
 /**
@@ -255,7 +255,7 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  */
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagStreamResponse *>(send(request));
 }
 
 /**
@@ -274,7 +274,7 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
  */
 UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagStreamResponse *>(send(request));
 }
 
 /**
@@ -313,7 +313,7 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
  */
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDataRetentionResponse *>(send(request));
 }
 
 /**
@@ -341,7 +341,7 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
  */
 UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateStreamResponse *>(send(request));
 }
 
 /**

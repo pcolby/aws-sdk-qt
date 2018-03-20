@@ -147,7 +147,7 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
  */
 BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const BatchMeterUsageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<BatchMeterUsageResponse *>(send(request));
 }
 
 /**
@@ -165,7 +165,7 @@ BatchMeterUsageResponse * MarketplaceMeteringClient::batchMeterUsage(const Batch
  */
 MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<MeterUsageResponse *>(send(request));
 }
 
 /**
@@ -181,7 +181,7 @@ MeterUsageResponse * MarketplaceMeteringClient::meterUsage(const MeterUsageReque
  */
 ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const ResolveCustomerRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ResolveCustomerResponse *>(send(request));
 }
 
 /**

@@ -111,7 +111,7 @@ SageMakerClient::SageMakerClient(
  */
 AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
  */
 CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
 /**
@@ -186,7 +186,7 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
  */
 CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const CreateEndpointConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateEndpointConfigResponse *>(send(request));
 }
 
 /**
@@ -223,7 +223,7 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
  */
 CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateModelResponse *>(send(request));
 }
 
 /**
@@ -283,7 +283,7 @@ CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &req
  */
 CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const CreateNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -302,7 +302,7 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
  */
 CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookInstanceLifecycleConfig(const CreateNotebookInstanceLifecycleConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
 /**
@@ -318,7 +318,7 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
  */
 CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNotebookInstanceUrl(const CreatePresignedNotebookInstanceUrlRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreatePresignedNotebookInstanceUrlResponse *>(send(request));
 }
 
 /**
@@ -382,7 +382,7 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
  */
 CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrainingJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTrainingJobResponse *>(send(request));
 }
 
 /**
@@ -396,7 +396,7 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
  */
 DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /**
@@ -411,7 +411,7 @@ DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointReq
  */
 DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const DeleteEndpointConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteEndpointConfigResponse *>(send(request));
 }
 
 /**
@@ -427,7 +427,7 @@ DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const Delet
  */
 DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteModelResponse *>(send(request));
 }
 
 /**
@@ -447,7 +447,7 @@ DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &req
  */
 DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const DeleteNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -461,7 +461,7 @@ DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const D
  */
 DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookInstanceLifecycleConfig(const DeleteNotebookInstanceLifecycleConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
 /**
@@ -479,7 +479,7 @@ DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookI
  */
 DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /**
@@ -493,7 +493,7 @@ DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &reques
  */
 DescribeEndpointResponse * SageMakerClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEndpointResponse *>(send(request));
 }
 
 /**
@@ -507,7 +507,7 @@ DescribeEndpointResponse * SageMakerClient::describeEndpoint(const DescribeEndpo
  */
 DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const DescribeEndpointConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEndpointConfigResponse *>(send(request));
 }
 
 /**
@@ -521,7 +521,7 @@ DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const D
  */
 DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeModelResponse *>(send(request));
 }
 
 /**
@@ -535,7 +535,7 @@ DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelReques
  */
 DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(const DescribeNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -553,7 +553,7 @@ DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(con
  */
 DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNotebookInstanceLifecycleConfig(const DescribeNotebookInstanceLifecycleConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
 /**
@@ -567,7 +567,7 @@ DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNoteb
  */
 DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const DescribeTrainingJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeTrainingJobResponse *>(send(request));
 }
 
 /**
@@ -581,7 +581,7 @@ DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const Describ
  */
 ListEndpointConfigsResponse * SageMakerClient::listEndpointConfigs(const ListEndpointConfigsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListEndpointConfigsResponse *>(send(request));
 }
 
 /**
@@ -595,7 +595,7 @@ ListEndpointConfigsResponse * SageMakerClient::listEndpointConfigs(const ListEnd
  */
 ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListEndpointsResponse *>(send(request));
 }
 
 /**
@@ -610,7 +610,7 @@ ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsReques
  */
 ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListModelsResponse *>(send(request));
 }
 
 /**
@@ -624,7 +624,7 @@ ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &reques
  */
 ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInstanceLifecycleConfigs(const ListNotebookInstanceLifecycleConfigsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListNotebookInstanceLifecycleConfigsResponse *>(send(request));
 }
 
 /**
@@ -638,7 +638,7 @@ ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInst
  */
 ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const ListNotebookInstancesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListNotebookInstancesResponse *>(send(request));
 }
 
 /**
@@ -652,7 +652,7 @@ ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const Lis
  */
 ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /**
@@ -666,7 +666,7 @@ ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
  */
 ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJobsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTrainingJobsResponse *>(send(request));
 }
 
 /**
@@ -682,7 +682,7 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
  */
 StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const StartNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -703,7 +703,7 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
  */
 StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -730,7 +730,7 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
  */
 StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJobRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StopTrainingJobResponse *>(send(request));
 }
 
 /**
@@ -752,7 +752,7 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
  */
 UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEndpointResponse *>(send(request));
 }
 
 /**
@@ -770,7 +770,7 @@ UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointReq
  */
 UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeightsAndCapacities(const UpdateEndpointWeightsAndCapacitiesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateEndpointWeightsAndCapacitiesResponse *>(send(request));
 }
 
 /**
@@ -785,7 +785,7 @@ UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeig
  */
 UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const UpdateNotebookInstanceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateNotebookInstanceResponse *>(send(request));
 }
 
 /**
@@ -799,7 +799,7 @@ UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const U
  */
 UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookInstanceLifecycleConfig(const UpdateNotebookInstanceLifecycleConfigRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateNotebookInstanceLifecycleConfigResponse *>(send(request));
 }
 
 /**

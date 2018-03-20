@@ -198,7 +198,7 @@ SqsClient::SqsClient(
  */
 AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<AddPermissionResponse *>(send(request));
 }
 
 /**
@@ -252,7 +252,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  */
 ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const ChangeMessageVisibilityRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ChangeMessageVisibilityResponse *>(send(request));
 }
 
 /**
@@ -287,7 +287,7 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  */
 ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(const ChangeMessageVisibilityBatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ChangeMessageVisibilityBatchResponse *>(send(request));
 }
 
 /**
@@ -355,7 +355,7 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  */
 CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateQueueResponse *>(send(request));
 }
 
 /**
@@ -386,7 +386,7 @@ CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
  */
 DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMessageResponse *>(send(request));
 }
 
 /**
@@ -419,7 +419,7 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  */
 DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteMessageBatchResponse *>(send(request));
 }
 
 /**
@@ -449,7 +449,7 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  */
 DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteQueueResponse *>(send(request));
 }
 
 /**
@@ -482,7 +482,7 @@ DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
  */
 GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetQueueAttributesResponse *>(send(request));
 }
 
 /**
@@ -504,7 +504,7 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
  */
 GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetQueueUrlResponse *>(send(request));
 }
 
 /**
@@ -524,7 +524,7 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
  */
 ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDeadLetterSourceQueuesResponse *>(send(request));
 }
 
 /**
@@ -571,7 +571,7 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
  */
 ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListQueueTagsResponse *>(send(request));
 }
 
 /**
@@ -586,7 +586,7 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
  */
 ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListQueuesResponse *>(send(request));
 }
 
 /**
@@ -611,7 +611,7 @@ ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
  */
 PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<PurgeQueueResponse *>(send(request));
 }
 
 /**
@@ -688,7 +688,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  */
 ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ReceiveMessageResponse *>(send(request));
 }
 
 /**
@@ -703,7 +703,7 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
  */
 RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RemovePermissionResponse *>(send(request));
 }
 
 /**
@@ -731,7 +731,7 @@ RemovePermissionResponse * SqsClient::removePermission(const RemovePermissionReq
  */
 SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SendMessageResponse *>(send(request));
 }
 
 /**
@@ -788,7 +788,7 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  */
 SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SendMessageBatchResponse *>(send(request));
 }
 
 /**
@@ -809,7 +809,7 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
  */
 SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttributesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<SetQueueAttributesResponse *>(send(request));
 }
 
 /**
@@ -856,7 +856,7 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  */
 TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagQueueResponse *>(send(request));
 }
 
 /**
@@ -903,7 +903,7 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
  */
 UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagQueueResponse *>(send(request));
 }
 
 /**

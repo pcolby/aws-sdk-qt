@@ -108,7 +108,7 @@ DaxClient::DaxClient(
  */
 CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
 /**
@@ -123,7 +123,7 @@ CreateClusterResponse * DaxClient::createCluster(const CreateClusterRequest &req
  */
 CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -137,7 +137,7 @@ CreateParameterGroupResponse * DaxClient::createParameterGroup(const CreateParam
  */
 CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -156,7 +156,7 @@ CreateSubnetGroupResponse * DaxClient::createSubnetGroup(const CreateSubnetGroup
  */
 DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const DecreaseReplicationFactorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DecreaseReplicationFactorResponse *>(send(request));
 }
 
 /**
@@ -172,7 +172,7 @@ DecreaseReplicationFactorResponse * DaxClient::decreaseReplicationFactor(const D
  */
 DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
 /**
@@ -186,7 +186,7 @@ DeleteClusterResponse * DaxClient::deleteCluster(const DeleteClusterRequest &req
  */
 DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -204,7 +204,7 @@ DeleteParameterGroupResponse * DaxClient::deleteParameterGroup(const DeleteParam
  */
 DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteSubnetGroupResponse *>(send(request));
 }
 
 /**
@@ -238,7 +238,7 @@ DeleteSubnetGroupResponse * DaxClient::deleteSubnetGroup(const DeleteSubnetGroup
  */
 DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
 /**
@@ -252,7 +252,7 @@ DescribeClustersResponse * DaxClient::describeClusters(const DescribeClustersReq
  */
 DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const DescribeDefaultParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeDefaultParametersResponse *>(send(request));
 }
 
 /**
@@ -272,7 +272,7 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
  */
 DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /**
@@ -287,7 +287,7 @@ DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &
  */
 DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const DescribeParameterGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeParameterGroupsResponse *>(send(request));
 }
 
 /**
@@ -301,7 +301,7 @@ DescribeParameterGroupsResponse * DaxClient::describeParameterGroups(const Descr
  */
 DescribeParametersResponse * DaxClient::describeParameters(const DescribeParametersRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeParametersResponse *>(send(request));
 }
 
 /**
@@ -316,7 +316,7 @@ DescribeParametersResponse * DaxClient::describeParameters(const DescribeParamet
  */
 DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSubnetGroupsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DescribeSubnetGroupsResponse *>(send(request));
 }
 
 /**
@@ -330,7 +330,7 @@ DescribeSubnetGroupsResponse * DaxClient::describeSubnetGroups(const DescribeSub
  */
 IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const IncreaseReplicationFactorRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<IncreaseReplicationFactorResponse *>(send(request));
 }
 
 /**
@@ -344,7 +344,7 @@ IncreaseReplicationFactorResponse * DaxClient::increaseReplicationFactor(const I
  */
 ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /**
@@ -359,7 +359,7 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
  */
 RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<RebootNodeResponse *>(send(request));
 }
 
 /**
@@ -374,7 +374,7 @@ RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
  */
 TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /**
@@ -389,7 +389,7 @@ TagResourceResponse * DaxClient::tagResource(const TagResourceRequest &request)
  */
 UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /**
@@ -404,7 +404,7 @@ UntagResourceResponse * DaxClient::untagResource(const UntagResourceRequest &req
  */
 UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateClusterResponse *>(send(request));
 }
 
 /**
@@ -419,7 +419,7 @@ UpdateClusterResponse * DaxClient::updateCluster(const UpdateClusterRequest &req
  */
 UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParameterGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateParameterGroupResponse *>(send(request));
 }
 
 /**
@@ -433,7 +433,7 @@ UpdateParameterGroupResponse * DaxClient::updateParameterGroup(const UpdateParam
  */
 UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroupRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateSubnetGroupResponse *>(send(request));
 }
 
 /**

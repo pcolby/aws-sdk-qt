@@ -105,7 +105,7 @@ AppSyncClient::AppSyncClient(
  */
 CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateApiKeyResponse *>(send(request));
 }
 
 /**
@@ -119,7 +119,7 @@ CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &re
  */
 CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateDataSourceResponse *>(send(request));
 }
 
 /**
@@ -133,7 +133,7 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
  */
 CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateGraphqlApiResponse *>(send(request));
 }
 
 /**
@@ -152,7 +152,7 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
  */
 CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateResolverResponse *>(send(request));
 }
 
 /**
@@ -166,7 +166,7 @@ CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverReque
  */
 CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<CreateTypeResponse *>(send(request));
 }
 
 /**
@@ -180,7 +180,7 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
  */
 DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteApiKeyResponse *>(send(request));
 }
 
 /**
@@ -194,7 +194,7 @@ DeleteApiKeyResponse * AppSyncClient::deleteApiKey(const DeleteApiKeyRequest &re
  */
 DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteDataSourceResponse *>(send(request));
 }
 
 /**
@@ -208,7 +208,7 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
  */
 DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteGraphqlApiResponse *>(send(request));
 }
 
 /**
@@ -222,7 +222,7 @@ DeleteGraphqlApiResponse * AppSyncClient::deleteGraphqlApi(const DeleteGraphqlAp
  */
 DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteResolverResponse *>(send(request));
 }
 
 /**
@@ -236,7 +236,7 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
  */
 DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<DeleteTypeResponse *>(send(request));
 }
 
 /**
@@ -250,7 +250,7 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
  */
 GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetDataSourceResponse *>(send(request));
 }
 
 /**
@@ -264,7 +264,7 @@ GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest 
  */
 GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetGraphqlApiResponse *>(send(request));
 }
 
 /**
@@ -278,7 +278,7 @@ GetGraphqlApiResponse * AppSyncClient::getGraphqlApi(const GetGraphqlApiRequest 
  */
 GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const GetIntrospectionSchemaRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetIntrospectionSchemaResponse *>(send(request));
 }
 
 /**
@@ -292,7 +292,7 @@ GetIntrospectionSchemaResponse * AppSyncClient::getIntrospectionSchema(const Get
  */
 GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetResolverResponse *>(send(request));
 }
 
 /**
@@ -306,7 +306,7 @@ GetResolverResponse * AppSyncClient::getResolver(const GetResolverRequest &reque
  */
 GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const GetSchemaCreationStatusRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetSchemaCreationStatusResponse *>(send(request));
 }
 
 /**
@@ -320,7 +320,7 @@ GetSchemaCreationStatusResponse * AppSyncClient::getSchemaCreationStatus(const G
  */
 GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetTypeResponse *>(send(request));
 }
 
 /**
@@ -334,7 +334,7 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
  */
 ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListApiKeysResponse *>(send(request));
 }
 
 /**
@@ -348,7 +348,7 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
  */
 ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListDataSourcesResponse *>(send(request));
 }
 
 /**
@@ -362,7 +362,7 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
  */
 ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListGraphqlApisResponse *>(send(request));
 }
 
 /**
@@ -376,7 +376,7 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
  */
 ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListResolversResponse *>(send(request));
 }
 
 /**
@@ -390,7 +390,7 @@ ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest 
  */
 ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListTypesResponse *>(send(request));
 }
 
 /**
@@ -408,7 +408,7 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
  */
 StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSchemaCreationRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<StartSchemaCreationResponse *>(send(request));
 }
 
 /**
@@ -422,7 +422,7 @@ StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSche
  */
 UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateApiKeyResponse *>(send(request));
 }
 
 /**
@@ -436,7 +436,7 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
  */
 UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateDataSourceResponse *>(send(request));
 }
 
 /**
@@ -450,7 +450,7 @@ UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourc
  */
 UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlApiRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateGraphqlApiResponse *>(send(request));
 }
 
 /**
@@ -464,7 +464,7 @@ UpdateGraphqlApiResponse * AppSyncClient::updateGraphqlApi(const UpdateGraphqlAp
  */
 UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateResolverResponse *>(send(request));
 }
 
 /**
@@ -478,7 +478,7 @@ UpdateResolverResponse * AppSyncClient::updateResolver(const UpdateResolverReque
  */
 UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<UpdateTypeResponse *>(send(request));
 }
 
 /**

@@ -121,7 +121,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  */
 GetMediaForFragmentListResponse * KinesisVideoArchivedMediaClient::getMediaForFragmentList(const GetMediaForFragmentListRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<GetMediaForFragmentListResponse *>(send(request));
 }
 
 /**
@@ -135,7 +135,7 @@ GetMediaForFragmentListResponse * KinesisVideoArchivedMediaClient::getMediaForFr
  */
 ListFragmentsResponse * KinesisVideoArchivedMediaClient::listFragments(const ListFragmentsRequest &request)
 {
-    return nullptr; /// @todo Return the right response object.
+    return qobject_cast<ListFragmentsResponse *>(send(request));
 }
 
 /**
