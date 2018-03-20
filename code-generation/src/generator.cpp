@@ -87,12 +87,9 @@ bool Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QLatin1String("operations"), operations);
-    render(QStringLiteral("client.cpp"), context,
-           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(className.toLower()));
-    render(QStringLiteral("client.h"), context,
-           QStringLiteral("%1/%2.h").arg(projectDir).arg(className.toLower()));
-    render(QStringLiteral("client_p.h"), context,
-           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(className.toLower()));
+    render(QStringLiteral("client.cpp"), context, projectDir, className.toLower() + QLatin1String(".cpp"));
+    render(QStringLiteral("client.h"),   context, projectDir, className.toLower() + QLatin1String(".h"));
+    render(QStringLiteral("client_p.h"), context, projectDir, className.toLower() + QLatin1String("_p.h"));
     context.pop();
 
     /// @todo Generate ancillary project files.
@@ -102,8 +99,7 @@ bool Generator::generate(const QString &serviceFileName,
                    << QStringLiteral("%1_p.h").arg(className.toLower()));
     context.insert(QStringLiteral("SourceFiles"), QStringList()
                    << QStringLiteral("%1.cpp").arg(className.toLower()));
-    render(QStringLiteral("service.pro"), context,
-           QStringLiteral("%1/%2.pro").arg(projectDir).arg(serviceFileName));
+    render(QStringLiteral("service.pro"), context, projectDir, serviceFileName + QLatin1String(".pro"));
     context.pop();
     return true;
 }
@@ -169,24 +165,18 @@ bool Generator::generateModelClasses(const QString &projectDir, const QString &o
     context.push();
     const QString requestClassName = operationName + QStringLiteral("Request");
     context.insert(QStringLiteral("ClassName"), requestClassName);
-    render(QStringLiteral("request.cpp"), context,
-           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(requestClassName.toLower()));
-    render(QStringLiteral("request.h"), context,
-           QStringLiteral("%1/%2.h").arg(projectDir).arg(requestClassName.toLower()));
-    render(QStringLiteral("request_p.h"), context,
-           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(requestClassName.toLower()));
+    render(QStringLiteral("request.cpp"), context, projectDir, requestClassName.toLower() + QStringLiteral(".cpp"));
+    render(QStringLiteral("request.h"),   context, projectDir, requestClassName.toLower() + QStringLiteral(".h"));
+    render(QStringLiteral("request_p.h"), context, projectDir, requestClassName.toLower() + QStringLiteral("_p.h"));
     context.pop();
 
     /// @todo Generate response class.
     context.push();
     const QString responseClassName = operationName + QStringLiteral("Response");
     context.insert(QStringLiteral("ClassName"), responseClassName);
-    render(QStringLiteral("response.cpp"), context,
-           QStringLiteral("%1/%2.cpp").arg(projectDir).arg(responseClassName.toLower()));
-    render(QStringLiteral("response.h"), context,
-           QStringLiteral("%1/%2.h").arg(projectDir).arg(responseClassName.toLower()));
-    render(QStringLiteral("response_p.h"), context,
-           QStringLiteral("%1/%2_p.h").arg(projectDir).arg(responseClassName.toLower()));
+    render(QStringLiteral("response.cpp"), context, projectDir, responseClassName.toLower() + QStringLiteral(".cpp"));
+    render(QStringLiteral("response.h"),   context, projectDir, responseClassName.toLower() + QStringLiteral(".h"));
+    render(QStringLiteral("response_p.h"), context, projectDir, responseClassName.toLower() + QStringLiteral("_p.h"));
     context.pop();
     return true;
 }
@@ -216,10 +206,8 @@ public:
     }
 };
 
-bool Generator::render(
-    const QString &templateName,
-    Grantlee::Context &context,
-    const QString &outputFileName) const
+bool Generator::render(const QString &templateName, Grantlee::Context &context,
+                       const QString &outputFileName) const
 {
     if (!templates.contains(templateName)) {
         qWarning() << "template does not exist" << templateName;
@@ -236,4 +224,10 @@ bool Generator::render(
     NoEscapeStream noEscapeStream(&textStream);
     templates[templateName]->render(&noEscapeStream, &context);
     return true;
+}
+
+bool Generator::render(const QString &templateName, Grantlee::Context &context,
+                       const QString &outputDirName, const QString &outputFileName) const
+{
+    return render(templateName, context, outputDirName + QLatin1Char('/') + outputFileName);
 }
