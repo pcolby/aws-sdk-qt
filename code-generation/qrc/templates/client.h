@@ -54,8 +54,8 @@ public:
         QObject * const parent = 0);
 
 public slots:
-{% for f in OperationSignatures %}
-    {{ f.returnType }} {{ f.name }}({{ f.arguments }});
+{% for name,op in operations.items %}
+    {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %});
 {% endfor %}
 
 private:
