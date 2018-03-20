@@ -65,7 +65,6 @@ bool Generator::generate(const QString &serviceFileName,
     context.insert(QLatin1String("TargetLibName"), serviceFileName);
     context.insert(QLatin1String("NameSpaceName"), classNamePrefix);
     context.insert(QLatin1String("ClassName"), className);
-    context.insert(QLatin1String("ClassBrief"), getClassBrief(metaData));
     context.insert(QLatin1String("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
@@ -146,21 +145,6 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
         lines.removeLast();
     }
     return lines;
-}
-
-QString Generator::getClassBrief(const QJsonObject &metaData)
-{
-    QString brief = QString::fromLatin1("Client for %1").arg(
-        metaData.value(QLatin1String("serviceFullName")).toString());
-
-    QString serviceAbbreviation =
-        metaData.value(QLatin1String("serviceAbbreviation")).toString();
-    serviceAbbreviation.replace(QRegularExpression(QLatin1String("Amazon|AWS")), QString());
-
-    if ((!serviceAbbreviation.isEmpty()) && (!brief.contains(serviceAbbreviation))) {
-        brief += QString::fromLatin1(" (%1)").arg(serviceAbbreviation);
-    }
-    return brief;
 }
 
 QString Generator::getClassNamePrefix(const QJsonObject &metaData)

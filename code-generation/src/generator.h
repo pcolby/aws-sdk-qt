@@ -31,7 +31,6 @@ public:
 
 protected:
     static QStringList formatHtmlDocumentation(const QString &html);
-    static QString getClassBrief(const QJsonObject &metaData);
     static QString getClassNamePrefix(const QJsonObject &metaData);
     static QVariantMap getFunctionSignature(const QString &operationName, const QJsonObject &operation);
     static QVariantList getFunctionSignatures(const QJsonObject &operations);

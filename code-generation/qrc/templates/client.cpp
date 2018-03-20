@@ -31,7 +31,7 @@ namespace {{NameSpaceName}} {
 /**
  * @class  {{ClassName}}
  *
- * @brief  {{ClassBrief}}
+ * @brief  Client for {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %}
  *
 {% for line in ClassDocumentation %}
  *{% if line %} {{ line }}{% endif %}
