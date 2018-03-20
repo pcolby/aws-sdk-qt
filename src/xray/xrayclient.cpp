@@ -106,7 +106,7 @@ XRayClient::XRayClient(
  */
 BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -122,7 +122,7 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
  */
 GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
  */
 GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  */
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -188,7 +188,7 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
  */
 PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetryRecordsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -260,7 +260,7 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  */
 PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

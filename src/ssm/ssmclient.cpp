@@ -149,7 +149,7 @@ SsmClient::SsmClient(
  */
 AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -164,7 +164,7 @@ AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResource
  */
 CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -182,7 +182,7 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
  */
 CreateActivationResponse * SsmClient::createActivation(const CreateActivationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -206,7 +206,7 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
  */
 CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -230,7 +230,7 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
  */
 CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateAssociationBatchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -248,7 +248,7 @@ CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateA
  */
 CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -262,7 +262,7 @@ CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &
  */
 CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const CreateMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -281,7 +281,7 @@ CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const Creat
  */
 CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  */
 CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateResourceDataSyncRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -321,7 +321,7 @@ CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateR
  */
 DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -341,7 +341,7 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
  */
 DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociation
  */
 DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -374,7 +374,7 @@ DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &
  */
 DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const DeleteMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -388,7 +388,7 @@ DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const Delet
  */
 DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -402,7 +402,7 @@ DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterReques
  */
 DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersReq
  */
 DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -432,7 +432,7 @@ DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBa
  */
 DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteResourceDataSyncRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -447,7 +447,7 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
  */
 DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const DeregisterManagedInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -461,7 +461,7 @@ DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const D
  */
 DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselineForPatchGroup(const DeregisterPatchBaselineForPatchGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -475,7 +475,7 @@ DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselin
  */
 DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromMaintenanceWindow(const DeregisterTargetFromMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -489,7 +489,7 @@ DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromM
  */
 DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaintenanceWindow(const DeregisterTaskFromMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -504,7 +504,7 @@ DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaint
  */
 DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActivationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -521,7 +521,7 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
  */
 DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -535,7 +535,7 @@ DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssoc
  */
 DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(const DescribeAutomationExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -549,7 +549,7 @@ DescribeAutomationExecutionsResponse * SsmClient::describeAutomationExecutions(c
  */
 DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExecutions(const DescribeAutomationStepExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -563,7 +563,7 @@ DescribeAutomationStepExecutionsResponse * SsmClient::describeAutomationStepExec
  */
 DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const DescribeAvailablePatchesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -577,7 +577,7 @@ DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const Des
  */
 DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -592,7 +592,7 @@ DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentReq
  */
 DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const DescribeDocumentPermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -606,7 +606,7 @@ DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const
  */
 DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInstanceAssociations(const DescribeEffectiveInstanceAssociationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -621,7 +621,7 @@ DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInst
  */
 DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectivePatchesForPatchBaseline(const DescribeEffectivePatchesForPatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -635,7 +635,7 @@ DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectiveP
  */
 DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociationsStatus(const DescribeInstanceAssociationsStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -652,7 +652,7 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
  */
 DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(const DescribeInstanceInformationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -666,7 +666,7 @@ DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(con
  */
 DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(const DescribeInstancePatchStatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -680,7 +680,7 @@ DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(con
  */
 DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePatchStatesForPatchGroup(const DescribeInstancePatchStatesForPatchGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -695,7 +695,7 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
  */
 DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const DescribeInstancePatchesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const Descr
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeMaintenanceWindowExecutionTaskInvocations(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -723,7 +723,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeM
  */
 DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenanceWindowExecutionTasks(const DescribeMaintenanceWindowExecutionTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -738,7 +738,7 @@ DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenance
  */
 DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWindowExecutions(const DescribeMaintenanceWindowExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
  */
 DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowTargets(const DescribeMaintenanceWindowTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -766,7 +766,7 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
  */
 DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTasks(const DescribeMaintenanceWindowTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -780,7 +780,7 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
  */
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -802,7 +802,7 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
  */
 DescribeParametersResponse * SsmClient::describeParameters(const DescribeParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -816,7 +816,7 @@ DescribeParametersResponse * SsmClient::describeParameters(const DescribeParamet
  */
 DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const DescribePatchBaselinesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -830,7 +830,7 @@ DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const Describ
  */
 DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const DescribePatchGroupStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -844,7 +844,7 @@ DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const Descr
  */
 DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatchGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -858,7 +858,7 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
  */
 GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAutomationExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -872,7 +872,7 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
  */
 GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandInvocationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -887,7 +887,7 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
  */
 GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDefaultPatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -902,7 +902,7 @@ GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDe
  */
 GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSnapshotForInstance(const GetDeployablePatchSnapshotForInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -916,7 +916,7 @@ GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSna
  */
 GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -930,7 +930,7 @@ GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
  */
 GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -945,7 +945,7 @@ GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &reques
  */
 GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -959,7 +959,7 @@ GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySch
  */
 GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -973,7 +973,7 @@ GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintena
  */
 GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution(const GetMaintenanceWindowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -987,7 +987,7 @@ GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution
  */
 GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecutionTask(const GetMaintenanceWindowExecutionTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1002,7 +1002,7 @@ GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecu
  */
 GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceWindowExecutionTaskInvocation(const GetMaintenanceWindowExecutionTaskInvocationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1016,7 +1016,7 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
  */
 GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const GetMaintenanceWindowTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1030,7 +1030,7 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
  */
 GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1044,7 +1044,7 @@ GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &reques
  */
 GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1058,7 +1058,7 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
  */
 GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1086,7 +1086,7 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
  */
 GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParametersByPathRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1100,7 +1100,7 @@ GetParametersByPathResponse * SsmClient::getParametersByPath(const GetParameters
  */
 GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1114,7 +1114,7 @@ GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineReq
  */
 GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup(const GetPatchBaselineForPatchGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1128,7 +1128,7 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
  */
 ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListAssociationVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1142,7 +1142,7 @@ ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListA
  */
 ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1158,7 +1158,7 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
  */
 ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCommandInvocationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1172,7 +1172,7 @@ ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCom
  */
 ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1187,7 +1187,7 @@ ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &reques
  */
 ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianceItemsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1203,7 +1203,7 @@ ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianc
  */
 ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListComplianceSummariesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1217,7 +1217,7 @@ ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListC
  */
 ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumentVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1231,7 +1231,7 @@ ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumen
  */
 ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1245,7 +1245,7 @@ ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &req
  */
 ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInventoryEntriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1260,7 +1260,7 @@ ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInvento
  */
 ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSummaries(const ListResourceComplianceSummariesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1283,7 +1283,7 @@ ListResourceComplianceSummariesResponse * SsmClient::listResourceComplianceSumma
  */
 ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourceDataSyncRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1297,7 +1297,7 @@ ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourc
  */
 ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1313,7 +1313,7 @@ ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForRe
  */
 ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const ModifyDocumentPermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1394,7 +1394,7 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  */
 PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceItemsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1409,7 +1409,7 @@ PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceIt
  */
 PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1423,7 +1423,7 @@ PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &reques
  */
 PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1437,7 +1437,7 @@ PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &reques
  */
 RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(const RegisterDefaultPatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1451,7 +1451,7 @@ RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(c
  */
 RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineForPatchGroup(const RegisterPatchBaselineForPatchGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1465,7 +1465,7 @@ RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineFor
  */
 RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaintenanceWindow(const RegisterTargetWithMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1479,7 +1479,7 @@ RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaint
  */
 RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenanceWindow(const RegisterTaskWithMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1493,7 +1493,7 @@ RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenan
  */
 RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1507,7 +1507,7 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
  */
 SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomationSignalRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1521,7 +1521,7 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
  */
 SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1535,7 +1535,7 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
  */
 StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const StartAutomationExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1549,7 +1549,7 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
  */
 StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopAutomationExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1564,7 +1564,7 @@ StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopA
  */
 UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1578,7 +1578,7 @@ UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociation
  */
 UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const UpdateAssociationStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1592,7 +1592,7 @@ UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const Updat
  */
 UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1606,7 +1606,7 @@ UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &
  */
 UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(const UpdateDocumentDefaultVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1620,7 +1620,7 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
  */
 UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const UpdateMaintenanceWindowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1656,7 +1656,7 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
  */
 UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget(const UpdateMaintenanceWindowTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1700,7 +1700,7 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  */
 UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(const UpdateMaintenanceWindowTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1714,7 +1714,7 @@ UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(con
  */
 UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const UpdateManagedInstanceRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1733,7 +1733,7 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
  */
 UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBaselineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

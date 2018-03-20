@@ -107,7 +107,7 @@ AppStreamClient::AppStreamClient(
  */
 AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -122,7 +122,7 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
  */
 CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
  */
 CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const CreateDirectoryConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
  */
 CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -168,7 +168,7 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
  */
 CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateImageBuilderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -182,7 +182,7 @@ CreateImageBuilderResponse * AppStreamClient::createImageBuilder(const CreateIma
  */
 CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStreamingURL(const CreateImageBuilderStreamingURLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -196,7 +196,7 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
  */
 CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -210,7 +210,7 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
  */
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
  */
 DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -238,7 +238,7 @@ DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const Del
  */
 DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
  */
 DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -267,7 +267,7 @@ DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &req
  */
 DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteImageBuilderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -282,7 +282,7 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
  */
 DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -297,7 +297,7 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
  */
 DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -311,7 +311,7 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
  */
 DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -325,7 +325,7 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
  */
 DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const DescribeImageBuildersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -339,7 +339,7 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
  */
 DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -355,7 +355,7 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
  */
 DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -369,7 +369,7 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
  */
 DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -383,7 +383,7 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
  */
 DisassociateFleetResponse * AppStreamClient::disassociateFleet(const DisassociateFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -397,7 +397,7 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
  */
 ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -411,7 +411,7 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
  */
 ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListAssociatedFleetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -425,7 +425,7 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
  */
 ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListAssociatedStacksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -445,7 +445,7 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  */
 ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -459,7 +459,7 @@ ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTag
  */
 StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -473,7 +473,7 @@ StartFleetResponse * AppStreamClient::startFleet(const StartFleetRequest &reques
  */
 StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageBuilderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -487,7 +487,7 @@ StartImageBuilderResponse * AppStreamClient::startImageBuilder(const StartImageB
  */
 StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -501,7 +501,7 @@ StopFleetResponse * AppStreamClient::stopFleet(const StopFleetRequest &request)
  */
 StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuilderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -532,7 +532,7 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  */
 TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -556,7 +556,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  */
 UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
  */
 UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const UpdateDirectoryConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -590,7 +590,7 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -604,7 +604,7 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
  */
 UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

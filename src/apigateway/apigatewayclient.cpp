@@ -111,7 +111,7 @@ APIGatewayClient::APIGatewayClient(
  */
 CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -127,7 +127,7 @@ CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest 
  */
 CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -141,7 +141,7 @@ CreateAuthorizerResponse * APIGatewayClient::createAuthorizer(const CreateAuthor
  */
 CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const CreateBasePathMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -155,7 +155,7 @@ CreateBasePathMappingResponse * APIGatewayClient::createBasePathMapping(const Cr
  */
 CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploymentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -168,7 +168,7 @@ CreateDeploymentResponse * APIGatewayClient::createDeployment(const CreateDeploy
  */
 CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(const CreateDocumentationPartRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -181,7 +181,7 @@ CreateDocumentationPartResponse * APIGatewayClient::createDocumentationPart(cons
  */
 CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersion(const CreateDocumentationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -195,7 +195,7 @@ CreateDocumentationVersionResponse * APIGatewayClient::createDocumentationVersio
  */
 CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomainNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -209,7 +209,7 @@ CreateDomainNameResponse * APIGatewayClient::createDomainName(const CreateDomain
  */
 CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -223,7 +223,7 @@ CreateModelResponse * APIGatewayClient::createModel(const CreateModelRequest &re
  */
 CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const CreateRequestValidatorRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -237,7 +237,7 @@ CreateRequestValidatorResponse * APIGatewayClient::createRequestValidator(const 
  */
 CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -251,7 +251,7 @@ CreateResourceResponse * APIGatewayClient::createResource(const CreateResourceRe
  */
 CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -265,7 +265,7 @@ CreateRestApiResponse * APIGatewayClient::createRestApi(const CreateRestApiReque
  */
 CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -279,7 +279,7 @@ CreateStageResponse * APIGatewayClient::createStage(const CreateStageRequest &re
  */
 CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -293,7 +293,7 @@ CreateUsagePlanResponse * APIGatewayClient::createUsagePlan(const CreateUsagePla
  */
 CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUsagePlanKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ CreateUsagePlanKeyResponse * APIGatewayClient::createUsagePlanKey(const CreateUs
  */
 CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -322,7 +322,7 @@ CreateVpcLinkResponse * APIGatewayClient::createVpcLink(const CreateVpcLinkReque
  */
 DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -338,7 +338,7 @@ DeleteApiKeyResponse * APIGatewayClient::deleteApiKey(const DeleteApiKeyRequest 
  */
 DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -352,7 +352,7 @@ DeleteAuthorizerResponse * APIGatewayClient::deleteAuthorizer(const DeleteAuthor
  */
 DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const DeleteBasePathMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -366,7 +366,7 @@ DeleteBasePathMappingResponse * APIGatewayClient::deleteBasePathMapping(const De
  */
 DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(const DeleteClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -381,7 +381,7 @@ DeleteClientCertificateResponse * APIGatewayClient::deleteClientCertificate(cons
  */
 DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploymentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -394,7 +394,7 @@ DeleteDeploymentResponse * APIGatewayClient::deleteDeployment(const DeleteDeploy
  */
 DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(const DeleteDocumentationPartRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -407,7 +407,7 @@ DeleteDocumentationPartResponse * APIGatewayClient::deleteDocumentationPart(cons
  */
 DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersion(const DeleteDocumentationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -421,7 +421,7 @@ DeleteDocumentationVersionResponse * APIGatewayClient::deleteDocumentationVersio
  */
 DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomainNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -436,7 +436,7 @@ DeleteDomainNameResponse * APIGatewayClient::deleteDomainName(const DeleteDomain
  */
 DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const DeleteGatewayResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -450,7 +450,7 @@ DeleteGatewayResponseResponse * APIGatewayClient::deleteGatewayResponse(const De
  */
 DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteIntegrationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -464,7 +464,7 @@ DeleteIntegrationResponse * APIGatewayClient::deleteIntegration(const DeleteInte
  */
 DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -478,7 +478,7 @@ DeleteIntegrationResponseResponse * APIGatewayClient::deleteIntegrationResponse(
  */
 DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -492,7 +492,7 @@ DeleteMethodResponse * APIGatewayClient::deleteMethod(const DeleteMethodRequest 
  */
 DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const DeleteMethodResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -506,7 +506,7 @@ DeleteMethodResponseResponse * APIGatewayClient::deleteMethodResponse(const Dele
  */
 DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -520,7 +520,7 @@ DeleteModelResponse * APIGatewayClient::deleteModel(const DeleteModelRequest &re
  */
 DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const DeleteRequestValidatorRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -534,7 +534,7 @@ DeleteRequestValidatorResponse * APIGatewayClient::deleteRequestValidator(const 
  */
 DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -548,7 +548,7 @@ DeleteResourceResponse * APIGatewayClient::deleteResource(const DeleteResourceRe
  */
 DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -562,7 +562,7 @@ DeleteRestApiResponse * APIGatewayClient::deleteRestApi(const DeleteRestApiReque
  */
 DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -576,7 +576,7 @@ DeleteStageResponse * APIGatewayClient::deleteStage(const DeleteStageRequest &re
  */
 DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -590,7 +590,7 @@ DeleteUsagePlanResponse * APIGatewayClient::deleteUsagePlan(const DeleteUsagePla
  */
 DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUsagePlanKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -604,7 +604,7 @@ DeleteUsagePlanKeyResponse * APIGatewayClient::deleteUsagePlanKey(const DeleteUs
  */
 DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -618,7 +618,7 @@ DeleteVpcLinkResponse * APIGatewayClient::deleteVpcLink(const DeleteVpcLinkReque
  */
 FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCache(const FlushStageAuthorizersCacheRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -632,7 +632,7 @@ FlushStageAuthorizersCacheResponse * APIGatewayClient::flushStageAuthorizersCach
  */
 FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCacheRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -646,7 +646,7 @@ FlushStageCacheResponse * APIGatewayClient::flushStageCache(const FlushStageCach
  */
 GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(const GenerateClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -660,7 +660,7 @@ GenerateClientCertificateResponse * APIGatewayClient::generateClientCertificate(
  */
 GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -674,7 +674,7 @@ GetAccountResponse * APIGatewayClient::getAccount(const GetAccountRequest &reque
  */
 GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -688,7 +688,7 @@ GetApiKeyResponse * APIGatewayClient::getApiKey(const GetApiKeyRequest &request)
  */
 GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -704,7 +704,7 @@ GetApiKeysResponse * APIGatewayClient::getApiKeys(const GetApiKeysRequest &reque
  */
 GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -720,7 +720,7 @@ GetAuthorizerResponse * APIGatewayClient::getAuthorizer(const GetAuthorizerReque
  */
 GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -734,7 +734,7 @@ GetAuthorizersResponse * APIGatewayClient::getAuthorizers(const GetAuthorizersRe
  */
 GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBasePathMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -748,7 +748,7 @@ GetBasePathMappingResponse * APIGatewayClient::getBasePathMapping(const GetBaseP
  */
 GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBasePathMappingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -762,7 +762,7 @@ GetBasePathMappingsResponse * APIGatewayClient::getBasePathMappings(const GetBas
  */
 GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -776,7 +776,7 @@ GetClientCertificateResponse * APIGatewayClient::getClientCertificate(const GetC
  */
 GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const GetClientCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -790,7 +790,7 @@ GetClientCertificatesResponse * APIGatewayClient::getClientCertificates(const Ge
  */
 GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -804,7 +804,7 @@ GetDeploymentResponse * APIGatewayClient::getDeployment(const GetDeploymentReque
  */
 GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -817,7 +817,7 @@ GetDeploymentsResponse * APIGatewayClient::getDeployments(const GetDeploymentsRe
  */
 GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetDocumentationPartRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -830,7 +830,7 @@ GetDocumentationPartResponse * APIGatewayClient::getDocumentationPart(const GetD
  */
 GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const GetDocumentationPartsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -843,7 +843,7 @@ GetDocumentationPartsResponse * APIGatewayClient::getDocumentationParts(const Ge
  */
 GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(const GetDocumentationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -856,7 +856,7 @@ GetDocumentationVersionResponse * APIGatewayClient::getDocumentationVersion(cons
  */
 GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(const GetDocumentationVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -870,7 +870,7 @@ GetDocumentationVersionsResponse * APIGatewayClient::getDocumentationVersions(co
  */
 GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -884,7 +884,7 @@ GetDomainNameResponse * APIGatewayClient::getDomainName(const GetDomainNameReque
  */
 GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -898,7 +898,7 @@ GetDomainNamesResponse * APIGatewayClient::getDomainNames(const GetDomainNamesRe
  */
 GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -912,7 +912,7 @@ GetExportResponse * APIGatewayClient::getExport(const GetExportRequest &request)
  */
 GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatewayResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -928,7 +928,7 @@ GetGatewayResponseResponse * APIGatewayClient::getGatewayResponse(const GetGatew
  */
 GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGatewayResponsesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -942,7 +942,7 @@ GetGatewayResponsesResponse * APIGatewayClient::getGatewayResponses(const GetGat
  */
 GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -956,7 +956,7 @@ GetIntegrationResponse * APIGatewayClient::getIntegration(const GetIntegrationRe
  */
 GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const GetIntegrationResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -970,7 +970,7 @@ GetIntegrationResponseResponse * APIGatewayClient::getIntegrationResponse(const 
  */
 GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -984,7 +984,7 @@ GetMethodResponse * APIGatewayClient::getMethod(const GetMethodRequest &request)
  */
 GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -998,7 +998,7 @@ GetMethodResponseResponse * APIGatewayClient::getMethodResponse(const GetMethodR
  */
 GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1012,7 +1012,7 @@ GetModelResponse * APIGatewayClient::getModel(const GetModelRequest &request)
  */
 GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1026,7 +1026,7 @@ GetModelTemplateResponse * APIGatewayClient::getModelTemplate(const GetModelTemp
  */
 GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1040,7 +1040,7 @@ GetModelsResponse * APIGatewayClient::getModels(const GetModelsRequest &request)
  */
 GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetRequestValidatorRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1054,7 +1054,7 @@ GetRequestValidatorResponse * APIGatewayClient::getRequestValidator(const GetReq
  */
 GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetRequestValidatorsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1068,7 +1068,7 @@ GetRequestValidatorsResponse * APIGatewayClient::getRequestValidators(const GetR
  */
 GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1082,7 +1082,7 @@ GetResourceResponse * APIGatewayClient::getResource(const GetResourceRequest &re
  */
 GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1096,7 +1096,7 @@ GetResourcesResponse * APIGatewayClient::getResources(const GetResourcesRequest 
  */
 GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1110,7 +1110,7 @@ GetRestApiResponse * APIGatewayClient::getRestApi(const GetRestApiRequest &reque
  */
 GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1124,7 +1124,7 @@ GetRestApisResponse * APIGatewayClient::getRestApis(const GetRestApisRequest &re
  */
 GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1137,7 +1137,7 @@ GetSdkResponse * APIGatewayClient::getSdk(const GetSdkRequest &request)
  */
 GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1150,7 +1150,7 @@ GetSdkTypeResponse * APIGatewayClient::getSdkType(const GetSdkTypeRequest &reque
  */
 GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1164,7 +1164,7 @@ GetSdkTypesResponse * APIGatewayClient::getSdkTypes(const GetSdkTypesRequest &re
  */
 GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1178,7 +1178,7 @@ GetStageResponse * APIGatewayClient::getStage(const GetStageRequest &request)
  */
 GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1192,7 +1192,7 @@ GetStagesResponse * APIGatewayClient::getStages(const GetStagesRequest &request)
  */
 GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1206,7 +1206,7 @@ GetTagsResponse * APIGatewayClient::getTags(const GetTagsRequest &request)
  */
 GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1220,7 +1220,7 @@ GetUsageResponse * APIGatewayClient::getUsage(const GetUsageRequest &request)
  */
 GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1234,7 +1234,7 @@ GetUsagePlanResponse * APIGatewayClient::getUsagePlan(const GetUsagePlanRequest 
  */
 GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1248,7 +1248,7 @@ GetUsagePlanKeyResponse * APIGatewayClient::getUsagePlanKey(const GetUsagePlanKe
  */
 GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlanKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1262,7 +1262,7 @@ GetUsagePlanKeysResponse * APIGatewayClient::getUsagePlanKeys(const GetUsagePlan
  */
 GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1276,7 +1276,7 @@ GetUsagePlansResponse * APIGatewayClient::getUsagePlans(const GetUsagePlansReque
  */
 GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1290,7 +1290,7 @@ GetVpcLinkResponse * APIGatewayClient::getVpcLink(const GetVpcLinkRequest &reque
  */
 GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1304,7 +1304,7 @@ GetVpcLinksResponse * APIGatewayClient::getVpcLinks(const GetVpcLinksRequest &re
  */
 ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1317,7 +1317,7 @@ ImportApiKeysResponse * APIGatewayClient::importApiKeys(const ImportApiKeysReque
  */
 ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(const ImportDocumentationPartsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1331,7 +1331,7 @@ ImportDocumentationPartsResponse * APIGatewayClient::importDocumentationParts(co
  */
 ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1345,7 +1345,7 @@ ImportRestApiResponse * APIGatewayClient::importRestApi(const ImportRestApiReque
  */
 PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatewayResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1359,7 +1359,7 @@ PutGatewayResponseResponse * APIGatewayClient::putGatewayResponse(const PutGatew
  */
 PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1373,7 +1373,7 @@ PutIntegrationResponse * APIGatewayClient::putIntegration(const PutIntegrationRe
  */
 PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const PutIntegrationResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1387,7 +1387,7 @@ PutIntegrationResponseResponse * APIGatewayClient::putIntegrationResponse(const 
  */
 PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1401,7 +1401,7 @@ PutMethodResponse * APIGatewayClient::putMethod(const PutMethodRequest &request)
  */
 PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1416,7 +1416,7 @@ PutMethodResponseResponse * APIGatewayClient::putMethodResponse(const PutMethodR
  */
 PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1430,7 +1430,7 @@ PutRestApiResponse * APIGatewayClient::putRestApi(const PutRestApiRequest &reque
  */
 TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1447,7 +1447,7 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1461,7 +1461,7 @@ TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const Test
  */
 TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMethodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1475,7 +1475,7 @@ TestInvokeMethodResponse * APIGatewayClient::testInvokeMethod(const TestInvokeMe
  */
 UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1489,7 +1489,7 @@ UntagResourceResponse * APIGatewayClient::untagResource(const UntagResourceReque
  */
 UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1503,7 +1503,7 @@ UpdateAccountResponse * APIGatewayClient::updateAccount(const UpdateAccountReque
  */
 UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1519,7 +1519,7 @@ UpdateApiKeyResponse * APIGatewayClient::updateApiKey(const UpdateApiKeyRequest 
  */
 UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1533,7 +1533,7 @@ UpdateAuthorizerResponse * APIGatewayClient::updateAuthorizer(const UpdateAuthor
  */
 UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const UpdateBasePathMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1547,7 +1547,7 @@ UpdateBasePathMappingResponse * APIGatewayClient::updateBasePathMapping(const Up
  */
 UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(const UpdateClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1561,7 +1561,7 @@ UpdateClientCertificateResponse * APIGatewayClient::updateClientCertificate(cons
  */
 UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploymentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1574,7 +1574,7 @@ UpdateDeploymentResponse * APIGatewayClient::updateDeployment(const UpdateDeploy
  */
 UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(const UpdateDocumentationPartRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1587,7 +1587,7 @@ UpdateDocumentationPartResponse * APIGatewayClient::updateDocumentationPart(cons
  */
 UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersion(const UpdateDocumentationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1601,7 +1601,7 @@ UpdateDocumentationVersionResponse * APIGatewayClient::updateDocumentationVersio
  */
 UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomainNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1615,7 +1615,7 @@ UpdateDomainNameResponse * APIGatewayClient::updateDomainName(const UpdateDomain
  */
 UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const UpdateGatewayResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1629,7 +1629,7 @@ UpdateGatewayResponseResponse * APIGatewayClient::updateGatewayResponse(const Up
  */
 UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateIntegrationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1643,7 +1643,7 @@ UpdateIntegrationResponse * APIGatewayClient::updateIntegration(const UpdateInte
  */
 UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(const UpdateIntegrationResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1657,7 +1657,7 @@ UpdateIntegrationResponseResponse * APIGatewayClient::updateIntegrationResponse(
  */
 UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1671,7 +1671,7 @@ UpdateMethodResponse * APIGatewayClient::updateMethod(const UpdateMethodRequest 
  */
 UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const UpdateMethodResponseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1685,7 +1685,7 @@ UpdateMethodResponseResponse * APIGatewayClient::updateMethodResponse(const Upda
  */
 UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1699,7 +1699,7 @@ UpdateModelResponse * APIGatewayClient::updateModel(const UpdateModelRequest &re
  */
 UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const UpdateRequestValidatorRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1713,7 +1713,7 @@ UpdateRequestValidatorResponse * APIGatewayClient::updateRequestValidator(const 
  */
 UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1727,7 +1727,7 @@ UpdateResourceResponse * APIGatewayClient::updateResource(const UpdateResourceRe
  */
 UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1741,7 +1741,7 @@ UpdateRestApiResponse * APIGatewayClient::updateRestApi(const UpdateRestApiReque
  */
 UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1755,7 +1755,7 @@ UpdateStageResponse * APIGatewayClient::updateStage(const UpdateStageRequest &re
  */
 UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1769,7 +1769,7 @@ UpdateUsageResponse * APIGatewayClient::updateUsage(const UpdateUsageRequest &re
  */
 UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1783,7 +1783,7 @@ UpdateUsagePlanResponse * APIGatewayClient::updateUsagePlan(const UpdateUsagePla
  */
 UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

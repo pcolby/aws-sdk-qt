@@ -173,7 +173,7 @@ HealthClient::HealthClient(
  */
 DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const DescribeAffectedEntitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -188,7 +188,7 @@ DescribeAffectedEntitiesResponse * HealthClient::describeAffectedEntities(const 
  */
 DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const DescribeEntityAggregatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DescribeEntityAggregatesResponse * HealthClient::describeEntityAggregates(const 
  */
 DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const DescribeEventAggregatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ DescribeEventAggregatesResponse * HealthClient::describeEventAggregates(const De
  */
 DescribeEventDetailsResponse * HealthClient::describeEventDetails(const DescribeEventDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -239,7 +239,7 @@ DescribeEventDetailsResponse * HealthClient::describeEventDetails(const Describe
  */
 DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEventTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -260,7 +260,7 @@ DescribeEventTypesResponse * HealthClient::describeEventTypes(const DescribeEven
  */
 DescribeEventsResponse * HealthClient::describeEvents(const DescribeEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

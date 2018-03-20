@@ -123,7 +123,7 @@ SimpleDBClient::SimpleDBClient(
  */
 BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const BatchDeleteAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -176,7 +176,7 @@ BatchDeleteAttributesResponse * SimpleDBClient::batchDeleteAttributes(const Batc
  */
 BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -201,7 +201,7 @@ BatchPutAttributesResponse * SimpleDBClient::batchPutAttributes(const BatchPutAt
  */
 CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -226,7 +226,7 @@ CreateDomainResponse * SimpleDBClient::createDomain(const CreateDomainRequest &r
  */
 DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -241,7 +241,7 @@ DeleteAttributesResponse * SimpleDBClient::deleteAttributes(const DeleteAttribut
  */
 DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -256,7 +256,7 @@ DeleteDomainResponse * SimpleDBClient::deleteDomain(const DeleteDomainRequest &r
  */
 DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -276,7 +276,7 @@ DomainMetadataResponse * SimpleDBClient::domainMetadata(const DomainMetadataRequ
  */
 GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -294,7 +294,7 @@ GetAttributesResponse * SimpleDBClient::getAttributes(const GetAttributesRequest
  */
 ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -342,7 +342,7 @@ ListDomainsResponse * SimpleDBClient::listDomains(const ListDomainsRequest &requ
  */
 PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -369,7 +369,7 @@ PutAttributesResponse * SimpleDBClient::putAttributes(const PutAttributesRequest
  */
 SelectResponse * SimpleDBClient::select(const SelectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

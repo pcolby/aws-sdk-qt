@@ -109,7 +109,7 @@ InspectorClient::InspectorClient(
  */
 AddAttributesToFindingsResponse * InspectorClient::addAttributesToFindings(const AddAttributesToFindingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -128,7 +128,7 @@ AddAttributesToFindingsResponse * InspectorClient::addAttributesToFindings(const
  */
 CreateAssessmentTargetResponse * InspectorClient::createAssessmentTarget(const CreateAssessmentTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -145,7 +145,7 @@ CreateAssessmentTargetResponse * InspectorClient::createAssessmentTarget(const C
  */
 CreateAssessmentTemplateResponse * InspectorClient::createAssessmentTemplate(const CreateAssessmentTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -161,7 +161,7 @@ CreateAssessmentTemplateResponse * InspectorClient::createAssessmentTemplate(con
  */
 CreateResourceGroupResponse * InspectorClient::createResourceGroup(const CreateResourceGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -175,7 +175,7 @@ CreateResourceGroupResponse * InspectorClient::createResourceGroup(const CreateR
  */
 DeleteAssessmentRunResponse * InspectorClient::deleteAssessmentRun(const DeleteAssessmentRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ DeleteAssessmentRunResponse * InspectorClient::deleteAssessmentRun(const DeleteA
  */
 DeleteAssessmentTargetResponse * InspectorClient::deleteAssessmentTarget(const DeleteAssessmentTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DeleteAssessmentTargetResponse * InspectorClient::deleteAssessmentTarget(const D
  */
 DeleteAssessmentTemplateResponse * InspectorClient::deleteAssessmentTemplate(const DeleteAssessmentTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -217,7 +217,7 @@ DeleteAssessmentTemplateResponse * InspectorClient::deleteAssessmentTemplate(con
  */
 DescribeAssessmentRunsResponse * InspectorClient::describeAssessmentRuns(const DescribeAssessmentRunsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -231,7 +231,7 @@ DescribeAssessmentRunsResponse * InspectorClient::describeAssessmentRuns(const D
  */
 DescribeAssessmentTargetsResponse * InspectorClient::describeAssessmentTargets(const DescribeAssessmentTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -245,7 +245,7 @@ DescribeAssessmentTargetsResponse * InspectorClient::describeAssessmentTargets(c
  */
 DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplates(const DescribeAssessmentTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -259,7 +259,7 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
  */
 DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAccessRole()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -273,7 +273,7 @@ DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAc
  */
 DescribeFindingsResponse * InspectorClient::describeFindings(const DescribeFindingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -287,7 +287,7 @@ DescribeFindingsResponse * InspectorClient::describeFindings(const DescribeFindi
  */
 DescribeResourceGroupsResponse * InspectorClient::describeResourceGroups(const DescribeResourceGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -301,7 +301,7 @@ DescribeResourceGroupsResponse * InspectorClient::describeResourceGroups(const D
  */
 DescribeRulesPackagesResponse * InspectorClient::describeRulesPackages(const DescribeRulesPackagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -315,7 +315,7 @@ DescribeRulesPackagesResponse * InspectorClient::describeRulesPackages(const Des
  */
 GetAssessmentReportResponse * InspectorClient::getAssessmentReport(const GetAssessmentReportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -329,7 +329,7 @@ GetAssessmentReportResponse * InspectorClient::getAssessmentReport(const GetAsse
  */
 GetTelemetryMetadataResponse * InspectorClient::getTelemetryMetadata(const GetTelemetryMetadataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -343,7 +343,7 @@ GetTelemetryMetadataResponse * InspectorClient::getTelemetryMetadata(const GetTe
  */
 ListAssessmentRunAgentsResponse * InspectorClient::listAssessmentRunAgents(const ListAssessmentRunAgentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -357,7 +357,7 @@ ListAssessmentRunAgentsResponse * InspectorClient::listAssessmentRunAgents(const
  */
 ListAssessmentRunsResponse * InspectorClient::listAssessmentRuns(const ListAssessmentRunsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -372,7 +372,7 @@ ListAssessmentRunsResponse * InspectorClient::listAssessmentRuns(const ListAsses
  */
 ListAssessmentTargetsResponse * InspectorClient::listAssessmentTargets(const ListAssessmentTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -387,7 +387,7 @@ ListAssessmentTargetsResponse * InspectorClient::listAssessmentTargets(const Lis
  */
 ListAssessmentTemplatesResponse * InspectorClient::listAssessmentTemplates(const ListAssessmentTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -402,7 +402,7 @@ ListAssessmentTemplatesResponse * InspectorClient::listAssessmentTemplates(const
  */
 ListEventSubscriptionsResponse * InspectorClient::listEventSubscriptions(const ListEventSubscriptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ ListEventSubscriptionsResponse * InspectorClient::listEventSubscriptions(const L
  */
 ListFindingsResponse * InspectorClient::listFindings(const ListFindingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ ListFindingsResponse * InspectorClient::listFindings(const ListFindingsRequest &
  */
 ListRulesPackagesResponse * InspectorClient::listRulesPackages(const ListRulesPackagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -444,7 +444,7 @@ ListRulesPackagesResponse * InspectorClient::listRulesPackages(const ListRulesPa
  */
 ListTagsForResourceResponse * InspectorClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -458,7 +458,7 @@ ListTagsForResourceResponse * InspectorClient::listTagsForResource(const ListTag
  */
 PreviewAgentsResponse * InspectorClient::previewAgents(const PreviewAgentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -472,7 +472,7 @@ PreviewAgentsResponse * InspectorClient::previewAgents(const PreviewAgentsReques
  */
 RegisterCrossAccountAccessRoleResponse * InspectorClient::registerCrossAccountAccessRole(const RegisterCrossAccountAccessRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -487,7 +487,7 @@ RegisterCrossAccountAccessRoleResponse * InspectorClient::registerCrossAccountAc
  */
 RemoveAttributesFromFindingsResponse * InspectorClient::removeAttributesFromFindings(const RemoveAttributesFromFindingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -501,7 +501,7 @@ RemoveAttributesFromFindingsResponse * InspectorClient::removeAttributesFromFind
  */
 SetTagsForResourceResponse * InspectorClient::setTagsForResource(const SetTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -516,7 +516,7 @@ SetTagsForResourceResponse * InspectorClient::setTagsForResource(const SetTagsFo
  */
 StartAssessmentRunResponse * InspectorClient::startAssessmentRun(const StartAssessmentRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -530,7 +530,7 @@ StartAssessmentRunResponse * InspectorClient::startAssessmentRun(const StartAsse
  */
 StopAssessmentRunResponse * InspectorClient::stopAssessmentRun(const StopAssessmentRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -545,7 +545,7 @@ StopAssessmentRunResponse * InspectorClient::stopAssessmentRun(const StopAssessm
  */
 SubscribeToEventResponse * InspectorClient::subscribeToEvent(const SubscribeToEventRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -560,7 +560,7 @@ SubscribeToEventResponse * InspectorClient::subscribeToEvent(const SubscribeToEv
  */
 UnsubscribeFromEventResponse * InspectorClient::unsubscribeFromEvent(const UnsubscribeFromEventRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -574,7 +574,7 @@ UnsubscribeFromEventResponse * InspectorClient::unsubscribeFromEvent(const Unsub
  */
 UpdateAssessmentTargetResponse * InspectorClient::updateAssessmentTarget(const UpdateAssessmentTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -107,7 +107,7 @@ ImportExportClient::ImportExportClient(
  */
 CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -123,7 +123,7 @@ CancelJobResponse * ImportExportClient::cancelJob(const CancelJobRequest &reques
  */
 CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ CreateJobResponse * ImportExportClient::createJob(const CreateJobRequest &reques
  */
 GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippingLabelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ GetShippingLabelResponse * ImportExportClient::getShippingLabel(const GetShippin
  */
 GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -165,7 +165,7 @@ GetStatusResponse * ImportExportClient::getStatus(const GetStatusRequest &reques
  */
 ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -180,7 +180,7 @@ ListJobsResponse * ImportExportClient::listJobs(const ListJobsRequest &request)
  */
 UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

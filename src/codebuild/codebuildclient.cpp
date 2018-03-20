@@ -180,7 +180,7 @@ CodeBuildClient::CodeBuildClient(
  */
 BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDeleteBuildsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -194,7 +194,7 @@ BatchDeleteBuildsResponse * CodeBuildClient::batchDeleteBuilds(const BatchDelete
  */
 BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -208,7 +208,7 @@ BatchGetBuildsResponse * CodeBuildClient::batchGetBuilds(const BatchGetBuildsReq
  */
 BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProjectsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -222,7 +222,7 @@ BatchGetProjectsResponse * CodeBuildClient::batchGetProjects(const BatchGetProje
  */
 CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -247,7 +247,7 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  */
 CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -261,7 +261,7 @@ CreateWebhookResponse * CodeBuildClient::createWebhook(const CreateWebhookReques
  */
 DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -276,7 +276,7 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
  */
 DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookReques
  */
 InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const InvalidateProjectCacheRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -304,7 +304,7 @@ InvalidateProjectCacheResponse * CodeBuildClient::invalidateProjectCache(const I
  */
 ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -318,7 +318,7 @@ ListBuildsResponse * CodeBuildClient::listBuilds(const ListBuildsRequest &reques
  */
 ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListBuildsForProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -332,7 +332,7 @@ ListBuildsForProjectResponse * CodeBuildClient::listBuildsForProject(const ListB
  */
 ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentImages(const ListCuratedEnvironmentImagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -346,7 +346,7 @@ ListCuratedEnvironmentImagesResponse * CodeBuildClient::listCuratedEnvironmentIm
  */
 ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
  */
 StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -374,7 +374,7 @@ StartBuildResponse * CodeBuildClient::startBuild(const StartBuildRequest &reques
  */
 StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -388,7 +388,7 @@ StopBuildResponse * CodeBuildClient::stopBuild(const StopBuildRequest &request)
  */
 UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -127,7 +127,7 @@ AutoScalingClient::AutoScalingClient(
  */
 AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -152,7 +152,7 @@ AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstanc
  */
 AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTargetGroups(const AttachLoadBalancerTargetGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -181,7 +181,7 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
  */
 AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const AttachLoadBalancersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -227,7 +227,7 @@ AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const Attac
  */
 CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(const CompleteLifecycleActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(con
  */
 CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const CreateAutoScalingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -280,7 +280,7 @@ CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const
  */
 CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration(const CreateLaunchConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration
  */
 CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateOrUpdateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -339,7 +339,7 @@ CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateO
  */
 DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const DeleteAutoScalingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const
  */
 DeleteLaunchConfigurationResponse * AutoScalingClient::deleteLaunchConfiguration(const DeleteLaunchConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ DeleteLaunchConfigurationResponse * AutoScalingClient::deleteLaunchConfiguration
  */
 DeleteLifecycleHookResponse * AutoScalingClient::deleteLifecycleHook(const DeleteLifecycleHookRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -391,7 +391,7 @@ DeleteLifecycleHookResponse * AutoScalingClient::deleteLifecycleHook(const Delet
  */
 DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationConfiguration(const DeleteNotificationConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -410,7 +410,7 @@ DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationC
  */
 DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -424,7 +424,7 @@ DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest
  */
 DeleteScheduledActionResponse * AutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -438,7 +438,7 @@ DeleteScheduledActionResponse * AutoScalingClient::deleteScheduledAction(const D
  */
 DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -458,7 +458,7 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -472,7 +472,7 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -486,7 +486,7 @@ DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
  */
 DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups(const DescribeAutoScalingGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -500,7 +500,7 @@ DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups
  */
 DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingInstances(const DescribeAutoScalingInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -514,7 +514,7 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
  */
 DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoScalingNotificationTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoSc
  */
 DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigurations(const DescribeLaunchConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -542,7 +542,7 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -556,7 +556,7 @@ DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTyp
  */
 DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const DescribeLifecycleHooksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const
  */
 DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalancerTargetGroups(const DescribeLoadBalancerTargetGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -589,7 +589,7 @@ DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalanc
  */
 DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -608,7 +608,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -622,7 +622,7 @@ DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollect
  */
 DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotificationConfigurations(const DescribeNotificationConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -636,7 +636,7 @@ DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotifica
  */
 DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -650,7 +650,7 @@ DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePol
  */
 DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -664,7 +664,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -679,7 +679,7 @@ DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessT
  */
 DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -704,7 +704,7 @@ DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(c
  */
 DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -718,7 +718,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  */
 DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -766,7 +766,7 @@ DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstanc
  */
 DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTargetGroups(const DetachLoadBalancerTargetGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -791,7 +791,7 @@ DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTa
  */
 DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const DetachLoadBalancersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -805,7 +805,7 @@ DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const Detac
  */
 DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(const DisableMetricsCollectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -821,7 +821,7 @@ DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(c
  */
 EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(const EnableMetricsCollectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -841,7 +841,7 @@ EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(con
  */
 EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -855,7 +855,7 @@ EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest
  */
 ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -875,7 +875,7 @@ ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequ
  */
 ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -932,7 +932,7 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  */
 PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycleHookRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -957,7 +957,7 @@ PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycl
  */
 PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfiguration(const PutNotificationConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -979,7 +979,7 @@ PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfigu
  */
 PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -999,7 +999,7 @@ PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingP
  */
 PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGroupAction(const PutScheduledUpdateGroupActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1046,7 +1046,7 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
  */
 RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActionHeartbeat(const RecordLifecycleActionHeartbeatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1066,7 +1066,7 @@ RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActio
  */
 ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcessesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1086,7 +1086,7 @@ ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcess
  */
 SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesiredCapacityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1105,7 +1105,7 @@ SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesi
  */
 SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstanceHealthRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1125,7 +1125,7 @@ SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstan
  */
 SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const SetInstanceProtectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1154,7 +1154,7 @@ SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const S
  */
 SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProcessesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1172,7 +1172,7 @@ SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProc
  */
 TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstanceInAutoScalingGroup(const TerminateInstanceInAutoScalingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1217,7 +1217,7 @@ TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstan
  */
 UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const UpdateAutoScalingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

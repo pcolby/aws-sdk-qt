@@ -111,7 +111,7 @@ ShieldClient::ShieldClient(
  */
 CreateProtectionResponse * ShieldClient::createProtection(const CreateProtectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -125,7 +125,7 @@ CreateProtectionResponse * ShieldClient::createProtection(const CreateProtection
  */
 CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -139,7 +139,7 @@ CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscr
  */
 DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -154,7 +154,7 @@ DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtection
  */
 DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -168,7 +168,7 @@ DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscr
  */
 DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -182,7 +182,7 @@ DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackReques
  */
 DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProtectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -196,7 +196,7 @@ DescribeProtectionResponse * ShieldClient::describeProtection(const DescribeProt
  */
 DescribeSubscriptionResponse * ShieldClient::describeSubscription(const DescribeSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -210,7 +210,7 @@ DescribeSubscriptionResponse * ShieldClient::describeSubscription(const Describe
  */
 GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubscriptionStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ GetSubscriptionStateResponse * ShieldClient::getSubscriptionState(const GetSubsc
  */
 ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -238,7 +238,7 @@ ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &reques
  */
 ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

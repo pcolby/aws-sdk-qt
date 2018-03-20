@@ -107,7 +107,7 @@ WorkSpacesClient::WorkSpacesClient(
  */
 CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -125,7 +125,7 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
  */
 CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -139,7 +139,7 @@ CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorksp
  */
 DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -153,7 +153,7 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
  */
 DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -171,7 +171,7 @@ DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest 
  */
 DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(const DescribeWorkspaceBundlesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -185,7 +185,7 @@ DescribeWorkspaceBundlesResponse * WorkSpacesClient::describeWorkspaceBundles(co
  */
 DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirectories(const DescribeWorkspaceDirectoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
  */
 DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const DescribeWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -217,7 +217,7 @@ DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const Describe
  */
 DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspacesConnectionStatus(const DescribeWorkspacesConnectionStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -231,7 +231,7 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
  */
 ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(const ModifyWorkspacePropertiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
  */
 RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -280,7 +280,7 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
  */
 RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -298,7 +298,7 @@ RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWor
  */
 StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -317,7 +317,7 @@ StartWorkspacesResponse * WorkSpacesClient::startWorkspaces(const StartWorkspace
  */
 StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -344,7 +344,7 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
  */
 TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const TerminateWorkspacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

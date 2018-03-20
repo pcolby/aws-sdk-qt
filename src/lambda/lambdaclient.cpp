@@ -134,7 +134,7 @@ LambdaClient::LambdaClient(
  */
 AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -153,7 +153,7 @@ AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &
  */
 CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
  */
 CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const CreateEventSourceMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -226,7 +226,7 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  */
 CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -245,7 +245,7 @@ CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionReques
  */
 DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -263,7 +263,7 @@ DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &reques
  */
 DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -295,7 +295,7 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
  */
 DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
  */
 DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -329,7 +329,7 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
  */
 GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -349,7 +349,7 @@ GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSe
  */
 GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -367,7 +367,7 @@ GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
  */
 GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEventSourceMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -394,7 +394,7 @@ GetEventSourceMappingResponse * LambdaClient::getEventSourceMapping(const GetEve
  */
 GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -421,7 +421,7 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
  */
 GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const GetFunctionConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -446,7 +446,7 @@ GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const 
  */
 GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -483,7 +483,7 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  */
 InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -508,7 +508,7 @@ InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
  */
 InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ InvokeAsyncResponse * LambdaClient::invokeAsync(const InvokeAsyncRequest &reques
  */
 ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -559,7 +559,7 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
  */
 ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const ListEventSourceMappingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -585,7 +585,7 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
  */
 ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -599,7 +599,7 @@ ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &
  */
 ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -615,7 +615,7 @@ ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
  */
 ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const ListVersionsByFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -633,7 +633,7 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
  */
 PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -650,7 +650,7 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
  */
 PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutFunctionConcurrencyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -680,7 +680,7 @@ PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutF
  */
 RemovePermissionResponse * LambdaClient::removePermission(const RemovePermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -695,7 +695,7 @@ RemovePermissionResponse * LambdaClient::removePermission(const RemovePermission
  */
 TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ TagResourceResponse * LambdaClient::tagResource(const TagResourceRequest &reques
  */
 UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -728,7 +728,7 @@ UntagResourceResponse * LambdaClient::untagResource(const UntagResourceRequest &
  */
 UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -761,7 +761,7 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
  */
 UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const UpdateEventSourceMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -787,7 +787,7 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
  */
 UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFunctionCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -814,7 +814,7 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
  */
 UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -130,7 +130,7 @@ TranslateClient::TranslateClient(
  */
 TranslateTextResponse * TranslateClient::translateText(const TranslateTextRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

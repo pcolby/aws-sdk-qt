@@ -168,7 +168,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
  */
 AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -182,7 +182,7 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
  */
 CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -197,7 +197,7 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
  */
 CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -211,7 +211,7 @@ CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateT
  */
 DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -226,7 +226,7 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
  */
 DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -241,7 +241,7 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
  */
 DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  */
 DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -282,7 +282,7 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -296,7 +296,7 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
  */
 DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -311,7 +311,7 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
  */
 DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -325,7 +325,7 @@ DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const Des
  */
 DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -346,7 +346,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
  */
 GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -375,7 +375,7 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
  */
 ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -389,7 +389,7 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
  */
 ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -403,7 +403,7 @@ ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeigh
  */
 StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  */
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -444,7 +444,7 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  */
 StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -458,7 +458,7 @@ StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDa
  */
 UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

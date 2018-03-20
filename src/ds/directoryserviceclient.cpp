@@ -128,7 +128,7 @@ DirectoryServiceClient::DirectoryServiceClient(
  */
 AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -143,7 +143,7 @@ AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesReque
  */
 AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -159,7 +159,7 @@ AddTagsToResourceResponse * DirectoryServiceClient::addTagsToResource(const AddT
  */
 CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(const CancelSchemaExtensionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -180,7 +180,7 @@ CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(co
  */
 ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const ConnectDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const Connec
  */
 CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -213,7 +213,7 @@ CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasReque
  */
 CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComputerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -228,7 +228,7 @@ CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComp
  */
 CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalForwarder(const CreateConditionalForwarderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -249,7 +249,7 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
  */
 CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -270,7 +270,7 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
  */
 CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const CreateMicrosoftADRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -288,7 +288,7 @@ CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const Crea
  */
 CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnap
  */
 CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -323,7 +323,7 @@ CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustReque
  */
 DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -344,7 +344,7 @@ DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalFo
  */
 DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDi
  */
 DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -372,7 +372,7 @@ DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnap
  */
 DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -386,7 +386,7 @@ DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustReque
  */
 DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(const DeregisterEventTopicRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -405,7 +405,7 @@ DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(cons
  */
 DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditionalForwarders(const DescribeConditionalForwardersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -434,7 +434,7 @@ DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditio
  */
 DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const DescribeDirectoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -448,7 +448,7 @@ DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const 
  */
 DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainControllers(const DescribeDomainControllersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -467,7 +467,7 @@ DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainContro
  */
 DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const DescribeEventTopicsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -491,7 +491,7 @@ DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const 
  */
 DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -510,7 +510,7 @@ DescribeSnapshotsResponse * DirectoryServiceClient::describeSnapshots(const Desc
  */
 DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTrustsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -525,7 +525,7 @@ DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTr
  */
 DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -539,7 +539,7 @@ DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiu
  */
 DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -554,7 +554,7 @@ DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest 
  */
 EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -568,7 +568,7 @@ EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRe
  */
 EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -582,7 +582,7 @@ EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &re
  */
 GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const GetDirectoryLimitsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -596,7 +596,7 @@ GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const Ge
  */
 GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetSnapshotLimitsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -610,7 +610,7 @@ GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetS
  */
 ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -624,7 +624,7 @@ ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRe
  */
 ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(const ListSchemaExtensionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -638,7 +638,7 @@ ListSchemaExtensionsResponse * DirectoryServiceClient::listSchemaExtensions(cons
  */
 ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -655,7 +655,7 @@ ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const 
  */
 RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const RegisterEventTopicRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -669,7 +669,7 @@ RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const Re
  */
 RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRoutesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -683,7 +683,7 @@ RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRo
  */
 RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -707,7 +707,7 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
  */
 RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const RestoreFromSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -721,7 +721,7 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
  */
 StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(const StartSchemaExtensionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -735,7 +735,7 @@ StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(cons
  */
 UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalForwarder(const UpdateConditionalForwarderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalFo
  */
 UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOfDomainControllers(const UpdateNumberOfDomainControllersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -766,7 +766,7 @@ UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOf
  */
 UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -784,7 +784,7 @@ UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRe
  */
 VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

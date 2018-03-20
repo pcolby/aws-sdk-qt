@@ -116,7 +116,7 @@ Route53Client::Route53Client(
  */
 AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(const AssociateVPCWithHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -231,7 +231,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  */
 ChangeResourceRecordSetsResponse * Route53Client::changeResourceRecordSets(const ChangeResourceRecordSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -251,7 +251,7 @@ ChangeResourceRecordSetsResponse * Route53Client::changeResourceRecordSets(const
  */
 ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const ChangeTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -307,7 +307,7 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
  */
 CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthCheckRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -364,7 +364,7 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  */
 CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -506,7 +506,7 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  */
 CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const CreateQueryLoggingConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -580,7 +580,7 @@ CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const
  */
 CreateReusableDelegationSetResponse * Route53Client::createReusableDelegationSet(const CreateReusableDelegationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -595,7 +595,7 @@ CreateReusableDelegationSetResponse * Route53Client::createReusableDelegationSet
  */
 CreateTrafficPolicyResponse * Route53Client::createTrafficPolicy(const CreateTrafficPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -612,7 +612,7 @@ CreateTrafficPolicyResponse * Route53Client::createTrafficPolicy(const CreateTra
  */
 CreateTrafficPolicyInstanceResponse * Route53Client::createTrafficPolicyInstance(const CreateTrafficPolicyInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -630,7 +630,7 @@ CreateTrafficPolicyInstanceResponse * Route53Client::createTrafficPolicyInstance
  */
 CreateTrafficPolicyVersionResponse * Route53Client::createTrafficPolicyVersion(const CreateTrafficPolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -652,7 +652,7 @@ CreateTrafficPolicyVersionResponse * Route53Client::createTrafficPolicyVersion(c
  */
 CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationAuthorization(const CreateVPCAssociationAuthorizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -675,7 +675,7 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
  */
 DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthCheckRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -721,7 +721,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  */
 DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -740,7 +740,7 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
  */
 DeleteQueryLoggingConfigResponse * Route53Client::deleteQueryLoggingConfig(const DeleteQueryLoggingConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -763,7 +763,7 @@ DeleteQueryLoggingConfigResponse * Route53Client::deleteQueryLoggingConfig(const
  */
 DeleteReusableDelegationSetResponse * Route53Client::deleteReusableDelegationSet(const DeleteReusableDelegationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -777,7 +777,7 @@ DeleteReusableDelegationSetResponse * Route53Client::deleteReusableDelegationSet
  */
 DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTrafficPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -795,7 +795,7 @@ DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTra
  */
 DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance(const DeleteTrafficPolicyInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -818,7 +818,7 @@ DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance
  */
 DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationAuthorization(const DeleteVPCAssociationAuthorizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -841,7 +841,7 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
  */
 DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHostedZone(const DisassociateVPCFromHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -864,7 +864,7 @@ DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHosted
  */
 GetAccountLimitResponse * Route53Client::getAccountLimit(const GetAccountLimitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -887,7 +887,7 @@ GetAccountLimitResponse * Route53Client::getAccountLimit(const GetAccountLimitRe
  */
 GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -904,7 +904,7 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
  */
 GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerIpRangesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -944,7 +944,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  */
 GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -958,7 +958,7 @@ GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationReque
  */
 GetHealthCheckResponse * Route53Client::getHealthCheck(const GetHealthCheckRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -972,7 +972,7 @@ GetHealthCheckResponse * Route53Client::getHealthCheck(const GetHealthCheckReque
  */
 GetHealthCheckCountResponse * Route53Client::getHealthCheckCount(const GetHealthCheckCountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -986,7 +986,7 @@ GetHealthCheckCountResponse * Route53Client::getHealthCheckCount(const GetHealth
  */
 GetHealthCheckLastFailureReasonResponse * Route53Client::getHealthCheckLastFailureReason(const GetHealthCheckLastFailureReasonRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1000,7 +1000,7 @@ GetHealthCheckLastFailureReasonResponse * Route53Client::getHealthCheckLastFailu
  */
 GetHealthCheckStatusResponse * Route53Client::getHealthCheckStatus(const GetHealthCheckStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1014,7 +1014,7 @@ GetHealthCheckStatusResponse * Route53Client::getHealthCheckStatus(const GetHeal
  */
 GetHostedZoneResponse * Route53Client::getHostedZone(const GetHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1028,7 +1028,7 @@ GetHostedZoneResponse * Route53Client::getHostedZone(const GetHostedZoneRequest 
  */
 GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZoneCountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1051,7 +1051,7 @@ GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZo
  */
 GetHostedZoneLimitResponse * Route53Client::getHostedZoneLimit(const GetHostedZoneLimitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1070,7 +1070,7 @@ GetHostedZoneLimitResponse * Route53Client::getHostedZoneLimit(const GetHostedZo
  */
 GetQueryLoggingConfigResponse * Route53Client::getQueryLoggingConfig(const GetQueryLoggingConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1085,7 +1085,7 @@ GetQueryLoggingConfigResponse * Route53Client::getQueryLoggingConfig(const GetQu
  */
 GetReusableDelegationSetResponse * Route53Client::getReusableDelegationSet(const GetReusableDelegationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1107,7 +1107,7 @@ GetReusableDelegationSetResponse * Route53Client::getReusableDelegationSet(const
  */
 GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetLimit(const GetReusableDelegationSetLimitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1121,7 +1121,7 @@ GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetL
  */
 GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1145,7 +1145,7 @@ GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolic
  */
 GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const GetTrafficPolicyInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1159,7 +1159,7 @@ GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const
  */
 GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceCount(const GetTrafficPolicyInstanceCountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1179,7 +1179,7 @@ GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceC
  */
 ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1193,7 +1193,7 @@ ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocation
  */
 ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthChecksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1213,7 +1213,7 @@ ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthCheck
  */
 ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1291,7 +1291,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  */
 ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListHostedZonesByNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1313,7 +1313,7 @@ ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListH
  */
 ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const ListQueryLoggingConfigsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1378,7 +1378,7 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  */
 ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const ListResourceRecordSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1392,7 +1392,7 @@ ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const Lis
  */
 ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(const ListReusableDelegationSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1412,7 +1412,7 @@ ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(c
  */
 ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1432,7 +1432,7 @@ ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsF
  */
 ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTagsForResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1447,7 +1447,7 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
  */
 ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTrafficPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1472,7 +1472,7 @@ ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTraff
  */
 ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(const ListTrafficPolicyInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1497,7 +1497,7 @@ ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(c
  */
 ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolicyInstancesByHostedZone(const ListTrafficPolicyInstancesByHostedZoneRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1522,7 +1522,7 @@ ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolic
  */
 ListTrafficPolicyInstancesByPolicyResponse * Route53Client::listTrafficPolicyInstancesByPolicy(const ListTrafficPolicyInstancesByPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1540,7 +1540,7 @@ ListTrafficPolicyInstancesByPolicyResponse * Route53Client::listTrafficPolicyIns
  */
 ListTrafficPolicyVersionsResponse * Route53Client::listTrafficPolicyVersions(const ListTrafficPolicyVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1560,7 +1560,7 @@ ListTrafficPolicyVersionsResponse * Route53Client::listTrafficPolicyVersions(con
  */
 ListVPCAssociationAuthorizationsResponse * Route53Client::listVPCAssociationAuthorizations(const ListVPCAssociationAuthorizationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1575,7 +1575,7 @@ ListVPCAssociationAuthorizationsResponse * Route53Client::listVPCAssociationAuth
  */
 TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1595,7 +1595,7 @@ TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest 
  */
 UpdateHealthCheckResponse * Route53Client::updateHealthCheck(const UpdateHealthCheckRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1609,7 +1609,7 @@ UpdateHealthCheckResponse * Route53Client::updateHealthCheck(const UpdateHealthC
  */
 UpdateHostedZoneCommentResponse * Route53Client::updateHostedZoneComment(const UpdateHostedZoneCommentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1623,7 +1623,7 @@ UpdateHostedZoneCommentResponse * Route53Client::updateHostedZoneComment(const U
  */
 UpdateTrafficPolicyCommentResponse * Route53Client::updateTrafficPolicyComment(const UpdateTrafficPolicyCommentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1659,7 +1659,7 @@ UpdateTrafficPolicyCommentResponse * Route53Client::updateTrafficPolicyComment(c
  */
 UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance(const UpdateTrafficPolicyInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

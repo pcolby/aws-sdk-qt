@@ -164,7 +164,7 @@ SwfClient::SwfClient(
  */
 CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions(const CountClosedWorkflowExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -222,7 +222,7 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
  */
 CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(const CountOpenWorkflowExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -267,7 +267,7 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
  */
 CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const CountPendingActivityTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -312,7 +312,7 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
  */
 CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const CountPendingDecisionTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -367,7 +367,7 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
  */
 DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const DeprecateActivityTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
  */
 DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -472,7 +472,7 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
  */
 DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const DeprecateWorkflowTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -523,7 +523,7 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
  */
 DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeActivityTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -565,7 +565,7 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
  */
 DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -611,7 +611,7 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
  */
 DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const DescribeWorkflowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -662,7 +662,7 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
  */
 DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWorkflowTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
  */
 GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(const GetWorkflowExecutionHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -754,7 +754,7 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
  */
 ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -814,7 +814,7 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
  */
 ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -862,7 +862,7 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  */
 ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -922,7 +922,7 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
  */
 ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -965,7 +965,7 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
  */
 ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1017,7 +1017,7 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  */
 PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivityTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1082,7 +1082,7 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  */
 PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisionTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1155,7 +1155,7 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  */
 RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(const RecordActivityTaskHeartbeatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1214,7 +1214,7 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
  */
 RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterActivityTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1257,7 +1257,7 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
  */
 RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1320,7 +1320,7 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  */
 RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWorkflowTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1374,7 +1374,7 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
  */
 RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecution(const RequestCancelWorkflowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1433,7 +1433,7 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  */
 RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(const RespondActivityTaskCanceledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1490,7 +1490,7 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  */
 RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(const RespondActivityTaskCompletedRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1541,7 +1541,7 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  */
 RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const RespondActivityTaskFailedRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1574,7 +1574,7 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
  */
 RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1627,7 +1627,7 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
  */
 SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const SignalWorkflowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1705,7 +1705,7 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
  */
 StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWorkflowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1763,7 +1763,7 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  */
 TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

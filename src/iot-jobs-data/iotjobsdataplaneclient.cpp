@@ -118,7 +118,7 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
  */
 DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ DescribeJobExecutionResponse * IoTJobsDataPlaneClient::describeJobExecution(cons
  */
 GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecutions(const GetPendingJobExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ GetPendingJobExecutionsResponse * IoTJobsDataPlaneClient::getPendingJobExecution
  */
 StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJobExecution(const StartNextPendingJobExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -160,7 +160,7 @@ StartNextPendingJobExecutionResponse * IoTJobsDataPlaneClient::startNextPendingJ
  */
 UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const UpdateJobExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

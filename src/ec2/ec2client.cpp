@@ -108,7 +108,7 @@ Ec2Client::Ec2Client(
  */
 AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstancesExchangeQuote(const AcceptReservedInstancesExchangeQuoteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -122,7 +122,7 @@ AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstance
  */
 AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(const AcceptVpcEndpointConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -143,7 +143,7 @@ AcceptVpcEndpointConnectionsResponse * Ec2Client::acceptVpcEndpointConnections(c
  */
 AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const AcceptVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
  */
 AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressReques
  */
 AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -208,7 +208,7 @@ AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &req
  */
 AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6AddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -233,7 +233,7 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
  */
 AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const AssignPrivateIpAddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -273,7 +273,7 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
  */
 AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -300,7 +300,7 @@ AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressReq
  */
 AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDhcpOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -315,7 +315,7 @@ AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDh
  */
 AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(const AssociateIamInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -338,7 +338,7 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
  */
 AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRouteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -353,7 +353,7 @@ AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRout
  */
 AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const AssociateSubnetCidrBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -374,7 +374,7 @@ AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const Ass
  */
 AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const AssociateVpcCidrBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -400,7 +400,7 @@ AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const Associate
  */
 AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClassicLinkVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClass
  */
 AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInt
  */
 AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachNetworkInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -489,7 +489,7 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  */
 AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -508,7 +508,7 @@ AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &reques
  */
 AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -538,7 +538,7 @@ AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayReq
  */
 AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(const AuthorizeSecurityGroupEgressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -574,7 +574,7 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
  */
 AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress(const AuthorizeSecurityGroupIngressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -602,7 +602,7 @@ AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress
  */
 BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -616,7 +616,7 @@ BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &
  */
 CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -638,7 +638,7 @@ CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskReq
  */
 CancelConversionTaskResponse * Ec2Client::cancelConversionTask(const CancelConversionTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -654,7 +654,7 @@ CancelConversionTaskResponse * Ec2Client::cancelConversionTask(const CancelConve
  */
 CancelExportTaskResponse * Ec2Client::cancelExportTask(const CancelExportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -668,7 +668,7 @@ CancelExportTaskResponse * Ec2Client::cancelExportTask(const CancelExportTaskReq
  */
 CancelImportTaskResponse * Ec2Client::cancelImportTask(const CancelImportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -687,7 +687,7 @@ CancelImportTaskResponse * Ec2Client::cancelImportTask(const CancelImportTaskReq
  */
 CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListing(const CancelReservedInstancesListingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -708,7 +708,7 @@ CancelReservedInstancesListingResponse * Ec2Client::cancelReservedInstancesListi
  */
 CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const CancelSpotFleetRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -729,7 +729,7 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
  */
 CancelSpotInstanceRequestsResponse * Ec2Client::cancelSpotInstanceRequests(const CancelSpotInstanceRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -744,7 +744,7 @@ CancelSpotInstanceRequestsResponse * Ec2Client::cancelSpotInstanceRequests(const
  */
 ConfirmProductInstanceResponse * Ec2Client::confirmProductInstance(const ConfirmProductInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -758,7 +758,7 @@ ConfirmProductInstanceResponse * Ec2Client::confirmProductInstance(const Confirm
  */
 CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -779,7 +779,7 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
  */
 CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -816,7 +816,7 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  */
 CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -856,7 +856,7 @@ CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &reques
  */
 CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCustomerGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -873,7 +873,7 @@ CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCus
  */
 CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefaultSubnetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -901,7 +901,7 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
  */
 CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -958,7 +958,7 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
  */
 CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -974,7 +974,7 @@ CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptions
  */
 CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGateway(const CreateEgressOnlyInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1001,7 +1001,7 @@ CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGat
  */
 CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1025,7 +1025,7 @@ CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &
  */
 CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1050,7 +1050,7 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
  */
 CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1070,7 +1070,7 @@ CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
  */
 CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const CreateInstanceExportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1089,7 +1089,7 @@ CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const Cre
  */
 CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1119,7 +1119,7 @@ CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInt
  */
 CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1134,7 +1134,7 @@ CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &req
  */
 CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunchTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1154,7 +1154,7 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
  */
 CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(const CreateLaunchTemplateVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1172,7 +1172,7 @@ CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(con
  */
 CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1193,7 +1193,7 @@ CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayReq
  */
 CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1226,7 +1226,7 @@ CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclReq
  */
 CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNetworkAclEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1246,7 +1246,7 @@ CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNet
  */
 CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateNetworkInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1264,7 +1264,7 @@ CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateN
  */
 CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePermission(const CreateNetworkInterfacePermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1289,7 +1289,7 @@ CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePerm
  */
 CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlacementGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1329,7 +1329,7 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
  */
 CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListing(const CreateReservedInstancesListingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1372,7 +1372,7 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
  */
 CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1393,7 +1393,7 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
  */
 CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1440,7 +1440,7 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  */
 CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurityGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1489,7 +1489,7 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
  */
 CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1506,7 +1506,7 @@ CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &
  */
 CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscription(const CreateSpotDatafeedSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1553,7 +1553,7 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
  */
 CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1577,7 +1577,7 @@ CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &reques
  */
 CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1616,7 +1616,7 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
  */
 CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1652,7 +1652,7 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  */
 CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1685,7 +1685,7 @@ CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
  */
 CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1706,7 +1706,7 @@ CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpoint
  */
 CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointConnectionNotification(const CreateVpcEndpointConnectionNotificationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1727,7 +1727,7 @@ CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointCo
  */
 CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServiceConfiguration(const CreateVpcEndpointServiceConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1759,7 +1759,7 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
  */
 CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1797,7 +1797,7 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
  */
 CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1818,7 +1818,7 @@ CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConn
  */
 CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const CreateVpnConnectionRouteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1839,7 +1839,7 @@ CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const Cre
  */
 CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1853,7 +1853,7 @@ CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayReq
  */
 DeleteCustomerGatewayResponse * Ec2Client::deleteCustomerGateway(const DeleteCustomerGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1869,7 +1869,7 @@ DeleteCustomerGatewayResponse * Ec2Client::deleteCustomerGateway(const DeleteCus
  */
 DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1883,7 +1883,7 @@ DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptions
  */
 DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGateway(const DeleteEgressOnlyInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1897,7 +1897,7 @@ DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGat
  */
 DeleteFlowLogsResponse * Ec2Client::deleteFlowLogs(const DeleteFlowLogsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1911,7 +1911,7 @@ DeleteFlowLogsResponse * Ec2Client::deleteFlowLogs(const DeleteFlowLogsRequest &
  */
 DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1925,7 +1925,7 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
  */
 DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1939,7 +1939,7 @@ DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInt
  */
 DeleteKeyPairResponse * Ec2Client::deleteKeyPair(const DeleteKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1953,7 +1953,7 @@ DeleteKeyPairResponse * Ec2Client::deleteKeyPair(const DeleteKeyPairRequest &req
  */
 DeleteLaunchTemplateResponse * Ec2Client::deleteLaunchTemplate(const DeleteLaunchTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1969,7 +1969,7 @@ DeleteLaunchTemplateResponse * Ec2Client::deleteLaunchTemplate(const DeleteLaunc
  */
 DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(const DeleteLaunchTemplateVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1984,7 +1984,7 @@ DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(c
  */
 DeleteNatGatewayResponse * Ec2Client::deleteNatGateway(const DeleteNatGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1999,7 +1999,7 @@ DeleteNatGatewayResponse * Ec2Client::deleteNatGateway(const DeleteNatGatewayReq
  */
 DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2013,7 +2013,7 @@ DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclReq
  */
 DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNetworkAclEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2027,7 +2027,7 @@ DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNet
  */
 DeleteNetworkInterfaceResponse * Ec2Client::deleteNetworkInterface(const DeleteNetworkInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2043,7 +2043,7 @@ DeleteNetworkInterfaceResponse * Ec2Client::deleteNetworkInterface(const DeleteN
  */
 DeleteNetworkInterfacePermissionResponse * Ec2Client::deleteNetworkInterfacePermission(const DeleteNetworkInterfacePermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2060,7 +2060,7 @@ DeleteNetworkInterfacePermissionResponse * Ec2Client::deleteNetworkInterfacePerm
  */
 DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlacementGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2074,7 +2074,7 @@ DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlace
  */
 DeleteRouteResponse * Ec2Client::deleteRoute(const DeleteRouteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2089,7 +2089,7 @@ DeleteRouteResponse * Ec2Client::deleteRoute(const DeleteRouteRequest &request)
  */
 DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2108,7 +2108,7 @@ DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableReq
  */
 DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurityGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2140,7 +2140,7 @@ DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurit
  */
 DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2154,7 +2154,7 @@ DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &
  */
 DeleteSpotDatafeedSubscriptionResponse * Ec2Client::deleteSpotDatafeedSubscription(const DeleteSpotDatafeedSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2168,7 +2168,7 @@ DeleteSpotDatafeedSubscriptionResponse * Ec2Client::deleteSpotDatafeedSubscripti
  */
 DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2188,7 +2188,7 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
  */
 DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2211,7 +2211,7 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
  */
 DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2228,7 +2228,7 @@ DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &reques
  */
 DeleteVpcResponse * Ec2Client::deleteVpc(const DeleteVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2242,7 +2242,7 @@ DeleteVpcResponse * Ec2Client::deleteVpc(const DeleteVpcRequest &request)
  */
 DeleteVpcEndpointConnectionNotificationsResponse * Ec2Client::deleteVpcEndpointConnectionNotifications(const DeleteVpcEndpointConnectionNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2258,7 +2258,7 @@ DeleteVpcEndpointConnectionNotificationsResponse * Ec2Client::deleteVpcEndpointC
  */
 DeleteVpcEndpointServiceConfigurationsResponse * Ec2Client::deleteVpcEndpointServiceConfigurations(const DeleteVpcEndpointServiceConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2273,7 +2273,7 @@ DeleteVpcEndpointServiceConfigurationsResponse * Ec2Client::deleteVpcEndpointSer
  */
 DeleteVpcEndpointsResponse * Ec2Client::deleteVpcEndpoints(const DeleteVpcEndpointsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2290,7 +2290,7 @@ DeleteVpcEndpointsResponse * Ec2Client::deleteVpcEndpoints(const DeleteVpcEndpoi
  */
 DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2312,7 +2312,7 @@ DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const
  */
 DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2327,7 +2327,7 @@ DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConn
  */
 DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const DeleteVpnConnectionRouteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2343,7 +2343,7 @@ DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const Del
  */
 DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2365,7 +2365,7 @@ DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayReq
  */
 DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2405,7 +2405,7 @@ DeregisterImageResponse * Ec2Client::deregisterImage(const DeregisterImageReques
  */
 DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2425,7 +2425,7 @@ DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const D
  */
 DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2456,7 +2456,7 @@ DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddresses
  */
 DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const DescribeAggregateIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2478,7 +2478,7 @@ DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const D
  */
 DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const DescribeAvailabilityZonesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2498,7 +2498,7 @@ DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const D
  */
 DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundleTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2513,7 +2513,7 @@ DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundl
  */
 DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(const DescribeClassicLinkInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2533,7 +2533,7 @@ DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(c
  */
 DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const DescribeConversionTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2553,7 +2553,7 @@ DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const Descr
  */
 DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const DescribeCustomerGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2573,7 +2573,7 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
  */
 DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2587,7 +2587,7 @@ DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpO
  */
 DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyInternetGateways(const DescribeEgressOnlyInternetGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2602,7 +2602,7 @@ DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyIntern
  */
 DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElasticGpusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2616,7 +2616,7 @@ DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElast
  */
 DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExportTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2631,7 +2631,7 @@ DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExpor
  */
 DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2645,7 +2645,7 @@ DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsReq
  */
 DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const DescribeFpgaImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2660,7 +2660,7 @@ DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const
  */
 DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaImagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2682,7 +2682,7 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
  */
 DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOfferings(const DescribeHostReservationOfferingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2696,7 +2696,7 @@ DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOff
  */
 DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const DescribeHostReservationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2715,7 +2715,7 @@ DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const Des
  */
 DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2729,7 +2729,7 @@ DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &req
  */
 DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceProfileAssociations(const DescribeIamInstanceProfileAssociationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2764,7 +2764,7 @@ DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceP
  */
 DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2798,7 +2798,7 @@ DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatReq
  */
 DescribeIdentityIdFormatResponse * Ec2Client::describeIdentityIdFormat(const DescribeIdentityIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2812,7 +2812,7 @@ DescribeIdentityIdFormatResponse * Ec2Client::describeIdentityIdFormat(const Des
  */
 DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const DescribeImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2832,7 +2832,7 @@ DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const Describ
  */
 DescribeImagesResponse * Ec2Client::describeImages(const DescribeImagesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2846,7 +2846,7 @@ DescribeImagesResponse * Ec2Client::describeImages(const DescribeImagesRequest &
  */
 DescribeImportImageTasksResponse * Ec2Client::describeImportImageTasks(const DescribeImportImageTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2860,7 +2860,7 @@ DescribeImportImageTasksResponse * Ec2Client::describeImportImageTasks(const Des
  */
 DescribeImportSnapshotTasksResponse * Ec2Client::describeImportSnapshotTasks(const DescribeImportSnapshotTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2878,7 +2878,7 @@ DescribeImportSnapshotTasksResponse * Ec2Client::describeImportSnapshotTasks(con
  */
 DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const DescribeInstanceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2915,7 +2915,7 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
  */
 DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCreditSpecifications(const DescribeInstanceCreditSpecificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2956,7 +2956,7 @@ DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCredit
  */
 DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const DescribeInstanceStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2986,7 +2986,7 @@ DescribeInstanceStatusResponse * Ec2Client::describeInstanceStatus(const Describ
  */
 DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3000,7 +3000,7 @@ DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstances
  */
 DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const DescribeInternetGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3020,7 +3020,7 @@ DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const Des
  */
 DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3035,7 +3035,7 @@ DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsReq
  */
 DescribeLaunchTemplateVersionsResponse * Ec2Client::describeLaunchTemplateVersions(const DescribeLaunchTemplateVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3049,7 +3049,7 @@ DescribeLaunchTemplateVersionsResponse * Ec2Client::describeLaunchTemplateVersio
  */
 DescribeLaunchTemplatesResponse * Ec2Client::describeLaunchTemplates(const DescribeLaunchTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3064,7 +3064,7 @@ DescribeLaunchTemplatesResponse * Ec2Client::describeLaunchTemplates(const Descr
  */
 DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const DescribeMovingAddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3078,7 +3078,7 @@ DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const Descr
  */
 DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3098,7 +3098,7 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
  */
 DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetworkAclsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3112,7 +3112,7 @@ DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetwo
  */
 DescribeNetworkInterfaceAttributeResponse * Ec2Client::describeNetworkInterfaceAttribute(const DescribeNetworkInterfaceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3126,7 +3126,7 @@ DescribeNetworkInterfaceAttributeResponse * Ec2Client::describeNetworkInterfaceA
  */
 DescribeNetworkInterfacePermissionsResponse * Ec2Client::describeNetworkInterfacePermissions(const DescribeNetworkInterfacePermissionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3140,7 +3140,7 @@ DescribeNetworkInterfacePermissionsResponse * Ec2Client::describeNetworkInterfac
  */
 DescribeNetworkInterfacesResponse * Ec2Client::describeNetworkInterfaces(const DescribeNetworkInterfacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3156,7 +3156,7 @@ DescribeNetworkInterfacesResponse * Ec2Client::describeNetworkInterfaces(const D
  */
 DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const DescribePlacementGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3172,7 +3172,7 @@ DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const Descr
  */
 DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefixListsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3205,7 +3205,7 @@ DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefi
  */
 DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const DescribePrincipalIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3224,7 +3224,7 @@ DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const D
  */
 DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3244,7 +3244,7 @@ DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsReques
  */
 DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const DescribeReservedInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3281,7 +3281,7 @@ DescribeReservedInstancesResponse * Ec2Client::describeReservedInstances(const D
  */
 DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstancesListings(const DescribeReservedInstancesListingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3302,7 +3302,7 @@ DescribeReservedInstancesListingsResponse * Ec2Client::describeReservedInstances
  */
 DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInstancesModifications(const DescribeReservedInstancesModificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3328,7 +3328,7 @@ DescribeReservedInstancesModificationsResponse * Ec2Client::describeReservedInst
  */
 DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstancesOfferings(const DescribeReservedInstancesOfferingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3353,7 +3353,7 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
  */
 DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRouteTablesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3378,7 +3378,7 @@ DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRoute
  */
 DescribeScheduledInstanceAvailabilityResponse * Ec2Client::describeScheduledInstanceAvailability(const DescribeScheduledInstanceAvailabilityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3392,7 +3392,7 @@ DescribeScheduledInstanceAvailabilityResponse * Ec2Client::describeScheduledInst
  */
 DescribeScheduledInstancesResponse * Ec2Client::describeScheduledInstances(const DescribeScheduledInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3407,7 +3407,7 @@ DescribeScheduledInstancesResponse * Ec2Client::describeScheduledInstances(const
  */
 DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupReferences(const DescribeSecurityGroupReferencesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3429,7 +3429,7 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
  */
 DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const DescribeSecurityGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3449,7 +3449,7 @@ DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const Describ
  */
 DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const DescribeSnapshotAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3518,7 +3518,7 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
  */
 DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3534,7 +3534,7 @@ DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshots
  */
 DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscription(const DescribeSpotDatafeedSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3548,7 +3548,7 @@ DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscr
  */
 DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const DescribeSpotFleetInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3567,7 +3567,7 @@ DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const
  */
 DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHistory(const DescribeSpotFleetRequestHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3585,7 +3585,7 @@ DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHis
  */
 DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const DescribeSpotFleetRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3613,7 +3613,7 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
  */
 DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(const DescribeSpotInstanceRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3635,7 +3635,7 @@ DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(c
  */
 DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const DescribeSpotPriceHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3651,7 +3651,7 @@ DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const Des
  */
 DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(const DescribeStaleSecurityGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3671,7 +3671,7 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
  */
 DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3691,7 +3691,7 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
  */
 DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3711,7 +3711,7 @@ DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &reques
  */
 DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const DescribeVolumeAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3761,7 +3761,7 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
  */
 DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVolumeStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3788,7 +3788,7 @@ DescribeVolumeStatusResponse * Ec2Client::describeVolumeStatus(const DescribeVol
  */
 DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3818,7 +3818,7 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
  */
 DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(const DescribeVolumesModificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3832,7 +3832,7 @@ DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(c
  */
 DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpcAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3846,7 +3846,7 @@ DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpc
  */
 DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const DescribeVpcClassicLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3865,7 +3865,7 @@ DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const Describ
  */
 DescribeVpcClassicLinkDnsSupportResponse * Ec2Client::describeVpcClassicLinkDnsSupport(const DescribeVpcClassicLinkDnsSupportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3879,7 +3879,7 @@ DescribeVpcClassicLinkDnsSupportResponse * Ec2Client::describeVpcClassicLinkDnsS
  */
 DescribeVpcEndpointConnectionNotificationsResponse * Ec2Client::describeVpcEndpointConnectionNotifications(const DescribeVpcEndpointConnectionNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3893,7 +3893,7 @@ DescribeVpcEndpointConnectionNotificationsResponse * Ec2Client::describeVpcEndpo
  */
 DescribeVpcEndpointConnectionsResponse * Ec2Client::describeVpcEndpointConnections(const DescribeVpcEndpointConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3907,7 +3907,7 @@ DescribeVpcEndpointConnectionsResponse * Ec2Client::describeVpcEndpointConnectio
  */
 DescribeVpcEndpointServiceConfigurationsResponse * Ec2Client::describeVpcEndpointServiceConfigurations(const DescribeVpcEndpointServiceConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3921,7 +3921,7 @@ DescribeVpcEndpointServiceConfigurationsResponse * Ec2Client::describeVpcEndpoin
  */
 DescribeVpcEndpointServicePermissionsResponse * Ec2Client::describeVpcEndpointServicePermissions(const DescribeVpcEndpointServicePermissionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3935,7 +3935,7 @@ DescribeVpcEndpointServicePermissionsResponse * Ec2Client::describeVpcEndpointSe
  */
 DescribeVpcEndpointServicesResponse * Ec2Client::describeVpcEndpointServices(const DescribeVpcEndpointServicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3949,7 +3949,7 @@ DescribeVpcEndpointServicesResponse * Ec2Client::describeVpcEndpointServices(con
  */
 DescribeVpcEndpointsResponse * Ec2Client::describeVpcEndpoints(const DescribeVpcEndpointsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3963,7 +3963,7 @@ DescribeVpcEndpointsResponse * Ec2Client::describeVpcEndpoints(const DescribeVpc
  */
 DescribeVpcPeeringConnectionsResponse * Ec2Client::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3977,7 +3977,7 @@ DescribeVpcPeeringConnectionsResponse * Ec2Client::describeVpcPeeringConnections
  */
 DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3997,7 +3997,7 @@ DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &reques
  */
 DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const DescribeVpnConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4017,7 +4017,7 @@ DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const Describ
  */
 DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4032,7 +4032,7 @@ DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGa
  */
 DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClassicLinkVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4047,7 +4047,7 @@ DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClass
  */
 DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInternetGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4061,7 +4061,7 @@ DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInt
  */
 DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachNetworkInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4090,7 +4090,7 @@ DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachN
  */
 DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4111,7 +4111,7 @@ DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &reques
  */
 DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4125,7 +4125,7 @@ DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayReq
  */
 DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const DisableVgwRoutePropagationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4139,7 +4139,7 @@ DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const
  */
 DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVpcClassicLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4156,7 +4156,7 @@ DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVp
  */
 DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSupport(const DisableVpcClassicLinkDnsSupportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4180,7 +4180,7 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
  */
 DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4198,7 +4198,7 @@ DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateA
  */
 DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfile(const DisassociateIamInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4219,7 +4219,7 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
  */
 DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const DisassociateRouteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4234,7 +4234,7 @@ DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const Disasso
  */
 DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(const DisassociateSubnetCidrBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4254,7 +4254,7 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
  */
 DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const DisassociateVpcCidrBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4268,7 +4268,7 @@ DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const Dis
  */
 EnableVgwRoutePropagationResponse * Ec2Client::enableVgwRoutePropagation(const EnableVgwRoutePropagationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4282,7 +4282,7 @@ EnableVgwRoutePropagationResponse * Ec2Client::enableVgwRoutePropagation(const E
  */
 EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4301,7 +4301,7 @@ EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &
  */
 EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcClassicLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4320,7 +4320,7 @@ EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcCl
  */
 EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSupport(const EnableVpcClassicLinkDnsSupportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4355,7 +4355,7 @@ EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSuppo
  */
 GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4373,7 +4373,7 @@ GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputReq
  */
 GetConsoleScreenshotResponse * Ec2Client::getConsoleScreenshot(const GetConsoleScreenshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4392,7 +4392,7 @@ GetConsoleScreenshotResponse * Ec2Client::getConsoleScreenshot(const GetConsoleS
  */
 GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchasePreview(const GetHostReservationPurchasePreviewRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4406,7 +4406,7 @@ GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchas
  */
 GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunchTemplateDataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4444,7 +4444,7 @@ GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunch
  */
 GetPasswordDataResponse * Ec2Client::getPasswordData(const GetPasswordDataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4460,7 +4460,7 @@ GetPasswordDataResponse * Ec2Client::getPasswordData(const GetPasswordDataReques
  */
 GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExchangeQuote(const GetReservedInstancesExchangeQuoteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4476,7 +4476,7 @@ GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExcha
  */
 ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4498,7 +4498,7 @@ ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
  */
 ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4521,7 +4521,7 @@ ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &
  */
 ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4535,7 +4535,7 @@ ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &req
  */
 ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4556,7 +4556,7 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
  */
 ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4570,7 +4570,7 @@ ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &reques
  */
 ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const ModifyFpgaImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4588,7 +4588,7 @@ ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const Mod
  */
 ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4629,7 +4629,7 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
  */
 ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4673,7 +4673,7 @@ ModifyIdFormatResponse * Ec2Client::modifyIdFormat(const ModifyIdFormatRequest &
  */
 ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyIdentityIdFormatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4698,7 +4698,7 @@ ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyI
  */
 ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4718,7 +4718,7 @@ ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImage
  */
 ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const ModifyInstanceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4738,7 +4738,7 @@ ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const Modif
  */
 ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpecification(const ModifyInstanceCreditSpecificationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4783,7 +4783,7 @@ ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpeci
  */
 ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const ModifyInstancePlacementRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4798,7 +4798,7 @@ ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const Modif
  */
 ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunchTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4812,7 +4812,7 @@ ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunc
  */
 ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttribute(const ModifyNetworkInterfaceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4833,7 +4833,7 @@ ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttri
  */
 ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const ModifyReservedInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4860,7 +4860,7 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
  */
 ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const ModifySnapshotAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4898,7 +4898,7 @@ ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const Modif
  */
 ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifySpotFleetRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4912,7 +4912,7 @@ ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifyS
  */
 ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySubnetAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4964,7 +4964,7 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
  */
 ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4989,7 +4989,7 @@ ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &reques
  */
 ModifyVolumeAttributeResponse * Ec2Client::modifyVolumeAttribute(const ModifyVolumeAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5003,7 +5003,7 @@ ModifyVolumeAttributeResponse * Ec2Client::modifyVolumeAttribute(const ModifyVol
  */
 ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5020,7 +5020,7 @@ ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttrib
  */
 ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5035,7 +5035,7 @@ ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpoint
  */
 ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointConnectionNotification(const ModifyVpcEndpointConnectionNotificationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5051,7 +5051,7 @@ ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointCo
  */
 ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServiceConfiguration(const ModifyVpcEndpointServiceConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5067,7 +5067,7 @@ ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServ
  */
 ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServicePermissions(const ModifyVpcEndpointServicePermissionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5103,7 +5103,7 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
  */
 ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectionOptions(const ModifyVpcPeeringConnectionOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5130,7 +5130,7 @@ ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectio
  */
 ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5150,7 +5150,7 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
  */
 MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5168,7 +5168,7 @@ MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesReq
  */
 MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5184,7 +5184,7 @@ MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcReq
  */
 PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const PurchaseHostReservationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5211,7 +5211,7 @@ PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const Purch
  */
 PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstancesOffering(const PurchaseReservedInstancesOfferingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5236,7 +5236,7 @@ PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstances
  */
 PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const PurchaseScheduledInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5262,7 +5262,7 @@ PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const
  */
 RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5307,7 +5307,7 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  */
 RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5321,7 +5321,7 @@ RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &req
  */
 RejectVpcEndpointConnectionsResponse * Ec2Client::rejectVpcEndpointConnections(const RejectVpcEndpointConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5337,7 +5337,7 @@ RejectVpcEndpointConnectionsResponse * Ec2Client::rejectVpcEndpointConnections(c
  */
 RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const RejectVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5372,7 +5372,7 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
  */
 ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5397,7 +5397,7 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
  */
 ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5416,7 +5416,7 @@ ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &reques
  */
 ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProfileAssociation(const ReplaceIamInstanceProfileAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5437,7 +5437,7 @@ ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProf
  */
 ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(const ReplaceNetworkAclAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5453,7 +5453,7 @@ ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(c
  */
 ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const ReplaceNetworkAclEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5475,7 +5475,7 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
  */
 ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5497,7 +5497,7 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
  */
 ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(const ReplaceRouteTableAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5518,7 +5518,7 @@ ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(c
  */
 ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInstanceStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5558,7 +5558,7 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
  */
 RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5575,7 +5575,7 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
  */
 RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpotInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5590,7 +5590,7 @@ RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpot
  */
 ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const ResetFpgaImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5608,7 +5608,7 @@ ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const Reset
  */
 ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5630,7 +5630,7 @@ ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAtt
  */
 ResetInstanceAttributeResponse * Ec2Client::resetInstanceAttribute(const ResetInstanceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5644,7 +5644,7 @@ ResetInstanceAttributeResponse * Ec2Client::resetInstanceAttribute(const ResetIn
  */
 ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribute(const ResetNetworkInterfaceAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5664,7 +5664,7 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
  */
 ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSnapshotAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5680,7 +5680,7 @@ ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSn
  */
 RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const RestoreAddressToClassicRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5707,7 +5707,7 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
  */
 RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const RevokeSecurityGroupEgressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5737,7 +5737,7 @@ RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const R
  */
 RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const RevokeSecurityGroupIngressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5823,7 +5823,7 @@ RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const
  */
 RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5849,7 +5849,7 @@ RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &reques
  */
 RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunScheduledInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5888,7 +5888,7 @@ RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunSchedu
  */
 StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5937,7 +5937,7 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
  */
 StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5982,7 +5982,7 @@ StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &req
  */
 TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5996,7 +5996,7 @@ TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstan
  */
 UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignIpv6AddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -6010,7 +6010,7 @@ UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignI
  */
 UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const UnassignPrivateIpAddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -6026,7 +6026,7 @@ UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const
  */
 UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -6046,7 +6046,7 @@ UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstan
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsEgress(const UpdateSecurityGroupRuleDescriptionsEgressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -6066,7 +6066,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
  */
 UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsIngress(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

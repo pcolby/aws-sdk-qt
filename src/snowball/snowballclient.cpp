@@ -111,7 +111,7 @@ SnowballClient::SnowballClient(
  */
 CancelClusterResponse * SnowballClient::cancelCluster(const CancelClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -127,7 +127,7 @@ CancelClusterResponse * SnowballClient::cancelCluster(const CancelClusterRequest
  */
 CancelJobResponse * SnowballClient::cancelJob(const CancelJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -143,7 +143,7 @@ CancelJobResponse * SnowballClient::cancelJob(const CancelJobRequest &request)
  */
 CreateAddressResponse * SnowballClient::createAddress(const CreateAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -158,7 +158,7 @@ CreateAddressResponse * SnowballClient::createAddress(const CreateAddressRequest
  */
 CreateClusterResponse * SnowballClient::createCluster(const CreateClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -175,7 +175,7 @@ CreateClusterResponse * SnowballClient::createCluster(const CreateClusterRequest
  */
 CreateJobResponse * SnowballClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ CreateJobResponse * SnowballClient::createJob(const CreateJobRequest &request)
  */
 DescribeAddressResponse * SnowballClient::describeAddress(const DescribeAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -204,7 +204,7 @@ DescribeAddressResponse * SnowballClient::describeAddress(const DescribeAddressR
  */
 DescribeAddressesResponse * SnowballClient::describeAddresses(const DescribeAddressesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -218,7 +218,7 @@ DescribeAddressesResponse * SnowballClient::describeAddresses(const DescribeAddr
  */
 DescribeClusterResponse * SnowballClient::describeCluster(const DescribeClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -232,7 +232,7 @@ DescribeClusterResponse * SnowballClient::describeCluster(const DescribeClusterR
  */
 DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &requ
  */
 GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -291,7 +291,7 @@ GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequ
  */
 GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -311,7 +311,7 @@ GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCo
  */
 GetSnowballUsageResponse * SnowballClient::getSnowballUsage(const GetSnowballUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -326,7 +326,7 @@ GetSnowballUsageResponse * SnowballClient::getSnowballUsage(const GetSnowballUsa
  */
 ListClusterJobsResponse * SnowballClient::listClusterJobs(const ListClusterJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -341,7 +341,7 @@ ListClusterJobsResponse * SnowballClient::listClusterJobs(const ListClusterJobsR
  */
 ListClustersResponse * SnowballClient::listClusters(const ListClustersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ ListClustersResponse * SnowballClient::listClusters(const ListClustersRequest &r
  */
 ListJobsResponse * SnowballClient::listJobs(const ListJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -374,7 +374,7 @@ ListJobsResponse * SnowballClient::listJobs(const ListJobsRequest &request)
  */
 UpdateClusterResponse * SnowballClient::updateCluster(const UpdateClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ UpdateClusterResponse * SnowballClient::updateCluster(const UpdateClusterRequest
  */
 UpdateJobResponse * SnowballClient::updateJob(const UpdateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

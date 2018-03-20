@@ -126,7 +126,7 @@ ElasticBeanstalkClient::ElasticBeanstalkClient(
  */
 AbortEnvironmentUpdateResponse * ElasticBeanstalkClient::abortEnvironmentUpdate(const AbortEnvironmentUpdateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -141,7 +141,7 @@ AbortEnvironmentUpdateResponse * ElasticBeanstalkClient::abortEnvironmentUpdate(
  */
 ApplyEnvironmentManagedActionResponse * ElasticBeanstalkClient::applyEnvironmentManagedAction(const ApplyEnvironmentManagedActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -155,7 +155,7 @@ ApplyEnvironmentManagedActionResponse * ElasticBeanstalkClient::applyEnvironment
  */
 CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(const CheckDNSAvailabilityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -173,7 +173,7 @@ CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(cons
  */
 ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const ComposeEnvironmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -187,7 +187,7 @@ ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const 
  */
 CreateApplicationResponse * ElasticBeanstalkClient::createApplication(const CreateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ CreateApplicationResponse * ElasticBeanstalkClient::createApplication(const Crea
  */
 CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVersion(const CreateApplicationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -255,7 +255,7 @@ CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVers
  */
 CreateConfigurationTemplateResponse * ElasticBeanstalkClient::createConfigurationTemplate(const CreateConfigurationTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -269,7 +269,7 @@ CreateConfigurationTemplateResponse * ElasticBeanstalkClient::createConfiguratio
  */
 CreateEnvironmentResponse * ElasticBeanstalkClient::createEnvironment(const CreateEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -283,7 +283,7 @@ CreateEnvironmentResponse * ElasticBeanstalkClient::createEnvironment(const Crea
  */
 CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(const CreatePlatformVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -300,7 +300,7 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
  */
 CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -319,7 +319,7 @@ CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
  */
 DeleteApplicationResponse * ElasticBeanstalkClient::deleteApplication(const DeleteApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -337,7 +337,7 @@ DeleteApplicationResponse * ElasticBeanstalkClient::deleteApplication(const Dele
  */
 DeleteApplicationVersionResponse * ElasticBeanstalkClient::deleteApplicationVersion(const DeleteApplicationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -356,7 +356,7 @@ DeleteApplicationVersionResponse * ElasticBeanstalkClient::deleteApplicationVers
  */
 DeleteConfigurationTemplateResponse * ElasticBeanstalkClient::deleteConfigurationTemplate(const DeleteConfigurationTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ DeleteConfigurationTemplateResponse * ElasticBeanstalkClient::deleteConfiguratio
  */
 DeleteEnvironmentConfigurationResponse * ElasticBeanstalkClient::deleteEnvironmentConfiguration(const DeleteEnvironmentConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -391,7 +391,7 @@ DeleteEnvironmentConfigurationResponse * ElasticBeanstalkClient::deleteEnvironme
  */
 DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(const DeletePlatformVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -404,7 +404,7 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
  */
 DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttributes()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -418,7 +418,7 @@ DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttri
  */
 DescribeApplicationVersionsResponse * ElasticBeanstalkClient::describeApplicationVersions(const DescribeApplicationVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -432,7 +432,7 @@ DescribeApplicationVersionsResponse * ElasticBeanstalkClient::describeApplicatio
  */
 DescribeApplicationsResponse * ElasticBeanstalkClient::describeApplications(const DescribeApplicationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -448,7 +448,7 @@ DescribeApplicationsResponse * ElasticBeanstalkClient::describeApplications(cons
  */
 DescribeConfigurationOptionsResponse * ElasticBeanstalkClient::describeConfigurationOptions(const DescribeConfigurationOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -477,7 +477,7 @@ DescribeConfigurationOptionsResponse * ElasticBeanstalkClient::describeConfigura
  */
 DescribeConfigurationSettingsResponse * ElasticBeanstalkClient::describeConfigurationSettings(const DescribeConfigurationSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -492,7 +492,7 @@ DescribeConfigurationSettingsResponse * ElasticBeanstalkClient::describeConfigur
  */
 DescribeEnvironmentHealthResponse * ElasticBeanstalkClient::describeEnvironmentHealth(const DescribeEnvironmentHealthRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -506,7 +506,7 @@ DescribeEnvironmentHealthResponse * ElasticBeanstalkClient::describeEnvironmentH
  */
 DescribeEnvironmentManagedActionHistoryResponse * ElasticBeanstalkClient::describeEnvironmentManagedActionHistory(const DescribeEnvironmentManagedActionHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -520,7 +520,7 @@ DescribeEnvironmentManagedActionHistoryResponse * ElasticBeanstalkClient::descri
  */
 DescribeEnvironmentManagedActionsResponse * ElasticBeanstalkClient::describeEnvironmentManagedActions(const DescribeEnvironmentManagedActionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -534,7 +534,7 @@ DescribeEnvironmentManagedActionsResponse * ElasticBeanstalkClient::describeEnvi
  */
 DescribeEnvironmentResourcesResponse * ElasticBeanstalkClient::describeEnvironmentResources(const DescribeEnvironmentResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -548,7 +548,7 @@ DescribeEnvironmentResourcesResponse * ElasticBeanstalkClient::describeEnvironme
  */
 DescribeEnvironmentsResponse * ElasticBeanstalkClient::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -566,7 +566,7 @@ DescribeEnvironmentsResponse * ElasticBeanstalkClient::describeEnvironments(cons
  */
 DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -581,7 +581,7 @@ DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEv
  */
 DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealth(const DescribeInstancesHealthRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -595,7 +595,7 @@ DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealt
  */
 DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersion(const DescribePlatformVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -609,7 +609,7 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
  */
 ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolutionStacks()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -623,7 +623,7 @@ ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolut
  */
 ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(const ListPlatformVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -643,7 +643,7 @@ ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(cons
  */
 ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -658,7 +658,7 @@ ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const 
  */
 RebuildEnvironmentResponse * ElasticBeanstalkClient::rebuildEnvironment(const RebuildEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -694,7 +694,7 @@ RebuildEnvironmentResponse * ElasticBeanstalkClient::rebuildEnvironment(const Re
  */
 RequestEnvironmentInfoResponse * ElasticBeanstalkClient::requestEnvironmentInfo(const RequestEnvironmentInfoRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -708,7 +708,7 @@ RequestEnvironmentInfoResponse * ElasticBeanstalkClient::requestEnvironmentInfo(
  */
 RestartAppServerResponse * ElasticBeanstalkClient::restartAppServer(const RestartAppServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -730,7 +730,7 @@ RestartAppServerResponse * ElasticBeanstalkClient::restartAppServer(const Restar
  */
 RetrieveEnvironmentInfoResponse * ElasticBeanstalkClient::retrieveEnvironmentInfo(const RetrieveEnvironmentInfoRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -744,7 +744,7 @@ RetrieveEnvironmentInfoResponse * ElasticBeanstalkClient::retrieveEnvironmentInf
  */
 SwapEnvironmentCNAMEsResponse * ElasticBeanstalkClient::swapEnvironmentCNAMEs(const SwapEnvironmentCNAMEsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -758,7 +758,7 @@ SwapEnvironmentCNAMEsResponse * ElasticBeanstalkClient::swapEnvironmentCNAMEs(co
  */
 TerminateEnvironmentResponse * ElasticBeanstalkClient::terminateEnvironment(const TerminateEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -777,7 +777,7 @@ TerminateEnvironmentResponse * ElasticBeanstalkClient::terminateEnvironment(cons
  */
 UpdateApplicationResponse * ElasticBeanstalkClient::updateApplication(const UpdateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -791,7 +791,7 @@ UpdateApplicationResponse * ElasticBeanstalkClient::updateApplication(const Upda
  */
 UpdateApplicationResourceLifecycleResponse * ElasticBeanstalkClient::updateApplicationResourceLifecycle(const UpdateApplicationResourceLifecycleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -810,7 +810,7 @@ UpdateApplicationResourceLifecycleResponse * ElasticBeanstalkClient::updateAppli
  */
 UpdateApplicationVersionResponse * ElasticBeanstalkClient::updateApplicationVersion(const UpdateApplicationVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -837,7 +837,7 @@ UpdateApplicationVersionResponse * ElasticBeanstalkClient::updateApplicationVers
  */
 UpdateConfigurationTemplateResponse * ElasticBeanstalkClient::updateConfigurationTemplate(const UpdateConfigurationTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -863,7 +863,7 @@ UpdateConfigurationTemplateResponse * ElasticBeanstalkClient::updateConfiguratio
  */
 UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -905,7 +905,7 @@ UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const Upda
  */
 UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(const UpdateTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -924,7 +924,7 @@ UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(co
  */
 ValidateConfigurationSettingsResponse * ElasticBeanstalkClient::validateConfigurationSettings(const ValidateConfigurationSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

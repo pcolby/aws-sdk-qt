@@ -121,7 +121,7 @@ CostExplorerClient::CostExplorerClient(
  */
 GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
  */
 GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDimensionValuesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -167,7 +167,7 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  */
 GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(const GetReservationCoverageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -184,7 +184,7 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
  */
 GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilization(const GetReservationUtilizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
  */
 GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

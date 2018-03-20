@@ -105,7 +105,7 @@ MachineLearningClient::MachineLearningClient(
  */
 AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -134,7 +134,7 @@ AddTagsResponse * MachineLearningClient::addTags(const AddTagsRequest &request)
  */
 CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(const CreateBatchPredictionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -164,7 +164,7 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
  */
 CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS(const CreateDataSourceFromRDSRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -214,7 +214,7 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
  */
 CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFromRedshift(const CreateDataSourceFromRedshiftRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -258,7 +258,7 @@ CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFr
  */
 CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(const CreateDataSourceFromS3Request &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -288,7 +288,7 @@ CreateDataSourceFromS3Response * MachineLearningClient::createDataSourceFromS3(c
  */
 CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateEvaluationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -323,7 +323,7 @@ CreateEvaluationResponse * MachineLearningClient::createEvaluation(const CreateE
  */
 CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -338,7 +338,7 @@ CreateMLModelResponse * MachineLearningClient::createMLModel(const CreateMLModel
  */
 CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(const CreateRealtimeEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -361,7 +361,7 @@ CreateRealtimeEndpointResponse * MachineLearningClient::createRealtimeEndpoint(c
  */
 DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(const DeleteBatchPredictionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -384,7 +384,7 @@ DeleteBatchPredictionResponse * MachineLearningClient::deleteBatchPrediction(con
  */
 DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -405,7 +405,7 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
  */
 DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteEvaluationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -428,7 +428,7 @@ DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteE
  */
 DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -442,7 +442,7 @@ DeleteMLModelResponse * MachineLearningClient::deleteMLModel(const DeleteMLModel
  */
 DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(const DeleteRealtimeEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -460,7 +460,7 @@ DeleteRealtimeEndpointResponse * MachineLearningClient::deleteRealtimeEndpoint(c
  */
 DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -474,7 +474,7 @@ DeleteTagsResponse * MachineLearningClient::deleteTags(const DeleteTagsRequest &
  */
 DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictions(const DescribeBatchPredictionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -488,7 +488,7 @@ DescribeBatchPredictionsResponse * MachineLearningClient::describeBatchPredictio
  */
 DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const DescribeDataSourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -502,7 +502,7 @@ DescribeDataSourcesResponse * MachineLearningClient::describeDataSources(const D
  */
 DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const DescribeEvaluationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -516,7 +516,7 @@ DescribeEvaluationsResponse * MachineLearningClient::describeEvaluations(const D
  */
 DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const DescribeMLModelsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -530,7 +530,7 @@ DescribeMLModelsResponse * MachineLearningClient::describeMLModels(const Describ
  */
 DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -545,7 +545,7 @@ DescribeTagsResponse * MachineLearningClient::describeTags(const DescribeTagsReq
  */
 GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const GetBatchPredictionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -564,7 +564,7 @@ GetBatchPredictionResponse * MachineLearningClient::getBatchPrediction(const Get
  */
 GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -578,7 +578,7 @@ GetDataSourceResponse * MachineLearningClient::getDataSource(const GetDataSource
  */
 GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -596,7 +596,7 @@ GetEvaluationResponse * MachineLearningClient::getEvaluation(const GetEvaluation
  */
 GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -614,7 +614,7 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
  */
 PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -632,7 +632,7 @@ PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
  */
 UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(const UpdateBatchPredictionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -650,7 +650,7 @@ UpdateBatchPredictionResponse * MachineLearningClient::updateBatchPrediction(con
  */
 UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -668,7 +668,7 @@ UpdateDataSourceResponse * MachineLearningClient::updateDataSource(const UpdateD
  */
 UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateEvaluationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -686,7 +686,7 @@ UpdateEvaluationResponse * MachineLearningClient::updateEvaluation(const UpdateE
  */
 UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

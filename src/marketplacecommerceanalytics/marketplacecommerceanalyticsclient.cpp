@@ -109,7 +109,7 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
  */
 GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(const GenerateDataSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -128,7 +128,7 @@ GenerateDataSetResponse * MarketplaceCommerceAnalyticsClient::generateDataSet(co
  */
 StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSupportDataExport(const StartSupportDataExportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

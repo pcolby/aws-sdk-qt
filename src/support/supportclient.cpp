@@ -180,7 +180,7 @@ SupportClient::SupportClient(
  */
 AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttachmentsToSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -204,7 +204,7 @@ AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttach
  */
 AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const AddCommunicationToCaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -275,7 +275,7 @@ AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const Add
  */
 CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -291,7 +291,7 @@ CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
  */
 DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAttachmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -326,7 +326,7 @@ DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAtt
  */
 DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -353,7 +353,7 @@ DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest 
  */
 DescribeCommunicationsResponse * SupportClient::describeCommunications(const DescribeCommunicationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ DescribeCommunicationsResponse * SupportClient::describeCommunications(const Des
  */
 DescribeServicesResponse * SupportClient::describeServices(const DescribeServicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -392,7 +392,7 @@ DescribeServicesResponse * SupportClient::describeServices(const DescribeService
  */
 DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const DescribeSeverityLevelsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -413,7 +413,7 @@ DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const Des
  */
 DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrustedAdvisorCheckRefreshStatuses(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -459,7 +459,7 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrus
  */
 DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdvisorCheckResult(const DescribeTrustedAdvisorCheckResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -478,7 +478,7 @@ DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdviso
  */
 DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdvisorCheckSummaries(const DescribeTrustedAdvisorCheckSummariesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -494,7 +494,7 @@ DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdv
  */
 DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChecks(const DescribeTrustedAdvisorChecksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -529,7 +529,7 @@ DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChec
  */
 RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(const RefreshTrustedAdvisorCheckRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -544,7 +544,7 @@ RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(c
  */
 ResolveCaseResponse * SupportClient::resolveCase(const ResolveCaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

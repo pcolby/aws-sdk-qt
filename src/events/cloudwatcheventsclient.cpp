@@ -136,7 +136,7 @@ CloudWatchEventsClient::CloudWatchEventsClient(
  */
 DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -151,7 +151,7 @@ DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest 
  */
 DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const DescribeEventBusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -165,7 +165,7 @@ DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const Descri
  */
 DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -184,7 +184,7 @@ DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRe
  */
 DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DisableRuleResponse * CloudWatchEventsClient::disableRule(const DisableRuleReque
  */
 EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -218,7 +218,7 @@ EnableRuleResponse * CloudWatchEventsClient::enableRule(const EnableRuleRequest 
  */
 ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(const ListRuleNamesByTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -233,7 +233,7 @@ ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(co
  */
 ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -247,7 +247,7 @@ ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &re
  */
 ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const ListTargetsByRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -261,7 +261,7 @@ ListTargetsByRuleResponse * CloudWatchEventsClient::listTargetsByRule(const List
  */
 PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &re
  */
 PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -328,7 +328,7 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
  */
 PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -470,7 +470,7 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  */
 PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -486,7 +486,7 @@ PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest 
  */
 RemovePermissionResponse * CloudWatchEventsClient::removePermission(const RemovePermissionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -511,7 +511,7 @@ RemovePermissionResponse * CloudWatchEventsClient::removePermission(const Remove
  */
 RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -531,7 +531,7 @@ RemoveTargetsResponse * CloudWatchEventsClient::removeTargets(const RemoveTarget
  */
 TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEventPatternRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -110,7 +110,7 @@ ServiceCatalogClient::ServiceCatalogClient(
  */
 AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const AcceptPortfolioShareRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -124,7 +124,7 @@ AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const 
  */
 AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincipalWithPortfolio(const AssociatePrincipalWithPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -138,7 +138,7 @@ AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincip
  */
 AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWithPortfolio(const AssociateProductWithPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -152,7 +152,7 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
  */
 AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptionWithResource(const AssociateTagOptionWithResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptio
  */
 CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -188,7 +188,7 @@ CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest
  */
 CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateConstraintRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -202,7 +202,7 @@ CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateCo
  */
 CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -216,7 +216,7 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
  */
 CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const CreatePortfolioShareRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -230,7 +230,7 @@ CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const 
  */
 CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -255,7 +255,7 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
  */
 CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedProductPlan(const CreateProvisionedProductPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -273,7 +273,7 @@ CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedPr
  */
 CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArtifact(const CreateProvisioningArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -287,7 +287,7 @@ CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArt
  */
 CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -301,7 +301,7 @@ CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagO
  */
 DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteConstraintRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -319,7 +319,7 @@ DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteCo
  */
 DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -333,7 +333,7 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
  */
 DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const DeletePortfolioShareRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -351,7 +351,7 @@ DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const 
  */
 DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -365,7 +365,7 @@ DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductR
  */
 DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedProductPlan(const DeleteProvisionedProductPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -384,7 +384,7 @@ DeleteProvisionedProductPlanResponse * ServiceCatalogClient::deleteProvisionedPr
  */
 DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArtifact(const DeleteProvisioningArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -402,7 +402,7 @@ DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArt
  */
 DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ DeleteTagOptionResponse * ServiceCatalogClient::deleteTagOption(const DeleteTagO
  */
 DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const DescribeConstraintRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ DescribeConstraintResponse * ServiceCatalogClient::describeConstraint(const Desc
  */
 DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductStatus(const DescribeCopyProductStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -444,7 +444,7 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
  */
 DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const DescribePortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -458,7 +458,7 @@ DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const Descri
  */
 DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribeProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -472,7 +472,7 @@ DescribeProductResponse * ServiceCatalogClient::describeProduct(const DescribePr
  */
 DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(const DescribeProductAsAdminRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -486,7 +486,7 @@ DescribeProductAsAdminResponse * ServiceCatalogClient::describeProductAsAdmin(co
  */
 DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const DescribeProductViewRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -500,7 +500,7 @@ DescribeProductViewResponse * ServiceCatalogClient::describeProductView(const De
  */
 DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedProduct(const DescribeProvisionedProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -514,7 +514,7 @@ DescribeProvisionedProductResponse * ServiceCatalogClient::describeProvisionedPr
  */
 DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvisionedProductPlan(const DescribeProvisionedProductPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ DescribeProvisionedProductPlanResponse * ServiceCatalogClient::describeProvision
  */
 DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisioningArtifact(const DescribeProvisioningArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -549,7 +549,7 @@ DescribeProvisioningArtifactResponse * ServiceCatalogClient::describeProvisionin
  */
 DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvisioningParameters(const DescribeProvisioningParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -568,7 +568,7 @@ DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvision
  */
 DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeRecordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -582,7 +582,7 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
  */
 DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const DescribeTagOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -596,7 +596,7 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
  */
 DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociatePrincipalFromPortfolio(const DisassociatePrincipalFromPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -610,7 +610,7 @@ DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociateP
  */
 DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociateProductFromPortfolio(const DisassociateProductFromPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -624,7 +624,7 @@ DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociatePro
  */
 DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTagOptionFromResource(const DisassociateTagOptionFromResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -638,7 +638,7 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
  */
 ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisionedProductPlan(const ExecuteProvisionedProductPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -652,7 +652,7 @@ ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisioned
  */
 ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -666,7 +666,7 @@ ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfoli
  */
 ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPortfolio(const ListConstraintsForPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -681,7 +681,7 @@ ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPo
  */
 ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunchPathsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -695,7 +695,7 @@ ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunch
  */
 ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const ListPortfolioAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const Li
  */
 ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoliosRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -723,7 +723,7 @@ ListPortfoliosResponse * ServiceCatalogClient::listPortfolios(const ListPortfoli
  */
 ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduct(const ListPortfoliosForProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -737,7 +737,7 @@ ListPortfoliosForProductResponse * ServiceCatalogClient::listPortfoliosForProduc
  */
 ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPortfolio(const ListPrincipalsForPortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -751,7 +751,7 @@ ListPrincipalsForPortfolioResponse * ServiceCatalogClient::listPrincipalsForPort
  */
 ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProductPlans(const ListProvisionedProductPlansRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -765,7 +765,7 @@ ListProvisionedProductPlansResponse * ServiceCatalogClient::listProvisionedProdu
  */
 ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifacts(const ListProvisioningArtifactsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -779,7 +779,7 @@ ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifa
  */
 ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRecordHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -793,7 +793,7 @@ ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRe
  */
 ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOption(const ListResourcesForTagOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -807,7 +807,7 @@ ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOpt
  */
 ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -832,7 +832,7 @@ ListTagOptionsResponse * ServiceCatalogClient::listTagOptions(const ListTagOptio
  */
 ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const ProvisionProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -846,7 +846,7 @@ ProvisionProductResponse * ServiceCatalogClient::provisionProduct(const Provisio
  */
 RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const RejectPortfolioShareRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -864,7 +864,7 @@ RejectPortfolioShareResponse * ServiceCatalogClient::rejectPortfolioShare(const 
  */
 ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(const ScanProvisionedProductsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -878,7 +878,7 @@ ScanProvisionedProductsResponse * ServiceCatalogClient::scanProvisionedProducts(
  */
 SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProductsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -892,7 +892,7 @@ SearchProductsResponse * ServiceCatalogClient::searchProducts(const SearchProduc
  */
 SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(const SearchProductsAsAdminRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -906,7 +906,7 @@ SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(cons
  */
 SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProducts(const SearchProvisionedProductsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -928,7 +928,7 @@ SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProdu
  */
 TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisionedProduct(const TerminateProvisionedProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -942,7 +942,7 @@ TerminateProvisionedProductResponse * ServiceCatalogClient::terminateProvisioned
  */
 UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateConstraintRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -960,7 +960,7 @@ UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateCo
  */
 UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePortfolioRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -974,7 +974,7 @@ UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePort
  */
 UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -997,7 +997,7 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
  */
 UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduct(const UpdateProvisionedProductRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1015,7 +1015,7 @@ UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduc
  */
 UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArtifact(const UpdateProvisioningArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1029,7 +1029,7 @@ UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArt
  */
 UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

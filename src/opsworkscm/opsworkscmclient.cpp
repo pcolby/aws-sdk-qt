@@ -192,7 +192,7 @@ OpsWorksCMClient::OpsWorksCMClient(
  */
 AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -223,7 +223,7 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  */
 CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -270,7 +270,7 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  */
 CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  */
 DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -318,7 +318,7 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  */
 DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -336,7 +336,7 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
  */
 DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  */
 DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -383,7 +383,7 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  */
 DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -403,7 +403,7 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  */
 DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -427,7 +427,7 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  */
 DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  */
 DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -476,7 +476,7 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  */
 RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -498,7 +498,7 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  */
 StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -516,7 +516,7 @@ StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMainten
  */
 UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -543,7 +543,7 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  */
 UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

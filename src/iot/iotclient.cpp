@@ -119,7 +119,7 @@ IoTClient::IoTClient(
  */
 AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const AcceptCertificateTransferRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -133,7 +133,7 @@ AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const A
  */
 AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -159,7 +159,7 @@ AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToT
  */
 AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const AssociateTargetsWithJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -173,7 +173,7 @@ AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const Assoc
  */
 AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -191,7 +191,7 @@ AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &reques
  */
 AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPrincipalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -205,7 +205,7 @@ AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPri
  */
 AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThingPrincipalRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -229,7 +229,7 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
  */
 CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const CancelCertificateTransferRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -243,7 +243,7 @@ CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const C
  */
 CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -257,7 +257,7 @@ CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
  */
 ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDefaultAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -271,7 +271,7 @@ ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDe
  */
 CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -342,7 +342,7 @@ CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerReq
  */
 CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const CreateCertificateFromCsrRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -356,7 +356,7 @@ CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const Cre
  */
 CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -375,7 +375,7 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
  */
 CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const CreateKeysAndCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -389,7 +389,7 @@ CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const Cre
  */
 CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -408,7 +408,7 @@ CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateReques
  */
 CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -429,7 +429,7 @@ CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &reques
  */
 CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -443,7 +443,7 @@ CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyV
  */
 CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -461,7 +461,7 @@ CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasReques
  */
 CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -475,7 +475,7 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -489,7 +489,7 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -503,7 +503,7 @@ CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupReq
  */
 CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -518,7 +518,7 @@ CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeReques
  */
 CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -532,7 +532,7 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
  */
 DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -546,7 +546,7 @@ DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerReq
  */
 DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -566,7 +566,7 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
  */
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -580,7 +580,7 @@ DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificate
  */
 DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -607,7 +607,7 @@ DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateReques
  */
 DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -623,7 +623,7 @@ DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &reques
  */
 DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -637,7 +637,7 @@ DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyV
  */
 DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteRegistrationCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -651,7 +651,7 @@ DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteR
  */
 DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -665,7 +665,7 @@ DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasReques
  */
 DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -679,7 +679,7 @@ DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &reques
  */
 DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -693,7 +693,7 @@ DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
  */
 DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -710,7 +710,7 @@ DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupReq
  */
 DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -724,7 +724,7 @@ DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeReques
  */
 DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -738,7 +738,7 @@ DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleReques
  */
 DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2LoggingLevelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2Log
  */
 DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -766,7 +766,7 @@ DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingT
  */
 DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -780,7 +780,7 @@ DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthori
  */
 DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeCACertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -794,7 +794,7 @@ DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeC
  */
 DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -808,7 +808,7 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
  */
 DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const DescribeDefaultAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -822,7 +822,7 @@ DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const D
  */
 DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -836,7 +836,7 @@ DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointReq
  */
 DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(const DescribeEventConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -850,7 +850,7 @@ DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(con
  */
 DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -864,7 +864,7 @@ DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &req
  */
 DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -878,7 +878,7 @@ DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
  */
 DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -892,7 +892,7 @@ DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJob
  */
 DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -906,7 +906,7 @@ DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAlias
  */
 DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -920,7 +920,7 @@ DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &
  */
 DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -934,7 +934,7 @@ DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &req
  */
 DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -948,7 +948,7 @@ DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGr
  */
 DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask(const DescribeThingRegistrationTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -962,7 +962,7 @@ DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask
  */
 DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -976,7 +976,7 @@ DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingType
  */
 DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -994,7 +994,7 @@ DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &reques
  */
 DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPrincipalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1008,7 +1008,7 @@ DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPri
  */
 DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThingPrincipalRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1022,7 +1022,7 @@ DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThing
  */
 DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1036,7 +1036,7 @@ DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleReq
  */
 EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1050,7 +1050,7 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
  */
 GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectivePoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1064,7 +1064,7 @@ GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectiv
  */
 GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const GetIndexingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1078,7 +1078,7 @@ GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const Get
  */
 GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1092,7 +1092,7 @@ GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &
  */
 GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1106,7 +1106,7 @@ GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptions
  */
 GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1120,7 +1120,7 @@ GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &reques
  */
 GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1134,7 +1134,7 @@ GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
  */
 GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1148,7 +1148,7 @@ GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionReq
  */
 GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrationCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1162,7 +1162,7 @@ GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrati
  */
 GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1176,7 +1176,7 @@ GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &reques
  */
 GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1190,7 +1190,7 @@ GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingO
  */
 ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttachedPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1204,7 +1204,7 @@ ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttache
  */
 ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1222,7 +1222,7 @@ ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersReques
  */
 ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1240,7 +1240,7 @@ ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertifica
  */
 ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1254,7 +1254,7 @@ ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesReq
  */
 ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertificatesByCARequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1268,7 +1268,7 @@ ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertifi
  */
 ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1282,7 +1282,7 @@ ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
  */
 ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJobExecutionsForJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1296,7 +1296,7 @@ ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJ
  */
 ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const ListJobExecutionsForThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1310,7 +1310,7 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
  */
 ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1324,7 +1324,7 @@ ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
  */
 ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1338,7 +1338,7 @@ ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &
  */
 ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const ListOutgoingCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1352,7 +1352,7 @@ ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const Lis
  */
 ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1370,7 +1370,7 @@ ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &reques
  */
 ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyPrincipalsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1384,7 +1384,7 @@ ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyP
  */
 ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1404,7 +1404,7 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
  */
 ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrincipalPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1418,7 +1418,7 @@ ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrinc
  */
 ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipalThingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1432,7 +1432,7 @@ ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipal
  */
 ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1446,7 +1446,7 @@ ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesReques
  */
 ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1460,7 +1460,7 @@ ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
  */
 ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1474,7 +1474,7 @@ ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargets
  */
 ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1488,7 +1488,7 @@ ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsReques
  */
 ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListThingGroupsForThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1502,7 +1502,7 @@ ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListT
  */
 ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrincipalsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1516,7 +1516,7 @@ ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrin
  */
 ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskReports(const ListThingRegistrationTaskReportsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1530,7 +1530,7 @@ ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskR
  */
 ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const ListThingRegistrationTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1544,7 +1544,7 @@ ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const
  */
 ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1560,7 +1560,7 @@ ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &
  */
 ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1574,7 +1574,7 @@ ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
  */
 ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThingsInThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1588,7 +1588,7 @@ ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThi
  */
 ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1602,7 +1602,7 @@ ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &
  */
 ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2LoggingLevelsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1620,7 +1620,7 @@ ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2Logging
  */
 RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterCACertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1635,7 +1635,7 @@ RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterC
  */
 RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1649,7 +1649,7 @@ RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCerti
  */
 RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1673,7 +1673,7 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
  */
 RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const RejectCertificateTransferRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1687,7 +1687,7 @@ RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const R
  */
 RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const RemoveThingFromThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1702,7 +1702,7 @@ RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const R
  */
 ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1716,7 +1716,7 @@ ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleReq
  */
 SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1730,7 +1730,7 @@ SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
  */
 SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1746,7 +1746,7 @@ SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultA
  */
 SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1760,7 +1760,7 @@ SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDe
  */
 SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1774,7 +1774,7 @@ SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptions
  */
 SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1788,7 +1788,7 @@ SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevel
  */
 SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1802,7 +1802,7 @@ SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingO
  */
 StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const StartThingRegistrationTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1816,7 +1816,7 @@ StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const
  */
 StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const StopThingRegistrationTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1830,7 +1830,7 @@ StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const S
  */
 TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1844,7 +1844,7 @@ TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorization
  */
 TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1874,7 +1874,7 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
  */
 TransferCertificateResponse * IoTClient::transferCertificate(const TransferCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1888,7 +1888,7 @@ TransferCertificateResponse * IoTClient::transferCertificate(const TransferCerti
  */
 UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1902,7 +1902,7 @@ UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerReq
  */
 UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1925,7 +1925,7 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
  */
 UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1939,7 +1939,7 @@ UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificate
  */
 UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const UpdateEventConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1953,7 +1953,7 @@ UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const U
  */
 UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(const UpdateIndexingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1967,7 +1967,7 @@ UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(con
  */
 UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1981,7 +1981,7 @@ UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasReques
  */
 UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1995,7 +1995,7 @@ UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &reques
  */
 UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2009,7 +2009,7 @@ UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
  */
 UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2023,7 +2023,7 @@ UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupReq
  */
 UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const UpdateThingGroupsForThingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -106,7 +106,7 @@ KinesisAnalyticsClient::KinesisAnalyticsClient(
  */
 AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption(const AddApplicationCloudWatchLoggingOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -135,7 +135,7 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::addAppli
  */
 AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const AddApplicationInputRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -151,7 +151,7 @@ AddApplicationInputResponse * KinesisAnalyticsClient::addApplicationInput(const 
  */
 AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -192,7 +192,7 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::add
  */
 AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(const AddApplicationOutputRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ AddApplicationOutputResponse * KinesisAnalyticsClient::addApplicationOutput(cons
  */
 AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -268,7 +268,7 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::addApplicati
  */
 CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const CreateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -287,7 +287,7 @@ CreateApplicationResponse * KinesisAnalyticsClient::createApplication(const Crea
  */
 DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const DeleteApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -303,7 +303,7 @@ DeleteApplicationResponse * KinesisAnalyticsClient::deleteApplication(const Dele
  */
 DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -317,7 +317,7 @@ DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsClient::delet
  */
 DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration(const DeleteApplicationInputProcessingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -336,7 +336,7 @@ DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsClient::
  */
 DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutput(const DeleteApplicationOutputRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -359,7 +359,7 @@ DeleteApplicationOutputResponse * KinesisAnalyticsClient::deleteApplicationOutpu
  */
 DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -383,7 +383,7 @@ DeleteApplicationReferenceDataSourceResponse * KinesisAnalyticsClient::deleteApp
  */
 DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const DescribeApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -410,7 +410,7 @@ DescribeApplicationResponse * KinesisAnalyticsClient::describeApplication(const 
  */
 DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const DiscoverInputSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -435,7 +435,7 @@ DiscoverInputSchemaResponse * KinesisAnalyticsClient::discoverInputSchema(const 
  */
 ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListApplicationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -468,7 +468,7 @@ ListApplicationsResponse * KinesisAnalyticsClient::listApplications(const ListAp
  */
 StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -489,7 +489,7 @@ StartApplicationResponse * KinesisAnalyticsClient::startApplication(const StartA
  */
 StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -513,7 +513,7 @@ StopApplicationResponse * KinesisAnalyticsClient::stopApplication(const StopAppl
  */
 UpdateApplicationResponse * KinesisAnalyticsClient::updateApplication(const UpdateApplicationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

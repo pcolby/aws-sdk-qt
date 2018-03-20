@@ -116,7 +116,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  */
 DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteThingShadowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
  */
 GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -155,7 +155,7 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
  */
 PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -175,7 +175,7 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
  */
 UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateThingShadowRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

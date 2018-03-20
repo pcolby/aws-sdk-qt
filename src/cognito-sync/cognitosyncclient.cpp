@@ -131,7 +131,7 @@ CognitoSyncClient::CognitoSyncClient(
  */
 BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &r
  */
 DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -170,7 +170,7 @@ DeleteDatasetResponse * CognitoSyncClient::deleteDataset(const DeleteDatasetRequ
  */
 DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatasetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ DescribeDatasetResponse * CognitoSyncClient::describeDataset(const DescribeDatas
  */
 DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage(const DescribeIdentityPoolUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ DescribeIdentityPoolUsageResponse * CognitoSyncClient::describeIdentityPoolUsage
  */
 DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const DescribeIdentityUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -226,7 +226,7 @@ DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const D
  */
 GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const GetBulkPublishDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -245,7 +245,7 @@ GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const G
  */
 GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoE
  */
 GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfiguration(const GetIdentityPoolConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -284,7 +284,7 @@ GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfigu
  */
 ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -303,7 +303,7 @@ ListDatasetsResponse * CognitoSyncClient::listDatasets(const ListDatasetsRequest
  */
 ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const ListIdentityPoolUsageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -324,7 +324,7 @@ ListIdentityPoolUsageResponse * CognitoSyncClient::listIdentityPoolUsage(const L
  */
 ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -343,7 +343,7 @@ ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &r
  */
 RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -363,7 +363,7 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
  */
 SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -382,7 +382,7 @@ SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoE
  */
 SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfiguration(const SetIdentityPoolConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -401,7 +401,7 @@ SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfigu
  */
 SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const SubscribeToDatasetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -420,7 +420,7 @@ SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const Subscri
  */
 UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -450,7 +450,7 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
  */
 UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

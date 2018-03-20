@@ -211,7 +211,7 @@ KmsClient::KmsClient(
  */
 CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  */
 CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -275,7 +275,7 @@ CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
  */
 CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
  */
 CreateKeyResponse * KmsClient::createKey(const CreateKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -343,7 +343,7 @@ CreateKeyResponse * KmsClient::createKey(const CreateKeyRequest &request)
  */
 DecryptResponse * KmsClient::decrypt(const DecryptRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -369,7 +369,7 @@ DecryptResponse * KmsClient::decrypt(const DecryptRequest &request)
  */
 DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -395,7 +395,7 @@ DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
  */
 DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const DeleteImportedKeyMaterialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -414,7 +414,7 @@ DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const D
  */
 DescribeKeyResponse * KmsClient::describeKey(const DescribeKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -435,7 +435,7 @@ DescribeKeyResponse * KmsClient::describeKey(const DescribeKeyRequest &request)
  */
 DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -450,7 +450,7 @@ DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
  */
 DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -465,7 +465,7 @@ DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotat
  */
 EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -480,7 +480,7 @@ EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
  */
 EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -522,7 +522,7 @@ EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotation
  */
 EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -593,7 +593,7 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
  */
 GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -624,7 +624,7 @@ GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyReques
  */
 GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlaintext(const GenerateDataKeyWithoutPlaintextRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -644,7 +644,7 @@ GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlain
  */
 GenerateRandomResponse * KmsClient::generateRandom(const GenerateRandomRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -659,7 +659,7 @@ GenerateRandomResponse * KmsClient::generateRandom(const GenerateRandomRequest &
  */
 GetKeyPolicyResponse * KmsClient::getKeyPolicy(const GetKeyPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -678,7 +678,7 @@ GetKeyPolicyResponse * KmsClient::getKeyPolicy(const GetKeyPolicyRequest &reques
  */
 GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotationStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotat
  */
 GetParametersForImportResponse * KmsClient::getParametersForImport(const GetParametersForImportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -767,7 +767,7 @@ GetParametersForImportResponse * KmsClient::getParametersForImport(const GetPara
  */
 ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -789,7 +789,7 @@ ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterial
  */
 ListAliasesResponse * KmsClient::listAliases(const ListAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -807,7 +807,7 @@ ListAliasesResponse * KmsClient::listAliases(const ListAliasesRequest &request)
  */
 ListGrantsResponse * KmsClient::listGrants(const ListGrantsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -823,7 +823,7 @@ ListGrantsResponse * KmsClient::listGrants(const ListGrantsRequest &request)
  */
 ListKeyPoliciesResponse * KmsClient::listKeyPolicies(const ListKeyPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -837,7 +837,7 @@ ListKeyPoliciesResponse * KmsClient::listKeyPolicies(const ListKeyPoliciesReques
  */
 ListKeysResponse * KmsClient::listKeys(const ListKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -855,7 +855,7 @@ ListKeysResponse * KmsClient::listKeys(const ListKeysRequest &request)
  */
 ListResourceTagsResponse * KmsClient::listResourceTags(const ListResourceTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -873,7 +873,7 @@ ListResourceTagsResponse * KmsClient::listResourceTags(const ListResourceTagsReq
  */
 ListRetirableGrantsResponse * KmsClient::listRetirableGrants(const ListRetirableGrantsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -894,7 +894,7 @@ ListRetirableGrantsResponse * KmsClient::listRetirableGrants(const ListRetirable
  */
 PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -924,7 +924,7 @@ PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &reques
  */
 ReEncryptResponse * KmsClient::reEncrypt(const ReEncryptRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -957,7 +957,7 @@ ReEncryptResponse * KmsClient::reEncrypt(const ReEncryptRequest &request)
  */
 RetireGrantResponse * KmsClient::retireGrant(const RetireGrantRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -976,7 +976,7 @@ RetireGrantResponse * KmsClient::retireGrant(const RetireGrantRequest &request)
  */
 RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1009,7 +1009,7 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
  */
 ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1042,7 +1042,7 @@ ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDe
  */
 TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1062,7 +1062,7 @@ TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
  */
 UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1095,7 +1095,7 @@ UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &req
  */
 UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1113,7 +1113,7 @@ UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
  */
 UpdateKeyDescriptionResponse * KmsClient::updateKeyDescription(const UpdateKeyDescriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

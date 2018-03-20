@@ -122,7 +122,7 @@ KinesisVideoClient::KinesisVideoClient(
  */
 CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -153,7 +153,7 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
  */
 DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -168,7 +168,7 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
  */
 DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -192,7 +192,7 @@ DescribeStreamResponse * KinesisVideoClient::describeStream(const DescribeStream
  */
 GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
  */
 ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -225,7 +225,7 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
  */
 ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -255,7 +255,7 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  */
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -274,7 +274,7 @@ TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &reques
  */
 UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -313,7 +313,7 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
  */
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -341,7 +341,7 @@ UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const Upda
  */
 UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

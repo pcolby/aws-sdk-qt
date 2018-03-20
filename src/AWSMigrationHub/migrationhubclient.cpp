@@ -121,7 +121,7 @@ MigrationHubClient::MigrationHubClient(
  */
 AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(const AssociateCreatedArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -135,7 +135,7 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
  */
 AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredResource(const AssociateDiscoveredResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -152,7 +152,7 @@ AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredRes
  */
 CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStream(const CreateProgressUpdateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -193,7 +193,7 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
  */
 DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStream(const DeleteProgressUpdateStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ DeleteProgressUpdateStreamResponse * MigrationHubClient::deleteProgressUpdateStr
  */
 DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(const DescribeApplicationStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -221,7 +221,7 @@ DescribeApplicationStateResponse * MigrationHubClient::describeApplicationState(
  */
 DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const DescribeMigrationTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -250,7 +250,7 @@ DescribeMigrationTaskResponse * MigrationHubClient::describeMigrationTask(const 
  */
 DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArtifact(const DisassociateCreatedArtifactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
  */
 DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -283,7 +283,7 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
  */
 ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const ImportMigrationTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const Impo
  */
 ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const ListCreatedArtifactsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -323,7 +323,7 @@ ListCreatedArtifactsResponse * MigrationHubClient::listCreatedArtifacts(const Li
  */
 ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -350,7 +350,7 @@ ListDiscoveredResourcesResponse * MigrationHubClient::listDiscoveredResources(co
  */
 ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMigrationTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -364,7 +364,7 @@ ListMigrationTasksResponse * MigrationHubClient::listMigrationTasks(const ListMi
  */
 ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStreams(const ListProgressUpdateStreamsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -380,7 +380,7 @@ ListProgressUpdateStreamsResponse * MigrationHubClient::listProgressUpdateStream
  */
 NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(const NotifyApplicationStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -407,7 +407,7 @@ NotifyApplicationStateResponse * MigrationHubClient::notifyApplicationState(cons
  */
 NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(const NotifyMigrationTaskStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -438,7 +438,7 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  */
 PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const PutResourceAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

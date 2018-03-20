@@ -126,7 +126,7 @@ SfnClient::SfnClient(
  */
 CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -142,7 +142,7 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
  */
 CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMachineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -156,7 +156,7 @@ CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMach
  */
 DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -175,7 +175,7 @@ DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &
  */
 DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMachineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMach
  */
 DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityReq
  */
 DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -217,7 +217,7 @@ DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecution
  */
 DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeStateMachineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -231,7 +231,7 @@ DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeSta
  */
 DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExecution(const DescribeStateMachineForExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -254,7 +254,7 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
  */
 GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -274,7 +274,7 @@ GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskReques
  */
 GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -293,7 +293,7 @@ GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionH
  */
 ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -312,7 +312,7 @@ ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &
  */
 ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -331,7 +331,7 @@ ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &
  */
 ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachinesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -345,7 +345,7 @@ ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachines
  */
 SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -371,7 +371,7 @@ SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureReques
  */
 SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeatRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -385,7 +385,7 @@ SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeat
  */
 SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -399,7 +399,7 @@ SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessReques
  */
 StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -413,7 +413,7 @@ StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &
  */
 StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -435,7 +435,7 @@ StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &req
  */
 UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMachineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

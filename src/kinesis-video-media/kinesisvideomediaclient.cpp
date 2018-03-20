@@ -130,7 +130,7 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
  */
 GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

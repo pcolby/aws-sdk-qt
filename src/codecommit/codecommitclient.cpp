@@ -301,7 +301,7 @@ CodeCommitClient::CodeCommitClient(
  */
 BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const BatchGetRepositoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -320,7 +320,7 @@ BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const Batc
  */
 CreateBranchResponse * CodeCommitClient::createBranch(const CreateBranchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -334,7 +334,7 @@ CreateBranchResponse * CodeCommitClient::createBranch(const CreateBranchRequest 
  */
 CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePullRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -348,7 +348,7 @@ CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePull
  */
 CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateRepositoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -362,7 +362,7 @@ CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateReposi
  */
 DeleteBranchResponse * CodeCommitClient::deleteBranch(const DeleteBranchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -376,7 +376,7 @@ DeleteBranchResponse * CodeCommitClient::deleteBranch(const DeleteBranchRequest 
  */
 DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const DeleteCommentContentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -395,7 +395,7 @@ DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const Dele
  */
 DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -409,7 +409,7 @@ DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteReposi
  */
 DescribePullRequestEventsResponse * CodeCommitClient::describePullRequestEvents(const DescribePullRequestEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -423,7 +423,7 @@ DescribePullRequestEventsResponse * CodeCommitClient::describePullRequestEvents(
  */
 GetBlobResponse * CodeCommitClient::getBlob(const GetBlobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -437,7 +437,7 @@ GetBlobResponse * CodeCommitClient::getBlob(const GetBlobRequest &request)
  */
 GetBranchResponse * CodeCommitClient::getBranch(const GetBranchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -451,7 +451,7 @@ GetBranchResponse * CodeCommitClient::getBranch(const GetBranchRequest &request)
  */
 GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -465,7 +465,7 @@ GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &reque
  */
 GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedCommit(const GetCommentsForComparedCommitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -479,7 +479,7 @@ GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedC
  */
 GetCommentsForPullRequestResponse * CodeCommitClient::getCommentsForPullRequest(const GetCommentsForPullRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -493,7 +493,7 @@ GetCommentsForPullRequestResponse * CodeCommitClient::getCommentsForPullRequest(
  */
 GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -508,7 +508,7 @@ GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
  */
 GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -522,7 +522,7 @@ GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRe
  */
 GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeConflictsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -536,7 +536,7 @@ GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeCo
  */
 GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -557,7 +557,7 @@ GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRe
  */
 GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -571,7 +571,7 @@ GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryReque
  */
 GetRepositoryTriggersResponse * CodeCommitClient::getRepositoryTriggers(const GetRepositoryTriggersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -585,7 +585,7 @@ GetRepositoryTriggersResponse * CodeCommitClient::getRepositoryTriggers(const Ge
  */
 ListBranchesResponse * CodeCommitClient::listBranches(const ListBranchesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -600,7 +600,7 @@ ListBranchesResponse * CodeCommitClient::listBranches(const ListBranchesRequest 
  */
 ListPullRequestsResponse * CodeCommitClient::listPullRequests(const ListPullRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -614,7 +614,7 @@ ListPullRequestsResponse * CodeCommitClient::listPullRequests(const ListPullRequ
  */
 ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListRepositoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -629,7 +629,7 @@ ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListReposito
  */
 MergePullRequestByFastForwardResponse * CodeCommitClient::mergePullRequestByFastForward(const MergePullRequestByFastForwardRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -643,7 +643,7 @@ MergePullRequestByFastForwardResponse * CodeCommitClient::mergePullRequestByFast
  */
 PostCommentForComparedCommitResponse * CodeCommitClient::postCommentForComparedCommit(const PostCommentForComparedCommitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -657,7 +657,7 @@ PostCommentForComparedCommitResponse * CodeCommitClient::postCommentForComparedC
  */
 PostCommentForPullRequestResponse * CodeCommitClient::postCommentForPullRequest(const PostCommentForPullRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -671,7 +671,7 @@ PostCommentForPullRequestResponse * CodeCommitClient::postCommentForPullRequest(
  */
 PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentReplyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -685,7 +685,7 @@ PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentR
  */
 PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -699,7 +699,7 @@ PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
  */
 PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const PutRepositoryTriggersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -714,7 +714,7 @@ PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const Pu
  */
 TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const TestRepositoryTriggersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -728,7 +728,7 @@ TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const 
  */
 UpdateCommentResponse * CodeCommitClient::updateComment(const UpdateCommentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -747,7 +747,7 @@ UpdateCommentResponse * CodeCommitClient::updateComment(const UpdateCommentReque
  */
 UpdateDefaultBranchResponse * CodeCommitClient::updateDefaultBranch(const UpdateDefaultBranchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -761,7 +761,7 @@ UpdateDefaultBranchResponse * CodeCommitClient::updateDefaultBranch(const Update
  */
 UpdatePullRequestDescriptionResponse * CodeCommitClient::updatePullRequestDescription(const UpdatePullRequestDescriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -775,7 +775,7 @@ UpdatePullRequestDescriptionResponse * CodeCommitClient::updatePullRequestDescri
  */
 UpdatePullRequestStatusResponse * CodeCommitClient::updatePullRequestStatus(const UpdatePullRequestStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -789,7 +789,7 @@ UpdatePullRequestStatusResponse * CodeCommitClient::updatePullRequestStatus(cons
  */
 UpdatePullRequestTitleResponse * CodeCommitClient::updatePullRequestTitle(const UpdatePullRequestTitleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -810,7 +810,7 @@ UpdatePullRequestTitleResponse * CodeCommitClient::updatePullRequestTitle(const 
  */
 UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescription(const UpdateRepositoryDescriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -827,7 +827,7 @@ UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescript
  */
 UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const UpdateRepositoryNameRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -280,7 +280,7 @@ OrganizationsClient::OrganizationsClient(
  */
 AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHandshakeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -340,7 +340,7 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  */
 AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -364,7 +364,7 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
  */
 CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHandshakeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -437,7 +437,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  */
 CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -466,7 +466,7 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
  */
 CreateOrganizationResponse * OrganizationsClient::createOrganization(const CreateOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -492,7 +492,7 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
  */
 CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit(const CreateOrganizationalUnitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -515,7 +515,7 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
  */
 CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -539,7 +539,7 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
  */
 DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHandshakeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -554,7 +554,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
  */
 DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -573,7 +573,7 @@ DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
  */
 DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit(const DeleteOrganizationalUnitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -592,7 +592,7 @@ DeleteOrganizationalUnitResponse * OrganizationsClient::deleteOrganizationalUnit
  */
 DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -610,7 +610,7 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
  */
 DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -628,7 +628,7 @@ DescribeAccountResponse * OrganizationsClient::describeAccount(const DescribeAcc
  */
 DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccountStatus(const DescribeCreateAccountStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -652,7 +652,7 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
  */
 DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const DescribeHandshakeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -675,7 +675,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -693,7 +693,7 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
  */
 DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizationalUnit(const DescribeOrganizationalUnitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -711,7 +711,7 @@ DescribeOrganizationalUnitResponse * OrganizationsClient::describeOrganizational
  */
 DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -741,7 +741,7 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
  */
 DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -784,7 +784,7 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  */
 DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(const DisableAWSServiceAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -811,7 +811,7 @@ DisableAWSServiceAccessResponse * OrganizationsClient::disableAWSServiceAccess(c
  */
 DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const DisablePolicyTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -847,7 +847,7 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  */
 EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(const EnableAWSServiceAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -895,7 +895,7 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  */
 EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableAllFeaturesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -923,7 +923,7 @@ EnableAllFeaturesResponse * OrganizationsClient::enableAllFeatures(const EnableA
  */
 EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePolicyTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -958,7 +958,7 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  */
 InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrganization(const InviteAccountToOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1003,7 +1003,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1029,7 +1029,7 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
  */
 ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServiceAccessForOrganization(const ListAWSServiceAccessForOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1055,7 +1055,7 @@ ListAWSServiceAccessForOrganizationResponse * OrganizationsClient::listAWSServic
  */
 ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1083,7 +1083,7 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
  */
 ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const ListAccountsForParentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1109,7 +1109,7 @@ ListAccountsForParentResponse * OrganizationsClient::listAccountsForParent(const
  */
 ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1134,7 +1134,7 @@ ListChildrenResponse * OrganizationsClient::listChildren(const ListChildrenReque
  */
 ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(const ListCreateAccountStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1164,7 +1164,7 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
  */
 ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount(const ListHandshakesForAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1196,7 +1196,7 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
  */
 ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOrganization(const ListHandshakesForOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1221,7 +1221,7 @@ ListHandshakesForOrganizationResponse * OrganizationsClient::listHandshakesForOr
  */
 ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganizationalUnitsForParent(const ListOrganizationalUnitsForParentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1251,7 +1251,7 @@ ListOrganizationalUnitsForParentResponse * OrganizationsClient::listOrganization
  */
 ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1276,7 +1276,7 @@ ListParentsResponse * OrganizationsClient::listParents(const ListParentsRequest 
  */
 ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1302,7 +1302,7 @@ ListPoliciesResponse * OrganizationsClient::listPolicies(const ListPoliciesReque
  */
 ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const ListPoliciesForTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1333,7 +1333,7 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
  */
 ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1358,7 +1358,7 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
  */
 ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1376,7 +1376,7 @@ ListTargetsForPolicyResponse * OrganizationsClient::listTargetsForPolicy(const L
  */
 MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1422,7 +1422,7 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  */
 RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOrganization(const RemoveAccountFromOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1441,7 +1441,7 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
  */
 UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit(const UpdateOrganizationalUnitRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1460,7 +1460,7 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
  */
 UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

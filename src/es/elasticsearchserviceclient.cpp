@@ -116,7 +116,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
  */
 AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &requ
  */
 CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsearchDomain(const CreateElasticsearchDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsea
  */
 DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -163,7 +163,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
  */
 DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -178,7 +178,7 @@ DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElast
  */
 DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -193,7 +193,7 @@ DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasti
  */
 DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -208,7 +208,7 @@ DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describe
  */
 DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -223,7 +223,7 @@ DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElast
  */
 DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -237,7 +237,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
  */
 ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -251,7 +251,7 @@ ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
  */
 ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -265,7 +265,7 @@ ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElastic
  */
 ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearchVersions(const ListElasticsearchVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -279,7 +279,7 @@ ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearc
  */
 ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -293,7 +293,7 @@ ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &r
  */
 RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
  */
 UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

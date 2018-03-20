@@ -112,7 +112,7 @@ MTurkClient::MTurkClient(
  */
 AcceptQualificationRequestResponse * MTurkClient::acceptQualificationRequest(const AcceptQualificationRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ AcceptQualificationRequestResponse * MTurkClient::acceptQualificationRequest(con
  */
 ApproveAssignmentResponse * MTurkClient::approveAssignment(const ApproveAssignmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -179,7 +179,7 @@ ApproveAssignmentResponse * MTurkClient::approveAssignment(const ApproveAssignme
  */
 AssociateQualificationWithWorkerResponse * MTurkClient::associateQualificationWithWorker(const AssociateQualificationWithWorkerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -209,7 +209,7 @@ AssociateQualificationWithWorkerResponse * MTurkClient::associateQualificationWi
  */
 CreateAdditionalAssignmentsForHITResponse * MTurkClient::createAdditionalAssignmentsForHIT(const CreateAdditionalAssignmentsForHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -248,7 +248,7 @@ CreateAdditionalAssignmentsForHITResponse * MTurkClient::createAdditionalAssignm
  */
 CreateHITResponse * MTurkClient::createHIT(const CreateHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ CreateHITResponse * MTurkClient::createHIT(const CreateHITRequest &request)
  */
 CreateHITTypeResponse * MTurkClient::createHITType(const CreateHITTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -295,7 +295,7 @@ CreateHITTypeResponse * MTurkClient::createHITType(const CreateHITTypeRequest &r
  */
 CreateHITWithHITTypeResponse * MTurkClient::createHITWithHITType(const CreateHITWithHITTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -310,7 +310,7 @@ CreateHITWithHITTypeResponse * MTurkClient::createHITWithHITType(const CreateHIT
  */
 CreateQualificationTypeResponse * MTurkClient::createQualificationType(const CreateQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -325,7 +325,7 @@ CreateQualificationTypeResponse * MTurkClient::createQualificationType(const Cre
  */
 CreateWorkerBlockResponse * MTurkClient::createWorkerBlock(const CreateWorkerBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -363,7 +363,7 @@ CreateWorkerBlockResponse * MTurkClient::createWorkerBlock(const CreateWorkerBlo
  */
 DeleteHITResponse * MTurkClient::deleteHIT(const DeleteHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ DeleteHITResponse * MTurkClient::deleteHIT(const DeleteHITRequest &request)
  */
 DeleteQualificationTypeResponse * MTurkClient::deleteQualificationType(const DeleteQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -407,7 +407,7 @@ DeleteQualificationTypeResponse * MTurkClient::deleteQualificationType(const Del
  */
 DeleteWorkerBlockResponse * MTurkClient::deleteWorkerBlock(const DeleteWorkerBlockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -426,7 +426,7 @@ DeleteWorkerBlockResponse * MTurkClient::deleteWorkerBlock(const DeleteWorkerBlo
  */
 DisassociateQualificationFromWorkerResponse * MTurkClient::disassociateQualificationFromWorker(const DisassociateQualificationFromWorkerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -440,7 +440,7 @@ DisassociateQualificationFromWorkerResponse * MTurkClient::disassociateQualifica
  */
 GetAccountBalanceResponse * MTurkClient::getAccountBalance(const GetAccountBalanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -454,7 +454,7 @@ GetAccountBalanceResponse * MTurkClient::getAccountBalance(const GetAccountBalan
  */
 GetAssignmentResponse * MTurkClient::getAssignment(const GetAssignmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -474,7 +474,7 @@ GetAssignmentResponse * MTurkClient::getAssignment(const GetAssignmentRequest &r
  */
 GetFileUploadURLResponse * MTurkClient::getFileUploadURL(const GetFileUploadURLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -488,7 +488,7 @@ GetFileUploadURLResponse * MTurkClient::getFileUploadURL(const GetFileUploadURLR
  */
 GetHITResponse * MTurkClient::getHIT(const GetHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -512,7 +512,7 @@ GetHITResponse * MTurkClient::getHIT(const GetHITRequest &request)
  */
 GetQualificationScoreResponse * MTurkClient::getQualificationScore(const GetQualificationScoreRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -526,7 +526,7 @@ GetQualificationScoreResponse * MTurkClient::getQualificationScore(const GetQual
  */
 GetQualificationTypeResponse * MTurkClient::getQualificationType(const GetQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -563,7 +563,7 @@ GetQualificationTypeResponse * MTurkClient::getQualificationType(const GetQualif
  */
 ListAssignmentsForHITResponse * MTurkClient::listAssignmentsForHIT(const ListAssignmentsForHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -578,7 +578,7 @@ ListAssignmentsForHITResponse * MTurkClient::listAssignmentsForHIT(const ListAss
  */
 ListBonusPaymentsResponse * MTurkClient::listBonusPayments(const ListBonusPaymentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -593,7 +593,7 @@ ListBonusPaymentsResponse * MTurkClient::listBonusPayments(const ListBonusPaymen
  */
 ListHITsResponse * MTurkClient::listHITs(const ListHITsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -609,7 +609,7 @@ ListHITsResponse * MTurkClient::listHITs(const ListHITsRequest &request)
  */
 ListHITsForQualificationTypeResponse * MTurkClient::listHITsForQualificationType(const ListHITsForQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -625,7 +625,7 @@ ListHITsForQualificationTypeResponse * MTurkClient::listHITsForQualificationType
  */
 ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const ListQualificationRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -641,7 +641,7 @@ ListQualificationRequestsResponse * MTurkClient::listQualificationRequests(const
  */
 ListQualificationTypesResponse * MTurkClient::listQualificationTypes(const ListQualificationTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -658,7 +658,7 @@ ListQualificationTypesResponse * MTurkClient::listQualificationTypes(const ListQ
  */
 ListReviewPolicyResultsForHITResponse * MTurkClient::listReviewPolicyResultsForHIT(const ListReviewPolicyResultsForHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -673,7 +673,7 @@ ListReviewPolicyResultsForHITResponse * MTurkClient::listReviewPolicyResultsForH
  */
 ListReviewableHITsResponse * MTurkClient::listReviewableHITs(const ListReviewableHITsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -687,7 +687,7 @@ ListReviewableHITsResponse * MTurkClient::listReviewableHITs(const ListReviewabl
  */
 ListWorkerBlocksResponse * MTurkClient::listWorkerBlocks(const ListWorkerBlocksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -702,7 +702,7 @@ ListWorkerBlocksResponse * MTurkClient::listWorkerBlocks(const ListWorkerBlocksR
  */
 ListWorkersWithQualificationTypeResponse * MTurkClient::listWorkersWithQualificationType(const ListWorkersWithQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -719,7 +719,7 @@ ListWorkersWithQualificationTypeResponse * MTurkClient::listWorkersWithQualifica
  */
 NotifyWorkersResponse * MTurkClient::notifyWorkers(const NotifyWorkersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -743,7 +743,7 @@ NotifyWorkersResponse * MTurkClient::notifyWorkers(const NotifyWorkersRequest &r
  */
 RejectAssignmentResponse * MTurkClient::rejectAssignment(const RejectAssignmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -761,7 +761,7 @@ RejectAssignmentResponse * MTurkClient::rejectAssignment(const RejectAssignmentR
  */
 RejectQualificationRequestResponse * MTurkClient::rejectQualificationRequest(const RejectQualificationRequestRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -780,7 +780,7 @@ RejectQualificationRequestResponse * MTurkClient::rejectQualificationRequest(con
  */
 SendBonusResponse * MTurkClient::sendBonus(const SendBonusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -797,7 +797,7 @@ SendBonusResponse * MTurkClient::sendBonus(const SendBonusRequest &request)
  */
 SendTestEventNotificationResponse * MTurkClient::sendTestEventNotification(const SendTestEventNotificationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -812,7 +812,7 @@ SendTestEventNotificationResponse * MTurkClient::sendTestEventNotification(const
  */
 UpdateExpirationForHITResponse * MTurkClient::updateExpirationForHIT(const UpdateExpirationForHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -827,7 +827,7 @@ UpdateExpirationForHITResponse * MTurkClient::updateExpirationForHIT(const Updat
  */
 UpdateHITReviewStatusResponse * MTurkClient::updateHITReviewStatus(const UpdateHITReviewStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -843,7 +843,7 @@ UpdateHITReviewStatusResponse * MTurkClient::updateHITReviewStatus(const UpdateH
  */
 UpdateHITTypeOfHITResponse * MTurkClient::updateHITTypeOfHIT(const UpdateHITTypeOfHITRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -863,7 +863,7 @@ UpdateHITTypeOfHITResponse * MTurkClient::updateHITTypeOfHIT(const UpdateHITType
  */
 UpdateNotificationSettingsResponse * MTurkClient::updateNotificationSettings(const UpdateNotificationSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -911,7 +911,7 @@ UpdateNotificationSettingsResponse * MTurkClient::updateNotificationSettings(con
  */
 UpdateQualificationTypeResponse * MTurkClient::updateQualificationType(const UpdateQualificationTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

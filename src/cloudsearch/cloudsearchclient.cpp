@@ -117,7 +117,7 @@ CloudSearchClient::CloudSearchClient(
  */
 BuildSuggestersResponse * CloudSearchClient::buildSuggesters(const BuildSuggestersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -133,7 +133,7 @@ BuildSuggestersResponse * CloudSearchClient::buildSuggesters(const BuildSuggeste
  */
 CreateDomainResponse * CloudSearchClient::createDomain(const CreateDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ CreateDomainResponse * CloudSearchClient::createDomain(const CreateDomainRequest
  */
 DefineAnalysisSchemeResponse * CloudSearchClient::defineAnalysisScheme(const DefineAnalysisSchemeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -167,7 +167,7 @@ DefineAnalysisSchemeResponse * CloudSearchClient::defineAnalysisScheme(const Def
  */
 DefineExpressionResponse * CloudSearchClient::defineExpression(const DefineExpressionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -187,7 +187,7 @@ DefineExpressionResponse * CloudSearchClient::defineExpression(const DefineExpre
  */
 DefineIndexFieldResponse * CloudSearchClient::defineIndexField(const DefineIndexFieldRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -205,7 +205,7 @@ DefineIndexFieldResponse * CloudSearchClient::defineIndexField(const DefineIndex
  */
 DefineSuggesterResponse * CloudSearchClient::defineSuggester(const DefineSuggesterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -221,7 +221,7 @@ DefineSuggesterResponse * CloudSearchClient::defineSuggester(const DefineSuggest
  */
 DeleteAnalysisSchemeResponse * CloudSearchClient::deleteAnalysisScheme(const DeleteAnalysisSchemeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -237,7 +237,7 @@ DeleteAnalysisSchemeResponse * CloudSearchClient::deleteAnalysisScheme(const Del
  */
 DeleteDomainResponse * CloudSearchClient::deleteDomain(const DeleteDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ DeleteDomainResponse * CloudSearchClient::deleteDomain(const DeleteDomainRequest
  */
 DeleteExpressionResponse * CloudSearchClient::deleteExpression(const DeleteExpressionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -269,7 +269,7 @@ DeleteExpressionResponse * CloudSearchClient::deleteExpression(const DeleteExpre
  */
 DeleteIndexFieldResponse * CloudSearchClient::deleteIndexField(const DeleteIndexFieldRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -285,7 +285,7 @@ DeleteIndexFieldResponse * CloudSearchClient::deleteIndexField(const DeleteIndex
  */
 DeleteSuggesterResponse * CloudSearchClient::deleteSuggester(const DeleteSuggesterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -304,7 +304,7 @@ DeleteSuggesterResponse * CloudSearchClient::deleteSuggester(const DeleteSuggest
  */
 DescribeAnalysisSchemesResponse * CloudSearchClient::describeAnalysisSchemes(const DescribeAnalysisSchemesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -322,7 +322,7 @@ DescribeAnalysisSchemesResponse * CloudSearchClient::describeAnalysisSchemes(con
  */
 DescribeAvailabilityOptionsResponse * CloudSearchClient::describeAvailabilityOptions(const DescribeAvailabilityOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -340,7 +340,7 @@ DescribeAvailabilityOptionsResponse * CloudSearchClient::describeAvailabilityOpt
  */
 DescribeDomainsResponse * CloudSearchClient::describeDomains(const DescribeDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ DescribeDomainsResponse * CloudSearchClient::describeDomains(const DescribeDomai
  */
 DescribeExpressionsResponse * CloudSearchClient::describeExpressions(const DescribeExpressionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -376,7 +376,7 @@ DescribeExpressionsResponse * CloudSearchClient::describeExpressions(const Descr
  */
 DescribeIndexFieldsResponse * CloudSearchClient::describeIndexFields(const DescribeIndexFieldsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -393,7 +393,7 @@ DescribeIndexFieldsResponse * CloudSearchClient::describeIndexFields(const Descr
  */
 DescribeScalingParametersResponse * CloudSearchClient::describeScalingParameters(const DescribeScalingParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -411,7 +411,7 @@ DescribeScalingParametersResponse * CloudSearchClient::describeScalingParameters
  */
 DescribeServiceAccessPoliciesResponse * CloudSearchClient::describeServiceAccessPolicies(const DescribeServiceAccessPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ DescribeServiceAccessPoliciesResponse * CloudSearchClient::describeServiceAccess
  */
 DescribeSuggestersResponse * CloudSearchClient::describeSuggesters(const DescribeSuggestersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -445,7 +445,7 @@ DescribeSuggestersResponse * CloudSearchClient::describeSuggesters(const Describ
  */
 IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -459,7 +459,7 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
  */
 ListDomainNamesResponse * CloudSearchClient::listDomainNames()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -477,7 +477,7 @@ ListDomainNamesResponse * CloudSearchClient::listDomainNames()
  */
 UpdateAvailabilityOptionsResponse * CloudSearchClient::updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ UpdateAvailabilityOptionsResponse * CloudSearchClient::updateAvailabilityOptions
  */
 UpdateScalingParametersResponse * CloudSearchClient::updateScalingParameters(const UpdateScalingParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -512,7 +512,7 @@ UpdateScalingParametersResponse * CloudSearchClient::updateScalingParameters(con
  */
 UpdateServiceAccessPoliciesResponse * CloudSearchClient::updateServiceAccessPolicies(const UpdateServiceAccessPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

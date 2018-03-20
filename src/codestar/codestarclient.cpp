@@ -192,7 +192,7 @@ CodeStarClient::CodeStarClient(
  */
 AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const AssociateTeamMemberRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -206,7 +206,7 @@ AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const Associat
  */
 CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -222,7 +222,7 @@ CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest
  */
 CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -237,7 +237,7 @@ CreateUserProfileResponse * CodeStarClient::createUserProfile(const CreateUserPr
  */
 DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -253,7 +253,7 @@ DeleteProjectResponse * CodeStarClient::deleteProject(const DeleteProjectRequest
  */
 DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -267,7 +267,7 @@ DeleteUserProfileResponse * CodeStarClient::deleteUserProfile(const DeleteUserPr
  */
 DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -281,7 +281,7 @@ DescribeProjectResponse * CodeStarClient::describeProject(const DescribeProjectR
  */
 DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const DescribeUserProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -297,7 +297,7 @@ DescribeUserProfileResponse * CodeStarClient::describeUserProfile(const Describe
  */
 DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const DisassociateTeamMemberRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -311,7 +311,7 @@ DisassociateTeamMemberResponse * CodeStarClient::disassociateTeamMember(const Di
  */
 ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -325,7 +325,7 @@ ListProjectsResponse * CodeStarClient::listProjects(const ListProjectsRequest &r
  */
 ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -339,7 +339,7 @@ ListResourcesResponse * CodeStarClient::listResources(const ListResourcesRequest
  */
 ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsForProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -353,7 +353,7 @@ ListTagsForProjectResponse * CodeStarClient::listTagsForProject(const ListTagsFo
  */
 ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -367,7 +367,7 @@ ListTeamMembersResponse * CodeStarClient::listTeamMembers(const ListTeamMembersR
  */
 ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfilesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -381,7 +381,7 @@ ListUserProfilesResponse * CodeStarClient::listUserProfiles(const ListUserProfil
  */
 TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -395,7 +395,7 @@ TagProjectResponse * CodeStarClient::tagProject(const TagProjectRequest &request
  */
 UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -409,7 +409,7 @@ UntagProjectResponse * CodeStarClient::untagProject(const UntagProjectRequest &r
  */
 UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -424,7 +424,7 @@ UpdateProjectResponse * CodeStarClient::updateProject(const UpdateProjectRequest
  */
 UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemberRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -439,7 +439,7 @@ UpdateTeamMemberResponse * CodeStarClient::updateTeamMember(const UpdateTeamMemb
  */
 UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

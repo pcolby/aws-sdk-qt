@@ -120,7 +120,7 @@ LightsailClient::LightsailClient(
  */
 AllocateStaticIpResponse * LightsailClient::allocateStaticIp(const AllocateStaticIpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -135,7 +135,7 @@ AllocateStaticIpResponse * LightsailClient::allocateStaticIp(const AllocateStati
  */
 AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -153,7 +153,7 @@ AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &reques
  */
 AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBalancer(const AttachInstancesToLoadBalancerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBa
  */
 AttachLoadBalancerTlsCertificateResponse * LightsailClient::attachLoadBalancerTlsCertificate(const AttachLoadBalancerTlsCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -188,7 +188,7 @@ AttachLoadBalancerTlsCertificateResponse * LightsailClient::attachLoadBalancerTl
  */
 AttachStaticIpResponse * LightsailClient::attachStaticIp(const AttachStaticIpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -202,7 +202,7 @@ AttachStaticIpResponse * LightsailClient::attachStaticIp(const AttachStaticIpReq
  */
 CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(const CloseInstancePublicPortsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -220,7 +220,7 @@ CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(con
  */
 CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -238,7 +238,7 @@ CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &reques
  */
 CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const CreateDiskFromSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -262,7 +262,7 @@ CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const C
  */
 CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDiskSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -276,7 +276,7 @@ CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDis
  */
 CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &
  */
 CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomainEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomai
  */
 CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const CreateInstanceSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -319,7 +319,7 @@ CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const C
  */
 CreateInstancesResponse * LightsailClient::createInstances(const CreateInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -333,7 +333,7 @@ CreateInstancesResponse * LightsailClient::createInstances(const CreateInstances
  */
 CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapshot(const CreateInstancesFromSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -347,7 +347,7 @@ CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapsh
  */
 CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -368,7 +368,7 @@ CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairReques
  */
 CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoadBalancerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -386,7 +386,7 @@ CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoa
  */
 CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTlsCertificate(const CreateLoadBalancerTlsCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -405,7 +405,7 @@ CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTl
  */
 DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -426,7 +426,7 @@ DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &reques
  */
 DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDiskSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -440,7 +440,7 @@ DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDis
  */
 DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -454,7 +454,7 @@ DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &
  */
 DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomainEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -468,7 +468,7 @@ DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomai
  */
 DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -482,7 +482,7 @@ DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceReq
  */
 DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const DeleteInstanceSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const D
  */
 DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -511,7 +511,7 @@ DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairReques
  */
 DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoadBalancerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -525,7 +525,7 @@ DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoa
  */
 DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTlsCertificate(const DeleteLoadBalancerTlsCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -540,7 +540,7 @@ DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTl
  */
 DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -558,7 +558,7 @@ DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &reques
  */
 DetachInstancesFromLoadBalancerResponse * LightsailClient::detachInstancesFromLoadBalancer(const DetachInstancesFromLoadBalancerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -572,7 +572,7 @@ DetachInstancesFromLoadBalancerResponse * LightsailClient::detachInstancesFromLo
  */
 DetachStaticIpResponse * LightsailClient::detachStaticIp(const DetachStaticIpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -586,7 +586,7 @@ DetachStaticIpResponse * LightsailClient::detachStaticIp(const DetachStaticIpReq
  */
 DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const DownloadDefaultKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -600,7 +600,7 @@ DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const D
  */
 GetActiveNamesResponse * LightsailClient::getActiveNames(const GetActiveNamesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -616,7 +616,7 @@ GetActiveNamesResponse * LightsailClient::getActiveNames(const GetActiveNamesReq
  */
 GetBlueprintsResponse * LightsailClient::getBlueprints(const GetBlueprintsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -631,7 +631,7 @@ GetBlueprintsResponse * LightsailClient::getBlueprints(const GetBlueprintsReques
  */
 GetBundlesResponse * LightsailClient::getBundles(const GetBundlesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -645,7 +645,7 @@ GetBundlesResponse * LightsailClient::getBundles(const GetBundlesRequest &reques
  */
 GetDiskResponse * LightsailClient::getDisk(const GetDiskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -659,7 +659,7 @@ GetDiskResponse * LightsailClient::getDisk(const GetDiskRequest &request)
  */
 GetDiskSnapshotResponse * LightsailClient::getDiskSnapshot(const GetDiskSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -678,7 +678,7 @@ GetDiskSnapshotResponse * LightsailClient::getDiskSnapshot(const GetDiskSnapshot
  */
 GetDiskSnapshotsResponse * LightsailClient::getDiskSnapshots(const GetDiskSnapshotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -697,7 +697,7 @@ GetDiskSnapshotsResponse * LightsailClient::getDiskSnapshots(const GetDiskSnapsh
  */
 GetDisksResponse * LightsailClient::getDisks(const GetDisksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -711,7 +711,7 @@ GetDisksResponse * LightsailClient::getDisks(const GetDisksRequest &request)
  */
 GetDomainResponse * LightsailClient::getDomain(const GetDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -725,7 +725,7 @@ GetDomainResponse * LightsailClient::getDomain(const GetDomainRequest &request)
  */
 GetDomainsResponse * LightsailClient::getDomains(const GetDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -739,7 +739,7 @@ GetDomainsResponse * LightsailClient::getDomains(const GetDomainsRequest &reques
  */
 GetInstanceResponse * LightsailClient::getInstance(const GetInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -753,7 +753,7 @@ GetInstanceResponse * LightsailClient::getInstance(const GetInstanceRequest &req
  */
 GetInstanceAccessDetailsResponse * LightsailClient::getInstanceAccessDetails(const GetInstanceAccessDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -767,7 +767,7 @@ GetInstanceAccessDetailsResponse * LightsailClient::getInstanceAccessDetails(con
  */
 GetInstanceMetricDataResponse * LightsailClient::getInstanceMetricData(const GetInstanceMetricDataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -781,7 +781,7 @@ GetInstanceMetricDataResponse * LightsailClient::getInstanceMetricData(const Get
  */
 GetInstancePortStatesResponse * LightsailClient::getInstancePortStates(const GetInstancePortStatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -795,7 +795,7 @@ GetInstancePortStatesResponse * LightsailClient::getInstancePortStates(const Get
  */
 GetInstanceSnapshotResponse * LightsailClient::getInstanceSnapshot(const GetInstanceSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -809,7 +809,7 @@ GetInstanceSnapshotResponse * LightsailClient::getInstanceSnapshot(const GetInst
  */
 GetInstanceSnapshotsResponse * LightsailClient::getInstanceSnapshots(const GetInstanceSnapshotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -823,7 +823,7 @@ GetInstanceSnapshotsResponse * LightsailClient::getInstanceSnapshots(const GetIn
  */
 GetInstanceStateResponse * LightsailClient::getInstanceState(const GetInstanceStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -837,7 +837,7 @@ GetInstanceStateResponse * LightsailClient::getInstanceState(const GetInstanceSt
  */
 GetInstancesResponse * LightsailClient::getInstances(const GetInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -851,7 +851,7 @@ GetInstancesResponse * LightsailClient::getInstances(const GetInstancesRequest &
  */
 GetKeyPairResponse * LightsailClient::getKeyPair(const GetKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -865,7 +865,7 @@ GetKeyPairResponse * LightsailClient::getKeyPair(const GetKeyPairRequest &reques
  */
 GetKeyPairsResponse * LightsailClient::getKeyPairs(const GetKeyPairsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -879,7 +879,7 @@ GetKeyPairsResponse * LightsailClient::getKeyPairs(const GetKeyPairsRequest &req
  */
 GetLoadBalancerResponse * LightsailClient::getLoadBalancer(const GetLoadBalancerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -893,7 +893,7 @@ GetLoadBalancerResponse * LightsailClient::getLoadBalancer(const GetLoadBalancer
  */
 GetLoadBalancerMetricDataResponse * LightsailClient::getLoadBalancerMetricData(const GetLoadBalancerMetricDataRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -915,7 +915,7 @@ GetLoadBalancerMetricDataResponse * LightsailClient::getLoadBalancerMetricData(c
  */
 GetLoadBalancerTlsCertificatesResponse * LightsailClient::getLoadBalancerTlsCertificates(const GetLoadBalancerTlsCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -934,7 +934,7 @@ GetLoadBalancerTlsCertificatesResponse * LightsailClient::getLoadBalancerTlsCert
  */
 GetLoadBalancersResponse * LightsailClient::getLoadBalancers(const GetLoadBalancersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -949,7 +949,7 @@ GetLoadBalancersResponse * LightsailClient::getLoadBalancers(const GetLoadBalanc
  */
 GetOperationResponse * LightsailClient::getOperation(const GetOperationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -968,7 +968,7 @@ GetOperationResponse * LightsailClient::getOperation(const GetOperationRequest &
  */
 GetOperationsResponse * LightsailClient::getOperations(const GetOperationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -982,7 +982,7 @@ GetOperationsResponse * LightsailClient::getOperations(const GetOperationsReques
  */
 GetOperationsForResourceResponse * LightsailClient::getOperationsForResource(const GetOperationsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -997,7 +997,7 @@ GetOperationsForResourceResponse * LightsailClient::getOperationsForResource(con
  */
 GetRegionsResponse * LightsailClient::getRegions(const GetRegionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1011,7 +1011,7 @@ GetRegionsResponse * LightsailClient::getRegions(const GetRegionsRequest &reques
  */
 GetStaticIpResponse * LightsailClient::getStaticIp(const GetStaticIpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1025,7 +1025,7 @@ GetStaticIpResponse * LightsailClient::getStaticIp(const GetStaticIpRequest &req
  */
 GetStaticIpsResponse * LightsailClient::getStaticIps(const GetStaticIpsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1039,7 +1039,7 @@ GetStaticIpsResponse * LightsailClient::getStaticIps(const GetStaticIpsRequest &
  */
 ImportKeyPairResponse * LightsailClient::importKeyPair(const ImportKeyPairRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1053,7 +1053,7 @@ ImportKeyPairResponse * LightsailClient::importKeyPair(const ImportKeyPairReques
  */
 IsVpcPeeredResponse * LightsailClient::isVpcPeered(const IsVpcPeeredRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1067,7 +1067,7 @@ IsVpcPeeredResponse * LightsailClient::isVpcPeered(const IsVpcPeeredRequest &req
  */
 OpenInstancePublicPortsResponse * LightsailClient::openInstancePublicPorts(const OpenInstancePublicPortsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1081,7 +1081,7 @@ OpenInstancePublicPortsResponse * LightsailClient::openInstancePublicPorts(const
  */
 PeerVpcResponse * LightsailClient::peerVpc(const PeerVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1096,7 +1096,7 @@ PeerVpcResponse * LightsailClient::peerVpc(const PeerVpcRequest &request)
  */
 PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const PutInstancePublicPortsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1111,7 +1111,7 @@ PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const P
  */
 RebootInstanceResponse * LightsailClient::rebootInstance(const RebootInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1125,7 +1125,7 @@ RebootInstanceResponse * LightsailClient::rebootInstance(const RebootInstanceReq
  */
 ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1139,7 +1139,7 @@ ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIp
  */
 StartInstanceResponse * LightsailClient::startInstance(const StartInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1153,7 +1153,7 @@ StartInstanceResponse * LightsailClient::startInstance(const StartInstanceReques
  */
 StopInstanceResponse * LightsailClient::stopInstance(const StopInstanceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1167,7 +1167,7 @@ StopInstanceResponse * LightsailClient::stopInstance(const StopInstanceRequest &
  */
 UnpeerVpcResponse * LightsailClient::unpeerVpc(const UnpeerVpcRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1181,7 +1181,7 @@ UnpeerVpcResponse * LightsailClient::unpeerVpc(const UnpeerVpcRequest &request)
  */
 UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomainEntryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1195,7 +1195,7 @@ UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomai
  */
 UpdateLoadBalancerAttributeResponse * LightsailClient::updateLoadBalancerAttribute(const UpdateLoadBalancerAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

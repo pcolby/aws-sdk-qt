@@ -133,7 +133,7 @@ CloudHSMClient::CloudHSMClient(
  */
 AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -161,7 +161,7 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
  */
 CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -200,7 +200,7 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  */
 CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -227,7 +227,7 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
  */
 CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -254,7 +254,7 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
  */
 DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -281,7 +281,7 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
  */
 DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
  */
 DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -335,7 +335,7 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
  */
 DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -362,7 +362,7 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
  */
 DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -389,7 +389,7 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
  */
 DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLunaClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
  */
 GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -443,7 +443,7 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
  */
 ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvailableZonesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -476,7 +476,7 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
  */
 ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -509,7 +509,7 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
  */
 ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -542,7 +542,7 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
  */
 ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -569,7 +569,7 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
  */
 ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -596,7 +596,7 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
  */
 ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -629,7 +629,7 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  */
 ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -660,7 +660,7 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
  */
 ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -691,7 +691,7 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
  */
 RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

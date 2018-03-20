@@ -104,7 +104,7 @@ MediaConvertClient::MediaConvertClient(
  */
 CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -118,7 +118,7 @@ CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &reques
  */
 CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ CreateJobResponse * MediaConvertClient::createJob(const CreateJobRequest &reques
  */
 CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJobTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ CreateJobTemplateResponse * MediaConvertClient::createJobTemplate(const CreateJo
  */
 CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -160,7 +160,7 @@ CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetReques
  */
 CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -173,7 +173,7 @@ CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &
  */
 DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJobTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -186,7 +186,7 @@ DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJo
  */
 DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ DeletePresetResponse * MediaConvertClient::deletePreset(const DeletePresetReques
  */
 DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -212,7 +212,7 @@ DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &
  */
 DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -225,7 +225,7 @@ DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const Describe
  */
 GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -238,7 +238,7 @@ GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
  */
 GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -251,7 +251,7 @@ GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplate
  */
 GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ GetPresetResponse * MediaConvertClient::getPreset(const GetPresetRequest &reques
  */
 GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -278,7 +278,7 @@ GetQueueResponse * MediaConvertClient::getQueue(const GetQueueRequest &request)
  */
 ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -293,7 +293,7 @@ ListJobTemplatesResponse * MediaConvertClient::listJobTemplates(const ListJobTem
  */
 ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -307,7 +307,7 @@ ListJobsResponse * MediaConvertClient::listJobs(const ListJobsRequest &request)
  */
 ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -321,7 +321,7 @@ ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &
  */
 ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -334,7 +334,7 @@ ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &req
  */
 UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJobTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -347,7 +347,7 @@ UpdateJobTemplateResponse * MediaConvertClient::updateJobTemplate(const UpdateJo
  */
 UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ UpdatePresetResponse * MediaConvertClient::updatePreset(const UpdatePresetReques
  */
 UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

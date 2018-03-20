@@ -106,7 +106,7 @@ Route53DomainsClient::Route53DomainsClient(
  */
 CheckDomainAvailabilityResponse * Route53DomainsClient::checkDomainAvailability(const CheckDomainAvailabilityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -120,7 +120,7 @@ CheckDomainAvailabilityResponse * Route53DomainsClient::checkDomainAvailability(
  */
 CheckDomainTransferabilityResponse * Route53DomainsClient::checkDomainTransferability(const CheckDomainTransferabilityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -138,7 +138,7 @@ CheckDomainTransferabilityResponse * Route53DomainsClient::checkDomainTransferab
  */
 DeleteTagsForDomainResponse * Route53DomainsClient::deleteTagsForDomain(const DeleteTagsForDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -152,7 +152,7 @@ DeleteTagsForDomainResponse * Route53DomainsClient::deleteTagsForDomain(const De
  */
 DisableDomainAutoRenewResponse * Route53DomainsClient::disableDomainAutoRenew(const DisableDomainAutoRenewRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -169,7 +169,7 @@ DisableDomainAutoRenewResponse * Route53DomainsClient::disableDomainAutoRenew(co
  */
 DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferLock(const DisableDomainTransferLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -191,7 +191,7 @@ DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferL
  */
 EnableDomainAutoRenewResponse * Route53DomainsClient::enableDomainAutoRenew(const EnableDomainAutoRenewRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ EnableDomainAutoRenewResponse * Route53DomainsClient::enableDomainAutoRenew(cons
  */
 EnableDomainTransferLockResponse * Route53DomainsClient::enableDomainTransferLock(const EnableDomainTransferLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -226,7 +226,7 @@ EnableDomainTransferLockResponse * Route53DomainsClient::enableDomainTransferLoc
  */
 GetContactReachabilityStatusResponse * Route53DomainsClient::getContactReachabilityStatus(const GetContactReachabilityStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -241,7 +241,7 @@ GetContactReachabilityStatusResponse * Route53DomainsClient::getContactReachabil
  */
 GetDomainDetailResponse * Route53DomainsClient::getDomainDetail(const GetDomainDetailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -256,7 +256,7 @@ GetDomainDetailResponse * Route53DomainsClient::getDomainDetail(const GetDomainD
  */
 GetDomainSuggestionsResponse * Route53DomainsClient::getDomainSuggestions(const GetDomainSuggestionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -270,7 +270,7 @@ GetDomainSuggestionsResponse * Route53DomainsClient::getDomainSuggestions(const 
  */
 GetOperationDetailResponse * Route53DomainsClient::getOperationDetail(const GetOperationDetailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -284,7 +284,7 @@ GetOperationDetailResponse * Route53DomainsClient::getOperationDetail(const GetO
  */
 ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -298,7 +298,7 @@ ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest
  */
 ListOperationsResponse * Route53DomainsClient::listOperations(const ListOperationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -316,7 +316,7 @@ ListOperationsResponse * Route53DomainsClient::listOperations(const ListOperatio
  */
 ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTagsForDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
  */
 RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -381,7 +381,7 @@ RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDoma
  */
 RenewDomainResponse * Route53DomainsClient::renewDomain(const RenewDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -396,7 +396,7 @@ RenewDomainResponse * Route53DomainsClient::renewDomain(const RenewDomainRequest
  */
 ResendContactReachabilityEmailResponse * Route53DomainsClient::resendContactReachabilityEmail(const ResendContactReachabilityEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -411,7 +411,7 @@ ResendContactReachabilityEmailResponse * Route53DomainsClient::resendContactReac
  */
 RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(const RetrieveDomainAuthCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
  */
 TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -469,7 +469,7 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
  */
 UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const UpdateDomainContactRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -492,7 +492,7 @@ UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const Up
  */
 UpdateDomainContactPrivacyResponse * Route53DomainsClient::updateDomainContactPrivacy(const UpdateDomainContactPrivacyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -512,7 +512,7 @@ UpdateDomainContactPrivacyResponse * Route53DomainsClient::updateDomainContactPr
  */
 UpdateDomainNameserversResponse * Route53DomainsClient::updateDomainNameservers(const UpdateDomainNameserversRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -530,7 +530,7 @@ UpdateDomainNameserversResponse * Route53DomainsClient::updateDomainNameservers(
  */
 UpdateTagsForDomainResponse * Route53DomainsClient::updateTagsForDomain(const UpdateTagsForDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -544,7 +544,7 @@ UpdateTagsForDomainResponse * Route53DomainsClient::updateTagsForDomain(const Up
  */
 ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

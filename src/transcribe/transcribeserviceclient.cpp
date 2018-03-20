@@ -107,7 +107,7 @@ TranscribeServiceClient::TranscribeServiceClient(
  */
 GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const GetTranscriptionJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -121,7 +121,7 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
  */
 ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(const ListTranscriptionJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -135,7 +135,7 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
  */
 StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

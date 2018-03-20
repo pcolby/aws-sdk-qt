@@ -125,7 +125,7 @@ SesClient::SesClient(
  */
 CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -148,7 +148,7 @@ CloneReceiptRuleSetResponse * SesClient::cloneReceiptRuleSet(const CloneReceiptR
  */
 CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateConfigurationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -177,7 +177,7 @@ CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateC
  */
 CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationSetEventDestination(const CreateConfigurationSetEventDestinationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationS
  */
 CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSetTrackingOptions(const CreateConfigurationSetTrackingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -223,7 +223,7 @@ CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSe
  */
 CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificationEmailTemplate(const CreateCustomVerificationEmailTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -246,7 +246,7 @@ CreateCustomVerificationEmailTemplateResponse * SesClient::createCustomVerificat
  */
 CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceiptFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -269,7 +269,7 @@ CreateReceiptFilterResponse * SesClient::createReceiptFilter(const CreateReceipt
  */
 CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -292,7 +292,7 @@ CreateReceiptRuleResponse * SesClient::createReceiptRule(const CreateReceiptRule
  */
 CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -312,7 +312,7 @@ CreateReceiptRuleSetResponse * SesClient::createReceiptRuleSet(const CreateRecei
  */
 CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -332,7 +332,7 @@ CreateTemplateResponse * SesClient::createTemplate(const CreateTemplateRequest &
  */
 DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteConfigurationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -352,7 +352,7 @@ DeleteConfigurationSetResponse * SesClient::deleteConfigurationSet(const DeleteC
  */
 DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationSetEventDestination(const DeleteConfigurationSetEventDestinationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -379,7 +379,7 @@ DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationS
  */
 DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSetTrackingOptions(const DeleteConfigurationSetTrackingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -403,7 +403,7 @@ DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSe
  */
 DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificationEmailTemplate(const DeleteCustomVerificationEmailTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -421,7 +421,7 @@ DeleteCustomVerificationEmailTemplateResponse * SesClient::deleteCustomVerificat
  */
 DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -450,7 +450,7 @@ DeleteIdentityResponse * SesClient::deleteIdentity(const DeleteIdentityRequest &
  */
 DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdentityPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -474,7 +474,7 @@ DeleteIdentityPolicyResponse * SesClient::deleteIdentityPolicy(const DeleteIdent
  */
 DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceiptFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -498,7 +498,7 @@ DeleteReceiptFilterResponse * SesClient::deleteReceiptFilter(const DeleteReceipt
  */
 DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -526,7 +526,7 @@ DeleteReceiptRuleResponse * SesClient::deleteReceiptRule(const DeleteReceiptRule
  */
 DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -544,7 +544,7 @@ DeleteReceiptRuleSetResponse * SesClient::deleteReceiptRuleSet(const DeleteRecei
  */
 DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -558,7 +558,7 @@ DeleteTemplateResponse * SesClient::deleteTemplate(const DeleteTemplateRequest &
  */
 DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const DeleteVerifiedEmailAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -581,7 +581,7 @@ DeleteVerifiedEmailAddressResponse * SesClient::deleteVerifiedEmailAddress(const
  */
 DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(const DescribeActiveReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -600,7 +600,7 @@ DescribeActiveReceiptRuleSetResponse * SesClient::describeActiveReceiptRuleSet(c
  */
 DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const DescribeConfigurationSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -623,7 +623,7 @@ DescribeConfigurationSetResponse * SesClient::describeConfigurationSet(const Des
  */
 DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeReceiptRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -647,7 +647,7 @@ DescribeReceiptRuleResponse * SesClient::describeReceiptRule(const DescribeRecei
  */
 DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const DescribeReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -665,7 +665,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  */
 GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -689,7 +689,7 @@ GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
  */
 GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEmailTemplate(const GetCustomVerificationEmailTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -732,7 +732,7 @@ GetCustomVerificationEmailTemplateResponse * SesClient::getCustomVerificationEma
  */
 GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const GetIdentityDkimAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -751,7 +751,7 @@ GetIdentityDkimAttributesResponse * SesClient::getIdentityDkimAttributes(const G
  */
 GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDomainAttributes(const GetIdentityMailFromDomainAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -776,7 +776,7 @@ GetIdentityMailFromDomainAttributesResponse * SesClient::getIdentityMailFromDoma
  */
 GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAttributes(const GetIdentityNotificationAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -805,7 +805,7 @@ GetIdentityNotificationAttributesResponse * SesClient::getIdentityNotificationAt
  */
 GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -840,7 +840,7 @@ GetIdentityPoliciesResponse * SesClient::getIdentityPolicies(const GetIdentityPo
  */
 GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAttributes(const GetIdentityVerificationAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -858,7 +858,7 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
  */
 GetSendQuotaResponse * SesClient::getSendQuota()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -877,7 +877,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  */
 GetSendStatisticsResponse * SesClient::getSendStatistics()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -895,7 +895,7 @@ GetSendStatisticsResponse * SesClient::getSendStatistics()
  */
 GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -919,7 +919,7 @@ GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
  */
 ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfigurationSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -943,7 +943,7 @@ ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfi
  */
 ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerificationEmailTemplates(const ListCustomVerificationEmailTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -962,7 +962,7 @@ ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerification
  */
 ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -991,7 +991,7 @@ ListIdentitiesResponse * SesClient::listIdentities(const ListIdentitiesRequest &
  */
 ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentityPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1015,7 +1015,7 @@ ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentit
  */
 ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFiltersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1041,7 +1041,7 @@ ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFilt
  */
 ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRuleSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1059,7 +1059,7 @@ ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRu
  */
 ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1073,7 +1073,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
  */
 ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1101,7 +1101,7 @@ ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
  */
 PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1130,7 +1130,7 @@ PutIdentityPolicyResponse * SesClient::putIdentityPolicy(const PutIdentityPolicy
  */
 ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1158,7 +1158,7 @@ ReorderReceiptRuleSetResponse * SesClient::reorderReceiptRuleSet(const ReorderRe
  */
 SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1203,7 +1203,7 @@ SendBounceResponse * SesClient::sendBounce(const SendBounceRequest &request)
  */
 SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBulkTemplatedEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1229,7 +1229,7 @@ SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBul
  */
 SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(const SendCustomVerificationEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1281,7 +1281,7 @@ SendCustomVerificationEmailResponse * SesClient::sendCustomVerificationEmail(con
  */
 SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1380,7 +1380,7 @@ SendEmailResponse * SesClient::sendEmail(const SendEmailRequest &request)
  */
 SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1430,7 +1430,7 @@ SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &reques
  */
 SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1458,7 +1458,7 @@ SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEm
  */
 SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetActiveReceiptRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1496,7 +1496,7 @@ SetActiveReceiptRuleSetResponse * SesClient::setActiveReceiptRuleSet(const SetAc
  */
 SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIdentityDkimEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1525,7 +1525,7 @@ SetIdentityDkimEnabledResponse * SesClient::setIdentityDkimEnabled(const SetIden
  */
 SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackForwardingEnabled(const SetIdentityFeedbackForwardingEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1549,7 +1549,7 @@ SetIdentityFeedbackForwardingEnabledResponse * SesClient::setIdentityFeedbackFor
  */
 SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeadersInNotificationsEnabled(const SetIdentityHeadersInNotificationsEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1574,7 +1574,7 @@ SetIdentityHeadersInNotificationsEnabledResponse * SesClient::setIdentityHeaders
  */
 SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const SetIdentityMailFromDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1603,7 +1603,7 @@ SetIdentityMailFromDomainResponse * SesClient::setIdentityMailFromDomain(const S
  */
 SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(const SetIdentityNotificationTopicRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1627,7 +1627,7 @@ SetIdentityNotificationTopicResponse * SesClient::setIdentityNotificationTopic(c
  */
 SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetReceiptRulePositionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1645,7 +1645,7 @@ SetReceiptRulePositionResponse * SesClient::setReceiptRulePosition(const SetRece
  */
 TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1665,7 +1665,7 @@ TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTempl
  */
 UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(const UpdateAccountSendingEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1692,7 +1692,7 @@ UpdateAccountSendingEnabledResponse * SesClient::updateAccountSendingEnabled(con
  */
 UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1712,7 +1712,7 @@ UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationS
  */
 UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfigurationSetReputationMetricsEnabled(const UpdateConfigurationSetReputationMetricsEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1732,7 +1732,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfig
  */
 UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSetSendingEnabled(const UpdateConfigurationSetSendingEnabledRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1754,7 +1754,7 @@ UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSet
  */
 UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSetTrackingOptions(const UpdateConfigurationSetTrackingOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1778,7 +1778,7 @@ UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSe
  */
 UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificationEmailTemplate(const UpdateCustomVerificationEmailTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1802,7 +1802,7 @@ UpdateCustomVerificationEmailTemplateResponse * SesClient::updateCustomVerificat
  */
 UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1822,7 +1822,7 @@ UpdateReceiptRuleResponse * SesClient::updateReceiptRule(const UpdateReceiptRule
  */
 UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1852,7 +1852,7 @@ UpdateTemplateResponse * SesClient::updateTemplate(const UpdateTemplateRequest &
  */
 VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1873,7 +1873,7 @@ VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimReq
  */
 VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomainIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1887,7 +1887,7 @@ VerifyDomainIdentityResponse * SesClient::verifyDomainIdentity(const VerifyDomai
  */
 VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1906,7 +1906,7 @@ VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddr
  */
 VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

@@ -137,7 +137,7 @@ WorkMailClient::WorkMailClient(
  */
 AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResource(const AssociateDelegateToResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -151,7 +151,7 @@ AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResourc
  */
 AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const AssociateMemberToGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -165,7 +165,7 @@ AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const As
  */
 CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -179,7 +179,7 @@ CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &requ
  */
 CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -193,7 +193,7 @@ CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &requ
  */
 CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequ
  */
 CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -221,7 +221,7 @@ CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request
  */
 DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -235,7 +235,7 @@ DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &requ
  */
 DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -249,7 +249,7 @@ DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &requ
  */
 DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -264,7 +264,7 @@ DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequ
  */
 DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -280,7 +280,7 @@ DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request
  */
 DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const DeregisterFromWorkMailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -294,7 +294,7 @@ DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const De
  */
 DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest
  */
 DescribeOrganizationResponse * WorkMailClient::describeOrganization(const DescribeOrganizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -322,7 +322,7 @@ DescribeOrganizationResponse * WorkMailClient::describeOrganization(const Descri
  */
 DescribeResourceResponse * WorkMailClient::describeResource(const DescribeResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -336,7 +336,7 @@ DescribeResourceResponse * WorkMailClient::describeResource(const DescribeResour
  */
 DescribeUserResponse * WorkMailClient::describeUser(const DescribeUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -350,7 +350,7 @@ DescribeUserResponse * WorkMailClient::describeUser(const DescribeUserRequest &r
  */
 DisassociateDelegateFromResourceResponse * WorkMailClient::disassociateDelegateFromResource(const DisassociateDelegateFromResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -364,7 +364,7 @@ DisassociateDelegateFromResourceResponse * WorkMailClient::disassociateDelegateF
  */
 DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGroup(const DisassociateMemberFromGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -378,7 +378,7 @@ DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGrou
  */
 ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -392,7 +392,7 @@ ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &requ
  */
 ListGroupMembersResponse * WorkMailClient::listGroupMembers(const ListGroupMembersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -406,7 +406,7 @@ ListGroupMembersResponse * WorkMailClient::listGroupMembers(const ListGroupMembe
  */
 ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -420,7 +420,7 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
  */
 ListOrganizationsResponse * WorkMailClient::listOrganizations(const ListOrganizationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -435,7 +435,7 @@ ListOrganizationsResponse * WorkMailClient::listOrganizations(const ListOrganiza
  */
 ListResourceDelegatesResponse * WorkMailClient::listResourceDelegates(const ListResourceDelegatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ ListResourceDelegatesResponse * WorkMailClient::listResourceDelegates(const List
  */
 ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -463,7 +463,7 @@ ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest
  */
 ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -482,7 +482,7 @@ ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
  */
 RegisterToWorkMailResponse * WorkMailClient::registerToWorkMail(const RegisterToWorkMailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ RegisterToWorkMailResponse * WorkMailClient::registerToWorkMail(const RegisterTo
  */
 ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -511,7 +511,7 @@ ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest
  */
 UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(const UpdatePrimaryEmailAddressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -526,7 +526,7 @@ UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(co
  */
 UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

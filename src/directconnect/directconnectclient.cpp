@@ -124,7 +124,7 @@ DirectConnectClient::DirectConnectClient(
  */
 AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnectionOnInterconnect(const AllocateConnectionOnInterconnectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnecti
  */
 AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection(const AllocateHostedConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -166,7 +166,7 @@ AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection
  */
 AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVirtualInterface(const AllocatePrivateVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -195,7 +195,7 @@ AllocatePrivateVirtualInterfaceResponse * DirectConnectClient::allocatePrivateVi
  */
 AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirtualInterface(const AllocatePublicVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirt
  */
 AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWithLag(const AssociateConnectionWithLagRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -244,7 +244,7 @@ AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWit
  */
 AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnection(const AssociateHostedConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -271,7 +271,7 @@ AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnecti
  */
 AssociateVirtualInterfaceResponse * DirectConnectClient::associateVirtualInterface(const AssociateVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ AssociateVirtualInterfaceResponse * DirectConnectClient::associateVirtualInterfa
  */
 ConfirmConnectionResponse * DirectConnectClient::confirmConnection(const ConfirmConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ ConfirmConnectionResponse * DirectConnectClient::confirmConnection(const Confirm
  */
 ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirtualInterface(const ConfirmPrivateVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -328,7 +328,7 @@ ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirt
  */
 ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtualInterface(const ConfirmPublicVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtua
  */
 CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRe
  */
 CreateConnectionResponse * DirectConnectClient::createConnection(const CreateConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -408,7 +408,7 @@ CreateConnectionResponse * DirectConnectClient::createConnection(const CreateCon
  */
 CreateDirectConnectGatewayResponse * DirectConnectClient::createDirectConnectGateway(const CreateDirectConnectGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -423,7 +423,7 @@ CreateDirectConnectGatewayResponse * DirectConnectClient::createDirectConnectGat
  */
 CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirectConnectGatewayAssociation(const CreateDirectConnectGatewayAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -461,7 +461,7 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
  */
 CreateInterconnectResponse * DirectConnectClient::createInterconnect(const CreateInterconnectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -500,7 +500,7 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
  */
 CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -515,7 +515,7 @@ CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &reque
  */
 CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtualInterface(const CreatePrivateVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -536,7 +536,7 @@ CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtua
  */
 CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualInterface(const CreatePublicVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -551,7 +551,7 @@ CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualI
  */
 DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -571,7 +571,7 @@ DeleteBGPPeerResponse * DirectConnectClient::deleteBGPPeer(const DeleteBGPPeerRe
  */
 DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -586,7 +586,7 @@ DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteCon
  */
 DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGateway(const DeleteDirectConnectGatewayRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -600,7 +600,7 @@ DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGat
  */
 DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirectConnectGatewayAssociation(const DeleteDirectConnectGatewayAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -618,7 +618,7 @@ DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirec
  */
 DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const DeleteInterconnectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -632,7 +632,7 @@ DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const Delet
  */
 DeleteLagResponse * DirectConnectClient::deleteLag(const DeleteLagRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -646,7 +646,7 @@ DeleteLagResponse * DirectConnectClient::deleteLag(const DeleteLagRequest &reque
  */
 DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(const DeleteVirtualInterfaceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -671,7 +671,7 @@ DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(con
  */
 DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const DescribeConnectionLoaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -689,7 +689,7 @@ DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const
  */
 DescribeConnectionsResponse * DirectConnectClient::describeConnections(const DescribeConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -711,7 +711,7 @@ DescribeConnectionsResponse * DirectConnectClient::describeConnections(const Des
  */
 DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnectionsOnInterconnect(const DescribeConnectionsOnInterconnectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -729,7 +729,7 @@ DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnect
  */
 DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describeDirectConnectGatewayAssociations(const DescribeDirectConnectGatewayAssociationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -747,7 +747,7 @@ DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describe
  */
 DescribeDirectConnectGatewayAttachmentsResponse * DirectConnectClient::describeDirectConnectGatewayAttachments(const DescribeDirectConnectGatewayAttachmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -764,7 +764,7 @@ DescribeDirectConnectGatewayAttachmentsResponse * DirectConnectClient::describeD
  */
 DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConnectGateways(const DescribeDirectConnectGatewaysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -782,7 +782,7 @@ DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConne
  */
 DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnections(const DescribeHostedConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -807,7 +807,7 @@ DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnectio
  */
 DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(const DescribeInterconnectLoaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -825,7 +825,7 @@ DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(c
  */
 DescribeInterconnectsResponse * DirectConnectClient::describeInterconnects(const DescribeInterconnectsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -843,7 +843,7 @@ DescribeInterconnectsResponse * DirectConnectClient::describeInterconnects(const
  */
 DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -864,7 +864,7 @@ DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsReque
  */
 DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -879,7 +879,7 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
  */
 DescribeLocationsResponse * DirectConnectClient::describeLocations()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -893,7 +893,7 @@ DescribeLocationsResponse * DirectConnectClient::describeLocations()
  */
 DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -914,7 +914,7 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
  */
 DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -934,7 +934,7 @@ DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
  */
 DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfaces(const DescribeVirtualInterfacesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -957,7 +957,7 @@ DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfac
  */
 DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnectionFromLag(const DisassociateConnectionFromLagRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -976,7 +976,7 @@ DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnect
  */
 TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -990,7 +990,7 @@ TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest 
  */
 UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1023,7 +1023,7 @@ UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRe
  */
 UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

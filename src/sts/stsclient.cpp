@@ -262,7 +262,7 @@ StsClient::StsClient(
  */
 AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -356,7 +356,7 @@ AssumeRoleResponse * StsClient::assumeRole(const AssumeRoleRequest &request)
  */
 AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithSAMLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -472,7 +472,7 @@ AssumeRoleWithSAMLResponse * StsClient::assumeRoleWithSAML(const AssumeRoleWithS
  */
 AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const AssumeRoleWithWebIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -532,7 +532,7 @@ AssumeRoleWithWebIdentityResponse * StsClient::assumeRoleWithWebIdentity(const A
  */
 DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const DecodeAuthorizationMessageRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -546,7 +546,7 @@ DecodeAuthorizationMessageResponse * StsClient::decodeAuthorizationMessage(const
  */
 GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -656,7 +656,7 @@ GetCallerIdentityResponse * StsClient::getCallerIdentity(const GetCallerIdentity
  */
 GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -722,7 +722,7 @@ GetFederationTokenResponse * StsClient::getFederationToken(const GetFederationTo
  */
 GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

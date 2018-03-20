@@ -118,7 +118,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  */
 CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
  */
 DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const DeleteScalingPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const Dele
  */
 DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -160,7 +160,7 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
  */
 DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

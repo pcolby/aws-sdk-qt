@@ -129,7 +129,7 @@ AcmClient::AcmClient(
  */
 AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCe
  */
 DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -164,7 +164,7 @@ DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificate
  */
 DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -181,7 +181,7 @@ DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCerti
  */
 GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -259,7 +259,7 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  */
 ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -274,7 +274,7 @@ ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificate
  */
 ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -290,7 +290,7 @@ ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesReq
  */
 ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTagsForCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -311,7 +311,7 @@ ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTag
  */
 RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -340,7 +340,7 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
  */
 RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -361,7 +361,7 @@ RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertific
  */
 ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendValidationEmailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

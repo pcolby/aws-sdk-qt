@@ -124,7 +124,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  */
 CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const CreateBotVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -154,7 +154,7 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
  */
 CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion(const CreateIntentVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -184,7 +184,7 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
  */
 CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVersion(const CreateSlotTypeVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -210,7 +210,7 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  */
 DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -232,7 +232,7 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
  */
 DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const DeleteBotAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -250,7 +250,7 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
  */
 DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotChannelAssociation(const DeleteBotChannelAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -268,7 +268,7 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
  */
 DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const DeleteBotVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -299,7 +299,7 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
  */
 DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteIntentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -317,7 +317,7 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
  */
 DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion(const DeleteIntentVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -348,7 +348,7 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
  */
 DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const DeleteSlotTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -367,7 +367,7 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
  */
 DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVersion(const DeleteSlotTypeVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -395,7 +395,7 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  */
 DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const DeleteUtterancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -413,7 +413,7 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
  */
 GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -431,7 +431,7 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
  */
 GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
  */
 GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBotAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -467,7 +467,7 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
  */
 GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelAssociation(const GetBotChannelAssociationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -486,7 +486,7 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
  */
 GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannelAssociations(const GetBotChannelAssociationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -515,7 +515,7 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
  */
 GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const GetBotVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -543,7 +543,7 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
  */
 GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -561,7 +561,7 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
  */
 GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const GetBuiltinIntentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -579,7 +579,7 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
  */
 GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(const GetBuiltinIntentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -603,7 +603,7 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
  */
 GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes(const GetBuiltinSlotTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -617,7 +617,7 @@ GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes
  */
 GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -631,7 +631,7 @@ GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequ
  */
 GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -649,7 +649,7 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
  */
 GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -678,7 +678,7 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
  */
 GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(const GetIntentVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -706,7 +706,7 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
  */
 GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -725,7 +725,7 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
  */
 GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -754,7 +754,7 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
  */
 GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions(const GetSlotTypeVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -782,7 +782,7 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
  */
 GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlotTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -818,7 +818,7 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  */
 GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(const GetUtterancesViewRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -847,7 +847,7 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
  */
 PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -866,7 +866,7 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
  */
 PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -942,7 +942,7 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
  */
 PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -973,7 +973,7 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
  */
 PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -987,7 +987,7 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
  */
 StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

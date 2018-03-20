@@ -156,7 +156,7 @@ RedshiftClient::RedshiftClient(
  */
 AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterSecurityGroupIngress(const AuthorizeClusterSecurityGroupIngressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -176,7 +176,7 @@ AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterS
  */
 AuthorizeSnapshotAccessResponse * RedshiftClient::authorizeSnapshotAccess(const AuthorizeSnapshotAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ AuthorizeSnapshotAccessResponse * RedshiftClient::authorizeSnapshotAccess(const 
  */
 CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClusterSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -224,7 +224,7 @@ CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClus
  */
 CreateClusterResponse * RedshiftClient::createCluster(const CreateClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -251,7 +251,7 @@ CreateClusterResponse * RedshiftClient::createCluster(const CreateClusterRequest
  */
 CreateClusterParameterGroupResponse * RedshiftClient::createClusterParameterGroup(const CreateClusterParameterGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -271,7 +271,7 @@ CreateClusterParameterGroupResponse * RedshiftClient::createClusterParameterGrou
  */
 CreateClusterSecurityGroupResponse * RedshiftClient::createClusterSecurityGroup(const CreateClusterSecurityGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -291,7 +291,7 @@ CreateClusterSecurityGroupResponse * RedshiftClient::createClusterSecurityGroup(
  */
 CreateClusterSnapshotResponse * RedshiftClient::createClusterSnapshot(const CreateClusterSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -312,7 +312,7 @@ CreateClusterSnapshotResponse * RedshiftClient::createClusterSnapshot(const Crea
  */
 CreateClusterSubnetGroupResponse * RedshiftClient::createClusterSubnetGroup(const CreateClusterSubnetGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -345,7 +345,7 @@ CreateClusterSubnetGroupResponse * RedshiftClient::createClusterSubnetGroup(cons
  */
 CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -368,7 +368,7 @@ CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const 
  */
 CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(const CreateHsmClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(
  */
 CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const CreateHsmConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -411,7 +411,7 @@ CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const Cr
  */
 CreateSnapshotCopyGrantResponse * RedshiftClient::createSnapshotCopyGrant(const CreateSnapshotCopyGrantRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -434,7 +434,7 @@ CreateSnapshotCopyGrantResponse * RedshiftClient::createSnapshotCopyGrant(const 
  */
 CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -465,7 +465,7 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
  */
 DeleteClusterResponse * RedshiftClient::deleteCluster(const DeleteClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -483,7 +483,7 @@ DeleteClusterResponse * RedshiftClient::deleteCluster(const DeleteClusterRequest
  */
 DeleteClusterParameterGroupResponse * RedshiftClient::deleteClusterParameterGroup(const DeleteClusterParameterGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -507,7 +507,7 @@ DeleteClusterParameterGroupResponse * RedshiftClient::deleteClusterParameterGrou
  */
 DeleteClusterSecurityGroupResponse * RedshiftClient::deleteClusterSecurityGroup(const DeleteClusterSecurityGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ DeleteClusterSecurityGroupResponse * RedshiftClient::deleteClusterSecurityGroup(
  */
 DeleteClusterSnapshotResponse * RedshiftClient::deleteClusterSnapshot(const DeleteClusterSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -542,7 +542,7 @@ DeleteClusterSnapshotResponse * RedshiftClient::deleteClusterSnapshot(const Dele
  */
 DeleteClusterSubnetGroupResponse * RedshiftClient::deleteClusterSubnetGroup(const DeleteClusterSubnetGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -556,7 +556,7 @@ DeleteClusterSubnetGroupResponse * RedshiftClient::deleteClusterSubnetGroup(cons
  */
 DeleteEventSubscriptionResponse * RedshiftClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ DeleteEventSubscriptionResponse * RedshiftClient::deleteEventSubscription(const 
  */
 DeleteHsmClientCertificateResponse * RedshiftClient::deleteHsmClientCertificate(const DeleteHsmClientCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -584,7 +584,7 @@ DeleteHsmClientCertificateResponse * RedshiftClient::deleteHsmClientCertificate(
  */
 DeleteHsmConfigurationResponse * RedshiftClient::deleteHsmConfiguration(const DeleteHsmConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -598,7 +598,7 @@ DeleteHsmConfigurationResponse * RedshiftClient::deleteHsmConfiguration(const De
  */
 DeleteSnapshotCopyGrantResponse * RedshiftClient::deleteSnapshotCopyGrant(const DeleteSnapshotCopyGrantRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -612,7 +612,7 @@ DeleteSnapshotCopyGrantResponse * RedshiftClient::deleteSnapshotCopyGrant(const 
  */
 DeleteTagsResponse * RedshiftClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -646,7 +646,7 @@ DeleteTagsResponse * RedshiftClient::deleteTags(const DeleteTagsRequest &request
  */
 DescribeClusterParameterGroupsResponse * RedshiftClient::describeClusterParameterGroups(const DescribeClusterParameterGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -674,7 +674,7 @@ DescribeClusterParameterGroupsResponse * RedshiftClient::describeClusterParamete
  */
 DescribeClusterParametersResponse * RedshiftClient::describeClusterParameters(const DescribeClusterParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -707,7 +707,7 @@ DescribeClusterParametersResponse * RedshiftClient::describeClusterParameters(co
  */
 DescribeClusterSecurityGroupsResponse * RedshiftClient::describeClusterSecurityGroups(const DescribeClusterSecurityGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -736,7 +736,7 @@ DescribeClusterSecurityGroupsResponse * RedshiftClient::describeClusterSecurityG
  */
 DescribeClusterSnapshotsResponse * RedshiftClient::describeClusterSnapshots(const DescribeClusterSnapshotsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -763,7 +763,7 @@ DescribeClusterSnapshotsResponse * RedshiftClient::describeClusterSnapshots(cons
  */
 DescribeClusterSubnetGroupsResponse * RedshiftClient::describeClusterSubnetGroups(const DescribeClusterSubnetGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -780,7 +780,7 @@ DescribeClusterSubnetGroupsResponse * RedshiftClient::describeClusterSubnetGroup
  */
 DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const DescribeClusterVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -810,7 +810,7 @@ DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const 
  */
 DescribeClustersResponse * RedshiftClient::describeClusters(const DescribeClustersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -830,7 +830,7 @@ DescribeClustersResponse * RedshiftClient::describeClusters(const DescribeCluste
  */
 DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultClusterParameters(const DescribeDefaultClusterParametersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -846,7 +846,7 @@ DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultCluste
  */
 DescribeEventCategoriesResponse * RedshiftClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -873,7 +873,7 @@ DescribeEventCategoriesResponse * RedshiftClient::describeEventCategories(const 
  */
 DescribeEventSubscriptionsResponse * RedshiftClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -889,7 +889,7 @@ DescribeEventSubscriptionsResponse * RedshiftClient::describeEventSubscriptions(
  */
 DescribeEventsResponse * RedshiftClient::describeEvents(const DescribeEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -916,7 +916,7 @@ DescribeEventsResponse * RedshiftClient::describeEvents(const DescribeEventsRequ
  */
 DescribeHsmClientCertificatesResponse * RedshiftClient::describeHsmClientCertificates(const DescribeHsmClientCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -943,7 +943,7 @@ DescribeHsmClientCertificatesResponse * RedshiftClient::describeHsmClientCertifi
  */
 DescribeHsmConfigurationsResponse * RedshiftClient::describeHsmConfigurations(const DescribeHsmConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -958,7 +958,7 @@ DescribeHsmConfigurationsResponse * RedshiftClient::describeHsmConfigurations(co
  */
 DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const DescribeLoggingStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -978,7 +978,7 @@ DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const Desc
  */
 DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClusterOptions(const DescribeOrderableClusterOptionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1001,7 +1001,7 @@ DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClust
  */
 DescribeReservedNodeOfferingsResponse * RedshiftClient::describeReservedNodeOfferings(const DescribeReservedNodeOfferingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1015,7 +1015,7 @@ DescribeReservedNodeOfferingsResponse * RedshiftClient::describeReservedNodeOffe
  */
 DescribeReservedNodesResponse * RedshiftClient::describeReservedNodes(const DescribeReservedNodesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1036,7 +1036,7 @@ DescribeReservedNodesResponse * RedshiftClient::describeReservedNodes(const Desc
  */
 DescribeResizeResponse * RedshiftClient::describeResize(const DescribeResizeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1056,7 +1056,7 @@ DescribeResizeResponse * RedshiftClient::describeResize(const DescribeResizeRequ
  */
 DescribeSnapshotCopyGrantsResponse * RedshiftClient::describeSnapshotCopyGrants(const DescribeSnapshotCopyGrantsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1074,7 +1074,7 @@ DescribeSnapshotCopyGrantsResponse * RedshiftClient::describeSnapshotCopyGrants(
  */
 DescribeTableRestoreStatusResponse * RedshiftClient::describeTableRestoreStatus(const DescribeTableRestoreStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1117,7 +1117,7 @@ DescribeTableRestoreStatusResponse * RedshiftClient::describeTableRestoreStatus(
  */
 DescribeTagsResponse * RedshiftClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1131,7 +1131,7 @@ DescribeTagsResponse * RedshiftClient::describeTags(const DescribeTagsRequest &r
  */
 DisableLoggingResponse * RedshiftClient::disableLogging(const DisableLoggingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1151,7 +1151,7 @@ DisableLoggingResponse * RedshiftClient::disableLogging(const DisableLoggingRequ
  */
 DisableSnapshotCopyResponse * RedshiftClient::disableSnapshotCopy(const DisableSnapshotCopyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1165,7 +1165,7 @@ DisableSnapshotCopyResponse * RedshiftClient::disableSnapshotCopy(const DisableS
  */
 EnableLoggingResponse * RedshiftClient::enableLogging(const EnableLoggingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1179,7 +1179,7 @@ EnableLoggingResponse * RedshiftClient::enableLogging(const EnableLoggingRequest
  */
 EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnapshotCopyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1221,7 +1221,7 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
  */
 GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetClusterCredentialsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1245,7 +1245,7 @@ GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetC
  */
 ModifyClusterResponse * RedshiftClient::modifyCluster(const ModifyClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1263,7 +1263,7 @@ ModifyClusterResponse * RedshiftClient::modifyCluster(const ModifyClusterRequest
  */
 ModifyClusterIamRolesResponse * RedshiftClient::modifyClusterIamRoles(const ModifyClusterIamRolesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1283,7 +1283,7 @@ ModifyClusterIamRolesResponse * RedshiftClient::modifyClusterIamRoles(const Modi
  */
 ModifyClusterParameterGroupResponse * RedshiftClient::modifyClusterParameterGroup(const ModifyClusterParameterGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1298,7 +1298,7 @@ ModifyClusterParameterGroupResponse * RedshiftClient::modifyClusterParameterGrou
  */
 ModifyClusterSubnetGroupResponse * RedshiftClient::modifyClusterSubnetGroup(const ModifyClusterSubnetGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1312,7 +1312,7 @@ ModifyClusterSubnetGroupResponse * RedshiftClient::modifyClusterSubnetGroup(cons
  */
 ModifyEventSubscriptionResponse * RedshiftClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1327,7 +1327,7 @@ ModifyEventSubscriptionResponse * RedshiftClient::modifyEventSubscription(const 
  */
 ModifySnapshotCopyRetentionPeriodResponse * RedshiftClient::modifySnapshotCopyRetentionPeriod(const ModifySnapshotCopyRetentionPeriodRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1350,7 +1350,7 @@ ModifySnapshotCopyRetentionPeriodResponse * RedshiftClient::modifySnapshotCopyRe
  */
 PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffering(const PurchaseReservedNodeOfferingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1368,7 +1368,7 @@ PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffer
  */
 RebootClusterResponse * RedshiftClient::rebootCluster(const RebootClusterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1384,7 +1384,7 @@ RebootClusterResponse * RedshiftClient::rebootCluster(const RebootClusterRequest
  */
 ResetClusterParameterGroupResponse * RedshiftClient::resetClusterParameterGroup(const ResetClusterParameterGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1412,7 +1412,7 @@ ResetClusterParameterGroupResponse * RedshiftClient::resetClusterParameterGroup(
  */
 RestoreFromClusterSnapshotResponse * RedshiftClient::restoreFromClusterSnapshot(const RestoreFromClusterSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1437,7 +1437,7 @@ RestoreFromClusterSnapshotResponse * RedshiftClient::restoreFromClusterSnapshot(
  */
 RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromClusterSnapshot(const RestoreTableFromClusterSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1454,7 +1454,7 @@ RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromCluste
  */
 RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurityGroupIngress(const RevokeClusterSecurityGroupIngressRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1475,7 +1475,7 @@ RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurit
  */
 RevokeSnapshotAccessResponse * RedshiftClient::revokeSnapshotAccess(const RevokeSnapshotAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1489,7 +1489,7 @@ RevokeSnapshotAccessResponse * RedshiftClient::revokeSnapshotAccess(const Revoke
  */
 RotateEncryptionKeyResponse * RedshiftClient::rotateEncryptionKey(const RotateEncryptionKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

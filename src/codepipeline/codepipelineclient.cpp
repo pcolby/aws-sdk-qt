@@ -267,7 +267,7 @@ CodePipelineClient::CodePipelineClient(
  */
 AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -281,7 +281,7 @@ AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJob
  */
 AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -295,7 +295,7 @@ AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(
  */
 CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(const CreateCustomActionTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(cons
  */
 CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -328,7 +328,7 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  */
 DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(const DeleteCustomActionTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -342,7 +342,7 @@ DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(cons
  */
 DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -356,7 +356,7 @@ DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipeline
  */
 DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(const DisableStageTransitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -370,7 +370,7 @@ DisableStageTransitionResponse * CodePipelineClient::disableStageTransition(cons
  */
 EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const EnableStageTransitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
  */
 GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -405,7 +405,7 @@ GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsReq
  */
 GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -420,7 +420,7 @@ GetPipelineResponse * CodePipelineClient::getPipeline(const GetPipelineRequest &
  */
 GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const GetPipelineExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -434,7 +434,7 @@ GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const Ge
  */
 GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelineStateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -454,7 +454,7 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
  */
 GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -468,7 +468,7 @@ GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(co
  */
 ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTypesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -482,7 +482,7 @@ ListActionTypesResponse * CodePipelineClient::listActionTypes(const ListActionTy
  */
 ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(const ListPipelineExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ ListPipelineExecutionsResponse * CodePipelineClient::listPipelineExecutions(cons
  */
 ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -516,7 +516,7 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
  */
 PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -535,7 +535,7 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
  */
 PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -549,7 +549,7 @@ PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const 
  */
 PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActionRevisionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -563,7 +563,7 @@ PutActionRevisionResponse * CodePipelineClient::putActionRevision(const PutActio
  */
 PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutApprovalResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -577,7 +577,7 @@ PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutAppro
  */
 PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJobFailureResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -591,7 +591,7 @@ PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJ
  */
 PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJobSuccessResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -605,7 +605,7 @@ PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJ
  */
 PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -619,7 +619,7 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
  */
 PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -633,7 +633,7 @@ PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSucc
  */
 RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const RetryStageExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -648,7 +648,7 @@ RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const Retr
  */
 StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(const StartPipelineExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -664,7 +664,7 @@ StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(cons
  */
 UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

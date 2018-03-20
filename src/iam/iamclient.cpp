@@ -174,7 +174,7 @@ IamClient::IamClient(
  */
 AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConnectProvider(const AddClientIDToOpenIDConnectProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -200,7 +200,7 @@ AddClientIDToOpenIDConnectProviderResponse * IamClient::addClientIDToOpenIDConne
  */
 AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const AddRoleToInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -214,7 +214,7 @@ AddRoleToInstanceProfileResponse * IamClient::addRoleToInstanceProfile(const Add
  */
 AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -238,7 +238,7 @@ AddUserToGroupResponse * IamClient::addUserToGroup(const AddUserToGroupRequest &
  */
 AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -265,7 +265,7 @@ AttachGroupPolicyResponse * IamClient::attachGroupPolicy(const AttachGroupPolicy
  */
 AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -289,7 +289,7 @@ AttachRolePolicyResponse * IamClient::attachRolePolicy(const AttachRolePolicyReq
  */
 AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -309,7 +309,7 @@ AttachUserPolicyResponse * IamClient::attachUserPolicy(const AttachUserPolicyReq
  */
 ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -342,7 +342,7 @@ ChangePasswordResponse * IamClient::changePassword(const ChangePasswordRequest &
  */
 CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -358,7 +358,7 @@ CreateAccessKeyResponse * IamClient::createAccessKey(const CreateAccessKeyReques
  */
 CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -378,7 +378,7 @@ CreateAccountAliasResponse * IamClient::createAccountAlias(const CreateAccountAl
  */
 CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -399,7 +399,7 @@ CreateGroupResponse * IamClient::createGroup(const CreateGroupRequest &request)
  */
 CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -416,7 +416,7 @@ CreateInstanceProfileResponse * IamClient::createInstanceProfile(const CreateIns
  */
 CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -448,7 +448,7 @@ CreateLoginProfileResponse * IamClient::createLoginProfile(const CreateLoginProf
  */
 CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(const CreateOpenIDConnectProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -475,7 +475,7 @@ CreateOpenIDConnectProviderResponse * IamClient::createOpenIDConnectProvider(con
  */
 CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -502,7 +502,7 @@ CreatePolicyResponse * IamClient::createPolicy(const CreatePolicyRequest &reques
  */
 CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -520,7 +520,7 @@ CreatePolicyVersionResponse * IamClient::createPolicyVersion(const CreatePolicyV
  */
 CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -560,7 +560,7 @@ CreateRoleResponse * IamClient::createRole(const CreateRoleRequest &request)
  */
 CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -587,7 +587,7 @@ CreateSAMLProviderResponse * IamClient::createSAMLProvider(const CreateSAMLProvi
  */
 CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const CreateServiceLinkedRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -620,7 +620,7 @@ CreateServiceLinkedRoleResponse * IamClient::createServiceLinkedRole(const Creat
  */
 CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCredential(const CreateServiceSpecificCredentialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -640,7 +640,7 @@ CreateServiceSpecificCredentialResponse * IamClient::createServiceSpecificCreden
  */
 CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -669,7 +669,7 @@ CreateUserResponse * IamClient::createUser(const CreateUserRequest &request)
  */
 CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateVirtualMFADeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -689,7 +689,7 @@ CreateVirtualMFADeviceResponse * IamClient::createVirtualMFADevice(const CreateV
  */
 DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFADeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -709,7 +709,7 @@ DeactivateMFADeviceResponse * IamClient::deactivateMFADevice(const DeactivateMFA
  */
 DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -725,7 +725,7 @@ DeleteAccessKeyResponse * IamClient::deleteAccessKey(const DeleteAccessKeyReques
  */
 DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -739,7 +739,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
  */
 DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -753,7 +753,7 @@ DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
  */
 DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -774,7 +774,7 @@ DeleteGroupResponse * IamClient::deleteGroup(const DeleteGroupRequest &request)
  */
 DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -798,7 +798,7 @@ DeleteGroupPolicyResponse * IamClient::deleteGroupPolicy(const DeleteGroupPolicy
  */
 DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -819,7 +819,7 @@ DeleteInstanceProfileResponse * IamClient::deleteInstanceProfile(const DeleteIns
  */
 DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -842,7 +842,7 @@ DeleteLoginProfileResponse * IamClient::deleteLoginProfile(const DeleteLoginProf
  */
 DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(const DeleteOpenIDConnectProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -884,7 +884,7 @@ DeleteOpenIDConnectProviderResponse * IamClient::deleteOpenIDConnectProvider(con
  */
 DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -909,7 +909,7 @@ DeletePolicyResponse * IamClient::deletePolicy(const DeletePolicyRequest &reques
  */
 DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -929,7 +929,7 @@ DeletePolicyVersionResponse * IamClient::deletePolicyVersion(const DeletePolicyV
  */
 DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -950,7 +950,7 @@ DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
  */
 DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -974,7 +974,7 @@ DeleteRolePolicyResponse * IamClient::deleteRolePolicy(const DeleteRolePolicyReq
  */
 DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -995,7 +995,7 @@ DeleteSAMLProviderResponse * IamClient::deleteSAMLProvider(const DeleteSAMLProvi
  */
 DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublicKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1026,7 +1026,7 @@ DeleteSSHPublicKeyResponse * IamClient::deleteSSHPublicKey(const DeleteSSHPublic
  */
 DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const DeleteServerCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1059,7 +1059,7 @@ DeleteServerCertificateResponse * IamClient::deleteServerCertificate(const Delet
  */
 DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1073,7 +1073,7 @@ DeleteServiceLinkedRoleResponse * IamClient::deleteServiceLinkedRole(const Delet
  */
 DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCredential(const DeleteServiceSpecificCredentialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1093,7 +1093,7 @@ DeleteServiceSpecificCredentialResponse * IamClient::deleteServiceSpecificCreden
  */
 DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const DeleteSigningCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1108,7 +1108,7 @@ DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const Del
  */
 DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1129,7 +1129,7 @@ DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
  */
 DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1148,7 +1148,7 @@ DeleteUserPolicyResponse * IamClient::deleteUserPolicy(const DeleteUserPolicyReq
  */
 DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteVirtualMFADeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1169,7 +1169,7 @@ DeleteVirtualMFADeviceResponse * IamClient::deleteVirtualMFADevice(const DeleteV
  */
 DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1190,7 +1190,7 @@ DetachGroupPolicyResponse * IamClient::detachGroupPolicy(const DetachGroupPolicy
  */
 DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1211,7 +1211,7 @@ DetachRolePolicyResponse * IamClient::detachRolePolicy(const DetachRolePolicyReq
  */
 DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1226,7 +1226,7 @@ DetachUserPolicyResponse * IamClient::detachUserPolicy(const DetachUserPolicyReq
  */
 EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1242,7 +1242,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
  */
 GenerateCredentialReportResponse * IamClient::generateCredentialReport()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1257,7 +1257,7 @@ GenerateCredentialReportResponse * IamClient::generateCredentialReport()
  */
 GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKeyLastUsedRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1278,7 +1278,7 @@ GetAccessKeyLastUsedResponse * IamClient::getAccessKeyLastUsed(const GetAccessKe
  */
 GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetails(const GetAccountAuthorizationDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1293,7 +1293,7 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
  */
 GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1313,7 +1313,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
  */
 GetAccountSummaryResponse * IamClient::getAccountSummary()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1335,7 +1335,7 @@ GetAccountSummaryResponse * IamClient::getAccountSummary()
  */
 GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy(const GetContextKeysForCustomPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1367,7 +1367,7 @@ GetContextKeysForCustomPolicyResponse * IamClient::getContextKeysForCustomPolicy
  */
 GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipalPolicy(const GetContextKeysForPrincipalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1383,7 +1383,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
  */
 GetCredentialReportResponse * IamClient::getCredentialReport()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1398,7 +1398,7 @@ GetCredentialReportResponse * IamClient::getCredentialReport()
  */
 GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1431,7 +1431,7 @@ GetGroupResponse * IamClient::getGroup(const GetGroupRequest &request)
  */
 GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1448,7 +1448,7 @@ GetGroupPolicyResponse * IamClient::getGroupPolicy(const GetGroupPolicyRequest &
  */
 GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1463,7 +1463,7 @@ GetInstanceProfileResponse * IamClient::getInstanceProfile(const GetInstanceProf
  */
 GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1477,7 +1477,7 @@ GetLoginProfileResponse * IamClient::getLoginProfile(const GetLoginProfileReques
  */
 GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const GetOpenIDConnectProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1505,7 +1505,7 @@ GetOpenIDConnectProviderResponse * IamClient::getOpenIDConnectProvider(const Get
  */
 GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1547,7 +1547,7 @@ GetPolicyResponse * IamClient::getPolicy(const GetPolicyRequest &request)
  */
 GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1570,7 +1570,7 @@ GetPolicyVersionResponse * IamClient::getPolicyVersion(const GetPolicyVersionReq
  */
 GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1609,7 +1609,7 @@ GetRoleResponse * IamClient::getRole(const GetRoleRequest &request)
  */
 GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1628,7 +1628,7 @@ GetRolePolicyResponse * IamClient::getRolePolicy(const GetRolePolicyRequest &req
  */
 GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1649,7 +1649,7 @@ GetSAMLProviderResponse * IamClient::getSAMLProvider(const GetSAMLProviderReques
  */
 GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1670,7 +1670,7 @@ GetSSHPublicKeyResponse * IamClient::getSSHPublicKey(const GetSSHPublicKeyReques
  */
 GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1687,7 +1687,7 @@ GetServerCertificateResponse * IamClient::getServerCertificate(const GetServerCe
  */
 GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDeletionStatus(const GetServiceLinkedRoleDeletionStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1706,7 +1706,7 @@ GetServiceLinkedRoleDeletionStatusResponse * IamClient::getServiceLinkedRoleDele
  */
 GetUserResponse * IamClient::getUser(const GetUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1739,7 +1739,7 @@ GetUserResponse * IamClient::getUser(const GetUserRequest &request)
  */
 GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1769,7 +1769,7 @@ GetUserPolicyResponse * IamClient::getUserPolicy(const GetUserPolicyRequest &req
  */
 ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1785,7 +1785,7 @@ ListAccessKeysResponse * IamClient::listAccessKeys(const ListAccessKeysRequest &
  */
 ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1813,7 +1813,7 @@ ListAccountAliasesResponse * IamClient::listAccountAliases(const ListAccountAlia
  */
 ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const ListAttachedGroupPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1841,7 +1841,7 @@ ListAttachedGroupPoliciesResponse * IamClient::listAttachedGroupPolicies(const L
  */
 ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const ListAttachedRolePoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1869,7 +1869,7 @@ ListAttachedRolePoliciesResponse * IamClient::listAttachedRolePolicies(const Lis
  */
 ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const ListAttachedUserPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1893,7 +1893,7 @@ ListAttachedUserPoliciesResponse * IamClient::listAttachedUserPolicies(const Lis
  */
 ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntitiesForPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1919,7 +1919,7 @@ ListEntitiesForPolicyResponse * IamClient::listEntitiesForPolicy(const ListEntit
  */
 ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1937,7 +1937,7 @@ ListGroupPoliciesResponse * IamClient::listGroupPolicies(const ListGroupPolicies
  */
 ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1955,7 +1955,7 @@ ListGroupsResponse * IamClient::listGroups(const ListGroupsRequest &request)
  */
 ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1975,7 +1975,7 @@ ListGroupsForUserResponse * IamClient::listGroupsForUser(const ListGroupsForUser
  */
 ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanceProfilesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1995,7 +1995,7 @@ ListInstanceProfilesResponse * IamClient::listInstanceProfiles(const ListInstanc
  */
 ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(const ListInstanceProfilesForRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2015,7 +2015,7 @@ ListInstanceProfilesForRoleResponse * IamClient::listInstanceProfilesForRole(con
  */
 ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2029,7 +2029,7 @@ ListMFADevicesResponse * IamClient::listMFADevices(const ListMFADevicesRequest &
  */
 ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const ListOpenIDConnectProvidersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2060,7 +2060,7 @@ ListOpenIDConnectProvidersResponse * IamClient::listOpenIDConnectProviders(const
  */
 ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2081,7 +2081,7 @@ ListPoliciesResponse * IamClient::listPolicies(const ListPoliciesRequest &reques
  */
 ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2107,7 +2107,7 @@ ListPolicyVersionsResponse * IamClient::listPolicyVersions(const ListPolicyVersi
  */
 ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2127,7 +2127,7 @@ ListRolePoliciesResponse * IamClient::listRolePolicies(const ListRolePoliciesReq
  */
 ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2146,7 +2146,7 @@ ListRolesResponse * IamClient::listRoles(const ListRolesRequest &request)
  */
 ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProvidersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2173,7 +2173,7 @@ ListSAMLProvidersResponse * IamClient::listSAMLProviders(const ListSAMLProviders
  */
 ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2199,7 +2199,7 @@ ListSSHPublicKeysResponse * IamClient::listSSHPublicKeys(const ListSSHPublicKeys
  */
 ListServerCertificatesResponse * IamClient::listServerCertificates(const ListServerCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2218,7 +2218,7 @@ ListServerCertificatesResponse * IamClient::listServerCertificates(const ListSer
  */
 ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentials(const ListServiceSpecificCredentialsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2244,7 +2244,7 @@ ListServiceSpecificCredentialsResponse * IamClient::listServiceSpecificCredentia
  */
 ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListSigningCertificatesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2270,7 +2270,7 @@ ListSigningCertificatesResponse * IamClient::listSigningCertificates(const ListS
  */
 ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2289,7 +2289,7 @@ ListUserPoliciesResponse * IamClient::listUserPolicies(const ListUserPoliciesReq
  */
 ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2309,7 +2309,7 @@ ListUsersResponse * IamClient::listUsers(const ListUsersRequest &request)
  */
 ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtualMFADevicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2343,7 +2343,7 @@ ListVirtualMFADevicesResponse * IamClient::listVirtualMFADevices(const ListVirtu
  */
 PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2385,7 +2385,7 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
  */
 PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2419,7 +2419,7 @@ PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &req
  */
 PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2438,7 +2438,7 @@ PutUserPolicyResponse * IamClient::putUserPolicy(const PutUserPolicyRequest &req
  */
 RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromOpenIDConnectProvider(const RemoveClientIDFromOpenIDConnectProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2465,7 +2465,7 @@ RemoveClientIDFromOpenIDConnectProviderResponse * IamClient::removeClientIDFromO
  */
 RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile(const RemoveRoleFromInstanceProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2479,7 +2479,7 @@ RemoveRoleFromInstanceProfileResponse * IamClient::removeRoleFromInstanceProfile
  */
 RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFromGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2495,7 +2495,7 @@ RemoveUserFromGroupResponse * IamClient::removeUserFromGroup(const RemoveUserFro
  */
 ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredential(const ResetServiceSpecificCredentialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2515,7 +2515,7 @@ ResetServiceSpecificCredentialResponse * IamClient::resetServiceSpecificCredenti
  */
 ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2540,7 +2540,7 @@ ResyncMFADeviceResponse * IamClient::resyncMFADevice(const ResyncMFADeviceReques
  */
 SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2574,7 +2574,7 @@ SetDefaultPolicyVersionResponse * IamClient::setDefaultPolicyVersion(const SetDe
  */
 SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCustomPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2619,7 +2619,7 @@ SimulateCustomPolicyResponse * IamClient::simulateCustomPolicy(const SimulateCus
  */
 SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const SimulatePrincipalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2646,7 +2646,7 @@ SimulatePrincipalPolicyResponse * IamClient::simulatePrincipalPolicy(const Simul
  */
 UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2671,7 +2671,7 @@ UpdateAccessKeyResponse * IamClient::updateAccessKey(const UpdateAccessKeyReques
  */
 UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(const UpdateAccountPasswordPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2688,7 +2688,7 @@ UpdateAccountPasswordPolicyResponse * IamClient::updateAccountPasswordPolicy(con
  */
 UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateAssumeRolePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2715,7 +2715,7 @@ UpdateAssumeRolePolicyResponse * IamClient::updateAssumeRolePolicy(const UpdateA
  */
 UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2735,7 +2735,7 @@ UpdateGroupResponse * IamClient::updateGroup(const UpdateGroupRequest &request)
  */
 UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProfileRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2766,7 +2766,7 @@ UpdateLoginProfileResponse * IamClient::updateLoginProfile(const UpdateLoginProf
  */
 UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectProviderThumbprint(const UpdateOpenIDConnectProviderThumbprintRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2780,7 +2780,7 @@ UpdateOpenIDConnectProviderThumbprintResponse * IamClient::updateOpenIDConnectPr
  */
 UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRoleDescriptionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2799,7 +2799,7 @@ UpdateRoleDescriptionResponse * IamClient::updateRoleDescription(const UpdateRol
  */
 UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2821,7 +2821,7 @@ UpdateSAMLProviderResponse * IamClient::updateSAMLProvider(const UpdateSAMLProvi
  */
 UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublicKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2856,7 +2856,7 @@ UpdateSSHPublicKeyResponse * IamClient::updateSSHPublicKey(const UpdateSSHPublic
  */
 UpdateServerCertificateResponse * IamClient::updateServerCertificate(const UpdateServerCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2872,7 +2872,7 @@ UpdateServerCertificateResponse * IamClient::updateServerCertificate(const Updat
  */
 UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCredential(const UpdateServiceSpecificCredentialRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2893,7 +2893,7 @@ UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCreden
  */
 UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const UpdateSigningCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2921,7 +2921,7 @@ UpdateSigningCertificateResponse * IamClient::updateSigningCertificate(const Upd
  */
 UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2942,7 +2942,7 @@ UpdateUserResponse * IamClient::updateUser(const UpdateUserRequest &request)
  */
 UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublicKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2987,7 +2987,7 @@ UploadSSHPublicKeyResponse * IamClient::uploadSSHPublicKey(const UploadSSHPublic
  */
 UploadServerCertificateResponse * IamClient::uploadServerCertificate(const UploadServerCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3018,7 +3018,7 @@ UploadServerCertificateResponse * IamClient::uploadServerCertificate(const Uploa
  */
 UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const UploadSigningCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

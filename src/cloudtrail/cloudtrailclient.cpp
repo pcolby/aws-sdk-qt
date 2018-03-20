@@ -130,7 +130,7 @@ CloudTrailClient::CloudTrailClient(
  */
 AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -145,7 +145,7 @@ AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
  */
 CreateTrailResponse * CloudTrailClient::createTrail(const CreateTrailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -160,7 +160,7 @@ CreateTrailResponse * CloudTrailClient::createTrail(const CreateTrailRequest &re
  */
 DeleteTrailResponse * CloudTrailClient::deleteTrail(const DeleteTrailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ DeleteTrailResponse * CloudTrailClient::deleteTrail(const DeleteTrailRequest &re
  */
 DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -207,7 +207,7 @@ DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRe
  */
 GetEventSelectorsResponse * CloudTrailClient::getEventSelectors(const GetEventSelectorsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -223,7 +223,7 @@ GetEventSelectorsResponse * CloudTrailClient::getEventSelectors(const GetEventSe
  */
 GetTrailStatusResponse * CloudTrailClient::getTrailStatus(const GetTrailStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -244,7 +244,7 @@ GetTrailStatusResponse * CloudTrailClient::getTrailStatus(const GetTrailStatusRe
  */
 ListPublicKeysResponse * CloudTrailClient::listPublicKeys(const ListPublicKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -258,7 +258,7 @@ ListPublicKeysResponse * CloudTrailClient::listPublicKeys(const ListPublicKeysRe
  */
 ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -312,7 +312,7 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
  */
 LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -363,7 +363,7 @@ LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest 
  */
 PutEventSelectorsResponse * CloudTrailClient::putEventSelectors(const PutEventSelectorsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ PutEventSelectorsResponse * CloudTrailClient::putEventSelectors(const PutEventSe
  */
 RemoveTagsResponse * CloudTrailClient::removeTags(const RemoveTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -393,7 +393,7 @@ RemoveTagsResponse * CloudTrailClient::removeTags(const RemoveTagsRequest &reque
  */
 StartLoggingResponse * CloudTrailClient::startLogging(const StartLoggingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -411,7 +411,7 @@ StartLoggingResponse * CloudTrailClient::startLogging(const StartLoggingRequest 
  */
 StopLoggingResponse * CloudTrailClient::stopLogging(const StopLoggingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -428,7 +428,7 @@ StopLoggingResponse * CloudTrailClient::stopLogging(const StopLoggingRequest &re
  */
 UpdateTrailResponse * CloudTrailClient::updateTrail(const UpdateTrailRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

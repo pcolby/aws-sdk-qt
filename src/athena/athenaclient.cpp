@@ -120,7 +120,7 @@ AthenaClient::AthenaClient(
  */
 BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetNamedQueryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -136,7 +136,7 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
  */
 BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const BatchGetQueryExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -156,7 +156,7 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
  */
 CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQueryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -176,7 +176,7 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
  */
 DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQueryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -190,7 +190,7 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
  */
 GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -205,7 +205,7 @@ GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &
  */
 GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -220,7 +220,7 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
  */
 GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -240,7 +240,7 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
  */
 ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -260,7 +260,7 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
  */
 ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryExecutionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -280,7 +280,7 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
  */
 StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQueryExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -300,7 +300,7 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
  */
 StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExecutionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

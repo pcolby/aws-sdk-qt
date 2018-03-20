@@ -149,7 +149,7 @@ CloudWatchLogsClient::CloudWatchLogsClient(
  */
 AssociateKmsKeyResponse * CloudWatchLogsClient::associateKmsKey(const AssociateKmsKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -167,7 +167,7 @@ AssociateKmsKeyResponse * CloudWatchLogsClient::associateKmsKey(const AssociateK
  */
 CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelExportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -193,7 +193,7 @@ CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelEx
  */
 CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateExportTaskRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -239,7 +239,7 @@ CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateEx
  */
 CreateLogGroupResponse * CloudWatchLogsClient::createLogGroup(const CreateLogGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -273,7 +273,7 @@ CreateLogGroupResponse * CloudWatchLogsClient::createLogGroup(const CreateLogGro
  */
 CreateLogStreamResponse * CloudWatchLogsClient::createLogStream(const CreateLogStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -288,7 +288,7 @@ CreateLogStreamResponse * CloudWatchLogsClient::createLogStream(const CreateLogS
  */
 DeleteDestinationResponse * CloudWatchLogsClient::deleteDestination(const DeleteDestinationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -302,7 +302,7 @@ DeleteDestinationResponse * CloudWatchLogsClient::deleteDestination(const Delete
  */
 DeleteLogGroupResponse * CloudWatchLogsClient::deleteLogGroup(const DeleteLogGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -316,7 +316,7 @@ DeleteLogGroupResponse * CloudWatchLogsClient::deleteLogGroup(const DeleteLogGro
  */
 DeleteLogStreamResponse * CloudWatchLogsClient::deleteLogStream(const DeleteLogStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -330,7 +330,7 @@ DeleteLogStreamResponse * CloudWatchLogsClient::deleteLogStream(const DeleteLogS
  */
 DeleteMetricFilterResponse * CloudWatchLogsClient::deleteMetricFilter(const DeleteMetricFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -345,7 +345,7 @@ DeleteMetricFilterResponse * CloudWatchLogsClient::deleteMetricFilter(const Dele
  */
 DeleteResourcePolicyResponse * CloudWatchLogsClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -363,7 +363,7 @@ DeleteResourcePolicyResponse * CloudWatchLogsClient::deleteResourcePolicy(const 
  */
 DeleteRetentionPolicyResponse * CloudWatchLogsClient::deleteRetentionPolicy(const DeleteRetentionPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ DeleteRetentionPolicyResponse * CloudWatchLogsClient::deleteRetentionPolicy(cons
  */
 DeleteSubscriptionFilterResponse * CloudWatchLogsClient::deleteSubscriptionFilter(const DeleteSubscriptionFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -391,7 +391,7 @@ DeleteSubscriptionFilterResponse * CloudWatchLogsClient::deleteSubscriptionFilte
  */
 DescribeDestinationsResponse * CloudWatchLogsClient::describeDestinations(const DescribeDestinationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -405,7 +405,7 @@ DescribeDestinationsResponse * CloudWatchLogsClient::describeDestinations(const 
  */
 DescribeExportTasksResponse * CloudWatchLogsClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -420,7 +420,7 @@ DescribeExportTasksResponse * CloudWatchLogsClient::describeExportTasks(const De
  */
 DescribeLogGroupsResponse * CloudWatchLogsClient::describeLogGroups(const DescribeLogGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -439,7 +439,7 @@ DescribeLogGroupsResponse * CloudWatchLogsClient::describeLogGroups(const Descri
  */
 DescribeLogStreamsResponse * CloudWatchLogsClient::describeLogStreams(const DescribeLogStreamsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -454,7 +454,7 @@ DescribeLogStreamsResponse * CloudWatchLogsClient::describeLogStreams(const Desc
  */
 DescribeMetricFiltersResponse * CloudWatchLogsClient::describeMetricFilters(const DescribeMetricFiltersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -468,7 +468,7 @@ DescribeMetricFiltersResponse * CloudWatchLogsClient::describeMetricFilters(cons
  */
 DescribeResourcePoliciesResponse * CloudWatchLogsClient::describeResourcePolicies(const DescribeResourcePoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -483,7 +483,7 @@ DescribeResourcePoliciesResponse * CloudWatchLogsClient::describeResourcePolicie
  */
 DescribeSubscriptionFiltersResponse * CloudWatchLogsClient::describeSubscriptionFilters(const DescribeSubscriptionFiltersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -507,7 +507,7 @@ DescribeSubscriptionFiltersResponse * CloudWatchLogsClient::describeSubscription
  */
 DisassociateKmsKeyResponse * CloudWatchLogsClient::disassociateKmsKey(const DisassociateKmsKeyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ DisassociateKmsKeyResponse * CloudWatchLogsClient::disassociateKmsKey(const Disa
  */
 FilterLogEventsResponse * CloudWatchLogsClient::filterLogEvents(const FilterLogEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -547,7 +547,7 @@ FilterLogEventsResponse * CloudWatchLogsClient::filterLogEvents(const FilterLogE
  */
 GetLogEventsResponse * CloudWatchLogsClient::getLogEvents(const GetLogEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -561,7 +561,7 @@ GetLogEventsResponse * CloudWatchLogsClient::getLogEvents(const GetLogEventsRequ
  */
 ListTagsLogGroupResponse * CloudWatchLogsClient::listTagsLogGroup(const ListTagsLogGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -585,7 +585,7 @@ ListTagsLogGroupResponse * CloudWatchLogsClient::listTagsLogGroup(const ListTags
  */
 PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -601,7 +601,7 @@ PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinati
  */
 PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const PutDestinationPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -652,7 +652,7 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
  */
 PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -671,7 +671,7 @@ PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequ
  */
 PutMetricFilterResponse * CloudWatchLogsClient::putMetricFilter(const PutMetricFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -686,7 +686,7 @@ PutMetricFilterResponse * CloudWatchLogsClient::putMetricFilter(const PutMetricF
  */
 PutResourcePolicyResponse * CloudWatchLogsClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -701,7 +701,7 @@ PutResourcePolicyResponse * CloudWatchLogsClient::putResourcePolicy(const PutRes
  */
 PutRetentionPolicyResponse * CloudWatchLogsClient::putRetentionPolicy(const PutRetentionPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -739,7 +739,7 @@ PutRetentionPolicyResponse * CloudWatchLogsClient::putRetentionPolicy(const PutR
  */
 PutSubscriptionFilterResponse * CloudWatchLogsClient::putSubscriptionFilter(const PutSubscriptionFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -763,7 +763,7 @@ PutSubscriptionFilterResponse * CloudWatchLogsClient::putSubscriptionFilter(cons
  */
 TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -778,7 +778,7 @@ TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest
  */
 TestMetricFilterResponse * CloudWatchLogsClient::testMetricFilter(const TestMetricFilterRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -796,7 +796,7 @@ TestMetricFilterResponse * CloudWatchLogsClient::testMetricFilter(const TestMetr
  */
 UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

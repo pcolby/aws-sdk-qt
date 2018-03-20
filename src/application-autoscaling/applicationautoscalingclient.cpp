@@ -186,7 +186,7 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
  */
 DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -200,7 +200,7 @@ DeleteScalingPolicyResponse * ApplicationAutoScalingClient::deleteScalingPolicy(
  */
 DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -222,7 +222,7 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
  */
 DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScalableTarget(const DeregisterScalableTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -245,7 +245,7 @@ DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScala
  */
 DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalableTargets(const DescribeScalableTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -269,7 +269,7 @@ DescribeScalableTargetsResponse * ApplicationAutoScalingClient::describeScalable
  */
 DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -293,7 +293,7 @@ DescribeScalingActivitiesResponse * ApplicationAutoScalingClient::describeScalin
  */
 DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -317,7 +317,7 @@ DescribeScalingPoliciesResponse * ApplicationAutoScalingClient::describeScalingP
  */
 DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -347,7 +347,7 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  */
 PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  */
 PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(const PutScheduledActionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -399,7 +399,7 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
  */
 RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableTarget(const RegisterScalableTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

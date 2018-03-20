@@ -107,7 +107,7 @@ GlueClient::GlueClient(
  */
 BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreatePartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -121,7 +121,7 @@ BatchCreatePartitionResponse * GlueClient::batchCreatePartition(const BatchCreat
  */
 BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDeleteConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -135,7 +135,7 @@ BatchDeleteConnectionResponse * GlueClient::batchDeleteConnection(const BatchDel
  */
 BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDeletePartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -149,7 +149,7 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
  */
 BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -163,7 +163,7 @@ BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRe
  */
 BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const BatchDeleteTableVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -177,7 +177,7 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
  */
 BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -191,7 +191,7 @@ BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitio
  */
 BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -206,7 +206,7 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
  */
 CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -220,7 +220,7 @@ CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRe
  */
 CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -235,7 +235,7 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
  */
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -249,7 +249,7 @@ CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &re
  */
 CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -263,7 +263,7 @@ CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest 
  */
 CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -277,7 +277,7 @@ CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpoin
  */
 CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -291,7 +291,7 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
  */
 CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionReque
  */
 CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -319,7 +319,7 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
  */
 CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -333,7 +333,7 @@ CreateTableResponse * GlueClient::createTable(const CreateTableRequest &request)
  */
 CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -347,7 +347,7 @@ CreateTriggerResponse * GlueClient::createTrigger(const CreateTriggerRequest &re
  */
 CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const CreateUserDefinedFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -361,7 +361,7 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
  */
 DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -375,7 +375,7 @@ DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRe
  */
 DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -389,7 +389,7 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
  */
 DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -403,7 +403,7 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
  */
 DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -417,7 +417,7 @@ DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest 
  */
 DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -431,7 +431,7 @@ DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpoin
  */
 DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -445,7 +445,7 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
  */
 DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -459,7 +459,7 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
  */
 DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -473,7 +473,7 @@ DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
  */
 DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -487,7 +487,7 @@ DeleteTableVersionResponse * GlueClient::deleteTableVersion(const DeleteTableVer
  */
 DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -501,7 +501,7 @@ DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &re
  */
 DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const DeleteUserDefinedFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -515,7 +515,7 @@ DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const 
  */
 GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCatalogImportStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -529,7 +529,7 @@ GetCatalogImportStatusResponse * GlueClient::getCatalogImportStatus(const GetCat
  */
 GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -543,7 +543,7 @@ GetClassifierResponse * GlueClient::getClassifier(const GetClassifierRequest &re
  */
 GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -557,7 +557,7 @@ GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest 
  */
 GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -571,7 +571,7 @@ GetConnectionResponse * GlueClient::getConnection(const GetConnectionRequest &re
  */
 GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -585,7 +585,7 @@ GetConnectionsResponse * GlueClient::getConnections(const GetConnectionsRequest 
  */
 GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -599,7 +599,7 @@ GetCrawlerResponse * GlueClient::getCrawler(const GetCrawlerRequest &request)
  */
 GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetricsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -613,7 +613,7 @@ GetCrawlerMetricsResponse * GlueClient::getCrawlerMetrics(const GetCrawlerMetric
  */
 GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -627,7 +627,7 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
  */
 GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -641,7 +641,7 @@ GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
  */
 GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -655,7 +655,7 @@ GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &reque
  */
 GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -669,7 +669,7 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
  */
 GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -683,7 +683,7 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
  */
 GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -697,7 +697,7 @@ GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsReque
  */
 GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -711,7 +711,7 @@ GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
  */
 GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -725,7 +725,7 @@ GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
  */
 GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -739,7 +739,7 @@ GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
  */
 GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -753,7 +753,7 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
  */
 GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -767,7 +767,7 @@ GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
  */
 GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -781,7 +781,7 @@ GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &reque
  */
 GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -795,7 +795,7 @@ GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &re
  */
 GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -809,7 +809,7 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
  */
 GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -823,7 +823,7 @@ GetTableResponse * GlueClient::getTable(const GetTableRequest &request)
  */
 GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -837,7 +837,7 @@ GetTableVersionResponse * GlueClient::getTableVersion(const GetTableVersionReque
  */
 GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -851,7 +851,7 @@ GetTableVersionsResponse * GlueClient::getTableVersions(const GetTableVersionsRe
  */
 GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -865,7 +865,7 @@ GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
  */
 GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -879,7 +879,7 @@ GetTriggerResponse * GlueClient::getTrigger(const GetTriggerRequest &request)
  */
 GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -893,7 +893,7 @@ GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
  */
 GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUserDefinedFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -907,7 +907,7 @@ GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUse
  */
 GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetUserDefinedFunctionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -921,7 +921,7 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
  */
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -935,7 +935,7 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
  */
 ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -949,7 +949,7 @@ ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRe
  */
 StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -964,7 +964,7 @@ StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &reque
  */
 StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawlerScheduleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -978,7 +978,7 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
  */
 StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -993,7 +993,7 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
  */
 StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1007,7 +1007,7 @@ StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &reque
  */
 StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1022,7 +1022,7 @@ StopCrawlerResponse * GlueClient::stopCrawler(const StopCrawlerRequest &request)
  */
 StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerScheduleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1036,7 +1036,7 @@ StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerS
  */
 StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1051,7 +1051,7 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
  */
 UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1065,7 +1065,7 @@ UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRe
  */
 UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1079,7 +1079,7 @@ UpdateConnectionResponse * GlueClient::updateConnection(const UpdateConnectionRe
  */
 UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1093,7 +1093,7 @@ UpdateCrawlerResponse * GlueClient::updateCrawler(const UpdateCrawlerRequest &re
  */
 UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCrawlerScheduleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1107,7 +1107,7 @@ UpdateCrawlerScheduleResponse * GlueClient::updateCrawlerSchedule(const UpdateCr
  */
 UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1121,7 +1121,7 @@ UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest 
  */
 UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1135,7 +1135,7 @@ UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpoin
  */
 UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1149,7 +1149,7 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
  */
 UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1163,7 +1163,7 @@ UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionReque
  */
 UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1177,7 +1177,7 @@ UpdateTableResponse * GlueClient::updateTable(const UpdateTableRequest &request)
  */
 UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1191,7 +1191,7 @@ UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &re
  */
 UpdateUserDefinedFunctionResponse * GlueClient::updateUserDefinedFunction(const UpdateUserDefinedFunctionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

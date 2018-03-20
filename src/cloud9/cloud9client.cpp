@@ -159,7 +159,7 @@ Cloud9Client::Cloud9Client(
  */
 CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEnvironmentEC2Request &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -173,7 +173,7 @@ CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEn
  */
 CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(const CreateEnvironmentMembershipRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -188,7 +188,7 @@ CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(
  */
 DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -202,7 +202,7 @@ DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironm
  */
 DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(const DeleteEnvironmentMembershipRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -216,7 +216,7 @@ DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(
  */
 DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMemberships(const DescribeEnvironmentMembershipsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -230,7 +230,7 @@ DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMember
  */
 DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -244,7 +244,7 @@ DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(cons
  */
 DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -258,7 +258,7 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
  */
 ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -272,7 +272,7 @@ ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironments
  */
 UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -286,7 +286,7 @@ UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironm
  */
 UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

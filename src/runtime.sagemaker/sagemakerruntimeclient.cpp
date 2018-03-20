@@ -116,7 +116,7 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  */
 InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndpointRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

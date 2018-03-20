@@ -145,7 +145,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  */
 DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStreamRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -168,7 +168,7 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
  */
 GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -183,7 +183,7 @@ GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &
  */
 GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -198,7 +198,7 @@ GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShar
  */
 ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

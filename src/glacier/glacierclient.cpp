@@ -168,7 +168,7 @@ GlacierClient::GlacierClient(
  */
 AbortMultipartUploadResponse * GlacierClient::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -200,7 +200,7 @@ AbortMultipartUploadResponse * GlacierClient::abortMultipartUpload(const AbortMu
  */
 AbortVaultLockResponse * GlacierClient::abortVaultLock(const AbortVaultLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -218,7 +218,7 @@ AbortVaultLockResponse * GlacierClient::abortVaultLock(const AbortVaultLockReque
  */
 AddTagsToVaultResponse * GlacierClient::addTagsToVault(const AddTagsToVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -276,7 +276,7 @@ AddTagsToVaultResponse * GlacierClient::addTagsToVault(const AddTagsToVaultReque
  */
 CompleteMultipartUploadResponse * GlacierClient::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ CompleteMultipartUploadResponse * GlacierClient::completeMultipartUpload(const C
  */
 CompleteVaultLockResponse * GlacierClient::completeVaultLock(const CompleteVaultLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -351,7 +351,7 @@ CompleteVaultLockResponse * GlacierClient::completeVaultLock(const CompleteVault
  */
 CreateVaultResponse * GlacierClient::createVault(const CreateVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -395,7 +395,7 @@ CreateVaultResponse * GlacierClient::createVault(const CreateVaultRequest &reque
  */
 DeleteArchiveResponse * GlacierClient::deleteArchive(const DeleteArchiveRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -434,7 +434,7 @@ DeleteArchiveResponse * GlacierClient::deleteArchive(const DeleteArchiveRequest 
  */
 DeleteVaultResponse * GlacierClient::deleteVault(const DeleteVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -457,7 +457,7 @@ DeleteVaultResponse * GlacierClient::deleteVault(const DeleteVaultRequest &reque
  */
 DeleteVaultAccessPolicyResponse * GlacierClient::deleteVaultAccessPolicy(const DeleteVaultAccessPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -488,7 +488,7 @@ DeleteVaultAccessPolicyResponse * GlacierClient::deleteVaultAccessPolicy(const D
  */
 DeleteVaultNotificationsResponse * GlacierClient::deleteVaultNotifications(const DeleteVaultNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -528,7 +528,7 @@ DeleteVaultNotificationsResponse * GlacierClient::deleteVaultNotifications(const
  */
 DescribeJobResponse * GlacierClient::describeJob(const DescribeJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -564,7 +564,7 @@ DescribeJobResponse * GlacierClient::describeJob(const DescribeJobRequest &reque
  */
 DescribeVaultResponse * GlacierClient::describeVault(const DescribeVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -580,7 +580,7 @@ DescribeVaultResponse * GlacierClient::describeVault(const DescribeVaultRequest 
  */
 GetDataRetrievalPolicyResponse * GlacierClient::getDataRetrievalPolicy(const GetDataRetrievalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -642,7 +642,7 @@ GetDataRetrievalPolicyResponse * GlacierClient::getDataRetrievalPolicy(const Get
  */
 GetJobOutputResponse * GlacierClient::getJobOutput(const GetJobOutputRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -661,7 +661,7 @@ GetJobOutputResponse * GlacierClient::getJobOutput(const GetJobOutputRequest &re
  */
 GetVaultAccessPolicyResponse * GlacierClient::getVaultAccessPolicy(const GetVaultAccessPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -706,7 +706,7 @@ GetVaultAccessPolicyResponse * GlacierClient::getVaultAccessPolicy(const GetVaul
  */
 GetVaultLockResponse * GlacierClient::getVaultLock(const GetVaultLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -744,7 +744,7 @@ GetVaultLockResponse * GlacierClient::getVaultLock(const GetVaultLockRequest &re
  */
 GetVaultNotificationsResponse * GlacierClient::getVaultNotifications(const GetVaultNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -760,7 +760,7 @@ GetVaultNotificationsResponse * GlacierClient::getVaultNotifications(const GetVa
  */
 InitiateJobResponse * GlacierClient::initiateJob(const InitiateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -814,7 +814,7 @@ InitiateJobResponse * GlacierClient::initiateJob(const InitiateJobRequest &reque
  */
 InitiateMultipartUploadResponse * GlacierClient::initiateMultipartUpload(const InitiateMultipartUploadRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -869,7 +869,7 @@ InitiateMultipartUploadResponse * GlacierClient::initiateMultipartUpload(const I
  */
 InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVaultLockRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -920,7 +920,7 @@ InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVault
  */
 ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -966,7 +966,7 @@ ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
  */
 ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1006,7 +1006,7 @@ ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMul
  */
 ListPartsResponse * GlacierClient::listParts(const ListPartsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1020,7 +1020,7 @@ ListPartsResponse * GlacierClient::listParts(const ListPartsRequest &request)
  */
 ListProvisionedCapacityResponse * GlacierClient::listProvisionedCapacity(const ListProvisionedCapacityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1036,7 +1036,7 @@ ListProvisionedCapacityResponse * GlacierClient::listProvisionedCapacity(const L
  */
 ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1075,7 +1075,7 @@ ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaul
  */
 ListVaultsResponse * GlacierClient::listVaults(const ListVaultsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1089,7 +1089,7 @@ ListVaultsResponse * GlacierClient::listVaults(const ListVaultsRequest &request)
  */
 PurchaseProvisionedCapacityResponse * GlacierClient::purchaseProvisionedCapacity(const PurchaseProvisionedCapacityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1105,7 +1105,7 @@ PurchaseProvisionedCapacityResponse * GlacierClient::purchaseProvisionedCapacity
  */
 RemoveTagsFromVaultResponse * GlacierClient::removeTagsFromVault(const RemoveTagsFromVaultRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1127,7 +1127,7 @@ RemoveTagsFromVaultResponse * GlacierClient::removeTagsFromVault(const RemoveTag
  */
 SetDataRetrievalPolicyResponse * GlacierClient::setDataRetrievalPolicy(const SetDataRetrievalPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1146,7 +1146,7 @@ SetDataRetrievalPolicyResponse * GlacierClient::setDataRetrievalPolicy(const Set
  */
 SetVaultAccessPolicyResponse * GlacierClient::setVaultAccessPolicy(const SetVaultAccessPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1200,7 +1200,7 @@ SetVaultAccessPolicyResponse * GlacierClient::setVaultAccessPolicy(const SetVaul
  */
 SetVaultNotificationsResponse * GlacierClient::setVaultNotifications(const SetVaultNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1255,7 +1255,7 @@ SetVaultNotificationsResponse * GlacierClient::setVaultNotifications(const SetVa
  */
 UploadArchiveResponse * GlacierClient::uploadArchive(const UploadArchiveRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1320,7 +1320,7 @@ UploadArchiveResponse * GlacierClient::uploadArchive(const UploadArchiveRequest 
  */
 UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMultipartPartRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

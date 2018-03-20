@@ -145,7 +145,7 @@ ConfigServiceClient::ConfigServiceClient(
  */
 DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteConfigRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -170,7 +170,7 @@ DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteCon
  */
 DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRecorder(const DeleteConfigurationRecorderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -189,7 +189,7 @@ DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRe
  */
 DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const DeleteDeliveryChannelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -205,7 +205,7 @@ DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const
  */
 DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(const DeleteEvaluationResultsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -232,7 +232,7 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
  */
 DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const DeliverConfigSnapshotRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -273,7 +273,7 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
  */
 DescribeComplianceByConfigRuleResponse * ConfigServiceClient::describeComplianceByConfigRule(const DescribeComplianceByConfigRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -314,7 +314,7 @@ DescribeComplianceByConfigRuleResponse * ConfigServiceClient::describeCompliance
  */
 DescribeComplianceByResourceResponse * ConfigServiceClient::describeComplianceByResource(const DescribeComplianceByResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -329,7 +329,7 @@ DescribeComplianceByResourceResponse * ConfigServiceClient::describeComplianceBy
  */
 DescribeConfigRuleEvaluationStatusResponse * ConfigServiceClient::describeConfigRuleEvaluationStatus(const DescribeConfigRuleEvaluationStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -343,7 +343,7 @@ DescribeConfigRuleEvaluationStatusResponse * ConfigServiceClient::describeConfig
  */
 DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const DescribeConfigRulesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -362,7 +362,7 @@ DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const Des
  */
 DescribeConfigurationRecorderStatusResponse * ConfigServiceClient::describeConfigurationRecorderStatus(const DescribeConfigurationRecorderStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -381,7 +381,7 @@ DescribeConfigurationRecorderStatusResponse * ConfigServiceClient::describeConfi
  */
 DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurationRecorders(const DescribeConfigurationRecordersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -400,7 +400,7 @@ DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurat
  */
 DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryChannelStatus(const DescribeDeliveryChannelStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -419,7 +419,7 @@ DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryCha
  */
 DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels(const DescribeDeliveryChannelsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -434,7 +434,7 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
  */
 GetComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getComplianceDetailsByConfigRule(const GetComplianceDetailsByConfigRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ GetComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getComplianceDet
  */
 GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetailsByResource(const GetComplianceDetailsByResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -463,7 +463,7 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
  */
 GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSummaryByConfigRule()
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -478,7 +478,7 @@ GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSum
  */
 GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceSummaryByResourceType(const GetComplianceSummaryByResourceTypeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -544,7 +544,7 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
  */
 GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResourceCounts(const GetDiscoveredResourceCountsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
  */
 GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory(const GetResourceConfigHistoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -597,7 +597,7 @@ GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory
  */
 ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -658,7 +658,7 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
  */
 PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -686,7 +686,7 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
  */
 PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder(const PutConfigurationRecorderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -715,7 +715,7 @@ PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder
  */
 PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDeliveryChannelRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -730,7 +730,7 @@ PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDe
  */
 PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -787,7 +787,7 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
  */
 StartConfigRulesEvaluationResponse * ConfigServiceClient::startConfigRulesEvaluation(const StartConfigRulesEvaluationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -805,7 +805,7 @@ StartConfigRulesEvaluationResponse * ConfigServiceClient::startConfigRulesEvalua
  */
 StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationRecorder(const StartConfigurationRecorderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -819,7 +819,7 @@ StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationReco
  */
 StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecorder(const StopConfigurationRecorderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

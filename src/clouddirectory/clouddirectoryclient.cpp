@@ -111,7 +111,7 @@ CloudDirectoryClient::CloudDirectoryClient(
  */
 AddFacetToObjectResponse * CloudDirectoryClient::addFacetToObject(const AddFacetToObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -126,7 +126,7 @@ AddFacetToObjectResponse * CloudDirectoryClient::addFacetToObject(const AddFacet
  */
 ApplySchemaResponse * CloudDirectoryClient::applySchema(const ApplySchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -148,7 +148,7 @@ ApplySchemaResponse * CloudDirectoryClient::applySchema(const ApplySchemaRequest
  */
 AttachObjectResponse * CloudDirectoryClient::attachObject(const AttachObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -162,7 +162,7 @@ AttachObjectResponse * CloudDirectoryClient::attachObject(const AttachObjectRequ
  */
 AttachPolicyResponse * CloudDirectoryClient::attachPolicy(const AttachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -176,7 +176,7 @@ AttachPolicyResponse * CloudDirectoryClient::attachPolicy(const AttachPolicyRequ
  */
 AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -191,7 +191,7 @@ AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexR
  */
 AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachTypedLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -205,7 +205,7 @@ AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachType
  */
 BatchReadResponse * CloudDirectoryClient::batchRead(const BatchReadRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -219,7 +219,7 @@ BatchReadResponse * CloudDirectoryClient::batchRead(const BatchReadRequest &requ
  */
 BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -233,7 +233,7 @@ BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &r
  */
 CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -247,7 +247,7 @@ CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDire
  */
 CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -262,7 +262,7 @@ CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest
  */
 CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -278,7 +278,7 @@ CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest
  */
 CreateObjectResponse * CloudDirectoryClient::createObject(const CreateObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -306,7 +306,7 @@ CreateObjectResponse * CloudDirectoryClient::createObject(const CreateObjectRequ
  */
 CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -321,7 +321,7 @@ CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequ
  */
 CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const CreateTypedLinkFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -336,7 +336,7 @@ CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const 
  */
 DeleteDirectoryResponse * CloudDirectoryClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -351,7 +351,7 @@ DeleteDirectoryResponse * CloudDirectoryClient::deleteDirectory(const DeleteDire
  */
 DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -365,7 +365,7 @@ DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest
  */
 DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -379,7 +379,7 @@ DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequ
  */
 DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -394,7 +394,7 @@ DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequ
  */
 DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const DeleteTypedLinkFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -408,7 +408,7 @@ DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const 
  */
 DetachFromIndexResponse * CloudDirectoryClient::detachFromIndex(const DetachFromIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -423,7 +423,7 @@ DetachFromIndexResponse * CloudDirectoryClient::detachFromIndex(const DetachFrom
  */
 DetachObjectResponse * CloudDirectoryClient::detachObject(const DetachObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -437,7 +437,7 @@ DetachObjectResponse * CloudDirectoryClient::detachObject(const DetachObjectRequ
  */
 DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -452,7 +452,7 @@ DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequ
  */
 DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachTypedLinkRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -467,7 +467,7 @@ DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachType
  */
 DisableDirectoryResponse * CloudDirectoryClient::disableDirectory(const DisableDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -482,7 +482,7 @@ DisableDirectoryResponse * CloudDirectoryClient::disableDirectory(const DisableD
  */
 EnableDirectoryResponse * CloudDirectoryClient::enableDirectory(const EnableDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ EnableDirectoryResponse * CloudDirectoryClient::enableDirectory(const EnableDire
  */
 GetAppliedSchemaVersionResponse * CloudDirectoryClient::getAppliedSchemaVersion(const GetAppliedSchemaVersionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -510,7 +510,7 @@ GetAppliedSchemaVersionResponse * CloudDirectoryClient::getAppliedSchemaVersion(
  */
 GetDirectoryResponse * CloudDirectoryClient::getDirectory(const GetDirectoryRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -525,7 +525,7 @@ GetDirectoryResponse * CloudDirectoryClient::getDirectory(const GetDirectoryRequ
  */
 GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -539,7 +539,7 @@ GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request
  */
 GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const GetObjectInformationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -555,7 +555,7 @@ GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const 
  */
 GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaAsJsonRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaA
  */
 GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetInformation(const GetTypedLinkFacetInformationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -584,7 +584,7 @@ GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetIn
  */
 ListAppliedSchemaArnsResponse * CloudDirectoryClient::listAppliedSchemaArns(const ListAppliedSchemaArnsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -598,7 +598,7 @@ ListAppliedSchemaArnsResponse * CloudDirectoryClient::listAppliedSchemaArns(cons
  */
 ListAttachedIndicesResponse * CloudDirectoryClient::listAttachedIndices(const ListAttachedIndicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -612,7 +612,7 @@ ListAttachedIndicesResponse * CloudDirectoryClient::listAttachedIndices(const Li
  */
 ListDevelopmentSchemaArnsResponse * CloudDirectoryClient::listDevelopmentSchemaArns(const ListDevelopmentSchemaArnsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -626,7 +626,7 @@ ListDevelopmentSchemaArnsResponse * CloudDirectoryClient::listDevelopmentSchemaA
  */
 ListDirectoriesResponse * CloudDirectoryClient::listDirectories(const ListDirectoriesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -640,7 +640,7 @@ ListDirectoriesResponse * CloudDirectoryClient::listDirectories(const ListDirect
  */
 ListFacetAttributesResponse * CloudDirectoryClient::listFacetAttributes(const ListFacetAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -654,7 +654,7 @@ ListFacetAttributesResponse * CloudDirectoryClient::listFacetAttributes(const Li
  */
 ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNamesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -670,7 +670,7 @@ ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNam
  */
 ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(const ListIncomingTypedLinksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -684,7 +684,7 @@ ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(co
  */
 ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -698,7 +698,7 @@ ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &requ
  */
 ListObjectAttributesResponse * CloudDirectoryClient::listObjectAttributes(const ListObjectAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -712,7 +712,7 @@ ListObjectAttributesResponse * CloudDirectoryClient::listObjectAttributes(const 
  */
 ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const ListObjectChildrenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -735,7 +735,7 @@ ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const List
  */
 ListObjectParentPathsResponse * CloudDirectoryClient::listObjectParentPaths(const ListObjectParentPathsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -749,7 +749,7 @@ ListObjectParentPathsResponse * CloudDirectoryClient::listObjectParentPaths(cons
  */
 ListObjectParentsResponse * CloudDirectoryClient::listObjectParents(const ListObjectParentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -763,7 +763,7 @@ ListObjectParentsResponse * CloudDirectoryClient::listObjectParents(const ListOb
  */
 ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const ListObjectPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -779,7 +779,7 @@ ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const List
  */
 ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(const ListOutgoingTypedLinksRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -793,7 +793,7 @@ ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(co
  */
 ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(const ListPolicyAttachmentsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -807,7 +807,7 @@ ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(cons
  */
 ListPublishedSchemaArnsResponse * CloudDirectoryClient::listPublishedSchemaArns(const ListPublishedSchemaArnsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -822,7 +822,7 @@ ListPublishedSchemaArnsResponse * CloudDirectoryClient::listPublishedSchemaArns(
  */
 ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -837,7 +837,7 @@ ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const Li
  */
 ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetAttributes(const ListTypedLinkFacetAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -852,7 +852,7 @@ ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetA
  */
 ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(const ListTypedLinkFacetNamesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -870,7 +870,7 @@ ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(
  */
 LookupPolicyResponse * CloudDirectoryClient::lookupPolicy(const LookupPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -884,7 +884,7 @@ LookupPolicyResponse * CloudDirectoryClient::lookupPolicy(const LookupPolicyRequ
  */
 PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -900,7 +900,7 @@ PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaR
  */
 PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSchemaFromJsonRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -914,7 +914,7 @@ PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSch
  */
 RemoveFacetFromObjectResponse * CloudDirectoryClient::removeFacetFromObject(const RemoveFacetFromObjectRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -928,7 +928,7 @@ RemoveFacetFromObjectResponse * CloudDirectoryClient::removeFacetFromObject(cons
  */
 TagResourceResponse * CloudDirectoryClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -942,7 +942,7 @@ TagResourceResponse * CloudDirectoryClient::tagResource(const TagResourceRequest
  */
 UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -968,7 +968,7 @@ UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceR
  */
 UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -982,7 +982,7 @@ UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest
  */
 UpdateObjectAttributesResponse * CloudDirectoryClient::updateObjectAttributes(const UpdateObjectAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -996,7 +996,7 @@ UpdateObjectAttributesResponse * CloudDirectoryClient::updateObjectAttributes(co
  */
 UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1011,7 +1011,7 @@ UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequ
  */
 UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const UpdateTypedLinkFacetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1028,7 +1028,7 @@ UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const 
  */
 UpgradeAppliedSchemaResponse * CloudDirectoryClient::upgradeAppliedSchema(const UpgradeAppliedSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1042,7 +1042,7 @@ UpgradeAppliedSchemaResponse * CloudDirectoryClient::upgradeAppliedSchema(const 
  */
 UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(const UpgradePublishedSchemaRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

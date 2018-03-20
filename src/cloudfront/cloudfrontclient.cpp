@@ -113,7 +113,7 @@ CloudFrontClient::CloudFrontClient(
  */
 CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -128,7 +128,7 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
  */
 CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -142,7 +142,7 @@ CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDi
  */
 CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTags(const CreateDistributionWithTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -156,7 +156,7 @@ CreateDistributionWithTagsResponse * CloudFrontClient::createDistributionWithTag
  */
 CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateInvalidationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -199,7 +199,7 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
  */
 CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribution(const CreateStreamingDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -213,7 +213,7 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
  */
 CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -227,7 +227,7 @@ CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingD
  */
 DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFrontOriginAccessIdentity(const DeleteCloudFrontOriginAccessIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -241,7 +241,7 @@ DeleteCloudFrontOriginAccessIdentityResponse * CloudFrontClient::deleteCloudFron
  */
 DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -254,7 +254,7 @@ DeleteDistributionResponse * CloudFrontClient::deleteDistribution(const DeleteDi
  */
 DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -320,7 +320,7 @@ DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(cons
  */
 DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -334,7 +334,7 @@ DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribut
  */
 GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -348,7 +348,7 @@ GetCloudFrontOriginAccessIdentityResponse * CloudFrontClient::getCloudFrontOrigi
  */
 GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -362,7 +362,7 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
  */
 GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -376,7 +376,7 @@ GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributio
  */
 GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const GetDistributionConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -390,7 +390,7 @@ GetDistributionConfigResponse * CloudFrontClient::getDistributionConfig(const Ge
  */
 GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -404,7 +404,7 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
  */
 GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(const GetStreamingDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -418,7 +418,7 @@ GetStreamingDistributionResponse * CloudFrontClient::getStreamingDistribution(co
  */
 GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistributionConfig(const GetStreamingDistributionConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -432,7 +432,7 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
  */
 ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -446,7 +446,7 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
  */
 ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -460,7 +460,7 @@ ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistri
  */
 ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -474,7 +474,7 @@ ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebAC
  */
 ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvalidationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -488,7 +488,7 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
  */
 ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistributions(const ListStreamingDistributionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -502,7 +502,7 @@ ListStreamingDistributionsResponse * CloudFrontClient::listStreamingDistribution
  */
 ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -516,7 +516,7 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
  */
 TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -530,7 +530,7 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
  */
 UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -544,7 +544,7 @@ UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceReque
  */
 UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFrontOriginAccessIdentity(const UpdateCloudFrontOriginAccessIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -622,7 +622,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  */
 UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -636,7 +636,7 @@ UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDi
  */
 UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribution(const UpdateStreamingDistributionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

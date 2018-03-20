@@ -140,7 +140,7 @@ WafClient::WafClient(
  */
 CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -184,7 +184,7 @@ CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatch
  */
 CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -228,7 +228,7 @@ CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSet
  */
 CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -334,7 +334,7 @@ CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
  */
 CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBasedRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -380,7 +380,7 @@ CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBas
  */
 CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -423,7 +423,7 @@ CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMa
  */
 CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateRegexPatternSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -489,7 +489,7 @@ CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateReg
  */
 CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -525,7 +525,7 @@ CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
  */
 CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -570,7 +570,7 @@ CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupReques
  */
 CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const CreateSizeConstraintSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -613,7 +613,7 @@ CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const Creat
  */
 CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const CreateSqlInjectionMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -673,7 +673,7 @@ CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const
  */
 CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -716,7 +716,7 @@ CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &reques
  */
 CreateXssMatchSetResponse * WafClient::createXssMatchSet(const CreateXssMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ CreateXssMatchSetResponse * WafClient::createXssMatchSet(const CreateXssMatchSet
  */
 DeleteByteMatchSetResponse * WafClient::deleteByteMatchSet(const DeleteByteMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -788,7 +788,7 @@ DeleteByteMatchSetResponse * WafClient::deleteByteMatchSet(const DeleteByteMatch
  */
 DeleteGeoMatchSetResponse * WafClient::deleteGeoMatchSet(const DeleteGeoMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -824,7 +824,7 @@ DeleteGeoMatchSetResponse * WafClient::deleteGeoMatchSet(const DeleteGeoMatchSet
  */
 DeleteIPSetResponse * WafClient::deleteIPSet(const DeleteIPSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -842,7 +842,7 @@ DeleteIPSetResponse * WafClient::deleteIPSet(const DeleteIPSetRequest &request)
  */
 DeletePermissionPolicyResponse * WafClient::deletePermissionPolicy(const DeletePermissionPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -878,7 +878,7 @@ DeletePermissionPolicyResponse * WafClient::deletePermissionPolicy(const DeleteP
  */
 DeleteRateBasedRuleResponse * WafClient::deleteRateBasedRule(const DeleteRateBasedRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -914,7 +914,7 @@ DeleteRateBasedRuleResponse * WafClient::deleteRateBasedRule(const DeleteRateBas
  */
 DeleteRegexMatchSetResponse * WafClient::deleteRegexMatchSet(const DeleteRegexMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -929,7 +929,7 @@ DeleteRegexMatchSetResponse * WafClient::deleteRegexMatchSet(const DeleteRegexMa
  */
 DeleteRegexPatternSetResponse * WafClient::deleteRegexPatternSet(const DeleteRegexPatternSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -965,7 +965,7 @@ DeleteRegexPatternSetResponse * WafClient::deleteRegexPatternSet(const DeleteReg
  */
 DeleteRuleResponse * WafClient::deleteRule(const DeleteRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1001,7 +1001,7 @@ DeleteRuleResponse * WafClient::deleteRule(const DeleteRuleRequest &request)
  */
 DeleteRuleGroupResponse * WafClient::deleteRuleGroup(const DeleteRuleGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1037,7 +1037,7 @@ DeleteRuleGroupResponse * WafClient::deleteRuleGroup(const DeleteRuleGroupReques
  */
 DeleteSizeConstraintSetResponse * WafClient::deleteSizeConstraintSet(const DeleteSizeConstraintSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1073,7 +1073,7 @@ DeleteSizeConstraintSetResponse * WafClient::deleteSizeConstraintSet(const Delet
  */
 DeleteSqlInjectionMatchSetResponse * WafClient::deleteSqlInjectionMatchSet(const DeleteSqlInjectionMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1104,7 +1104,7 @@ DeleteSqlInjectionMatchSetResponse * WafClient::deleteSqlInjectionMatchSet(const
  */
 DeleteWebACLResponse * WafClient::deleteWebACL(const DeleteWebACLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1140,7 +1140,7 @@ DeleteWebACLResponse * WafClient::deleteWebACL(const DeleteWebACLRequest &reques
  */
 DeleteXssMatchSetResponse * WafClient::deleteXssMatchSet(const DeleteXssMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1154,7 +1154,7 @@ DeleteXssMatchSetResponse * WafClient::deleteXssMatchSet(const DeleteXssMatchSet
  */
 GetByteMatchSetResponse * WafClient::getByteMatchSet(const GetByteMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1182,7 +1182,7 @@ GetByteMatchSetResponse * WafClient::getByteMatchSet(const GetByteMatchSetReques
  */
 GetChangeTokenResponse * WafClient::getChangeToken(const GetChangeTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1210,7 +1210,7 @@ GetChangeTokenResponse * WafClient::getChangeToken(const GetChangeTokenRequest &
  */
 GetChangeTokenStatusResponse * WafClient::getChangeTokenStatus(const GetChangeTokenStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1224,7 +1224,7 @@ GetChangeTokenStatusResponse * WafClient::getChangeTokenStatus(const GetChangeTo
  */
 GetGeoMatchSetResponse * WafClient::getGeoMatchSet(const GetGeoMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1238,7 +1238,7 @@ GetGeoMatchSetResponse * WafClient::getGeoMatchSet(const GetGeoMatchSetRequest &
  */
 GetIPSetResponse * WafClient::getIPSet(const GetIPSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1252,7 +1252,7 @@ GetIPSetResponse * WafClient::getIPSet(const GetIPSetRequest &request)
  */
 GetPermissionPolicyResponse * WafClient::getPermissionPolicy(const GetPermissionPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1267,7 +1267,7 @@ GetPermissionPolicyResponse * WafClient::getPermissionPolicy(const GetPermission
  */
 GetRateBasedRuleResponse * WafClient::getRateBasedRule(const GetRateBasedRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1283,7 +1283,7 @@ GetRateBasedRuleResponse * WafClient::getRateBasedRule(const GetRateBasedRuleReq
  */
 GetRateBasedRuleManagedKeysResponse * WafClient::getRateBasedRuleManagedKeys(const GetRateBasedRuleManagedKeysRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1297,7 +1297,7 @@ GetRateBasedRuleManagedKeysResponse * WafClient::getRateBasedRuleManagedKeys(con
  */
 GetRegexMatchSetResponse * WafClient::getRegexMatchSet(const GetRegexMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1311,7 +1311,7 @@ GetRegexMatchSetResponse * WafClient::getRegexMatchSet(const GetRegexMatchSetReq
  */
 GetRegexPatternSetResponse * WafClient::getRegexPatternSet(const GetRegexPatternSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1325,7 +1325,7 @@ GetRegexPatternSetResponse * WafClient::getRegexPatternSet(const GetRegexPattern
  */
 GetRuleResponse * WafClient::getRule(const GetRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1344,7 +1344,7 @@ GetRuleResponse * WafClient::getRule(const GetRuleRequest &request)
  */
 GetRuleGroupResponse * WafClient::getRuleGroup(const GetRuleGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1367,7 +1367,7 @@ GetRuleGroupResponse * WafClient::getRuleGroup(const GetRuleGroupRequest &reques
  */
 GetSampledRequestsResponse * WafClient::getSampledRequests(const GetSampledRequestsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1381,7 +1381,7 @@ GetSampledRequestsResponse * WafClient::getSampledRequests(const GetSampledReque
  */
 GetSizeConstraintSetResponse * WafClient::getSizeConstraintSet(const GetSizeConstraintSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1395,7 +1395,7 @@ GetSizeConstraintSetResponse * WafClient::getSizeConstraintSet(const GetSizeCons
  */
 GetSqlInjectionMatchSetResponse * WafClient::getSqlInjectionMatchSet(const GetSqlInjectionMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1409,7 +1409,7 @@ GetSqlInjectionMatchSetResponse * WafClient::getSqlInjectionMatchSet(const GetSq
  */
 GetWebACLResponse * WafClient::getWebACL(const GetWebACLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1423,7 +1423,7 @@ GetWebACLResponse * WafClient::getWebACL(const GetWebACLRequest &request)
  */
 GetXssMatchSetResponse * WafClient::getXssMatchSet(const GetXssMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1437,7 +1437,7 @@ GetXssMatchSetResponse * WafClient::getXssMatchSet(const GetXssMatchSetRequest &
  */
 ListActivatedRulesInRuleGroupResponse * WafClient::listActivatedRulesInRuleGroup(const ListActivatedRulesInRuleGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1451,7 +1451,7 @@ ListActivatedRulesInRuleGroupResponse * WafClient::listActivatedRulesInRuleGroup
  */
 ListByteMatchSetsResponse * WafClient::listByteMatchSets(const ListByteMatchSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1465,7 +1465,7 @@ ListByteMatchSetsResponse * WafClient::listByteMatchSets(const ListByteMatchSets
  */
 ListGeoMatchSetsResponse * WafClient::listGeoMatchSets(const ListGeoMatchSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1479,7 +1479,7 @@ ListGeoMatchSetsResponse * WafClient::listGeoMatchSets(const ListGeoMatchSetsReq
  */
 ListIPSetsResponse * WafClient::listIPSets(const ListIPSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1493,7 +1493,7 @@ ListIPSetsResponse * WafClient::listIPSets(const ListIPSetsRequest &request)
  */
 ListRateBasedRulesResponse * WafClient::listRateBasedRules(const ListRateBasedRulesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1507,7 +1507,7 @@ ListRateBasedRulesResponse * WafClient::listRateBasedRules(const ListRateBasedRu
  */
 ListRegexMatchSetsResponse * WafClient::listRegexMatchSets(const ListRegexMatchSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1521,7 +1521,7 @@ ListRegexMatchSetsResponse * WafClient::listRegexMatchSets(const ListRegexMatchS
  */
 ListRegexPatternSetsResponse * WafClient::listRegexPatternSets(const ListRegexPatternSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1535,7 +1535,7 @@ ListRegexPatternSetsResponse * WafClient::listRegexPatternSets(const ListRegexPa
  */
 ListRuleGroupsResponse * WafClient::listRuleGroups(const ListRuleGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1549,7 +1549,7 @@ ListRuleGroupsResponse * WafClient::listRuleGroups(const ListRuleGroupsRequest &
  */
 ListRulesResponse * WafClient::listRules(const ListRulesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1563,7 +1563,7 @@ ListRulesResponse * WafClient::listRules(const ListRulesRequest &request)
  */
 ListSizeConstraintSetsResponse * WafClient::listSizeConstraintSets(const ListSizeConstraintSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1577,7 +1577,7 @@ ListSizeConstraintSetsResponse * WafClient::listSizeConstraintSets(const ListSiz
  */
 ListSqlInjectionMatchSetsResponse * WafClient::listSqlInjectionMatchSets(const ListSqlInjectionMatchSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1591,7 +1591,7 @@ ListSqlInjectionMatchSetsResponse * WafClient::listSqlInjectionMatchSets(const L
  */
 ListSubscribedRuleGroupsResponse * WafClient::listSubscribedRuleGroups(const ListSubscribedRuleGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1605,7 +1605,7 @@ ListSubscribedRuleGroupsResponse * WafClient::listSubscribedRuleGroups(const Lis
  */
 ListWebACLsResponse * WafClient::listWebACLs(const ListWebACLsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1619,7 +1619,7 @@ ListWebACLsResponse * WafClient::listWebACLs(const ListWebACLsRequest &request)
  */
 ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1679,7 +1679,7 @@ ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsReq
  */
 PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermissionPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1747,7 +1747,7 @@ PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermission
  */
 UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1803,7 +1803,7 @@ UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatch
  */
 UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1885,7 +1885,7 @@ UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSet
  */
 UpdateIPSetResponse * WafClient::updateIPSet(const UpdateIPSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1956,7 +1956,7 @@ UpdateIPSetResponse * WafClient::updateIPSet(const UpdateIPSetRequest &request)
  */
 UpdateRateBasedRuleResponse * WafClient::updateRateBasedRule(const UpdateRateBasedRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2020,7 +2020,7 @@ UpdateRateBasedRuleResponse * WafClient::updateRateBasedRule(const UpdateRateBas
  */
 UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2079,7 +2079,7 @@ UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMa
  */
 UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateRegexPatternSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2145,7 +2145,7 @@ UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateReg
  */
 UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2197,7 +2197,7 @@ UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
  */
 UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2266,7 +2266,7 @@ UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupReques
  */
 UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const UpdateSizeConstraintSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2326,7 +2326,7 @@ UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const Updat
  */
 UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const UpdateSqlInjectionMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2406,7 +2406,7 @@ UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const
  */
 UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2466,7 +2466,7 @@ UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &reques
  */
 UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

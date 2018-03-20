@@ -586,7 +586,7 @@ GameLiftClient::GameLiftClient(
  */
 AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -644,7 +644,7 @@ AcceptMatchResponse * GameLiftClient::acceptMatch(const AcceptMatchRequest &requ
  */
 CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -725,7 +725,7 @@ CreateAliasResponse * GameLiftClient::createAlias(const CreateAliasRequest &requ
  */
 CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -898,7 +898,7 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  */
 CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -991,7 +991,7 @@ CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &requ
  */
 CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSessionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1051,7 +1051,7 @@ CreateGameSessionResponse * GameLiftClient::createGameSession(const CreateGameSe
  */
 CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const CreateGameSessionQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1123,7 +1123,7 @@ CreateGameSessionQueueResponse * GameLiftClient::createGameSessionQueue(const Cr
  */
 CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfiguration(const CreateMatchmakingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1188,7 +1188,7 @@ CreateMatchmakingConfigurationResponse * GameLiftClient::createMatchmakingConfig
  */
 CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(const CreateMatchmakingRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1246,7 +1246,7 @@ CreateMatchmakingRuleSetResponse * GameLiftClient::createMatchmakingRuleSet(cons
  */
 CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePlayerSessionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1304,7 +1304,7 @@ CreatePlayerSessionResponse * GameLiftClient::createPlayerSession(const CreatePl
  */
 CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const CreatePlayerSessionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1374,7 +1374,7 @@ CreatePlayerSessionsResponse * GameLiftClient::createPlayerSessions(const Create
  */
 CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthorization(const CreateVpcPeeringAuthorizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1436,7 +1436,7 @@ CreateVpcPeeringAuthorizationResponse * GameLiftClient::createVpcPeeringAuthoriz
  */
 CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(const CreateVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1479,7 +1479,7 @@ CreateVpcPeeringConnectionResponse * GameLiftClient::createVpcPeeringConnection(
  */
 DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1522,7 +1522,7 @@ DeleteAliasResponse * GameLiftClient::deleteAlias(const DeleteAliasRequest &requ
  */
 DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1628,7 +1628,7 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  */
 DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1663,7 +1663,7 @@ DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &requ
  */
 DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const DeleteGameSessionQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1710,7 +1710,7 @@ DeleteGameSessionQueueResponse * GameLiftClient::deleteGameSessionQueue(const De
  */
 DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfiguration(const DeleteMatchmakingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1813,7 +1813,7 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  */
 DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1856,7 +1856,7 @@ DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteSc
  */
 DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthorization(const DeleteVpcPeeringAuthorizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1905,7 +1905,7 @@ DeleteVpcPeeringAuthorizationResponse * GameLiftClient::deleteVpcPeeringAuthoriz
  */
 DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(const DeleteVpcPeeringConnectionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1952,7 +1952,7 @@ DeleteVpcPeeringConnectionResponse * GameLiftClient::deleteVpcPeeringConnection(
  */
 DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1991,7 +1991,7 @@ DescribeAliasResponse * GameLiftClient::describeAlias(const DescribeAliasRequest
  */
 DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2106,7 +2106,7 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  */
 DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2217,7 +2217,7 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  */
 DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const DescribeFleetAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2328,7 +2328,7 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  */
 DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const DescribeFleetCapacityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2432,7 +2432,7 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  */
 DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const DescribeFleetEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2537,7 +2537,7 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  */
 DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2647,7 +2647,7 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  */
 DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(const DescribeFleetUtilizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2714,7 +2714,7 @@ DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(cons
  */
 DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(const DescribeGameSessionDetailsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2773,7 +2773,7 @@ DescribeGameSessionDetailsResponse * GameLiftClient::describeGameSessionDetails(
  */
 DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacement(const DescribeGameSessionPlacementRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2810,7 +2810,7 @@ DescribeGameSessionPlacementResponse * GameLiftClient::describeGameSessionPlacem
  */
 DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(const DescribeGameSessionQueuesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2880,7 +2880,7 @@ DescribeGameSessionQueuesResponse * GameLiftClient::describeGameSessionQueues(co
  */
 DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const DescribeGameSessionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2901,7 +2901,7 @@ DescribeGameSessionsResponse * GameLiftClient::describeGameSessions(const Descri
  */
 DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInstancesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -2951,7 +2951,7 @@ DescribeInstancesResponse * GameLiftClient::describeInstances(const DescribeInst
  */
 DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const DescribeMatchmakingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3001,7 +3001,7 @@ DescribeMatchmakingResponse * GameLiftClient::describeMatchmaking(const Describe
  */
 DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingConfigurations(const DescribeMatchmakingConfigurationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3049,7 +3049,7 @@ DescribeMatchmakingConfigurationsResponse * GameLiftClient::describeMatchmakingC
  */
 DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSets(const DescribeMatchmakingRuleSetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3108,7 +3108,7 @@ DescribeMatchmakingRuleSetsResponse * GameLiftClient::describeMatchmakingRuleSet
  */
 DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const DescribePlayerSessionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3211,7 +3211,7 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  */
 DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3319,7 +3319,7 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  */
 DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3362,7 +3362,7 @@ DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const 
  */
 DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAuthorizations(const DescribeVpcPeeringAuthorizationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3412,7 +3412,7 @@ DescribeVpcPeeringAuthorizationsResponse * GameLiftClient::describeVpcPeeringAut
  */
 DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnections(const DescribeVpcPeeringConnectionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3476,7 +3476,7 @@ DescribeVpcPeeringConnectionsResponse * GameLiftClient::describeVpcPeeringConnec
  */
 GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGameSessionLogUrlRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3506,7 +3506,7 @@ GetGameSessionLogUrlResponse * GameLiftClient::getGameSessionLogUrl(const GetGam
  */
 GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceAccessRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3553,7 +3553,7 @@ GetInstanceAccessResponse * GameLiftClient::getInstanceAccess(const GetInstanceA
  */
 ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3597,7 +3597,7 @@ ListAliasesResponse * GameLiftClient::listAliases(const ListAliasesRequest &requ
  */
 ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3704,7 +3704,7 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  */
 ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3832,7 +3832,7 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  */
 PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3852,7 +3852,7 @@ PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPoli
  */
 RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(const RequestUploadCredentialsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -3894,7 +3894,7 @@ RequestUploadCredentialsResponse * GameLiftClient::requestUploadCredentials(cons
  */
 ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4010,7 +4010,7 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  */
 SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGameSessionsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4118,7 +4118,7 @@ SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGame
  */
 StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(const StartGameSessionPlacementRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4179,7 +4179,7 @@ StartGameSessionPlacementResponse * GameLiftClient::startGameSessionPlacement(co
  */
 StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatchBackfillRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4280,7 +4280,7 @@ StartMatchBackfillResponse * GameLiftClient::startMatchBackfill(const StartMatch
  */
 StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmakingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4339,7 +4339,7 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
  */
 StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(const StopGameSessionPlacementRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4378,7 +4378,7 @@ StopGameSessionPlacementResponse * GameLiftClient::stopGameSessionPlacement(cons
  */
 StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4422,7 +4422,7 @@ StopMatchmakingResponse * GameLiftClient::stopMatchmaking(const StopMatchmakingR
  */
 UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4461,7 +4461,7 @@ UpdateAliasResponse * GameLiftClient::updateAlias(const UpdateAliasRequest &requ
  */
 UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4564,7 +4564,7 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  */
 UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const UpdateFleetAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4681,7 +4681,7 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  */
 UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFleetCapacityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4786,7 +4786,7 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  */
 UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4847,7 +4847,7 @@ UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const 
  */
 UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSessionRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4883,7 +4883,7 @@ UpdateGameSessionResponse * GameLiftClient::updateGameSession(const UpdateGameSe
  */
 UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const UpdateGameSessionQueueRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -4930,7 +4930,7 @@ UpdateGameSessionQueueResponse * GameLiftClient::updateGameSessionQueue(const Up
  */
 UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfiguration(const UpdateMatchmakingConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5047,7 +5047,7 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  */
 UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -5094,7 +5094,7 @@ UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(
  */
 ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

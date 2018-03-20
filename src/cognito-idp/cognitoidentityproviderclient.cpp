@@ -114,7 +114,7 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
  */
 AddCustomAttributesResponse * CognitoIdentityProviderClient::addCustomAttributes(const AddCustomAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ AddCustomAttributesResponse * CognitoIdentityProviderClient::addCustomAttributes
  */
 AdminAddUserToGroupResponse * CognitoIdentityProviderClient::adminAddUserToGroup(const AdminAddUserToGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -150,7 +150,7 @@ AdminAddUserToGroupResponse * CognitoIdentityProviderClient::adminAddUserToGroup
  */
 AdminConfirmSignUpResponse * CognitoIdentityProviderClient::adminConfirmSignUp(const AdminConfirmSignUpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -186,7 +186,7 @@ AdminConfirmSignUpResponse * CognitoIdentityProviderClient::adminConfirmSignUp(c
  */
 AdminCreateUserResponse * CognitoIdentityProviderClient::adminCreateUser(const AdminCreateUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -204,7 +204,7 @@ AdminCreateUserResponse * CognitoIdentityProviderClient::adminCreateUser(const A
  */
 AdminDeleteUserResponse * CognitoIdentityProviderClient::adminDeleteUser(const AdminDeleteUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -222,7 +222,7 @@ AdminDeleteUserResponse * CognitoIdentityProviderClient::adminDeleteUser(const A
  */
 AdminDeleteUserAttributesResponse * CognitoIdentityProviderClient::adminDeleteUserAttributes(const AdminDeleteUserAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -269,7 +269,7 @@ AdminDeleteUserAttributesResponse * CognitoIdentityProviderClient::adminDeleteUs
  */
 AdminDisableProviderForUserResponse * CognitoIdentityProviderClient::adminDisableProviderForUser(const AdminDisableProviderForUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -287,7 +287,7 @@ AdminDisableProviderForUserResponse * CognitoIdentityProviderClient::adminDisabl
  */
 AdminDisableUserResponse * CognitoIdentityProviderClient::adminDisableUser(const AdminDisableUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -305,7 +305,7 @@ AdminDisableUserResponse * CognitoIdentityProviderClient::adminDisableUser(const
  */
 AdminEnableUserResponse * CognitoIdentityProviderClient::adminEnableUser(const AdminEnableUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -323,7 +323,7 @@ AdminEnableUserResponse * CognitoIdentityProviderClient::adminEnableUser(const A
  */
 AdminForgetDeviceResponse * CognitoIdentityProviderClient::adminForgetDevice(const AdminForgetDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -341,7 +341,7 @@ AdminForgetDeviceResponse * CognitoIdentityProviderClient::adminForgetDevice(con
  */
 AdminGetDeviceResponse * CognitoIdentityProviderClient::adminGetDevice(const AdminGetDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -359,7 +359,7 @@ AdminGetDeviceResponse * CognitoIdentityProviderClient::adminGetDevice(const Adm
  */
 AdminGetUserResponse * CognitoIdentityProviderClient::adminGetUser(const AdminGetUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -377,7 +377,7 @@ AdminGetUserResponse * CognitoIdentityProviderClient::adminGetUser(const AdminGe
  */
 AdminInitiateAuthResponse * CognitoIdentityProviderClient::adminInitiateAuth(const AdminInitiateAuthRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -413,7 +413,7 @@ AdminInitiateAuthResponse * CognitoIdentityProviderClient::adminInitiateAuth(con
  */
 AdminLinkProviderForUserResponse * CognitoIdentityProviderClient::adminLinkProviderForUser(const AdminLinkProviderForUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -431,7 +431,7 @@ AdminLinkProviderForUserResponse * CognitoIdentityProviderClient::adminLinkProvi
  */
 AdminListDevicesResponse * CognitoIdentityProviderClient::adminListDevices(const AdminListDevicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -449,7 +449,7 @@ AdminListDevicesResponse * CognitoIdentityProviderClient::adminListDevices(const
  */
 AdminListGroupsForUserResponse * CognitoIdentityProviderClient::adminListGroupsForUser(const AdminListGroupsForUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -463,7 +463,7 @@ AdminListGroupsForUserResponse * CognitoIdentityProviderClient::adminListGroupsF
  */
 AdminListUserAuthEventsResponse * CognitoIdentityProviderClient::adminListUserAuthEvents(const AdminListUserAuthEventsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -481,7 +481,7 @@ AdminListUserAuthEventsResponse * CognitoIdentityProviderClient::adminListUserAu
  */
 AdminRemoveUserFromGroupResponse * CognitoIdentityProviderClient::adminRemoveUserFromGroup(const AdminRemoveUserFromGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -508,7 +508,7 @@ AdminRemoveUserFromGroupResponse * CognitoIdentityProviderClient::adminRemoveUse
  */
 AdminResetUserPasswordResponse * CognitoIdentityProviderClient::adminResetUserPassword(const AdminResetUserPasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -526,7 +526,7 @@ AdminResetUserPasswordResponse * CognitoIdentityProviderClient::adminResetUserPa
  */
 AdminRespondToAuthChallengeResponse * CognitoIdentityProviderClient::adminRespondToAuthChallenge(const AdminRespondToAuthChallengeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -540,7 +540,7 @@ AdminRespondToAuthChallengeResponse * CognitoIdentityProviderClient::adminRespon
  */
 AdminSetUserMFAPreferenceResponse * CognitoIdentityProviderClient::adminSetUserMFAPreference(const AdminSetUserMFAPreferenceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -558,7 +558,7 @@ AdminSetUserMFAPreferenceResponse * CognitoIdentityProviderClient::adminSetUserM
  */
 AdminSetUserSettingsResponse * CognitoIdentityProviderClient::adminSetUserSettings(const AdminSetUserSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -573,7 +573,7 @@ AdminSetUserSettingsResponse * CognitoIdentityProviderClient::adminSetUserSettin
  */
 AdminUpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::adminUpdateAuthEventFeedback(const AdminUpdateAuthEventFeedbackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -591,7 +591,7 @@ AdminUpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::adminUpdat
  */
 AdminUpdateDeviceStatusResponse * CognitoIdentityProviderClient::adminUpdateDeviceStatus(const AdminUpdateDeviceStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -617,7 +617,7 @@ AdminUpdateDeviceStatusResponse * CognitoIdentityProviderClient::adminUpdateDevi
  */
 AdminUpdateUserAttributesResponse * CognitoIdentityProviderClient::adminUpdateUserAttributes(const AdminUpdateUserAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -635,7 +635,7 @@ AdminUpdateUserAttributesResponse * CognitoIdentityProviderClient::adminUpdateUs
  */
 AdminUserGlobalSignOutResponse * CognitoIdentityProviderClient::adminUserGlobalSignOut(const AdminUserGlobalSignOutRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -650,7 +650,7 @@ AdminUserGlobalSignOutResponse * CognitoIdentityProviderClient::adminUserGlobalS
  */
 AssociateSoftwareTokenResponse * CognitoIdentityProviderClient::associateSoftwareToken(const AssociateSoftwareTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -664,7 +664,7 @@ AssociateSoftwareTokenResponse * CognitoIdentityProviderClient::associateSoftwar
  */
 ChangePasswordResponse * CognitoIdentityProviderClient::changePassword(const ChangePasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -678,7 +678,7 @@ ChangePasswordResponse * CognitoIdentityProviderClient::changePassword(const Cha
  */
 ConfirmDeviceResponse * CognitoIdentityProviderClient::confirmDevice(const ConfirmDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -692,7 +692,7 @@ ConfirmDeviceResponse * CognitoIdentityProviderClient::confirmDevice(const Confi
  */
 ConfirmForgotPasswordResponse * CognitoIdentityProviderClient::confirmForgotPassword(const ConfirmForgotPasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -706,7 +706,7 @@ ConfirmForgotPasswordResponse * CognitoIdentityProviderClient::confirmForgotPass
  */
 ConfirmSignUpResponse * CognitoIdentityProviderClient::confirmSignUp(const ConfirmSignUpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -724,7 +724,7 @@ ConfirmSignUpResponse * CognitoIdentityProviderClient::confirmSignUp(const Confi
  */
 CreateGroupResponse * CognitoIdentityProviderClient::createGroup(const CreateGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -738,7 +738,7 @@ CreateGroupResponse * CognitoIdentityProviderClient::createGroup(const CreateGro
  */
 CreateIdentityProviderResponse * CognitoIdentityProviderClient::createIdentityProvider(const CreateIdentityProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -752,7 +752,7 @@ CreateIdentityProviderResponse * CognitoIdentityProviderClient::createIdentityPr
  */
 CreateResourceServerResponse * CognitoIdentityProviderClient::createResourceServer(const CreateResourceServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -766,7 +766,7 @@ CreateResourceServerResponse * CognitoIdentityProviderClient::createResourceServ
  */
 CreateUserImportJobResponse * CognitoIdentityProviderClient::createUserImportJob(const CreateUserImportJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -780,7 +780,7 @@ CreateUserImportJobResponse * CognitoIdentityProviderClient::createUserImportJob
  */
 CreateUserPoolResponse * CognitoIdentityProviderClient::createUserPool(const CreateUserPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -794,7 +794,7 @@ CreateUserPoolResponse * CognitoIdentityProviderClient::createUserPool(const Cre
  */
 CreateUserPoolClientResponse * CognitoIdentityProviderClient::createUserPoolClient(const CreateUserPoolClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -808,7 +808,7 @@ CreateUserPoolClientResponse * CognitoIdentityProviderClient::createUserPoolClie
  */
 CreateUserPoolDomainResponse * CognitoIdentityProviderClient::createUserPoolDomain(const CreateUserPoolDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -826,7 +826,7 @@ CreateUserPoolDomainResponse * CognitoIdentityProviderClient::createUserPoolDoma
  */
 DeleteGroupResponse * CognitoIdentityProviderClient::deleteGroup(const DeleteGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -840,7 +840,7 @@ DeleteGroupResponse * CognitoIdentityProviderClient::deleteGroup(const DeleteGro
  */
 DeleteIdentityProviderResponse * CognitoIdentityProviderClient::deleteIdentityProvider(const DeleteIdentityProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -854,7 +854,7 @@ DeleteIdentityProviderResponse * CognitoIdentityProviderClient::deleteIdentityPr
  */
 DeleteResourceServerResponse * CognitoIdentityProviderClient::deleteResourceServer(const DeleteResourceServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -868,7 +868,7 @@ DeleteResourceServerResponse * CognitoIdentityProviderClient::deleteResourceServ
  */
 DeleteUserResponse * CognitoIdentityProviderClient::deleteUser(const DeleteUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -882,7 +882,7 @@ DeleteUserResponse * CognitoIdentityProviderClient::deleteUser(const DeleteUserR
  */
 DeleteUserAttributesResponse * CognitoIdentityProviderClient::deleteUserAttributes(const DeleteUserAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -896,7 +896,7 @@ DeleteUserAttributesResponse * CognitoIdentityProviderClient::deleteUserAttribut
  */
 DeleteUserPoolResponse * CognitoIdentityProviderClient::deleteUserPool(const DeleteUserPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -910,7 +910,7 @@ DeleteUserPoolResponse * CognitoIdentityProviderClient::deleteUserPool(const Del
  */
 DeleteUserPoolClientResponse * CognitoIdentityProviderClient::deleteUserPoolClient(const DeleteUserPoolClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -924,7 +924,7 @@ DeleteUserPoolClientResponse * CognitoIdentityProviderClient::deleteUserPoolClie
  */
 DeleteUserPoolDomainResponse * CognitoIdentityProviderClient::deleteUserPoolDomain(const DeleteUserPoolDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -938,7 +938,7 @@ DeleteUserPoolDomainResponse * CognitoIdentityProviderClient::deleteUserPoolDoma
  */
 DescribeIdentityProviderResponse * CognitoIdentityProviderClient::describeIdentityProvider(const DescribeIdentityProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -952,7 +952,7 @@ DescribeIdentityProviderResponse * CognitoIdentityProviderClient::describeIdenti
  */
 DescribeResourceServerResponse * CognitoIdentityProviderClient::describeResourceServer(const DescribeResourceServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -966,7 +966,7 @@ DescribeResourceServerResponse * CognitoIdentityProviderClient::describeResource
  */
 DescribeRiskConfigurationResponse * CognitoIdentityProviderClient::describeRiskConfiguration(const DescribeRiskConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -980,7 +980,7 @@ DescribeRiskConfigurationResponse * CognitoIdentityProviderClient::describeRiskC
  */
 DescribeUserImportJobResponse * CognitoIdentityProviderClient::describeUserImportJob(const DescribeUserImportJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -994,7 +994,7 @@ DescribeUserImportJobResponse * CognitoIdentityProviderClient::describeUserImpor
  */
 DescribeUserPoolResponse * CognitoIdentityProviderClient::describeUserPool(const DescribeUserPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1008,7 +1008,7 @@ DescribeUserPoolResponse * CognitoIdentityProviderClient::describeUserPool(const
  */
 DescribeUserPoolClientResponse * CognitoIdentityProviderClient::describeUserPoolClient(const DescribeUserPoolClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1022,7 +1022,7 @@ DescribeUserPoolClientResponse * CognitoIdentityProviderClient::describeUserPool
  */
 DescribeUserPoolDomainResponse * CognitoIdentityProviderClient::describeUserPoolDomain(const DescribeUserPoolDomainRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1036,7 +1036,7 @@ DescribeUserPoolDomainResponse * CognitoIdentityProviderClient::describeUserPool
  */
 ForgetDeviceResponse * CognitoIdentityProviderClient::forgetDevice(const ForgetDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1054,7 +1054,7 @@ ForgetDeviceResponse * CognitoIdentityProviderClient::forgetDevice(const ForgetD
  */
 ForgotPasswordResponse * CognitoIdentityProviderClient::forgotPassword(const ForgotPasswordRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1068,7 +1068,7 @@ ForgotPasswordResponse * CognitoIdentityProviderClient::forgotPassword(const For
  */
 GetCSVHeaderResponse * CognitoIdentityProviderClient::getCSVHeader(const GetCSVHeaderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1082,7 +1082,7 @@ GetCSVHeaderResponse * CognitoIdentityProviderClient::getCSVHeader(const GetCSVH
  */
 GetDeviceResponse * CognitoIdentityProviderClient::getDevice(const GetDeviceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1100,7 +1100,7 @@ GetDeviceResponse * CognitoIdentityProviderClient::getDevice(const GetDeviceRequ
  */
 GetGroupResponse * CognitoIdentityProviderClient::getGroup(const GetGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1114,7 +1114,7 @@ GetGroupResponse * CognitoIdentityProviderClient::getGroup(const GetGroupRequest
  */
 GetIdentityProviderByIdentifierResponse * CognitoIdentityProviderClient::getIdentityProviderByIdentifier(const GetIdentityProviderByIdentifierRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1128,7 +1128,7 @@ GetIdentityProviderByIdentifierResponse * CognitoIdentityProviderClient::getIden
  */
 GetSigningCertificateResponse * CognitoIdentityProviderClient::getSigningCertificate(const GetSigningCertificateRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1144,7 +1144,7 @@ GetSigningCertificateResponse * CognitoIdentityProviderClient::getSigningCertifi
  */
 GetUICustomizationResponse * CognitoIdentityProviderClient::getUICustomization(const GetUICustomizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1158,7 +1158,7 @@ GetUICustomizationResponse * CognitoIdentityProviderClient::getUICustomization(c
  */
 GetUserResponse * CognitoIdentityProviderClient::getUser(const GetUserRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1172,7 +1172,7 @@ GetUserResponse * CognitoIdentityProviderClient::getUser(const GetUserRequest &r
  */
 GetUserAttributeVerificationCodeResponse * CognitoIdentityProviderClient::getUserAttributeVerificationCode(const GetUserAttributeVerificationCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1186,7 +1186,7 @@ GetUserAttributeVerificationCodeResponse * CognitoIdentityProviderClient::getUse
  */
 GetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::getUserPoolMfaConfig(const GetUserPoolMfaConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1200,7 +1200,7 @@ GetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::getUserPoolMfaConf
  */
 GlobalSignOutResponse * CognitoIdentityProviderClient::globalSignOut(const GlobalSignOutRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1214,7 +1214,7 @@ GlobalSignOutResponse * CognitoIdentityProviderClient::globalSignOut(const Globa
  */
 InitiateAuthResponse * CognitoIdentityProviderClient::initiateAuth(const InitiateAuthRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1228,7 +1228,7 @@ InitiateAuthResponse * CognitoIdentityProviderClient::initiateAuth(const Initiat
  */
 ListDevicesResponse * CognitoIdentityProviderClient::listDevices(const ListDevicesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1246,7 +1246,7 @@ ListDevicesResponse * CognitoIdentityProviderClient::listDevices(const ListDevic
  */
 ListGroupsResponse * CognitoIdentityProviderClient::listGroups(const ListGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1260,7 +1260,7 @@ ListGroupsResponse * CognitoIdentityProviderClient::listGroups(const ListGroupsR
  */
 ListIdentityProvidersResponse * CognitoIdentityProviderClient::listIdentityProviders(const ListIdentityProvidersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1274,7 +1274,7 @@ ListIdentityProvidersResponse * CognitoIdentityProviderClient::listIdentityProvi
  */
 ListResourceServersResponse * CognitoIdentityProviderClient::listResourceServers(const ListResourceServersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1288,7 +1288,7 @@ ListResourceServersResponse * CognitoIdentityProviderClient::listResourceServers
  */
 ListUserImportJobsResponse * CognitoIdentityProviderClient::listUserImportJobs(const ListUserImportJobsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1302,7 +1302,7 @@ ListUserImportJobsResponse * CognitoIdentityProviderClient::listUserImportJobs(c
  */
 ListUserPoolClientsResponse * CognitoIdentityProviderClient::listUserPoolClients(const ListUserPoolClientsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1316,7 +1316,7 @@ ListUserPoolClientsResponse * CognitoIdentityProviderClient::listUserPoolClients
  */
 ListUserPoolsResponse * CognitoIdentityProviderClient::listUserPools(const ListUserPoolsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1330,7 +1330,7 @@ ListUserPoolsResponse * CognitoIdentityProviderClient::listUserPools(const ListU
  */
 ListUsersResponse * CognitoIdentityProviderClient::listUsers(const ListUsersRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1348,7 +1348,7 @@ ListUsersResponse * CognitoIdentityProviderClient::listUsers(const ListUsersRequ
  */
 ListUsersInGroupResponse * CognitoIdentityProviderClient::listUsersInGroup(const ListUsersInGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1362,7 +1362,7 @@ ListUsersInGroupResponse * CognitoIdentityProviderClient::listUsersInGroup(const
  */
 ResendConfirmationCodeResponse * CognitoIdentityProviderClient::resendConfirmationCode(const ResendConfirmationCodeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1376,7 +1376,7 @@ ResendConfirmationCodeResponse * CognitoIdentityProviderClient::resendConfirmati
  */
 RespondToAuthChallengeResponse * CognitoIdentityProviderClient::respondToAuthChallenge(const RespondToAuthChallengeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1399,7 +1399,7 @@ RespondToAuthChallengeResponse * CognitoIdentityProviderClient::respondToAuthCha
  */
 SetRiskConfigurationResponse * CognitoIdentityProviderClient::setRiskConfiguration(const SetRiskConfigurationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1425,7 +1425,7 @@ SetRiskConfigurationResponse * CognitoIdentityProviderClient::setRiskConfigurati
  */
 SetUICustomizationResponse * CognitoIdentityProviderClient::setUICustomization(const SetUICustomizationRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1439,7 +1439,7 @@ SetUICustomizationResponse * CognitoIdentityProviderClient::setUICustomization(c
  */
 SetUserMFAPreferenceResponse * CognitoIdentityProviderClient::setUserMFAPreference(const SetUserMFAPreferenceRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1453,7 +1453,7 @@ SetUserMFAPreferenceResponse * CognitoIdentityProviderClient::setUserMFAPreferen
  */
 SetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::setUserPoolMfaConfig(const SetUserPoolMfaConfigRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1468,7 +1468,7 @@ SetUserPoolMfaConfigResponse * CognitoIdentityProviderClient::setUserPoolMfaConf
  */
 SetUserSettingsResponse * CognitoIdentityProviderClient::setUserSettings(const SetUserSettingsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1482,7 +1482,7 @@ SetUserSettingsResponse * CognitoIdentityProviderClient::setUserSettings(const S
  */
 SignUpResponse * CognitoIdentityProviderClient::signUp(const SignUpRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1496,7 +1496,7 @@ SignUpResponse * CognitoIdentityProviderClient::signUp(const SignUpRequest &requ
  */
 StartUserImportJobResponse * CognitoIdentityProviderClient::startUserImportJob(const StartUserImportJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1510,7 +1510,7 @@ StartUserImportJobResponse * CognitoIdentityProviderClient::startUserImportJob(c
  */
 StopUserImportJobResponse * CognitoIdentityProviderClient::stopUserImportJob(const StopUserImportJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1525,7 +1525,7 @@ StopUserImportJobResponse * CognitoIdentityProviderClient::stopUserImportJob(con
  */
 UpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::updateAuthEventFeedback(const UpdateAuthEventFeedbackRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1539,7 +1539,7 @@ UpdateAuthEventFeedbackResponse * CognitoIdentityProviderClient::updateAuthEvent
  */
 UpdateDeviceStatusResponse * CognitoIdentityProviderClient::updateDeviceStatus(const UpdateDeviceStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1557,7 +1557,7 @@ UpdateDeviceStatusResponse * CognitoIdentityProviderClient::updateDeviceStatus(c
  */
 UpdateGroupResponse * CognitoIdentityProviderClient::updateGroup(const UpdateGroupRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1571,7 +1571,7 @@ UpdateGroupResponse * CognitoIdentityProviderClient::updateGroup(const UpdateGro
  */
 UpdateIdentityProviderResponse * CognitoIdentityProviderClient::updateIdentityProvider(const UpdateIdentityProviderRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1585,7 +1585,7 @@ UpdateIdentityProviderResponse * CognitoIdentityProviderClient::updateIdentityPr
  */
 UpdateResourceServerResponse * CognitoIdentityProviderClient::updateResourceServer(const UpdateResourceServerRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1599,7 +1599,7 @@ UpdateResourceServerResponse * CognitoIdentityProviderClient::updateResourceServ
  */
 UpdateUserAttributesResponse * CognitoIdentityProviderClient::updateUserAttributes(const UpdateUserAttributesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1613,7 +1613,7 @@ UpdateUserAttributesResponse * CognitoIdentityProviderClient::updateUserAttribut
  */
 UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const UpdateUserPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1627,7 +1627,7 @@ UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const Upd
  */
 UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClient(const UpdateUserPoolClientRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1641,7 +1641,7 @@ UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClie
  */
 VerifySoftwareTokenResponse * CognitoIdentityProviderClient::verifySoftwareToken(const VerifySoftwareTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -1655,7 +1655,7 @@ VerifySoftwareTokenResponse * CognitoIdentityProviderClient::verifySoftwareToken
  */
 VerifyUserAttributeResponse * CognitoIdentityProviderClient::verifyUserAttribute(const VerifyUserAttributeRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

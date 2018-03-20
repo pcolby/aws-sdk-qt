@@ -112,7 +112,7 @@ ElasticTranscoderClient::ElasticTranscoderClient(
  */
 CancelJobResponse * ElasticTranscoderClient::cancelJob(const CancelJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -132,7 +132,7 @@ CancelJobResponse * ElasticTranscoderClient::cancelJob(const CancelJobRequest &r
  */
 CreateJobResponse * ElasticTranscoderClient::createJob(const CreateJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -146,7 +146,7 @@ CreateJobResponse * ElasticTranscoderClient::createJob(const CreateJobRequest &r
  */
 CreatePipelineResponse * ElasticTranscoderClient::createPipeline(const CreatePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -174,7 +174,7 @@ CreatePipelineResponse * ElasticTranscoderClient::createPipeline(const CreatePip
  */
 CreatePresetResponse * ElasticTranscoderClient::createPreset(const CreatePresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -193,7 +193,7 @@ CreatePresetResponse * ElasticTranscoderClient::createPreset(const CreatePresetR
  */
 DeletePipelineResponse * ElasticTranscoderClient::deletePipeline(const DeletePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -211,7 +211,7 @@ DeletePipelineResponse * ElasticTranscoderClient::deletePipeline(const DeletePip
  */
 DeletePresetResponse * ElasticTranscoderClient::deletePreset(const DeletePresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -230,7 +230,7 @@ DeletePresetResponse * ElasticTranscoderClient::deletePreset(const DeletePresetR
  */
 ListJobsByPipelineResponse * ElasticTranscoderClient::listJobsByPipeline(const ListJobsByPipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -245,7 +245,7 @@ ListJobsByPipelineResponse * ElasticTranscoderClient::listJobsByPipeline(const L
  */
 ListJobsByStatusResponse * ElasticTranscoderClient::listJobsByStatus(const ListJobsByStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -259,7 +259,7 @@ ListJobsByStatusResponse * ElasticTranscoderClient::listJobsByStatus(const ListJ
  */
 ListPipelinesResponse * ElasticTranscoderClient::listPipelines(const ListPipelinesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -274,7 +274,7 @@ ListPipelinesResponse * ElasticTranscoderClient::listPipelines(const ListPipelin
  */
 ListPresetsResponse * ElasticTranscoderClient::listPresets(const ListPresetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -288,7 +288,7 @@ ListPresetsResponse * ElasticTranscoderClient::listPresets(const ListPresetsRequ
  */
 ReadJobResponse * ElasticTranscoderClient::readJob(const ReadJobRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -302,7 +302,7 @@ ReadJobResponse * ElasticTranscoderClient::readJob(const ReadJobRequest &request
  */
 ReadPipelineResponse * ElasticTranscoderClient::readPipeline(const ReadPipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -316,7 +316,7 @@ ReadPipelineResponse * ElasticTranscoderClient::readPipeline(const ReadPipelineR
  */
 ReadPresetResponse * ElasticTranscoderClient::readPreset(const ReadPresetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -337,7 +337,7 @@ ReadPresetResponse * ElasticTranscoderClient::readPreset(const ReadPresetRequest
  */
 TestRoleResponse * ElasticTranscoderClient::testRole(const TestRoleRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -357,7 +357,7 @@ TestRoleResponse * ElasticTranscoderClient::testRole(const TestRoleRequest &requ
  */
 UpdatePipelineResponse * ElasticTranscoderClient::updatePipeline(const UpdatePipelineRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -376,7 +376,7 @@ UpdatePipelineResponse * ElasticTranscoderClient::updatePipeline(const UpdatePip
  */
 UpdatePipelineNotificationsResponse * ElasticTranscoderClient::updatePipelineNotifications(const UpdatePipelineNotificationsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -397,7 +397,7 @@ UpdatePipelineNotificationsResponse * ElasticTranscoderClient::updatePipelineNot
  */
 UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(const UpdatePipelineStatusRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

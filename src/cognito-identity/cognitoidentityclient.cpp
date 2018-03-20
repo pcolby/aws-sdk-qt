@@ -167,7 +167,7 @@ CognitoIdentityClient::CognitoIdentityClient(
  */
 CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const CreateIdentityPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -185,7 +185,7 @@ CreateIdentityPoolResponse * CognitoIdentityClient::createIdentityPool(const Cre
  */
 DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteIdentitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -203,7 +203,7 @@ DeleteIdentitiesResponse * CognitoIdentityClient::deleteIdentities(const DeleteI
  */
 DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const DeleteIdentityPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -221,7 +221,7 @@ DeleteIdentityPoolResponse * CognitoIdentityClient::deleteIdentityPool(const Del
  */
 DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const DescribeIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -240,7 +240,7 @@ DescribeIdentityResponse * CognitoIdentityClient::describeIdentity(const Describ
  */
 DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const DescribeIdentityPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -260,7 +260,7 @@ DescribeIdentityPoolResponse * CognitoIdentityClient::describeIdentityPool(const
  */
 GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIdentity(const GetCredentialsForIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -278,7 +278,7 @@ GetCredentialsForIdentityResponse * CognitoIdentityClient::getCredentialsForIden
  */
 GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -296,7 +296,7 @@ GetIdResponse * CognitoIdentityClient::getId(const GetIdRequest &request)
  */
 GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const GetIdentityPoolRolesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -319,7 +319,7 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
  */
 GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTokenRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -348,7 +348,7 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
  */
 GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTokenForDeveloperIdentity(const GetOpenIdTokenForDeveloperIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -366,7 +366,7 @@ GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTok
  */
 ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -384,7 +384,7 @@ ListIdentitiesResponse * CognitoIdentityClient::listIdentities(const ListIdentit
  */
 ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListIdentityPoolsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -408,7 +408,7 @@ ListIdentityPoolsResponse * CognitoIdentityClient::listIdentityPools(const ListI
  */
 LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity(const LookupDeveloperIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -430,7 +430,7 @@ LookupDeveloperIdentityResponse * CognitoIdentityClient::lookupDeveloperIdentity
  */
 MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentities(const MergeDeveloperIdentitiesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -448,7 +448,7 @@ MergeDeveloperIdentitiesResponse * CognitoIdentityClient::mergeDeveloperIdentiti
  */
 SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const SetIdentityPoolRolesRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -468,7 +468,7 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
  */
 UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity(const UnlinkDeveloperIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -487,7 +487,7 @@ UnlinkDeveloperIdentityResponse * CognitoIdentityClient::unlinkDeveloperIdentity
  */
 UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdentityRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -505,7 +505,7 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
  */
 UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const UpdateIdentityPoolRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**

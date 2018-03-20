@@ -163,7 +163,7 @@ EfsClient::EfsClient(
  */
 CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -308,7 +308,7 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  */
 CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -329,7 +329,7 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
  */
 CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -360,7 +360,7 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
  */
 DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -404,7 +404,7 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
  */
 DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTargetRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -425,7 +425,7 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  */
 DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -469,7 +469,7 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  */
 DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileSystemsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -496,7 +496,7 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
  */
 DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -517,7 +517,7 @@ DescribeMountTargetSecurityGroupsResponse * EfsClient::describeMountTargetSecuri
  */
 DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMountTargetsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -537,7 +537,7 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  */
 DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
@@ -571,7 +571,7 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
  */
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {
-
+    return nullptr; /// @todo Return the right response object.
 }
 
 /**
