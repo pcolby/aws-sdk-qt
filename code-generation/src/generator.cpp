@@ -158,19 +158,24 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
     return lines;
 }
 
-bool Generator::generateModelClasses(const QString &projectDir, const QString &operationName, const QJsonObject &description)
+bool Generator::generateModelClasses(const QString &projectDir, const QString &operationName,
+                                     const QJsonObject &description)
 {
     qDebug() << "generating model for operation" << operationName;
-    Grantlee::Context context(description.value(QLatin1String("operation")).toObject().toVariantHash());
+    const QJsonObject operation = description.value(QLatin1String("operations"))
+            .toObject().value(operationName).toObject();
+    Grantlee::Context context(operation.toVariantHash());
 
     /// @todo Generate request class.
-    context.push();
-    const QString requestClassName = operationName + QSL("Request");
-    context.insert(QSL("ClassName"), requestClassName);
-    render(QSL("request.cpp"), context, projectDir, requestClassName.toLower() + QSL(".cpp"));
-    render(QSL("request.h"),   context, projectDir, requestClassName.toLower() + QSL(".h"));
-    render(QSL("request_p.h"), context, projectDir, requestClassName.toLower() + QSL("_p.h"));
-    context.pop();
+    if (operation.contains(QLatin1String("input"))) {
+        context.push();
+        const QString requestClassName = operationName + QSL("Request");
+        context.insert(QSL("ClassName"), requestClassName);
+        render(QSL("request.cpp"), context, projectDir, requestClassName.toLower() + QSL(".cpp"));
+        render(QSL("request.h"),   context, projectDir, requestClassName.toLower() + QSL(".h"));
+        render(QSL("request_p.h"), context, projectDir, requestClassName.toLower() + QSL("_p.h"));
+        context.pop();
+    }
 
     /// @todo Generate response class.
     context.push();
